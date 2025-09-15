@@ -1,10 +1,18 @@
 import { useState } from "react";
 import { MatchResultItem } from "@/lib/ai-matchmaking";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { BarChart3BriefcaseIconMonitorUser } from "@/components/icons";
+=======
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +21,10 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   serviceType?: string;
 }
 
@@ -23,7 +35,11 @@ export function AIMatchingResults({
   projectDescription = "",
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
+<<<<<<< HEAD
+  const [activeTabsetActiveTab] = useState("all");
+=======
   const [activeTab, setActiveTab] = useState("all");
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Group matches by category
   const categories = {
@@ -92,7 +108,11 @@ export function AIMatchingResults({
           </TabsTrigger>
         </TabsList>
         
+<<<<<<< HEAD
+        {Object.entries(categories).map(([tabitems]) => (
+=======
         {Object.entries(categories).map(([tab, items]) => (
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
               items.map((match) => {
@@ -105,7 +125,11 @@ export function AIMatchingResults({
                   >
                     <div className="flex">
                       <div className={cn(
+<<<<<<< HEAD
+                        "w-2"
+=======
                         "w-2", 
+>>>>>>> origin/auto/autonomy-17186719616
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"
@@ -142,7 +166,11 @@ export function AIMatchingResults({
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
                                 {match.category}
                               </Badge>
+<<<<<<< HEAD
+                              {match.skills && match.skills.slice(03).map((skill: stringi: number) => (
+=======
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+>>>>>>> origin/auto/autonomy-17186719616
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
                                   {skill}
                                 </Badge>

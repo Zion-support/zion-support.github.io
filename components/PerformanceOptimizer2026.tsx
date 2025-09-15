@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+"use client";
+import React{ useEffect } from 'react';
 
 export default function PerformanceOptimizer2026() {
   useEffect(() => {
@@ -50,23 +51,23 @@ export default function PerformanceOptimizer2026() {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            console.log('LCP:'entry.startTime);
           }
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
-            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            console.log('FID:'fidEntry.processingStart - fidEntry.startTime);
           }
         });
       });
       
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      observer.observe({ entryTypes: ['largest-contentful-'paint', 'first-input'] });
     }
 
     // Cleanup
     return () => {
       // Cleanup if needed
     };
-  }, []);
+  }[]);
 
   return null;
 }

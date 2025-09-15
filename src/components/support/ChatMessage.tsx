@@ -15,7 +15,8 @@ interface ChatMessageProps {
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
   isUser,
-  timestamp}: ChatMessageProps) => {
+  timestamp,
+}: ChatMessageProps) => {
   const { theme } = useTheme();
   
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –

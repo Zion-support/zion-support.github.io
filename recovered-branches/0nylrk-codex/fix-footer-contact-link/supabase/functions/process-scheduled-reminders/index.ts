@@ -8,14 +8,24 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
+<<<<<<< HEAD
     "authorization, x-client-info, apikey, content-type"};
+=======
+    "authorization, x-client-info, apikey, content-type",
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
+<<<<<<< HEAD
       headers: corsHeaders});
+=======
+      headers: corsHeaders,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   try {
@@ -33,7 +43,12 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
         {
           status: 500,
+<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders }}
+=======
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+>>>>>>> origin/auto/autonomy-17186719616
       );
     }
     
@@ -51,7 +66,12 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
         {
           status: 500,
+<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders }}
+=======
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+>>>>>>> origin/auto/autonomy-17186719616
       );
     }
     
@@ -66,8 +86,15 @@ serve(async (req: Request) => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+<<<<<<< HEAD
               "Authorization": `Bearer ${supabaseServiceKey}`},
             body: JSON.stringify(job.payload)}
+=======
+              "Authorization": `Bearer ${supabaseServiceKey}`,
+            },
+            body: JSON.stringify(job.payload),
+          }
+>>>>>>> origin/auto/autonomy-17186719616
         );
         
         if (reminderResponse.ok) {
@@ -76,7 +103,12 @@ serve(async (req: Request) => {
             .from("scheduled_jobs")
             .update({
               status: "completed",
+<<<<<<< HEAD
               completed_at: new Date().toISOString()})
+=======
+              completed_at: new Date().toISOString(),
+            })
+>>>>>>> origin/auto/autonomy-17186719616
             .eq("id", job.id);
           
           if (updateError) {
@@ -90,7 +122,12 @@ serve(async (req: Request) => {
           await supabase
             .from("scheduled_jobs")
             .update({
+<<<<<<< HEAD
               status: "failed"})
+=======
+              status: "failed",
+            })
+>>>>>>> origin/auto/autonomy-17186719616
             .eq("id", job.id);
         }
       }
@@ -100,10 +137,19 @@ serve(async (req: Request) => {
       JSON.stringify({
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
+<<<<<<< HEAD
         job_ids: processedJobs}),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
+=======
+        job_ids: processedJobs,
+      }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+>>>>>>> origin/auto/autonomy-17186719616
     );
   } catch (error) {
     console.error(error);
@@ -111,7 +157,12 @@ serve(async (req: Request) => {
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
         status: 500,
+<<<<<<< HEAD
         headers: { "Content-Type": "application/json", ...corsHeaders }}
+=======
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      }
+>>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

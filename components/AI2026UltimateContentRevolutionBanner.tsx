@@ -26,7 +26,7 @@ const AI2026UltimateContentRevolutionBanner: React.FC = () => {
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-4xl mx-auto leading-relaxed">
-            Discover the most comprehensive collection of revolutionary AI technologies, quantum breakthroughs, and future predictions that will reshape the world
+            Discover the most comprehensive collection of revolutionary AI technologiesquantum breakthroughsand future predictions that will reshape the world
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">

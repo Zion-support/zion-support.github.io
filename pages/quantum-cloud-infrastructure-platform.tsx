@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
@@ -26,8 +26,8 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 					"Compliance and audit kits"
 				]}
 				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}
-				canonical="https://ziontechgroup.com/quantum-cloud-infrastructure-platform"
+				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
 			/>
 		</>
-	);
+	)
 }

@@ -13,7 +13,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from '@/components/ui/form';
+  FormMessage,
+} from '@/components/ui/form';
 import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume';
@@ -29,7 +30,8 @@ const workExperienceSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional(),
+});
 
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 
@@ -60,7 +62,9 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: ''}});
+      location: '',
+    },
+  });
 
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
@@ -74,7 +78,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         end_date: data.is_current ? undefined : (data.end_date || undefined),
         is_current: data.is_current,
         description: data.description,
-        location: data.location};
+        location: data.location,
+      };
 
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData);
@@ -89,7 +94,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           start_date: format(new Date(), 'yyyy-MM-dd'),
           is_current: false,
           description: '',
-          location: ''});
+          location: '',
+        });
         setEditingId(null);
       }
     } catch (err: any) {
@@ -102,7 +108,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.reset({
       ...work,
       start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined});
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined,
+    });
   };
 
   const handleDelete = async (id: string) => {
@@ -327,7 +334,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-                      location: ''});
+                      location: '',
+                    });
                   } else {
                     onBack();
                   }

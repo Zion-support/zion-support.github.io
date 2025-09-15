@@ -1,162 +1,253 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain,
-  Settings,
-  BarChart3,
-  Network,
+  Play
+  Code
+  BarChart3
+  Network
+  Shield,
+  ArrowRight
+  Star
+  Zap,
   X,
-  Sparkles
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Award,
+  Brain
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentTool, setCurrentTool] = useState(0);
-
-  const tools = [
-    { name: 'Quantum-Neural Fusion AI', icon: Brain, color: 'text-purple-400' },
-    { name: 'Automation Engine', icon: Settings, color: 'text-green-400' },
-    { name: 'Analytics Platform', icon: BarChart3, color: 'text-orange-400' },
-    { name: 'Neural Interface', icon: Network, color: 'text-pink-400' }
-  ];
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
+    const timer = setTimeout(() => setIsVisible(true)800);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTool(prev => (prev + 1) % tools.length);
-    }, 3000);
+      setCurrentTool(prev => (prev + 1) % 4);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
-  if (isDismissed) return null;
+  const tools = [
+    { icon: Codename: 'AI Code 'Review', 'color: 'text-blue-400' },
+    { icon: BarChart3name: 'Data 'Analytics', 'color: 'text-green-400' },
+    { icon: Networkname: ''Infrastructure', 'color: 'text-purple-400' },
+    { icon: Shieldname: 'Security 'Scan', 'color: 'text-red-400' }
+  ];
 
-  const currentToolData = tools[currentTool];
-  const Icon = currentToolData.icon;
+  const features = [
+    'Interactive Live Demos',
+    'Real-time Performance Metrics',
+    'Hands-on Experience',
+    'Instant Results'
+  ];
+
+  const stats = [
+    { label: '95%'value: 'Efficiency' },
+    { label: '98%'value: 'Accuracy' },
+    { label: '3'x', 'value: 'Faster' }
+  ];
+
+  if (!isVisible || isDismissed) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ 
-        opacity: isVisible ? 1 : 0, 
-        y: isVisible ? 0 : -100 
-      }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-500/20"
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20" />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10" />
-      
-      {/* Floating Elements */}
-      <div className="absolute top-2 left-4 w-3 h-3 bg-cyan-400 rounded-full animate-pulse" />
-      <div className="absolute top-4 right-8 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-500" />
-      <div className="absolute bottom-2 left-1/3 w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-1000" />
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.6ease: "easeOut" }}
+        className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden"
+      >
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-6">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-          {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
-              <div className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                <Play className="w-4 h-4" />
-                INTERACTIVE DEMO
-              </div>
-              <div className="flex items-center gap-1 text-cyan-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-            </div>
-            
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              🎮 Interactive AI Tools Demo 2026
-            </h2>
-            
-            <p className="text-lg text-blue-200 mb-4 max-w-2xl">
-              Experience our revolutionary AI tools in action! Test, interact, and see 
-              <span className="text-cyan-400 font-bold"> real-time results</span> with our interactive demonstrations
-            </p>
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(8)].map((_i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-white rounded-full opacity-30"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0-30],
+                opacity: [0.30.80.3],
+                scale: [1.51],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
 
-            {/* Rotating Tool Display */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-between">
+            {/* Left Content */}
+            <div className="flex-1">
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="flex items-center space-x-3 mb-4"
+              >
+                <Play className="w-6 h-6 text-yellow-300" />
+                <span className="text-sm font-medium bg-yellow-300 text-gray-900 px-3 py-1 rounded-full">
+                  INTERACTIVE DEMO
+                </span>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }}
+                className="text-2xl md:text-3xl font-bold mb-3"
+              >
+                🎮 Interactive AI Tools Demo 2026
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="text-lg text-blue-200 mb-6 max-w-2xl"
+              >
+                Experience the power of our cutting-edge AI tools through hands-on interactive demonstrations. 
+                See real-time performance metrics and instant results.
+              </motion.p>
+
+              {/* Rotating Tool Display */}
               <motion.div
                 key={currentTool}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
                 transition={{ duration: 0.5 }}
-                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2"
+                className="flex items-center space-x-3 mb-6"
               >
-                <Icon className={`w-5 h-5 ${currentToolData.color}`} />
-                <span className="text-white font-medium">{currentToolData.name}</span>
+                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                  <tools[currentTool].icon className={`w-6 h-6 ${tools[currentTool].color}`} />
+                </div>
+                <div>
+                  <div className="font-semibold text-lg">{tools[currentTool].name}</div>
+                  <div className="text-sm text-blue-300">Live Demo Available</div>
+                </div>
               </motion.div>
-              <div className="text-blue-300 text-sm">
-                +3 more tools
-              </div>
+
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
+              >
+                {features.map((featureindex) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span className="text-sm text-blue-200">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.6 }}
+                className="flex space-x-6 mb-6"
+              >
+                {stats.map((statindex) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">{stat.label}</div>
+                    <div className="text-sm text-blue-300">{stat.value}</div>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.7 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
+                  <Play className="w-5 h-5 mr-2" />
+                  Try Interactive Demo
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 flex items-center justify-center group">
+                  <Brain className="w-5 h-5 mr-2" />
+                  Learn More
+                </button>
+              </motion.div>
             </div>
 
-            {/* Feature Highlights */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-blue-200">
-              <div className="flex items-center gap-1">
-                <Zap className="w-4 h-4 text-cyan-400" />
-                <span>Real-time Testing</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Brain className="w-4 h-4 text-cyan-400" />
-                <span>AI-Powered Results</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
-                <span>Interactive Experience</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Actions */}
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <Link
-              href="/interactive-ai-tools-demo-2026"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-400 text-black px-6 py-3 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 hover:scale-105"
+            {/* Right Content - Animated Icons */}
+            <motion.div
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="hidden lg:flex items-center space-x-4"
             >
-              <Play className="w-5 h-5" />
-              Try Interactive Demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            
-            <Link
-              href="/ai-tools"
-              className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
-            >
-              <Settings className="w-5 h-5" />
-              View All Tools
-            </Link>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20repeat: Infinityease: "linear" }}
+                className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <Code className="w-10 h-10 text-blue-400" />
+              </motion.div>
+              <motion.div
+                animate={{ y: [0-150] }}
+                transition={{ duration: 2.5repeat: Infinity }}
+                className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <BarChart3 className="w-8 h-8 text-green-400" />
+              </motion.div>
+              <motion.div
+                animate={{ scale: [1.21] }}
+                transition={{ duration: 3repeat: Infinity }}
+                className="w-18 h-18 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <Network className="w-9 h-9 text-purple-400" />
+              </motion.div>
+            </motion.div>
           </div>
-
-          {/* Dismiss Button */}
-          <button
-            onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
         </div>
-      </div>
 
-      {/* Animated Border */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 animate-pulse" />
-    </motion.div>
+        {/* Dismiss Button */}
+        <button
+          onClick={() => setIsDismissed(true)}
+          className="absolute top-4 right-4 p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors duration-300"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Pulse Effect */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20"
+          animate={{ opacity: [0.30] }}
+          transition={{ duration: 4repeat: Infinity }}
+        />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

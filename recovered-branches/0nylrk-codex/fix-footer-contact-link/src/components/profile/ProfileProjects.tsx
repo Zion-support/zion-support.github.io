@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+=======
 import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -37,7 +41,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mb-2">
+<<<<<<< HEAD
+                  {project.tags.map((tagi) => (
+=======
                   {project.tags.map((tag, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                       {tag}
                     </Badge>

@@ -83,7 +83,8 @@ const ProductListingCardComponent = ({
       toast({
         title: "Navigation Error",
         description: "Product information is incomplete",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
     
@@ -100,7 +101,9 @@ const ProductListingCardComponent = ({
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart')}});
+        onClick: () => router.push('/cart'),
+      },
+    });
     setLoading(false);
   };
   

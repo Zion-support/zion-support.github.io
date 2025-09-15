@@ -84,7 +84,8 @@ export default function FrontLanding() {
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails']].map(([k, v]) => (
+                ['Safety', 'Guardrails'],
+              ].map(([k, v]) => (
                 <motion.div
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
@@ -111,7 +112,8 @@ export default function FrontLanding() {
               { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
               { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
               { title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
-              { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' }].map((f) => (
+              { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' },
+            ].map((f) => (
               <motion.article
                 key={f.title}
                 initial={{ opacity: 0, y: 8 }}
@@ -135,7 +137,8 @@ export default function FrontLanding() {
             {[
               { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
               { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
-              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
+              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' },
+            ].map((c) => (
               <motion.article
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
@@ -160,7 +163,8 @@ export default function FrontLanding() {
               '24/7 progress without human intervention',
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports'].map((b) => (
+              'Fewer regressions via layered checks and reports',
+            ].map((b) => (
               <motion.div
                 key={b}
                 initial={{ opacity: 0, y: 6 }}

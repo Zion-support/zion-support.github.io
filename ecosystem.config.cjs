@@ -1,137 +1,198 @@
 module.exports = {
   apps: [
-    {
 <<<<<<< HEAD
-      name: 'ci-cd-pipeline',
+    // Main application
+    {
+      name: 'zion-app',
       script: 'npm',
-      args: 'run build',
-      cwd: '/workspace',
+      args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       },
-      cron_restart: '0 0 * * *', // Daily restart
-      error_file: './logs/ci-cd-error.log',
-      out_file: './logs/ci-cd-out.log',
-      log_file: './logs/ci-cd-combined.log',
-      time: true,
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      }
     },
+    
+    // Backend server
     {
-      name: 'continuous-automation',
-      script: 'node',
-      args: 'scripts/automation/automation-orchestrator.cjs',
-      cwd: '/workspace',
+      name: 'zion-backend',
+      script: 'npm',
+      args: 'start',
+      cwd: './server',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/automation-error.log',
-      out_file: './logs/automation-out.log',
-      log_file: './logs/automation-combined.log',
-      time: true,
+        NODE_ENV: 'production'
+      }
     },
+
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'comprehensive-automation',
-      script: 'node',
-      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
-      cwd: '/workspace',
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/comprehensive-automation-error.log',
-      out_file: './logs/comprehensive-automation-out.log',
-      log_file: './logs/comprehensive-automation-combined.log',
-      time: true,
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     },
+
+    // Continuous link checker - runs every 30 minutes
     {
-      name: 'marketing-automation',
-      script: 'node',
-      args: 'scripts/linkedin_automation.js',
-      cwd: '/workspace',
+      name: 'link-checker',
+      script: './scripts/automation/link-checker.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-      },
-      cron_restart: '0 */12 * * *', // Every 12 hours
-      error_file: './logs/marketing-automation-error.log',
-      out_file: './logs/marketing-automation-out.log',
-      log_file: './logs/marketing-automation-combined.log',
-      time: true,
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     },
+
+    // Continuous improvement - runs every 2 hours
+    {
+      name: 'continuous-improvement',
+      script: './scripts/automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous build and test - runs every hour
+    {
+      name: 'daily-build-test',
+      script: './scripts/automation/daily-build-test.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // Continuous security audit - runs every 4 hours
     {
       name: 'security-audit',
-      script: 'npm',
-      args: 'audit',
-      cwd: '/workspace',
+      script: './scripts/automation/security-audit.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '500M',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-      },
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      error_file: './logs/security-audit-error.log',
-      out_file: './logs/security-audit-out.log',
-      log_file: './logs/security-audit-combined.log',
-      time: true,
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
     },
+
+    // Continuous dependency updates - runs every 6 hours
     {
-      name: 'test-runner',
-      script: 'npm',
-      args: 'test',
-      cwd: '/workspace',
+      name: 'dependency-updates',
+      script: './scripts/automation/dependency-updates.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-      },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      error_file: './logs/test-runner-error.log',
-      out_file: './logs/test-runner-out.log',
-      log_file: './logs/test-runner-combined.log',
-      time: true,
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
     },
+
+    // Continuous performance monitoring - runs every 2 hours
     {
-      name: 'lint-checker',
-      script: 'npm',
-      args: 'run lint',
-      cwd: '/workspace',
+      name: 'performance-monitor',
+      script: './scripts/automation/performance-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '500M',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      error_file: './logs/lint-checker-error.log',
-      out_file: './logs/lint-checker-out.log',
-      log_file: './logs/lint-checker-combined.log',
-<<<<<<< HEAD
-      time: true,
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
-  ],
+
+    // Continuous quality checks - runs every 3 hours
+    {
+      name: 'quality-checks',
+      script: './scripts/automation/quality-checks.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
+      }
+    },
+
+    // Continuous link integrity checker - runs every 2 hours
+    {
+      name: 'link-integrity',
+      script: './scripts/automation/link-integrity.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous front maximizer - runs every 4 hours
+    {
+      name: 'front-maximizer',
+      script: './scripts/automation/front-maximizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Continuous sitemap runner - runs every 6 hours
+    {
+      name: 'sitemap-runner',
+      script: './scripts/automation/sitemap-runner.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    }
+  ]
 };
 =======
-=======
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
@@ -186,9 +247,8 @@ module.exports = {
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
       time: true
     }
   ]
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+>>>>>>> origin/auto/autonomy-17186719616

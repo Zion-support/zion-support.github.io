@@ -42,7 +42,8 @@ export default function ProfilePage() {
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive"});
+          variant: "destructive",
+        });
       } finally {
         setIsLoading(false);
       }

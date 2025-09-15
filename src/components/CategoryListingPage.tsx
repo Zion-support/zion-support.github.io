@@ -44,11 +44,13 @@ export function CategoryListingPage({
     { label: 'Highest Rating', value: 'rating-high' },
     { label: 'Highest AI Match', value: 'ai-match' },
     { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' }],
+    { label: 'Z-A', value: 'z-a' },
+  ],
   filterOptions = [
     { label: 'All', value: 'all' },
     { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' }]
+    { label: 'Best AI Match', value: 'best-match' },
+  ]
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSort, setSelectedSort] = useState(

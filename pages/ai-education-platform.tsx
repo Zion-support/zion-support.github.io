@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 
 export default function AIEducationPlatformPage() {
   return (
@@ -10,5 +10,5 @@ export default function AIEducationPlatformPage() {
         <p className="text-gray-300">Adaptive learning and skill development powered by AI. Details coming soon.</p>
       </div>
     </div>
-  );
+  ),
 }

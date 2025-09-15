@@ -6,8 +6,7 @@
 set -e
 
 echo "🚀 Comprehensive Merge All PRs - Systematic Branch Merging"
-echo "========================================================="
-
+echo "
 # Function to resolve merge conflicts automatically
 resolve_conflicts() {
     local file="$1"
@@ -18,6 +17,7 @@ resolve_conflicts() {
         
         # Remove conflict markers and combine content intelligently
         awk '
+        /^        !in_conflict { print }
         !in_conflict { print }
         in_conflict && /^[[:space:]]*$/ { print }
         in_conflict && /import/ { print }
@@ -169,8 +169,7 @@ git push origin main --force-with-lease
 # Summary
 echo ""
 echo "📊 Comprehensive Merge Summary:"
-echo "==============================="
-echo "✅ Successfully merged: ${#SUCCESSFUL_MERGES[@]} branches"
+echo "echo "✅ Successfully merged: ${#SUCCESSFUL_MERGES[@]} branches"
 echo "❌ Failed to merge: ${#FAILED_MERGES[@]} branches"
 echo "📈 Total processed: $PROCESSED_COUNT"
 

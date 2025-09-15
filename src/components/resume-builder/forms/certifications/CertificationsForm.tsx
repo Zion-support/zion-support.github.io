@@ -41,7 +41,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       issue_date: '',
       expiration_date: '',
       credential_id: '',
-      credential_url: ''}});
+      credential_url: '',
+    },
+  });
 
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
@@ -54,7 +56,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         issue_date: data.issue_date || undefined,
         expiration_date: data.expiration_date || undefined,
         credential_id: data.credential_id,
-        credential_url: data.credential_url};
+        credential_url: data.credential_url,
+      };
 
       if (editingId) {
         success = await updateCertification(editingId, certData);
@@ -69,7 +72,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           issue_date: '',
           expiration_date: '',
           credential_id: '',
-          credential_url: ''});
+          credential_url: '',
+        });
         setEditingId(null);
       }
     } catch (err: any) {
@@ -82,7 +86,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     form.reset({
       ...cert,
       issue_date: formatDateValue(cert.issue_date),
-      expiration_date: formatDateValue(cert.expiration_date)});
+      expiration_date: formatDateValue(cert.expiration_date),
+    });
   };
 
   const handleDelete = async (id: string) => {
@@ -132,7 +137,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-                      credential_url: ''});
+                      credential_url: '',
+                    });
                   } else {
                     onBack();
                   }

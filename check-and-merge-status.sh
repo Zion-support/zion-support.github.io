@@ -56,9 +56,7 @@ for branch in $UNMERGED_BRANCH_LIST; do
             for file in $CONFLICTED_FILES; do
                 if [ -f "$file" ]; then
                     echo "🔧 Resolving conflicts in $file..."
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                    sed -i '/>>>>>>> /d' "$file"
-                    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
+                    sed -i '/                    sed -i '/                    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
                 fi
             done
             

@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Shield, 
+  Building2
+  TrendingUp
+  Users
+  DollarSign
+  Shield
   Zap,
   ArrowRight,
   CheckCircle,
@@ -22,12 +23,12 @@ import {
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
     {
@@ -39,7 +40,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Workflow Automation',
           description: 'Streamline your business processes with intelligent automation.',
-          features: ['Process Optimization', 'Error Reduction', 'Time Savings'],
+          features: ['Process 'Optimization', 'Error 'Reduction', 'Time Savings'],
           roi: '300%',
           timeToValue: '30 days',
           image: '/api/placeholder/400/300'
@@ -47,7 +48,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Document Processing',
           description: 'Automate document handling and data extraction.',
-          features: ['OCR Technology', 'Smart Classification', 'Data Validation'],
+          features: ['OCR 'Technology', 'Smart 'Classification', 'Data Validation'],
           roi: '250%',
           timeToValue: '14 days',
           image: '/api/placeholder/400/300'
@@ -55,7 +56,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Customer Service AI',
           description: 'Enhance customer support with AI-powered chatbots.',
-          features: ['24/7 Support', 'Natural Language', 'Multi-language'],
+          features: ['24/7 'Support', 'Natural 'Language', 'Multi-language'],
           roi: '400%',
           timeToValue: '21 days',
           image: '/api/placeholder/400/300'
@@ -71,7 +72,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Predictive Analytics',
           description: 'Forecast trends and make data-driven decisions.',
-          features: ['Machine Learning', 'Real-time Insights', 'Custom Dashboards'],
+          features: ['Machine 'Learning', 'Real-time 'Insights', 'Custom Dashboards'],
           roi: '500%',
           timeToValue: '45 days',
           image: '/api/placeholder/400/300'
@@ -79,7 +80,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Business Intelligence',
           description: 'Transform data into actionable business insights.',
-          features: ['Data Visualization', 'KPI Tracking', 'Automated Reports'],
+          features: ['Data 'Visualization', 'KPI 'Tracking', 'Automated Reports'],
           roi: '350%',
           timeToValue: '28 days',
           image: '/api/placeholder/400/300'
@@ -87,7 +88,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Customer Analytics',
           description: 'Understand customer behavior and preferences.',
-          features: ['Segmentation', 'Churn Prediction', 'Personalization'],
+          features: [', 'Segmentation', 'Churn 'Prediction', 'Personalization'],
           roi: '450%',
           timeToValue: '35 days',
           image: '/api/placeholder/400/300'
@@ -103,7 +104,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Cybersecurity Suite',
           description: 'Protect your business from cyber threats.',
-          features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response'],
+          features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Incident Response'],
           roi: '200%',
           timeToValue: '7 days',
           image: '/api/placeholder/400/300'
@@ -111,7 +112,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Compliance Management',
           description: 'Ensure regulatory compliance across all operations.',
-          features: ['GDPR Compliance', 'Audit Trails', 'Risk Assessment'],
+          features: ['GDPR 'Compliance', 'Audit 'Trails', 'Risk Assessment'],
           roi: '180%',
           timeToValue: '14 days',
           image: '/api/placeholder/400/300'
@@ -119,7 +120,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Data Protection',
           description: 'Secure sensitive data with advanced encryption.',
-          features: ['End-to-End Encryption', 'Access Control', 'Data Backup'],
+          features: ['End-to-End 'Encryption', 'Access 'Control', 'Data Backup'],
           roi: '220%',
           timeToValue: '10 days',
           image: '/api/placeholder/400/300'
@@ -172,7 +173,7 @@ const BusinessSolutionsShowcase2025 = () => {
             Transform Your Business Operations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover comprehensive business solutions that drive growth, efficiency, and innovation 
+            Discover comprehensive business solutions that drive growthefficiencyand innovation 
             across every aspect of your organization.
           </p>
         </motion.div>
@@ -180,7 +181,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {/* Category Navigation */}
         <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
-            {categories.map((category, index) => {
+            {categories.map((categoryindex) => {
               const Icon = category.icon;
               return (
                 <button
@@ -210,11 +211,11 @@ const BusinessSolutionsShowcase2025 = () => {
             exit="hidden"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {currentCategory.solutions.map((solution, index) => (
+            {currentCategory.solutions.map((solutionindex) => (
               <motion.div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover={{ y: -5scale: 1.02 }}
                 variants={itemVariants}
               >
                 {/* Header */}
@@ -234,7 +235,7 @@ const BusinessSolutionsShowcase2025 = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
                   <div className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
+                    {solution.features.map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span className="text-sm text-gray-600">{feature}</span>

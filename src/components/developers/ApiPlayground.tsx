@@ -46,9 +46,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       method,
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"},
+        "Content-Type": "application/json",
+      },
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000)};
+      signal: AbortSignal.timeout(15000),
+    };
 
     if (method !== "GET" && method !== "DELETE") {
       try {

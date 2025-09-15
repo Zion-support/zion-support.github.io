@@ -1,271 +1,182 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Shield, 
-  Zap,
-  Target,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
+  TrendingUp
+  Building2
+  DollarSign
   Star,
+  ChevronRight,
+  X,
+  Users,
   Award,
-  Lightbulb,
-  Building2,
-  Cpu,
-  Database,
-  Sparkles
+  Clock,
+  Sparkles,
+  CheckCircle,
+  BarChart3
 } from 'lucide-react';
 
 const BusinessTransformation2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentMetricsetCurrentMetric] = useState(0);
+
+  const metrics = [
+    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increase', 'color: 'text-green-400' },
+    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reduction', 'color: 'text-blue-400' },
+    { icon: BarChart3value: '280%'label: 'Efficiency 'Gain', 'color: 'text-yellow-400' },
+    { icon: Starvalue: '98%'label: 'Customer 'Satisfaction', 'color: 'text-purple-400' }
+  ];
 
   useEffect(() => {
     setIsVisible(true);
     
+    // Rotate through metrics
     const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 2500);
+      setCurrentMetric((prev) => (prev + 1) % metrics.length);
+    }2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
-  const stats = [
-    {
-      icon: TrendingUp,
-      value: '+150%',
-      label: 'Revenue Growth',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: DollarSign,
-      value: '-60%',
-      label: 'Cost Reduction',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Zap,
-      value: '+300%',
-      label: 'Efficiency Gain',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Clock,
-      value: '75%',
-      label: 'Time Savings',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+  const currentMetricData = metrics[currentMetric];
 
-  const features = [
-    {
-      icon: Cpu,
-      title: 'AI-Powered Automation',
-      description: 'Intelligent process automation that learns and adapts'
-    },
-    {
-      icon: BarChart3,
-      title: 'Advanced Analytics',
-      description: 'Real-time insights and predictive analytics'
-    },
-    {
-      icon: Users,
-      title: 'Customer Experience',
-      description: 'Personalized customer journeys with AI'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Next-generation security and compliance monitoring'
-    }
-  ];
-
-  const currentStatData = stats[currentStat];
+  if (isDismissed || !isVisible) return null;
 
   return (
-    <div className="relative py-16 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
-              <Sparkles className="w-4 h-4 text-yellow-300 mr-2" />
-              <span className="text-white text-sm font-medium">NEW: Business Transformation 2025</span>
-            </div>
-
-            {/* Main Heading */}
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Transform Your Business with
-                <span className="block bg-gradient-to-r from-yellow-300 via-white to-cyan-300 bg-clip-text text-transparent">
-                  AI-Powered Solutions
-                </span>
-              </h1>
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Join thousands of forward-thinking companies that have revolutionized their operations 
-                with our cutting-edge AI technologies and automation solutions.
-              </p>
-            </div>
-
-            {/* Animated Stat */}
-            <motion.div
-              key={currentStat}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-            >
-              <div className="flex items-center space-x-4">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentStatData.color} flex items-center justify-center`}>
-                  <currentStatData.icon className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-white">{currentStatData.value}</div>
-                  <div className="text-blue-200 font-medium">{currentStatData.label}</div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Features Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-center space-x-3">
-                    <feature.icon className="w-5 h-5 text-white flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-medium text-sm">{feature.title}</div>
-                      <div className="text-blue-200 text-xs">{feature.description}</div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all duration-300 flex items-center justify-center group shadow-lg">
-                <Award className="w-5 h-5 mr-2" />
-                Start Transformation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 flex items-center justify-center group border border-white/30">
-                <Lightbulb className="w-5 h-5 mr-2" />
-                View Case Studies
-              </button>
-            </div>
-          </motion.div>
-
-          {/* Right Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            {/* Main Visual Container */}
-            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ 
-                  y: [0, -15, 0],
-                  rotate: [0, 5, 0]
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center"
-              >
-                <TrendingUp className="w-8 h-8 text-white" />
-              </motion.div>
-
-              <motion.div
-                animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -5, 0]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
-              >
-                <DollarSign className="w-6 h-6 text-white" />
-              </motion.div>
-
-              <motion.div
-                animate={{ 
-                  y: [0, -20, 0],
-                  rotate: [0, 10, 0]
-                }}
-                transition={{ 
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 2
-                }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
-              >
-                <Zap className="w-10 h-10 text-white" />
-              </motion.div>
-
-              {/* Central Content */}
-              <div className="text-center pt-16 pb-8">
-                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white/20 border border-white/30 mb-6">
-                  <Building2 className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Business Transformation
-                </h3>
-                <p className="text-blue-100 mb-6">
-                  Real results from companies using our AI solutions
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">500+</div>
-                    <div className="text-blue-200 text-sm">Companies</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">$2.5B+</div>
-                    <div className="text-blue-200 text-sm">Saved</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/10 rounded-3xl blur-xl -z-10"></div>
-          </motion.div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.6ease: "easeOut" }}
+        className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
+      >
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-4 -left-4 w-72 h-72 bg-green-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-4 -right-4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl animate-ping" />
         </div>
-      </div>
-    </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            {/* Left side - Main content */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
+                  className="flex items-center gap-2"
+                >
+                  <Sparkles className="w-6 h-6 text-green-400" />
+                  <span className="text-green-400 font-bold text-sm uppercase tracking-wider">
+                    Proven Results
+                  </span>
+                </motion.div>
+                <div className="flex items-center gap-1 text-blue-400">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm font-semibold">Live Data</span>
+                </div>
+              </div>
+
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
+                🚀 Business Transformation 2025
+              </h2>
+              
+              <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl">
+                Real results from real businesses. See how companies achieve 340% revenue growth with AI and automation.
+              </p>
+
+              {/* Rotating metrics showcase */}
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
+                <motion.div
+                  key={currentMetric}
+                  initial={{ opacity: 0x: 20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="flex items-center px-4 py-2 rounded-full bg-white/10 text-white"
+                >
+                  <currentMetricData.icon className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">{currentMetricData.value} {currentMetricData.label}</span>
+                </motion.div>
+                <div className="flex items-center text-green-400">
+                  <Users className="w-4 h-4 mr-1" />
+                  <span className="text-sm">500+ Companies</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm">
+                <div className="flex items-center text-yellow-400">
+                  <Star className="w-4 h-4 mr-1" />
+                  <span>4.9/5 Rating</span>
+                </div>
+                <div className="flex items-center text-blue-400">
+                  <Award className="w-4 h-4 mr-1" />
+                  <span>Industry Leader</span>
+                </div>
+                <div className="flex items-center text-green-400">
+                  <CheckCircle className="w-4 h-4 mr-1" />
+                  <span>Verified Results</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg"
+              >
+                <Building2 className="w-5 h-5 mr-2" />
+                View Success Stories
+                <ChevronRight className="w-4 h-4 ml-2" />
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
+              >
+                <TrendingUp className="w-5 h-5 mr-2" />
+                Calculate ROI
+              </motion.button>
+            </div>
+
+            {/* Close button */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsDismissed(true)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              <X className="w-6 h-6" />
+            </motion.button>
+          </div>
+
+          {/* Metric indicators */}
+          <div className="flex justify-center lg:justify-start mt-4 space-x-2">
+            {metrics.map((_index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentMetric ? 'bg-green-400 w-8' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Floating elements */}
+        <div className="absolute top-4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce" />
+        <div className="absolute top-8 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" />
+        <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

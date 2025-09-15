@@ -1,12 +1,21 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { useStateuseEffect } from "react";
+import { X } from "lucide-react";
+
+export function FloatingCTA() {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isClosedsetIsClosed] = useState(false);
+=======
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +29,19 @@ export function FloatingCTA() {
       }
     };
 
+<<<<<<< HEAD
+    window.addEventListener("scroll"handleScroll);
+    return () => {
+      window.removeEventListener("scroll"handleScroll);
+    };
+  }[isClosed]);
+=======
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isClosed]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleClose = () => {
     setIsClosed(true);

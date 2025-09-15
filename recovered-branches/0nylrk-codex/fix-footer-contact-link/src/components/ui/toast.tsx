@@ -1,6 +1,10 @@
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
+<<<<<<< HEAD
+import { cvatype VariantProps } from "class-variance-authority"
+=======
 import { cva, type VariantProps } from "class-variance-authority"
+>>>>>>> origin/auto/autonomy-17186719616
 import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -10,7 +14,11 @@ const ToastProvider = ToastPrimitives.Provider
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+=======
 >(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <ToastPrimitives.Viewport
     ref={ref}
     className={cn(
@@ -30,20 +38,38 @@ const toastVariants = cva(
         default: "border bg-background text-foreground",
         destructive:
           "destructive group border-destructive bg-destructive text-destructive-foreground",
+<<<<<<< HEAD
         success: "border bg-background text-foreground"}},
     defaultVariants: {
       variant: "default"}}
+=======
+        success: "border bg-background text-foreground",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+>>>>>>> origin/auto/autonomy-17186719616
 )
 
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVariants>
+<<<<<<< HEAD
+>(({ classNamevariant...props }ref) => {
+  return (
+    <ToastPrimitives.Root
+      ref={ref}
+      className={cn(toastVariants({ variant })className)}
+=======
 >(({ className, variant, ...props }, ref) => {
   return (
     <ToastPrimitives.Root
       ref={ref}
       className={cn(toastVariants({ variant }), className)}
+>>>>>>> origin/auto/autonomy-17186719616
       {...props}
     />
   )
@@ -53,7 +79,11 @@ Toast.displayName = ToastPrimitives.Root.displayName
 const ToastAction = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Action>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Action>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+=======
 >(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <ToastPrimitives.Action
     ref={ref}
     className={cn(
@@ -68,7 +98,11 @@ ToastAction.displayName = ToastPrimitives.Action.displayName
 const ToastClose = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Close>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Close>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+=======
 >(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <ToastPrimitives.Close
     ref={ref}
     className={cn(
@@ -86,10 +120,17 @@ ToastClose.displayName = ToastPrimitives.Close.displayName
 const ToastTitle = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Title>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+  <ToastPrimitives.Title
+    ref={ref}
+    className={cn("text-sm font-semibold"className)}
+=======
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Title
     ref={ref}
     className={cn("text-sm font-semibold", className)}
+>>>>>>> origin/auto/autonomy-17186719616
     {...props}
   />
 ))
@@ -98,11 +139,20 @@ ToastTitle.displayName = ToastPrimitives.Title.displayName
 const ToastDescription = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Description>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+  <ToastPrimitives.Description
+    ref={ref}
+    className={cn("text-sm opacity-90"className)}
+    {...props}
+
+=======
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Description
     ref={ref}
     className={cn("text-sm opacity-90", className)}
     {...props}
+>>>>>>> origin/auto/autonomy-17186719616
   />
 ))
 ToastDescription.displayName = ToastPrimitives.Description.displayName
@@ -123,7 +173,12 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
+<<<<<<< HEAD
   ToastAction}
+=======
+  ToastAction,
+}
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Add useToast hook export
 export function useToast() {
@@ -131,6 +186,12 @@ export function useToast() {
     // Accept a loosely typed props object to allow custom fields like `description`
     toast: (props: any) => {
       // Implementation of toast functionality
-      console.log("Toast:", props)
+<<<<<<< HEAD
+      console.log("Toast:"props)
     }}
+=======
+      console.log("Toast:", props)
+    },
+  }
+>>>>>>> origin/auto/autonomy-17186719616
 }

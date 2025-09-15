@@ -11,6 +11,15 @@ export type Trend = {
 };
 
 export async function getServerSideProps() {
+<<<<<<< HEAD
+  const file = path.join(process.cwd()', 'data', 'ai-trends.json');
+  let items: Trend[] = [];
+  try {
+    const raw = fs.readFileSync('file', 'utf-8');
+    items = JSON.parse(raw);
+  } catch {}
+  items.sort((ab) => (a.date < b.date ? 1 : -1));
+=======
   const file = path.join(process.cwd(), 'data', 'ai-trends.json');
   let items: Trend[] = [];
   try {
@@ -18,6 +27,7 @@ export async function getServerSideProps() {
     items = JSON.parse(raw);
   } catch {}
   items.sort((a, b) => (a.date < b.date ? 1 : -1));
+>>>>>>> origin/auto/autonomy-17186719616
   return { props: { items } };
 }
 
@@ -25,7 +35,11 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>
+<<<<<<< HEAD
+      <p className="text-gray-600">Autonomously generated insights on AIdev toolsand cloud trends.</p>
+=======
       <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="grid grid-cols-1 gap-4">
         {items.map((t) => (
           <div key={t.id} className="border rounded p-4 space-y-2">
@@ -35,7 +49,11 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
             </div>
             <div className="text-sm text-gray-700">{t.summary}</div>
             <ul className="list-disc pl-5 text-sm text-gray-700">
+<<<<<<< HEAD
+              {t.highlights.map((hi) => (<li key={i}>{h}</li>))}
+=======
               {t.highlights.map((h, i) => (<li key={i}>{h}</li>))}
+>>>>>>> origin/auto/autonomy-17186719616
             </ul>
             <div className="flex flex-wrap gap-2 pt-1">
               {t.tags.map(tag => (<span key={tag} className="text-xs px-2 py-0.5 rounded bg-gray-100">{tag}</span>))}

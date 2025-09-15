@@ -21,7 +21,8 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
-  onSettingsClick}: MobileHeaderProps) {
+  onSettingsClick,
+}: MobileHeaderProps) {
   const router = useRouter();
 
   return (

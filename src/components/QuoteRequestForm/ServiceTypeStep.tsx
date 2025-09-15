@@ -16,7 +16,8 @@ const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
-  image: z.string().optional()});
+  image: z.string().optional(),
+});
 
 const listingsSchema = z.array(listingSchema);
 

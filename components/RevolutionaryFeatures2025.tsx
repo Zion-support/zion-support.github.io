@@ -7,7 +7,7 @@ const RevolutionaryFeatures2025 = () => {
     {
       icon: '🚀',
       title: 'Autonomous AI Operations',
-      description: 'Self-managing AI systems that operate 24/7 without human intervention, delivering 99.9% uptime and 2,500% ROI.',
+      description: 'Self-managing AI systems that operate 24/7 without human interventiondelivering 99.9% uptime and 2,500% ROI.',
       stats: '99.9% Uptime',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -28,14 +28,14 @@ const RevolutionaryFeatures2025 = () => {
     {
       icon: '🔮',
       title: 'Predictive Analytics 2030',
-      description: 'Advanced AI predictions for the next 5 years, helping businesses prepare for the future of technology.',
+      description: 'Advanced AI predictions for the next 5 yearshelping businesses prepare for the future of technology.',
       stats: '5-Year Forecast',
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: '🛡️',
       title: 'Quantum Security',
-      description: 'Unbreakable encryption using quantum cryptography, providing absolute security for sensitive data.',
+      description: 'Unbreakable encryption using quantum cryptographyproviding absolute security for sensitive data.',
       stats: 'Unbreakable',
       color: 'from-indigo-500 to-purple-500'
     },
@@ -66,21 +66,21 @@ const RevolutionaryFeatures2025 = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"
-                   style={{ background: `linear-gradient(135deg, var(--tw-gradient-stops))` }}
+                   style={{ background: `linear-gradient(135degvar(--tw-gradient-stops))` }}
               />
               
               <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 h-full">
                 <motion.div
-                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileHover={{ scale: 1.2rotate: 10 }}
                   transition={{ duration: 0.3 }}
                   className="text-5xl mb-6"
                 >
@@ -115,7 +115,7 @@ const RevolutionaryFeatures2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">

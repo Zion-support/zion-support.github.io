@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-17T21:39:45.888Z",
+  "timestamp": "2025-08-18T03:03:48.105Z",
   "critical": [
     {
       "name": "ci.yml",
@@ -22,7 +22,7 @@
     },
     {
       "name": "dependency-auto-upgrade.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-auto-upgrade.yml",
+      "path": "/workspace/.github/workflows/dependency-auto-upgrade.yml",
       "priority": "critical",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -97,7 +97,7 @@
   "high": [
     {
       "name": "security.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security.yml",
+      "path": "/workspace/.github/workflows/security.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 15,
@@ -121,7 +121,7 @@
     },
     {
       "name": "dependabot-auto-approve.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependabot-auto-approve.yml",
+      "path": "/workspace/.github/workflows/dependabot-auto-approve.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -140,7 +140,7 @@
     },
     {
       "name": "dependency-management.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-management.yml",
+      "path": "/workspace/.github/workflows/dependency-management.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -159,7 +159,7 @@
     },
     {
       "name": "security-auto-heal.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security-auto-heal.yml",
+      "path": "/workspace/.github/workflows/security-auto-heal.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 25,
@@ -178,7 +178,7 @@
     },
     {
       "name": "security-scan.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security-scan.yml",
+      "path": "/workspace/.github/workflows/security-scan.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 25,
@@ -197,7 +197,7 @@
     },
     {
       "name": "security-audit.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/security-audit.yml",
+      "path": "/workspace/.github/workflows/security-audit.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 25,
@@ -235,7 +235,7 @@
     },
     {
       "name": "dependency-maintenance.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-maintenance.yml",
+      "path": "/workspace/.github/workflows/dependency-maintenance.yml",
       "priority": "high",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -275,6 +275,25 @@
         "workflow_dispatch"
       ],
       "resourceScore": 131
+    },
+    {
+      "name": "dependency-maintenance.yml",
+      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-maintenance.yml",
+      "priority": "high",
+      "resourceIntensity": "medium",
+      "estimatedDuration": 45,
+      "concurrentJobs": 12,
+      "runnerRequirements": {
+        "runner": "ubuntu-latest",
+        "size": "standard",
+        "special": []
+      },
+      "dependencies": [],
+      "triggers": [
+        "workflow_dispatch {}",
+        "schedule"
+      ],
+      "resourceScore": 115
     }
   ],
   "medium": [
@@ -450,7 +469,7 @@
     },
     {
       "name": "workflow-validator.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-validator.yml",
+      "path": "/workspace/.github/workflows/workflow-validator.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 10,
@@ -568,7 +587,7 @@
     },
     {
       "name": "agent-agent-1755379731008-2-monitoring-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379731008-2-monitoring-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379731008-2-monitoring-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -587,7 +606,7 @@
     },
     {
       "name": "agent-agent-1755379759029-0-optimization-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759029-0-optimization-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759029-0-optimization-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -606,7 +625,7 @@
     },
     {
       "name": "agent-agent-1755379759032-1-full-stack-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759032-1-full-stack-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759032-1-full-stack-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -625,7 +644,7 @@
     },
     {
       "name": "agent-agent-1755379759033-2-deployment-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759033-2-deployment-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759033-2-deployment-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -644,7 +663,7 @@
     },
     {
       "name": "agent-agent-1755379759033-3-frontend-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759033-3-frontend-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759033-3-frontend-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -663,7 +682,7 @@
     },
     {
       "name": "agent-agent-1755379759035-4-full-stack-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759035-4-full-stack-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759035-4-full-stack-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -682,7 +701,7 @@
     },
     {
       "name": "agent-agent-1755379759035-5-frontend-basic.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759035-5-frontend-basic.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759035-5-frontend-basic.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -701,7 +720,7 @@
     },
     {
       "name": "agent-agent-1755379759036-6-monitoring-advanced.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759036-6-monitoring-advanced.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759036-6-monitoring-advanced.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -720,7 +739,7 @@
     },
     {
       "name": "agent-agent-1755379759037-7-full-stack-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379759037-7-full-stack-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379759037-7-full-stack-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -739,7 +758,7 @@
     },
     {
       "name": "agent-agent-1755379777746-0-full-stack-advanced.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777746-0-full-stack-advanced.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777746-0-full-stack-advanced.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -758,7 +777,7 @@
     },
     {
       "name": "agent-agent-1755379777749-1-full-stack-basic.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777749-1-full-stack-basic.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777749-1-full-stack-basic.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -777,7 +796,7 @@
     },
     {
       "name": "agent-agent-1755379777750-2-monitoring-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777750-2-monitoring-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777750-2-monitoring-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -796,7 +815,7 @@
     },
     {
       "name": "agent-agent-1755379777751-3-monitoring-advanced.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777751-3-monitoring-advanced.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777751-3-monitoring-advanced.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -815,7 +834,7 @@
     },
     {
       "name": "agent-agent-1755379777752-5-testing-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777752-5-testing-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777752-5-testing-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -834,7 +853,7 @@
     },
     {
       "name": "agent-agent-1755379777754-6-backend-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777754-6-backend-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777754-6-backend-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -853,7 +872,7 @@
     },
     {
       "name": "agent-agent-1755379777755-7-backend-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755379777755-7-backend-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755379777755-7-backend-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -872,7 +891,7 @@
     },
     {
       "name": "agent-agent-1755381089841-0-backend-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089841-0-backend-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089841-0-backend-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -891,26 +910,7 @@
     },
     {
       "name": "agent-agent-1755381089844-1-deployment-advanced.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089844-1-deployment-advanced.yml",
-      "priority": "medium",
-      "resourceIntensity": "medium",
-      "estimatedDuration": 20,
-      "concurrentJobs": 6,
-      "runnerRequirements": {
-        "runner": "ubuntu-latest",
-        "size": "standard",
-        "special": []
-      },
-      "dependencies": [],
-      "triggers": [
-        "workflow_dispatch {}",
-        "schedule"
-      ],
-      "resourceScore": 114
-    },
-    {
-      "name": "agent-agent-1755381089845-2-full-stack-advanced.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089845-2-full-stack-advanced.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089844-1-deployment-advanced.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -929,7 +929,7 @@
     },
     {
       "name": "agent-agent-1755381089846-3-optimization-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089846-3-optimization-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089846-3-optimization-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -948,7 +948,7 @@
     },
     {
       "name": "agent-agent-1755381089846-4-testing-advanced.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089846-4-testing-advanced.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089846-4-testing-advanced.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -967,7 +967,7 @@
     },
     {
       "name": "agent-agent-1755381089847-5-frontend-expert.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089847-5-frontend-expert.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089847-5-frontend-expert.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -986,7 +986,7 @@
     },
     {
       "name": "agent-agent-1755381089848-6-testing-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089848-6-testing-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089848-6-testing-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1005,7 +1005,7 @@
     },
     {
       "name": "agent-agent-1755381089849-7-monitoring-intermediate.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-agent-1755381089849-7-monitoring-intermediate.yml",
+      "path": "/workspace/.github/workflows/agent-agent-1755381089849-7-monitoring-intermediate.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1024,7 +1024,7 @@
     },
     {
       "name": "agent-factory-automation.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-factory-automation.yml",
+      "path": "/workspace/.github/workflows/agent-factory-automation.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1043,7 +1043,7 @@
     },
     {
       "name": "agent-factory-proliferation.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-factory-proliferation.yml",
+      "path": "/workspace/.github/workflows/agent-factory-proliferation.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1062,7 +1062,7 @@
     },
     {
       "name": "agent-of-agents-trigger.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/agent-of-agents-trigger.yml",
+      "path": "/workspace/.github/workflows/agent-of-agents-trigger.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1081,7 +1081,7 @@
     },
     {
       "name": "auto-update-prs.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/auto-update-prs.yml",
+      "path": "/workspace/.github/workflows/auto-update-prs.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1100,7 +1100,7 @@
     },
     {
       "name": "automation-advertiser.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-advertiser.yml",
+      "path": "/workspace/.github/workflows/automation-advertiser.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1119,7 +1119,7 @@
     },
     {
       "name": "automation-cleanup.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-cleanup.yml",
+      "path": "/workspace/.github/workflows/automation-cleanup.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1138,7 +1138,7 @@
     },
     {
       "name": "automation-dashboard.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-dashboard.yml",
+      "path": "/workspace/.github/workflows/automation-dashboard.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1157,7 +1157,7 @@
     },
     {
       "name": "automation-guardian-10min.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-guardian-10min.yml",
+      "path": "/workspace/.github/workflows/automation-guardian-10min.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1176,7 +1176,7 @@
     },
     {
       "name": "automation-orchestrator.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automation-orchestrator.yml",
+      "path": "/workspace/.github/workflows/automation-orchestrator.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1195,7 +1195,7 @@
     },
     {
       "name": "automations.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automations.yml",
+      "path": "/workspace/.github/workflows/automations.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1214,7 +1214,7 @@
     },
     {
       "name": "automerge-main.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/automerge-main.yml",
+      "path": "/workspace/.github/workflows/automerge-main.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1233,7 +1233,7 @@
     },
     {
       "name": "autonomous-agent-orchestrator.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-agent-orchestrator.yml",
+      "path": "/workspace/.github/workflows/autonomous-agent-orchestrator.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1252,7 +1252,7 @@
     },
     {
       "name": "autonomous-auto-discovery.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-auto-discovery.yml",
+      "path": "/workspace/.github/workflows/autonomous-auto-discovery.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1271,7 +1271,7 @@
     },
     {
       "name": "autonomous-auto-merge-to-main.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-auto-merge-to-main.yml",
+      "path": "/workspace/.github/workflows/autonomous-auto-merge-to-main.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1290,7 +1290,7 @@
     },
     {
       "name": "autonomous-cloud-automations.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud-automations.yml",
+      "path": "/workspace/.github/workflows/autonomous-cloud-automations.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1309,7 +1309,7 @@
     },
     {
       "name": "autonomous-cloud-fast.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud-fast.yml",
+      "path": "/workspace/.github/workflows/autonomous-cloud-fast.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1328,7 +1328,7 @@
     },
     {
       "name": "autonomous-cloud-runner.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud-runner.yml",
+      "path": "/workspace/.github/workflows/autonomous-cloud-runner.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1347,7 +1347,7 @@
     },
     {
       "name": "autonomous-cloud.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-cloud.yml",
+      "path": "/workspace/.github/workflows/autonomous-cloud.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1366,7 +1366,7 @@
     },
     {
       "name": "autonomous-content-curation.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-content-curation.yml",
+      "path": "/workspace/.github/workflows/autonomous-content-curation.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1385,7 +1385,7 @@
     },
     {
       "name": "autonomous-content-scanner.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-content-scanner.yml",
+      "path": "/workspace/.github/workflows/autonomous-content-scanner.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1404,7 +1404,7 @@
     },
     {
       "name": "autonomous-deps-upgrade.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-deps-upgrade.yml",
+      "path": "/workspace/.github/workflows/autonomous-deps-upgrade.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1423,7 +1423,7 @@
     },
     {
       "name": "autonomous-external-links.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-external-links.yml",
+      "path": "/workspace/.github/workflows/autonomous-external-links.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1442,7 +1442,7 @@
     },
     {
       "name": "autonomous-image-optimizer.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-image-optimizer.yml",
+      "path": "/workspace/.github/workflows/autonomous-image-optimizer.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1461,7 +1461,7 @@
     },
     {
       "name": "autonomous-intelligence.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-intelligence.yml",
+      "path": "/workspace/.github/workflows/autonomous-intelligence.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1480,7 +1480,7 @@
     },
     {
       "name": "autonomous-keepalive.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-keepalive.yml",
+      "path": "/workspace/.github/workflows/autonomous-keepalive.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1499,7 +1499,7 @@
     },
     {
       "name": "autonomous-lighthouse.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-lighthouse.yml",
+      "path": "/workspace/.github/workflows/autonomous-lighthouse.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1518,7 +1518,7 @@
     },
     {
       "name": "autonomous-marketing-seo.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-marketing-seo.yml",
+      "path": "/workspace/.github/workflows/autonomous-marketing-seo.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1537,7 +1537,7 @@
     },
     {
       "name": "autonomous-minute-orchestrator.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-minute-orchestrator.yml",
+      "path": "/workspace/.github/workflows/autonomous-minute-orchestrator.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1556,7 +1556,7 @@
     },
     {
       "name": "autonomous-quick-fixes.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-quick-fixes.yml",
+      "path": "/workspace/.github/workflows/autonomous-quick-fixes.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1575,7 +1575,7 @@
     },
     {
       "name": "autonomous-release.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-release.yml",
+      "path": "/workspace/.github/workflows/autonomous-release.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1594,7 +1594,7 @@
     },
     {
       "name": "autonomous-self-tune.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-self-tune.yml",
+      "path": "/workspace/.github/workflows/autonomous-self-tune.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1613,7 +1613,7 @@
     },
     {
       "name": "autonomous-ultrafast.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-ultrafast.yml",
+      "path": "/workspace/.github/workflows/autonomous-ultrafast.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1632,7 +1632,7 @@
     },
     {
       "name": "autonomous-workflow-cleanup.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-workflow-cleanup.yml",
+      "path": "/workspace/.github/workflows/autonomous-workflow-cleanup.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1651,7 +1651,7 @@
     },
     {
       "name": "autonomous-workflow-watchdog.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-workflow-watchdog.yml",
+      "path": "/workspace/.github/workflows/autonomous-workflow-watchdog.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1670,7 +1670,7 @@
     },
     {
       "name": "branch-cleanup.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/branch-cleanup.yml",
+      "path": "/workspace/.github/workflows/branch-cleanup.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1689,7 +1689,7 @@
     },
     {
       "name": "branch-pruner.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/branch-pruner.yml",
+      "path": "/workspace/.github/workflows/branch-pruner.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1708,7 +1708,7 @@
     },
     {
       "name": "broken-images.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/broken-images.yml",
+      "path": "/workspace/.github/workflows/broken-images.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1727,7 +1727,7 @@
     },
     {
       "name": "ci-auto-heal.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-auto-heal.yml",
+      "path": "/workspace/.github/workflows/ci-auto-heal.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1746,7 +1746,7 @@
     },
     {
       "name": "ci-merge-main.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-merge-main.yml",
+      "path": "/workspace/.github/workflows/ci-merge-main.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1765,7 +1765,7 @@
     },
     {
       "name": "ci-quality.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ci-quality.yml",
+      "path": "/workspace/.github/workflows/ci-quality.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1784,7 +1784,7 @@
     },
     {
       "name": "cleanup-merged-branches.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cleanup-merged-branches.yml",
+      "path": "/workspace/.github/workflows/cleanup-merged-branches.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1803,7 +1803,7 @@
     },
     {
       "name": "cleanup.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cleanup.yml",
+      "path": "/workspace/.github/workflows/cleanup.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1822,7 +1822,7 @@
     },
     {
       "name": "cloud-deep-research.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-deep-research.yml",
+      "path": "/workspace/.github/workflows/cloud-deep-research.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1841,7 +1841,7 @@
     },
     {
       "name": "cloud-orchestrator-plus.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-orchestrator-plus.yml",
+      "path": "/workspace/.github/workflows/cloud-orchestrator-plus.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1860,26 +1860,7 @@
     },
     {
       "name": "codeql-analysis.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/codeql-analysis.yml",
-      "priority": "medium",
-      "resourceIntensity": "medium",
-      "estimatedDuration": 20,
-      "concurrentJobs": 6,
-      "runnerRequirements": {
-        "runner": "ubuntu-latest",
-        "size": "standard",
-        "special": []
-      },
-      "dependencies": [],
-      "triggers": [
-        "workflow_dispatch {}",
-        "schedule"
-      ],
-      "resourceScore": 114
-    },
-    {
-      "name": "codeql.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/codeql.yml",
+      "path": "/workspace/.github/workflows/codeql-analysis.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1898,7 +1879,7 @@
     },
     {
       "name": "commit-message-lint.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/commit-message-lint.yml",
+      "path": "/workspace/.github/workflows/commit-message-lint.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1917,7 +1898,7 @@
     },
     {
       "name": "commitlint.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/commitlint.yml",
+      "path": "/workspace/.github/workflows/commitlint.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1936,7 +1917,7 @@
     },
     {
       "name": "components-size-report.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/components-size-report.yml",
+      "path": "/workspace/.github/workflows/components-size-report.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1955,7 +1936,7 @@
     },
     {
       "name": "content-generation.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/content-generation.yml",
+      "path": "/workspace/.github/workflows/content-generation.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1974,7 +1955,7 @@
     },
     {
       "name": "crawl-normalize.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/crawl-normalize.yml",
+      "path": "/workspace/.github/workflows/crawl-normalize.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -1993,7 +1974,7 @@
     },
     {
       "name": "cursor-chat.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cursor-chat.yml",
+      "path": "/workspace/.github/workflows/cursor-chat.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2012,7 +1993,7 @@
     },
     {
       "name": "dead-code-report.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dead-code-report.yml",
+      "path": "/workspace/.github/workflows/dead-code-report.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2043,14 +2024,14 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
     },
     {
       "name": "docs-autogen.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/docs-autogen.yml",
+      "path": "/workspace/.github/workflows/docs-autogen.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2069,7 +2050,7 @@
     },
     {
       "name": "docs-intelligence.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/docs-intelligence.yml",
+      "path": "/workspace/.github/workflows/docs-intelligence.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2088,7 +2069,7 @@
     },
     {
       "name": "emergency-fix.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/emergency-fix.yml",
+      "path": "/workspace/.github/workflows/emergency-fix.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2107,7 +2088,7 @@
     },
     {
       "name": "ephemeral-branch-autorebase.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/ephemeral-branch-autorebase.yml",
+      "path": "/workspace/.github/workflows/ephemeral-branch-autorebase.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2126,7 +2107,7 @@
     },
     {
       "name": "exponential-ai-delegation.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/exponential-ai-delegation.yml",
+      "path": "/workspace/.github/workflows/exponential-ai-delegation.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2145,7 +2126,7 @@
     },
     {
       "name": "external-links.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/external-links.yml",
+      "path": "/workspace/.github/workflows/external-links.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2164,7 +2145,7 @@
     },
     {
       "name": "fast-auto-push-to-main.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/fast-auto-push-to-main.yml",
+      "path": "/workspace/.github/workflows/fast-auto-push-to-main.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2183,7 +2164,7 @@
     },
     {
       "name": "fast-lint-sync.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/fast-lint-sync.yml",
+      "path": "/workspace/.github/workflows/fast-lint-sync.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2202,7 +2183,7 @@
     },
     {
       "name": "front-scheduler.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/front-scheduler.yml",
+      "path": "/workspace/.github/workflows/front-scheduler.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2221,7 +2202,7 @@
     },
     {
       "name": "gitleaks.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/gitleaks.yml",
+      "path": "/workspace/.github/workflows/gitleaks.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2240,7 +2221,7 @@
     },
     {
       "name": "guardian-scheduler.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/guardian-scheduler.yml",
+      "path": "/workspace/.github/workflows/guardian-scheduler.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2259,7 +2240,7 @@
     },
     {
       "name": "labeler.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/labeler.yml",
+      "path": "/workspace/.github/workflows/labeler.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2278,7 +2259,7 @@
     },
     {
       "name": "monetization.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/monetization.yml",
+      "path": "/workspace/.github/workflows/monetization.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -2309,7 +2290,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 114
@@ -2367,7 +2348,7 @@
       "dependencies": [],
       "triggers": [
         "schedule",
-        "workflow_dispatch {}"
+        "workflow_dispatch null"
       ],
       "resourceScore": 114
     },
@@ -2385,7 +2366,7 @@
       },
       "dependencies": [],
       "triggers": [
-        "workflow_dispatch {}",
+        "workflow_dispatch null",
         "schedule"
       ],
       "resourceScore": 112
@@ -2711,7 +2692,7 @@
         "workflow_dispatch {}",
         "schedule"
       ],
-      "resourceScore": 112
+      "resourceScore": 111
     },
     {
       "name": "homepage-auto-advertiser.yml",
@@ -3512,8 +3493,65 @@
       "resourceScore": 111
     },
     {
+      "name": "test.yml",
+      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/test.yml",
+      "priority": "medium",
+      "resourceIntensity": "medium",
+      "estimatedDuration": 25,
+      "concurrentJobs": 6,
+      "runnerRequirements": {
+        "runner": "ubuntu-latest",
+        "size": "standard",
+        "special": []
+      },
+      "dependencies": [],
+      "triggers": [
+        "workflow_dispatch {}",
+        "schedule"
+      ],
+      "resourceScore": 109
+    },
+    {
+      "name": "test.yml",
+      "path": "/workspace/.github/workflows/test.yml",
+      "priority": "medium",
+      "resourceIntensity": "medium",
+      "estimatedDuration": 25,
+      "concurrentJobs": 6,
+      "runnerRequirements": {
+        "runner": "ubuntu-latest",
+        "size": "standard",
+        "special": []
+      },
+      "dependencies": [],
+      "triggers": [
+        "workflow_dispatch {}",
+        "schedule"
+      ],
+      "resourceScore": 109
+    },
+    {
+      "name": "test.yml",
+      "path": "/workspace/.github/workflows/test.yml",
+      "priority": "medium",
+      "resourceIntensity": "medium",
+      "estimatedDuration": 25,
+      "concurrentJobs": 6,
+      "runnerRequirements": {
+        "runner": "ubuntu-latest",
+        "size": "standard",
+        "special": []
+      },
+      "dependencies": [],
+      "triggers": [
+        "workflow_dispatch {}",
+        "schedule"
+      ],
+      "resourceScore": 109
+    },
+    {
       "name": "marketing-daily.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/marketing-daily.yml",
+      "path": "/workspace/.github/workflows/marketing-daily.yml",
       "priority": "medium",
       "resourceIntensity": "high",
       "estimatedDuration": 30,
@@ -3646,7 +3684,7 @@
     },
     {
       "name": "revenue-ideas-daily.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/revenue-ideas-daily.yml",
+      "path": "/workspace/.github/workflows/revenue-ideas-daily.yml",
       "priority": "medium",
       "resourceIntensity": "high",
       "estimatedDuration": 30,
@@ -4054,7 +4092,7 @@
     },
     {
       "name": "rapid-git-sync.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/rapid-git-sync.yml",
+      "path": "/workspace/.github/workflows/rapid-git-sync.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 30,
@@ -4072,8 +4110,27 @@
       "resourceScore": 104
     },
     {
+      "name": "codeql.yml",
+      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/codeql.yml",
+      "priority": "medium",
+      "resourceIntensity": "medium",
+      "estimatedDuration": 30,
+      "concurrentJobs": 8,
+      "runnerRequirements": {
+        "runner": "ubuntu-latest",
+        "size": "standard",
+        "special": []
+      },
+      "dependencies": [],
+      "triggers": [
+        "workflow_dispatch {}",
+        "schedule"
+      ],
+      "resourceScore": 102
+    },
+    {
       "name": "frontend-sync-continuous.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/frontend-sync-continuous.yml",
+      "path": "/workspace/.github/workflows/frontend-sync-continuous.yml",
       "priority": "medium",
       "resourceIntensity": "medium",
       "estimatedDuration": 30,
@@ -4087,7 +4144,7 @@
       "triggers": [
         "push",
         "schedule",
-        "workflow_dispatch null"
+        "workflow_dispatch {}"
       ],
       "resourceScore": 102
     },
@@ -4236,7 +4293,7 @@
     },
     {
       "name": "autonomous-deep-maintenance.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/autonomous-deep-maintenance.yml",
+      "path": "/workspace/.github/workflows/autonomous-deep-maintenance.yml",
       "priority": "low",
       "resourceIntensity": "medium",
       "estimatedDuration": 20,
@@ -4255,7 +4312,7 @@
     },
     {
       "name": "cloud-maintenance.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/cloud-maintenance.yml",
+      "path": "/workspace/.github/workflows/cloud-maintenance.yml",
       "priority": "low",
       "resourceIntensity": "medium",
       "estimatedDuration": 25,
@@ -4542,7 +4599,7 @@
     },
     {
       "name": "workflow-manager.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-manager.yml",
+      "path": "/workspace/.github/workflows/workflow-manager.yml",
       "priority": "medium",
       "resourceIntensity": "high",
       "estimatedDuration": 30,
@@ -4565,7 +4622,7 @@
     },
     {
       "name": "maintenance.yml",
-      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/maintenance.yml",
+      "path": "/workspace/.github/workflows/maintenance.yml",
       "priority": "low",
       "resourceIntensity": "high",
       "estimatedDuration": 25,
@@ -4590,7 +4647,7 @@
   "recommendations": [
     {
       "type": "warning",
-      "message": "Too many critical workflows (5/3)",
+      "message": "Too many critical workflows (4/3)",
       "suggestion": "Consider consolidating or deprioritizing some critical workflows"
     },
     {
@@ -4600,7 +4657,7 @@
     },
     {
       "type": "info",
-      "message": "High priority workflows may compete for resources (14)",
+      "message": "High priority workflows may compete for resources (13)",
       "suggestion": "Consider staggering high-priority workflow execution"
     }
   ]

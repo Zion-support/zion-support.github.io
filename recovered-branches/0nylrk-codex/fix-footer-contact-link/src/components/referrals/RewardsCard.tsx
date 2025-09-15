@@ -1,15 +1,26 @@
 
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSignBadge } from "lucide-react";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
+export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
+=======
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   if (isLoading) {
     return (
       <Card>
@@ -52,6 +63,10 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   }
 
   return (
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -62,7 +77,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
+<<<<<<< HEAD
+          {rewards.map((rewardindex) => (
+=======
           {rewards.map((reward, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div 
               key={reward.id}
               className={`flex justify-between items-start ${

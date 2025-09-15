@@ -2,158 +2,130 @@
 
 import React from 'react';
 
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'SoftwareApplication' | 'Product' | 'Article';
-  data: any;
-}
+const StructuredData2025 = () => {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
+    "foundingDate": "2020",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Innovation Solutions",
+        "description": "Cutting-edge AI technologies and automation solutions",
+        "url": "https://ziontechgroup.com/ai-innovation-showcase-2025"
+      },
+      {
+        "@type": "Offer",
+        "name": "Interactive Tech Demos",
+        "description": "Hands-on demonstrations of our latest technologies",
+        "url": "https://ziontechgroup.com/interactive-tech-demo-2025"
+      },
+      {
+        "@type": "Offer",
+        "name": "Ultimate Content Showcase",
+        "description": "Revolutionary AI content and digital transformation strategies",
+        "url": "https://ziontechgroup.com/ultimate-content-showcase-2025"
+      }
+    ]
+  };
 
-export default function StructuredData2025({ type, data }: StructuredDataProps) {
-  const getStructuredData = () => {
-    switch (type) {
-      case 'Organization':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Leading AI and technology solutions provider specializing in automation, cloud infrastructure, and digital transformation.",
-          "foundingDate": "2020",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "US"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-0123",
-            "contactType": "customer service",
-            "availableLanguage": "English"
-          },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup",
-            "https://github.com/ziontechgroup"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Solutions",
-              "description": "Comprehensive AI implementation and consulting services"
-            }
-          }
-        };
-
-      case 'WebSite':
-        return {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "AI and technology solutions for modern businesses",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        };
-
-      case 'SoftwareApplication':
-        return {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": data.name || "AI Tools Suite 2025",
-          "description": data.description || "Comprehensive suite of AI tools for business automation and optimization",
-          "url": "https://ziontechgroup.com/ai-tools",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web, Windows, macOS, Linux",
-          "offers": {
-            "@type": "Offer",
-            "price": data.price || "29",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": data.rating || "4.9",
-            "ratingCount": data.reviewCount || "150"
-          },
-          "author": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          }
-        };
-
-      case 'Product':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": data.name || "AI Automation Platform",
-          "description": data.description || "Advanced AI-powered automation platform for enterprise businesses",
-          "brand": {
-            "@type": "Brand",
-            "name": "Zion Tech Group"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": data.price || "99",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "Organization",
-              "name": "Zion Tech Group"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": data.rating || "4.8",
-            "ratingCount": data.reviewCount || "75"
-          }
-        };
-
-      case 'Article':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": data.title || "AI Tools Showcase 2025: Revolutionary Solutions for Modern Businesses",
-          "description": data.description || "Discover the latest AI tools and technologies transforming industries in 2025",
-          "author": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://ziontechgroup.com/logo.png"
-            }
-          },
-          "datePublished": data.datePublished || "2025-01-15",
-          "dateModified": data.dateModified || "2025-01-15",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ziontechgroup.com/ai-tools-showcase"
-          }
-        };
-
-      default:
-        return {};
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "description": "AI & Technology Solutions for Modern Businesses",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
   };
 
-  const structuredData = getStructuredData();
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI & Technology Solutions",
+    "description": "Comprehensive AIautomationand cloud infrastructure solutions for businesses",
+    "provider": {
+      "@type": "Organization",
+      "name": "Zion Tech Group"
+    },
+    "serviceType": "Technology Consulting",
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Innovation Solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automation Solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Infrastructure"
+          }
+        }
+      ]
+    }
+  };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema)
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
+    </>
   );
-}
+};
+
+export default StructuredData2025;

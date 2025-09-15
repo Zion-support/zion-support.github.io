@@ -82,7 +82,8 @@ export function BundleAnalyzer() {
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
           size,
           loadTime,
-          cached});
+          cached,
+        });
       });
 
       // Estimate gzipped size (roughly 70% of original)
@@ -94,7 +95,8 @@ export function BundleAnalyzer() {
         gzippedSize,
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
-        cacheHitRate: cacheHitRate * 100});
+        cacheHitRate: cacheHitRate * 100,
+      });
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks
     } catch (error) {

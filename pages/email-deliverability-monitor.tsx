@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 
 export default function EmailDeliverabilityMonitorPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'));
-  if (!service) return null;
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor')),
+  if (!service) return null,
 
   return (
     <Layout>
@@ -51,6 +51,6 @@ export default function EmailDeliverabilityMonitorPage() {
         </div>
       </div>
     </Layout>
-  );
+  ),
 }
 

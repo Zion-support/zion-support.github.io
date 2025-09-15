@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const AutomationStatus: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default AutomationStatus;
+export default AutomationStatus,

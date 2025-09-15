@@ -26,7 +26,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter,
   contentTypeFilter,
   setContentTypeFilter,
-  resetFilters}) => {
+  resetFilters,
+}) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
       <div className="relative flex-1">

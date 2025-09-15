@@ -1,252 +1,109 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
-import { Badge } from '../components/ui/badge.js';
-import { 
-  Home, 
-  ShoppingCart, 
-  FileText, 
-  MessageSquare, 
-  HelpCircle,
-  Globe,
-  Phone, 
-  Mail 
-} from 'lucide-react';
-
-interface SitemapSection {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  links: {
-    title: string;
-    href: string;
-    description?: string;
-  }[];
-}
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Map, ExternalLink } from 'lucide-react';
 
 const Sitemap: React.FC = () => {
-  const sitemapSections: SitemapSection[] = [
-    {
-      id: 'main',
-      title: 'Main Pages',
-      description: 'Core pages of our website',
-      icon: <Home className="h-5 w-5" />,
-      links: [
-        {
-          title: 'Home',
-          href: '/',
-          description: 'Our main landing page'
-        },
-        {
-          title: 'About',
-          href: '/about',
-          description: 'Learn about our company and mission'
-        },
-        {
-          title: 'Services',
-          href: '/services',
-          description: 'Explore our comprehensive service offerings'
-        },
-        {
-          title: 'Contact',
-          href: '/contact',
-          description: 'Get in touch with our team'
-        }
-      ]
-    },
-    {
-      id: 'services',
-      title: 'Services',
-      description: 'Our comprehensive service offerings',
-      icon: <ShoppingCart className="h-5 w-5" />,
-      links: [
-        {
-          title: 'AI Services',
-          href: '/ai-services',
-          description: 'Advanced AI-powered solutions'
-        },
-        {
-          title: 'IT Infrastructure',
-          href: '/it-infrastructure',
-          description: 'Robust IT infrastructure solutions'
-        },
-        {
-          title: 'Cloud Solutions',
-          href: '/cloud-solutions',
-          description: 'Scalable cloud computing services'
-        },
-        {
-          title: 'Cybersecurity',
-          href: '/cybersecurity',
-          description: 'Comprehensive security solutions'
-        }
-      ]
-    },
-    {
-      id: 'resources',
-      title: 'Resources',
-      description: 'Helpful resources and information',
-      icon: <FileText className="h-5 w-5" />,
-      links: [
-        {
-          title: 'Blog',
-          href: '/blog',
-          description: 'Latest insights and updates'
-        },
-        {
-          title: 'Case Studies',
-          href: '/case-studies',
-          description: 'Success stories and implementations'
-        },
-        {
-          title: 'Documentation',
-          href: '/documentation',
-          description: 'Technical documentation and guides'
-        },
-        {
-          title: 'FAQ',
-          href: '/faq',
-          description: 'Frequently asked questions'
-        }
-      ]
-    },
-    {
-      id: 'support',
-      title: 'Support',
-      description: 'Get help and support',
-      icon: <HelpCircle className="h-5 w-5" />,
-      links: [
-        {
-          title: 'Help Center',
-          href: '/help',
-          description: 'Comprehensive help and support'
-        },
-        {
-          title: 'Contact Support',
-          href: '/contact',
-          description: 'Reach out to our support team'
-        },
-        {
-          title: 'Status Page',
-          href: '/status',
-          description: 'Check system status and uptime'
-        }
-      ]
-    },
-    {
-      id: 'legal',
-      title: 'Legal',
-      description: 'Legal information and policies',
-      icon: <Globe className="h-5 w-5" />,
-      links: [
-        {
-          title: 'Privacy Policy',
-          href: '/privacy',
-          description: 'How we protect your data'
-        },
-        {
-          title: 'Terms of Service',
-          href: '/terms',
-          description: 'Terms and conditions'
-        },
-        {
-          title: 'Cookie Policy',
-          href: '/cookies',
-          description: 'Cookie usage and preferences'
-        }
-      ]
-    }
-  ];
+  const sitemapData = {
+    main: [
+      { name: 'Home', path: '/' },
+      { name: 'About', path: '/about' },
+      { name: 'Services', path: '/services' },
+      { name: 'Contact', path: '/contact' },
+      { name: 'Careers', path: '/careers' }
+    ],
+    services: [
+      { name: 'AI Services', path: '/services/ai' },
+      { name: 'Cloud Services', path: '/services/cloud' },
+      { name: 'Cybersecurity', path: '/services/cybersecurity' },
+      { name: 'IT Infrastructure', path: '/services/infrastructure' },
+      { name: 'Digital Transformation', path: '/services/transformation' },
+      { name: 'IT Consulting', path: '/services/consulting' }
+    ],
+    resources: [
+      { name: 'Blog', path: '/blog' },
+      { name: 'FAQ', path: '/faq' },
+      { name: 'Partners', path: '/partners' },
+      { name: 'Green IT', path: '/green-it' }
+    ],
+    legal: [
+      { name: 'Privacy Policy', path: '/privacy' },
+      { name: 'Terms of Service', path: '/terms' },
+      { name: 'Cookies', path: '/cookies' }
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Sitemap - Zion Tech Group"
-        description="Navigate our website easily with our comprehensive sitemap. Find all pages, services, and resources in one place."
-      />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Site Map
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Navigate our website easily with our comprehensive sitemap. 
-            Find all pages, services, and resources in one organized place.
-          </p>
-        </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+              <Map className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Sitemap
+            </h1>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              Navigate through all the pages and services available on our website.
+            </p>
+          </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sitemapSections.map((section) => (
-            <Card key={section.id} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="text-blue-400">
-                    {section.icon}
-                  </div>
-                  <CardTitle className="text-white text-xl">
-                    {section.title}
-                  </CardTitle>
-                </div>
-                <CardDescription className="text-gray-300">
-                  {section.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {section.links.map((link, index) => (
-                    <div key={index} className="group">
-                      <a
-                        href={link.href}
-                        className="block p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition-colors group-hover:bg-slate-600/50"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {Object.entries(sitemapData).map(([category, links], categoryIndex) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                className="bg-zion-slate/30 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20"
+              >
+                <h2 className="text-xl font-bold text-white mb-4 capitalize">
+                  {category}
+                </h2>
+                <ul className="space-y-3">
+                  {links.map((link, linkIndex) => (
+                    <motion.li
+                      key={linkIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: categoryIndex * 0.1 + linkIndex * 0.05 }}
+                    >
+                      <Link
+                        to={link.path}
+                        className="text-zion-cyan/80 hover:text-zion-cyan transition-colors duration-200 flex items-center gap-2 group"
                       >
-                        <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                          {link.title}
-                        </div>
-                        {link.description && (
-                          <div className="text-sm text-gray-400 mt-1">
-                            {link.description}
-                          </div>
-                        )}
-                      </a>
-                    </div>
+                        <span>{link.name}</span>
+                        <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                      </Link>
+                    </motion.li>
                   ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                </ul>
+              </motion.div>
+            ))}
+          </div>
 
-        <div className="mt-16 text-center">
-          <Card className="bg-slate-800/50 border-slate-700 max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Need Help Finding Something?
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Can&apos;t find what you&apos;re looking for? Our team is here to help you navigate our services and find the perfect solution for your needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  Contact Us
-                </a>
-                <a
-                  href="mailto:info@ziontechgroup.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-lg transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  Email Us
-                </a>
-              </div>
-            </CardContent>
-          </Card>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mt-16"
+          >
+            <p className="text-zion-cyan/60 text-sm">
+              Can't find what you're looking for?{' '}
+              <Link to="/contact" className="text-zion-cyan hover:text-zion-cyan/80 underline">
+                Contact us
+              </Link>{' '}
+              for assistance.
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

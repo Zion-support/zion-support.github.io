@@ -1,337 +1,278 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Award, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Target, 
-  ArrowRight,
-  Star,
+  Award
+  ArrowRight
+  Star
+  TrendingUp,
+  X,
   CheckCircle,
-  Building2,
-  Heart,
-  Car,
-  ShoppingCart,
-  GraduationCap,
-  Globe,
+  DollarSign,
+  Users,
+  Clock,
+  Target,
   BarChart3,
   Zap,
   Shield,
-  Sparkles,
-  Play
+  Globe
 } from 'lucide-react';
 
 const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
 
-  const stats = [
-    { value: '340%', label: 'Average ROI', icon: TrendingUp, color: 'text-green-400' },
-    { value: '$2.3M', label: 'Average Savings', icon: DollarSign, color: 'text-blue-400' },
-    { value: '99.2%', label: 'Success Rate', icon: Target, color: 'text-purple-400' },
-    { value: '500+', label: 'Companies', icon: Building2, color: 'text-yellow-400' }
-  ];
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
 
-  const industries = [
-    { name: 'Enterprise', icon: Building2, cases: '150+', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Healthcare', icon: Heart, cases: '80+', color: 'from-red-500 to-pink-500' },
-    { name: 'Retail', icon: ShoppingCart, cases: '120+', color: 'from-green-500 to-teal-500' },
-    { name: 'Education', icon: GraduationCap, cases: '60+', color: 'from-purple-500 to-indigo-500' },
-    { name: 'Automotive', icon: Car, cases: '40+', color: 'from-orange-500 to-red-500' }
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStat(prev => (prev + 1) % 4);
+    }2500);
+    return () => clearInterval(interval);
+  }[]);
 
-  const testimonials = [
-    {
-      quote: "The AI implementation exceeded our wildest expectations. We've never seen such dramatic improvements.",
-      author: "Sarah Johnson",
-      position: "CTO, Global Manufacturing Corp",
-      company: "Fortune 500",
-      result: "340% ROI"
+  const caseStudies = [
+    { 
+      title: 'FinTech Revolution'
+      roi: '500%'
+      icon: DollarSign
+      color: 'text-green-400',
+      company: 'PayFlow Solutions'
     },
-    {
-      quote: "This AI system has transformed how we diagnose patients. The accuracy and speed are remarkable.",
-      author: "Dr. Michael Chen",
-      position: "Chief Medical Officer, Metro Health",
-      company: "Healthcare",
-      result: "95% Accuracy"
+    { 
+      title: 'Healthcare AI'
+      roi: '400%'
+      icon: Shield
+      color: 'text-blue-400',
+      company: 'MediTech Innovations'
     },
-    {
-      quote: "The AI personalization engine has been a game-changer for our business. Revenue has never been higher.",
-      author: "Jennifer Martinez",
-      position: "VP of Technology, TechRetail",
-      company: "E-commerce",
-      result: "$50M Revenue"
+    { 
+      title: 'E-commerce Automation'
+      roi: '600%'
+      icon: Globe
+      color: 'text-purple-400',
+      company: 'ShopGlobal'
+    },
+    { 
+      title: 'Smart Manufacturing'
+      roi: '350%'
+      icon: Zap
+      color: 'text-orange-400',
+      company: 'AutoParts Pro'
     }
   ];
 
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate stats
-    const interval = setInterval(() => {
-      setCurrentStat(prev => (prev + 1) % stats.length);
-    }, 2000);
-    
-    return () => clearInterval(interval);
-  }, []);
+  const features = [
+    'Real Success Stories',
+    'Proven ROI Results',
+    'Industry Expertise',
+    'Client Testimonials'
+  ];
+
+  const stats = [
+    { label: '200+'value: 'Projects' },
+    { label: '450%'value: 'Avg ROI' },
+    { label: '96%'value: 'Satisfaction' }
+  ];
+
+  if (!isVisible || isDismissed) return null;
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-blue-900"
-    >
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <motion.div
-          animate={{ 
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ 
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{ 
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-            rotate: [360, 180, 0]
-          }}
-          transition={{ 
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full blur-xl"
-        />
-      </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.6ease: "easeOut" }}
+        className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+      >
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,92,246,0.2),transparent_50%)]"></div>
+        </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white"
-          >
-            {/* Badge */}
+        {/* Floating Success Icons */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(6)].map((_i) => (
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-6"
-            >
-              <Award className="w-4 h-4" />
-              Revolutionary Success Stories 2026
-            </motion.div>
+              key={i}
+              className="absolute w-2 h-2 bg-white rounded-full opacity-40"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0-250],
+                opacity: [0.40.80.4],
+                scale: [1.21],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
 
-            {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
-            >
-              Real Results from
-              <span className="block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-                Real Companies
-              </span>
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
-            >
-              Discover how leading companies across industries are transforming their businesses 
-              with our AI solutions. See the measurable impact and ROI they've achieved.
-            </motion.p>
-
-            {/* Key Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="grid grid-cols-2 gap-6 mb-8"
-            >
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                const isActive = currentStat === index;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ 
-                      opacity: isVisible ? 1 : 0, 
-                      scale: isVisible ? (isActive ? 1.05 : 1) : 0.8 
-                    }}
-                    transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                    className={`bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20 transition-all duration-300 ${
-                      isActive ? 'ring-2 ring-yellow-400' : ''
-                    }`}
-                  >
-                    <div className={`w-8 h-8 ${stat.color} rounded-full flex items-center justify-center mx-auto mb-2`}>
-                      <Icon className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:shadow-2xl transition-all duration-300"
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-between">
+            {/* Left Content */}
+            <div className="flex-1">
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="flex items-center space-x-3 mb-4"
               >
-                <Play className="w-5 h-5" />
-                View Success Stories
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-900 transition-all duration-300"
+                <Award className="w-6 h-6 text-yellow-300" />
+                <span className="text-sm font-medium bg-yellow-300 text-purple-900 px-3 py-1 rounded-full">
+                  SUCCESS STORIES
+                </span>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }}
+                className="text-2xl md:text-3xl font-bold mb-3"
               >
-                Download Case Studies
-              </motion.button>
-            </motion.div>
-          </motion.div>
+                🏆 Revolutionary Case Studies 2026
+              </motion.h2>
 
-          {/* Right Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-8"
-          >
-            {/* Industry Stats */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-white mb-4">Success Across Industries</h3>
-              {industries.map((industry, index) => {
-                const Icon = industry.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 20 }}
-                    transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 bg-gradient-to-r ${industry.color} rounded-full flex items-center justify-center`}>
-                          <Icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <div className="text-white font-medium">{industry.name}</div>
-                          <div className="text-gray-300 text-sm">{industry.cases} case studies</div>
-                        </div>
-                      </div>
-                      <div className="text-yellow-400 font-bold">{industry.cases}</div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+              <motion.p
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="text-lg text-purple-200 mb-6 max-w-2xl"
+              >
+                Real success stories from companies that achieved incredible results with our AI and automation solutions. 
+                See how they transformed their operations and achieved massive ROI.
+              </motion.p>
 
-            {/* Featured Testimonial */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                <span className="text-white font-medium">Featured Testimonial</span>
-              </div>
-              
-              <blockquote className="text-gray-300 italic mb-4">
-                "{testimonials[0].quote}"
-              </blockquote>
-              
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">
-                    {testimonials[0].author.split(' ').map(n => n[0]).join('')}
-                  </span>
+              {/* Rotating Case Study Display */}
+              <motion.div
+                key={currentStat}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center space-x-4 mb-6 p-4 bg-white bg-opacity-10 rounded-lg"
+              >
+                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                  <caseStudies[currentStat].icon className={`w-6 h-6 ${caseStudies[currentStat].color}`} />
                 </div>
                 <div>
-                  <div className="text-white font-medium">{testimonials[0].author}</div>
-                  <div className="text-gray-300 text-sm">{testimonials[0].position}</div>
+                  <div className="font-semibold text-lg">{caseStudies[currentStat].title}</div>
+                  <div className="text-sm text-purple-200">{caseStudies[currentStat].company}</div>
+                  <div className="text-2xl font-bold text-yellow-300">{caseStudies[currentStat].roi} ROI</div>
                 </div>
-                <div className="ml-auto text-right">
-                  <div className="text-yellow-400 font-bold">{testimonials[0].result}</div>
-                  <div className="text-gray-300 text-sm">{testimonials[0].company}</div>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Success Metrics */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <BarChart3 className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                <div className="text-white font-bold text-lg">500+</div>
-                <div className="text-gray-300 text-sm">Success Stories</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <Zap className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
-                <div className="text-white font-bold text-lg">98%</div>
-                <div className="text-gray-300 text-sm">Success Rate</div>
-              </div>
-            </motion.div>
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
+              >
+                {features.map((featureindex) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span className="text-sm text-purple-200">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
 
-            {/* Floating Action */}
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.6 }}
+                className="flex space-x-6 mb-6"
+              >
+                {stats.map((statindex) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">{stat.label}</div>
+                    <div className="text-sm text-purple-300">{stat.value}</div>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.7 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
+                  <BarChart3 className="w-5 h-5 mr-2" />
+                  View Case Studies
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300 flex items-center justify-center group">
+                  <Target className="w-5 h-5 mr-2" />
+                  Start Your Success Story
+                </button>
+              </motion.div>
+            </div>
+
+            {/* Right Content - Animated Success Icons */}
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.6, delay: 1.6 }}
-              className="text-center"
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="hidden lg:flex items-center space-x-4"
             >
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="inline-flex items-center gap-2 text-yellow-400 text-sm font-medium"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 15repeat: Infinityease: "linear" }}
+                className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
-                <Sparkles className="w-4 h-4" />
-                Scroll to explore success stories
+                <DollarSign className="w-10 h-10 text-green-400" />
+              </motion.div>
+              <motion.div
+                animate={{ y: [0-20] }}
+                transition={{ duration: 2repeat: Infinity }}
+                className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <TrendingUp className="w-8 h-8 text-yellow-400" />
+              </motion.div>
+              <motion.div
+                animate={{ scale: [1.31] }}
+                transition={{ duration: 2.5repeat: Infinity }}
+                className="w-18 h-18 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
+              >
+                <Award className="w-9 h-9 text-pink-400" />
               </motion.div>
             </motion.div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
-    </motion.section>
+        {/* Dismiss Button */}
+        <button
+          onClick={() => setIsDismissed(true)}
+          className="absolute top-4 right-4 p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-colors duration-300"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Pulse Effect */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-pink-400/20"
+          animate={{ opacity: [0.30] }}
+          transition={{ duration: 3repeat: Infinity }}
+        />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

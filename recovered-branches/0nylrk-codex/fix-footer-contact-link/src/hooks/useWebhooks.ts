@@ -74,7 +74,12 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error fetching webhooks",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setLoading(false);
     }
@@ -119,7 +124,12 @@ export function useWebhooks() {
       
       toast({
         title: "Webhook Created",
+<<<<<<< HEAD
         description: "Your webhook has been created successfully."});
+=======
+        description: "Your webhook has been created successfully.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       return result.webhook;
     } catch (err) {
@@ -128,7 +138,12 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error creating webhook",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setLoading(false);
     }
@@ -170,7 +185,12 @@ export function useWebhooks() {
       
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
+<<<<<<< HEAD
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
+=======
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`,
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       return result;
     } catch (err) {
@@ -179,7 +199,12 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error updating webhook",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setLoading(false);
     }
@@ -219,7 +244,12 @@ export function useWebhooks() {
       
       toast({
         title: "Webhook Deleted",
+<<<<<<< HEAD
         description: "The webhook has been deleted successfully."});
+=======
+        description: "The webhook has been deleted successfully.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       return result;
     } catch (err) {
@@ -228,7 +258,12 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error deleting webhook",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setLoading(false);
     }
@@ -278,7 +313,12 @@ export function useWebhooks() {
       
       toast({
         title: "Webhook Test Sent",
+<<<<<<< HEAD
         description: `Test completed with status: ${result.status} ${result.statusText}`});
+=======
+        description: `Test completed with status: ${result.status} ${result.statusText}`,
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       return result;
     } catch (err) {
@@ -287,7 +327,12 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error testing webhook",
+<<<<<<< HEAD
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred',
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setLoading(false);
     }

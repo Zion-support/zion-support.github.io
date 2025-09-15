@@ -1,400 +1,217 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Users, 
-  TrendingUp,
-  BookOpen,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  ArrowRight,
-  Brain,
-  Zap,
-  Globe,
-  Shield
-} from 'lucide-react';
 
 const InteractiveContentDiscoveryWidget2025 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
-  const [favorites, setFavorites] = useState(new Set());
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const categories = [
-    { id: 'all', label: 'All Content', icon: Globe },
-    { id: 'ai-innovations', label: 'AI Innovations', icon: Brain },
-    { id: 'case-studies', label: 'Case Studies', icon: Users },
-    { id: 'tutorials', label: 'Tutorials', icon: BookOpen },
-    { id: 'tools', label: 'Interactive Tools', icon: Zap },
-    { id: 'security', label: 'Security', icon: Shield }
+    { id: 'all', name: 'All Content', icon: '🔥', count: 156 },
+    { id: 'ai-revolution', name: 'AI Revolution', icon: '🤖', count: 45 },
+    { id: 'case-studies', name: 'Success Stories', icon: '📈', count: 32 },
+    { id: 'automation', name: 'Automation', icon: '⚡', count: 28 },
+    { id: 'quantum', name: 'Quantum AI', icon: '🔮', count: 18 },
+    { id: 'neural', name: 'Neural Networks', icon: '🧠', count: 15 },
+    { id: 'business', name: 'Business Intelligence', icon: '💼', count: 18 }
   ];
 
-  const contentItems = [
+  const featuredContent = [
     {
-      id: 'quantum-ai-fusion',
-      title: 'Quantum-AI Fusion Technology',
-      description: 'Revolutionary fusion of quantum computing and artificial intelligence',
-      category: 'ai-innovations',
-      type: 'article',
-      readTime: '8 min read',
-      views: '12.5K',
-      likes: 847,
-      trending: true,
+      title: "AI 2025 Ultimate Content Revolution",
+      description: "The breakthrough delivering 25,000% ROI and 1500% engagement increases",
+      category: "ai-revolution",
+      readTime: "8 min",
       featured: true,
-      tags: ['quantum', 'ai', 'breakthrough', 'technology'],
-      image: '/api/placeholder/400/250',
-      author: 'AI Research Team',
-      date: '2025-01-15'
+      href: "/content/ai-2025-ultimate-content-revolution-breakthrough",
+      stats: { roi: "25,000%", engagement: "1500%" }
     },
     {
-      id: 'techcorp-success-story',
-      title: 'TechCorp AI Transformation Success',
-      description: 'How TechCorp achieved 95% efficiency gains with AI automation',
-      category: 'case-studies',
-      type: 'case-study',
-      readTime: '6 min read',
-      views: '8.2K',
-      likes: 623,
-      trending: true,
-      featured: false,
-      tags: ['success-story', 'automation', 'efficiency', 'business'],
-      image: '/api/placeholder/400/250',
-      author: 'Success Stories Team',
-      date: '2025-01-12'
-    },
-    {
-      id: 'ai-security-guide',
-      title: 'AI Security Best Practices Guide',
-      description: 'Comprehensive guide to securing AI systems and preventing attacks',
-      category: 'tutorials',
-      type: 'guide',
-      readTime: '12 min read',
-      views: '15.3K',
-      likes: 1204,
-      trending: false,
+      title: "25,000% ROI Success Story",
+      description: "How a Fortune 100 company achieved unprecedented results",
+      category: "case-studies",
+      readTime: "12 min",
       featured: true,
-      tags: ['security', 'ai', 'best-practices', 'guide'],
-      image: '/api/placeholder/400/250',
-      author: 'Security Team',
-      date: '2025-01-10'
+      href: "/case-studies/ai-2025-content-revolution-25000-roi-success-story",
+      stats: { roi: "25,000%", cost: "98% reduction" }
     },
     {
-      id: 'neural-interface-demo',
-      title: 'Neural Interface Interactive Demo',
-      description: 'Hands-on demonstration of brain-computer interface technology',
-      category: 'tools',
-      type: 'interactive',
-      readTime: '15 min demo',
-      views: '25.7K',
-      likes: 1892,
-      trending: true,
-      featured: true,
-      tags: ['neural-interface', 'demo', 'interactive', 'technology'],
-      image: '/api/placeholder/400/250',
-      author: 'Tech Demo Team',
-      date: '2025-01-08'
-    },
-    {
-      id: 'ai-trends-2025',
-      title: 'AI Trends 2025: Ultimate Predictions',
-      description: 'Comprehensive analysis of AI trends that will shape 2025',
-      category: 'ai-innovations',
-      type: 'article',
-      readTime: '10 min read',
-      views: '18.9K',
-      likes: 1456,
-      trending: true,
+      title: "Quantum AI Business Transformation",
+      description: "Revolutionary quantum computing applications in business",
+      category: "quantum",
+      readTime: "10 min",
       featured: false,
-      tags: ['trends', 'predictions', '2025', 'future'],
-      image: '/api/placeholder/400/250',
-      author: 'Trends Analysis Team',
-      date: '2025-01-05'
+      href: "/content/ai-2025-quantum-ai-business-transformation",
+      stats: { performance: "1000x faster" }
     },
     {
-      id: 'automation-roi-calculator',
-      title: 'AI Automation ROI Calculator',
-      description: 'Calculate the return on investment for AI automation projects',
-      category: 'tools',
-      type: 'calculator',
-      readTime: '5 min use',
-      views: '9.4K',
-      likes: 567,
-      trending: false,
+      title: "Neural Interface Revolution",
+      description: "The future of human-computer interaction",
+      category: "neural",
+      readTime: "7 min",
       featured: false,
-      tags: ['calculator', 'roi', 'automation', 'business'],
-      image: '/api/placeholder/400/250',
-      author: 'Business Tools Team',
-      date: '2025-01-03'
+      href: "/content/ai-2025-neural-interface-revolution",
+      stats: { accuracy: "99.8%" }
     }
   ];
 
-  const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredContent = featuredContent.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
   });
-
-  const sortedContent = [...filteredContent].sort((a, b) => {
-    switch (sortBy) {
-      case 'trending':
-        return b.likes - a.likes;
-      case 'newest':
-        return new Date(b.date) - new Date(a.date);
-      case 'popular':
-        return parseInt(b.views.replace('K', '')) - parseInt(a.views.replace('K', ''));
-      default:
-        return 0;
-    }
-  });
-
-  const toggleFavorite = (id) => {
-    const newFavorites = new Set(favorites);
-    if (newFavorites.has(id)) {
-      newFavorites.delete(id);
-    } else {
-      newFavorites.add(id);
-    }
-    setFavorites(newFavorites);
-  };
-
-  const getTypeIcon = (type) => {
-    switch (type) {
-      case 'article': return BookOpen;
-      case 'case-study': return Users;
-      case 'guide': return BookOpen;
-      case 'interactive': return Play;
-      case 'calculator': return TrendingUp;
-      default: return BookOpen;
-    }
-  };
-
-  const getCategoryIcon = (category) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className={`py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-medium mb-4"
-          >
-            <Search className="w-4 h-4 mr-2" />
-            Interactive Content Discovery
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
-          >
-            Discover Amazing
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI Content</span>
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Explore our comprehensive library of AI innovations, success stories, tutorials, and interactive tools. 
-            Find exactly what you need with our intelligent discovery system.
-          </motion.p>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-bold text-white">🔍 INTERACTIVE CONTENT DISCOVERY</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary
+            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              AI Content
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our comprehensive library of breakthrough content, case studies, and success stories 
+            that are transforming businesses worldwide.
+          </p>
         </div>
 
-        {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="bg-white rounded-2xl p-8 shadow-lg mb-12"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search content..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+        {/* Search and Filter */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Search Bar */}
+            <div className="flex-1">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search content, case studies, guides..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 pl-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                />
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+              </div>
             </div>
-
+            
             {/* Category Filter */}
-            <div className="relative">
-              <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="lg:w-80">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+                className="w-full px-6 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
               >
                 {categories.map(category => (
                   <option key={category.id} value={category.id}>
-                    {category.label}
+                    {category.icon} {category.name} ({category.count})
                   </option>
                 ))}
               </select>
             </div>
-
-            {/* Sort */}
-            <div className="relative">
-              <TrendingUp className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
-              >
-                <option value="trending">Trending</option>
-                <option value="newest">Newest</option>
-                <option value="popular">Most Popular</option>
-              </select>
-            </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Category Pills */}
+        <div className="flex flex-wrap gap-3 mb-12 justify-center">
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+              }`}
+            >
+              {category.icon} {category.name} ({category.count})
+            </button>
+          ))}
+        </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {sortedContent.map((item, index) => {
-              const TypeIcon = getTypeIcon(item.type);
-              const CategoryIcon = getCategoryIcon(item.category);
-              const isFavorite = favorites.has(item.id);
+          {filteredContent.map((item, index) => (
+            <div
+              key={index}
+              className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-purple-500 ring-opacity-50' : ''
+              }`}
+            >
+              {item.featured && (
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                  FEATURED
+                </div>
+              )}
               
-              return (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden"
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">
+                    {categories.find(cat => cat.id === item.category)?.name}
+                  </span>
+                  <span className="text-sm text-gray-500">{item.readTime}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+
+                {/* Stats */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {Object.entries(item.stats).map(([key, value]) => (
+                    <span key={key} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">
+                      {key}: {value}
+                    </span>
+                  ))}
+                </div>
+                
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:translate-x-1 transform duration-200"
                 >
-                  {/* Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100">
-                    {item.featured && (
-                      <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
-                      </div>
-                    )}
-                    {item.trending && (
-                      <div className="absolute top-4 right-4 bg-gradient-to-r from-red-400 to-pink-400 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Trending
-                      </div>
-                    )}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <CategoryIcon className="w-16 h-16 text-blue-500 opacity-50" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-2">
-                        <TypeIcon className="w-5 h-5 text-blue-500" />
-                        <span className="text-sm text-gray-500 capitalize">{item.type}</span>
-                      </div>
-                      <button
-                        onClick={() => toggleFavorite(item.id)}
-                        className={`p-2 rounded-full transition-colors duration-300 ${
-                          isFavorite 
-                            ? 'text-red-500 bg-red-50' 
-                            : 'text-gray-400 hover:text-red-500 hover:bg-red-50'
-                        }`}
-                      >
-                        <Heart className={`w-5 h-5 ${isFavorite ? 'fill-current' : ''}`} />
-                      </button>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-gray-600 mb-4 line-clamp-2">
-                      {item.description}
-                    </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(0, 3).map(tag => (
-                        <span key={tag} className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Stats */}
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {item.readTime}
-                        </div>
-                        <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
-                          {item.views}
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        {item.likes}
-                      </div>
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href={`/content/${item.id}`}
-                        className="flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform duration-300"
-                      >
-                        {item.type === 'interactive' ? 'Try Demo' : 'Read More'}
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                      <div className="flex items-center space-x-2">
-                        <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-300">
-                          <Share2 className="w-4 h-4" />
-                        </button>
-                        <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-300">
-                          <Download className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
+                  Read More
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Load More */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-            Load More Content
-          </button>
-        </motion.div>
+        {/* Results Summary */}
+        <div className="text-center mt-12">
+          <p className="text-lg text-gray-600 mb-6">
+            Showing {filteredContent.length} of {featuredContent.length} featured content pieces
+          </p>
+          <Link
+            href="/content"
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Explore All Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

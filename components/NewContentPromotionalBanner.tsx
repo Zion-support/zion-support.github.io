@@ -19,8 +19,8 @@ const NewContentPromotionalBanner = () => {
         >
           <motion.div
             animate={{ 
-              scale: [1, 1.05, 1],
-              rotate: [0, 1, -1, 0]
+              scale: [1.051],
+              rotate: [01-10]
             }}
             transition={{ 
               duration: 4,
@@ -39,14 +39,14 @@ const NewContentPromotionalBanner = () => {
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100">
-            🚀 Revolutionary AI breakthroughs, quantum computing solutions, and autonomous business systems are now live!
+            🚀 Revolutionary AI breakthroughsquantum computing solutionsand autonomous business systems are now live!
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30"
             >
               <div className="text-3xl mb-3">🤖</div>
@@ -57,7 +57,7 @@ const NewContentPromotionalBanner = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30"
             >
               <div className="text-3xl mb-3">⚛️</div>
@@ -66,9 +66,9 @@ const NewContentPromotionalBanner = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0x: 30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30"
             >
               <div className="text-3xl mb-3">🧠</div>
@@ -78,9 +78,9 @@ const NewContentPromotionalBanner = () => {
           </div>
           
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={{ opacity: 0scale: 0.9 }}
+            animate={{ opacity: 1scale: 1 }}
+            transition={{ duration: 0.6delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link 
@@ -101,7 +101,7 @@ const NewContentPromotionalBanner = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+            transition={{ duration: 0.6delay: 1.0 }}
             className="mt-8 text-lg text-blue-200 font-semibold"
           >
             ⚡ Limited Time: Get 50% off on all premium AI solutions!

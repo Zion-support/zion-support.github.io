@@ -13,7 +13,8 @@ export function ContactSection() {
     name: "",
     email: "",
     subject: "",
-    message: ""});
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{
@@ -38,7 +39,8 @@ export function ContactSection() {
       name: z.string().min(2, "Name is required"),
       email: z.string().email("Enter a valid email"),
       subject: z.string().min(2, "Subject is required"),
-      message: z.string().min(10, "Message must be at least 10 characters")});
+      message: z.string().min(10, "Message must be at least 10 characters"),
+    });
 
     const result = schema.safeParse(formData);
     if (!result.success) {
@@ -52,7 +54,8 @@ export function ContactSection() {
       toast({
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -62,7 +65,8 @@ export function ContactSection() {
     fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)})
+      body: JSON.stringify(formData),
+    })
       .then(async (res) => {
         setIsSubmitting(false);
         if (!res.ok) {
@@ -71,7 +75,8 @@ export function ContactSection() {
         }
         toast({
           title: "Message Sent",
-          description: "We've received your message and will get back to you soon."});
+          description: "We've received your message and will get back to you soon.",
+        });
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 2000);
         setFormData({ name: "", email: "", subject: "", message: "" });
@@ -81,7 +86,8 @@ export function ContactSection() {
         toast({
           title: "Submission Error",
           description: err.message,
-          variant: "destructive"});
+          variant: "destructive",
+        });
       });
   };
 

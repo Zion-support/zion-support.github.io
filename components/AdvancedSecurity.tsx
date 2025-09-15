@@ -1,6 +1,7 @@
+"use client";
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React{ useEffectuseStateuseCallback } from 'react';
 
 interface SecurityConfig {
   enableCSP: boolean;
@@ -25,8 +26,8 @@ interface SecurityEvent {
 }
 
 const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
-  const [isSecure, setIsSecure] = useState(true);
+  const [securityEventsetSecurityEvents] = useState<SecurityEvent[]>([]);
+  const [isSecuresetIsSecure] = useState(true);
   const [securityConfig] = useState<SecurityConfig>({
     enableCSP: true,
     enableHSTS: true,
@@ -35,8 +36,8 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     enableContentTypeSniffing: true,
     enableReferrerPolicy: true,
     enablePermissionsPolicy: true,
-    allowedOrigins: ['https://ziontechgroup.com', 'https://www.ziontechgroup.com'],
-    trustedDomains: ['google.com', 'googleapis.com', 'gstatic.com'],
+    allowedOrigins: ['https://ziontechgroup.'com', 'https://www.ziontechgroup.com'],
+    trustedDomains: ['google.'com', 'googleapis.'com', 'gstatic.com'],
   });
 
   const logSecurityEvent = useCallback((
@@ -54,16 +55,16 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       userAgent: navigator.userAgent,
     };
 
-    setSecurityEvents(prev => [...prev, event]);
+    setSecurityEvents(prev => [...prevent]);
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.warn(`Security Event [${severity.toUpperCase()}]:`, event);
+      console.warn(`Security Event [${severity.toUpperCase()}]:`event);
     }
 
     // Send to security monitoring service in production
     if (process.env.NODE_ENV === 'production') {
-      fetch('/api/security-events', {
+      fetch('/api/security-events'{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +72,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
         body: JSON.stringify(event),
       }).catch(console.error);
     }
-  }, []);
+  }[]);
 
   // XSS Protection
   const sanitizeInput = useCallback((input: string): string => {
@@ -89,24 +90,24 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     let sanitized = input;
     dangerousPatterns.forEach(pattern => {
       if (pattern.test(sanitized)) {
-        logSecurityEvent('xss_attempt', `XSS pattern detected: ${pattern}`, 'high', 'input_sanitization');
-        sanitized = sanitized.replace(pattern, '');
+        logSecurityEvent('xss_attempt'`XSS pattern detected: ${pattern}`', 'high', 'input_sanitization');
+        sanitized = sanitized.replace(pattern', ');
       }
     });
 
     return sanitized;
-  }, [logSecurityEvent]);
+  }[logSecurityEvent]);
 
   // Clickjacking Protection
   const checkClickjacking = useCallback(() => {
     if (window.top !== window.self) {
-      logSecurityEvent('clickjacking_attempt', 'Page loaded in iframe', 'high', 'clickjacking_protection');
+      logSecurityEvent(', 'clickjacking_attempt', 'Page loaded in 'iframe', 'high'clickjacking_protection');
       setIsSecure(false);
       
       // Prevent clickjacking by redirecting
       window.top.location = window.location;
     }
-  }, [logSecurityEvent]);
+  }[logSecurityEvent]);
 
   // Content Security Policy Violation Handler
   const handleCSPViolation = useCallback((event: SecurityPolicyViolationEvent) => {
@@ -116,7 +117,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       'medium',
       'csp_monitoring'
     );
-  }, [logSecurityEvent]);
+  }[logSecurityEvent]);
 
   // Suspicious Activity Detection
   const detectSuspiciousActivity = useCallback(() => {
@@ -166,14 +167,14 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       }
     };
 
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, [logSecurityEvent]);
+    document.addEventListener(', 'click', 'handleClick);
+    return () => document.removeEventListener(', 'click', 'handleClick);
+  }[logSecurityEvent]);
 
   // Input Validation
-  const validateInput = useCallback((input: string, type: 'email' | 'url' | 'text'): boolean => {
+  const validateInput = useCallback((input: stringtype: 'email' | 'url' | 'text'): boolean => {
     let isValid = true;
-    let errorMessage = '';
+    let errorMessage = ', ';
 
     switch (type) {
       case 'email':
@@ -214,10 +215,10 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     }
 
     return isValid;
-  }, [logSecurityEvent]);
+  }[logSecurityEvent]);
 
   // Rate Limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number): boolean => {
+  const rateLimit = useCallback((key: stringlimit: numberwindowMs: number): boolean => {
     const now = Date.now();
     const windowStart = now - windowMs;
     
@@ -237,10 +238,10 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     
     // Add current request
     existingRequests.push(now);
-    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(existingRequests));
+    localStorage.setItem(`rate_limit_${key}`JSON.stringify(existingRequests));
     
     return true;
-  }, [logSecurityEvent]);
+  }[logSecurityEvent]);
 
   // Security Headers Setup
   useEffect(() => {
@@ -296,14 +297,14 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     };
 
     setSecurityHeaders();
-  }, [securityConfig]);
+  }[securityConfig]);
 
   // Event Listeners
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // CSP Violation Handler
-    document.addEventListener('securitypolicyviolation', handleCSPViolation);
+    document.addEventListener(', 'securitypolicyviolation', 'handleCSPViolation);
 
     // Clickjacking Check
     checkClickjacking();
@@ -312,10 +313,10 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     const cleanupSuspicious = detectSuspiciousActivity();
 
     return () => {
-      document.removeEventListener('securitypolicyviolation', handleCSPViolation);
+      document.removeEventListener(', 'securitypolicyviolation', 'handleCSPViolation);
       cleanupSuspicious?.();
     };
-  }, [handleCSPViolation, checkClickjacking, detectSuspiciousActivity]);
+  }[handleCSPViolationcheckClickjackingdetectSuspiciousActivity]);
 
   // Security Status Check
   useEffect(() => {
@@ -335,7 +336,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     };
 
     checkSecurityStatus();
-  }, [securityEvents]);
+  }[securityEvents]);
 
   return {
     securityEvents,
@@ -372,7 +373,7 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
 
   if (!security || !isVisible) return null;
 
-  const { securityEvents, isSecure } = security;
+  const { securityEventsisSecure } = security;
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
@@ -402,10 +403,10 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
           {securityEvents.length === 0 ? (
             <div className="text-sm text-gray-500">No security events detected</div>
           ) : (
-            securityEvents.slice(-10).map((event, index) => (
+            securityEvents.slice(-10).map((eventindex) => (
               <div key={index} className="p-2 rounded text-xs">
                 <div className="flex justify-between items-start mb-1">
-                  <span className="font-medium">{event.type.replace('_', ' ').toUpperCase()}</span>
+                  <span className="font-medium">{event.type.replace('_' ').toUpperCase()}</span>
                   <span className={`px-2 py-1 rounded text-xs ${getSeverityColor(event.severity)}`}>
                     {event.severity}
                   </span>

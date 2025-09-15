@@ -4,7 +4,12 @@ import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils
 
 const variantStyles = {
   info: { background: '#1e3a8a', color: '#fff' },
+<<<<<<< HEAD
   error: { background: '#7f1d1d', color: '#fff' }};
+=======
+  error: { background: '#7f1d1d', color: '#fff' },
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Deduplication settings
 const DEDUPE_DELAY = 3000; // 3 seconds
@@ -45,7 +50,12 @@ const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
     return globalToastManager.showToast({
       message: props,
+<<<<<<< HEAD
       type: ToastType.INFO});
+=======
+      type: ToastType.INFO,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   const { 
@@ -85,7 +95,12 @@ const toastAdapter = (props: ToastProps | string) => {
     duration,
     persistent,
     action,
+<<<<<<< HEAD
     onRetry});
+=======
+    onRetry,
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 };
 
 // Convenience methods that use the global toast manager
@@ -138,6 +153,11 @@ export const useToast = () => ({
   networkError: showToast.networkError,
   authError: showToast.authError,
   validationError: showToast.validationError,
+<<<<<<< HEAD
   criticalError: showToast.criticalError});
+=======
+  criticalError: showToast.criticalError,
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 export const toast = toastAdapter;

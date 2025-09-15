@@ -605,7 +605,8 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
-  'zoom-out': LucideZoomOut};
+  'zoom-out': LucideZoomOut,
+};
 
 export const Icon: React.FC<IconProps> = ({
   name,

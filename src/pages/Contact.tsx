@@ -12,7 +12,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
@@ -23,7 +24,8 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''});
+    message: '',
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{
     name?: string;
@@ -49,7 +51,8 @@ export default function Contact() {
     const schema = z.object({
       name: z.string().min(2, 'Name must be at least 2 characters'),
       email: z.string().email('Invalid email address'),
-      message: z.string().min(10, 'Message must be at least 10 characters')});
+      message: z.string().min(10, 'Message must be at least 10 characters'),
+    });
 
     const result = schema.safeParse(formData);
     logInfo('[ContactForm] Zod validation result:', { data: result });
@@ -67,7 +70,8 @@ export default function Contact() {
       toast({
         title: 'Form Validation Error',
         description: validationErrorMsg,
-        variant: 'destructive'});
+        variant: 'destructive',
+      });
       return;
     }
 
@@ -79,7 +83,8 @@ export default function Contact() {
       fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)})
+        body: JSON.stringify(formData),
+      })
         .then(async (res) => {
           logInfo('[ContactForm] API response status:', { data: res.status });
           const responseBody = await res.text(); // Read as text first to avoid JSON parse error if not JSON
@@ -106,7 +111,8 @@ export default function Contact() {
           toast({
             title: 'Message Sent',
             description:
-              "We've received your message and will get back to you soon."});
+              "We've received your message and will get back to you soon.",
+          });
           setSubmitted(true);
           setTimeout(() => setSubmitted(false), 2000);
           setFormData({ name: '', email: '', message: '' });
@@ -118,7 +124,8 @@ export default function Contact() {
           toast({
             title: 'Submission Error',
             description: err.message || 'An unexpected error occurred during submission.',
-            variant: 'destructive'});
+            variant: 'destructive',
+          });
         });
     } catch (error) {
       // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
@@ -128,7 +135,8 @@ export default function Contact() {
       toast({
         title: 'Critical Submission Error',
         description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
-        variant: 'destructive'});
+        variant: 'destructive',
+      });
     }
   };
 
@@ -140,9 +148,12 @@ export default function Contact() {
         {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'},
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify({
-            messages: [{ role: 'user', content: message }]})},
+            messages: [{ role: 'user', content: message }],
+          }),
+        },
       );
 
       if (!response.ok) {
@@ -156,7 +167,8 @@ export default function Contact() {
         title: 'Chat Error',
         description:
           'There was an error communicating with our AI assistant. Please try again.',
-        variant: 'destructive'});
+        variant: 'destructive',
+      });
       return Promise.resolve();
     }
   };
@@ -166,12 +178,15 @@ export default function Contact() {
       name: 'Headquarters',
       address: '123 Tech Avenue, San Francisco, CA 94105',
       phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com'},
+      email: 'commercial@ziontechgroup.com',
+    },
     {
       name: 'East Coast Office',
       address: '456 Innovation Street, New York, NY 10001',
       phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com'}];
+      email: 'commercial@ziontechgroup.com',
+    },
+  ];
 
   return (
     <>
@@ -433,14 +448,16 @@ export default function Contact() {
             id: 'ai-assistant',
             name: 'AI Assistant',
             avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Support Bot'}}
+            role: 'Support Bot',
+          }}
           onSendMessage={handleSendMessage}
           starterQuestions={[
             'How do I list a product?',
             'What services does Zion offer?',
             'Where can I view pricing plans?',
             'How do I create an account?',
-            'Can I talk to a human representative?']}
+            'Can I talk to a human representative?',
+          ]}
         />
       )}
     </>

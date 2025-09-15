@@ -14,7 +14,11 @@ axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontec
 export const globalAxiosErrorHandler = (error: unknown) => {
   const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined;
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
+<<<<<<< HEAD
     toast.error('Server returned HTML instead of JSON');
+=======
+    showError('html-error', 'Server returned HTML instead of JSON');
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {};
@@ -47,7 +51,12 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     '/telemetry',
     'supabase.co',
     'googleapis.com',
+<<<<<<< HEAD
     'github.com/api'];
+=======
+    'github.com/api',
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Check if URL should fail silently
   const shouldFailSilently = (url: string): boolean => {
@@ -85,8 +94,12 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 
   // Only show error toast if it's a user-facing error
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
+<<<<<<< HEAD
     const message = typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response && typeof (error.response as { data?: unknown }).data === 'object' && (error.response as { data?: unknown }).data && 'message' in (error.response as { data?: unknown }).data ? ((error.response as { data?: unknown }).data as { message?: string }).message : 'Something went wrong';
     toast.error(message || 'Something went wrong');
+=======
+    showApiError(error);
+>>>>>>> origin/auto/autonomy-17186719616
   } else {
     // Log background errors without showing toast
     logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined });
@@ -104,7 +117,12 @@ axios.interceptors.response.use(
 const API_BASE = axios.defaults.baseURL;
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL || '/api',
+<<<<<<< HEAD
   withCredentials: true});
+=======
+  withCredentials: true,
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;

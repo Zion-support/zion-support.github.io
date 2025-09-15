@@ -9,7 +9,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 interface FavoriteButtonProps {
   itemId: string;
@@ -36,7 +37,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
       description: wasWishlisted 
         ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"});
+        : "Item has been added to your wishlist",
+    });
   };
 
   const active = isWishlisted(itemId);

@@ -30,7 +30,8 @@ const defaultModules: DeployFormState['modules'] = {
   'book-builder': true,
   'roadmap-whitepaper': true,
   'api-docs-wiki': true,
-  'zion-brain': true};
+  'zion-brain': true,
+};
 
 const defaultBonus: DeployFormState['bonusModules'] = {
   'global-map': false,
@@ -38,7 +39,8 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   'referral-ambassadors': false,
   'grant-portal': false,
   trailer: false,
-  'book-store': false};
+  'book-store': false,
+};
 
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
@@ -49,7 +51,8 @@ const InitPage: NextPage = () => {
     governanceMode: 'Hybrid',
     branding: { logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' },
     modules: defaultModules,
-    bonusModules: defaultBonus});
+    bonusModules: defaultBonus,
+  });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
@@ -57,7 +60,8 @@ const InitPage: NextPage = () => {
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState((prev) => ({
       ...prev,
-      [group]: { ...prev[group], [key]: !prev[group][key] }}));
+      [group]: { ...prev[group], [key]: !prev[group][key] },
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -69,7 +73,8 @@ const InitPage: NextPage = () => {
       const res = await fetch('/api/deploy/genesis', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(state)});
+        body: JSON.stringify(state),
+      });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error || 'Deployment failed');
       setResult(json);

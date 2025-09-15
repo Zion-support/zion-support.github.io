@@ -122,7 +122,8 @@ export default function ForumPostPage() {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to vote on posts"});
+        description: "Please sign in to vote on posts",
+      });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
@@ -131,14 +132,16 @@ export default function ForumPostPage() {
     setPost({ ...post, upvotes: post.upvotes + 1 });
     toast({
       title: "Vote recorded",
-      description: "You upvoted this post"});
+      description: "You upvoted this post",
+    });
   };
 
   const handleDownvote = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to vote on posts"});
+        description: "Please sign in to vote on posts",
+      });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
@@ -147,14 +150,16 @@ export default function ForumPostPage() {
     setPost({ ...post, downvotes: post.downvotes + 1 });
     toast({
       title: "Vote recorded",
-      description: "You downvoted this post"});
+      description: "You downvoted this post",
+    });
   };
 
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to reply"});
+        description: "Please sign in to reply",
+      });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
@@ -179,7 +184,8 @@ export default function ForumPostPage() {
     
     toast({
       title: "Reply posted",
-      description: "Your reply has been added to the discussion"});
+      description: "Your reply has been added to the discussion",
+    });
   };
 
   const handleMarkAsAnswer = (replyId: string) => {
@@ -204,14 +210,16 @@ export default function ForumPostPage() {
     
     toast({
       title: "Answer marked",
-      description: "The reply has been marked as the accepted answer"});
+      description: "The reply has been marked as the accepted answer",
+    });
   };
 
   const handleReportPost = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to report content"});
+        description: "Please sign in to report content",
+      });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
@@ -219,7 +227,8 @@ export default function ForumPostPage() {
     
     toast({
       title: "Report submitted",
-      description: "A moderator will review this content"});
+      description: "A moderator will review this content",
+    });
   };
 
   const handlePinPost = () => {
@@ -229,7 +238,8 @@ export default function ForumPostPage() {
     
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
-      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
+      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top",
+    });
   };
 
   const handleLockPost = () => {
@@ -239,7 +249,8 @@ export default function ForumPostPage() {
     
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled",
+    });
   };
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });

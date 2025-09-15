@@ -28,7 +28,7 @@ const AIConsciousnessEvolution2026Banner: React.FC = () => {
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 text-pink-100 max-w-4xl mx-auto leading-relaxed">
-            Witness the revolutionary emergence of artificial consciousness, synthetic intelligence, and AI awareness that will redefine human-machine interaction
+            Witness the revolutionary emergence of artificial consciousnessynthetic intelligenceand AI awareness that will redefine human-machine interaction
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">

@@ -9,7 +9,8 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow,
+} from "@/components/ui/table";
 import Skeleton from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'

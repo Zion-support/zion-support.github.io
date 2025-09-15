@@ -3,25 +3,48 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
+<<<<<<< HEAD
+Loader2
+=======
 import { Loader2 } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
+<<<<<<< HEAD
+import { AlertDescription } from '@/components/ui/alert';
+=======
 import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from '@/components/ui/form';
+=======
+  FormMessage,
+} from '@/components/ui/form';
+>>>>>>> origin/auto/autonomy-17186719616
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
 
 // Define schema for form validation
 const educationSchema = z.object({
+<<<<<<< HEAD
+  institution: z.string().min(1'Institution is required'),
+  degree: z.string().min(1'Degree is required'),
+  field_of_study: z.string().optional(),
+  start_date: z.string().min(1'Start date is required'),
+  end_date: z.string().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional()});
+=======
   institution: z.string().min(1, 'Institution is required'),
   degree: z.string().min(1, 'Degree is required'),
   field_of_study: z.string().optional(),
@@ -29,17 +52,28 @@ const educationSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional(),
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 type EducationFormValues = z.infer<typeof educationSchema>;
 
 export function EducationFormFields({ 
+<<<<<<< HEAD
+  isEditing
+  onSubmit
+  onCancel 
+}: EducationFormFieldsProps) {
+  const [isLoadingsetIsLoading] = useState(false);
+  const [errorsetError] = useState<string | null>(null);
+=======
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema),
@@ -47,10 +81,19 @@ export function EducationFormFields({
       institution: '',
       degree: '',
       field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
+<<<<<<< HEAD
+      start_date: format(new Date()'yyyy-MM-dd'),
       is_current: false,
       description: '',
       location: ''}});
+=======
+      start_date: format(new Date(), 'yyyy-MM-dd'),
+      is_current: false,
+      description: '',
+      location: '',
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
@@ -75,7 +118,11 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
+                  <Input placeholder="University of CaliforniaMITetc." {...field} />
+=======
                   <Input placeholder="University of California, MIT, etc." {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -89,7 +136,11 @@ export function EducationFormFields({
               <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
+                  <Input placeholder="Bachelor'sMaster'sPh.Detc." {...field} />
+=======
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -104,7 +155,11 @@ export function EducationFormFields({
             <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
+<<<<<<< HEAD
+                <Input placeholder="Computer ScienceEngineeringetc." {...field} />
+=======
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -178,7 +233,11 @@ export function EducationFormFields({
             <FormItem>
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
+<<<<<<< HEAD
+                <Input placeholder="CambridgeMA" {...field} />
+=======
                 <Input placeholder="Cambridge, MA" {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -193,7 +252,11 @@ export function EducationFormFields({
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea
+<<<<<<< HEAD
+                  placeholder="Notable achievementscoursesactivities..."
+=======
                   placeholder="Notable achievements, courses, activities..."
+>>>>>>> origin/auto/autonomy-17186719616
                   className="min-h-[100px]"
                   {...field}
                 />

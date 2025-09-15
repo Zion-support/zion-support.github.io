@@ -14,7 +14,8 @@ import { Switch } from "@/components/ui/switch";
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
-  isDefault: z.boolean()});
+  isDefault: z.boolean(),
+});
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -38,7 +39,9 @@ export function TemplateSaveForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}});
+      isDefault: editTemplate?.is_default || false,
+    },
+  });
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
@@ -53,12 +56,14 @@ export function TemplateSaveForm({
           templateId: editTemplate.id,
           title: values.title,
           templateData: editTemplate.template_data,
-          isDefault: values.isDefault});
+          isDefault: values.isDefault,
+        });
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
           templateData: currentValues,
-          isDefault: values.isDefault});
+          isDefault: values.isDefault,
+        });
       }
       
       onComplete();

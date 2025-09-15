@@ -1,21 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
   Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,
   Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,
   ShoppingCart
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
   {
@@ -54,7 +54,7 @@ const features = [
     icon: Zap,
     color: 'from-yellow-500 to-orange-500'
   }
-];
+],
 
 const pricingPlans = [
   {
@@ -63,12 +63,9 @@ const pricingPlans = [
     period: '/month',
     description: 'Perfect for small businesses and content creators',
     features: [
-      'Real-time content analytics',
-      'AI optimization suggestions',
-      'Basic performance tracking',
-      'SEO content insights',
-      'Email support',
-      'Up to 100 content pieces/month'
+      'Real-time content analyticsAI optimization suggestions',
+      'Basic performance trackingSEO content insights',
+      'Email supportUp to 100 content pieces/month'
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600'
@@ -79,12 +76,9 @@ const pricingPlans = [
     period: '/month',
     description: 'Ideal for growing businesses and marketing teams',
     features: [
-      'Everything in Starter',
-      'Predictive performance modeling',
-      'Advanced competitor analysis',
-      'Multi-channel optimization',
-      'Priority support',
-      'Up to 500 content pieces/month',
+      'Everything in StarterPredictive performance modeling',
+      'Advanced competitor analysisMulti-channel optimization',
+      'Priority supportUp to 500 content pieces/month',
       'Custom integrations'
     ],
     popular: true,
@@ -96,19 +90,15 @@ const pricingPlans = [
     period: '/month',
     description: 'For large organizations with complex content needs',
     features: [
-      'Everything in Professional',
-      'Custom AI models',
-      'Advanced analytics',
-      'Dedicated account manager',
-      '24/7 phone support',
-      'Unlimited content pieces',
-      'White-label solutions',
-      'API access'
+      'Everything in ProfessionalCustom AI models',
+      'Advanced analyticsDedicated account manager',
+      '24/7 phone supportUnlimited content pieces',
+      'White-label solutionsAPI access'
     ],
     popular: false,
     color: 'from-purple-500 to-pink-600'
   }
-];
+],
 
 const useCases = [
   {
@@ -135,13 +125,12 @@ const useCases = [
     icon: ShoppingCart,
     color: 'from-orange-500 to-red-500'
   }
-];
+],
 
 const integrations = [
-  'WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Google Analytics',
-  'Facebook Ads', 'Google Ads', 'LinkedIn', 'Twitter', 'Instagram',
-  'YouTube', 'TikTok', 'Slack', 'Zapier', 'API Access'
-];
+  'WordPressShopify', 'HubSpotMailchimp', 'Google AnalyticsFacebook Ads', 'Google AdsLinkedIn', 'TwitterInstagram',
+  'YouTubeTikTok', 'SlackZapier', 'API Access'
+],
 
 export default function AIContentIntelligencePlatform() {
   return (
@@ -443,7 +432,7 @@ export default function AIContentIntelligencePlatform() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
@@ -462,5 +451,5 @@ export default function AIContentIntelligencePlatform() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

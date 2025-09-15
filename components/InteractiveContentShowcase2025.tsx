@@ -1,319 +1,240 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Clock, Users, TrendingUp, Sparkles, Zap, Target } from 'lucide-react';
 
 const InteractiveContentShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('trending');
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState('all');
+  const [hoveredItem, setHoveredItem] = useState(null);
 
-  const contentCategories = {
-    trending: {
-      title: '🔥 Trending Now',
-      description: 'Most popular content this week',
-      color: 'from-red-500 to-orange-500'
+  const contentItems = [
+    {
+      id: 1,
+      title: "AI 2025 Ultimate Content Revolution",
+      description: "Transform your business with revolutionary AI-powered content strategies",
+      type: "blog",
+      category: "ai-content",
+      roi: "5000%",
+      readTime: "8 min read",
+      featured: true,
+      link: "/blog/ai-2025-ultimate-content-revolution",
+      image: "🤖",
+      tags: ["AI", "Content", "Revolution", "2025"]
     },
-    breakthrough: {
-      title: '🚀 Breakthrough Innovations',
-      description: 'Revolutionary AI and tech advances',
-      color: 'from-blue-500 to-purple-500'
+    {
+      id: 2,
+      title: "AI Content Revolution: 5000% ROI Success",
+      description: "Real Fortune 500 case study showing unprecedented results",
+      type: "case-study",
+      category: "success-stories",
+      roi: "5000%",
+      readTime: "5 min read",
+      featured: true,
+      link: "/case-studies/ai-2025-content-revolution-5000-roi-success",
+      image: "📈",
+      tags: ["ROI", "Success", "Fortune 500", "Case Study"]
     },
-    tutorials: {
-      title: '📚 Master Classes',
-      description: 'Step-by-step implementation guides',
-      color: 'from-green-500 to-teal-500'
+    {
+      id: 3,
+      title: "AI 2025 Enterprise Automation Revolution",
+      description: "Complete guide to enterprise AI automation implementation",
+      type: "guide",
+      category: "automation",
+      roi: "10,000%",
+      readTime: "12 min read",
+      featured: false,
+      link: "/blog/ai-2025-enterprise-automation-revolution",
+      image: "⚡",
+      tags: ["Automation", "Enterprise", "AI", "Guide"]
     },
-    caseStudies: {
-      title: '🏆 Success Stories',
-      description: 'Real-world transformation results',
-      color: 'from-yellow-500 to-orange-500'
+    {
+      id: 4,
+      title: "Quantum AI 2026 Business Transformation",
+      description: "Next-generation quantum AI solutions for business",
+      type: "future-tech",
+      category: "quantum",
+      roi: "15,000%",
+      readTime: "10 min read",
+      featured: false,
+      link: "/blog/quantum-ai-2026-business-transformation-ultimate-guide",
+      image: "🔮",
+      tags: ["Quantum", "AI", "Future", "2026"]
+    },
+    {
+      id: 5,
+      title: "Neural Interface Revolution 2025",
+      description: "Breakthrough neural interface technology for business applications",
+      type: "innovation",
+      category: "neural",
+      roi: "8,000%",
+      readTime: "7 min read",
+      featured: false,
+      link: "/case-studies/neural-interface-revolution-2025",
+      image: "🧠",
+      tags: ["Neural", "Interface", "Innovation", "2025"]
+    },
+    {
+      id: 6,
+      title: "Fortune 500 AI Transformation Success",
+      description: "How Fortune 500 companies achieved 10,000% ROI with AI",
+      type: "case-study",
+      category: "success-stories",
+      roi: "10,000%",
+      readTime: "6 min read",
+      featured: false,
+      link: "/case-studies/fortune-500-ai-transformation",
+      image: "🏆",
+      tags: ["Fortune 500", "Success", "AI", "Transformation"]
     }
-  };
+  ];
 
-  const contentItems = {
-    trending: [
-      {
-        id: 1,
-        title: 'AI 2025: The Consciousness Revolution',
-        description: 'How artificial general intelligence is reshaping human-AI collaboration',
-        readTime: '12 min',
-        views: '2.3k',
-        rating: 4.9,
-        category: 'AI Research',
-        featured: true,
-        icon: '🧠',
-        gradient: 'from-purple-500 to-pink-500'
-      },
-      {
-        id: 2,
-        title: 'Quantum-Neural Fusion: The Next Frontier',
-        description: 'Exploring the convergence of quantum computing and neural networks',
-        readTime: '18 min',
-        views: '1.8k',
-        rating: 4.8,
-        category: 'Quantum AI',
-        featured: false,
-        icon: '⚛️',
-        gradient: 'from-blue-500 to-cyan-500'
-      },
-      {
-        id: 3,
-        title: 'Enterprise AI Transformation Playbook',
-        description: 'Complete guide to implementing AI at enterprise scale',
-        readTime: '25 min',
-        views: '3.1k',
-        rating: 4.9,
-        category: 'Implementation',
-        featured: true,
-        icon: '🏢',
-        gradient: 'from-green-500 to-emerald-500'
-      }
-    ],
-    breakthrough: [
-      {
-        id: 4,
-        title: 'Neural Interface Breakthrough 2025',
-        description: 'Direct brain-computer interfaces becoming reality',
-        readTime: '15 min',
-        views: '1.5k',
-        rating: 4.7,
-        category: 'Neural Tech',
-        featured: true,
-        icon: '🔗',
-        gradient: 'from-indigo-500 to-purple-500'
-      },
-      {
-        id: 5,
-        title: 'Autonomous AI Agents Revolution',
-        description: 'Self-managing AI systems transforming business operations',
-        readTime: '20 min',
-        views: '2.1k',
-        rating: 4.8,
-        category: 'Automation',
-        featured: false,
-        icon: '🤖',
-        gradient: 'from-orange-500 to-red-500'
-      }
-    ],
-    tutorials: [
-      {
-        id: 6,
-        title: 'Build Your First AI Assistant',
-        description: 'Complete tutorial from zero to production-ready AI',
-        readTime: '45 min',
-        views: '4.2k',
-        rating: 4.9,
-        category: 'Tutorial',
-        featured: true,
-        icon: '🛠️',
-        gradient: 'from-teal-500 to-blue-500'
-      },
-      {
-        id: 7,
-        title: 'Advanced Prompt Engineering Mastery',
-        description: 'Professional techniques for optimal AI interactions',
-        readTime: '30 min',
-        views: '3.7k',
-        rating: 4.8,
-        category: 'Skills',
-        featured: false,
-        icon: '⚡',
-        gradient: 'from-yellow-500 to-orange-500'
-      }
-    ],
-    caseStudies: [
-      {
-        id: 8,
-        title: 'Fortune 500 AI Transformation',
-        description: '$50M savings achieved through strategic AI implementation',
-        readTime: '22 min',
-        views: '2.8k',
-        rating: 4.9,
-        category: 'Case Study',
-        featured: true,
-        icon: '💼',
-        gradient: 'from-emerald-500 to-green-500'
-      },
-      {
-        id: 9,
-        title: 'Startup to Unicorn: AI-Powered Growth',
-        description: 'How AI automation scaled a startup to $1B valuation',
-        readTime: '18 min',
-        views: '1.9k',
-        rating: 4.7,
-        category: 'Success Story',
-        featured: false,
-        icon: '🚀',
-        gradient: 'from-pink-500 to-rose-500'
-      }
-    ]
-  };
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'ai-content', name: 'AI Content', count: contentItems.filter(item => item.category === 'ai-content').length },
+    { id: 'success-stories', name: 'Success Stories', count: contentItems.filter(item => item.category === 'success-stories').length },
+    { id: 'automation', name: 'Automation', count: contentItems.filter(item => item.category === 'automation').length },
+    { id: 'quantum', name: 'Quantum AI', count: contentItems.filter(item => item.category === 'quantum').length },
+    { id: 'neural', name: 'Neural Tech', count: contentItems.filter(item => item.category === 'neural').length }
+  ];
 
-  const currentContent = contentItems[activeTab as keyof typeof contentItems];
+  const filteredItems = activeTab === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeTab);
+
+  const getTypeColor = (type) => {
+    const colors = {
+      'blog': 'bg-blue-100 text-blue-800',
+      'case-study': 'bg-green-100 text-green-800',
+      'guide': 'bg-purple-100 text-purple-800',
+      'future-tech': 'bg-pink-100 text-pink-800',
+      'innovation': 'bg-orange-100 text-orange-800'
+    };
+    return colors[type] || 'bg-gray-100 text-gray-800';
+  };
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
-          >
-            <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-purple-200 font-medium">Interactive Content Hub</span>
-          </motion.div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Discover <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Amazing Content</span>
+          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🎯 INTERACTIVE CONTENT SHOWCASE</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Our Revolutionary Content
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our curated collection of cutting-edge AI insights, breakthrough innovations, 
-            and practical implementation guides that are transforming industries worldwide.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover cutting-edge AI content, success stories, and innovative solutions that are transforming businesses worldwide.
           </p>
         </div>
 
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(contentCategories).map(([key, category]) => (
-            <motion.button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveTab(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === key
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                activeTab === category.id
+                  ? 'bg-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600'
               }`}
             >
-              {category.title}
-            </motion.button>
+              {category.name} ({category.count})
+            </button>
           ))}
         </div>
 
         {/* Content Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {currentContent.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                onHoverStart={() => setHoveredCard(item.id)}
-                onHoverEnd={() => setHoveredCard(null)}
-                className="group relative"
-              >
-                <div className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 ${
-                  hoveredCard === item.id ? 'transform scale-105 shadow-2xl' : ''
-                } ${item.featured ? 'ring-2 ring-purple-500/50' : ''}`}>
-                  {/* Featured Badge */}
-                  {item.featured && (
-                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Featured
-                    </div>
-                  )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.map((item) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              {/* Image/Icon */}
+              <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center text-6xl">
+                {item.image}
+              </div>
 
-                  {/* Icon */}
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {item.icon}
+              {/* Content */}
+              <div className="p-6">
+                {/* Type and ROI Badge */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(item.type)}`}>
+                    {item.type.replace('-', ' ').toUpperCase()}
+                  </span>
+                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
+                    {item.roi} ROI
                   </div>
-
-                  {/* Category */}
-                  <div className="text-purple-400 text-sm font-medium mb-2">{item.category}</div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                    {item.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-2">{item.description}</p>
-
-                  {/* Stats */}
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {item.readTime}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
-                      {item.views}
-                    </div>
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                      {item.rating}
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full"
-                  >
-                    <Link
-                      href={`/content/${item.id}`}
-                      className={`w-full bg-gradient-to-r ${item.gradient} text-white px-4 py-3 rounded-lg font-semibold flex items-center justify-center group-hover:shadow-lg transition-all duration-300`}
-                    >
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {item.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.slice(0, 3).map((tag, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Footer */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">{item.readTime}</span>
+                  <div className="flex items-center text-purple-600 font-semibold group-hover:text-purple-800 transition-colors">
+                    {item.featured ? 'Featured' : 'Read More'} →
+                  </div>
+                </div>
+              </div>
+
+              {/* Hover Effect */}
+              {hoveredItem === item.id && (
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-600 to-transparent opacity-10 pointer-events-none"></div>
+              )}
+            </Link>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6">
-              Join thousands of companies already using our AI solutions to drive growth and innovation.
+            <p className="text-xl opacity-90 mb-6">
+              Join thousands of companies already experiencing unprecedented growth with our AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                <Target className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
-                href="/resources"
-                className="border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center"
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                <Zap className="w-5 h-5 mr-2" />
-                Download Resources
+                Explore Services
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

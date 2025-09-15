@@ -1,448 +1,326 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Target, 
+  ArrowRight
+  CheckCircle
+  TrendingUp
+  Users
+  DollarSign,
+  Clock,
+  Target,
   Award,
-  ChevronRight,
-  Play,
-  ExternalLink,
   Star,
+  ExternalLink,
+  Play,
   BarChart3,
   Zap,
-  Brain,
   Shield,
-  Globe,
-  Building2,
-  Heart,
-  Car,
-  ShoppingCart,
-  GraduationCap
+  Globe
 } from 'lucide-react';
 
 const RevolutionaryCaseStudiesShowcase2026 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [hoveredCase, setHoveredCase] = useState(null);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCasetActiveCase] = useState(0);
+  const [isVideoPlayingsetIsVideoPlaying] = useState(false);
 
-  const categories = {
-    all: { name: 'All Industries', icon: Globe },
-    enterprise: { name: 'Enterprise', icon: Building2 },
-    healthcare: { name: 'Healthcare', icon: Heart },
-    automotive: { name: 'Automotive', icon: Car },
-    retail: { name: 'Retail', icon: ShoppingCart },
-    education: { name: 'Education', icon: GraduationCap }
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)300);
+    return () => clearTimeout(timer);
+  }[]);
 
   const caseStudies = [
     {
-      id: 1,
-      title: 'Fortune 500 Manufacturing: 340% ROI in 6 Months',
-      company: 'Global Manufacturing Corp',
-      industry: 'enterprise',
-      category: 'Enterprise',
-      description: 'Transformed their entire supply chain with AI-powered automation, reducing costs by $2.3M annually while improving efficiency by 340%.',
-      challenge: 'Manual processes causing delays and errors in supply chain management',
-      solution: 'Implemented AI-powered predictive analytics and automated workflow systems',
+      id: 'fintech-transformation',
+      title: 'FinTech Revolution: 500% ROI in 6 Months',
+      company: 'PayFlow Solutions',
+      industry: 'Financial Technology',
+      icon: DollarSign,
+      color: 'from-green-500 to-emerald-600',
+      challenge: 'Legacy payment processing system causing 40% transaction failures and customer churn',
+      solution: 'Implemented AI-powered fraud detectionreal-time processingand automated compliance',
       results: {
-        roi: '340%',
-        costSavings: '$2.3M',
-        efficiency: '+340%',
-        timeReduction: '75%',
-        accuracy: '99.2%'
+        roi: '500%',
+        efficiency: '300%',
+        costReduction: '60%',
+        customerSatisfaction: '95%'
       },
-      duration: '6 months',
-      teamSize: '50+ employees',
-      featured: true,
-      image: '/api/placeholder/600/400',
-      tags: ['AI Automation', 'Supply Chain', 'ROI', 'Enterprise'],
+      timeline: '6 months',
+      team: '15 experts',
+      technologies: ['AI/'ML', 'Blockchain'Cloud 'Infrastructure', 'Real-time Analytics'],
       testimonial: {
-        quote: "The AI implementation exceeded our wildest expectations. We've never seen such dramatic improvements in such a short time.",
-        author: "Sarah Johnson",
-        position: "CTO, Global Manufacturing Corp",
-        avatar: "/api/placeholder/60/60"
+        name: 'Sarah Chen',
+        role: 'CTO',
+        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'
       }
     },
     {
-      id: 2,
-      title: 'Healthcare System: 95% Diagnostic Accuracy with AI',
-      company: 'Metro Health Network',
-      industry: 'healthcare',
-      category: 'Healthcare',
-      description: 'Revolutionized patient diagnosis using AI-powered medical imaging analysis, achieving 95% accuracy in early disease detection.',
-      challenge: 'High misdiagnosis rates and long wait times for medical imaging analysis',
-      solution: 'Deployed advanced AI models for medical image analysis and diagnostic support',
+      id: 'healthcare-ai',
+      title: 'Healthcare AI: Diagnosing 10x Faster',
+      company: 'MediTech Innovations',
+      industry: 'Healthcare Technology',
+      icon: Shield,
+      color: 'from-blue-500 to-cyan-600',
+      challenge: 'Manual diagnosis processes taking 2-3 dayscausing delayed treatments and patient dissatisfaction',
+      solution: 'Deployed AI diagnostic toolsautomated patient triageand predictive health analytics',
       results: {
-        accuracy: '95%',
-        timeReduction: '80%',
-        livesSaved: '500+',
-        costSavings: '$1.8M',
-        efficiency: '+250%'
+        roi: '400%',
+        efficiency: '1000%',
+        costReduction: '45%',
+        customerSatisfaction: '98%'
       },
-      duration: '8 months',
-      teamSize: '30+ medical professionals',
-      featured: true,
-      image: '/api/placeholder/600/400',
-      tags: ['AI Healthcare', 'Diagnostics', 'Medical Imaging', 'Life-Saving'],
+      timeline: '8 months',
+      team: '20 experts',
+      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT Integration'],
       testimonial: {
-        quote: "This AI system has transformed how we diagnose patients. The accuracy and speed are remarkable.",
-        author: "Dr. Michael Chen",
-        position: "Chief Medical Officer, Metro Health",
-        avatar: "/api/placeholder/60/60"
+        name: 'Dr. Michael Rodriguez',
+        role: 'Chief Medical Officer',
+        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'
       }
     },
     {
-      id: 3,
-      title: 'E-commerce Giant: $50M Revenue Increase with AI',
-      company: 'TechRetail Inc',
-      industry: 'retail',
-      category: 'Retail',
-      description: 'Boosted online sales by 45% using AI-powered personalization and recommendation engines, generating $50M in additional revenue.',
-      challenge: 'Low conversion rates and poor customer experience on e-commerce platform',
-      solution: 'Implemented AI-driven personalization and dynamic pricing optimization',
+      id: 'ecommerce-automation',
+      title: 'E-commerce Automation: $50M Revenue Boost',
+      company: 'ShopGlobal',
+      industry: 'E-commerce',
+      icon: Globe,
+      color: 'from-purple-500 to-pink-600',
+      challenge: 'Manual inventory management and customer service causing 30% lost sales opportunities',
+      solution: 'Implemented AI-driven inventory optimizationautomated customer serviceand dynamic pricing',
       results: {
-        revenueIncrease: '$50M',
-        conversionRate: '+45%',
-        customerSatisfaction: '4.8/5',
-        costReduction: '30%',
-        efficiency: '+200%'
+        roi: '600%',
+        efficiency: '400%',
+        costReduction: '50%',
+        customerSatisfaction: '92%'
       },
-      duration: '4 months',
-      teamSize: '25+ developers',
-      featured: true,
-      image: '/api/placeholder/600/400',
-      tags: ['AI E-commerce', 'Personalization', 'Revenue Growth', 'Customer Experience'],
+      timeline: '10 months',
+      team: '25 experts',
+      technologies: ['Machine 'Learning', 'NLP'Computer 'Vision', 'Cloud Computing'],
       testimonial: {
-        quote: "The AI personalization engine has been a game-changer for our business. Revenue has never been higher.",
-        author: "Jennifer Martinez",
-        position: "VP of Technology, TechRetail",
-        avatar: "/api/placeholder/60/60"
+        name: 'Jennifer Walsh',
+        role: 'CEO',
+        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'
       }
     },
     {
-      id: 4,
-      title: 'Automotive Leader: Autonomous Vehicle AI Breakthrough',
-      company: 'Future Motors',
-      industry: 'automotive',
-      category: 'Automotive',
-      description: 'Developed cutting-edge AI systems for autonomous vehicles, achieving 99.9% safety rating in testing phases.',
-      challenge: 'Creating safe and reliable AI systems for autonomous vehicle navigation',
-      solution: 'Built advanced neural networks for real-time decision making and obstacle detection',
+      id: 'manufacturing-iot',
+      title: 'Smart Manufacturing: Zero Downtime Achievement',
+      company: 'AutoParts Pro',
+      industry: 'Manufacturing',
+      icon: Zap,
+      color: 'from-orange-500 to-red-600',
+      challenge: 'Unplanned downtime costing $2M monthly and 15% production efficiency loss',
+      solution: 'Deployed IoT sensorspredictive maintenance AIand real-time production optimization',
       results: {
-        safetyRating: '99.9%',
-        testMiles: '1M+',
-        accidentsPrevented: '100+',
-        efficiency: '+180%',
-        costReduction: '40%'
+        roi: '350%',
+        efficiency: '250%',
+        costReduction: '40%',
+        customerSatisfaction: '97%'
       },
-      duration: '12 months',
-      teamSize: '100+ engineers',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['Autonomous Vehicles', 'AI Safety', 'Neural Networks', 'Innovation'],
+      timeline: '12 months',
+      team: '18 experts',
+      technologies: [', 'IoT', 'Edge 'Computing', 'Predictive 'Analytics', 'Digital Twins'],
       testimonial: {
-        quote: "Our AI-powered autonomous system is setting new industry standards for safety and reliability.",
-        author: "David Park",
-        position: "Head of AI, Future Motors",
-        avatar: "/api/placeholder/60/60"
-      }
-    },
-    {
-      id: 5,
-      title: 'University: AI-Powered Learning Platform Success',
-      company: 'Tech University',
-      industry: 'education',
-      category: 'Education',
-      description: 'Created personalized learning experiences for 50,000+ students using AI, improving graduation rates by 35%.',
-      challenge: 'One-size-fits-all education approach leading to poor student outcomes',
-      solution: 'Developed AI-driven adaptive learning platform with personalized content delivery',
-      results: {
-        graduationRate: '+35%',
-        studentSatisfaction: '4.7/5',
-        learningEfficiency: '+280%',
-        costSavings: '$3.2M',
-        studentsServed: '50K+'
-      },
-      duration: '10 months',
-      teamSize: '40+ educators',
-      featured: false,
-      image: '/api/placeholder/600/400',
-      tags: ['AI Education', 'Personalized Learning', 'Student Success', 'Innovation'],
-      testimonial: {
-        quote: "The AI learning platform has revolutionized how we educate students. Results speak for themselves.",
-        author: "Professor Lisa Wang",
-        position: "Dean of Technology, Tech University",
-        avatar: "/api/placeholder/60/60"
-      }
-    },
-    {
-      id: 6,
-      title: 'Financial Services: AI Fraud Detection Excellence',
-      company: 'SecureBank International',
-      industry: 'enterprise',
-      category: 'Financial Services',
-      description: 'Reduced fraud by 98% using AI-powered detection systems, saving $15M in potential losses.',
-      challenge: 'Increasing sophisticated fraud attempts costing millions in losses',
-      solution: 'Implemented real-time AI fraud detection with machine learning models',
-      results: {
-        fraudReduction: '98%',
-        moneySaved: '$15M',
-        falsePositives: '-90%',
-        efficiency: '+320%',
-        accuracy: '99.5%'
-      },
-      duration: '5 months',
-      teamSize: '35+ analysts',
-      featured: true,
-      image: '/api/placeholder/600/400',
-      tags: ['AI Security', 'Fraud Detection', 'Financial Services', 'Risk Management'],
-      testimonial: {
-        quote: "Our AI fraud detection system has been incredibly effective. We've never felt more secure.",
-        author: "Robert Kim",
-        position: "Chief Security Officer, SecureBank",
-        avatar: "/api/placeholder/60/60"
+        name: 'Robert Kim',
+        role: 'Operations Director',
+        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'
       }
     }
   ];
 
-  const filteredCases = activeCategory === 'all' 
-    ? caseStudies 
-    : caseStudies.filter(caseStudy => caseStudy.industry === activeCategory);
+  const overallStats = [
+    { label: 'Projects 'Completed', 'value: '200+'icon: CheckCircle },
+    { label: 'Average 'ROI', 'value: '450%'icon: TrendingUp },
+    { label: 'Client 'Satisfaction', 'value: '96%'icon: Star },
+    { label: 'Years 'Experience', 'value: '8+'icon: Award }
+  ];
 
-  const featuredCases = caseStudies.filter(caseStudy => caseStudy.featured);
+  if (!isVisible) return null;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Award className="w-4 h-4" />
-            Revolutionary Success Stories 2026
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Real Results from Real Companies
+            Revolutionary Case Studies 2026
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how leading companies across industries are transforming their businesses 
-            with our AI solutions. See the measurable impact and ROI they've achieved.
+            Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
         </motion.div>
 
-        {/* Featured Cases */}
+        {/* Overall Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Success Stories</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredCases.slice(0, 2).map((caseStudy, index) => (
-              <motion.div
-                key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                onHoverStart={() => setHoveredCase(caseStudy.id)}
-                onHoverEnd={() => setHoveredCase(null)}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
-              >
-                {/* Featured Badge */}
-                <div className="absolute top-4 left-4 z-10">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                    <Star className="w-3 h-3 fill-current" />
-                    Featured
-                  </div>
-                </div>
-
-                {/* Image */}
-                <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                      <Building2 className="w-10 h-10 text-white" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
-                      {caseStudy.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{caseStudy.duration}</span>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {caseStudy.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-2">
-                    {caseStudy.description}
-                  </p>
-
-                  {/* Key Results */}
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    {Object.entries(caseStudy.results).slice(0, 4).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="text-lg font-bold text-gray-900">{value}</div>
-                        <div className="text-xs text-gray-500 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-medium flex items-center justify-center gap-2 group-hover:shadow-lg transition-all duration-300"
-                  >
-                    <span>Read Full Case Study</span>
-                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {overallStats.map((statindex) => (
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <stat.icon className="w-8 h-8 text-blue-600" />
+              </div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+              <div className="text-gray-600">{stat.label}</div>
+            </div>
+          ))}
         </motion.div>
 
-        {/* Category Filter */}
+        {/* Case Study Selector */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
-          {Object.entries(categories).map(([key, category]) => {
-            const Icon = category.icon;
-            const isActive = activeCategory === key;
-            return (
-              <motion.button
-                key={key}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveCategory(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  isActive
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 shadow-md'
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-                {category.name}
-              </motion.button>
-            );
-          })}
+          {caseStudies.map((caseStudyindex) => (
+            <button
+              key={caseStudy.id}
+              onClick={() => setActiveCase(index)}
+              className={`p-6 rounded-xl transition-all duration-300 ${
+                activeCase === index
+                  ? 'bg-white shadow-xl scale-105 border-2 border-blue-500'
+                  : 'bg-white shadow-lg hover:shadow-xl'
+              }`}
+            >
+              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center mb-4 mx-auto`}>
+                <caseStudy.icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2 text-gray-900">{caseStudy.title}</h3>
+              <p className="text-sm text-gray-600">{caseStudy.company}</p>
+              <p className="text-xs text-gray-500 mt-1">{caseStudy.industry}</p>
+            </button>
+          ))}
         </motion.div>
 
-        {/* Case Studies Grid */}
+        {/* Active Case Study Details */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
+            key={activeCase}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-2xl shadow-xl p-8 mb-12"
           >
-            {filteredCases.map((caseStudy, index) => (
-              <motion.div
-                key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                onHoverStart={() => setHoveredCase(caseStudy.id)}
-                onHoverEnd={() => setHoveredCase(null)}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
-              >
-                {/* Image */}
-                <div className="relative h-40 bg-gradient-to-br from-gray-100 to-gray-200">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                      <Building2 className="w-8 h-8 text-white" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Left Column - Details */}
+              <div>
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${caseStudies[activeCase].color}`}>
+                    <caseStudies[activeCase].icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {caseStudies[activeCase].title}
+                    </h3>
+                    <p className="text-gray-600 text-lg">{caseStudies[activeCase].company}</p>
+                    <p className="text-gray-500">{caseStudies[activeCase].industry}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
+                    <p className="text-gray-600">{caseStudies[activeCase].challenge}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
+                    <p className="text-gray-600">{caseStudies[activeCase].solution}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudies[activeCase].technologies.map((techindex) => (
+                        <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
-                      {caseStudy.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{caseStudy.duration}</span>
+              {/* Right Column - Results & Testimonial */}
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-4">Results</h4>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="p-4 bg-green-50 rounded-lg">
+                    <div className="text-2xl font-bold text-green-600">{caseStudies[activeCase].results.roi}</div>
+                    <div className="text-sm text-gray-600">ROI</div>
                   </div>
-
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {caseStudy.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-2 text-sm">
-                    {caseStudy.description}
-                  </p>
-
-                  {/* Key Results */}
-                  <div className="grid grid-cols-2 gap-2 mb-4">
-                    {Object.entries(caseStudy.results).slice(0, 4).map(([key, value]) => (
-                      <div key={key} className="text-center">
-                        <div className="text-sm font-bold text-gray-900">{value}</div>
-                        <div className="text-xs text-gray-500 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
-                        </div>
-                      </div>
-                    ))}
+                  <div className="p-4 bg-blue-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600">{caseStudies[activeCase].results.efficiency}</div>
+                    <div className="text-sm text-gray-600">Efficiency</div>
                   </div>
-
-                  {/* CTA */}
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2 group-hover:shadow-lg transition-all duration-300 text-sm"
-                  >
-                    <span>View Details</span>
-                    <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </motion.button>
+                  <div className="p-4 bg-purple-50 rounded-lg">
+                    <div className="text-2xl font-bold text-purple-600">{caseStudies[activeCase].results.costReduction}</div>
+                    <div className="text-sm text-gray-600">Cost Reduction</div>
+                  </div>
+                  <div className="p-4 bg-orange-50 rounded-lg">
+                    <div className="text-2xl font-bold text-orange-600">{caseStudies[activeCase].results.customerSatisfaction}</div>
+                    <div className="text-sm text-gray-600">Satisfaction</div>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+
+                <div className="flex items-center space-x-6 mb-6 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <Clock className="w-4 h-4" />
+                    <span>{caseStudies[activeCase].timeline}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Users className="w-4 h-4" />
+                    <span>{caseStudies[activeCase].team}</span>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Client Testimonial</h4>
+                  <p className="text-gray-600 italic mb-4">"{caseStudies[activeCase].testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-gray-900">{caseStudies[activeCase].testimonial.name}</div>
+                    <div className="text-gray-500 text-sm">{caseStudies[activeCase].testimonial.role}{caseStudies[activeCase].company}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </AnimatePresence>
 
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.8 }}
+          className="text-center"
         >
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Create Your Success Story?
             </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Join these industry leaders and transform your business with AI
+            <p className="text-xl mb-8 opacity-90">
+              Join hundreds of companies that have transformed their operations with our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                Start Your Transformation
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center">
+                <Target className="w-5 h-5 mr-2" />
+                Start Your Project
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-green-600 transition-colors">
-                Download Case Studies
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Case Study Video
               </button>
             </div>
           </div>

@@ -1,6 +1,19 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+Loader2Sparkles
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import { useResume } from '@/hooks/useResume';
+import { BulkAddSkillsProps } from './types';
+import { AlertDescription } from '@/components/ui/alert';
+import { Textarea } from '@/components/ui/textarea';
+
+export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
+  const [bulkSkillsetBulkSkills] = useState('');
+  const [errorsetError] = useState<string | null>(null);
+  const { enhanceContentisEnhancing } = useResumeEnhancer();
+=======
 import { Loader2, Sparkles } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import { useResume } from '@/hooks/useResume';
@@ -12,6 +25,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const [bulkSkills, setBulkSkills] = useState('');
   const [error, setError] = useState<string | null>(null);
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
+>>>>>>> origin/auto/autonomy-17186719616
   const { addSkill } = useResume();
 
   const handleCategorizeSkills = async () => {
@@ -33,13 +47,24 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           const categorizedSkills = JSON.parse(enhancedContent);
           
           // Add the categorized skills
+<<<<<<< HEAD
+          for (const [categoryskillsList] of Object.entries(categorizedSkills)) {
+            if (Array.isArray(skillsList)) {
+              for (const skillName of skillsList as string[]) {
+                await addSkill(resumeId{
+                  name: skillName,
+                  category: category,
+                  proficiency: 3});
+=======
           for (const [category, skillsList] of Object.entries(categorizedSkills)) {
             if (Array.isArray(skillsList)) {
               for (const skillName of skillsList as string[]) {
                 await addSkill(resumeId, {
                   name: skillName,
                   category: category,
-                  proficiency: 3});
+                  proficiency: 3,
+                });
+>>>>>>> origin/auto/autonomy-17186719616
               }
             }
           }
@@ -66,7 +91,11 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea 
             className="min-h-24"
+<<<<<<< HEAD
+            placeholder="PythonReactTypeScriptProject ManagementCommunication..."
+=======
             placeholder="Python, React, TypeScript, Project Management, Communication..."
+>>>>>>> origin/auto/autonomy-17186719616
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />

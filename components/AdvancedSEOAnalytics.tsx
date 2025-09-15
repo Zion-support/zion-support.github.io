@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+"use client";
+import React{ useEffect } from 'react';
 
 const AdvancedSEOAnalytics = () => {
   useEffect(() => {
     // Enhanced SEO tracking
     const trackPageView = () => {
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'page_view', {
+        window.gtag(', 'event', 'page_view'{
           page_title: document.title,
           page_location: window.location.href,
           page_path: window.location.pathname
@@ -16,7 +17,7 @@ const AdvancedSEOAnalytics = () => {
     // Track user engagement
     const trackEngagement = () => {
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'engagement', {
+        window.gtag(', 'event', 'engagement'{
           engagement_time_msec: Date.now(),
           page_title: document.title
         });
@@ -31,15 +32,15 @@ const AdvancedSEOAnalytics = () => {
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent;
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+            window.gtag(', 'event', 'scroll'{
               scroll_depth: maxScroll
             });
           }
         }
       };
 
-      window.addEventListener('scroll', trackScroll);
-      return () => window.removeEventListener('scroll', trackScroll);
+      window.addEventListener(', 'scroll', 'trackScroll);
+      return () => window.removeEventListener(', 'scroll', 'trackScroll);
     };
 
     // Track time on page
@@ -47,7 +48,7 @@ const AdvancedSEOAnalytics = () => {
     const trackTimeOnPage = () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'timing_complete', {
+        window.gtag(', 'event', 'timing_complete'{
           name: 'time_on_page',
           value: timeOnPage
         });
@@ -64,20 +65,20 @@ const AdvancedSEOAnalytics = () => {
       trackTimeOnPage();
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener(', 'beforeunload', 'handleBeforeUnload);
 
     return () => {
       cleanupScroll();
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener(', 'beforeunload', 'handleBeforeUnload);
     };
-  }, []);
+  }[]);
 
   // Enhanced structured data
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
     "url": "https://zion.app",
     "logo": "https://zion.app/logo.png",
     "sameAs": [
@@ -114,10 +115,10 @@ const AdvancedSEOAnalytics = () => {
           __html: `
             // Enhanced performance monitoring
             if (typeof window !== 'undefined') {
-              window.addEventListener('load', function() {
+              window.addEventListener(', 'load', 'function() {
                 const perfData = performance.getEntriesByType('navigation')[0];
                 if (perfData && window.gtag) {
-                  window.gtag('event', 'timing_complete', {
+                  window.gtag(', 'event', 'timing_complete'{
                     name: 'page_load_time',
                     value: Math.round(perfData.loadEventEnd - perfData.loadEventStart)
                   });

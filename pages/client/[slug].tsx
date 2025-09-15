@@ -20,7 +20,8 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
 
   async function handleReport(id: string) {
     await fetch('/api/reviews/report', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })});
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' }),
+    });
   }
 
   return (

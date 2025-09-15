@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 export default function AI2026QuantumNeuralFusionBanner() {
   return (
-<<<<<<< HEAD
     <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -123,7 +122,6 @@ export default function AI2026QuantumNeuralFusionBanner() {
         </div>
       </div>
     </section>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white">
       {/* Animated background */}
       <div className="absolute inset-0">
@@ -140,7 +138,7 @@ export default function AI2026QuantumNeuralFusionBanner() {
           
           {/* Subheading */}
           <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            The most revolutionary breakthrough in AI history, combining quantum computing 
+            The most revolutionary breakthrough in AI historycombining quantum computing 
             with neural networks to deliver 
             <span className="text-yellow-400 font-bold text-2xl"> 15,000% ROI</span> and infinite possibilities.
           </p>
@@ -211,6 +209,5 @@ export default function AI2026QuantumNeuralFusionBanner() {
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping opacity-75 animation-delay-2000"></div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-95d3
   );
 }

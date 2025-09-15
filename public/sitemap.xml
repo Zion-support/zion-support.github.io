@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>2025-08-28</lastmod>
+=======
     <loc>https://zion.app/</loc>
 =======
     <loc>https://ziontechgroup.com/500</loc>
@@ -90,10 +94,61 @@
   <url>
 =======
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+>>>>>>> origin/auto/autonomy-17186719616
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/innovative-services-2025</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/advanced-services-2025</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/advanced-services-showcase-2025</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/comprehensive-pricing-2025</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/blog</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+=======
     <loc>https://ziontechgroup.com/404</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <loc>https://ziontechgroup.com/</loc>
@@ -6120,16 +6175,76 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+    <loc>https://zion.app/about</loc>
+    <lastmod>2025-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/services</loc>
-    <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+    <loc>https://zion.app/services</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/micro-saas</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/ai-tools</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/developer-tools</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/ai-assistant</loc>
+    <lastmod>2025-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/cloud-platform</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/automation</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/analytics</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/pricing</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/contact</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zion.app/case-studies</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zion.app/blog</loc>
@@ -53083,3 +53198,4 @@
     <priority>0.6</priority>
   </url>
 </urlset>
+>>>>>>> origin/auto/autonomy-17186719616

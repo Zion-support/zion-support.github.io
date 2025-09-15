@@ -3,6 +3,10 @@ import { Skill } from '@/types/resume';
 
 export interface SkillsFormProps {
   resumeId: string;
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void;

@@ -6,7 +6,8 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious} from "@/components/ui/carousel";
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -14,19 +15,23 @@ const testimonials = [
     author: "Sarah Johnson",
     title: "VP of Talent Acquisition",
     company: "TechGlobal Inc.",
-    image: "/placeholder.svg"},
+    image: "/placeholder.svg",
+  },
   {
     quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
     author: "Michael Chen",
     title: "Director of HR",
     company: "InnovateCorp",
-    image: "/placeholder.svg"},
+    image: "/placeholder.svg",
+  },
   {
     quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
-    image: "/placeholder.svg"}];
+    image: "/placeholder.svg",
+  },
+];
 
 export function EnterpriseTestimonials() {
   return (

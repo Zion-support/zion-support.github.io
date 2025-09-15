@@ -1,51 +1,46 @@
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
+import Head from 'next/head',
+import React, { useMemo, useState } from 'react',
 
 type RoadmapInputs = {
-  milestones: string;
-  keywords: string;
-  priorities: string;
-};
+  milestones: string,
+  keywords: string,
+  priorities: string
+},
 
 type Stage = {
-  id: number;
-  name: string;
-  theme: string;
-  objective: string;
-  highlights: string[];
-  metrics: string[];
-};
+  id: number,
+  name: string,
+  theme: string,
+  objective: string,
+  highlights: string[],
+  metrics: string[]
+},
 
 function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
   const keywordList = keywords
     .split(/,|\n/)
     .map((s) => s.trim())
-    .filter(Boolean);
+    .filter(Boolean),
 
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
-    .filter(Boolean);
+    .filter(Boolean),
 
   const baseThemes = [
-    'Foundations',
-    'Trust Layer',
-    'AI-Native Matching',
-    'Reputation & Identity',
-    'Payments & Escrow',
-    'Marketplace Liquidity',
-    'Sovereign Workflows',
-    'Open Protocol Interfaces',
-    'Governance & Ownership',
-    'Global Scale'];
+    'FoundationsTrust Layer',
+    'AI-Native MatchingReputation & Identity',
+    'Payments & EscrowMarketplace Liquidity',
+    'Sovereign WorkflowsOpen Protocol Interfaces',
+    'Governance & OwnershipGlobal Scale'],
 
   return baseThemes.map((theme, index) => {
-    const id = index + 1;
-    const name = `Zion v${id}`;
+    const id = index + 1,
+    const name = `Zion v${id}`,
 
-    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join(', ') || 'core principles'}; focus: ${
-      priorityList.join(', ') || 'execution and learning'
-    }.`;
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join(', ') || 'core principles'}, focus: ${
+      priorityList.join() || 'execution and learning'
+    }.`,
 
     const highlights: string[] = [
       index === 0 && 'Design system, domain model, and initial data architecture',
@@ -59,17 +54,15 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       index === 8 && 'Progressive decentralization, contributor ownership, councils',
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
-      .map((s) => String(s));
+      .map((s) => String(s)),
 
     const metrics: string[] = [
-      'Weekly active contributors',
-      'Verified engagements (intros, briefs, scopes)',
-      'On-chain/escrow settlement volume',
-      'Time-to-hire and time-to-pay',
-      'Retention and NPS'];
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)',
+      'On-chain/escrow settlement volumeTime-to-hire and time-to-pay',
+      'Retention and NPS'],
 
-    return { id, name, theme, objective, highlights, metrics };
-  });
+    return { id, name, theme, objective, highlights, metrics },
+  }),
 }
 
 function defaultOperatorPrompt(): string {
@@ -98,31 +91,31 @@ Risks:
 - ...
 Validation:
 - ...
-`;
+`
 }
 
 export default function RoadmapPage(): JSX.Element {
-  const [milestones, setMilestones] = useState('MVP live; First 50 users; First 10 paid engagements');
-  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools');
-  const [priorities, setPriorities] = useState('governance, scale, regional expansion');
-  const [copied, setCopied] = useState(false);
+  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements'),
+  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools'),
+  const [priorities, setPriorities] = useState('governance, scale, regional expansion'),
+  const [copied, setCopied] = useState(false),
 
   const stages = useMemo(
     () => generateStages({ milestones, keywords, priorities }),
     [milestones, keywords, priorities]
-  );
+  ),
 
-  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), []);
+  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), []),
 
   const copyPrompt = async () => {
     try {
-      await navigator.clipboard.writeText(operatorPrompt);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
+      await navigator.clipboard.writeText(operatorPrompt),
+      setCopied(true),
+      setTimeout(() => setCopied(false), 1500),
     } catch {
-      setCopied(false);
+      setCopied(false),
     }
-  };
+  },
 
   return (
     <>
@@ -150,7 +143,7 @@ export default function RoadmapPage(): JSX.Element {
                   onChange={(e) => setMilestones(e.target.value)}
                   rows={3}
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
-                  placeholder="e.g., MVP live; 100 design partners; 1k weekly active contributors"
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
               </div>
               <div>
@@ -213,7 +206,7 @@ export default function RoadmapPage(): JSX.Element {
                   <div className="mt-3">
                     <p className="font-semibold">Risks</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
-                      <li>Scope creep; unclear ownership</li>
+                      <li>Scope creep, unclear ownership</li>
                       <li>Model hallucinations or bias affecting matches</li>
                       <li>Regulatory and payment-compliance variability</li>
                     </ul>
@@ -233,5 +226,5 @@ export default function RoadmapPage(): JSX.Element {
         </div>
       </main>
     </>
-  );
+  ),
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
-import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
+import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
+import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026',
 
 export default function QuantumCybersecurityServices() {
   return (
@@ -273,7 +273,7 @@ export default function QuantumCybersecurityServices() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Secure Your Future Today
                 </span>
@@ -326,5 +326,5 @@ export default function QuantumCybersecurityServices() {
         </section>
       </UltraFuturisticBackground2026>
     </>
-  );
+  )
 }
