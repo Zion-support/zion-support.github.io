@@ -197,6 +197,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/ai-ops-autonomous-incident-response-2026.jpg",
     slug: "ai-2026-ai-ops-autonomous-incident-response"
   }
+  ,
+  {
+    id: 12,
+    title: "AI 2026: Agentic Risk and Safety Playbook",
+    excerpt: "Practical safeguards, monitoring, and governance patterns for production agent systems.",
+    content: "This playbook distills proven patterns for safely operating agentic systems at scale: policy-as-code guardrails, evaluation harnesses, runtime tripwires, behavior analytics, and rollback strategies. It includes rollout checklists and reference architectures for high-assurance deployments.",
+    author: "Nadia Patel",
+    authorRole: "Director of AI Safety",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Safety",
+    tags: ["Agents", "Safety", "Governance", "Monitoring"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-risk-safety-playbook-2026.jpg",
+    slug: "ai-2026-agentic-risk-and-safety-playbook"
+  },
+  {
+    id: 13,
+    title: "AI 2026: Enterprise Agent Observability Guide",
+    excerpt: "End-to-end telemetry, tracing, and evals for visibility into autonomous workflows.",
+    content: "A practical guide to agent observability: structured traces for tool use, state snapshots, dataset-linked evals, red-team scenarios, and SLAs/SLOs for AI-driven processes. Learn how to integrate with existing observability stacks and close the loop with feedback to training and prompts.",
+    author: "Leo Martinez",
+    authorRole: "Principal Observability Engineer",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Observability",
+    tags: ["Tracing", "Evals", "Telemetry", "Agents"],
+    featured: true,
+    imageUrl: "/images/blog/enterprise-agent-observability-2026.jpg",
+    slug: "ai-2026-enterprise-agent-observability-guide"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
