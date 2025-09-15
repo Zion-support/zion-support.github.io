@@ -1,33 +1,20 @@
-<<<<<<< HEAD
 "use client"
-=======
-'use client'
-
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-<<<<<<< HEAD
-=======
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services', tag: 'New' },
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
   { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/autonomous-strategy-copilot-1-0' },
+  { name: 'New', href: '/updates/autonomous-incident-analysis-copilot-1-0', tag: 'New' },
 ]
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-<<<<<<< HEAD
-=======
-
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">

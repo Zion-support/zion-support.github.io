@@ -7,6 +7,23 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content batch)
+  {
+    title: 'Launch: Autonomous Incident Analysis Copilot v1.0',
+    summary:
+      'Automated incident timelines, causal graphs, and remediation suggestions with audit-ready evidence.',
+    href: '/updates/autonomous-incident-analysis-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Agent Reliability 2026',
+    summary:
+      'Uptime, SLO adherence, and failure taxonomy across production agent systems with benchmarks.',
+    href: '/updates/state-of-agent-reliability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
