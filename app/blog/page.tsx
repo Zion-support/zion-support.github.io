@@ -23,6 +23,15 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
+      title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide",
+      description: "Operational blueprint for privacy, security, lineage, and policy enforcement to build trustworthy AI at scale.",
+      slug: "ai-2025-data-governance-trust-security",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/data-governance-2025.jpg"
+    },
+    {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
       description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
       slug: "ai-2025-enterprise-ai-agents-breakthrough",
