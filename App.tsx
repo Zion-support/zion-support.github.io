@@ -185,7 +185,6 @@ export default function App(): JSX.Element {
                       Space Technology, Advanced Robotics, Next-Gen AI, Quantum Computing, and Neural Interface Technology
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
-<<<<<<< HEAD
                       <a href="/pages/AdvancedBiotechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧬 Biotech Revolution →
                       </a>
@@ -195,8 +194,6 @@ export default function App(): JSX.Element {
                       <a href="/pages/AdvancedRoboticsRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Robotics Revolution →
                       </a>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1b8
                       <a href="/pages/NextGenAIRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 Next-Gen AI →
                       </a>
