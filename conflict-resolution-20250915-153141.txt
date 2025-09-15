@@ -159,3 +159,24 @@
 2025-09-15 15:34:31 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch feature/content-sept15-2025
 2025-09-15 15:34:31 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch feature/content-sept15-2025
 2025-09-15 15:34:31 - Resolving conflicts in zion-os/src/app/page.tsx for branch feature/content-sept15-2025
+2025-09-15 15:34:36 - Merge conflicts detected in feature/generative-agents-content
+2025-09-15 15:34:36 - Resolving conflicts in zion-os/.next/cache/webpack/edge-server-production/index.pack for branch feature/generative-agents-content
+2025-09-15 15:34:36 - Resolving conflicts in zion-os/.next/cache/webpack/server-production/0.pack for branch feature/generative-agents-content
+2025-09-15 15:34:36 - Resolving conflicts in zion-os/.next/cache/webpack/server-production/index.pack for branch feature/generative-agents-content
+2025-09-15 15:34:36 - Resolving conflicts in zion-os/.next/cache/webpack/server-production/index.pack.old for branch feature/generative-agents-content
+2025-09-15 15:34:36 - Resolving conflicts in zion-os/.next/server/app-paths-manifest.json for branch feature/generative-agents-content
+2025-09-15 15:34:37 - Resolving conflicts in zion-os/.next/server/app/about/page.js for branch feature/generative-agents-content
+2025-09-15 15:34:37 - Resolving conflicts in zion-os/.next/server/app/about/page.js.nft.json for branch feature/generative-agents-content
+2025-09-15 15:34:37 - Resolving conflicts in zion-os/.next/server/app/accessibility/page.js for branch feature/generative-agents-content
+2025-09-15 15:34:37 - Resolving conflicts in zion-os/.next/server/app/accessibility/page.js.nft.json for branch feature/generative-agents-content
+2025-09-15 15:34:38 - Resolving conflicts in zion-os/.next/server/app/admin/instances/page.js for branch feature/generative-agents-content
+2025-09-15 15:34:38 - Resolving conflicts in zion-os/.next/server/app/admin/instances/page.js.nft.json for branch feature/generative-agents-content
+2025-09-15 15:34:38 - Resolving conflicts in zion-os/.next/server/app/admin/os-deploy/page.js for branch feature/generative-agents-content
+2025-09-15 15:34:38 - Resolving conflicts in zion-os/.next/server/app/page.js for branch feature/generative-agents-content
+2025-09-15 15:34:38 - Resolving conflicts in zion-os/.next/server/app/services/page.js for branch feature/generative-agents-content
+2025-09-15 15:34:38 - Resolving conflicts in zion-os/.next/server/app/services/page.js.nft.json for branch feature/generative-agents-content
+2025-09-15 15:34:39 - Resolving conflicts in zion-os/.next/server/server-reference-manifest.js for branch feature/generative-agents-content
+2025-09-15 15:34:39 - Resolving conflicts in zion-os/.next/server/server-reference-manifest.json for branch feature/generative-agents-content
+2025-09-15 15:34:39 - Resolving conflicts in zion-os/.next/trace for branch feature/generative-agents-content
+2025-09-15 15:34:39 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch feature/generative-agents-content
+2025-09-15 15:34:39 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch feature/generative-agents-content
