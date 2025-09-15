@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-governance-operating-systems',
+      title: 'AI Governance Operating Systems: From Policy to Runtime Controls',
+      excerpt: 'How to translate AI policies into executable, auditable runtime controls across your stack.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -74,6 +85,16 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
+    },
+    {
+      id: 'agent-safety-tooling-2025',
+      title: 'Agent Safety Tooling 2025: Sandboxes, Guards, and Runtime Observability',
+      excerpt: 'Practical safety layers for autonomous agents: capability sandboxes, action guards, live monitoring.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '9 min read',
+      image: '/blog/agent-safety.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',
