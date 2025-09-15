@@ -84,8 +84,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: AI Governance Readiness 2026 —
-              <a href="/updates/ai-governance-readiness-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see report</a>
+              New: Autonomous Experimentation Playbook —
+              <a href="/blog/ai-2026-autonomous-experimentation-playbook" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -140,10 +140,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/blog/ai-2026-real-time-retrieval-architectures"
+                href="/blog/ai-2026-autonomous-experimentation-playbook"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                New: Real‑Time Retrieval Architectures
+                New: Autonomous Experimentation Playbook
                 <span aria-hidden>→</span>
               </a>
               <a

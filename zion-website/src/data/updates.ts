@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new blog promo)
+  {
+    title: 'Playbook: Autonomous Experimentation (2026) ',
+    summary:
+      'Continuous, policy-safe experiments with eval gates, telemetry, and auto-rollback.',
+    href: '/blog/ai-2026-autonomous-experimentation-playbook',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
   // Added 2025-09-15 (late night batch)
   {
     title: 'Launch: Autonomous Knowledge Ops Suite v1.0',

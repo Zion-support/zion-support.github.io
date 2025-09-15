@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-autonomous-experimentation-playbook',
+    title: 'AI 2026: Autonomous Experimentation Playbook',
+    summary:
+      'Run continuous, policy-safe experiments with eval gates, telemetry, and auto-rollback.'
+  },
+  {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
     title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
     summary:
