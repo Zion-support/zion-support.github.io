@@ -1,3 +1,7 @@
+import React from 'react';
+import ScrollToTop from './components/ScrollToTop';
+import { Header } from './src/components/Header';
+import { Footer } from './src/Footer';
 
 export default function App(): JSX.Element {
   return (
@@ -49,6 +53,30 @@ export default function App(): JSX.Element {
           </div>
         </div>
 
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Latest Insights</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
+            Explore our newest articles and deep-dives on AI, blockchain, and cloud transformation.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/About" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">📘</div>
+              <h3 className="text-xl font-semibold mb-2">About Zion Tech Group</h3>
+              <p className="text-gray-600">Learn our mission, values, and how we deliver impact.</p>
+            </a>
+            <a href="/AIContentCreation" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-semibold mb-2">AI Content Creation</h3>
+              <p className="text-gray-600">See how we scale content with responsible generative AI.</p>
+            </a>
+            <a href="/blockchain-solutions" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold mb-2">Enterprise Blockchain</h3>
+              <p className="text-gray-600">Modernize trust and traceability with production-grade ledgers.</p>
+            </a>
+          </div>
+        </section>
+
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Why Choose Zion Tech Group?
@@ -64,3 +92,4 @@ export default function App(): JSX.Element {
       <Footer />
     </div>
   );
+}
