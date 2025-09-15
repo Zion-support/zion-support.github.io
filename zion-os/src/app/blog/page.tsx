@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agentic-safety-patterns-2025',
+      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+      excerpt: 'Practical patterns like budget caps, sensitive-action handshakes, and reputation‑gated autonomy.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-safety.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -108,6 +119,16 @@ export default function BlogPage() {
       image: '/blog/edge-ai-marketplaces.jpg'
     },
     {
+      id: 'multi-agent-supply-chains',
+      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+      excerpt: 'Agent-based orchestration to reduce latency and increase resilience across supply networks.',
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/multi-agent-supply-chains.jpg'
+    },
+    {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
       excerpt: 'Deploy AI-driven observability, incident response, and remediation to cut MTTR.',
@@ -200,9 +221,10 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
+    { name: 'AI Safety', count: 1, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
@@ -214,7 +236,7 @@ export default function BlogPage() {
   const tags = [
     'AI Consciousness', 'Quantum Computing', 'Machine Learning', 'Cybersecurity',
     'Data Science', 'Autonomous Systems', 'Business Intelligence', 'Cloud Computing',
-    'AI Ethics', 'Research', 'Innovation', 'Technology Trends'
+    'AI Ethics', 'AI Safety', 'Supply Chain', 'Innovation', 'Technology Trends'
   ];
 
   return (
