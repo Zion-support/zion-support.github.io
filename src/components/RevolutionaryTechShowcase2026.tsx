@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (

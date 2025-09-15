@@ -253,6 +253,7 @@ const NewContentShowcase2026: React.FC = () => {
               <div className="text-5xl mb-4">{stat.icon}</div>
               <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
             </motion.div>
           ))}
         </div>
@@ -281,6 +282,7 @@ const NewContentShowcase2026: React.FC = () => {
           </a>
         </div>
       </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
     </div>
   );
 };

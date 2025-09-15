@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+import { motion } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
 

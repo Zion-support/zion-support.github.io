@@ -11,22 +11,18 @@ export const useWhitelabel = () => {
 };
 
 export const WhitelabelProvider = ({ children }) => {
-  const [theme, setTheme] = useState({
-    primaryColor: '#3b82f6',
-    secondaryColor: '#8b5cf6',
-    backgroundColor: '#ffffff',
-    textColor: '#1f2937',
-    brandName: 'Zion Tech Group',
+  const [theme, setTheme] = useState('default');
+  const [branding, setBranding] = useState({
     logo: '/logo.png',
+    companyName: 'Zion Tech Group',
+    primaryColor: '#6366f1'
   });
-
-  const updateTheme = (newTheme) => {
-    setTheme(prev => ({ ...prev, ...newTheme }));
-  };
 
   const value = {
     theme,
-    updateTheme,
+    setTheme,
+    branding,
+    setBranding
   };
 
   return (

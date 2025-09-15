@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
