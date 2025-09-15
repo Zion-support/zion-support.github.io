@@ -41,6 +41,15 @@ const BlogPage = () => {
       image: "/images/enterprise-ai-agents-2025.jpg"
     },
     {
+      title: "AI 2026: LLM Evals Maturity Model",
+      description: "An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+      slug: "ai-2026-llm-evals-maturity-model",
+      category: "AI Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evals-2026.jpg"
+    },
+    {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
       description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
       slug: "ai-2025-quantum-computing-breakthrough",
