@@ -39,6 +39,12 @@ import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import CyberPhysicalSystems2026 from './src/pages/CyberPhysicalSystems2026';
 import AdvancedBiotechSolutions2026 from './src/pages/AdvancedBiotechSolutions2026';
+import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
+import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
+import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
+import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
+import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
+import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -589,17 +595,13 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/CyberPhysicalSystems2026" element={<CyberPhysicalSystems2026 />} />
           <Route path="/pages/AdvancedBiotechSolutions2026" element={<AdvancedBiotechSolutions2026 />} />
-          <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
-<<<<<<< HEAD
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
-=======
->>>>>>> cursor/create-and-deploy-new-content-b683
+          <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
+          <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
