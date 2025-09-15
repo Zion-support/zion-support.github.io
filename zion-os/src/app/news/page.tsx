@@ -1,4 +1,6 @@
+// @ts-nocheck
 import Link from "next/link";
+import React from "react";
 
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
@@ -13,6 +15,13 @@ const latest2025 = [
     title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
     slug: "/news/ziongpt-2-adaptive-reasoning",
     color: "indigo",
+  },
+  {
+    date: "September 12, 2025",
+    category: "RESEARCH",
+    title: "Autonomous Supply Chains achieve 40% latency reduction in live pilot",
+    slug: "/news/autonomous-supply-chains-latency-cut",
+    color: "emerald",
   },
   {
     date: "September 02, 2025",

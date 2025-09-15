@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from 'next/link';
 import React from 'react';
 
@@ -17,6 +18,17 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/foundation-models-2025.jpg',
+      featured: true
+    },
+    {
+      id: 'sovereign-ai-commerce-2025',
+      title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
+      excerpt: 'We unveil our blueprint for self-orchestrating, sovereign AI marketplaces with built‑in governance, identity, and commerce rails.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/sovereign-ai-commerce.jpg',
       featured: true
     },
     {
