@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
 'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -30,8 +34,12 @@ const navigation = [
 >>>>>>> cursor/create-and-deploy-new-content-c934
 ]
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-60ab
 export default function Navigation() {
   return (
     <nav className="bg-gray-900 text-white py-4">
