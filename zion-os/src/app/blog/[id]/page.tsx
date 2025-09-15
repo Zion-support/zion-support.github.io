@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,32 +12,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-  'ai-governance-blueprint-2025': {
-    id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+  'ai-foundation-models-2025': {
+    id: 'ai-foundation-models-2025',
+    title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
     excerpt:
-      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
-    category: 'AI Governance',
-    author: 'Dr. Emily Watson',
+      'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
+    category: 'AI Solutions',
+    author: 'Dr. David Kim',
     date: '2025-09-15',
-    readTime: '8 min read',
+    readTime: '9 min read',
     content: [
-      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
-      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
+      'Foundation models are moving from experimentation to production impact. The winners standardize adaptation recipes, evaluation harnesses, and policy guardrails across teams.',
+      'This guide covers reference patterns: retrieval-augmented generation for knowledge workflows, constrained generation for operations, and tool-use orchestration for complex tasks.',
+      'We include governance checklists: model cards, test sets, bias audits, safety red-teaming, and continuous telemetry to ensure reliable performance at scale.'
     ]
   },
-  'edge-ai-marketplaces': {
-    id: 'edge-ai-marketplaces',
-    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+  'enterprise-agent-guardrails': {
+    id: 'enterprise-agent-guardrails',
+    title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
     excerpt:
-      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
+      'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
+    category: 'Cybersecurity',
+    author: 'Dr. Emily Watson',
     date: '2025-09-14',
-    readTime: '7 min read',
+    readTime: '8 min read',
     content: [
-      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
-      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
+      'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
+      'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
+      'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -54,6 +57,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key building blocks include: DID-backed identity, reputation scoring, policy engines, event-driven orchestration, and human-in-the-loop controls for sensitive actions.',
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ],
+  },
+  'ai-supply-chain-orchestration-2025': {
+    id: 'ai-supply-chain-orchestration-2025',
+    title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
+    excerpt:
+      'A pragmatic roadmap to deploy AI-driven planning, routing, and fulfillment with guardrails and measurable ROI.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Supply chains are data-rich but execution-poor. AI orchestration closes the loop by converting signals into actions across planning, procurement, routing, and fulfillment.',
+      'Start with demand forecasting and inventory positioning. Add dynamic routing with real-time constraints, then automate exception handling with human-in-the-loop approvals for high-risk actions.',
+      'Reference stack: event streaming, optimization engines, policy guardrails, and audit logs. Outcomes include lower stockouts, reduced logistics cost, and faster cycle times.'
+    ]
+  },
+  'responsible-agent-governance': {
+    id: 'responsible-agent-governance',
+    title: 'Responsible Agent Governance: Policies, Controls, and Audit for AI Agents',
+    excerpt:
+      'Design a governance layer for AI agents with identity, permissions, policy evaluation, and verifiable audit.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '6 min read',
+    content: [
+      'As organizations adopt AI agents, governance must move from guidelines to enforceable controls. The core is identity, permissions, and policy evaluation with contextual risk.',
+      'Implement capabilities-based access, graded trust, and continuous monitoring. Maintain tamper-evident audit trails and require approvals for sensitive actions.',
+      'This framework reduces operational risk and builds stakeholder trust without slowing innovation.'
+    ]
   },
   'quantum-risk-modeling-2025': {
     id: 'quantum-risk-modeling-2025',

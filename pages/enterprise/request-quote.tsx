@@ -11,9 +11,5 @@ export default function RequestQuote() {
         <button type="submit" style={{ padding: '0.5rem 0.75rem' }}>Send</button>
       </form>
     </main>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

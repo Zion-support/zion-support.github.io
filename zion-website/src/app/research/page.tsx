@@ -1,9 +1,44 @@
+<<<<<<< HEAD
 import React from 'react'
-import {
-  LightBulbIcon,
-  CpuChipIcon,
-  AcademicCapIcon,
+import { LightBulbIcon, CpuChipIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
+
+const areas = [
+	{ name: 'Foundation Models', description: 'Training and adapting multi-modal models for enterprise tasks.', icon: LightBulbIcon },
+	{ name: 'Systems & Optimization', description: 'Inference acceleration, scheduling, and cost/performance trade-offs.', icon: CpuChipIcon },
+	{ name: 'Applied Science', description: 'Safety, robustness, and domain-specific evaluation methods.', icon: AcademicCapIcon },
+]
+
+export default function ResearchPage() {
+	return (
+		<div className="bg-black min-h-screen">
+			<div className="mx-auto max-w-7xl px-6 pt-24">
+				<div className="mx-auto max-w-2xl lg:text-center">
+					<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Research</h1>
+					<p className="mt-4 text-lg leading-8 text-gray-300">Advancing the state of the art in practical AI systems.</p>
+				</div>
+				<div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
+					<dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+						{areas.map((a) => (
+							<div key={a.name} className="rounded-2xl bg-white/5 p-6">
+								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+									<a.icon className="h-5 w-5 text-blue-400" />
+									{a.name}
+								</dt>
+								<dd className="mt-3 text-sm text-gray-300">{a.description}</dd>
+							</div>
+						))}
+					</dl>
+				</div>
+			</div>
+		</div>
+	)
+=======
+import { 
+  LightBulbIcon, 
+  CpuChipIcon, 
+  AcademicCapIcon, 
   GlobeAltIcon,
+  ChartBarIcon,
   UserGroupIcon,
   RocketLaunchIcon,
   ShieldCheckIcon
@@ -12,8 +47,7 @@ import {
 const researchAreas = [
   {
     name: 'Artificial Intelligence & Machine Learning',
-    description:
-      'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
+    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
     icon: LightBulbIcon,
     topics: [
       'Deep Learning & Neural Networks',
@@ -22,12 +56,11 @@ const researchAreas = [
       'Reinforcement Learning',
       'Federated Learning',
       'Explainable AI'
-    ]
+    ],
   },
   {
     name: 'Quantum Computing & AI',
-    description:
-      'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
+    description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
     icon: CpuChipIcon,
     topics: [
       'Quantum Neural Networks',
@@ -36,12 +69,11 @@ const researchAreas = [
       'Quantum Error Correction',
       'Quantum Algorithms for AI',
       'Quantum Supremacy Applications'
-    ]
+    ],
   },
   {
     name: 'Autonomous Systems & Robotics',
-    description:
-      'Developing intelligent systems that can operate independently and adapt to changing environments.',
+    description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
     icon: RocketLaunchIcon,
     topics: [
       'Autonomous Decision Making',
@@ -50,12 +82,11 @@ const researchAreas = [
       'Human-Robot Interaction',
       'Autonomous Navigation',
       'Swarm Intelligence'
-    ]
+    ],
   },
   {
     name: 'AI Ethics & Governance',
-    description:
-      'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
+    description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
     icon: ShieldCheckIcon,
     topics: [
       'AI Bias & Fairness',
@@ -64,8 +95,8 @@ const researchAreas = [
       'Ethical AI Guidelines',
       'AI Regulation & Policy',
       'Human-AI Collaboration'
-    ]
-  }
+    ],
+  },
 ]
 
 const recentPublications = [
@@ -75,9 +106,8 @@ const recentPublications = [
     journal: 'Nature Machine Intelligence',
     year: '2024',
     doi: '10.1038/s42256-024-00001-x',
-    abstract:
-      'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
-    impact: 'High Impact'
+    abstract: 'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
+    impact: 'High Impact',
   },
   {
     title: 'Autonomous Business Operations: AI-Driven Process Optimization',
@@ -85,9 +115,8 @@ const recentPublications = [
     journal: 'Harvard Business Review',
     year: '2024',
     doi: '10.1000/hbr.2024.001',
-    abstract:
-      'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
-    impact: 'Industry Leading'
+    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
+    impact: 'Industry Leading',
   },
   {
     title: 'Multi-Modal AI Research Assistant: Accelerating Scientific Discovery',
@@ -95,9 +124,8 @@ const recentPublications = [
     journal: 'Science',
     year: '2023',
     doi: '10.1126/science.abc1234',
-    abstract:
-      'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
-    impact: 'Breakthrough'
+    abstract: 'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
+    impact: 'Breakthrough',
   },
   {
     title: 'Ethical AI Development: A Framework for Responsible Innovation',
@@ -105,60 +133,23 @@ const recentPublications = [
     journal: 'AI Ethics Journal',
     year: '2023',
     doi: '10.1000/aie.2023.001',
-    abstract:
-      'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
-    impact: 'Foundational'
-  }
+    abstract: 'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
+    impact: 'Foundational',
+  },
 ]
 
 const researchImpact = [
-  {
-    metric: 'Research Papers Published',
-    value: '150+',
-    description: 'Peer-reviewed publications in top-tier journals and conferences'
-  },
-  {
-    metric: 'Citations',
-    value: '10,000+',
-    description: 'Academic citations demonstrating research influence'
-  },
-  {
-    metric: 'Patents Filed',
-    value: '25+',
-    description: 'Intellectual property protecting our innovations'
-  },
-  {
-    metric: 'Research Collaborations',
-    value: '50+',
-    description: 'Partnerships with leading academic institutions'
-  }
+  { metric: 'Research Papers Published', value: '150+', description: 'Peer-reviewed publications in top-tier journals and conferences' },
+  { metric: 'Citations', value: '10,000+', description: 'Academic citations demonstrating research influence' },
+  { metric: 'Patents Filed', value: '25+', description: 'Intellectual property protecting our innovations' },
+  { metric: 'Research Collaborations', value: '50+', description: 'Partnerships with leading academic institutions' },
 ]
 
 const academicPartners = [
-  {
-    name: 'Stanford University',
-    location: 'Stanford, CA',
-    focus: 'AI & Machine Learning',
-    collaboration: 'Joint research programs and student exchanges'
-  },
-  {
-    name: 'MIT',
-    location: 'Cambridge, MA',
-    focus: 'Quantum Computing & AI',
-    collaboration: 'Shared research facilities and joint publications'
-  },
-  {
-    name: 'University of Oxford',
-    location: 'Oxford, UK',
-    focus: 'AI Ethics & Governance',
-    collaboration: 'Policy research and ethical AI development'
-  },
-  {
-    name: 'University of Tokyo',
-    location: 'Tokyo, Japan',
-    focus: 'Robotics & Autonomous Systems',
-    collaboration: 'Robotic learning and human-robot interaction'
-  }
+  { name: 'Stanford University', location: 'Stanford, CA', focus: 'AI & Machine Learning', collaboration: 'Joint research programs and student exchanges' },
+  { name: 'MIT', location: 'Cambridge, MA', focus: 'Quantum Computing & AI', collaboration: 'Shared research facilities and joint publications' },
+  { name: 'University of Oxford', location: 'Oxford, UK', focus: 'AI Ethics & Governance', collaboration: 'Policy research and ethical AI development' },
+  { name: 'University of Tokyo', location: 'Tokyo, Japan', focus: 'Robotics & Autonomous Systems', collaboration: 'Robotic learning and human-robot interaction' },
 ]
 
 export default function ResearchPage() {
@@ -186,9 +177,12 @@ export default function ResearchPage() {
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Research</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Focus Areas</p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Focus Areas
+          </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation and advancing the state of the art.
+            Our research spans the cutting edge of AI and technology, driving innovation 
+            and advancing the state of the art.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -218,7 +212,9 @@ export default function ResearchPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Recent Research</p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Recent Research
+          </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our latest research contributions to the field of artificial intelligence and technology.
           </p>
@@ -228,17 +224,12 @@ export default function ResearchPage() {
             {recentPublications.map((publication) => (
               <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-x-2 mb-4">
-                  <span
-                    className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                      publication.impact === 'High Impact'
-                        ? 'bg-blue-600/20 text-blue-400'
-                        : publication.impact === 'Industry Leading'
-                        ? 'bg-green-600/20 text-green-400'
-                        : publication.impact === 'Breakthrough'
-                        ? 'bg-purple-600/20 text-purple-400'
-                        : 'bg-gray-600/20 text-gray-400'
-                    }`}
-                  >
+                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :
+                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :
+                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
+                    'bg-gray-600/20 text-gray-400'
+                  }`}>
                     {publication.impact}
                   </span>
                   <span className="text-sm text-gray-400">{publication.year}</span>
@@ -265,9 +256,12 @@ export default function ResearchPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Research Influence</p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Research Influence
+          </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research has made significant contributions to the field, influencing both academia and industry.
+            Our research has made significant contributions to the field, 
+            influencing both academia and industry.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
@@ -287,9 +281,12 @@ export default function ResearchPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Academic Partnerships</p>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Academic Partnerships
+          </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            We collaborate with leading academic institutions worldwide to advance the frontiers of AI research and innovation.
+            We collaborate with leading academic institutions worldwide to advance 
+            the frontiers of AI research and innovation.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -323,9 +320,12 @@ export default function ResearchPage() {
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our research community</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Join our research community
+          </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Interested in collaborating on cutting-edge AI research? Let's explore opportunities to work together.
+            Interested in collaborating on cutting-edge AI research? 
+            Let's explore opportunities to work together.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
@@ -342,5 +342,5 @@ export default function ResearchPage() {
       </div>
     </div>
   )
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 }
-

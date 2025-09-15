@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
-
-interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem) => void,
-  isLoading?: boolean,
-  projectDescription?: string,
-  serviceType?: string
-=======
 import { useState } from "react";
 import { MatchResultItem } from "@/lib/ai-matchmaking";
 import { Card, CardContent } from "@/components/ui/card";
@@ -32,7 +14,6 @@ interface AIMatchingResultsProps {
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function AIMatchingResults({
@@ -42,11 +23,7 @@ export function AIMatchingResults({
   projectDescription = "",
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState("all"),
-=======
   const [activeTab, setActiveTab] = useState("all");
->>>>>>> origin/auto/autonomy-17186719616
   
   // Group matches by category
   const categories = {
@@ -54,17 +31,6 @@ export function AIMatchingResults({
     talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
     services: matches.filter(match => match.category.toLowerCase().includes("service")),
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-<<<<<<< HEAD
-  },
-  
-  // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase(),
-    if (lowerCategory.includes("talent")) return User,
-    if (lowerCategory.includes("equipment")) return Monitor,
-    return BriefcaseIcon
-  },
-=======
   };
   
   // Get the icon for a category
@@ -74,7 +40,6 @@ export function AIMatchingResults({
     if (lowerCategory.includes("equipment")) return Monitor;
     return BriefcaseIcon;
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   if (isLoading) {
     return (
@@ -86,11 +51,7 @@ export function AIMatchingResults({
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
   
   if (matches.length === 0) {
@@ -110,11 +71,7 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
   
   return (
@@ -139,11 +96,7 @@ export function AIMatchingResults({
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
               items.map((match) => {
-<<<<<<< HEAD
-                const CategoryIcon = getCategoryIcon(match.category),
-=======
                 const CategoryIcon = getCategoryIcon(match.category);
->>>>>>> origin/auto/autonomy-17186719616
                 return (
                   <Card 
                     key={match.id}
@@ -200,11 +153,7 @@ export function AIMatchingResults({
                       </div>
                     </div>
                   </Card>
-<<<<<<< HEAD
-                ),
-=======
                 );
->>>>>>> origin/auto/autonomy-17186719616
               })
             ) : (
               <div className="text-center py-8 text-zion-slate-light">
@@ -215,10 +164,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-<<<<<<< HEAD
-  ),
-}
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

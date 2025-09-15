@@ -9,6 +9,13 @@ export const metadata = {
 const latest2025 = [
   {
     date: "September 15, 2025",
+    category: "GOVERNANCE",
+    title: "Enterprise AI Safety Assurance framework now available in Zion OS",
+    slug: "/blog/ai-safety-assurance-2025",
+    color: "emerald",
+  },
+  {
+    date: "September 15, 2025",
     category: "AI",
     title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
     slug: "/news/ziongpt-2-adaptive-reasoning",
@@ -27,6 +34,20 @@ const latest2025 = [
     title: "Zion Tech Group acquires VectorEdge to expand edge-AI capabilities",
     slug: "/news/acquisition-vectoredge",
     color: "blue",
+  },
+  {
+    date: "September 13, 2025",
+    category: "SAFETY",
+    title: "Agent Safety Scorecards now available across Zion OS deployments",
+    slug: "/news/agent-safety-scorecards",
+    color: "emerald",
+  },
+  {
+    date: "September 11, 2025",
+    category: "OPERATIONS",
+    title: "Governed Autonomy Runbooks shipped for change management & approvals",
+    slug: "/news/governed-autonomy-runbooks",
+    color: "orange",
   },
 ];
 

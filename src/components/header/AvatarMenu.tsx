@@ -1,34 +1,13 @@
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link',
-import { useAuth } from '@/hooks/useAuth',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-=======
 import React from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
->>>>>>> origin/auto/autonomy-17186719616
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-<<<<<<< HEAD
-  DropdownMenuLabel} from '@/components/ui/dropdown-menu',
-import { User as UserIcon, Package } from 'lucide-react'
-import { LogOut } from 'lucide-react', // Assuming lucide-react is used
-
-export const AvatarMenu: React.FC = () => {
-  const { user, logout, avatarUrl } = useAuth(),
-
-  if (!user) return null,
-
-  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase(),
-
-const AvatarMenu = () => {
-=======
   DropdownMenuLabel,
 } from '@/components/ui/dropdown-menu';
 import { User as UserIcon, Package } from 'lucide-react'
@@ -41,7 +20,6 @@ export const AvatarMenu: React.FC = () => {
 
   const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
 
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
@@ -91,14 +69,7 @@ export const AvatarMenu: React.FC = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-<<<<<<< HEAD
-  ),
-},
-
-export default AvatarMenu,
-=======
   );
 };
 
 export default AvatarMenu;
->>>>>>> origin/auto/autonomy-17186719616
