@@ -3,6 +3,8 @@ import React from 'react';
 const QuantumAIRevolution2026: React.FC = () => {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -236,7 +238,8 @@ const QuantumAIRevolution2026: React.FC = () => {
                 <div className="text-sm text-green-400 font-semibold">+{stat.improvement}</div>
               </motion.div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-8735
+>>>>>>> main
           </div>
         </div>
       </div>

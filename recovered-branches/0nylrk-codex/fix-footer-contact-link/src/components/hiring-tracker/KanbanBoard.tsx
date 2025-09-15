@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-import { useStateuseEffect } from "react";
-import { DragDropContextDroppableDraggable } from "react-beautiful-dnd";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { JobApplicationStatus } from "@/types/jobs";
-import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
-=======
-import { useState, useEffect } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
@@ -34,99 +21,18 @@ const COLUMNS = [
   {
     id: "new",
     title: "Applied",
-<<<<<<< HEAD
-    description: "New applications"},
-  {
-    id: "shortlisted",
-    title: "Shortlisted",
-    description: "Candidates selected for review"},
-  {
-    id: "interview",
-    title: "Interview",
-    description: "Scheduled for interview"},
-  {
-    id: "hired",
-    title: "Hired",
-    description: "Successful candidates"},
-  {
-    id: "rejected",
-    title: "Rejected",
-    description: "Not moving forward"}];
-=======
-    description: "New applications",
-  },
-  {
-    id: "shortlisted",
-    title: "Shortlisted",
-    description: "Candidates selected for review",
-  },
-  {
-    id: "interview",
-    title: "Interview",
-    description: "Scheduled for interview",
-  },
-  {
-    id: "hired",
-    title: "Hired",
-    description: "Successful candidates",
-  },
-  {
-    id: "rejected",
-    title: "Rejected",
-    description: "Not moving forward",
-  },
-];
->>>>>>> origin/auto/autonomy-17186719616
 
 interface KanbanBoardProps {
   jobId?: string;
 }
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
-<<<<<<< HEAD
-  const { applicationsisLoadingupdateApplicationStatus } = useJobApplications(jobId);
-  const [columnsetColumns] = useState<Record<stringJobApplication[]>>({});
-=======
-  const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
-  const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
->>>>>>> origin/auto/autonomy-17186719616
   const isMobile = useIsMobile();
   
   // Initialize columns with applications based on their status
   useEffect(() => {
     if (applications) {
       // Group applications by status
-<<<<<<< HEAD
-      const groupedApplications = COLUMNS.reduce((accolumn) => {
-        acc[column.id] = applications.filter(app => app.status === column.id);
-        return acc;
-      }{} as Record<stringJobApplication[]>);
-      
-      setColumns(groupedApplications);
-    }
-  }[applications]);
-  
-  // Handle drag end event to update the application status
-  const handleDragEnd = async (result: DropResult) => {
-    const { destinationsourcedraggableId } = result;
-    
-    // If there's no destination or the item is dropped in the same placedo nothing
-=======
-      const groupedApplications = COLUMNS.reduce((acc, column) => {
-        acc[column.id] = applications.filter(app => app.status === column.id);
-        return acc;
-      }, {} as Record<string, JobApplication[]>);
-      
-      setColumns(groupedApplications);
-    }
-  }, [applications]);
-  
-  // Handle drag end event to update the application status
-  const handleDragEnd = async (result: DropResult) => {
-    const { destination, source, draggableId } = result;
-    
-    // If there's no destination or the item is dropped in the same place, do nothing
->>>>>>> origin/auto/autonomy-17186719616
     if (!destination || 
         (destination.droppableId === source.droppableId && 
          destination.index === source.index)) {
@@ -143,60 +49,21 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
     // Optimistically update the UI
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
-<<<<<<< HEAD
-    const [removed] = sourceColumn.splice(source.index1);
-    destColumn.splice(destination.index0{ ...removedstatus: newStatus });
-=======
-    const [removed] = sourceColumn.splice(source.index, 1);
-    destColumn.splice(destination.index, 0, { ...removed, status: newStatus });
->>>>>>> origin/auto/autonomy-17186719616
     
     setColumns({
       ...columns,
       [source.droppableId]: sourceColumn,
-<<<<<<< HEAD
-      [destination.droppableId]: destColumn});
-    
-    // Update status in the database
-    try {
-      await updateApplicationStatus(draggableIdnewStatus);
-      toast({
-        title: "Status updated",
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
-=======
-      [destination.droppableId]: destColumn,
-    });
-    
-    // Update status in the database
-    try {
-      await updateApplicationStatus(draggableId, newStatus);
-      toast({
-        title: "Status updated",
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`,
-      });
->>>>>>> origin/auto/autonomy-17186719616
     } catch (error) {
       // Revert the UI changes if the database update fails
       toast({
         title: "Failed to update status",
         description: "Please try again",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
   
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
-<<<<<<< HEAD
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_i) => (
-=======
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
           <Card key={i} className="h-[500px]">
             <CardHeader>
               <Skeleton className="h-8 w-24" />

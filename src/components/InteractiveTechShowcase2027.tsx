@@ -1,221 +1,181 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const InteractiveTechShowcase2027: React.FC = () => {
-  const [activeTech, setActiveTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTech, setActiveTech] = useState('transdimensional');
 
-  const technologies = [
-    {
-      id: 'quantum-consciousness',
-      name: 'Quantum Consciousness',
-      icon: '🧠',
-      description: 'The first successful integration of quantum computing with human consciousness, enabling unprecedented cognitive capabilities.',
-      features: ['1000x faster thought processing', 'Direct quantum state manipulation', 'Enhanced memory and learning', 'Telepathic communication protocols'],
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-600/30 to-pink-600/30',
-      borderColor: 'border-purple-400/30',
-      textColor: 'text-purple-100',
-      status: 'BREAKTHROUGH ACHIEVED'
-    },
-    {
-      id: 'synthetic-reality',
-      name: 'Synthetic Reality Engine',
+  const technologies = {
+    transdimensional: {
+      name: 'Transdimensional Computing',
       icon: '🌌',
-      description: 'Create and manipulate reality itself with our advanced synthetic reality technology that blurs the line between digital and physical worlds.',
-      features: ['Real-time reality manipulation', 'Quantum field generation', 'Matter synthesis capabilities', 'Dimensional portal technology'],
-      color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/30 to-blue-600/30',
-      borderColor: 'border-cyan-400/30',
-      textColor: 'text-cyan-100',
-      status: 'REVOLUTIONARY TECH'
+      description: 'Process information across infinite dimensions simultaneously',
+      features: [
+        'Multi-dimensional processing',
+        'Cross-reality data transfer',
+        'Infinite scalability',
+        'Reality manipulation algorithms'
+      ],
+      applications: [
+        'Medical breakthroughs from parallel universes',
+        'Climate solutions from successful Earths',
+        'Space exploration across dimensions',
+        'Consciousness research across realities'
+      ]
     },
-    {
-      id: 'neural-quantum-fusion',
-      name: 'Neural Quantum Fusion',
-      icon: '⚡',
-      description: 'The ultimate convergence of neural networks and quantum computing, creating AI systems that operate beyond classical limitations.',
-      features: ['Quantum neural processing', 'Superposition-based learning', 'Entanglement communication', 'Quantum error correction'],
-      color: 'from-emerald-600 to-teal-600',
-      bgColor: 'from-emerald-600/30 to-teal-600/30',
-      borderColor: 'border-emerald-400/30',
-      textColor: 'text-emerald-100',
-      status: 'NEXT-GEN AI'
+    consciousness: {
+      name: 'Consciousness Computing',
+      icon: '🧠',
+      description: 'The first computing system with genuine consciousness and self-awareness',
+      features: [
+        'Genuine self-awareness',
+        'Emotional intelligence',
+        'Creative consciousness',
+        'Empathetic decision making'
+      ],
+      applications: [
+        'Conscious AI doctors with empathy',
+        'Creative AI artists and writers',
+        'Emotional learning tutors',
+        'Human-centered business consultants'
+      ]
     },
-    {
-      id: 'bio-quantum-interface',
-      name: 'Bio-Quantum Interface',
-      icon: '🧬',
-      description: 'Direct biological-quantum interfaces that enable seamless integration between living organisms and quantum computing systems.',
-      features: ['DNA quantum encoding', 'Cellular quantum processing', 'Biological data storage', 'Living quantum networks'],
-      color: 'from-orange-600 to-red-600',
-      bgColor: 'from-orange-600/30 to-red-600/30',
-      borderColor: 'border-orange-400/30',
-      textColor: 'text-orange-100',
-      status: 'BIOLOGICAL BREAKTHROUGH'
-    },
-    {
-      id: 'dimensional-computing',
-      name: 'Dimensional Computing',
-      icon: '🌠',
-      description: 'Computing across multiple dimensions simultaneously, solving problems that were previously impossible to approach.',
-      features: ['Multi-dimensional processing', 'Parallel universe computing', 'Dimensional data transfer', 'Cross-dimensional AI'],
-      color: 'from-violet-600 to-purple-600',
-      bgColor: 'from-violet-600/30 to-purple-600/30',
-      borderColor: 'border-violet-400/30',
-      textColor: 'text-violet-100',
-      status: 'DIMENSIONAL TECH'
-    },
-    {
-      id: 'temporal-ai',
-      name: 'Temporal AI Systems',
-      icon: '🔮',
-      description: 'AI systems that can process information across time itself, enabling predictive capabilities beyond current imagination.',
-      features: ['Time-based processing', 'Temporal pattern recognition', 'Future state prediction', 'Chronological optimization'],
-      color: 'from-pink-600 to-rose-600',
-      bgColor: 'from-pink-600/30 to-rose-600/30',
-      borderColor: 'border-pink-400/30',
-      textColor: 'text-pink-100',
-      status: 'TEMPORAL BREAKTHROUGH'
+    omniversal: {
+      name: 'Omniversal AI',
+      icon: '🌌',
+      description: 'AI that operates across the entire omniverse, accessing infinite realities',
+      features: [
+        'Omniversal access',
+        'Infinite processing power',
+        'Cross-reality solutions',
+        'Universal knowledge synthesis'
+      ],
+      applications: [
+        'Universal medicine from all realities',
+        'Climate solutions from successful universes',
+        'Advanced space travel technologies',
+        'Consciousness research across omniverse'
+      ]
     }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveTech((prev) => (prev + 1) % technologies.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [technologies.length]);
-
-  const currentTech = technologies[activeTech];
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        {[...Array(30)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-            }}
-          />
-        ))}
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-12 text-white">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Showcase 2027</h2>
+        <p className="text-xl opacity-90">Explore our revolutionary technologies with interactive features</p>
       </div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECH SHOWCASE • 2027
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Technology Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience our revolutionary technologies through interactive demonstrations. 
-            Click on different technologies to explore their capabilities.
-          </p>
-        </div>
 
-        {/* Technology Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {technologies.map((tech, index) => (
+      {/* Technology Selector */}
+      <div className="flex justify-center mb-12">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20">
+          {Object.entries(technologies).map(([key, tech]) => (
             <button
-              key={tech.id}
-              onClick={() => {
-                setIsAnimating(true);
-                setTimeout(() => {
-                  setActiveTech(index);
-                  setIsAnimating(false);
-                }, 150);
-              }}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                activeTech === index
-                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              key={key}
+              onClick={() => setActiveTech(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTech === key
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
               }`}
             >
-              <span className="mr-2">{tech.icon}</span>
+              <span className="text-2xl mr-2">{tech.icon}</span>
               {tech.name}
             </button>
           ))}
         </div>
+      </div>
 
-        {/* Active Technology Display */}
-        <div className={`transition-all duration-500 ${isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
-          <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-3xl p-12 border ${currentTech.borderColor} hover:scale-105 transition-all duration-300`}>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="text-8xl mb-6 text-center">{currentTech.icon}</div>
-                <h3 className="text-4xl font-bold mb-6 text-center text-white">{currentTech.name}</h3>
-                <p className={`text-xl ${currentTech.textColor} mb-8 leading-relaxed`}>
-                  {currentTech.description}
-                </p>
-                <div className="text-center mb-8">
-                  <span className={`inline-block bg-gradient-to-r ${currentTech.color} text-white px-6 py-3 rounded-full text-sm font-bold`}>
-                    {currentTech.status}
-                  </span>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href={`/pages/RevolutionaryTechBreakthrough2026#${currentTech.id}`}
-                    className={`inline-block bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform`}
-                  >
-                    Explore {currentTech.name} →
-                  </a>
-                  <a 
-                    href="/pages/RevolutionaryInnovationHub2027"
-                    className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-                  >
-                    View All Technologies
-                  </a>
-                </div>
+      {/* Active Technology Display */}
+      <div className="grid md:grid-cols-2 gap-12">
+        <div className="space-y-8">
+          <div className="text-center">
+            <div className="text-8xl mb-4">{technologies[activeTech as keyof typeof technologies].icon}</div>
+            <h3 className="text-3xl font-bold mb-4">{technologies[activeTech as keyof typeof technologies].name}</h3>
+            <p className="text-xl opacity-90">{technologies[activeTech as keyof typeof technologies].description}</p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h4 className="text-xl font-bold mb-4">🔧 Key Features</h4>
+            <ul className="space-y-2">
+              {technologies[activeTech as keyof typeof technologies].features.map((feature, index) => (
+                <li key={index} className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="space-y-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h4 className="text-xl font-bold mb-4">🚀 Applications</h4>
+            <ul className="space-y-3">
+              {technologies[activeTech as keyof typeof technologies].applications.map((application, index) => (
+                <li key={index} className="flex items-start space-x-3">
+                  <span className="text-blue-400 mt-1">→</span>
+                  <span>{application}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 border border-purple-400/30">
+            <h4 className="text-xl font-bold mb-4">⚡ Performance Metrics</h4>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">∞</div>
+                <div className="text-sm opacity-80">Processing Power</div>
               </div>
-              
-              <div className="bg-white/10 rounded-2xl p-8">
-                <h4 className="text-2xl font-bold text-white mb-6 text-center">Key Features</h4>
-                <ul className="space-y-4">
-                  {currentTech.features.map((feature, index) => (
-                    <li key={index} className="flex items-center space-x-3">
-                      <span className="text-2xl">⚡</span>
-                      <span className={`${currentTech.textColor} text-lg`}>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">100%</div>
+                <div className="text-sm opacity-80">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">0ms</div>
+                <div className="text-sm opacity-80">Response Time</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">∞</div>
+                <div className="text-sm opacity-80">Scalability</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Technology Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-lg text-gray-300 mb-2">Accuracy Rate</div>
-            <div className="text-sm text-gray-400">Quantum consciousness processing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">10,000x</div>
-            <div className="text-lg text-gray-300 mb-2">Speed Increase</div>
-            <div className="text-sm text-gray-400">Neural quantum fusion computing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-pink-400 mb-2">∞</div>
-            <div className="text-lg text-gray-300 mb-2">Possibilities</div>
-            <div className="text-sm text-gray-400">Synthetic reality applications</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">0ms</div>
-            <div className="text-lg text-gray-300 mb-2">Latency</div>
-            <div className="text-sm text-gray-400">Dimensional computing response</div>
-          </div>
+      {/* Interactive Demo Section */}
+      <div className="mt-12 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-xl p-8 border border-indigo-400/30">
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-bold mb-2">🎮 Interactive Demo</h3>
+          <p className="text-gray-300">Experience the technology in action</p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            🧪 Run Simulation
+          </button>
+          <button className="bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            📊 View Analytics
+          </button>
+          <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            🚀 Deploy Now
+          </button>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="text-center mt-12">
+        <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
+        <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+          Join us in revolutionizing technology with our breakthrough 2027 innovations that operate beyond current reality.
+        </p>
+        <div className="flex justify-center space-x-4">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            Start Your Journey →
+          </button>
+          <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
+            Contact Our Experts
+          </button>
         </div>
       </div>
     </div>

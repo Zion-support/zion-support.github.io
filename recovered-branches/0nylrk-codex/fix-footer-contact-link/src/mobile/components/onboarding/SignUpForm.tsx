@@ -1,53 +1,10 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-=======
-import React, { useState } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { AlertCircle } from "lucide-react";
-<<<<<<< HEAD
-import { AlertDescription } from "@/components/ui/alert";
-
-export function SignUpForm() {
-  const navigate = useNavigate();
-  const { signuploginWithGoogle } = useAuth();
-  
-  const [formDatasetFormData] = useState({
-    email: "",
-    password: "",
-    name: ""});
-  const [isLoadingsetIsLoading] = useState(false);
-  const [signupModesetSignupMode] = useState(true);
-  const [errorsetError] = useState("");
-  
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { namevalue } = e.target;
-    setFormData(prev => ({ ...prev[name]: value }));
-=======
-import { Alert, AlertDescription } from "@/components/ui/alert";
-
-export function SignUpForm() {
-  const navigate = useNavigate();
-  const { signup, login, loginWithGoogle } = useAuth();
-  
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    name: "",
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
-  
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
->>>>>>> origin/auto/autonomy-17186719616
     setError("");
   };
   
@@ -58,14 +15,6 @@ export function SignUpForm() {
     
     try {
       if (signupMode) {
-<<<<<<< HEAD
-        const { error } = await signup(formData.emailformData.password{
-          name: formData.name});
-=======
-        const { error } = await signup(formData.email, formData.password, {
-          name: formData.name,
-        });
->>>>>>> origin/auto/autonomy-17186719616
         
         if (error) {
           throw new Error(error);
@@ -73,11 +22,6 @@ export function SignUpForm() {
         
         navigate("/mobile");
       } else {
-<<<<<<< HEAD
-        const { error } = await login(formData.emailformData.password);
-=======
-        const { error } = await login(formData.email, formData.password);
->>>>>>> origin/auto/autonomy-17186719616
         
         if (error) {
           throw new Error(error);
