@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content)
+  {
+    title: 'Launch: Real-Time Agent Cost Controller v1.0',
+    summary:
+      'Continuous cost monitoring, dynamic budgets, and eval-gated routing to reduce spend safely.',
+    href: '/updates/real-time-agent-cost-controller-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (even later night batch - fresh content)
   {
     title: 'Launch: Realtime Agent Observatory 1.0',
