@@ -7,6 +7,24 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+<<<<<<< HEAD
+  // Added 2025-09-15 (new content created now)
+  {
+    title: 'Launch: Autonomous Security Copilot v1.0',
+    summary:
+      'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
+    href: '/updates/autonomous-security-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Guardrails for Tool Use (2026)',
+    summary:
+      'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
+    href: '/updates/production-guardrails-tool-use-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: AI Governance Dashboard v5',
@@ -34,6 +52,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Report: AI 2026 Platform Readiness Checklist',
+    summary:
+      'Engineer-ready checklist across data, governance, evals, and observability to ship enterprise AI safely.',
+    href: '/updates/ai-2026-platform-readiness-checklist',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
     summary:
       'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
@@ -55,6 +81,15 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Exec-ready strategy copilot that drafts roadmaps, OKRs, and investment memos grounded in telemetry and benchmarks.',
     href: '/updates/autonomous-strategy-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (latest)
+  {
+    title: 'Launch: Autonomous Decision Engine v1.0',
+    summary:
+      'Policy-aware agent decisioning with eval gates, budgets, and signed evidence for every action.',
+    href: '/updates/autonomous-decision-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },

@@ -1,38 +1,41 @@
-export default function Page() {
+export default function AutonomousAnalyticsCopilot() {
   return (
-    <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
-        <a href="/updates" className="text-sm text-blue-300 hover:text-blue-200">← All updates</a>
-        <p className="mt-4 text-sm font-semibold leading-6 text-blue-400">Launch</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Launch: Autonomous Analytics Copilot v1.0
-        </h1>
-        <p className="mt-2 text-gray-400">2025-09-15</p>
-        <div className="prose prose-invert mt-8">
-          <p>
-            The Autonomous Analytics Copilot generates trustworthy dashboards, narratives, and alerts grounded in your
-            telemetry and KPIs. It proposes experiments, tracks results, and packages audit-ready evidence for reviews.
-          </p>
-          <h2>What’s new</h2>
-          <ul>
-            <li>Natural language queries over metrics with lineage-aware citations</li>
-            <li>Auto-generated KPI briefs, weekly digests, and anomaly narratives</li>
-            <li>Guardrailed insights with policy-as-code and signed evidence bundles</li>
-            <li>Experiment planner with eval gates and rollback recommendations</li>
-          </ul>
-          <h2>Why it matters</h2>
-          <p>
-            Teams make faster, safer, evidence-backed decisions with explainable insights that connect directly to
-            production telemetry and governance controls.
-          </p>
-          <p className="mt-8">
-            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
-              Talk to us
-            </a>
-          </p>
+    <div className="min-h-screen bg-black">
+      <article className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="mb-8">
+            <p className="text-sm text-gray-400">September 15, 2025 · Launch</p>
+            <h1 className="mt-2 text-4xl font-bold tracking-tight text-white">
+              Launch: Autonomous Analytics Copilot v1.0
+            </h1>
+            <p className="mt-4 text-lg text-gray-300">
+              Automates insights, anomaly detection, and executive summaries with policy-aware data access and
+              live evaluation gates for safe, reliable analytics.
+            </p>
+          </header>
+
+          <section className="prose prose-invert prose-lg max-w-none">
+            <h2>What's in v1.0</h2>
+            <ul>
+              <li>Automated insight generation across metrics, segments, and cohorts.</li>
+              <li>Real-time anomaly detection with alerting and explainability.</li>
+              <li>Executive-ready summaries with links to evidence and drilldowns.</li>
+              <li>Policy-as-code guardrails for governed data access and audit trails.</li>
+              <li>Live eval gates to validate accuracy, safety, and cost before rollout.</li>
+            </ul>
+
+            <h3>Who it's for</h3>
+            <p>
+              Operations, product, and executive teams who need trusted analytics without manual dashboard spelunking.
+            </p>
+
+            <h3>Get started</h3>
+            <p>
+              Contact us to enable the Autonomous Analytics Copilot in your environment and connect to your data sources.
+            </p>
+          </section>
         </div>
-      </div>
+      </article>
     </div>
   )
 }
-
