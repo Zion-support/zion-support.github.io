@@ -13,6 +13,9 @@ import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
+import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
+import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
+import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -30,15 +33,26 @@ export default function App(): JSX.Element {
                 <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
                   <div className="flex items-center justify-center space-x-2 mb-2">
                     <span className="text-2xl">🎉</span>
-                    <h3 className="text-xl font-bold">NEW: Comprehensive Services 2025</h3>
+                    <h3 className="text-xl font-bold">NEW: Revolutionary Content 2025</h3>
                     <span className="text-2xl">🎉</span>
                   </div>
                   <p className="text-lg opacity-90 mb-4">
-                    Discover our complete suite of cutting-edge technology solutions
+                    Explore our latest insights on AI Transformation, Quantum Computing, and Technology Trends
                   </p>
-                  <a href="/pages/ComprehensiveServices2025" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    Explore Now →
-                  </a>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <a href="/pages/TechnologyInsights2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+                      🔮 Tech Insights →
+                    </a>
+                    <a href="/pages/AITransformationGuide2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+                      🤖 AI Guide →
+                    </a>
+                    <a href="/pages/QuantumComputingSolutions2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+                      ⚡ Quantum →
+                    </a>
+                    <a href="/pages/ComprehensiveServices2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+                      🚀 All Services →
+                    </a>
+                  </div>
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -52,24 +66,30 @@ export default function App(): JSX.Element {
                   <p className="text-xl text-gray-600 mb-8">
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
-                  <div className="flex flex-col sm:flex-row justify-center space-x-4 space-y-4 sm:space-y-0">
-                    <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                      🚀 View All Services
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🔮 Tech Insights 2025
                     </a>
-                    <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                      Explore Innovation 2025
+                    <a href="/pages/AITransformationGuide2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🤖 AI Transformation
                     </a>
-                    <a href="/pages/AdvancedTechSolutions2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    <a href="/pages/QuantumComputingSolutions2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚡ Quantum Computing
+                    </a>
+                    <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🚀 All Services
+                    </a>
+                    <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+                      🌟 Innovation 2025
+                    </a>
+                    <a href="/pages/AdvancedTechSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       ⚡ Advanced Solutions
                     </a>
-                    <a href="/pages/FutureTechTrends2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    <a href="/pages/FutureTechTrends2025" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Future Trends
                     </a>
-                    <a href="/pages/BlogPost2025" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                      📰 Latest Blog
-                    </a>
-                    <a href="/pages/AIInnovationPlaybook2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      📘 AI Innovation Playbook
+                    <a href="/pages/AIInnovationPlaybook2025" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
+                      📘 AI Playbook
                     </a>
                   </div>
                 </div>
@@ -255,30 +275,33 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
-                {/* New Content Promotion Banner */}
+                {/* NEW CONTENT SHOWCASE - Latest Additions */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
                   <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold mb-4">🌟 NEW: AI Innovation Playbook 2025</h2>
-                    <p className="text-xl opacity-90">Practical guide to ideate, prototype, and scale AI with ROI</p>
+                    <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
+                      🎉 JUST RELEASED • JANUARY 2025
+                    </div>
+                    <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary New Content</h2>
+                    <p className="text-xl opacity-90">Discover our latest insights on cutting-edge technologies</p>
                   </div>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
                       <div className="text-4xl mb-3">🔮</div>
-                      <h3 className="text-xl font-semibold mb-2">AI Playbook</h3>
-                      <p className="text-sm opacity-90 mb-4">Templates, KPIs, and guardrails</p>
-                      <a href="/pages/AIInnovationPlaybook2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read Playbook →</a>
+                      <h3 className="text-xl font-semibold mb-2">Technology Insights 2025</h3>
+                      <p className="text-sm opacity-90 mb-4">Key trends reshaping industries and business</p>
+                      <a href="/pages/TechnologyInsights2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Insights →</a>
                     </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
+                      <div className="text-4xl mb-3">🤖</div>
+                      <h3 className="text-xl font-semibold mb-2">AI Transformation Guide</h3>
+                      <p className="text-sm opacity-90 mb-4">Complete roadmap to AI implementation</p>
+                      <a href="/pages/AITransformationGuide2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Start Journey →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
                       <div className="text-4xl mb-3">⚡</div>
-                      <h3 className="text-xl font-semibold mb-2">Advanced Solutions</h3>
-                      <p className="text-sm opacity-90 mb-4">Next-generation AI and quantum technologies</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">View Solutions →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
-                      <div className="text-4xl mb-3">🚀</div>
-                      <h3 className="text-xl font-semibold mb-2">Future Trends</h3>
-                      <p className="text-sm opacity-90 mb-4">Expert predictions and breakthroughs</p>
-                      <a href="/pages/FutureTechTrends2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Trends →</a>
+                      <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
+                      <p className="text-sm opacity-90 mb-4">Next-generation quantum solutions</p>
+                      <a href="/pages/QuantumComputingSolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Go Quantum →</a>
                     </div>
                   </div>
                 </div>
@@ -341,6 +364,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
           <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
+          <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
+          <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
+          <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
