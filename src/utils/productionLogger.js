@@ -1,46 +1,26 @@
-// Production logger utility for safe logging in production environments
-
-const isDevelopment = process.env.NODE_ENV === 'development';
-
+// Production-safe logging utility
 export const productionLogger = {
   log: (...args) => {
-    if (isDevelopment) {
+    if (process.env.NODE_ENV === 'development') {
       console.log(...args);
     }
   },
   
-  warn: (...args) => {
-    if (isDevelopment) {
-      console.warn(...args);
-    }
-  },
-  
   error: (...args) => {
-    if (isDevelopment) {
+    if (process.env.NODE_ENV === 'development') {
       console.error(...args);
     }
   },
   
+  warn: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  },
+  
   info: (...args) => {
-    if (isDevelopment) {
+    if (process.env.NODE_ENV === 'development') {
       console.info(...args);
-    }
-  },
-  
-  debug: (...args) => {
-    if (isDevelopment) {
-      console.debug(...args);
-    }
-  },
-  
-  // Safe logging that works in both dev and production
-  safeLog: (level, ...args) => {
-    try {
-      if (isDevelopment) {
-        console[level](...args);
-      }
-    } catch (error) {
-      // Silently fail in production
     }
   }
 };
