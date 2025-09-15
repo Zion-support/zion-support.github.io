@@ -116,10 +116,16 @@ export function DisputeDetail() {
   const [adminNote, setAdminNote] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [resolution, setResolution] = useState<{ summary: string; resolution_type: ResolutionType }>({
+<<<<<<< HEAD
   summary: "",
   resolution_type: "compromise",
 });
    
+=======
+    summary: "",
+    resolution_type: "compromise",
+  });
+>>>>>>> origin/new-fix
   const [activeTab, setActiveTab] = useState("overview");
 
   // Check if user is admin (placeholder - implement proper admin check)
@@ -173,6 +179,7 @@ export function DisputeDetail() {
 >>>>>>> origin/auto/autonomy-17186719616
     }
     
+<<<<<<< HEAD
     const success = await resolveDispute(disputeId, {
       summary: resolution.summary,
 <<<<<<< HEAD
@@ -184,6 +191,13 @@ export function DisputeDetail() {
     if (success && dispute) {
       setDispute({
         ...dispute,
+=======
+    const success = await resolveDispute(disputeId, { ...resolution, resolution_type: resolution.resolution_type || "compromise" });
+    if (success && dispute) {
+      setDispute({
+        ...dispute, 
+        status: "resolved", 
+>>>>>>> origin/new-fix
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
 <<<<<<< HEAD
@@ -704,7 +718,11 @@ export function DisputeDetail() {
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>
                               <select
                                 className="w-full p-2 border rounded"
+<<<<<<< HEAD
                                 value={resolution.resolution_type || ""}
+=======
+                                value={resolution.resolution_type || "compromise"}
+>>>>>>> origin/new-fix
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
                               >
                                 <option value="client_favor">In Client's Favor</option>
@@ -1057,7 +1075,10 @@ export function DisputeDetail() {
               <div className="flex justify-between">
                 <span className="font-medium">Raised by:</span>
                 <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/new-fix
               </div>
             </CardContent>
           </Card>
