@@ -47,6 +47,10 @@ import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import TranscendentAI2026 from './src/pages/TranscendentAI2026';
 import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
 import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
+import AdvancedMetaverseSolutions2026 from './src/pages/AdvancedMetaverseSolutions2026';
+import AdvancedBlockchainSolutions2026 from './src/pages/AdvancedBlockchainSolutions2026';
+import AdvancedIoTandEdgeComputing2026 from './src/pages/AdvancedIoTandEdgeComputing2026';
+import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -122,6 +126,36 @@ export default function App(): JSX.Element {
                         </a>
                       </div>
 =======
+                {/* NEW: Brand New Content Banner 2026 */}
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-3 mb-4">
+                      <span className="text-3xl animate-bounce">🚀</span>
+                      <h3 className="text-2xl font-bold">BRAND NEW BREAKTHROUGH CONTENT 2026</h3>
+                      <span className="text-3xl animate-bounce">🚀</span>
+                    </div>
+                    <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+                      Experience the future of technology with our groundbreaking new content on Advanced Metaverse Solutions, 
+                      Blockchain Web3, IoT & Edge Computing, and Next-Gen AI Technologies
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                      <a href="/pages/AdvancedMetaverseSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌐 Metaverse Solutions →
+                      </a>
+                      <a href="/pages/AdvancedBlockchainSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
+                        ⛓️ Blockchain Web3 →
+                      </a>
+                      <a href="/pages/AdvancedIoTandEdgeComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-teal-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌐 IoT & Edge Computing →
+                      </a>
+                      <a href="/pages/NextGenAIRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧠 Next-Gen AI →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -269,6 +303,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
+                </div>
+
+                {/* NEW: Brand New Content Showcase 2026 */}
+                <div className="mb-12">
+                  <NewContentShowcase2026 />
                 </div>
 
 <<<<<<< HEAD
@@ -655,6 +694,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedBiotechSolutions2026" element={<AdvancedBiotechSolutions2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/TranscendentAI2026" element={<TranscendentAI2026 />} />
+          <Route path="/pages/AdvancedMetaverseSolutions2026" element={<AdvancedMetaverseSolutions2026 />} />
+          <Route path="/pages/AdvancedBlockchainSolutions2026" element={<AdvancedBlockchainSolutions2026 />} />
+          <Route path="/pages/AdvancedIoTandEdgeComputing2026" element={<AdvancedIoTandEdgeComputing2026 />} />
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> cursor/create-and-deploy-new-content-f1b8
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
