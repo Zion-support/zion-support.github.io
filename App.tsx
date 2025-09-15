@@ -211,9 +211,6 @@ export default function App(): JSX.Element {
                       <a href="/pages/ComprehensiveTechInsights2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🔍 Comprehensive Tech Insights →
                       </a>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-c934
-=======
                       <a href="/pages/AdvancedBiotechSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧬 Advanced Biotech →
                       </a>
@@ -223,8 +220,6 @@ export default function App(): JSX.Element {
                       <a href="/pages/TranscendentAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 Transcendent AI →
                       </a>
->>>>>>> cursor/create-and-deploy-new-content-f1b8
->>>>>>> origin/cursor/create-and-deploy-new-content-e453
                     </div>
                   </div>
                 </div>
