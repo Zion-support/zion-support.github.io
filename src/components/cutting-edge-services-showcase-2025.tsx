@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  BrainAtomShieldRocketStarAwardTrendingUp,
-  CheckCircleArrowRightZapTargetMicroscope,
-  LockCloudBarChart3SettingsEyeCodePalette,
-  SearchFilterGridListExternalLinkPhoneMailMapPin
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -17,7 +6,6 @@ import {
   CheckCircle, ArrowRight, Zap, Target, Microscope,
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
@@ -33,17 +21,10 @@ const contactInfo = {
 };
 
 const heroStats = [
-<<<<<<< HEAD
-  { label: 'Cutting-Edge 'Services', 'value: '25+'icon: <Star className="w-5 h-5" /> },
-  { label: 'Innovation 'Areas', 'value: '8+'icon: <Brain className="w-5 h-5" /> },
-  { label: 'Market 'Coverage', 'value: '$500B+'icon: <TrendingUp className="w-5 h-5" /> },
-  { label: 'Success 'Rate', 'value: '99.9%'icon: <Award className="w-5 h-5" /> }
-=======
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
->>>>>>> origin/auto/autonomy-17186719616
 ];
 
 const serviceCategories = [
@@ -86,15 +67,9 @@ const serviceCategories = [
 ];
 
 export default function CuttingEdgeServicesShowcase2025() {
-<<<<<<< HEAD
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
->>>>>>> origin/auto/autonomy-17186719616
 
   const allServices = [
     ...cuttingEdgeAIServices2025,
@@ -122,11 +97,7 @@ export default function CuttingEdgeServicesShowcase2025() {
   };
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { y: 20opacity: 0 },
-=======
     hidden: { y: 20, opacity: 0 },
->>>>>>> origin/auto/autonomy-17186719616
     visible: {
       y: 0,
       opacity: 1,
@@ -140,15 +111,9 @@ export default function CuttingEdgeServicesShowcase2025() {
     <>
       <Head>
         <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
-<<<<<<< HEAD
-        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousnessquantum computingspace miningand advanced enterprise solutions. Transform your business with future technology." />
-        <meta name="keywords" content="cutting-edge servicesAI consciousnessquantum computingspace miningenterprise ITmicro SAASfuture technology" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-=======
         <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -165,15 +130,9 @@ export default function CuttingEdgeServicesShowcase2025() {
             >
               <motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.9 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 1delay: 0.2 }}
-=======
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Cutting-Edge Services
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
@@ -185,17 +144,10 @@ export default function CuttingEdgeServicesShowcase2025() {
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-              >
-                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-                From AI consciousness to space miningexperience the cutting edge of innovation.
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
->>>>>>> origin/auto/autonomy-17186719616
               </motion.p>
 
               {/* Hero Stats */}
@@ -203,15 +155,9 @@ export default function CuttingEdgeServicesShowcase2025() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.6 }}
-              >
-                {heroStats.map((statindex) => (
-=======
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -229,11 +175,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.8 }}
-=======
                 transition={{ duration: 0.8, delay: 0.8 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <a
                   href="#services"
@@ -339,11 +281,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               viewport={{ once: true }}
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
-<<<<<<< HEAD
-              {filteredServices.map((serviceindex) => (
-=======
               {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -371,11 +309,7 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                      {service.tags.slice(03).map((tagIndex) => (
-=======
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
@@ -400,11 +334,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                         Key Features
                       </h4>
                       <ul className="space-y-2">
-<<<<<<< HEAD
-                        {service.features.slice(03).map((featureIndex) => (
-=======
                         {service.features.slice(0, 3).map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <li key={featureIndex} className="flex items-start text-sm text-white/80">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0" />
                             <span>{feature}</span>
@@ -461,11 +391,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-<<<<<<< HEAD
-                    setSearchTerm(', ');
-=======
                     setSearchTerm('');
->>>>>>> origin/auto/autonomy-17186719616
                     setSelectedCategory('all');
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -491,11 +417,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. 
-<<<<<<< HEAD
-                'Let', 's discuss how we can help you achieve your goals.
-=======
                 Let's discuss how we can help you achieve your goals.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

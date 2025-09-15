@@ -14,7 +14,6 @@ const RevolutionaryContentShowcase: React.FC = () => {
 
   const revolutionaryContent = [
     {
-<<<<<<< HEAD
       id: 'neural-consciousness',
       title: 'Neural Consciousness Breakthrough',
       description: 'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities.',
@@ -169,56 +168,6 @@ const RevolutionaryContentShowcase: React.FC = () => {
       url: '/resources/quantum-computing-business-implementation-guide',
       featured: false,
       badge: '⚛️ QUANTUM'
-=======
-      id: 1,
-      title: "Business Automation Guide 2025",
-      description: "Complete 90-day roadmap to automate 80% of business operations and achieve exponential growth",
-      image: "📋",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/BusinessAutomationGuide2025",
-      category: "Business Strategy",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Advanced Tech Solutions 2026",
-      description: "Revolutionary technologies including Neural Networks 3.0, Quantum Computing, and Consciousness AI",
-      image: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/AdvancedTechSolutions2026",
-      category: "Advanced Technology",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Innovation Showcase 2026",
-      description: "Breakthrough innovations like Consciousness AI, Quantum Internet, and Neural Interface Technology",
-      image: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/InnovationShowcase2026",
-      category: "Innovation",
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct neural interfaces and brain-computer communication",
-      image: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      category: "Neural Technology",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Quantum Computing Revolution 2026",
-      description: "Unlock exponential computing power with quantum technology that solves impossible problems",
-      image: "⚛️",
-      gradient: "from-indigo-600 to-purple-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      category: "Quantum Computing",
-      featured: false
->>>>>>> cursor/create-and-deploy-new-content-7857
     }
   ];
 
@@ -302,6 +251,38 @@ const RevolutionaryContentShowcase: React.FC = () => {
                       Read {content.type}
                     </Link>
                   </div>
+                )}
+                
+                {/* Content Icon */}
+                <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
+                  {content.image}
+                </div>
+                
+                {/* Category */}
+                <div className="text-center mb-4">
+                  <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                    {content.category}
+                  </span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-2xl font-bold mb-4 text-center group-hover:text-purple-300 transition-colors duration-300">
+                  {content.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-gray-300 mb-6 text-center leading-relaxed">
+                  {content.description}
+                </p>
+                
+                {/* CTA Button */}
+                <div className="text-center">
+                  <a
+                    href={content.link}
+                    className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                  >
+                    Explore Now →
+                  </a>
                 </div>
               </div>
             ))}
@@ -379,6 +360,33 @@ const RevolutionaryContentShowcase: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Technology Categories */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-12">🔬 Technology Categories</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🧠</div>
+              <h4 className="text-xl font-bold mb-2">AI Consciousness</h4>
+              <p className="text-gray-300 text-sm">Self-aware AI systems with emotional intelligence</p>
+            </div>
+            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">⚛️</div>
+              <h4 className="text-xl font-bold mb-2">Quantum Reality</h4>
+              <p className="text-gray-300 text-sm">Quantum-powered virtual reality experiences</p>
+            </div>
+            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🧬</div>
+              <h4 className="text-xl font-bold mb-2">Neural Interfaces</h4>
+              <p className="text-gray-300 text-sm">Direct brain-computer communication</p>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🤖</div>
+              <h4 className="text-xl font-bold mb-2">Synthetic Intelligence</h4>
+              <p className="text-gray-300 text-sm">Hybrid biological-digital intelligence</p>
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}

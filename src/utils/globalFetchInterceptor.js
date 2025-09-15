@@ -1,13 +1,14 @@
 // Global fetch interceptor for handling API requests
+<<<<<<< HEAD
 const originalFetch = window.fetch;
 
 window.fetch = async function(...args) {
   try {
-    const response = await originalFetch(...args);
+    const response = await originalFetch.apply(this, args);
     
     // Add any global response handling here
     if (!response.ok) {
-      console.warn(`API request failed with status: ${response.status}`);
+      console.warn(`API request failed: ${response.status} ${response.statusText}`);
     }
     
     return response;
@@ -17,4 +18,11 @@ window.fetch = async function(...args) {
   }
 };
 
-export default window.fetch;
+export default {};
+=======
+export const globalFetchInterceptor = () => {
+  // This is a placeholder for global fetch interception
+  // In a real application, this would handle authentication, error handling, etc.
+  console.log('Global fetch interceptor initialized');
+};
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
