@@ -32,9 +32,9 @@ export const cartUtils = {
     );
   },
   
-  // Get total price
-  getTotalPrice: (cart) => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  // Clear cart
+  clearCart: () => {
+    return [];
   },
   
   // Get total items count
@@ -42,9 +42,9 @@ export const cartUtils = {
     return cart.reduce((total, item) => total + item.quantity, 0);
   },
   
-  // Clear cart
-  clearCart: () => {
-    return [];
+  // Get total price
+  getTotalPrice: (cart) => {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   },
   
   // Check if item is in cart

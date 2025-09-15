@@ -1,11 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-<<<<<<< HEAD
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 =======
@@ -19,17 +13,6 @@
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
@@ -39,23 +22,6 @@
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-=======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> cursor/create-and-deploy-new-content-f977
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 <<<<<<< HEAD
@@ -72,21 +38,6 @@
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const values = [
@@ -101,12 +52,6 @@ export default function AboutPage() {
       <div className="mx-auto max-w-7xl px-6 pt-24">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-<<<<<<< HEAD
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 =======
@@ -120,17 +65,6 @@ export default function AboutPage() {
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 =======
 import { 
@@ -223,23 +157,6 @@ export default function AboutPage() {
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-=======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> cursor/create-and-deploy-new-content-f977
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 <<<<<<< HEAD
@@ -256,21 +173,6 @@ export default function AboutPage() {
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">About Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -300,33 +202,17 @@ export default function AboutPage() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   )
 }
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
     </div>
@@ -337,16 +223,6 @@ export default function AboutPage() {
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
-<<<<<<< HEAD
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
@@ -443,36 +319,14 @@ export default function AboutPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f977
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   )
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -486,18 +340,3 @@ export default function AboutPage() {
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

@@ -110,20 +110,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
           />
         ))}
       </div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECH SHOWCASE • 2027
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interactive Technology Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience our revolutionary technologies through interactive demonstrations. 
-            Click on different technologies to explore their capabilities.
-          </p>
-        </div>
 
         {/* Technology Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -194,6 +180,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Technology Stats */}
         <div className="mt-16 grid md:grid-cols-4 gap-8">
