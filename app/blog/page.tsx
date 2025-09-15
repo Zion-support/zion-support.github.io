@@ -23,6 +23,15 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
+      title: "AI 2026: Autonomous Supply Chain Playbook",
+      description: "Forecast demand, optimize inventory, and route logistics autonomously with AI agents.",
+      slug: "ai-2026-autonomous-supply-chain-playbook",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-supply-chain-2026.jpg"
+    },
+    {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
       description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
       slug: "ai-2025-enterprise-ai-agents-breakthrough",
