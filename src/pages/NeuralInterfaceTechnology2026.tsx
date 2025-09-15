@@ -155,7 +155,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         'Concurrent channels: 256',
         'Data processing: Real-time'
       ]
-    ]
+    }
   ];
 
   const demos = [
