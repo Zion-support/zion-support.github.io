@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',
-import { ProductListingCard } from '@/components/ProductListingCard',
-import { useAuth } from '@/hooks/useAuth',
-import { fetchRecommendations } from '@/api/recommendations',
-import type { ProductListing } from '@/types/listings',
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog',
-import { Button } from '@/components/ui/button',
-import { Loader2 } from 'lucide-react'
-import Link from 'next/link',
-import { ErrorState } from '@/components/jobs/applications',
-
-export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth(),
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
-
-  useEffect(() => {
-    if (isAuthenticated && user?.id) {
-      setLoading(true),
-      fetchRecommendations(user.id)
-        .then(setListings)
-        .catch(() => setError(true))
-        .finally(() => setLoading(false)),
-    }
-  }, [isAuthenticated, user]),
-=======
 import { useEffect, useState } from 'react';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { useAuth } from '@/hooks/useAuth';
@@ -52,7 +24,6 @@ export default function EquipmentRecommendations() {
         .finally(() => setLoading(false));
     }
   }, [isAuthenticated, user]);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!isAuthenticated) {
     return (
@@ -67,11 +38,7 @@ export default function EquipmentRecommendations() {
           </Button>
         </DialogContent>
       </Dialog>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -91,9 +58,5 @@ export default function EquipmentRecommendations() {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

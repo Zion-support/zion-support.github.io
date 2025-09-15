@@ -45,7 +45,7 @@
     "prefer-offline": true
   },
   "dependencies": {
-    "@esbuild/linux-x64": "^0.19.0",
+    "@esbuild/linux-x64": "^0.25.9",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
@@ -75,7 +75,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
-    "@rollup/rollup-linux-x64-gnu": "^4.50.1",
+    "@rollup/rollup-linux-x64-gnu": "^4.18.0",
     "@sentry/nextjs": "^10.11.0",
     "@sentry/node": "^10.11.0",
     "@supabase/ssr": "^0.7.0",
@@ -134,6 +134,8 @@
     "workbox-window": "^7.3.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.28.0",
+    "@babel/plugin-transform-react-jsx": "^7.27.1",
     "@next/bundle-analyzer": "^15.5.2",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.33",

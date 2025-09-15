@@ -1,6 +1,5 @@
 // @ts-nocheck
-import React from 'react';
-import { FeatureCard } from '../components/FeatureCard';
+import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
   const features = [
@@ -80,6 +79,20 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo Ribbon */}
+      <section className="py-3 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/autonomous-it-ops-2025" className="flex items-center justify-between gap-3 text-blue-900">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-blue-600 text-white text-sm font-bold">AO</span>
+              <p className="text-sm md:text-base">
+                New: Autonomous IT Operations in 2025 — self-healing, policy-driven, AI-orchestrated ops. <span className="underline">Read more</span>
+              </p>
+            </div>
+            <span className="hidden md:block text-blue-700">→</span>
+          </a>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -142,7 +155,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
-                key={index}
+                key={String(index)}
                 icon={<span>{feature.icon}</span>}
                 title={feature.title}
                 description={feature.description}
@@ -171,8 +184,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Blueprint 2025
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Supply Chains 2025
               </a>
             </div>
           </div>
