@@ -9,10 +9,22 @@ const Header: React.FC = () => {
           <Link to="/" className="text-2xl font-bold text-gray-900">
             Zion Tech Group
           </Link>
-          <nav className="hidden md:flex space-x-6">
-            <Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
+          <nav className="hidden md:flex space-x-8">
+            <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Home
+            </Link>
+            <Link to="/pages/AdvancedAITransformation2026" className="text-gray-600 hover:text-gray-900 transition-colors">
+              AI Transformation
+            </Link>
+            <Link to="/pages/QuantumNeuralFusion2026" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Quantum-Neural
+            </Link>
+            <Link to="/pages/NeuralInterfaceRevolution2026" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Neural Interface
+            </Link>
+            <Link to="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Contact
+            </Link>
           </nav>
         </div>
       </div>
