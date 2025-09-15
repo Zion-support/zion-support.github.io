@@ -1,68 +1,49 @@
-// Fetch with retry utility for handling network requests with automatic retries
+// Fetch with retry utility for better error handling
 
 interface FetchWithRetryOptions {
   retries?: number;
   delay?: number;
-  backoff?: 'linear' | 'exponential';
   timeout?: number;
 }
-
-const defaultOptions: Required<FetchWithRetryOptions> = {
-  retries: 3,
-  delay: 1000,
-  backoff: 'exponential',
-  timeout: 10000
-};
 
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
-  const { retries, delay, backoff, timeout, ...fetchOptions } = {
-    ...defaultOptions,
-    ...options
-  };
-
-  let lastError: Error | null = null;
-
+  const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
+  
+  let lastError: Error;
+  
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      // Create abort controller for timeout
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), timeout);
-
+      
       const response = await fetch(url, {
         ...fetchOptions,
-        signal: controller.signal
+        signal: controller.signal,
       });
-
+      
       clearTimeout(timeoutId);
-
-      // Check if response is ok
+      
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-
+      
       return response;
     } catch (error) {
       lastError = error as Error;
       
-      // Don't retry on the last attempt
       if (attempt === retries) {
-        break;
+        throw lastError;
       }
-
-      // Calculate delay based on backoff strategy
-      const currentDelay = backoff === 'exponential' 
-        ? delay * Math.pow(2, attempt)
-        : delay * (attempt + 1);
-
+      
       // Wait before retrying
-      await new Promise(resolve => setTimeout(resolve, currentDelay));
+      await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
     }
   }
-
-  throw lastError || new Error('Fetch failed after all retries');
+  
+  throw lastError!;
 };
 
 export default fetchWithRetry;
