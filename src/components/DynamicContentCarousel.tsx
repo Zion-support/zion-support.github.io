@@ -1,69 +1,74 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  category: string;
+  badge: string;
+}
 
 const DynamicContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const slides = [
+  const contentItems: ContentItem[] = [
     {
-      id: 1,
-      title: 'Revolutionary AI Solutions 2025',
-      subtitle: 'Transform Your Business with Next-Gen AI',
-      description: 'Experience the future of business automation with our cutting-edge AI solutions that deliver measurable results and drive unprecedented growth.',
-      image: '🚀',
-      gradient: 'from-purple-600 to-pink-600',
-      link: '/pages/RevolutionaryTechSolutions2025',
-      features: ['Autonomous Intelligence', 'Predictive Analytics', 'Smart Automation']
-    },
-    {
-      id: 5,
-      title: 'AI Use Cases 2025',
-      subtitle: 'Proven Patterns That Drive ROI',
-      description: 'Sales, marketing, ops, and support use cases you can deploy today.',
-      image: '📈',
-      gradient: 'from-cyan-600 to-blue-600',
-      link: '/pages/NewAIUseCases2025',
-      features: ['Sales Copilot', 'Content Studio', 'Ops Automation']
-    },
-    {
-      id: 6,
-      title: 'Edge AI & IoT 2025',
-      subtitle: 'Intelligence Where Data Is Born',
-      description: 'Predictive maintenance, fleet optimization, smart grids, and cities.',
-      image: '🌐',
-      gradient: 'from-teal-600 to-emerald-600',
-      link: '/pages/EdgeAIandIoT2025',
-      features: ['On-device ML', 'Edge Gateways', 'Streaming Analytics']
-    },
-    {
-      id: 2,
-      title: 'Quantum Computing Revolution',
-      subtitle: 'Unlock Exponential Computational Power',
-      description: 'Solve complex problems exponentially faster with our revolutionary quantum computing solutions for cryptography, optimization, and AI.',
-      image: '⚛️',
-      gradient: 'from-indigo-600 to-blue-600',
-      link: '/pages/QuantumComputingSolutions2025',
-      features: ['Quantum Cryptography', 'Quantum Optimization', 'Quantum ML']
-    },
-    {
-      id: 3,
-      title: 'AI Business Transformation',
-      subtitle: 'Complete Digital Transformation Suite',
-      description: 'Transform every aspect of your business with our comprehensive AI-powered solutions that automate, optimize, and scale operations.',
+      id: '1',
+      title: 'AI Innovation Hub 2025',
+      description: 'Revolutionary AI solutions transforming industries with autonomous agents, predictive analytics, and intelligent automation.',
+      link: '/pages/AIInnovationHub2025',
       image: '🤖',
-      gradient: 'from-blue-600 to-purple-600',
-      link: '/pages/AIBusinessTransformation2025',
-      features: ['Process Automation', 'Intelligent Analytics', 'Smart Operations']
+      category: 'Artificial Intelligence',
+      badge: 'NEW'
     },
     {
-      id: 4,
-      title: 'Comprehensive Services 2025',
-      subtitle: 'Complete Technology Ecosystem',
-      description: 'Discover our full suite of cutting-edge technology solutions spanning AI, blockchain, cloud, and emerging technologies.',
-      image: '🎯',
-      gradient: 'from-green-600 to-emerald-600',
-      link: '/pages/ComprehensiveServices2025',
-      features: ['Full Stack Solutions', 'End-to-End Support', 'Scalable Architecture']
+      id: '2',
+      title: 'Digital Transformation Services',
+      description: 'Complete digital transformation solutions including cloud migration, process automation, and organizational change management.',
+      link: '/pages/DigitalTransformation2025',
+      image: '🔄',
+      category: 'Digital Services',
+      badge: 'FEATURED'
+    },
+    {
+      id: '3',
+      title: 'Advanced Analytics Platform',
+      description: 'Next-generation analytics with real-time insights, predictive modeling, and business intelligence dashboards.',
+      link: '/pages/AdvancedAnalytics2025',
+      image: '📊',
+      category: 'Analytics',
+      badge: 'BREAKTHROUGH'
+    },
+    {
+      id: '4',
+      title: 'Cybersecurity Fortress',
+      description: 'Enterprise-grade security solutions with AI-powered threat detection, zero-trust architecture, and compliance automation.',
+      link: '/pages/CybersecurityFortress2025',
+      image: '🛡️',
+      category: 'Security',
+      badge: 'SECURE'
+    },
+    {
+      id: '5',
+      title: 'Quantum Computing Solutions',
+      description: 'Cutting-edge quantum computing applications for optimization, cryptography, and advanced simulations.',
+      link: '/pages/QuantumComputingSolutions2025',
+      image: '⚡',
+      category: 'Quantum Tech',
+      badge: 'FUTURE'
+    },
+    {
+      id: '6',
+      title: 'Edge AI & IoT Ecosystem',
+      description: 'Distributed intelligence with edge computing, IoT integration, and real-time processing capabilities.',
+      link: '/pages/EdgeAIandIoT2025',
+      image: '🌐',
+      category: 'Edge Computing',
+      badge: 'INNOVATIVE'
     }
   ];
 
@@ -71,112 +76,147 @@ const DynamicContentCarousel: React.FC = () => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentIndex((prevIndex) => 
+        prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
+      );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, slides.length]);
+  }, [isAutoPlaying, contentItems.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? contentItems.length - 1 : prevIndex - 1
+    );
   };
 
   const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
+    setCurrentIndex(index);
   };
 
   return (
-    <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
-      {/* Main Carousel */}
-      <div className="relative h-96">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-all duration-1000 ${
-              index === currentSlide
-                ? 'opacity-100 translate-x-0'
-                : index < currentSlide
-                ? 'opacity-0 -translate-x-full'
-                : 'opacity-0 translate-x-full'
-            }`}
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div 
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
+      >
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.5 }}
+            className="relative h-80 flex items-center"
           >
-            <div className={`h-full bg-gradient-to-r ${slide.gradient} p-8 text-white`}>
-              <div className="flex items-center justify-between h-full">
-                <div className="flex-1 max-w-2xl">
-                  <div className="text-6xl mb-4">{slide.image}</div>
-                  <h2 className="text-4xl font-bold mb-2">{slide.title}</h2>
-                  <h3 className="text-xl opacity-90 mb-4">{slide.subtitle}</h3>
-                  <p className="text-lg opacity-80 mb-6">{slide.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {slide.features.map((feature, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={slide.link}
-                    className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                  >
-                    Explore Now →
-                  </a>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
+            
+            {/* Content */}
+            <div className="relative z-20 flex items-center w-full px-8 lg:px-16">
+              <div className="flex-1 text-white">
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full">
+                    {contentItems[currentIndex].badge}
+                  </span>
+                  <span className="text-sm text-purple-200">
+                    {contentItems[currentIndex].category}
+                  </span>
+                </div>
+                
+                <h3 className="text-4xl lg:text-5xl font-bold mb-4">
+                  {contentItems[currentIndex].title}
+                </h3>
+                
+                <p className="text-xl text-gray-200 mb-8 max-w-2xl">
+                  {contentItems[currentIndex].description}
+                </p>
+                
+                <a
+                  href={contentItems[currentIndex].link}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Now
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+              
+              <div className="hidden lg:block ml-8">
+                <div className="text-8xl opacity-20">
+                  {contentItems[currentIndex].image}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all duration-300"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 p-3 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all duration-300"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-      >
-        <span className="text-2xl">‹</span>
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-      >
-        <span className="text-2xl">›</span>
-      </button>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {slides.map((_, index) => (
+      {/* Dots Indicator */}
+      <div className="flex justify-center space-x-2 mt-6">
+        {contentItems.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-white scale-125'
-                : 'bg-white/50 hover:bg-white/75'
+              index === currentIndex 
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 scale-125' 
+                : 'bg-gray-300 hover:bg-gray-400'
             }`}
           />
         ))}
       </div>
 
-      {/* Auto-play Toggle */}
-      <button
-        onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-        className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
-      >
-        <span className="text-sm">
-          {isAutoPlaying ? '⏸️' : '▶️'}
-        </span>
-      </button>
+      {/* Content Grid Preview */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
+        {contentItems.map((item, index) => (
+          <div
+            key={item.id}
+            onClick={() => goToSlide(index)}
+            className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+              index === currentIndex
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white transform scale-105'
+                : 'bg-white border border-gray-200 hover:border-purple-300 hover:shadow-lg'
+            }`}
+          >
+            <div className="text-2xl mb-2">{item.image}</div>
+            <h4 className="font-semibold text-sm mb-1">{item.title}</h4>
+            <span className={`text-xs px-2 py-1 rounded-full ${
+              index === currentIndex 
+                ? 'bg-white/20 text-white' 
+                : 'bg-purple-100 text-purple-700'
+            }`}>
+              {item.category}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
