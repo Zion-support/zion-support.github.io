@@ -13,6 +13,8 @@ import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
 import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
+import AdvancedTechInnovations2026 from './src/pages/AdvancedTechInnovations2026';
+import FutureTechSolutions2026 from './src/pages/FutureTechSolutions2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 
@@ -38,11 +40,11 @@ export default function App(): JSX.Element {
                       Quantum Computing Revolution, Neural Interface Technology, and Synthetic Intelligence
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                      <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 AI Revolutionary Breakthrough →
+                      <a href="/pages/AdvancedTechInnovations2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 Advanced Tech Innovations →
                       </a>
-                      <a href="/pages/QuantumComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Computing Revolution →
+                      <a href="/pages/FutureTechSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Future Tech Solutions →
                       </a>
                       <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧬 Neural Interface Revolution →
@@ -66,6 +68,12 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    <a href="/pages/AdvancedTechInnovations2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🚀 Advanced Tech Innovations
+                    </a>
+                    <a href="/pages/FutureTechSolutions2026" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Future Tech Solutions
+                    </a>
                     <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧠 AI Breakthrough 2026
                     </a>
@@ -83,12 +91,6 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NextGenAIRevolution2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Next-Gen AI Revolution
-                    </a>
-                    <a href="/pages/RevolutionaryTechBlog2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      📚 Revolutionary Tech Blog
-                    </a>
-                    <a href="/pages/ComprehensiveTechInsights2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🔍 Tech Insights 2026
                     </a>
                   </div>
                 </div>
@@ -111,7 +113,7 @@ export default function App(): JSX.Element {
                     <p className="text-gray-600 mb-4">
                       Cutting-edge artificial intelligence solutions for your business needs.
                     </p>
-                    <a href="/pages/AIRevolutionaryBreakthrough2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                    <a href="/pages/AdvancedTechInnovations2026" className="text-blue-600 hover:text-blue-700 font-semibold">
                       View AI Services →
                     </a>
                   </div>
@@ -122,7 +124,7 @@ export default function App(): JSX.Element {
                     <p className="text-gray-600 mb-4">
                       Revolutionary quantum computing solutions for complex problem solving.
                     </p>
-                    <a href="/pages/QuantumComputingRevolution2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                    <a href="/pages/FutureTechSolutions2026" className="text-blue-600 hover:text-blue-700 font-semibold">
                       Explore Quantum →
                     </a>
                   </div>
@@ -150,9 +152,9 @@ export default function App(): JSX.Element {
                     to helping you succeed in the digital age.
                   </p>
                   <div className="flex justify-center space-x-4">
-                    <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Start Your Journey
-                    </a>
+                  <a href="/pages/AdvancedTechInnovations2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    Start Your Journey
+                  </a>
                     <a href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       Contact Us
                     </a>
@@ -163,6 +165,8 @@ export default function App(): JSX.Element {
           } />
           
           {/* Routes for all the new pages */}
+          <Route path="/pages/AdvancedTechInnovations2026" element={<AdvancedTechInnovations2026 />} />
+          <Route path="/pages/FutureTechSolutions2026" element={<FutureTechSolutions2026 />} />
           <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
