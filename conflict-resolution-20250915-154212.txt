@@ -7,3 +7,6 @@
 2025-09-15 15:42:35 - Merge conflicts detected in aggressive-merge-backup-20250915-151419
 2025-09-15 15:42:35 - Resolving conflicts in content/index.yaml for branch aggressive-merge-backup-20250915-151419
 2025-09-15 15:42:35 - Resolving conflicts in data/whatsNew.ts for branch aggressive-merge-backup-20250915-151419
+2025-09-15 15:42:58 - Merge conflicts detected in backup-main-20250915-070305
+2025-09-15 15:42:58 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch backup-main-20250915-070305
+2025-09-15 15:42:58 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch backup-main-20250915-070305
