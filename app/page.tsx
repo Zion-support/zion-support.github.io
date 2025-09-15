@@ -73,6 +73,12 @@ import NewContent2025AdvancedAutomationBanner from './components/NewContent2025A
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+
+// Import new 2026 promotional components
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryTechBanner2026 from './components/RevolutionaryTechBanner2026';
+import EnterpriseSolutionsShowcase2026 from './components/EnterpriseSolutionsShowcase2026';
+import Link from 'next/link';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -90,6 +96,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Tech Banner 2026 - NEW FEATURED */}
+        <RevolutionaryTechBanner2026 />
+        
+        {/* New Content Showcase 2026 - NEW FEATURED */}
+        <NewContentShowcase2026 />
+        
+        {/* Enterprise Solutions Showcase 2026 - NEW FEATURED */}
+        <EnterpriseSolutionsShowcase2026 />
+        
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
@@ -366,7 +381,6 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -399,10 +413,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
+
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
