@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 33
+  total_content_pieces: 37
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -596,6 +596,48 @@ content_index:
         availability: "99.9%"
         mttr: "< 10 min"
         timeout_rate: "< 1% P95"
+    - id: "ai-2026-evidence-driven-operations"
+      type: "page"
+      title: "AI 2026: Evidence-Driven AI Operations"
+      file_path: "/content/pages/ai-2026-evidence-driven-operations.md"
+      url: "/content/ai-2026-evidence-driven-operations"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI Operations", "Evaluations", "SLOs", "Policy-as-Code", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        rollback_time: "< 5 min"
+        cost_optimization: "20-40%"
+    - id: "ai-2026-risk-tiered-tool-use-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Risk‑Tiered Tool Use — Permissions Blueprint"
+      file_path: "/content/pages/ai-2026-risk-tiered-tool-use-blueprint.md"
+      url: "/content/ai-2026-risk-tiered-tool-use-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Tooling", "Policy-as-Code", "Isolation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        approvals: "dual for Tier 2+"
+        isolation_domains: true
+    - id: "ai-2026-agent-evaluation-playground"
+      type: "page"
+      title: "AI 2026: Agent Evaluation Playground"
+      file_path: "/content/pages/ai-2026-agent-evaluation-playground.md"
+      url: "/content/ai-2026-agent-evaluation-playground"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Sandbox", "Governance", "Agents", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        eval_speed: "fast local"
+        deterministic: true
+        export_evidence: true
     - id: "ai-2026-agent-incident-response-playbook"
       type: "playbook"
       title: "AI 2026: Agent Incident Response Playbook"
