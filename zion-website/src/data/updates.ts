@@ -25,6 +25,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
+<<<<<<< HEAD
   // Newly added 2025-09-15 (to advertise on homepage)
   {
     title: 'Report: Enterprise Retrieval Observability (2026)',
@@ -39,6 +40,29 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
+=======
+  {
+    title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
+    summary:
+      'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
+    href: '/updates/autonomous-it-ops-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
+    summary:
+      'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
+    href: '/updates/agent-runbooks-live-evals',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Agentic Ops Control Center (v1.0)',
+    summary:
+      'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
+    href: '/updates/agentic-ops-control-center-1-0',
+>>>>>>> 661b01d7078213468e26f8ab1845b4ba302ed1aa
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -319,6 +343,23 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
   },
   // Fresh content added 2025-09-15
+  // New blog posts added 2025-09-15 (to feature on homepage)
+  {
+    title: 'Playbook: Production Agent Postmortems (2026)',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.',
+    href: '/blog/ai-2026-production-agent-postmortems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: Real-Time Model Routing (2026)',
+    summary:
+      'Latency- and quality-aware routing with eval gates, budgets, and audit-ready evidence.',
+    href: '/blog/ai-2026-real-time-model-routing-playbook',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // New content added 2025-09-15 (afternoon batch)
   {
     title: 'Launch: AI Content Studio 2.2',

@@ -3,6 +3,18 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+  },
+  {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
     title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
     summary:

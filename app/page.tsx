@@ -919,11 +919,27 @@ export default function HomePage() {
                 <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read Guide →</Link>
               </article>
               <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-blue-700 mb-2">Playbook</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Agents ROI Playbook 2026</h3>
-                <p className="text-gray-600 mb-4">A practical playbook to model, track, and realize ROI from enterprise AI agents.</p>
-                <Link href="/content/ai-agents-roi-playbook-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Playbook →</Link>
+                <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
+                <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
+                <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Promo: New Blueprint - Enterprise AI Ops 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New Blueprint</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI Ops Blueprint (2026)</h3>
+                <p className="text-gray-600 max-w-2xl">A practical operating model for reliable, governed, and cost-efficient AI at scale.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/content/enterprise-ai-ops-2026" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
+              </div>
             </div>
           </div>
         </section>
