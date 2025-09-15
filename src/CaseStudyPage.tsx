@@ -5,13 +5,6 @@ const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
-    <div className="min-h-screen bg-white">
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 >>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
       <div className="container mx-auto px-4 py-16">
