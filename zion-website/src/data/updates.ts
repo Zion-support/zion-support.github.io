@@ -9,9 +9,14 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
-=======
+    summary:
+      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -29,10 +34,9 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Agentic Ops Control Center (v1.0)',
->>>>>>> cursor/create-and-deploy-new-content-8191
     summary:
-      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
-    href: '/updates/autonomous-data-quality-copilot-1-0',
+      'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
+    href: '/updates/agentic-ops-control-center-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -297,6 +301,23 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
   },
   // Fresh content added 2025-09-15
+  // New blog posts added 2025-09-15 (to feature on homepage)
+  {
+    title: 'Playbook: Production Agent Postmortems (2026)',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.',
+    href: '/blog/ai-2026-production-agent-postmortems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: Real-Time Model Routing (2026)',
+    summary:
+      'Latency- and quality-aware routing with eval gates, budgets, and audit-ready evidence.',
+    href: '/blog/ai-2026-real-time-model-routing-playbook',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // New content added 2025-09-15 (afternoon batch)
   {
     title: 'Launch: AI Content Studio 2.2',
