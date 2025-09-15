@@ -77,6 +77,28 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "hyperautomation-blueprint-2026",
+    title: "Hyperautomation Blueprint 2026",
+    description:
+      "Scale AI-driven automation with platform patterns, policy-as-code, and ROI tracking.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/hyperautomation-blueprint-2026",
+    emoji: "🧩",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-agents-roi-playbook-2026",
+    title: "AI Agents ROI Playbook 2026",
+    description:
+      "Model, track, and realize ROI from enterprise AI agents with evidence-driven governance.",
+    ctaLabel: "Read Playbook",
+    href: "/content/ai-agents-roi-playbook-2026",
+    emoji: "📏",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-platform-operations-2026",
     title: "AI 2026: Agent Platform Operations",
     description:
