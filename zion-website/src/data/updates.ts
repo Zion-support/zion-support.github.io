@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Procurement Copilot (v1.1)',
+    summary:
+      'Upgraded supplier intelligence, PO policy-as-code, and exception workflows with live evals.',
+    href: '/updates/autonomous-procurement-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Eval-Driven Release Management',
+    summary:
+      'Ship changes behind eval gates with canaries, rollback budgets, and automated safety checks.',
+    href: '/updates/eval-driven-release-management',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Report: State of Agent Tooling (2026 Preview)',
+    summary:
+      'Trends in agent frameworks, tracing, evals, and policy enforcement based on production data.',
+    href: '/updates/state-of-agent-tooling-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Launch: Autonomous Support Copilot (v1.1)',
     summary:
       'Reliability and cost upgrades with retrieval observability, improved grounding, and safety guardrails.',

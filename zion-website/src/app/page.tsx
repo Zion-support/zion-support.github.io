@@ -1,13 +1,12 @@
-import React from 'react'
-import { getLatestUpdates } from '../data/updates'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
+import { getLatestUpdates } from '../data/updates'
 
 const features = [
   {
@@ -106,6 +105,13 @@ export default function HomePage() {
               </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
+              <a
+                href="/updates/autonomous-procurement-copilot-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Procurement Copilot v1.1
+                <span aria-hidden>→</span>
+              </a>
               <a
                 href="/updates/mentor-office-hours"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
