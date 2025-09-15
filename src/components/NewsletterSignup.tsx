@@ -1,191 +1,106 @@
 "use client";
-import React{ useState } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface NewsletterSignupProps {
   variant?: 'default' | 'compact' | 'hero';
   className?: string;
 }
 
-export default function NewsletterSignup({ variant = ', 'default', 'className = ', ' }: NewsletterSignupProps) {
-  const [emailsetEmail] = useState('');
-  const [isSubmittingsetIsSubmitting] = useState(false);
-  const [isSubscribedsetIsSubscribed] = useState(false);
+export default function NewsletterSignup({ variant = 'default', className = '' }: NewsletterSignupProps) {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubscribed(true);
     setIsSubmitting(false);
-    setEmail(', ');
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-
-const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail('');
-    }, 2000);
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+    setEmail('');
   };
 
   if (isSubscribed) {
     return (
-      <div className={`text-center p-6 bg-green-50 border border-green-200 rounded-lg ${className}`}>
-        <div className="text-green-600 text-4xl mb-4">✅</div>
-        <h3 className="text-lg font-semibold text-green-800 mb-2">Successfully Subscribed!</h3>
-        <p className="text-green-700">Thank you for joining our newsletter. 'You', 'll receive our latest AI insights and updates.</p>
-      </div>
-    );
-  }
-
-  if (variant === 'hero') {
-    return (
-      <div className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl ${className}`}>
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold mb-4">🚀 Stay Ahead with AI Insights</h2>
-          <p className="text-xl opacity-90 mb-6">
-            Get exclusive access to breakthrough AI contentcase studiesand implementation guides.
-          </p>
-        </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center text-white"
+        className={`text-center p-8 bg-green-50 border border-green-200 rounded-lg ${className}`}
       >
-        <div className="text-6xl mb-4">🎉</div>
-        <h3 className="text-2xl font-bold mb-4">Welcome to the Future!</h3>
-        <p className="text-lg opacity-90">
-          You're now subscribed to our exclusive newsletter. Get ready for the latest breakthroughs in AI, quantum computing, and neural interfaces.
-        </p>
+        <div className="text-green-600 text-4xl mb-4">✅</div>
+        <h3 className="text-xl font-semibold text-green-800 mb-2">Successfully Subscribed!</h3>
+        <p className="text-green-600">Thank you for joining our newsletter.</p>
       </motion.div>
     );
   }
 
+  const baseClasses = "w-full max-w-md mx-auto";
+  const variantClasses = {
+    default: "p-8 bg-white border border-gray-200 rounded-lg shadow-lg",
+    compact: "p-4 bg-gray-50 border border-gray-200 rounded-md",
+    hero: "p-12 bg-gradient-to-br from-purple-600 to-blue-600 text-white rounded-2xl shadow-2xl"
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-4 animate-pulse">
-            📧 EXCLUSIVE NEWSLETTER
-          </div>
-          <h2 className="text-4xl font-bold mb-4">Stay Ahead of the Curve</h2>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            Get exclusive access to the latest breakthroughs in AI, quantum computing, neural interfaces, and space technology. 
-            Join 50,000+ innovators who are shaping the future.
-          </p>
-        </div>
-
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-              required
-            />
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? 'Subscribing...' : 'Subscribe Now →'}
-            </button>
-          </div>
-        </form>
-
-        <div className="mt-6 text-center">
-          <p className="text-sm opacity-75">
-            🔒 We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
-
-        {/* Benefits */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl mb-2">🚀</div>
-            <div className="font-semibold">Weekly Updates</div>
-            <div className="text-sm opacity-75">Latest tech breakthroughs</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl mb-2">🎯</div>
-            <div className="font-semibold">Exclusive Content</div>
-            <div className="text-sm opacity-75">Insider insights & analysis</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-            <div className="text-2xl mb-2">💡</div>
-            <div className="font-semibold">Early Access</div>
-            <div className="text-sm opacity-75">Be first to know about new products</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={`bg-white border border-gray-200 rounded-xl p-8 ${className}`}>
       <div className="text-center mb-6">
-        <div className="text-4xl mb-4">📧</div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Get Our AI Newsletter</h2>
-        <p className="text-gray-600">
-          Weekly insights on AI trendscase studiesand implementation strategies. 
-          Join 25,000+ professionals transforming their businesses.
+        <h2 className={`text-2xl font-bold mb-2 ${variant === 'hero' ? 'text-white' : 'text-gray-900'}`}>
+          Stay Updated
+        </h2>
+        <p className={`${variant === 'hero' ? 'text-purple-100' : 'text-gray-600'}`}>
+          Get the latest news and updates delivered to your inbox.
         </p>
       </div>
-      
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <div className="mb-4">
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
+            className={`w-full px-4 py-3 rounded-lg border ${
+              variant === 'hero' 
+                ? 'bg-white/20 border-white/30 text-white placeholder-white/70 focus:border-white focus:ring-white/50' 
+                : 'border-gray-300 focus:border-purple-500 focus:ring-purple-500/20'
+            } focus:outline-none focus:ring-2 transition-colors`}
           />
         </div>
-        <button
+        
+        <motion.button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+            variant === 'hero'
+              ? 'bg-white text-purple-600 hover:bg-purple-50'
+              : 'bg-purple-600 text-white hover:bg-purple-700'
+          } disabled:opacity-50 disabled:cursor-not-allowed`}
         >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe Free'}
-        </button>
-        <p className="text-xs text-gray-500 mt-3 text-center">
-          No spam. Unsubscribe anytime. We respect your privacy.
-        </p>
+          {isSubmitting ? (
+            <div className="flex items-center justify-center">
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-current mr-2"></div>
+              Subscribing...
+            </div>
+          ) : (
+            'Subscribe Now'
+          )}
+        </motion.button>
       </form>
-    </div>
-  );
-}
+
+      <p className={`text-xs mt-4 text-center ${variant === 'hero' ? 'text-purple-100' : 'text-gray-500'}`}>
+        We respect your privacy. Unsubscribe at any time.
+      </p>
     </motion.div>
   );
-};
-
-export default NewsletterSignup;
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+}
