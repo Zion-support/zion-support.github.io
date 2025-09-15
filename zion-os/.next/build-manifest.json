@@ -6,12 +6,17 @@
   "ampDevFiles": [],
   "lowPriorityFiles": [
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-7857
     "static/Xrea-7swJWwhaLtHR8oPX/_buildManifest.js",
     "static/Xrea-7swJWwhaLtHR8oPX/_ssgManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/webpack-7c41e62318265d5b.js",
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-60ab
@@ -31,12 +36,16 @@
     "static/chunks/webpack-7c41e62318265d5b.js",
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-7857
     "static/chunks/vendors-5f75eaeeba9d8604.js",
     "static/chunks/main-app-dff33cccac5ce0bc.js"
   ],
   "pages": {
     "/_app": [
 <<<<<<< HEAD
+      "static/chunks/webpack-7c41e62318265d5b.js",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       "static/chunks/webpack-7c41e62318265d5b.js",
 =======
@@ -48,12 +57,16 @@
       "static/chunks/webpack-7c41e62318265d5b.js",
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-7857
       "static/chunks/vendors-5f75eaeeba9d8604.js",
       "static/chunks/main-5de6da90de1b808b.js",
       "static/chunks/pages/_app-c2cee2cd4461e22d.js"
     ],
     "/_error": [
 <<<<<<< HEAD
+      "static/chunks/webpack-7c41e62318265d5b.js",
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       "static/chunks/webpack-7c41e62318265d5b.js",
 =======
@@ -65,6 +78,7 @@
       "static/chunks/webpack-7c41e62318265d5b.js",
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-7857
       "static/chunks/vendors-5f75eaeeba9d8604.js",
       "static/chunks/main-5de6da90de1b808b.js",
       "static/chunks/pages/_error-9ddcd26ad43fe890.js"
