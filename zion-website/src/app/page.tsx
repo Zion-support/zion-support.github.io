@@ -211,10 +211,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/real-time-rag-evals-2026"
+                href="/updates/ai-compliance-readiness-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                Guide: Real-Time RAG Evals
+                Report: AI Compliance Readiness 2026
                 <span aria-hidden>→</span>
               </a>
               <a
