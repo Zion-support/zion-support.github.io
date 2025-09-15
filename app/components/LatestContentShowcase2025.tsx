@@ -30,30 +30,30 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚙️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Incident Response 2026</h3>
+            <div className="text-4xl mb-4">💸</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Cost Optimization 2026</h3>
             <p className="text-gray-600 mb-4">
-              Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.
+              Right-size compute, optimize inference, and automate savings with safe guardrails.
             </p>
             <Link 
-              href="/blog/ai-2026-ai-ops-autonomous-incident-response"
+              href="/content/ai-2026-autonomous-cost-optimization-blueprint"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Read Article →
+              Read Blueprint →
             </Link>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🔐</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Agent Architecture 2026</h3>
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Agentic Sales Acceleration 2026</h3>
             <p className="text-gray-600 mb-4">
-              Design zero-trust autonomous agents with isolation domains and runtime guards.
+              Deploy revenue agents for enrichment, outreach, and scheduling with compliance.
             </p>
             <Link 
-              href="/blog/ai-2026-secure-agent-architecture"
+              href="/content/ai-2026-agentic-sales-acceleration-playbook"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Explore Architecture →
+              Read Playbook →
             </Link>
           </div>
         </div>

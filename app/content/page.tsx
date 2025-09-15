@@ -17,6 +17,31 @@ export default function ContentIndexPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-autonomous-cost-optimization-blueprint" className="hover:underline">
+              Autonomous Cost Optimization 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce cloud and AI spend with agentic automation and policy-as-code guardrails.
+          </p>
+          <Link href="/content/ai-2026-autonomous-cost-optimization-blueprint" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-blue-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agentic-sales-acceleration-playbook" className="hover:underline">
+              Agentic Sales Acceleration 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Deploy revenue agents for enrichment, outreach, and scheduling with compliance.
+          </p>
+          <Link href="/content/ai-2026-agentic-sales-acceleration-playbook" className="text-blue-600 font-semibold">Read Playbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
               AI Governance Blueprint 2026
             </Link>

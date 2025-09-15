@@ -39,7 +39,7 @@ import {
   Phone,
   MapPin,
   Infinity,
-  Link,
+  Link as LinkIcon,
   Atom,
   Leaf as LeafIcon,
   Factory,
@@ -198,7 +198,7 @@ export default function ComprehensiveServicesShowcase2030() {
       case 'IoT & Edge Computing':
         return <Network className="w-6 h-6" />;
       case 'Blockchain & Web3':
-        return <Link className="w-6 h-6" />;
+        return <LinkIcon className="w-6 h-6" />;
       case 'AI & Healthcare':
         return <Heart className="w-6 h-6" />;
       case 'FinTech':

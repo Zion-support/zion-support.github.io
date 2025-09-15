@@ -13,10 +13,10 @@ import {
   Phone,
   MapPin,
   Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Lock,
-  Eye,
+  CheckCircle as CheckCircle2,
+  AlertTriangle as AlertTriangle2,
+  Lock as Lock2,
+  Eye as Eye2,
   Database,
   Zap,
   Rocket,
@@ -155,7 +155,7 @@ const Terms: React.FC = () => {
               <div className="space-y-4">
                 {prohibitedActivities.map((activity, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                    <AlertTriangle2 className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300 text-sm">{activity}</span>
                   </div>
                 ))}
@@ -171,7 +171,7 @@ const Terms: React.FC = () => {
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
-                  <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                  <AlertTriangle2 className="w-16 h-16 text-red-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white">Violation Consequences</h3>
                 </div>
                 <div className="space-y-4">
@@ -262,7 +262,7 @@ const Terms: React.FC = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-white">Service Usage</h3>
                     <p>You must be at least 18 years old to use our services, or have parental consent if under 18.</p>
@@ -368,7 +368,7 @@ const Terms: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
-                <Lock className="w-6 h-6 text-cyan-400" />
+                <Lock2 className="w-6 h-6 text-cyan-400" />
                 <span>Intellectual Property</span>
               </h2>
               <div className="space-y-4 text-gray-300">
@@ -441,7 +441,7 @@ const Terms: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
-                <AlertTriangle className="w-6 h-6 text-yellow-400" />
+                <AlertTriangle2 className="w-6 h-6 text-yellow-400" />
                 <span>Limitation of Liability</span>
               </h2>
               <div className="space-y-4 text-gray-300">
@@ -477,7 +477,7 @@ const Terms: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
-                <Eye className="w-6 h-6 text-cyan-400" />
+                <Eye2 className="w-6 h-6 text-cyan-400" />
                 <span>Termination</span>
               </h2>
               <div className="space-y-4 text-gray-300">
@@ -610,15 +610,15 @@ const Terms: React.FC = () => {
                   <h3 className="text-2xl font-semibold text-white mb-4">What We Don't Cover</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start space-x-3">
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      <AlertTriangle2 className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300">Indirect or consequential damages</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      <AlertTriangle2 className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300">Loss of profits or business opportunities</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      <AlertTriangle2 className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                       <span className="text-gray-300">Third-party service failures</span>
                     </li>
                   </ul>
@@ -670,15 +670,15 @@ const Terms: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-white mb-4">We May Terminate</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
-                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                    <AlertTriangle2 className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">For violation of terms</span>
                     </li>
                   <li className="flex items-start space-x-3">
-                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                    <AlertTriangle2 className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">Non-payment of fees</span>
                     </li>
                   <li className="flex items-start space-x-3">
-                    <AlertTriangle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                    <AlertTriangle2 className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">Illegal or harmful use</span>
                     </li>
                 </ul>

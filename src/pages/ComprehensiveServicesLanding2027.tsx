@@ -82,7 +82,7 @@ import {
   ExternalLink,
   BookOpen,
   Lightbulb,
-  Target as TargetIcon,
+  Target as TargetIconDup,
   Users as UsersIcon,
   Settings,
   BarChart,
@@ -91,7 +91,7 @@ import {
   TrendingDown,
   Calculator,
   Calendar,
-  Clock as ClockIcon,
+  Clock as ClockIconMain,
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
@@ -284,7 +284,7 @@ export default function ComprehensiveServicesLanding2027() {
               <div className="text-cyan-400 text-sm">Total Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <Target className="w-8 h-8 text-green-400 mx-auto mb-3" />
+              <TargetIconDup className="w-8 h-8 text-green-400 mx-auto mb-3" />
               <div className="text-2xl font-bold text-white">{categories.length - 1}</div>
               <div className="text-green-400 text-sm">Categories</div>
             </div>
