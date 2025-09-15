@@ -5,19 +5,43 @@ const AdvancedAISystems2026: React.FC = () => {
   const systems = [
     {
       name: "Autonomous Business Manager",
+      icon: "🤖",
       description: "AI system that manages entire business operations autonomously",
-      capabilities: ["Strategic Planning", "Resource Allocation", "Performance Optimization", "Risk Management"],
-      color: "from-blue-500 to-cyan-600"
+      capabilities: ["Strategic Planning", "Resource Allocation", "Performance Monitoring", "Decision Making"],
+      color: "from-blue-500 to-indigo-600"
     },
     {
-      name: "Synthetic Intelligence Core",
-      description: "Advanced AI with synthetic consciousness capabilities",
-      capabilities: ["Self-Awareness", "Emotional Intelligence", "Creative Problem Solving", "Ethical Reasoning"],
+      name: "Neural Creative Engine",
+      icon: "🎨",
+      description: "AI-powered creative system that generates original content and solutions",
+      capabilities: ["Content Creation", "Design Generation", "Innovation Synthesis", "Creative Problem Solving"],
       color: "from-purple-500 to-pink-600"
     },
     {
-      name: "Predictive Analytics Engine",
-      description: "AI system that predicts future trends and outcomes",
+      name: "Quantum Analytics Hub",
+      icon: "⚡",
+      description: "Quantum-enhanced analytics system for complex data processing",
+      capabilities: ["Big Data Analysis", "Predictive Modeling", "Pattern Recognition", "Real-time Insights"],
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      name: "Synthetic Intelligence Core",
+      icon: "🧠",
+      description: "Core AI system with synthetic consciousness and self-awareness",
+      capabilities: ["Self-Awareness", "Conscious Decision Making", "Emotional Intelligence", "Ethical Reasoning"],
+      color: "from-emerald-500 to-teal-600"
+    },
+    {
+      name: "Adaptive Learning Network",
+      icon: "🕸️",
+      description: "Distributed AI network that learns and adapts across multiple domains",
+      capabilities: ["Cross-Domain Learning", "Knowledge Transfer", "Adaptive Intelligence", "Collective Wisdom"],
+      color: "from-orange-500 to-red-600"
+    },
+    {
+      name: "Predictive Operations Engine",
+      icon: "🔮",
+      description: "AI system that predicts and prevents operational issues before they occur",
       capabilities: ["Anomaly Detection", "Predictive Maintenance", "Risk Assessment", "Proactive Solutions"],
       color: "from-violet-500 to-purple-600"
     }
@@ -54,76 +78,83 @@ const AdvancedAISystems2026: React.FC = () => {
             <div className="text-5xl mb-6 text-purple-600">⚙️</div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Autonomous Decision-Making Engines</h2>
             <p className="text-gray-700 mb-6">
-              AI systems that make complex decisions independently, learning from outcomes and continuously improving their decision-making processes.
+              AI systems capable of independent, high-stakes decision-making in dynamic environments, optimizing for complex objectives.
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Real-time Decision Processing</li>
-              <li>Multi-criteria Optimization</li>
-              <li>Adaptive Learning Algorithms</li>
+              <li>Real-time Adaptive Planning</li>
+              <li>Self-Correction & Optimization</li>
+              <li>Explainable Autonomous Actions</li>
             </ul>
           </div>
 
-          {/* Advanced Neural Networks */}
+          {/* Self-Evolving AI Architectures */}
           <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-pink-200">
-            <div className="text-5xl mb-6 text-pink-600">🧠</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Advanced Neural Networks</h2>
+            <div className="text-5xl mb-6 text-pink-600">🌱</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Self-Evolving AI Architectures</h2>
             <p className="text-gray-700 mb-6">
-              Next-generation neural architectures that process information more efficiently and accurately than ever before.
+              AI that designs, tests, and refines its own underlying algorithms and structures for continuous performance enhancement.
             </p>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Quantum-Inspired Computing</li>
-              <li>Neuromorphic Processing</li>
-              <li>Distributed Intelligence</li>
+              <li>Meta-Learning Algorithms</li>
+              <li>Automated AI Design</li>
+              <li>Adaptive Model Generation</li>
+            </ul>
+          </div>
+
+          {/* Human-AI Symbiotic Systems */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-red-200">
+            <div className="text-5xl mb-6 text-red-600">🤝</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Human-AI Symbiotic Systems</h2>
+            <p className="text-gray-700 mb-6">
+              Creating collaborative ecosystems where human intuition and AI's processing power merge for unparalleled innovation.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Intuitive AI Interfaces</li>
+              <li>Shared Autonomy Models</li>
+              <li>Augmented Human Creativity</li>
+            </ul>
+          </div>
+
+          {/* Global Autonomous Operations Platforms */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-teal-200">
+            <div className="text-5xl mb-6 text-teal-600">🌐</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Global Autonomous Operations Platforms</h2>
+            <p className="text-gray-700 mb-6">
+              Deploying and managing AI systems that autonomously oversee and optimize vast, distributed operations worldwide.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Decentralized AI Networks</li>
+              <li>Cross-Domain Optimization</li>
+              <li>Resilient Autonomous Infrastructure</li>
+            </ul>
+          </div>
+
+          {/* AI Ethics & Safety in Autonomous Systems */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-yellow-200">
+            <div className="text-5xl mb-6 text-yellow-600">🛡️</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">AI Ethics & Safety in Autonomous Systems</h2>
+            <p className="text-gray-700 mb-6">
+              Pioneering research and implementation of advanced safety protocols and ethical guardrails for highly autonomous AI.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Fail-Safe Mechanisms</li>
+              <li>Adversarial Robustness</li>
+              <li>Human Oversight & Control</li>
             </ul>
           </div>
         </div>
 
-        {/* AI Systems Showcase */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-            Revolutionary AI Systems
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {systems.map((system, index) => (
-              <motion.div
-                key={system.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-200 hover:border-indigo-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${system.color} rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6`}>
-                  {system.name.charAt(0)}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{system.name}</h3>
-                <p className="text-gray-600 mb-6">{system.description}</p>
-                <div className="space-y-2">
-                  {system.capabilities.map((capability, capIndex) => (
-                    <div key={capIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                      <span className="text-gray-700 text-sm">{capability}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with Advanced AI?</h2>
-          <p className="text-xl mb-8 opacity-90">
+        <div className="text-center mt-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Implement Advanced AI Systems?</h2>
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
             Our team of leading AI scientists and engineers is ready to partner with you to build the next generation of intelligent systems.
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg">
-              Deploy AI System →
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
-          </div>
+          <a
+            href="/contact"
+            className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            Consult Our AI Experts →
+          </a>
         </div>
       </div>
     </div>
