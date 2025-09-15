@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
@@ -31,11 +35,15 @@
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
 export interface CartItem {
   id: string;
   name: string;
@@ -91,11 +99,15 @@ export const cartUtils = {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
     
     if (existingItem) {
@@ -106,6 +118,10 @@ export const cartUtils = {
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,6 +206,7 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 >>>>>>> main
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -197,10 +214,15 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     }
   },
 
   // Remove item from cart
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
@@ -213,11 +235,20 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
 
   // Update item quantity
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -267,6 +298,7 @@ export function calculateCartTotals(cart: Cart): Cart {
 >>>>>>> main
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -274,6 +306,10 @@ export function calculateCartTotals(cart: Cart): Cart {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -287,6 +323,7 @@ export function calculateCartTotals(cart: Cart): Cart {
 
   // Calculate totals
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -298,12 +335,21 @@ export function calculateCartTotals(cart: Cart): Cart {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
     return {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -382,15 +428,23 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   },
 
   // Clear cart
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     return cart.items.some(item => item.id === itemId);
   },
 
   // Get cart summary
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -754,8 +808,12 @@ export default cartUtils;
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 export default cartUtils;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026

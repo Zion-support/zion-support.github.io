@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
@@ -24,11 +28,15 @@
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -105,6 +113,10 @@ class ProductionLogger {
       console.warn('Failed to send log to remote endpoint:', error);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -388,8 +400,12 @@ export default logger;
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026

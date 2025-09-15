@@ -4,10 +4,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 =======
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
 
 const FutureTechTrends2026: React.FC = () => {
   const [activeTrend, setActiveTrend] = useState('ai');
@@ -385,10 +389,14 @@ const FutureTechTrends2026: React.FC = () => {
                       <h3 className="text-2xl font-bold">{trend.title}</h3>
                       <div className="text-sm opacity-90">{trend.timeline}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
                     </div>
                   </div>
                 </div>
@@ -523,10 +531,14 @@ const FutureTechTrends2026: React.FC = () => {
               View Showcase
             </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
           </div>
         </div>
       </section>

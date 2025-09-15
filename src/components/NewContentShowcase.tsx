@@ -3,10 +3,13 @@ import React from 'react';
 const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -115,10 +118,14 @@ const NewContentShowcase: React.FC = () => {
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   return (
     <div className="w-full">
       {/* New Content Banner */}
@@ -243,16 +250,24 @@ const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -274,10 +289,14 @@ export { NewContentShowcase };
 export { NewContentShowcase };
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 export { NewContentShowcase };
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
 export default NewContentShowcase;

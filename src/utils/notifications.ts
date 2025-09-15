@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
@@ -48,16 +52,24 @@ interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,11 +94,15 @@ interface NotificationOptions {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -116,6 +132,10 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,11 +322,15 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     }
 
     try {
@@ -317,8 +341,11 @@ class NotificationManager {
         tag: options.tag,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -369,11 +396,15 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -385,6 +416,10 @@ class NotificationManager {
 
       return notification;
     } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -408,16 +443,24 @@ class NotificationManager {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -630,15 +673,23 @@ export type { NotificationOptions, ToastOptions };
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -756,8 +807,12 @@ export default notificationManager;
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026

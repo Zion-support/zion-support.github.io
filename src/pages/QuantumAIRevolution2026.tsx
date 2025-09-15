@@ -237,6 +237,7 @@ const QuantumAIRevolution2026: React.FC = () => {
               </motion.div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -245,6 +246,9 @@ const QuantumAIRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
           </div>
         </div>
       </div>

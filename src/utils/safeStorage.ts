@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
@@ -326,11 +330,15 @@ export const safeStorage = {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     }
   }
 };

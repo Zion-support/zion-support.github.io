@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
@@ -25,11 +29,15 @@ import { useState, useEffect, useCallback } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 import { useState, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
 
 export interface Webhook {
   id: string;
@@ -37,6 +45,10 @@ export interface Webhook {
   url: string;
   events: string[];
   secret?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,11 +82,15 @@ export interface Webhook {
   isActive: boolean;
   createdAt: string;
   lastTriggered?: string;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   failureCount: number;
 }
 
@@ -85,6 +101,10 @@ export interface WebhookEvent {
   payload: any;
   status: 'pending' | 'success' | 'failed';
   attempts: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -135,11 +155,15 @@ export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => 
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   createdAt: string;
   lastAttempt?: string;
   error?: string;
@@ -155,16 +179,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -172,10 +200,17 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [events, setEvents] = useState<WebhookEvent[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -211,11 +246,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 =======
 
   // Fetch webhooks
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   const fetchWebhooks = useCallback(async () => {
     try {
       setLoading(true);
@@ -227,16 +266,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         throw new Error('Failed to fetch webhooks');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -244,6 +287,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       }
       
       const data = await response.json();
@@ -255,6 +301,10 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
     }
   }, []);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -279,11 +329,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   // Fetch webhook events
   const fetchEvents = useCallback(async (webhookId?: string) => {
     try {
@@ -296,16 +350,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         throw new Error('Failed to fetch webhook events');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -313,11 +371,18 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       }
       
       const data = await response.json();
       setEvents(data.events || []);
     } catch (err) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -343,11 +408,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
     } finally {
       setLoading(false);
@@ -360,16 +429,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -377,6 +450,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       setError(null);
       
       const response = await fetch('/api/webhooks', {
@@ -391,16 +467,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         throw new Error('Failed to create webhook');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -408,12 +488,19 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       }
       
       const newWebhook = await response.json();
       setWebhooks(prev => [...prev, newWebhook]);
       return newWebhook;
     } catch (err) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -441,11 +528,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       setError(err instanceof Error ? err.message : 'Failed to create webhook');
       throw err;
     } finally {
@@ -459,16 +550,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -476,6 +571,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       setError(null);
       
       const response = await fetch(`/api/webhooks/${id}`, {
@@ -487,6 +585,10 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       
       if (!response.ok) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -521,11 +623,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
         throw new Error('Failed to update webhook');
       }
       
@@ -548,16 +654,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setLoading(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -565,6 +675,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
       setError(null);
       
       const response = await fetch(`/api/webhooks/${id}`, {
@@ -572,6 +685,10 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       
       if (!response.ok) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -645,11 +762,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
         throw new Error('Failed to delete webhook');
       }
       
@@ -671,16 +792,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       const response = await fetch(`/api/webhooks/${id}/test`, {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -688,10 +813,17 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
         method: 'POST',
       });
       
       if (!response.ok) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -760,11 +892,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
         throw new Error('Failed to test webhook');
       }
       
@@ -817,16 +953,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   // Initial load
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -834,11 +974,18 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   useEffect(() => {
     fetchWebhooks();
     fetchEvents();
   }, [fetchWebhooks, fetchEvents]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -873,16 +1020,24 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   return {
     webhooks,
     events,
     loading,
     error,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -911,11 +1066,15 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
     fetchWebhooks,
     fetchEvents,
     createWebhook,
@@ -925,16 +1084,20 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
     retryEvent,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/revolutionary-content-2026
 <<<<<<< HEAD
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
@@ -942,6 +1105,9 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
+>>>>>>> origin/revolutionary-content-2026
   };
 };
 
