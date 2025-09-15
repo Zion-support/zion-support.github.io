@@ -79,6 +79,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Report'
   },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
@@ -260,7 +261,19 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/web3-dapp-challenge',
     date: '2025-09-03',
     tag: 'Community'
-  }
+  },
+  {
+    title: 'Launch: AI Content Studio 2.1',
+    summary:
+      'Refinements to workflows, new templates, and 20% faster asset generation for teams.',
+    href: '/updates/ai-content-studio-2-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  
+  
+  
+  
   ,
   {
     title: 'Case Study: RAG Agents Reduce MTTR by 42%',
@@ -269,6 +282,23 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-agents-case-study',
     date: '2025-09-15',
     tag: 'Case Study'
+  }
+  ,
+  {
+    title: 'Launch: AI Governance Dashboard v3',
+    summary:
+      'Unified governance KPIs with policy-as-code status, eval gates, and exception workflows.',
+    href: '/updates/ai-governance-dashboard-v3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Agent Benchmark Suite v1',
+    summary:
+      'Task suites, rubrics, and golden datasets for production agents across domains.',
+    href: '/updates/agent-benchmark-suite-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
   }
 ]
 
