@@ -39,6 +39,19 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold">Read Article →</Link>
         </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-autonomous-ops-platform" className="hover:underline">
+              Autonomous Operations Platform (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Build an autonomous, outcome-driven operations platform with agents, EDA, and guardrails.
+          </p>
+          <Link href="/content/ai-2026-autonomous-ops-platform" className="text-indigo-600 font-semibold">Read Guide →</Link>
+        </article>
       </div>
     </main>
   );
