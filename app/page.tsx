@@ -73,6 +73,12 @@ import NewContent2025AdvancedAutomationBanner from './components/NewContent2025A
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+
+// Import new 2026 promotional components
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryTechBanner2026 from './components/RevolutionaryTechBanner2026';
+import EnterpriseSolutionsShowcase2026 from './components/EnterpriseSolutionsShowcase2026';
+import Link from 'next/link';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -90,6 +96,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Tech Banner 2026 - NEW FEATURED */}
+        <RevolutionaryTechBanner2026 />
+        
+        {/* New Content Showcase 2026 - NEW FEATURED */}
+        <NewContentShowcase2026 />
+        
+        {/* Enterprise Solutions Showcase 2026 - NEW FEATURED */}
+        <EnterpriseSolutionsShowcase2026 />
+        
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
@@ -101,11 +116,11 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Hyperautomation Blueprint 2026 and Edge AI Agents are now live.</p>
+                <p className="text-gray-600 mt-2">Now featuring GenAI Governance 2026 and Agent Observability 2026.</p>
               </div>
               <div className="flex gap-3">
-                <Link href="/content/hyperautomation-blueprint-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
-                <Link href="/content/edge-ai-agents-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Edge AI Agents</Link>
+                <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">GenAI Governance</Link>
+                <Link href="/content/agent-observability-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
               </div>
             </div>
           </div>
@@ -291,6 +306,48 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content Promo: LLM Evaluation Best Practices 2025 */}
+        <section className="py-6 bg-gradient-to-r from-purple-50 to-blue-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New Best Practices</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2025: LLM Evaluation Best Practices</h2>
+                <p className="text-gray-600 mt-2">Reliable, fair, and robust evaluation methods for LLMs and AI agents in production.</p>
+              </div>
+              <Link href="/blog/ai-2025-llm-evaluation-best-practices" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read the Guide →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Secure Agent Architecture 2026 */}
+        <section className="py-6 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-indigo-700">New Architecture</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Secure Agent Architecture</h2>
+                <p className="text-gray-600 mt-2">Zero-trust design, scoped capabilities, and runtime guardrails for enterprise agents.</p>
+              </div>
+              <Link href="/blog/ai-2026-secure-agent-architecture" className="shrink-0 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read the Blueprint →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Autonomous Enterprise Blueprint 2026 */}
+        <section className="py-6 bg-gradient-to-r from-green-50 to-emerald-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700">New Blueprint</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Autonomous Enterprise Blueprint</h2>
+                <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
+              </div>
+              <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read the Blueprint →</Link>
+            </div>
+          </div>
+        </section>
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
@@ -340,6 +397,18 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
                 <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
                 <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
+              </article>
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">GenAI Governance 2026</h3>
+                <p className="text-gray-600 mb-4">Policies, controls, and guardrails for safe and compliant GenAI at scale.</p>
+                <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold hover:text-indigo-900">Read Framework →</Link>
+              </article>
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Agent Observability 2026</h3>
+                <p className="text-gray-600 mb-4">Metrics, traces, and evals to ship reliable agentic systems.</p>
+                <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold hover:text-green-900">Read Guide →</Link>
               </article>
             </div>
           </div>
