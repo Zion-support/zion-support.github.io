@@ -248,7 +248,6 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-d3a3
   );
 };
 
