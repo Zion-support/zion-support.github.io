@@ -11,6 +11,27 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "gtm-agents-blueprint-2026",
+    title: "AI 2026: Go-To-Market Agents Blueprint",
+    description:
+      "Pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-go-to-market-agents-blueprint",
+    emoji: "💼",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "blog-gtm-agents-blueprint-2026",
+    title: "AI 2026: Go-To-Market Agents Blueprint",
+    description:
+      "Design GTM agents with eval-gated delivery, brand-safe tone, and closed-loop learning.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-go-to-market-agents-blueprint",
+    emoji: "📈",
+    date: "2025-09-15",
+  },
+  {
     id: "agent-incident-response-playbook-2026-v1",
     title: "AI 2026: Agent Incident Response Playbook",
     description:
