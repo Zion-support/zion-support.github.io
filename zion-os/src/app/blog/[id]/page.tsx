@@ -11,6 +11,20 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-eval-suite-2025': {
+    id: 'ai-safety-eval-suite-2025',
+    title: 'AI Safety Eval Suite 2025: Practical Tests for Autonomous Agents',
+    excerpt:
+      'A hands-on evaluation battery covering red-teaming, reward hacking, prompt injection, and tool-use safety for production agents.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'As organizations adopt autonomous agents, systematic evaluation becomes critical. Our 2025 Eval Suite provides reproducible tests spanning jailbreak resistance, prompt injection, tool-use containment, and reward hacking detection.',
+      'We include reference metrics (task success, unintended side-effects, intervention frequency), scoring rubrics, and a staged rollout plan that enables incremental hardening without slowing shipping velocity.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',

@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-safety-eval-suite-2025',
+      title: 'AI Safety Eval Suite 2025: Practical Tests for Autonomous Agents',
+      excerpt: 'A reproducible evaluation battery for jailbreak resistance, prompt injection, and tool-use safety.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-safety-eval.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-safety-eval-suite-2025',
+      title: 'AI Safety Eval Suite 2025: Practical Tests for Autonomous Agents',
+      excerpt: 'Operational guidance to harden production agents using standardized evals and metrics.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-safety-eval.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',

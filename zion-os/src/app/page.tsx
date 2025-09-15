@@ -132,6 +132,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Promo: New Blog Article */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/ai-safety-eval-suite-2025" className="block w-full bg-white/10 border border-white/15 rounded-xl p-5 md:p-6 hover:bg-white/15 transition-colors">
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                SE
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100/20 text-blue-200">AI Safety</span>
+                  <span className="text-xs text-white/70">New</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold text-white">
+                  AI Safety Eval Suite 2025: Practical Tests for Autonomous Agents
+                </h3>
+                <p className="text-white/70 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A reproducible evaluation battery for jailbreak resistance, prompt injection, and tool-use safety.
+                </p>
+              </div>
+              <div className="text-blue-300 font-medium whitespace-nowrap">Read now →</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
