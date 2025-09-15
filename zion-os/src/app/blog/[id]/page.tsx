@@ -14,7 +14,6 @@ interface BlogPostMeta {
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
@@ -35,7 +34,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 =======
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -72,6 +72,14 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7857
+=======
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
@@ -88,13 +96,12 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> cursor/create-and-deploy-new-content-7857
     ]
   },
 >>>>>>> 989864ad5ef118804be96b17356deb0745379eba
@@ -128,6 +135,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
     ]
   },
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
     title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
