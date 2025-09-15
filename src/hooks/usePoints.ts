@@ -22,7 +22,6 @@ export function usePoints(): UsePointsResult {
   const fetchLedger = useCallback(async () => {
     setLoading(true);
     try {
-      // Placeholder local data; replace with API call when backend available
       const demo: PointsLedgerEntry[] = [
         { id: 'p1', type: 'earn', points: 120, description: 'Signup bonus', createdAt: new Date().toISOString() },
         { id: 'p2', type: 'earn', points: 80, description: 'Read Trusted GenAI article', createdAt: new Date().toISOString() },
@@ -44,4 +43,3 @@ export function usePoints(): UsePointsResult {
 }
 
 export default usePoints;
-

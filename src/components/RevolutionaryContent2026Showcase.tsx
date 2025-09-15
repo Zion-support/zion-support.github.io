@@ -173,7 +173,7 @@ const RevolutionaryContent2026Showcase: React.FC = () => {
       exit={{ opacity: 0, y: -20 }}
       className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl border border-purple-500/20 overflow-hidden"
     >
-      {/* Background Pattern (replaced inline SVG with safe gradient for build stability) */}
+      {/* Background Pattern (use safe gradient for build stability) */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/10 to-slate-900/20" />
       
       {/* Header */}
