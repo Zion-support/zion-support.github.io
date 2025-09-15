@@ -9,6 +9,7 @@ import CaseStudyPage from './src/CaseStudyPage';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+import AIPlaybook2025 from './src/pages/AIPlaybook2025';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -43,95 +44,14 @@ export default function App(): JSX.Element {
                     <a href="/pages/BlogPost2025" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       Read Latest Blog
                     </a>
+                    <a href="/pages/AIPlaybook2025" className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                      Download AI Playbook 2025
+                    </a>
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 {/* Featured Content Section */}
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold mb-4">🌟 Featured: Revolutionary Technology 2025</h2>
-                    <p className="text-lg opacity-90">Discover our latest innovations that are reshaping industries</p>
-                  </div>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
-                      <div className="text-3xl mb-3">🧠</div>
-                      <h3 className="text-xl font-semibold mb-2">AI Autonomous Agents</h3>
-                      <p className="text-sm opacity-90 mb-4">Self-learning AI systems that handle complex business processes</p>
-                      <a href="/pages/InnovativeServicesShowcase2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn More →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
-                      <div className="text-3xl mb-3">⚡</div>
-                      <h3 className="text-xl font-semibold mb-2">Quantum Security</h3>
-                      <p className="text-sm opacity-90 mb-4">Next-generation encryption using quantum computing principles</p>
-                      <a href="/pages/InnovationLanding2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
-                      <div className="text-3xl mb-3">🌐</div>
-                      <h3 className="text-xl font-semibold mb-2">Global IoT Network</h3>
-                      <p className="text-sm opacity-90 mb-4">Worldwide connected devices for seamless data exchange</p>
-                      <a href="/pages/BlogPost2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read More →</a>
-                    </div>
-                  </div>
-                </div>
-=======
-        {/* Featured New Services */}
-        <section className="mb-12">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-gray-900">Newest Services</h2>
-            <p className="text-gray-600">Explore our latest offerings designed to drive measurable outcomes.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">🧭</div>
-              <h3 className="text-xl font-semibold mb-2">AI Sales Copilot</h3>
-              <p className="text-gray-600 mb-4">Automate prospecting, personalize outreach, and accelerate pipeline with conversational AI.</p>
-              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">💸</div>
-              <h3 className="text-xl font-semibold mb-2">Cloud Cost Optimizer</h3>
-              <p className="text-gray-600 mb-4">Cut multi-cloud spend with automated rightsizing, scheduling, and anomaly detection.</p>
-              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold mb-2">Cyber Threat Intelligence Hub</h3>
-              <p className="text-gray-600 mb-4">Unify threat feeds and correlate signals with AI to reduce alert fatigue.</p>
-              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
-            </div>
-          </div>
-          <div className="text-center mt-6">
-            <a href="/services" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">View all services</a>
-          </div>
-        </section>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-xl font-semibold mb-2">AI Solutions</h3>
-            <p className="text-gray-600">
-              Cutting-edge artificial intelligence solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-4xl mb-4">🔗</div>
-            <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
-            <p className="text-gray-600">
-              Secure, decentralized solutions powered by blockchain technology.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-4xl mb-4">☁️</div>
-            <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>
-            <p className="text-gray-600">
-              Scalable cloud infrastructure and deployment solutions.
-            </p>
-          </div>
-        </div>
->>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
+                <FeaturedContentSection />
 
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -222,6 +142,7 @@ export default function App(): JSX.Element {
               </main>
             </div>
           } />
+          <Route path="/pages/AIPlaybook2025" element={<AIPlaybook2025 />} />
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
@@ -254,8 +175,4 @@ export default function App(): JSX.Element {
       </div>
     </Router>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
