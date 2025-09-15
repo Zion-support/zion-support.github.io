@@ -1,15 +1,18 @@
-// Console error toast handler
+// Console error toast notifications
+import { toast } from 'react-hot-toast';
+
+// Override console.error to show toast notifications
 const originalConsoleError = console.error;
 
 console.error = function(...args) {
   // Call the original console.error
   originalConsoleError.apply(console, args);
   
-  // Add any additional error handling here
-  // For example, sending errors to a logging service
-  if (typeof window !== 'undefined' && window.reportError) {
-    window.reportError(args.join(' '));
+  // Show toast notification for errors
+  const errorMessage = args.join(' ');
+  if (errorMessage && !errorMessage.includes('Warning:')) {
+    toast.error('An error occurred: ' + errorMessage);
   }
 };
 
-export default {};
+export default console.error;

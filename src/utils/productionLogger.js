@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
 // Production logger utility
 export const productionLogger = {
   log: (message, ...args) => {
@@ -23,6 +27,11 @@ export const productionLogger = {
     if (process.env.NODE_ENV === 'development') {
       console.info(message, ...args);
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 // Production logger utility for safe logging in production environments
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -66,7 +75,14 @@ export const productionLogger = {
       }
     } catch (error) {
       // Silently fail in production
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
     }
   }
 };
