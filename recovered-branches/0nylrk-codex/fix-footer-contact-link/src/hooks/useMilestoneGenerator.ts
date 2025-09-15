@@ -35,6 +35,7 @@ export function useMilestoneGenerator() {
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone,
+
         isAiGenerated: true}));
 
       setGeneratedMilestones(milestonesWithFlag);

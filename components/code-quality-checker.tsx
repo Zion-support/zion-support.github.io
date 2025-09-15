@@ -117,6 +117,7 @@ export default function CodeQualityCheckerPage() {
           testCoverage: '85%',
           securityScore: '92%'
         },
+
         recommendations: [
           'Use const for immutable variables to improve code clarity',
           'Break down large functions into smallermore focused functions',
@@ -185,6 +186,9 @@ export default function CodeQualityCheckerPage() {
             </Button>
           </div>
 
+
+
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="#pricing"
@@ -246,6 +250,15 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
       {/* Supported Languages Section */}
       <section className="section-padding bg-gradient-cursor">
@@ -366,6 +379,7 @@ export default function CodeQualityCheckerPage() {
             </div>
 
             {/* Recommendations */}
+
             <Card className="border-gradient-teal">
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

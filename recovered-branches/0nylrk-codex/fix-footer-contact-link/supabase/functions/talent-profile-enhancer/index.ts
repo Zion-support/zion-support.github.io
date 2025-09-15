@@ -34,6 +34,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+
   try {
     const { talentData } = await req.json() as { talentData: TalentProfileData };
     

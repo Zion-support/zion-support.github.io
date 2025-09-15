@@ -21,6 +21,7 @@ import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
+
 const Homepage2047: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
@@ -400,6 +401,7 @@ const Homepage2047: React.FC = () => {
             transition={{ duration: 0.8delay: 0.2 }}
             className="text-center mt-16"
           >
+
             <Link
               href="/2025-innovative-services-showcase-v2"
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"

@@ -104,6 +104,11 @@ export default defineConfig({
     port: 3000,
     host: true
   },
+
+  server: {
+    port: 3000,
+    open: true,
+  },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
     exclude: ['@vite/client', '@vite/env']

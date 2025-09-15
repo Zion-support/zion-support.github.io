@@ -364,9 +364,13 @@ export default function DeveloperToolsPage() {
                       ))}
                     </ul>
 
+
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
+
+
+
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -478,6 +482,7 @@ export default function DeveloperToolsPage() {
             >
               Explore AI Tools
             </Button>
+
             <Button
               href="/contact"
               variant="outline"

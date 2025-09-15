@@ -3,13 +3,20 @@ import type { GetServerSideProps } from 'next';
 import { FormEventuseEffectuseState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
-type Props = { vendor: Vendor | null };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendorsetActiveVendor] = useState(vendor);
   const [pkgTitlesetPkgTitle] = useState('');
   const [pkgDescsetPkgDesc] = useState('');
   const [pkgPricesetPkgPrice] = useState<number | ', '>(', ');
+
+
+
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
@@ -27,6 +34,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     // For MVPupdate via direct API not implemented; keep local preview only
     setActiveVendor(updated);
   }
+
 
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;

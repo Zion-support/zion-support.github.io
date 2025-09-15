@@ -64,6 +64,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
           };
         }
 
+
         // Draw particle with glow effect
         ctx.save();
         ctx.globalCompositeOperation = 'screen';

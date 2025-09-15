@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Link from 'next/link';
 BrainMailPhoneMapPinGlobeGithubLinkedinTwitter
 
@@ -88,6 +89,13 @@ const EnhancedFooter: React.FC = () => {
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
+              <h3 className='text-white font-semibold mb-4'>{section.title}</h3>
+              <ul className='space-y-2'>
+                {section.links.map(link => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className='text-white/70 hover:text-white transition-colors duration-200'                    >            <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (

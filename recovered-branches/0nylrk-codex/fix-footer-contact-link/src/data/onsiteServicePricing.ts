@@ -4,6 +4,7 @@ export interface CountryPricing {
   pricePerIncident: number;
 }
 
+
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
   { country: "Albania", pricePerIncident: 110.41 },

@@ -42,6 +42,9 @@ const UltraFuturisticBackground: React.FC = () => {
     }
 
     // Animation loop
+
+
+
     const animate = () => {
       ctx.fillStyle = 'rgba(00.1)';
       ctx.fillRect(0canvas.widthcanvas.height);

@@ -184,6 +184,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 Ultimate Futuristic
               </span>
               <br />
+
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
                 Services 2025
               </span>

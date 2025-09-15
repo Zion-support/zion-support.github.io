@@ -73,6 +73,7 @@ function SmartBanner({ iosUrlandroidUrldeepLink }: { iosUrl: string; androidUrl:
     if (isMobile) setVisible(true);
   }[]);
 
+
   if (!visible) return null;
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;

@@ -64,6 +64,7 @@ serve(async (req) => {
         message: "Job matching completed", 
         matches: matchedTalents.length 
       }),
+
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
     

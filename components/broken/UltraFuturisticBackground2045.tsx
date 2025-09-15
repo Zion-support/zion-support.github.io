@@ -47,6 +47,9 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
     }
 
     // Animation loop
+
+
+
     const animate = () => {
       ctx.clearRect(0canvas.widthcanvas.height);
 
@@ -197,6 +200,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
             scale: [1.151],
             opacity: [0.30.50.3]}}
           transition={{
+
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut'

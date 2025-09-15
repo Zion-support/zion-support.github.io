@@ -458,9 +458,6 @@ const Homepage2040: React.FC = () => {
                   </Link>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
-        </section>
 
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">

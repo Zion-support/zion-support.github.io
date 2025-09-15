@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Head from 'next/head';
 CheckShieldAlertLockPhoneMailMapPinExternalLink
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';

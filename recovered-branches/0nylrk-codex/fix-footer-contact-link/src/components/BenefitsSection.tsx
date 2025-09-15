@@ -21,6 +21,7 @@ const benefits = [
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
     icon: <TrendingDown className="w-8 h-8" />}];
 
+
 export function BenefitsSection() {
   return (
     <section className="py-20 bg-zion-blue-light">

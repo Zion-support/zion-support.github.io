@@ -386,6 +386,7 @@ export default function RevolutionaryServicesPage() {
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
                       ))}
+
                     </div>
 
                     <div className="text-center">

@@ -300,6 +300,7 @@ export default function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
 
+
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (

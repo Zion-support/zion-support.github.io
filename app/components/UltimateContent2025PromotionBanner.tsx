@@ -53,9 +53,12 @@ const UltimateContent2025PromotionBanner = () => {
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+=======
+>>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-30"></div>
@@ -87,9 +90,12 @@ const UltimateContent2025PromotionBanner = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">Featured Content</h3>
           
+=======
+>>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         {/* Content Showcase */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">Featured Content</h3>
@@ -192,4 +198,7 @@ const UltimateContent2025PromotionBanner = () => {
 };
 
 export default UltimateContent2025PromotionBanner;
+<<<<<<< HEAD
 export default UltimateContent2025PromotionBanner;
+=======
+>>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e

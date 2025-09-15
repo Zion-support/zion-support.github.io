@@ -152,6 +152,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
           opacity: [0.30.60.3]
         }}
         transition={{
+
           duration: 20,
           repeat: Infinity,
           ease: "linear"
@@ -169,9 +170,9 @@ const UltraFuturisticBackground2034: React.FC = () => {
           duration: 25,
           repeat: Infinity,
           ease: "linear"
+
         }}
       />
-
       <motion.div
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
         animate={{
@@ -344,6 +345,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ]
         }}
         transition={{
+
           duration: 2,
           repeat: Infinity,
           ease: "easeInOut",

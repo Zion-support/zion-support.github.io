@@ -330,6 +330,9 @@ export default function ComprehensiveServicesShowcase() {
                         ))}
                       </div>
 
+
+
+
                       {/* Stats Row */}
                       <div className="flex items-center gap-6 text-sm text-white/60">
                         <div className="flex items-center gap-2">
@@ -373,6 +376,7 @@ export default function ComprehensiveServicesShowcase() {
             </AnimatePresence>
           </div>
         )}
+
 
         {/* No Results */}
         {filteredServices.length === 0 && (

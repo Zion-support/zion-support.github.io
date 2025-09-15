@@ -57,6 +57,7 @@ export default function AiToolsPage() {
       textColor: 'text-purple-400',
       gradient: 'from-purple-400 to-pink-500',
       popular: true,
+
       category: 'Image Generation'
     },
     {
@@ -335,9 +336,13 @@ export default function AiToolsPage() {
                       ))}
                     </ul>
 
+
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
+
+
+
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"

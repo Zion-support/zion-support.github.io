@@ -165,7 +165,11 @@ const AI2025UltimateEnterpriseTransformationBanner = () => {
                 
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center animate-bounce">
+<<<<<<< HEAD
                   <Award className="w-6 h-6 text-green-400" />
+=======
+                  <Zap className="w-6 h-6 text-green-400" />
+>>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center animate-bounce delay-1000">
                   <TrendingUp className="w-8 h-8 text-blue-400" />

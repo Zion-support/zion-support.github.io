@@ -38,6 +38,7 @@ export interface EnterpriseITBreakthroughService2029 {
   launchDate: string;
   customers: number;
   rating: number;
+
   reviews: number;
 }
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 export default function PartnersPage() {
 	return (

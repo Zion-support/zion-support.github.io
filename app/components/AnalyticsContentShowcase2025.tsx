@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { BarChart3, TrendingUp, Zap, Clock, Users, DollarSign, CheckCircle, ArrowRight, Filter, ArrowRight } from 'lucide-react';
+import { BarChart3, TrendingUp, Zap, Clock, Users, DollarSign, CheckCircle, ArrowRight, Filter } from 'lucide-react';
 
 const AnalyticsContentShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

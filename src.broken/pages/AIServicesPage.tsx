@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react',
 import { 
-  Brain
-  MessageSquare
-  BarChart3
-  FileText
-  Search
-  Shield
-  Users
-  Zap
-  CheckCircle
+  Brain,
+  MessageSquare, 
+  BarChart3, 
+  FileText, 
+  Search, 
+  Shield, 
+  Users, 
+  Zap, 
+  CheckCircle, 
   Star,
   ExternalLink,
   ArrowRight,
@@ -18,13 +18,13 @@ import {
   Linkedin,
   Twitter,
   Github
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIServicesPage() {
   const aiServices = [
     {
       name: "AI Content Generation Suite",
-      description: "Revolutionary AI-powered content creation platform that generates high-qualitySEO-optimized content for blogsmarketing materialsand social media.",
+      description: "Revolutionary AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, marketing materials, and social media.",
       icon: <FileText className="w-12 h-12 text-blue-500" />,
       features: [
         "Multi-language content generation",
@@ -42,7 +42,7 @@ export default function AIServicesPage() {
         enterprise: "$1,299/month"
       },
       marketPrice: "$500-800/month",
-      useCases: ["Marketing agencies"Content creators"E-commerce businesses"Bloggers"Social media managers"],
+      useCases: ["Marketing agencies", "Content creators", "E-commerce businesses", "Bloggers", "Social media managers"],
       benefits: [
         "10x faster content creation",
         "Improved SEO rankings",
@@ -54,7 +54,7 @@ export default function AIServicesPage() {
     },
     {
       name: "AI Customer Service Platform",
-      description: "Intelligent chatbot solution with advanced natural language processingsentiment analysisand seamless human handoff capabilities.",
+      description: "Intelligent chatbot solution with advanced natural language processing, sentiment analysis, and seamless human handoff capabilities.",
       icon: <MessageSquare className="w-12 h-12 text-green-500" />,
       features: [
         "Natural language understanding",
@@ -72,7 +72,7 @@ export default function AIServicesPage() {
         enterprise: "$799/month"
       },
       marketPrice: "$300-600/month",
-      useCases: ["E-commerce platforms"SaaS companies"Customer support teams"Healthcare providers"Financial services"],
+      useCases: ["E-commerce platforms", "SaaS companies", "Customer support teams", "Healthcare providers", "Financial services"],
       benefits: [
         "24/7 customer support",
         "Reduced response times",
@@ -102,7 +102,7 @@ export default function AIServicesPage() {
         enterprise: "$1,599/month"
       },
       marketPrice: "$600-1000/month",
-      useCases: ["Sales teams"B2B companies"Growth teams"Sales managers"Revenue operations"],
+      useCases: ["Sales teams", "B2B companies", "Growth teams", "Sales managers", "Revenue operations"],
       benefits: [
         "Increased conversion rates",
         "Better lead prioritization",
@@ -114,7 +114,7 @@ export default function AIServicesPage() {
     },
     {
       name: "AI-Powered Search & RAG System",
-      description: "Advanced retrieval-augmented generation system for intelligent document searchknowledge managementand contextual information retrieval.",
+      description: "Advanced retrieval-augmented generation system for intelligent document search, knowledge management, and contextual information retrieval.",
       icon: <Search className="w-12 h-12 text-orange-500" />,
       features: [
         "Vector-based semantic search",
@@ -132,7 +132,7 @@ export default function AIServicesPage() {
         enterprise: "$1,999/month"
       },
       marketPrice: "$800-1500/month",
-      useCases: ["Research institutions"Legal firms"Healthcare organizations"Educational institutions"Enterprise knowledge management"],
+      useCases: ["Research institutions", "Legal firms", "Healthcare organizations", "Educational institutions", "Enterprise knowledge management"],
       benefits: [
         "Instant information retrieval",
         "Improved research efficiency",
@@ -144,7 +144,7 @@ export default function AIServicesPage() {
     },
     {
       name: "AI Security & Guardrails",
-      description: "Comprehensive AI safety and security platform with content filteringbias detectionand ethical AI governance tools.",
+      description: "Comprehensive AI safety and security platform with content filtering, bias detection, and ethical AI governance tools.",
       icon: <Shield className="w-12 h-12 text-red-500" />,
       features: [
         "Content safety filtering",
@@ -162,7 +162,7 @@ export default function AIServicesPage() {
         enterprise: "$2,499/month"
       },
       marketPrice: "$1000-2000/month",
-      useCases: ["AI development teams"Enterprises"Government agencies"Healthcare providers"Financial institutions"],
+      useCases: ["AI development teams", "Enterprises", "Government agencies", "Healthcare providers", "Financial institutions"],
       benefits: [
         "Reduced AI risks",
         "Compliance assurance",
@@ -174,7 +174,7 @@ export default function AIServicesPage() {
     },
     {
       name: "AI Evaluation & Testing Lab",
-      description: "Comprehensive AI model evaluation platform with automated testingperformance benchmarkingand quality assurance tools.",
+      description: "Comprehensive AI model evaluation platform with automated testing, performance benchmarking, and quality assurance tools.",
       icon: <Brain className="w-12 h-12 text-indigo-500" />,
       features: [
         "Automated model testing",
@@ -192,7 +192,7 @@ export default function AIServicesPage() {
         enterprise: "$3,199/month"
       },
       marketPrice: "$1200-2500/month",
-      useCases: ["AI research teams"ML engineers"Data scientists"AI product teams"Quality assurance teams"],
+      useCases: ["AI research teams", "ML engineers", "Data scientists", "AI product teams", "Quality assurance teams"],
       benefits: [
         "Improved AI model quality",
         "Faster model deployment",
@@ -202,14 +202,14 @@ export default function AIServicesPage() {
       ],
       website: "https://ziontechgroup.com/ai-evaluation-lab"
     }
-  ];
+  ],
 
   const stats = [
-    { label: "AI Models Deployed"value: "500+" },
-    { label: "Client Satisfaction"value: "98%" },
-    { label: "Cost Savings"value: "40-60%" },
-    { label: "Implementation Time"value: "2-4 weeks" }
-  ];
+    { label: "AI Models Deployed", value: "500+" },
+    { label: "Client Satisfaction", value: "98%" },
+    { label: "Cost Savings", value: "40-60%" },
+    { label: "Implementation Time", value: "2-4 weeks" }
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -225,7 +225,7 @@ export default function AIServicesPage() {
               AI Services & Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI-powered solutions that transform businesses through intelligent automationpredictive analyticsand cutting-edge machine learning technologies.
+              Revolutionary AI-powered solutions that transform businesses through intelligent automation, predictive analytics, and cutting-edge machine learning technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -250,7 +250,7 @@ export default function AIServicesPage() {
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((statindex) => (
+          {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -266,12 +266,12 @@ export default function AIServicesPage() {
             Our AI Service Portfolio
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI solutions designed to drive innovationefficiencyand competitive advantage across all business functions.
+            Comprehensive AI solutions designed to drive innovation, efficiency, and competitive advantage across all business functions.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {aiServices.map((serviceindex) => (
+          {aiServices.map((service, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -285,7 +285,7 @@ export default function AIServicesPage() {
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.map((featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
@@ -319,7 +319,7 @@ export default function AIServicesPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
                       <ul className="space-y-1">
-                        {service.useCases.map((useCaseIndex) => (
+                        {service.useCases.map((useCase, useCaseIndex) => (
                           <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
                         ))}
                       </ul>
@@ -329,7 +329,7 @@ export default function AIServicesPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {service.benefits.map((benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
                       ))}
                     </ul>
@@ -384,7 +384,7 @@ export default function AIServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-white">Expert AI Team</h3>
                 <p className="text-gray-300">
-                  Our team of AI specialistsdata scientistsand ML engineers bring years of experience.
+                  Our team of AI specialists, data scientists, and ML engineers bring years of experience.
                 </p>
               </div>
               
@@ -410,7 +410,7 @@ export default function AIServicesPage() {
               Ready to Harness the Power of AI?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Let's discuss how our AI solutions can transform your business operationsdrive innovationand create competitive advantages.
+              Let's discuss how our AI solutions can transform your business operations, drive innovation, and create competitive advantages.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -438,7 +438,7 @@ export default function AIServicesPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-white">Visit Us</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>
-                <p className="text-sm text-gray-400">MiddletownDE 19709</p>
+                <p className="text-sm text-gray-400">Middletown, DE 19709</p>
               </div>
             </div>
 
@@ -457,7 +457,7 @@ export default function AIServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -512,5 +512,5 @@ export default function AIServicesPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

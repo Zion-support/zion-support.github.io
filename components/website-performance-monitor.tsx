@@ -5,6 +5,16 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 ActivityZapTrendingUpAlertTriangleCheckCircleArrowRightMonitorGaugeBarChart3Clock
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzingsetIsAnalyzing] = useState(false);
   const [analysisResultsetAnalysisResults] = useState(null);
@@ -247,6 +257,13 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
         </div>
       </section>
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* Metrics Section */}
       <section className="section-padding bg-gradient-cursor">

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, TrendingUp, Brain, Zap, ArrowRight, Brain } from 'lucide-react';
+import { X, ChevronRight, TrendingUp, Brain, Zap, ArrowRight } from 'lucide-react';
 
 const AutonomousBIRevolutionBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);

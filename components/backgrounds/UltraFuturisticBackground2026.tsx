@@ -3,7 +3,8 @@ import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2026Props {
-  children: React.ReactNode;
+  intensity?: 'low' | 'medium' | 'high';
+  theme?: 'quantum' | 'cyber' | 'neon';
   className?: string;
 }
 
@@ -13,25 +14,121 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsReducedMotion(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  // Intersection Observer for performance
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+    
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Get intensity value
+  const getIntensityValue = useCallback((intensity: string): number => {
+    switch (intensity) {
+      case 'low': return 0.3;
+      case 'medium': return 0.6;
+      case 'high': return 1.0;
+      default: return 0.6;
+    }
+  }, []);
+
+  // Get theme colors
+  const getThemeColors = useCallback((theme: string): { primary: string; secondary: string; accent: string } => {
+    switch (theme) {
+      case 'quantum':
+        return {
+          primary: '#3b82f6',   // Blue
+          secondary: '#8b5cf6',  // Purple
+          accent: '#06b6d4'      // Cyan
+        };
+      case 'cyber':
+        return {
+          primary: '#10b981',    // Green
+          secondary: '#f59e0b',  // Amber
+          accent: '#ef4444'      // Red
+        };
+      case 'neon':
+        return {
+          primary: '#ec4899',    // Pink
+          secondary: '#f97316',  // Orange
+          accent: '#8b5cf6'      // Purple
+        };
+      default:
+        return {
+          primary: '#3b82f6',
+          secondary: '#8b5cf6',
+          accent: '#06b6d4'
+        };
+    }
+  }, []);
+
+  // Memoized particle system configuration
+  const particleConfig = useMemo(() => ({
+    maxParticles: isReducedMotion ? 50 : 150,
+    particleSize: { min: 1, max: 3 },
+    speed: { min: 0.5, max: 2.0 },
+    opacity: { min: 0.1, max: 0.8 }
+  }), [isReducedMotion]);
+
+  // Initialize canvas and animation
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas || !isVisible || isReducedMotion) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Set canvas size
+    const resizeCanvas = () => {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      
+      ctx.scale(dpr, dpr);
+      canvas.style.width = `${rect.width}px`;
+      canvas.style.height = `${rect.height}px`;
+    };
 
-    let particles: Array<{
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Particle system
+    const particles: Array<{
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
+      opacity: number;
       color: string;
-      alpha: number;
       life: number;
       maxLife: number;
     }> = [];
@@ -91,13 +188,25 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       };
     };
 
+    // Initialize particles
     const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 100; i++) {
-        particles.push(createParticle());
+      particles.length = 0;
+      for (let i = 0; i < particleConfig.maxParticles; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * particleConfig.speed.max * intensityValue,
+          vy: (Math.random() - 0.5) * particleConfig.speed.max * intensityValue,
+          size: Math.random() * (particleConfig.particleSize.max - particleConfig.particleSize.min) + particleConfig.particleSize.min,
+          opacity: Math.random() * (particleConfig.opacity.max - particleConfig.opacity.min) + particleConfig.opacity.min,
+          color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)],
+          life: Math.random() * 100,
+          maxLife: 100
+        });
       }
     };
 
+    // Animation loop
     const animate = () => {
       ctx.clearRect(0canvas.widthcanvas.height);
 
@@ -105,17 +214,24 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       particles.forEach((particleindex) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-        particle.life++;
 
-        if (particle.life > particle.maxLife || 
-            particle.x < -20 || particle.x > canvas.width + 20 ||
-            particle.y < -20 || particle.y > canvas.height + 20) {
-          particles[index] = createParticle();
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Update life
+        particle.life -= 0.5;
+        if (particle.life <= 0) {
+          particle.life = particle.maxLife;
+          particle.x = Math.random() * canvas.width;
+          particle.y = Math.random() * canvas.height;
         }
 
         // Draw particle
         ctx.save();
-        ctx.globalAlpha = particle.alpha;
+        ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
         ctx.fillStyle = particle.color;
         ctx.beginPath();
         ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
@@ -133,7 +249,6 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         ctx.arc(particle.xparticle.yparticle.size * 30Math.PI * 2);
         ctx.fill();
         ctx.restore();
-      });
 
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(02550.1)';
@@ -145,10 +260,15 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
             Math.pow(particle1.y - particle2.y2)
           );
           if (distance < 100) {
+            ctx.save();
+            ctx.globalAlpha = (1 - distance / 100) * 0.3 * intensityValue;
+            ctx.strokeStyle = colors.primary;
+            ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particle1.xparticle1.y);
             ctx.lineTo(particle2.xparticle2.y);
             ctx.stroke();
+            ctx.restore();
           }
         });
       });

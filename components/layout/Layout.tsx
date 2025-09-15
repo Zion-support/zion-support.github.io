@@ -1,29 +1,15 @@
 "use client";
-import React{ ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
+import React, { useState } from 'react';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-};
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-export default Layout;
-      {children};
-    </div>)
-};
-import React{ useState } from 'react';
+  return (
+    <>
       {/* Top Contact Bar */}
       <TopContactBar />
       
@@ -76,7 +62,11 @@ import React{ useState } from 'react';
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
+<<<<<<< HEAD
             transition={{ type: ''spring', 'damping: 25stiffness: 200 }}
+=======
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+>>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             className="absolute left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
@@ -156,11 +146,11 @@ import React{ useState } from 'react';
           </motion.div>
         </div>
       )}
-    </div>
+    </>
   );
-}
-import EnhancedNavigation2025 from './EnhancedNavigation2025';
+};
 
+<<<<<<< HEAD
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -290,3 +280,6 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   );
 }
+=======
+export default Layout;
+>>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e

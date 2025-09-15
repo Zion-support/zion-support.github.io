@@ -49,12 +49,12 @@ const AnalyticsTracker: React.FC = () => {
             
             // Track Core Web Vitals
             const vitals = {
-              FCP: perfData.firstContentfulPaint,
+              FCP: 0, // Will be tracked by PerformanceObserver
               LCP: 0, // Will be tracked by PerformanceObserver
               FID: 0, // Will be tracked by PerformanceObserver
               CLS: 0, // Will be tracked by PerformanceObserver
               TTFB: perfData.responseStart - perfData.requestStart,
-              TTI: perfData.domInteractive - perfData.navigationStart,
+              TTI: perfData.domInteractive - perfData.fetchStart,
             };
 
             // Send to analytics

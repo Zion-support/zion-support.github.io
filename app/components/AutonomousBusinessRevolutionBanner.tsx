@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, TrendingUp, Zap, Award, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { ArrowRight, TrendingUp, Zap, Award, CheckCircle, Star } from 'lucide-react';
 
 const AutonomousBusinessRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);

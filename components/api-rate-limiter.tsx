@@ -13,6 +13,7 @@ export default function APIRateLimiterPage() {
   const [isTestingsetIsTesting] = useState(false);
   const [apiKeysetApiKey] = useState('');
 
+
   const timeWindows = [
     { value: '1's', 'label: '1 'Second', 'description: 'Per second rate limiting' },
     { value: '1'm', 'label: '1 'Minute', 'description: 'Per minute rate limiting' },
@@ -427,8 +428,9 @@ console.log('Rate Limit Info:'{
               <Button
                 onClick={() => copyToClipboard(`const axios = require('axios');
 
-const apiKey = '${apiKey || 'your_api_key_here'}';
-const endpoint = '${endpoint || '/api/users'}';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`{

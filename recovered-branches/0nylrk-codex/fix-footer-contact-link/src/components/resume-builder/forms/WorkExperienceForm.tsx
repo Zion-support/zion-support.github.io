@@ -328,6 +328,7 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
                       location: ''});
                   } else {
                     onBack();
+
                   }
                 }}
               >
