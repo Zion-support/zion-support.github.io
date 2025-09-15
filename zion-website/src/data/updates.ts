@@ -377,6 +377,32 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Guide'
   }
+  ,
+  // New updates added by automation on 2025-09-15
+  {
+    title: 'Launch: Agent Policy-as-Code Starter Kit',
+    summary:
+      'Ready-to-run policy packs, CI checks, and audit trails to operationalize AI governance in weeks.',
+    href: '/updates/agent-policy-as-code-starter-kit',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Lab Research Datasets Portal',
+    summary:
+      'Curated, enterprise-ready datasets with licenses, schemas, and quality metrics for rapid prototyping.',
+    href: '/updates/ai-lab-research-datasets-portal',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Blueprint: Secure Agent Operations 2026',
+    summary:
+      'End-to-end controls, telemetry, and incident response for safe, compliant, and resilient agent ops.',
+    href: '/updates/secure-agent-operations-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  }
 ]
 
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {

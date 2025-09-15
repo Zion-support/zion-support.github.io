@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-risk-maturity-matrix-2026",
+    title: "AI 2026: Agent Risk Maturity Matrix",
+    description:
+      "Benchmark policy, evals, telemetry, and ops to safely scale agent impact.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-risk-maturity-matrix",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "incident-simulation-toolkit-1-0",
     title: "Incident Simulation Toolkit v1.0",
     description:
@@ -18,6 +29,28 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     ctaLabel: "Read Update",
     href: "/updates/incident-simulation-toolkit-1-0",
     emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "production-safety-checklist-2026",
+    title: "AI 2026: Production Safety Checklist",
+    description:
+      "Eval‑gated controls, policy bundles, and incident playbooks to operate safely.",
+    ctaLabel: "Read Checklist",
+    href: "/blog/ai-2026-production-safety-checklist",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-slos-2026",
+    title: "AI 2026: Agent Platform SLOs That Matter",
+    description:
+      "A concise SLO set for safety, quality, reliability, and economics.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-platform-slos",
+    emoji: "📏",
     highlight: true,
     date: "2025-09-15",
   },
