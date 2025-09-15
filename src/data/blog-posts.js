@@ -166,6 +166,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/autonomous-finance-os.jpg",
     slug: "ai-2026-autonomous-finance-operating-system"
   }
+  ,
+  {
+    id: 10,
+    title: "Enterprise AI Governance Blueprint (2026)",
+    excerpt: "Policy-as-code, risk tiers, and continuous evaluations for safe scale.",
+    content: "This blueprint shows how to govern AI systems with policy-as-code, risk-tiered approvals, automated CI/CD checks, runtime monitoring, and auditable trails to meet enterprise compliance in 2026.",
+    author: "Alex Rivera",
+    authorRole: "Chief AI Governance Officer",
+    publishDate: "2025-09-15",
+    readTime: "10 min read",
+    category: "Governance",
+    tags: ["AI Governance", "Policy-as-Code", "Risk"],
+    featured: true,
+    imageUrl: "/images/blog/ai-governance-blueprint-2026.jpg",
+    slug: "ai-2026-enterprise-ai-governance-blueprint"
+  },
+  {
+    id: 11,
+    title: "AI-Ops 2026: Autonomous Incident Response",
+    excerpt: "Agentic playbooks and event-driven pipelines to cut MTTR by half.",
+    content: "Design autonomous incident response using streaming telemetry, anomaly detection, and agents executing safe runbooks with human-in-the-loop for high-risk changes.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-14",
+    readTime: "8 min read",
+    category: "Operations",
+    tags: ["AIOps", "Incident Response", "SRE"],
+    featured: true,
+    imageUrl: "/images/blog/ai-ops-autonomous-incident-response-2026.jpg",
+    slug: "ai-2026-ai-ops-autonomous-incident-response"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
