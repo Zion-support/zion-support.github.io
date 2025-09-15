@@ -190,6 +190,23 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-03',
     tag: 'Community'
   }
+  ,
+  {
+    title: 'Blueprint: Agentic Evals Blueprint (v1)',
+    summary:
+      'Evaluation-first framework with quality gates, task suites, and policy-as-code for agents.',
+    href: '/updates/agentic-evals-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Case Study: RAG Agents Reduce MTTR by 42%',
+    summary:
+      'Deep dive on observability-driven RAG agents that lowered incident MTTR and support volume.',
+    href: '/updates/rag-agents-case-study',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  }
 ]
 
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {

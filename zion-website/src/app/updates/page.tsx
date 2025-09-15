@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { updates } from '../../data/updates'
+import { siteUpdates } from '../../data/updates'
 
 export default function UpdatesPage() {
   return (
@@ -17,12 +17,12 @@ export default function UpdatesPage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {updates
+            {siteUpdates
               .slice()
               .sort((a, b) => (a.date < b.date ? 1 : -1))
               .map((item) => (
               <article
-                key={item.id}
+                key={item.href}
                 className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 text-xs text-gray-400">
