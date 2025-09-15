@@ -1389,3 +1389,26 @@ zion-os/src/app/page.tsx
 [2025-09-15 13:45:01] 🔧 Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-governance-edge-ai...
 [2025-09-15 13:45:01] 🧩 Generic file: prefer main version
 [2025-09-15 13:45:01] ✅ Resolved conflicts in zion-os/src/app/page.tsx
+[2025-09-15 13:45:02] ✅ Successfully resolved conflicts and merged content/ai-governance-edge-ai
+[2025-09-15 13:45:02] ✅ Branch content/ai-governance-edge-ai processed successfully
+[2025-09-15 13:45:02] 📊 Batch progress: 38 successful, 1 failed
+[2025-09-15 13:45:02] 📊 Overall progress: 38 successful, 1 failed, 186 conflicts resolved
+[2025-09-15 13:45:02] 📋 Processing branch 40: content/ai-regulatory-post
+[2025-09-15 13:45:03] 🔄 Attempting to merge content/ai-regulatory-post...
+[2025-09-15 13:45:06] ⚠️  Merge conflicts detected in content/ai-regulatory-post, resolving...
+[2025-09-15 13:45:06] 📋 Conflicted files: zion-os/src/app/blog/[id]/page.tsx
+zion-os/src/app/blog/page.tsx
+zion-os/src/app/layout.tsx
+zion-os/src/app/page.tsx
+[2025-09-15 13:45:06] 🔧 Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch content/ai-regulatory-post...
+[2025-09-15 13:45:06] 🧩 Generic file: prefer main version
+[2025-09-15 13:45:06] ✅ Resolved conflicts in zion-os/src/app/blog/[id]/page.tsx
+[2025-09-15 13:45:06] 🔧 Resolving conflicts in zion-os/src/app/blog/page.tsx for branch content/ai-regulatory-post...
+[2025-09-15 13:45:06] 🧩 Generic file: prefer main version
+[2025-09-15 13:45:07] ✅ Resolved conflicts in zion-os/src/app/blog/page.tsx
+[2025-09-15 13:45:07] 🔧 Resolving conflicts in zion-os/src/app/layout.tsx for branch content/ai-regulatory-post...
+[2025-09-15 13:45:07] 🧩 Generic file: prefer main version
+[2025-09-15 13:45:07] ✅ Resolved conflicts in zion-os/src/app/layout.tsx
+[2025-09-15 13:45:07] 🔧 Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-regulatory-post...
+[2025-09-15 13:45:07] 🧩 Generic file: prefer main version
+[2025-09-15 13:45:07] ✅ Resolved conflicts in zion-os/src/app/page.tsx

@@ -400,3 +400,8 @@
 2025-09-15 13:45:00 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch content/ai-governance-edge-ai
 2025-09-15 13:45:01 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch content/ai-governance-edge-ai
 2025-09-15 13:45:01 - Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-governance-edge-ai
+2025-09-15 13:45:06 - Merge conflicts detected in content/ai-regulatory-post
+2025-09-15 13:45:06 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch content/ai-regulatory-post
+2025-09-15 13:45:06 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch content/ai-regulatory-post
+2025-09-15 13:45:07 - Resolving conflicts in zion-os/src/app/layout.tsx for branch content/ai-regulatory-post
+2025-09-15 13:45:07 - Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-regulatory-post
