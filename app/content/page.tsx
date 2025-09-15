@@ -15,6 +15,18 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-red-700 mb-2">Security</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="hover:underline">
+              AI 2026: Agent Red Teaming Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Adversarial scenarios, attack surfaces, and eval-gated mitigations to harden agents.
+          </p>
+          <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="text-red-700 font-semibold">Read Blueprint →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Hub</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-evaluation-hub" className="hover:underline">
