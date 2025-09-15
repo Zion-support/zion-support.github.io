@@ -44,16 +44,16 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services</h3>
+            <div className="text-4xl mb-4">📏</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
             <p className="text-gray-600 mb-4">
-              Explore our comprehensive suite of AI automation services designed to accelerate your digital transformation journey.
+              A practical playbook to model, track, and realize ROI from enterprise AI agents.
             </p>
             <Link 
-              href="/services/ai-automation"
+              href="/content/ai-agents-roi-playbook-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              View Services →
+              Read Playbook →
             </Link>
           </div>
         </div>
@@ -64,12 +64,7 @@ export default function LatestContentShowcase2025() {
             Join thousands of companies already using our AI solutions to drive innovation and growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Explore All Services
-            </Link>
+            <Link href="/content/ai-governance-blueprint-2026" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Read AI Governance Blueprint</Link>
             <Link
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
