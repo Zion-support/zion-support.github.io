@@ -48,6 +48,9 @@ import PromotionalBanner from './components/PromotionalBanner';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
+import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026';
+import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026';
+import TrendingContentSection from './components/TrendingContentSection';
 import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
@@ -136,6 +139,11 @@ export default function App(): JSX.Element {
                 {/* NEW: Enhanced Content Showcase 2026 */}
                 <div className="mb-12">
                   <NewContentShowcase2026 />
+                </div>
+
+                {/* NEW: Trending Content Section */}
+                <div className="mb-12">
+                  <TrendingContentSection />
                 </div>
 
                 {/* Revolutionary Content Showcase 2026 */}
@@ -539,6 +547,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
+          <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
+          <Route path="/pages/AdvancedRoboticsRevolution2026" element={<AdvancedRoboticsRevolution2026 />} />
           <Route path="/pages/QuantumConsciousnessRevolution2026" element={<QuantumConsciousnessRevolution2026 />} />
           <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
           <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
