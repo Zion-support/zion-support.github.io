@@ -7,6 +7,31 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content, featured)
+  {
+    title: 'Launch: Realtime Agent Debugger v1.1',
+    summary:
+      'Trace diffs, token timelines, and tool-call replay with evidence export. Faster triage for production agents.',
+    href: '/updates/real-time-agent-debugger-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Real-Time Agent Debugging 2026',
+    summary:
+      'Benchmarks, practices, and tooling gaps for debugging agent workflows in realtime across industries.',
+    href: '/updates/state-of-real-time-agent-debugging-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Shadow Testing for Agents (2026)',
+    summary:
+      'Design shadow traffic, compare traces, and gate rollouts with live evals and safety budgets.',
+    href: '/updates/agent-shadow-testing-guide-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: AI Governance Dashboard v5',
