@@ -3,9 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-be96
   return (
     <>
       <Helmet>
@@ -252,8 +249,6 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
 =======
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -562,8 +557,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-2def
   );
 };
 
