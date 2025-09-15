@@ -1,10 +1,9 @@
-import React from 'react'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 
@@ -114,7 +113,7 @@ export default function HomePage() {
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Fresh content, announcements, and courses from Zion Academy.
+            Fresh content, announcements, courses, events, and community challenges. Visit the full updates page for more.
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
@@ -127,13 +126,15 @@ export default function HomePage() {
                 href: '/updates'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+                title: 'Event: AI x Quantum Innovation Summit',
+                summary:
+                  'A virtual summit exploring AI-accelerated research, quantum computing, and autonomous enterprise solutions.',
                 href: '/updates'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                title: 'Community Challenge: Build a DApp',
+                summary:
+                  'Join our DApp challenge and compete for prizes, mentorship, and showcase placement.',
                 href: '/updates'
               }
             ].map((item) => (
@@ -146,7 +147,7 @@ export default function HomePage() {
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
                 <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-                  Read more <span aria-hidden="true">→</span>
+                  See updates <span aria-hidden="true">→</span>
                 </a>
               </article>
             ))}
