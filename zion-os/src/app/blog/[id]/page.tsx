@@ -11,6 +11,21 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-autonomous-market-strategies-2025': {
+    id: 'ai-autonomous-market-strategies-2025',
+    title: 'AI Autonomous Market Strategies: Launch Playbooks for 2025',
+    excerpt:
+      'Field-tested blueprints to launch agent-powered products, growth loops, and marketplaces with measurable governance and safety.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-15',
+    readTime: '6 min read',
+    content: [
+      'Autonomous product capabilities require an operating system for safety, observability, and iteration. This article proposes a pragmatic rollout sequence that pairs customer value with guardrails at every step.',
+      'We define three playbooks: 1) Assist → Automate for core workflows, 2) Agent Growth Loops using incentive-aligned tasks, 3) Marketplace Activation with reputation and graded autonomy. Each playbook lists readiness checks, KPIs, and rollback levers.',
+      'Governance is built-in: dual-layer policy, consented data use, and human-in-the-loop for sensitive actions. Success looks like faster cycle time, higher conversion, and reduced operational load without compromising trust.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
