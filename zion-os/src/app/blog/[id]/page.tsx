@@ -12,6 +12,7 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+<<<<<<< HEAD
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
@@ -42,6 +43,8 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
     ]
   },
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
     title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',

@@ -1,16 +1,21 @@
 'use client'
-import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
+<<<<<<< HEAD
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 ]
 
 export default function Navigation() {
@@ -41,7 +46,7 @@ export default function Navigation() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 relative"
             >
               <span className="inline-flex items-center gap-2">
                 {item.name}

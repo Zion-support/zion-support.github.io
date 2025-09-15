@@ -16,13 +16,14 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
+  // Added 2025-09-15 (brand new content)
   {
-    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
+    title: 'Launch: AI Governance Dashboard v5',
     summary:
-      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
-    href: '/updates/evaluating-real-time-retrieval-2026',
+      'Cross-env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails. Faster, deeper integrations.',
+    href: '/updates/ai-governance-dashboard-v5',
     date: '2025-09-15',
-    tag: 'Guide'
+    tag: 'Launch'
   },
   // Added 2025-09-15 (brand new content)
   {
@@ -67,6 +68,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Autonomous Innovation Hub v1.0',
+    summary:
+      'Unified workspace with blueprints, live eval gates, and policy‑as‑code to accelerate safe AI launches.',
+    href: '/updates/autonomous-innovation-hub-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Report: AI 2026 Platform Readiness Checklist',
     summary:
       'Engineer-ready checklist across data, governance, evals, and observability to ship enterprise AI safely.',
@@ -81,6 +90,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-runbooks-live-evals',
     date: '2025-09-15',
     tag: 'Guide'
+  },
+  {
+    title: 'Launch: AI Platform 2.0',
+    summary:
+      'Realtime reasoning, tool-use, retrieval observability, and eval-backed releases baked in.',
+    href: '/updates/ai-platform-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Customer Win: Finance - MTTR -42%',
+    summary:
+      'How a Fortune 100 finance org cut MTTR and boosted FCR with real-time RAG + guardrails.',
+    href: '/updates/customer-win-finance',
+    date: '2025-09-15',
+    tag: 'Case Study'
   },
   {
     title: 'Launch: Agentic Ops Control Center (v1.0)',
@@ -260,6 +285,30 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified taxonomy, scorecards, and mitigation patterns to operationalize agent risk management.',
     href: '/updates/enterprise-agent-risk-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: AI Governance Field Guide (2026)',
+    summary:
+      'Practical, audit-ready patterns to operationalize AI governance with policy-as-code and live evidence.',
+    href: '/updates/ai-governance-field-guide-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Real-Time Agent Metrics Widgets v1.0',
+    summary:
+      'Drop-in dashboards for traces, guardrail events, and eval signals to monitor agent reliability.',
+    href: '/updates/real-time-agent-metrics-widgets-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production RAG Latency Tuning (2026)',
+    summary:
+      'Hands-on techniques to hit sub-second latency with hybrid retrieval, caching, and routing.',
+    href: '/updates/production-rag-latency-tuning-2026',
     date: '2025-09-15',
     tag: 'Guide'
   },
