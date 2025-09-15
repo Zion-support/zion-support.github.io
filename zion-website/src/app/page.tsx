@@ -106,6 +106,20 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/blog/ai-2026-sovereign-ai-commerce"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                New: Sovereign AI Commerce
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-enterprise-rag-observability"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Guide: Enterprise RAG Observability
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/real-time-agent-debugger-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-500/10 px-4 py-2 text-sm font-semibold text-lime-200 hover:bg-lime-500/20 transition-colors duration-200"
               >

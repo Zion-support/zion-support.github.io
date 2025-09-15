@@ -2,6 +2,24 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-sovereign-ai-commerce',
+    title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
+    summary:
+      'Reference architecture, safety gates, and rollout checklist for AI commerce.'
+  },
+  {
+    slug: 'ai-2026-realtime-evals-at-scale',
+    title: 'AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates',
+    summary:
+      'Wire objective evals into CI/CD and runtime for reliable AI systems.'
+  },
+  {
+    slug: 'ai-2026-enterprise-rag-observability',
+    title: 'AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry',
+    summary:
+      'Operate RAG with deep telemetry, groundedness checks, and governance hooks.'
+  },
+  {
     slug: 'ai-2026-autonomous-procurement-blueprint',
     title: 'AI 2026: Autonomous Procurement Blueprint',
     summary:
