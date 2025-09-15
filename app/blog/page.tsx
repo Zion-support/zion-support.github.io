@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Enterprise AI Governance Blueprint",
+      description: "A practical blueprint to ship reliable AI with policy-as-code, risk tiers, and runtime monitoring.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/ai-governance-2026.jpg"
+    },
+    {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
       description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
       slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",

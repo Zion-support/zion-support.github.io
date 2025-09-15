@@ -37,12 +37,11 @@ import RevolutionaryContent2026Banner from './components/RevolutionaryContent202
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
@@ -101,11 +100,11 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Hyperautomation Blueprint 2026 and Edge AI Agents are now live.</p>
+                <p className="text-gray-600 mt-2">Edge Governance Framework and Agent Security Hardening are now live.</p>
               </div>
               <div className="flex gap-3">
-                <Link href="/content/hyperautomation-blueprint-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
-                <Link href="/content/edge-ai-agents-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Edge AI Agents</Link>
+                <Link href="/content/ai-2026-edge-governance-framework" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Edge Governance</Link>
+                <Link href="/content/ai-2026-agent-security-hardening" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Security</Link>
               </div>
             </div>
           </div>
@@ -324,7 +323,9 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
+        {/* Latest Content Showcase 2025 - NEW FEATURED */}
+        <LatestContentShowcase2025 />
+
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,10 +346,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
-        {/* Latest Content Showcase 2025 - NEW FEATURED */}
-        <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
