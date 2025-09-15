@@ -83,5 +83,26 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     emoji: "💹",
     date: "2025-09-14",
   },
+  {
+    id: "real-time-rag-2026",
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    description:
+      "Design sub-200ms RAG with hybrid search, streaming generation, and eval-gated upgrades.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-real-time-retrieval-architectures",
+    emoji: "⚡",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-playbook-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
+    description:
+      "SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.",
+    ctaLabel: "Explore Playbook",
+    href: "/content/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
+    date: "2025-09-15",
+  },
 ];
 
