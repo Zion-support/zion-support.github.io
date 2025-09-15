@@ -18,9 +18,14 @@ import MetaIntelligence2026 from './src/pages/MetaIntelligence2026';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import RevolutionaryAIBreakthrough2026 from './src/pages/RevolutionaryAIBreakthrough2026';
 import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
+import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
+import TranscendentAI2030 from './src/pages/TranscendentAI2030';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
+import RevolutionaryTechShowcase2027 from './src/components/RevolutionaryTechShowcase2027';
+import TrendingContentShowcase from './src/components/TrendingContentShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -39,6 +44,11 @@ export default function App(): JSX.Element {
                 {/* REVOLUTIONARY TECH SHOWCASE 2027 */}
                 <div className="mb-12">
                   <RevolutionaryTechShowcase2027 />
+                </div>
+
+                {/* TRENDING CONTENT SHOWCASE */}
+                <div className="mb-12">
+                  <TrendingContentShowcase />
                 </div>
 
                 {/* ULTRA-PROMINENT NEW CONTENT BANNER */}
@@ -559,6 +569,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/RevolutionaryAIBreakthrough2026" element={<RevolutionaryAIBreakthrough2026 />} />
           <Route path="/pages/NextGenSpaceTech2026" element={<NextGenSpaceTech2026 />} />
+          <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/pages/TranscendentAI2030" element={<TranscendentAI2030 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
