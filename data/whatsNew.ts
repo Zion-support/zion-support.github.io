@@ -11,6 +11,27 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "exec-guide-agent-adoption-2026",
+    title: "AI 2026: Executive Guide to Agent Adoption",
+    description:
+      "Leadership playbook for adopting autonomous agents with governance, controls, and ROI.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-executive-guide-to-agent-adoption",
+    emoji: "🏛️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "production-guardrails-2026",
+    title: "AI 2026: Production Guardrails for Autonomous Agents",
+    description:
+      "Isolation domains, policy-as-code, eval gates, and telemetry to ship safely.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-production-guardrails-for-autonomous-agents",
+    emoji: "🛡️",
+    date: "2025-09-15",
+  },
+  {
     id: "real-time-rag-2026",
     title: "AI 2026: Real-Time Retrieval Architectures",
     description:
