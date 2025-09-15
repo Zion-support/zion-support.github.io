@@ -11,6 +11,50 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "evaluation-harness-starter-kit-2026",
+    title: "AI 2026: Evaluation Harness Starter Kit",
+    description:
+      "Ready-to-run scenarios, metrics, and CI hooks to begin eval-driven development.",
+    ctaLabel: "Get the Kit",
+    href: "/content/ai-2026-evaluation-harness-starter-kit",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-red-team-playbooks-2026",
+    title: "AI 2026: Agentic Red-Team Playbooks",
+    description:
+      "Adversarial scenarios, attack trees, and pass criteria to harden autonomous agents.",
+    ctaLabel: "Read Playbooks",
+    href: "/blog/ai-2026-agentic-red-team-playbooks",
+    emoji: "🧨",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "model-routing-cookbook-2026",
+    title: "AI 2026: Model Routing Cookbook",
+    description:
+      "Practical recipes for policy-gated routing, fallbacks, and cost-aware selection.",
+    ctaLabel: "Read Cookbook",
+    href: "/content/ai-2026-model-routing-cookbook",
+    emoji: "🍳",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-evidence-hub-2026",
+    title: "AI 2026: Agent Safety Evidence Hub",
+    description:
+      "Centralize eval results, incidents, and approvals to prove safety at scale.",
+    ctaLabel: "Explore Hub",
+    href: "/content/ai-2026-agent-safety-evidence-hub",
+    emoji: "📚",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "trustworthy-model-routing-2026",
     title: "AI 2026: Trustworthy Model Routing",
     description:
