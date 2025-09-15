@@ -155,3 +155,7 @@
 2025-09-15 15:34:26 - Merge conflicts detected in feature/content-sep-2025
 2025-09-15 15:34:26 - Resolving conflicts in app/blog/page.jsx for branch feature/content-sep-2025
 2025-09-15 15:34:26 - Resolving conflicts in app/page.tsx for branch feature/content-sep-2025
+2025-09-15 15:34:31 - Merge conflicts detected in feature/content-sept15-2025
+2025-09-15 15:34:31 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch feature/content-sept15-2025
+2025-09-15 15:34:31 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch feature/content-sept15-2025
+2025-09-15 15:34:31 - Resolving conflicts in zion-os/src/app/page.tsx for branch feature/content-sept15-2025
