@@ -25,6 +25,8 @@ import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
 import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
+import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
+import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
@@ -56,9 +58,9 @@ export default function App(): JSX.Element {
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
                       Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
+                      Quantum-Neural Fusion, AI Revolution, Neural Interface Technology, and Autonomous AI Systems
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
                       <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 Synthetic Intelligence →
                       </a>
@@ -73,6 +75,11 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧬 Neural Interface →
+                      </a>
+                    </div>
+                    <div className="mt-6">
+                      <a href="/pages/NewShowcase2025" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
+                        🌟 NEW: Autonomous AI Systems 2025 →
                       </a>
                     </div>
                   </div>
@@ -268,13 +275,13 @@ export default function App(): JSX.Element {
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">FEATURED</span>
-                        <span className="text-sm text-gray-500">January 18, 2025</span>
+                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">BREAKTHROUGH</span>
+                        <span className="text-sm text-gray-500">January 25, 2025</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">Innovation Showcase 2025</h3>
-                      <p className="text-gray-600 mb-4">Explore our revolutionary services across cutting-edge technology domains...</p>
-                      <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Innovations →
+                      <h3 className="text-xl font-semibold mb-2">Autonomous AI Systems</h3>
+                      <p className="text-gray-600 mb-4">Revolutionary AI systems that operate independently and continuously evolve...</p>
+                      <a href="/pages/NewShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Explore Autonomous AI →
                       </a>
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
@@ -282,11 +289,62 @@ export default function App(): JSX.Element {
                         <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full">BREAKTHROUGH</span>
                         <span className="text-sm text-gray-500">January 22, 2025</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">Advanced Tech Solutions</h3>
-                      <p className="text-gray-600 mb-4">Cutting-edge AI, quantum computing, and neural interface technologies...</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Solutions →
+                      <h3 className="text-xl font-semibold mb-2">Neural Interface Technology</h3>
+                      <p className="text-gray-600 mb-4">Direct brain-computer interfaces enabling thought-controlled devices...</p>
+                      <a href="/pages/NeuralInterfaceFuture" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Explore Neural Tech →
                       </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* NEW: Revolutionary Technology Showcase */}
+                <div className="bg-gradient-to-br from-fuchsia-900 via-violet-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600/20 to-violet-600/20 backdrop-blur-sm"></div>
+                  <div className="relative z-10">
+                    <div className="text-center mb-12">
+                      <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+                        🌟 BRAND NEW • AUTONOMOUS AI SYSTEMS 2025
+                      </div>
+                      <h2 className="text-5xl font-bold mb-6">🚀 Autonomous AI Systems Showcase</h2>
+                      <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+                        Experience the future with our revolutionary autonomous AI systems that operate independently, 
+                        learn continuously, and deliver unprecedented results
+                      </p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="bg-gradient-to-br from-fuchsia-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-fuchsia-400/30 hover:scale-105 transition-all duration-300">
+                        <div className="text-6xl mb-4 text-center">🌟</div>
+                        <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Systems</h3>
+                        <p className="text-fuchsia-100 mb-6 text-center">
+                          Self-managing AI systems that operate independently, make complex decisions, and continuously evolve
+                        </p>
+                        <ul className="text-fuchsia-200 space-y-2 mb-6 text-sm">
+                          <li>• Self-learning capabilities</li>
+                          <li>• Autonomous decision making</li>
+                          <li>• Self-healing architecture</li>
+                        </ul>
+                        <a href="/pages/NewShowcase2025" className="block w-full bg-white text-fuchsia-600 py-3 rounded-lg hover:bg-fuchsia-50 transition-colors font-semibold text-center">
+                          Explore Autonomous AI →
+                        </a>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+                        <div className="text-6xl mb-4 text-center">🧭</div>
+                        <h3 className="text-2xl font-bold mb-4 text-center">AI Enterprise Copilot</h3>
+                        <p className="text-indigo-100 mb-6 text-center">
+                          Transform your business operations with AI-powered copilots that work alongside your teams
+                        </p>
+                        <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
+                          <li>• Intelligent automation</li>
+                          <li>• Predictive analytics</li>
+                          <li>• Contextual assistance</li>
+                        </ul>
+                        <a href="/pages/AIEnterpriseCopilot2025" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
+                          Deploy AI Copilot →
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
