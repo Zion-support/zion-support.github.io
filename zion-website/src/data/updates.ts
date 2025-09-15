@@ -8,6 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Blueprint: Sovereign AI Commerce (2026)',
+    summary:
+      'Reference architecture and rollout checklist for launching autonomous AI marketplaces with policy gates and evals.',
+    href: '/blog/ai-2026-sovereign-ai-commerce',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Incident Simulation Toolkit v1.0',
     summary:
       'Scenario-driven drills, policy checks, and CI/CD gates to harden agent systems.',
