@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Real-Time Agent Observability Console v1.0',
+    summary:
+      'Unified traces, eval signals, and guardrail events with drilldowns and exportable evidence bundles.',
+    href: '/updates/real-time-agent-observability-console-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Change Management Runbook (2026)',
+    summary:
+      'Standardize eval-gated approvals, progressive rollouts, and incident playbooks for safer autonomy.',
+    href: '/updates/agent-change-management-runbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Agent Evals & Observability Suite v1.0',
     summary:
       'Unified live evals, guardrail events, tracing, and budget dashboards to operate agents safely.',

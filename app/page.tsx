@@ -302,6 +302,18 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Operations</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Real-Time Agent Observability Console</h3>
+              <p className="text-gray-600 mb-4">Unified traces, evals, and guardrail events with audit‑ready exports.</p>
+              <Link href="/updates/real-time-agent-observability-console-1-0" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Playbook</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Change Management Runbook (2026)</h3>
+              <p className="text-gray-600 mb-4">Eval‑gated approvals and progressive rollouts with incident SOPs.</p>
+              <Link href="/updates/agent-change-management-runbook-2026" className="text-purple-700 font-semibold hover:text-purple-900">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Incident Response</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Incident Response Playbook</h3>
               <p className="text-gray-600 mb-4">Eval‑gated triage, mitigation, and escalation with autonomous agents.</p>
