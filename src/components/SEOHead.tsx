@@ -1,117 +1,102 @@
 import React from 'react';
-import Head from 'next/head';
-import { SEOProps } from '../types';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-=======
 interface SEOHeadProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
-  structuredData?: any;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = "AI, quantum computing, blockchain, cybersecurity, cloud computing, technology solutions, 2026, innovation",
-  image = "/images/og-image.jpg",
-  url = typeof window !== 'undefined' ? window.location.href : '',
-  type = "website",
-  structuredData
->>>>>>> cursor/create-and-deploy-new-content-c963
+  title = "Zion Tech Group - Revolutionary Technology Solutions 2026",
+  description = "Leading the future of technology with AI, blockchain, quantum computing, neural interfaces, metaverse integration, green tech, and innovative solutions. Explore cutting-edge technology content and revolutionary breakthroughs.",
+  keywords = "AI, artificial intelligence, quantum computing, neural interface, metaverse, green tech, blockchain, technology, innovation, 2026, revolutionary, breakthrough, consciousness, sustainability",
+  image = "/og-image.jpg",
+  url = "https://ziontechgroup.com"
 }) => {
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const defaultImage = `${siteUrl}/og-image.jpg`;
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": siteUrl,
-    "logo": `${siteUrl}/logo.png`,
-    "description": "Leading-edge technology solutions and autonomous innovation platform",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://github.com/Zion-Holdings",
-      "https://linkedin.com/company/zion-tech-group"
-    ]
-  };
-
   return (
-<<<<<<< HEAD
-=======
     <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="title" content={fullTitle} />
-      <meta name="description" content={fullDescription} />
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
       <meta name="author" content="Zion Tech Group" />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={image} />
->>>>>>> cursor/create-and-deploy-new-content-c963
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
-=======
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={fullDescription} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-      <meta property="twitter:site" content="@ziontechgroup" />
-      
-      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#1a365d" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#6366f1" />
+      <meta name="msapplication-TileColor" content="#6366f1" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      
+      {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || {
+        {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/logo.png",
-          "description": "Leading-edge technology solutions in AI, quantum computing, and cybersecurity",
+          "description": description,
+          "url": url,
+          "logo": "https://ziontechgroup.com/logo.png",
           "sameAs": [
             "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
+            "https://linkedin.com/company/ziontechgroup",
+            "https://github.com/ziontechgroup"
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
+            "telephone": "+1-555-0123",
             "contactType": "customer service",
-            "email": "contact@ziontechgroup.com"
-          }
+            "areaServed": "US",
+            "availableLanguage": "English"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Street",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "postalCode": "94105",
+            "addressCountry": "US"
+          },
+          "foundingDate": "2020",
+          "founder": {
+            "@type": "Person",
+            "name": "Zion Tech Group Founders"
+          },
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "Quantum Computing",
+            "Neural Interfaces",
+            "Metaverse Technology",
+            "Green Technology",
+            "Blockchain",
+            "Space Technology",
+            "Robotics",
+            "Holographic Technology"
+          ]
         })}
       </script>
     </Helmet>
->>>>>>> cursor/create-and-deploy-new-content-c963
   );
 };
 

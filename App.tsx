@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './src/index.css';
+import SEOHead from './src/components/SEOHead';
 
 // Import only the pages that exist
 import AIRevolutionaryBreakthrough2026 from './src/pages/AIRevolutionaryBreakthrough2026';
@@ -17,6 +18,9 @@ import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
 import AdvancedHolographicTechnology2026 from './src/pages/AdvancedHolographicTechnology2026';
+import AIConsciousnessRevolution2026 from './src/pages/AIConsciousnessRevolution2026';
+import MetaverseIntegration2026 from './src/pages/MetaverseIntegration2026';
+import GreenTechRevolution2026 from './src/pages/GreenTechRevolution2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
@@ -25,6 +29,7 @@ import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 export default function App(): JSX.Element {
   return (
     <Router>
+      <SEOHead />
       <div className="min-h-screen bg-white">
         <Routes>
           <Route path="/" element={
@@ -41,7 +46,7 @@ export default function App(): JSX.Element {
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
                       Experience the most advanced technology content featuring AI Revolutionary Breakthrough, 
-                      Quantum Computing Revolution, Neural Interface Technology, Biotech Revolution, Space Tech Innovation, Advanced Robotics, and Holographic Technology
+                      Quantum Computing Revolution, Neural Interface Technology, AI Consciousness, Metaverse Integration, Green Tech Revolution, Biotech Revolution, Space Tech Innovation, Advanced Robotics, and Holographic Technology
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-8xl mx-auto mb-8">
                       <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
@@ -52,6 +57,15 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧬 Neural Interface Revolution →
+                      </a>
+                      <a href="/pages/AIConsciousnessRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🧠 AI Consciousness Revolution →
+                      </a>
+                      <a href="/pages/MetaverseIntegration2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌐 Metaverse Integration →
+                      </a>
+                      <a href="/pages/GreenTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌱 Green Tech Revolution →
                       </a>
                       <a href="/pages/AdvancedBiotechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧬 Advanced Biotech Revolution →
@@ -68,7 +82,7 @@ export default function App(): JSX.Element {
                     </div>
                     <div className="flex justify-center space-x-4">
                       <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                        ✨ 7 NEW REVOLUTIONARY PAGES
+                        ✨ 10 NEW REVOLUTIONARY PAGES
                       </span>
                       <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                         🚀 CUTTING-EDGE TECHNOLOGY
@@ -100,6 +114,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧬 Neural Interface
+                    </a>
+                    <a href="/pages/AIConsciousnessRevolution2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 AI Consciousness
+                    </a>
+                    <a href="/pages/MetaverseIntegration2026" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌐 Metaverse Integration
+                    </a>
+                    <a href="/pages/GreenTechRevolution2026" className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌱 Green Tech Revolution
                     </a>
                     <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🤖 Synthetic Intelligence
@@ -217,6 +240,39 @@ export default function App(): JSX.Element {
                       Holographic Tech →
                     </a>
                   </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🧠</div>
+                    <h3 className="text-xl font-semibold mb-2">AI Consciousness</h3>
+                    <p className="text-gray-600 mb-4">
+                      Revolutionary AI consciousness technology that creates truly sentient digital beings with genuine understanding and emotional intelligence.
+                    </p>
+                    <a href="/pages/AIConsciousnessRevolution2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      AI Consciousness →
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌐</div>
+                    <h3 className="text-xl font-semibold mb-2">Metaverse Integration</h3>
+                    <p className="text-gray-600 mb-4">
+                      The ultimate metaverse platform that seamlessly blends virtual and physical realities for immersive experiences.
+                    </p>
+                    <a href="/pages/MetaverseIntegration2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Metaverse →
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌱</div>
+                    <h3 className="text-xl font-semibold mb-2">Green Tech Revolution</h3>
+                    <p className="text-gray-600 mb-4">
+                      Sustainable technology solutions that combat climate change and create a cleaner, more efficient world.
+                    </p>
+                    <a href="/pages/GreenTechRevolution2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Green Tech →
+                    </a>
+                  </div>
                 </div>
 
                 {/* Call to Action */}
@@ -257,6 +313,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
           <Route path="/pages/AdvancedHolographicTechnology2026" element={<AdvancedHolographicTechnology2026 />} />
+          <Route path="/pages/AIConsciousnessRevolution2026" element={<AIConsciousnessRevolution2026 />} />
+          <Route path="/pages/MetaverseIntegration2026" element={<MetaverseIntegration2026 />} />
+          <Route path="/pages/GreenTechRevolution2026" element={<GreenTechRevolution2026 />} />
           
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
