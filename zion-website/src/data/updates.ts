@@ -13,7 +13,7 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
-=======
+  },
   // Added 2025-09-15 (new content for homepage promotion)
   {
     title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
@@ -37,7 +37,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -302,6 +301,30 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified taxonomy, scorecards, and mitigation patterns to operationalize agent risk management.',
     href: '/updates/enterprise-agent-risk-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: AI Governance Field Guide (2026)',
+    summary:
+      'Practical, audit-ready patterns to operationalize AI governance with policy-as-code and live evidence.',
+    href: '/updates/ai-governance-field-guide-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Real-Time Agent Metrics Widgets v1.0',
+    summary:
+      'Drop-in dashboards for traces, guardrail events, and eval signals to monitor agent reliability.',
+    href: '/updates/real-time-agent-metrics-widgets-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production RAG Latency Tuning (2026)',
+    summary:
+      'Hands-on techniques to hit sub-second latency with hybrid retrieval, caching, and routing.',
+    href: '/updates/production-rag-latency-tuning-2026',
     date: '2025-09-15',
     tag: 'Guide'
   },
