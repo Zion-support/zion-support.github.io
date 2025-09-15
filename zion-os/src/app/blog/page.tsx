@@ -65,6 +65,36 @@ export default function BlogPage() {
       image: '/blog/sovereign-ai-commerce.jpg'
     },
     {
+      id: 'ai-governance-safety-2025',
+      title: 'AI Governance in 2025: Safety, Alignment, and Accountability',
+      excerpt: 'A pragmatic framework to balance AI innovation with safety, transparency, and compliance.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/ai-governance.jpg'
+    },
+    {
+      id: 'quantum-edge-ai-systems',
+      title: 'Quantum-Accelerated Edge AI Systems: Architecture and Use Cases',
+      excerpt: 'Hybrid quantum-classical pipelines enabling low-latency, high-accuracy inference at the edge.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-10',
+      readTime: '8 min read',
+      image: '/blog/quantum-edge-ai.jpg'
+    },
+    {
+      id: 'autonomous-supply-chains',
+      title: 'Autonomous Supply Chains: From Forecasting to Self-Healing Logistics',
+      excerpt: 'Event-driven, policy-aware agents forecast demand and re-route logistics with oversight.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-08',
+      readTime: '10 min read',
+      image: '/blog/autonomous-supply-chains.jpg'
+    },
+    {
       id: 'cybersecurity-ai-trends',
       title: 'AI-Powered Cybersecurity: Trends and Best Practices for 2024',
       excerpt: 'Stay ahead of evolving cyber threats with the latest AI-powered security solutions and best practices.',
@@ -127,13 +157,13 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 15, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
-    { name: 'Quantum Computing', count: 2, active: false },
+    { name: 'AI Solutions', count: 4, active: false },
+    { name: 'Quantum Computing', count: 3, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
-    { name: 'AI Ethics', count: 1, active: false },
+    { name: 'AI Ethics', count: 2, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
   ];

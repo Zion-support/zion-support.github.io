@@ -27,6 +27,51 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ],
   },
+  'ai-governance-safety-2025': {
+    id: 'ai-governance-safety-2025',
+    title: 'AI Governance in 2025: Safety, Alignment, and Accountability',
+    excerpt:
+      'A pragmatic framework for implementing AI governance that balances innovation with safety, transparency, and regulatory compliance.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'As AI systems orchestrate increasingly critical processes, organizations need governance models that ensure alignment with human values while enabling rapid iteration.',
+      'This article introduces a layered governance blueprint: capability thresholds and guardrails, policy-as-code with auditable change controls, red-teaming and evaluation gates, and incident response with postmortem learning loops.',
+      'We include a practical rollout checklist that maps responsibilities across product, security, legal, and operations, with metrics to track model risk, drift, and real-world impact.'
+    ],
+  },
+  'quantum-edge-ai-systems': {
+    id: 'quantum-edge-ai-systems',
+    title: 'Quantum-Accelerated Edge AI Systems: Architecture and Use Cases',
+    excerpt:
+      'How hybrid quantum-classical pipelines unlock low-latency, high-accuracy inference at the edge for robotics, telecom, and finance.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-10',
+    readTime: '8 min read',
+    content: [
+      'We detail an architecture where classical edge devices perform feature extraction while quantum co-processors handle combinatorial optimization and sampling tasks.',
+      'Patterns covered include: route optimization for logistics robots, anomaly detection in 5G networks, and portfolio rebalancing with real-time constraints.',
+      'We also outline deployment considerations: hardware abstraction layers, batching strategies, error mitigation, and cost controls.'
+    ],
+  },
+  'autonomous-supply-chains': {
+    id: 'autonomous-supply-chains',
+    title: 'Autonomous Supply Chains: From Forecasting to Self-Healing Logistics',
+    excerpt:
+      'Deploy event-driven, policy-aware AI agents that forecast demand, negotiate contracts, and dynamically re-route logistics with human oversight.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-08',
+    readTime: '10 min read',
+    content: [
+      'Supply chains benefit from autonomous agents that perceive, decide, and act across procurement, warehousing, and distribution.',
+      'We present a reference implementation on Zion OS using message buses, digital twins, and incentive-aligned policies to minimize stockouts and reduce carrying costs.',
+      'Case studies demonstrate 15–30% lead time reductions and resilient performance under disruption scenarios.'
+    ],
+  },
 };
 
 export function generateStaticParams() {

@@ -78,6 +78,24 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo: Latest Article */}
+      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold">SA</div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                  <span className="text-xs text-gray-500">New</span>
+                </div>
+                <p className="text-sm md:text-base text-gray-900">Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025</p>
+              </div>
+              <div className="text-blue-600 text-sm font-medium whitespace-nowrap">Read →</div>
+            </div>
+          </a>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
