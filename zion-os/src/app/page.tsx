@@ -106,6 +106,9 @@ export default function HomePage() {
               <a href="/blog/sovereign-ai-commerce-2025" className="btn-secondary hover-lift">
                 📰 New: Sovereign AI Commerce 2025
               </a>
+              <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift">
+                ✅ New: Agent Safety Evaluation 2025
+              </a>
             </div>
           </div>
         </div>
@@ -427,6 +430,9 @@ export default function HomePage() {
               </a>
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
+              </a>
+              <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                ✅ Read: Agent Safety Evaluation 2025
               </a>
             </div>
           </div>
