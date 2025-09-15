@@ -23,6 +23,15 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
+      title: "AI 2026: Autonomous Finance Agents — From FP&A to Real-Time Treasury",
+      description: "How autonomous AI agents are transforming finance with real-time forecasting, risk management, and continuous close operations in 2026.",
+      slug: "ai-2026-autonomous-finance-agents",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-finance-agents-2026.jpg"
+    },
+    {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
       description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
       slug: "ai-2025-enterprise-ai-agents-breakthrough",
