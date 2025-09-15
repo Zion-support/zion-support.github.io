@@ -17,6 +17,22 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-10",
   },
   {
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-harness-blueprint-2026",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+    tag: "Blueprint",
+    date: "2025-09-15",
+  },
+  {
     id: "quantum-edge-report",
     title: "Quantum + Edge: 2026 Readiness Report",
     summary: "Where quantum acceleration meets edge workloads—benchmarks and ROI models.",
