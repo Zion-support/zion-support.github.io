@@ -105,115 +105,63 @@ const AdvancedRobotics2026: React.FC = () => {
                 View Demo
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Robotics Capabilities */}
-      <div className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Revolutionary Robotics Capabilities</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the cutting-edge robotics technologies that are revolutionizing industries
-            </p>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {robotTypes.map((robot, index) => (
-              <motion.div
-                key={robot.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
-                  activeRobot === robot.id ? 'ring-2 ring-blue-400' : ''
-                }`}
-                onClick={() => setActiveRobot(robot.id)}
-              >
-                <div className="text-5xl mb-6 text-center">{robot.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-blue-300">{robot.name}</h3>
-                <p className="text-blue-100 mb-6 text-center text-sm">{robot.description}</p>
-                <div className="text-center">
-                  <div className="text-sm text-blue-200">Click to explore</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Autonomous Navigation",
-                description: "AI-powered robots that navigate complex environments independently",
-                icon: "🧭",
-                color: "from-blue-500 to-cyan-500"
-              },
-              {
-                title: "Human-Robot Collaboration",
-                description: "Seamless interaction between humans and robots in shared workspaces",
-                icon: "🤝",
-                color: "from-green-500 to-emerald-500"
-              },
-              {
-                title: "Precision Manufacturing",
-                description: "Ultra-precise robotic systems for advanced manufacturing processes",
-                icon: "⚙️",
-                color: "from-purple-500 to-pink-500"
-              },
-              {
-                title: "Medical Robotics",
-                description: "Surgical and therapeutic robots for advanced medical procedures",
-                icon: "🏥",
-                color: "from-red-500 to-orange-500"
-              },
-              {
-                title: "Service Robotics",
-                description: "Intelligent service robots for hospitality, retail, and customer service",
-                icon: "🛎️",
-                color: "from-indigo-500 to-purple-500"
-              },
-              {
-                title: "Agricultural Robotics",
-                description: "Autonomous farming robots for precision agriculture and crop management",
-                icon: "🌾",
-                color: "from-yellow-500 to-green-500"
-              }
-            ].map((capability, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-5xl mb-6 text-center">{capability.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-300 text-center">{capability.title}</h3>
-                <p className="text-gray-300 mb-6 text-center leading-relaxed">{capability.description}</p>
-                <div className={`w-full h-2 bg-gradient-to-r ${capability.color} rounded-full`}></div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="py-20 px-4 bg-gradient-to-r from-slate-600/10 to-gray-600/10">
-        <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Transform Your Industry
-          </h2>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Implement advanced robotics solutions to revolutionize your business operations
+      {/* Content Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6 text-gray-800">Advanced Robotics Solutions</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our comprehensive suite of robotics technologies designed to revolutionize automation and human-robot collaboration
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              Start Robotics Journey →
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-12 py-4 rounded-2xl text-xl font-bold hover:bg-cyan-400/10 transition-all duration-300">
-              Learn More
-            </button>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+            <div className="text-5xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Industrial Robotics</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Advanced industrial robots for manufacturing, assembly, and production automation
+            </p>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Precision manufacturing</li>
+              <li>• Quality control</li>
+              <li>• Assembly automation</li>
+              <li>• Material handling</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+            <div className="text-5xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">AI-Powered Robotics</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Intelligent robots with advanced AI capabilities for complex decision-making and learning
+            </p>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Machine learning integration</li>
+              <li>• Adaptive behavior</li>
+              <li>• Predictive maintenance</li>
+              <li>• Autonomous operation</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-slate-200">
+            <div className="text-5xl mb-4 text-center">🤝</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Human-Robot Collaboration</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Safe and efficient collaboration between humans and robots in shared workspaces
+            </p>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Safety protocols</li>
+              <li>• Intuitive interfaces</li>
+              <li>• Collaborative workflows</li>
+              <li>• Real-time communication</li>
+            </ul>
           </div>
         </div>
       </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

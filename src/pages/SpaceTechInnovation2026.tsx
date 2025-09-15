@@ -23,6 +23,14 @@ const SpaceTechInnovation2026: React.FC = () => {
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
               Revolutionary space technologies and exploration solutions for the next generation of space missions
             </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Technologies →
+              </button>
+              <button className="border-2 border-indigo-300 text-indigo-700 px-8 py-4 rounded-lg hover:bg-indigo-100 transition-all duration-300 font-semibold text-lg">
+                Schedule Demo
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>
