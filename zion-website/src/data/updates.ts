@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Agentic Ops Dashboard (v1.0)',
+    summary:
+      'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
+    href: '/updates/agentic-ops-dashboard-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
+    summary:
+      'How to evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.',
+    href: '/updates/multimodal-rag-benchmarking-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 50% MTTR Reduction with Evals-in-Prod',
+    summary:
+      'Incident-driven improvements using live evals, guardrails, and cost-aware routing to halve MTTR.',
+    href: '/updates/mttr-reduction-evals-in-prod',
+    date: '2025-09-14',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',
     summary:
       'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',
