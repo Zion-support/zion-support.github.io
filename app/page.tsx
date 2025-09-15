@@ -73,6 +73,7 @@ import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+import WhatsNew from './components/WhatsNew';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -104,6 +105,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* What's New dynamic section */}
+      <WhatsNew highlightOnly limit={6} />
       
       <div className='min-h-screen bg-white'>
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
