@@ -37,8 +37,6 @@ import NewShowcase2025 from './src/pages/NewShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
-import CyberPhysicalSystems2026 from './src/pages/CyberPhysicalSystems2026';
-import AdvancedBiotechSolutions2026 from './src/pages/AdvancedBiotechSolutions2026';
 import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
@@ -79,7 +77,6 @@ export default function App(): JSX.Element {
                       <a href="/pages/ComprehensiveTechInsights2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🔍 Comprehensive Tech Insights →
                       </a>
-                    </div>
                     </div>
                   </div>
                 </div>
