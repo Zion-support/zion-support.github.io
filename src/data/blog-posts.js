@@ -89,6 +89,67 @@ export const blogPosts = [
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
   }
+  ,
+  {
+    id: 7,
+    title: "Generative AI in the Enterprise: Governance That Scales",
+    excerpt: "A practical framework to safely operationalize GenAI across teams without slowing innovation.",
+    content: "Enterprises are rapidly adopting generative AI, but doing so safely requires scalable governance. In this article we break down reference guardrails, human-in-the-loop review, evaluation harnesses, red-teaming, and policy-as-code approaches that let you move fast without breaking trust...",
+    author: "Priya Narayanan",
+    authorRole: "Head of AI Governance",
+    publishDate: "2025-09-10",
+    readTime: "8 min read",
+    category: "Technology Trends",
+    tags: ["GenAI", "Governance", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/genai-governance.jpg",
+    slug: "generative-ai-enterprise-governance-that-scales"
+  },
+  {
+    id: 8,
+    title: "From POCs to Production: Shipping AI Features Reliably",
+    excerpt: "A step-by-step playbook to take AI features from prototype to production with confidence.",
+    content: "Many AI projects stall after promising prototypes. The difference between demo and dependable is productization: data contracts, offline evals, shadow launches, continuous monitoring, and rollback strategies. We share a pragmatic checklist teams can reuse to consistently ship AI features...",
+    author: "Kevin Brooks",
+    authorRole: "Principal Engineer",
+    publishDate: "2025-09-07",
+    readTime: "7 min read",
+    category: "Best Practices",
+    tags: ["MLOps", "Productization", "Reliability"],
+    featured: false,
+    imageUrl: "/images/blog/ai-productization.jpg",
+    slug: "from-poc-to-production-shipping-ai-reliably"
+  },
+  {
+    id: 9,
+    title: "Security for LLM Apps: Prompt Injection and Data Exfiltration",
+    excerpt: "Understand modern LLM-specific threats and how to harden your AI applications.",
+    content: "LLM applications introduce a new attack surface: prompt injection, tool abuse, and sensitive data leakage. This guide outlines a layered defense: strict tool schemas, content filters, output validation, sandboxed execution, and audit logging—plus how to continuously test for regressions...",
+    author: "Lisa Thompson",
+    authorRole: "Security Specialist",
+    publishDate: "2025-09-03",
+    readTime: "9 min read",
+    category: "Security",
+    tags: ["LLM", "Security", "AppSec"],
+    featured: true,
+    imageUrl: "/images/blog/llm-security.jpg",
+    slug: "security-for-llm-apps-prompt-injection-data-exfiltration"
+  },
+  {
+    id: 10,
+    title: "Cost Optimization for AI Workloads: Practical FinOps Tactics",
+    excerpt: "Cut inference and training costs by 30–60% with these proven techniques.",
+    content: "AI workloads can be expensive without intentional optimization. We cover quantization, selective distillation, request batching, autoscaling, GPU right-sizing, spot capacity, caching, and model routing. Real-world examples show how teams achieved significant savings while improving latency...",
+    author: "David Kim",
+    authorRole: "IT Operations Manager",
+    publishDate: "2025-09-01",
+    readTime: "6 min read",
+    category: "Cost Management",
+    tags: ["FinOps", "Optimization", "AI"],
+    featured: false,
+    imageUrl: "/images/blog/ai-finops.jpg",
+    slug: "cost-optimization-for-ai-workloads-practical-finops"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
