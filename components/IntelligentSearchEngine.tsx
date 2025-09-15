@@ -1,7 +1,11 @@
 "use client";
 'use client';
+<<<<<<< HEAD
 
 import React{ useStateuseEffectuseRef } from 'react';
+=======
+import React, { useState, useEffect, useRef } from 'react';
+>>>>>>> origin/new-content-and-promotional-components
 
 interface SearchResult {
   id: string;

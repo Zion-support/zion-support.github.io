@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
+<<<<<<< HEAD
 // Metadata will be handled by SEO component
+=======
+// Metadata moved to parent component
+>>>>>>> origin/new-content-and-promotional-components
 
 export default function AI2026ROICalculator() {
   const [inputs, setInputs] = useState({

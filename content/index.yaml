@@ -133,6 +133,60 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+<<<<<<< HEAD
+=======
+    - id: "ai-2025-advanced-analytics-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: Advanced Analytics Revolution - Ultimate Enterprise Guide"
+      file_path: "/content/blog/ai-2025-advanced-analytics-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-analytics-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Analytics", "Enterprise", "ROI", "Data Intelligence", "Business Intelligence", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$3.2M"
+        accuracy: "99.7%"
+        efficiency: "89%"
+      reading_time: "22 min read"
+      
+    - id: "ai-analytics-fortune-500-manufacturing-450-roi-success"
+      type: "case-study"
+      title: "Fortune 500 Manufacturing AI Analytics Success: 450% ROI in 8 Months"
+      file_path: "/content/case-studies/ai-analytics-fortune-500-manufacturing-450-roi-success.md"
+      url: "/case-studies/ai-analytics-fortune-500-manufacturing-450-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Manufacturing", "AI Analytics", "ROI", "Fortune 500", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$2.8M"
+        accuracy: "99.7%"
+        efficiency: "89%"
+      reading_time: "15 min read"
+      
+    - id: "ai-analytics-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Analytics Implementation Master Guide 2025: From Strategy to 450% ROI"
+      file_path: "/content/resources/ai-analytics-implementation-master-guide-2025.md"
+      url: "/resources/ai-analytics-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Analytics", "Strategy", "ROI", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        success: "98%"
+        roi: "450%"
+        projects: "500+"
+        timeline: "6-8 months"
+      reading_time: "28 min read"
+      
+>>>>>>> origin/new-content-and-promotional-components
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"

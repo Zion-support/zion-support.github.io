@@ -60,12 +60,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New blog posts
     {
+<<<<<<< HEAD
       url: `${baseUrl}/blog/ai-2025-ultimate-business-transformation-revolution`,
+=======
+      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
+>>>>>>> origin/new-content-and-promotional-components
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
+<<<<<<< HEAD
       url: `${baseUrl}/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -118,6 +123,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/case-studies/fortune-500-ai-transformation`,
+=======
+      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
+>>>>>>> origin/new-content-and-promotional-components
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

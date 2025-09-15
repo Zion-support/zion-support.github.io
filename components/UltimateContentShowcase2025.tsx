@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> origin/new-content-and-promotional-components
 import Link from 'next/link';
 
 const UltimateContentShowcase2025: React.FC = () => {
