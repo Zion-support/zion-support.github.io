@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-fleet-management-handbook-2026",
+    title: "AI 2026: Agent Fleet Management Handbook",
+    description:
+      "Operate large fleets with safety, reliability, and cost controls. Playbooks and SLOs included.",
+    ctaLabel: "Read Handbook",
+    href: "/content/ai-2026-agent-fleet-management-handbook",
+    emoji: "🚀",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-operations-2026-overview",
+    title: "AI 2026: Agent Platform Operations",
+    description:
+      "Reference operating model: SLOs, incident response, and eval-gated change management.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-platform-operations",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-revenue-blueprint-2026",
     title: "AI 2026: Autonomous Revenue Blueprint",
     description:
