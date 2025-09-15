@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-change-management-2026",
+    title: "AI 2026: Agent Change Management",
+    description:
+      "Eval‑gated approvals, progressive rollouts, and safe‑mode fallbacks for agent changes.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-change-management",
+    emoji: "🔁",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-runbook-starter-kit-2026",
+    title: "AI 2026: Agent Runbook Starter Kit",
+    description:
+      "Standardized triage, mitigation, and escalation templates linked to evaluations.",
+    ctaLabel: "Use Kit",
+    href: "/content/ai-2026-agent-runbook-starter-kit",
+    emoji: "📒",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "zero-trust-agent-architecture-2026",
     title: "AI 2026: Zero-Trust Agent Architecture",
     description:
