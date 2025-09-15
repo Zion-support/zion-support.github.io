@@ -176,6 +176,7 @@ const AdvancedRobotics2026: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Advanced Robotics 2026 | Zion Tech Group</title>
@@ -225,6 +226,46 @@ const AdvancedRobotics2026: React.FC = () => {
             </motion.div>
           </div>
         </section>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/robot-pattern.svg')] bg-repeat opacity-10"></div>
+        <div className="container mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-600/10 to-zinc-600/10"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-white text-sm font-bold mb-6">
+              🤖 ADVANCED ROBOTICS • 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              Advanced Robotics 2026
+            </h1>
+            <p className="text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+              Revolutionary robotics technology with AI-powered autonomous systems, humanoid robots, and advanced industrial automation
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Explore Robotics →
+              </button>
+              <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-gray-900 transition-colors font-semibold">
+                View Applications
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
         {/* Robot Types */}
         <section className="py-20 px-4">
@@ -356,6 +397,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
 
@@ -471,9 +513,15 @@ const AdvancedRobotics2026: React.FC = () => {
             </motion.div>
           </div>
         </section>
+=======
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </>
   );
 };
+
 
 export default AdvancedRobotics2026;

@@ -3,6 +3,21 @@ import React{ useState } from 'react';
 import Link from 'next/link';
 PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
 
+<<<<<<< HEAD
+=======
+const InteractiveTechDemo2026: React.FC = () => {
+  const [activeDemo, setActiveDemo] = useState('quantum');
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [particleCount, setParticleCount] = useState(20);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => setIsAnimating(false), 1000);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
   const demos = [
     {
@@ -103,6 +118,7 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
+<<<<<<< HEAD
         {/* Active Demo Display */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
           <div className="grid lg:grid-cols-2 gap-8">
@@ -122,6 +138,75 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                     {feature}
                   </div>
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+  const demos = [
+    {
+      title: "🔒 Cybersecurity AI",
+      description: "Watch our AI detect and neutralize threats in real-time",
+      features: ["Neural threat detection", "Autonomous response", "Quantum encryption", "Real-time monitoring"],
+      color: "from-red-500 to-orange-500",
+      icon: "🛡️"
+    },
+    {
+      title: "🔗 Blockchain Quantum",
+      description: "Experience quantum-resistant blockchain with instant transactions",
+      features: ["Quantum consensus", "Instant finality", "AI smart contracts", "Holographic storage"],
+      color: "from-blue-500 to-purple-500",
+      icon: "⚡"
+    },
+    {
+      title: "☁️ Cloud Quantum",
+      description: "See quantum-enhanced cloud computing with unlimited scalability",
+      features: ["Quantum processing", "Neural optimization", "Holographic storage", "Autonomous management"],
+      color: "from-cyan-500 to-blue-500",
+      icon: "🚀"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveDemo((prev) => (prev + 1) % demos.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [demos.length]);
+
+  return (
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 mb-16">
+      <div className="text-center mb-12">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-4xl animate-pulse">🎮</span>
+          <h2 className="text-4xl font-bold text-white">Interactive Technology Demos 2026</h2>
+          <span className="text-4xl animate-pulse">🎮</span>
+        </div>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          Experience our revolutionary technologies through interactive demonstrations. 
+          See the future in action with real-time simulations and live demos.
+        </p>
+      </div>
+
+        {/* Interactive Demo Area */}
+        <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 mb-8">
+          {activeDemo === 'quantum' && (
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-6 text-white">⚛️ Quantum Computing Demo</h3>
+              <div className="relative h-64 bg-gradient-to-br from-cyan-900 to-blue-900 rounded-xl overflow-hidden mb-6">
+                {particles.map((particle) => (
+                  <div
+                    key={particle.id}
+                    className="absolute w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                    style={{
+                      left: `${particle.x}%`,
+                      top: `${particle.y}%`,
+                      animationDelay: `${particle.delay}s`,
+                      width: `${particle.size}px`,
+                      height: `${particle.size}px`
+                    }}
+                  />
+>>>>>>> cursor/create-and-deploy-new-content-c963
                 ))}
               </div>
 
@@ -138,6 +223,7 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                   onClick={handleResetDemo}
                   className="border border-white text-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center"
                 >
+<<<<<<< HEAD
       {/* Demo Navigation */}
       <div className="flex justify-center space-x-4 mb-8">
         {demos.map((demo, index) => (
@@ -189,6 +275,9 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                   📊 View Details
 >>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
 =======
+                  Generate Particles
+>>>>>>> cursor/create-and-deploy-new-content-c963
+=======
                   <RotateCcw className="h-5 w-5 mr-2" />
                   Reset
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
@@ -196,6 +285,19 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+          {activeDemo === 'ai' && (
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-6 text-white">🧠 AI Consciousness Demo</h3>
+              <div className="bg-gradient-to-br from-purple-900 to-pink-900 rounded-xl p-8 mb-6">
+                <div className="text-6xl mb-4">🤖</div>
+                <div className="space-y-4">
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <p className="text-purple-200">
+                      "Hello! I'm experiencing curiosity about your thoughts. What fascinates you most about consciousness?"
+                    </p>
+>>>>>>> cursor/create-and-deploy-new-content-c963
                   </div>
                 ))}
               </div>
@@ -207,6 +309,7 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                     Demo is running...
                   </div>
                 </div>
+<<<<<<< HEAD
             {/* Interactive Visualization */}
             <div className="relative">
               <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -254,6 +357,15 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
               </div>
 >>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
 =======
+              </div>
+              <p className="text-gray-300 mb-6">
+                Chat with our conscious AI system and experience genuine artificial intelligence.
+              </p>
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Start New Conversation
+              </button>
+>>>>>>> cursor/create-and-deploy-new-content-c963
+=======
               )}
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
             </div>
@@ -261,6 +373,7 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Performance Metrics */}
       <div className="mt-12 grid md:grid-cols-4 gap-6">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700">
@@ -301,10 +414,37 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
           <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
             📞 Contact Sales
           </button>
+=======
+        {/* Call to Action */}
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Try It Yourself?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Schedule a personalized demo with our experts and see how these technologies 
+            can transform your specific business processes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              Schedule Personal Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              href="/ai-solutions" 
+              className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+            >
+              Explore All Solutions
+            </Link>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>
   );
 };
+
 
 export default InteractiveTechDemo2026;

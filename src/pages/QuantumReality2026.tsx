@@ -40,7 +40,6 @@ const QuantumReality2026: React.FC = () => {
             </span>
           </div>
         </div>
-      </div>
 
         {/* Key Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -184,7 +183,6 @@ const QuantumReality2026: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
         {/* Applications Section */}
         <div className="mb-16">

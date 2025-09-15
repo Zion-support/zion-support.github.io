@@ -9,25 +9,17 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-35fa
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 =======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> cursor/create-and-deploy-new-content-35fa
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -50,33 +42,24 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-35fa
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 >>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 =======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> cursor/create-and-deploy-new-content-35fa
+>>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -87,11 +70,15 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  // Added 2025-09-15 (new content created now)
+  {
+    title: 'Launch: Autonomous Security Copilot v1.0',
+    summary: 'Advanced security automation with real-time threat detection and response capabilities.',
+    href: '/updates/autonomous-security-copilot-1-0',
 =======
->>>>>>> cursor/create-and-deploy-new-content-35fa
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: AI Governance Dashboard v5',
@@ -124,31 +111,11 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-  // Added 2025-09-15 (new content created now)
-  {
-    title: 'Launch: Autonomous Security Copilot v1.0',
-    summary: 'Advanced security automation with real-time threat detection and response capabilities.',
-    href: '/updates/autonomous-security-copilot-1-0',
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-35fa
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
     title: 'Guide: Production Guardrails for Tool Use (2026)',
     summary:
       'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
@@ -167,12 +134,11 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 =======
->>>>>>> cursor/create-and-deploy-new-content-35fa
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -181,11 +147,8 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 =======
->>>>>>> cursor/create-and-deploy-new-content-35fa
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
       'Trustworthy dashboards, KPI narratives, and anomaly alerts grounded in telemetry with audit-ready evidence.',
@@ -238,19 +201,7 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
-<<<<<<< HEAD
-=======
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-    summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
-    href: '/updates/autonomous-data-quality-copilot-1-0',
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-    summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
-    href: '/updates/autonomous-data-quality-copilot-1-0',
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-35fa
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -613,6 +564,30 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/blog/ai-2026-policy-as-code-production-blueprint',
     date: '2025-09-15',
     tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.3',
+    summary:
+      'Safer tool gating, better retrieval debugging, and SLA-aware escalation workflows.',
+    href: '/updates/autonomous-support-copilot-1-3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Real-Time Agent Rollouts with Live Evals',
+    summary:
+      'Operational guide for shipping agent updates with canaries, metrics, and abort switches.',
+    href: '/updates/real-time-agent-rollouts-live-evals',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Case Study: 25% Ticket Deflection via Support Agents',
+    summary:
+      'How enterprise support saw reduced volume and faster MTTR using eval‑gated agents.',
+    href: '/updates/agent-support-deflection-case-study',
+    date: '2025-09-15',
+    tag: 'Case Study'
   },
   {
     title: 'Launch: Autonomous Sales Copilot v1.0',

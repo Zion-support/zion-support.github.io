@@ -1,63 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Production logger utility
-export const productionLogger = {
-  log: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(message, ...args);
-    }
-  },
-  
-  error: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error(message, ...args);
-    }
-  },
-  
-  warn: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(message, ...args);
-    }
-  },
-  
-  info: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.info(message, ...args);
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-35fa
 // Production logger utility for safe logging in production environments
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 export const productionLogger = {
-  log: (message, ...args) => {
+  log: (...args) => {
     if (isDevelopment) {
-      console.log(message, ...args);
+      console.log(...args);
     }
   },
   
-  warn: (message, ...args) => {
+  warn: (...args) => {
     if (isDevelopment) {
-      console.warn(message, ...args);
+      console.warn(...args);
     }
   },
   
-  error: (message, ...args) => {
+  error: (...args) => {
     if (isDevelopment) {
-      console.error(message, ...args);
+      console.error(...args);
     }
   },
   
-  info: (message, ...args) => {
+  info: (...args) => {
     if (isDevelopment) {
-      console.info(message, ...args);
+      console.info(...args);
     }
   },
   
-  debug: (message, ...args) => {
+  debug: (...args) => {
     if (isDevelopment) {
-      console.debug(message, ...args);
+      console.debug(...args);
     }
   },
   
@@ -69,10 +41,6 @@ export const productionLogger = {
       }
     } catch (error) {
       // Silently fail in production
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d952
-=======
->>>>>>> cursor/create-and-deploy-new-content-35fa
     }
   }
 };
