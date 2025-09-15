@@ -5,6 +5,9 @@ import Header from './src/Header';
 import Footer from './src/Footer';
 import CaseStudyPage from './src/CaseStudyPage';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import AccessibilityFeatures from './src/components/AccessibilityFeatures';
+import usePerformanceMonitoring from './src/hooks/usePerformanceMonitoring';
 import './src/index.css';
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
@@ -15,11 +18,15 @@ import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 
 export default function App(): JSX.Element {
+  // Initialize performance monitoring
+  usePerformanceMonitoring();
+
   return (
-    <Router>
-      <div className="min-h-screen bg-white">
-        <ScrollToTop />
-        <Header />
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <ScrollToTop />
+          <Header />
         
         <Routes>
           <Route path="/" element={
@@ -612,7 +619,9 @@ export default function App(): JSX.Element {
         </Routes>
         
         <Footer />
+        <AccessibilityFeatures />
       </div>
     </Router>
+    </ErrorBoundary>
   );
 }
