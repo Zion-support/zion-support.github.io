@@ -90,14 +90,9 @@ const blogPosts: Record<string, any> = {
   }
 }
 
-interface BlogPostPageProps {
-  params: {
-    id: string
-  }
-}
-
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts[params.id]
+export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const post = blogPosts[id]
   
   if (!post) {
     return (

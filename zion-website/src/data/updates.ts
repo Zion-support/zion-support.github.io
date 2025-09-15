@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Guide: Real-Time Evals Starter Kit',
+    summary:
+      'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
+    href: '/updates/real-time-evals-starter-kit',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Agent Safety Toolkit (v1)',
+    summary:
+      'End-to-end safety reviews, red-teaming templates, and policy-as-code checks for agentic systems.',
+    href: '/updates/agent-safety-toolkit-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Governance Maturity Model (2026 Preview)',
+    summary:
+      'A staged model to assess and level-up AI governance across policy, controls, and telemetry.',
+    href: '/updates/ai-governance-maturity-model-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Launch: Autonomous Research Copilot (v1.1)',
     summary:
       'Context-grounded copilots for research teams with retrieval observability, evals, and live citations.',

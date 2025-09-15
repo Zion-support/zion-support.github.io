@@ -135,10 +135,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/ai-research-assistant-2-0"
-                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+                href="/updates/agent-safety-toolkit-v1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: AI Research Assistant 2.0
+                Launch: Agent Safety Toolkit v1
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -149,10 +149,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/rag-production-patterns"
+                href="/updates/real-time-evals-starter-kit"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                Guide: RAG Production Patterns
+                Guide: Real-Time Evals Starter Kit
                 <span aria-hidden>→</span>
               </a>
               <a
