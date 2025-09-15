@@ -16,6 +16,9 @@ import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution2026';
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import AdvancedMetaverseSolutions2026 from './src/pages/AdvancedMetaverseSolutions2026';
+import AdvancedCybersecuritySuite2026 from './src/pages/AdvancedCybersecuritySuite2026';
+import AdvancedIoTPlatform2026 from './src/pages/AdvancedIoTPlatform2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
@@ -39,9 +42,9 @@ export default function App(): JSX.Element {
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
                       Experience the most advanced technology content featuring AI Revolutionary Breakthrough, 
-                      Quantum Computing Revolution, Neural Interface Technology, Biotech Revolution, Space Tech Innovation, and Advanced Robotics
+                      Quantum Computing Revolution, Neural Interface Technology, Biotech Revolution, Space Tech Innovation, Advanced Robotics, Metaverse Solutions, Cybersecurity Suite, and IoT Platform
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-8xl mx-auto mb-8">
                       <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧠 AI Revolutionary Breakthrough →
                       </a>
@@ -60,10 +63,19 @@ export default function App(): JSX.Element {
                       <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🤖 Advanced Robotics →
                       </a>
+                      <a href="/pages/AdvancedMetaverseSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌐 Advanced Metaverse Solutions →
+                      </a>
+                      <a href="/pages/AdvancedCybersecuritySuite2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🛡️ Advanced Cybersecurity Suite →
+                      </a>
+                      <a href="/pages/AdvancedIoTPlatform2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        📱 Advanced IoT Platform →
+                      </a>
                     </div>
                     <div className="flex justify-center space-x-4">
                       <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                        ✨ 6 NEW REVOLUTIONARY PAGES
+                        ✨ 9 NEW REVOLUTIONARY PAGES
                       </span>
                       <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                         🚀 CUTTING-EDGE TECHNOLOGY
@@ -196,6 +208,39 @@ export default function App(): JSX.Element {
                       Robotics →
                     </a>
                   </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌐</div>
+                    <h3 className="text-xl font-semibold mb-2">Metaverse Solutions</h3>
+                    <p className="text-gray-600 mb-4">
+                      Immersive virtual worlds and augmented reality experiences for the digital future.
+                    </p>
+                    <a href="/pages/AdvancedMetaverseSolutions2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Enter Metaverse →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🛡️</div>
+                    <h3 className="text-xl font-semibold mb-2">Cybersecurity Suite</h3>
+                    <p className="text-gray-600 mb-4">
+                      Next-generation security solutions protecting against advanced cyber threats.
+                    </p>
+                    <a href="/pages/AdvancedCybersecuritySuite2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Secure Now →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">📱</div>
+                    <h3 className="text-xl font-semibold mb-2">IoT Platform</h3>
+                    <p className="text-gray-600 mb-4">
+                      Connect and manage millions of devices with our advanced IoT platform.
+                    </p>
+                    <a href="/pages/AdvancedIoTPlatform2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Connect Devices →
+                    </a>
+                  </div>
                 </div>
 
                 {/* Call to Action */}
@@ -235,6 +280,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/AdvancedMetaverseSolutions2026" element={<AdvancedMetaverseSolutions2026 />} />
+          <Route path="/pages/AdvancedCybersecuritySuite2026" element={<AdvancedCybersecuritySuite2026 />} />
+          <Route path="/pages/AdvancedIoTPlatform2026" element={<AdvancedIoTPlatform2026 />} />
           
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
