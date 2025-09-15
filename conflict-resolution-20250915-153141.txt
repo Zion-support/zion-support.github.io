@@ -141,3 +141,7 @@
 2025-09-15 15:34:07 - Merge conflicts detected in feat/news-content
 2025-09-15 15:34:07 - Resolving conflicts in zion-os/src/app/news/page.tsx for branch feat/news-content
 2025-09-15 15:34:07 - Resolving conflicts in zion-os/src/app/page.tsx for branch feat/news-content
+2025-09-15 15:34:11 - Merge conflicts detected in feat/updates-content-and-advertising
+2025-09-15 15:34:12 - Resolving conflicts in zion-website/src/app/page.tsx for branch feat/updates-content-and-advertising
+2025-09-15 15:34:12 - Resolving conflicts in zion-website/src/app/updates/page.tsx for branch feat/updates-content-and-advertising
+2025-09-15 15:34:12 - Resolving conflicts in zion-website/src/data/updates.ts for branch feat/updates-content-and-advertising
