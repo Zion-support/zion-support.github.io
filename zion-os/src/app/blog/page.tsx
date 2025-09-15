@@ -66,6 +66,26 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+      id: 'edge-ai-compliance-2025',
+      title: 'Edge AI Compliance in 2025: Practical Governance for Regulated Industries',
+      excerpt: 'Deploy edge AI with privacy-by-design, verifiable audit trails, and policy controls.',
+      category: 'AI Solutions',
+      author: 'Dr. Maria Garcia',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/edge-ai-compliance.jpg'
+    },
+    {
+      id: 'ai-accessibility-2025',
+      title: 'AI Accessibility 2025: Designing Inclusive Autonomous Experiences',
+      excerpt: 'Patterns for multimodal access, adjustable autonomy, and explainable interactions.',
+      category: 'Accessibility',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/ai-accessibility-2025.jpg'
+    },
+    {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
       excerpt: 'Deploy AI-driven observability, incident response, and remediation to cut MTTR.',
@@ -158,13 +178,14 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
+    { name: 'Accessibility', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
   ];
