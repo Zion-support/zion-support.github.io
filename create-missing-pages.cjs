@@ -2,18 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+const missingPages = [
+  'InnovativeServicesShowcase2025',
+  'BlogPost2025',
+  'AdvancedTechSolutions2025',
+=======
 const pages = [
   'InnovativeServicesShowcase2025',
   'BlogPost2025',
   'AdvancedTechSolutions2025',
   'NewAIUseCases2025',
   'EdgeAIandIoT2025',
-=======
-const missingPages = [
-  'InnovativeServicesShowcase2025',
-  'BlogPost2025',
-  'AdvancedTechSolutions2025',
->>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-7857
   'FutureTechTrends2025',
   'ComprehensiveServices2025',
   'AIInnovationPlaybook2025',
@@ -36,25 +36,6 @@ const missingPages = [
   'SyntheticIntelligence2026',
   'QuantumNeuralFusion2026',
 <<<<<<< HEAD
-  'AdvancedQuantumComputing2026',
-  'NeuralInterfaceRevolution2026',
-  'AdvancedAISolutions2026',
-  'AdvancedNeuralInterface2026'
-];
-
-const template = (pageName) => `import React from 'react';
-
-const ${pageName} = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">${pageName.replace(/([A-Z])/g, ' $1').trim()}</h1>
-          <p className="text-xl text-gray-600 mb-8">Coming soon - Revolutionary technology showcase</p>
-          <a href="/" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Back to Home
-          </a>
-=======
   'CyberPhysicalSystems2026',
   'NextGenAIRevolution2026',
   'QuantumComputingRevolution2026',
@@ -73,7 +54,26 @@ const COMPONENT_NAME: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">COMPONENT_NAME</h1>
           <p className="text-xl text-gray-600">Content coming soon</p>
->>>>>>> cursor/create-and-deploy-new-content-abae
+=======
+  'AdvancedQuantumComputing2026',
+  'NeuralInterfaceRevolution2026',
+  'AdvancedAISolutions2026',
+  'AdvancedNeuralInterface2026'
+];
+
+const template = (pageName) => `import React from 'react';
+
+const ${pageName} = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">${pageName.replace(/([A-Z])/g, ' $1').trim()}</h1>
+          <p className="text-xl text-gray-600 mb-8">Coming soon - Revolutionary technology showcase</p>
+          <a href="/" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Back to Home
+          </a>
+>>>>>>> cursor/create-and-deploy-new-content-7857
         </div>
       </div>
     </div>
@@ -81,18 +81,6 @@ const COMPONENT_NAME: React.FC = () => {
 };
 
 <<<<<<< HEAD
-export default ${pageName};`;
-
-pages.forEach(pageName => {
-  const filePath = path.join(__dirname, 'src', 'pages', `${pageName}.jsx`);
-  if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, template(pageName));
-    console.log(`Created ${filePath}`);
-  }
-});
-
-console.log('All missing pages created!');
-=======
 export default COMPONENT_NAME;`;
 
 missingPages.forEach(pageName => {
@@ -108,4 +96,16 @@ missingPages.forEach(pageName => {
 });
 
 console.log('Done creating missing pages');
->>>>>>> cursor/create-and-deploy-new-content-abae
+=======
+export default ${pageName};`;
+
+pages.forEach(pageName => {
+  const filePath = path.join(__dirname, 'src', 'pages', `${pageName}.jsx`);
+  if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, template(pageName));
+    console.log(`Created ${filePath}`);
+  }
+});
+
+console.log('All missing pages created!');
+>>>>>>> cursor/create-and-deploy-new-content-7857

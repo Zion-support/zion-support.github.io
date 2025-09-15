@@ -300,7 +300,6 @@ const TranscendentAI2026: React.FC = () => {
               Learn More
             </button>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
         </div>
       </div>
     </div>

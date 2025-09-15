@@ -17,10 +17,10 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Comprehensive Tech Insights 2026" />
-        <meta name="twitter:description" content="Revolutionary tech insights for 2026" />
+        <meta name="twitter:description" content="Comprehensive tech insights for 2026" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
         {/* Hero Section */}
 <<<<<<< HEAD
         <div className="container mx-auto px-4 py-16">
@@ -134,14 +134,6 @@ const ComprehensiveTechInsights2026: React.FC = () => {
               <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
                 Deep dive into the most revolutionary technologies and trends shaping our future
               </p>
-              <div className="flex justify-center space-x-4">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                  Explore Insights →
-                </button>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                  Schedule Consultation
-                </button>
-              </div>
             </div>
           </div>
         </div>

@@ -125,7 +125,92 @@ const QuantumComputingRevolution2025: React.FC = () => {
               Contact Quantum Experts
             </button>
           </div>
+<<<<<<< HEAD
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-xl p-6 border border-cyan-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">🔧 Quantum Development Kits</h3>
+                <p className="text-cyan-200 mb-4">
+                  Complete development environments for quantum algorithm design and testing.
+                </p>
+                <ul className="text-cyan-300 space-y-2 text-sm">
+                  <li>• Qiskit, Cirq, PennyLane integration</li>
+                  <li>• Quantum circuit simulators</li>
+                  <li>• Hybrid classical-quantum algorithms</li>
+                  <li>• Cloud quantum computing access</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl p-6 border border-purple-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">🧮 Quantum Algorithms Library</h3>
+                <p className="text-purple-200 mb-4">
+                  Pre-built quantum algorithms for common optimization and simulation problems.
+                </p>
+                <ul className="text-purple-300 space-y-2 text-sm">
+                  <li>• QAOA for optimization</li>
+                  <li>• VQE for chemistry</li>
+                  <li>• Quantum machine learning</li>
+                  <li>• Quantum cryptography protocols</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">☁️ Quantum Cloud Platform</h3>
+                <p className="text-emerald-200 mb-4">
+                  Access to quantum computers through secure cloud infrastructure.
+                </p>
+                <ul className="text-emerald-300 space-y-2 text-sm">
+                  <li>• Multi-cloud quantum access</li>
+                  <li>• Real-time job scheduling</li>
+                  <li>• Quantum error mitigation</li>
+                  <li>• Hybrid classical-quantum workflows</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-600/30 to-red-600/30 rounded-xl p-6 border border-orange-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">🔍 Quantum Error Correction</h3>
+                <p className="text-orange-200 mb-4">
+                  Advanced error correction techniques for reliable quantum computation.
+                </p>
+                <ul className="text-orange-300 space-y-2 text-sm">
+                  <li>• Surface code implementation</li>
+                  <li>• Logical qubit encoding</li>
+                  <li>• Error syndrome detection</li>
+                  <li>• Fault-tolerant operations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-white">
+            <h2 className="text-4xl font-bold mb-6">Ready to Enter the Quantum Era?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Join the quantum revolution and unlock unprecedented computational power for your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-50 transition-colors">
+                Start Quantum Journey →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-600 transition-colors">
+                Explore Quantum Solutions
+              </button>
+            </div>
+          </div>
+        </motion.div>
+=======
         </div>
+>>>>>>> cursor/create-and-deploy-new-content-7857
       </div>
     </div>
   );
