@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
@@ -13,6 +12,15 @@ export const metadata = {
 
 const BlogPage = () => {
   const featuredPosts = [
+    {
+      title: "AI 2026: Eval-Ready AI Pipelines in Production",
+      description: "Design evaluation-first pipelines with governance gates, metrics, and progressive delivery.",
+      slug: "ai-2026-eval-ready-ai-pipelines-in-production",
+      category: "AI Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/eval-ready-pipelines-2026.jpg"
+    },
     {
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to ship reliable AI with policy-as-code, risk tiers, and runtime monitoring.",
