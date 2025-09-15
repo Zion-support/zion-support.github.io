@@ -21,6 +21,10 @@ import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution2026';
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import AdvancedHolographicReality2026 from './src/pages/AdvancedHolographicReality2026';
+import AdvancedMetaverseSolutions2026 from './src/pages/AdvancedMetaverseSolutions2026';
+import AdvancedGreenTechRevolution2026 from './src/pages/AdvancedGreenTechRevolution2026';
+import AdvancedCybersecurityFortress2026 from './src/pages/AdvancedCybersecurityFortress2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
@@ -55,7 +59,8 @@ export default function App(): JSX.Element {
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
                       Experience the most advanced technology content featuring AI Revolutionary Breakthrough, 
-                      Quantum Computing Revolution, Neural Interface Technology, Biotech Revolution, Space Tech Innovation, and Advanced Robotics
+                      Quantum Computing Revolution, Neural Interface Technology, Holographic Reality, Metaverse Solutions, 
+                      Green Tech Revolution, Cybersecurity Fortress, Biotech Revolution, Space Tech Innovation, and Advanced Robotics
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
                       <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
@@ -67,19 +72,28 @@ export default function App(): JSX.Element {
                       <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧬 Neural Interface Revolution →
                       </a>
+                      <a href="/pages/AdvancedHolographicReality2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        👁️ Holographic Reality →
+                      </a>
+                      <a href="/pages/AdvancedMetaverseSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌐 Metaverse Solutions →
+                      </a>
+                      <a href="/pages/AdvancedGreenTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌱 Green Tech Revolution →
+                      </a>
+                      <a href="/pages/AdvancedCybersecurityFortress2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🛡️ Cybersecurity Fortress →
+                      </a>
                       <a href="/pages/AdvancedBiotechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧬 Advanced Biotech Revolution →
                       </a>
                       <a href="/pages/SpaceTechInnovation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🚀 Space Tech Innovation →
                       </a>
-                      <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🤖 Advanced Robotics →
-                      </a>
                     </div>
                     <div className="flex justify-center space-x-4">
                       <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                        ✨ 6 NEW REVOLUTIONARY PAGES
+                        ✨ 10 REVOLUTIONARY PAGES
                       </span>
                       <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                         🚀 CUTTING-EDGE TECHNOLOGY
@@ -212,6 +226,50 @@ export default function App(): JSX.Element {
                       Robotics →
                     </a>
                   </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">👁️</div>
+                    <h3 className="text-xl font-semibold mb-2">Holographic Reality</h3>
+                    <p className="text-gray-600 mb-4">
+                      Revolutionary holographic technology that blurs the line between digital and physical reality.
+                    </p>
+                    <a href="/pages/AdvancedHolographicReality2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Holographic Tech →
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌐</div>
+                    <h3 className="text-xl font-semibold mb-2">Metaverse Solutions</h3>
+                    <p className="text-gray-600 mb-4">
+                      Next-generation virtual worlds with persistent environments and immersive experiences.
+                    </p>
+                    <a href="/pages/AdvancedMetaverseSolutions2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Metaverse →
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌱</div>
+                    <h3 className="text-xl font-semibold mb-2">Green Technology</h3>
+                    <p className="text-gray-600 mb-4">
+                      Revolutionary green technologies combating climate change and creating sustainable solutions.
+                    </p>
+                    <a href="/pages/AdvancedGreenTechRevolution2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Green Tech →
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🛡️</div>
+                    <h3 className="text-xl font-semibold mb-2">Cybersecurity Fortress</h3>
+                    <p className="text-gray-600 mb-4">
+                      Next-generation cybersecurity solutions powered by AI, quantum encryption, and zero-trust architecture.
+                    </p>
+                    <a href="/pages/AdvancedCybersecurityFortress2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Cybersecurity →
+                    </a>
+                  </div>
                 </div>
 
                 {/* Call to Action */}
@@ -314,6 +372,30 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedRobotics2026" element={
             <div>
               <AdvancedRobotics2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedHolographicReality2026" element={
+            <div>
+              <AdvancedHolographicReality2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedMetaverseSolutions2026" element={
+            <div>
+              <AdvancedMetaverseSolutions2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedGreenTechRevolution2026" element={
+            <div>
+              <AdvancedGreenTechRevolution2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedCybersecurityFortress2026" element={
+            <div>
+              <AdvancedCybersecurityFortress2026 />
               <EnhancedFooter />
             </div>
           } />
