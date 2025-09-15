@@ -9,12 +9,28 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -38,7 +54,14 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 <<<<<<< HEAD
 =======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
@@ -48,7 +71,16 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {

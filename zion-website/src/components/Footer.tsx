@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 <<<<<<< HEAD
 =======
@@ -61,7 +68,16 @@ const navigation = {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">

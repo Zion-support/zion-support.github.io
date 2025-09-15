@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -18,6 +25,12 @@ const navigation = [
 =======
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
+=======
+>>>>>>> cursor/create-and-deploy-new-content-be96
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
   { name: 'Solutions', href: '/solutions' },
@@ -25,9 +38,21 @@ const navigation = [
   { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 ]
 
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c934
+]
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 export default function Navigation() {
   return (
     <nav className="bg-gray-900 text-white py-4">
