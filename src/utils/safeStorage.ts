@@ -1,13 +1,81 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-be96
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
 <<<<<<< HEAD
+      if (typeof window !== 'undefined' && window.localStorage) {
+        return localStorage.getItem(key);
+      }
+      return null;
+=======
+      return localStorage.getItem(key);
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+<<<<<<< HEAD
+
+  setItem: (key: string, value: string): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem(key, value);
+      }
+=======
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
+
+  removeItem: (key: string): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.removeItem(key);
+      }
+=======
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+<<<<<<< HEAD
+
+  clear: (): void => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.clear();
+      }
+=======
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+>>>>>>> cursor/create-and-deploy-new-content-c934
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+=======
+<<<<<<< HEAD
+=======
+=======
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
-=======
-// Safe storage utilities for browser compatibility
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 export const safeStorage = {
   // Safe localStorage operations
   localStorage: {
@@ -62,7 +130,6 @@ export const safeStorage = {
       }
     }
   },
-<<<<<<< HEAD
 
   // Safe sessionStorage operations
   sessionStorage: {
@@ -116,41 +183,9 @@ export const safeStorage = {
         return false;
       }
 =======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key: string): string | null => {
-    try {
-      return localStorage.getItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return null;
-    }
-  },
-  
-  setItem: (key: string, value: string): void => {
-    try {
-      localStorage.setItem(key, value);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-  
-  removeItem: (key: string): void => {
-    try {
-      localStorage.removeItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-  
-  clear: (): void => {
-    try {
-      localStorage.clear();
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 /**
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
@@ -265,6 +300,10 @@ export const safeStorage = {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 =======
@@ -278,8 +317,6 @@ export const safeStorage = {
       return null;
     }
   },
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   
   setItem: (key: string, value: string): void => {
     try {
@@ -302,12 +339,13 @@ export const safeStorage = {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
 =======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-6f13
     }
   }
 };
