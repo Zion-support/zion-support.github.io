@@ -84,8 +84,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Agent Evals & Observability Suite v1.0 and AI Lab Benchmarks —
-              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see all updates</a>
+              New: Trustworthy Model Routing (2026 Preview) —
+              <a href="/updates/trustworthy-model-routing-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
+              <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
           </div>
         </div>
@@ -142,6 +144,20 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
               >
                 Guide: Enterprise RAG Observability
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-procurement-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Procurement Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/production-rag-observability-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Guide: RAG Observability 2026
                 <span aria-hidden>→</span>
               </a>
               <a
