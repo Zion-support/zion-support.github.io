@@ -44,30 +44,12 @@ const QuantumNeuralFusion2026: React.FC = () => {
           <p className="text-xl opacity-80">Experience the convergence of quantum physics and artificial intelligence</p>
         </div>
         
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Superposition Processing</h3>
-            <p className="text-cyan-100 mb-6">
-              Process multiple states simultaneously using quantum superposition, achieving exponential speed improvements.
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Parallel universe calculations</li>
-              <li>• Quantum entanglement networks</li>
-              <li>• Instantaneous state transitions</li>
-=======
-        <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
           >
             <div className="text-6xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Processing</h3>
@@ -79,30 +61,14 @@ const QuantumNeuralFusion2026: React.FC = () => {
               <li>• Quantum entanglement</li>
               <li>• Quantum interference</li>
               <li>• Quantum tunneling</li>
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
             </ul>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-4">Neural Quantum States</h3>
-            <p className="text-purple-100 mb-6">
-              Neural networks that exist in quantum states, enabling unprecedented learning and adaptation capabilities.
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Quantum learning algorithms</li>
-              <li>• Superposition-based memory</li>
-              <li>• Quantum pattern recognition</li>
-=======
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
           >
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Networks</h3>
@@ -114,21 +80,14 @@ const QuantumNeuralFusion2026: React.FC = () => {
               <li>• Recurrent architectures</li>
               <li>• Attention mechanisms</li>
               <li>• Transfer learning</li>
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
             </ul>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-=======
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           >
             <div className="text-6xl mb-4 text-center">🔗</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Fusion Technology</h3>
@@ -280,18 +239,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready for Quantum Revolution?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Join the quantum computing revolution and unlock infinite computational possibilities with our Quantum-Neural Fusion platform.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Quantum Trial
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-=======
           <h2 className="text-4xl font-bold mb-6">Ready for Quantum-Neural Revolution?</h2>
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Experience the future of computing with our quantum-neural fusion technology. 
@@ -303,7 +250,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
               Explore Quantum Computing
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
             </button>
           </div>
         </div>
