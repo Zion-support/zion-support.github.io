@@ -333,6 +333,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/evals-maturity-model-2026.jpg",
     slug: "ai-2026-evals-maturity-model"
   }
+  ,
+  {
+    id: 21,
+    title: "AI 2026: Autonomous Evals Blueprint",
+    excerpt: "Eval-first, guardrail-driven blueprint to ship reliable autonomous agents at scale.",
+    content: "Adopt an evaluation-first operating model for autonomous agents. Define scenario suites, measurable pass thresholds, red-team coverage, and regression gates wired into CI/CD. Implement runtime drift monitors and feedback loops to keep behavior aligned with business KPIs.",
+    author: "Sofia Alvarez",
+    authorRole: "Head of AI Quality",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Evaluation",
+    tags: ["Evals", "CI/CD", "Guardrails", "Safety"],
+    featured: true,
+    imageUrl: "/images/blog/autonomous-evals-blueprint-2026.jpg",
+    slug: "ai-2026-autonomous-evals-blueprint"
+  },
+  {
+    id: 22,
+    title: "AI 2026: Evaluation Harness Blueprint",
+    excerpt: "Build scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    content: "This blueprint details a modular evaluation harness: dataset loaders, scenario generators, metric calculators, policy gates, and reporters. It shows how to gate releases with quantitative thresholds and integrate findings into incident response and postmortems.",
+    author: "Ethan Park",
+    authorRole: "Principal Evaluation Architect",
+    publishDate: "2025-09-15",
+    readTime: "10 min read",
+    category: "Blueprint",
+    tags: ["Evaluation Harness", "Metrics", "Policy-as-Code", "Agents"],
+    featured: true,
+    imageUrl: "/images/blog/evaluation-harness-blueprint-2026.jpg",
+    slug: "ai-2026-evaluation-harness-blueprint"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {

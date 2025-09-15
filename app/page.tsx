@@ -107,7 +107,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={6} />
+      <WhatsNew highlightOnly limit={8} />
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />
@@ -137,10 +137,10 @@ export default function HomePage() {
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
         
-        {/* New Content Promo: Sept 15, 2025 - Agent Safety + Observability */}
+        {/* New Content Promo: Sept 15, 2025 - Agent Safety + Observability + Evals */}
         <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
                   <div className="text-sm font-semibold text-purple-700 mb-2">Safety</div>
@@ -159,6 +159,16 @@ export default function HomePage() {
                 </div>
                 <div className="mt-4">
                   <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Evaluation</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Evaluation Harness Blueprint</h3>
+                  <p className="text-gray-600">Scenario suites, metrics, and policy gates to ship reliable autonomous agents.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/content/ai-2026-evaluation-harness-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
             </div>
