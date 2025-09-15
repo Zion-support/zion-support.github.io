@@ -121,20 +121,20 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'New: Agentic Supply Chains 2025',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                  'How autonomous agents coordinate suppliers, inventory, and fulfillment in real time.',
+                href: '/blog/agentic-supply-chains-2025'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
+                title: 'New: Federated AI Governance',
+                summary: 'Policies that travel with your models across clouds and partners.',
+                href: '/blog/federated-ai-governance'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
+                title: 'Quantum Risk Modeling 2025',
+                summary: 'Practical impacts on risk analytics and portfolio construction.',
+                href: '/blog/quantum-risk-modeling-2025'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">

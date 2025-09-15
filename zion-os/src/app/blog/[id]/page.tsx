@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'agentic-supply-chains-2025': {
+    id: 'agentic-supply-chains-2025',
+    title: 'Agentic Supply Chains: Self-Orchestrating Logistics with Zion OS',
+    excerpt:
+      'How autonomous agents coordinate suppliers, inventory, and fulfillment to cut costs and improve resilience.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Agentic supply chains replace static workflows with adaptive, policy-driven agents that forecast demand, negotiate orders, and route fulfillment in real time.',
+      'Using Zion OS, teams deploy a federation of agents across procurement, inventory, logistics, and compliance. Each agent follows guardrails, exchanges verifiable messages, and escalates edge cases to humans.',
+      'Benefits include reduced stockouts, higher on-time delivery, and measurable savings from dynamic pricing and smarter capacity planning.'
+    ]
+  },
+  'federated-ai-governance': {
+    id: 'federated-ai-governance',
+    title: 'Federated AI Governance: Policies that Travel with your Models',
+    excerpt:
+      'A pragmatic approach to enforcing policy, safety, and auditability across multi-cloud and partner ecosystems.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '7 min read',
+    content: [
+      'Enterprises increasingly operate AI across business units and partners. Governance must be portable, verifiable, and minimally invasive to innovation.',
+      'We show how to encode policy as artifacts that bind to models, datasets, and endpoints. These artifacts carry enforcement hooks, telemetry, and attestations.',
+      'Outcomes: simpler audits, faster approvals, and fewer production incidents caused by silent policy drift.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

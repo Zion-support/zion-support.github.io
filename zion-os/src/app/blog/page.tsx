@@ -66,6 +66,26 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains: Self-Orchestrating Logistics with Zion OS',
+      excerpt: 'Autonomous agents coordinate suppliers, inventory, and fulfillment for resilient operations.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agentic-supply-chains.jpg'
+    },
+    {
+      id: 'federated-ai-governance',
+      title: 'Federated AI Governance: Policies that Travel with your Models',
+      excerpt: 'Enforce policy, safety, and auditability across multi-cloud and partner ecosystems.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/federated-governance.jpg'
+    },
+    {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
       excerpt: 'Deploy AI-driven observability, incident response, and remediation to cut MTTR.',
@@ -192,13 +212,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/sovereign-ai-commerce-2025"
+            href="/blog/agentic-supply-chains-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+            aria-label="Read: Agentic Supply Chains: Self-Orchestrating Logistics with Zion OS"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SA
+                AS
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -206,10 +226,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
+                  Agentic Supply Chains: Self-Orchestrating Logistics with Zion OS
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+                  How autonomous agents coordinate suppliers, inventory, and fulfillment in real time.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
