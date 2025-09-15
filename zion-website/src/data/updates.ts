@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Governance Copilot v1.2',
+    summary:
+      'Smarter policy drafting, fine-grained controls, and signed evidence bundles integrated with CI/CD.',
+    href: '/updates/ai-governance-copilot-1-2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Cost Controls (2026)',
+    summary:
+      'Budgets, routing policies, and eval-driven safeguards to control spend without hurting quality.',
+    href: '/updates/production-agent-cost-controls-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: AI Incident Simulator v1.1',
     summary:
       'New scenarios, live eval gates, and evidence exports to harden agent systems.',
