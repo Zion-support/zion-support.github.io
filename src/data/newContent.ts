@@ -1,5 +1,31 @@
 export const newBlogPosts = [
   {
+    id: 10,
+    title: 'AI 2026: Trustworthy Model Routing — Eval‑Gated Decisions',
+    excerpt: 'Route tasks to the best model using evaluation gates with auditable evidence.',
+    author: 'Priya Natarajan',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop',
+    slug: 'ai-2026-trustworthy-model-routing',
+    category: 'AI Operations',
+    featured: true,
+    content: `# Trustworthy Model Routing\n\nUse policy and evals to select models that meet cost/quality SLOs.`
+  },
+  {
+    id: 11,
+    title: 'AI 2026: Agent Benchmark Suite — Scenario Packs and Quality Gates',
+    excerpt: 'A practical, extensible suite to benchmark agents and enforce quality.',
+    author: 'Diego Alvarez',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=400&h=250&fit=crop',
+    slug: 'ai-2026-agent-benchmark-suite',
+    category: 'Evaluations',
+    featured: true,
+    content: `# Agent Benchmark Suite\n\nScenario packs, harnesses, and scorecards for continuous evaluation.`
+  },
+  {
     id: 7,
     title: 'Revolutionary AI Agent Factory: Building the Future of Automation',
     excerpt: 'Discover how our AI Agent Factory is revolutionizing business automation with self-improving intelligent agents.',

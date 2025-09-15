@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 33
+  total_content_pieces: 36
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -795,6 +795,50 @@ content_index:
         incident_reduction: "40%"
         rollback_time: "< 5 min"
         conversion_lift: "+8%"
+
+    - id: "ai-2026-trustworthy-model-routing"
+      type: "blog"
+      title: "AI 2026: Trustworthy Model Routing — Eval‑Gated Decisions"
+      file_path: "/content/blog/ai-2026-trustworthy-model-routing.md"
+      url: "/blog/ai-2026-trustworthy-model-routing"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI", "Routing", "Governance", "Evals", "Reliability", "Cost"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        cost_reduction: "20%"
+        audit_ready: true
+
+    - id: "ai-2026-agent-benchmark-suite"
+      type: "blog"
+      title: "AI 2026: Agent Benchmark Suite — Scenario Packs and Quality Gates"
+      file_path: "/content/blog/ai-2026-agent-benchmark-suite.md"
+      url: "/blog/ai-2026-agent-benchmark-suite"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Benchmarks", "Evals", "Quality", "Reliability"]
+      featured: true
+      is_new: true
+      metrics:
+        regression_catch_rate: "> 80%"
+        promotion_gates: true
+
+    - id: "ai-2026-evidence-driven-operations"
+      type: "page"
+      title: "AI 2026: Evidence‑Driven AI Operations"
+      file_path: "/content/pages/ai-2026-evidence-driven-operations.md"
+      url: "/content/ai-2026-evidence-driven-operations"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "Evals", "Policy-as-Code", "Observability", "SLOs"]
+      featured: true
+      is_new: true
+      metrics:
+        availability: "99.9%"
+        rollback_time: "< 5 min"
+        audit_ready: true
 
     - id: "ai-2026-generative-ai-risk-register"
       type: "blog"

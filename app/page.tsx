@@ -209,7 +209,7 @@ export default function HomePage() {
             </div>
             <div className="flex gap-3">
               <Link href="/content/ai-2026-evidence-driven-operations" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
-              <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Platform SLOs</Link>
+              <Link href="/blog/ai-2026-trustworthy-model-routing" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Model Routing</Link>
             </div>
           </div>
         </div>
@@ -339,7 +339,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Eval-gated routing and scenario suites to ship safe, high-quality agents.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/content/ai-2026-trustworthy-model-routing" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Model Routing</Link>
+              <Link href="/blog/ai-2026-trustworthy-model-routing" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Model Routing</Link>
               <Link href="/blog/ai-2026-agent-benchmark-suite" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Benchmark Suite</Link>
             </div>
           </div>
