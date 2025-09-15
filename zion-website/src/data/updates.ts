@@ -16,6 +16,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Guide: Enterprise Agent Observability (2026)',
+    summary:
+      'Traces, evals, and safety telemetry to operate autonomous agents in production.',
+    href: '/blog/ai-2026-enterprise-agent-observability-guide',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Blueprint: Safe Tool Use (2026)',
+    summary:
+      'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.',
+    href: '/blog/ai-2026-safe-tool-use-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Enterprise AI Security (2025)',
+    summary:
+      'Layered controls across model, data, runtime, and supply chain.',
+    href: '/blog/ai-2025-enterprise-ai-security-blueprint',
+    date: '2025-09-15',
+    tag: 'Security'
+  },
+  {
     title: 'Guide: Agent Platform Operations (2026)',
     summary:
       'Reference operating model: SLOs, incident response, and eval-gated change management.',
