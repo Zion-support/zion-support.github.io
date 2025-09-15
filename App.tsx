@@ -36,6 +36,9 @@ import QuantumConsciousnessRevolution2027 from './src/pages/QuantumConsciousness
 import SyntheticBiologyRevolution2027 from './src/pages/SyntheticBiologyRevolution2027';
 import TranscendentAI2026 from './src/pages/TranscendentAI2026';
 import UltimateServiceShowcase2026 from './src/pages/UltimateServiceShowcase2026';
+import FutureTechPredictions2025 from './src/pages/FutureTechPredictions2025';
+import AutonomousSystemsRevolution2025 from './src/pages/AutonomousSystemsRevolution2025';
+import QuantumAIRevolution2025 from './src/pages/QuantumAIRevolution2025';
 
 export default function App(): JSX.Element {
   return (
@@ -54,37 +57,25 @@ export default function App(): JSX.Element {
                   <div className="relative z-10">
                     <div className="flex items-center justify-center space-x-3 mb-4">
                       <span className="text-3xl animate-bounce">🚀</span>
-                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h3>
+                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2025</h3>
                       <span className="text-3xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-                      Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
+                      Experience the future of technology with our groundbreaking new content on Quantum AI, 
+                      Autonomous Systems, Future Predictions, and Revolutionary Technology
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+                      <a href="/pages/QuantumAIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        ⚛️ Quantum AI Revolution →
+                      </a>
+                      <a href="/pages/AutonomousSystemsRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🤖 Autonomous Systems →
+                      </a>
+                      <a href="/pages/FutureTechPredictions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🔮 Future Predictions →
+                      </a>
                       <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 Synthetic Intelligence →
-                      </a>
-                      <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚛️ Quantum-Neural Fusion →
-                      </a>
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Revolution 2025 →
-                      </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Breakthrough →
-                      </a>
-                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural Interface →
-                      </a>
-                      <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧭 Enterprise Copilot →
-                      </a>
-                      <a href="/pages/AdvancedAITransformation2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Transformation →
-                      </a>
-                      <a href="/pages/NextGenTechShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🚀 Next-Gen Tech →
                       </a>
                     </div>
                   </div>
@@ -169,17 +160,17 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
-                    <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🤖 NEW: AI Transformation →
+                    <a href="/pages/QuantumAIRevolution2025" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚛️ NEW: Quantum AI →
                     </a>
-                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      ⚡ NEW: Quantum Revolution →
+                    <a href="/pages/AutonomousSystemsRevolution2025" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🤖 NEW: Autonomous Systems →
                     </a>
-                    <a href="/pages/NeuralInterfaceRevolution2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🧬 NEW: Neural Interface →
+                    <a href="/pages/FutureTechPredictions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🔮 NEW: Future Predictions →
                     </a>
-                    <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
-                      🚀 NEW: Next-Gen Tech →
+                    <a href="/pages/AdvancedAITransformation2025" className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: AI Transformation →
                     </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
@@ -662,6 +653,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/TranscendentAI2026" element={<TranscendentAI2026 />} />
           <Route path="/pages/UltimateServiceShowcase2026" element={<UltimateServiceShowcase2026 />} />
+          <Route path="/pages/FutureTechPredictions2025" element={<FutureTechPredictions2025 />} />
+          <Route path="/pages/AutonomousSystemsRevolution2025" element={<AutonomousSystemsRevolution2025 />} />
+          <Route path="/pages/QuantumAIRevolution2025" element={<QuantumAIRevolution2025 />} />
 >>>>>>> cursor/create-and-deploy-new-content-bc17
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
