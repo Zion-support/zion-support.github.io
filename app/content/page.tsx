@@ -39,6 +39,19 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold">Read Article →</Link>
         </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/enterprise-ai-governance-2026" className="hover:underline">
+              Enterprise AI Governance Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical governance: policy-as-code, evals, monitoring, and risk workflows for trustworthy AI.
+          </p>
+          <Link href="/content/enterprise-ai-governance-2026" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
       </div>
     </main>
   );

@@ -97,9 +97,10 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Hyperautomation Blueprint 2026 and Edge AI Agents are now live.</p>
+                <p className="text-gray-600 mt-2">Now live: Enterprise AI Governance Blueprint 2026, Hyperautomation 2026, and Edge AI Agents.</p>
               </div>
               <div className="flex gap-3">
+                <Link href="/content/enterprise-ai-governance-2026" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">AI Governance 2026</Link>
                 <Link href="/content/hyperautomation-blueprint-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
                 <Link href="/content/edge-ai-agents-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Edge AI Agents</Link>
               </div>
@@ -241,11 +242,11 @@ export default function HomePage() {
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
                   <div className="text-sm font-semibold text-purple-700 mb-2">Enterprise AI</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Multimodal Agents in the Enterprise (2025)</h3>
-                  <p className="text-gray-600">Deploy agents that see, hear, and act for real outcomes.</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI Governance Blueprint (2026)</h3>
+                  <p className="text-gray-600">Policy-as-code, evals, and runtime monitoring for trustworthy AI.</p>
                 </div>
                 <div className="mt-4">
-                  <Link href="/blog/ai-2025-multimodal-agents-in-the-enterprise" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                  <Link href="/content/enterprise-ai-governance-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
