@@ -96,12 +96,12 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Agent Posture + Eval Checklists</h2>
-              <p className="text-gray-600 mt-2">Continuously harden agents with posture baselines and use checklists to gate releases.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Production Readiness + Secure Tooling</h2>
+              <p className="text-gray-600 mt-2">A go-live checklist and a secure permissions blueprint for enterprise agents.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-agent-posture-management" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Agent Posture</Link>
-              <Link href="/content/ai-2026-agentic-evaluation-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Checklists</Link>
+              <Link href="/content/ai-2026-production-readiness-checklist" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Production Readiness</Link>
+              <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Secure Tooling</Link>
             </div>
           </div>
         </div>
