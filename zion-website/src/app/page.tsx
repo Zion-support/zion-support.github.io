@@ -1,12 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-2def
-=======
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-c439
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 import React from 'react'
 import {
   ChartBarIcon,
@@ -17,13 +16,16 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
->>>>>>> cursor/create-and-deploy-new-content-c439
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 import { getLatestUpdates } from '../data/updates'
 
-<<<<<<< HEAD
 const features = [
   {
     name: 'AI-Powered Research',
@@ -99,34 +101,11 @@ const solutions = [
 
 const whatsNew = [
   {
-<<<<<<< HEAD
-    title: 'Agent Safety Red Teaming 2025',
-    desc: 'Practical playbooks to probe, stress, and harden multi‑agent systems.',
-    href: '/blog/agent-safety-red-teaming-2025',
-    tag: 'New',
-  },
-  {
-    title: 'AI Automation Case Studies 2025',
-    desc: 'Five deployments with measurable KPIs from MTTR to margin uplift.',
-    href: '/blog/ai-automation-case-studies-2025',
-    tag: 'New',
-  },
-  {
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
     title: 'Edge AI Inference v1.2',
     desc: 'Run models 3x faster on edge devices with quantization-aware serving.',
     href: '/solutions/edge-ai-inference',
     tag: 'New',
   },
-<<<<<<< HEAD
-]
-
-=======
-import { getLatestUpdates } from '../data/updates'
-
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
   {
     title: 'GenAI Content Studio',
     desc: 'Launch multi-channel AI content with approvals, analytics, and guardrails.',
@@ -141,20 +120,9 @@ import { getLatestUpdates } from '../data/updates'
   },
 ]
 
->>>>>>> cursor/create-and-deploy-new-content-2def
 export default function HomePage() {
   return (
     <div className="bg-black">
-=======
-export default function HomePage() {
-  return (
-<<<<<<< HEAD
-    <div className="bg-black min-h-screen">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c439
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -162,22 +130,19 @@ export default function HomePage() {
             <p className="text-sm sm:text-base font-semibold text-blue-200">
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-c439
 <<<<<<< HEAD
+              New: Real-Time Agent Cost Controller v1.0 —
+              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-6f13
->>>>>>> cursor/create-and-deploy-new-content-c439
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
@@ -186,24 +151,18 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
-              New: AI Autonomous Workflow Engine v1.0 —
-              <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
-=======
-              New: Real-Time Agent Cost Controller v1.0 —
-              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
->>>>>>> cursor/create-and-deploy-new-content-2def
-=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> cursor/create-and-deploy-new-content-6f13
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
->>>>>>> cursor/create-and-deploy-new-content-c439
+>>>>>>> cursor/create-and-deploy-new-content-23cd
+=======
+              New: Real-Time Agent Cost Controller v1.0 —
+              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
@@ -211,27 +170,17 @@ export default function HomePage() {
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8472
 =======
->>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-6f13
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
-            </p>
->>>>>>> cursor/create-and-deploy-new-content-c439
-<<<<<<< HEAD
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -265,17 +214,73 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/autonomous-data-quality-copilot-1-0"
+                href="/updates/autonomous-analytics-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
-                Launch: Data Quality Copilot v1.0
+                New Launch: Analytics Copilot v1.0
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/agent-benchmark-suite-v2"
+                href="/updates/autonomous-it-ops-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-innovation-hub-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Launch: Innovation Hub v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-runbooks-live-evals"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: Benchmark Suite v2
+                New Guide: Agent Runbooks Live Evals
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-control-center-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Agentic Ops Control Center
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-finance-os-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Autonomous Finance OS v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/auto-data-governance-v3"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Launch: Data Governance v3
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-research-assistant-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 hover:bg-teal-500/20 transition-colors duration-200"
+              >
+                Launch: AI Research Assistant 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-agent-safety-certification-beta"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Agent Safety Certification (Beta)
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/real-time-agent-cost-controller-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Cost Controller v1.0
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -293,10 +298,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/blog/ai-2026-real-time-retrieval-architectures"
+                href="/updates/production-guardrails-tool-use-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                New: Real‑Time Retrieval Architectures
+                Guide: Tool‑Use Guardrails 2026
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -542,12 +547,14 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Latest Updates section (auto from data/updates) */}
+      {/* What's New section (Latest Updates from data) */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content and announcements. Visit Updates for more.</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
+          </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
@@ -568,6 +575,58 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Latest on the blog</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            New articles on enterprise AI, security, and autonomous systems.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            {[
+              {
+                title: 'AI 2026: Trustworthy Model Routing',
+                summary:
+                  'Policy‑aware, evaluation‑driven routing balancing quality, latency, and cost with audit evidence.',
+                href: '/blog/ai-2026-trustworthy-model-routing'
+              },
+              {
+                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
+                summary:
+                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
+                href: '/blog/ai-2026-policy-as-code-production-blueprint'
+              },
+              {
+                title: 'AI 2026: Generative AI Risk Register',
+                summary:
+                  'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
+                href: '/blog/ai-2026-generative-ai-risk-register'
+              },
+              {
+                title: 'AI 2026: Real‑Time Retrieval Architectures',
+                summary:
+                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
+                href: '/blog/ai-2026-real-time-retrieval-architectures'
+              }
+            ].map((item) => (
+              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold leading-6 text-white">
+                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
+                    <span className="absolute inset-0" />
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
+                <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+                  Read more <span aria-hidden="true">→</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -716,7 +775,6 @@ export default function HomePage() {
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your business?
           </h2>
@@ -733,39 +791,6 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
-=======
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Zion Tech Group</h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">AI, automation, and secure infrastructure.</p>
-          <div className="mt-8">
-            <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">See all updates →</a>
-          </div>
-        </div>
-        <div className="mx-auto mt-12 max-w-4xl">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-<<<<<<< HEAD
-=======
-=======
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
-            <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-            {latest.map((item) => (
-              <article key={item.href} className="rounded-2xl bg-white/5 p-6">
-                <h3 className="text-white font-semibold"><a href={item.href}>{item.title}</a></h3>
-                <p className="mt-2 text-sm text-gray-300">{item.summary}</p>
-              </article>
-            ))}
-=======
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> cursor/create-and-deploy-new-content-c439
           </div>
         </div>
       </div>

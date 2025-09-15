@@ -120,23 +120,20 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-f175
 =======
->>>>>>> cursor/create-and-deploy-new-content-6f13
->>>>>>> cursor/create-and-deploy-new-content-c439
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -158,21 +155,7 @@ export default function HomePage() {
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f13
->>>>>>> cursor/create-and-deploy-new-content-c439
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-<<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
 <<<<<<< HEAD
 =======
@@ -180,13 +163,16 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
->>>>>>> cursor/create-and-deploy-new-content-6f13
->>>>>>> cursor/create-and-deploy-new-content-c439
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
