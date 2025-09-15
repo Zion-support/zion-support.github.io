@@ -1,64 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const NewContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const contentTabs = [
-    {
-      id: 'next-gen-tech',
-      title: 'Next-Gen Tech Revolution',
-      icon: '🚀',
-      description: 'Revolutionary technologies including Synthetic Intelligence, Quantum-Neural Fusion, and Advanced AI Systems',
-      link: '/pages/NextGenTechRevolution2026',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Synthetic Intelligence', 'Quantum-Neural Fusion', 'Advanced AI Systems']
-    },
-    {
-      id: 'tech-insights',
-      title: 'Revolutionary Tech Insights',
-      icon: '📊',
-      description: 'Deep insights into the most revolutionary technologies of 2026 with expert analysis and market trends',
-      link: '/pages/RevolutionaryTechInsights2026',
-      color: 'from-cyan-600 to-blue-600',
-      features: ['Expert Analysis', 'Market Trends', 'Future Predictions']
-    },
-    {
-      id: 'future-showcase',
-      title: 'Future Tech Showcase',
-      icon: '🌟',
-      description: 'Interactive demonstrations of the most advanced technologies with cutting-edge innovations',
-      link: '/pages/FutureTechShowcase2026',
-      color: 'from-emerald-600 to-teal-600',
-      features: ['Interactive Demos', 'Live Statistics', 'Hands-on Experience']
-    }
-  ];
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
-            <span className="text-cyan-400">✨</span>
-            <span className="text-cyan-300 font-semibold ml-2">NEW CONTENT SHOWCASE 2026</span>
-            <span className="text-cyan-400 ml-2">✨</span>
           </div>
           
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -196,7 +135,16 @@ const NewContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     </div>
+    </>
   );
 };
 
