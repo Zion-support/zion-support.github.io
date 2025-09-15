@@ -1,42 +1,45 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
-interface LedgerEntry {
-	date: string;
-	points: number;
-	description: string;
+export interface PointsLedgerEntry {
+  id: string;
+  type: 'earn' | 'redeem';
+  points: number;
+  description?: string;
+  createdAt: string;
 }
 
-interface UsePointsResult {
-	ledger: LedgerEntry[];
-	balance: number;
-	loading: boolean;
-	fetchLedger: () => Promise<void>;
+export interface UsePointsResult {
+  ledger: PointsLedgerEntry[];
+  balance: number;
+  loading: boolean;
+  fetchLedger: () => Promise<void>;
 }
 
 export function usePoints(): UsePointsResult {
-	const [ledger, setLedger] = useState<LedgerEntry[]>([]);
-	const [balance, setBalance] = useState<number>(0);
-	const [loading, setLoading] = useState<boolean>(false);
+  const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
-	const fetchLedger = useCallback(async () => {
-		setLoading(true);
-		try {
-			// Placeholder implementation; replace with real API integration
-			const sample: LedgerEntry[] = [
-				{ date: new Date().toISOString(), points: 100, description: 'Welcome bonus' }
-			];
-			setLedger(sample);
-			setBalance(sample.reduce((sum, e) => sum + e.points, 0));
-		} finally {
-			setLoading(false);
-		}
-	}, []);
+  const fetchLedger = useCallback(async () => {
+    setLoading(true);
+    try {
+      const demo: PointsLedgerEntry[] = [
+        { id: 'p1', type: 'earn', points: 120, description: 'Signup bonus', createdAt: new Date().toISOString() },
+        { id: 'p2', type: 'earn', points: 80, description: 'Read Trusted GenAI article', createdAt: new Date().toISOString() },
+        { id: 'p3', type: 'redeem', points: -50, description: 'Redeemed for discount', createdAt: new Date().toISOString() }
+      ];
+      setLedger(demo);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
-	useEffect(() => {
-		void fetchLedger();
-	}, [fetchLedger]);
+  useEffect(() => {
+    void fetchLedger();
+  }, [fetchLedger]);
 
-	return { ledger, balance, loading, fetchLedger };
+  const balance = useMemo(() => ledger.reduce((sum, e) => sum + e.points, 0), [ledger]);
+
+  return { ledger, balance, loading, fetchLedger };
 }
 
 export default usePoints;
