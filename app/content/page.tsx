@@ -65,6 +65,19 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
         </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-teal-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-operational-evals-blueprint" className="hover:underline">
+              AI 2026: Operational Evals Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            An evaluation-first blueprint with metrics, harnesses, and governance to ship reliable AI systems.
+          </p>
+          <Link href="/content/ai-2026-operational-evals-blueprint" className="text-teal-700 font-semibold">Read Blueprint →</Link>
+        </article>
       </div>
     </main>
   );
