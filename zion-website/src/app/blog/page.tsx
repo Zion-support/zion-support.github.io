@@ -72,6 +72,16 @@ const posts = [
     slug: 'ai-2026-enterprise-retrieval-observability',
     title: 'AI 2026: Enterprise Retrieval Observability',
     summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
+  },
+  {
+    slug: 'ai-2026-eval-ready-pipelines',
+    title: 'AI 2026: Eval-Ready AI Pipelines',
+    summary: 'From datasets to live canaries with objective rubrics and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-agent-orchestration-patterns',
+    title: 'AI 2026: Agent Orchestration Patterns',
+    summary: 'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.'
   }
 ]
 

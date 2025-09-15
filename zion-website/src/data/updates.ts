@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Agent Orchestration Toolkit (v2)',
+    summary:
+      'Unified workflows for multi-agent planning, tool-use, and guardrails with production templates.',
+    href: '/updates/agent-orchestration-toolkit-v2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Building Eval-Ready AI Pipelines',
+    summary:
+      'How to instrument datasets, harnesses, and live canaries to ship trustworthy AI changes.',
+    href: '/updates/eval-ready-ai-pipelines',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',
     summary:
       'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',
