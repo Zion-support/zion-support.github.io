@@ -19,6 +19,9 @@ import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
+import FutureTechInnovationHub2027 from './src/pages/FutureTechInnovationHub2027';
+import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027';
 
 export default function App(): JSX.Element {
   return (
@@ -198,6 +201,9 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* Ultimate Tech Showcase 2027 */}
+                <UltimateTechShowcase2027 />
+
                 {/* Call to Action */}
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -235,6 +241,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/pages/FutureTechInnovationHub2027" element={<FutureTechInnovationHub2027 />} />
           
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
