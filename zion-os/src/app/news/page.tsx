@@ -28,6 +28,27 @@ const latest2025 = [
     slug: "/news/acquisition-vectoredge",
     color: "blue",
   },
+  {
+    date: "September 14, 2025",
+    category: "SECURITY",
+    title: "Zero-trust orchestration added across all Zion OS deployments",
+    slug: "/news/zero-trust-orchestration-release",
+    color: "emerald",
+  },
+  {
+    date: "September 10, 2025",
+    category: "CLOUD",
+    title: "Multi-region failover achieves 99.995% uptime in production tests",
+    slug: "/news/multi-region-failover-uptime",
+    color: "cyan",
+  },
+  {
+    date: "September 06, 2025",
+    category: "ACADEMY",
+    title: "Zion Academy releases AI Governance Blueprint course (Level II)",
+    slug: "/news/academy-ai-governance-blueprint-l2",
+    color: "rose",
+  },
 ];
 
 export default function NewsPage() {
