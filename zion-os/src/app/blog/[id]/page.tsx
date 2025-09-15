@@ -12,71 +12,16 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
-  'agentic-safety-patterns-2025': {
-    id: 'agentic-safety-patterns-2025',
-    title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
-    excerpt:
-      'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
-      'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
-    ]
-  },
-  'multi-agent-supply-chains': {
-    id: 'multi-agent-supply-chains',
-    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
-    excerpt:
-      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
-    category: 'AI Solutions',
-    author: 'Dr. Sarah Chen',
-    date: '2025-09-12',
-    readTime: '8 min read',
-    content: [
-      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
-      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
-    ]
-  },
-  'ai-governance-blueprint-2025': {
-    id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
-    excerpt:
-      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
-    category: 'AI Governance',
-=======
   'agent-safety-guardrails-2025': {
     id: 'agent-safety-guardrails-2025',
     title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
     excerpt:
       'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
     category: 'AI Solutions',
->>>>>>> cursor/create-and-deploy-new-content-4789
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '8 min read',
     content: [
-<<<<<<< HEAD
-      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
-      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
-    ]
-  },
-  'edge-ai-marketplaces': {
-    id: 'edge-ai-marketplaces',
-    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
-    excerpt:
-      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-14',
-    readTime: '7 min read',
-    content: [
-      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
-      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
-=======
       'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
       'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
       'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
@@ -95,7 +40,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
->>>>>>> cursor/create-and-deploy-new-content-4789
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -187,6 +131,62 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Organizations need consistent methods to measure the impact of GenAI on knowledge and operational work.',
       'We propose task archetypes, gold standards, evaluation rubrics, and cost models to compare tools apples-to-apples.',
       'The framework enables portfolio-level governance and investment decisions grounded in observable outcomes.'
+    ]
+  },
+  'multi-agent-supply-chains': {
+    id: 'multi-agent-supply-chains',
+    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+    excerpt:
+      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+    category: 'AI Solutions',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
+      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+    ]
+  },
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+    excerpt:
+      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
+      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
+    ]
+  },
+  'ai-regulatory-landscape-2025': {
+    id: 'ai-regulatory-landscape-2025',
+    title: 'AI Regulatory Landscape 2025: Global Rules and Enterprise Readiness',
+    excerpt:
+      'What new AI regulations mean for product teams, governance, and compliance programs—and how to prepare.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'Global regulators are converging on risk-based frameworks for AI systems, emphasizing transparency, evaluations, and incident reporting.',
+      'We summarize key requirements across regions and provide a readiness checklist covering model governance, data lineage, human oversight, and vendor management.'
+    ]
+  },
+  'quantum-supply-optimization-2025': {
+    id: 'quantum-supply-optimization-2025',
+    title: 'Quantum Supply Optimization 2025: From Pilots to Production',
+    excerpt:
+      'A roadmap to move from quantum PoCs to production-grade optimization for sourcing and logistics.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-11',
+    readTime: '8 min read',
+    content: [
+      'Enterprises can capture value with hybrid quantum-classical optimization for sourcing and routing under constraints.',
+      'We outline problem selection, benchmark baselines, architecture patterns, and controls to ensure robustness and auditability.'
     ]
   },
 };
