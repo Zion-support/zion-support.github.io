@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -37,6 +37,13 @@ export default function ResourcesPage() {
           description: 'Comprehensive guide to quantum computing applications and business implementation.',
           type: 'Guide',
           link: '/blog/quantum-computing-2025-business-breakthrough-ultimate-guide',
+          featured: true
+        },
+        {
+          title: 'AI 2026 Enterprise Multimodal Agents Blueprint',
+          description: 'Architecture, runbooks, SLAs, and governance for multimodal agent platforms.',
+          type: 'Guide',
+          link: '/resources/ai-2026-enterprise-multimodal-agents-blueprint',
           featured: true
         },
         {
