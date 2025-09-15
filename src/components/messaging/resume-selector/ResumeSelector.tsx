@@ -136,7 +136,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded."});
+        description: "Your resume has been downloaded.",
+      });
     } catch (error) {
       logErrorToProduction('Error downloading PDF:', { data: error });
       toast({

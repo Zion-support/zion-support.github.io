@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
+BarChart3TrendingUpPieChartActivityArrowRightCheckEye
 
 
 
@@ -41,7 +41,7 @@ export default function CloudPlatformPage() {
     <>
       <Head>
         <title>Cloud Platform - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." />
+        <meta name="description" content="Enterprise-grade cloud infrastructure with global reachautomated scalingand 99.99% uptime guarantee." />
       </Head>
 
       <div className="min-h-screen bg-black">
@@ -64,7 +64,7 @@ export default function CloudPlatformPage() {
               Cloud Platform
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee.
+              Enterprise-grade cloud infrastructure with global reachautomated scalingand 99.99% uptime guarantee.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -89,12 +89,12 @@ export default function CloudPlatformPage() {
                 Cloud Infrastructure Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Built for scale, performance, and reliability
+                Built for scaleperformanceand reliability
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
@@ -121,7 +121,7 @@ export default function CloudPlatformPage() {
                   Why Choose Our Cloud Platform?
                 </h2>
                 <div className="space-y-6">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefitindex) => (
                     <div key={index} className="flex items-start">
                       <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
                         <Check className="w-4 h-4 text-blue-500" />

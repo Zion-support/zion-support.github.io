@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  ArrowRight, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  ArrowRight
   X,
   Play,
   Star,
@@ -17,13 +18,13 @@ import {
 } from 'lucide-react';
 
 const UltimateContentRevolution2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true)1000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -38,7 +39,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 border-b border-purple-500/30 shadow-2xl"
         >
           <div className="container mx-auto px-4 py-4">
@@ -46,8 +47,8 @@ const UltimateContentRevolution2026PromotionBanner = () => {
               {/* Left Content */}
               <div className="flex items-center gap-4">
                 <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  animate={{ rotate: [0360] }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="flex-shrink-0"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
@@ -161,8 +162,8 @@ const UltimateContentRevolution2026PromotionBanner = () => {
             <motion.div
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full"
               animate={{
-                y: [0, -10, 0],
-                opacity: [0.5, 1, 0.5],
+                y: [0-10],
+                opacity: [0.510.5],
               }}
               transition={{
                 duration: 2,
@@ -173,8 +174,8 @@ const UltimateContentRevolution2026PromotionBanner = () => {
             <motion.div
               className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full"
               animate={{
-                y: [0, -8, 0],
-                opacity: [0.3, 0.8, 0.3],
+                y: [0-80],
+                opacity: [0.30.80.3],
               }}
               transition={{
                 duration: 1.5,
@@ -186,8 +187,8 @@ const UltimateContentRevolution2026PromotionBanner = () => {
             <motion.div
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
               animate={{
-                y: [0, -6, 0],
-                opacity: [0.4, 0.9, 0.4],
+                y: [0-60],
+                opacity: [0.40.90.4],
               }}
               transition={{
                 duration: 2.5,

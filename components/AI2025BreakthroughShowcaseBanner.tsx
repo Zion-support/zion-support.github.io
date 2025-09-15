@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Cpu, Database, Network, Shield, Zap, Target, TrendingUp, Users } from 'lucide-react';
+ArrowRightBrainCpuDatabaseNetworkShieldZapTargetTrendingUpUsers
 
 const AI2025BreakthroughShowcaseBanner = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const breakthroughFeatures = [
     {
@@ -53,18 +54,18 @@ const AI2025BreakthroughShowcaseBanner = () => {
   ];
 
   const achievements = [
-    { number: "500+", label: "AI Models Deployed" },
-    { number: "99.9%", label: "Uptime Achieved" },
-    { number: "10M+", label: "Decisions Processed" },
-    { number: "150+", label: "Countries Served" }
+    { number: "500+"label: "AI Models Deployed" },
+    { number: "99.9%"label: "Uptime Achieved" },
+    { number: "10M+"label: "Decisions Processed" },
+    { number: "150+"label: "Countries Served" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % breakthroughFeatures.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
@@ -82,7 +83,7 @@ const AI2025BreakthroughShowcaseBanner = () => {
             Revolutionary AI Showcase
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Experience the future of artificial intelligence with our groundbreaking 2025 technology suite that's reshaping industries worldwide.
+            Experience the future of artificial intelligence with our groundbreaking 2025 technology suite 'that', 's reshaping industries worldwide.
           </p>
         </div>
 
@@ -111,7 +112,7 @@ const AI2025BreakthroughShowcaseBanner = () => {
               </div>
               <div className="flex-1">
                 <div className="grid grid-cols-2 gap-4">
-                  {achievements.map((achievement, index) => (
+                  {achievements.map((achievementindex) => (
                     <div key={index} className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
                       <div className="text-3xl font-bold text-blue-400 mb-1">
                         {achievement.number}
@@ -130,7 +131,7 @@ const AI2025BreakthroughShowcaseBanner = () => {
         {/* Feature Dots */}
         <div className="flex justify-center mb-12">
           <div className="flex space-x-2">
-            {breakthroughFeatures.map((_, index) => (
+            {breakthroughFeatures.map((_index) => (
               <button
                 key={index}
                 onClick={() => setCurrentFeature(index)}
@@ -145,11 +146,11 @@ const AI2025BreakthroughShowcaseBanner = () => {
         {/* Technology Stack Preview */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {[
-            { name: "Machine Learning", icon: <Brain className="w-8 h-8" />, progress: 95 },
-            { name: "Deep Learning", icon: <Cpu className="w-8 h-8" />, progress: 92 },
-            { name: "Neural Networks", icon: <Network className="w-8 h-8" />, progress: 98 },
-            { name: "Quantum AI", icon: <Zap className="w-8 h-8" />, progress: 88 }
-          ].map((tech, index) => (
+            { name: "Machine Learning"icon: <Brain className="w-8 h-8" />progress: 95 },
+            { name: "Deep Learning"icon: <Cpu className="w-8 h-8" />progress: 92 },
+            { name: "Neural Networks"icon: <Network className="w-8 h-8" />progress: 98 },
+            { name: "Quantum AI"icon: <Zap className="w-8 h-8" />progress: 88 }
+          ].map((techindex) => (
             <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">
               <div className="text-blue-400 mb-3 flex justify-center">
                 {tech.icon}

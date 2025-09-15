@@ -180,11 +180,6 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
-    const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
-    return (<>
-      <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
-      
-=======
     setFilter,
   } = useNotifications() as NotificationContextType;
 

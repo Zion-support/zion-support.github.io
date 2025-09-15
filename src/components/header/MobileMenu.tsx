@@ -44,7 +44,8 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       key: 'home',
       href: '/',
       icon: Home,
-      matches: (path: string) => path === '/'},
+      matches: (path: string) => path === '/',
+    },
     {
       key: 'explore',
       href: '/talent',
@@ -52,19 +53,22 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       matches: (path: string) =>
         path.startsWith('/talent') ||
         path.startsWith('/categories') ||
-        path.startsWith('/marketplace')},
+        path.startsWith('/marketplace'),
+    },
     {
       key: 'community',
       href: '/community',
       icon: MessageCircle,
       matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum')},
+        path.startsWith('/community') || path.startsWith('/forum'),
+    },
     {
       key: 'post_job',
       href: '/post-job',
       icon: BriefcaseIcon,
       matches: (path: string) => path.startsWith('/post-job'),
-      authRequired: true},
+      authRequired: true,
+    },
     {
       key: 'messages',
       href: '/messages',
@@ -72,17 +76,21 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       matches: (path: string) =>
         path.startsWith('/messages') || path.startsWith('/inbox'),
       badge: unreadCount,
-      authRequired: true},
+      authRequired: true,
+    },
     {
       key: 'dashboard',
       href: '/dashboard',
       icon: User,
       matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true}];
+      authRequired: true,
+    },
+  ];
 
   const navItems = baseItems.map((item) => ({
     ...item,
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)}));
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`),
+  }));
 
   // Filter items based on auth status
   const visibleItems = navItems.filter(

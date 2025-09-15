@@ -1,6 +1,10 @@
 import React from 'react';
 import SEO from '../components/SEO';
+<<<<<<< HEAD
+CheckExternalLink
+=======
 import { Check, ExternalLink } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ApiPerformanceTestingPage() {
 	const features = [
@@ -13,7 +17,11 @@ export default function ApiPerformanceTestingPage() {
 
 	return (
 		<>
+<<<<<<< HEAD
+			<SEO title="API Performance Testing" description="Loadlatency and regression testing-as-a-service with CI and SLOs." />
+=======
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
+>>>>>>> origin/auto/autonomy-17186719616
 			<main id="main" className="container mx-auto px-4 py-24">
 				<section className="max-w-5xl mx-auto">
 					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>

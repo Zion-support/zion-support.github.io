@@ -28,7 +28,7 @@ export default function NewContentShowcase() {
     },
     {
       title: "AI 2026 Ultimate Future Predictions",
-      description: "Discover the most accurate and revolutionary AI predictions for 2026, based on quantum computing analysis.",
+      description: "Discover the most accurate and revolutionary AI predictions for 2026based on quantum computing analysis.",
       link: "/blog/ai-2026-ultimate-future-predictions",
       badge: "🔮 PREDICTIONS",
       icon: "🔮",
@@ -38,7 +38,7 @@ export default function NewContentShowcase() {
     },
     {
       title: "Quantum-AI Fusion Revolution",
-      description: "Complete integration of quantum computing with AI systems, achieving 100,000x processing speed improvements.",
+      description: "Complete integration of quantum computing with AI systemsachieving 100,000x processing speed improvements.",
       link: "/quantum-ai-fusion-2026",
       badge: "⚛️ REVOLUTIONARY",
       icon: "⚛️",
@@ -58,7 +58,7 @@ export default function NewContentShowcase() {
     },
     {
       title: "Universal Integration Platform",
-      description: "Seamless AI integration across all platforms, systems, and dimensions with zero downtime deployment.",
+      description: "Seamless AI integration across all platformsystemsand dimensions with zero downtime deployment.",
       link: "/universal-integration-platform",
       badge: "🌌 UNIVERSAL",
       icon: "🌌",
@@ -93,14 +93,14 @@ export default function NewContentShowcase() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover the most revolutionary AI content ever created. Experience breakthrough technologies, 
-            transcendent intelligence, and infinite possibilities that will reshape the future of humanity.
+            Discover the most revolutionary AI content ever created. Experience breakthrough technologies
+            transcendent intelligenceand infinite possibilities that will reshape the future of humanity.
           </p>
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {newContent.map((item, index) => (
+          {newContent.map((itemindex) => (
             <div
               key={index}
               className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"

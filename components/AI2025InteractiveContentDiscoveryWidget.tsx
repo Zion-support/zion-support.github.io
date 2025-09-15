@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function AI2025InteractiveContentDiscoveryWidget() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedROIsetSelectedROI] = useState('all');
 
   const contentItems = [
     {
@@ -15,7 +16,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
       description: "Discover the revolutionary AI breakthrough transforming businesses worldwide",
       url: "/blog/ai-2025-revolutionary-breakthrough-announcement",
       featured: true,
-      tags: ["BREAKTHROUGH", "NEW"]
+      tags: ["BREAKTHROUGH"NEW"]
     },
     {
       id: 2,
@@ -26,7 +27,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
       description: "How a Fortune 500 company achieved unprecedented ROI",
       url: "/case-studies/ai-2025-global-transformation-breakthrough",
       featured: true,
-      tags: ["SUCCESS STORY", "ROI"]
+      tags: ["SUCCESS STORY"ROI"]
     },
     {
       id: 3,
@@ -37,7 +38,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
       description: "Complete blueprint for achieving breakthrough results",
       url: "/resources/ai-2025-revolutionary-implementation-guide",
       featured: true,
-      tags: ["GUIDE", "ESSENTIAL"]
+      tags: ["GUIDE"ESSENTIAL"]
     },
     {
       id: 4,
@@ -76,7 +77,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
 
   const filteredContent = contentItems.filter(item => {
     const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%', ''));
+    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%', '));
     return categoryMatch && roiMatch;
   });
 
@@ -109,8 +110,8 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
             Discover Your Perfect AI Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Use our intelligent content discovery system to find the most relevant AI insights, 
-            case studies, and implementation guides for your specific needs and ROI goals.
+            Use our intelligent content discovery system to find the most relevant AI insights
+            case studiesand implementation guides for your specific needs and ROI goals.
           </p>
         </div>
 
@@ -171,7 +172,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
               <div className="p-6">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.map((tag, index) => (
+                  {item.tags.map((tagindex) => (
                     <span key={index} className="text-xs font-semibold px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
                       {tag}
                     </span>
@@ -228,7 +229,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-purple-800 mb-4">Can't Find What You're Looking For?</h3>
+            <h3 className="text-2xl font-bold text-purple-800 mb-4">'Can', 't Find What 'You', 're Looking For?</h3>
             <p className="text-purple-700 mb-6">
               Our AI experts can help you find the perfect content for your specific needs and goals.
             </p>

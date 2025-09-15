@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Shield, 
-  ArrowRight, 
+  Brain
+  Cpu
+  Zap
+  Shield
+  ArrowRight
   Star,
   TrendingUp,
   Sparkles,
@@ -16,24 +17,24 @@ import {
 } from 'lucide-react';
 
 const AI2025UltimateTechnologyShowcaseBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     
     const interval = setInterval(() => {
       setCurrentFeature(prev => (prev + 1) % 4);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
-    { icon: Brain, text: 'AI-Powered Automation', color: 'from-purple-500 to-pink-500' },
-    { icon: Cpu, text: 'Quantum Computing', color: 'from-blue-500 to-cyan-500' },
-    { icon: Zap, text: 'Neural Interfaces', color: 'from-green-500 to-emerald-500' },
-    { icon: Shield, text: 'Advanced Security', color: 'from-red-500 to-orange-500' }
+    { icon: Braintext: 'AI-Powered 'Automation', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Cputext: 'Quantum 'Computing', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: Zaptext: 'Neural 'Interfaces', 'color: 'from-green-500 to-emerald-500' },
+    { icon: Shieldtext: 'Advanced 'Security', 'color: 'from-red-500 to-orange-500' }
   ];
 
   const currentFeatureData = features[currentFeature];
@@ -41,7 +42,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : -50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl border border-purple-500/20 shadow-2xl"
     >
@@ -57,9 +58,9 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
           {/* Left Content */}
           <div className="flex-1">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -20 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="mb-6"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -105,8 +106,8 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-wrap gap-6 mb-8"
             >
               <div className="flex items-center gap-2">
@@ -126,8 +127,8 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -149,9 +150,9 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
 
           {/* Right Visual */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8delay: 0.3 }}
             className="relative"
           >
             <div className="relative w-80 h-80">
@@ -163,7 +164,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
               </div>
 
               {/* Orbiting Elements */}
-              {features.map((feature, index) => {
+              {features.map((featureindex) => {
                 const angle = (index * 90) * (Math.PI / 180);
                 const radius = 120;
                 const x = Math.cos(angle) * radius;
@@ -195,7 +196,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
 
               {/* Connection Lines */}
               <svg className="absolute inset-0 w-full h-full">
-                {features.map((_, index) => {
+                {features.map((_index) => {
                   const angle = (index * 90) * (Math.PI / 180);
                   const radius = 120;
                   const x1 = 160; // Center x

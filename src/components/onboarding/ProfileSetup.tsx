@@ -13,12 +13,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Full Name must be at least 2 characters"),
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters"),
+});
 
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
@@ -33,7 +35,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     defaultValues: {
       displayName: "",
       bio: "",
-      headline: ""}});
+      headline: "",
+    },
+  });
 
   const getTypeLabel = () => {
     switch (userType) {

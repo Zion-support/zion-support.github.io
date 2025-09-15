@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
-  Clock, 
+  TrendingUp
+  DollarSign
+  Users
+  Clock
   Award,
   BarChart3,
   PieChart,
@@ -20,9 +21,9 @@ import {
 } from 'lucide-react';
 
 const InteractiveSuccessMetrics2025 = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [currentMetric, setCurrentMetric] = useState(0);
-  const [animatedValues, setAnimatedValues] = useState({
+  const [isPlayingsetIsPlaying] = useState(true);
+  const [currentMetricsetCurrentMetric] = useState(0);
+  const [animatedValuesetAnimatedValues] = useState({
     revenue: 0,
     clients: 0,
     efficiency: 0,
@@ -95,10 +96,10 @@ const InteractiveSuccessMetrics2025 = () => {
   ];
 
   const achievements = [
-    { icon: <Award className="w-6 h-6" />, title: "Industry Leader", count: "3 Years Running" },
-    { icon: <Star className="w-6 h-6" />, title: "5-Star Rating", count: "99.8% Reviews" },
-    { icon: <Target className="w-6 h-6" />, title: "Success Rate", count: "98.7%" },
-    { icon: <TrendingUp className="w-6 h-6" />, title: "Growth Rate", count: "2,847%" }
+    { icon: <Award className="w-6 h-6" />title: "Industry Leader"count: "3 Years Running" },
+    { icon: <Star className="w-6 h-6" />title: "5-Star Rating"count: "99.8% Reviews" },
+    { icon: <Target className="w-6 h-6" />title: "Success Rate"count: "98.7%" },
+    { icon: <TrendingUp className="w-6 h-6" />title: "Growth Rate"count: "2,847%" }
   ];
 
   useEffect(() => {
@@ -123,22 +124,22 @@ const InteractiveSuccessMetrics2025 = () => {
           clearInterval(timer);
         }
         setAnimatedValues(prev => ({ 
-          ...prev, 
+          ...prev
           [key]: key.includes('clients') || key.includes('satisfaction') 
             ? Number(start.toFixed(1)) 
             : Math.floor(start) 
         }));
-      }, 30);
+      }30);
     });
 
     // Auto-rotate metrics
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentMetric((prev) => (prev + 1) % metrics.length);
-      }, 3000);
+      }3000);
       return () => clearInterval(interval);
     }
-  }, [isPlaying, metrics.length]);
+  }[isPlayingmetrics.length]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -208,9 +209,9 @@ const InteractiveSuccessMetrics2025 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentMetric}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0x: -50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 50 }}
                 transition={{ duration: 0.5 }}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${metrics[currentMetric].color} shadow-2xl relative overflow-hidden`}
               >
@@ -241,7 +242,7 @@ const InteractiveSuccessMetrics2025 = () => {
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
-                    {metrics[currentMetric].details.map((detail, index) => (
+                    {metrics[currentMetric].details.map((detailindex) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -260,7 +261,7 @@ const InteractiveSuccessMetrics2025 = () => {
 
             {/* Metric Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
-              {metrics.map((_, index) => (
+              {metrics.map((_index) => (
                 <motion.button
                   key={index}
                   onClick={() => {
@@ -296,7 +297,7 @@ const InteractiveSuccessMetrics2025 = () => {
                     <motion.div 
                       className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
                       initial={{ width: 0 }}
-                      animate={{ width: `${Math.min(animatedValues.revenue / 30, 100)}%` }}
+                      animate={{ width: `${Math.min(animatedValues.revenue / 30100)}%` }}
                       transition={{ duration: 1 }}
                     />
                   </div>
@@ -326,7 +327,7 @@ const InteractiveSuccessMetrics2025 = () => {
                     <motion.div 
                       className="bg-gradient-to-r from-yellow-400 to-orange-600 h-2 rounded-full"
                       initial={{ width: 0 }}
-                      animate={{ width: `${Math.min(animatedValues.efficiency / 6, 100)}%` }}
+                      animate={{ width: `${Math.min(animatedValues.efficiency / 6100)}%` }}
                       transition={{ duration: 1 }}
                     />
                   </div>
@@ -338,11 +339,11 @@ const InteractiveSuccessMetrics2025 = () => {
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-xl font-bold text-white mb-4">Achievements</h4>
               <div className="space-y-3">
-                {achievements.map((achievement, index) => (
+                {achievements.map((achievementindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center justify-between text-white"
                   >
@@ -366,11 +367,11 @@ const InteractiveSuccessMetrics2025 = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { icon: <DollarSign className="w-6 h-6" />, value: `$${animatedValues.savings}M`, label: "Cost Savings" },
-            { icon: <Users className="w-6 h-6" />, value: `${animatedValues.growth.toLocaleString()}`, label: "Hours Saved" },
-            { icon: <PieChart className="w-6 h-6" />, value: `${animatedValues.satisfaction}%`, label: "Success Rate" },
-            { icon: <TrendingUp className="w-6 h-6" />, value: "24/7", label: "Monitoring" }
-          ].map((stat, index) => (
+            { icon: <DollarSign className="w-6 h-6" />value: `$${animatedValues.savings}M`label: "Cost Savings" },
+            { icon: <Users className="w-6 h-6" />value: `${animatedValues.growth.toLocaleString()}`label: "Hours Saved" },
+            { icon: <PieChart className="w-6 h-6" />value: `${animatedValues.satisfaction}%`label: "Success Rate" },
+            { icon: <TrendingUp className="w-6 h-6" />value: "24/7"label: "Monitoring" }
+          ].map((statindex) => (
             <motion.div
               key={index}
               variants={itemVariants}

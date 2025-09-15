@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -18,8 +19,8 @@ interface ShowcaseItem {
 }
 
 export default function AnimatedContentShowcase() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [isAnimatingsetIsAnimating] = useState(false);
 
   const showcaseItems: ShowcaseItem[] = [
     {
@@ -120,11 +121,11 @@ export default function AnimatedContentShowcase() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % showcaseItems.length);
         setIsAnimating(false);
-      }, 300);
-    }, 5000);
+      }300);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [showcaseItems.length]);
+  }[showcaseItems.length]);
 
   const currentItem = showcaseItems[currentIndex];
 
@@ -143,7 +144,7 @@ export default function AnimatedContentShowcase() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the most revolutionary AI and technology content that's transforming the world.
+            Discover the most revolutionary AI and technology content 'that', 's transforming the world.
           </p>
         </div>
 
@@ -233,7 +234,7 @@ export default function AnimatedContentShowcase() {
 
           {/* Navigation Dots */}
           <div className="flex justify-center mt-8 space-x-3">
-            {showcaseItems.map((_, index) => (
+            {showcaseItems.map((_index) => (
               <button
                 key={index}
                 onClick={() => {
@@ -241,7 +242,7 @@ export default function AnimatedContentShowcase() {
                   setTimeout(() => {
                     setCurrentIndex(index);
                     setIsAnimating(false);
-                  }, 300);
+                  }300);
                 }}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex

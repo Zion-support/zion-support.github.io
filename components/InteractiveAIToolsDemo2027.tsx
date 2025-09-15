@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Zap, 
-  Brain, 
-  Code, 
-  BarChart3, 
+  Play
+  Pause
+  RotateCcw
+  Zap
+  Brain
+  Code
+  BarChart3
   Image,
   FileText,
   Music,
@@ -22,15 +23,15 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2027 = () => {
-  const [activeTool, setActiveTool] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [results, setResults] = useState<any[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeToolsetActiveTool] = useState(0);
+  const [isRunningsetIsRunning] = useState(false);
+  const [progressetProgress] = useState(0);
+  const [resultsetResults] = useState<any[]>([]);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const aiTools = [
     {
@@ -40,7 +41,7 @@ const InteractiveAIToolsDemo2027 = () => {
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
       demo: {
-        input: 'Create a React component for a user profile card with avatar, name, and bio',
+        input: 'Create a React component for a user profile card with avatarnameand bio',
         output: `import React from 'react';
 import { Avatar } from './ui/avatar';
 
@@ -104,7 +105,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
       color: 'from-purple-500 to-pink-500',
       demo: {
         input: 'A futuristic cityscape at sunset with flying cars and neon lights',
-        output: 'Generated high-resolution image (2048x2048) with photorealistic quality, featuring a cyberpunk cityscape with glowing neon signs, flying vehicles, and dramatic sunset lighting.',
+        output: 'Generated high-resolution image (2048x2048) with photorealistic qualityfeaturing a cyberpunk cityscape with glowing neon signsflying vehiclesand dramatic sunset lighting.',
         time: 4.2
       }
     },
@@ -119,21 +120,21 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
         output: `# The Future of AI in Healthcare: A Revolutionary Transformation
 
 ## Introduction
-Artificial Intelligence is poised to revolutionize healthcare in ways we've never imagined. From diagnostic accuracy to personalized treatment plans, AI is transforming every aspect of medical care.
+Artificial Intelligence is poised to revolutionize healthcare in ways 'we', 've never imagined. From diagnostic accuracy to personalized treatment plansAI is transforming every aspect of medical care.
 
 ## Key Applications
 
 ### 1. Diagnostic Imaging
-AI-powered systems can now detect diseases with superhuman accuracy, identifying conditions like cancer, heart disease, and neurological disorders earlier than ever before.
+AI-powered systems can now detect diseases with superhuman accuracyidentifying conditions like cancerheart diseaseand neurological disorders earlier than ever before.
 
 ### 2. Drug Discovery
-Machine learning algorithms are accelerating drug development, reducing the time from discovery to market from years to months.
+Machine learning algorithms are accelerating drug developmentreducing the time from discovery to market from years to months.
 
 ### 3. Personalized Medicine
-AI analyzes patient data to create customized treatment plans, ensuring optimal outcomes for each individual.
+AI analyzes patient data to create customized treatment plansensuring optimal outcomes for each individual.
 
 ## The Road Ahead
-As AI continues to evolve, we can expect even more groundbreaking innovations that will save lives and improve quality of care for millions worldwide.`,
+As AI continues to evolvewe can expect even more groundbreaking innovations that will save lives and improve quality of care for millions worldwide.`,
         time: 2.8
       }
     },
@@ -145,7 +146,7 @@ As AI continues to evolve, we can expect even more groundbreaking innovations th
       color: 'from-indigo-500 to-purple-500',
       demo: {
         input: 'Compose an upbeat electronic track for a tech startup presentation',
-        output: 'Generated 3-minute electronic track with:\n- 128 BPM tempo\n- Synthwave/cyberpunk style\n- Dynamic build-up and drop\n- Professional mixing and mastering\n- Available in WAV, MP3, and MIDI formats',
+        output: 'Generated 3-minute electronic track with:\n- 128 BPM tempo\n- Synthwave/cyberpunk style\n- Dynamic build-up and drop\n- Professional mixing and mastering\n- Available in WAVMP3and MIDI formats',
         time: 5.5
       }
     },
@@ -188,7 +189,7 @@ As AI continues to evolve, we can expect even more groundbreaking innovations th
         }
         return prev + increment;
       });
-    }, interval);
+    }interval);
   };
 
   const resetDemo = () => {
@@ -225,14 +226,14 @@ As AI continues to evolve, we can expect even more groundbreaking innovations th
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Tool Selection */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: -30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Choose an AI Tool</h3>
             <div className="grid gap-4">
-              {aiTools.map((tool, index) => (
+              {aiTools.map((toolindex) => (
                 <button
                   key={tool.id}
                   onClick={() => setActiveTool(index)}
@@ -262,9 +263,9 @@ As AI continues to evolve, we can expect even more groundbreaking innovations th
 
           {/* Demo Interface */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="bg-white rounded-2xl shadow-xl p-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -367,7 +368,7 @@ As AI continues to evolve, we can expect even more groundbreaking innovations th
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white">

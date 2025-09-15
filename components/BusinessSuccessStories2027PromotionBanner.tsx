@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  Award, 
-  DollarSign, 
-  Clock, 
+  TrendingUp
+  Users
+  Award
+  DollarSign
+  Clock
   Target,
   ArrowRight,
   X,
@@ -23,13 +24,13 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStories2027PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentStory, setCurrentStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentStorysetCurrentStory] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const stories = [
     {
@@ -66,18 +67,18 @@ const BusinessSuccessStories2027PromotionBanner = () => {
   ];
 
   const stats = [
-    { value: '850%', label: 'Avg ROI' },
-    { value: '$2.4M', label: 'Avg Savings' },
-    { value: '99.8%', label: 'Success Rate' },
-    { value: '15k+', label: 'Hours Saved' }
+    { value: '850%'label: 'Avg ROI' },
+    { value: '$2.4'M', 'label: 'Avg Savings' },
+    { value: '99.8%'label: 'Success Rate' },
+    { value: '15k+'label: 'Hours Saved' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStory((prev) => (prev + 1) % stories.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (isDismissed) return null;
 
@@ -88,7 +89,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
@@ -97,13 +98,13 @@ const BusinessSuccessStories2027PromotionBanner = () => {
               className="absolute inset-0 opacity-30"
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                 ]
               }}
-              transition={{ duration: 8, repeat: Infinity }}
+              transition={{ duration: 8repeat: Infinity }}
             />
           </div>
 
@@ -117,7 +118,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                     <span className="text-purple-300 text-sm font-medium">SUCCESS STORIES</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -131,7 +132,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                 
                 <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
                   Discover how leading companies achieved extraordinary results with our AI solutions. 
-                  Real stories, proven ROI, and detailed case studies from industry leaders.
+                  Real storiesproven ROIand detailed case studies from industry leaders.
                 </p>
 
                 {/* Rotating Success Stories */}
@@ -139,9 +140,9 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentStory}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
@@ -162,7 +163,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
                 {/* Features */}
                 <div className="flex flex-wrap items-center gap-3 text-xs">
-                  {features.map((feature, index) => (
+                  {features.map((featureindex) => (
                     <div key={index} className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/10">
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span className="text-gray-300">{feature}</span>
@@ -214,7 +215,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
             {/* Mobile Stats */}
             <div className="lg:hidden mt-4 grid grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <div key={index} className="text-center p-2 rounded-lg bg-white/5">
                   <div className="text-lg font-bold text-white">{stat.value}</div>
                   <div className="text-xs text-gray-400">{stat.label}</div>

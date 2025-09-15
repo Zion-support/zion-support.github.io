@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  Zap, 
+  ArrowRight
+  Star
+  Zap
   Sparkles,
   TrendingUp,
   Users,
@@ -23,12 +24,12 @@ import {
 } from 'lucide-react';
 
 const NewContentNavigation = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isExpandedsetIsExpanded] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentCategories = [
     {
@@ -158,19 +159,19 @@ const NewContentNavigation = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discover cutting-edge AI, quantum computing, and neural interface technologies 
+            Discover cutting-edge AIquantum computingand neural interface technologies 
             that are reshaping the future of business and human potential.
           </p>
         </div>
 
         {/* Featured Content */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {featuredContent.map((item, index) => (
+          {featuredContent.map((itemindex) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-4">
@@ -218,18 +219,18 @@ const NewContentNavigation = () => {
         <AnimatePresence>
           {isExpanded && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0height: 0 }}
+              animate={{ opacity: 1height: 'auto' }}
+              exit={{ opacity: 0height: 0 }}
               transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-              {contentCategories.map((category, index) => (
+              {contentCategories.map((categoryindex) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-4 mb-4">
@@ -243,7 +244,7 @@ const NewContentNavigation = () => {
                   </div>
                   
                   <div className="space-y-2 mb-6">
-                    {category.items.map((item, itemIndex) => (
+                    {category.items.map((itemIndex) => (
                       <div key={itemIndex} className="flex items-center text-sm text-gray-300">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 flex-shrink-0" />
                         {item}
@@ -268,7 +269,7 @@ const NewContentNavigation = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">

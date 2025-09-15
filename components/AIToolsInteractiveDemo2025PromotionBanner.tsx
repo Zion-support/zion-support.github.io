@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  Sparkles, 
-  ArrowRight, 
-  Star, 
-  Users, 
+  Play
+  Sparkles
+  ArrowRight
+  Star
+  Users
   Zap,
   Brain,
   Code,
@@ -21,30 +22,30 @@ import {
 } from 'lucide-react';
 
 const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
-  const [currentTool, setCurrentTool] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const tools = [
-    { name: 'GPT-5 Ultra', icon: <Brain className="w-6 h-6" />, color: 'from-blue-500 to-cyan-500' },
-    { name: 'CodeGen Pro', icon: <Code className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },
-    { name: 'Analytics AI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },
-    { name: 'Smart Chat', icon: <MessageSquare className="w-6 h-6" />, color: 'from-orange-500 to-red-500' },
-    { name: 'Image Creator', icon: <Image className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Video Editor', icon: <Video className="w-6 h-6" />, color: 'from-pink-500 to-rose-500' }
+    { name: 'GPT-5 'Ultra', 'icon: <Brain className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'CodeGen 'Pro', 'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Analytics 'AI', 'icon: <BarChart3 className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Smart 'Chat', 'icon: <MessageSquare className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Video 'Editor', 'icon: <Video className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
   ];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTool((prev) => (prev + 1) % tools.length);
-    }, 2000);
+    }2000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16"
     >
@@ -56,9 +57,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
             >
               <div className="inline-flex items-center space-x-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4" />
@@ -73,16 +74,16 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Test, explore, and discover 24+ cutting-edge AI tools with live demonstrations. 
+                Testexploreand discover 24+ cutting-edge AI tools with live demonstrations. 
                 See how AI can transform your workflow in real-time.
               </p>
             </motion.div>
 
             {/* Features List */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="space-y-4"
             >
               {[
@@ -90,7 +91,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 '24+ AI tools across 6 categories',
                 'Real-time performance metrics',
                 'Instant trial access'
-              ].map((feature, index) => (
+              ].map((featureindex) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
@@ -100,9 +101,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25">
@@ -118,9 +119,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.8 }}
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
             >
               <div className="text-center">
@@ -140,9 +141,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 
           {/* Right Content - Interactive Demo Preview */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="relative"
           >
             {/* Demo Container */}
@@ -157,10 +158,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 
               {/* Tool Showcase */}
               <div className="space-y-4">
-                {tools.map((tool, index) => (
+                {tools.map((toolindex) => (
                   <motion.div
                     key={tool.name}
-                    initial={{ opacity: 0.5, scale: 0.95 }}
+                    initial={{ opacity: 0.5scale: 0.95 }}
                     animate={{ 
                       opacity: currentTool === index ? 1 : 0.5,
                       scale: currentTool === index ? 1 : 0.95
@@ -215,8 +216,8 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             {/* Floating Elements */}
             <motion.div
               animate={{ 
-                y: [0, -10, 0],
-                rotate: [0, 5, 0]
+                y: [0-10],
+                rotate: [050]
               }}
               transition={{ 
                 duration: 3,
@@ -230,8 +231,8 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 
             <motion.div
               animate={{ 
-                y: [0, 10, 0],
-                rotate: [0, -5, 0]
+                y: [010],
+                rotate: [0-50]
               }}
               transition={{ 
                 duration: 4,

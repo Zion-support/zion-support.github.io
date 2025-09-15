@@ -1,45 +1,46 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function NewContentCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const contentSlides = [
     {
       id: 1,
       title: 'AI 2025 Ultimate Breakthrough Revolution',
-      description: 'The most revolutionary AI breakthrough of 2025 delivering 10,000% ROI, 99.9% accuracy, and 10,000x faster processing.',
+      description: 'The most revolutionary AI breakthrough of 2025 delivering 10,000% ROI99.9% accuracyand 10,000x faster processing.',
       href: '/ai-2025-ultimate-breakthrough-revolution',
       badge: 'BREAKTHROUGH',
       color: 'from-red-500 to-pink-500',
       bgColor: 'from-red-50 to-pink-50',
       borderColor: 'border-red-200',
       icon: '🚀',
-      features: ['10,000% ROI', '99.9% Accuracy', '10,000x Faster']
+      features: ['10,000% ROI'99.9% Accuracy'10,000x Faster']
     },
     {
       id: 2,
       title: 'Quantum Computing Solutions 2025',
-      description: 'Revolutionary quantum computing solutions delivering quantum supremacy, error-corrected quantum computers, and quantum-AI fusion.',
+      description: 'Revolutionary quantum computing solutions delivering quantum supremacyerror-corrected quantum computersand quantum-AI fusion.',
       href: '/quantum-computing-solutions-2025',
       badge: 'QUANTUM',
       color: 'from-indigo-500 to-purple-500',
       bgColor: 'from-indigo-50 to-purple-50',
       borderColor: 'border-indigo-200',
       icon: '⚛️',
-      features: ['Quantum Supremacy', 'Error-Corrected', 'Quantum-AI Fusion']
+      features: ['Quantum 'Supremacy', 'Error-'Corrected', 'Quantum-AI Fusion']
     },
     {
       id: 3,
       title: 'Advanced Automation Solutions 2026',
-      description: 'Revolutionary automation solutions featuring intelligent process automation, autonomous decision systems, and predictive maintenance AI.',
+      description: 'Revolutionary automation solutions featuring intelligent process automationautonomous decision systemsand predictive maintenance AI.',
       href: '/advanced-automation-solutions-2026',
       badge: 'AUTOMATION',
       color: 'from-emerald-500 to-teal-500',
       bgColor: 'from-emerald-50 to-teal-50',
       borderColor: 'border-emerald-200',
       icon: '🤖',
-      features: ['15,000% ROI', 'Autonomous AI', 'Smart Resources']
+      features: ['15,000% 'ROI', 'Autonomous 'AI', 'Smart Resources']
     },
     {
       id: 4,
@@ -51,29 +52,29 @@ export default function NewContentCarousel() {
       bgColor: 'from-purple-50 to-pink-50',
       borderColor: 'border-purple-200',
       icon: '🧠',
-      features: ['Brain-Computer', 'Enhanced Cognition', 'Direct Interface']
+      features: ['Brain-'Computer', 'Enhanced 'Cognition', 'Direct Interface']
     },
     {
       id: 5,
       title: 'Space Technology Solutions 2025',
-      description: 'Revolutionary space technology solutions for interplanetary exploration, satellite optimization, and space-based AI systems.',
+      description: 'Revolutionary space technology solutions for interplanetary explorationsatellite optimizationand space-based AI systems.',
       href: '/space-technology-solutions-2025',
       badge: 'SPACE',
       color: 'from-cyan-500 to-blue-500',
       bgColor: 'from-cyan-50 to-blue-50',
       borderColor: 'border-cyan-200',
       icon: '🚀',
-      features: ['Interplanetary', 'Satellite AI', 'Space Exploration']
+      features: [', 'Interplanetary', 'Satellite 'AI', 'Space Exploration']
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(timer);
-  }, [contentSlides.length]);
+  }[contentSlides.length]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
@@ -97,7 +98,7 @@ export default function NewContentCarousel() {
             Revolutionary Content Showcase
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest breakthrough content across AI, quantum computing, automation, and cutting-edge technologies.
+            Discover our latest breakthrough content across AIquantum computingautomationand cutting-edge technologies.
           </p>
         </div>
 
@@ -127,7 +128,7 @@ export default function NewContentCarousel() {
 
                 {/* Features */}
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {currentContent.features.map((feature, index) => (
+                  {currentContent.features.map((featureindex) => (
                     <span
                       key={index}
                       className="px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full text-sm font-semibold text-gray-700"
@@ -189,7 +190,7 @@ export default function NewContentCarousel() {
 
         {/* Dots Navigation */}
         <div className="flex justify-center mt-8 space-x-2">
-          {contentSlides.map((_, index) => (
+          {contentSlides.map((_index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
@@ -208,7 +209,7 @@ export default function NewContentCarousel() {
             Quick Access to All Content
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {contentSlides.map((slide, index) => (
+            {contentSlides.map((slideindex) => (
               <button
                 key={slide.id}
                 onClick={() => goToSlide(index)}

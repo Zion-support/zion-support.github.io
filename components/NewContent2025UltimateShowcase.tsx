@@ -1,218 +1,231 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Brain } from 'lucide-react';
 
 const NewContent2025UltimateShowcase = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-blue-600" />,
-      title: "AI-Powered Intelligence",
-      description: "Revolutionary AI systems that adapt and learn from your business patterns",
-      stats: "500% ROI Increase"
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-600" />,
-      title: "Lightning-Fast Automation",
-      description: "Automate complex workflows in seconds, not hours",
-      stats: "90% Time Savings"
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-600" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with zero-trust architecture",
-      stats: "99.9% Uptime"
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-600" />,
-      title: "Global Scalability",
-      description: "Scale your operations across 50+ countries instantly",
-      stats: "10M+ Users"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "CEO, TechCorp",
-      content: "This platform transformed our entire operation. We've seen 300% growth in just 6 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "CTO, InnovateLabs",
-      content: "The AI capabilities are mind-blowing. It's like having a team of experts working 24/7.",
-      rating: 5
-    },
-    {
-      name: "Emily Watson",
-      role: "VP Operations, GlobalTech",
-      content: "Implementation was seamless and the results exceeded all expectations.",
-      rating: 5
-    }
-  ];
-
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
-      className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white"
-    >
+    <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={isVisible ? { scale: 1 } : {}}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-sm font-medium mb-6"
-          >
-            <Star className="w-4 h-4 mr-2" />
-            NEW: Ultimate 2025 Showcase
-          </motion.div>
-          
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent"
-          >
-            Revolutionary AI Solutions
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              for 2025 & Beyond
-            </span>
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl text-blue-100 max-w-3xl mx-auto"
-          >
-            Experience the future of business automation with our cutting-edge AI platform. 
-            Join thousands of companies already transforming their operations.
-          </motion.p>
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🚀 NEW IN 2025</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Ultimate Content Showcase
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover revolutionary AI technologies, quantum computing breakthroughs, 
+            and autonomous systems that are reshaping the future of business and technology.
+          </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* AI Revolution 2025 */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold mb-4">AI Revolution 2025</h3>
+            <p className="text-gray-200 mb-6">
+              Explore cutting-edge artificial intelligence solutions that are transforming 
+              businesses worldwide with unprecedented automation and intelligence.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Autonomous Business Operations
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                Advanced Neural Networks
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                Predictive Analytics
+              </div>
+            </div>
+            <Link 
+              href="/ai-2025"
+              className="inline-flex items-center text-white bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
             >
-              <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
+              Explore AI 2025 →
+            </Link>
+          </div>
+
+          {/* Quantum Computing */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
+            <p className="text-gray-200 mb-6">
+              Dive into the quantum realm where traditional computing limitations 
+              are shattered by quantum supremacy and quantum advantage.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                Quantum Neural Networks
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-blue-100 mb-4">{feature.description}</p>
-              <div className="text-sm font-bold text-green-400">{feature.stats}</div>
-            </motion.div>
-          ))}
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                Quantum Cryptography
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
+                Quantum Machine Learning
+              </div>
+            </div>
+            <Link 
+              href="/quantum-computing-2026"
+              className="inline-flex items-center text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Explore Quantum →
+            </Link>
+          </div>
+
+          {/* Neural Interfaces */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
+            <p className="text-gray-200 mb-6">
+              Experience the future of human-computer interaction through 
+              advanced neural interface technologies and brain-computer interfaces.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                Brain-Computer Interfaces
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
+                Neural Implants
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
+                Cognitive Enhancement
+              </div>
+            </div>
+            <Link 
+              href="/neural-interface-revolution-2026"
+              className="inline-flex items-center text-white bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300"
+            >
+              Explore Neural →
+            </Link>
+          </div>
+
+          {/* Autonomous Systems */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold mb-4">Autonomous Systems</h3>
+            <p className="text-gray-200 mb-6">
+              Discover self-governing systems that operate independently, 
+              making intelligent decisions without human intervention.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                Autonomous Vehicles
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                Smart Infrastructure
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                Autonomous Drones
+              </div>
+            </div>
+            <Link 
+              href="/autonomous-systems-2026"
+              className="inline-flex items-center text-white bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-300"
+            >
+              Explore Autonomous →
+            </Link>
+          </div>
+
+          {/* Synthetic Intelligence */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">🧬</div>
+            <h3 className="text-2xl font-bold mb-4">Synthetic Intelligence</h3>
+            <p className="text-gray-200 mb-6">
+              Explore artificially created intelligence systems that surpass 
+              human cognitive capabilities in specific domains.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                Artificial General Intelligence
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-violet-400 rounded-full mr-3"></span>
+                Synthetic Consciousness
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-rose-400 rounded-full mr-3"></span>
+                Digital Life Forms
+              </div>
+            </div>
+            <Link 
+              href="/synthetic-intelligence-2026"
+              className="inline-flex items-center text-white bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300"
+            >
+              Explore Synthetic →
+            </Link>
+          </div>
+
+          {/* Business Transformation */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">💼</div>
+            <h3 className="text-2xl font-bold mb-4">Business Transformation</h3>
+            <p className="text-gray-200 mb-6">
+              Transform your business with cutting-edge technologies and 
+              revolutionary approaches to digital transformation.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-amber-400 rounded-full mr-3"></span>
+                Digital Transformation
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-lime-400 rounded-full mr-3"></span>
+                Process Automation
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>
+                Enterprise Solutions
+              </div>
+            </div>
+            <Link 
+              href="/business-transformation-2026-ultimate"
+              className="inline-flex items-center text-white bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-600 transition-all duration-300"
+            >
+              Transform Business →
+            </Link>
+          </div>
         </div>
 
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 mb-16 border border-white/20"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">50K+</div>
-              <div className="text-blue-200">Active Users</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-blue-200">Uptime</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500%</div>
-              <div className="text-blue-200">Average ROI</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-blue-200">Support</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-blue-100 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-blue-200 text-sm">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join the AI revolution and see why thousands of companies choose our platform.
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
+            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Future?</h3>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join thousands of forward-thinking organizations already leveraging 
+              these revolutionary technologies to achieve unprecedented success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-colors duration-300 group"
+                href="/services"
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
               >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                Get Started Today
               </Link>
               <Link
-                href="/demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-colors duration-300"
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
               >
-                Watch Demo
+                Schedule Consultation
               </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

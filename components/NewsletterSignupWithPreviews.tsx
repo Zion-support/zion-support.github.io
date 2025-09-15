@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 interface ContentPreview {
@@ -42,16 +43,16 @@ const contentPreviews: ContentPreview[] = [
 ];
 
 export default function NewsletterSignupWithPreviews() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -66,10 +67,10 @@ export default function NewsletterSignupWithPreviews() {
             Welcome to the Revolution!
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            You're now subscribed to our revolutionary AI insights newsletter. Get ready for breakthrough content delivered directly to your inbox.
+            'You', 're now subscribed to our revolutionary AI insights newsletter. Get ready for breakthrough content delivered directly to your inbox.
           </p>
           <div className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 p-6 rounded-xl border border-green-500/30">
-            <h3 className="text-2xl font-bold mb-4 text-green-400">What's Next?</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-400">'What', 's Next?</h3>
             <div className="space-y-3 text-left">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -104,7 +105,7 @@ export default function NewsletterSignupWithPreviews() {
               Join the AI Revolution
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get exclusive access to revolutionary AI content, breakthrough technologies, and success stories delivered directly to your inbox.
+              Get exclusive access to revolutionary AI contentbreakthrough technologiesand success stories delivered directly to your inbox.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -139,14 +140,14 @@ export default function NewsletterSignupWithPreviews() {
               </button>
 
               <p className="text-sm text-gray-400">
-                By subscribing, you agree to receive revolutionary AI content and breakthrough insights. 
+                By subscribingyou agree to receive revolutionary AI content and breakthrough insights. 
                 Unsubscribe anytime with one click.
               </p>
             </form>
 
             {/* Benefits */}
             <div className="mt-8 space-y-4">
-              <h3 className="text-xl font-bold text-cyan-400">What You'll Get:</h3>
+              <h3 className="text-xl font-bold text-cyan-400">What 'You', 'll Get:</h3>
               <div className="space-y-2">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -174,7 +175,7 @@ export default function NewsletterSignupWithPreviews() {
               Featured Revolutionary Content
             </h3>
             <div className="space-y-6">
-              {contentPreviews.map((content, index) => (
+              {contentPreviews.map((contentindex) => (
                 <Link key={index} href={content.href} className="group block">
                   <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-600/30 hover:border-cyan-500/60 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/20">
                     <div className="flex items-start justify-between mb-4">

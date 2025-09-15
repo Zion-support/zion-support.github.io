@@ -19,7 +19,8 @@ export function SignUpForm() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    name: ""});
+    name: "",
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
@@ -41,7 +42,7 @@ export function SignUpForm() {
 
     const errors: { email?: string; password?: string; name?: string } = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required';
@@ -69,7 +70,8 @@ export function SignUpForm() {
       setShowVerificationMessage(false); // Reset verification message
       if (signupMode) {
         const result = await signUp(formData.email, formData.password, {
-          name: formData.name});
+          name: formData.name,
+        });
         
         if (result?.error) {
           throw new Error(result.error as any); // Cast to any if type is AuthError

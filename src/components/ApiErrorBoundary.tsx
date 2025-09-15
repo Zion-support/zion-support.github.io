@@ -31,13 +31,15 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       error: null,
       errorInfo: null,
       isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true};
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
+    };
   }
 
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
     return {
       hasError: true,
-      error};
+      error,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
@@ -51,7 +53,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
     this.setState({
       error,
-      errorInfo});
+      errorInfo,
+    });
 
     logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
   }
@@ -102,7 +105,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
           hasError: false,
           error: null,
           errorInfo: null,
-          isRetrying: false});
+          isRetrying: false,
+        });
       }, 500);
     } catch (retryError) {
       logErrorToProduction('Retry failed:', { data: retryError });

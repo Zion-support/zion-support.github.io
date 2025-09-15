@@ -2,68 +2,75 @@
 
 ## Overview
 
-The Zion Tech Group API provides comprehensive access to our AI-powered enterprise solutions.
+This document describes the API endpoints and their usage.
+
+## Base URL
+
+```
+https://ziontechgroup.com/api
+```
 
 ## Authentication
 
-All API requests require authentication using API keys or OAuth 2.0.
+Most endpoints require authentication. Include your API key in the request headers:
 
-```bash
-curl -H "Authorization: Bearer YOUR_API_KEY" \
-     https://api.ziontechgroup.com/v1/endpoint
+```
+Authorization: Bearer YOUR_API_KEY
 ```
 
 ## Endpoints
 
-### AI Services
+### Health Check
 
-#### Autonomous Systems
-- `POST /api/v1/autonomous/systems` - Create autonomous system
-- `GET /api/v1/autonomous/systems` - List autonomous systems
-- `PUT /api/v1/autonomous/systems/{id}` - Update system
+Check the health of the API.
 
-#### AI Agents
-- `POST /api/v1/agents` - Deploy AI agent
-- `GET /api/v1/agents` - List agents
-- `DELETE /api/v1/agents/{id}` - Remove agent
+```
+GET /api/health
+```
 
-### Enterprise Solutions
+**Response:**
+```json
+{
+  "status": "healthy",
+  "timestamp": "2024-01-01T00:00:00.000Z",
+  "version": "1.0.0"
+}
+```
 
-#### Business Operations
-- `POST /api/v1/operations/automate` - Automate business process
-- `GET /api/v1/operations/analytics` - Get operation analytics
+### Contact Form
 
-#### Customer Data
-- `GET /api/v1/customers/insights` - Get customer insights
-- `POST /api/v1/customers/segment` - Create customer segment
+Submit a contact form.
 
-## Response Format
+```
+POST /api/contact
+```
 
-All API responses follow this format:
+**Request Body:**
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "message": "Hello, I'm interested in your services."
+}
+```
 
+**Response:**
 ```json
 {
   "success": true,
-  "data": {
-    // Response data
-  },
-  "meta": {
-    "timestamp": "2025-01-17T10:30:00Z",
-    "request_id": "req_123456789"
-  }
+  "message": "Message sent successfully"
 }
 ```
 
 ## Error Handling
 
-Errors are returned with appropriate HTTP status codes:
+All errors follow a consistent format:
 
 ```json
 {
-  "success": false,
   "error": {
     "code": "VALIDATION_ERROR",
-    "message": "Invalid input parameters",
+    "message": "Invalid input data",
     "details": {
       "field": "email",
       "reason": "Invalid email format"
@@ -71,3 +78,17 @@ Errors are returned with appropriate HTTP status codes:
   }
 }
 ```
+
+## Rate Limiting
+
+API requests are rate limited to 100 requests per minute per IP address.
+
+## Status Codes
+
+- `200` - Success
+- `400` - Bad Request
+- `401` - Unauthorized
+- `403` - Forbidden
+- `404` - Not Found
+- `429` - Too Many Requests
+- `500` - Internal Server Error

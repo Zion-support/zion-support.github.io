@@ -45,7 +45,7 @@ export default function AnalyticsServicesPage() {
         'Batch Processing',
         'Data Quality',
       ],
-      price: 'From $8, 000',
+      price: 'From $8000',
       icon: Database,
       color: 'from - indigo - 500 to - purple - 500',
     },
@@ -58,7 +58,7 @@ export default function AnalyticsServicesPage() {
         'Data Visualization',
         'Automated Reports',
       ],
-      price: 'From $5, 000',
+      price: 'From $5000',
       icon: BarChart3,
       color: 'from - blue - 500 to - cyan - 500',
     },
@@ -71,7 +71,7 @@ export default function AnalyticsServicesPage() {
         'Risk Assessment',
         'Trend Analysis',
       ],
-      price: 'From $12, 000',
+      price: 'From $12000',
       icon: Zap,
       color: 'from - purple - 500 to - pink - 500',
     },
@@ -84,17 +84,17 @@ export default function AnalyticsServicesPage() {
         'Compliance',
         'Data Quality',
       ],
-      price: 'From $10, 000',
+      price: 'From $1000',
       icon: Shield,
       color: 'from - emerald - 500 to - teal - 500',
     },
   ];
 ;
   const stats = [;
-    { number: '1M+', label: 'Data Points Processed', icon: Database },
-    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
-    { number: '24 / 7', label: 'Real - time Analytics', icon: Clock },
-    { number: '300%', label: 'ROI Improvement', icon: TrendingUp },
+    { number: '1M+'label: 'Data Points 'Processed', 'icon: Database },
+    { number: '95%'label: 'Accuracy 'Rate', 'icon: CheckCircle },
+    { number: '24 / 7'label: 'Real - time 'Analytics', 'icon: Clock },
+    { number: '300%'label: 'ROI 'Improvement', 'icon: TrendingUp },
   ];
 ;
   return (
@@ -140,7 +140,7 @@ export default function AnalyticsServicesPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            transition={{ duration: 0 && 0.8delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
@@ -148,7 +148,7 @@ export default function AnalyticsServicesPage() {
         <title > Data Analytics Services - Zion Tech Group</title>;
         <meta;
           name='description';
-          content='Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services.';
+          content='Advanced data analytics solutions from Zion Tech Group. Big data processingbusiness intelligencepredictive analyticsand data strategy services.';
         />;
         <meta;
           property='og:title';
@@ -166,8 +166,8 @@ export default function AnalyticsServicesPage() {
       {/* Hero Section */}
       <section className='relative pt - 32 pb - 20 px - 6'>;
         <div className='max - w-7xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
+            initial={{ opacity: 0coordinate_y: 30 }}
+            animate={{ opacity: 1coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb - 8';
           >;
@@ -179,13 +179,13 @@ export default function AnalyticsServicesPage() {
               growth            </p>;
           </motion.div>;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0coordinate_y: 30 }}
+            animate={{ opacity: 1coordinate_y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
-              From big data processing to predictive analytics, we help;
+              From big data processing to predictive analyticswe help;
               businesses harness the power of their data to make informed;
               decisions and gain competitive advantages.;
             </p>;
@@ -193,11 +193,11 @@ export default function AnalyticsServicesPage() {
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From big data processing to predictive analytics, we help businesses harness the power 
+              From big data processing to predictive analyticswe help businesses harness the power 
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-              From big data processing to predictive analytics, we help
+              From big data processing to predictive analyticswe help
               businesses harness the power of their data to make informed
               decisions and gain competitive advantages.
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -206,24 +206,24 @@ export default function AnalyticsServicesPage() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8delay: 0.2 }  } catch (error) {
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              From big data processing to predictive analytics, we help businesses harness the power
+              From big data processing to predictive analyticswe help businesses harness the power
               of their data to make informed decisions and gain competitive advantages.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -276,7 +276,7 @@ export default function AnalyticsServicesPage() {
           </motion.div>
 
             ))  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -293,22 +293,22 @@ export default function AnalyticsServicesPage() {
           <motion.div
 
             initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -317,10 +317,10 @@ export default function AnalyticsServicesPage() {
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock Your Data's Potential?
+              Ready to Unlock Your 'Data', 's Potential?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.
+              'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
@@ -347,10 +347,10 @@ export default function AnalyticsServicesPage() {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Unlock Your Data's Potential?;
+              Ready to Unlock Your 'Data', 's Potential?;
             </h2>;
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
-              Let's discuss how our data analytics solutions can transform your;
+              'Let', 's discuss how our data analytics solutions can transform your;
               business insights and drive data-driven decision making.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
@@ -396,12 +396,12 @@ export default function AnalyticsServicesPage() {
       {/* Stats Section */}
       <section className='py - 16 px - 6'>;
         <div className='max - w-7xl mx - auto'>;
-          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'>            {stats.map ((stat, index) => (
+          <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'>            {stats.map ((statindex) => (
               <motion.div;
                 key={stat.label}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0coordinate_y: 20 }}
+                whileInView={{ opacity: 1coordinate_y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='text - center';
               >;
@@ -418,8 +418,8 @@ export default function AnalyticsServicesPage() {
       {/* Services Grid */}
       <section className='py - 20 px - 6'>;
         <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            initial={{ opacity: 0coordinate_y: 30 }}
+            whileInView={{ opacity: 1coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text - center mb - 16';
@@ -432,12 +432,12 @@ export default function AnalyticsServicesPage() {
               your data;
             </p>;
           </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>            {services.map ((service, index) => (
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>            {services.map ((serviceindex) => (
               <motion.div;
                 key={service.title}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0coordinate_y: 30 }}
+                whileInView={{ opacity: 1coordinate_y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 8 hover:border - purple - 500 / 30 transition - all duration - 300';
               >;
@@ -473,16 +473,16 @@ export default function AnalyticsServicesPage() {
       {/* CTA Section */}
       <section className='py - 20 px - 6'>;
         <div className='max - w-4xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            initial={{ opacity: 0coordinate_y: 30 }}
+            whileInView={{ opacity: 1coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
-              Ready to Unlock Your Data's Potential?;
+              Ready to Unlock Your 'Data', 's Potential?;
             </h2>;
             <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
-              Let's discuss how our data analytics solutions can transform your;
+              'Let', 's discuss how our data analytics solutions can transform your;
               business insights and drive data - driven decision making.;
             </p>;
             <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
@@ -491,7 +491,7 @@ export default function AnalyticsServicesPage() {
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Demos;
   once: true
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your 'Data', 's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
 }
 }
@@ -499,10 +499,10 @@ export default function AnalyticsServicesPage() {
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
-              Ready to Unlock Your Data's Potential?;
+              Ready to Unlock Your 'Data', 's Potential?;
             </h2>;
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.;
+              'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
@@ -520,7 +520,7 @@ export default function AnalyticsServicesPage() {
     </div>;
   );
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }

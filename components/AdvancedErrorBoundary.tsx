@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React{ ComponentErrorInfoReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: ErrorerrorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -14,17 +15,17 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class AdvancedErrorBoundary extends Component<Props, State> {
+class AdvancedErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: truerror };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -32,23 +33,23 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:'errorInfo);
     }
 
     // Call custom error handler if provided
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(errorInfo);
 
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(error, errorInfo);
+      // You can integrate with services like SentryLogRocketc.
+      this.logErrorToService(errorInfo);
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (error: ErrorerrorInfo: ErrorInfo) => {
     // Example: Send to external logging service
     try {
-      fetch('/api/log-error', {
+      fetch('/api/log-error'{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,12 +69,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
         }),
       }).catch(console.error);
     } catch (e) {
-      console.error('Failed to log error:', e);
+      console.error('Failed to log error:'e);
     }
   };
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: falserror: undefinederrorInfo: undefined });
   };
 
   private handleReload = () => {
@@ -110,7 +111,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              'We', 're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -156,7 +157,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             </div>
 
             <div className="mt-6 text-xs text-gray-500">
-              <p>If this problem persists, please contact our support team.</p>
+              <p>If this problem persistsplease contact our support team.</p>
               <p className="mt-1">
                 Error ID: {this.state.error?.name || 'Unknown'} - {Date.now()}
               </p>
@@ -172,29 +173,29 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
 // Hook for functional components to catch errors
 export const useErrorHandler = () => {
-  const [error, setError] = React.useState<Error | null>(null);
+  const [errorsetError] = React.useState<Error | null>(null);
 
   const resetError = React.useCallback(() => {
     setError(null);
-  }, []);
+  }[]);
 
   const captureError = React.useCallback((error: Error) => {
     setError(error);
-  }, []);
+  }[]);
 
   React.useEffect(() => {
     if (error) {
       throw error;
     }
-  }, [error]);
+  }[error]);
 
-  return { captureError, resetError };
+  return { captureErroresetError };
 };
 
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
+  errorBoundaryProps?: Omit<'Props', 'children'>
 ) => {
   const WrappedComponent = (props: P) => (
     <AdvancedErrorBoundary {...errorBoundaryProps}>

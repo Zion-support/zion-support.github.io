@@ -4,10 +4,17 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  ArrowRightStarUsersAwardClock
+  BrainAtomShieldRocketZap,
+  TrendingUpGlobeCpuDatabaseCloud,
+  LockPaletteTargetCheckCircleSparkles
+=======
   ArrowRight, Star, Users, Award, Clock, 
   Brain, Atom, Shield, Rocket, Zap,
   TrendingUp, Globe, Cpu, Database, Cloud,
   Lock, Palette, Target, CheckCircle, Sparkles
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 
 // Import new service data
@@ -17,9 +24,15 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
 
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
+<<<<<<< HEAD
+  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(03);
+  const featuredIT = realITServices2025.filter(service => service.popular).slice(03);
+  const featuredAI = realAIServices2025.filter(service => service.popular).slice(03);
+=======
   const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);
   const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3);
   const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Layout>
@@ -54,7 +67,11 @@ const Homepage2037: React.FC = () => {
               </div>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+                Transform your business with cutting-edge AIquantum computingand enterprise solutions. 
+=======
                 Transform your business with cutting-edge AI, quantum computing, and enterprise solutions. 
+>>>>>>> origin/auto/autonomy-17186719616
                 We deliver innovative technology that drives business transformation and shapes the future.
               </p>
               
@@ -105,7 +122,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
               >
@@ -117,7 +138,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.2 }}
+=======
                 transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
               >
@@ -129,7 +154,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.3 }}
+=======
                 transition={{ duration: 0.8, delay: 0.3 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
               >
@@ -141,7 +170,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.4 }}
+=======
                 transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
               >
@@ -175,12 +208,20 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+              {featuredAI.map((serviceindex) => (
+=======
               {featuredAI.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2026
@@ -205,7 +246,11 @@ const Homepage2037: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center mt-12"
             >
@@ -241,12 +286,20 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+              {featuredIT.map((serviceindex) => (
+=======
               {featuredIT.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2026
@@ -271,7 +324,11 @@ const Homepage2037: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center mt-12"
             >
@@ -307,12 +364,20 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+              {featuredMicroSaas.map((serviceindex) => (
+=======
               {featuredMicroSaas.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2026
@@ -337,7 +402,11 @@ const Homepage2037: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center mt-12"
             >
@@ -373,7 +442,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
               >
@@ -381,13 +454,21 @@ const Homepage2037: React.FC = () => {
                   <Brain className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
+<<<<<<< HEAD
+                <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adaptevolveand transform your business operations</p>
+=======
                 <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p>
+>>>>>>> origin/auto/autonomy-17186719616
               </motion.div>
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.2 }}
+=======
                 transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
               >
@@ -401,7 +482,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.3 }}
+=======
                 transition={{ duration: 0.8, delay: 0.3 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group"
               >
@@ -415,7 +500,11 @@ const Homepage2037: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.4 }}
+=======
                 transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group"
               >
@@ -447,7 +536,11 @@ const Homepage2037: React.FC = () => {
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+                  Join the future of technology with Zion Tech Group. 'Let', 's build something extraordinary together and shape the future of your industry.
+=======
                   Join the future of technology with Zion Tech Group. Let's build something extraordinary together and shape the future of your industry.
+>>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

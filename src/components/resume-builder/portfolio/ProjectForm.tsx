@@ -12,7 +12,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from '@/components/ui/form';
+  FormMessage,
+} from '@/components/ui/form';
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
@@ -30,7 +31,8 @@ const projectSchema = z.object({
   demo_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional(),
-  pdf_url: z.string().optional()});
+  pdf_url: z.string().optional(),
+});
 
 type ProjectFormValues = z.infer<typeof projectSchema>;
 
@@ -55,7 +57,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       image_url: project?.image_url || '',
       github_url: project?.github_url || '',
       demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || ''}
+      pdf_url: project?.pdf_url || '',
+    }
   });
   
   const onSubmit = async (data: ProjectFormValues) => {
@@ -72,7 +75,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         image_url: data.image_url,
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
-        pdf_url: data.pdf_url};
+        pdf_url: data.pdf_url,
+      };
       
       let success = false;
       

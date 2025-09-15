@@ -66,7 +66,9 @@ function restorePage(pagePath) {
     let backupContent = fs.readFileSync(backupPath, 'utf8');
     
     // Handle merge conflicts by taking the content after the conflict markers
-    if (backupContent.includes('      const parts = backupContent.split('      if (parts.length > 1) {
+    if (backupContent.includes('<<<<<<< HEAD')) {
+      const parts = backupContent.split('=======');
+      if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0];
       }

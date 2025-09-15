@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  DollarSign
   Sparkles,
   X,
   Play,
@@ -17,13 +18,13 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
+    const timer = setTimeout(() => setIsVisible(true)1500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -38,7 +39,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -64,9 +65,9 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
               {/* Content */}
               <div className="flex-1 text-center lg:text-left">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.2 }}
                   className="flex items-center justify-center lg:justify-start gap-3 mb-3"
                 >
                   <div className="flex items-center gap-1">
@@ -85,30 +86,30 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                 </motion.div>
 
                 <motion.h2
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 }}
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
                 >
                   🏆 Business Success Stories 2025
                 </motion.h2>
 
                 <motion.p
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.4 }}
                   className="text-green-100 text-lg mb-4 max-w-2xl"
                 >
                   Discover how leading companies achieved 
-                  <span className="font-semibold text-white"> 350% average ROI</span>, 
-                  <span className="font-semibold text-white"> 2.5M+ hours saved</span>, and 
+                  <span className="font-semibold text-white"> 350% average ROI</span>
+                  <span className="font-semibold text-white"> 2.5M+ hours saved</span>and 
                   <span className="font-semibold text-white"> $50M+ in cost savings</span> with our solutions.
                 </motion.p>
 
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.5 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
                   <div className="flex items-center gap-2 text-sm text-green-100">
@@ -126,9 +127,9 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.6 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >
                   <button className="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl">
@@ -145,9 +146,9 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
 
               {/* Success Metrics */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                initial={{ opacity: 0x: 20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row lg:flex-col gap-4"
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">

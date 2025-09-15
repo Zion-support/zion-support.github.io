@@ -7,7 +7,7 @@ export default function BlogPage() {
       title: 'The Future of AI in Business: 2025 and Beyond',
       excerpt: 'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.',
       category: 'AI & Machine Learning',
-      date: 'August 26, 2025',
+      date: 'August 262025',
       readTime: '5 min read',
       author: 'Zion Tech Group Team',
       slug: 'future-of-ai-business-2025',
@@ -17,7 +17,7 @@ export default function BlogPage() {
       title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
       excerpt: 'Understanding what quantum computing can actually deliver today and what\'s still in the realm of science fiction.',
       category: 'Quantum Computing',
-      date: 'August 24, 2025',
+      date: 'August 242025',
       readTime: '7 min read',
       author: 'Quantum Team',
       slug: 'quantum-computing-hype-reality',
@@ -27,7 +27,7 @@ export default function BlogPage() {
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt: 'How AI is both creating new security challenges and providing innovative solutions to protect businesses.',
       category: 'Cybersecurity',
-      date: 'August 22, 2025',
+      date: 'August 22025',
       readTime: '6 min read',
       author: 'Security Team',
       slug: 'cybersecurity-ai-threats-solutions',
@@ -35,9 +35,9 @@ export default function BlogPage() {
     },
     {
       title: 'Cloud-Native Architecture: Best Practices for 2025',
-      excerpt: 'Essential strategies for building scalable, secure, and efficient cloud-native applications.',
+      excerpt: 'Essential strategies for building scalablesecureand efficient cloud-native applications.',
       category: 'Cloud & Infrastructure',
-      date: 'August 20, 2025',
+      date: 'August 2025',
       readTime: '8 min read',
       author: 'Cloud Team',
       slug: 'cloud-native-architecture-best-practices-2025',
@@ -47,7 +47,7 @@ export default function BlogPage() {
       title: 'The Rise of Edge Computing: Bringing AI Closer to Users',
       excerpt: 'How edge computing is revolutionizing AI deployment and improving user experiences.',
       category: 'Edge Computing',
-      date: 'August 18, 2025',
+      date: 'August 182025',
       readTime: '4 min read',
       author: 'Infrastructure Team',
       slug: 'rise-edge-computing-ai-users',
@@ -57,7 +57,7 @@ export default function BlogPage() {
       title: 'Sustainable Technology: Building Green AI Solutions',
       excerpt: 'Strategies for developing environmentally conscious AI and technology solutions.',
       category: 'Sustainability',
-      date: 'August 16, 2025',
+      date: 'August 162025',
       readTime: '6 min read',
       author: 'Innovation Team',
       slug: 'sustainable-technology-green-ai-solutions',
@@ -82,8 +82,8 @@ export default function BlogPage() {
     <>
       <Head>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Stay updated with the latest insights on AIquantum computingcybersecurityand emerging technologies from Zion Tech Group." />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -95,7 +95,7 @@ export default function BlogPage() {
               Insights & Thought Leadership
             </h1>
             <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-              Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the future of technology.
+              Stay ahead of the curve with expert insights on AIquantum computingcybersecurityand the future of technology.
             </p>
           </div>
         </section>
@@ -142,7 +142,7 @@ export default function BlogPage() {
         <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
+              {categories.map((categoryindex) => (
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -162,7 +162,7 @@ export default function BlogPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => !post.featured).map((post, index) => (
+              {blogPosts.filter(post => !post.featured).map((postindex) => (
                 <article key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover:bg-opacity-20 transition-all">
                   <div className="mb-4">
                     <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-300">
@@ -205,7 +205,7 @@ export default function BlogPage() {
               Stay Updated
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Get the latest insights delivered to your inbox. No spam, just valuable content.
+              Get the latest insights delivered to your inbox. No spamjust valuable content.
             </p>
             <div className="max-w-md mx-auto">
               <div className="flex flex-col sm:flex-row gap-4">

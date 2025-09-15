@@ -26,7 +26,8 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-  redirectUrl}: PaymentButtonProps) {
+  redirectUrl,
+}: PaymentButtonProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const router = useRouter();
@@ -35,7 +36,8 @@ export function PaymentButton({
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to make a purchase."});
+        description: "Please sign in to make a purchase.",
+      });
 
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`);
       router.push(`/auth/login?returnTo=${returnTo}`);
@@ -57,7 +59,9 @@ export function PaymentButton({
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href}});
+          cancelUrl: window.location.href,
+        },
+      });
       
       if (error) {
         throw error;
@@ -76,7 +80,8 @@ export function PaymentButton({
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {

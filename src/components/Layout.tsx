@@ -1,33 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Search as SearchIcon } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import Search from './Search';
-import ScrollToTop from './ScrollToTop';
-
-interface NavItem {
-  label: string;
-  href: string;
-  children?: NavItem[];
-  icon?: React.ComponentType<{ className?: string }>;
+import React, { useState } from 'react';
+import { ReactNode } from 'react';
+interface LayoutProps {
+  children: ReactNode;
 }
-
 const navigation: NavItem[] = [
-  { label: 'Home', href: '/', icon: Home },
-  { 
-    label: 'Services', 
+  { label: 'Home', href: '/' },
+  {
+    label: 'Services',
     href: '/services',
-    icon: Briefcase,
     children: [
-      { label: 'AI Systems', href: '/services#ai' },
-      { label: 'Cloud Platforms', href: '/services#cloud' },
+      { label: 'AI & Machine Learning', href: '/services#ai' },
+      { label: 'Quantum Technology', href: '/services#quantum' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
-      { label: 'Custom Software', href: '/services#saas' }
+      { label: 'Cloud & Infrastructure', href: '/services#cloud' },
+      { label: 'Blockchain & Web3', href: '/services#blockchain' },
+      { label: 'IoT & Edge Computing', href: '/services#iot' },
+      { label: 'Biotechnology & Healthcare', href: '/services#biotech' },
+      { label: 'Space Technology', href: '/services#space' },
+      { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' },
+      { label: 'FinTech & Wealth Management', href: '/services#fintech' },
+      { label: 'Consulting & Strategy', href: '/services#consulting' },
+      { label: 'All Services', href: '/services' }
     ]
   },
-  { label: 'Blog', href: '/blog', icon: FileText },
-  { label: 'About', href: '/about', icon: Building },
-  { label: 'Contact', href: '/contact', icon: Phone }
+  { label: 'Contact', href: '/contact' }
 ];
 
 const sidebarNavigation: NavItem[] = [
@@ -73,116 +69,83 @@ const sidebarNavigation: NavItem[] = [
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
   const isActive = (href: string) => location.pathname === href;
 
+  // Handle scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setSidebarOpen(false);
+    setDropdownOpen(null);
+  }, [location]);
+
+  const toggleDropdown = (label: string) => {
+    setDropdownOpen(dropdownOpen === label ? null : label);
+  };
+
   const toggleSidebarDropdown = (label: string) => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900 transition-colors duration-300">
+    <div className="min-h-screen bg-zion-slate-dark">
       {/* Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 shadow-lg' 
-          : 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700'
+        isScrolled ? 'bg-zion-slate-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center space-x-2 group">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-=======
-      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-          <div className="flex h-16 items-center justify-between">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center space-x-2 group" aria-label="Zion Tech Group Homepage">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span className="text-white font-bold text-sm">Z</span>
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-purple-700 transition-all duration-200">
-                  Zion Tech Group
-                </span>
-              </Link>
-            </div>
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech</span>
+            </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                {navigation.map((item) => (
-                  <div key={item.label} className="relative group">
-                    {item.children ? (
-                      <div
-                        className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors"
-                        onMouseEnter={() => setDropdownOpen(item.label)}
-                        onMouseLeave={() => setDropdownOpen(null)}
-                        role="button"
-                        tabIndex={0}
-                        aria-expanded={dropdownOpen === item.label}
-                        aria-haspopup="true"
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            setDropdownOpen(dropdownOpen === item.label ? null : item.label);
-                          }
-                        }}
-                      >
-                        {item.icon && <item.icon className="w-4 h-4 mr-1" />}
-                        <span>{item.label}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen === item.label ? 'rotate-180' : ''}`} />
-                      </div>
-                    ) : (
-                      <Link
-                        to={item.href}
-                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                          isActive(item.href)
-                            ? 'text-blue-600 bg-blue-50 shadow-sm'
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                        }`}
-                        aria-current={isActive(item.href) ? 'page' : undefined}
-                      >
-                        {item.icon && <item.icon className="w-4 h-4 mr-1" />}
-                        {item.label}
-                      </Link>
-                    )}
-                    
-                    {/* Enhanced Dropdown Menu */}
-                    {item.children && dropdownOpen === item.label && (
-                      <div 
-                        className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
-                        role="menu"
-                        aria-orientation="vertical"
-                        aria-labelledby={`${item.label}-button`}
-                      >
+            <nav className="hidden md:flex items-center space-x-8">
+              {navigation.map((item) => (
+                <div key={item.label} className="relative">
+                  {item.children ? (
+                    <button
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center space-x-1 text-zion-slate-light hover:text-white transition-colors"
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`transition-colors ${
+                        isActive(item.href) ? 'text-zion-cyan' : 'text-zion-slate-light hover:text-white'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+
+                  {/* Dropdown Menu */}
+                  {item.children && dropdownOpen === item.label && (
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-cyan/20 rounded-lg shadow-xl backdrop-blur-sm">
+                      <div className="py-2">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
                             to={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200"
-=======
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                            role="menuitem"
-                            onClick={() => setDropdownOpen(null)}
+                            className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 transition-colors"
                           >
                             {child.icon && <child.icon className="w-4 h-4" />}
                             <span>{child.label}</span>
@@ -195,42 +158,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
             </nav>
 
-            {/* CTA Button and Actions */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Right side actions */}
+            <div className="flex items-center space-x-4">
               <Search />
               <ThemeToggle />
+              
+              {/* Mobile menu button */}
               <button
-                onClick={() => setSidebarOpen(true)}
-                className="p-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-                title="Open Sidebar"
-              >
-                <Menu className="w-5 h-5" />
-              </button>
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
-                aria-label="Get started with Zion Tech Group"
-              >
-                <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Link>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-2">
-              <button
-                onClick={() => setSidebarOpen(true)}
-                className="text-gray-700 hover:text-blue-600 p-2"
-                title="Open Sidebar"
-              >
-                <Menu className="w-5 h-5" />
-              </button>
-              <button
-                type="button"
-                className="text-gray-700 hover:text-blue-600 p-2 transition-colors"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-expanded={mobileMenuOpen}
-                aria-label="Toggle mobile menu"
+                className="md:hidden p-2 text-zion-slate-light hover:text-white transition-colors"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -240,186 +176,185 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden" role="navigation" aria-label="Mobile navigation">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+          <div className="md:hidden bg-zion-slate-dark border-t border-zion-cyan/20">
+            <div className="px-4 py-2 space-y-1">
               {navigation.map((item) => (
                 <div key={item.label}>
                   {item.children ? (
-                    <div>
-                      <div className="text-gray-700 px-3 py-2 text-base font-medium">
-                        {item.label}
-                      </div>
-                      <div className="pl-4 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
-                            aria-label={`${child.label} - ${item.label}`}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                    <button
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
+                    >
+                      <span>{item.label}</span>
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
                   ) : (
                     <Link
                       to={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        isActive(item.href)
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      className={`block px-3 py-2 rounded-md transition-colors ${
+                        isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
                       }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      aria-current={isActive(item.href) ? 'page' : undefined}
                     >
-                      {item.label}
+                      {item.icon && <item.icon className="w-4 h-4" />}
+                      <span>{item.label}</span>
                     </Link>
+                  )}
+
+                  {/* Mobile Dropdown */}
+                  {item.children && dropdownOpen === item.label && (
+                    <div className="ml-4 mt-1 space-y-1">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.href}
+                          className="flex items-center space-x-3 px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
+                        >
+                          {child.icon && <child.icon className="w-4 h-4" />}
+                          <span>{child.label}</span>
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-                  onClick={() => setMobileMenuOpen(false)}
-                  aria-label="Get started with Zion Tech Group"
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
-            <div className="pt-4 space-y-3">
-              <div className="flex items-center justify-center">
-                <ThemeToggle />
-              </div>
-              <Link
-                to="/contact"
-                className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get Started
-              </Link>
             </div>
           </div>
-        </div>
+        )}
       </header>
 
+      {/* Sidebar */}
+      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-zion-slate-dark border-r border-zion-cyan/20 transform transition-transform duration-300 ease-in-out ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}>
+        <div className="flex items-center justify-between h-16 px-4 border-b border-zion-cyan/20">
+          <span className="text-white font-semibold">Navigation</span>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="p-2 text-zion-slate-light hover:text-white transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        
+        <nav className="px-4 py-4 space-y-2">
+          {sidebarNavigation.map((item) => (
+            <div key={item.label}>
+              {item.children ? (
+                <button
+                  onClick={() => toggleSidebarDropdown(item.label)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
+                >
+                  <div className="flex items-center space-x-3">
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.label}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-colors ${
+                    isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
+                  }`}
+                >
+                  {item.icon && <item.icon className="w-4 h-4" />}
+                  <span>{item.label}</span>
+                </Link>
+              )}
+
+              {/* Sidebar Dropdown */}
+              {item.children && sidebarDropdownOpen === item.label && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.label}
+                      to={child.href}
+                      className="flex items-center space-x-3 px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
+                    >
+                      {child.icon && <child.icon className="w-4 h-4" />}
+                      <span>{child.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      </div>
+
       {/* Main Content */}
-      <main className="flex-1" role="main">
+      <main className="pt-16">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white" role="contentinfo">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <footer className="bg-zion-slate-dark border-t border-zion-cyan/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
+                <span className="text-white font-bold text-xl">Zion Tech Group</span>
               </div>
-              <p className="text-slate-300 mb-4 max-w-md">
-                Building autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business from startup to enterprise.
+              <p className="text-zion-slate-light mb-4 max-w-md">
+                Leading technology solutions provider specializing in AI, cloud platforms, cybersecurity, and digital transformation.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                  <span className="sr-only">LinkedIn</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
+                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
-                  <span className="sr-only">Twitter</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                  </svg>
+                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
-                  <span className="sr-only">GitHub</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
+                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  <Youtube className="w-5 h-5" />
                 </a>
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Services</h3>
+              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li>
-                  <a href="/services#ai" className="text-slate-400 hover:text-white transition-colors">
-                    AI Systems
-                  </a>
-                </li>
-                <li>
-                  <a href="/services#cloud" className="text-slate-400 hover:text-white transition-colors">
-                    Cloud Platforms
-                  </a>
-                </li>
-                <li>
-                  <a href="/services#cybersecurity" className="text-slate-400 hover:text-white transition-colors">
-                    Cybersecurity
-                  </a>
-                </li>
-                <li>
-                  <a href="/services#saas" className="text-slate-400 hover:text-white transition-colors">
-                    Custom Software
-                  </a>
-                </li>
+                <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
+                <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About</Link></li>
+                <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
+                <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
               </ul>
             </div>
 
-            {/* Contact Info */}
+            {/* Support */}
             <div>
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Company</h3>
+              <h3 className="text-white font-semibold mb-4">Support</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link to="/" className="text-slate-400 hover:text-white transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services" className="text-slate-400 hover:text-white transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="text-slate-400 hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </li>
+                <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+                <li><Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors">System Status</Link></li>
+                <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Support</Link></li>
+                <li><Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Training</Link></li>
               </ul>
             </div>
           </div>
-        </aside>
 
-          <div className="mt-8 pt-8 border-t border-slate-800">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mt-8 pt-8 border-t border-slate-700">
-            <p className="text-slate-400 text-sm text-center">
-              © 2024 Zion Tech Group. All rights reserved.
+          <div className="border-t border-zion-cyan/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-zion-slate-light text-sm">
+              © 2025 Zion Tech Group. All rights reserved.
             </p>
-          </div>
-        </div>
-      </footer>
-=======
-              <p className="text-slate-400 text-sm">
-                © 2024 Zion Tech Group. All rights reserved.
-              </p>
-              <div className="mt-4 md:mt-0 flex space-x-6">
-                <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </a>
-              </div>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+                Cookie Policy
+              </Link>
             </div>
           </div>
         </div>

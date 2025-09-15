@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export interface EmergingTechBreakthrough2025 {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface EmergingTechBreakthrough2025 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
@@ -94,7 +100,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 5
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -147,7 +156,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 10
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Space Mining Operations Platform
   {
     id: 'space-mining-operations-platform',
@@ -200,7 +212,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 3
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum Robotics Platform
   {
     id: 'quantum-robotics-platform',
@@ -253,7 +268,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.9,
     reviews: 8
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -306,7 +324,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 6
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum Materials Discovery Platform
   {
     id: 'quantum-materials-discovery-platform',
@@ -359,7 +380,10 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.8,
     reviews: 9
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',

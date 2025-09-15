@@ -1,10 +1,11 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Zap, Target, Users, BarChart3, CheckCircle, Star } from 'lucide-react';
+ArrowRightTrendingUpZapTargetUsersBarChart3CheckCircleStar
 
 const UltimateBusinessTransformation2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeTransformation, setActiveTransformation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTransformationsetActiveTransformation] = useState(0);
 
   const transformations = [
     {
@@ -37,9 +38,9 @@ const UltimateBusinessTransformation2026PromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveTransformation((prev) => (prev + 1) % transformations.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentTransformationData = transformations[activeTransformation];
   const IconComponent = currentTransformationData.icon;
@@ -52,7 +53,7 @@ const UltimateBusinessTransformation2026PromotionBanner = () => {
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-green-400/40 rounded-full animate-pulse"
@@ -100,7 +101,7 @@ const UltimateBusinessTransformation2026PromotionBanner = () => {
                   {currentTransformationData.description}
                 </p>
                 <div className="flex gap-2">
-                  {transformations.map((_, index) => (
+                  {transformations.map((_index) => (
                     <div
                       key={index}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -114,7 +115,7 @@ const UltimateBusinessTransformation2026PromotionBanner = () => {
 
             {/* Transformation List */}
             <div className="space-y-4">
-              {transformations.map((transformation, index) => {
+              {transformations.map((transformationindex) => {
                 const IconComponent = transformation.icon;
                 return (
                   <div

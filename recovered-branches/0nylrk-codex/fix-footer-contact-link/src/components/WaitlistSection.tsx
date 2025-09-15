@@ -8,11 +8,19 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export function WaitlistSection() {
+<<<<<<< HEAD
+  const [emailsetEmail] = useState("");
+  const [namesetName] = useState("");
+  const [rolesetRole] = useState("");
+  const [agreeTermsetAgreeTerms] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+=======
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -22,7 +30,12 @@ export function WaitlistSection() {
       toast({
         variant: "destructive",
         title: "Missing information",
+<<<<<<< HEAD
         description: "Please fill all fields and agree to the terms."});
+=======
+        description: "Please fill all fields and agree to the terms.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       return;
     }
     
@@ -30,11 +43,20 @@ export function WaitlistSection() {
     
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+<<<<<<< HEAD
+      await new Promise(resolve => setTimeout(resolve1000));
       
       toast({
         title: "Success!",
         description: "Thank you for registering with Zion. We'll be in touch soon."});
+=======
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Success!",
+        description: "Thank you for registering with Zion. We'll be in touch soon.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Reset form
       setEmail("");
@@ -45,7 +67,12 @@ export function WaitlistSection() {
       toast({
         variant: "destructive",
         title: "Something went wrong",
+<<<<<<< HEAD
         description: "Please try again later."});
+=======
+        description: "Please try again later.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSubmitting(false);
     }
@@ -97,7 +124,11 @@ export function WaitlistSection() {
               <Label htmlFor="role">Your Role</Label>
               <Input
                 id="role"
+<<<<<<< HEAD
+                placeholder="IT ManagerDeveloperBusiness Owneretc."
+=======
                 placeholder="IT Manager, Developer, Business Owner, etc."
+>>>>>>> origin/auto/autonomy-17186719616
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light"

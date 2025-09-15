@@ -18,7 +18,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
-  rateType}) => {
+  rateType,
+}) => {
   if (isLoading) {
     return (
       <Card className="border border-dashed border-muted">
@@ -41,7 +42,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   const confidenceColor = {
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
-    Low: "bg-red-100 text-red-800"}[suggestion.confidence];
+    Low: "bg-red-100 text-red-800",
+  }[suggestion.confidence];
 
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">

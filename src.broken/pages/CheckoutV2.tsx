@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react',
+import { useForm } from 'react-hook-form',
+import { useNavigate, useSearchParams } from 'react-router-dom',
+import { Input } from '@/components/ui/input',
+import { safeStorage } from '@/utils/safeStorage',
+import { Button } from '@/components/ui/button',
+import { getStripe } from '@/utils/getStripe',
+=======
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -5,13 +14,60 @@ import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { getStripe } from '@/utils/getStripe';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage} from '@/components/ui/form';
+<<<<<<< HEAD
+  FormMessage} from '@/components/ui/form',
+import { useFeatureFlags } from '@/context/FeatureFlagContext',
+
+interface CartItem {
+  id: string,
+  name: string,
+  price: number,
+  quantity: number
+}
+
+interface CheckoutForm {
+  name: string,
+  email: string,
+  address: string,
+  city: string,
+  country: string
+}
+
+export default function CheckoutV2() {
+  const navigate = useNavigate(),
+  const [searchParams] = useSearchParams(),
+  const [items, setItems] = useState<CartItem[]>([]),
+  const form = useForm<CheckoutForm>({
+    defaultValues: { name: '', email: '', address: '', city: '', country: '' }}),
+  const { track } = useFeatureFlags(),
+
+  useEffect(() => {
+    const sku = searchParams.get('sku'),
+    if (sku) {
+      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]),
+      return,
+    }
+    const stored = safeStorage.getItem('cart'),
+    if (stored) {
+      try {
+        setItems(JSON.parse(stored) as CartItem[]),
+      } catch {
+        setItems([]),
+      }
+    }
+  }, [searchParams]),
+
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+=======
+  FormMessage,
+} from '@/components/ui/form';
 import { useFeatureFlags } from '@/context/FeatureFlagContext';
 
 interface CartItem {
@@ -34,7 +90,8 @@ export default function CheckoutV2() {
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' }});
+    defaultValues: { name: '', email: '', address: '', city: '', country: '' },
+  });
   const { track } = useFeatureFlags();
 
   useEffect(() => {
@@ -54,21 +111,44 @@ export default function CheckoutV2() {
   }, [searchParams]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
       const res = await fetch('/api/create-payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: subtotal })});
+<<<<<<< HEAD
+        body: JSON.stringify({ amount: subtotal })}),
+      const result = await res.json(),
+      if (!res.ok) throw new Error(result.error || 'Failed'),
+      const stripe = await getStripe(),
+=======
+        body: JSON.stringify({ amount: subtotal }),
+      });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
       const stripe = await getStripe();
+>>>>>>> origin/auto/autonomy-17186719616
       if (stripe && result.clientSecret) {
         const payment = await stripe.confirmCardPayment(result.clientSecret, {
           payment_method: {
             card: { token: 'tok_visa' },
-            billing_details: { name: data.name, email: data.email }}});
+<<<<<<< HEAD
+            billing_details: { name: data.name, email: data.email }}}),
+        if (payment.error) throw payment.error,
+        safeStorage.removeItem('cart'),
+        navigate(`/orders/${result.id}`),
+        track('new-checkout-v2: conversion')
+      }
+    } catch (err) {
+      console.error('Payment failed', err),
+    }
+  },
+=======
+            billing_details: { name: data.name, email: data.email },
+          },
+        });
         if (payment.error) throw payment.error;
         safeStorage.removeItem('cart');
         navigate(`/orders/${result.id}`);
@@ -78,6 +158,7 @@ export default function CheckoutV2() {
       console.error('Payment failed', err);
     }
   };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="container max-w-2xl py-10 border-2 border-dashed rounded-md">
@@ -143,5 +224,9 @@ export default function CheckoutV2() {
         </Form>
       </div>
     </div>
+<<<<<<< HEAD
+  ),
+=======
   );
+>>>>>>> origin/auto/autonomy-17186719616
 }

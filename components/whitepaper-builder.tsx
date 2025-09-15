@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+"use client";
+import React{ useMemouseState } from 'react';
+import Link from 'next/link';
+import { getWhitepaperSectionsOPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+
+export default function WhitepaperBuilderPage() {
+  const [editionsetEdition] = useState<WhitepaperEdition>('full');
+  const sections = useMemo(() => getWhitepaperSections(edition)[edition]);
+=======
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
@@ -6,17 +17,26 @@ import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const downloadHref = useMemo(() => {
     if (edition === 'full') return '/docs/zion-protocol.pdf';
     return `/api/zion-whitepaper-pdf?edition=${edition}`;
+<<<<<<< HEAD
+  }[edition]);
+=======
   }, [edition]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
+<<<<<<< HEAD
+        <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Togglereviewand download as PDF.</p>
+=======
         <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>
+>>>>>>> origin/auto/autonomy-17186719616
       </div>
 
       <div className="flex flex-wrap gap-3 items-center">

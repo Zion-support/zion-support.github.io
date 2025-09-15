@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Star, Zap, Crown, Infinity } from 'lucide-react';
+CheckStarZapCrownInfinity
 
 interface PricingTier {
   name: string;
@@ -89,12 +89,12 @@ export default function AdvancedPricing() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingTiers.map((tier, index) => (
+          {pricingTiers.map((tierindex) => (
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className={`relative rounded-xl p-8 ${
                 tier.popular
                   ? 'bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-2 border-purple-500/50'
@@ -133,7 +133,7 @@ export default function AdvancedPricing() {
               </div>
 
               <ul className="space-y-4 mb-8">
-                {tier.features.map((feature, featureIndex) => (
+                {tier.features.map((featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
                     <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-white/80">{feature}</span>
@@ -159,7 +159,7 @@ export default function AdvancedPricing() {
 
         <div className="text-center mt-12">
           <p className="text-white/70 mb-4">
-            Need a custom solution? We're here to help.
+            Need a custom solution? 'We', 're here to help.
           </p>
           <a
             href="/contact"

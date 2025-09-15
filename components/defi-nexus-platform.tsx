@@ -2,9 +2,15 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  TrendingUpBrainShieldZapTarget
+  BarChart3CpuGlobeUsersAward,
+  CheckCircleArrowRightStarPhoneMailMapPin
+=======
   TrendingUp, Brain, Shield, Zap, Target, 
   BarChart3, Cpu, Globe, Users, Award,
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -31,21 +37,33 @@ const pricingPlans = [
     name: 'Starter',
     price: 29,
     period: 'month',
+<<<<<<< HEAD
+    features: ['Basic DeFi tools'3 blockchain 'networks', 'Yield 'tracking', 'Standard support'],
+=======
     features: ['Basic DeFi tools', '3 blockchain networks', 'Yield tracking', 'Standard support'],
+>>>>>>> origin/auto/autonomy-17186719616
     popular: false
   },
   {
     name: 'Professional',
     price: 99,
     period: 'month',
+<<<<<<< HEAD
+    features: ['Advanced DeFi 'tools', 'All major 'networks', 'Automated 'strategies', 'Analytics'Priority support'],
+=======
     features: ['Advanced DeFi tools', 'All major networks', 'Automated strategies', 'Analytics', 'Priority support'],
+>>>>>>> origin/auto/autonomy-17186719616
     popular: true
   },
   {
     name: 'Enterprise',
     price: 299,
     period: 'month',
+<<<<<<< HEAD
+    features: ['Custom DeFi 'solutions', 'White-label 'platform', 'API 'access', 'Priority 'support', 'Custom integrations'],
+=======
     features: ['Custom DeFi solutions', 'White-label platform', 'API access', 'Priority support', 'Custom integrations'],
+>>>>>>> origin/auto/autonomy-17186719616
     popular: false
   }
 ];
@@ -55,8 +73,13 @@ export default function DeFiNexusPlatform() {
     <Layout>
       <Head>
         <title>DeFi Nexus Platform | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Comprehensive decentralized finance platform providing yield farmingliquidity provisionand cross-chain DeFi services." />
+        <meta name="keywords" content="DeFiblockchainyield farmingliquiditycross-chainZion Tech Group" />
+=======
         <meta name="description" content="Comprehensive decentralized finance platform providing yield farming, liquidity provision, and cross-chain DeFi services." />
         <meta name="keywords" content="DeFi, blockchain, yield farming, liquidity, cross-chain, Zion Tech Group" />
+>>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="DeFi Nexus Platform - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive decentralized finance platform with multi-chain support." />
         <meta property="og:url" content="https://ziontechgroup.com/defi-nexus-platform" />
@@ -92,7 +115,11 @@ export default function DeFiNexusPlatform() {
               <span className="text-white">Platform</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+              Comprehensive decentralized finance platform providing yield farmingliquidity provisionand cross-chain DeFi services.
+=======
               Comprehensive decentralized finance platform providing yield farming, liquidity provision, and cross-chain DeFi services.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 
@@ -100,7 +127,11 @@ export default function DeFiNexusPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            transition={{ duration: 0.8delay: 0.2 }}
+=======
             transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -135,17 +166,29 @@ export default function DeFiNexusPlatform() {
               Revolutionary DeFi Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+              Experience the future of decentralized finance with multi-chain supportautomated yield optimizationand comprehensive DeFi analytics.
+=======
               Experience the future of decentralized finance with multi-chain support, automated yield optimization, and comprehensive DeFi analytics.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
+            {features.map((featureindex) => (
+=======
             {features.map((feature, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300"
               >
@@ -173,17 +216,29 @@ export default function DeFiNexusPlatform() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+              Flexible pricing options designed for DeFi users of all levelsfrom beginners to institutional investors.
+=======
               Flexible pricing options designed for DeFi users of all levels, from beginners to institutional investors.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {pricingPlans.map((planindex) => (
+=======
             {pricingPlans.map((plan, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${
                   plan.popular 
@@ -208,7 +263,11 @@ export default function DeFiNexusPlatform() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
+<<<<<<< HEAD
+                  {plan.features.map((featureIndex) => (
+=======
                   {plan.features.map((feature, featureIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -247,7 +306,11 @@ export default function DeFiNexusPlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.1 }}
+=======
               transition={{ duration: 0.8, delay: 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center"
             >
@@ -261,7 +324,11 @@ export default function DeFiNexusPlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center"
             >
@@ -275,7 +342,11 @@ export default function DeFiNexusPlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.3 }}
+=======
               transition={{ duration: 0.8, delay: 0.3 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center"
             >

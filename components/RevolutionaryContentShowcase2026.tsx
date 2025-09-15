@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Star, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Heart, 
-  Bookmark, 
-  Share2, 
-  Play, 
+  Star
+  TrendingUp
+  Clock
+  Users
+  Heart
+  Bookmark
+  Share2
+  Play
   Download,
   ArrowRight,
   Sparkles,
@@ -26,9 +27,9 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryContentShowcase2026 = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [favorites, setFavorites] = useState(new Set());
-  const [bookmarks, setBookmarks] = useState(new Set());
+  const [activeSlidesetActiveSlide] = useState(0);
+  const [favoritesetFavorites] = useState(new Set());
+  const [bookmarksetBookmarks] = useState(new Set());
 
   const featuredContent = [
     {
@@ -43,7 +44,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.9,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['AI', 'Predictions', 'Future', 'Technology', 'Revolutionary'],
+      tags: [', 'AI', 'Predictions', 'Future', 'Technology'Revolutionary'],
       author: 'AI Research Team',
       publishedAt: '2025-01-15',
       color: 'from-purple-500 to-pink-500'
@@ -60,7 +61,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.8,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['Quantum', 'Neural Networks', 'AI', 'Computing', 'Breakthrough'],
+      tags: [', 'Quantum', 'Neural 'Networks', 'AI', 'Computing', 'Breakthrough'],
       author: 'Quantum AI Lab',
       publishedAt: '2025-01-14',
       color: 'from-blue-500 to-cyan-500'
@@ -77,7 +78,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.9,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['Automation', 'Business', 'Operations', 'AI', 'Autonomous'],
+      tags: [', 'Automation', 'Business', 'Operations', 'AI'Autonomous'],
       author: 'Business AI Institute',
       publishedAt: '2025-01-13',
       color: 'from-green-500 to-emerald-500'
@@ -94,7 +95,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.7,
       thumbnail: '/api/placeholder/800/400',
       featured: false,
-      tags: ['Tutorial', 'Neural Interface', 'Implementation', 'Technology'],
+      tags: [', 'Tutorial', 'Neural 'Interface', 'Implementation'Technology'],
       author: 'NeuroTech Academy',
       publishedAt: '2025-01-12',
       color: 'from-orange-500 to-red-500'
@@ -102,7 +103,7 @@ const RevolutionaryContentShowcase2026 = () => {
     {
       id: 5,
       title: 'Consciousness Integration: The Future of AI',
-      description: 'Exploring how AI systems will develop forms of consciousness and what it means for humanity, ethics, and the future of intelligence.',
+      description: 'Exploring how AI systems will develop forms of consciousness and what it means for humanityethicsand the future of intelligence.',
       category: 'AI Philosophy',
       type: 'Deep Dive Article',
       duration: '25 min',
@@ -111,7 +112,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.8,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['Consciousness', 'AI', 'Future', 'Philosophy', 'Ethics'],
+      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy'Ethics'],
       author: 'Consciousness Research Group',
       publishedAt: '2025-01-10',
       color: 'from-yellow-500 to-orange-500'
@@ -119,27 +120,27 @@ const RevolutionaryContentShowcase2026 = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: 156, icon: Globe },
-    { id: 'ai-predictions', name: 'AI Predictions', count: 42, icon: Brain },
-    { id: 'quantum-computing', name: 'Quantum Computing', count: 28, icon: Zap },
-    { id: 'automation', name: 'Automation', count: 35, icon: Rocket },
-    { id: 'tutorials', name: 'Tutorials', count: 31, icon: Play },
-    { id: 'case-studies', name: 'Case Studies', count: 20, icon: Target }
+    { id: ''all', 'name: 'All 'Content', 'count: 156icon: Globe },
+    { id: 'ai-'predictions', 'name: 'AI 'Predictions', 'count: 42icon: Brain },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'count: 28icon: Zap },
+    { id: ''automation', 'name: ''Automation', 'count: 35icon: Rocket },
+    { id: ''tutorials', 'name: ''Tutorials', 'count: 31icon: Play },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 20icon: Target }
   ];
 
   const stats = [
-    { label: 'Total Content', value: '500+', icon: Globe },
-    { label: 'Active Users', value: '50K+', icon: Users },
-    { label: 'Content Views', value: '2M+', icon: TrendingUp },
-    { label: 'Average Rating', value: '4.8', icon: Star }
+    { label: 'Total 'Content', 'value: '500+'icon: Globe },
+    { label: 'Active 'Users', 'value: '50K+'icon: Users },
+    { label: 'Content 'Views', 'value: '2M+'icon: TrendingUp },
+    { label: 'Average 'Rating', 'value: '4.8'icon: Star }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 8000);
+    }8000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -201,12 +202,12 @@ const RevolutionaryContentShowcase2026 = () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-6 mb-12">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ delay: index * 0.1duration: 0.5 }}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center min-w-[150px]"
                 >
                   <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-400" />
@@ -224,14 +225,14 @@ const RevolutionaryContentShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          transition={{ delay: 0.5duration: 0.8 }}
           className="text-center mb-16"
         >
           <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
             Featured Content
           </h3>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The most revolutionary and impactful content that's changing how we think about AI and technology
+            The most revolutionary and impactful content 'that', 's changing how we think about AI and technology
           </p>
         </motion.div>
 
@@ -240,9 +241,9 @@ const RevolutionaryContentShowcase2026 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSlide}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0x: 100 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -100 }}
                 transition={{ duration: 0.5 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden"
               >
@@ -316,7 +317,7 @@ const RevolutionaryContentShowcase2026 = () => {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {featuredContent[activeSlide].tags.map((tag, index) => (
+                      {featuredContent[activeSlide].tags.map((tagindex) => (
                         <span
                           key={index}
                           className="px-3 py-1 bg-white/10 text-white text-sm rounded-full"
@@ -383,7 +384,7 @@ const RevolutionaryContentShowcase2026 = () => {
 
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 gap-2">
-            {featuredContent.map((_, index) => (
+            {featuredContent.map((_index) => (
               <button
                 key={index}
                 onClick={() => setActiveSlide(index)}
@@ -401,7 +402,7 @@ const RevolutionaryContentShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
+          transition={{ delay: 0.7duration: 0.8 }}
           className="text-center mb-16"
         >
           <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
@@ -413,12 +414,12 @@ const RevolutionaryContentShowcase2026 = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {categories.map((category, index) => (
+          {categories.map((categoryindex) => (
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+              transition={{ delay: 0.8 + index * 0.1duration: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300 cursor-pointer group"
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -436,14 +437,14 @@ const RevolutionaryContentShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          transition={{ delay: 1duration: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-12"
         >
           <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
             Ready to Explore?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of innovators, researchers, and technology enthusiasts who are already exploring the future of AI and technology.
+            Join thousands of innovatorsresearchersand technology enthusiasts who are already exploring the future of AI and technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center gap-2">

@@ -34,21 +34,25 @@ const getDefaultCategories = (t: any) => [
     description: t('categories.talents_desc'),
     iconName: "Users",
     link: "/talent",
-    color: "from-cyan-500 to-blue-600"},
+    color: "from-cyan-500 to-blue-600",
+  },
   {
     id: "equipment",
     name: t('categories.equipment'),
     description: t('categories.equipment_desc'),
     iconName: "HardDrive",
     link: "/equipment",
-    color: "from-amber-500 to-orange-600"},
+    color: "from-amber-500 to-orange-600",
+  },
   {
     id: "innovation",
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
     iconName: "Lightbulb",
     link: "/innovation",
-    color: "from-emerald-500 to-green-600"}];
+    color: "from-emerald-500 to-green-600",
+  },
+];
 
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
@@ -93,11 +97,13 @@ export function CategoriesSection({
         icon: getIcon(cat.iconName), // Get icon component
         link: cat.link || `/category/${cat.id}`, // Construct link if not provided
         // Assign a default color or implement logic to assign colors
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600",
+      }))
     : defaultCategories.map(cat => ({
         ...cat,
         title: cat.name,
-        icon: getIcon(cat.iconName)}));
+        icon: getIcon(cat.iconName),
+      }));
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {

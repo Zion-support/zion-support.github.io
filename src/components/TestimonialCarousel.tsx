@@ -4,7 +4,8 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious} from "@/components/ui/carousel";
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -30,7 +31,8 @@ export function TestimonialCarousel() {
           <Carousel
             opts={{
               align: "start",
-              loop: true}}
+              loop: true,
+            }}
             className="w-full"
           >
             <CarouselContent>

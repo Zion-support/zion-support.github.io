@@ -1,6 +1,10 @@
 
 import { Fragment } from "react";
+<<<<<<< HEAD
+import { RoutesNavigate } from "react-router-dom";
+=======
 import { Route, Routes, Navigate } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";

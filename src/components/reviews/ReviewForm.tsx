@@ -10,10 +10,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import {
   RadioGroup,
-  RadioGroupItem} from "@/components/ui/radio-group";
+  RadioGroupItem,
+} from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 
@@ -42,7 +44,8 @@ export function ReviewForm({
   revieweeName,
   onSubmit,
   defaultValues,
-  isSubmitting}: ReviewFormProps) {
+  isSubmitting,
+}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
   
   const form = useForm<ReviewFormValues>({
@@ -53,21 +56,24 @@ export function ReviewForm({
       quality_rating: defaultValues.quality_rating,
       timeliness_rating: defaultValues.timeliness_rating,
       would_work_again: defaultValues.would_work_again,
-      is_anonymous: defaultValues.is_anonymous} : {
+      is_anonymous: defaultValues.is_anonymous,
+    } : {
       rating: 0,
       review_text: "",
       communication_rating: undefined,
       quality_rating: undefined,
       timeliness_rating: undefined,
       would_work_again: undefined,
-      is_anonymous: false}
+      is_anonymous: false,
+    }
   });
   
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
       ...values,
       project_id: projectId,
-      reviewee_id: revieweeId};
+      reviewee_id: revieweeId,
+    };
     
     const success = await onSubmit(formattedData);
     if (success) {
@@ -128,7 +134,9 @@ export function ReviewForm({
             required: "Please provide feedback",
             minLength: {
               value: 20,
-              message: "Review must be at least 20 characters"}}}
+              message: "Review must be at least 20 characters",
+            },
+          }}
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>

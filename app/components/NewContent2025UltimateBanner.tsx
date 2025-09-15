@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 const NewContent2025UltimateBanner = () => {
   return (
@@ -48,6 +51,9 @@ const NewContent2025UltimateBanner = () => {
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 <span>Predictive Intelligence</span>
               </div>
+            <div className="flex items-center text-sm text-green-400 mb-4">
+              <TrendingUp className="w-4 h-4 mr-2" />
+              <span>400% Average ROI Achieved</span>
             </div>
             <Link 
               href="/blog/ai-2025-data-analytics-revolution-enterprise-intelligence"
@@ -139,6 +145,56 @@ const NewContent2025UltimateBanner = () => {
                   </div>
                 </div>
               </div>
+        {/* Case Studies Section */}
+        <div className="bg-gradient-to-r from-emerald-800 to-cyan-800 rounded-2xl p-8 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">Real-World Success Stories</h3>
+            <p className="text-xl opacity-90">Discover how leading enterprises achieved exceptional results with our AI solutions</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white bg-opacity-10 rounded-xl p-6">
+              <h4 className="text-xl font-bold mb-3">Global Manufacturing Giant</h4>
+              <ul className="space-y-2 text-emerald-100">
+                <li>• 500% ROI within 18 months</li>
+                <li>• $50M annual savings</li>
+                <li>• 95% efficiency improvement</li>
+                <li>• Industry leadership position</li>
+              </ul>
+              <div className="mt-4">
+                <Link 
+                  href="/case-studies/global-manufacturing-ai-transformation"
+                  className="text-emerald-300 hover:text-emerald-200 font-semibold"
+                >
+                  Read Full Case Study →
+                </Link>
+              </div>
+            </div>
+            
+            <div className="bg-white bg-opacity-10 rounded-xl p-6">
+              <h4 className="text-xl font-bold mb-3">Financial Services Leader</h4>
+              <ul className="space-y-2 text-emerald-100">
+                <li>• 600% ROI within 20 months</li>
+                <li>• $75M annual savings</li>
+                <li>• 98% customer satisfaction</li>
+                <li>• Market leadership position</li>
+              </ul>
+              <div className="mt-4">
+                <Link 
+                  href="/case-studies/financial-services-ai-revolution"
+                  className="text-emerald-300 hover:text-emerald-200 font-semibold"
+                >
+                  Read Full Case Study →
+                </Link>
+              </div>
+        {/* Implementation Checklist */}
+        <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">🎯 AI Implementation Checklist 2025</h3>
+              <p className="text-gray-200">
+                The definitive step-by-step guide to AI success. Don't miss any critical steps.
+              </p>
             </div>
             <div className="flex flex-col justify-center">
               <div className="text-center">
@@ -175,11 +231,42 @@ const NewContent2025UltimateBanner = () => {
             >
               Explore Services
             </Link>
+        {/* Resources Section */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-8">Free Implementation Resources</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-emerald-700 to-teal-700 rounded-xl p-6">
+              <h4 className="text-xl font-bold mb-3">AI Transformation Checklist</h4>
+              <p className="text-emerald-100 mb-4">Complete step-by-step guide for successful AI implementation</p>
+              <Link 
+                href="/resources/ai-transformation-checklist-2025"
+                className="inline-flex items-center bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-all duration-300"
+              >
+                Download Free Guide →
+              </Link>
+            </div>
+            
+            <div className="bg-gradient-to-r from-teal-700 to-cyan-700 rounded-xl p-6">
+              <h4 className="text-xl font-bold mb-3">Expert Consultation</h4>
+              <p className="text-teal-100 mb-4">Get personalized guidance for your AI transformation journey</p>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-all duration-300"
+              >
+                Schedule Consultation →
+              </Link>
+            </div>
+        {/* Trust Indicators */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-300 mb-4">Trusted by leading organizations worldwide</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <div className="text-2xl font-bold">Fortune 500</div>
+            <div className="text-2xl font-bold">Enterprise</div>
+            <div className="text-2xl font-bold">Startups</div>
+            <div className="text-2xl font-bold">Government</div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default NewContent2025UltimateBanner;
+}

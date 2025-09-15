@@ -30,7 +30,7 @@ const AISolutions2025UltimatePromotionBanner = () => {
           {/* Description */}
           <p className="text-lg md:text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your business with our comprehensive AI solutions suite. From intelligent automation 
-            to predictive analytics, unlock unprecedented growth and efficiency.
+            to predictive analyticsunlock unprecedented growth and efficiency.
           </p>
 
           {/* Features Grid */}

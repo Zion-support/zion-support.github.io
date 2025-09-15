@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Quote, Users, Award, TrendingUp, CheckCircle, Globe, Building, Zap } from 'lucide-react';
+ArrowRightStarQuoteUsersAwardTrendingUpCheckCircleGlobeBuildingZap
 
 export default function SocialProofTestimonials2025() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentTestimonialsetCurrentTestimonial] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const testimonials = [
     {
@@ -24,7 +25,7 @@ export default function SocialProofTestimonials2025() {
       title: "Chief Technology Officer",
       company: "Industrial Solutions Inc",
       avatar: "MC",
-      content: "Autonomous AI systems revolutionized our production line, reducing costs by 90% while increasing output by 500%. The implementation was seamless and the results exceeded all our expectations. This is the future of manufacturing.",
+      content: "Autonomous AI systems revolutionized our production linereducing costs by 90% while increasing output by 500%. The implementation was seamless and the results exceeded all our expectations. This is the future of manufacturing.",
       rating: 5,
       roi: "8,500%",
       industry: "Manufacturing"
@@ -44,7 +45,7 @@ export default function SocialProofTestimonials2025() {
       title: "Chief Financial Officer",
       company: "Global Finance Corp",
       avatar: "DK",
-      content: "The AI-powered financial optimization platform delivered unprecedented results. We saw a 3,000% ROI in the first year alone, with automated risk assessment and portfolio optimization that outperformed all traditional methods.",
+      content: "The AI-powered financial optimization platform delivered unprecedented results. We saw a 3,000% ROI in the first year alonewith automated risk assessment and portfolio optimization that outperformed all traditional methods.",
       rating: 5,
       roi: "3,000%",
       industry: "Finance"
@@ -62,21 +63,21 @@ export default function SocialProofTestimonials2025() {
   ];
 
   const stats = [
-    { number: "500+", label: "Success Stories", icon: Users },
-    { number: "15,000%", label: "Max ROI Achieved", icon: TrendingUp },
-    { number: "99.9%", label: "Customer Satisfaction", icon: Star },
-    { number: "50+", label: "Countries Served", icon: Globe },
-    { number: "Fortune 500", label: "Companies Trust Us", icon: Building },
-    { number: "24/7", label: "Expert Support", icon: Zap }
+    { number: "500+"label: "Success Stories"icon: Users },
+    { number: "15,000%"label: "Max ROI Achieved"icon: TrendingUp },
+    { number: "99.9%"label: "Customer Satisfaction"icon: Star },
+    { number: "50+"label: "Countries Served"icon: Globe },
+    { number: "Fortune 500"label: "Companies Trust Us"icon: Building },
+    { number: "24/7"label: "Expert Support"icon: Zap }
   ];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentItem = testimonials[currentTestimonial];
 
@@ -101,7 +102,7 @@ export default function SocialProofTestimonials2025() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -134,7 +135,7 @@ export default function SocialProofTestimonials2025() {
               
               <div className="flex items-center justify-between">
                 <div className="flex space-x-1">
-                  {[...Array(currentItem.rating)].map((_, i) => (
+                  {[...Array(currentItem.rating)].map((_i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -148,7 +149,7 @@ export default function SocialProofTestimonials2025() {
             {/* Testimonial Selector */}
             <div className="space-y-4">
               <h4 className="text-xl font-bold text-white mb-6">More Success Stories</h4>
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonialindex) => (
                 <div
                   key={index}
                   className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${

@@ -1,65 +1,47 @@
 import React from 'react';
-import { cn } from '../lib/utils';
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+interface CardProps {
+
+
+  title: string;
+  description: string;
+
+
+  className?: string;
+
+
+  children?: React.ReactNode;
 }
 
-export const Card: React.FC<CardProps> = ({ className, children, ...props }) => {
+
+
+
+const Card: React.FC<CardProps> = ({
+  children,
+  title,
+  description,
+  className = '',
+  hover = true,
+  glass = true,
+}) => {
+  const baseClasses = 'rounded-xl p-6 transition-all duration-300';
+  const hoverClasses = hover ? 'transform hover:scale-105 hover:shadow-xl' : '';
+  const glassClasses = glass ? 'bg-white/10 backdrop-blur-sm border border-white/20' : 'bg-slate-800';
+  
+  const classes = `${baseClasses} ${hoverClasses} ${glassClasses} ${className}`;
+  
   return (
-    <div
-      className={cn(
-        'bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300',
-        className
-      )}
-      {...props}
-    >
+
+
+    <div className={classes}>
+      {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
+      {description && <p className="text-gray-300 mb-4">{description}</p>}
+
+
       {children}
+
     </div>
   );
 };
 
-interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
-
-export const CardHeader: React.FC<CardHeaderProps> = ({ className, children, ...props }) => {
-  return (
-    <div
-      className={cn('p-6 pb-0', className)}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-};
-
-interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
-
-export const CardContent: React.FC<CardContentProps> = ({ className, children, ...props }) => {
-  return (
-    <div
-      className={cn('p-6', className)}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-};
-
-interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-}
-
-export const CardFooter: React.FC<CardFooterProps> = ({ className, children, ...props }) => {
-  return (
-    <div
-      className={cn('p-6 pt-0', className)}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-};
+export default Card;

@@ -74,7 +74,12 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+<<<<<<< HEAD
         "Authorization": `Bearer ${openaiApiKey}`},
+=======
+        "Authorization": `Bearer ${openaiApiKey}`,
+      },
+>>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
@@ -179,7 +184,12 @@ serve(async (req) => {
     const result: AnalysisResult = {
       classification: classification.toLowerCase(),
       explanation,
+<<<<<<< HEAD
       success: true};
+=======
+      success: true,
+    };
+>>>>>>> origin/auto/autonomy-17186719616
     
     console.log("Analysis completed successfully:", result);
     return new Response(JSON.stringify(result), { 
@@ -195,7 +205,12 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ 
         error: error.message || "An unexpected error occurred",
+<<<<<<< HEAD
         success: false}),
+=======
+        success: false,
+      }),
+>>>>>>> origin/auto/autonomy-17186719616
       { 
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
