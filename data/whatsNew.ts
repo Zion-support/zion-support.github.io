@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-incident-response-playbook-2026-v1",
+    title: "AI 2026: Agent Incident Response Playbook",
+    description:
+      "Eval‑gated triage, mitigation, and escalation playbooks for autonomous agents in production.",
+    ctaLabel: "Read Playbook",
+    href: "/content/ai-2026-agent-incident-response-playbook",
+    emoji: "🚨",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-incident-response-playbook-2026",
     title: "AI 2026: Agent Incident Response Playbook",
     description:
