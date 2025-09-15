@@ -107,7 +107,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* What's New dynamic section */}
-      <WhatsNew highlightOnly limit={6} />
+      <WhatsNew highlightOnly limit={8} />
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />
@@ -123,6 +123,22 @@ export default function HomePage() {
               <div className="flex gap-3">
                 <Link href="/content/ai-2026-policy-as-code-starter-kit" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Policy-as-Code Kit</Link>
                 <Link href="/blog/ai-2026-reliability-engineering-for-agents" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Reliability Guide</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Promo: New - Autonomous Revenue Blueprint + Agent Platform Ops */}
+        <section className="py-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-gray-100">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New content</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Autonomous Revenue + Agent Platform Ops</h2>
+                <p className="text-gray-600 mt-2">Blueprint for GTM agents and the day-2 ops guide for running the platform.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/content/ai-2026-autonomous-revenue-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Revenue Blueprint</Link>
+                <Link href="/content/ai-2026-agent-platform-operations" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Platform Ops</Link>
               </div>
             </div>
           </div>

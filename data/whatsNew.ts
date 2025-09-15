@@ -11,6 +11,47 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "autonomous-revenue-blueprint-2026",
+    title: "AI 2026: Autonomous Revenue Blueprint",
+    description:
+      "GTM agents for pipeline, deal acceleration, and expansion with eval-gated safety.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-autonomous-revenue-blueprint",
+    emoji: "💼",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-operations-2026",
+    title: "AI 2026: Agent Platform Operations",
+    description:
+      "SLOs, incident response, and change management to run agent platforms at scale.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-platform-operations",
+    emoji: "🧭",
+    date: "2025-09-15",
+  },
+  {
+    id: "revenue-ops-autonomous-agents-2026",
+    title: "AI 2026: Revenue Ops with Autonomous Agents",
+    description:
+      "Prospecting, sequencing, and expansion plays with policy-as-code governance.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-revenue-ops-autonomous-agents",
+    emoji: "📈",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-operations-best-practices-2026",
+    title: "AI 2026: Agent Platform Ops Best Practices",
+    description:
+      "SLOs that matter, safe-mode fallbacks, and eval-driven change management.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-platform-operations-best-practices",
+    emoji: "🔧",
+    date: "2025-09-15",
+  },
+  {
     id: "agents-oncall-automation-2026",
     title: "AI 2026: Agents-On-Call Automation",
     description:
