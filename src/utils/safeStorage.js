@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
 // Safe storage utility for browser compatibility
 export const safeStorage = {
   getItem: (key) => {
@@ -42,11 +40,7 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
       return false;
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -157,33 +151,10 @@ export const safeStorage = {
         return false;
       }
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d952
-    }
 =======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     }
-=======
-    }
-  },
-  
-  // Convenience methods for direct access
-  getItem: (key) => {
-    return safeStorage.localStorage.getItem(key);
-  },
-  
-  setItem: (key, value) => {
-    return safeStorage.localStorage.setItem(key, value);
-  },
-  
-  removeItem: (key) => {
-    return safeStorage.localStorage.removeItem(key);
-  },
-  
-  clear: () => {
-    return safeStorage.localStorage.clear();
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
   }
 };
 
