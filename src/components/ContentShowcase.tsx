@@ -562,6 +562,7 @@ const ContentShowcase: React.FC = () => {
           })}
         </motion.div>
 
+<<<<<<< HEAD
         {/* Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -611,4 +612,7 @@ const ContentShowcase: React.FC = () => {
 };
 
 export { ContentShowcase };
+=======
+
+>>>>>>> cursor/create-and-deploy-new-content-c963
 export default ContentShowcase;
