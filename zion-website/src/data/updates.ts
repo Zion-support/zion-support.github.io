@@ -771,6 +771,32 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   }
   ,
+  // New updates added by background automation on 2025-09-15 (even later batch)
+  {
+    title: 'Launch: Autonomous Customer Insights Copilot v1.0',
+    summary:
+      'Automatic theme detection, sentiment analysis, and action recommendations across support, sales, and product feedback with policy-aware data handling.',
+    href: '/updates/autonomous-customer-insights-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise AI Change Management (2026)',
+    summary:
+      'Governance workflows, rollout strategies, and live eval gates to safely introduce AI changes across teams.',
+    href: '/updates/enterprise-ai-change-management-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of AI Evaluations 2026',
+    summary:
+      'Survey of eval practices, rubrics, and live telemetry adoption across industries with maturity benchmarks.',
+    href: '/updates/state-of-ai-evaluations-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  }
+  ,
   // Added 2025-09-15 (night batch)
   {
     title: 'Launch: Real-Time Retrieval Evals 2026',
