@@ -100,6 +100,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'agentic-supply-chains-2025': {
+    id: 'agentic-supply-chains-2025',
+    title: 'Agentic Supply Chains 2025: Self-Optimizing Logistics with Zion OS',
+    excerpt:
+      'How autonomous agents coordinate procurement, routing, and fulfillment to cut costs and increase resiliency across global supply chains.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-16',
+    readTime: '9 min read',
+    content: [
+      'Agentic supply chains replace brittle, centrally orchestrated workflows with autonomous agents that negotiate capacity, optimize routes, and preempt disruptions.',
+      'This article details agent roles (supplier, carrier, hub, auditor), market mechanisms for bids and SLAs, and policy constraints for compliance and safety.',
+      'We include a reference architecture on Zion OS with event-driven orchestration, trust scoring, and human-in-the-loop overrides for sensitive actions.'
+    ]
+  },
+  'quantum-secure-communications-2025': {
+    id: 'quantum-secure-communications-2025',
+    title: 'Quantum-Secure Communications: Practical Zero-Trust Patterns for 2025',
+    excerpt:
+      'Deploy post-quantum cryptography and zero-trust patterns to safeguard multi-agent communications and data pipelines today.',
+    category: 'Cybersecurity',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-13',
+    readTime: '8 min read',
+    content: [
+      'With cryptographic transitions underway, organizations need practical blueprints for adopting PQC, rotating keys, and segmenting trust boundaries.',
+      'We map threat models, recommended NIST-aligned algorithms, and staged rollouts for messaging, storage, and inter-agent communication on Zion OS.',
+      'Operational guidance covers crypto agility, audit trails, and performance considerations for high-throughput systems.'
+    ]
+  },
 };
 
 export function generateStaticParams() {
