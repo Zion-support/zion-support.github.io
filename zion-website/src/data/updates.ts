@@ -7,6 +7,31 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (spotlight content for homepage promo)
+  {
+    title: 'Launch: Autonomous Strategy Copilot v1.0',
+    summary:
+      'Exec-grade copilot for roadmaps, ROI modeling, and policy-aware program plans with live eval gates.',
+    href: '/updates/autonomous-strategy-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: Real-Time Agent Debugging — 2026 Preview',
+    summary:
+      'Benchmarks and best practices for live traces, prompt diffs, and tool-call timelines in prod.',
+    href: '/updates/state-of-real-time-agent-debugging-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Production AI Change Management (2026)',
+    summary:
+      'Templates, gates, and evidence bundles to ship AI changes safely across teams and envs.',
+    href: '/updates/production-ai-change-management-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // Added 2025-09-15 (even later night batch - fresh content)
   {
     title: 'Launch: Realtime Agent Observatory 1.0',
