@@ -100,6 +100,48 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'agent-safety-scorecards-2025': {
+    id: 'agent-safety-scorecards-2025',
+    title: 'Agent Safety Scorecards: Measuring Real-World Safety of Autonomous Systems',
+    excerpt:
+      'A practical scoring framework for evaluating autonomy safety across tasks, environments, and escalation thresholds.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '7 min read',
+    content: [
+      'Safety scorecards provide continuous, scenario-driven evaluation of autonomous behaviors in production. They quantify risk exposure and safety margins in ways that static pre-release tests cannot.',
+      'We present taxonomy, sampling methods, and governance hooks to bind scorecard thresholds to rollout gates, with examples for IT operations, finance, and public sector use cases.'
+    ]
+  },
+  'sovereign-identity-for-agents': {
+    id: 'sovereign-identity-for-agents',
+    title: 'Sovereign Identity for AI Agents: DIDs, Attestations, and Trust',
+    excerpt:
+      'How decentralized identifiers and verifiable credentials enable safer, composable multi-agent systems.',
+    category: 'Identity',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-13',
+    readTime: '6 min read',
+    content: [
+      'Decentralized identifiers (DIDs) and verifiable credentials (VCs) allow agents to authenticate actions and claims without central bottlenecks.',
+      'We cover issuer-verifier patterns, revocation, and selective disclosure, and show how trust registries and reputation align incentives for open marketplaces.'
+    ]
+  },
+  'governed-autonomy-runbooks': {
+    id: 'governed-autonomy-runbooks',
+    title: 'Governed Autonomy Runbooks: Human-in-the-Loop for High-Stakes Actions',
+    excerpt:
+      'Operational patterns to keep humans in control without slowing down routine autonomous actions.',
+    category: 'Operations',
+    author: 'Michael Rodriguez',
+    date: '2025-09-11',
+    readTime: '6 min read',
+    content: [
+      'Runbooks encode escalation boundaries and exception flows so that autonomy accelerates low-risk tasks while preserving human approval for sensitive changes.',
+      'We share templates, role mappings, and audit trails that connect to incident response, change management, and compliance workflows.'
+    ]
+  },
 };
 
 export function generateStaticParams() {

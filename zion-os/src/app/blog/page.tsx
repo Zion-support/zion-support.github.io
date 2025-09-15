@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'agent-safety-scorecards-2025',
+      title: 'Agent Safety Scorecards: Measuring Real-World Safety of Autonomous Systems',
+      excerpt: 'A practical scoring framework for evaluating autonomy safety across tasks, environments, and escalation thresholds.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '7 min read',
+      image: '/blog/agent-safety-scorecards.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -85,6 +96,26 @@ export default function BlogPage() {
       date: '2025-09-14',
       readTime: '7 min read',
       image: '/blog/edge-ai-marketplaces.jpg'
+    },
+    {
+      id: 'sovereign-identity-for-agents',
+      title: 'Sovereign Identity for AI Agents: DIDs, Attestations, and Trust',
+      excerpt: 'How decentralized identifiers and verifiable credentials enable safer, composable multi-agent systems.',
+      category: 'Identity',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-13',
+      readTime: '6 min read',
+      image: '/blog/sovereign-identity.jpg'
+    },
+    {
+      id: 'governed-autonomy-runbooks',
+      title: 'Governed Autonomy Runbooks: Human-in-the-Loop for High-Stakes Actions',
+      excerpt: 'Operational patterns to keep humans in control without slowing down routine autonomous actions.',
+      category: 'Operations',
+      author: 'Michael Rodriguez',
+      date: '2025-09-11',
+      readTime: '6 min read',
+      image: '/blog/governed-autonomy.jpg'
     },
     {
       id: 'autonomous-it-operations',
