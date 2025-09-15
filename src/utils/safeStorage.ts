@@ -300,6 +300,7 @@ export const safeStorage = {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 <<<<<<< HEAD
@@ -342,6 +343,9 @@ export const safeStorage = {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-6f13
     }
   }
 };
