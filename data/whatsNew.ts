@@ -41,5 +41,26 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     emoji: "☁️",
     date: "2025-09-01",
   },
+  {
+    id: "secure-agent-architecture-2026",
+    title: "AI 2026: Secure Agent Architecture",
+    description:
+      "Blueprint for zero-trust agents with policy-as-code, isolation domains, and runtime guards.",
+    ctaLabel: "Read Architecture",
+    href: "/blog/ai-2026-secure-agent-architecture",
+    emoji: "🔐",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-finance-os",
+    title: "AI 2026: Autonomous Finance OS",
+    description:
+      "Real-time treasury, autonomous close, and compliance automation for CFO organizations.",
+    ctaLabel: "Explore Finance OS",
+    href: "/blog/ai-2026-autonomous-finance-operating-system",
+    emoji: "💹",
+    date: "2025-09-14",
+  },
 ];
 

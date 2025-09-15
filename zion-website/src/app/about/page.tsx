@@ -1,34 +1,43 @@
 import React from 'react'
-import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-
-const values = [
-	{ name: 'Innovation First', description: "We push the boundaries of what's possible, exploring new frontiers in AI and technology.", icon: LightBulbIcon },
-	{ name: 'Security By Design', description: 'We build with security, privacy, and compliance at the core.', icon: ShieldCheckIcon },
-	{ name: 'Customer Obsession', description: 'We win when our customers win measurable outcomes.', icon: UserGroupIcon },
-]
 
 export default function AboutPage() {
-	return (
-		<div className="bg-black min-h-screen">
-			<div className="mx-auto max-w-7xl px-6 pt-24">
-				<div className="mx-auto max-w-2xl lg:text-center">
-					<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">About Zion Tech Group</h1>
-					<p className="mt-4 text-lg leading-8 text-gray-300">We help organizations accelerate with AI, automation, and secure infrastructure.</p>
-				</div>
-				<div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
-					<dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-						{values.map((v) => (
-							<div key={v.name} className="rounded-2xl bg-white/5 p-6">
-								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-									<v.icon className="h-5 w-5 text-blue-400" />
-									{v.name}
-								</dt>
-								<dd className="mt-3 text-sm text-gray-300">{v.description}</dd>
-							</div>
-						))}
-					</dl>
-				</div>
-			</div>
-		</div>
-	)
+  return (
+    <div className="bg-black">
+      <div className="relative isolate px-6 pt-24 lg:px-8">
+        <div className="mx-auto max-w-2xl py-10 lg:py-16 text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            About <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
+          </h1>
+          <p className="mt-4 text-lg leading-7 text-gray-300">
+            We are pioneers in artificial intelligence, quantum computing, and autonomous systems, dedicated to transforming industries and advancing human potential through technology.
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+            <h3 className="text-xl font-semibold text-white mb-3">Our Mission</h3>
+            <p className="text-gray-300">To accelerate human progress through cutting-edge AI and technology solutions that solve the world's most complex challenges while maintaining the highest ethical standards.</p>
+          </div>
+          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+            <h3 className="text-xl font-semibold text-white mb-3">Our Vision</h3>
+            <p className="text-gray-300">A future where AI and technology seamlessly enhance human capabilities, creating a more intelligent, efficient, and sustainable world for generations to come.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join us in shaping the future</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Ready to be part of the AI revolution? Let's discuss how we can work together to transform your organization.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get in Touch</a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Careers <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
+

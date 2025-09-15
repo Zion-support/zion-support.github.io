@@ -9,11 +9,8 @@
   --ring: 0 0 0 1.5px var(--primary);
   --radius: 14px;
   --shadow: 0 10px 30px rgba(2, 6, 23, 0.5);
-<<<<<<< HEAD
   --shadow-lg: 0 20px 40px rgba(2, 6, 23, 0.6);
   --shadow-xl: 0 25px 50px rgba(2, 6, 23, 0.7);
-=======
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 * { box-sizing: border-box; }
@@ -181,7 +178,6 @@ h3 { font-size: 1.1rem; }
 /* Accessibility focus */
 :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
 
-<<<<<<< HEAD
 /* Content Showcase Styles */
 .content-showcase {
   padding: 80px 0;
@@ -320,9 +316,6 @@ h3 { font-size: 1.1rem; }
     gap: 8px;
   }
 }
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

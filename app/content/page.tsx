@@ -15,6 +15,31 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
+              AI Governance Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Operationalize responsible AI with policy-as-code, risk controls, and evaluation.
+          </p>
+          <Link href="/content/ai-governance-blueprint-2026" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-orange-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-agents-roi-playbook-2026" className="hover:underline">
+              AI Agents ROI Playbook 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            A step-by-step approach to quantify, track, and realize ROI from AI agents.
+          </p>
+          <Link href="/content/ai-agents-roi-playbook-2026" className="text-orange-600 font-semibold">Read Playbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/hyperautomation-blueprint-2026" className="hover:underline">
@@ -25,6 +50,19 @@ export default function ContentIndexPage() {
             A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise.
           </p>
           <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-operational-excellence-blueprint" className="hover:underline">
+              AI 2026: Operational Excellence Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Align reliability, quality, cost, and speed with AI-driven automation and observability.
+          </p>
+          <Link href="/content/ai-2026-operational-excellence-blueprint" className="text-purple-600 font-semibold">Read Blueprint →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
@@ -51,6 +89,19 @@ export default function ContentIndexPage() {
             Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
           </p>
           <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-risk-management-framework" className="hover:underline">
+              AI 2026: Agent Risk Management Framework
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Threat models, layered controls, and runtime guardrails for enterprise agents.
+          </p>
+          <Link href="/content/ai-2026-agent-risk-management-framework" className="text-emerald-700 font-semibold">Read Framework →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
