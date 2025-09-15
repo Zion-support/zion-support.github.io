@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
 ]
 
 export default function Navigation() {
