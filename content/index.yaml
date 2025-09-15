@@ -458,6 +458,34 @@ content_index:
         reliability: "99.9%"
         gated_releases: true
         audit_ready: true
+    - id: "ai-2026-production-safety-checklist"
+      type: "checklist"
+      title: "AI 2026: Production Safety Checklist"
+      file_path: "/app/content/ai-2026-production-safety-checklist/page.tsx"
+      url: "/content/ai-2026-production-safety-checklist"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Safety", "Production", "Evals", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        incidents_reduction: "40%"
+        audit_ready: true
+    - id: "ai-2026-cost-optimization-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Cost Optimization Blueprint"
+      file_path: "/app/content/ai-2026-cost-optimization-blueprint/page.tsx"
+      url: "/content/ai-2026-cost-optimization-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Cost", "Optimization", "Production", "ROI", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "35-60%"
+        payback: "< 3 months"
+        uptime: "99.9%"
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
