@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,11 +31,15 @@ interface NotificationOptions {
 interface NotificationOptions {
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-fb46
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -43,6 +48,8 @@ interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
   data?: any;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -72,6 +79,7 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+<<<<<<< HEAD
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
@@ -241,6 +249,9 @@ class NotificationManager {
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-fb46
     }
 
     try {
@@ -249,6 +260,7 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -285,6 +297,9 @@ class NotificationManager {
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-fb46
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -297,17 +312,21 @@ class NotificationManager {
       return notification;
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -505,10 +524,13 @@ export type { NotificationOptions, ToastOptions };
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -608,3 +630,6 @@ export default notificationManager;
 export default notificationManager;
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-fb46
