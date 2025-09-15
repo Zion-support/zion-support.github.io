@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "trustworthy-model-routing-2026",
+    title: "AI 2026: Trustworthy Model Routing",
+    description:
+      "Risk-aware, eval-gated routing with policy-as-code, telemetry, and cost controls.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-trustworthy-model-routing",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-benchmark-suite-2026",
+    title: "AI 2026: Agent Benchmark Suite",
+    description:
+      "Scenario-driven benchmarks to measure safety, quality, reliability, and efficiency.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-benchmark-suite",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-platform-slos-2026-guide",
     title: "AI 2026: Agent Platform SLOs That Matter",
     description:
