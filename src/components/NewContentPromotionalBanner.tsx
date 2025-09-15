@@ -9,36 +9,44 @@ const NewContentPromotionalBanner: React.FC = () => {
 
   const promotionalContent = [
     {
-      title: "🚀 New AI Revolution Blog Post",
-      description: "Discover how 2025 will transform every industry with groundbreaking AI innovations",
-      link: "/blog/ai-revolution-2025",
+      title: "🤖 NEW: AI Business Automation 2025",
+      description: "Transform your operations with 75% time reduction and $180K savings - Read our latest blog post",
+      link: "/blog/AI-Business-Automation-2025",
       linkText: "Read Article",
-      gradient: "from-cyan-500 to-blue-600",
-      bgGradient: "from-cyan-500/10 to-blue-500/10"
+      gradient: "from-blue-500 to-purple-600",
+      bgGradient: "from-blue-500/10 to-purple-500/10"
+    },
+    {
+      title: "🚀 AI Business Automation Services",
+      description: "Reduce costs by 50% and improve accuracy to 99.5% with our AI automation solutions",
+      link: "/services/AI-Business-Automation",
+      linkText: "Explore Services",
+      gradient: "from-purple-500 to-cyan-600",
+      bgGradient: "from-purple-500/10 to-cyan-500/10"
+    },
+    {
+      title: "📈 Success Story: Fortune 500 Case Study",
+      description: "See how we helped achieve 75% processing time reduction and $180K annual savings",
+      link: "/case-study-ai-automation-success",
+      linkText: "View Case Study",
+      gradient: "from-green-500 to-blue-600",
+      bgGradient: "from-green-500/10 to-blue-500/10"
     },
     {
       title: "⚛️ Quantum Computing Solutions",
       description: "Harness exponential computational power for complex business optimization",
       link: "/services/quantum-computing-solutions",
       linkText: "Explore Solutions",
-      gradient: "from-purple-500 to-cyan-600",
-      bgGradient: "from-purple-500/10 to-cyan-500/10"
+      gradient: "from-cyan-500 to-blue-600",
+      bgGradient: "from-cyan-500/10 to-blue-500/10"
     },
     {
       title: "🤖 AI Customer Success Platform",
       description: "Reduce churn by 40% with AI-powered customer success automation",
       link: "/services/ai-powered-customer-success-platform",
       linkText: "Learn More",
-      gradient: "from-blue-500 to-purple-600",
-      bgGradient: "from-blue-500/10 to-purple-500/10"
-    },
-    {
-      title: "📊 New Business Insights",
-      description: "Stay ahead with our latest industry trends and technology insights",
-      link: "/blog/quantum-computing-business",
-      linkText: "Read Insights",
-      gradient: "from-green-500 to-blue-600",
-      bgGradient: "from-green-500/10 to-blue-500/10"
+      gradient: "from-indigo-500 to-purple-600",
+      bgGradient: "from-indigo-500/10 to-purple-500/10"
     }
   ];
 

@@ -82,6 +82,7 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const AIPoweredLegalDocumentGenerator = React.lazy(() => import('./pages/services/AI-Powered-Legal-Document-Generator'));
 const AIHealthcareDiagnosticsPlatform = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics-Platform'));
 const BlockchainSupplyChainTransparency = React.lazy(() => import('./pages/services/Blockchain-Supply-Chain-Transparency'));
+const AIBusinessAutomation = React.lazy(() => import('./pages/services/AI-Business-Automation'));
 // Define lazy components for AI-powered routes (JSX cannot inline React.lazy inside element prop)
 const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
 const AIPoweredMarketingAutomation = React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'));
@@ -92,6 +93,7 @@ const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateSe
 const TheFutureOfAIInBusiness2025 = React.lazy(() => import('./pages/blog/TheFutureOfAIInBusiness2025'));
 const AIRevolution2025 = React.lazy(() => import('./pages/blog/AIRevolution2025'));
 const QuantumComputingBusiness = React.lazy(() => import('./pages/blog/QuantumComputingBusiness'));
+const AIBusinessAutomation2025 = React.lazy(() => import('./pages/blog/AI-Business-Automation-2025'));
 const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
 const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
 
@@ -116,6 +118,7 @@ const Press = React.lazy(() => import('./pages/Press'));
 const NewContentShowcase = React.lazy(() => import('./pages/NewContentShowcase'));
 const AIInnovationHub = React.lazy(() => import('./pages/AIInnovationHub'));
 const BlogPostNewContent = React.lazy(() => import('./pages/BlogPostNewContent'));
+const CaseStudyAIAutomationSuccess = React.lazy(() => import('./pages/CaseStudy-AI-Automation-Success'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -220,10 +223,12 @@ function App() {
                 <Route path="/new-content-showcase" element={<NewContentShowcase />} />
                 <Route path="/ai-innovation-hub" element={<AIInnovationHub />} />
                 <Route path="/blog/new-ai-services-announcement" element={<BlogPostNewContent />} />
+                <Route path="/case-study-ai-automation-success" element={<CaseStudyAIAutomationSuccess />} />
                 
                 {/* New blog posts */}
                 <Route path="/blog/ai-revolution-2025" element={<AIRevolution2025 />} />
                 <Route path="/blog/quantum-computing-business" element={<QuantumComputingBusiness />} />
+                <Route path="/blog/AI-Business-Automation-2025" element={<AIBusinessAutomation2025 />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -239,6 +244,7 @@ function App() {
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
                 <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
                 <Route path="/services/ai-powered-customer-success-platform" element={<AIPoweredCustomerSuccessPlatform />} />
+                <Route path="/services/AI-Business-Automation" element={<AIBusinessAutomation />} />
 
                 {/* New content routes */}
                 <Route path="/innovative-tech-solutions-2025" element={<InnovativeTechSolutions2025 />} />
