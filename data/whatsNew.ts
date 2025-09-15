@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-runbooks-blueprint-2026",
+    title: "AI 2026: Agent Runbooks Blueprint",
+    description:
+      "Eval‑gated, auditable runbooks with safety envelopes and deterministic rollback.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-agent-runbooks-blueprint",
+    emoji: "🛠️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-operations-2026-blog",
+    title: "AI 2026: Agent Platform Operations",
+    description:
+      "SLOs, incidents, change management, and eval‑gated releases for agent platforms.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-platform-operations",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-fleet-management-handbook-2026",
     title: "AI 2026: Agent Fleet Management Handbook",
     description:
