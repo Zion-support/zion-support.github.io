@@ -9,9 +9,6 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-=======
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -20,16 +17,7 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-    title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
-    summary:
-      'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
-    href: '/updates/agent-runbooks-live-evals',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: Agentic Ops Control Center (v1.0)',
->>>>>>> cursor/create-and-deploy-new-content-8191
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
@@ -143,22 +131,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-ops-slo-dashboards-v2',
     date: '2025-09-15',
     tag: 'Feature'
-  },
-  {
-    title: 'Launch: Autonomous Marketing Copilot v1.0',
-    summary:
-      'Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evals.',
-    href: '/updates/autonomous-marketing-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Production-Grade RAG Latency Budgets (2026)',
-    summary:
-      'Set, monitor, and enforce latency SLOs for RAG systems with streaming evals and rollbacks.',
-    href: '/updates/production-rag-latency-budgets-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
   },
   {
     title: 'Launch: Autonomous Marketing Copilot v1.0',
@@ -409,22 +381,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/secure-prompt-engineering-2025',
     date: '2025-09-15',
     tag: 'Guide'
-  },
-  {
-    title: 'Guide: Operationalizing Live Evals in Production (2026)',
-    summary:
-      'Blueprint to stand up live eval pipelines with canaries, abort switches, and audit evidence.',
-    href: '/blog/ai-2026-operationalizing-live-evals-in-production',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Playbook: Incident Response for Agentic Systems (2026)',
-    summary:
-      'Runbooks, drills, and telemetry to reduce MTTR and improve safety for autonomous agents.',
-    href: '/blog/ai-2026-incident-response-for-agentic-systems',
-    date: '2025-09-15',
-    tag: 'Playbook'
   },
   {
     title: 'Guide: Operationalizing Live Evals in Production (2026)',
