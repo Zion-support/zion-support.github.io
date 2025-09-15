@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
@@ -176,8 +174,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Latency Performance</h3>
               <p className="text-indigo-200 mb-4">Ultra-low latency for real-time neural control</p>
               <ul className="text-indigo-300 space-y-1 text-sm text-left">
-                <li>• < 10ms signal processing</li>
-                <li>• < 5ms command execution</li>
+                <li>• &lt; 10ms signal processing</li>
+                <li>• &lt; 5ms command execution</li>
                 <li>• Real-time feedback loops</li>
                 <li>• Sub-millisecond precision</li>
               </ul>
@@ -291,26 +289,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 NEURAL BREAKTHROUGH • JANUARY 2025
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Neural Interface Revolution 2025
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Bridge the gap between mind and machine with our revolutionary neural interface technology that enables direct brain-computer communication.
-          </p>
-        </div>
 
         {/* Neural Interface Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -487,10 +465,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
       </div>
     </div>
   );

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const QuantumComputingRevolution2025: React.FC = () => {
@@ -291,26 +289,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-
-const QuantumComputingRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ QUANTUM BREAKTHROUGH • JANUARY 2025
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Quantum Computing Revolution 2025
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Experience exponential computing power with our quantum solutions that solve impossible problems and unlock new possibilities across industries.
-          </p>
-        </div>
 
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -456,10 +434,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
       </div>
     </div>
   );
