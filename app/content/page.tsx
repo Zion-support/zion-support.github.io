@@ -39,6 +39,32 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold">Read Article →</Link>
         </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-autonomous-enterprise-blueprint" className="hover:underline">
+              AI 2026: Autonomous Enterprise Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            A step-by-step plan to scale from automation to truly autonomous, outcome-driven operations.
+          </p>
+          <Link href="/content/ai-2026-autonomous-enterprise-blueprint" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-llm-evals-maturity-model" className="hover:underline">
+              AI 2026: LLM Evals Maturity Model
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.
+          </p>
+          <Link href="/content/ai-2026-llm-evals-maturity-model" className="text-purple-600 font-semibold">Read Framework →</Link>
+        </article>
       </div>
     </main>
   );
