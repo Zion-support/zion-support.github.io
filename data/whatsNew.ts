@@ -22,6 +22,28 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "production-safety-checklist-2026",
+    title: "AI 2026: Production Safety Checklist",
+    description:
+      "Eval‑gated controls, policy bundles, and incident playbooks to operate safely.",
+    ctaLabel: "Read Checklist",
+    href: "/blog/ai-2026-production-safety-checklist",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-slos-2026",
+    title: "AI 2026: Agent Platform SLOs That Matter",
+    description:
+      "A concise SLO set for safety, quality, reliability, and economics.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-platform-slos",
+    emoji: "📏",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-governance-toolkit-2-0",
     title: "Agent Governance Toolkit v2.0",
     description:

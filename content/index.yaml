@@ -469,6 +469,34 @@ content_index:
         reliability: "99.9%"
         gated_releases: true
         audit_ready: true
+    - id: "ai-2026-production-safety-checklist"
+      type: "blog"
+      title: "AI 2026: Production Safety Checklist for Autonomous Agents"
+      file_path: "/content/blog/ai-2026-production-safety-checklist.md"
+      url: "/blog/ai-2026-production-safety-checklist"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Safety", "Governance", "Policy-as-Code", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        incident_reduction: "40%"
+    - id: "ai-2026-agent-platform-slos"
+      type: "page"
+      title: "AI 2026: Agent Platform SLOs That Matter"
+      file_path: "/content/pages/ai-2026-agent-platform-slos.md"
+      url: "/content/ai-2026-agent-platform-slos"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["SLOs", "Observability", "Reliability", "Operations", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        availability: "99.9%"
+        mttr: "< 10 min"
+        timeout_rate: "< 1% P95"
     - id: "ai-2026-agent-incident-response-playbook"
       type: "playbook"
       title: "AI 2026: Agent Incident Response Playbook"
