@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-
-export default function InternationalProposals() {
-  const [items, setItems] = useState<any[]>([]),
-  const [loading, setLoading] = useState(true),
-
-  useEffect(() => {
-    (async () => {
-      const res = await fetch('/api/proposals/list'),
-      const data = await res.json(),
-      setItems(data.proposals || []),
-      setLoading(false),
-    })(),
-  }, []),
-
-  async function updateStatus(id: string, status: string) {
-    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
-    const res = await fetch('/api/proposals/list'),
-    const data = await res.json(),
-    setItems(data.proposals || []),
-=======
 import React, { useEffect, useState } from 'react';
 
 export default function InternationalProposals() {
@@ -40,7 +18,6 @@ export default function InternationalProposals() {
     const res = await fetch('/api/proposals/list');
     const data = await res.json();
     setItems(data.proposals || []);
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -76,9 +53,5 @@ export default function InternationalProposals() {
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

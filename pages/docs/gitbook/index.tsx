@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path',
-import Link from 'next/link',
-
-function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir),
-  return items.map((name) => {
-    const full = path.join(dir, name),
-    const rel = path.relative(baseDir, full),
-    const stat = fs.statSync(full),
-    return { name, rel, isDir: stat.isDirectory() },
-  }),
-}
-
-export async function getStaticProps() {
-  const base = path.join(process.cwd(), 'docs/gitbook'),
-  const sections = fs.existsSync(base)
-    ? list(base, base).map((entry) => ({
-        title: entry.name,
-        items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
-    : [],
-  return { props: { sections }, revalidate: 600 },
-}
-
-export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
-=======
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -51,7 +24,6 @@ export async function getStaticProps() {
 }
 
 export default function DocsIndex({ sections }: { sections: { title: string; items: { name: string; rel: string; isDir: boolean }[] }[] }) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Zion Docs (GitBook)</h1>
@@ -73,9 +45,5 @@ export default function DocsIndex({ sections }: { sections: { title: string; ite
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

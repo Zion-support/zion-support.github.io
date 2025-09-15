@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { useFavorites } from '@/hooks/useFavorites',
-import { X } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { ProductListingCard } from '@/components/ProductListingCard',
-import { TalentCard } from '@/components/talent/TalentCard',
-import { Button } from '@/components/ui/button',
-import { useCart } from '@/context/CartContext',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { useEffect } from 'react', // Added useEffect
-
-export default function WishlistPage() {
-  const { favorites, loading, toggleFavorite } = useFavorites(),
-  const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading
-  const router = useRouter(), // Changed from navigate
-=======
 import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
@@ -34,25 +15,10 @@ export default function WishlistPage() {
   const { favorites, loading, toggleFavorite } = useFavorites();
   const { user, isLoading: isAuthLoading } = useAuth(); // Added isAuthLoading
   const router = useRouter(); // Changed from navigate
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     // Redirect if not authenticated and auth loading is complete
     if (!isAuthLoading && !user) {
-<<<<<<< HEAD
-      router.push('/login'),
-    }
-  }, [user, isAuthLoading, router]),
-
-  if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null, // Or a loading spinner
-  }
-
-  const { items, dispatch } = useCart(),
-
-  const addToCart = (item: { id: string, title?: string, price?: number }) => {
-    if (items.some(i => i.id === item.id)) return,
-=======
       router.push('/login');
     }
   }, [user, isAuthLoading, router]);
@@ -65,29 +31,10 @@ export default function WishlistPage() {
 
   const addToCart = (item: { id: string; title?: string; price?: number }) => {
     if (items.some(i => i.id === item.id)) return;
->>>>>>> origin/auto/autonomy-17186719616
     dispatch({
       type: 'ADD_ITEM',
       payload: {
         id: item.id,
-<<<<<<< HEAD
-        title: item.title || 'Item', // Changed name to title
-        price: item.price || 0
-        // quantity: 1 // Removed quantity
-      }
-    }),
-    toast.success(`1× ${item.title || 'Item'} added`),
-  },
-
-  const productMap = MARKETPLACE_LISTINGS.reduce<Record<string any>>((acc, p) => {
-    acc[p.id] = p,
-    return acc,
-  }, {}),
-  const talentMap = TALENT_PROFILES.reduce<Record<string any>>((acc, t) => {
-    acc[t.id] = t,
-    return acc,
-  }, {}),
-=======
         name: item.title || 'Item',
         price: item.price || 0,
         quantity: 1
@@ -104,17 +51,12 @@ export default function WishlistPage() {
     acc[t.id] = t;
     return acc;
   }, {});
->>>>>>> origin/auto/autonomy-17186719616
 
   const sortedFavorites = [...favorites].sort(
     (a, b) =>
       new Date(b.created_at || '').getTime() -
       new Date(a.created_at || '').getTime()
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="container py-8">
@@ -127,11 +69,7 @@ export default function WishlistPage() {
         <div className="responsive-grid">
           {sortedFavorites.map(fav => {
             if (fav.item_type === 'talent') {
-<<<<<<< HEAD
-              const talent = talentMap[fav.item_id],
-=======
               const talent = talentMap[fav.item_id];
->>>>>>> origin/auto/autonomy-17186719616
               return talent ? (
                 <div key={fav.item_id} className="relative">
                   <button
@@ -153,15 +91,9 @@ export default function WishlistPage() {
                     </p>
                   )}
                 </div>
-<<<<<<< HEAD
-              ) : null,
-            }
-            const item = productMap[fav.item_id],
-=======
               ) : null;
             }
             const item = productMap[fav.item_id];
->>>>>>> origin/auto/autonomy-17186719616
             return item ? (
               <div key={fav.item_id} className="relative">
                 <button
@@ -186,18 +118,10 @@ export default function WishlistPage() {
                   </p>
                 )}
               </div>
-<<<<<<< HEAD
-            ) : null,
-=======
             ) : null;
->>>>>>> origin/auto/autonomy-17186719616
           })}
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

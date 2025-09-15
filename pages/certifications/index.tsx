@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',
-import CertificatePreview from '../../components/learn/CertificatePreview',
-
-export default function Certifications() {
-  const [leaderboard, setLeaderboard] = useState<any[]>([]),
-
-  useEffect(() => {
-    fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || [])),
-  }, []),
-=======
 import { useEffect, useState } from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 
@@ -18,7 +7,6 @@ export default function Certifications() {
   useEffect(() => {
     fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []));
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -44,9 +32,5 @@ export default function Certifications() {
         </ol>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -80,10 +80,6 @@ NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 const NavigationMenuLink = NavigationMenuPrimitive.Link
 
 const NavigationMenuViewport = React.forwardRef<
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => (
@@ -126,17 +122,7 @@ export {
   NavigationMenuItem,
   NavigationMenuContent,
   NavigationMenuTrigger,
-<<<<<<< HEAD
-  NavigationMenuLink,;
-  NavigationMenuIndicator,;
-  NavigationMenuViewport;
-};
-  NavigationMenuLink,
-  NavigationMenuIndicator,
-  NavigationMenuViewport}
-=======
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport,
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
-
-const TalentProfile: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query,
-
-  const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
-
-  const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
-    setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }]),
-  },
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -32,7 +14,6 @@ const TalentProfile: NextPage = () => {
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }]);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6 pb-20">
@@ -85,14 +66,7 @@ const TalentProfile: NextPage = () => {
         </aside>
       </section>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default TalentProfile,
-=======
   );
 };
 
 export default TalentProfile;
->>>>>>> origin/auto/autonomy-17186719616

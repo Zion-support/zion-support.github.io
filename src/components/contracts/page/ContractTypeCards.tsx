@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, ShieldCheck } from 'lucide-react'
-
-interface ContractTypeCardsProps {
-  onStandardClick: () => void,
-  onSmartClick: () => void
-=======
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, ShieldCheck } from 'lucide-react'
@@ -15,7 +6,6 @@ import { FileText, ShieldCheck } from 'lucide-react'
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
@@ -40,21 +30,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
-<<<<<<< HEAD
-          <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract
-          </Button>
-        </CardFooter>
-      </Card>
-          <ul className="space-y-2">
-            <li className="text-sm"> Legally binding templates</li>
-            <li className="text-sm"> Milestone-based payment terms</li>
-            <li className="text-sm"> IP rights and confidentiality clauses</li>
-            <li className="text-sm"> DocuSign integration</li>
-          </ul>
-        </CardContent>
-        <CardFooter>
-=======
->>>>>>> origin/auto/autonomy-17186719616
           <Button variant="outline" onClick={onStandardClick}>
             Create Standard Contract
           </Button>
@@ -78,10 +53,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <li className="text-sm">✓ All standard contract features</li>
             <li className="text-sm">✓ Automatic escrow payment release</li>
             <li className="text-sm">✓ Transaction verification</li>
@@ -99,9 +70,5 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
