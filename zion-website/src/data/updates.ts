@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Ops Control Center (v2.0)',
+    summary:
+      'Unified observability, policy enforcement, and automated incident workflows with live evals.',
+    href: '/updates/autonomous-ops-control-center-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Enterprise Agent Safety (2026)',
+    summary:
+      'Risk tiers, permissioned tools, sandboxes, approvals, and runtime safety telemetry.',
+    href: '/updates/enterprise-agent-safety-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Compliance Auditor (v1.0)',
     summary:
       'Automated GenAI compliance auditing with policy-as-code, lineage, PII detection, and exportable audit reports.',
