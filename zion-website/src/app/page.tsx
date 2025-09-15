@@ -121,10 +121,10 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'New Article: AI Governance Blueprint 2025',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                  'Practical guardrails for deploying autonomous AI with verifiable policy and audits.',
+                href: '/blog/ai-governance-blueprint-2025'
               },
               {
                 title: 'Community Challenge: Build a DApp',
