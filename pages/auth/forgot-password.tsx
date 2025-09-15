@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const ForgotPassword: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const ForgotPassword: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ForgotPassword;
+export default ForgotPassword,

@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 const http = require('http');
 const url = require('url');
@@ -341,6 +342,28 @@ class AutomationDashboard {
       metrics: {},
       alerts: this.alerts,
       recommendations: this.generateRecommendations()
+=======
+
+const logsDir = path.join(__dirname, 'logs');
+const logFile = path.join(logsDir, 'automation-dashboard.log');
+const statusFile = path.join(logsDir, 'dashboard-status.json');
+
+function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
+function log(msg) {
+  const line = `[${new Date().toISOString()}] ${msg}\n`;
+  console.log(msg);
+  fs.appendFileSync(logFile, line);
+}
+
+function start() {
+  ensureDir(logsDir);
+  log('Starting automation dashboard...');
+  setInterval(() => {
+    const status = {
+      timestamp: new Date().toISOString(),
+      pid: process.pid,
+      uptimeMs: Math.round(process.uptime() * 1000)
+>>>>>>> origin/auto/autonomy-17186719616
     };
 
     // System details
@@ -419,7 +442,14 @@ class AutomationDashboard {
       const pathname = parsedUrl.pathname;
 
       res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
       res.setHeader('Access-Control-Allow-Origin', '*');
+=======
+      // Restrict CORS to local Next.js dev by default; adjust as needed
+      const origin = req.headers.origin || '*';
+      res.setHeader('Access-Control-Allow-Origin', origin);
+      res.setHeader('Vary', 'Origin');
+>>>>>>> origin/auto/autonomy-17186719616
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -502,6 +532,7 @@ class AutomationDashboard {
   }
 }
 
+<<<<<<< HEAD
 // CLI handling
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
@@ -534,3 +565,6 @@ process.on('SIGINT', () => {
   console.log('\n🛑 Shutting down automation dashboard...');
   process.exit(0);
 });
+=======
+if (require.main === module) start();
+>>>>>>> origin/auto/autonomy-17186719616

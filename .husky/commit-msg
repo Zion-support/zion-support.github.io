@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+<<<<<<< HEAD
 
 # Get the commit message
 commit_msg=$(cat "$1")
@@ -23,3 +24,8 @@ if ! echo "$commit_msg" | grep -qE "^(feat|fix|docs|style|refactor|test|chore|pe
 fi
 
 echo "✅ Commit message validation passed" 
+=======
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --yes commitlint --edit "$1"
+>>>>>>> origin/auto/autonomy-17186719616
