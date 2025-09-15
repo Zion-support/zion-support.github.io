@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -8,6 +9,7 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+<<<<<<< HEAD
       id: 'agentic-safety-patterns-2025',
       title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
       excerpt: 'Practical patterns like budget caps, sensitive-action handshakes, and reputation‑gated autonomy.',
@@ -16,6 +18,16 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/agentic-safety.jpg',
+=======
+      id: 'enterprise-agent-safety-2025',
+      title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
+      excerpt: 'Deploy autonomous agents with executable policy guardrails, human-in-the-loop controls, and full auditability.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/enterprise-agent-safety.jpg',
+>>>>>>> cursor/create-and-deploy-new-content-1633
       featured: true
     },
     {
@@ -99,6 +111,7 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+<<<<<<< HEAD
       id: 'genai-productivity-benchmarks-2025',
       title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
       excerpt: 'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
@@ -107,6 +120,16 @@ export default function BlogPage() {
       date: '2025-09-13',
       readTime: '8 min read',
       image: '/blog/genai-productivity-benchmarks.jpg'
+=======
+      id: 'enterprise-agent-safety-2025',
+      title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
+      excerpt: 'A practical playbook for safe, scalable autonomous agent deployments in the enterprise.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/enterprise-agent-safety.jpg'
+>>>>>>> cursor/create-and-deploy-new-content-1633
     },
     {
       id: 'edge-ai-marketplaces',
@@ -252,13 +275,20 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Promo Banner - New Article */}
+      {/* Promo Banner - New Article */
+      }
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
+<<<<<<< HEAD
             href="/blog/agentic-supply-chains-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents"
+=======
+            href="/blog/enterprise-agent-safety-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale"
+>>>>>>> cursor/create-and-deploy-new-content-1633
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
@@ -270,10 +300,17 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+<<<<<<< HEAD
                   Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   How autonomous agents coordinate forecasting, procurement, and fulfillment with measurable SLAs.
+=======
+                  Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A practical playbook for policy guardrails, escalation paths, and auditable autonomy.
+>>>>>>> cursor/create-and-deploy-new-content-1633
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>

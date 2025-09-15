@@ -1,3 +1,4 @@
+import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -148,8 +149,13 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Agentic Supply Chains 2025
+=======
+              <a href="/blog/enterprise-agent-safety-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Enterprise Agent Safety 2025
+>>>>>>> cursor/create-and-deploy-new-content-1633
               </a>
             </div>
           </div>
