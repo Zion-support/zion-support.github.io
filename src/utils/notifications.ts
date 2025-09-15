@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Notification utilities
 interface NotificationOptions {
 =======
@@ -9,12 +10,19 @@ interface NotificationOptions {
 
 export interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+// Notification utilities
+interface NotificationOptions {
+>>>>>>> cursor/create-and-deploy-new-content-35fa
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
   data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
@@ -50,6 +58,7 @@ class NotificationManager {
         console.warn('Notification permission denied');
         return null;
       }
+<<<<<<< HEAD
 =======
   requireInteraction?: boolean;
   silent?: boolean;
@@ -100,6 +109,8 @@ export const notifications = {
       console.warn('Notification permission not granted');
       return null;
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
     }
 
     try {
@@ -109,16 +120,22 @@ export const notifications = {
         badge: options.badge,
         tag: options.tag,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+<<<<<<< HEAD
 =======
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -131,6 +148,9 @@ export const notifications = {
       return notification;
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
       console.error('Error showing notification:', error);
       return null;
     }
@@ -147,6 +167,7 @@ export const notifications = {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+<<<<<<< HEAD
 =======
       console.warn('Failed to show notification:', error);
       return null;
@@ -171,11 +192,16 @@ export const notifications = {
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
       requireInteraction: true,
     });
   }
@@ -200,6 +226,7 @@ export const notifications = {
 }
 
 export const notificationManager = new NotificationManager();
+<<<<<<< HEAD
 export default notificationManager;
 =======
       requireInteraction: true
@@ -233,3 +260,6 @@ export default notificationManager;
 
 export default notifications;
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+export default notificationManager;
+>>>>>>> cursor/create-and-deploy-new-content-35fa

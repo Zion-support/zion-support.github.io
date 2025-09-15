@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -31,6 +34,7 @@ export const safeStorage = {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
+<<<<<<< HEAD
 =======
 /**
  * Safe storage utility for handling localStorage and sessionStorage
@@ -146,6 +150,8 @@ export const safeStorage = {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
     }
   }
 };

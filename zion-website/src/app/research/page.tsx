@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
 
@@ -34,6 +33,7 @@ export default function ResearchPage() {
 			</div>
 		</div>
 	)
+<<<<<<< HEAD
 }
 =======
 import { LightBulbIcon, CpuChipIcon, AcademicCapIcon, GlobeAltIcon, ChartBarIcon, UserGroupIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -194,3 +194,6 @@ export default function ResearchPage() {
 }
 
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-35fa

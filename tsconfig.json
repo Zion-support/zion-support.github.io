@@ -35,6 +35,7 @@
   },
   "include": [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     "**/*.ts",
@@ -50,6 +51,19 @@
 >>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
+=======
+<<<<<<< HEAD
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+    "**/*.ts",
+    "**/*.tsx",
+>>>>>>> cursor/create-and-deploy-new-content-35fa
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -58,12 +72,18 @@
     "dist",
     "build",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-35fa
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-    "coverage"
-=======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-35fa
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
@@ -73,8 +93,13 @@
 =======
 =======
     "coverage"
+<<<<<<< HEAD
 >>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-35fa
   ]
 }
