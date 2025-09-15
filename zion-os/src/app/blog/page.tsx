@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-agent-safety-playbook-2025',
+      title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Engineering-first guardrails, audits, and human-in-the-loop patterns for safe autonomy.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-agent-safety.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-agent-safety-playbook-2025',
+      title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Engineering-first guardrails, audits, and human-in-the-loop patterns for safe autonomy.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-agent-safety.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -213,25 +234,23 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-governance-blueprint-2025"
+            href="/blog/ai-agent-safety-playbook-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy"
+            aria-label="Read: AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AG
+                AS
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Governance</span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Safety</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                  AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
-                </p>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">A concise, engineering-first guide to deploy guardrails, audits, and human-in-the-loop controls for real-world autonomous agents.</p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
             </div>

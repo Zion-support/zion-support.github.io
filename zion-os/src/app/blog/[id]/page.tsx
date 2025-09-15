@@ -11,6 +11,20 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-agent-safety-playbook-2025': {
+    id: 'ai-agent-safety-playbook-2025',
+    title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A concise, engineering-first guide to deploy guardrails, audits, and human-in-the-loop controls for real-world autonomous agents.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Enterprises moving to autonomous agents need safety woven into architecture, not bolted on. This playbook outlines pragmatic controls that preserve velocity while containing risk.',
+      'We cover policy engines, capability scoping, red-teaming, incident response, and post-incident learning loops. Templates and reference checklists are included to accelerate implementation.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
