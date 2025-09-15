@@ -261,7 +261,19 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/web3-dapp-challenge',
     date: '2025-09-03',
     tag: 'Community'
-  }
+  },
+  {
+    title: 'Launch: AI Content Studio 2.1',
+    summary:
+      'Refinements to workflows, new templates, and 20% faster asset generation for teams.',
+    href: '/updates/ai-content-studio-2-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  
+  
+  
+  
   ,
   {
     title: 'Case Study: RAG Agents Reduce MTTR by 42%',
@@ -281,6 +293,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: AI Governance Dashboard v3',
+    summary:
+      'Unified governance KPIs with policy-as-code status, eval gates, and exception workflows.',
+    href: '/updates/ai-governance-dashboard-v3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Guide: Evaluating Multimodal Agents (2026 Preview)',
     summary:
       'A practical rubric and harnesses to evaluate multimodal grounding, tool use, and safety.',
@@ -295,6 +315,14 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/genai-executive-course',
     date: '2025-09-15',
     tag: 'Course'
+  },
+  {
+    title: 'Launch: Agent Benchmark Suite v1',
+    summary:
+      'Task suites, rubrics, and golden datasets for production agents across domains.',
+    href: '/updates/agent-benchmark-suite-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
   }
 ]
 

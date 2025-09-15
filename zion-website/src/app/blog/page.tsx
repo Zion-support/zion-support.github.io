@@ -107,6 +107,17 @@ const posts = [
     title: 'AI 2026: Agent Orchestration Patterns',
     summary: 'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.'
   }
+  ,
+  {
+    slug: 'ai-2026-retrieval-latency-patterns',
+    title: 'AI 2026: Retrieval Latency Patterns',
+    summary: 'Designing sub-500ms retrieval with caches, hybrids, and streaming.'
+  },
+  {
+    slug: 'ai-2026-grounded-generation-blueprint',
+    title: 'AI 2026: Grounded Generation Blueprint',
+    summary: 'Reduce hallucinations with retrieval, constraints, and eval gates.'
+  }
 ]
 
 export default function BlogIndexPage() {
