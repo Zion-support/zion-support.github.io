@@ -117,17 +117,17 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/production-guardrails-multimodal-agents"
+                href="/blog/ai-2026-policy-as-code-production-blueprint"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
-                Guide: Multimodal Guardrails
+                Blueprint: Policy‑as‑Code in Production
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/blog/ai-2026-production-safety-checklist"
+                href="/blog/ai-2026-real-time-retrieval-architectures"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                Guide: Production Safety Checklist
+                New: Real‑Time Retrieval Architectures
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -394,21 +394,22 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
+                summary:
+                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
+                href: '/blog/ai-2026-policy-as-code-production-blueprint'
+              },
+              {
+                title: 'AI 2026: Real‑Time Retrieval Architectures',
+                summary:
+                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
+                href: '/blog/ai-2026-real-time-retrieval-architectures'
+              },
+              {
                 title: 'AI 2026: Generative AI Risk Register',
                 summary:
                   'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
                 href: '/blog/ai-2026-generative-ai-risk-register'
-              },
-              {
-                title: 'AI 2026: Agent Cost Optimization',
-                summary:
-                  'Reduce spend 20–40% with routing, caching, batching, and benchmark‑driven choices.',
-                href: '/blog/ai-2026-agent-cost-optimization'
-              },
-              {
-                title: 'Sovereign AI Commerce (2026): Autonomous Marketplaces',
-                summary: 'Reference architecture, safety gates, and rollout checklist for AI commerce.',
-                href: '/blog/ai-2026-sovereign-ai-commerce'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
