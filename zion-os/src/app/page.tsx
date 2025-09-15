@@ -148,7 +148,7 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
               <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Quantum Risk Modeling 2025
+                📰 New: AI Governance Blueprint 2025
               </a>
             </div>
           </div>
