@@ -1,364 +1,150 @@
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
-import { motion } from 'framer-motion',
-import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts';
+import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database  } from 'lucide-react.ts'
 
-const Solutions: NextPage = () => {
-  const industrySolutions = [
+export default function Solutions(...args: any[]): any {
+  const solutions = [
     {
-      id: 'healthcare',
-      name: 'Healthcare Solutions',
-      description: 'AI-powered healthcare technology solutions',
-      features: ['Patient Care OptimizationDiagnostic AI', 'Healthcare AnalyticsCompliance Management'],
-      price: '$3,999',
-      period: 'month',
-      popular: true,
-      icon: <Heart className="w-8 h-8" />
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      description: 'Advanced AI systems, autonomous agents, and intelligent automation platforms that transform business operations.',
+      features: ['Multi-agent AI systems', 'RAG-powered workflows', 'Predictive analytics', 'Natural language processing'],
+      href: '/services#ai',
+      color: 'from-blue-600 to-purple-600'
     },
     {
-      id: 'financial',
-      name: 'Financial Solutions',
-      description: 'Advanced financial technology and services',
-      features: ['Risk ManagementFraud Detection', 'Trading SystemsCompliance Automation'],
-      price: '$2,999',
-      period: 'month',
-      popular: false,
-      icon: <TrendingUp className="w-8 h-8" />
+      icon: Cloud,
+      title: 'Cloud & Infrastructure',
+      description: 'Scalable cloud platforms, serverless architectures, and modern infrastructure solutions.',
+      features: ['Cloud migration', 'Kubernetes orchestration', 'Serverless computing', 'Data pipelines'],
+      href: '/services#cloud',
+      color: 'from-cyan-500 to-blue-600'
     },
     {
-      id: 'manufacturing',
-      name: 'Manufacturing Solutions',
-      description: 'Smart manufacturing and Industry 4.0',
-      features: ['Predictive MaintenanceQuality Control', 'Supply Chain OptimizationIoT Integration'],
-      price: '$2,799',
-      period: 'month',
-      popular: false,
-      icon: <Settings className="w-8 h-8" />
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions including zero-trust architecture and threat detection.',
+      features: ['Zero-trust security', 'Threat intelligence', 'Compliance frameworks', 'Incident response'],
+      href: '/services#cybersecurity',
+      color: 'from-emerald-500 to-teal-600'
     },
     {
-      id: 'retail',
-      name: 'Retail Solutions',
-      description: 'Digital transformation for retail businesses',
-      features: ['E-commerce PlatformsCustomer Analytics', 'Inventory ManagementOmnichannel Solutions'],
-      price: '$2,499',
-      period: 'month',
-      popular: false,
-      icon: <ShoppingCart className="w-8 h-8" />
+      icon: Zap,
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize legacy systems and processes.',
+      features: ['Legacy modernization', 'Process automation', 'Digital workflows', 'Change management'],
+      href: '/services#transformation',
+      color: 'from-orange-500 to-red-600'
     },
     {
-      id: 'government',
-      name: 'Government Solutions',
-      description: 'Technology solutions for public sector',
-      features: ['Digital ServicesSecurity & Compliance', 'Data ManagementCitizen Engagement'],
-      price: '$3,499',
-      period: 'month',
-      popular: false,
-      icon: <Building className="w-8 h-8" />
+      icon: Users,
+      title: 'Enterprise Solutions',
+      description: 'Tailored enterprise-grade solutions for large organizations with complex requirements.',
+      features: ['Custom development', 'Integration services', 'Enterprise architecture', 'Scalability planning'],
+      href: '/services#enterprise',
+      color: 'from-purple-500 to-pink-600'
     },
     {
-      id: 'education',
-      name: 'Education Solutions',
-      description: 'Innovative educational technology',
-      features: ['Learning PlatformsStudent Analytics', 'Administrative SystemsVirtual Classrooms'],
-      price: '$1,999',
-      period: 'month',
-      popular: false,
-      icon: <BookOpenCheck className="w-8 h-8" />
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Performance tuning, monitoring, and optimization for applications and infrastructure.',
+      features: ['Performance monitoring', 'Load testing', 'Optimization strategies', 'Capacity planning'],
+      href: '/services#performance',
+      color: 'from-yellow-500 to-orange-600'
     }
-  ],
-
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise',
-      description: 'Deep domain knowledge across sectors',
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: 'Custom Development',
-      description: 'Tailored solutions for unique needs',
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: 'Integration Services',
-      description: 'Seamless system integration',
-      icon: <Network className="w-6 h-6" />
-    },
-    {
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions',
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: 'Cloud & Security',
-      description: 'Secure cloud infrastructure',
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Data-driven decision making',
-      icon: <BarChart3 className="w-6 h-6" />
-    }
-  ],
-
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation",
-      industry: "Healthcare",
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
-      results: [
-        "30% reduction in administrative overhead",
-        "Improved patient satisfaction scores",
-        "Enhanced data security and compliance"
-      ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
-    },
-    {
-      title: "E-commerce Platform Modernization",
-      industry: "Retail",
-      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales.",
-      results: [
-        "45% increase in conversion rates",
-        "60% improvement in page load times",
-        "Enhanced mobile user experience"
-      ],
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
-    },
-    {
-      title: "Manufacturing IoT Integration",
-      industry: "Manufacturing",
-      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
-      results: [
-        "25% reduction in unplanned downtime",
-        "15% improvement in production efficiency",
-        "Predictive maintenance cost savings"
-      ],
-      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-    }
-  ],
+  ]
 
   return (
-    <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
-          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
-        </Head>
-
-        {/* Hero Section */}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                Industry Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Tailored technology solutions designed for your industry's unique challenges and opportunities
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </a>
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Demo
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Solution Capabilities */}
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Solution Capabilities
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive capabilities to deliver industry-specific technology solutions
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutionCapabilities.map((capability, index) => (
-                <motion.div
-                  key={capability.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
-                      {capability.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{capability.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Industry Solutions */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Industry Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose from our comprehensive suite of industry-specific solutions
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index) => (
-                <motion.div
-                  key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    solution.popular 
-                      ? 'border-orange-500 shadow-lg shadow-orange-500/25' 
-                      : 'border-gray-700 hover:border-orange-500'
-                  }`}
-                >
-                  {solution.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-6">
-                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
-                      {solution.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
-                    <p className="text-gray-300 mb-4">{solution.description}</p>
-                    <div className="text-3xl font-bold text-orange-400 mb-2">
-                      {solution.price}
-                      <span className="text-lg text-gray-400">/{solution.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <a 
-                    href="/contact" 
-                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
-                  >
-                    Get Started
-                  </a>
-                </motion.div>
-              ))}
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Industry Solutions
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Enterprise Solutions for{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Modern Business
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Transform your business with our comprehensive suite of AI, cloud, and cybersecurity solutions designed for enterprise scale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Grid */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16">
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Our Solutions</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Comprehensive technology solutions
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              From AI-powered automation to enterprise-grade security, we provide the tools and expertise to transform your operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+            {solutions.map((solution, index)  => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${solution.color} text-white mb-6`}>
+                  <solution.icon className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{solution.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  href={solution.href}
+                  className={`inline-flex items-center justify-center w-full px-6 py-3 rounded-lg bg-gradient-to-r ${solution.color} text-white font-semibold hover:shadow-lg transition-all duration-200`}
+                >
+                  Learn More
+                  <Zap className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+              Ready to transform your business?
+            </h2>
+            <p className="text-lg leading-8 text-gray-600 mb-8">
+              Let's discuss how our solutions can help you achieve your goals and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
               >
                 Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                href="/demo"
-                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
+                href="/services"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-gray-300 text-gray-700 font-semibold hover:border-gray-400 transition-all duration-200"
               >
-                Request Demo
+                View All Services
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Ready for Industry Transformation?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Partner with us to build industry-specific solutions that drive your business forward
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </a>
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Consultation
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
+    </div>
   )
-},
-
-export default Solutions,
+}

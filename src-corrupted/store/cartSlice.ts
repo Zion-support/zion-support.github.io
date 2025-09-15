@@ -12,26 +12,14 @@ interface CartState {
 const initialState: CartState = {
   items: [],
   total: 0,
-  itemCount: 0,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-
-
-
-
-
-
+  itemCount: 0,
 };
 
-const cartSlice:  createSlice({;
-  name: unknown'cart',;
-  initialState,;
-  reducers: {;
-    addItem: (state, action: PayloadAction<CartItem>)  => {;
+const cartSlice = createSlice({
+  name: any'cart',
+  initialState,
+  reducers: {
+    addItem: (state, action: PayloadAction<CartItem>)  => {
       const existingItem = state.items.find(item => item.id === action.payload.id);
       if (existingItem) {
         existingItem.quantity += action.payload.quantity;
@@ -41,12 +29,12 @@ const cartSlice:  createSlice({;
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
-    removeItem: unknown(state, action: PayloadAction<string>)  => {
+    removeItem: any(state, action: PayloadAction<string>)  => {
       state.items = state.items.filter(item => item.id !== action.payload);
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
-    updateQuantity: unknown(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
+    updateQuantity: any(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
       const item = state.items.find(item => item.id === action.payload.id);
       if (item) {
         item.quantity = action.payload.quantity;
@@ -54,7 +42,7 @@ const cartSlice:  createSlice({;
         state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
       }
     },
-    clearCart: unknown(state)  => {
+    clearCart: any(state)  => {
       state.items = [];
       state.total = 0;
       state.itemCount = 0;

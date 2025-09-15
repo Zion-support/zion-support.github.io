@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 // Enhanced Services with real market prices, features, and benefits
 export const ENHANCED_SERVICES: ProductListing[] = [

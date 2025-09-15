@@ -1,476 +1,190 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
-import plugin from 'tailwindcss/plugin';
-
+import { Config  } from 'tailwindcss.ts';
+import { fontFamily  } from 'tailwindcss/defaultTheme.ts';
+import plugin from 'tailwindcss/plugin.ts';
+import animatePlugin from 'tailwindcss-animate.ts';
 const config: Config = {
-=======
-=======
-  darkMode: "class",
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-=======
   ],
   safelist: ['border-border'],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
-        // Enhanced Zion colors for futuristic design
-        'zion-blue': {
-          DEFAULT: '#0a0f1f',
-          light: '#1e263b',
-          dark: '#090c1a',
+        // Custom Zion colors (updated palette)
+        "zion-blue": {
+          DEFAULT: "#2e73ea",
+          light: "#8ab1f3",
+          dark: "#172d67",
         },
-        'zion-purple': {
-          DEFAULT: '#a855f7',
-          light: '#d8b4fe',
-          dark: '#9333ea',
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
         },
-        'zion-cyan': {
-          DEFAULT: '#00e5ff',
-          light: '#7df9ff',
-          dark: '#00c4cc',
+        "zion-cyan": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
         },
-        'zion-slate': {
-          DEFAULT: '#94A3B8',
-          light: '#CBD5E1',
-          dark: '#64748B',
+        "zion-slate": {
+          DEFAULT: "#17072b",
+          light: "#451582",
+          dark: "#000000",
         },
-        // New futuristic colors
-        'neon-pink': '#ff0080',
-        'neon-green': '#00ff41',
-        'neon-orange': '#ff6b35',
-        'neon-yellow': '#ffff00',
-        'quantum-blue': '#1e40af',
-        'quantum-purple': '#7c3aed',
-        'quantum-cyan': '#0891b2',
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
+          glow: "#22ddd2",
+        },
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
+        },
+        "zion-cyber": {
+          DEFAULT: "#00ff88",
+          light: "#66ffaa",
+          dark: "#00cc6a",
+          neon: "#00ff88",
+        },
+        "zion-matrix": {
+          DEFAULT: "#00ff41",
+          light: "#66ff7a",
+          dark: "#00cc33",
+          neon: "#00ff41",
+        },
+        // Neon color palette for components
+        "neon-blue": "#00d4ff",
+        "neon-purple": "#8b5cf6",
+        "neon-pink": "#ec4899",
+        "neon-green": "#00ff88",
+        "neon-orange": "#ff8000",
+        "neon-red": "#ff0000",
+        "neon-yellow": "#ffff00",
+        "neon-cyan": "#00ffff",
+        "neon-magenta": "#ff00ff",
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
-        heading: [
-          'var(--font-poppins)',
-          'Poppins Fallback',
-          ...defaultTheme.fontFamily.sans
-        ],
-        futuristic: ['Orbitron', 'monospace'],
-        neon: ['Rajdhani', 'sans-serif'],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
-        'neon-pulse': {
-          '0%, 100%': { 
-            textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-            opacity: '1'
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "fade-out": {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
+        },
+        "slide-in-from-top": {
+          from: { transform: "translateY(-100%)" },
+          to: { transform: "translateY(0)" },
+        },
+        "slide-in-from-bottom": {
+          from: { transform: "translateY(100%)" },
+          to: { transform: "translateY(0)" },
+        },
+        "slide-in-from-left": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "slide-in-from-right": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { 
+            boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor" 
           },
-          '50%': { 
-            textShadow: '0 0 2px currentColor, 0 0 5px currentColor, 0 0 7px currentColor',
-            opacity: '0.8'
+          "50%": { 
+            boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor" 
           },
-        },
-        'quantum-float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'holographic-shift': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-        'matrix-rain': {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100vh)' },
-        },
-        'neon-flicker': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
-        },
-        'quantum-spin': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
-        },
-        "glow": {
-          "0%, 100%": { 
-            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" 
-          },
-          "50%": { 
-            boxShadow: "0 0 40px rgba(34, 221, 210, 0.8), 0 0 60px rgba(34, 221, 210, 0.4)" 
-          },
-        },
-        "neon-pulse": {
-          "0%, 100%": { 
-            textShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor" 
-          },
-          "50%": { 
-            textShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor" 
-          },
-        },
-        "cyber-scan": {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" },
         },
         "matrix-rain": {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(100vh)" },
         },
-        "gradient-shift": {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-        },
-        "fade-in-up": {
-          "0%": { 
-            opacity: "0",
-            transform: "translateY(30px)" 
-          },
-          "100%": { 
-            opacity: "1",
-            transform: "translateY(0)" 
-          },
-        },
-        "fade-in-left": {
-          "0%": { 
-            opacity: "0",
-            transform: "translateX(-30px)" 
-          },
-          "100%": { 
-            opacity: "1",
-            transform: "translateX(0)" 
-          },
-        },
-        "fade-in-right": {
-          "0%": { 
-            opacity: "0",
-            transform: "translateX(30px)" 
-          },
-          "100%": { 
-            opacity: "1",
-            transform: "translateX(0)" 
-          },
-        },
-        "scale-in": {
-          "0%": { 
-            opacity: "0",
-            transform: "scale(0.9)" 
-          },
-          "100%": { 
-            opacity: "1",
-            transform: "scale(1)" 
-          },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "glow": {
-          "0%, 100%": { 
-            boxShadow: "0 0 20px rgba(34, 221, 210, 0.3)" 
-          },
-          "50%": { 
-            boxShadow: "0 0 40px rgba(34, 221, 210, 0.6), 0 0 60px rgba(34, 221, 210, 0.3)" 
-          },
-        },
-        "neon-pulse": {
-          "0%, 100%": { 
-            textShadow: "0 0 5px rgba(34, 221, 210, 0.5), 0 0 10px rgba(34, 221, 210, 0.3)" 
-          },
-          "50%": { 
-            textShadow: "0 0 20px rgba(34, 221, 210, 0.8), 0 0 30px rgba(34, 221, 210, 0.5)" 
-          },
-        },
-        "matrix-rain": {
-          "0%": { 
-            transform: "translateY(-100%)",
-            opacity: "0"
-          },
-          "10%": { opacity: "1" },
-          "90%": { opacity: "1" },
-          "100%": { 
-            transform: "translateY(100vh)",
-            opacity: "0"
-          },
-        },
-        "slide-in-left": {
-          "0%": { transform: "translateX(-100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        "slide-in-right": {
-          "0%": { transform: "translateX(100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        "fade-in-up": {
-          "0%": { transform: "translateY(30px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        "neon-glow": {
-          "0%, 100%": { 
-            boxShadow: "0 0 5px #22ddd2, 0 0 10px #22ddd2, 0 0 15px #22ddd2" 
-          },
-          "50%": { 
-            boxShadow: "0 0 10px #22ddd2, 0 0 20px #22ddd2, 0 0 30px #22ddd2" 
-          },
-        },
-        "neon-pulse": {
-          "0%, 100%": { 
-            opacity: "1",
-            textShadow: "0 0 5px #22ddd2, 0 0 10px #22ddd2" 
-          },
-          "50%": { 
-            opacity: "0.8",
-            textShadow: "0 0 10px #22ddd2, 0 0 20px #22ddd2" 
-          },
-        },
-        "gradient-shift": {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "rotate-slow": {
-          from: { transform: "rotate(0deg)" },
-          to: { transform: "rotate(360deg)" },
-        },
-        "slide-in-left": {
-          from: { transform: "translateX(-100%)", opacity: "0" },
-          to: { transform: "translateX(0)", opacity: "1" },
-        },
-        "slide-in-right": {
-          from: { transform: "translateX(100%)", opacity: "0" },
-          to: { transform: "translateX(0)", opacity: "1" },
-        },
-        "fade-in-up": {
-          from: { transform: "translateY(30px)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.3)" },
-          "50%": { boxShadow: "0 0 40px rgba(34, 221, 210, 0.6)" },
-        },
-        "neon-pulse": {
-          "0%, 100%": { 
-            textShadow: "0 0 5px rgba(34, 221, 210, 0.5), 0 0 10px rgba(34, 221, 210, 0.3)" 
-          },
-          "50%": { 
-            textShadow: "0 0 20px rgba(34, 221, 210, 0.8), 0 0 30px rgba(34, 221, 210, 0.5)" 
-          },
-        },
-        "gradient-shift": {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
-        },
-        "fade-in-up": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(30px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-        "fade-in-down": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(-30px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-        "fade-in-left": {
-          "0%": {
-            opacity: "0",
-            transform: "translateX(-30px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateX(0)",
-          },
-        },
-        "fade-in-right": {
-          "0%": {
-            opacity: "0",
-            transform: "translateX(30px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateX(0)",
-          },
-        },
-        "float": {
-          "0%, 100%": {
-            transform: "translateY(0px)",
-          },
-          "50%": {
-            transform: "translateY(-20px)",
-          },
-        },
-        "glow": {
-          "0%, 100%": {
-            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)",
-          },
-          "50%": {
-            boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)",
-          },
-        },
-        "shimmer": {
-          "0%": {
-            backgroundPosition: "-200% 0",
-          },
-          "100%": {
-            backgroundPosition: "200% 0",
-          },
-        },
-        "spin-reverse": {
-          from: { transform: "rotate(360deg)" },
-          to: { transform: "rotate(0deg)" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "glow": {
-          "0%": { boxShadow: "0 0 5px #8c15e9, 0 0 10px #8c15e9, 0 0 15px #8c15e9" },
-          "100%": { boxShadow: "0 0 10px #8c15e9, 0 0 20px #8c15e9, 0 0 30px #8c15e9" },
-        },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
-        'quantum-float': 'quantum-float 6s ease-in-out infinite',
-        'holographic-shift': 'holographic-shift 3s ease infinite',
-        'matrix-rain': 'matrix-rain 20s linear infinite',
-        'neon-flicker': 'neon-flicker 0.15s ease-in-out infinite alternate',
-        'quantum-spin': 'quantum-spin 20s linear infinite',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
+        "fade-out": "fade-out 0.3s ease-out",
+        "slide-in-from-top": "slide-in-from-top 0.3s ease-out",
+        "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
+        "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
+        "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
+        "spin-slow": "spin 3s linear infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
+        "matrix-rain": "matrix-rain 20s linear infinite",
       },
-      backgroundImage: {
-        'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        'neon-gradient': 'linear-gradient(45deg, #ff0080, #00ff41, #00e5ff, #a855f7)',
-        'holographic-gradient': 'linear-gradient(45deg, #ff0080, #00ff41, #00e5ff, #a855f7, #ff0080)',
-        'cyber-gradient': 'linear-gradient(135deg, #0a0f1f 0%, #1e263b 50%, #0a0f1f 100%)',
-        'quantum-mesh': 'radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 50%)',
-      },
-      backdropBlur: {
-        'xs': '2px',
-      },
-      boxShadow: {
-        'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-        'quantum': '0 0 20px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.3)',
-        'holographic': '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)',
-      },
-    }
+    },
   },
-  plugins: [
-    plugin(function ({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right',
-        },
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left',
-        },
-        '.text-neon': {
-          textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-        },
-        '.border-neon': {
-          boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-        },
-        '.bg-holographic': {
-          background: 'linear-gradient(45deg, #ff0080, #00ff41, #00e5ff, #a855f7)',
-          backgroundSize: '400% 400%',
-          animation: 'holographic-shift 3s ease infinite',
-        },
-        '.quantum-border': {
-          border: '1px solid transparent',
-          background: 'linear-gradient(45deg, #00e5ff, #a855f7) border-box',
-          backgroundClip: 'border-box',
-        },
-      };
-      addUtilities(newUtilities);
-    })
-  ]
+  plugins: [animatePlugin],
 };
 
 export default config;

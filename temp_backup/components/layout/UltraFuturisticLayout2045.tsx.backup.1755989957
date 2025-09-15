@@ -1,30 +1,25 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-import EnhancedNavigation2025 from './EnhancedNavigation2025';
-=======
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-import UltraFuturisticFooter2044 from './UltraFuturisticFooter2044';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import ModernHeader from './ModernHeader';
+import ModernFooter from './ModernFooter';
 
-interface UltraFuturisticLayout2045Props {
+interface ModernLayoutProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  ogImage?: string;
   canonical?: string;
+
 }
 
-const UltraFuturisticLayout2045: React.FC<UltraFuturisticLayout2045Props> = ({
-  children,
-  title = "Zion Tech Group - Revolutionary 2045 Futuristic Technology Solutions",
-  description = "Discover revolutionary AI consciousness, quantum computing, and space technology solutions that will transform your business and propel humanity into the future.",
-  keywords = "AI consciousness, quantum computing, space technology, metaverse, cybersecurity, futuristic technology, 2045, Zion Tech Group",
-  ogImage = "https://ziontechgroup.com/og-image-2045.jpg",
-  canonical = "https://ziontechgroup.com"
-}) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+const ModernLayout: React.FC<ModernLayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
+  canonical = 'https: any//ziontechgroup.com'
+})  => {
   return (
     <>
       <Head>
@@ -32,27 +27,27 @@ const UltraFuturisticLayout2045: React.FC<UltraFuturisticLayout2045Props> = ({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonical} />
         
-        {/* Open Graph */}
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:site_name" content="Zion Tech Group" />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Canonical */}
-        <link rel="canonical" href={canonical} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonical} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
         
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -71,7 +66,7 @@ const UltraFuturisticLayout2045: React.FC<UltraFuturisticLayout2045Props> = ({
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Revolutionary AI consciousness, quantum computing, and space technology solutions",
+              "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
@@ -87,34 +82,24 @@ const UltraFuturisticLayout2045: React.FC<UltraFuturisticLayout2045Props> = ({
                 "email": "kleber@ziontechgroup.com"
               },
               "sameAs": [
-                "https://facebook.com/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
                 "https://linkedin.com/company/ziontechgroup",
-                "https://youtube.com/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
               ]
             })
           }}
         />
       </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-        {/* Navigation */}
-        <UltraFuturisticNavigation2045 
-          sidebarOpen={sidebarOpen} 
-          setSidebarOpen={setSidebarOpen} 
-        />
-        
-        {/* Main Content */}
-        <main className="relative z-10">
+      
+      <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+        <ModernHeader />
+        <main className="flex-1 pt-20">
           {children}
         </main>
-        
-        {/* Footer */}
-        <UltraFuturisticFooter2044 />
+        <ModernFooter />
       </div>
     </>
   );
 };
 
-export default UltraFuturisticLayout2045;
+export default ModernLayout;

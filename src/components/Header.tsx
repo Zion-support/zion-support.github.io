@@ -1,235 +1,305 @@
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Menu, 
+  X, 
+  ChevronDown, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Heart, 
+  Rocket, 
+  Sparkles,
+  BarChart3,
+  Network,
+  Globe,
+  Users,
+  FileText,
+  Phone,
+  Mail,
+  MapPin
+ } from 'lucide-react.ts';
 
+export function Header(...args: any[]): any {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
-import React, { useState } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react',
-,
-const Header = () => {,
-  const [isMenuOpen, setIsMenuOpen] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-,
-  const navigation = [,
-    {,
-      nam: e: 'Home',
-      hre: f: '/',
-    },
-    {,
-      nam: e: 'Services',
-      hre: f: '/services',
-      dropdow: n: [,
-        { nam: e: 'AI Services', hre: f: '/ai-services' },
-        { nam: e: 'IT Services', hre: f: '/it-services' },
-        { nam: e: 'Micro SaaS', hre: f: '/micro-saas' },
-        { nam: e: 'Cloud Solutions', hre: f: '/solutions/cloud-migration' },
-        { nam: e: 'Cybersecurity', hre: f: '/services/cybersecurity' },
-        { nam: e: 'Data Analytics', hre: f: '/services/data-analytics' };
-      ],
-    },
-    {,
-      nam: e: 'Solutions',
-      hre: f: '/solutions',
-      dropdow: n: [,
-        { nam: e: 'Enterprise Solutions', hre: f: '/solutions/enterprise' },
-        { nam: e: 'Healthcare', hre: f: '/solutions/healthcare' },
-        { nam: e: 'Finance', hre: f: '/solutions/finance' },
-        { nam: e: 'Government', hre: f: '/solutions/government' },
-        { nam: e: 'Retail', hre: f: '/solutions/retail' },
-        { nam: e: 'Education', hre: f: '/solutions/education' };
-      ],
-    },
-    {,
-      nam: e: 'Industries',
-      hre: f: '/industries',
-      dropdow: n: [,
-        { nam: e: 'Financial Services', hre: f: '/industries/financial' },
-        { nam: e: 'Healthcare', hre: f: '/industries/healthcare' },
-        { nam: e: 'Manufacturing', hre: f: '/industries/manufacturing' },
-        { nam: e: 'Retail', hre: f: '/industries/retail' },
-        { nam: e: 'Government', hre: f: '/industries/government' };
-      ],
-    },
-    {,
-      nam: e: 'Company',
-      hre: f: '/about',
-      dropdow: n: [,
-        { nam: e: 'About Us', hre: f: '/about' },
-        { nam: e: 'Our Team', hre: f: '/team' },
-        { nam: e: 'Careers', hre: f: '/careers' },
-        { nam: e: 'Partners', hre: f: '/partners' },
-        { nam: e: 'Case Studies', hre: f: '/case-studies' };
-      ],
-    },
-    {,
-      nam: e: 'Resources',
-      hre: f: '/resources',
-      dropdow: n: [,
-        { nam: e: 'Blog', hre: f: '/blog' },
-        { nam: e: 'White Papers', hre: f: '/white-papers' },
-        { nam: e: 'Webinars', hre: f: '/webinars' },
-        { nam: e: 'Tutorials', hre: f: '/tutorials' },
-        { nam: e: 'API Documentation', hre: f: '/api-docs' };
-      ],
-    },
-    {,
-      nam: e: 'Contact',
-      hre: f: '/contact',
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
     };
-  ],
-,
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen),
-  const toggleDropdown = (nam: e: string) => {,
-    setActiveDropdown(activeDropdown === name ? nul: l: name),
-  };
-,
-  return (,
-    <header className="bg-white shadow-lg sticky top-0 z-50">,
-      {/* Top Bar */};
-      <div className="bg-blue-900 text-white py-2">,
-        <div className="container mx-auto px-4">,
-          <div className="flex flex-col: md: flex-row justify-between items-center text-sm">,
-            <div className="flex items-center space-x-6 mb-2: md: mb-0">,
-              <div className="flex items-center space-x-2">,
-                <Phone className="w-4 h-4" />,
-                <span>+1 302 464 0950</span>,
-              </div>,
-              <div className="flex items-center space-x-2">,
-                <Mail className="w-4 h-4" />,
-                <span>kleber@ziontechgroup.com</span>,
-              </div>,
-            </div>,
-            <div className="flex items-center space-x-2">,
-              <MapPin className="w-4 h-4" />,
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>,
-            </div>,
-          </div>,
-        </div>,
-      </div>,
-      {/* Main Navigation */};
-      <nav className="container mx-auto px-4 py-4">,
-        <div className="flex justify-between items-center">,
-          {/* Logo */};
-          <Link href="/" className="flex items-center space-x-2">,
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,
-              <span className="text-white font-bold text-xl">Z</span>,
-            </div>,
-            <div>,
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>,
-              <p className="text-sm text-gray-600">AI & Technology Solutions</p>,
-            </div>,
-          </Link>,
-          {/* Desktop Navigation */};
-          <div className="hidden: lg: flex items-center space-x-8">,
-            {navigation.map((item) => (,
-              <div key={item.name} className="relative group">,
-                <button,
-                  onClick={() => item.dropdown && toggleDropdown(item.name)};
-                  className="flex items-center space-x-1 text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium",
-                >,
-                  <Link href={item.href}>{item.name}</Link>,
-                  {item.dropdown && (,
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,
-                      activeDropdown === item.name ? 'rotate-180' : '',
-                    }`} />,
-                  )};
-                </button>,
-                {/* Dropdown Menu */};
-                {item.dropdown && (,
-                  <AnimatePresence>,
-                    {activeDropdown === item.name && (,
-                      <motion.div,
-                        initial={{ opacit: y: 0, y: 10 }};
-                        animate={{ opacit: y: 1, y: 0 }};
-                        exit={{ opacit: y: 0, y: 10 }};
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50",
-                      >,
-                        {item.dropdown.map((subItem) => (,
-                          <Link,
-                            key={subItem.name};
-                            href={subItem.href};
-                            className="block px-4 py-2 text-gray-700: hover: bg-blue-50: hover:text-blue-600 transition-colors duration-200",
-                            onClick={() => setActiveDropdown(null)};
-                          >,
-                            {subItem.name};
-                          </Link>,
-                        ))};
-                      </motion.div>,
-                    )};
-                  </AnimatePresence>,
-                )};
-              </div>,
-            ))};
-          </div>,
-          {/* Mobile Menu Button */};
-          <button,
-            onClick={toggleMenu};
-            className="l: g: hidden p-2 text-gray-700: hover:text-blue-600 transition-colors duration-200",
-          >,
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
-          </button>,
-        </div>,
-        {/* Mobile Navigation */};
-        <AnimatePresence>,
-          {isMenuOpen && (,
-            <motion.div,
-              initial={{ opacit: y: 0, heigh: t: 0 }};
-              animate={{ opacit: y: 1, heigh: t: 'auto' }};
-              exit={{ opacit: y: 0, heigh: t: 0 }};
-              className="l: g: hidden mt-4 border-t border-gray-200 pt-4",
-            >,
-              {navigation.map((item) => (,
-                <div key={item.name} className="mb-2">,
-                  <div className="flex items-center justify-between">,
-                    <Link,
-                      href={item.href};
-                      className="text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium py-2",
-                      onClick={() => setIsMenuOpen(false)};
-                    >,
-                      {item.name};
-                    </Link>,
-                    {item.dropdown && (,
-                      <button,
-                        onClick={() => toggleDropdown(item.name)};
-                        className="p-1",
-                      >,
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${,
-                          activeDropdown === item.name ? 'rotate-180' : '',
-                        }`} />,
-                      </button>,
-                    )};
-                  </div>,
-                  {item.dropdown && activeDropdown === item.name && (,
-                    <div className="ml-4 mt-2 space-y-1">,
-                      {item.dropdown.map((subItem) => (,
-                        <Link,
-                          key={subItem.name};
-                          href={subItem.href};
-                          className="block text-gray-600: hover: text-blue-600 transition-colors duration-200 py-1",
-                          onClick={() => setIsMenuOpen(false)};
-                        >,
-                          {subItem.name};
-                        </Link>,
-                      ))};
-                    </div>,
-                  )};
-                </div>,
-              ))};
-              <div className="mt-4 pt-4 border-t border-gray-200">,
-                <Link,
-                  href="/contact",
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",
-                  onClick={() => setIsMenuOpen(false)};
-                >,
-                  Get Started,
-                </Link>,
-              </div>,
-            </motion.div>,
-          )};
-        </AnimatePresence>,
-      </nav>,
-    </header>,
-  ),
-};
-,
-export default Header,
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const services = [
+    {
+      category: 'AI & Research',
+      items: [
+        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: <FileText className="w-4 h-4" /> },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: <Network className="w-4 h-4" /> }
+      ]
+    },
+    {
+      category: 'Quantum & Advanced',
+      items: [
+        { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: <Cpu className="w-4 h-4" /> },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: <Shield className="w-4 h-4" /> },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: <Heart className="w-4 h-4" /> }
+      ]
+    },
+    {
+      category: 'Innovation Hub',
+      items: [
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },
+        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },
+        { name: 'All Services', path: '/services', icon: <Globe className="w-4 h-4" /> }
+      ]
+    }
+  ];
+
+  const isActive = (path: anystring)  => location.pathname === path;
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
+        : 'bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-sm'
+    }`}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
+              <Rocket className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-white text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 py-2"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                    className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-4"
+                  >
+                    <div className="grid grid-cols-1 gap-4">
+                      {services.map((category, index) => (
+                        <div key={index}>
+                          <h3 className="text-sm font-semibold text-cyan-400 mb-2 px-2">
+                            {category.category}
+                          </h3>
+                          <div className="space-y-1">
+                            {category.items.map((service, serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                to={service.path}
+                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                                onClick={() => setIsServicesOpen(false)}
+                              >
+                                <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                                  {service.icon}
+                                </div>
+                                <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                                  {service.name}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <Link 
+              to="/solutions" 
+              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                isActive('/solutions') ? 'text-cyan-400' : ''
+              }`}
+            >
+              Solutions
+            </Link>
+            
+            <Link 
+              to="/about" 
+              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                isActive('/about') ? 'text-cyan-400' : ''
+              }`}
+            >
+              About
+            </Link>
+            
+            <Link 
+              to="/blog" 
+              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                isActive('/blog') ? 'text-cyan-400' : ''
+              }`}
+            >
+              Blog
+            </Link>
+            
+            <Link 
+              to="/contact" 
+              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                isActive('/contact') ? 'text-cyan-400' : ''
+              }`}
+            >
+              Contact
+            </Link>
+
+            {/* CTA Button */}
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden border-t border-white/10"
+            >
+              <div className="py-4 space-y-4">
+                {/* Services Section */}
+                <div>
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center justify-between w-full text-left text-white hover:text-cyan-400 transition-colors duration-200 py-2"
+                  >
+                    <span>Services</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="ml-4 mt-2 space-y-2"
+                      >
+                        {services.map((category, index) => (
+                          <div key={index}>
+                            <h4 className="text-sm font-semibold text-cyan-400 mb-1">
+                              {category.category}
+                            </h4>
+                            <div className="space-y-1">
+                              {category.items.map((service, serviceIndex) => (
+                                <Link
+                                  key={serviceIndex}
+                                  to={service.path}
+                                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-1"
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  {service.icon}
+                                  <span className="text-sm">{service.name}</span>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <Link 
+                  to="/solutions" 
+                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                    isActive('/solutions') ? 'text-cyan-400' : ''
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Solutions
+                </Link>
+                
+                <Link 
+                  to="/about" 
+                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                    isActive('/about') ? 'text-cyan-400' : ''
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  About
+                </Link>
+                
+                <Link 
+                  to="/blog" 
+                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                    isActive('/blog') ? 'text-cyan-400' : ''
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blog
+                </Link>
+                
+                <Link 
+                  to="/contact" 
+                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
+                    isActive('/contact') ? 'text-cyan-400' : ''
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact
+                </Link>
+
+                {/* Mobile CTA */}
+                <Link 
+                  to="/contact" 
+                  className="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
+  );
+}
 

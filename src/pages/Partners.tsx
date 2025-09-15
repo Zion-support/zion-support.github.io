@@ -1,236 +1,193 @@
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
+  Building, 
+  Globe, 
+  Star, 
+  ArrowRight, 
+  Handshake, 
+  Award, 
+  TrendingUp,
+  Shield,
+  Cloud,
+  Brain,
+  Zap,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin
+ } from 'lucide-react.ts';
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
-import { useState, useEffect } from "react",
-import { useTranslation } from 'react-i18next',
-import Link from 'next/link',
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
-import { PartnerResources } from "@/components/partners/PartnerResources",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from 'next/router',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-export default function Partners() {
-
-  logInfo('PartnersPage rendering'),
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { t } = useTranslation(),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
-
-  useEffect(() => {
-    async function checkHealth() {
-      try {
-        const res = await fetch('/api/auth/health'),
-        setAuthServiceAvailable(res.ok),
-      } catch (err) {
-        logErrorToProduction('Partner login auth health check failed', { data: err }),
-        setAuthServiceAvailable(false),
-      }
+export default function Partners(...args: any[]): any {
+  const partnerCategories = [
+    {
+      title: 'Technology Partners',
+      description: 'Leading technology companies that enhance our solutions',
+      icon: Brain,
+      partners: [
+        { name: 'Microsoft', logo: 'M', tier: 'Platinum', category: 'Cloud & AI' },
+        { name: 'AWS', logo: 'AWS', tier: 'Platinum', category: 'Cloud Infrastructure' },
+        { name: 'Google Cloud', logo: 'GC', tier: 'Gold', category: 'AI & ML' },
+        { name: 'IBM', logo: 'IBM', tier: 'Gold', category: 'Enterprise Solutions' }
+      ]
+    },
+    {
+      title: 'System Integrators',
+      description: 'Partners who help implement our solutions worldwide',
+      icon: Building,
+      partners: [
+        { name: 'Accenture', logo: 'A', tier: 'Platinum', category: 'Global SI' },
+        { name: 'Deloitte', logo: 'D', tier: 'Platinum', category: 'Consulting' },
+        { name: 'PwC', logo: 'P', tier: 'Gold', category: 'Advisory' }
+      ]
+    },
+    {
+      title: 'Channel Partners',
+      description: 'Resellers and distributors expanding our reach',
+      icon: Globe,
+      partners: [
+        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
+        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
+      ]
     }
-    checkHealth(),
-  }, []),
+  ];
 
-  // If not authenticated, display partner program info and signup CTA
-  if (!isAuthenticated) {
-    logInfo('PartnersPage rendering Unauthenticated View'),
-    return (
-      <div className="container max-w-6xl py-10">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold tracking-tight text-white mb-2">{t('partner.title')}</h1>
-          <p className="text-xl text-zion-slate-light">{t('partner.subtitle')}</p>
-        </div>
+  const benefits = [
+    { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },
+    { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },
+    { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },
+    { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' }
+  ];
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="bg-zion-blue-dark border-zion-blue-light">
-            <CardHeader>
-              <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
-              <CardDescription>{t('partner.influencers.desc')}</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
-                <div>
-                  <p className="font-medium text-white">{t('partner.influencers.points.audience')}</p>
-                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.audience_desc')}</p>
-                </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <Handshake className="h-10 w-10 text-white" />
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
-                <div>
-                  <p className="font-medium text-white">{t('partner.influencers.points.insights')}</p>
-                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.insights_desc')}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
-                <div>
-                  <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
-                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-zion-blue-dark border-zion-blue-light">
-            <CardHeader>
-              <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
-              <CardDescription>{t('partner.organizations.desc')}</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
-                <div>
-                  <p className="font-medium text-white">{t('partner.organizations.points.ecosystem')}</p>
-                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.ecosystem_desc')}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
-                <div>
-                  <p className="font-medium text-white">{t('partner.organizations.points.co_brand')}</p>
-                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.co_brand_desc')}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
-                <div>
-                  <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
-                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">{t('partner.how_it_works')}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader className="text-center pb-2">
-                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-zion-cyan" />
-                </div>
-                <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-sm text-zion-slate-light">
-                <p>{t('partner.steps.join_desc')}</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader className="text-center pb-2">
-                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-zion-cyan" />
-                </div>
-                <CardTitle className="text-lg text-white">{t('partner.steps.share_title')}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-sm text-zion-slate-light">
-                <p>{t('partner.steps.share_desc')}</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader className="text-center pb-2">
-                <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  <PieChart className="h-6 w-6 text-zion-cyan" />
-                </div>
-                <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-sm text-zion-slate-light">
-                <p>{t('partner.steps.earn_desc')}</p>
-              </CardContent>
-            </Card>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Partners</h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join our global partner ecosystem and help organizations transform their business with cutting-edge technology solutions.
+              </p>
+            </motion.div>
           </div>
         </div>
-
-        <div className="flex justify-center gap-4">
-          <Button
-            size="lg"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            asChild
-          >
-            <Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-zion-cyan border-zion-cyan"
-            disabled={!authServiceAvailable}
-            onClick={() => router.push('/login')}
-          >
-            {t('partner.login')}
-          </Button>
-          {!authServiceAvailable && (
-            <p className="text-red-500 text-sm mt-2">{t('partner.login_unavailable')}</p>
-          )}
-        </div>
-      </div>
-    ),
-  }
-
-  // Authenticated user view - Partner Dashboard
-  logInfo('PartnersPage rendering Authenticated View. User:', { data: user }),
-  return (
-    <div className="container max-w-7xl py-10">
-      <h1>DEBUG: Partners Page - Authenticated View</h1>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
-          <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
-        </div>
-        <div className="flex gap-2">
-          <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
-            <FileDown className="h-4 w-4" />
-            {t('partner.export_csv')}
-          </Button>
-        </div>
       </div>
 
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
-          <TabsTrigger value="overview">{t('partner.tabs.overview')}</TabsTrigger>
-          <TabsTrigger value="referrals">{t('partner.tabs.referrals')}</TabsTrigger>
-          <TabsTrigger value="earnings">{t('partner.tabs.earnings')}</TabsTrigger>
-          <TabsTrigger value="leaderboard">{t('partner.tabs.leaderboard')}</TabsTrigger>
-          <TabsTrigger value="resources">{t('partner.tabs.resources')}</TabsTrigger>
-        </TabsList>
-        
-        <TabsContent value="overview" className="space-y-4">
-          <PartnerDashboard />
-        </TabsContent>
-        
-        <TabsContent value="referrals" className="space-y-4">
-          <PartnerReferralLinks />
-        </TabsContent>
-        
-        <TabsContent value="earnings" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>{t('partner.earnings_title')}</CardTitle>
-              <CardDescription>{t('partner.earnings_desc')}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              {/* This will be implemented later */}
-              <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
-            </CardContent>
-          </Card>
-        </TabsContent>
-        
-        <TabsContent value="leaderboard" className="space-y-4">
-          <PartnerLeaderboard />
-        </TabsContent>
-        
-        <TabsContent value="resources" className="space-y-4">
-          <PartnerResources />
-        </TabsContent>
-      </Tabs>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Partner Categories */}
+        <div className="space-y-12">
+          {partnerCategories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-xl shadow-sm border border-gray-200 p-8"
+            >
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  <category.icon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">{category.title}</h2>
+                  <p className="text-gray-600">{category.description}</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+                {category.partners.map((partner, partnerIndex)  => (
+                  <motion.div
+                    key={partner.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: (index * 0.1) + (partnerIndex * 0.05) }}
+                    className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                      {partner.logo}
+                    </div>
+                    <h3 className="font-semibold text-gray-900 mb-1">{partner.name}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{partner.category}</p>
+                    <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
+                      partner.tier === 'Platinum' ? 'bg-yellow-100 text-yellow-800' :
+                      partner.tier === 'Gold' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {partner.tier}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Benefits Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Partner Benefits</h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index)  => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + index * 0.1 }}
+                className="text-center p-6"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-4">
+                  <benefit.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Become a Partner
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Contact Partnership Team
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
-  ),
+  );
 }

@@ -1,28 +1,25 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
-import { EMERGING_TECH_SERVICES_2027 } from "../src/data/emergingTechServices2027";
+import type { NextPage } from 'next.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { useState  } from 'react.ts';
+import { EMERGING_TECH_SERVICES_2027  } from '../data/emergingTechServices2027';
 
-const EmergingTechServices: NextPag e = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+const EmergingTechServices: NextPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', color: 'from-purple-500 to-pink-600' },
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', color: 'from-indigo-500 to-blue-600' },
-    { id: 'Web3 & Blockchain', name: 'Web3 & Blockchain', color: 'from-green-500 to-teal-600' },
-    { id: 'Metaverse & VR/AR', name: 'Metaverse & VR/AR', color: 'from-orange-500 to-red-600' },
-    { id: 'Edge Computing', name: 'Edge Computing', color: 'from-yellow-500 to-orange-600' },
-    { id: 'Biotech & Health', name: 'Biotech & Health', color: 'from-teal-500 to-green-600' },
-    { id: 'Green Tech', name: 'Green Tech', color: 'from-green-500 to-blue-600' },
-    { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-purple-600' }
+    { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },
+    { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },
+    { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },
+    { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },
+    { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' }
   ];
 
   const filteredServices = EMERGING_TECH_SERVICES_2027.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
@@ -30,27 +27,36 @@ const EmergingTechServices: NextPag e = () => {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price.localeCompare(b.price);
-      case 'rating':
-        return b.rating - a.rating;
-      case 'popular':
-        return b.popular ? 1 : -1;
-      default: return a.name.localeCompare(b.name);
+        return a.pricing.monthly - b.pricing.monthly;
+      case 'innovation':
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
+      case 'roi':
+        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
+      default:
+        return 0;
     }
   });
 
-  const getCategoryColor = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.color : 'from-gray-500 to-gray-600';
+  const getInnovationColor = (level: anystring)  => {
+    switch (level) {
+      case 'Revolutionary': return 'from-red-500 to-pink-600';
+      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
+      case 'Advanced': return 'from-blue-500 to-cyan-600';
+      default: return 'from-gray-500 to-gray-600';
+    }
   };
 
-  const getCategoryBgColor = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? `bg-gradient-to-r ${category.color}` : 'bg-gradient-to-r from-gray-500 to-gray-600';
+  const getBadgeColor = (badge: anystring)  => {
+    switch (badge) {
+      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
+      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
+      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
+    }
   };
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -58,22 +64,22 @@ const EmergingTechServices: NextPag e = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      <Helmet>
+      <Head>
         <title>Emerging Tech Services 2027 - Zion Tech Group | Revolutionary Technology Solutions</title>
-        <meta name="description" content="Discover the future of technology with Zion Tech Group's revolutionary emerging tech services. From quantum computing to biocomputing, we're pioneering the next generation of innovation."  />
-        <meta name="keywords" content="emerging technology, quantum computing, space technology, biocomputing, neuromorphic computing, fusion energy, Zion Tech Group"  />
-        <meta name="author" content="Zion Tech Group"  />
-        <link rel="canonical" href="https://ziontechgroup.com/emerging-tech-services"  />
-      </Helmet>
+        <meta name="description" content="Discover the future of technology with Zion Tech Group's revolutionary emerging tech services. From quantum computing to biocomputing, we're pioneering the next generation of innovation." />
+        <meta name="keywords" content="emerging technology, quantum computing, space technology, biocomputing, neuromorphic computing, fusion energy, Zion Tech Group" />
+        <meta name="author" content="Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/emerging-tech-services" />
+      </Head>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md: tex t-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Emerging Tech Services 2027
           </h1>
-          <p className="text-xl md: tex t-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the future of technology with our revolutionary emerging tech services.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the future of technology with our revolutionary emerging tech services. 
             From quantum computing to biocomputing, we're pioneering the next generation of innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -94,7 +100,7 @@ const EmergingTechServices: NextPag e = () => {
 
         {/* Search and Filter Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-blue-400/20">
-          <div className="grid grid-cols-1 md: gri d-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Search */}
             <div className="relative">
               <input
@@ -102,10 +108,10 @@ const EmergingTechServices: NextPag e = () => {
                 placeholder="Search emerging tech services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400/50 focus: borde r-blue-400/50"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50"
               />
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"  />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
 
@@ -114,7 +120,7 @@ const EmergingTechServices: NextPag e = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400/50 focus: borde r-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
                 {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
@@ -123,7 +129,7 @@ const EmergingTechServices: NextPag e = () => {
                 ))}
               </select>
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>
 
@@ -132,15 +138,14 @@ const EmergingTechServices: NextPag e = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outlin e-none focus: rin g-2 focus: rin g-blue-400/50 focus: borde r-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                <option value="name">Sort by Name</option>
+                <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
-                <option value="rating">Sort by Rating</option>
-                <option value="popular">Sort by Popularity</option>
+                <option value="roi">Sort by ROI</option>
               </select>
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </div>
           </div>
@@ -155,7 +160,7 @@ const EmergingTechServices: NextPag e = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-white/10 text-gray-300 hover: b g-white/20 border border-white/20'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
             >
               {category.name}
@@ -164,41 +169,40 @@ const EmergingTechServices: NextPag e = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)  => (
             <div
               key={service.id}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover: borde r-blue-400/50 transition-all duration-300 hover: transform hover:scale-105"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="text-4xl">{service.icon}</div>
-                {service.popular && (
-                  <span className="px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-yellow-500 to-orange-500">
-                    Popular
-                  </span>
-                )}
+                <span className={`px-3 py-1 rounded-full text-xs font-bold text-white ${getBadgeColor(service.badge)}`}>
+                  {service.badge}
+                </span>
               </div>
 
               {/* Service Title and Description */}
-              <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
 
-              {/* Category */}
+              {/* Innovation Level */}
               <div className="mb-4">
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
-                  {service.category}
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getInnovationColor(service.innovationLevel)} text-white`}>
+                  {service.innovationLevel}
                 </span>
               </div>
 
               {/* Pricing */}
               <div className="mb-4">
                 <div className="text-2xl font-bold text-blue-400">
-                  {service.price}
+                  ${service.pricing.monthly.toLocaleString()}
+                  <span className="text-sm text-gray-400">/month</span>
                 </div>
                 <div className="text-sm text-gray-400">
-                  {service.trialDays} days free trial
+                  ${service.pricing.yearly.toLocaleString()}/year
                 </div>
               </div>
 
@@ -226,24 +230,26 @@ const EmergingTechServices: NextPag e = () => {
                 </div>
               </div>
 
-              {/* Rating */}
+              {/* Market Size */}
               <div className="mb-4">
-                <div className="flex items-center">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className={i < Math.floor(service.rating) ? 'text-yellow-400' : 'text-gray-600'}>
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-400 ml-2">({service.reviewCount} reviews)</span>
+                <div className="text-sm text-gray-400">Market Size</div>
+                <div className="text-sm font-medium text-white">{service.marketSize}</div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="border-t border-white/20 pt-4 mb-4">
+                <div className="text-xs text-gray-400 mb-2">Contact Information</div>
+                <div className="space-y-1 text-xs text-gray-300">
+                  <div>📞 {service.contactInfo.phone}</div>
+                  <div>✉️ {service.contactInfo.email}</div>
+                  <div>🌐 {service.contactInfo.website}</div>
                 </div>
               </div>
 
               {/* CTA Button */}
               <a
-                href={`/services/${service.id}`}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover: fro m-blue-600 hover: t o-purple-700 transition-all duration-300 block"
+                href={service.link}
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
               >
                 Learn More
               </a>
@@ -259,19 +265,19 @@ const EmergingTechServices: NextPag e = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss how our revolutionary emerging technology services can transform your business and give you a competitive advantage in the digital age.
           </p>
-          <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-                          <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover: fro m-blue-600 hover: t o-purple-700 transition-all duration-300"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover: b g-white/20 transition-all duration-300"
-              >
-                📞 Call +1 (302) 464-0950
-              </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started Today
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              📞 Call +1 (302) 464-0950
+            </a>
           </div>
         </div>
       </div>

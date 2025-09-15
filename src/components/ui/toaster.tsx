@@ -1,13 +1,6 @@
-import {
-  Toast,
-  ToastClose,
-  ToastDescription,
-  ToastProvider,
-  ToastTitle,
-  ToastViewport,
-} from "@/components/ui/toast"
-import { useToast } from "@/hooks/use-toast"
 
-export function Toaster() {
-  return <div id="toaster" />;
+import { Toaster as HotToaster  } from 'react-hot-toast.ts'
+
+export function Toaster(...args: any[]): any {
+  return <HotToaster />
 }

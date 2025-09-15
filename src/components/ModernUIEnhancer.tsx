@@ -398,7 +398,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '');
   };
 
-  const toggleSetting = (setting: keyof UISettings)  => {
+  const toggleSetting = (setting: anykeyof UISettings)  => {
     setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
   };
 

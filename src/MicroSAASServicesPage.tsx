@@ -1,9 +1,8 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { 
-  Building, 
+import React from 'react.ts';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '../ui/card';
+import { Button  } from '../ui/button';
+import { Badge  } from '../ui/badge';
+import { Building, 
   Users, 
   BarChart3, 
   MessageSquare, 
@@ -31,9 +30,8 @@ import {
   Smartphone,
   Settings,
   BarChart
-} from "lucide-react";
-
-export default function MicroSAASServicesPage() {
+ } from 'lucide-react.ts';
+export default function MicroSAASServicesPage(...args: any[]): any {
   const microSAASServices = [
     {
       id: "crm-saas",
@@ -372,7 +370,6 @@ export default function MicroSAASServicesPage() {
       reviewCount: 167
     }
   ];
-
   const categories = [
     "All Services",
     "Business Tools",
@@ -388,10 +385,8 @@ export default function MicroSAASServicesPage() {
     "E-commerce",
     "Education"
   ];
-
   const [selectedCategory, setSelectedCategory] = React.useState("All Services");
   const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
-
   React.useEffect(() => {
     if (selectedCategory === "All Services") {
       setFilteredServices(microSAASServices);
@@ -399,7 +394,6 @@ export default function MicroSAASServicesPage() {
       setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory));
     }
   }, [selectedCategory]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -414,18 +408,17 @@ export default function MicroSAASServicesPage() {
             our micro SAAS services help you grow without breaking the bank.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
               <TrendingUp className="h-5 w-5 mr-2" />
               Explore SAAS Solutions
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
               <TrendingUp className="h-5 w-5 mr-2" />
               Start Free Trial
             </Button>
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
@@ -445,7 +438,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
@@ -453,7 +445,6 @@ export default function MicroSAASServicesPage() {
             {categories.map((category) => (
               <Button
                 key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
                 className={`${
                   selectedCategory === category
@@ -467,12 +458,11 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service)  => (
               <Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
@@ -547,7 +537,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="container mx-auto px-4 text-center">
@@ -559,11 +548,11 @@ export default function MicroSAASServicesPage() {
             improve productivity, and drive growth. No long-term contracts, cancel anytime.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
               <TrendingUp className="h-5 w-5 mr-2" />
               Start Free Trial
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+            <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
             </Button>

@@ -1,77 +1,51 @@
-import React, { useState } from 'react';
-import { Search, X } from 'lucide-react';
+import React, { useState } from 'react.ts';
 
-interface InteractiveSearchProps {
+interface InteractiveSearchProps extends React.PropsWithChildren<{}> {
+
   placeholder?: string;
-  onSearch: (query: string) => void;
+  onSearch: any(query: string)  => void;
   className?: string;
+
 }
 
-export default function InteractiveSearch({ placeholder = 'Search...', onSearch, className = '' }: InteractiveSearchProps) {
+const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
+  placeholder = "Search...", 
+  onSearch, 
+  className = "" 
+}) => {
   const [query, setQuery] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
     }
   };
 
-  const clearQuery = () => {
-    setQuery('');
-  };
-
   return (
-    <form onSubmit={handleSubmit} className={`relative ${className}`}>
-      <div className={`relative flex items-center transition-all duration-200 ${
-        isFocused ? 'scale-105' : 'scale-100'
-      }`}>
-        <div className="absolute left-3 text-gray-400">
-          <Search size={20} />
-        </div>
+    <form onSubmit={handleSubmit} className={`w-full ${className}`}>
+      <div className="relative">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-12 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200 backdrop-blur-sm"
+          className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
-        {query && (
-          <button
-            type="button"
-            onClick={clearQuery}
-            className="absolute right-3 text-gray-400 hover:text-white transition-colors duration-200"
-          >
-            <X size={18} />
-          </button>
-        )}
-      </div>
-      
-      {isFocused && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white/80 text-sm">
-          <div className="flex items-center gap-2 mb-2">
-            <Search size={16} />
-            <span>Search suggestions:</span>
-          </div>
-          <div className="space-y-1">
-            <div className="hover:bg-white/10 p-2 rounded cursor-pointer transition-colors duration-200">
-              AI Services
-            </div>
-            <div className="hover:bg-white/10 p-2 rounded cursor-pointer transition-colors duration-200">
-              Cloud Solutions
-            </div>
-            <div className="hover:bg-white/10 p-2 rounded cursor-pointer transition-colors duration-200">
-              Cybersecurity
-            </div>
-            <div className="hover:bg-white/10 p-2 rounded cursor-pointer transition-colors duration-200">
-              Data Analytics
-            </div>
-          </div>
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
         </div>
-      )}
+        <button
+          type="submit"
+          className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors"
+        >
+          Search
+        </button>
+      </div>
     </form>
   );
-}
+};
+
+export default InteractiveSearch;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-const EnhancedServices = (props: any) => {
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
+const EnhancedServices = () => {
   return (
     <>
       <SEO 
@@ -41,5 +41,3 @@ const EnhancedServices = (props: any) => {
   );
 };
 export default EnhancedServices;
-
-</SEO>

@@ -1,90 +1,109 @@
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
-import React from "react",
-import Link from "next/link",
-import { useTranslation } from "react-i18next",
-import { cn } from "@/lib/utils",
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
+const quickLinks = [
+  {
+    title: "AI Services",
+    description: "Artificial Intelligence & Machine Learning",
+    icon: "🤖",
+    link: "/ai-services",
+    color: "from-purple-500 to-indigo-600"
+  },
+  {
+    title: "Micro SAAS",
+    description: "Cloud-based Software Solutions",
+    icon: "☁️",
+    link: "/micro-saas",
+    color: "from-cyan-500 to-blue-600"
+  },
+  {
+    title: "IT Services",
+    description: "Infrastructure & Technical Consulting",
+    icon: "⚡",
+    link: "/it-services",
+    color: "from-amber-500 to-orange-600"
+  },
+  {
+    title: "Contact Us",
+    description: "Get in touch with our team",
+    icon: "📞",
+    link: "/contact",
+    color: "from-green-500 to-emerald-600"
+  }
+];
 
-interface QuickAccessProps {
-  className?: string,
-  style?: React.CSSProperties,
-}
-
-export function QuickAccess({ className, style }: QuickAccessProps) {
-  const { t } = useTranslation(),
-  const quickLinks = [
-    {
-      title: t('home.tool_ai_matcher'),
-      description: t('home.tool_ai_matcher_desc'),
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-      link: "/marketplace"
-    },
-    {
-      title: t('home.tool_talent'),
-      description: t('home.tool_talent_desc'),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
-      link: "/talent"
-    },
-    {
-      title: t('home.tool_services'),
-      description: t('home.tool_services_desc'),
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
-      link: "/services"
-    },
-    {
-      title: t('home.tool_equipment'),
-      description: t('home.tool_equipment_desc'),
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,
-      link: "/equipment"
-    },
-    {
-      title: t('nav.community'),
-      description: t('home.tool_chat_desc'),
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
-      link: "/community"
-    },
-    {
-      title: t('home.tool_mobile_appMobile App'),
-      description: t('home.tool_mobile_app_descZion on the go'),
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch"
-    }
-  ],
-
+export function QuickAccess(...args: any[]): any {
   return (
-    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-            {t('home.quick_access_titleQuick Access')}
+    <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Quick Access
           </h2>
-          <p className="text-zion-slate-light text-lg">
-            {t('home.quick_access_subtitleJump directly to our most popular features')}
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Navigate quickly to our most popular services and resources
           </p>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-          {quickLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.link}
-              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          {quickLinks.map((link, index)  => (
+            <motion.div
+              key={link.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
-                {link.icon}
-              </div>
-              <h3 className="text-white font-medium mb-1">{link.title}</h3>
-              <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
-              <div className="flex items-center text-zion-cyan text-xs mt-auto">
-                <span>{t('general.explore')}</span>
-                <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </div>
-            </Link>
+              <Link 
+                to={link.link}
+                className="block group"
+              >
+                <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 h-full transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-700 hover:shadow-lg hover:shadow-blue-500/25">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${link.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-2xl">{link.icon}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
+                    {link.title}
+                  </h3>
+                  
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {link.description}
+                  </p>
+                  
+                  <div className="mt-4 flex items-center text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
+                    Learn More
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
+
+        <motion.div 
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Link 
+            to="/services"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
+          >
+            View All Services
+            <span className="text-sm">→</span>
+          </Link>
+        </motion.div>
       </div>
     </section>
-  ),
+  );
 }
-
-export default QuickAccess,

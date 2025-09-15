@@ -1,8 +1,38 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Heart, Stethoscope, Brain, Target, CheckCircle, Star, Clock, Users, Globe, Shield, BarChart3, Rocket, Sparkles, Database, Zap, Activity, Monitor, AlertTriangle, TrendingUp, Award, ArrowRight, Pill, Microscope, TestTube, FileText, Lock, Eye, Cpu, Network } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Heart, 
+  Stethoscope, 
+  Brain, 
+  Target, 
+  CheckCircle, 
+  Star, 
+  Clock, 
+  Users, 
+  Globe, 
+  Shield,
+  BarChart3,
+  Rocket,
+  Sparkles,
+  Database,
+  Zap,
+  Activity,
+  Monitor,
+  AlertTriangle,
+  TrendingUp,
+  Award,
+  ArrowRight,
+  Pill,
+  Microscope,
+  TestTube,
+  FileText,
+  Lock,
+  Eye,
+  Cpu,
+  Network
+ } from 'lucide-react.ts';
 
-const AIHealthcarePlatform = (props: any) => {
+const AIHealthcarePlatform = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-blue-400" />,
@@ -258,8 +288,8 @@ const AIHealthcarePlatform = (props: any) => {
           >
             Key Features
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,8 +323,8 @@ const AIHealthcarePlatform = (props: any) => {
           >
             Healthcare Modules
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {healthcareModules.map((module, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {healthcareModules.map((module, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -326,8 +356,8 @@ const AIHealthcarePlatform = (props: any) => {
           >
             Compliance & Security
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceFeatures.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -354,7 +384,7 @@ const AIHealthcarePlatform = (props: any) => {
                       feature.status === '100%' ? 'bg-green-400' : 
                       feature.status === 'Pending' ? 'bg-yellow-400' : 'bg-blue-400'
                     }`}
-                    style="{{{ width: feature.status === 'Pending' ? '75%'}}"}
+                    style={{ width: feature.status === 'Pending' ? '75%' : '100%' }}
                   ></div>
                 </div>
               </motion.div>
@@ -375,8 +405,8 @@ const AIHealthcarePlatform = (props: any) => {
           >
             Why Choose AI Healthcare Platform?
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -577,24 +607,3 @@ const AIHealthcarePlatform = (props: any) => {
 };
 
 export default AIHealthcarePlatform;
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

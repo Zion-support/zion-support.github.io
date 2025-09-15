@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp, Shield, Zap, Globe, Brain, Rocket, Phone, Mail, MapPin, ExternalLink, ArrowRight, CheckCircle, Clock, DollarSign } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
+  Filter, 
+  Star, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Brain, 
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  DollarSign
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { zionCuttingEdgeServices2029  } from '../../data/zion-2029-cutting-edge-services';
+import { zionEmergingTechServices2029  } from '../../data/zion-2029-emerging-tech-services';
 
-export default function ZionCuttingEdgeServices2029(props: any) {
-  const [searchTerm, setSearchTerm] = useState<any>('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [priceRange, setPriceRange] = useState<any>('all');
+export default function ZionCuttingEdgeServices2029(...args: any[]): any {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
 
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
   
@@ -34,7 +52,7 @@ export default function ZionCuttingEdgeServices2029(props: any) {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (props: any) => {
+  const getPriceRangeLabel = (range: anystring)  => {
     switch (range) {
       case '0-1000': return '$0 - $1,000/month';
       case '1000-3000': return '$1,000 - $3,000/month';
@@ -64,7 +82,7 @@ export default function ZionCuttingEdgeServices2029(props: any) {
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group 2029
               </span>
-              <br  />
+              <br />
               <span className="text-white">Cutting-Edge Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -105,7 +123,7 @@ export default function ZionCuttingEdgeServices2029(props: any) {
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-6 h-6 text-white mb-2" />
-              <p className="text-white font-semibold">364 E Main St STE 1008<br  />Middletown DE 19709</p>
+              <p className="text-white font-semibold">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>
@@ -132,9 +150,9 @@ export default function ZionCuttingEdgeServices2029(props: any) {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category  => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -171,8 +189,8 @@ export default function ZionCuttingEdgeServices2029(props: any) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -474,15 +492,3 @@ export default function ZionCuttingEdgeServices2029(props: any) {
     </div>
   );
 }
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</Star>
-</motion>
-</motion>
-</SEO>
-</any>
-</any>
-</any>

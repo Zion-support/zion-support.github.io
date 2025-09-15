@@ -1,8 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -30,14 +29,14 @@ import {
   DollarSign,
   Clock,
   Shield as ShieldIcon
-} from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/ultimateInnovativeServices2025';
+ } from 'lucide-react.ts';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/ultimateInnovativeServices2025';
 
-export default function UltimateInnovativeServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('innovation');
+export default function UltimateInnovativeServicesShowcase2025(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+  const [sortBy, setSortBy] = useState<any>('innovation');
 
   const filteredServices = useMemo(() => {
     let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
@@ -92,7 +91,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: anystring)  => {
     switch (category) {
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
       case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
@@ -108,7 +107,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
     }
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (level: anystring)  => {
     const type = level.split(' - ')[0];
     switch (type) {
       case 'Revolutionary':
@@ -228,8 +227,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-          {filteredServices.map((service, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-6">
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

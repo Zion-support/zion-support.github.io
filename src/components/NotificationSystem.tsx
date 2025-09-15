@@ -26,7 +26,7 @@ export interface Notification {
   duration?: number;
   timestamp: Date;
   read: boolean;
-action?: {
+action?: {;
     label: string;
     onClick: ()  => void;
   
@@ -477,10 +477,10 @@ export const useNotifications = () => {
 
 // Utility functions for common notification types
 export const notificationUtils = {
-  success: (title: string, message: string, options?: Partial<Notification>)  => {
+  success: any(title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: 'success',
+        type: any'success',
         title,
         message,
         priority: 'medium',
@@ -492,7 +492,7 @@ export const notificationUtils = {
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: 'warning',
+        type: any'warning',
         title,
         message,
         priority: 'medium',
@@ -504,7 +504,7 @@ export const notificationUtils = {
   error: (title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: 'error',
+        type: any'error',
         title,
         message,
         priority: 'high',
@@ -516,7 +516,7 @@ export const notificationUtils = {
   info: (title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: 'info',
+        type: any'info',
         title,
         message,
         priority: 'low',

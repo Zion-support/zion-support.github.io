@@ -1,7 +1,81 @@
-import { motion } from 'framer-motion';
-import { Rocket, Satellite, CheckCircle, Users, Clock, ArrowRight, Play, Settings, Target, Activity, Sparkles, Search, Zap, Globe, Building, DollarSign, BarChart3, TrendingUp, Key, Fingerprint, Monitor, AlertTriangle, ShieldCheck, Globe2, Server, Database, Smartphone, Code, FileText, AlertCircle, CheckSquare, Calculator, PieChart, LineChart, Target2, Wallet, PiggyBank, CreditCard, Receipt, Cloud, Zap2, Gauge, BarChart4, TrendingUp2, Lightbulb, Briefcase, Strategy, Brain, Compass, Shield, RefreshCw, TrendingUp3, Layers, Workflow, Scale, Award, Lock, Wifi, Bluetooth, Radio, Sensor, Chip, Circuit, Orbit, Planet, Star, Telescope, Antenna, Signal, Navigation, Earth, Moon, Sun } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, 
+  Satellite, 
+  CheckCircle, 
+  Users, 
+  Clock, 
+  ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  BarChart3,
+  TrendingUp,
+  Key,
+  Fingerprint,
+  Monitor,
+  AlertTriangle,
+  ShieldCheck,
+  Globe2,
+  Server,
+  Database,
+  Smartphone,
+  Code,
+  FileText,
+  AlertCircle,
+  CheckSquare,
+  Calculator,
+  PieChart,
+  LineChart,
+  Target2,
+  Wallet,
+  PiggyBank,
+  CreditCard,
+  Receipt,
+  Cloud,
+  Zap2,
+  Gauge,
+  BarChart4,
+  TrendingUp2,
+  Lightbulb,
+  Briefcase,
+  Strategy,
+  Brain,
+  Compass,
+  Shield,
+  RefreshCw,
+  TrendingUp3,
+  Layers,
+  Workflow,
+  Scale,
+  Award,
+  Lock,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Sensor,
+  Chip,
+  Circuit,
+  Orbit,
+  Planet,
+  Star,
+  Telescope,
+  Antenna,
+  Signal,
+  Navigation,
+  Earth,
+  Moon,
+  Sun
+ } from 'lucide-react.ts';
 
-const SpaceTech = (props: any) => {
+const SpaceTech = () => {
   const features = [
     {
       icon: Satellite,
@@ -145,8 +219,8 @@ const SpaceTech = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,8 +257,8 @@ const SpaceTech = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -275,8 +349,8 @@ const SpaceTech = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -327,15 +401,3 @@ const SpaceTech = (props: any) => {
 };
 
 export default SpaceTech;
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

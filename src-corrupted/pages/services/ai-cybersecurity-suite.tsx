@@ -1,48 +1,48 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-export default function AICybersecuritySuite
-export { AICybersecuritySuite }(...args: []):  {
+export default function AICybersecuritySuite(...args: any[]): any {
   return (
     <>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
-        <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning."   />
-        <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence"   />
+        <meta name="description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
+        <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-8">
-                <Shield className="w-4 h-4 mr-2"  />
+                <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Cybersecurity
               </div>
-
-              <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Cybersecurity
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Suite</span>
               </h1>
-
+              
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds
+                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds 
                 in real-time. Protect your digital assets with intelligent threat detection and automated response.
               </p>
-
-              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-                <Link to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-600 hover: t o-orange-700 transition-all duration-200 shadow-lg hover: shado w-xl"
-
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
                   Get Protected
-                  <ArrowRight className="ml-2 w-5 h-5"   />
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover: b g-red-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5"  />
+                <button className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">
+                  <Play className="mr-2 w-5 h-5" />
                   Security Demo
                 </button>
               </div>
@@ -51,52 +51,52 @@ export { AICybersecuritySuite }(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Intelligent Threat Protection
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats
+                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats 
                 with intelligent detection and automated response capabilities.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: Brai n,
+                  icon: Brain,
                   title: "AI Threat Detection",
                   description: "Machine learning algorithms identify and analyze threats in real-time with high accuracy."
                 },
                 {
-                  icon: Shiel d,
+                  icon: Shield,
                   title: "Advanced Firewall",
                   description: "Next-generation firewall with AI-powered traffic analysis and threat blocking."
                 },
                 {
-                  icon: Ey e,
+                  icon: Eye,
                   title: "Behavioral Analytics",
                   description: "Monitor user and system behavior to detect anomalies and potential threats."
                 },
                 {
-                  icon: Za p,
+                  icon: Zap,
                   title: "Automated Response",
                   description: "Instant threat response with automated containment and remediation actions."
                 },
                 {
-                  icon: User s,
+                  icon: Users,
                   title: "Identity Protection",
                   description: "Multi-factor authentication and identity verification with AI risk assessment."
                 },
                 {
-                  icon: Loc k,
+                  icon: Lock,
                   title: "Data Encryption",
                   description: "End-to-end encryption with AI-powered key management and access control."
                 }
               ].map((feature, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -109,10 +109,10 @@ export { AICybersecuritySuite }(...args: []):  {
         </section>
 
         {/* Security Layers Section */}
-        <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Multi-Layer Security Architecture
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -120,7 +120,7 @@ export { AICybersecuritySuite }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   layer: "01",
@@ -156,10 +156,10 @@ export { AICybersecuritySuite }(...args: []):  {
         </section>
 
         {/* Threat Intelligence Section */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 AI-Powered Threat Intelligence
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -167,7 +167,7 @@ export { AICybersecuritySuite }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: gri d-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
                   {[
@@ -179,7 +179,7 @@ export { AICybersecuritySuite }(...args: []):  {
                     "Integration with major threat intelligence platforms"
                   ].map((capability, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0"  />
+                      <CheckCircle className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{capability}</span>
                     </div>
                   ))}
@@ -190,10 +190,10 @@ export { AICybersecuritySuite }(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>
                 <div className="space-y-4">
                   {[
-                    { type: "Malware", icon: AlertTriangl e, color: "from-red-500 to-pink-500", count: "10M+" },
-                    { type: "Phishing", icon: Ey e, color: "from-orange-500 to-red-500", count: "5M+" },
-                    { type: "Ransomware", icon: Loc k, color: "from-purple-500 to-red-500", count: "2M+" },
-                    { type: "DDoS", icon: Activit y, color: "from-blue-500 to-cyan-500", count: "1M+" }
+                    { type: any"Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
+                    { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },
+                    { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },
+                    { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }
                   ].map((item, index)  => (
                     <div key={index} className="flex justify-between items-center">
                       <div className="flex items-center space-x-3">
@@ -212,10 +212,10 @@ export { AICybersecuritySuite }(...args: []):  {
         </section>
 
         {/* Compliance Section */}
-        <section className="py-20 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Compliance & Governance
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
@@ -223,46 +223,46 @@ export { AICybersecuritySuite }(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "SOC 2 Type II",
                   description: "Complete SOC 2 compliance with automated monitoring and reporting.",
-                  icon: Shiel d,
+                  icon: Shield,
                   features: ["Automated controls", "Continuous monitoring", "Compliance reporting"]
                 },
                 {
                   title: "GDPR Compliance",
                   description: "Data protection and privacy compliance for European operations.",
-                  icon: Loc k,
+                  icon: Lock,
                   features: ["Data mapping", "Privacy controls", "Right to be forgotten"]
                 },
                 {
                   title: "HIPAA Security",
                   description: "Healthcare data security and privacy compliance.",
-                  icon: User s,
+                  icon: Users,
                   features: ["PHI protection", "Access controls", "Audit trails"]
                 },
                 {
                   title: "PCI DSS",
                   description: "Payment card industry security standards compliance.",
-                  icon: Targe t,
+                  icon: Target,
                   features: ["Card data protection", "Secure transactions", "Vulnerability management"]
                 },
                 {
                   title: "ISO 27001",
                   description: "Information security management system certification.",
-                  icon: Glob e,
+                  icon: Globe,
                   features: ["Risk assessment", "Security controls", "Continuous improvement"]
                 },
                 {
                   title: "NIST Framework",
                   description: "Cybersecurity framework alignment and implementation.",
-                  icon: Activit y,
+                  icon: Activity,
                   features: ["Framework mapping", "Gap analysis", "Implementation guidance"]
                 }
               ].map((compliance, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: b g-slate-800/70 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <compliance.icon className="w-6 h-6 text-white" />
                   </div>
@@ -271,7 +271,7 @@ export { AICybersecuritySuite }(...args: []):  {
                   <ul className="space-y-1">
                     {compliance.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-red-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2"  />
+                        <CheckCircle className="w-3 h-3 mr-2" />
                         {feature}
                       </li>
                     ))}
@@ -283,31 +283,32 @@ export { AICybersecuritySuite }(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-600/10">;
-          <div className="max-w-4xl mx-auto text-center px-4 sm: p x-6 lg: p x-8">
-            <h2 className="text-3xl md: tex t-4xl font-bold text-white mb-4">
+        <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-600/10">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Secure Your Digital Future?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Protect your organization with AI-powered cybersecurity that adapts and evolves with threats.
             </p>
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <Link to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover: fro m-red-600 hover: t o-orange-700 transition-all duration-200"
-
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200"
+              >
                 Schedule Security Assessment
-                <ArrowRight className="ml-2 w-5 h-5"   />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover: b g-red-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200"
               >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+                Explore All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}}}}}
+}

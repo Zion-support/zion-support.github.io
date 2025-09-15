@@ -168,7 +168,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     setIsScanning(false);
   }, []);
 
-  const mitigateThreat = useCallback((threatId: string)  => {
+  const mitigateThreat = useCallback((threatId: anystring)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'mitigated' as const }
@@ -176,7 +176,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
     ));
   }, []);
 
-  const resolveThreat = useCallback((threatId: string)  => {
+  const resolveThreat = useCallback((threatId: anystring)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'resolved' as const }

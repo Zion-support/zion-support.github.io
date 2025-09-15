@@ -1,7 +1,46 @@
-import { motion } from 'framer-motion';
-import { Cloud, Code, CheckCircle, Users, Clock, ArrowRight, Play, Settings, Target, Cpu, Activity, Sparkles, Search, Zap, Globe, Building, DollarSign, BarChart3, TrendingUp, Network, Key, Fingerprint, Monitor, AlertTriangle, ShieldCheck, Globe2, Server, Database, Smartphone, GitBranch, Docker, Kubernetes, Terminal, Workflow, Rocket, RefreshCw, Shield, Lock } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Cloud, 
+  Code, 
+  CheckCircle, 
+  Users, 
+  Clock, 
+  ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Cpu,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  BarChart3,
+  TrendingUp,
+  Network,
+  Key,
+  Fingerprint,
+  Monitor,
+  AlertTriangle,
+  ShieldCheck,
+  Globe2,
+  Server,
+  Database,
+  Smartphone,
+  GitBranch,
+  Docker,
+  Kubernetes,
+  Terminal,
+  Workflow,
+  Rocket,
+  RefreshCw,
+  Shield,
+  Lock
+ } from 'lucide-react.ts';
 
-const CloudDevOps = (props: any) => {
+const CloudDevOps = () => {
   const features = [
     {
       icon: Cloud,
@@ -145,8 +184,8 @@ const CloudDevOps = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,8 +222,8 @@ const CloudDevOps = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -275,8 +314,8 @@ const CloudDevOps = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -328,15 +367,3 @@ const CloudDevOps = (props: any) => {
 
 export default CloudDevOps;
 
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

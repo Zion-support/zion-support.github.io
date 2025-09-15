@@ -1,20 +1,22 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-    ArrowRight,
-    Brain,
-    CheckCircle,
-    Cpu,
-    Database,
-    Globe,
-    Rocket,
-    Shield,
-    TrendingUp,
-    Users
-} from 'lucide-react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Brain, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Cpu, 
+  Database,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
 interface AIService {
+
   id: string;
   name: string;
   description: string;
@@ -30,10 +32,10 @@ interface AIService {
   status: 'active' | 'beta' | 'coming-soon';
 }
 
-const AdvancedAIServicesHub: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
+const AdvancedAIServicesHub: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [sortBy, setSortBy] = useState<any>('popularity');
 
   const aiServices: AIService[] = [
     {
@@ -214,10 +216,10 @@ const AdvancedAIServicesHub: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

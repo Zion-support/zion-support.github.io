@@ -1,4 +1,4 @@
-import { useCallback  } from 'react';
+import { useCallback  } from 'react.ts';
 
 interface User {
 
@@ -9,18 +9,20 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string}
+  updatedAt?: string;
+
+}
 
 export const useAuthEventHandlers = (
-  setUser: (user: Use r | null)  => void,
-  setOnboardingStep: (step: number)  => void
-) => {;
-  const handleSignedIn = useCallback((user: Use r)  => {;
+  setUser: any(user: User | null)  => void,
+  setOnboardingStep: any(step: number)  => void
+) => {
+  const handleSignedIn = useCallback((user: anyUser)  => {
     setUser(user);
     setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);
 
-  const handleSignedOut = useCallback(() => {;
+  const handleSignedOut = useCallback(() => {
     setUser(null);
     setOnboardingStep(0); // Reset onboarding
   }, [setUser, setOnboardingStep]);
@@ -28,4 +30,5 @@ export const useAuthEventHandlers = (
   return {
     handleSignedIn,
     handleSignedOut
-  }};
+  };
+};

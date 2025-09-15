@@ -1,19 +1,23 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface GradientHeadingProps {
+interface GradientHeadingProps extends React.PropsWithChildren<{}> {
 
-  text: string;
+  children: React.ReactNode;
   className?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
 }
 
 export const GradientHeading: React.FC<GradientHeadingProps> = ({ 
-  text, 
-  className = '' 
+  children, 
+  className = '', 
+  as: Component = 'h2' 
 }) => {
   return (
-    <h1 className={`text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent ${className}`}>
-      {text}
-    </h1>
+    <Component 
+      className={`bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent ${className}`}
+    >
+      {children}
+    </Component>
   );
 };
-

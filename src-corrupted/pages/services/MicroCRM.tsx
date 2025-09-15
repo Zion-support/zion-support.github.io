@@ -1,7 +1,105 @@
-import { motion } from 'framer-motion';
-import { Users, Target, CheckCircle, ArrowRight, Play, Settings, Activity, BarChart3, TrendingUp, Shield, Database, Smartphone, Code, FileText, AlertCircle, CheckSquare, Calculator, PieChart, LineChart, Target2, Wallet, PiggyBank, CreditCard, Receipt, Cloud, Zap2, Gauge, BarChart4, TrendingUp2, Lightbulb, Briefcase, Strategy, Brain, Compass, RefreshCw, TrendingUp3, Layers, Workflow, Scale, Award, Lock, Wifi, Bluetooth, Radio, Sensor, Chip, Circuit, Orbit, Planet, Star, Telescope, Antenna, Signal, Navigation, Earth, Moon, Sun, Binary, Network, Database2, Lock2, Key2, Fingerprint2, Eye, Brain2, Cpu2, Memory, HardDrive, Server2, Phone, Mail, Calendar, MessageSquare, UserPlus, UserCheck, UserX, UserMinus, UserEdit, UserSearch, UserList, UserSettings, UserCog, UserShield, UserStar, UserHeart, UserCheck2, UserX2, UserMinus2, UserPlus2, UserEdit2, UserSearch2, UserList2, UserSettings2, UserCog2, UserShield2, UserStar2, UserHeart2 } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Users, 
+  Target, 
+  CheckCircle, 
+  ArrowRight,
+  Play,
+  Settings,
+  Activity,
+  BarChart3,
+  TrendingUp,
+  Shield,
+  Database,
+  Smartphone,
+  Code,
+  FileText,
+  AlertCircle,
+  CheckSquare,
+  Calculator,
+  PieChart,
+  LineChart,
+  Target2,
+  Wallet,
+  PiggyBank,
+  CreditCard,
+  Receipt,
+  Cloud,
+  Zap2,
+  Gauge,
+  BarChart4,
+  TrendingUp2,
+  Lightbulb,
+  Briefcase,
+  Strategy,
+  Brain,
+  Compass,
+  RefreshCw,
+  TrendingUp3,
+  Layers,
+  Workflow,
+  Scale,
+  Award,
+  Lock,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Sensor,
+  Chip,
+  Circuit,
+  Orbit,
+  Planet,
+  Star,
+  Telescope,
+  Antenna,
+  Signal,
+  Navigation,
+  Earth,
+  Moon,
+  Sun,
+  Binary,
+  Network,
+  Database2,
+  Lock2,
+  Key2,
+  Fingerprint2,
+  Eye,
+  Brain2,
+  Cpu2,
+  Memory,
+  HardDrive,
+  Server2,
+  Phone,
+  Mail,
+  Calendar,
+  MessageSquare,
+  UserPlus,
+  UserCheck,
+  UserX,
+  UserMinus,
+  UserEdit,
+  UserSearch,
+  UserList,
+  UserSettings,
+  UserCog,
+  UserShield,
+  UserStar,
+  UserHeart,
+  UserCheck2,
+  UserX2,
+  UserMinus2,
+  UserPlus2,
+  UserEdit2,
+  UserSearch2,
+  UserList2,
+  UserSettings2,
+  UserCog2,
+  UserShield2,
+  UserStar2,
+  UserHeart2
+ } from 'lucide-react.ts';
 
-const MicroCRM = (props: any) => {
+const MicroCRM = () => {
   const features = [
     {
       icon: Users,
@@ -145,8 +243,8 @@ const MicroCRM = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,8 +281,8 @@ const MicroCRM = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -275,8 +373,8 @@ const MicroCRM = (props: any) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -328,15 +426,3 @@ const MicroCRM = (props: any) => {
 
 export default MicroCRM;
 
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

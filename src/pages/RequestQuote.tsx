@@ -1,85 +1,194 @@
-
-import React from 'react';
-import QuoteRequestForm from "@/components/QuoteRequestForm";
-import { SEO } from "@/components/SEO";
-import { MainNavigation } from "@/layout/MainNavigation";
-import Footer from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-=======
-import { Footer } from "@/components/Footer";
-=======
-=======
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-=======
-import { Footer } from "@/components/Footer";
-=======
-import { Footer } from "@/components/Footer";
-
-export default function RequestQuote() {
-  return (
-import React, { useState } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-import { Checkbox } from "@/components/ui/checkbox";
-=======
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  HardDrive, 
-  DollarSign, 
-  Clock, 
-  Users, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calculator, 
+  Send, 
   CheckCircle, 
-  ArrowRight,
-  Brain,
+  AlertCircle, 
+  Clock, 
+  DollarSign, 
+  Users, 
+  Calendar, 
+  FileText, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  Building, 
+  Globe, 
+  Target, 
+  Star, 
+  ArrowRight, 
+  ChevronDown, 
+  ChevronUp,
   Shield,
-  Cloud,
-  Database,
-  TrendingUp,
   Zap,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  FileText,
-  Calendar,
-  Building,
-  MessageSquare
-} from "lucide-react";
-import { Link } from "react-router-dom";
+  Brain,
+  Cloud,
+  Network,
+  Server,
+  Rocket,
+  Users as Team,
+  Award,
+  TrendingUp,
+  Lightbulb,
+  CheckSquare,
+  Square,
+  Info,
+  HelpCircle
+ } from 'lucide-react.ts';
 
-export default function RequestQuote() {
-  const [formData, setFormData] = useState({
+interface QuoteForm {
+
+  // Company Information
+  companyName: string;
+  industry: string;
+  companySize: string;
+  website: string;
+  
+  // Contact Information
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  jobTitle: string;
+  
+  // Project Details
+  projectTitle: string;
+  projectDescription: string;
+  projectType: string;
+  services: string[];
+  budget: string;
+  timeline: string;
+  urgency: string;
+  
+  // Technical Requirements
+  currentTechnology: string;
+  integrationRequirements: string;
+  complianceNeeds: string;
+  scalabilityRequirements: string;
+  
+  // Additional Information
+  teamSize: string;
+  existingPartners: string;
+  successMetrics: string;
+  additionalNotes: string;
+
+}
+
+const industries = [
+  'Technology',
+  'Healthcare',
+  'Finance',
+  'Manufacturing',
+  'Retail',
+  'Education',
+  'Government',
+  'Non-profit',
+  'Real Estate',
+  'Transportation',
+  'Energy',
+  'Media & Entertainment',
+  'Other'
+];
+
+const companySizes = [
+  '1-10 employees',
+  '11-50 employees',
+  '51-200 employees',
+  '201-500 employees',
+  '501-1000 employees',
+  '1000+ employees'
+];
+
+const projectTypes = [
+  'New Development',
+  'System Integration',
+  'Migration/Upgrade',
+  'Consulting',
+  'Support & Maintenance',
+  'Custom Solution',
+  'Other'
+];
+
+const services = [
+  'AI & Machine Learning',
+  'Cloud & DevOps',
+  'Cybersecurity',
+  'IoT & Edge Computing',
+  'Quantum Computing',
+  'Digital Transformation',
+  'IT Infrastructure',
+  'Technology Consulting'
+];
+
+const budgets = [
+  'Under $10,000',
+  '$10,000 - $50,000',
+  '$50,000 - $100,000',
+  '$100,000 - $500,000',
+  '$500,000 - $1,000,000',
+  'Over $1,000,000'
+];
+
+const timelines = [
+  'Immediate (1-2 weeks)',
+  'Quick (1-2 months)',
+  'Standard (3-6 months)',
+  'Extended (6-12 months)',
+  'Long-term (12+ months)',
+  'Flexible'
+];
+
+const urgencyLevels = [
+  'Low - Planning phase',
+  'Medium - Need within 3 months',
+  'High - Need within 1 month',
+  'Critical - Need immediately'
+];
+
+const teamSizes = [
+  '1-5 people',
+  '6-15 people',
+  '16-50 people',
+  '51-100 people',
+  '100+ people'
+];
+
+export default function RequestQuote(...args: any[]): any {
+  const [formData, setFormData] = useState<any>({
+    companyName: '',
+    industry: '',
+    companySize: '',
+    website: '',
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
-    company: '',
-    website: '',
-    industry: '',
+    jobTitle: '',
+    projectTitle: '',
+    projectDescription: '',
     projectType: '',
+    services: [],
     budget: '',
     timeline: '',
+    urgency: '',
+    currentTechnology: '',
+    integrationRequirements: '',
+    complianceNeeds: '',
+    scalabilityRequirements: '',
     teamSize: '',
-    description: '',
-    requirements: [],
-    additionalServices: []
+    existingPartners: '',
+    successMetrics: '',
+    additionalNotes: ''
   });
 
+  const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [submitStatus, setSubmitStatus] = useState<any>('idle');
+  const [expandedSection, setExpandedSection] = useState<any>(null);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const totalSteps = 4;
+
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -87,310 +196,752 @@ export default function RequestQuote() {
     }));
   };
 
-  const handleSelectChange = (name: string, value: string) => {
+  const handleServiceToggle = (service: anystring)  => {
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      services: anyprev.services.includes(service)
+        ? prev.services.filter(s  => s !== service)
+        : [...prev.services, service]
     }));
   };
 
-  const handleServiceToggle = (serviceId: string) => {
-    setSelectedServices(prev => 
-      prev.includes(serviceId) 
-        ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
-    );
+  const toggleSection = (section: anystring)  => {
+    setExpandedSection(expandedSection === section ? null : section);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const nextStep = () => {
+    if (currentStep < totalSteps) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
+  const prevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    
-    // Reset form after 5 seconds
     setTimeout(() => {
-      setSubmitSuccess(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        website: '',
-        industry: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        teamSize: '',
-        description: '',
-        requirements: [],
-        additionalServices: []
-      });
-      setSelectedServices([]);
-    }, 5000);
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      
+      // Reset form after success
+      setTimeout(() => {
+        setSubmitStatus('idle');
+        setFormData({
+          companyName: '',
+          industry: '',
+          companySize: '',
+          website: '',
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          jobTitle: '',
+          projectTitle: '',
+          projectDescription: '',
+          projectType: '',
+          services: [],
+          budget: '',
+          timeline: '',
+          urgency: '',
+          currentTechnology: '',
+          integrationRequirements: '',
+          complianceNeeds: '',
+          scalabilityRequirements: '',
+          teamSize: '',
+          existingPartners: '',
+          successMetrics: '',
+          additionalNotes: ''
+        });
+        setCurrentStep(1);
+      }, 3000);
+    }, 2000);
   };
 
-  const serviceCategories = [
-    {
-      id: "ai-ml",
-      name: "AI & Machine Learning",
-      icon: <Brain className="h-6 w-6" />,
-      description: "Custom AI development and ML solutions",
-      basePrice: 8000,
-      color: "from-purple-500 to-indigo-600",
-      services: [
-        { name: "Custom AI Development", price: 8000, duration: "8-12 weeks" },
-        { name: "ML Model Training", price: 12000, duration: "6-10 weeks" },
-        { name: "AI Strategy Consulting", price: 5000, duration: "2-4 weeks" },
-        { name: "NLP Solutions", price: 6000, duration: "4-8 weeks" },
-        { name: "Computer Vision", price: 10000, duration: "6-10 weeks" }
-      ]
-    },
-    {
-      id: "cybersecurity",
-      name: "Cybersecurity",
-      icon: <Shield className="h-6 w-6" />,
-      description: "Security audits and compliance frameworks",
-      basePrice: 8000,
-      color: "from-red-500 to-orange-600",
-      services: [
-        { name: "Security Audit", price: 8000, duration: "2-4 weeks" },
-        { name: "Penetration Testing", price: 12000, duration: "3-5 weeks" },
-        { name: "Compliance Framework", price: 15000, duration: "8-12 weeks" },
-        { name: "Incident Response", price: 10000, duration: "Ongoing" },
-        { name: "Security Training", price: 3000, duration: "1-2 weeks" }
-      ]
-    },
-    {
-      id: "cloud-infrastructure",
-      name: "Cloud & Infrastructure",
-      icon: <Cloud className="h-6 w-6" />,
-      description: "Cloud migration and DevOps implementation",
-      basePrice: 5000,
-      color: "from-cyan-500 to-blue-600",
-      services: [
-        { name: "Cloud Migration", price: 15000, duration: "8-16 weeks" },
-        { name: "DevOps Implementation", price: 12000, duration: "6-12 weeks" },
-        { name: "Infrastructure Modernization", price: 20000, duration: "12-20 weeks" },
-        { name: "Monitoring & Support", price: 5000, duration: "Ongoing" }
-      ]
-    },
-    {
-      id: "data-analytics",
-      name: "Data & Analytics",
-      icon: <Database className="h-6 w-6" />,
-      description: "Big data and business intelligence solutions",
-      basePrice: 7000,
-      color: "from-emerald-500 to-green-600",
-      services: [
-        { name: "Big Data Engineering", price: 18000, duration: "12-20 weeks" },
-        { name: "Data Pipeline Development", price: 12000, duration: "8-16 weeks" },
-        { name: "Business Intelligence", price: 8000, duration: "6-12 weeks" },
-        { name: "Data Visualization", price: 5000, duration: "4-8 weeks" }
-      ]
-    },
-    {
-      id: "digital-transformation",
-      name: "Digital Transformation",
-      icon: <TrendingUp className="h-6 w-6" />,
-      description: "Strategic consulting and implementation",
-      basePrice: 10000,
-      color: "from-amber-500 to-orange-600",
-      services: [
-        { name: "Digital Strategy", price: 15000, duration: "4-8 weeks" },
-        { name: "Process Reengineering", price: 20000, duration: "12-20 weeks" },
-        { name: "Technology Assessment", price: 8000, duration: "2-4 weeks" },
-        { name: "Change Management", price: 12000, duration: "8-16 weeks" }
-      ]
-    },
-    {
-      id: "micro-saas",
-      name: "Micro SAAS Solutions",
-      icon: <Zap className="h-6 w-6" />,
-      description: "Custom business applications and tools",
-      basePrice: 5000,
-      color: "from-pink-500 to-rose-600",
-      services: [
-        { name: "Business Process Automation", price: 8000, duration: "6-12 weeks" },
-        { name: "Custom CRM Development", price: 12000, duration: "8-16 weeks" },
-        { name: "BI Dashboard Creation", price: 6000, duration: "4-8 weeks" },
-        { name: "Workflow Management", price: 5000, duration: "4-8 weeks" }
-      ]
+  const isStepValid = (step: anynumber)  => {
+    switch (step) {
+      case 1:
+        return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
+      case 2:
+        return formData.projectTitle && formData.projectDescription && formData.projectType && formData.services.length > 0;
+      case 3:
+        return formData.budget && formData.timeline && formData.urgency;
+      case 4:
+        return true; // Additional info is optional
+      default:
+        return false;
     }
-  ];
-
-  const industries = [
-    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education",
-    "Real Estate", "Transportation", "Energy", "Media", "Non-Profit", "Other"
-  ];
-
-  const projectTypes = [
-    "New Development", "Enhancement", "Migration", "Integration", "Consulting", "Support & Maintenance"
-  ];
-
-  const budgetRanges = [
-    "Under $5,000", "$5,000 - $15,000", "$15,000 - $50,000", "$50,000 - $100,000", "Over $100,000"
-  ];
-
-  const timelineOptions = [
-    "Immediate (1-2 weeks)", "Quick (1-2 months)", "Standard (3-6 months)", "Long-term (6+ months)"
-  ];
-
-  const teamSizes = [
-    "1-10 employees", "11-50 employees", "51-200 employees", "201-500 employees", "500+ employees"
-  ];
-
-  const additionalServices = [
-    "Project Management", "Quality Assurance", "Training & Documentation", "Ongoing Support", "Performance Optimization"
-  ];
-
-  const calculateEstimatedCost = () => {
-    let total = 0;
-    selectedServices.forEach(serviceId => {
-      const [categoryId, serviceIndex] = serviceId.split('-');
-      const category = serviceCategories.find(cat => cat.id === categoryId);
-      if (category && serviceIndex !== undefined) {
-        const service = category.services[parseInt(serviceIndex)];
-        if (service) {
-          total += service.price;
-        }
-      }
-    });
-    return total;
   };
 
-  const estimatedCost = calculateEstimatedCost();
+  const getStepIcon = (step: anynumber)  => {
+    switch (step) {
+      case 1: return <Building className="h-5 w-5" />;
+      case 2: return <Target className="h-5 w-5" />;
+      case 3: return <Calculator className="h-5 w-5" />;
+      case 4: return <FileText className="h-5 w-5" />;
+      default: return <CheckCircle className="h-5 w-5" />;
+    }
+  };
+
+  const getStepTitle = (step: anynumber)  => {
+    switch (step) {
+      case 1: return 'Company & Contact';
+      case 2: return 'Project Details';
+      case 3: return 'Budget & Timeline';
+      case 4: return 'Additional Info';
+      default: return 'Complete';
+    }
+  };
 
   return (
-    <>
-      <SEO 
-        title="Request Quote - Zion Tech Group" 
-        description="Get a customized quote for AI, cybersecurity, cloud, and digital transformation services. Professional consultation and transparent pricing."
-        keywords="quote, pricing, AI services, cybersecurity, cloud migration, digital transformation, Zion Tech Group"
-      />
-      <Header />
-      
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          {/* Hero */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Request a Quote</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tell us about your project and we\'ll send a tailored proposal within 24 hours.
-            </p>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
+      <div className="container-responsive">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Request a Quote
+          </h1>
+          <p className="text-zion-slate-light text-lg max-w-4xl mx-auto leading-relaxed">
+            Get a detailed quote for your technology project. Our team will analyze your requirements 
+            and provide a comprehensive proposal tailored to your business needs and budget.
+          </p>
+        </motion.div>
 
-          {/* Form */}
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2">Full Name</label>
-                  <input name="name" value={form.name} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-gray-400" placeholder="Jane Doe" />
+        {/* Progress Steps */}
+        <motion.div 
+          className="mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="flex items-center justify-between max-w-4xl mx-auto">
+            {Array.from({ length: anytotalSteps }, (_, index)  => (
+              <div key={index + 1} className="flex items-center">
+                <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
+                  currentStep > index + 1
+                    ? 'bg-zion-cyan border-zion-cyan text-white'
+                    : currentStep === index + 1
+                    ? 'bg-zion-cyan/20 border-zion-cyan text-zion-cyan'
+                    : 'bg-white/10 border-zion-slate-light text-zion-slate-light'
+                }`}>
+                  {currentStep > index + 1 ? (
+                    <CheckCircle className="h-6 w-6" />
+                  ) : (
+                    getStepIcon(index + 1)
+                  )}
                 </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2">Email</label>
-                  <input name="email" type="email" value={form.email} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-gray-400" placeholder="jane@company.com" />
+                <div className="ml-3 text-left">
+                  <div className={`text-sm font-medium ${
+                    currentStep >= index + 1 ? 'text-white' : 'text-zion-slate-light'
+                  }`}>
+                    Step {index + 1}
+                  </div>
+                  <div className={`text-xs ${
+                    currentStep >= index + 1 ? 'text-zion-cyan' : 'text-zion-slate-light'
+                  }`}>
+                    {getStepTitle(index + 1)}
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2">Company</label>
-                  <input name="company" value={form.company} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-gray-400" placeholder="Acme Inc." />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2">Phone</label>
-                  <input name="phone" value={form.phone} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-gray-400" placeholder="+1 555 123 4567" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2">Project Type</label>
-                  <select name="projectType" value={form.projectType} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white">
-                    <option value="">Select...</option>
-                    <option value="AI Development">AI Development</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                    <option value="IT Infrastructure">IT Infrastructure</option>
-                    <option value="Micro-SaaS">Micro-SaaS</option>
-                    <option value="Consulting">Consulting</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-2">Budget</label>
-                  <select name="budget" value={form.budget} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white">
-                    <option value="">Select...</option>
-                    <option value="$5k - $20k">$5k - $20k</option>
-                    <option value="$20k - $50k">$20k - $50k</option>
-                    <option value="$50k - $100k">$50k - $100k</option>
-                    <option value="$100k+">$100k+</option>
-                  </select>
-                </div>
+                {index < totalSteps - 1 && (
+                  <div className={`w-16 h-1 mx-4 transition-all duration-300 ${
+                    currentStep > index + 1 ? 'bg-zion-cyan' : 'bg-zion-slate-light/20'
+                  }`} />
+                )}
               </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-2">Project Details</label>
-                <textarea name="details" rows={5} value={form.details} onChange={handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-gray-400" placeholder="Tell us about your goals, timeline, and requirements..." />
-              </div>
-              <div className="text-center">
-                <button type="submit" className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover:from-cyan-400 hover:to-blue-400 transition-colors">Submit Request</button>
-              </div>
-            </form>
+            ))}
           </div>
-        </section>
-        
-        {/* Why Choose Zion Section */}
-        <section className="py-20 bg-zion-blue-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion for Your Tech Needs?</h2>
-              <p className="text-zion-slate-light text-xl max-w-2xl mx-auto">
-                We combine cutting-edge technology with proven expertise to deliver exceptional results.
+        </motion.div>
+
+        {/* Success Message */}
+        {submitStatus === 'success' && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="mb-8 p-6 bg-green-500/20 border border-green-500/30 rounded-2xl flex items-center gap-4 max-w-2xl mx-auto"
+          >
+            <CheckCircle className="h-8 w-8 text-green-500" />
+            <div>
+              <h3 className="text-green-400 font-bold text-lg">Quote Request Submitted!</h3>
+              <p className="text-green-400/80">
+                Thank you for your request. Our team will review your requirements and get back to you 
+                with a detailed quote within 24-48 hours.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center p-6">
-                <div className="bg-zion-purple/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+          </motion.div>
+        )}
+
+        {/* Quote Form */}
+        <motion.div 
+          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8">
+            {/* Step 1: Company & Contact Information */}
+            {currentStep === 1 && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl font-bold text-white mb-2">Company & Contact Information</h2>
+                  <p className="text-zion-slate-light">Tell us about your company and how to reach you</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Fast & Efficient</h3>
-                <p className="text-zion-slate-light">
-                  Get your quote within 24 hours and start your project quickly with our streamlined process.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="bg-zion-cyan/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="companyName" className="block text-white font-medium mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="companyName"
+                      name="companyName"
+                      value={formData.companyName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="industry" className="block text-white font-medium mb-2">
+                      Industry *
+                    </label>
+                    <select
+                      id="industry"
+                      name="industry"
+                      value={formData.industry}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select industry</option>
+                      {industries.map(industry => (
+                        <option key={industry} value={industry} className="bg-zion-slate-dark text-white">
+                          {industry}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="companySize" className="block text-white font-medium mb-2">
+                      Company Size
+                    </label>
+                    <select
+                      id="companySize"
+                      name="companySize"
+                      value={formData.companySize}
+                      onChange={handleInputChange}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select company size</option>
+                      {companySizes.map(size => (
+                        <option key={size} value={size} className="bg-zion-slate-dark text-white">
+                          {size}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="website" className="block text-white font-medium mb-2">
+                      Website
+                    </label>
+                    <input
+                      type="url"
+                      id="website"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleInputChange}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="https://yourcompany.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="firstName" className="block text-white font-medium mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="lastName" className="block text-white font-medium mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-white font-medium mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-white font-medium mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="jobTitle" className="block text-white font-medium mb-2">
+                      Job Title
+                    </label>
+                    <input
+                      type="text"
+                      id="jobTitle"
+                      name="jobTitle"
+                      value={formData.jobTitle}
+                      onChange={handleInputChange}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter your job title"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Quality Assured</h3>
-                <p className="text-zion-slate-light">
-                  All our services and equipment meet the highest industry standards with comprehensive warranties.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="bg-zion-purple-light/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-zion-purple-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
+              </motion.div>
+            )}
+
+            {/* Step 2: Project Details */}
+            {currentStep === 2 && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl font-bold text-white mb-2">Project Details</h2>
+                  <p className="text-zion-slate-light">Describe your project and what you need</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Competitive Pricing</h3>
-                <p className="text-zion-slate-light">
-                  Get the best value for your investment with our transparent pricing and no hidden costs.
-                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="md:col-span-2">
+                    <label htmlFor="projectTitle" className="block text-white font-medium mb-2">
+                      Project Title *
+                    </label>
+                    <input
+                      type="text"
+                      id="projectTitle"
+                      name="projectTitle"
+                      value={formData.projectTitle}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="Enter a descriptive project title"
+                    />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="projectDescription" className="block text-white font-medium mb-2">
+                      Project Description *
+                    </label>
+                    <textarea
+                      id="projectDescription"
+                      name="projectDescription"
+                      value={formData.projectDescription}
+                      onChange={handleInputChange}
+                      required
+                      rows={4}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
+                      placeholder="Describe your project goals, requirements, and expected outcomes..."
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="projectType" className="block text-white font-medium mb-2">
+                      Project Type *
+                    </label>
+                    <select
+                      id="projectType"
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select project type</option>
+                      {projectTypes.map(type => (
+                        <option key={type} value={type} className="bg-zion-slate-dark text-white">
+                          {type}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-medium mb-2">
+                      Services Needed *
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {services.map(service => (
+                        <label key={service} className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={formData.services.includes(service)}
+                            onChange={() => handleServiceToggle(service)}
+                            className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/30 rounded focus:ring-zion-cyan focus:ring-2"
+                          />
+                          <span className="text-zion-slate-light text-sm">{service}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Step 3: Budget & Timeline */}
+            {currentStep === 3 && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl font-bold text-white mb-2">Budget & Timeline</h2>
+                  <p className="text-zion-slate-light">Help us understand your constraints and priorities</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="budget" className="block text-white font-medium mb-2">
+                      Budget Range *
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select budget range</option>
+                      {budgets.map(budget => (
+                        <option key={budget} value={budget} className="bg-zion-slate-dark text-white">
+                          {budget}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="timeline" className="block text-white font-medium mb-2">
+                      Project Timeline *
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select timeline</option>
+                      {timelines.map(timeline => (
+                        <option key={timeline} value={timeline} className="bg-zion-slate-dark text-white">
+                          {timeline}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="urgency" className="block text-white font-medium mb-2">
+                      Project Urgency *
+                    </label>
+                    <select
+                      id="urgency"
+                      name="urgency"
+                      value={formData.urgency}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select urgency level</option>
+                      {urgencyLevels.map(level => (
+                        <option key={level} value={level} className="bg-zion-slate-dark text-white">
+                          {level}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Step 4: Additional Information */}
+            {currentStep === 4 && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="text-center mb-8">
+                  <h2 className="text-2xl font-bold text-white mb-2">Additional Information</h2>
+                  <p className="text-zion-slate-light">Help us provide a more accurate quote</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="currentTechnology" className="block text-white font-medium mb-2">
+                      Current Technology Stack
+                    </label>
+                    <input
+                      type="text"
+                      id="currentTechnology"
+                      name="currentTechnology"
+                      value={formData.currentTechnology}
+                      onChange={handleInputChange}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      placeholder="e.g., React, Node.js, AWS, etc."
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="teamSize" className="block text-white font-medium mb-2">
+                      Development Team Size
+                    </label>
+                    <select
+                      id="teamSize"
+                      name="teamSize"
+                      value={formData.teamSize}
+                      onChange={handleInputChange}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select team size</option>
+                      {teamSizes.map(size => (
+                        <option key={size} value={size} className="bg-zion-slate-dark text-white">
+                          {size}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="integrationRequirements" className="block text-white font-medium mb-2">
+                      Integration Requirements
+                    </label>
+                    <textarea
+                      id="integrationRequirements"
+                      name="integrationRequirements"
+                      value={formData.integrationRequirements}
+                      onChange={handleInputChange}
+                      rows={3}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
+                      placeholder="Describe any third-party integrations or systems that need to be connected..."
+                    />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="successMetrics" className="block text-white font-medium mb-2">
+                      Success Metrics
+                    </label>
+                    <textarea
+                      id="successMetrics"
+                      name="successMetrics"
+                      value={formData.successMetrics}
+                      onChange={handleInputChange}
+                      rows={3}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
+                      placeholder="How will you measure the success of this project? (KPIs, goals, etc.)"
+                    />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label htmlFor="additionalNotes" className="block text-white font-medium mb-2">
+                      Additional Notes
+                    </label>
+                    <textarea
+                      id="additionalNotes"
+                      name="additionalNotes"
+                      value={formData.additionalNotes}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
+                      placeholder="Any additional information, special requirements, or questions you'd like to share..."
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Navigation Buttons */}
+            <div className="flex items-center justify-between pt-8 border-t border-zion-cyan/20">
+              <button
+                type="button"
+                onClick={prevStep}
+                disabled={currentStep === 1}
+                className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Previous
+              </button>
+
+              <div className="text-zion-slate-light text-sm">
+                Step {currentStep} of {totalSteps}
               </div>
+
+              {currentStep < totalSteps ? (
+                <button
+                  type="button"
+                  onClick={nextStep}
+                  disabled={!isStepValid(currentStep)}
+                  className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                >
+                  Next Step
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4" />
+                      Submit Quote Request
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
+          </form>
+        </motion.div>
+
+        {/* Why Choose Zion Tech Group */}
+        <motion.div 
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Star className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-3">Expert Team</h3>
+              <p className="text-zion-slate-light">
+                Our team of 50+ experts brings deep expertise in AI, cloud, security, and emerging technologies.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-3">Proven Track Record<string, any>
+              <p className="text-zion-slate-light">
+                Successfully delivered 150+ projects with 98% client satisfaction rate.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-white font-semibold text-lg mb-3">ROI Focused</h3>
+              <p className="text-zion-slate-light">
+                We focus on delivering measurable business value and return on investment.
+              </p>
             </div>
           </div>
-        </section>
-      </main>
-      
-      <Footer />
+        </motion.div>
+
+        {/* Contact Information */}
+        <motion.div 
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-6">Need Immediate Assistance?</h2>
+            <p className="text-zion-slate-light mb-8">
+              Can't wait for a quote? Our team is available to discuss your project right now.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
+              >
+                <Phone className="mr-2 h-4 w-4" />
+                Call Now: +1 (302) 464-0950
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center border border-zion-cyan text-zion-cyan px-6 py-3 rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Live Chat
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
