@@ -288,6 +288,22 @@ export const blogPosts = [
     imageUrl: "/images/blog/edge-agents-on-device-2026.jpg",
     slug: "ai-2026-edge-agents-on-device"
   }
+  ,
+  {
+    id: 18,
+    title: "AI 2026: Production Guardrails for Autonomous Agents",
+    excerpt: "Blueprint for approval gates, safety envelopes, and evals-as-code in prod.",
+    content: "To operate autonomous agents safely in production, enterprises need layered guardrails: policy-as-code, risk-tiered approvals, sandboxed execution, incident playbooks, and continuous evals-as-code. This article provides actionable patterns and reference implementations to ship with confidence.",
+    author: "Maya Torres",
+    authorRole: "Head of Platform Safety",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Guardrails", "Policy-as-Code", "Safety", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/production-guardrails-autonomous-agents-2026.jpg",
+    slug: "ai-2026-production-guardrails-for-autonomous-agents"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {

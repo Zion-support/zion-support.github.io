@@ -22,6 +22,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "production-guardrails-2026",
+    title: "AI 2026: Production Guardrails for Autonomous Agents",
+    description:
+      "Approval gates, safety envelopes, and evals-as-code for safe operations.",
+    ctaLabel: "Read Guardrails",
+    href: "/blog/ai-2026-production-guardrails-for-autonomous-agents",
+    emoji: "🧰",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "trustworthy-ai-ops-2026",
+    title: "Trustworthy AI Operations 2026",
+    description:
+      "Operating model: policy-as-code, evals-as-code, and incident playbooks.",
+    ctaLabel: "Explore Blueprint",
+    href: "/content/trustworthy-ai-operations-2026",
+    emoji: "✅",
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-ops-playbook-blog-2026",
     title: "AI 2026: Autonomous Ops Playbook",
     description:

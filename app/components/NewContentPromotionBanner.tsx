@@ -11,17 +11,17 @@ const NewContentPromotionBanner: React.FC = () => {
             <p className="text-lg text-gray-600 max-w-2xl">Blueprints for sub-200ms RAG: hybrid search, reranking, streaming UX, and SLOs.</p>
           </div>
           <div className="flex gap-3">
-            <a href="/blog/ai-2026-real-time-retrieval-architectures" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article →</a>
-            <a href="/content/ai-2026-autonomous-ops-playbook" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</a>
+            <a href="/blog/ai-2026-production-guardrails-for-autonomous-agents" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Guardrails →</a>
+            <a href="/content/trustworthy-ai-operations-2026" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Trustworthy AI Ops</a>
           </div>
         </div>
         <div className="mt-6 bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Also new</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Agent Safety Certification</h3>
-            <p className="text-lg text-gray-600 max-w-2xl">Structured certification to validate agent safety with scenario suites and governance.</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Real-Time Retrieval Architectures</h3>
+            <p className="text-lg text-gray-600 max-w-2xl">Blueprints for sub-200ms RAG: hybrid search, reranking, streaming UX, and SLOs.</p>
           </div>
-          <a href="/blog/ai-2026-agent-safety-certification" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Read →</a>
+          <a href="/blog/ai-2026-real-time-retrieval-architectures" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Read →</a>
         </div>
       </div>
     </div>
