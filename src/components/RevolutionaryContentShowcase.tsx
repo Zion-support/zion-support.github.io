@@ -14,7 +14,6 @@ const RevolutionaryContentShowcase: React.FC = () => {
 
   const revolutionaryContent = [
     {
-<<<<<<< HEAD
       id: 'neural-consciousness',
       title: 'Neural Consciousness Breakthrough',
       description: 'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities.',
@@ -169,15 +168,6 @@ const RevolutionaryContentShowcase: React.FC = () => {
       url: '/resources/quantum-computing-business-implementation-guide',
       featured: false,
       badge: '⚛️ QUANTUM'
-=======
-      id: 1,
-      title: "Business Automation Guide 2025",
-      description: "Complete 90-day roadmap to automate 80% of business operations and achieve exponential growth",
-      image: "📋",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/BusinessAutomationGuide2025",
-      category: "Business Strategy",
-      featured: true
     },
     {
       id: 2,
@@ -218,7 +208,6 @@ const RevolutionaryContentShowcase: React.FC = () => {
       link: "/pages/QuantumComputingRevolution2026",
       category: "Quantum Computing",
       featured: false
->>>>>>> cursor/create-and-deploy-new-content-7857
     }
   ];
 

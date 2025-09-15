@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const AdvancedBiotechSolutions2026: React.FC = () => {
@@ -309,20 +308,9 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-
-const AdvancedBiotechSolutions2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
+      
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 BIOTECH REVOLUTION • JANUARY 2026
-          </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Advanced Biotech Solutions 2026
-          </h1>
           <p className="text-2xl text-emerald-200 max-w-4xl mx-auto mb-8">
             Revolutionary biotechnology solutions that are transforming healthcare, 
             agriculture, and human enhancement through cutting-edge genetic engineering and synthetic biology.
@@ -624,7 +612,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-7857
     </div>
   );
 };
