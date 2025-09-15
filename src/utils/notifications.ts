@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+<<<<<<< HEAD
 // Notification utilities
 interface NotificationOptions {
 =======
@@ -55,6 +58,7 @@ interface NotificationOptions {
 
 export interface NotificationOptions {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 <<<<<<< HEAD
@@ -67,6 +71,9 @@ interface NotificationOptions {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-6f13
   title: string;
   body?: string;
   icon?: string;
@@ -169,6 +176,7 @@ export const notifications = {
       console.warn('Notification permission not granted');
       return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 <<<<<<< HEAD
@@ -266,6 +274,9 @@ class NotificationManager {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-6f13
     }
 
     try {
@@ -274,6 +285,7 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -291,20 +303,27 @@ class NotificationManager {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-6f13
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
 =======
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -312,6 +331,8 @@ class NotificationManager {
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -374,6 +395,7 @@ class NotificationManager {
    */
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
@@ -533,6 +555,9 @@ export type { NotificationOptions, ToastOptions };
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-6f13
       title,
       body,
       icon: '/icons/error.png',
@@ -607,6 +632,7 @@ export default notificationManager;
 
 export default notifications;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 <<<<<<< HEAD
@@ -643,3 +669,6 @@ export default notificationManager;
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-6f13
