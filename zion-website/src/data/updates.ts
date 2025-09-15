@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (latest content)
+  {
+    title: 'Launch: AI Autonomous Testing Framework v1.0',
+    summary:
+      'Self-healing test automation with intelligent test generation, execution, and maintenance for enterprise applications.',
+    href: '/updates/ai-autonomous-testing-framework-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (new content for homepage promotion)
   {
     title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
