@@ -15,6 +15,18 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations" className="hover:underline">
+              AI 2026: Evidence-Driven AI Operations
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation-first operating model with policy gates, observability, and SLOs for safe scale.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-red-700 mb-2">Security</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="hover:underline">
