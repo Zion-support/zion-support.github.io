@@ -39,6 +39,16 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '8 min read',
       image: '/blog/ai-governance.jpg',
+=======
+      id: 'agent-safety-guardrails-2025',
+      title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
+      excerpt: 'Blueprints for policy engines, interventions, and auditable controls that keep AI agents safe and aligned.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agent-safety-guardrails.jpg',
+>>>>>>> cursor/create-and-deploy-new-content-4789
       featured: true
     },
     {
@@ -112,6 +122,11 @@ export default function BlogPage() {
   const recentPosts = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7628bd3f9c6fdd87749ce79d345f9b0dcea6b009
       id: 'genai-productivity-benchmarks-2025',
       title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
       excerpt: 'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
@@ -132,6 +147,7 @@ export default function BlogPage() {
 >>>>>>> cursor/create-and-deploy-new-content-1633
     },
     {
+>>>>>>> 2445d7df832b351361c2d9a20e071d592355fcda
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
       excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
@@ -150,6 +166,16 @@ export default function BlogPage() {
       date: '2025-09-12',
       readTime: '8 min read',
       image: '/blog/multi-agent-supply-chains.jpg'
+=======
+      id: 'edge-ai-agents-2025',
+      title: 'Edge AI Agents: Real-Time Intelligence Across Devices and Locations',
+      excerpt: 'Deploy low-latency, bandwidth‑efficient agents at the edge for on‑site decisioning and resilience.',
+      category: 'IoT & Edge',
+      author: 'Michael Rodriguez',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-agents.jpg'
+>>>>>>> cursor/create-and-deploy-new-content-4789
     },
     {
       id: 'autonomous-it-operations',
@@ -247,9 +273,13 @@ export default function BlogPage() {
     { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 3, active: false },
+<<<<<<< HEAD
     { name: 'AI Safety', count: 1, active: false },
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4789
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
+    { name: 'IoT & Edge', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
