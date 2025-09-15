@@ -11,6 +11,37 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A step-by-step framework to implement safe, auditable, and effective governance for enterprise AI and autonomous agents.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'As autonomous systems proliferate across business-critical workflows, organizations need clear, enforceable guardrails that preserve velocity without sacrificing safety.',
+      'This blueprint offers a pragmatic approach to AI governance: start with policy discovery, map risks to controls, then deploy layered enforcement with human-in-the-loop checkpoints.',
+      'We detail reference architectures using policy engines, action sandboxes, approval queues, and immutable logs that satisfy regulatory and audit requirements.',
+      'Outcome: faster delivery with measurable risk reduction, continuous compliance, and higher stakeholder trust.'
+    ]
+  },
+  'autonomous-supply-chains': {
+    id: 'autonomous-supply-chains',
+    title: 'Autonomous Supply Chains: Real-Time Orchestration From Demand to Delivery',
+    excerpt:
+      'How to deploy event-driven, AI-optimized supply chains that self-balance inventory, logistics, and fulfillment in real time.',
+    category: 'Research & Development',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'Supply chains are ideal for autonomous orchestration: high data volume, clear objectives, and continuous feedback.',
+      'We outline a reference design using streaming signals, predictive models, and reinforcement learning to optimize sourcing, routing, and fulfillment.',
+      'The system learns from interventions and external shocks, improving resilience while cutting lead times and waste.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
