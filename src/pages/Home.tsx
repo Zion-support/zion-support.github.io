@@ -1,50 +1,27 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  BarChart3, 
-  Target, 
-  Lightbulb, 
-  Database, 
-  Network, 
-  Eye, 
-  Globe2, 
-  Smartphone, 
-  Monitor, 
-  Server, 
-  Atom, 
-  Car, 
-  Scale, 
-  Leaf, 
-  Factory, 
-  Building, 
-  Clock, 
-  Phone, 
-  Mail, 
-  TrendingUp 
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
+import { SEO } from "@/components/SEO";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Atom,
+  Brain,
+  Building,
+  Car,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Cpu,
+  DollarSign,
+  Globe2,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Zap
+} from 'lucide-react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -324,6 +301,23 @@ export default function Home() {
       />
       
       <div className="min-h-screen bg-futuristic">
+        {/* New Content Promotion */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-slate-900/60 border-b border-slate-800/60">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <p className="text-sm font-semibold text-zion-cyan mb-1">New</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">AI Implementation Playbook 2026</h2>
+              <p className="text-gray-300 mt-2 max-w-2xl">A practical, executive-friendly guide with a 90‑day plan, KPIs, and templates.</p>
+            </div>
+            <Link
+              to="/resources/ai-implementation-playbook-2026"
+              className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:from-cyan-300 hover:to-blue-400 transition-colors"
+            >
+              Read the Playbook
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+        </section>
         {/* Hero Section */}
         <HeroSection />
 

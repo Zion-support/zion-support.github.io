@@ -3,6 +3,7 @@
 // React stubs
 declare module 'react' {
   export type FC<P = any> = (props: P) => any;
+  export type ComponentType<P = any> = (props: P) => any;
   export type ReactNode = any;
   export interface ChangeEvent<T = any> extends Event { target: T }
   export interface FormEvent<T = any> extends Event {}
@@ -14,12 +15,25 @@ declare module 'react' {
   export function useState<S = any>(initial?: S): [S, (value: S) => void];
   export function useEffect(fn: () => any, deps?: any[]): void;
   export function useRef<T = any>(initial: T): { current: T };
+  export const Suspense: any;
   const react: any;
   export default react;
 }
 
 declare module 'react/jsx-runtime' {
-  export {};
+  export { };
+}
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+  namespace React {
+    // Support React.ComponentType type references
+    type ComponentType<P = any> = (props: P) => any;
+  }
 }
 
 declare module 'react-dom' {
