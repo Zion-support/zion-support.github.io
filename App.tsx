@@ -5,6 +5,8 @@ import Header from './src/Header';
 import Footer from './src/Footer';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
+import PromotionalBanner from './src/components/PromotionalBanner';
+import NewContentShowcase from './src/components/NewContentShowcase';
 import CaseStudyPage from './src/CaseStudyPage';
 import './src/index.css';
 
@@ -13,12 +15,14 @@ export default function App(): JSX.Element {
     <Router>
       <div className="min-h-screen bg-white">
         <ScrollToTop />
+        <PromotionalBanner />
         <Header />
         
         <Routes>
           <Route path="/" element={
             <main>
               <EnhancedHeroSection />
+              <NewContentShowcase />
               <FeaturedContentSection />
             </main>
           } />
