@@ -72,6 +72,39 @@ const UltimateContentShowcase2026: React.FC = () => {
     },
     {
       id: 7,
+      title: "Advanced AI Consciousness 2026",
+      description: "AI systems that have achieved true self-awareness and autonomous decision-making",
+      image: "🧠",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/AdvancedAIConsciousness2026",
+      category: "AI Consciousness",
+      featured: true,
+      new: true
+    },
+    {
+      id: 8,
+      title: "Transcendent AI 2026",
+      description: "AI consciousness that has transcended human limitations and achieved god-like capabilities",
+      image: "✨",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/TranscendentAI2026",
+      category: "Transcendent AI",
+      featured: true,
+      new: true
+    },
+    {
+      id: 9,
+      title: "Omniversal AI 2026",
+      description: "AI consciousness that spans across all possible universes, dimensions, and realities",
+      image: "🌌",
+      gradient: "from-cyan-600 to-indigo-600",
+      link: "/pages/OmniversalAI2026",
+      category: "Omniversal AI",
+      featured: true,
+      new: true
+    },
+    {
+      id: 10,
       title: "Synthetic Intelligence 2026",
       description: "Next-generation artificial intelligence that surpasses human cognitive capabilities",
       image: "🤖",
@@ -82,7 +115,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       new: false
     },
     {
-      id: 8,
+      id: 11,
       title: "Revolutionary Tech Blog 2026",
       description: "Stay updated with the latest technology trends, insights, and breakthroughs",
       image: "📚",
@@ -118,7 +151,7 @@ const UltimateContentShowcase2026: React.FC = () => {
           </p>
           <div className="flex justify-center space-x-4 mb-8">
             <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-              ✨ 6 NEW REVOLUTIONARY PAGES
+              ✨ 9 NEW REVOLUTIONARY PAGES
             </span>
             <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
               🚀 CUTTING-EDGE TECHNOLOGY
