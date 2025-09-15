@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const technologies = [
     {
@@ -188,6 +189,34 @@ const InteractiveTechShowcase: React.FC = () => {
               <div className="text-gray-300">{stat.label}</div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Interactive Features */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
+          >
+            <div className="text-4xl mb-4">🧪</div>
+            <h4 className="text-xl font-bold mb-3">Live Simulation</h4>
+            <p className="text-sm opacity-90 mb-4">Watch real-time simulations of our technologies in action</p>
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Start Simulation
+            </button>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
+          >
+            <div className="text-4xl mb-4">📊</div>
+            <h4 className="text-xl font-bold mb-3">Performance Analytics</h4>
+            <p className="text-sm opacity-90 mb-4">View detailed performance metrics and analytics</p>
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              View Analytics
+            </button>
+          </motion.div>
+        </div>
         </div>
       </div>
     </div>
