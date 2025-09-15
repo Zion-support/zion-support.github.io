@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InnovationHub2025Banner = () => {
   const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
@@ -104,12 +104,12 @@ const InnovationHub2025Banner = () => {
                     <span className="text-sm font-semibold">{innovation.stats}</span>
                   </div>
                   
-                  <Link
+                  <a
                     href={innovation.link}
                     className="inline-flex items-center text-white font-semibold hover:underline transition-all duration-300"
                   >
                     Explore Innovation →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -147,18 +147,18 @@ const InnovationHub2025Banner = () => {
               Be part of the most advanced innovation ecosystem on the planet. Connect with leading researchers, access cutting-edge technologies, and shape the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/innovation-hub"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Join Innovation Hub
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/innovation-projects"
                 className="border-2 border-indigo-400 text-indigo-400 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300"
               >
                 Explore Projects
-              </Link>
+              </a>
             </div>
           </div>
         </div>

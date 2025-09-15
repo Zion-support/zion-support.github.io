@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -18,9 +18,9 @@ export default function QuantumAIBreakthrough2026() {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">
-          <Link href="/blog" className="text-indigo-600 hover:text-indigo-800 font-medium">
+          <a href="/blog" className="text-indigo-600 hover:text-indigo-800 font-medium">
             ← Back to Blog
-          </Link>
+          </a>
         </div>
 
         <article className="prose prose-lg max-w-none">
@@ -166,18 +166,18 @@ export default function QuantumAIBreakthrough2026() {
               Ready to harness the power of quantum AI? Our expert team can help you implement this breakthrough technology and achieve unprecedented results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <a 
                 href="/contact" 
                 className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 text-center"
               >
                 Start Quantum Journey
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/content/ai-2026-quantum-ai-implementation-guide" 
                 className="inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 text-center"
               >
                 Download Guide
-              </Link>
+              </a>
             </div>
           </div>
         </article>

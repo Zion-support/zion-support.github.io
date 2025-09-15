@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContent2026Banner = () => {
   return (
@@ -41,12 +41,12 @@ const RevolutionaryContent2026Banner = () => {
               Comprehensive roadmap for enterprise AI transformation in 2025. Learn implementation strategies
               best practicesand real-world case studies.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2025-enterprise-transformation-complete-guide"
               className="inline-flex items-center text-purple-300 hover:text-purple-200 font-semibold text-sm"
             >
               Read More →
-            </Link>
+            </a>
           </div>
 
           {/* Featured Article 2 */}
@@ -64,12 +64,12 @@ const RevolutionaryContent2026Banner = () => {
               Explore the revolutionary impact of Quantum AI on business operations
               competitive advantageand market dynamics in 2026.
             </p>
-            <Link 
+            <a 
               href="/blog/quantum-ai-2026-business-revolution"
               className="inline-flex items-center text-blue-300 hover:text-blue-200 font-semibold text-sm"
             >
               Read More →
-            </Link>
+            </a>
           </div>
 
           {/* Featured Resource */}
@@ -87,12 +87,12 @@ const RevolutionaryContent2026Banner = () => {
               The definitive guide to enterprise AI implementation in 2026. 
               Complete strategyexecution frameworkand best practices.
             </p>
-            <Link 
+            <a 
               href="/resources/ai-implementation-enterprise-guide-2026"
               className="inline-flex items-center text-green-300 hover:text-green-200 font-semibold text-sm"
             >
               Read More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -119,24 +119,24 @@ const RevolutionaryContent2026Banner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
+            <a
               href="/blog"
               className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore All Content
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
               View Resources
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-colors"
             >
               Get Expert Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

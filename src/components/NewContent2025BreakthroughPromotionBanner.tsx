@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025BreakthroughPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
@@ -36,12 +36,12 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-red-400 font-bold text-lg">10,000% ROI</span>
-                <Link 
+                <a 
                   href="/ai-2025-ultimate-breakthrough-revolution"
                   className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
                 >
                   Explore →
-                </Link>
+                </a>
               </div>
             </div>
             
@@ -54,12 +54,12 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-cyan-400 font-bold text-lg">15,000% ROI</span>
-                <Link 
+                <a 
                   href="/ai-2026-quantum-neural-fusion-revolutionary-breakthrough"
                   className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
                 >
                   Explore →
-                </Link>
+                </a>
               </div>
             </div>
             
@@ -72,12 +72,12 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-green-400 font-bold text-lg">10,000% ROI</span>
-                <Link 
+                <a 
                   href="/case-studies/ai-2025-global-transformation-breakthrough"
                   className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
                 >
                   Read Story →
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -89,12 +89,12 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               <p className="text-gray-300 mb-4 text-sm">
                 Discover the revolutionary AI trends and predictions that will transform business operations in 2025.
               </p>
-              <Link 
+              <a 
                 href="/blog/ai-2025-revolutionary-trends-predictions"
                 className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
               >
                 Read Predictions →
-              </Link>
+              </a>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
@@ -102,29 +102,29 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               <p className="text-gray-300 mb-4 text-sm">
                 Explore additional case studies and success stories from companies achieving unprecedented ROI with our AI solutions.
               </p>
-              <Link 
+              <a 
                 href="/case-studies"
                 className="text-blue-400 hover:text-blue-300 text-sm font-semibold"
               >
                 View All Stories →
-              </Link>
+              </a>
             </div>
           </div>
           
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution"
               className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
             >
               🚀 Start Your Revolution
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
             >
               📞 Get Consultation
-            </Link>
+            </a>
           </div>
           
           {/* Stats */}

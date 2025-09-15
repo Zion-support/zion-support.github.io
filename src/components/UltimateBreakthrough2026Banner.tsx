@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBreakthrough2026Banner = () => {
   return (
@@ -83,40 +83,40 @@ const UltimateBreakthrough2026Banner = () => {
               Join thousands of companies already experiencing the AI revolution
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors"
               >
                 Get Started Now
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/demo"
                 className="border-2 border-black text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white transition-colors"
               >
                 Watch Demo
-              </Link>
+              </a>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/case-studies"
               className="text-yellow-400 hover:text-yellow-300 font-semibold"
             >
               View Success Stories →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/pricing"
               className="text-yellow-400 hover:text-yellow-300 font-semibold"
             >
               See Pricing →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="text-yellow-400 hover:text-yellow-300 font-semibold"
             >
               Download Resources →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

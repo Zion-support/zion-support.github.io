@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightPlayCodeBrainZapTargetUsersShield
 
 export default function AIToolsInteractiveShowcase2025PromotionBanner() {
@@ -103,20 +103,20 @@ export default function AIToolsInteractiveShowcase2025PromotionBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link 
+            <a 
               href="/ai-tools-interactive-showcase-2025" 
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl"
             >
               <Play className="mr-2 h-5 w-5" />
               Start Interactive Demo
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/guides" 
               className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
             >
               <Code className="mr-2 h-5 w-5" />
               View Implementation Guides
-            </Link>
+            </a>
           </div>
           <p className="text-gray-400 text-sm">
             Join 25,000+ developers already using our AI tool suite

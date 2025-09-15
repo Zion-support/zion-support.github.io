@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTrendingUpUsersAward
 
 const RevolutionaryAI2026Banner = () => {
@@ -37,22 +37,22 @@ const RevolutionaryAI2026Banner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
+            <a
               href="/blog/ai-2026-revolutionary-breakthrough-complete-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
             >
               <Zap className="w-5 h-5 mr-2" />
               Explore AI 2026 Guide
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2026-transformation-ultimate-success-story"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <Award className="w-5 h-5 mr-2" />
               View Success Story
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -107,7 +107,7 @@ const RevolutionaryAI2026Banner = () => {
         <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-10">
           <h3 className="text-2xl font-bold text-center mb-6">Explore Our Latest AI 2026 Content</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link
+            <a
               href="/blog/ai-2026-revolutionary-breakthrough-complete-guide"
               className="group bg-white bg-opacity-10 rounded-lg p-4 hover:bg-opacity-20 transition-all duration-300"
             >
@@ -118,9 +118,9 @@ const RevolutionaryAI2026Banner = () => {
               <p className="text-sm text-gray-300 group-hover:text-white">
                 Revolutionary AI breakthroughs and implementation strategies
               </p>
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/case-studies/ai-2026-transformation-ultimate-success-story"
               className="group bg-white bg-opacity-10 rounded-lg p-4 hover:bg-opacity-20 transition-all duration-300"
             >
@@ -131,9 +131,9 @@ const RevolutionaryAI2026Banner = () => {
               <p className="text-sm text-gray-300 group-hover:text-white">
                 Fortune 500 company achieves 500% ROI with AI transformation
               </p>
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/resources/ai-2026-implementation-ultimate-master-guide"
               className="group bg-white bg-opacity-10 rounded-lg p-4 hover:bg-opacity-20 transition-all duration-300"
             >
@@ -144,7 +144,7 @@ const RevolutionaryAI2026Banner = () => {
               <p className="text-sm text-gray-300 group-hover:text-white">
                 Complete roadmap and best practices for AI implementation
               </p>
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -153,14 +153,14 @@ const RevolutionaryAI2026Banner = () => {
           <p className="text-lg mb-6 opacity-90">
             Ready to transform your business with revolutionary AI technologies?
           </p>
-          <Link
+          <a
             href="/contact"
             className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Zap className="w-5 h-5 mr-2" />
             Start Your AI Transformation
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

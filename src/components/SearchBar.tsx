@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface SearchResult {
   title: string, description: string
@@ -214,7 +214,7 @@ const SearchBar: React.FC = () => {
           {results.length > 0 ? (
             <div className="py-2">
               {results.map((result, index) => (
-                <Link
+                <a
                   key={index}
                   href={result.url}
                   onClick={handleResultClick}
@@ -236,7 +236,7 @@ const SearchBar: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           ) : query && !isLoading ? (

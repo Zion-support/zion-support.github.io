@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -211,7 +211,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
       className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -301,14 +301,14 @@ const ComprehensiveAIServicesShowcase2025 = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <Link
+                <a
                   href={services[activeService].link}
                   className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2"
                 >
                   <Rocket className="w-5 h-5" />
                   <span>Get Started</span>
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
                 <button className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300 flex items-center gap-2">
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
@@ -361,13 +361,13 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                     <span className="text-gray-300 text-sm">Starting from</span>
                     <div className="text-2xl font-bold text-white">{services[activeService].pricing}</div>
                   </div>
-                  <Link
+                  <a
                     href="/pricing"
                     className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
                   >
                     <span>View Pricing</span>
                     <ExternalLink className="w-4 h-4" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -383,7 +383,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               whileHover={{ scale: 1.02y: -5 }}
               className="group"
             >
-              <Link href={service.link}>
+              <a href={service.link}>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 h-full">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">
@@ -415,7 +415,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                     <ArrowRight className="w-5 h-5 text-white group-hover:text-blue-400 transition-colors" />
                   </div>
                 </div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </motion.div>
@@ -430,20 +430,20 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               Join thousands of companies already using our AI services to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <Users className="w-5 h-5" />
                 <span>Schedule Consultation</span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300 flex items-center gap-2"
               >
                 <Globe className="w-5 h-5" />
                 <span>Explore All Services</span>
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumAI2025RevolutionBanner = () => {
   return (
     <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -35,12 +35,12 @@ const QuantumAI2025RevolutionBanner = () => {
               Complete guide to quantum machine learning implementation in 2025. 
               Revolutionary capabilities and business transformation strategies.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2025-quantum-machine-learning-revolution-ultimate-guide"
               className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
             >
               Read Guide →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -50,12 +50,12 @@ const QuantumAI2025RevolutionBanner = () => {
               Ultimate breakthrough guide to generative AI enterprise implementation. 
               Transform your business with cutting-edge AI capabilities.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
               className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
             >
               Explore Now →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -65,12 +65,12 @@ const QuantumAI2025RevolutionBanner = () => {
               Real Fortune 500 case study: How quantum AI transformation delivered 
               $1.05 billion in annual savings and 2000% ROI.
             </p>
-            <Link 
+            <a 
               href="/case-studies/ai-2025-quantum-ai-transformation-2000-roi-success-story"
               className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
             >
               View Case Study →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -97,18 +97,18 @@ const QuantumAI2025RevolutionBanner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Quantum AI Journey
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/quantum-ai"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               Explore Quantum AI Services
-            </Link>
+            </a>
           </div>
           <p className="text-sm text-gray-300 mt-4">
             Join leading enterprises transforming their business with quantum AI

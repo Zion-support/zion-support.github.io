@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightWrenchCodeDatabaseBarChart3ShieldZapBrainStar
 
 export default function AIToolsUtilities2025Banner() {
@@ -15,7 +15,7 @@ export default function AIToolsUtilities2025Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border border-blue-500/30 rounded-2xl p-8 mb-8">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -59,20 +59,20 @@ export default function AIToolsUtilities2025Banner() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <a 
                 href="/ai-tools-utilities-2025"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore All Tools
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
               
-              <Link 
+              <a 
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Get Custom Solutions
-              </Link>
+              </a>
             </div>
           </div>
 

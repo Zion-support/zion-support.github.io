@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface BreakthroughContent {
   id: string;
@@ -149,12 +149,12 @@ export default function InteractiveBreakthroughContentWidget2025() {
                     <p className="text-gray-600 text-sm mb-4">{content.description}</p>
                     <div className="text-2xl font-bold text-blue-600 mb-4">{content.roi} ROI</div>
                   </div>
-                  <Link 
+                  <a 
                     href={content.href}
                     className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-lg font-bold hover:scale-105 transition-transform"
                   >
                     Explore Breakthrough
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -180,12 +180,12 @@ export default function InteractiveBreakthroughContentWidget2025() {
                   <p className="text-gray-600 text-sm mb-4">{content.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold text-green-600">{content.roi}</div>
-                    <Link 
+                    <a 
                       href={content.href}
                       className="text-blue-600 hover:text-blue-800 font-semibold text-sm"
                     >
                       Learn More →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -210,18 +210,18 @@ export default function InteractiveBreakthroughContentWidget2025() {
               Discover how our breakthrough AI technologies can deliver unprecedented ROI for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Started Now
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

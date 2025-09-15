@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContent2025Banner = () => {
   return (
@@ -44,12 +44,12 @@ const RevolutionaryContent2025Banner = () => {
                 <div className="text-sm opacity-80">Success Rate</div>
               </div>
             </div>
-            <Link 
+            <a 
               href="/blog/ai-automation-2025-comprehensive-guide"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
             >
               Read Complete Guide →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-30">
@@ -74,12 +74,12 @@ const RevolutionaryContent2025Banner = () => {
                 <div className="text-sm opacity-80">Accuracy</div>
               </div>
             </div>
-            <Link 
+            <a 
               href="/blog/quantum-computing-business-applications-2025"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
             >
               Explore Applications →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -107,12 +107,12 @@ const RevolutionaryContent2025Banner = () => {
           </div>
 
           <div className="text-center">
-            <Link 
+            <a 
               href="/case-studies/ai-transformation-success-story"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               View Success Stories →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

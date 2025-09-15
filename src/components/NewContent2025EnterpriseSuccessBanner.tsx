@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025EnterpriseSuccessBanner() {
   return (
@@ -29,7 +29,7 @@ export default function NewContent2025EnterpriseSuccessBanner() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <a 
               href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
@@ -37,13 +37,13 @@ export default function NewContent2025EnterpriseSuccessBanner() {
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-green-600 transition-all duration-300"
             >
               Schedule Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

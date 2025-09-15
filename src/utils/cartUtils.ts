@@ -1,15 +1,7 @@
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
 /**
  * Cart utility functions for managing shopping cart operations
  */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 export interface CartItem {
   id: string;
   name: string;
@@ -18,348 +10,271 @@ export interface CartItem {
   image?: string;
   description?: string;
   category?: string;
+  metadata?: Record<string, any>;
 }
 
 export interface Cart {
   items: CartItem[];
+  subtotal: number;
+  tax: number;
+  shipping: number;
   total: number;
+  currency: string;
+  updatedAt: string;
+}
+
+export interface CartSummary {
   itemCount: number;
+  totalItems: number;
+  subtotal: number;
+  tax: number;
+  shipping: number;
+  total: number;
 }
 
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-    const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
-    
-    if (existingItem) {
-      // Update quantity if item already exists
-      return cartUtils.updateItemQuantity(cart, item.id, existingItem.quantity + 1);
-    } else {
-      // Add new item
-      const newItem: CartItem = { ...item, quantity: 1 };
-      const newItems = [...cart.items, newItem];
-      return cartUtils.calculateTotals({ ...cart, items: newItems });
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+class CartManager {
+  private cart: Cart = {
     items: [],
+    subtotal: 0,
+    tax: 0,
+    shipping: 0,
     total: 0,
-    itemCount: 0,
-  }),
-
-    }
-    return item;
-  });
-
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-    }
-  },
-
-  // Remove item from cart
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-    const newItems = cart.items.filter(item => item.id !== itemId);
-    return cartUtils.calculateTotals({ ...cart, items: newItems });
-  },
-
-  // Update item quantity
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-    if (quantity <= 0) {
-      return cartUtils.removeItem(cart, itemId);
-    }
-=======
-  return calculateCartTotals({ ...cart, items: newItems });
-}
-
-export function clearCart(): Cart {
-  return createEmptyCart();
-}
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-
-export function calculateCartTotals(cart: Cart): Cart {
-  const subtotal = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
-  
-  // Calculate shipping
-  const shipping = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
-  
-  // Calculate tax (on subtotal + shipping - discount)
-  const taxableAmount = subtotal + shipping - cart.discount;
-  const tax = taxableAmount * TAX_RATE;
-  
-  // Calculate total
-  const total = subtotal + shipping + tax - cart.discount;
-
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-    if (quantity <= 0) {
-      return cartUtils.removeItem(cart, itemId);
-    }
-
-    const newItems = cart.items.map(item =>
-      item.id === itemId ? { ...item, quantity } : item
-    );
-    
-    return cartUtils.calculateTotals({ ...cart, items: newItems });
-  },
-
-  // Calculate totals
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-    const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
-    
-    return {
-      ...cart,
-      total: Math.round(total * 100) / 100, // Round to 2 decimal places
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
-  return {
-    ...cart,
-    subtotal: Math.round(subtotal * 100) / 100,
-    tax: Math.round(tax * 100) / 100,
-    shipping: Math.round(shipping * 100) / 100,
-    total: Math.round(total * 100) / 100,
-    itemCount,
+    currency: 'USD',
+    updatedAt: new Date().toISOString()
   };
-}
 
-export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isValid: boolean; message: string } {
-  const now = new Date();
-  
-  // Check if discount is expired
-  if (discount.expiresAt && discount.expiresAt < now) {
-    return {
-      cart,
-      isValid: false,
-      message: 'Discount code has expired',
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-    };
-  }
+  private taxRate = 0.08; // 8% tax rate
+  private freeShippingThreshold = 100; // Free shipping over $100
+  private shippingCost = 9.99; // Standard shipping cost
 
-=======
-    };
-  },
+  /**
+   * Add an item to the cart
+   */
+  addItem(item: Omit<CartItem, 'quantity'> | CartItem): void {
+    const existingItemIndex = this.cart.items.findIndex(cartItem => cartItem.id === item.id);
 
-  // Clear cart
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
-    };
-  },
-
-  // Clear cart
->>>>>>> cursor/create-and-deploy-new-content-8735
-    return cart.items.some(item => item.id === itemId);
-  },
-
-  // Get cart summary
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-    return {
-      cart,
-      isValid: false,
-      message: `Minimum order amount of $${discount.minimumAmount} required`,
-    };
-  }
-
-  // Calculate discount amount
-  let discountAmount = 0;
-  if (discount.type === 'percentage') {
-    discountAmount = cart.subtotal * (discount.value / 100);
-  } else {
-    discountAmount = discount.value;
-  }
-
-  // Don't allow discount to exceed subtotal
-  discountAmount = Math.min(discountAmount, cart.subtotal);
-
-  const newCart = calculateCartTotals({
-    ...cart,
-    discount: Math.round(discountAmount * 100) / 100,
-  });
-
-  return {
-    cart: newCart,
-    isValid: true,
-    message: 'Discount applied successfully',
-  };
-}
-
-export default cartUtils;
-=======
-export function removeDiscount(cart: Cart): Cart {
-  return calculateCartTotals({
-    ...cart,
-    discount: 0,
-  });
-}
-
-export function getCartSummary(cart: Cart): string {
-  if (cart.itemCount === 0) {
-    return 'Your cart is empty';
-  }
-
-  const itemText = cart.itemCount === 1 ? 'item' : 'items';
-  return `${cart.itemCount} ${itemText} - $${cart.total.toFixed(2)}`;
-}
-
-export function getCartItemById(cart: Cart, itemId: string): CartItem | undefined {
-  return cart.items.find(item => item.id === itemId);
-}
-
-export function isItemInCart(cart: Cart, itemId: string): boolean {
-  return cart.items.some(item => item.id === itemId);
-}
-
-export function getCartItemsByCategory(cart: Cart, category: string): CartItem[] {
-  return cart.items.filter(item => item.category === category);
-}
-
-export function getCartTotalByCategory(cart: Cart, category: string): number {
-  return getCartItemsByCategory(cart, category).reduce(
-    (sum, item) => sum + (item.price * item.quantity),
-    0
-  );
-}
-
-export function validateCartItem(item: Partial<CartItem>): { isValid: boolean; errors: string[] } {
-  const errors: string[] = [];
-
-  if (!item.id) {
-    errors.push('Item ID is required');
-  }
-
-  if (!item.name) {
-    errors.push('Item name is required');
-  }
-
-  if (!item.price || item.price <= 0) {
-    errors.push('Valid price is required');
-  }
-
-  if (!item.quantity || item.quantity <= 0) {
-    errors.push('Valid quantity is required');
-  }
-
-  return {
-    isValid: errors.length === 0,
-    errors,
-  };
-}
-
-export function exportCart(cart: Cart): string {
-  return JSON.stringify(cart, null, 2);
-}
-
-export function importCart(cartData: string): { cart: Cart; isValid: boolean; errors: string[] } {
-  try {
-    const parsed = JSON.parse(cartData);
-    const cart = calculateCartTotals(parsed);
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-    
-    if (existingItemIndex > -1) {
-      // Item exists, increment quantity
-      const updatedItems = [...cart.items];
-      updatedItems[existingItemIndex].quantity += 1;
-      return cartUtils.calculateTotals({ ...cart, items: updatedItems });
+    if (existingItemIndex >= 0) {
+      // Item exists, increase quantity
+      this.cart.items[existingItemIndex].quantity += (item as CartItem).quantity || 1;
     } else {
-      // New item, add with quantity 1
-      const updatedItems = [...cart.items, { ...newItem, quantity: 1 }];
-      return cartUtils.calculateTotals({ ...cart, items: updatedItems });
+      // New item, add to cart
+      this.cart.items.push({
+        ...item,
+        quantity: (item as CartItem).quantity || 1
+      });
     }
-  },
 
-  // Remove item from cart
-  removeItem: (cart: Cart, itemId: string): Cart => {
-    const updatedItems = cart.items.filter(item => item.id !== itemId);
-    return cartUtils.calculateTotals({ ...cart, items: updatedItems });
-  },
+    this.recalculateCart();
+  }
 
-  // Update item quantity
-  updateQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
+  /**
+   * Remove an item from the cart
+   */
+  removeItem(itemId: string): void {
+    this.cart.items = this.cart.items.filter(item => item.id !== itemId);
+    this.recalculateCart();
+  }
+
+  /**
+   * Update item quantity
+   */
+  updateQuantity(itemId: string, quantity: number): void {
     if (quantity <= 0) {
-      return cartUtils.removeItem(cart, itemId);
+      this.removeItem(itemId);
+      return;
     }
 
-    const updatedItems = cart.items.map(item =>
-      item.id === itemId ? { ...item, quantity } : item
-    );
-    return cartUtils.calculateTotals({ ...cart, items: updatedItems });
-  },
+    const itemIndex = this.cart.items.findIndex(item => item.id === itemId);
+    if (itemIndex >= 0) {
+      this.cart.items[itemIndex].quantity = quantity;
+      this.recalculateCart();
+    }
+  }
 
-  // Clear all items from cart
-  clearCart: (): Cart => cartUtils.createEmptyCart(),
+  /**
+   * Clear all items from cart
+   */
+  clearCart(): void {
+    this.cart.items = [];
+    this.recalculateCart();
+  }
 
-  // Calculate totals
-  calculateTotals: (cart: Cart): Cart => {
-    const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+  /**
+   * Get cart items
+   */
+  getCart(): Cart {
+    return { ...this.cart };
+  }
+
+  /**
+   * Get cart summary
+   */
+  getCartSummary(): CartSummary {
+    const totalItems = this.cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
     return {
-      ...cart,
-      total: Math.round(total * 100) / 100, // Round to 2 decimal places
-      itemCount,
+      itemCount: this.cart.items.length,
+      totalItems,
+      subtotal: this.cart.subtotal,
+      tax: this.cart.tax,
+      shipping: this.cart.shipping,
+      total: this.cart.total
     };
-  },
+  }
 
-  // Get item by ID
-  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
-    return cart.items.find(item => item.id === itemId);
-  },
+  /**
+   * Check if cart is empty
+   */
+  isEmpty(): boolean {
+    return this.cart.items.length === 0;
+  }
 
-  // Check if item exists in cart
-  hasItem: (cart: Cart, itemId: string): boolean => {
-    return cart.items.some(item => item.id === itemId);
-  },
+  /**
+   * Get item count
+   */
+  getItemCount(): number {
+    return this.cart.items.reduce((sum, item) => sum + item.quantity, 0);
+  }
 
-  // Get cart summary
-  getSummary: (cart: Cart) => {
-    return {
-      itemCount: cart.itemCount,
-      total: cart.total,
-      isEmpty: cart.items.length === 0,
-      uniqueItems: cart.items.length,
-    };
-  },
+  /**
+   * Find item by ID
+   */
+  findItem(itemId: string): CartItem | undefined {
+    return this.cart.items.find(item => item.id === itemId);
+  }
 
-  // Validate cart
-  validateCart: (cart: Cart): { isValid: boolean; errors: string[] } => {
+  /**
+   * Calculate cart totals
+   */
+  private recalculateCart(): void {
+    // Calculate subtotal
+    this.cart.subtotal = this.cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    // Calculate tax
+    this.cart.tax = this.cart.subtotal * this.taxRate;
+
+    // Calculate shipping
+    this.cart.shipping = this.cart.subtotal >= this.freeShippingThreshold ? 0 : this.shippingCost;
+
+    // Calculate total
+    this.cart.total = this.cart.subtotal + this.cart.tax + this.cart.shipping;
+
+    // Update timestamp
+    this.cart.updatedAt = new Date().toISOString();
+  }
+
+  /**
+   * Apply discount
+   */
+  applyDiscount(percentage: number): void {
+    if (percentage < 0 || percentage > 100) {
+      throw new Error('Discount percentage must be between 0 and 100');
+    }
+
+    const discountAmount = this.cart.subtotal * (percentage / 100);
+    this.cart.subtotal -= discountAmount;
+    this.recalculateCart();
+  }
+
+  /**
+   * Set shipping cost
+   */
+  setShippingCost(cost: number): void {
+    this.shippingCost = cost;
+    this.recalculateCart();
+  }
+
+  /**
+   * Set tax rate
+   */
+  setTaxRate(rate: number): void {
+    this.taxRate = rate;
+    this.recalculateCart();
+  }
+
+  /**
+   * Set free shipping threshold
+   */
+  setFreeShippingThreshold(threshold: number): void {
+    this.freeShippingThreshold = threshold;
+    this.recalculateCart();
+  }
+
+  /**
+   * Validate cart
+   */
+  validateCart(): { isValid: boolean; errors: string[] } {
     const errors: string[] = [];
 
-    if (!Array.isArray(cart.items)) {
-      errors.push('Items must be an array');
-      return { isValid: false, errors };
+    if (this.cart.items.length === 0) {
+      errors.push('Cart is empty');
     }
 
-    cart.items.forEach((item, index) => {
-      if (!item.id) {
-        errors.push(`Item at index ${index} is missing ID`);
+    for (const item of this.cart.items) {
+      if (item.quantity <= 0) {
+        errors.push(`Invalid quantity for item: ${item.name}`);
       }
-      if (!item.name) {
-        errors.push(`Item at index ${index} is missing name`);
+      if (item.price < 0) {
+        errors.push(`Invalid price for item: ${item.name}`);
       }
-      if (typeof item.price !== 'number' || item.price < 0) {
-        errors.push(`Item at index ${index} has invalid price`);
-      }
-      if (typeof item.quantity !== 'number' || item.quantity <= 0) {
-        errors.push(`Item at index ${index} has invalid quantity`);
-      }
-    });
+    }
 
     return {
       isValid: errors.length === 0,
-      errors,
+      errors
     };
-  },
+  }
 
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
-export default cartUtils;
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
-export default cartUtils;
->>>>>>> cursor/create-and-deploy-new-content-8735
+  /**
+   * Export cart data
+   */
+  exportCart(): string {
+    return JSON.stringify(this.cart, null, 2);
+  }
+
+  /**
+   * Import cart data
+   */
+  importCart(cartData: string): boolean {
+    try {
+      const importedCart = JSON.parse(cartData);
+      
+      // Validate imported cart structure
+      if (!importedCart.items || !Array.isArray(importedCart.items)) {
+        throw new Error('Invalid cart structure');
+      }
+
+      this.cart = importedCart;
+      this.recalculateCart();
+      return true;
+    } catch (error) {
+      console.error('Failed to import cart:', error);
+      return false;
+    }
+  }
+}
+
+// Create default instance
+const cartManager = new CartManager();
+
+// Export convenience functions
+export const cartUtils = {
+  addItem: (item: Omit<CartItem, 'quantity'> | CartItem) => cartManager.addItem(item),
+  removeItem: (itemId: string) => cartManager.removeItem(itemId),
+  updateQuantity: (itemId: string, quantity: number) => cartManager.updateQuantity(itemId, quantity),
+  clearCart: () => cartManager.clearCart(),
+  getCart: () => cartManager.getCart(),
+  getCartSummary: () => cartManager.getCartSummary(),
+  isEmpty: () => cartManager.isEmpty(),
+  getItemCount: () => cartManager.getItemCount(),
+  findItem: (itemId: string) => cartManager.findItem(itemId),
+  applyDiscount: (percentage: number) => cartManager.applyDiscount(percentage),
+  setShippingCost: (cost: number) => cartManager.setShippingCost(cost),
+  setTaxRate: (rate: number) => cartManager.setTaxRate(rate),
+  setFreeShippingThreshold: (threshold: number) => cartManager.setFreeShippingThreshold(threshold),
+  validateCart: () => cartManager.validateCart(),
+  exportCart: () => cartManager.exportCart(),
+  importCart: (cartData: string) => cartManager.importCart(cartData)
+};
+
+export default cartManager;

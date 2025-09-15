@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025UltimateBreakthroughAnnouncementBanner() {
   return (
@@ -62,24 +62,24 @@ export default function AI2025UltimateBreakthroughAnnouncementBanner() {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-announcement"
               className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-lg rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Learn More
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Success Stories
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get Started
-            </Link>
+            </a>
           </div>
           
           {/* Trust indicators */}

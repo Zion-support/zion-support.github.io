@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 XShieldZapTrendingUpCheckCircle
 
 const NewContent2025CybersecurityBanner: React.FC = () => {
@@ -71,20 +71,20 @@ const NewContent2025CybersecurityBanner: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
+              <a
                 href="/blog/ai-2025-cybersecurity-revolution"
                 className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Shield className="h-5 w-5 mr-2" />
                 Read Cybersecurity Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies/ai-cybersecurity-enterprise-success-2025"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
               >
                 <TrendingUp className="h-5 w-5 mr-2" />
                 View Success Story
-              </Link>
+              </a>
             </div>
           </div>
 

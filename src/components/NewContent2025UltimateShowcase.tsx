@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateShowcase = () => {
   return (
@@ -41,12 +41,12 @@ const NewContent2025UltimateShowcase = () => {
                 Predictive Analytics
               </div>
             </div>
-            <Link 
+            <a 
               href="/ai-2025"
               className="inline-flex items-center text-white bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
             >
               Explore AI 2025 →
-            </Link>
+            </a>
           </div>
 
           {/* Quantum Computing */}
@@ -71,12 +71,12 @@ const NewContent2025UltimateShowcase = () => {
                 Quantum Machine Learning
               </div>
             </div>
-            <Link 
+            <a 
               href="/quantum-computing-2026"
               className="inline-flex items-center text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               Explore Quantum →
-            </Link>
+            </a>
           </div>
 
           {/* Neural Interfaces */}
@@ -101,12 +101,12 @@ const NewContent2025UltimateShowcase = () => {
                 Cognitive Enhancement
               </div>
             </div>
-            <Link 
+            <a 
               href="/neural-interface-revolution-2026"
               className="inline-flex items-center text-white bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300"
             >
               Explore Neural →
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Systems */}
@@ -131,12 +131,12 @@ const NewContent2025UltimateShowcase = () => {
                 Autonomous Drones
               </div>
             </div>
-            <Link 
+            <a 
               href="/autonomous-systems-2026"
               className="inline-flex items-center text-white bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-300"
             >
               Explore Autonomous →
-            </Link>
+            </a>
           </div>
 
           {/* Synthetic Intelligence */}
@@ -161,12 +161,12 @@ const NewContent2025UltimateShowcase = () => {
                 Digital Life Forms
               </div>
             </div>
-            <Link 
+            <a 
               href="/synthetic-intelligence-2026"
               className="inline-flex items-center text-white bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300"
             >
               Explore Synthetic →
-            </Link>
+            </a>
           </div>
 
           {/* Business Transformation */}
@@ -191,12 +191,12 @@ const NewContent2025UltimateShowcase = () => {
                 Enterprise Solutions
               </div>
             </div>
-            <Link 
+            <a 
               href="/business-transformation-2026-ultimate"
               className="inline-flex items-center text-white bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-600 transition-all duration-300"
             >
               Transform Business →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -209,18 +209,18 @@ const NewContent2025UltimateShowcase = () => {
               these revolutionary technologies to achieve unprecedented success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

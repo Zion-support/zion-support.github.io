@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 BrainTrendingUpZapArrowRightStarSparkles
 
 export default function NewContent2025UltimateInnovationsPromotionBanner() {
@@ -76,7 +76,7 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
 
           {/* Right Side - Links */}
           <div className="flex flex-col space-y-3">
-            <Link 
+            <a 
               href="/ai-2025-next-generation-innovations"
               className="group flex items-center justify-between p-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
             >
@@ -90,9 +90,9 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
                 </div>
               </div>
               <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
 
-            <Link 
+            <a 
               href="/ai-trends-2025-ultimate-predictions"
               className="group flex items-center justify-between p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg hover:from-blue-600/30 hover:to-cyan-600/30 transition-all duration-300"
             >
@@ -106,9 +106,9 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
                 </div>
               </div>
               <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
 
-            <Link 
+            <a 
               href="/services"
               className="group flex items-center justify-between p-4 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-500/30 rounded-lg hover:from-indigo-600/30 hover:to-purple-600/30 transition-all duration-300"
             >
@@ -122,7 +122,7 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
                 </div>
               </div>
               <ArrowRight className="w-5 h-5 text-indigo-400 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -132,12 +132,12 @@ export default function NewContent2025UltimateInnovationsPromotionBanner() {
             <div className="text-sm text-gray-300">
               <span className="text-purple-400 font-semibold">Limited Time:</span> Get exclusive access to revolutionary AI innovations
             </div>
-            <Link 
+            <a 
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started Today
-            </Link>
+            </a>
           </div>
         </div>
       </div>

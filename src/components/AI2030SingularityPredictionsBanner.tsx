@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2030SingularityPredictionsBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-black via-purple-900 to-indigo-900 text-white py-24 overflow-hidden">
       {/* Cosmic Background */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="100" cy="100" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="200" height="200" viewBox="0 0 200 200" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx="100" cy="100" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
       </div>
       
       {/* Floating Cosmic Elements */}
@@ -207,18 +207,18 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-10">
-            <Link
+            <a
               href="/blog/ai-2030-singularity-predictions-ultimate-guide"
               className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-purple-700 hover:via-pink-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Read Complete Predictions
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/ai-singularity"
               className="border-3 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Prepare for the Future
-            </Link>
+            </a>
           </div>
           <p className="text-2xl text-purple-200 mb-6">
             The singularity is coming - be ready for the ultimate transformation

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateContentShowcase2026PromotionBanner() {
   return (
@@ -38,9 +38,9 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-green-400 font-bold">15,000% ROI</span>
-              <Link href="/ai-2026-ultimate-breakthrough-revolution" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
+              <a href="/ai-2026-ultimate-breakthrough-revolution" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
                 Explore →
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -52,9 +52,9 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-blue-400 font-bold">99.7% Accuracy</span>
-              <Link href="/ai-2027-future-predictions-revolutionary" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
+              <a href="/ai-2027-future-predictions-revolutionary" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
                 Explore →
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -66,9 +66,9 @@ export default function UltimateContentShowcase2026PromotionBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-green-400 font-bold">$2.5B Value</span>
-              <Link href="/case-studies/ai-2026-quantum-neural-fusion-enterprise-transformation-breakthrough" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+              <a href="/case-studies/ai-2026-quantum-neural-fusion-enterprise-transformation-breakthrough" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                 Explore →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -96,18 +96,18 @@ export default function UltimateContentShowcase2026PromotionBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
+            <a
               href="/ultimate-content-showcase-2026"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Ultimate Content Showcase
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-2026-ultimate-breakthrough-revolution"
               className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               Start with AI 2026 Breakthrough
-            </Link>
+            </a>
           </div>
         </div>
       </div>

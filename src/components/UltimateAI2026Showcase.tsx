@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateAI2026Showcase = () => {
   return (
@@ -44,9 +44,9 @@ const UltimateAI2026Showcase = () => {
               <li>• Quantum optimization</li>
               <li>• Quantum cryptography</li>
             </ul>
-            <Link href="/quantum-ai-2026" className="text-indigo-300 hover:text-indigo-200 font-semibold">
+            <a href="/quantum-ai-2026" className="text-indigo-300 hover:text-indigo-200 font-semibold">
               Learn More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300">
@@ -59,9 +59,9 @@ const UltimateAI2026Showcase = () => {
               <li>• AI integration</li>
               <li>• Cognitive augmentation</li>
             </ul>
-            <Link href="/neural-interface-2026" className="text-purple-300 hover:text-purple-200 font-semibold">
+            <a href="/neural-interface-2026" className="text-purple-300 hover:text-purple-200 font-semibold">
               Learn More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-gradient-to-br from-pink-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:border-pink-400/50 transition-all duration-300">
@@ -74,9 +74,9 @@ const UltimateAI2026Showcase = () => {
               <li>• Emotional understanding</li>
               <li>• Abstract reasoning</li>
             </ul>
-            <Link href="/synthetic-intelligence-2026" className="text-pink-300 hover:text-pink-200 font-semibold">
+            <a href="/synthetic-intelligence-2026" className="text-pink-300 hover:text-pink-200 font-semibold">
               Learn More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:border-red-400/50 transition-all duration-300">
@@ -89,9 +89,9 @@ const UltimateAI2026Showcase = () => {
               <li>• Self-maintenance</li>
               <li>• Independent operation</li>
             </ul>
-            <Link href="/autonomous-systems-2026" className="text-red-300 hover:text-red-200 font-semibold">
+            <a href="/autonomous-systems-2026" className="text-red-300 hover:text-red-200 font-semibold">
               Learn More →
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -176,18 +176,18 @@ const UltimateAI2026Showcase = () => {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/ai-2026-complete-guide"
               className="bg-gradient-to-r from-indigo-500 to-pink-600 text-white px-12 py-4 rounded-lg font-bold text-xl hover:from-indigo-400 hover:to-pink-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore Complete AI 2026 Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-2026-demo"
               className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg font-bold text-xl hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300"
             >
               Try Interactive Demo
-            </Link>
+            </a>
           </div>
           
           <p className="text-lg opacity-80 mb-4">

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewSuccessStoriesShowcase2025 = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -219,18 +219,18 @@ const NewSuccessStoriesShowcase2025 = () => {
               Join these companies and transform your business with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View All Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

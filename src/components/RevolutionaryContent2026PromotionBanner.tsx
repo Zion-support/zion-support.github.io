@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContent2026PromotionBanner = () => {
   const contentItems = [
@@ -70,12 +70,12 @@ const RevolutionaryContent2026PromotionBanner = () => {
                 {item.description}
               </p>
               
-              <Link 
+              <a 
                 href={item.link}
                 className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold group-hover:translate-x-2 transition-transform duration-300"
               >
                 Read More →
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -92,59 +92,59 @@ const RevolutionaryContent2026PromotionBanner = () => {
               the technologies that will shape our future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/blog/ai-2026-breakthrough-predictions"
                 className="bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors"
               >
                 Read Full Article
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/premium-content"
                 className="border-2 border-black text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white transition-colors"
               >
                 Get Premium Access
-              </Link>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Content Categories */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <Link 
+          <a 
             href="/blog"
             className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 group"
           >
             <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">📝</div>
             <h4 className="font-bold mb-2">Blog Posts</h4>
             <p className="text-sm text-gray-300">Latest insights and analysis</p>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/case-studies"
             className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 group"
           >
             <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">📊</div>
             <h4 className="font-bold mb-2">Case Studies</h4>
             <p className="text-sm text-gray-300">Real success stories</p>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/resources"
             className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 group"
           >
             <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">📚</div>
             <h4 className="font-bold mb-2">Resources</h4>
             <p className="text-sm text-gray-300">Guides and tools</p>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/webinars"
             className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 group"
           >
             <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">🎥</div>
             <h4 className="font-bold mb-2">Webinars</h4>
             <p className="text-sm text-gray-300">Live expert sessions</p>
-          </Link>
+          </a>
         </div>
 
         {/* Newsletter Signup */}

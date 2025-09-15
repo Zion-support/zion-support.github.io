@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRightIcon, SparklesIcon, CpuChipIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 
 const AI2026QuantumNeuralFusionRevolutionBanner = () => {
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
@@ -48,19 +48,19 @@ const AI2026QuantumNeuralFusionRevolutionBanner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-2026-quantum-neural-fusion-revolution"
               className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Article
               <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/quantum-ai-solutions"
               className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
             >
               Get Quantum AI Solutions
-            </Link>
+            </a>
           </div>
         </div>
         

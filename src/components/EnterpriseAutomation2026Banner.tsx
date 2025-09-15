@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 CogBarChart3TargetArrowRightCheckCircle
 
 export default function EnterpriseAutomation2026Banner() {
@@ -65,22 +65,22 @@ export default function EnterpriseAutomation2026Banner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2026-enterprise-automation-revolution-ultimate-guide"
               className="bg-gradient-to-r from-green-400 to-blue-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-green-300 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <BarChart3 className="w-5 h-5 mr-2" />
               Read Ultimate Automation Guide
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-800 transition-all duration-300 flex items-center justify-center"
             >
               <Target className="w-5 h-5 mr-2" />
               Get Automation Assessment
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
           
           <div className="flex items-center justify-center text-sm opacity-70">

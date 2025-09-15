@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 CpuAtomZapClockShieldGlobeTrendingUp
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -90,19 +90,19 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               transition={{ delay: 0.6duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link
+              <a
                 href="/quantum-computing-2025"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Quantum
                 <Cpu className="w-4 h-4" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 border-2 border-gray-400 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-300 hover:bg-gray-800/50 transition-all duration-300"
               >
                 Get Quantum Access
-              </Link>
+              </a>
             </motion.div>
           </div>
 

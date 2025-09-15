@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const BusinessIntelligenceRevolutionBanner2025 = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
       {/* Data Visualization Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3Cpath d="M20 20c0 11.046 8.954 20 20 20V20H20z"/%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3Cpath d="M20 20c0 11.046 8.954 20 20 20V20H20z"/%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
       
       {/* Animated Charts */}
@@ -93,18 +93,18 @@ const BusinessIntelligenceRevolutionBanner2025 = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-2026-ultimate-business-intelligence-revolution"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Discover BI Revolution
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources/ai-2025-2026-quantum-ml-implementation-ultimate-guide"
               className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               Get Implementation Guide
-            </Link>
+            </a>
           </div>
 
           {/* Success Metrics */}

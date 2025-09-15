@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025ContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
@@ -114,7 +114,7 @@ export default function AI2025ContentDiscoveryWidget() {
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentCategory.items.map((itemindex) => (
-            <Link
+            <a
               key={index}
               href={item.href}
               className="group bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-blue-300"
@@ -142,7 +142,7 @@ export default function AI2025ContentDiscoveryWidget() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
@@ -154,12 +154,12 @@ export default function AI2025ContentDiscoveryWidget() {
             <h4 className="font-semibold text-gray-900">Ready to Transform Your Business?</h4>
             <p className="text-sm text-gray-600">Get started with AI 2025 breakthrough technology</p>
           </div>
-          <Link
+          <a
             href="/contact"
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
     </div>

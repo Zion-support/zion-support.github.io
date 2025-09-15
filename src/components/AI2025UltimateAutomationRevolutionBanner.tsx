@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -128,7 +128,7 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="inline-flex items-center px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
               >
@@ -136,21 +136,21 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
                 Get Consultation
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="/services"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition-colors"
               >
                 View Services
-              </Link>
+              </a>
             </div>
           </div>
 

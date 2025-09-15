@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentShowcase2025Banner = () => {
   return (
@@ -89,24 +89,24 @@ const NewContentShowcase2025Banner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/case-studies"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
               Explore Case Studies
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-assessment"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
             >
               Take AI Assessment
-            </Link>
-            <Link
+            </a>
+            <a
               href="/blog"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
             >
               Read Expert Insights
-            </Link>
+            </a>
           </div>
           
           <p className="text-lg opacity-90 max-w-2xl mx-auto">

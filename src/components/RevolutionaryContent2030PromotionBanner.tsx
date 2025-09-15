@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryContent2030PromotionBanner() {
   return (
@@ -39,12 +39,12 @@ export default function RevolutionaryContent2030PromotionBanner() {
                 Autonomous Business AI
               </div>
             </div>
-            <Link
+            <a
               href="/ai-trends-2025-2030"
               className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
             >
               Explore AI Trends →
-            </Link>
+            </a>
           </div>
 
           {/* Quantum Computing */}
@@ -68,12 +68,12 @@ export default function RevolutionaryContent2030PromotionBanner() {
                 Quantum Internet
               </div>
             </div>
-            <Link
+            <a
               href="/quantum-computing-breakthroughs-2030"
               className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
             >
               Discover Quantum AI →
-            </Link>
+            </a>
           </div>
 
           {/* Neural Interfaces */}
@@ -97,12 +97,12 @@ export default function RevolutionaryContent2030PromotionBanner() {
                 Telepathic Communication
               </div>
             </div>
-            <Link
+            <a
               href="/neural-interface-revolution-2030"
               className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
             >
               Explore Neural AI →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -112,18 +112,18 @@ export default function RevolutionaryContent2030PromotionBanner() {
             Ready to explore the future of technology?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-trends-2025-2030"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Exploring Now
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Our AI Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

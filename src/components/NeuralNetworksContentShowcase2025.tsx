@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralNetworksContentShowcase2025 = () => {
   const neuralContent = [
@@ -85,12 +85,12 @@ const NeuralNetworksContentShowcase2025 = () => {
                 <p className="text-gray-600 mb-4">
                   {content.description}
                 </p>
-                <Link
+                <a
                   href={content.link}
                   className="text-orange-600 font-semibold hover:text-orange-800 transition-colors"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -103,18 +103,18 @@ const NeuralNetworksContentShowcase2025 = () => {
               Join thousands of developers and researchers learning neural networks with our comprehensive curriculum.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/neural-networks/learning-path"
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Learning Path
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/neural-networks/community"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
                 Join Community
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,18 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
@@ -21,23 +7,8 @@
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a:zion-website/src/app/about/page.tsx
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
-<<<<<<< HEAD
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const values = [
@@ -51,20 +22,6 @@ export default function AboutPage() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 =======
 import { 
@@ -156,23 +113,8 @@ export default function AboutPage() {
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
-<<<<<<< HEAD
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">About Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -201,28 +143,6 @@ export default function AboutPage() {
         </div>
       </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
@@ -316,27 +236,8 @@ export default function AboutPage() {
   )
 }
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
     </div>
   )
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d

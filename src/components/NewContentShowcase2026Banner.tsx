@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContentShowcase2026Banner() {
   return (
@@ -17,38 +17,38 @@ export default function NewContentShowcase2026Banner() {
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <Link href="/ai-powered-content-hub-2026" className="group">
+            <a href="/ai-powered-content-hub-2026" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
                 <div className="text-3xl mb-3">📝</div>
                 <h3 className="text-xl font-semibold mb-2">AI Content Hub</h3>
                 <p className="text-sm opacity-80">Revolutionary content creation and management</p>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/ai-automation-solutions-2026" className="group">
+            <a href="/ai-automation-solutions-2026" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
                 <div className="text-3xl mb-3">⚡</div>
                 <h3 className="text-xl font-semibold mb-2">AI Automation</h3>
                 <p className="text-sm opacity-80">Intelligent business process automation</p>
               </div>
-            </Link>
+            </a>
             
-            <Link href="/cybersecurity-solutions-2026" className="group">
+            <a href="/cybersecurity-solutions-2026" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
                 <div className="text-3xl mb-3">🛡️</div>
                 <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
                 <p className="text-sm opacity-80">Advanced threat protection and security</p>
               </div>
-            </Link>
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/ai-powered-content-hub-2026" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+            <a href="/ai-powered-content-hub-2026" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
               Explore All Solutions
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
               Get Free Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

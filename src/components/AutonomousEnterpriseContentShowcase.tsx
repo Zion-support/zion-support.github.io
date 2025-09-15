@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -240,12 +240,12 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
 
                 {/* Action buttons */}
                 <div className="flex space-x-3">
-                  <Link
+                  <a
                     href={item.url}
                     className="flex-1 bg-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   >
                     Read Now
-                  </Link>
+                  </a>
                   <button className="bg-gray-100 text-gray-700 py-3 px-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
                     Save
                   </button>
@@ -263,18 +263,18 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
               Join the autonomous enterprise revolution and transform your business with proven strategies and breakthrough technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/resources/autonomous-enterprise-implementation-guide-2025-40000-roi"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -287,25 +287,25 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
               <div className="text-3xl mb-4">📊</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">ROI Calculator</h4>
               <p className="text-gray-600 mb-4">Calculate your potential ROI with our advanced autonomous enterprise ROI calculator.</p>
-              <Link href="/tools/roi-calculator" className="text-purple-600 font-semibold hover:text-purple-800">
+              <a href="/tools/roi-calculator" className="text-purple-600 font-semibold hover:text-purple-800">
                 Calculate ROI →
-              </Link>
+              </a>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">🎯</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Success Stories</h4>
               <p className="text-gray-600 mb-4">Explore detailed case studies from companies that achieved 40,000% ROI.</p>
-              <Link href="/case-studies" className="text-purple-600 font-semibold hover:text-purple-800">
+              <a href="/case-studies" className="text-purple-600 font-semibold hover:text-purple-800">
                 View Stories →
-              </Link>
+              </a>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl mb-4">🚀</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Implementation Support</h4>
               <p className="text-gray-600 mb-4">Get expert guidance and support for your autonomous enterprise transformation.</p>
-              <Link href="/services" className="text-purple-600 font-semibold hover:text-purple-800">
+              <a href="/services" className="text-purple-600 font-semibold hover:text-purple-800">
                 Learn More →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

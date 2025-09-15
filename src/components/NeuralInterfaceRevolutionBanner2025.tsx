@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 XBrainZapTrendingUpArrowRightPlayUsersAward
 
@@ -250,13 +250,13 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                           </div>
                         </div>
 
-                        <Link
+                        <a
                           href={currentContent.url}
                           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                         >
                           <span>Explore {currentContent.type}</span>
                           <ArrowRight className="h-4 w-4" />
-                        </Link>
+                        </a>
                       </motion.div>
                     </AnimatePresence>
 
@@ -331,18 +331,18 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                       Join Fortune 500 companies transforming their operations with neural interface technology
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
+                      <a
                         href="/contact"
                         className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105"
                       >
                         Get Consultation
-                      </Link>
-                      <Link
+                      </a>
+                      <a
                         href="/resources/neural-interface-implementation-master-guide-2025"
                         className="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 border border-white/30"
                       >
                         Download Guide
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

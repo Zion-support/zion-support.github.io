@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap
 
 export default function AI2025ContentRevolution5000ROIBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-emerald-900 to-green-900 rounded-3xl p-8 md:p-12 mb-16 border border-green-500/20">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23059669" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23059669" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10">
         {/* Header */}
@@ -126,22 +126,22 @@ export default function AI2025ContentRevolution5000ROIBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link 
+            <a 
               href="/case-studies/ai-2025-content-revolution-5000-roi-success" 
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <Award className="w-5 h-5" />
               Read Full Case Study
               <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm border border-white/20"
             >
               <Users className="w-5 h-5" />
               Start Your Success Story
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
           </div>
           <p className="text-green-200 text-sm">
             Join 500+ companies achieving breakthrough results with AI 2025

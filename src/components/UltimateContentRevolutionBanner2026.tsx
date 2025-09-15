@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateContentRevolutionBanner2026() {
   return (
@@ -52,24 +52,24 @@ export default function UltimateContentRevolutionBanner2026() {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <Link 
+            <a 
               href="/ai-2026-quantum-neural-fusion-breakthrough" 
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold text-lg rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Experience 25,000% ROI
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution" 
               className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-lg rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get 5,000% ROI Now
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/webinars/ai-2026-quantum-revolution" 
               className="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-black transition-all duration-300 shadow-lg"
             >
               Watch Quantum Demo
-            </Link>
+            </a>
           </div>
 
           {/* ROI showcase */}

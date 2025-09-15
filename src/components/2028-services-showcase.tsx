@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
@@ -116,20 +116,20 @@ export default function ServicesShowcase2028() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
+              <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/revolutionary-2028-pricing"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Pricing</span>
                 <DollarSign className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             {/* Stats */}
@@ -198,13 +198,13 @@ export default function ServicesShowcase2028() {
                       ))}
                     </div>
 
-                    <Link
+                    <a
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -265,12 +265,12 @@ export default function ServicesShowcase2028() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <Link
+                      <a
                         href={service.link}
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More
-                      </Link>
+                      </a>
                       <div className="text-right">
                         <div className="text-sm text-purple-300">Setup Time</div>
                         <div className="text-white font-medium">{service.setupTime}</div>
@@ -370,20 +370,20 @@ export default function ServicesShowcase2028() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
+              <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
               >
                 <span>View Case Studies</span>
                 <TrendingUp className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             <div className="flex items-center justify-center space-x-8 text-purple-300">

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2027ContentShowcaseBanner() {
   return (
@@ -7,7 +7,7 @@ export default function AI2027ContentShowcaseBanner() {
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-5 transform -skew-x-12 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M50 50c0-27.614-22.386-50-50-50v100c27.614 0 50-22.386 50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M50 50c0-27.614-22.386-50-50-50v100c27.614 0 50-22.386 50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -48,15 +48,15 @@ export default function AI2027ContentShowcaseBanner() {
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Edge AI</span>
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Future Tech</span>
             </div>
-            <Link
+            <a
               href="/blog/ai-2027-future-predictions-ultimate-breakthrough"
               className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Read Predictions
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-5 h-5" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
           
           {/* Case Study Card */}
@@ -77,15 +77,15 @@ export default function AI2027ContentShowcaseBanner() {
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Fortune 500</span>
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Success Story</span>
             </div>
-            <Link
+            <a
               href="/case-studies/ai-2027-global-enterprise-transformation-ultimate-success"
               className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               View Success Story
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-5 h-5" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -123,18 +123,18 @@ export default function AI2027ContentShowcaseBanner() {
             Start your AI transformation journey today with our comprehensive guides and expert consultation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/resources/ai-implementation-master-guide-2025-complete"
               className="bg-white text-purple-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Implementation Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Get Expert Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

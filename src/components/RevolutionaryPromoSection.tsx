@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryPromoSection() {
   const [hoveredCardsetHoveredCard] = useState<number | null>(null);
@@ -121,7 +121,7 @@ export default function RevolutionaryPromoSection() {
                   {item.description}
                 </p>
                 
-                <Link
+                <a
                   href={item.link}
                   className={`inline-flex items-center space-x-2 bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full justify-center`}
                 >
@@ -129,7 +129,7 @@ export default function RevolutionaryPromoSection() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
 
               {/* Hover effect overlay */}
@@ -150,18 +150,18 @@ export default function RevolutionaryPromoSection() {
               Discover how revolutionary AI technologies can transform your business and deliver unprecedented results
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 🎯 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/webinars/ai-2025-revolutionary-breakthroughs"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg border border-white/30"
               >
                 🔥 Watch Webinar
-              </Link>
+              </a>
             </div>
           </div>
         </div>

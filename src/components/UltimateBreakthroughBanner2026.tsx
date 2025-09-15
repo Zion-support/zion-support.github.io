@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBreakthroughBanner2026: React.FC = () => {
   return (
@@ -37,7 +37,7 @@ const UltimateBreakthroughBanner2026: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-ultimate-breakthrough"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-bold text-xl rounded-full hover:from-yellow-300 hover:to-orange-300 transition-all duration-300 hover:scale-105 shadow-xl"
             >
@@ -46,14 +46,14 @@ const UltimateBreakthroughBanner2026: React.FC = () => {
               <svg className="ml-2 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/quantum-neural-fusion-2026"
               className="inline-flex items-center px-10 py-5 border-2 border-white text-white font-bold text-xl rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300"
             >
               <span className="mr-2">🌀</span>
               Quantum Fusion
-            </Link>
+            </a>
           </div>
         </div>
       </div>

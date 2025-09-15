@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentPreview {
   title: string;
@@ -176,7 +176,7 @@ export default function NewsletterSignupWithPreviews() {
             </h3>
             <div className="space-y-6">
               {contentPreviews.map((contentindex) => (
-                <Link key={index} href={content.href} className="group block">
+                <a key={index} href={content.href} className="group block">
                   <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-600/30 hover:border-cyan-500/60 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/20">
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{content.icon}</div>
@@ -201,12 +201,12 @@ export default function NewsletterSignupWithPreviews() {
                       Read More →
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
 
             <div className="mt-8 text-center">
-              <Link
+              <a
                 href="/content-showcase"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105"
               >
@@ -214,7 +214,7 @@ export default function NewsletterSignupWithPreviews() {
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

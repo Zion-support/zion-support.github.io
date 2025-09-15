@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users } from 'lucide-react';
 
 export default function AI2026UltimateImplementationFrameworkBanner() {
@@ -8,7 +8,7 @@ export default function AI2026UltimateImplementationFrameworkBanner() {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,19 +54,19 @@ export default function AI2026UltimateImplementationFrameworkBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/content/resources/ai-2026-ultimate-implementation-framework-complete-guide"
               className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Access Complete Guide
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/ai-implementation"
               className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
             >
               Get Implementation Support
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -171,13 +171,13 @@ export default function AI2026UltimateImplementationFrameworkBanner() {
           <p className="text-gray-300 mb-6">
             Join 500+ companies already implementing AI with our proven framework
           </p>
-          <Link
+          <a
             href="/contact"
             className="inline-flex items-center bg-white text-purple-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Start Your AI Transformation
             <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

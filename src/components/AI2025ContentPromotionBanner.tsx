@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025ContentPromotionBanner() {
   return (
@@ -20,7 +20,7 @@ export default function AI2025ContentPromotionBanner() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Featured Breakthrough */}
-          <Link 
+          <a 
             href="/ai-2025-ultimate-breakthrough-revolution"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
           >
@@ -35,10 +35,10 @@ export default function AI2025ContentPromotionBanner() {
               </span>
               <span>Learn More →</span>
             </div>
-          </Link>
+          </a>
 
           {/* Success Story */}
-          <Link 
+          <a 
             href="/case-studies/ai-2025-global-transformation-breakthrough"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
           >
@@ -53,10 +53,10 @@ export default function AI2025ContentPromotionBanner() {
               </span>
               <span>Read Story →</span>
             </div>
-          </Link>
+          </a>
 
           {/* Trends & Predictions */}
-          <Link 
+          <a 
             href="/blog/ai-2025-revolutionary-trends-predictions"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
           >
@@ -71,10 +71,10 @@ export default function AI2025ContentPromotionBanner() {
               </span>
               <span>Explore Trends →</span>
             </div>
-          </Link>
+          </a>
 
           {/* Implementation Toolkit */}
-          <Link 
+          <a 
             href="/resources/ai-2025-ultimate-implementation-toolkit"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 group"
           >
@@ -89,11 +89,11 @@ export default function AI2025ContentPromotionBanner() {
               </span>
               <span>Get Toolkit →</span>
             </div>
-          </Link>
+          </a>
         </div>
 
         <div className="text-center mt-8">
-          <Link 
+          <a 
             href="/content-showcase"
             className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
           >
@@ -101,7 +101,7 @@ export default function AI2025ContentPromotionBanner() {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

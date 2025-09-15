@@ -80,6 +80,69 @@ const AdvancedAISystems2026: React.FC = () => {
         </div>
       </section>
 
+      {/* Key Features */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Self-Evolving AI Architectures */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-pink-200">
+            <div className="text-5xl mb-6 text-pink-600">🌱</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Self-Evolving AI Architectures</h2>
+            <p className="text-gray-700 mb-6">
+              AI that designs, tests, and refines its own underlying algorithms and structures for continuous performance enhancement.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Meta-Learning Algorithms</li>
+              <li>Automated AI Design</li>
+              <li>Adaptive Model Generation</li>
+            </ul>
+          </div>
+
+          {/* Human-AI Symbiotic Systems */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-red-200">
+            <div className="text-5xl mb-6 text-red-600">🤝</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Human-AI Symbiotic Systems</h2>
+            <p className="text-gray-700 mb-6">
+              Creating collaborative ecosystems where human intuition and AI's processing power merge for unparalleled innovation.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Intuitive AI Interfaces</li>
+              <li>Shared Autonomy Models</li>
+              <li>Augmented Human Creativity</li>
+            </ul>
+          </div>
+
+          {/* Global Autonomous Operations Platforms */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-teal-200">
+            <div className="text-5xl mb-6 text-teal-600">🌐</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Global Autonomous Operations Platforms</h2>
+            <p className="text-gray-700 mb-6">
+              Deploying and managing AI systems that autonomously oversee and optimize vast, distributed operations worldwide.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Decentralized AI Networks</li>
+              <li>Cross-Domain Optimization</li>
+              <li>Resilient Autonomous Infrastructure</li>
+            </ul>
+          </div>
+
+          {/* AI Ethics & Safety in Autonomous Systems */}
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-yellow-200">
+            <div className="text-5xl mb-6 text-yellow-600">🛡️</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">AI Ethics & Safety in Autonomous Systems</h2>
+            <p className="text-gray-700 mb-6">
+              Pioneering research and implementation of advanced safety protocols and ethical guardrails for highly autonomous AI.
+            </p>
+            <ul className="list-disc list-inside text-gray-600 space-y-2">
+              <li>Fail-Safe Mechanisms</li>
+              <li>Adversarial Robustness</li>
+              <li>Human Oversight & Control</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </section>
+
       {/* AI Systems Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">

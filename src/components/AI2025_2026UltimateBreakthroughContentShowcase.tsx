@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025_2026UltimateBreakthroughContentShowcase = () => {
   const contentItems = [
@@ -85,24 +85,24 @@ const AI2025_2026UltimateBreakthroughContentShowcase = () => {
                 <div className="text-sm text-purple-600 font-semibold mb-2">{item.category}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600 mb-4">{item.description}</p>
-                <Link
+                <a
                   href={item.link}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/ai-2025-2026-content"
             className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
           >
             View All 2025-2026 Content
-          </Link>
+          </a>
         </div>
       </div>
     </section>

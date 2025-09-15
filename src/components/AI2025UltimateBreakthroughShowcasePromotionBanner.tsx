@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3
 
 export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
@@ -8,7 +8,7 @@ export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -100,19 +100,19 @@ export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-showcase" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Breakthrough Showcase
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2025-global-transformation-breakthrough" 
               className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
           
           <div className="text-blue-200 text-sm">

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025RevolutionaryTrendsPromotionBanner() {
   return (
@@ -59,18 +59,18 @@ export default function AI2025RevolutionaryTrendsPromotionBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/blog/ai-2025-revolutionary-trends-predictions"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🔮 Explore All Trends
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/resources/ai-2025-ultimate-implementation-toolkit"
               className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20"
             >
               📚 Get Implementation Guide
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

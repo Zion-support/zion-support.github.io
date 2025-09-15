@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContentHub2026: React.FC = () => {
   const contentCategories = [
@@ -94,7 +94,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
         {/* Content Categories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {contentCategories.map((categoryindex) => (
-            <Link 
+            <a 
               key={index}
               href={`/content/${category.title.toLowerCase().replace(/\s+/g'-')}`}
               className="group relative p-6 bg-gradient-to-br from-purple-800/30 to-blue-800/30 rounded-2xl border border-purple-400/20 backdrop-blur-sm hover:border-purple-400/50 transition-all duration-500 hover:transform hover:scale-105"
@@ -120,7 +120,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-purple-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -130,12 +130,12 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <h3 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Featured Articles
             </h3>
-            <Link 
+            <a 
               href="/articles"
               className="px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold rounded-xl hover:from-purple-400 hover:to-blue-400 transition-all duration-300"
             >
               View All
-            </Link>
+            </a>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -173,12 +173,12 @@ const RevolutionaryContentHub2026: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 Our AI analyzes your interests and recommends personalized content from our vast library.
               </p>
-              <Link 
+              <a 
                 href="/ai-discovery"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
               >
                 Start Discovery
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -189,12 +189,12 @@ const RevolutionaryContentHub2026: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 Track trending topicsresearch patternsand breakthrough developments in real-time.
               </p>
-              <Link 
+              <a 
                 href="/analytics"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-xl hover:from-purple-400 hover:to-pink-400 transition-all duration-300"
               >
                 View Analytics
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -202,18 +202,18 @@ const RevolutionaryContentHub2026: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link 
+            <a 
               href="/revolutionary-content-hub"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-bold rounded-xl hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
               Explore Content Hub
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/subscribe-newsletter"
               className="px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-400 font-bold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300"
             >
               Subscribe for Updates
-            </Link>
+            </a>
           </div>
           <p className="text-sm text-gray-400 mt-4">
             Join 50,000+ researchers and innovators exploring the future

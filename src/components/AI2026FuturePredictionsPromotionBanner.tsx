@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026FuturePredictionsPromotionBanner() {
   return (
@@ -139,18 +139,18 @@ export default function AI2026FuturePredictionsPromotionBanner() {
               Prepare your organization for the AI 2026 revolution with Zion Tech 'Group', 's cutting-edge solutions and expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/ai-2026-future-predictions-revolutionary-breakthrough-ultimate-guide"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
                 Read Full Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Get Expert Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

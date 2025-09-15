@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useStateuseEffectuseRef } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface SearchResult {
   id: string;
@@ -364,7 +364,7 @@ const AIPoweredSearch2026: React.FC = () => {
 
             <div className="space-y-4">
               {results.map((result) => (
-                <Link
+                <a
                   key={result.id}
                   href={result.url}
                   className="block bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300"
@@ -407,7 +407,7 @@ const AIPoweredSearch2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>

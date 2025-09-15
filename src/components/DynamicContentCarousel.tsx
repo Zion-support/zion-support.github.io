@@ -1,195 +1,275 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
+  return (
+    <div className="bg-white rounded-2xl p-8 shadow-lg">
+      <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg">
+          <h4 className="text-xl font-semibold mb-2">AI Innovation</h4>
+          <p>Latest AI breakthroughs and applications</p>
+        </div>
+        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-lg">
+          <h4 className="text-xl font-semibold mb-2">Quantum Computing</h4>
+          <p>Revolutionary quantum technologies</p>
+        </div>
+        <div className="bg-gradient-to-r from-pink-500 to-red-500 text-white p-6 rounded-lg">
+          <h4 className="text-xl font-semibold mb-2">Neural Interfaces</h4>
+          <p>Brain-computer interface solutions</p>
+        </div>
+=======
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const slides = [
+  const contentItems = [
     {
       id: 1,
-      title: "AI Consciousness Revolution",
-      description: "Experience the dawn of artificial consciousness with self-aware AI systems",
-      image: "🧠",
+      title: "Revolutionary AI Consciousness 2025",
+      description: "Experience the birth of true artificial consciousness - AI that thinks, feels, and creates with genuine self-awareness.",
+      icon: "🧠",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AIConsciousnessRevolution2026",
-      badge: "NEW"
+      link: "/pages/RevolutionaryAIConsciousness2025",
+      isNew: true,
+      isLive: true,
+      thumbnail: "🤖",
+      category: "AI Revolution",
+      tags: ["AI Consciousness", "Self-Awareness", "Emotional Intelligence", "Creative AI"],
+      stats: {
+        consciousness: "100%",
+        empathy: "99.9%",
+        creativity: "∞"
+      }
     },
     {
       id: 2,
-      title: "Quantum Reality 2026",
-      description: "Step into quantum-powered virtual worlds with unprecedented realism",
-      image: "⚡",
+      title: "Quantum Computing Breakthrough 2025",
+      description: "Witness computing power that defies imagination - solving impossible problems in seconds with quantum technology.",
+      icon: "⚡",
       gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumReality2026",
-      badge: "HOT"
+      link: "/pages/QuantumComputingBreakthrough2025",
+      isNew: true,
+      isLive: true,
+      thumbnail: "🔬",
+      category: "Quantum Computing",
+      tags: ["Quantum", "Breakthrough", "Computing", "Revolution"],
+      stats: {
+        speed: "1000x faster",
+        qubits: "1M+",
+        fidelity: "99.99%"
+      }
     },
     {
       id: 3,
-      title: "Metaverse AI Integration",
-      description: "Enter intelligent virtual worlds powered by advanced AI systems",
-      image: "🌐",
-      gradient: "from-pink-600 to-purple-600",
-      link: "/pages/MetaverseAI2026",
-      badge: "TRENDING"
+      title: "Neural Interface Revolution 2025",
+      description: "Bridge the gap between mind and machine with direct brain-computer communication and thought-controlled technology.",
+      icon: "🧬",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      isNew: true,
+      isLive: true,
+      thumbnail: "🔗",
+      category: "Neural Interface",
+      tags: ["Neural Interface", "BCI", "Medical", "Technology"],
+      stats: {
+        latency: "< 10ms",
+        accuracy: "99.9%",
+        comfort: "100%"
+      }
     },
     {
       id: 4,
-      title: "Ultimate Tech Trends 2026",
-      description: "Stay ahead with comprehensive insights into revolutionary technologies",
-      image: "📈",
-      gradient: "from-blue-600 to-indigo-600",
-      link: "/pages/UltimateTechTrends2026",
-      badge: "INSIGHTS"
+      title: "Advanced AI Transformation 2025",
+      description: "Transform your business with cutting-edge AI solutions that deliver measurable results and competitive advantage.",
+      icon: "🤖",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/AdvancedAITransformation2025",
+      isNew: false,
+      isLive: true,
+      thumbnail: "⚡",
+      category: "AI Solutions",
+      tags: ["AI", "Transformation", "Business", "Automation"],
+      stats: {
+        efficiency: "+300%",
+        cost: "-40%",
+        roi: "500%"
+      }
     },
     {
       id: 5,
-      title: "Advanced Biotech Revolution",
-      description: "Explore revolutionary biotechnology transforming healthcare and human enhancement",
-      image: "🧬",
-      gradient: "from-green-600 to-emerald-600",
-      link: "/pages/AdvancedBiotechRevolution2026",
-      badge: "BREAKTHROUGH"
-    },
-    {
-      id: 6,
-      title: "Space Tech Innovation",
-      description: "Discover cutting-edge space technologies enabling interstellar exploration",
-      image: "🚀",
+      title: "Next-Gen Tech Showcase 2025",
+      description: "Discover the latest innovations in technology that are reshaping industries and creating new opportunities.",
+      icon: "🚀",
       gradient: "from-orange-600 to-red-600",
-      link: "/pages/SpaceTechInnovation2026",
-      badge: "FUTURE"
+      link: "/pages/NextGenTechShowcase2025",
+      isNew: false,
+      isLive: true,
+      thumbnail: "🌟",
+      category: "Innovation",
+      tags: ["Innovation", "Technology", "Future", "Showcase"],
+      stats: {
+        innovations: "50+",
+        industries: "15+",
+        impact: "Global"
+      }
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    if (isPlaying) {
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+      }, 5000);
+    } else {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    }
 
-    return () => clearInterval(timer);
-  }, [slides.length]);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPlaying, contentItems.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsPlaying(false);
+  };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  const currentItem = contentItems[currentIndex];
 
   return (
     <div className="relative w-full max-w-6xl mx-auto">
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-gray-900 to-gray-800 shadow-2xl">
-        <div 
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className={`bg-gradient-to-br ${slide.gradient} p-12 text-white relative overflow-hidden`}>
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-                  <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
-                </div>
-                
-                <div className="relative z-10 flex items-center justify-between">
-                  <div className="flex-1 pr-8">
-                    <div className="flex items-center mb-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white mr-4`}>
-                        {slide.badge}
+      <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="relative"
+          >
+            <div className={`bg-gradient-to-br ${currentItem.gradient} p-12 text-white`}>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center space-x-3 mb-4">
+                    {currentItem.isNew && (
+                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold animate-pulse">
+                        ✨ NEW
                       </span>
-                      <span className="text-sm opacity-90">Revolutionary Technology</span>
-                    </div>
-                    
-                    <h2 className="text-4xl font-bold mb-4 leading-tight">
-                      {slide.title}
-                    </h2>
-                    
-                    <p className="text-xl opacity-90 mb-8 max-w-2xl">
-                      {slide.description}
-                    </p>
-                    
-                    <div className="flex space-x-4">
-                      <a 
-                        href={slide.link}
-                        className="bg-white text-gray-900 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg"
-                      >
-                        Explore Now →
-                      </a>
-                      <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
-                        Learn More
-                      </button>
-                    </div>
+                    )}
+                    {currentItem.isLive && (
+                      <span className="px-3 py-1 bg-green-500/20 backdrop-blur-sm rounded-full text-sm font-bold">
+                        🔴 LIVE
+                      </span>
+                    )}
+                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold">
+                      {currentItem.category}
+                    </span>
                   </div>
                   
-                  <div className="text-8xl opacity-20">
-                    {slide.image}
+                  <h3 className="text-4xl font-bold mb-4">{currentItem.title}</h3>
+                  <p className="text-xl opacity-90 mb-6">{currentItem.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {currentItem.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
+                  
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {Object.entries(currentItem.stats).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-2xl font-bold">{value}</div>
+                        <div className="text-sm opacity-80 capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <a
+                    href={currentItem.link}
+                    className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+                  >
+                    Explore {currentItem.icon} →
+                  </a>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-9xl mb-4">{currentItem.thumbnail}</div>
+                  <div className="text-6xl">{currentItem.icon}</div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
+          ←
         </button>
-        
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+          →
+        </button>
+
+        {/* Play/Pause Button */}
+        <button
+          onClick={() => setIsPlaying(!isPlaying)}
+          className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors"
+        >
+          {isPlaying ? '⏸️' : '▶️'}
         </button>
       </div>
 
-      {/* Dots Indicator */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {slides.map((_, index) => (
+      {/* Thumbnail Navigation */}
+      <div className="flex justify-center space-x-3 mt-6">
+        {contentItems.map((item, index) => (
           <button
-            key={index}
+            key={item.id}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? 'bg-blue-600 scale-125' 
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Quick Access Grid */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {slides.map((slide, index) => (
-          <button
-            key={slide.id}
-            onClick={() => goToSlide(index)}
-            className={`p-4 rounded-xl text-center transition-all duration-300 hover:scale-105 ${
-              index === currentSlide 
-                ? `bg-gradient-to-br ${slide.gradient} text-white shadow-lg` 
-                : 'bg-white hover:bg-gray-50 text-gray-700 shadow-md'
+            className={`w-16 h-16 rounded-lg overflow-hidden transition-all duration-300 ${
+              index === currentIndex
+                ? 'ring-4 ring-blue-500 scale-110'
+                : 'opacity-60 hover:opacity-100'
             }`}
           >
-            <div className="text-3xl mb-2">{slide.image}</div>
-            <div className="text-sm font-semibold">{slide.title.split(' ')[0]}</div>
-            <div className={`text-xs ${index === currentSlide ? 'text-white/80' : 'text-gray-500'}`}>
-              {slide.badge}
+            <div className={`w-full h-full bg-gradient-to-br ${item.gradient} flex items-center justify-center text-2xl`}>
+              {item.thumbnail}
             </div>
           </button>
         ))}
+      </div>
+
+      {/* Progress Bar */}
+      <div className="w-full bg-gray-200 rounded-full h-2 mt-4">
+        <div
+          className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300"
+          style={{ width: `${((currentIndex + 1) / contentItems.length) * 100}%` }}
+        />
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a22
       </div>
     </div>
   );

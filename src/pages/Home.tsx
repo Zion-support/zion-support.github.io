@@ -5,6 +5,7 @@ import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
 import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
+import NeuralRealityBanner from '../components/NeuralRealityBanner';
 
 const Home: React.FC = () => {
   return (
@@ -84,6 +85,11 @@ const Home: React.FC = () => {
         {/* NEW: Ultimate Breakthrough Banner */}
         <div className="container mx-auto px-4">
           <UltimateBreakthroughBanner />
+        </div>
+
+        {/* NEW: Neural Reality Interface Banner */}
+        <div className="container mx-auto px-4">
+          <NeuralRealityBanner />
         </div>
 
         {/* Services Grid */}

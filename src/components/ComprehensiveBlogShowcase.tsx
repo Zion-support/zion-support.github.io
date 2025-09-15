@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const ComprehensiveBlogShowcase = () => {
   const featuredPosts = [
@@ -191,12 +191,12 @@ const ComprehensiveBlogShowcase = () => {
                         <div className="text-xs text-gray-500">{post.authorTitle}</div>
                       </div>
                     </div>
-                    <Link 
+                    <a 
                       href={`/blog/${post.id}`}
                       className="text-purple-600 hover:text-purple-800 font-medium text-sm"
                     >
                       Read More →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -208,12 +208,12 @@ const ComprehensiveBlogShowcase = () => {
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-2xl font-bold text-gray-900">Latest Articles</h3>
-            <Link 
+            <a 
               href="/blog"
               className="text-purple-600 hover:text-purple-800 font-medium"
             >
               View All Articles →
-            </Link>
+            </a>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -256,12 +256,12 @@ const ComprehensiveBlogShowcase = () => {
                       </div>
                       <span className="text-xs text-gray-600">{post.author}</span>
                     </div>
-                    <Link 
+                    <a 
                       href={`/blog/${post.id}`}
                       className="text-purple-600 hover:text-purple-800 text-xs font-medium"
                     >
                       Read →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -274,7 +274,7 @@ const ComprehensiveBlogShowcase = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Explore by Category</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category) => (
-              <Link
+              <a
                 key={category.name}
                 href={`/blog/category/${category.name.toLowerCase().replace(' ', '-')}`}
                 className={`bg-white rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-l-4 ${
@@ -296,7 +296,7 @@ const ComprehensiveBlogShowcase = () => {
                 </div>
                 <div className="font-semibold text-gray-900 mb-1">{category.name}</div>
                 <div className="text-sm text-gray-500">{category.count} articles</div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

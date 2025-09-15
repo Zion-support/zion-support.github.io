@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapClockTrendingUpCheckCircle
 
 export default function AITrends2025UltimatePredictionsBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl mx-4 my-8 border border-purple-500/20">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10 p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
@@ -62,19 +62,19 @@ export default function AITrends2025UltimatePredictionsBanner() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <a 
                   href="/ai-trends-2025-ultimate-predictions" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   View All Predictions
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/ai-trends-2025-ultimate-predictions#predictions" 
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
                 >
                   Explore Timeline
-                </Link>
+                </a>
               </div>
             </div>
             

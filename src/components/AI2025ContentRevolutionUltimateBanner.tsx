@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025ContentRevolutionUltimateBanner = () => {
   return (
@@ -71,7 +71,7 @@ const AI2025ContentRevolutionUltimateBanner = () => {
           {/* Revolutionary CTA Section */}
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
+              <a
                 href="/case-studies"
                 className="group bg-gradient-to-r from-pink-500 to-rose-600 text-white px-12 py-6 rounded-2xl font-black text-xl hover:from-pink-600 hover:to-rose-700 transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-pink-500/25"
               >
@@ -79,8 +79,8 @@ const AI2025ContentRevolutionUltimateBanner = () => {
                   📊 Explore Case Studies
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/blog"
                 className="group border-3 border-white text-white px-12 py-6 rounded-2xl font-black text-xl hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-110 backdrop-blur-sm bg-white bg-opacity-10"
               >
@@ -88,26 +88,26 @@ const AI2025ContentRevolutionUltimateBanner = () => {
                   📚 Read AI Trends
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
-              </Link>
+              </a>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="group bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 <span className="flex items-center justify-center gap-2">
                   🚀 Get Started
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 <span className="flex items-center justify-center gap-2">
                   💬 Contact Us
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
 

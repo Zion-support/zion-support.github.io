@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateSuccessBanner = () => {
   return (
@@ -39,12 +39,12 @@ const NewContent2025UltimateSuccessBanner = () => {
                 <span className="font-bold">85% improvement</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/blog/ai-2025-ultimate-business-transformation-success-story"
               className="inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Full Story →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -67,12 +67,12 @@ const NewContent2025UltimateSuccessBanner = () => {
                 <span className="font-bold">Previously impossible</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/blog/quantum-computing-2025-business-breakthrough-ultimate-guide"
               className="inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Guide →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -95,12 +95,12 @@ const NewContent2025UltimateSuccessBanner = () => {
                 <span className="font-bold">95% satisfaction</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/neural-interface-enterprise-implementation-success"
               className="inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               View Case Study →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -109,18 +109,18 @@ const NewContent2025UltimateSuccessBanner = () => {
             <span className="text-lg font-medium">💡 Ready to Transform Your Business?</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services"
               className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
               Explore Our Services
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors text-lg"
             >
               Get Free Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

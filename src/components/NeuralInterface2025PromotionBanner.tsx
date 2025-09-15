@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -178,18 +178,18 @@ const NeuralInterface2025PromotionBanner: React.FC = () => {
 
           {/* Action buttons */}
           <div className="ml-6 flex flex-col space-y-3">
-            <Link
+            <a
               href={currentContent.url}
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read Now
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white/30 hover:border-white/50 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white/10"
             >
               Get Assessment
-            </Link>
+            </a>
             <button
               onClick={handleDismiss}
               className="text-white/60 hover:text-white text-sm transition-colors duration-300"

@@ -51,7 +51,7 @@ import React from 'react';
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -213,13 +213,13 @@ export default function NewsPage() {
                         </span>
                       ))}
                     </div>
-                    <Link
+                    <a
                       href={`/news/${featuredArticle.id}`}
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
                     >
                       Read Full Article
                       <ArrowRight className="w-5 h-5 ml-2" />
-                    </Link>
+                    </a>
                   </div>
                   <div className="relative h-64 lg:h-auto">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 to-blue-900/50 flex items-center justify-center">
@@ -317,13 +317,13 @@ export default function NewsPage() {
                         </span>
                       ))}
                     </div>
-                    <Link
+                    <a
                       href={`/news/${article.id}`}
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
+                    </a>
                   </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -378,7 +378,7 @@ import {
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -1379,19 +1379,19 @@ export default function News() {
               that are shaping the future of AI and quantum computing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
                 Contact Our Team
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -10,14 +10,7 @@ const navigation = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-=======
   { name: 'Contact', href: '/contact' },
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
->>>>>>> cursor/create-and-deploy-new-content-8472
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> cursor/create-and-deploy-new-content-7857
 ]
 
 export default function Navigation() {

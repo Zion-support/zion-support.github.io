@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025DataRevolutionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true);
@@ -82,7 +82,7 @@ const NewContent2025DataRevolutionBanner = () => {
     <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       </div>
 
       <div className="relative z-10">
@@ -130,24 +130,24 @@ const NewContent2025DataRevolutionBanner = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
                   className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Read Complete Guide
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/case-studies/fortune-500-data-transformation-500-roi-success"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   View Success Stories
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/resources/ai-data-transformation-implementation-guide-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   Download Implementation Guide
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -208,7 +208,7 @@ const NewContent2025DataRevolutionBanner = () => {
           className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
           aria-label="Dismiss banner"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>

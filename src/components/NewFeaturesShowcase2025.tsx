@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapShieldBrainRocketStarCheckCircle
 
 export default function NewFeaturesShowcase2025() {
@@ -136,13 +136,13 @@ export default function NewFeaturesShowcase2025() {
                 <p className="text-gray-300 text-sm mb-6">
                   Experience our AI-powered features in action
                 </p>
-                <Link
+                <a
                   href="/demo"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
                 >
                   Launch Demo
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -158,19 +158,19 @@ export default function NewFeaturesShowcase2025() {
               Join thousands of companies already leveraging these revolutionary features to achieve unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-colors"
               >
                 View Pricing
-              </Link>
+              </a>
             </div>
           </div>
         </div>

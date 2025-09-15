@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { X, ChevronLeft, ChevronRight, Zap, Star, Target, Brain, Atom } from 'lucide-react';
 
 interface BreakthroughItem {
@@ -264,7 +264,7 @@ export default function QuantumAIBreakthroughBanner() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-6">
-                    <Link
+                    <a
                       href={currentItem.url}
                       className={`inline-flex items-center justify-center px-10 py-5 rounded-2xl font-bold text-white transition-all duration-300 transform hover:scale-105 shadow-lg ${
                         currentItem.category === 'breakthrough' ? 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700' :
@@ -275,14 +275,14 @@ export default function QuantumAIBreakthroughBanner() {
                     >
                       <Brain className="w-6 h-6 mr-3" />
                       Explore {categoryLabels[currentItem.category]}
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="/content"
                       className="inline-flex items-center justify-center px-10 py-5 rounded-2xl font-bold border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 shadow-lg"
                     >
                       <Target className="w-6 h-6 mr-3" />
                       View All Content
-                    </Link>
+                    </a>
                   </div>
                 </div>
 
@@ -372,20 +372,20 @@ export default function QuantumAIBreakthroughBanner() {
               Ready to experience the future of AI and quantum computing?
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl font-bold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 <Atom className="w-8 h-8 mr-4" />
                 Start Your Journey
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-purple-600 text-purple-700 rounded-2xl font-bold hover:bg-purple-50 transition-all duration-300 shadow-xl"
               >
                 <Brain className="w-8 h-8 mr-4" />
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

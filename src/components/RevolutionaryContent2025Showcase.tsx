@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContent2025Showcase = () => {
   const contentItems = [
@@ -112,12 +112,12 @@ const RevolutionaryContent2025Showcase = () => {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readTime}</span>
-                  <Link
+                  <a
                     href={item.link}
                     className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -133,18 +133,18 @@ const RevolutionaryContent2025Showcase = () => {
               Join thousands of business leaders who are transforming their organizations with our AI content library.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/content"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Browse All Content
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/newsletter"
                 className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-600 hover:text-white transition-all duration-300"
               >
                 Subscribe to Updates
-              </Link>
+              </a>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTrendingUpUsersAward
 
 const AI2025NewContentBreakthroughBanner = () => {
@@ -8,7 +8,7 @@ const AI2025NewContentBreakthroughBanner = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="text-center mb-12">
@@ -52,12 +52,12 @@ const AI2025NewContentBreakthroughBanner = () => {
               <span className="text-green-400 font-bold text-lg">4,200% ROI</span>
               <span className="text-yellow-400 font-bold text-lg">99.9% Accuracy</span>
             </div>
-            <Link 
+            <a 
               href="/blog/ai-2025-enterprise-automation-revolutionary-breakthrough"
               className="inline-flex items-center text-blue-300 hover:text-white font-semibold group-hover:translate-x-1 transition-transform duration-300"
             >
               Read Full Guide <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
 
           {/* Implementation Guide */}
@@ -75,12 +75,12 @@ const AI2025NewContentBreakthroughBanner = () => {
               <span className="text-purple-400 font-bold text-lg">500+ Cases</span>
               <span className="text-pink-400 font-bold text-lg">16 Weeks</span>
             </div>
-            <Link 
+            <a 
               href="/resources/ai-2025-implementation-guide"
               className="inline-flex items-center text-blue-300 hover:text-white font-semibold group-hover:translate-x-1 transition-transform duration-300"
             >
               Get Your Guide <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
 
           {/* Case Study */}
@@ -98,12 +98,12 @@ const AI2025NewContentBreakthroughBanner = () => {
               <span className="text-orange-400 font-bold text-lg">$42B Revenue</span>
               <span className="text-red-400 font-bold text-lg">Fortune 100</span>
             </div>
-            <Link 
+            <a 
               href="/case-studies/ai-2025-global-enterprise-transformation-success"
               className="inline-flex items-center text-blue-300 hover:text-white font-semibold group-hover:translate-x-1 transition-transform duration-300"
             >
               Read Case Study <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -150,19 +150,19 @@ const AI2025NewContentBreakthroughBanner = () => {
               Get your personalized assessment and implementation roadmap today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg rounded-xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/resources"
                 className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold text-lg rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300"
               >
                 Explore All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

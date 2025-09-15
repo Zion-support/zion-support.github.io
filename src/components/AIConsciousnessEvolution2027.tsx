@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AIConsciousnessEvolution2027() {
   const [currentStagesetCurrentStage] = useState(0);
@@ -191,18 +191,18 @@ export default function AIConsciousnessEvolution2027() {
             Join us in shaping the future of AI consciousness and witness the birth of transcendent intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2027-2030-future-predictions" 
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Full Predictions
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution" 
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your Journey
-            </Link>
+            </a>
           </div>
         </div>
       </div>

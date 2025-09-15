@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   ArrowRight
@@ -175,21 +175,21 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               transition={{ duration: 0.6delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link
+              <a
                 href="/success-stories-2025"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-full hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-green-600 transition-all duration-300"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Read Case Studies
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025_2026ContentRevolution50000ROIBanner = () => {
   return (
@@ -56,18 +56,18 @@ const AI2025_2026ContentRevolution50000ROIBanner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/case-studies/ai-2025-2026-content-revolution-50000-roi-success-story"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read Full Case Study
-            </Link>
-            <Link
+            </a>
+            <a
               href="/blog/ai-2025-2026-ultimate-content-revolution-breakthrough"
               className="bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Learn About the Technology
-            </Link>
+            </a>
           </div>
           
           {/* Trust Indicators */}

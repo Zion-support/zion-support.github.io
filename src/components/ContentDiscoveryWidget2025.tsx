@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SearchFilterBookOpenTargetUsersTrendingUpArrowRightStarZapClock
 
 interface ContentItem {
@@ -186,7 +186,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredContent.map((item) => (
-          <Link
+          <a
             key={item.id}
             href={item.url}
             className="group bg-gray-50 hover:bg-white border border-gray-200 hover:border-blue-300 rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
@@ -247,7 +247,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
               </span>
               <ArrowRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 
@@ -265,13 +265,13 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       {/* View All CTA */}
       {filteredContent.length > 0 && (
         <div className="mt-8 text-center">
-          <Link
+          <a
             href="/content-library"
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             <span>View All Content</span>
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       )}
     </div>

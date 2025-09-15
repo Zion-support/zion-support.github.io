@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputing2026UltimateBanner = () => {
   return (
@@ -25,18 +25,18 @@ const QuantumComputing2026UltimateBanner = () => {
             that would take classical computers billions of years in mere seconds.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/quantum-computing-2026"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Explore Quantum 2026
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-applications"
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
             >
               Quantum Applications
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -106,13 +106,13 @@ const QuantumComputing2026UltimateBanner = () => {
           <p className="text-xl text-gray-300 mb-8">
             Ready to harness the power of quantum computing for your business?
           </p>
-          <Link
+          <a
             href="/contact"
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
           >
             Get Quantum Access Now
             <span className="ml-2">→</span>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

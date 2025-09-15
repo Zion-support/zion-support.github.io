@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AdvancedNeuralArchitectures2026PromotionBanner() {
   return (
@@ -7,7 +7,7 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -73,35 +73,35 @@ export default function AdvancedNeuralArchitectures2026PromotionBanner() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
+          <a
             href="/advanced-neural-architectures-2026"
             className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
           >
             Explore Neural AI
-          </Link>
-          <Link
+          </a>
+          <a
             href="/contact"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
           >
             Get Started
-          </Link>
+          </a>
         </div>
 
         {/* Additional Links */}
         <div className="mt-8 text-center">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/ai-2025-2026-ultimate-breakthrough" className="text-purple-300 hover:text-white transition-colors">
+            <a href="/ai-2025-2026-ultimate-breakthrough" className="text-purple-300 hover:text-white transition-colors">
               AI Breakthrough →
-            </Link>
-            <Link href="/quantum-ai-2026-breakthrough" className="text-purple-300 hover:text-white transition-colors">
+            </a>
+            <a href="/quantum-ai-2026-breakthrough" className="text-purple-300 hover:text-white transition-colors">
               Quantum AI →
-            </Link>
-            <Link href="/case-studies" className="text-purple-300 hover:text-white transition-colors">
+            </a>
+            <a href="/case-studies" className="text-purple-300 hover:text-white transition-colors">
               Success Stories →
-            </Link>
-            <Link href="/services" className="text-purple-300 hover:text-white transition-colors">
+            </a>
+            <a href="/services" className="text-purple-300 hover:text-white transition-colors">
               Our Services →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

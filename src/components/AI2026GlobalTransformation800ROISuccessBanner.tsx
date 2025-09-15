@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpDollarSignClockUsersAwardTargetCheckCircle
 
 const AI2026GlobalTransformation800ROISuccessBanner = () => {
@@ -271,37 +271,37 @@ const AI2026GlobalTransformation800ROISuccessBanner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/content/case-studies/ai-2026-global-transformation-ultimate-success-story"
               className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
             >
               Read the Complete Case Study
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center"
             >
               Start Your AI Transformation
               <TrendingUp className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/tools/ai-roi-calculator"
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               Calculate Your Potential ROI
               <DollarSign className="w-4 h-4 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-readiness-assessment"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
             >
               Assess Your AI Readiness
               <Target className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
 
