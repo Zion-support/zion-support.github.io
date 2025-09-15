@@ -30,7 +30,6 @@ export const NotificationProvider = ({ children }) => {
   const value = {
     notifications,
     addNotification,
-    removeNotification
   };
 
   return (

@@ -6,6 +6,14 @@ const EdgeAIandIoT2025: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Edge A Iand Io T2025</h1>
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">EdgeAIandIoT2025</h1>
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
           <p className="text-xl text-gray-600">Coming soon - EdgeAIandIoT2025 content</p>
         </div>
       </div>

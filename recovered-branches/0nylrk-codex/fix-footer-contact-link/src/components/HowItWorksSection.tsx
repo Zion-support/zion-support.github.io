@@ -1,50 +1,9 @@
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-import { CheckHandshakeSearchSend } from "lucide-react";
-=======
-import { Check, Handshake, Search, Send } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 const steps = [
   {
     title: "Post",
-<<<<<<< HEAD
-    description: "Publish your servicejobor equipment in minutes with our AI-powered form.",
-    icon: Send},
-  {
-    title: "Match",
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",
-    icon: Search},
-  {
-    title: "Hire/Buy",
-    description: "Connect directly with matched providers and complete your transaction securely.",
-    icon: Handshake},
-  {
-    title: "Done",
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",
-    icon: Check}];
-=======
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
-    icon: Send,
-  },
-  {
-    title: "Match",
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",
-    icon: Search,
-  },
-  {
-    title: "Hire/Buy",
-    description: "Connect directly with matched providers and complete your transaction securely.",
-    icon: Handshake,
-  },
-  {
-    title: "Done",
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",
-    icon: Check,
-  },
-];
->>>>>>> origin/auto/autonomy-17186719616
 
 export function HowItWorksSection() {
   return (
@@ -62,11 +21,6 @@ export function HowItWorksSection() {
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
           <div className="space-y-12 md:space-y-0">
-<<<<<<< HEAD
-            {steps.map((stepindex) => (
-=======
-            {steps.map((step, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${

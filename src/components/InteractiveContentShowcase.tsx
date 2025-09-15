@@ -1,277 +1,259 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const InteractiveContentShowcase: React.FC = () => {
+const InteractiveContentShowcase = () => {
   const [activeContent, setActiveContent] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const contentItems = [
     {
-      id: 'ai-trends',
-      title: 'AI Trends & Insights 2025',
-      description: 'Comprehensive analysis of AI trends, market insights, and breakthrough technologies',
-      image: '📊',
-      color: 'from-emerald-500 to-teal-500',
-      bgColor: 'from-emerald-50 to-teal-50',
-      features: [
-        'Generative AI 2.0 Revolution',
-        'Edge AI Computing',
-        'Quantum-Enhanced AI',
-        'AI-Human Collaboration'
-      ],
-      stats: [
-        { label: 'Market Size', value: '$1.8T' },
-        { label: 'Growth Rate', value: '28.5%' },
-        { label: 'New Jobs', value: '97M' }
-      ],
-      link: '/pages/AITrendsInsights2025'
+      title: "Advanced Tech Innovation 2027",
+      description: "Experience the most advanced technological innovations featuring consciousness AI, quantum computing, and neural interfaces",
+      icon: "🚀",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/AdvancedTechInnovation2027",
+      category: "Innovation",
+      features: ["Conscious AI Systems", "Quantum Consciousness", "Neural Reality Interface", "Revolutionary Applications"],
+      stats: { views: "2.5M", rating: "4.9", downloads: "150K" }
     },
     {
-      id: 'tech-showcase',
-      title: 'Technology Showcase 2025',
-      description: 'Interactive demonstrations of cutting-edge technologies and innovations',
-      image: '🔬',
-      color: 'from-violet-500 to-purple-500',
-      bgColor: 'from-violet-50 to-purple-50',
-      features: [
-        'Interactive Demos',
-        'Technology Tabs',
-        'Innovation Timeline',
-        'Real-time Processing'
-      ],
-      stats: [
-        { label: 'Technologies', value: '50+' },
-        { label: 'Demos', value: '25+' },
-        { label: 'Users', value: '10K+' }
-      ],
-      link: '/pages/TechnologyShowcase2025'
+      title: "Revolutionary Tech Breakthrough 2027",
+      description: "Witness the most revolutionary technological breakthroughs including consciousness transfer and quantum reality manipulation",
+      icon: "🌟",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/RevolutionaryTechBreakthrough2027",
+      category: "Breakthrough",
+      features: ["Consciousness Transfer", "Quantum Reality", "Synthetic Biology", "Revolutionary Impact"],
+      stats: { views: "3.2M", rating: "5.0", downloads: "200K" }
     },
     {
-      id: 'case-studies',
-      title: 'Comprehensive Case Studies',
-      description: 'Real-world success stories with measurable results and ROI',
-      image: '🏆',
-      color: 'from-amber-500 to-orange-500',
-      bgColor: 'from-amber-50 to-orange-50',
-      features: [
-        'Industry-Specific Results',
-        'Quantifiable Metrics',
-        'Client Testimonials',
-        'ROI Analysis'
-      ],
-      stats: [
-        { label: 'Projects', value: '500+' },
-        { label: 'Average ROI', value: '320%' },
-        { label: 'Satisfaction', value: '98%' }
-      ],
-      link: '/pages/ComprehensiveCaseStudies2025'
+      title: "Synthetic Intelligence 2026",
+      description: "Discover synthetic intelligence systems that possess consciousness and autonomous capabilities beyond human imagination",
+      icon: "🤖",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/SyntheticIntelligence2026",
+      category: "AI",
+      features: ["Synthetic Consciousness", "Autonomous Agents", "Creative AI", "Collective Intelligence"],
+      stats: { views: "1.8M", rating: "4.8", downloads: "120K" }
     },
     {
-      id: 'innovation-2026',
-      title: 'Innovation Showcase 2026',
-      description: 'Revolutionary innovations that are reshaping the future',
-      image: '🌟',
-      color: 'from-rose-500 to-pink-500',
-      bgColor: 'from-rose-50 to-pink-50',
-      features: [
-        'Consciousness AI',
-        'Quantum Internet',
-        'Genetic Optimization',
-        'Neural Networks 3.0'
-      ],
-      stats: [
-        { label: 'Innovations', value: '100+' },
-        { label: 'Patents', value: '50+' },
-        { label: 'Breakthroughs', value: '25+' }
-      ],
-      link: '/pages/InnovationShowcase2026'
+      title: "Quantum-Neural Fusion 2026",
+      description: "Revolutionary fusion of quantum computing and neural networks for unprecedented processing power and capabilities",
+      icon: "⚛️",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/QuantumNeuralFusion2026",
+      category: "Quantum",
+      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"],
+      stats: { views: "2.1M", rating: "4.9", downloads: "180K" }
+    },
+    {
+      title: "Consciousness AI 2026",
+      description: "AI systems that possess genuine consciousness, emotional intelligence, and self-awareness capabilities",
+      icon: "🧠",
+      gradient: "from-orange-600 to-red-600",
+      link: "/pages/ConsciousnessAI2026",
+      category: "Consciousness",
+      features: ["Self-Aware AI", "Emotional Intelligence", "Creative Consciousness", "Human-AI Relationships"],
+      stats: { views: "2.8M", rating: "4.9", downloads: "160K" }
+    },
+    {
+      title: "Next-Gen Space Tech 2026",
+      description: "Advanced space technology featuring quantum propulsion, neural interface navigation, and consciousness-based exploration",
+      icon: "🌌",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/NextGenSpaceTech2026",
+      category: "Space",
+      features: ["Quantum Propulsion", "Neural Navigation", "Consciousness Exploration", "Interstellar Travel"],
+      stats: { views: "1.5M", rating: "4.7", downloads: "90K" }
     }
   ];
 
+  // Auto-play functionality
   useEffect(() => {
-    if (!isPlaying) return;
-
-    const interval = setInterval(() => {
-      setActiveContent((prev) => (prev + 1) % contentItems.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [isPlaying, contentItems.length]);
-
-  const currentContent = contentItems[activeContent];
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setActiveContent((prev) => (prev + 1) % contentItems.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, contentItems.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 rounded-2xl p-8">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
-          🚀 Interactive Content Showcase
-        </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Explore our latest content through an interactive experience that adapts to your interests
-        </p>
-      </div>
-
-      <div className="grid lg:grid-cols-2 gap-8">
-        {/* Content Display */}
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeContent}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className={`bg-gradient-to-br ${currentContent.bgColor} rounded-xl p-8 h-full`}
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎯 INTERACTIVE CONTENT SHOWCASE • 2027
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Content Showcase
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
+            Explore our most popular and revolutionary content with interactive features, 
+            real-time statistics, and immersive experiences.
+          </p>
+          
+          {/* Controls */}
+          <div className="flex justify-center items-center space-x-4 mb-8">
+            <button
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                isAutoPlaying 
+                  ? 'bg-white text-purple-600' 
+                  : 'bg-white/20 text-white hover:bg-white/30'
+              }`}
             >
-              <div className="text-center mb-6">
-                <div className="text-8xl mb-4">{currentContent.image}</div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  {currentContent.title}
-                </h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  {currentContent.description}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {currentContent.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className={`text-2xl font-bold bg-gradient-to-r ${currentContent.color} bg-clip-text text-transparent`}>
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-700 mb-3">Key Features:</h4>
-                <ul className="space-y-2">
-                  {currentContent.features.map((feature, index) => (
-                    <li key={index} className="text-sm text-gray-600 flex items-start">
-                      <span className="text-green-500 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <a
-                href={currentContent.link}
-                className={`block w-full bg-gradient-to-r ${currentContent.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center`}
-              >
-                Explore {currentContent.title} →
-              </a>
-            </motion.div>
-          </AnimatePresence>
+              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
+            </button>
+            <div className="flex space-x-2">
+              {contentItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveContent(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    activeContent === index ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Navigation and Controls */}
-        <div className="space-y-6">
-          {/* Content Selector */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-900">Select Content:</h3>
+        {/* Content Navigation */}
+        <div className="flex justify-center mb-12 overflow-x-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 flex space-x-2">
             {contentItems.map((item, index) => (
               <button
-                key={item.id}
-                onClick={() => {
-                  setActiveContent(index);
-                  setIsPlaying(false);
-                }}
-                className={`w-full p-4 rounded-lg text-left transition-all duration-300 ${
+                key={index}
+                onClick={() => setActiveContent(index)}
+                className={`px-4 py-2 rounded-md transition-all duration-300 whitespace-nowrap ${
                   activeContent === index
-                    ? `bg-gradient-to-r ${item.color} text-white shadow-lg`
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                    ? 'bg-white text-gray-900'
+                    : 'text-white hover:bg-white/20'
                 }`}
               >
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">{item.image}</span>
-                  <div>
-                    <div className="font-semibold">{item.title}</div>
-                    <div className={`text-sm ${
-                      activeContent === index ? 'text-white/80' : 'text-gray-500'
-                    }`}>
-                      {item.description}
-                    </div>
-                  </div>
-                </div>
+                <span className="text-lg mr-2">{item.icon}</span>
+                {item.title}
               </button>
             ))}
           </div>
+        </div>
 
-          {/* Controls */}
-          <div className="bg-white rounded-lg p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Controls:</h3>
-            <div className="space-y-4">
-              <button
-                onClick={() => setIsPlaying(!isPlaying)}
-                className={`w-full py-2 px-4 rounded-lg font-semibold transition-colors ${
-                  isPlaying
-                    ? 'bg-red-500 text-white hover:bg-red-600'
-                    : 'bg-green-500 text-white hover:bg-green-600'
-                }`}
-              >
-                {isPlaying ? '⏸️ Pause Auto-Play' : '▶️ Start Auto-Play'}
-              </button>
+        {/* Active Content Display */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeContent}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.5 }}
+            className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
+          >
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="text-6xl">{contentItems[activeContent].icon}</div>
+                  <div>
+                    <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-2">
+                      {contentItems[activeContent].category}
+                    </div>
+                    <h3 className="text-4xl font-bold">{contentItems[activeContent].title}</h3>
+                  </div>
+                </div>
+                
+                <p className="text-xl opacity-90 mb-8">{contentItems[activeContent].description}</p>
+                
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {contentItems[activeContent].features.map((feature, index) => (
+                    <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                      <span className="text-sm font-semibold">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Stats */}
+                <div className="flex space-x-6 mb-8">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">{contentItems[activeContent].stats.views}</div>
+                    <div className="text-sm opacity-80">Views</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">{contentItems[activeContent].stats.rating}</div>
+                    <div className="text-sm opacity-80">Rating</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">{contentItems[activeContent].stats.downloads}</div>
+                    <div className="text-sm opacity-80">Downloads</div>
+                  </div>
+                </div>
+                
+                <a
+                  href={contentItems[activeContent].link}
+                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
+                >
+                  Explore {contentItems[activeContent].title} →
+                </a>
+              </div>
               
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => {
-                    setActiveContent(activeContent === 0 ? contentItems.length - 1 : activeContent - 1);
-                    setIsPlaying(false);
-                  }}
-                  className="flex-1 py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-semibold"
-                >
-                  ← Previous
-                </button>
-                <button
-                  onClick={() => {
-                    setActiveContent((activeContent + 1) % contentItems.length);
-                    setIsPlaying(false);
-                  }}
-                  className="flex-1 py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-semibold"
-                >
-                  Next →
-                </button>
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                  <h4 className="text-2xl font-bold mb-4">Interactive Features</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-white rounded-full"></span>
+                      <span>Real-time content updates</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-white rounded-full"></span>
+                      <span>Interactive demonstrations</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-white rounded-full"></span>
+                      <span>Live statistics tracking</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <span className="w-2 h-2 bg-white rounded-full"></span>
+                      <span>Immersive experiences</span>
+                    </li>
+                  </ul>
+                  
+                  <div className="mt-6 p-4 bg-white/10 rounded-lg">
+                    <div className="text-sm opacity-80 mb-2">Live Engagement</div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm">2,847 users currently viewing</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
+        </AnimatePresence>
 
-          {/* Progress Indicator */}
-          <div className="bg-white rounded-lg p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Progress:</h3>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm text-gray-600">
-                <span>Content {activeContent + 1} of {contentItems.length}</span>
-                <span>{Math.round(((activeContent + 1) / contentItems.length) * 100)}%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className={`h-2 rounded-full bg-gradient-to-r ${currentContent.color} transition-all duration-300`}
-                  style={{ width: `${((activeContent + 1) / contentItems.length) * 100}%` }}
-                ></div>
-              </div>
-            </div>
+        {/* Content Grid */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8">All Featured Content</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {contentItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${item.gradient} rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => setActiveContent(index)}
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h4 className="text-xl font-bold mb-2">{item.title}</h4>
+                <p className="text-sm opacity-90 mb-4">{item.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{item.category}</span>
+                  <span className="text-sm font-semibold">{item.stats.views} views</span>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
-
-      {/* Quick Access Links */}
-      <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-        {contentItems.map((item, index) => (
-          <a
-            key={item.id}
-            href={item.link}
-            className={`p-4 rounded-lg text-center transition-all duration-300 hover:scale-105 ${
-              activeContent === index
-                ? `bg-gradient-to-r ${item.color} text-white shadow-lg`
-                : 'bg-white text-gray-700 hover:bg-gray-50'
-            }`}
-          >
-            <div className="text-3xl mb-2">{item.image}</div>
-            <div className="font-semibold text-sm">{item.title}</div>
-          </a>
-        ))}
       </div>
     </div>
   );
