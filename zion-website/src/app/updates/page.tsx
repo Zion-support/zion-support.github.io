@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import { siteUpdates } from '../../data/updates'
 
 export default function UpdatesPage() {
