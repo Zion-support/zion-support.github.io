@@ -71,6 +71,11 @@ import InteractiveTechShowcase2030 from './src/components/InteractiveTechShowcas
 // New 2027 Components
 import RevolutionaryTechShowcase2027 from './src/components/RevolutionaryTechShowcase2027';
 import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
+// New 2025 Content Components
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import AdvancedQuantumComputing2025 from './src/pages/AdvancedQuantumComputing2025';
+import NeuralInterfaceTechnology2025 from './src/pages/NeuralInterfaceTechnology2025';
+import AIInnovationGuide2025 from './src/pages/AIInnovationGuide2025';
 >>>>>>> cursor/create-and-deploy-new-content-a3b8
 
 export default function App(): JSX.Element {
@@ -85,6 +90,9 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* ULTRA-PROMINENT NEW CONTENT BANNER */}
+                <UltimateContentBanner2025 />
+                
+                {/* ULTRA-PROMINENT NEW CONTENT BANNER 2027 */}
                 <UltimateContentBanner2027 />
 
                 {/* REVOLUTIONARY TECH SHOWCASE 2027 */}
@@ -315,6 +323,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Next-Gen Tech →
+                    </a>
+                    <a href="/pages/AdvancedQuantumComputing2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Advanced Quantum →
+                    </a>
+                    <a href="/pages/NeuralInterfaceTechnology2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: Neural Interface →
+                    </a>
+                    <a href="/pages/AIInnovationGuide2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🤖 NEW: AI Innovation Guide →
                     </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
@@ -899,6 +916,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+          {/* New 2025 Content Routes */}
+          <Route path="/pages/AdvancedQuantumComputing2025" element={<AdvancedQuantumComputing2025 />} />
+          <Route path="/pages/NeuralInterfaceTechnology2025" element={<NeuralInterfaceTechnology2025 />} />
+          <Route path="/pages/AIInnovationGuide2025" element={<AIInnovationGuide2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/ConsciousnessAI2026" element={<ConsciousnessAI2026 />} />
