@@ -1,125 +1,165 @@
 import React, { useState, useEffect } from 'react';
 
+interface CarouselItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  link: string;
+  featured: boolean;
+}
+
 const DynamicContentCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const contentItems = [
+  const carouselItems: CarouselItem[] = [
     {
-      id: 1,
-      title: "🧠 Synthetic Intelligence Revolution",
-      description: "Experience the next generation of AI that transcends traditional limitations and evolves autonomously.",
-      link: "/pages/SyntheticIntelligence2026",
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🧠"
+      id: '1',
+      title: '🤖 AI Revolution 2025',
+      description: 'Experience the transformative power of artificial intelligence as it reshapes industries and creates new opportunities.',
+      image: '🧠',
+      category: 'Artificial Intelligence',
+      link: '/pages/AIRevolution2025',
+      featured: true
     },
     {
-      id: 2,
-      title: "⚛️ Quantum-Neural Fusion",
-      description: "Discover the revolutionary convergence of quantum computing and neural networks for exponential processing power.",
-      link: "/pages/QuantumNeuralFusion2026",
-      gradient: "from-cyan-600 to-blue-600",
-      icon: "⚛️"
+      id: '2',
+      title: '⚛️ Quantum Computing Breakthrough',
+      description: 'Discover exponential computing power that solves impossible problems and accelerates scientific discovery.',
+      image: '⚡',
+      category: 'Quantum Technology',
+      link: '/pages/QuantumComputingBreakthrough',
+      featured: true
     },
     {
-      id: 3,
-      title: "🧬 Neural Interface Technology",
-      description: "Bridge the gap between mind and machine with direct neural interfaces and brain-computer communication.",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      gradient: "from-emerald-600 to-teal-600",
-      icon: "🧬"
+      id: '3',
+      title: '🧬 Neural Interface Future',
+      description: 'Bridge mind and machine with direct neural interfaces enabling thought-controlled computing.',
+      image: '🧬',
+      category: 'Neural Technology',
+      link: '/pages/NeuralInterfaceFuture',
+      featured: true
     },
     {
-      id: 4,
-      title: "🚀 AI Revolution 2025",
-      description: "Transform your business with cutting-edge AI solutions that reshape industries and create new opportunities.",
-      link: "/pages/AIRevolution2025",
-      gradient: "from-orange-600 to-red-600",
-      icon: "🚀"
+      id: '4',
+      title: '🚀 Next-Gen Tech Showcase',
+      description: 'Comprehensive showcase of next-generation technologies reshaping our world.',
+      image: '🚀',
+      category: 'Innovation',
+      link: '/pages/NextGenTechShowcase2025',
+      featured: false
     },
     {
-      id: 5,
-      title: "⚡ Quantum Computing Breakthrough",
-      description: "Experience quantum computing that solves impossible problems and unlocks unprecedented computational power.",
-      link: "/pages/QuantumComputingBreakthrough2026",
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "⚡"
+      id: '5',
+      title: '🧠 Synthetic Intelligence 2026',
+      description: 'Self-evolving AI systems that transcend traditional limitations and create new possibilities.',
+      image: '🌟',
+      category: 'Future AI',
+      link: '/pages/SyntheticIntelligence2026',
+      featured: false
     },
     {
-      id: 6,
-      title: "🌟 Next-Gen Technology Showcase",
-      description: "Explore comprehensive showcase of next-generation technologies reshaping our world.",
-      link: "/pages/NextGenTechShowcase2025",
-      gradient: "from-pink-600 to-rose-600",
-      icon: "🌟"
+      id: '6',
+      title: '⚛️ Quantum-Neural Fusion',
+      description: 'The revolutionary convergence of quantum computing and neural networks.',
+      image: '⚛️',
+      category: 'Quantum AI',
+      link: '/pages/QuantumNeuralFusion2026',
+      featured: false
     }
   ];
 
+  const featuredItems = carouselItems.filter(item => item.featured);
+
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
+
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+      setCurrentIndex((prevIndex) => 
+        prevIndex === featuredItems.length - 1 ? 0 : prevIndex + 1
+      );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, contentItems.length]);
+  }, [featuredItems.length, isAutoPlaying]);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === featuredItems.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? featuredItems.length - 1 : prevIndex - 1
+    );
   };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const currentItem = contentItems[currentIndex];
+  const currentItem = featuredItems[currentIndex];
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 overflow-hidden">
-      {/* Carousel Container */}
-      <div className="relative h-96 overflow-hidden rounded-xl">
-        {/* Main Content */}
-        <div 
-          className="flex transition-transform duration-500 ease-in-out h-full"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {contentItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="w-full flex-shrink-0 h-full relative"
-            >
-              <div className={`bg-gradient-to-br ${item.gradient} h-full rounded-xl flex items-center justify-center text-white relative overflow-hidden`}>
-                {/* Background Pattern */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-                
-                <div className="relative z-10 text-center max-w-4xl mx-auto px-8">
-                  <div className="text-8xl mb-6 animate-bounce">{item.icon}</div>
-                  <h3 className="text-4xl font-bold mb-6">{item.title}</h3>
-                  <p className="text-xl opacity-90 mb-8">{item.description}</p>
-                  <a
-                    href={item.link}
-                    className="inline-block bg-white text-gray-800 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
+    <div className="relative bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl overflow-hidden">
+      {/* Main Carousel */}
+      <div className="relative h-96 md:h-[500px]">
+        {/* Background with animated gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Text Content */}
+              <div className="text-white">
+                <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
+                  {currentItem.category}
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  {currentItem.title}
+                </h2>
+                <p className="text-xl opacity-90 mb-6">
+                  {currentItem.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href={currentItem.link}
+                    className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-center"
                   >
-                    Explore {item.title.split(' ')[0]} →
+                    Explore Technology →
                   </a>
+                  <button 
+                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold"
+                  >
+                    {isAutoPlaying ? 'Pause' : 'Play'}
+                  </button>
+                </div>
+              </div>
+              
+              {/* Visual Element */}
+              <div className="text-center">
+                <div className="text-8xl md:text-9xl mb-4 animate-bounce">
+                  {currentItem.image}
+                </div>
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
+                  <h3 className="text-lg font-semibold mb-2">Interactive Demo</h3>
+                  <p className="text-sm opacity-90">Experience this technology in action</p>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors z-20"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -128,62 +168,72 @@ const DynamicContentCarousel: React.FC = () => {
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors z-20"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
-        {/* Auto-play Toggle */}
-        <button
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors z-20"
-        >
-          {isAutoPlaying ? (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* Dots Indicator */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {contentItems.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Content Preview Grid */}
-      <div className="mt-8">
-        <h4 className="text-lg font-semibold text-gray-700 mb-4 text-center">Explore All Revolutionary Technologies</h4>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {contentItems.map((item, index) => (
+        {/* Dots Indicator */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {featuredItems.map((_, index) => (
             <button
-              key={item.id}
+              key={index}
               onClick={() => goToSlide(index)}
-              className={`p-3 rounded-lg text-center transition-all duration-300 ${
-                index === currentIndex 
-                  ? `bg-gradient-to-r ${item.gradient} text-white shadow-lg scale-105` 
-                  : 'bg-white hover:bg-gray-50 border border-gray-200'
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-white' : 'bg-white/50'
               }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Featured Items Grid */}
+      <div className="p-6 bg-white/50 backdrop-blur-sm">
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Technologies</h3>
+          <p className="text-gray-600">Explore our revolutionary technology showcase</p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-4">
+          {featuredItems.map((item, index) => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl p-4 cursor-pointer transition-all duration-300 hover:shadow-lg ${
+                index === currentIndex ? 'ring-2 ring-purple-500 shadow-lg' : ''
+              }`}
+              onClick={() => goToSlide(index)}
             >
-              <div className="text-2xl mb-1">{item.icon}</div>
-              <div className="text-xs font-medium truncate">{item.title.split(' ')[0]}</div>
-            </button>
+              <div className="text-3xl mb-2">{item.image}</div>
+              <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
+              <p className="text-sm text-gray-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* All Technologies Grid */}
+      <div className="p-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-bold mb-2">All Revolutionary Technologies</h3>
+          <p className="opacity-90">Discover the complete range of breakthrough innovations</p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-4">
+          {carouselItems.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className="bg-white/20 backdrop-blur-sm rounded-xl p-4 hover:bg-white/30 transition-all duration-300 hover:scale-105"
+            >
+              <div className="text-3xl mb-2">{item.image}</div>
+              <h4 className="font-semibold mb-1">{item.title}</h4>
+              <p className="text-sm opacity-90 mb-2">{item.description}</p>
+              <div className="text-xs opacity-75 bg-white/20 px-2 py-1 rounded-full inline-block">
+                {item.category}
+              </div>
+            </a>
           ))}
         </div>
       </div>
