@@ -2,6 +2,18 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-autonomous-procurement-blueprint',
+    title: 'AI 2026: Autonomous Procurement Blueprint',
+    summary:
+      'From sourcing to contract ops with policy-as-code and measurable savings.'
+  },
+  {
+    slug: 'ai-2026-guardrails-for-multimodal-agents',
+    title: 'AI 2026: Guardrails for Multimodal Agents',
+    summary:
+      'Design patterns for safe image/audio/text agents with continuous evals.'
+  },
+  {
     slug: 'ai-2026-policy-as-code-governance-blueprint',
     title: 'AI 2026: Policy-as-Code Governance Blueprint',
     summary:

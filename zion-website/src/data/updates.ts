@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Procurement Copilot (v1.0)',
+    summary:
+      'Automates vendor sourcing, contract analysis, and PO workflows with policy-as-code guardrails and live cost benchmarks.',
+    href: '/updates/autonomous-procurement-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Guardrails for Multimodal Agents',
+    summary:
+      'Practical design patterns for safe image, audio, and text agents: sandboxing, red-teaming, and continuous evals.',
+    href: '/updates/production-guardrails-multimodal-agents',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Customer Support Copilot (v1.0)',
     summary:
       'Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.',
