@@ -6,52 +6,52 @@ const RevolutionaryContentShowcase: React.FC = () => {
   const contentItems = [
     {
       id: 1,
-      title: "Next-Gen AI Revolution 2026",
-      description: "Experience the future of artificial intelligence with revolutionary technologies that are reshaping industries",
-      image: "🤖",
+      title: "Business Automation Guide 2025",
+      description: "Complete 90-day roadmap to automate 80% of business operations and achieve exponential growth",
+      image: "📋",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/NextGenAIRevolution2026",
-      category: "AI Technology",
+      link: "/pages/BusinessAutomationGuide2025",
+      category: "Business Strategy",
       featured: true
     },
     {
       id: 2,
-      title: "Quantum Computing Revolution 2026",
-      description: "Unlock exponential computing power with quantum technology that solves impossible problems",
+      title: "Advanced Tech Solutions 2026",
+      description: "Revolutionary technologies including Neural Networks 3.0, Quantum Computing, and Consciousness AI",
       image: "⚡",
       gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      category: "Quantum Computing",
+      link: "/pages/AdvancedTechSolutions2026",
+      category: "Advanced Technology",
       featured: true
     },
     {
       id: 3,
+      title: "Innovation Showcase 2026",
+      description: "Breakthrough innovations like Consciousness AI, Quantum Internet, and Neural Interface Technology",
+      image: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/InnovationShowcase2026",
+      category: "Innovation",
+      featured: true
+    },
+    {
+      id: 4,
       title: "Neural Interface Revolution 2026",
       description: "Bridge mind and machine with direct neural interfaces and brain-computer communication",
       image: "🧬",
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       category: "Neural Technology",
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Revolutionary Tech Blog 2026",
-      description: "Stay updated with the latest technology trends, insights, and breakthroughs",
-      image: "📚",
-      gradient: "from-blue-600 to-purple-600",
-      link: "/pages/RevolutionaryTechBlog2026",
-      category: "Tech Insights",
       featured: false
     },
     {
       id: 5,
-      title: "Comprehensive Tech Insights 2026",
-      description: "Deep dive into technology trends, market analysis, and future predictions",
-      image: "🔍",
-      gradient: "from-indigo-600 to-pink-600",
-      link: "/pages/ComprehensiveTechInsights2026",
-      category: "Analysis",
+      title: "Quantum Computing Revolution 2026",
+      description: "Unlock exponential computing power with quantum technology that solves impossible problems",
+      image: "⚛️",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/QuantumComputingRevolution2026",
+      category: "Quantum Computing",
       featured: false
     }
   ];
