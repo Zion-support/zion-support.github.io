@@ -1,20 +1,20 @@
-import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
+import React, { Suspense, lazy } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
 import LoadingSpinner from './components/LoadingSpinner';
+import SEO from './components/SEO';
 
 // Import new advanced AI components
-import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from './components/IntelligentSearchEngine';
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
 import AdvancedAnalyticsEngine from './components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from './components/EnterpriseDataManagement';
+import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
+import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
 import APIManagementSystem from './components/APIManagementSystem';
+import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
+import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
+import EnterpriseDataManagement from './components/EnterpriseDataManagement';
+import IntelligentSearchEngine from './components/IntelligentSearchEngine';
+import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('./components/ROICalculator'));
@@ -23,60 +23,56 @@ const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'))
 const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
 
 // Import key promotional components
-import NewContentPromotionBanner from './components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from './components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from './components/ComprehensiveContentShowcase2026';
+import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
+import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
+import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
+import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
+import NewContent2026Showcase from './components/NewContent2026Showcase';
+import NewContentPromotionBanner from './components/NewContentPromotionBanner';
+import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
 import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
+import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
-import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
+import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
 import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
 
 // Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
+import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
 import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from './components/RevolutionaryContentBanner2025';
 
 // Import new promotional components
-import RevolutionaryAI2026ContentBanner from './components/RevolutionaryAI2026ContentBanner';
 import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
 
 // Import new 2025 quantum AI promotional components
-import QuantumAIRevolutionBanner2025 from './components/QuantumAIRevolutionBanner2025';
-import NewContent2025UltimateShowcase from './components/NewContent2025UltimateShowcase';
 
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
 
 // Import new 2025 advanced automation promotional components
-import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
+import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
 
 // Import new 2025 analytics promotional components
-import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
+import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
-import Link from 'next/link';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -94,8 +90,26 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
         <NewMultimodalAgents2025Banner />
+        {/* Promo: Fresh Content */}
+        <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">Just published</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
+                <p className="text-gray-600 mt-2">Now featuring GenAI Governance 2026 and Agent Observability 2026.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">GenAI Governance</Link>
+                <Link href="/content/agent-observability-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         
@@ -111,17 +125,51 @@ export default function HomePage() {
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
 
-        {/* Promo: New Article - Enterprise AI Agents 2025 */}
+        {/* Promo: New Article - Multimodal Agents Blueprint 2026 */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
                 <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact</h3>
-                <p className="text-gray-600 max-w-2xl">How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Multimodal Agents Enterprise Blueprint</h3>
+                <p className="text-gray-600 max-w-2xl">A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI.</p>
               </div>
               <div className="shrink-0">
-                <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Promo: New Article - Enterprise AI Security Blueprint 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Security Blueprint</h3>
+                <p className="text-gray-600 max-w-2xl">A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 2026.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                  Read Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Promo: New Article - Enterprise AI Security Blueprint 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Security Blueprint</h3>
+                <p className="text-gray-600 max-w-2xl">A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 2026.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
                   Read Article
                 </Link>
               </div>
@@ -165,18 +213,123 @@ export default function HomePage() {
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
 
-        {/* New Content Promo: Hyperautomation Business Playbook 2026 */}
+        {/* New Content Promo: LLM Evals Maturity Model 2026 */}
         <section className="py-6 bg-gradient-to-r from-blue-50 to-purple-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
               <div>
-                <p className="text-sm font-semibold text-purple-700">New Guide</p>
-                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Hyperautomation Business Playbook</h2>
-                <p className="text-gray-600 mt-2">A practical playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.</p>
+                <p className="text-sm font-semibold text-purple-700">New Framework</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: LLM Evals Maturity Model</h2>
+                <p className="text-gray-600 mt-2">An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.</p>
               </div>
-              <Link href="/blog/ai-2026-hyperautomation-business-playbook" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
-                Read the Playbook →
+              <Link href="/blog/ai-2026-llm-evals-maturity-model" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read the Framework →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Spotlight - September 2025 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Just published</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Security</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise AI Security Blueprint (2025)</h3>
+                  <p className="text-gray-600">Layered controls for model, data, runtime, and supply chain risk.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2025-enterprise-ai-security-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Enterprise AI</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Multimodal Agents in the Enterprise (2025)</h3>
+                  <p className="text-gray-600">Deploy agents that see, hear, and act for real outcomes.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2025-multimodal-agents-in-the-enterprise" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Finance</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Autonomous Finance Operating System</h3>
+                  <p className="text-gray-600">Real-time cash, autonomous close, and policy-as-code guardrails.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2026-autonomous-finance-operating-system" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Enterprise AI</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Foundation Models: A Practical Guide (2025)</h3>
+                  <p className="text-gray-600">A vendor-neutral playbook to evaluate, deploy, and govern foundation models.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2025-enterprise-foundation-models-practical-guide" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Autonomous Enterprise Blueprint 2026 */}
+        <section className="py-6 bg-gradient-to-r from-green-50 to-emerald-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700">New Blueprint</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Autonomous Enterprise Blueprint</h2>
+                <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
+              </div>
+              <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">
+                Read the Blueprint →
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: LLM Evaluation Best Practices 2025 */}
+        <section className="py-6 bg-gradient-to-r from-purple-50 to-blue-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New Best Practices</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2025: LLM Evaluation Best Practices</h2>
+                <p className="text-gray-600 mt-2">Reliable, fair, and robust evaluation methods for LLMs and AI agents in production.</p>
+              </div>
+              <Link href="/blog/ai-2025-llm-evaluation-best-practices" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read the Guide →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Secure Agent Architecture 2026 */}
+        <section className="py-6 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-indigo-700">New Architecture</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Secure Agent Architecture</h2>
+                <p className="text-gray-600 mt-2">Zero-trust design, scoped capabilities, and runtime guardrails for enterprise agents.</p>
+              </div>
+              <Link href="/blog/ai-2026-secure-agent-architecture" className="shrink-0 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read the Blueprint →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Autonomous Enterprise Blueprint 2026 */}
+        <section className="py-6 bg-gradient-to-r from-green-50 to-emerald-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700">New Blueprint</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Autonomous Enterprise Blueprint</h2>
+                <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
+              </div>
+              <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read the Blueprint →</Link>
             </div>
           </div>
         </section>
@@ -209,6 +362,56 @@ export default function HomePage() {
                   Get Started
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Latest Content Showcase 2025 - NEW FEATURED */}
+        <LatestContentShowcase2025 />
+
+        {/* New: September 2025 Highlights */}
+        <section className="py-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">September 2025 Highlights</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <article className="bg-white p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Security</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI Security Blueprint (2025)</h3>
+                  <p className="text-gray-600 mb-4">Layered controls for model, data, runtime, and supply chain risk.</p>
+                </div>
+                <Link href="/blog/ai-2025-enterprise-ai-security-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </article>
+
+              <article className="bg-white p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-blue-700 mb-2">Enterprise AI</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Multimodal Agents in the Enterprise (2025)</h3>
+                  <p className="text-gray-600 mb-4">Deploy agents that see, hear, and act for real outcomes.</p>
+                </div>
+                <Link href="/blog/ai-2025-multimodal-agents-in-the-enterprise" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </article>
+
+              <article className="bg-white p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-green-700 mb-2">Finance</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Autonomous Finance OS</h3>
+                  <p className="text-gray-600 mb-4">Real-time cash, autonomous close, and policy-as-code guardrails.</p>
+                </div>
+                <Link href="/blog/ai-2026-autonomous-finance-operating-system" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </article>
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">GenAI Governance 2026</h3>
+                <p className="text-gray-600 mb-4">Policies, controls, and guardrails for safe and compliant GenAI at scale.</p>
+                <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold hover:text-indigo-900">Read Framework →</Link>
+              </article>
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Agent Observability 2026</h3>
+                <p className="text-gray-600 mb-4">Metrics, traces, and evals to ship reliable agentic systems.</p>
+                <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold hover:text-green-900">Read Guide →</Link>
+              </article>
             </div>
           </div>
         </section>

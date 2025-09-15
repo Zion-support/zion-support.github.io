@@ -1,10 +1,9 @@
-
 // @ts-nocheck
 import React from 'react';
 import { Header } from './src/components/Header';
 import { ScrollToTop } from './src/components/ScrollToTop';
 import { Footer } from './src/Footer';
-
+import { WHATS_NEW_ITEMS } from './data/whatsNew';
 export default function App(): React.ReactElement {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -128,6 +127,41 @@ export default function App(): React.ReactElement {
             </p>
           </div>
         </div>
+
+        <section className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-3xl font-bold text-gray-900">What's New</h2>
+            <a href="/news" className="text-blue-600 hover:underline">View all updates</a>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {WHATS_NEW_ITEMS.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                className={`block bg-white p-6 rounded-lg shadow-lg border transition-transform hover:-translate-y-0.5 ${item.highlight ? 'border-blue-600' : 'border-gray-100'}`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl" aria-hidden>{item.emoji || '✨'}</div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-1">
+                      <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                      {item.date && (
+                        <span className="text-xs text-gray-500">{new Date(item.date).toLocaleDateString()}</span>
+                      )}
+                    </div>
+                    <p className="text-gray-600 mb-3">{item.description}</p>
+                    <span className="inline-flex items-center text-blue-600 font-medium">
+                      {item.ctaLabel}
+                      <svg className="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 10 10.293 6.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">

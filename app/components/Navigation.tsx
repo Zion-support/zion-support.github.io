@@ -14,7 +14,7 @@ export default function Navigation() {
     { name: 'Analytics', href: '/analytics', new: true },
     { name: 'Automation', href: '/automation', new: true },
     { name: 'Neural Networks', href: '/neural-networks', new: true },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/blog', hot: true },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' },
@@ -47,6 +47,11 @@ export default function Navigation() {
                 {item.new && (
                   <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
                     New
+                  </span>
+                )}
+                {item.hot && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                    Hot
                   </span>
                 )}
               </Link>
