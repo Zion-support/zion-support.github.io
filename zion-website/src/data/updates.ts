@@ -7,6 +7,31 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content)
+  {
+    title: 'Launch: Autonomous Ops Control Center v2.3',
+    summary:
+      'New incident timelines, policy drift alerts, and cross-region failover testing automation.',
+    href: '/updates/agentic-ops-control-center-2-3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: GenAI Production Benchmarks 2026 (Preview)',
+    summary:
+      'Latency, quality, and cost benchmarks across model providers with eval harness details.',
+    href: '/updates/genai-production-benchmarks-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Shipping Agents with Live Evals (2025 Edition)',
+    summary:
+      'Practical rollout patterns using canaries, abort switches, and evidence capture.',
+    href: '/updates/ship-agents-with-live-evals-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   {
     title: 'Launch: Autonomous Support Copilot v1.2',
     summary:
