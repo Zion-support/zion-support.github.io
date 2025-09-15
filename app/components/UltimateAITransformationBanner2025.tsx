@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { X, ArrowRight, TrendingUp, DollarSign, Clock, Users, ArrowRight } from 'lucide-react';
 
 const UltimateAITransformationBanner2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,46 +10,49 @@ const UltimateAITransformationBanner2025 = () => {
 
   const content = [
     {
-      id: 'enterprise-transformation',
-      title: 'AI 2025: The Enterprise AI Transformation Ultimate Guide',
-      description: 'Discover how Fortune 500 companies are achieving unprecedented 600% ROI through comprehensive AI transformation strategies.',
+      id: 'ultimate-transformation',
+      title: 'AI 2025: The Ultimate Business Transformation Revolution',
+      subtitle: '1,200% ROI in 8 Months - $500M+ Annual Savings',
+      description: 'Discover how Fortune 500 companies are achieving unprecedented success with AI transformation. Real case studies showing 1,200% ROI, $500M+ savings, and 99.8% customer satisfaction.',
+      type: 'blog',
+      url: '/blog/ai-2025-ultimate-business-transformation-revolution',
       metrics: {
-        roi: '600%',
-        timeline: '8 months',
-        savings: '$2.8B',
-        success: '94%'
+        roi: '1,200%',
+        savings: '$500M+',
+        satisfaction: '99.8%',
+        timeline: '8 months'
       },
-      url: '/blog/ai-2025-enterprise-ai-transformation-ultimate-guide',
-      type: 'Blog Post',
-      readingTime: '18 min read'
+      featured: true
     },
     {
       id: 'fortune-500-success',
-      title: 'Fortune 500 AI Transformation Success: $2.8B Annual Savings',
-      description: 'Complete case study of a Fortune 500 manufacturing company that achieved 600% ROI and $2.8B in annual savings.',
+      title: 'Fortune 500 AI Transformation Success Story',
+      subtitle: '$2.8B Annual Savings with 1,200% ROI in 8 Months',
+      description: 'Real case study of a Fortune 500 manufacturing company that achieved unprecedented success with AI transformation, saving $2.8 billion annually.',
+      type: 'case-study',
+      url: '/case-studies/fortune-500-ai-transformation-1200-roi-success',
       metrics: {
-        roi: '600%',
+        roi: '1,200%',
         savings: '$2.8B',
-        efficiency: '156%',
-        uptime: '99.2%'
+        timeline: '8 months',
+        satisfaction: '99.8%'
       },
-      url: '/case-studies/fortune-500-ai-transformation-600-roi-success',
-      type: 'Case Study',
-      readingTime: '12 min read'
+      featured: true
     },
     {
-      id: 'implementation-guide',
-      title: 'AI Transformation Ultimate Implementation Guide 2025',
-      description: 'The complete step-by-step guide to AI transformation success. Proven framework for achieving 600% ROI within 8 months.',
+      id: 'master-guide',
+      title: 'AI Transformation Master Guide 2025',
+      subtitle: 'Complete Roadmap to 1,200% ROI',
+      description: 'The ultimate guide to AI transformation success. Step-by-step roadmap, proven strategies, and real-world case studies showing how to achieve 1,200% ROI in 8 months.',
+      type: 'resource',
+      url: '/resources/ai-transformation-master-guide-2025-ultimate',
       metrics: {
-        roi: '600%',
-        success: '94%',
+        roi: '1,200%',
+        success_rate: '98%',
         timeline: '8 months',
-        projects: '500+'
+        savings: '$500M+'
       },
-      url: '/resources/ai-transformation-ultimate-implementation-guide-2025',
-      type: 'Implementation Guide',
-      readingTime: '25 min read'
+      featured: true
     }
   ];
 
@@ -78,167 +82,128 @@ const UltimateAITransformationBanner2025 = () => {
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500 rounded-full opacity-30 animate-bounce"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500 rounded-full opacity-25 animate-ping"></div>
-          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-purple-400 rounded-full opacity-20 animate-pulse"></div>
-        </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-white/10 rounded-full animate-pulse delay-3000"></div>
       </div>
 
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
-              <span className="text-sm font-medium">🚀 NEW: ULTIMATE AI TRANSFORMATION CONTENT</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Achieve 600% ROI in 8 Months
-            </h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Discover the proven frameworks and strategies that Fortune 500 companies use to achieve unprecedented AI transformation success.
-            </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-2">
+            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-sm font-medium text-green-400">NEW CONTENT</span>
           </div>
+          <button
+            onClick={handleDismiss}
+            className="text-white/70 hover:text-white transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
-          {/* Content Showcase */}
-          <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Content Details */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3">
-                  <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {currentContent.type}
-                  </span>
-                  <span className="text-sm opacity-75">{currentContent.readingTime}</span>
-                </div>
-                
-                <h3 className="text-2xl font-bold leading-tight">
-                  {currentContent.title}
-                </h3>
-                
-                <p className="text-lg opacity-90 leading-relaxed">
-                  {currentContent.description}
-                </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                {currentContent.title}
+              </h2>
+              <p className="text-xl text-blue-200 font-semibold">
+                {currentContent.subtitle}
+              </p>
+              <p className="text-lg text-gray-200 leading-relaxed">
+                {currentContent.description}
+              </p>
+            </div>
 
-                {/* Success Metrics */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white bg-opacity-20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-yellow-300">{currentContent.metrics.roi}</div>
-                    <div className="text-sm opacity-75">ROI</div>
-                  </div>
-                  <div className="bg-white bg-opacity-20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-green-300">{currentContent.metrics.savings}</div>
-                    <div className="text-sm opacity-75">Savings</div>
-                  </div>
-                  <div className="bg-white bg-opacity-20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-300">{currentContent.metrics.efficiency || currentContent.metrics.success}</div>
-                    <div className="text-sm opacity-75">{currentContent.metrics.efficiency ? 'Efficiency' : 'Success Rate'}</div>
-                  </div>
-                  <div className="bg-white bg-opacity-20 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-purple-300">{currentContent.metrics.uptime || currentContent.metrics.timeline}</div>
-                    <div className="text-sm opacity-75">{currentContent.metrics.uptime ? 'Uptime' : 'Timeline'}</div>
-                  </div>
-                </div>
-
-                {/* Call to Action */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href={currentContent.url}
-                    className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-                  >
-                    Read Full {currentContent.type}
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-center"
-                  >
-                    Get Consultation
-                  </Link>
-                </div>
+            {/* Success Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <TrendingUp className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-green-400">{currentContent.metrics.roi}</div>
+                <div className="text-sm text-gray-300">ROI</div>
               </div>
-
-              {/* Content Preview */}
-              <div className="space-y-4">
-                <div className="bg-white bg-opacity-10 rounded-lg p-6">
-                  <h4 className="font-semibold mb-3">What You'll Learn:</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      Proven 8-month transformation framework
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      Step-by-step implementation guide
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      Real-world Fortune 500 case studies
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      ROI measurement and validation methods
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      Common pitfalls and solutions
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      Future-proofing strategies
-                    </li>
-                  </ul>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <DollarSign className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-blue-400">{currentContent.metrics.savings}</div>
+                <div className="text-sm text-gray-300">Savings</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <Clock className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-purple-400">{currentContent.metrics.timeline}</div>
+                <div className="text-sm text-gray-300">Timeline</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <Users className="w-6 h-6 text-orange-400 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-orange-400">
+                  {currentContent.metrics.satisfaction || currentContent.metrics.success_rate}
                 </div>
-
-                {/* Additional Resources */}
-                <div className="bg-white bg-opacity-10 rounded-lg p-6">
-                  <h4 className="font-semibold mb-3">Additional Resources:</h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span>Implementation Templates</span>
-                      <span className="text-green-300">✓ Included</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>ROI Calculator</span>
-                      <span className="text-green-300">✓ Included</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Checklists & Guides</span>
-                      <span className="text-green-300">✓ Included</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Expert Consultation</span>
-                      <span className="text-blue-300">Available</span>
-                    </div>
-                  </div>
+                <div className="text-sm text-gray-300">
+                  {currentContent.metrics.satisfaction ? 'Satisfaction' : 'Success Rate'}
                 </div>
               </div>
             </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href={currentContent.url}
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-purple-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
+              >
+                Get Consultation
+              </Link>
+            </div>
           </div>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-2 mt-8">
-            {content.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-30'
-                }`}
-              />
-            ))}
-          </div>
+          <div className="space-y-4">
+            {/* Content Preview Cards */}
+            <div className="space-y-3">
+              {content.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-white/20 backdrop-blur-sm border-2 border-white/30'
+                      : 'bg-white/5 hover:bg-white/10'
+                  }`}
+                  onClick={() => setCurrentSlide(index)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
+                      <p className="text-xs text-gray-300">{item.subtitle}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-lg font-bold text-green-400">{item.metrics.roi}</div>
+                      <div className="text-xs text-gray-300">ROI</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-          {/* Dismiss Button */}
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={handleDismiss}
-              className="text-white text-opacity-75 hover:text-opacity-100 transition-opacity text-sm"
-            >
-              Dismiss this banner
-            </button>
+            {/* Progress Indicators */}
+            <div className="flex justify-center space-x-2">
+              {content.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  }`}
+                  onClick={() => setCurrentSlide(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

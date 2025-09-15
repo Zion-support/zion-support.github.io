@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -22,8 +23,8 @@ import {
 } from 'lucide-react';
 
 const UltimateContentPromotionBanner2026 = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentMessage, setCurrentMessage] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentMessagesetCurrentMessage] = useState(0);
 
   const promotionalMessages = [
     {
@@ -37,7 +38,7 @@ const UltimateContentPromotionBanner2026 = () => {
     {
       icon: Rocket,
       title: "Future Technology Predictions",
-      subtitle: "Explore what's coming in the next decade of innovation",
+      subtitle: "Explore 'what', 's coming in the next decade of innovation",
       color: "from-blue-600 to-cyan-600",
       bgColor: "bg-gradient-to-r from-blue-600/10 to-cyan-600/10",
       borderColor: "border-blue-500/30"
@@ -55,9 +56,9 @@ const UltimateContentPromotionBanner2026 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % promotionalMessages.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentPromo = promotionalMessages[currentMessage];
 
@@ -80,8 +81,8 @@ const UltimateContentPromotionBanner2026 = () => {
               <div className="flex items-center gap-4 flex-1">
                 <motion.div
                   key={currentMessage}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className="flex items-center gap-3"
                 >
@@ -138,14 +139,14 @@ const UltimateContentPromotionBanner2026 = () => {
             key={currentMessage}
             initial={{ x: '-100%' }}
             animate={{ x: '100%' }}
-            transition={{ duration: 4, ease: 'linear' }}
+            transition={{ duration: 4ease: 'linear' }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(5)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
@@ -154,8 +155,8 @@ const UltimateContentPromotionBanner2026 = () => {
                 top: '50%',
               }}
               animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.8, 0.2],
+                y: [0-20],
+                opacity: [0.20.80.2],
               }}
               transition={{
                 duration: 2 + i * 0.5,

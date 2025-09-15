@@ -19,7 +19,7 @@ const AutonomousBusinessEcosystem2028PromotionBanner: React.FC = () => {
             </h3>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
               Experience the future of business with fully autonomous AI systems that manage entire enterprises. 
-              Self-optimizing, self-growing, and self-managing business ecosystems that operate without human intervention.
+              Self-optimizingself-growingand self-managing business ecosystems that operate without human intervention.
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <span className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm font-medium">

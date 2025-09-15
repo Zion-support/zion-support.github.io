@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Target, Zap, CheckCircle } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import { ArrowLeft, Calendar, User, Clock,  TrendingUp, DollarSign,  Zap, CheckCircle, Award } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',
@@ -171,7 +171,7 @@ export default function ManufacturingTransformationPage() {
 
             <div className="bg-green-50 border border-green-200 rounded-xl p-6">
               <h4 className="font-bold text-green-800 mb-3 flex items-center">
-                <Target className="w-5 h-5 mr-2" />
+                <Award className="w-5 h-5 mr-2" />
                 Phase 2: Core Optimization Modules (Months 4-8)
               </h4>
               <ul className="list-disc pl-6 text-green-700 space-y-1">

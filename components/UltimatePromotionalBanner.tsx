@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Star, TrendingUp, Users, Award, Clock, CheckCircle } from 'lucide-react';
+ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
 
 export default function UltimatePromotionalBanner() {
   return (
@@ -24,7 +24,7 @@ export default function UltimatePromotionalBanner() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
             className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
@@ -51,7 +51,7 @@ export default function UltimatePromotionalBanner() {
             className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             Join 10,000+ businesses already saving 60% on costs and increasing productivity by 300%. 
-            Don't miss this exclusive offer - limited time only!
+            'Don', 't miss this exclusive offer - limited time only!
           </motion.p>
 
           {/* Benefits Grid */}

@@ -1,44 +1,45 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, ArrowRight, Play, Download, Users, TrendingUp } from 'lucide-react';
+ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
 const UltimateContentCarousel2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const slides = [
     {
       id: 1,
       title: "AI-Powered Business Automation",
       subtitle: "Transform Your Operations",
-      description: "Revolutionary AI systems that automate complex business processes, reduce costs by 60%, and increase productivity by 300%.",
+      description: "Revolutionary AI systems that automate complex business processesreduce costs by 60%and increase productivity by 300%.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
       cta: "Start Automation",
       href: "/automation",
-      stats: { value: "300%", label: "Productivity Increase" },
-      features: ["Smart Workflows", "Cost Reduction", "Real-time Analytics"]
+      stats: { value: "300%"label: "Productivity Increase" },
+      features: ["Smart Workflows"Cost Reduction"Real-time Analytics"]
     },
     {
       id: 2,
       title: "Quantum Computing Solutions",
       subtitle: "Next-Gen Processing Power",
-      description: "Harness the power of quantum computing for complex problem-solving, optimization, and breakthrough innovations.",
+      description: "Harness the power of quantum computing for complex problem-solvingoptimizationand breakthrough innovations.",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop",
       cta: "Explore Quantum",
       href: "/quantum",
-      stats: { value: "10x", label: "Processing Speed" },
-      features: ["Quantum Algorithms", "Optimization", "Breakthrough Innovation"]
+      stats: { value: "10x"label: "Processing Speed" },
+      features: ["Quantum Algorithms"Optimization"Breakthrough Innovation"]
     },
     {
       id: 3,
@@ -48,19 +49,19 @@ const UltimateContentCarousel2025 = () => {
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
       cta: "Experience Neural",
       href: "/neural",
-      stats: { value: "99.9%", label: "Accuracy Rate" },
-      features: ["Brain-Computer Interface", "Real-time Processing", "Enhanced Control"]
+      stats: { value: "99.9%"label: "Accuracy Rate" },
+      features: ["Brain-Computer Interface"Real-time Processing"Enhanced Control"]
     },
     {
       id: 4,
       title: "Autonomous Business Systems",
       subtitle: "Self-Managing AI",
-      description: "AI systems that learn, adapt, and manage your business operations autonomously with minimal human intervention.",
+      description: "AI systems that learnadaptand manage your business operations autonomously with minimal human intervention.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
       cta: "Go Autonomous",
       href: "/autonomous",
-      stats: { value: "24/7", label: "Autonomous Operation" },
-      features: ["Self-Learning", "Adaptive Systems", "Minimal Intervention"]
+      stats: { value: "24/7"label: "Autonomous Operation" },
+      features: ["Self-Learning"Adaptive Systems"Minimal Intervention"]
     }
   ];
 
@@ -89,7 +90,7 @@ const UltimateContentCarousel2025 = () => {
           <motion.div
             initial={{ scale: 0.9 }}
             animate={isVisible ? { scale: 1 } : {}}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            transition={{ delay: 0.2duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
@@ -99,7 +100,7 @@ const UltimateContentCarousel2025 = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ delay: 0.3duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
           >
             Revolutionary Technology
@@ -112,7 +113,7 @@ const UltimateContentCarousel2025 = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ delay: 0.4duration: 0.6 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             Discover the most advanced AI and technology solutions that are reshaping 
@@ -126,9 +127,9 @@ const UltimateContentCarousel2025 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
+                initial={{ opacity: 0x: 300 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -300 }}
                 transition={{ duration: 0.5 }}
                 className="relative h-[600px] md:h-[700px]"
               >
@@ -147,7 +148,7 @@ const UltimateContentCarousel2025 = () => {
                       key={`badge-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2, duration: 0.5 }}
+                      transition={{ delay: 0.2duration: 0.5 }}
                       className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-lg text-sm font-medium mb-6"
                     >
                       <TrendingUp className="w-4 h-4 mr-2" />
@@ -158,7 +159,7 @@ const UltimateContentCarousel2025 = () => {
                       key={`title-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3, duration: 0.5 }}
+                      transition={{ delay: 0.3duration: 0.5 }}
                       className="text-4xl md:text-6xl font-bold mb-6"
                     >
                       {slides[currentSlide].title}
@@ -168,7 +169,7 @@ const UltimateContentCarousel2025 = () => {
                       key={`desc-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4, duration: 0.5 }}
+                      transition={{ delay: 0.4duration: 0.5 }}
                       className="text-xl text-gray-200 mb-8 max-w-2xl"
                     >
                       {slides[currentSlide].description}
@@ -179,10 +180,10 @@ const UltimateContentCarousel2025 = () => {
                       key={`features-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5, duration: 0.5 }}
+                      transition={{ delay: 0.5duration: 0.5 }}
                       className="flex flex-wrap gap-4 mb-8"
                     >
-                      {slides[currentSlide].features.map((feature, index) => (
+                      {slides[currentSlide].features.map((featureindex) => (
                         <span
                           key={index}
                           className="px-4 py-2 bg-white/20 backdrop-blur-lg rounded-full text-sm font-medium"
@@ -197,7 +198,7 @@ const UltimateContentCarousel2025 = () => {
                       key={`cta-${currentSlide}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6, duration: 0.5 }}
+                      transition={{ delay: 0.6duration: 0.5 }}
                       className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
                     >
                       <div className="flex items-center">
@@ -240,7 +241,7 @@ const UltimateContentCarousel2025 = () => {
 
           {/* Dots Indicator */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
-            {slides.map((_, index) => (
+            {slides.map((_index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
@@ -258,7 +259,7 @@ const UltimateContentCarousel2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.6 }}
+          transition={{ delay: 0.8duration: 0.6 }}
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

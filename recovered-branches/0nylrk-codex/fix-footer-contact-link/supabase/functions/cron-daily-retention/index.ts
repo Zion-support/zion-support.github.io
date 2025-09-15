@@ -17,7 +17,12 @@ serve(async (req) => {
       if (cronSecret !== Deno.env.get("CRON_SECRET")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
           status: 401,
+<<<<<<< HEAD
           headers: { "Content-Type": "application/json" }});
+=======
+          headers: { "Content-Type": "application/json" },
+        });
+>>>>>>> origin/auto/autonomy-17186719616
       }
     }
     
@@ -26,23 +31,45 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+<<<<<<< HEAD
         "Authorization": `Bearer ${supabaseServiceKey}`}});
+=======
+        "Authorization": `Bearer ${supabaseServiceKey}`,
+      },
+    });
+>>>>>>> origin/auto/autonomy-17186719616
 
     const result = await response.json();
 
     return new Response(JSON.stringify({
       success: true,
       message: "Daily retention process executed",
+<<<<<<< HEAD
       result}), {
       status: 200,
       headers: { "Content-Type": "application/json" }});
+=======
+      result,
+    }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Error in cron-daily-retention:", error);
 
     return new Response(JSON.stringify({
       success: false,
+<<<<<<< HEAD
       error: error.message}), {
       status: 500,
       headers: { "Content-Type": "application/json" }});
+=======
+      error: error.message,
+    }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   }
 });

@@ -1,9 +1,15 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { CopyFacebookLinkShareTwitter } from "lucide-react";
+=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface ReferralLinkProps {
   referralLink: string;
@@ -11,13 +17,22 @@ interface ReferralLinkProps {
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 }
 
+<<<<<<< HEAD
+export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
+  const [copiedsetCopied] = useState(false);
+=======
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleCopy = () => {
     onCopy();
     setCopied(true);
+<<<<<<< HEAD
+    setTimeout(() => setCopied(false)2000);
+=======
     setTimeout(() => setCopied(false), 2000);
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (

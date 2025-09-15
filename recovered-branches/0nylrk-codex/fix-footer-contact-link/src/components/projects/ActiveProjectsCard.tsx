@@ -1,25 +1,46 @@
 
+<<<<<<< HEAD
+import { useEffectuseState } from "react";
+import { Link } from "react-router-dom";
+import { BriefcaseIconClock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+=======
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BriefcaseIcon, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 
 export function ActiveProjectsCard() {
+<<<<<<< HEAD
+  const { projectsisLoading } = useProjects();
+  const [activeProjectsetActiveProjects] = useState<Project[]>([]);
+=======
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p => 
+<<<<<<< HEAD
+        ['offer_accepted'in_progress'].includes(p.status)
+      ).slice(03); // Limit to 3 most recent projects
+      setActiveProjects(active);
+    }
+  }[projectsisLoading]);
+=======
         ['offer_accepted', 'in_progress'].includes(p.status)
       ).slice(0, 3); // Limit to 3 most recent projects
       setActiveProjects(active);
     }
   }, [projects, isLoading]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   if (isLoading) {
     return (
@@ -33,7 +54,11 @@ export function ActiveProjectsCard() {
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
+<<<<<<< HEAD
+            {[12].map(idx => (
+=======
             {[1, 2].map(idx => (
+>>>>>>> origin/auto/autonomy-17186719616
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
             ))}
           </div>

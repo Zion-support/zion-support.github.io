@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Database, 
-  Cpu, 
-  Network, 
+  Brain
+  Zap
+  Shield
+  Globe
+  Database
+  Cpu
+  Network
   BarChart3,
   Users,
   Target,
@@ -56,153 +57,153 @@ const services: Service[] = [
     title: 'AI Strategy Consulting',
     description: 'Comprehensive AI strategy development and implementation planning for businesses of all sizes.',
     category: 'Consulting',
-    pricing: { type: 'professional', price: 5000, period: 'month' },
-    features: ['Strategy Development', 'Technology Assessment', 'Implementation Roadmap', 'ROI Analysis'],
-    benefits: ['Increased Efficiency', 'Cost Reduction', 'Competitive Advantage', 'Future-Proofing'],
+    pricing: { type: ''professional', 'price: 5000period: 'month' },
+    features: ['Strategy 'Development', 'Technology 'Assessment', 'Implementation 'Roadmap', 'ROI Analysis'],
+    benefits: ['Increased 'Efficiency', 'Cost 'Reduction', 'Competitive 'Advantage', 'Future-Proofing'],
     icon: Brain,
     color: 'from-purple-500 to-pink-500',
     rating: 4.9,
     reviews: 127,
     deliveryTime: '2-4 weeks',
     complexity: 'expert',
-    tags: ['AI', 'Strategy', 'Consulting', 'Planning']
+    tags: [', 'AI', 'Strategy', 'Consulting', 'Planning']
   },
   {
     id: 'ml-implementation',
     title: 'Machine Learning Implementation',
-    description: 'End-to-end machine learning model development, training, and deployment services.',
+    description: 'End-to-end machine learning model developmentrainingand deployment services.',
     category: 'Development',
-    pricing: { type: 'professional', price: 8000, period: 'month' },
-    features: ['Model Development', 'Data Processing', 'Training & Validation', 'Deployment'],
-    benefits: ['Automated Decision Making', 'Predictive Analytics', 'Process Optimization', 'Scalable Solutions'],
+    pricing: { type: ''professional', 'price: 8000period: 'month' },
+    features: ['Model 'Development', 'Data 'Processing', 'Training & 'Validation', 'Deployment'],
+    benefits: ['Automated Decision 'Making', 'Predictive 'Analytics', 'Process 'Optimization', 'Scalable Solutions'],
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
     rating: 4.8,
     reviews: 89,
     deliveryTime: '4-8 weeks',
     complexity: 'expert',
-    tags: ['ML', 'Development', 'Data Science', 'Deployment']
+    tags: [', 'ML', 'Development'Data 'Science', 'Deployment']
   },
   {
     id: 'ai-automation',
     title: 'AI-Powered Automation',
     description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
     category: 'Automation',
-    pricing: { type: 'starter', price: 2500, period: 'month' },
-    features: ['Process Automation', 'Workflow Optimization', 'Integration Services', 'Monitoring'],
-    benefits: ['Time Savings', 'Error Reduction', 'Cost Efficiency', 'Scalability'],
+    pricing: { type: ''starter', 'price: 2500period: 'month' },
+    features: ['Process 'Automation', 'Workflow 'Optimization', 'Integration 'Services', 'Monitoring'],
+    benefits: ['Time 'Savings', 'Error 'Reduction', 'Cost 'Efficiency', 'Scalability'],
     icon: Zap,
     color: 'from-green-500 to-emerald-500',
     rating: 4.7,
     reviews: 156,
     deliveryTime: '2-6 weeks',
     complexity: 'moderate',
-    tags: ['Automation', 'RPA', 'Workflow', 'Efficiency']
+    tags: [', 'Automation', 'RPA', 'Workflow', 'Efficiency']
   },
   {
     id: 'data-analytics',
     title: 'Advanced Data Analytics',
     description: 'Comprehensive data analysis and visualization services to unlock business insights.',
     category: 'Analytics',
-    pricing: { type: 'professional', price: 4000, period: 'month' },
-    features: ['Data Mining', 'Statistical Analysis', 'Visualization', 'Reporting'],
-    benefits: ['Data-Driven Decisions', 'Performance Insights', 'Trend Analysis', 'Predictive Modeling'],
+    pricing: { type: ''professional', 'price: 4000period: 'month' },
+    features: ['Data 'Mining', 'Statistical 'Analysis', 'Visualization'Reporting'],
+    benefits: ['Data-Driven 'Decisions', 'Performance 'Insights', 'Trend 'Analysis', 'Predictive Modeling'],
     icon: BarChart3,
     color: 'from-orange-500 to-red-500',
     rating: 4.6,
     reviews: 98,
     deliveryTime: '3-5 weeks',
     complexity: 'complex',
-    tags: ['Analytics', 'Data', 'Visualization', 'Insights']
+    tags: [', 'Analytics', 'Data', 'Visualization', 'Insights']
   },
   {
     id: 'ai-security',
     title: 'AI Security Solutions',
     description: 'Advanced AI-powered security systems to protect your digital assets and infrastructure.',
     category: 'Security',
-    pricing: { type: 'enterprise', price: 12000, period: 'month' },
-    features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
-    benefits: ['Enhanced Security', 'Real-time Protection', 'Risk Mitigation', 'Compliance'],
+    pricing: { type: ''enterprise', 'price: 12000period: 'month' },
+    features: ['Threat 'Detection', 'Anomaly 'Detection', 'Security 'Monitoring', 'Incident Response'],
+    benefits: ['Enhanced 'Security', 'Real-time 'Protection', 'Risk 'Mitigation', 'Compliance'],
     icon: Shield,
     color: 'from-red-500 to-pink-500',
     rating: 4.9,
     reviews: 73,
     deliveryTime: '4-6 weeks',
     complexity: 'expert',
-    tags: ['Security', 'AI', 'Protection', 'Monitoring']
+    tags: [', 'Security', 'AI', 'Protection', 'Monitoring']
   },
   {
     id: 'cloud-ai',
     title: 'Cloud AI Infrastructure',
     description: 'Scalable cloud-based AI infrastructure setup and management services.',
     category: 'Infrastructure',
-    pricing: { type: 'professional', price: 6000, period: 'month' },
-    features: ['Cloud Setup', 'Resource Management', 'Scaling Solutions', 'Monitoring'],
-    benefits: ['Scalability', 'Cost Optimization', 'High Availability', 'Global Access'],
+    pricing: { type: ''professional', 'price: 6000period: 'month' },
+    features: ['Cloud 'Setup', 'Resource 'Management', 'Scaling 'Solutions', 'Monitoring'],
+    benefits: [', 'Scalability', 'Cost 'Optimization', 'High 'Availability', 'Global Access'],
     icon: Globe,
     color: 'from-indigo-500 to-purple-500',
     rating: 4.7,
     reviews: 112,
     deliveryTime: '3-4 weeks',
     complexity: 'complex',
-    tags: ['Cloud', 'Infrastructure', 'Scalability', 'AWS']
+    tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'AWS']
   },
   {
     id: 'ai-integration',
     title: 'AI System Integration',
     description: 'Seamless integration of AI capabilities into existing business systems and workflows.',
     category: 'Integration',
-    pricing: { type: 'starter', price: 3000, period: 'month' },
-    features: ['API Development', 'System Integration', 'Data Migration', 'Testing'],
-    benefits: ['Seamless Integration', 'Improved Workflows', 'Data Consistency', 'User Experience'],
+    pricing: { type: ''starter', 'price: 3000period: 'month' },
+    features: ['API 'Development', 'System 'Integration', 'Data 'Migration', 'Testing'],
+    benefits: ['Seamless 'Integration', 'Improved 'Workflows', 'Data 'Consistency', 'User Experience'],
     icon: Network,
     color: 'from-teal-500 to-blue-500',
     rating: 4.5,
     reviews: 84,
     deliveryTime: '2-5 weeks',
     complexity: 'moderate',
-    tags: ['Integration', 'API', 'Systems', 'Workflow']
+    tags: [', 'Integration', 'API', 'Systems', 'Workflow']
   },
   {
     id: 'ai-training',
     title: 'AI Training & Education',
     description: 'Comprehensive AI training programs for teams and organizations.',
     category: 'Education',
-    pricing: { type: 'starter', price: 2000, period: 'month' },
-    features: ['Custom Training', 'Workshops', 'Certification', 'Ongoing Support'],
-    benefits: ['Skill Development', 'Team Empowerment', 'Knowledge Transfer', 'Best Practices'],
+    pricing: { type: ''starter', 'price: 2000period: 'month' },
+    features: ['Custom 'Training', 'Workshops', 'Certification', 'Ongoing Support'],
+    benefits: ['Skill 'Development', 'Team 'Empowerment', 'Knowledge 'Transfer', 'Best Practices'],
     icon: Users,
     color: 'from-yellow-500 to-orange-500',
     rating: 4.8,
     reviews: 145,
     deliveryTime: '1-3 weeks',
     complexity: 'simple',
-    tags: ['Training', 'Education', 'Skills', 'Workshops']
+    tags: [', 'Training', 'Education', 'Skills', 'Workshops']
   }
 ];
 
-const categories = ['All', 'Consulting', 'Development', 'Automation', 'Analytics', 'Security', 'Infrastructure', 'Integration', 'Education'];
+const categories = [', 'All', 'Consulting', 'Development', 'Automation', 'Analytics', 'Security', 'Infrastructure', 'Integration'Education'];
 
 const pricingTypes = {
-  free: { label: 'Free', color: 'bg-gray-100 text-gray-800' },
-  starter: { label: 'Starter', color: 'bg-green-100 text-green-800' },
-  professional: { label: 'Professional', color: 'bg-blue-100 text-blue-800' },
-  enterprise: { label: 'Enterprise', color: 'bg-purple-100 text-purple-800' }
+  free: { label: ''Free', 'color: 'bg-gray-100 text-gray-800' },
+  starter: { label: ''Starter', 'color: 'bg-green-100 text-green-800' },
+  professional: { label: ''Professional', 'color: 'bg-blue-100 text-blue-800' },
+  enterprise: { label: ''Enterprise', 'color: 'bg-purple-100 text-purple-800' }
 };
 
 const complexityLevels = {
-  simple: { label: 'Simple', color: 'text-green-400' },
-  moderate: { label: 'Moderate', color: 'text-yellow-400' },
-  complex: { label: 'Complex', color: 'text-orange-400' },
-  expert: { label: 'Expert', color: 'text-red-400' }
+  simple: { label: ''Simple', 'color: 'text-green-400' },
+  moderate: { label: ''Moderate', 'color: 'text-yellow-400' },
+  complex: { label: ''Complex', 'color: 'text-orange-400' },
+  expert: { label: ''Expert', 'color: 'text-red-400' }
 };
 
 export default function ComprehensiveServiceShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'delivery'>('rating');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [selectedServicesetSelectedService] = useState<Service | null>(null);
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBysetSortBy] = useState<'rating' | 'price' | 'delivery'>('rating');
+  const [searchTermsetSearchTerm] = useState('');
 
   const filteredServices = services
     .filter(service => 
@@ -213,7 +214,7 @@ export default function ComprehensiveServiceShowcase2025() {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-    .sort((a, b) => {
+    .sort((ab) => {
       switch (sortBy) {
         case 'rating':
           return b.rating - a.rating;
@@ -347,14 +348,14 @@ export default function ComprehensiveServiceShowcase2025() {
           }
         >
           <AnimatePresence>
-            {filteredServices.map((service, index) => (
+            {filteredServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
                 layout
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group cursor-pointer ${
                   viewMode === 'grid' 
                     ? 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105'
@@ -410,7 +411,7 @@ export default function ComprehensiveServiceShowcase2025() {
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      {service.tags.slice(0, 3).map((tag) => (
+                      {service.tags.slice(03).map((tag) => (
                         <span key={tag} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded">
                           {tag}
                         </span>
@@ -544,7 +545,7 @@ export default function ComprehensiveServiceShowcase2025() {
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-white mb-3">Key Features</h3>
                     <div className="grid grid-cols-1 gap-2">
-                      {selectedService.features.map((feature, index) => (
+                      {selectedService.features.map((featureindex) => (
                         <div key={index} className="flex items-center text-gray-300">
                           <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                           <span>{feature}</span>
@@ -556,7 +557,7 @@ export default function ComprehensiveServiceShowcase2025() {
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-white mb-3">Benefits</h3>
                     <div className="grid grid-cols-1 gap-2">
-                      {selectedService.benefits.map((benefit, index) => (
+                      {selectedService.benefits.map((benefitindex) => (
                         <div key={index} className="flex items-center text-gray-300">
                           <TrendingUp className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />
                           <span>{benefit}</span>

@@ -26,7 +26,7 @@ export default function UltimateContentRevolutionBanner2026() {
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
             Experience the most revolutionary AI content in history. Our breakthrough delivers 
             <span className="text-cyan-400 font-bold"> 25,000% guaranteed ROI</span> through 
-            quantum-neural fusion, consciousness-level AI, and transcendent intelligence.
+            quantum-neural fusionconsciousness-level AIand transcendent intelligence.
           </p>
 
           {/* Feature highlights */}

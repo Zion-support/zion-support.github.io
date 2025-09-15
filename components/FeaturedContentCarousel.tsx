@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -11,7 +12,7 @@ const featuredContent = [
     gradient: 'from-slate-900 via-purple-900 to-slate-900',
     badge: 'REVOLUTIONARY BREAKTHROUGH',
     badgeColor: 'from-purple-500 to-pink-500',
-    features: ['15,000% ROI', '10,000x Faster', '99.7% Accuracy']
+    features: ['15,000% ROI'10,000x Faster'99.7% Accuracy']
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const featuredContent = [
     gradient: 'from-indigo-900 via-purple-900 to-indigo-900',
     badge: 'QUANTUM BREAKTHROUGH',
     badgeColor: 'from-cyan-500 to-blue-500',
-    features: ['Unhackable Security', '99.9% Accuracy', 'Exponential Speedup']
+    features: ['Unhackable Security'99.9% 'Accuracy', 'Exponential Speedup']
   },
   {
     id: 3,
@@ -33,7 +34,7 @@ const featuredContent = [
     gradient: 'from-emerald-900 via-teal-900 to-emerald-900',
     badge: 'AUTOMATION REVOLUTION',
     badgeColor: 'from-emerald-500 to-teal-500',
-    features: ['10,000% ROI', '95% Reduction', '8,500% ROI']
+    features: ['10,000% ROI'95% Reduction'8,500% ROI']
   },
   {
     id: 4,
@@ -44,7 +45,7 @@ const featuredContent = [
     gradient: 'from-violet-900 via-purple-900 to-violet-900',
     badge: 'NEURAL BREAKTHROUGH',
     badgeColor: 'from-violet-500 to-purple-500',
-    features: ['99.7% Accuracy', '1000x Enhancement', '∞ Creativity']
+    features: ['99.7% Accuracy'1000x Enhancement'∞ Creativity']
   },
   {
     id: 5,
@@ -55,13 +56,13 @@ const featuredContent = [
     gradient: 'from-rose-900 via-pink-900 to-rose-900',
     badge: 'FUTURE PREDICTIONS',
     badgeColor: 'from-rose-500 to-pink-500',
-    features: ['99.9% AGI', '1Mx Faster', 'True Consciousness']
+    features: ['99.9% AGI'1Mx 'Faster', 'True Consciousness']
   }
 ];
 
 export default function FeaturedContentCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [isAutoPlayingsetIsAutoPlaying] = useState(true);
 
   // Auto-advance carousel
   useEffect(() => {
@@ -71,10 +72,10 @@ export default function FeaturedContentCarousel() {
       setCurrentIndex((prevIndex) => 
         prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }[isAutoPlaying]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -134,7 +135,7 @@ export default function FeaturedContentCarousel() {
                   
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mb-8">
-                    {currentContent.features.map((feature, index) => (
+                    {currentContent.features.map((featureindex) => (
                       <span 
                         key={index}
                         className="bg-white/20 backdrop-blur-lg px-4 py-2 rounded-full text-sm font-semibold border border-white/30"
@@ -195,7 +196,7 @@ export default function FeaturedContentCarousel() {
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-6 space-x-2">
-            {featuredContent.map((_, index) => (
+            {featuredContent.map((_index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
@@ -226,7 +227,7 @@ export default function FeaturedContentCarousel() {
                 <h4 className="text-xl font-bold mb-3">{content.title}</h4>
                 <p className="text-gray-300 text-sm mb-4">{content.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {content.features.slice(0, 2).map((feature, index) => (
+                  {content.features.slice(02).map((featureindex) => (
                     <span 
                       key={index}
                       className="bg-white/20 px-2 py-1 rounded-full text-xs font-semibold"

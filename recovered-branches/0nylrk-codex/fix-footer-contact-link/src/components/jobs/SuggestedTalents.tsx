@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
+import { useEffectuseState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+=======
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { EmptyMatchesCard } from "./EmptyMatchesCard";
 import { JobMatchCard } from "./JobMatchCard";
 
@@ -11,15 +18,26 @@ interface SuggestedTalentsProps {
   jobTitle?: string;
 }
 
+<<<<<<< HEAD
+export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
+  const [talentsetTalents] = useState([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [isProcessingsetIsProcessing] = useState(false);
+=======
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const fetchSuggestedTalents = async () => {
     setIsLoading(true);
     try {
+<<<<<<< HEAD
+      const { dataerror } = await supabase
+=======
       const { data, error } = await supabase
+>>>>>>> origin/auto/autonomy-17186719616
         .from("suggested_talents")
         .select(`
           *,
@@ -39,16 +57,29 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
             company_name
           )
         `)
+<<<<<<< HEAD
+        .eq("job_id"jobId);
+=======
         .eq("job_id", jobId);
+>>>>>>> origin/auto/autonomy-17186719616
 
       if (error) throw error;
       setTalents(data || []);
     } catch (error) {
-      console.error("Error fetching suggested talents:", error);
+<<<<<<< HEAD
+      console.error("Error fetching suggested talents:"error);
       toast({
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"});
+=======
+      console.error("Error fetching suggested talents:", error);
+      toast({
+        title: "Error",
+        description: "Failed to load suggested talents. Please try again later.",
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsLoading(false);
     }
@@ -56,18 +87,34 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
-    console.log("View talent profile:", talentId);
+<<<<<<< HEAD
+    console.log("View talent profile:"talentId);
     toast({
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`});
+=======
+    console.log("View talent profile:", talentId);
+    toast({
+      title: "View Profile",
+      description: `Navigating to talent profile: ${talentId}`,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
-    console.log("Invite talent:", talentId);
+<<<<<<< HEAD
+    console.log("Invite talent:"talentId);
     toast({
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`});
+=======
+    console.log("Invite talent:", talentId);
+    toast({
+      title: "Invite Talent",
+      description: `Inviting talent: ${talentId}`,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   const handleRefresh = () => {
@@ -81,7 +128,11 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     if (jobId) {
       fetchSuggestedTalents();
     }
+<<<<<<< HEAD
+  }[jobId]);
+=======
   }, [jobId]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Transform data to match JobMatchCard component props
   const transformedTalents = talents.map(talent => {
@@ -94,7 +145,12 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       location: talent.talent_profile?.location || 'Remote',
       category: talent.talent_profile?.category || 'Technology',
       matchPercent: talent.match_score || 85,
+<<<<<<< HEAD
       skills: talent.talent_profile?.skills || []};
+=======
+      skills: talent.talent_profile?.skills || [],
+    };
+>>>>>>> origin/auto/autonomy-17186719616
   });
 
   return (

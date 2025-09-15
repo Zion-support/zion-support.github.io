@@ -3,6 +3,15 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
+<<<<<<< HEAD
+  Brain
+  Monitor
+  Search
+  Shield
+  Mail
+  Share2
+  Check
+=======
   Brain, 
   Monitor, 
   Search, 
@@ -10,6 +19,7 @@ import {
   Mail, 
   Share2, 
   Check, 
+>>>>>>> origin/auto/autonomy-17186719616
   Star,
   Zap,
   TrendingUp,
@@ -26,13 +36,21 @@ export default function MicroSaasServicesPage() {
     {
       id: 'ai-content-generator',
       name: 'AI Content Generator',
+<<<<<<< HEAD
+      description: 'Generate high-qualitySEO-optimized content for blogsocial mediaemailsand landing pages using advanced AI technology.',
+=======
       description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Brain className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       features: [
         'AI-powered content generation',
+<<<<<<< HEAD
+        'Multiple content types (blogsocialemail)',
+=======
         'Multiple content types (blog, social, email)',
+>>>>>>> origin/auto/autonomy-17186719616
         'SEO optimization suggestions',
         'Content templates library',
         'Plagiarism-free content',
@@ -47,19 +65,32 @@ export default function MicroSaasServicesPage() {
         'Newsletter content'
       ],
       pricing: {
+<<<<<<< HEAD
+        starter: { price: 29features: ['100 generations/'month', 'Basic 'templates', 'SEO 'analysis', 'Email support'] },
+        professional: { price: 99features: ['500 generations/'month', 'Premium 'templates', 'Advanced 'SEO', 'Priority 'support', 'API access'] },
+        enterprise: { price: 299features: ['Unlimited 'generations', 'Custom 'templates', 'White-label 'options', 'SLA guarantee'] }
+      },
+      marketPrice: '$29-299/month',
+      competitors: ['Jasper 'AI', 'Copy.'ai', 'Writesonic'],
+=======
         starter: { price: 29, features: ['100 generations/month', 'Basic templates', 'SEO analysis', 'Email support'] },
         professional: { price: 99, features: ['500 generations/month', 'Premium templates', 'Advanced SEO', 'Priority support', 'API access'] },
         enterprise: { price: 299, features: ['Unlimited generations', 'Custom templates', 'White-label options', 'SLA guarantee'] }
       },
       marketPrice: '$29-299/month',
       competitors: ['Jasper AI', 'Copy.ai', 'Writesonic'],
+>>>>>>> origin/auto/autonomy-17186719616
       website: 'https://ai-content.ziontech.ai',
       demo: 'https://demo.ai-content.ziontech.ai'
     },
     {
       id: 'performance-monitor',
       name: 'Website Performance Monitor',
+<<<<<<< HEAD
+      description: 'Monitor your website performance in real-time with comprehensive metricsalertsand optimization recommendations.',
+=======
       description: 'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.',
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Monitor className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
@@ -80,19 +111,32 @@ export default function MicroSaasServicesPage() {
         'Mobile performance testing'
       ],
       pricing: {
+<<<<<<< HEAD
+        starter: { price: 19features: ['5 URLs'5-min 'monitoring', 'Basic 'metrics', 'Email alerts'7-day retention'] },
+        professional: { price: 49features: ['25 URLs'1-min 'monitoring', 'Advanced 'metrics', 'Multiple alerts'30-day 'retention', 'API access'] },
+        enterprise: { price: 149features: ['Unlimited 'URLs', 'Real-time 'monitoring', 'All 'metrics', 'Custom dashboards'1-year 'retention', 'SLA guarantee'] }
+      },
+      marketPrice: '$19-149/month',
+      competitors: [', 'Pingdom', 'GTmetrix'WebPageTest'],
+=======
         starter: { price: 19, features: ['5 URLs', '5-min monitoring', 'Basic metrics', 'Email alerts', '7-day retention'] },
         professional: { price: 49, features: ['25 URLs', '1-min monitoring', 'Advanced metrics', 'Multiple alerts', '30-day retention', 'API access'] },
         enterprise: { price: 149, features: ['Unlimited URLs', 'Real-time monitoring', 'All metrics', 'Custom dashboards', '1-year retention', 'SLA guarantee'] }
       },
       marketPrice: '$19-149/month',
       competitors: ['Pingdom', 'GTmetrix', 'WebPageTest'],
+>>>>>>> origin/auto/autonomy-17186719616
       website: 'https://performance.ziontech.ai',
       demo: 'https://demo.performance.ziontech.ai'
     },
     {
       id: 'seo-analytics',
       name: 'SEO Analytics Dashboard',
+<<<<<<< HEAD
+      description: 'Comprehensive SEO trackingcompetitor analysisand keyword monitoring to improve your search engine rankings.',
+=======
       description: 'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Search className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
@@ -113,19 +157,32 @@ export default function MicroSaasServicesPage() {
         'Content optimization'
       ],
       pricing: {
+<<<<<<< HEAD
+        starter: { price: 39features: ['100 'keywords', 'Basic 'analysis', 'Monthly 'reports', 'Email support'7-day retention'] },
+        professional: { price: 89features: ['500 'keywords', 'Advanced 'analysis', 'Weekly 'reports', 'Priority support'30-day 'retention', 'API access'] },
+        enterprise: { price: 199features: ['Unlimited 'keywords', 'Full SEO 'suite', 'Daily 'reports', 'Dedicated support'1-year 'retention', 'White-label options'] }
+      },
+      marketPrice: '$39-199/month',
+      competitors: [', 'Ahrefs', 'SEMrush'Moz'],
+=======
         starter: { price: 39, features: ['100 keywords', 'Basic analysis', 'Monthly reports', 'Email support', '7-day retention'] },
         professional: { price: 89, features: ['500 keywords', 'Advanced analysis', 'Weekly reports', 'Priority support', '30-day retention', 'API access'] },
         enterprise: { price: 199, features: ['Unlimited keywords', 'Full SEO suite', 'Daily reports', 'Dedicated support', '1-year retention', 'White-label options'] }
       },
       marketPrice: '$39-199/month',
       competitors: ['Ahrefs', 'SEMrush', 'Moz'],
+>>>>>>> origin/auto/autonomy-17186719616
       website: 'https://seo.ziontech.ai',
       demo: 'https://demo.seo.ziontech.ai'
     },
     {
       id: 'api-rate-limiter',
       name: 'API Rate Limiter',
+<<<<<<< HEAD
+      description: 'Protect your APIs with intelligent rate limitingtraffic managementand comprehensive analytics.',
+=======
       description: 'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.',
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Shield className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
@@ -146,19 +203,32 @@ export default function MicroSaasServicesPage() {
         'Enterprise API governance'
       ],
       pricing: {
+<<<<<<< HEAD
+        starter: { price: 25features: ['10 rate limit 'rules', 'Basic 'limiting', 'API key 'management', 'Email notifications'7-day retention'] },
+        professional: { price: 79features: ['50 rate limit 'rules', 'Advanced 'limiting', 'Unlimited API 'keys', 'Real-time monitoring'30-day 'retention', 'API access'] },
+        enterprise: { price: 199features: ['Unlimited 'rules', 'Enterprise 'security', 'Advanced 'features', 'Custom integrations'1-year 'retention', 'SLA guarantee'] }
+      },
+      marketPrice: '$25-199/month',
+      competitors: [', 'Kong', 'Tyk'AWS API Gateway'],
+=======
         starter: { price: 25, features: ['10 rate limit rules', 'Basic limiting', 'API key management', 'Email notifications', '7-day retention'] },
         professional: { price: 79, features: ['50 rate limit rules', 'Advanced limiting', 'Unlimited API keys', 'Real-time monitoring', '30-day retention', 'API access'] },
         enterprise: { price: 199, features: ['Unlimited rules', 'Enterprise security', 'Advanced features', 'Custom integrations', '1-year retention', 'SLA guarantee'] }
       },
       marketPrice: '$25-199/month',
       competitors: ['Kong', 'Tyk', 'AWS API Gateway'],
+>>>>>>> origin/auto/autonomy-17186719616
       website: 'https://rate-limiter.ziontech.ai',
       demo: 'https://demo.rate-limiter.ziontech.ai'
     },
     {
       id: 'email-marketing',
       name: 'Email Marketing Automation',
+<<<<<<< HEAD
+      description: 'Create engaging email campaignsautomate customer journeysand drive conversions with intelligent email marketing.',
+=======
       description: 'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.',
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Mail className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
@@ -179,19 +249,32 @@ export default function MicroSaasServicesPage() {
         'Lead nurturing'
       ],
       pricing: {
+<<<<<<< HEAD
+        starter: { price: 29features: ['1,000 'subscribers', 'Basic 'templates', 'Simple 'automation', 'Basic 'analytics', 'Email support'] },
+        professional: { price: 79features: ['10,000 'subscribers', 'Advanced 'templates', 'Advanced 'automation', 'Advanced 'analytics', 'Priority 'support', 'API access'] },
+        enterprise: { price: 199features: ['Unlimited 'subscribers', 'Custom 'templates', 'Complex 'workflows', 'Enterprise 'analytics', 'Dedicated 'support', 'White-label options'] }
+      },
+      marketPrice: '$29-199/month',
+      competitors: [', 'Mailchimp', 'ConvertKit'ActiveCampaign'],
+=======
         starter: { price: 29, features: ['1,000 subscribers', 'Basic templates', 'Simple automation', 'Basic analytics', 'Email support'] },
         professional: { price: 79, features: ['10,000 subscribers', 'Advanced templates', 'Advanced automation', 'Advanced analytics', 'Priority support', 'API access'] },
         enterprise: { price: 199, features: ['Unlimited subscribers', 'Custom templates', 'Complex workflows', 'Enterprise analytics', 'Dedicated support', 'White-label options'] }
       },
       marketPrice: '$29-199/month',
       competitors: ['Mailchimp', 'ConvertKit', 'ActiveCampaign'],
+>>>>>>> origin/auto/autonomy-17186719616
       website: 'https://email.ziontech.ai',
       demo: 'https://demo.email.ziontech.ai'
     },
     {
       id: 'social-media-scheduler',
       name: 'Social Media Scheduler',
+<<<<<<< HEAD
+      description: 'Schedulemanageand analyze your social media presence across multiple platforms from one unified dashboard.',
+=======
       description: 'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Share2 className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
@@ -212,12 +295,21 @@ export default function MicroSaasServicesPage() {
         'Brand consistency'
       ],
       pricing: {
+<<<<<<< HEAD
+        starter: { price: 19features: ['3 social 'accounts', 'Basic 'scheduling', 'Simple 'calendar', 'Basic 'analytics', 'Email support'] },
+        professional: { price: 49features: ['10 social 'accounts', 'Advanced 'scheduling', 'Content 'calendar', 'Advanced 'analytics', 'Priority 'support', 'API access'] },
+        enterprise: { price: 129features: ['Unlimited 'accounts', 'Enterprise 'scheduling', 'Advanced 'calendar', 'Enterprise 'analytics', 'Dedicated 'support', 'White-label options'] }
+      },
+      marketPrice: '$19-129/month',
+      competitors: [', 'Buffer', 'Hootsuite'Later'],
+=======
         starter: { price: 19, features: ['3 social accounts', 'Basic scheduling', 'Simple calendar', 'Basic analytics', 'Email support'] },
         professional: { price: 49, features: ['10 social accounts', 'Advanced scheduling', 'Content calendar', 'Advanced analytics', 'Priority support', 'API access'] },
         enterprise: { price: 129, features: ['Unlimited accounts', 'Enterprise scheduling', 'Advanced calendar', 'Enterprise analytics', 'Dedicated support', 'White-label options'] }
       },
       marketPrice: '$19-129/month',
       competitors: ['Buffer', 'Hootsuite', 'Later'],
+>>>>>>> origin/auto/autonomy-17186719616
       website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai'
     }
@@ -266,7 +358,11 @@ export default function MicroSaasServicesPage() {
     <>
       <Head>
         <title>Micro SaaS Services | Zion Tech Group - Professional Business Solutions</title>
+<<<<<<< HEAD
+        <meta name="description" content="Discover our comprehensive suite of micro SaaS services including AI content generationperformance monitoringSEO analyticsAPI managementemail marketingand social media scheduling." />
+=======
         <meta name="description" content="Discover our comprehensive suite of micro SaaS services including AI content generation, performance monitoring, SEO analytics, API management, email marketing, and social media scheduling." />
+>>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
         <meta property="og:description" content="Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -288,7 +384,11 @@ export default function MicroSaasServicesPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover our comprehensive suite of micro SaaS services designed for modern businesses. 
+<<<<<<< HEAD
+            From AI-powered content generation to enterprise-grade performance monitoring
+=======
             From AI-powered content generation to enterprise-grade performance monitoring, 
+>>>>>>> origin/auto/autonomy-17186719616
             we deliver professional solutions with competitive pricing and exceptional value.
           </p>
         </div>
@@ -307,7 +407,11 @@ export default function MicroSaasServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {marketInsights.map((insightindex) => (
+=======
             {marketInsights.map((insight, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -340,7 +444,11 @@ export default function MicroSaasServicesPage() {
           </div>
 
           <div className="space-y-16">
+<<<<<<< HEAD
+            {microSaasServices.map((serviceindex) => (
+=======
             {microSaasServices.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Service Info */}
@@ -362,7 +470,11 @@ export default function MicroSaasServicesPage() {
                           Key Features
                         </h4>
                         <ul className="space-y-2">
+<<<<<<< HEAD
+                          {service.features.map((featureIndex) => (
+=======
                           {service.features.map((feature, featureIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                             <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
                               {feature}
@@ -377,7 +489,11 @@ export default function MicroSaasServicesPage() {
                           Use Cases
                         </h4>
                         <ul className="space-y-2">
+<<<<<<< HEAD
+                          {service.useCases.map((useCaseIndex) => (
+=======
                           {service.useCases.map((useCase, useCaseIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                             <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
                               {useCase}
@@ -423,7 +539,11 @@ export default function MicroSaasServicesPage() {
                         <div>
                           <p className="text-sm text-gray-400 mb-1">Our Pricing</p>
                           <div className="space-y-2">
+<<<<<<< HEAD
+                            {Object.entries(service.pricing).map(([tierdetails]) => (
+=======
                             {Object.entries(service.pricing).map(([tier, details]) => (
+>>>>>>> origin/auto/autonomy-17186719616
                               <div key={tier} className="flex justify-between items-center">
                                 <span className="text-sm text-gray-300 capitalize">{tier}</span>
                                 <span className="text-sm font-semibold text-white">${details.price}/mo</span>
@@ -435,7 +555,11 @@ export default function MicroSaasServicesPage() {
                         <div>
                           <p className="text-sm text-gray-400 mb-1">Key Competitors</p>
                           <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+                            {service.competitors.map((competitorcompIndex) => (
+=======
                             {service.competitors.map((competitor, compIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                               <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">
                                 {competitor}
                               </span>
@@ -515,6 +639,10 @@ export default function MicroSaasServicesPage() {
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Get Started?
           </h2>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.
           </p>

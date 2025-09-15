@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Shield, 
-  Zap, 
+  TrendingUp
+  Users
+  DollarSign
+  Shield
+  Zap
   Target,
   BarChart3,
   Building2,
-  X, 
+  X
   Play,
   ArrowRight,
   Sparkles,
@@ -20,8 +20,8 @@ import {
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2028PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentBenefit, setCurrentBenefit] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentBenefitsetCurrentBenefit] = useState(0);
 
   const benefits = [
     {
@@ -51,27 +51,27 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
   ];
 
   const solutions = [
-    { name: 'AI Automation', icon: Zap },
-    { name: 'Analytics', icon: BarChart3 },
-    { name: 'Security', icon: Shield },
-    { name: 'Cloud', icon: Building2 }
+    { name: 'AI Automation'icon: Zap },
+    { name: 'Analytics'icon: BarChart3 },
+    { name: 'Security'icon: Shield },
+    { name: 'Cloud'icon: Building2 }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBenefit((prev) => (prev + 1) % benefits.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden"
       >
         {/* Background Effects */}
@@ -92,7 +92,7 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 2repeat: Infinityease: "linear" }}
                     className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
                   >
                     <Sparkles className="w-4 h-4 text-white" />
@@ -109,7 +109,7 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
                 </h2>
 
                 <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl">
-                  Discover cutting-edge AI automation, advanced analytics, enterprise security, 
+                  Discover cutting-edge AI automationadvanced analyticsenterprise security
                   and cloud solutions designed to drive unprecedented growth.
                 </p>
 
@@ -118,9 +118,9 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentBenefit}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
@@ -161,27 +161,27 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
                   {/* Main Visual */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 2, 0]
+                      y: [0-10],
+                      rotate: [020]
                     }}
                     transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
+                      duration: 4
+                      repeat: Infinity
                       ease: "easeInOut" 
                     }}
                     className="relative bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 backdrop-blur-sm border border-blue-500/30"
                   >
                     {/* Floating Solution Icons */}
-                    {solutions.map((solution, index) => (
+                    {solutions.map((solutionindex) => (
                       <motion.div
                         key={solution.name}
                         animate={{ 
-                          y: [0, -15, 0],
-                          x: [0, 10, 0]
+                          y: [0-150],
+                          x: [010]
                         }}
                         transition={{ 
-                          duration: 3 + index * 0.5, 
-                          repeat: Infinity, 
+                          duration: 3 + index * 0.5
+                          repeat: Infinity
                           ease: "easeInOut",
                           delay: index * 0.5
                         }}
@@ -205,7 +205,7 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
                         Business Solutions
                       </div>
                       <div className="flex justify-center gap-2 mb-4">
-                        {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map((_i) => (
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
@@ -259,7 +259,7 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
             className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, ease: "linear" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </motion.div>

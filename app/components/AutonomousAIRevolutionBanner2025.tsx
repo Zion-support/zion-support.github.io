@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRight, X, TrendingUp, Zap, Target, Award } from 'lucide-react';
+import { ChevronRight, X, TrendingUp, Zap, Award, ArrowRight } from 'lucide-react';
 
 const AutonomousAIRevolutionBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -150,7 +150,7 @@ const AutonomousAIRevolutionBanner2025 = () => {
                   href={currentContent.url}
                   className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  <Target className="w-5 h-5 mr-2" />
+                  <ArrowRight className="w-5 h-5 mr-2" />
                   Read {currentContent.type === 'case-study' ? 'Case Study' : 'Article'}
                   <ChevronRight className="w-5 h-5 ml-2" />
                 </Link>

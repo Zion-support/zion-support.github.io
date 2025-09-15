@@ -1,3 +1,9 @@
+"use client";
+'use client';
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetric {
@@ -23,8 +29,8 @@ interface SystemHealth {
 }
 
 const RealTimePerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetric[]>([]);
-  const [systemHealth, setSystemHealth] = useState<SystemHealth>({
+  const [metricsetMetrics] = useState<PerformanceMetric[]>([]);
+  const [systemHealthsetSystemHealth] = useState<SystemHealth>({
     cpu: 0,
     memory: 0,
     disk: 0,
@@ -34,8 +40,8 @@ const RealTimePerformanceDashboard: React.FC = () => {
     requestsPerMinute: 0,
     errorRate: 0
   });
-  const [isLoading, setIsLoading] = useState(true);
-  const [autoRefresh, setAutoRefresh] = useState(true);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [autoRefreshsetAutoRefresh] = useState(true);
 
   useEffect(() => {
     const generateMockData = () => {
@@ -122,10 +128,10 @@ const RealTimePerformanceDashboard: React.FC = () => {
     generateMockData();
 
     if (autoRefresh) {
-      const interval = setInterval(generateMockData, 3000); // Update every 3 seconds
+      const interval = setInterval(generateMockData3000); // Update every 3 seconds
       return () => clearInterval(interval);
     }
-  }, [autoRefresh]);
+  }[autoRefresh]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -146,7 +152,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
     }
   };
 
-  const getHealthColor = (value: number, type: string) => {
+  const getHealthColor = (value: numbertype: string) => {
     if (type === 'cpu' || type === 'memory' || type === 'disk') {
       if (value > 90) return 'text-red-600';
       if (value > 75) return 'text-yellow-600';
@@ -166,7 +172,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map(i => (
+            {[123456].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -187,7 +193,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
             📊 Real-Time Performance Dashboard
           </h2>
           <p className="text-xl text-gray-600">
-            Monitor your application's performance metrics in real-time
+            Monitor your 'application', 's performance metrics in real-time
           </p>
         </div>
         <div className="flex items-center space-x-4">
@@ -212,25 +218,25 @@ const RealTimePerformanceDashboard: React.FC = () => {
         <h3 className="text-2xl font-bold mb-6">🖥️ System Health Overview</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.cpu, 'cpu')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'cpu', 'cpu')}`}>
               {systemHealth.cpu.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">CPU Usage</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.memory, 'memory')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'memory', 'memory')}`}>
               {systemHealth.memory.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">Memory</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.disk, 'disk')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'disk', 'disk')}`}>
               {systemHealth.disk.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">Disk Usage</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.network, 'network')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'network', 'network')}`}>
               {systemHealth.network.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">Network</div>

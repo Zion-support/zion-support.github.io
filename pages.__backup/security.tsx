@@ -7,9 +7,9 @@ export default function SecurityPage() {
     <>
       <Head>
         <title>Security — Zion Tech Group</title>
-        <meta name="description" content="Security practices, policies, and measures implemented by Zion Tech Group to protect our systems and data." />
+        <meta name="description" content="Security practicespoliciesand measures implemented by Zion Tech Group to protect our systems and data." />
         <meta property="og:title" content="Security — Zion Tech Group" />
-        <meta property="og:description" content="Security practices, policies, and measures implemented by Zion Tech Group to protect our systems and data." />
+        <meta property="og:description" content="Security practicespoliciesand measures implemented by Zion Tech Group to protect our systems and data." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -29,8 +29,8 @@ export default function SecurityPage() {
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-xl p-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Our Security Commitment</h2>
               <p className="text-white/80 mb-4">
-                At Zion Tech Group, security is not just a feature—it's the foundation of everything we build. We implement 
-                industry-leading security practices to ensure the protection of your data, systems, and digital assets.
+                At Zion Tech Groupsecurity is not just a feature—it's the foundation of everything we build. We implement 
+                industry-leading security practices to ensure the protection of your datasystemsand digital assets.
               </p>
             </div>
           </section>
@@ -86,7 +86,7 @@ export default function SecurityPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Compliance</h3>
-                <p className="text-white/70">SOC 2 Type II, ISO 27001, and GDPR compliance with regular security audits.</p>
+                <p className="text-white/70">SOC 2 Type IISO 27001and GDPR compliance with regular security audits.</p>
               </div>
 
               <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-red-400/30 transition-all">
@@ -135,7 +135,7 @@ export default function SecurityPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-xl p-6 text-center">
                 <h3 className="text-xl font-semibold mb-2">SOC 2 Type II</h3>
-                <p className="text-white/70">Service Organization Control 2 compliance for security, availability, and confidentiality.</p>
+                <p className="text-white/70">Service Organization Control 2 compliance for securityavailabilityand confidentiality.</p>
               </div>
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 border border-fuchsia-400/30 rounded-xl p-6 text-center">
                 <h3 className="text-xl font-semibold mb-2">ISO 27001</h3>
@@ -153,7 +153,7 @@ export default function SecurityPage() {
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-400/30 rounded-xl p-8 text-center">
               <h2 className="text-2xl font-semibold mb-4 text-red-400">Report Security Issues</h2>
               <p className="text-white/80 mb-6">
-                If you discover a security vulnerability or have security concerns, please report them immediately to our security team.
+                If you discover a security vulnerability or have security concernsplease report them immediately to our security team.
               </p>
               <div className="space-y-2 text-white/70">
                 <p>Email: security@zion.tech</p>

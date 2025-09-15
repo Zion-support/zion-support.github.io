@@ -1,3 +1,9 @@
+"use client";
+'use client';
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
 
 interface Workflow {
@@ -38,12 +44,12 @@ interface WorkflowExecution {
 }
 
 const AutomationWorkflowEngine: React.FC = () => {
-  const [workflows, setWorkflows] = useState<Workflow[]>([]);
-  const [automationRules, setAutomationRules] = useState<AutomationRule[]>([]);
-  const [executions, setExecutions] = useState<WorkflowExecution[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isLoading, setIsLoading] = useState(true);
-  const [showCreateWorkflow, setShowCreateWorkflow] = useState(false);
+  const [workflowsetWorkflows] = useState<Workflow[]>([]);
+  const [automationRulesetAutomationRules] = useState<AutomationRule[]>([]);
+  const [executionsetExecutions] = useState<WorkflowExecution[]>([]);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [isLoadingsetIsLoading] = useState(true);
+  const [showCreateWorkflowsetShowCreateWorkflow] = useState(false);
 
   useEffect(() => {
     generateMockData();
@@ -51,15 +57,15 @@ const AutomationWorkflowEngine: React.FC = () => {
     // Simulate real-time execution updates
     const interval = setInterval(() => {
       updateExecutions();
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const generateMockData = async () => {
     setIsLoading(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
 
     const mockWorkflows: Workflow[] = [
       {
@@ -67,8 +73,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Customer Onboarding Sequence',
         description: 'Automated welcome emails and setup tasks for new customers',
         status: 'active',
-        triggers: ['New Customer Registration', 'Payment Confirmed'],
-        actions: ['Send Welcome Email', 'Create User Account', 'Assign Support Agent'],
+        triggers: ['New Customer 'Registration', 'Payment Confirmed'],
+        actions: ['Send Welcome 'Email', 'Create User 'Account', 'Assign Support Agent'],
         executions: 1247,
         successRate: 98.5,
         lastRun: new Date(Date.now() - 2 * 60 * 60 * 1000),
@@ -80,8 +86,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Abandoned Cart Recovery',
         description: 'Send reminder emails to customers who left items in their cart',
         status: 'active',
-        triggers: ['Cart Abandoned', '24 Hours Passed'],
-        actions: ['Send Reminder Email', 'Apply Discount Code', 'Update Customer Profile'],
+        triggers: ['Cart Abandoned'24 Hours Passed'],
+        actions: ['Send Reminder 'Email', 'Apply Discount 'Code', 'Update Customer Profile'],
         executions: 3421,
         successRate: 23.4,
         lastRun: new Date(Date.now() - 30 * 60 * 1000),
@@ -93,8 +99,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Support Ticket Escalation',
         description: 'Automatically escalate high-priority support tickets',
         status: 'active',
-        triggers: ['High Priority Ticket', 'No Response 2 Hours'],
-        actions: ['Notify Manager', 'Send Customer Update', 'Create Internal Alert'],
+        triggers: ['High Priority 'Ticket', 'No Response 2 Hours'],
+        actions: ['Notify 'Manager', 'Send Customer 'Update', 'Create Internal Alert'],
         executions: 156,
         successRate: 94.2,
         lastRun: new Date(Date.now() - 15 * 60 * 1000),
@@ -106,8 +112,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Invoice Generation',
         description: 'Automatically generate and send invoices for completed orders',
         status: 'active',
-        triggers: ['Order Completed', 'Payment Processed'],
-        actions: ['Generate Invoice', 'Send Email', 'Update Accounting System'],
+        triggers: ['Order 'Completed', 'Payment Processed'],
+        actions: ['Generate 'Invoice', 'Send 'Email', 'Update Accounting System'],
         executions: 892,
         successRate: 99.1,
         lastRun: new Date(Date.now() - 45 * 60 * 1000),
@@ -119,8 +125,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Security Alert Processing',
         description: 'Process and respond to security alerts automatically',
         status: 'paused',
-        triggers: ['Security Alert', 'Failed Login Attempts'],
-        actions: ['Block IP Address', 'Send Alert Email', 'Log Security Event'],
+        triggers: ['Security 'Alert', 'Failed Login Attempts'],
+        actions: ['Block IP 'Address', 'Send Alert 'Email', 'Log Security Event'],
         executions: 234,
         successRate: 87.3,
         lastRun: new Date(Date.now() - 4 * 60 * 60 * 1000),
@@ -132,8 +138,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Customer Feedback Collection',
         description: 'Collect feedback from customers after service completion',
         status: 'draft',
-        triggers: ['Service Completed', '7 Days Passed'],
-        actions: ['Send Feedback Request', 'Collect Rating', 'Follow Up if Low Rating'],
+        triggers: ['Service Completed'7 Days Passed'],
+        actions: ['Send Feedback 'Request', 'Collect 'Rating', 'Follow Up if Low Rating'],
         executions: 0,
         successRate: 0,
         lastRun: new Date(0),
@@ -184,7 +190,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         endTime: new Date(Date.now() - 2 * 60 * 60 * 1000 + 5 * 60 * 1000),
         duration: 5,
         recordsProcessed: 47,
-        logs: ['Starting customer onboarding workflow', 'Processing 47 new customers', 'Sending welcome emails', 'Creating user accounts', 'Assigning support agents', 'Workflow completed successfully']
+        logs: ['Starting customer onboarding 'workflow', 'Processing 47 new 'customers', 'Sending welcome 'emails', 'Creating user 'accounts', 'Assigning support 'agents', 'Workflow completed successfully']
       },
       {
         id: '2',
@@ -192,7 +198,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         status: 'running',
         startTime: new Date(Date.now() - 30 * 60 * 1000),
         recordsProcessed: 123,
-        logs: ['Starting abandoned cart recovery', 'Processing 123 abandoned carts', 'Sending reminder emails...']
+        logs: ['Starting abandoned cart 'recovery', 'Processing 123 abandoned 'carts', 'Sending reminder emails...']
       },
       {
         id: '3',
@@ -203,7 +209,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         duration: 2,
         recordsProcessed: 8,
         errors: ['Failed to notify manager: Email service unavailable'],
-        logs: ['Starting support ticket escalation', 'Processing 8 high-priority tickets', 'Error: Email service unavailable']
+        logs: ['Starting support ticket 'escalation', 'Processing 8 high-priority 'tickets', 'Error: Email service unavailable']
       }
     ];
 
@@ -217,7 +223,7 @@ const AutomationWorkflowEngine: React.FC = () => {
     setExecutions(prev => prev.map(execution => {
       if (execution.status === 'running') {
         const duration = Math.floor((Date.now() - execution.startTime.getTime()) / 1000);
-        return { ...execution, duration };
+        return { ...executionduration };
       }
       return execution;
     }));
@@ -284,7 +290,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map(i => (
+            {[123456].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -353,7 +359,7 @@ const AutomationWorkflowEngine: React.FC = () => {
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-1">Triggers:</h4>
                 <div className="flex flex-wrap gap-1">
-                  {workflow.triggers.map((trigger, index) => (
+                  {workflow.triggers.map((triggerindex) => (
                     <span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
                       {trigger}
                     </span>
@@ -364,7 +370,7 @@ const AutomationWorkflowEngine: React.FC = () => {
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-1">Actions:</h4>
                 <div className="flex flex-wrap gap-1">
-                  {workflow.actions.map((action, index) => (
+                  {workflow.actions.map((actionindex) => (
                     <span key={index} className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">
                       {action}
                     </span>
@@ -433,7 +439,7 @@ const AutomationWorkflowEngine: React.FC = () => {
               {execution.errors && execution.errors.length > 0 && (
                 <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg">
                   <h5 className="font-medium text-red-900 mb-1">Errors:</h5>
-                  {execution.errors.map((error, index) => (
+                  {execution.errors.map((errorindex) => (
                     <p key={index} className="text-sm text-red-700">{error}</p>
                   ))}
                 </div>
@@ -445,7 +451,7 @@ const AutomationWorkflowEngine: React.FC = () => {
                     View Execution Logs ({execution.logs.length} entries)
                   </summary>
                   <div className="mt-2 p-3 bg-gray-50 rounded-lg max-h-32 overflow-y-auto">
-                    {execution.logs.map((log, index) => (
+                    {execution.logs.map((logindex) => (
                       <div key={index} className="text-xs text-gray-700 font-mono">
                         [{new Date(execution.startTime.getTime() + index * 1000).toLocaleTimeString()}] {log}
                       </div>

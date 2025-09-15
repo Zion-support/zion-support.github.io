@@ -26,7 +26,8 @@ export function SmartContractBuilder({
   onClose,
   talent,
   clientName,
-  onContractGenerated}: SmartContractBuilderProps) {
+  onContractGenerated,
+}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(

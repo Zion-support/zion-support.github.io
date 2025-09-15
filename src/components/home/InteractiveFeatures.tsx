@@ -20,28 +20,33 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       details:
         "Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.",
       icon: <Search className="h-8 w-8 text-blue-700" />,
-      link: "/match"},
+      link: "/match",
+    },
     {
       title: "Talent Directory",
       description: "Browse a verified database of AI and tech specialists.",
       details:
         "Every profile is vetted for quality and authenticity so you can hire with confidence.",
       icon: <Users className="h-8 w-8 text-purple-700" />,
-      link: "/talent"},
+      link: "/talent",
+    },
     {
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business.",
       details:
         "From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.",
       icon: <Zap className="h-8 w-8 text-cyan-700" />,
-      link: "/services"},
+      link: "/services",
+    },
     {
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
-      link: "/equipment"}];
+      link: "/equipment",
+    },
+  ];
 
   const handleToggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));

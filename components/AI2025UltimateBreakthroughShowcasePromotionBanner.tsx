@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, CheckCircle, Rocket, Brain, Cpu, Target, BarChart3 } from 'lucide-react';
+ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3
 
 export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
   return (
@@ -23,8 +23,8 @@ export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the most revolutionary AI technologies of 2025. Explore cutting-edge solutions, 
-            <span className="font-bold text-yellow-300"> success stories with 2,500-15,000% ROI</span>, 
+            Discover the most revolutionary AI technologies of 2025. Explore cutting-edge solutions
+            <span className="font-bold text-yellow-300"> success stories with 2,500-15,000% ROI</span>
             and transformative technologies that are reshaping industries.
           </p>
         </div>

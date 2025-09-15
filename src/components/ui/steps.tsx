@@ -14,13 +14,15 @@ export function Step({
   status,
   label,
   description,
-  className}: StepProps) {
+  className,
+}: StepProps) {
   return (
     <li
       className={cn(
         "relative flex items-center",
         {
-          "opacity-60": status === "incomplete"},
+          "opacity-60": status === "incomplete",
+        },
         className
       )}
     >
@@ -33,7 +35,8 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
-              status === "complete"}
+              status === "complete",
+          }
         )}
       >
         {status === "complete" ? (
@@ -49,7 +52,8 @@ export function Step({
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete",
-            "text-white": status === "current" || status === "complete"})}
+            "text-white": status === "current" || status === "complete",
+          })}
         >
           {label}
         </h3>
@@ -81,7 +85,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current";
           
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status});
+            status,
+          });
         })}
       </ol>
       
@@ -90,7 +95,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`,
+            }}
           />
         </div>
       </div>

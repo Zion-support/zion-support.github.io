@@ -50,7 +50,8 @@ export function QuickActions() {
       action: () => {
         localStorage.setItem('performance-monitoring', 'true');
         window.location.reload();
-      }},
+      },
+    },
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -60,7 +61,8 @@ export function QuickActions() {
       action: () => {
         localStorage.setItem('bundle-analyzer', 'true');
         window.location.reload();
-      }},
+      },
+    },
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -77,7 +79,8 @@ export function QuickActions() {
         localStorage.clear();
         sessionStorage.clear();
         window.location.reload();
-      }},
+      },
+    },
     {
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
@@ -114,7 +117,8 @@ export function QuickActions() {
           link.href = img;
           document.head.appendChild(link);
         });
-      }},
+      },
+    },
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -147,7 +151,8 @@ export function QuickActions() {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-      }},
+      },
+    },
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -157,7 +162,8 @@ export function QuickActions() {
       dangerous: true,
       action: () => {
         throw new Error('Test error for Sentry integration - this is intentional!');
-      }},
+      },
+    },
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -166,17 +172,21 @@ export function QuickActions() {
       category: 'maintenance',
       action: () => {
         window.location.reload();
-      }}];
+      },
+    },
+  ];
 
   const categorizedActions = {
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance')};
+    maintenance: actions.filter(a => a.category === 'maintenance'),
+  };
 
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'};
+    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
+  };
 
   if (!isVisible) {
     return (

@@ -1,0 +1,442 @@
+[2025-09-02T22:42:08.325Z] [INFO] 🚀 Starting Comprehensive App Improvement Process...
+[2025-09-02T22:42:08.327Z] [INFO] =========================================[2025-09-02T22:42:08.327Z] [INFO] Fixing package.json...
+[2025-09-02T22:42:08.328Z] [INFO] Package.json fixed: 
+[2025-09-02T22:42:08.328Z] [INFO] Installing dependencies...
+[2025-09-02T22:42:08.328Z] [INFO] Running command: npm install --legacy-peer-deps --force
+[2025-09-02T22:42:15.879Z] [ERROR] Command failed: npm install --legacy-peer-deps --force - Command failed: npm install --legacy-peer-deps --force
+npm warn using --force Recommended protections disabled.
+npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+npm error code 1
+npm error path /workspace/node_modules/unrs-resolver
+npm error command failed
+npm error command sh -c napi-postinstall unrs-resolver 1.11.1 check
+npm error /workspace/node_modules/napi-postinstall/lib/index.js:57
+npm error     return process.env.npm_config_user_agent?.startsWith('npm/');
+npm error                                              ^
+npm error
+npm error SyntaxError: Unexpected token .
+npm error     at Module._compile (internal/modules/cjs/loader.js:723:23)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error     at Module.load (internal/modules/cjs/loader.js:653:32)
+npm error     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+npm error     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+npm error     at Module.require (internal/modules/cjs/loader.js:692:17)
+npm error     at require (internal/modules/cjs/helpers.js:25:18)
+npm error     at Object.<anonymous> (/workspace/node_modules/napi-postinstall/lib/cli.js:4:20)
+npm error     at Module._compile (internal/modules/cjs/loader.js:778:30)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T22_42_08_371Z-debug-0.log
+
+[2025-09-02T22:42:15.879Z] [INFO] Running command: npm install --force
+[2025-09-02T22:42:25.944Z] [ERROR] Command failed: npm install --force - Command failed: npm install --force
+npm warn using --force Recommended protections disabled.
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: @types/react@18.3.23
+npm warn node_modules/@types/react
+npm warn   dev @types/react@"^17.0.87" from the root project
+npm warn   2 more (@types/react-dom, @testing-library/react)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer @types/react@"^18.0.0" from @types/react-dom@18.3.7
+npm warn node_modules/@types/react-dom
+npm warn   dev @types/react-dom@"^17.0.26" from the root project
+npm warn   1 more (@testing-library/react)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: @types/react@18.3.23
+npm warn node_modules/@types/react
+npm warn   dev @types/react@"^17.0.87" from the root project
+npm warn   2 more (@types/react-dom, @testing-library/react)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/react@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: @types/react-dom@18.3.7
+npm warn node_modules/@types/react-dom
+npm warn   dev @types/react-dom@"^17.0.26" from the root project
+npm warn   1 more (@testing-library/react)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/react-dom@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.3.1" from react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.3.1" from react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react@"^18.0.0 || ^19.0.0" from framer-motion@12.23.12
+npm warn node_modules/framer-motion
+npm warn   framer-motion@"^12.23.12" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-dom@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react-dom@"^18.0.0 || ^19.0.0" from framer-motion@12.23.12
+npm warn node_modules/framer-motion
+npm warn   framer-motion@"^12.23.12" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @magneticwatermelon/mcp-toolkit@1.1.5
+npm warn Found: typescript@4.9.5
+npm warn node_modules/typescript
+npm warn   dev typescript@"^4.9.5" from the root project
+npm warn   10 more (@typescript-eslint/eslint-plugin, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@"^5" from @magneticwatermelon/mcp-toolkit@1.1.5
+npm warn node_modules/@magneticwatermelon/mcp-toolkit
+npm warn   @magneticwatermelon/mcp-toolkit@"^1.1.4" from the root project
+npm warn
+npm warn Conflicting peer dependency: typescript@5.9.2
+npm warn node_modules/typescript
+npm warn   peer typescript@"^5" from @magneticwatermelon/mcp-toolkit@1.1.5
+npm warn   node_modules/@magneticwatermelon/mcp-toolkit
+npm warn     @magneticwatermelon/mcp-toolkit@"^1.1.4" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: eslint-config-next@14.2.31
+npm warn Found: eslint@9.32.0
+npm warn node_modules/eslint
+npm warn   dev eslint@"^9.32.0" from the root project
+npm warn   11 more (@eslint-community/eslint-utils, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer eslint@"^7.23.0 || ^8.0.0" from eslint-config-next@14.2.31
+npm warn node_modules/eslint-config-next
+npm warn   dev eslint-config-next@"^14.0.0" from the root project
+npm warn
+npm warn Conflicting peer dependency: eslint@8.57.1
+npm warn node_modules/eslint
+npm warn   peer eslint@"^7.23.0 || ^8.0.0" from eslint-config-next@14.2.31
+npm warn   node_modules/eslint-config-next
+npm warn     dev eslint-config-next@"^14.0.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+npm error code 1
+npm error path /workspace/node_modules/unrs-resolver
+npm error command failed
+npm error command sh -c napi-postinstall unrs-resolver 1.11.1 check
+npm error /workspace/node_modules/napi-postinstall/lib/index.js:57
+npm error     return process.env.npm_config_user_agent?.startsWith('npm/');
+npm error                                              ^
+npm error
+npm error SyntaxError: Unexpected token .
+npm error     at Module._compile (internal/modules/cjs/loader.js:723:23)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error     at Module.load (internal/modules/cjs/loader.js:653:32)
+npm error     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+npm error     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+npm error     at Module.require (internal/modules/cjs/loader.js:692:17)
+npm error     at require (internal/modules/cjs/helpers.js:25:18)
+npm error     at Object.<anonymous> (/workspace/node_modules/napi-postinstall/lib/cli.js:4:20)
+npm error     at Module._compile (internal/modules/cjs/loader.js:778:30)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T22_42_15_916Z-debug-0.log
+
+[2025-09-02T22:42:25.945Z] [INFO] Running command: yarn install --ignore-engines
+[2025-09-02T22:42:46.544Z] [INFO] Dependencies installed successfully using: yarn install --ignore-engines
+[2025-09-02T22:42:46.545Z] [INFO] Creating missing configuration files...
+[2025-09-02T22:42:46.546Z] [INFO] Fixing TypeScript errors...
+[2025-09-02T22:42:46.546Z] [INFO] Running command: npx tsc --noEmit
+[2025-09-02T22:42:48.614Z] [ERROR] Command failed: npx tsc --noEmit - Command failed: npx tsc --noEmit
+[2025-09-02T22:42:48.614Z] [INFO] Attempting to fix TypeScript errors...
+[2025-09-02T22:42:48.614Z] [INFO] Created global type declarations
+[2025-09-02T22:42:48.614Z] [INFO] Running linting...
+[2025-09-02T22:42:48.614Z] [INFO] Running command: npx eslint . --ext .js,.jsx,.ts,.tsx --fix
+[2025-09-02T22:42:50.320Z] [ERROR] Command failed: npx eslint . --ext .js,.jsx,.ts,.tsx --fix - Command failed: npx eslint . --ext .js,.jsx,.ts,.tsx --fix
+[2025-09-02T22:42:50.320Z] [WARN] Linting had issues, but continuing...
+[2025-09-02T22:42:50.320Z] [INFO] Building the application...
+[2025-09-02T22:42:50.320Z] [INFO] Running command: npm run build
+[2025-09-02T22:42:50.997Z] [ERROR] Command failed: npm run build - Command failed: npm run build
+It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+
+Please install @types/react by running:
+
+	yarn add --dev @types/react
+
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your pages directory).
+
+
+[2025-09-02T22:42:50.997Z] [WARN] Build failed, but continuing with other improvements...
+[2025-09-02T22:42:50.998Z] [INFO] Creating enhanced automation scripts...
+[2025-09-02T22:42:50.998Z] [INFO] Created automation/health-check.cjs
+[2025-09-02T22:42:50.999Z] [INFO] Created automation/performance-optimizer.cjs
+[2025-09-02T22:42:51.000Z] [INFO] Created automation/security-scanner.cjs
+[2025-09-02T22:42:51.001Z] [INFO] Updating package.json scripts...
+[2025-09-02T22:42:51.001Z] [INFO] Updated package.json scripts
+[2025-09-02T22:42:51.001Z] [INFO] \n📊 COMPREHENSIVE APP IMPROVEMENT REPORT
+[2025-09-02T22:42:51.001Z] [INFO] ==============================[2025-09-02T22:42:51.001Z] [INFO] Duration: 43s
+[2025-09-02T22:42:51.001Z] [INFO] Fixes Applied: 6
+[2025-09-02T22:42:51.001Z] [INFO] Errors Found: 5
+[2025-09-02T22:42:51.001Z] [INFO] Success: ❌
+[2025-09-02T22:42:51.001Z] [INFO] \n🔧 Fixes Applied:
+[2025-09-02T22:42:51.002Z] [INFO]   1. Dependencies installed
+[2025-09-02T22:42:51.002Z] [INFO]   2. Created global type declarations
+[2025-09-02T22:42:51.002Z] [INFO]   3. Created automation/health-check.cjs
+[2025-09-02T22:42:51.002Z] [INFO]   4. Created automation/performance-optimizer.cjs
+[2025-09-02T22:42:51.002Z] [INFO]   5. Created automation/security-scanner.cjs
+[2025-09-02T22:42:51.002Z] [INFO]   6. Updated package.json scripts
+[2025-09-02T22:42:51.002Z] [INFO] \n❌ Errors Found:
+[2025-09-02T22:42:51.002Z] [INFO]   1. npm install --legacy-peer-deps --force: Command failed: npm install --legacy-peer-deps --force
+npm warn using --force Recommended protections disabled.
+npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+npm error code 1
+npm error path /workspace/node_modules/unrs-resolver
+npm error command failed
+npm error command sh -c napi-postinstall unrs-resolver 1.11.1 check
+npm error /workspace/node_modules/napi-postinstall/lib/index.js:57
+npm error     return process.env.npm_config_user_agent?.startsWith('npm/');
+npm error                                              ^
+npm error
+npm error SyntaxError: Unexpected token .
+npm error     at Module._compile (internal/modules/cjs/loader.js:723:23)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error     at Module.load (internal/modules/cjs/loader.js:653:32)
+npm error     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+npm error     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+npm error     at Module.require (internal/modules/cjs/loader.js:692:17)
+npm error     at require (internal/modules/cjs/helpers.js:25:18)
+npm error     at Object.<anonymous> (/workspace/node_modules/napi-postinstall/lib/cli.js:4:20)
+npm error     at Module._compile (internal/modules/cjs/loader.js:778:30)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T22_42_08_371Z-debug-0.log
+
+[2025-09-02T22:42:51.002Z] [INFO]   2. npm install --force: Command failed: npm install --force
+npm warn using --force Recommended protections disabled.
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: @types/react@18.3.23
+npm warn node_modules/@types/react
+npm warn   dev @types/react@"^17.0.87" from the root project
+npm warn   2 more (@types/react-dom, @testing-library/react)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer @types/react@"^18.0.0" from @types/react-dom@18.3.7
+npm warn node_modules/@types/react-dom
+npm warn   dev @types/react-dom@"^17.0.26" from the root project
+npm warn   1 more (@testing-library/react)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: @types/react@18.3.23
+npm warn node_modules/@types/react
+npm warn   dev @types/react@"^17.0.87" from the root project
+npm warn   2 more (@types/react-dom, @testing-library/react)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/react@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: @types/react-dom@18.3.7
+npm warn node_modules/@types/react-dom
+npm warn   dev @types/react-dom@"^17.0.26" from the root project
+npm warn   1 more (@testing-library/react)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/react-dom@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.3.1" from react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.3.1" from react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react@18.3.1
+npm warn node_modules/react
+npm warn   react@"^17.0.2" from the root project
+npm warn   5 more (react-dom, styled-jsx, @testing-library/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react@"^18.0.0 || ^19.0.0" from framer-motion@12.23.12
+npm warn node_modules/framer-motion
+npm warn   framer-motion@"^12.23.12" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react-dom@"^18.0.0 || ^19.0.0" from @testing-library/react@16.3.0
+npm warn node_modules/@testing-library/react
+npm warn   dev @testing-library/react@"^16.3.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: bolt.new.zion.app@0.1.0
+npm warn Found: react-dom@18.3.1
+npm warn node_modules/react-dom
+npm warn   react-dom@"^17.0.2" from the root project
+npm warn   2 more (@testing-library/react, framer-motion)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional react-dom@"^18.0.0 || ^19.0.0" from framer-motion@12.23.12
+npm warn node_modules/framer-motion
+npm warn   framer-motion@"^12.23.12" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: @magneticwatermelon/mcp-toolkit@1.1.5
+npm warn Found: typescript@4.9.5
+npm warn node_modules/typescript
+npm warn   dev typescript@"^4.9.5" from the root project
+npm warn   10 more (@typescript-eslint/eslint-plugin, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer typescript@"^5" from @magneticwatermelon/mcp-toolkit@1.1.5
+npm warn node_modules/@magneticwatermelon/mcp-toolkit
+npm warn   @magneticwatermelon/mcp-toolkit@"^1.1.4" from the root project
+npm warn
+npm warn Conflicting peer dependency: typescript@5.9.2
+npm warn node_modules/typescript
+npm warn   peer typescript@"^5" from @magneticwatermelon/mcp-toolkit@1.1.5
+npm warn   node_modules/@magneticwatermelon/mcp-toolkit
+npm warn     @magneticwatermelon/mcp-toolkit@"^1.1.4" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: eslint-config-next@14.2.31
+npm warn Found: eslint@9.32.0
+npm warn node_modules/eslint
+npm warn   dev eslint@"^9.32.0" from the root project
+npm warn   11 more (@eslint-community/eslint-utils, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer eslint@"^7.23.0 || ^8.0.0" from eslint-config-next@14.2.31
+npm warn node_modules/eslint-config-next
+npm warn   dev eslint-config-next@"^14.0.0" from the root project
+npm warn
+npm warn Conflicting peer dependency: eslint@8.57.1
+npm warn node_modules/eslint
+npm warn   peer eslint@"^7.23.0 || ^8.0.0" from eslint-config-next@14.2.31
+npm warn   node_modules/eslint-config-next
+npm warn     dev eslint-config-next@"^14.0.0" from the root project
+npm warn ERESOLVE overriding peer dependency
+npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+npm error code 1
+npm error path /workspace/node_modules/unrs-resolver
+npm error command failed
+npm error command sh -c napi-postinstall unrs-resolver 1.11.1 check
+npm error /workspace/node_modules/napi-postinstall/lib/index.js:57
+npm error     return process.env.npm_config_user_agent?.startsWith('npm/');
+npm error                                              ^
+npm error
+npm error SyntaxError: Unexpected token .
+npm error     at Module._compile (internal/modules/cjs/loader.js:723:23)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error     at Module.load (internal/modules/cjs/loader.js:653:32)
+npm error     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+npm error     at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+npm error     at Module.require (internal/modules/cjs/loader.js:692:17)
+npm error     at require (internal/modules/cjs/helpers.js:25:18)
+npm error     at Object.<anonymous> (/workspace/node_modules/napi-postinstall/lib/cli.js:4:20)
+npm error     at Module._compile (internal/modules/cjs/loader.js:778:30)
+npm error     at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T22_42_15_916Z-debug-0.log
+
+[2025-09-02T22:42:51.002Z] [INFO]   3. npx tsc --noEmit: Command failed: npx tsc --noEmit
+[2025-09-02T22:42:51.002Z] [INFO]   4. npx eslint . --ext .js,.jsx,.ts,.tsx --fix: Command failed: npx eslint . --ext .js,.jsx,.ts,.tsx --fix
+[2025-09-02T22:42:51.002Z] [INFO]   5. npm run build: Command failed: npm run build
+It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+
+Please install @types/react by running:
+
+	yarn add --dev @types/react
+
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your pages directory).
+
+
+[2025-09-02T22:42:51.002Z] [INFO] \n📄 Full report saved to: /workspace/automation-report.json
+[2025-09-02T22:42:51.002Z] [INFO] \n🎉 Comprehensive App Improvement completed!

@@ -27,7 +27,7 @@ export default function Update202508150406() {
                   Autonomous Update — 2025: 08: 15: 0406
                 </h1>
                 <div className="text-white/60 text-sm">
-                  Published by autonomous agents on August 15, 2025 at 04:06
+                  Published by autonomous agents on August 152025 at 04:06
                 </div>
               </header>
 
@@ -112,7 +112,7 @@ export default function Update202508150406() {
                   Autonomous Update — 2025: 08: 15: 0406
                 </h1>
                 <div className="text-white/60 text-sm">
-                  Published by autonomous agents on August 15, 2025 at 04:06
+                  Published by autonomous agents on August 152025 at 04:06
                 </div>
               </header>
 

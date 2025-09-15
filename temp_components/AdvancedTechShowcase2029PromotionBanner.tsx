@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Rocket, 
-  Star, 
-  X, 
+  Brain
+  Zap
+  Globe
+  Shield
+  Rocket
+  Star
+  X
   Play,
   ArrowRight,
   Sparkles,
@@ -21,8 +21,8 @@ import {
 } from 'lucide-react';
 
 const AdvancedTechShowcase2029PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     {
@@ -52,27 +52,27 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
   ];
 
   const technologies = [
-    { name: 'Synthetic Consciousness', icon: Brain },
-    { name: 'Quantum Processing', icon: Cpu },
-    { name: 'Reality Manipulation', icon: Globe },
-    { name: 'Ethical AI', icon: Shield }
+    { name: 'Synthetic Consciousness'icon: Brain },
+    { name: 'Quantum Processing'icon: Cpu },
+    { name: 'Reality Manipulation'icon: Globe },
+    { name: 'Ethical AI'icon: Shield }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white overflow-hidden"
       >
         {/* Background Effects */}
@@ -93,7 +93,7 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 2repeat: Infinityease: "linear" }}
                     className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center"
                   >
                     <Sparkles className="w-4 h-4 text-white" />
@@ -110,7 +110,7 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
                 </h2>
 
                 <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl">
-                  Discover AI consciousness, quantum neural networks, and omniversal computing 
+                  Discover AI consciousnessquantum neural networksand omniversal computing 
                   technologies that are reshaping reality itself.
                 </p>
 
@@ -119,9 +119,9 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentFeature}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
@@ -162,27 +162,27 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
                   {/* Main Visual */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 2, 0]
+                      y: [0-10],
+                      rotate: [020]
                     }}
                     transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
+                      duration: 4
+                      repeat: Infinity
                       ease: "easeInOut" 
                     }}
                     className="relative bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 backdrop-blur-sm border border-indigo-500/30"
                   >
                     {/* Floating Technology Icons */}
-                    {technologies.map((tech, index) => (
+                    {technologies.map((techindex) => (
                       <motion.div
                         key={tech.name}
                         animate={{ 
-                          y: [0, -15, 0],
-                          x: [0, 10, 0]
+                          y: [0-150],
+                          x: [010]
                         }}
                         transition={{ 
-                          duration: 3 + index * 0.5, 
-                          repeat: Infinity, 
+                          duration: 3 + index * 0.5
+                          repeat: Infinity
                           ease: "easeInOut",
                           delay: index * 0.5
                         }}
@@ -206,7 +206,7 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
                         Advanced Technology
                       </div>
                       <div className="flex justify-center gap-2 mb-4">
-                        {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map((_i) => (
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
@@ -260,7 +260,7 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
             className="h-full bg-gradient-to-r from-indigo-500 to-purple-500"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, ease: "linear" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </motion.div>

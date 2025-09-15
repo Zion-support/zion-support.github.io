@@ -1,5 +1,9 @@
 import { useState } from "react";
+<<<<<<< HEAD
+import { QuoteFormDataListingItemServiceType } from "@/types/quotes";
+=======
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Search } from "lucide-react";
@@ -12,15 +16,28 @@ interface ServiceTypeStepProps {
 
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
+<<<<<<< HEAD
+  { id: "service-1"title: "AI Development"category: "Services"image: "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format" },
+  { id: "service-2"title: "Cloud Migration"category: "Services"image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format" },
+  { id: "talent-1"title: "AI Engineer"category: "Talents"image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format" },
+  { id: "talent-2"title: "Data Scientist"category: "Talents"image: "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format" },
+  { id: "equipment-1"title: "Workstation"category: "Equipment"image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format" },
+  { id: "equipment-2"title: "Server Rack"category: "Equipment"image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" }];
+
+export function ServiceTypeStep({ formDataupdateFormData }: ServiceTypeStepProps) {
+  const [searchQuerysetSearchQuery] = useState("");
+=======
   { id: "service-1", title: "AI Development", category: "Services", image: "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format" },
   { id: "service-2", title: "Cloud Migration", category: "Services", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format" },
   { id: "talent-1", title: "AI Engineer", category: "Talents", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format" },
   { id: "talent-2", title: "Data Scientist", category: "Talents", image: "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format" },
   { id: "equipment-1", title: "Workstation", category: "Equipment", image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format" },
-  { id: "equipment-2", title: "Server Rack", category: "Equipment", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" }];
+  { id: "equipment-2", title: "Server Rack", category: "Equipment", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" },
+];
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -60,7 +77,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             onClick={() => handleTypeSelect("service")}
           >
             <h4 className="font-medium text-white">Services</h4>
+<<<<<<< HEAD
+            <p className="text-sm text-zion-slate-light">AI solutionsconsultingdevelopment</p>
+=======
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
+>>>>>>> origin/auto/autonomy-17186719616
           </Card>
           
           <Card 
@@ -72,7 +93,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             onClick={() => handleTypeSelect("talent")}
           >
             <h4 className="font-medium text-white">Talent</h4>
+<<<<<<< HEAD
+            <p className="text-sm text-zion-slate-light">AI specialistsdevelopersconsultants</p>
+=======
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
+>>>>>>> origin/auto/autonomy-17186719616
           </Card>
           
           <Card 
@@ -84,7 +109,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             onClick={() => handleTypeSelect("equipment")}
           >
             <h4 className="font-medium text-white">Equipment</h4>
+<<<<<<< HEAD
+            <p className="text-sm text-zion-slate-light">Serversworkstationspecialized hardware</p>
+=======
             <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
+>>>>>>> origin/auto/autonomy-17186719616
           </Card>
         </div>
       </div>

@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  TrendingUp, 
-  Clock, 
-  Star, 
-  BookOpen, 
-  Play, 
+  Search
+  Filter
+  TrendingUp
+  Clock
+  Star
+  BookOpen
+  Play
   Download,
   Share2,
   Heart,
@@ -27,20 +28,20 @@ import {
 } from 'lucide-react';
 
 const AdvancedContentDiscoveryWidget2026 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
-  const [showFilters, setShowFilters] = useState(false);
-  const [favorites, setFavorites] = useState(new Set());
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [sortBysetSortBy] = useState('trending');
+  const [showFiltersetShowFilters] = useState(false);
+  const [favoritesetFavorites] = useState(new Set());
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-innovations', name: 'AI Innovations', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, color: 'from-cyan-500 to-teal-500' },
-    { id: 'automation', name: 'Automation', icon: Rocket, color: 'from-orange-500 to-red-500' },
-    { id: 'predictions', name: 'Future Predictions', icon: Target, color: 'from-green-500 to-emerald-500' },
-    { id: 'case-studies', name: 'Case Studies', icon: BookOpen, color: 'from-indigo-500 to-purple-500' },
-    { id: 'tutorials', name: 'Tutorials', icon: Play, color: 'from-yellow-500 to-orange-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecolor: 'from-blue-500 to-cyan-500' },
+    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-cyan-500 to-teal-500' },
+    { id: ''automation', 'name: ''Automation', 'icon: Rocketcolor: 'from-orange-500 to-red-500' },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Targetcolor: 'from-green-500 to-emerald-500' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: Playcolor: 'from-yellow-500 to-orange-500' }
   ];
 
   const contentItems = [
@@ -56,7 +57,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       featured: true,
       trending: true,
-      tags: ['AI', 'Neural Networks', 'Consciousness', 'Machine Learning'],
+      tags: [', 'AI', 'Neural 'Networks', 'Consciousness'Machine Learning'],
       author: 'Dr. Sarah Chen',
       publishedAt: '2026-01-15',
       thumbnail: '/api/placeholder/400/250'
@@ -73,7 +74,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       featured: true,
       trending: true,
-      tags: ['Quantum Computing', 'AI', 'Fusion', 'Computational Power'],
+      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Computational Power'],
       author: 'Prof. Michael Rodriguez',
       publishedAt: '2026-01-12',
       thumbnail: '/api/placeholder/400/250'
@@ -90,7 +91,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.7,
       featured: false,
       trending: true,
-      tags: ['Automation', 'Business', 'Operations', 'Implementation'],
+      tags: [', 'Automation', 'Business', 'Operations', 'Implementation'],
       author: 'Alex Thompson',
       publishedAt: '2026-01-10',
       thumbnail: '/api/placeholder/400/250'
@@ -107,7 +108,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       featured: true,
       trending: false,
-      tags: ['Predictions', 'AI Consciousness', 'Future', 'Society'],
+      tags: [', 'Predictions', 'AI 'Consciousness', 'Future'Society'],
       author: 'Dr. Elena Volkov',
       publishedAt: '2026-01-08',
       thumbnail: '/api/placeholder/400/250'
@@ -124,7 +125,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.6,
       featured: false,
       trending: true,
-      tags: ['Case Study', 'Enterprise', 'ROI', 'Transformation'],
+      tags: ['Case 'Study', 'Enterprise', 'ROI', 'Transformation'],
       author: 'Jennifer Walsh',
       publishedAt: '2026-01-05',
       thumbnail: '/api/placeholder/400/250'
@@ -141,7 +142,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       featured: false,
       trending: false,
-      tags: ['Tutorial', 'Neural Networks', 'Hands-on', 'Learning'],
+      tags: [', 'Tutorial', 'Neural 'Networks', 'Hands-'on', 'Learning'],
       author: 'David Kim',
       publishedAt: '2026-01-03',
       thumbnail: '/api/placeholder/400/250'
@@ -156,7 +157,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedContent = [...filteredContent].sort((a, b) => {
+  const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
       case 'trending':
         return b.views - a.views;
@@ -221,7 +222,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Explore cutting-edge innovations, predictions, and solutions with our intelligent content discovery system.
+            Explore cutting-edge innovationspredictionsand solutions with our intelligent content discovery system.
           </p>
         </div>
 
@@ -233,7 +234,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search content, tags, or authors..."
+                placeholder="Search contentagsor authors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -290,7 +291,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {sortedContent.map((item, index) => {
+            {sortedContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
                 <motion.div
@@ -298,7 +299,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`relative group cursor-pointer ${
                     item.featured ? 'lg:col-span-2' : ''
                   }`}
@@ -365,7 +366,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                        {item.tags.slice(03).map((tagIndex) => (
                           <span
                             key={tagIndex}
                             className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"

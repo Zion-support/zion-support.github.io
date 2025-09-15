@@ -6,7 +6,7 @@ const AI2035BreakthroughContentShowcase = () => {
     {
       id: 1,
       title: "AI 2035 Matter Creation",
-      description: "Revolutionary AI systems that can create matter from pure energy, achieving infinite ROI through reality manipulation.",
+      description: "Revolutionary AI systems that can create matter from pure energyachieving infinite ROI through reality manipulation.",
       category: "Matter Creation",
       roi: "∞",
       status: "BREAKTHROUGH",
@@ -64,19 +64,19 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Quantum AI', 'Consciousness', 'Revolutionary', '2035'],
+      tags: ['Quantum 'AI', 'Consciousness'Revolutionary'2035'],
       readTime: '15 min read',
       publishDate: '2025-01-17'
     },
     {
       id: 'ai-2035-matter-creation',
       title: 'AI 2035: Matter Creation Technology',
-      description: 'Revolutionary AI systems that can create matter from pure energy, transforming manufacturing and space exploration.',
+      description: 'Revolutionary AI systems that can create matter from pure energytransforming manufacturing and space exploration.',
       category: 'Revolutionary Technology',
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Matter Creation', 'Manufacturing', 'Space Tech', '2035'],
+      tags: ['Matter 'Creation', 'Manufacturing'Space Tech'2035'],
       readTime: '12 min read',
       publishDate: '2025-01-17'
     },
@@ -100,7 +100,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Peace', 'Conflict Resolution', 'Universal', '2035'],
+      tags: [', 'Peace', 'Conflict 'Resolution', 'Universal'2035'],
       readTime: '20 min read',
       publishDate: '2025-01-17'
     },
@@ -112,14 +112,14 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Galaxy', 'Space Exploration', 'Expansion', '2035'],
+      tags: [', 'Galaxy', 'Space 'Exploration', 'Expansion'2035'],
       readTime: '16 min read',
       publishDate: '2025-01-17'
     },
     {
       id: 'ai-2035-immortality-protocol',
       title: 'AI 2035: Immortality Protocol Achievement',
-      description: 'Revolutionary AI breakthrough that achieved digital immortality, preserving human consciousness indefinitely.',
+      description: 'Revolutionary AI breakthrough that achieved digital immortalitypreserving human consciousness indefinitely.',
       category: 'Revolutionary Life Extension',
       roi: 'INFINITE',
       featured: true,
@@ -165,25 +165,61 @@ const AI2035BreakthroughContentShowcase = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold mb-4">
+            🚀 REVOLUTIONARY BREAKTHROUGH
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             AI 2035 Breakthrough Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore revolutionary AI 2035 technologies that are reshaping the future of consciousness, quantum computing, and universal intelligence.
+            Explore revolutionary AI 2035 technologies that are reshaping the future of consciousnessquantum computingand universal intelligence.
           </p>
         </div>
 
-        {/* Content Grid */}
+        {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {breakthroughContent.map((content) => (
-            <div
-              key={content.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100"
-            >
-              {/* Image/Icon */}
-              <div className={`h-48 bg-gradient-to-br ${content.gradient} flex items-center justify-center text-6xl`}>
-                {content.image}
+            <div key={content.id} className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold rounded-full">
+                    {content.category}
+                  </span>
+                  <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold rounded-full">
+                    {content.roi} ROI
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-purple-200 transition-colors">
+                  {content.title}
+                </h3>
+                <p className="text-purple-100 mb-4 text-sm leading-relaxed">
+                  {content.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {content.tags.map((tag) => (
+                    <span key={tag} className="px-2 py-1 bg-white/20 text-white text-xs rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between text-sm text-purple-200">
+                  <span>{content.readTime}</span>
+                  <span>{content.publishDate}</span>
+                </div>
+                <Link
+                  to={`/blog/${content.id}`}
+                  className="mt-4 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+                >
+                  Read More
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
+            </div>
+          ))}
+        </div>
               
               {/* Content */}
               <div className="p-6">

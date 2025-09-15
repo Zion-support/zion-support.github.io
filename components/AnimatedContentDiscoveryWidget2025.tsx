@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, CheckCircle, Rocket, Brain, Cpu, Target, BarChart3, Search, Filter, Clock, Eye } from 'lucide-react';
+ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3SearchFilterClockEye
 
 export default function AnimatedContentDiscoveryWidget2025() {
-  const [currentContent, setCurrentContent] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentContentsetCurrentContent] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const contentItems = [
     {
@@ -69,9 +70,9 @@ export default function AnimatedContentDiscoveryWidget2025() {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % contentItems.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentItem = contentItems[currentContent];
 
@@ -87,7 +88,7 @@ export default function AnimatedContentDiscoveryWidget2025() {
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Discovery</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Explore our revolutionary AI content library. Discover breakthrough technologies, success stories, and tools that can transform your business.
+            Explore our revolutionary AI content library. Discover breakthrough technologiesuccess storiesand tools that can transform your business.
           </p>
         </div>
 
@@ -124,7 +125,7 @@ export default function AnimatedContentDiscoveryWidget2025() {
 
               {/* Content Indicators */}
               <div className="flex justify-center mt-6 space-x-2">
-                {contentItems.map((_, index) => (
+                {contentItems.map((_index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentContent(index)}
@@ -146,7 +147,7 @@ export default function AnimatedContentDiscoveryWidget2025() {
                 </div>
               </div>
 
-              {contentItems.map((item, index) => (
+              {contentItems.map((itemindex) => (
                 <div
                   key={index}
                   className={`p-4 rounded-lg border-2 transition-all duration-300 cursor-pointer ${
@@ -208,7 +209,7 @@ export default function AnimatedContentDiscoveryWidget2025() {
               </div>
             </div>
             <p className="text-gray-600 mb-4">
-              Filter content by ROI, industry, technology type, and implementation timeline.
+              Filter content by ROIindustrytechnology typeand implementation timeline.
             </p>
             <Link href="/filters" className="text-blue-600 hover:text-blue-700 font-semibold">
               Explore Filters →

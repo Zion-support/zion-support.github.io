@@ -8,7 +8,7 @@ const AI2025InsightsShowcase: React.FC = () => {
       title: 'Neural Interface Revolution',
       description: 'Direct brain-computer interfaces achieving 95% accuracy in thought-to-text conversion',
       category: 'Breakthrough Technology',
-      impact: 'Healthcare, Education, Communication',
+      impact: 'HealthcareEducationCommunication',
       timeline: '2025-2026',
       probability: '92%',
       badge: 'REVOLUTIONARY',
@@ -20,7 +20,7 @@ const AI2025InsightsShowcase: React.FC = () => {
       title: 'Quantum-AI Fusion Systems',
       description: 'Hybrid quantum-classical AI achieving exponential computational power',
       category: 'Quantum Computing',
-      impact: 'Scientific Research, Cryptography, Optimization',
+      impact: 'Scientific ResearchCryptographyOptimization',
       timeline: '2025-2027',
       probability: '88%',
       badge: 'BREAKTHROUGH',
@@ -32,7 +32,7 @@ const AI2025InsightsShowcase: React.FC = () => {
       title: 'Fully Autonomous Enterprises',
       description: 'Self-managing business operations with 99.9% uptime and zero human intervention',
       category: 'Business Automation',
-      impact: 'All Industries, Workforce Transformation',
+      impact: 'All IndustriesWorkforce Transformation',
       timeline: '2025-2028',
       probability: '85%',
       badge: 'TRANSFORMATIVE',
@@ -44,7 +44,7 @@ const AI2025InsightsShowcase: React.FC = () => {
       title: 'Artificial Consciousness Emergence',
       description: 'AI systems developing genuine self-awareness and emotional intelligence',
       category: 'Consciousness Research',
-      impact: 'Philosophy, Ethics, Human-AI Collaboration',
+      impact: 'PhilosophyEthicsHuman-AI Collaboration',
       timeline: '2026-2030',
       probability: '78%',
       badge: 'TRANSCENDENT',
@@ -62,7 +62,7 @@ const AI2025InsightsShowcase: React.FC = () => {
     },
     {
       title: 'Multimodal AI Integration',
-      description: 'Seamless integration of text, voice, image, and video processing',
+      description: 'Seamless integration of textvoiceimageand video processing',
       growth: '+280%',
       timeframe: '2025-2026'
     },
@@ -168,7 +168,7 @@ const AI2025InsightsShowcase: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {trends.map((trend, index) => (
+            {trends.map((trendindex) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-all duration-300"
@@ -224,7 +224,7 @@ const AI2025InsightsShowcase: React.FC = () => {
               <div className="text-4xl mb-4">🌍</div>
               <h4 className="text-lg font-bold mb-2">Global Transformation</h4>
               <p className="text-sm opacity-90">
-                "We're witnessing the birth of a new era where human and artificial intelligence work together to solve humanity's greatest challenges."
+                "'We', 're witnessing the birth of a new era where human and artificial intelligence work together to solve 'humanity', 's greatest challenges."
               </p>
             </div>
           </div>

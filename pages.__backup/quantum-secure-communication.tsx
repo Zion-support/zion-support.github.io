@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
-  Brain, Database, TrendingUp as TrendingUpIcon, Users,
-  Target, BarChart, PieChart, Activity, Eye, Key
+  CheckCircleArrowRightStarTrendingUpPhoneZap
+  DollarSignShieldMailMapPinRocketLock,
+  BrainDatabaseTrendingUp as TrendingUpIconUsers,
+  TargetBarChartPieChartActivityEyeKey
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -27,7 +27,7 @@ export default function QuantumSecureCommunication() {
     'Secure file sharing and collaboration tools',
     'Real-time encrypted messaging and video calls',
     'Audit trails and compliance reporting',
-    'Multi-platform support (Web, Mobile, Desktop)',
+    'Multi-platform support (WebMobileDesktop)',
     'Integration with existing communication tools',
     'Advanced threat detection and monitoring',
     '24/7 security monitoring and support'
@@ -42,13 +42,13 @@ export default function QuantumSecureCommunication() {
   ];
 
   const integrations = [
-    'Slack', 'Microsoft Teams', 'Zoom', 'Email systems', 
+    'Slack'Microsoft Teams'Zoom'Email systems'
     'File storage platforms'
   ];
 
   const technology = [
-    'Quantum Computing', 'Post-Quantum Cryptography', 'React', 'Node.js', 
-    'WebRTC', 'WebAssembly', 'Docker', 'Kubernetes'
+    'Quantum Computing'Post-Quantum Cryptography'React'Node.js'
+    'WebRTC'WebAssembly'Docker'Kubernetes'
   ];
 
   return (
@@ -64,9 +64,9 @@ export default function QuantumSecureCommunication() {
         <Head>
           <title>Quantum-Secure Communication - Zion Tech Group | Unbreakable Encryption</title>
           <meta name="description" content="Unbreakable encryption for the quantum era with quantum key distribution and quantum-resistant protocols. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="quantum secure communication, quantum encryption, quantum key distribution, post-quantum cryptography, secure messaging, quantum security" />
+          <meta name="keywords" content="quantum secure communicationquantum encryptionquantum key distributionpost-quantum cryptographysecure messagingquantum security" />
           <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
+          <meta name="robots" content="indexfollow" />
           <meta property="og:title" content="Quantum-Secure Communication - Zion Tech Group" />
           <meta property="og:description" content="Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950" />
           <meta property="og:url" content="https://ziontechgroup.com/quantum-secure-communication" />
@@ -80,13 +80,13 @@ export default function QuantumSecureCommunication() {
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }} className="text-center mb-16">
               <motion.div
-                initial={{ scale: 0.8, rotate: -5 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.2 }} className="mb-8">
+                initial={{ scale: 0.8rotate: -5 }}
+                animate={{ scale: 1rotate: 0 }}
+                transition={{ duration: 1delay: 0.2 }} className="mb-8">
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
                   <Lock className="w-12 h-12 text-white relative z-10" />
@@ -95,35 +95,35 @@ export default function QuantumSecureCommunication() {
               </motion.div>
 
               <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }} className="text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6">
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.3 }} className="text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6">
                 Quantum-Secure Communication
               </motion.h1>
 
               <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }} className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium">
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.4 }} className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium">
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
 
               <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.5 }}
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
-                Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.
+                Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communicationsensuring your data remains secure even against quantum computers.
               </motion.p>
 
               {/* Pricing and CTA */}
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.6 }} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }} className="bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2xl">
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -143,9 +143,9 @@ export default function QuantumSecureCommunication() {
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
+                  transition={{ duration: 0.2delay: 0.1 }}
                 >
                   <Button 
                     href="/contact" 
@@ -164,7 +164,7 @@ export default function QuantumSecureCommunication() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                transition={{ duration: 1delay: 0.8 }} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="text-center p-4">
                   <div className="text-3xl font-bold text-purple-400 mb-2">500% ROI</div>
                   <div className="text-gray-300">Average customer sees 500% ROI through avoided security breaches</div>
@@ -186,8 +186,8 @@ export default function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -201,14 +201,14 @@ export default function QuantumSecureCommunication() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ scale: 1.02, y: -5 }} className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
+                  whileHover={{ scale: 1.02y: -5 }} className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
                       <CheckCircle className="w-5 h-5 text-white" />
@@ -227,8 +227,8 @@ export default function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -242,14 +242,14 @@ export default function QuantumSecureCommunication() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCaseindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ scale: 1.02, y: -5 }} className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300">
+                  whileHover={{ scale: 1.02y: -5 }} className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
                       <Shield className="w-5 h-5 text-white" />
@@ -270,8 +270,8 @@ export default function QuantumSecureCommunication() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Technology Stack */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0x: -20 }}
+                whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
@@ -281,12 +281,12 @@ export default function QuantumSecureCommunication() {
                   </span>
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {technology.map((tech, index) => (
+                  {technology.map((techindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      initial={{ opacity: 0y: 10 }}
+                      whileInView={{ opacity: 1y: 0 }}
+                      transition={{ duration: 0.4delay: index * 0.1 }}
                       viewport={{ once: true }} className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50">
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-gray-200">{tech}</span>
@@ -297,8 +297,8 @@ export default function QuantumSecureCommunication() {
 
               {/* Integrations */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0x: 20 }}
+                whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
@@ -308,12 +308,12 @@ export default function QuantumSecureCommunication() {
                   </span>
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {integrations.map((integration, index) => (
+                  {integrations.map((integrationindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      initial={{ opacity: 0y: 10 }}
+                      whileInView={{ opacity: 1y: 0 }}
+                      transition={{ duration: 0.4delay: index * 0.1 }}
                       viewport={{ once: true }} className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
@@ -329,8 +329,8 @@ export default function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -342,14 +342,14 @@ export default function QuantumSecureCommunication() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.1 }}
                 viewport={{ once: true }} className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
-                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month). 
-                  Our advantage: Quantum-resistant encryption, enterprise features, and compliance tools.
+                  Competitive with Signal (Free)Wickr ($4.99/user/month)and Wire ($5.83/user/month). 
+                  Our advantage: Quantum-resistant encryptionenterprise featuresand compliance tools.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -368,9 +368,9 @@ export default function QuantumSecureCommunication() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
                 viewport={{ once: true }} className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
                 <div className="text-4xl font-bold text-green-400 mb-4">500% ROI</div>
@@ -400,8 +400,8 @@ export default function QuantumSecureCommunication() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -414,7 +414,7 @@ export default function QuantumSecureCommunication() {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -432,9 +432,9 @@ export default function QuantumSecureCommunication() {
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
+                  transition={{ duration: 0.2delay: 0.1 }}
                 >
                   <Button 
                     href="/contact" 

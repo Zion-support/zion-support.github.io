@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+"use client";
+import React{ useEffectuseRef } from 'react';
+=======
 import React, { useEffect, useRef } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface UltraFuturisticBackground2036Props {
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
@@ -6,7 +11,11 @@ interface UltraFuturisticBackground2036Props {
 }
 
 export default function UltraFuturisticBackground2036({ 
+<<<<<<< HEAD
+  variant = 'default'
+=======
   variant = 'default', 
+>>>>>>> origin/auto/autonomy-17186719616
   intensity = 'medium' 
 }: UltraFuturisticBackground2036Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -42,10 +51,17 @@ export default function UltraFuturisticBackground2036({
     }> = [];
 
     const colors = {
+<<<<<<< HEAD
+      quantum: ['#00ffff'#0080ff'#8000ff'#ff0080'],
+      neon: ['#00ff00'#ff00ff'#ffff00'#00ffff'],
+      energy: ['#ff6600'#ff0066'#6600ff'#00ff66'],
+      data: ['#00ccff'#cc00ff'#ffcc00'#00ffcc']
+=======
       quantum: ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
       neon: ['#00ff00', '#ff00ff', '#ffff00', '#00ffff'],
       energy: ['#ff6600', '#ff0066', '#6600ff', '#00ff66'],
       data: ['#00ccff', '#cc00ff', '#ffcc00', '#00ffcc']
+>>>>>>> origin/auto/autonomy-17186719616
     };
 
     const intensityMultiplier = {
@@ -55,11 +71,19 @@ export default function UltraFuturisticBackground2036({
     };
 
     const variantConfig = {
+<<<<<<< HEAD
+      default: { particleCount: 50speed: 1size: 2 },
+      quantum: { particleCount: 80speed: 1.5size: 3 },
+      space: { particleCount: 100speed: 0.8size: 2.5 },
+      ai: { particleCount: 120speed: 2size: 1.5 },
+      cyber: { particleCount: 90speed: 1.8size: 2.2 }
+=======
       default: { particleCount: 50, speed: 1, size: 2 },
       quantum: { particleCount: 80, speed: 1.5, size: 3 },
       space: { particleCount: 100, speed: 0.8, size: 2.5 },
       ai: { particleCount: 120, speed: 2, size: 1.5 },
       cyber: { particleCount: 90, speed: 1.8, size: 2.2 }
+>>>>>>> origin/auto/autonomy-17186719616
     };
 
     const config = variantConfig[variant];
@@ -75,11 +99,39 @@ export default function UltraFuturisticBackground2036({
         size: Math.random() * config.size * multiplier,
         opacity: Math.random() * 0.8 + 0.2,
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
+<<<<<<< HEAD
+        type: variant === 'default' ? [', 'quantum', 'neon', 'energy', 'data'][Math.floor(Math.random() * 4)] as any : variant
+=======
         type: variant === 'default' ? ['quantum', 'neon', 'energy', 'data'][Math.floor(Math.random() * 4)] as any : variant
+>>>>>>> origin/auto/autonomy-17186719616
       });
     }
 
     const animate = () => {
+<<<<<<< HEAD
+      ctx.clearRect(0canvas.widthcanvas.height);
+
+      // Create gradient background
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2
+        canvas.height / 2
+        0
+        canvas.width / 2
+        canvas.height / 2
+        Math.max(canvas.widthcanvas.height) / 2
+      );
+      
+      gradient.addColorStop(0'rgba(00.8)');
+      gradient.addColorStop(0.3'rgba(2040.6)');
+      gradient.addColorStop(0.7'rgba(402060.4)');
+      gradient.addColorStop(1'rgba(00.8)');
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0canvas.widthcanvas.height);
+
+      // Update and draw particles
+      particles.forEach((particleindex) => {
+=======
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Create gradient background
@@ -102,6 +154,7 @@ export default function UltraFuturisticBackground2036({
 
       // Update and draw particles
       particles.forEach((particle, index) => {
+>>>>>>> origin/auto/autonomy-17186719616
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -117,6 +170,19 @@ export default function UltraFuturisticBackground2036({
         
         // Create glow effect
         const glowGradient = ctx.createRadialGradient(
+<<<<<<< HEAD
+          particle.xparticle.y0,
+          particle.xparticle.yparticle.size * 3
+        );
+        
+        glowGradient.addColorStop(0`${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2'0')}`);
+        glowGradient.addColorStop(0.5`${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2'0')}`);
+        glowGradient.addColorStop(1'transparent');
+        
+        ctx.fillStyle = glowGradient;
+        ctx.beginPath();
+        ctx.arc(particle.xparticle.yparticle.size * 30Math.PI * 2);
+=======
           particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3
         );
@@ -128,12 +194,17 @@ export default function UltraFuturisticBackground2036({
         ctx.fillStyle = glowGradient;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
+>>>>>>> origin/auto/autonomy-17186719616
         ctx.fill();
         
         // Draw core particle
         ctx.fillStyle = particle.color;
         ctx.beginPath();
+<<<<<<< HEAD
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
+=======
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+>>>>>>> origin/auto/autonomy-17186719616
         ctx.fill();
         
         ctx.restore();
@@ -141,17 +212,30 @@ export default function UltraFuturisticBackground2036({
         // Draw connections between nearby particles
         particles.slice(index + 1).forEach(otherParticle => {
           const distance = Math.sqrt(
+<<<<<<< HEAD
+            Math.pow(particle.x - otherParticle.x2) + 
+            Math.pow(particle.y - otherParticle.y2)
+=======
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
+>>>>>>> origin/auto/autonomy-17186719616
           );
           
           if (distance < 100 * multiplier) {
             const opacity = (100 - distance) / 100 * 0.3 * multiplier;
+<<<<<<< HEAD
+            ctx.strokeStyle = `rgba(0255${opacity})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particle.xparticle.y);
+            ctx.lineTo(otherParticle.xotherParticle.y);
+=======
             ctx.strokeStyle = `rgba(0, 255, 255, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+>>>>>>> origin/auto/autonomy-17186719616
             ctx.stroke();
           }
         });
@@ -159,23 +243,39 @@ export default function UltraFuturisticBackground2036({
 
       // Add floating geometric shapes
       if (variant === 'quantum' || variant === 'ai') {
+<<<<<<< HEAD
+        drawQuantumShapes(ctxcanvasmultiplier);
+=======
         drawQuantumShapes(ctx, canvas, multiplier);
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       // Add data streams for AI variant
       if (variant === 'ai') {
+<<<<<<< HEAD
+        drawDataStreams(ctxcanvasmultiplier);
+=======
         drawDataStreams(ctx, canvas, multiplier);
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       // Add space elements for space variant
       if (variant === 'space') {
+<<<<<<< HEAD
+        drawSpaceElements(ctxcanvasmultiplier);
+=======
         drawSpaceElements(ctx, canvas, multiplier);
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       animationRef.current = requestAnimationFrame(animate);
     };
 
+<<<<<<< HEAD
+    const drawQuantumShapes = (ctx: CanvasRenderingContext2Dcanvas: HTMLCanvasElementmultiplier: number) => {
+=======
     const drawQuantumShapes = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
+>>>>>>> origin/auto/autonomy-17186719616
       const time = Date.now() * 0.001;
       
       for (let i = 0; i < 3; i++) {
@@ -184,6 +284,21 @@ export default function UltraFuturisticBackground2036({
         const size = 30 * multiplier;
         
         ctx.save();
+<<<<<<< HEAD
+        ctx.translate(xy);
+        ctx.rotate(time + i);
+        
+        // Draw quantum circuit pattern
+        ctx.strokeStyle = `rgba(0255${0.3 * multiplier})`;
+        ctx.lineWidth = 2;
+        ctx.setLineDash([5]);
+        
+        ctx.beginPath();
+        ctx.moveTo(-size);
+        ctx.lineTo(size-size);
+        ctx.lineTo(size);
+        ctx.lineTo(-size);
+=======
         ctx.translate(x, y);
         ctx.rotate(time + i);
         
@@ -197,20 +312,31 @@ export default function UltraFuturisticBackground2036({
         ctx.lineTo(size, -size);
         ctx.lineTo(size, size);
         ctx.lineTo(-size, size);
+>>>>>>> origin/auto/autonomy-17186719616
         ctx.closePath();
         ctx.stroke();
         
         // Draw inner quantum dots
+<<<<<<< HEAD
+        ctx.fillStyle = `rgba(0255${0.6 * multiplier})`;
+        ctx.beginPath();
+        ctx.arc(0size * 0.30Math.PI * 2);
+=======
         ctx.fillStyle = `rgba(0, 255, 255, ${0.6 * multiplier})`;
         ctx.beginPath();
         ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2);
+>>>>>>> origin/auto/autonomy-17186719616
         ctx.fill();
         
         ctx.restore();
       }
     };
 
+<<<<<<< HEAD
+    const drawDataStreams = (ctx: CanvasRenderingContext2Dcanvas: HTMLCanvasElementmultiplier: number) => {
+=======
     const drawDataStreams = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
+>>>>>>> origin/auto/autonomy-17186719616
       const time = Date.now() * 0.001;
       
       for (let i = 0; i < 5; i++) {
@@ -219,14 +345,29 @@ export default function UltraFuturisticBackground2036({
         const endY = canvas.height * 0.9;
         
         ctx.save();
+<<<<<<< HEAD
+        ctx.strokeStyle = `rgba(02550${0.4 * multiplier})`;
+        ctx.lineWidth = 2;
+        ctx.setLineDash([105]);
+=======
         ctx.strokeStyle = `rgba(0, 255, 0, ${0.4 * multiplier})`;
         ctx.lineWidth = 2;
         ctx.setLineDash([10, 5]);
+>>>>>>> origin/auto/autonomy-17186719616
         
         // Animated data stream
         const streamY = startY + (endY - startY) * ((time * 0.5 + i * 0.2) % 1);
         
         ctx.beginPath();
+<<<<<<< HEAD
+        ctx.moveTo(xstartY);
+        ctx.lineTo(xstreamY);
+        ctx.stroke();
+        
+        // Data packets
+        ctx.fillStyle = `rgba(02550${0.8 * multiplier})`;
+        ctx.fillRect(x - 3streamY - 36);
+=======
         ctx.moveTo(x, startY);
         ctx.lineTo(x, streamY);
         ctx.stroke();
@@ -234,12 +375,17 @@ export default function UltraFuturisticBackground2036({
         // Data packets
         ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`;
         ctx.fillRect(x - 3, streamY - 3, 6, 6);
+>>>>>>> origin/auto/autonomy-17186719616
         
         ctx.restore();
       }
     };
 
+<<<<<<< HEAD
+    const drawSpaceElements = (ctx: CanvasRenderingContext2Dcanvas: HTMLCanvasElementmultiplier: number) => {
+=======
     const drawSpaceElements = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
+>>>>>>> origin/auto/autonomy-17186719616
       const time = Date.now() * 0.001;
       
       // Draw stars
@@ -249,15 +395,34 @@ export default function UltraFuturisticBackground2036({
         const brightness = (Math.sin(time + i) + 1) * 0.5;
         
         ctx.save();
+<<<<<<< HEAD
+        ctx.fillStyle = `rgba(255255${brightness * multiplier})`;
+        ctx.beginPath();
+        ctx.arc(xy10Math.PI * 2);
+=======
         ctx.fillStyle = `rgba(255, 255, 255, ${brightness * multiplier})`;
         ctx.beginPath();
         ctx.arc(x, y, 1, 0, Math.PI * 2);
+>>>>>>> origin/auto/autonomy-17186719616
         ctx.fill();
         ctx.restore();
       }
       
       // Draw nebula
       const nebulaGradient = ctx.createRadialGradient(
+<<<<<<< HEAD
+        canvas.width * 0.7canvas.height * 0.30,
+        canvas.width * 0.7canvas.height * 0.3200 * multiplier
+      );
+      
+      nebulaGradient.addColorStop(0'rgba(25502550.1)');
+      nebulaGradient.addColorStop(0.5'rgba(02550.05)');
+      nebulaGradient.addColorStop(1'transparent');
+      
+      ctx.fillStyle = nebulaGradient;
+      ctx.beginPath();
+      ctx.arc(canvas.width * 0.7canvas.height * 0.3200 * multiplier0Math.PI * 2);
+=======
         canvas.width * 0.7, canvas.height * 0.3, 0,
         canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier
       );
@@ -269,6 +434,7 @@ export default function UltraFuturisticBackground2036({
       ctx.fillStyle = nebulaGradient;
       ctx.beginPath();
       ctx.arc(canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI * 2);
+>>>>>>> origin/auto/autonomy-17186719616
       ctx.fill();
     };
 
@@ -278,9 +444,15 @@ export default function UltraFuturisticBackground2036({
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
+<<<<<<< HEAD
+      window.removeEventListener(', 'resize', 'resizeCanvas);
+    };
+  }[variantintensity]);
+=======
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [variant, intensity]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -300,7 +472,11 @@ export default function UltraFuturisticBackground2036({
         {/* Quantum field lines */}
         {variant === 'quantum' && (
           <div className="absolute inset-0">
+<<<<<<< HEAD
+            {[...Array(8)].map((_i) => (
+=======
             {[...Array(8)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={i}
                 className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent"
@@ -309,11 +485,21 @@ export default function UltraFuturisticBackground2036({
                   transform: 'translateX(-50%)'
                 }}
                 animate={{
-                  opacity: [0.3, 0.8, 0.3]}}
+<<<<<<< HEAD
+                  opacity: [0.30.80.3]}}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
                   delay: i * 0.5}}
+=======
+                  opacity: [0.3, 0.8, 0.3],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: i * 0.5,
+                }}
+>>>>>>> origin/auto/autonomy-17186719616
               />
             ))}
           </div>
@@ -322,18 +508,35 @@ export default function UltraFuturisticBackground2036({
         {/* AI neural network overlay */}
         {variant === 'ai' && (
           <div className="absolute inset-0">
+<<<<<<< HEAD
+            {[...Array(6)].map((_i) => (
+=======
             {[...Array(6)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={i}
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent"
                 style={{
+<<<<<<< HEAD
                   top: `${(i + 1) * 16.67}%`}}
                 animate={{
-                  opacity: [0.2, 0.6, 0.2]}}
+                  opacity: [0.20.60.2]}}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
                   delay: i * 0.8}}
+=======
+                  top: `${(i + 1) * 16.67}%`,
+                }}
+                animate={{
+                  opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  delay: i * 0.8,
+                }}
+>>>>>>> origin/auto/autonomy-17186719616
               />
             ))}
           </div>

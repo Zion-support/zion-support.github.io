@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Briefcase, 
+  Target
+  TrendingUp
+  Users
+  Briefcase
   Lightbulb,
   ArrowRight,
   CheckCircle2,
@@ -16,8 +17,8 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformationRevolution2025 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [counters, setCounters] = useState({
+  const [activeTabsetActiveTab] = useState(0);
+  const [countersetCounters] = useState({
     businesses: 0,
     revenue: 0,
     efficiency: 0,
@@ -95,14 +96,14 @@ const BusinessTransformationRevolution2025 = () => {
             start = target;
             clearInterval(timer);
           }
-          setCounters(prev => ({ ...prev, [key]: Math.floor(start) }));
-        }, 20);
+          setCounters(prev => ({ ...prev[key]: Math.floor(start) }));
+        }20);
       });
     };
 
-    const timer = setTimeout(animateCounters, 500);
+    const timer = setTimeout(animateCounters500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -168,11 +169,11 @@ const BusinessTransformationRevolution2025 = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {[
-            { icon: <Users className="w-8 h-8" />, value: counters.businesses.toLocaleString(), label: "Businesses Transformed", suffix: "+" },
-            { icon: <TrendingUp className="w-8 h-8" />, value: counters.revenue, label: "Average Revenue Increase", suffix: "%" },
-            { icon: <BarChart3 className="w-8 h-8" />, value: counters.efficiency, label: "Efficiency Improvement", suffix: "%" },
-            { icon: <Target className="w-8 h-8" />, value: counters.satisfaction, label: "Client Satisfaction", suffix: "%" }
-          ].map((stat, index) => (
+            { icon: <Users className="w-8 h-8" />value: counters.businesses.toLocaleString()label: "Businesses Transformed"suffix: "+" },
+            { icon: <TrendingUp className="w-8 h-8" />value: counters.revenuelabel: "Average Revenue Increase"suffix: "%" },
+            { icon: <BarChart3 className="w-8 h-8" />value: counters.efficiencylabel: "Efficiency Improvement"suffix: "%" },
+            { icon: <Target className="w-8 h-8" />value: counters.satisfactionlabel: "Client Satisfaction"suffix: "%" }
+          ].map((statindex) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -197,7 +198,7 @@ const BusinessTransformationRevolution2025 = () => {
             className="flex justify-center mb-8"
           >
             <div className="flex bg-white/10 backdrop-blur-lg rounded-full p-2">
-              {tabs.map((tab, index) => (
+              {tabs.map((tabindex) => (
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
@@ -234,11 +235,11 @@ const BusinessTransformationRevolution2025 = () => {
               </p>
               
               <div className="space-y-4">
-                {tabs[activeTab].content.benefits.map((benefit, index) => (
+                {tabs[activeTab].content.benefits.map((benefitindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center text-white"
                   >
@@ -268,7 +269,7 @@ const BusinessTransformationRevolution2025 = () => {
                 </div>
 
                 <motion.button
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center"
                 >
@@ -305,7 +306,7 @@ const BusinessTransformationRevolution2025 = () => {
               Join the Revolution Today
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl">
-              Don't get left behind. Transform your business with our proven methodologies 
+              'Don', 't get left behind. Transform your business with our proven methodologies 
               and join thousands of successful companies already experiencing exponential growth.
             </p>
             <motion.button

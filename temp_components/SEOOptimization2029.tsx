@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  Globe, 
-  Eye, 
-  Users, 
+  Search
+  TrendingUp
+  Target
+  BarChart3
+  Globe
+  Eye
+  Users
   MousePointer,
   Zap,
   CheckCircle,
@@ -34,10 +34,10 @@ import {
 } from 'lucide-react';
 
 const SEOOptimization2029 = () => {
-  const [activeMetric, setActiveMetric] = useState('ranking');
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisProgress, setAnalysisProgress] = useState(0);
-  const [currentKeyword, setCurrentKeyword] = useState(0);
+  const [activeMetricsetActiveMetric] = useState('ranking');
+  const [isAnalyzingsetIsAnalyzing] = useState(false);
+  const [analysisProgressetAnalysisProgress] = useState(0);
+  const [currentKeywordsetCurrentKeyword] = useState(0);
 
   const seoMetrics = {
     ranking: {
@@ -185,10 +185,10 @@ const SEOOptimization2029 = () => {
   ];
 
   const realTimeData = [
-    { label: 'Organic Traffic', value: '125K', change: '+12%', trend: 'up' },
-    { label: 'Average Position', value: '4.2', change: '-0.8', trend: 'up' },
-    { label: 'Click-Through Rate', value: '8.5%', change: '+1.2%', trend: 'up' },
-    { label: 'Conversion Rate', value: '3.2%', change: '+0.5%', trend: 'up' }
+    { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' },
+    { label: 'Average Position'value: '4.2'change: '-0.8'trend: 'up' },
+    { label: 'Click-Through Rate'value: '8.5%'change: '+1.2%'trend: 'up' },
+    { label: 'Conversion Rate'value: '3.2%'change: '+0.5%'trend: 'up' }
   ];
 
   useEffect(() => {
@@ -201,17 +201,17 @@ const SEOOptimization2029 = () => {
           }
           return prev + 3;
         });
-      }, 100);
+      }100);
       return () => clearInterval(interval);
     }
-  }, [isAnalyzing]);
+  }[isAnalyzing]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentKeyword(prev => (prev + 1) % keywords.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const startAnalysis = () => {
     setIsAnalyzing(true);
@@ -225,15 +225,15 @@ const SEOOptimization2029 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3repeat: Infinityease: "linear" }}
                 className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center"
               >
                 <Search className="w-6 h-6 text-white" />
@@ -292,12 +292,12 @@ const SEOOptimization2029 = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {realTimeData.map((metric, index) => (
+            {realTimeData.map((metricindex) => (
               <motion.div
                 key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 text-center"
               >
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
@@ -324,7 +324,7 @@ const SEOOptimization2029 = () => {
 
           {/* Metric Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(seoMetrics).map(([key, metric]) => (
+            {Object.entries(seoMetrics).map(([keymetric]) => (
               <motion.button
                 key={key}
                 whileHover={{ scale: 1.05 }}
@@ -346,9 +346,9 @@ const SEOOptimization2029 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeMetric}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
@@ -410,12 +410,12 @@ const SEOOptimization2029 = () => {
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8">
                 <h4 className="text-2xl font-bold mb-6">Optimization Strategies</h4>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {seoMetrics[activeMetric].improvements.map((improvement, index) => (
+                  {seoMetrics[activeMetric].improvements.map((improvementindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
                       className="flex items-center gap-3 p-4 bg-gray-700/50 rounded-lg"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -441,9 +441,9 @@ const SEOOptimization2029 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentKeyword}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0x: 50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto"
               >
@@ -500,7 +500,7 @@ const SEOOptimization2029 = () => {
 
             {/* Keyword Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
-              {keywords.map((_, index) => (
+              {keywords.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentKeyword(index)}
@@ -523,12 +523,12 @@ const SEOOptimization2029 = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {seoFeatures.map((feature, index) => (
+            {seoFeatures.map((featureindex) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 hover:bg-gray-800/70 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">

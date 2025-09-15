@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Shield, Globe, Cpu, Database } from 'lucide-react';
+BrainZapShieldGlobeCpuDatabase
 
 interface Feature {
   title: string;
@@ -14,37 +14,37 @@ const features: Feature[] = [
     title: "Neural Processing",
     description: "Advanced neural networks that mimic human brain functions",
     icon: Brain,
-    benefits: ["Pattern Recognition", "Learning Capabilities", "Adaptive Responses"]
+    benefits: ["Pattern Recognition"Learning Capabilities"Adaptive Responses"]
   },
   {
     title: "Quantum Computing",
     description: "Leveraging quantum mechanics for unprecedented processing power",
     icon: Zap,
-    benefits: ["Exponential Speed", "Complex Calculations", "Future-Ready"]
+    benefits: ["Exponential Speed"Complex Calculations"Future-Ready"]
   },
   {
     title: "Security First",
     description: "Built-in security protocols and privacy protection",
     icon: Shield,
-    benefits: ["Data Protection", "Privacy Controls", "Compliance Ready"]
+    benefits: ["Data Protection"Privacy Controls"Compliance Ready"]
   },
   {
     title: "Global Scale",
     description: "Designed to operate across multiple regions and time zones",
     icon: Globe,
-    benefits: ["Multi-Region", "24/7 Availability", "Localized Support"]
+    benefits: ["Multi-Region"24/7 Availability"Localized Support"]
   },
   {
     title: "High Performance",
     description: "Optimized for speed and efficiency in all operations",
     icon: Cpu,
-    benefits: ["Fast Processing", "Low Latency", "Scalable Architecture"]
+    benefits: ["Fast Processing"Low Latency"Scalable Architecture"]
   },
   {
     title: "Data Intelligence",
     description: "Advanced analytics and insights from your data",
     icon: Database,
-    benefits: ["Real-time Analytics", "Predictive Insights", "Data Visualization"]
+    benefits: ["Real-time Analytics"Predictive Insights"Data Visualization"]
   }
 ];
 
@@ -62,12 +62,12 @@ export default function AdvancedFeaturesShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -82,7 +82,7 @@ export default function AdvancedFeaturesShowcase() {
               </p>
               
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => (
+                {feature.benefits.map((benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center text-white/60">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}

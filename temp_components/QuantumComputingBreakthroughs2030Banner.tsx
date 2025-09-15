@@ -18,7 +18,7 @@ export default function QuantumComputingBreakthroughs2030Banner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
             Experience the revolutionary quantum computing breakthroughs that will reshape the future. 
-            <span className="text-cyan-400 font-bold">Error-corrected quantum computers</span>, quantum internet, and quantum-AI fusion await.
+            <span className="text-cyan-400 font-bold">Error-corrected quantum computers</span>quantum internetand quantum-AI fusion await.
           </p>
           
           {/* Key features */}

@@ -9,10 +9,17 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn("border-b"className)}
+=======
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
     className={cn("border-b", className)}
+>>>>>>> origin/auto/autonomy-17186719616
     {...props}
   />
 ))
@@ -21,7 +28,11 @@ AccordionItem.displayName = "AccordionItem"
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+<<<<<<< HEAD
+>(({ classNamechildren...props }ref) => (
+=======
 >(({ className, children, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
@@ -41,16 +52,28 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+<<<<<<< HEAD
+>(({ classNamechildren...props }ref) => (
+=======
 >(({ className, children, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <AccordionPrimitive.Content
     ref={ref}
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
+<<<<<<< HEAD
+    <div className={cn("pb-4 pt-0"className)}>{children}</div>
+=======
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
+>>>>>>> origin/auto/autonomy-17186719616
   </AccordionPrimitive.Content>
 ))
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
+<<<<<<< HEAD
+export { AccordionItemAccordionTriggerAccordionContent }
+=======
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+>>>>>>> origin/auto/autonomy-17186719616

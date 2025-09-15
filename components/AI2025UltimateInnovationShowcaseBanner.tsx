@@ -1,149 +1,122 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Brain, Zap, Target, Globe, Shield, Rocket } from 'lucide-react';
 
-export default function AI2025UltimateInnovationShowcaseBanner() {
+const AI2025UltimateInnovationShowcaseBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-400/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-purple-400/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-pink-400/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-1/4 w-28 h-28 bg-yellow-400/10 rounded-full animate-pulse delay-500"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          {/* Main heading with icon */}
-          <div className="flex items-center justify-center mb-6">
-            <Rocket className="w-10 h-10 text-cyan-400 mr-4 animate-bounce" />
-            <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI 2025 ULTIMATE INNOVATION SHOWCASE
-            </h2>
-            <Rocket className="w-10 h-10 text-cyan-400 ml-4 animate-bounce" />
+    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
+      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-bounce"></div>
+      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-pulse"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20">
+            <span className="text-sm font-medium text-yellow-300">🚀 NEW RELEASE</span>
           </div>
           
-          <p className="text-xl md:text-2xl mb-12 text-gray-300 max-w-5xl mx-auto">
-            Experience the most revolutionary AI breakthroughs, cutting-edge technologies, and transformative solutions that will reshape the future of business and humanity.
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-white to-blue-300 bg-clip-text text-transparent">
+            AI 2025 Ultimate Innovation Showcase
+          </h2>
+          
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover the groundbreaking AI innovations revolutionizing business in 2025. 
+            From quantum-neural fusion to autonomous enterprise systems, explore the future of technology.
           </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/blog/ai-2025-ultimate-innovation-showcase-latest-trends"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Read Full Article
+            </Link>
+            <Link
+              href="/case-studies/ai-2025-global-enterprise-transformation-3000-roi-ultimate-success"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
+            >
+              View Success Story
+            </Link>
+          </div>
+        </div>
 
-          {/* Innovation categories grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-purple-800/40 to-blue-800/40 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105">
-              <Brain className="w-10 h-10 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-cyan-300 mb-3">Neural Interface Revolution</h3>
-              <p className="text-sm text-gray-400 mb-4">Direct brain-computer interfaces enabling seamless human-AI collaboration</p>
-              <div className="flex justify-center">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              </div>
+        {/* Key Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-xl font-bold mb-3">Quantum-Neural Fusion</h3>
+            <p className="text-sm opacity-90">
+              10,000x faster processing with enhanced pattern recognition and real-time decision making.
+            </p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🏭</div>
+            <h3 className="text-xl font-bold mb-3">Autonomous Enterprise</h3>
+            <p className="text-sm opacity-90">
+              Self-managing business ecosystems that adapt, learn, and optimize operations automatically.
+            </p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🎯</div>
+            <h3 className="text-xl font-bold mb-3">Multimodal AI</h3>
+            <p className="text-sm opacity-90">
+              Advanced AI systems processing text, images, audio, and video for comprehensive insights.
+            </p>
+          </div>
+        </div>
+
+        {/* Success Metrics */}
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <h3 className="text-2xl font-bold text-center mb-8 text-yellow-300">Proven Results</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-green-400 mb-2">3,000%</div>
+              <div className="text-sm opacity-90">ROI Achieved</div>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-800/40 to-indigo-800/40 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:transform hover:scale-105">
-              <Zap className="w-10 h-10 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-purple-300 mb-3">Quantum AI Fusion</h3>
-              <p className="text-sm text-gray-400 mb-4">Revolutionary quantum computing integration with AI systems</p>
-              <div className="flex justify-center">
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-              </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">95%</div>
+              <div className="text-sm opacity-90">Error Reduction</div>
             </div>
-            
-            <div className="bg-gradient-to-br from-green-800/40 to-teal-800/40 backdrop-blur-sm rounded-xl p-6 border border-green-500/30 hover:border-green-400/60 transition-all duration-300 hover:transform hover:scale-105">
-              <Target className="w-10 h-10 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-green-300 mb-3">Autonomous Business Systems</h3>
-              <p className="text-sm text-gray-400 mb-4">Self-managing business operations with AI agents</p>
-              <div className="flex justify-center">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
+              <div className="text-sm opacity-90">Process Efficiency</div>
             </div>
-            
-            <div className="bg-gradient-to-br from-red-800/40 to-pink-800/40 backdrop-blur-sm rounded-xl p-6 border border-red-500/30 hover:border-red-400/60 transition-all duration-300 hover:transform hover:scale-105">
-              <Sparkles className="w-10 h-10 text-red-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-red-300 mb-3">Synthetic Intelligence</h3>
-              <p className="text-sm text-gray-400 mb-4">Next-generation AI with consciousness and creativity</p>
-              <div className="flex justify-center">
-                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-yellow-800/40 to-orange-800/40 backdrop-blur-sm rounded-xl p-6 border border-yellow-500/30 hover:border-yellow-400/60 transition-all duration-300 hover:transform hover:scale-105">
-              <Globe className="w-10 h-10 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-yellow-300 mb-3">Global Transformation</h3>
-              <p className="text-sm text-gray-400 mb-4">AI-powered solutions transforming industries worldwide</p>
-              <div className="flex justify-center">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-800/40 to-purple-800/40 backdrop-blur-sm rounded-xl p-6 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300 hover:transform hover:scale-105">
-              <Shield className="w-10 h-10 text-indigo-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-indigo-300 mb-3">Enterprise Security</h3>
-              <p className="text-sm text-gray-400 mb-4">Advanced AI-powered security systems</p>
-              <div className="flex justify-center">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
-              </div>
+            <div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
+              <div className="text-sm opacity-90">Projects Delivered</div>
             </div>
           </div>
+        </div>
 
-          {/* Success metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-sm text-gray-300">Enterprise Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">15,000%</div>
-              <div className="text-sm text-gray-300">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-sm text-gray-300">Uptime Guarantee</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">24/7</div>
-              <div className="text-sm text-gray-300">AI Support</div>
-            </div>
-          </div>
-
-          {/* Call to action buttons */}
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <p className="text-lg mb-6 opacity-90">
+            Ready to transform your business with cutting-edge AI solutions?
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-2025-ultimate-innovation-showcase" 
-              className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-10 py-5 rounded-lg font-semibold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Explore Innovation Showcase
-              <ArrowRight className="inline-block ml-3 group-hover:translate-x-1 transition-transform" />
+              Get Free Consultation
             </Link>
-            
-            <Link 
-              href="/contact" 
-              className="group border-2 border-pink-400 hover:bg-pink-400 hover:text-black px-10 py-5 rounded-lg font-semibold text-xl transition-all duration-300 transform hover:scale-105"
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
-              Start Your Transformation
-              <Rocket className="inline-block ml-3 group-hover:rotate-12 transition-transform" />
-            </Link>
-          </div>
-
-          {/* Additional links */}
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center">
-              <Target className="w-4 h-4 mr-2" />
-              Success Stories
-            </Link>
-            <Link href="/blog" className="text-purple-400 hover:text-purple-300 transition-colors flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
-              Latest Insights
-            </Link>
-            <Link href="/guides" className="text-pink-400 hover:text-pink-300 transition-colors flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              Implementation Guides
+              Explore Services
             </Link>
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent"></div>
-    </div>
+    </section>
   );
-}
+};
+
+export default AI2025UltimateInnovationShowcaseBanner;

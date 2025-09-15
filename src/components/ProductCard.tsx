@@ -7,7 +7,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
@@ -61,7 +62,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
 
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
-      extra: { product }});
+      extra: { product },
+    });
     return (
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
@@ -82,7 +84,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       toast({
         title: 'Login Required',
         description: 'Please log in to add items to your cart.',
-        variant: 'destructive'});
+        variant: 'destructive',
+      });
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
       return;
     }
@@ -92,7 +95,9 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       description: `${productTitle} has been added to your cart`,
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart')}});
+        onClick: () => router.push('/cart'),
+      },
+    });
   };
 
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
@@ -103,7 +108,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       setImageError(true);
       captureException(error, {
         product: product.id,
-        imageUrl});
+        imageUrl,
+      });
     }
   };
 

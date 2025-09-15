@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, TrendingUp, Users, Clock } from 'lucide-react';
+ArrowRightSparklesTrendingUpUsersClock
 
 export default function NewContent2025PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 rounded-2xl">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10 p-8 md:p-12">
         <div className="max-w-7xl mx-auto">
@@ -30,7 +30,7 @@ export default function NewContent2025PromotionBanner() {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Explore cutting-edge AI technologies, breakthrough case studies, and revolutionary insights that are reshaping industries in 2025.
+                Explore cutting-edge AI technologiesbreakthrough case studiesand revolutionary insights that are reshaping industries in 2025.
               </p>
               
               {/* Stats */}
@@ -83,7 +83,7 @@ export default function NewContent2025PromotionBanner() {
                   AI 2025: Latest Innovations and Breakthrough Technologies
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  Discover quantum AI fusion, neural interfaces, and autonomous systems revolutionizing industries.
+                  Discover quantum AI fusioneural interfacesand autonomous systems revolutionizing industries.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-gray-400 text-sm">

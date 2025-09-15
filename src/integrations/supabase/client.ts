@@ -1,48 +1,97 @@
 import { createClient } from '@supabase/supabase-js';
+import { Headers as NodeHeaders } from 'node-fetch';
+import { supabaseStorageAdapter } from './safeStorageAdapter';
 
-export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
+// Determine if an env var is missing or contains a placeholder value
+const isInvalid = (value?: string): boolean => {
+  if (!value) return true;
+  const lower = value.toLowerCase();
+  return (
+    lower.startsWith('your_supabase_url') ||
+    lower.startsWith('your_supabase_url_here') ||
+    lower === 'your_supabase_anon_key_here'
+  );
+};
+
+if (isInvalid(supabaseUrl) || isInvalid(supabaseAnonKey)) {
+  console.warn(
+    'Supabase environment variables are missing or placeholders. Using dummy credentials.'
+  );
 }
 
-// Utility to detect network connectivity. navigator.onLine is not reliable in
-// all environments, so we also try a small request with a short timeout.
-export const checkOnline = async (): Promise<boolean> => {
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    return false;
+const effectiveUrl = !isInvalid(supabaseUrl)
+  ? (supabaseUrl as string)
+  : 'http://localhost';
+const effectiveAnonKey = !isInvalid(supabaseAnonKey)
+  ? (supabaseAnonKey as string)
+  : 'public-anon-key';
+
+// Create Supabase client with proper configuration
+export const supabase = createClient(effectiveUrl, effectiveAnonKey, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    storage: supabaseStorageAdapter,
+  },
+  global: {
+    headers: {
+      'apikey': effectiveAnonKey
+    }
   }
+});
+
+// Helper function to access profiles table
+export const getFromProfiles = () => supabase.from('profiles');
+
+// Check if the browser is online. Gracefully handle environments where
+// `navigator` is undefined such as server side rendering or tests.
+export async function checkOnline(): Promise<boolean> {
   try {
-    const controller = new AbortController();
-    const id = setTimeout(() => controller.abort(), 3000);
-    await fetch('https://clients3.google.com/generate_204', {
-      mode: 'no-cors',
-      signal: controller.signal});
-    clearTimeout(id);
-    return true;
+    return typeof navigator !== 'undefined' && navigator.onLine;
   } catch {
     return false;
   }
-};
+}
 
-// Custom fetch wrapper to provide clearer errors when network requests fail
-export const safeFetch: typeof fetch = async (input, init) => {
+// Helper function for safe fetching with retries. Adds the Supabase API key
+// header while preserving any existing Headers instance passed in `options`.
+// Throws a consistent error message when the request ultimately fails.
+export async function safeFetch(url: string, options: RequestInit = {}) {
   if (!(await checkOnline())) {
-    throw new Error('No internet connection');
-  }
-  try {
-    return await fetch(input, init);
-  } catch (err) {
-    // Log the original error for debugging
-    console.error('Supabase fetch failed:', err);
     throw new Error('Failed to connect to Supabase');
   }
-};
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  global: { fetch: safeFetch }
-});
+  // Ensure 'fetchHeaders' is compatible with the global fetch
+  const fetchHeaders = new Headers(options.headers as HeadersInit);
 
-// Helper function to get profiles table
-export const getFromProfiles = () => supabase.from('profiles');
+  if (!fetchHeaders.has('apikey')) {
+    fetchHeaders.set('apikey', effectiveAnonKey); // Use effectiveAnonKey
+  }
+
+  const maxRetries = 3;
+  let lastError: any;
+
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await fetch(url, {
+        ...options,
+        headers: fetchHeaders, // Use the new 'fetchHeaders' variable
+      });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      return response;
+    } catch (error) {
+      lastError = error;
+      // Wait before retrying (exponential backoff)
+      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+    }
+  }
+
+  throw new Error('Failed to connect to Supabase');
+}

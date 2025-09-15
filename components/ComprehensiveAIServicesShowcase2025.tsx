@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Users, 
+  Brain
+  Zap
+  Shield
+  BarChart3
+  Users
   Target,
   Rocket,
   Award,
@@ -27,12 +28,12 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveAIServicesShowcase2025 = () => {
-  const [activeService, setActiveService] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeServicesetActiveService] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const services = [
     {
@@ -62,7 +63,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
     {
       id: 'predictive-analytics',
       title: 'Advanced Predictive Analytics',
-      description: 'Harness the power of AI to predict future trends, customer behavior, and business outcomes.',
+      description: 'Harness the power of AI to predict future trendscustomer behaviorand business outcomes.',
       icon: <BarChart3 className="w-8 h-8" />,
       features: [
         '95% accurate market predictions',
@@ -86,7 +87,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
     {
       id: 'ai-content-generation',
       title: 'Intelligent Content Generation',
-      description: 'Create high-quality, engaging content at scale with our advanced AI content generation platform.',
+      description: 'Create high-qualityengaging content at scale with our advanced AI content generation platform.',
       icon: <Lightbulb className="w-8 h-8" />,
       features: [
         'Multi-format content creation',
@@ -229,14 +230,14 @@ const ComprehensiveAIServicesShowcase2025 = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Choose from our comprehensive suite of AI services designed to accelerate growth, 
-            improve efficiency, and drive innovation across every aspect of your business.
+            Choose from our comprehensive suite of AI services designed to accelerate growth
+            improve efficiencyand drive innovation across every aspect of your business.
           </p>
         </motion.div>
 
         {/* Service Navigation */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-12">
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <button
               key={service.id}
               onClick={() => setActiveService(index)}
@@ -255,8 +256,8 @@ const ComprehensiveAIServicesShowcase2025 = () => {
         {/* Active Service Details */}
         <motion.div
           key={activeService}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0x: 50 }}
+          animate={{ opacity: 1x: 0 }}
           transition={{ duration: 0.5 }}
           className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12"
         >
@@ -328,7 +329,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   Key Features
                 </h4>
                 <div className="space-y-3">
-                  {services[activeService].features.map((feature, index) => (
+                  {services[activeService].features.map((featureindex) => (
                     <div key={index} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -344,7 +345,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   Business Benefits
                 </h4>
                 <div className="space-y-3">
-                  {services[activeService].benefits.map((benefit, index) => (
+                  {services[activeService].benefits.map((benefitindex) => (
                     <div key={index} className="flex items-start gap-3">
                       <Award className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{benefit}</span>
@@ -375,11 +376,11 @@ const ComprehensiveAIServicesShowcase2025 = () => {
 
         {/* All Services Grid */}
         <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -5 }}
+              whileHover={{ scale: 1.02y: -5 }}
               className="group"
             >
               <Link href={service.link}>

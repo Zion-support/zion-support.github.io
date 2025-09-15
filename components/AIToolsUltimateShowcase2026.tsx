@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Code, 
-  BarChart3, 
-  Search, 
-  Image, 
-  FileText, 
+  Brain
+  Zap
+  Code
+  BarChart3
+  Search
+  Image
+  FileText
   Video,
   Mic,
   Camera,
@@ -36,13 +37,13 @@ import {
 } from 'lucide-react';
 
 const AIToolsUltimateShowcase2026 = () => {
-  const [activeCategory, setActiveCategory] = useState('productivity');
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredTool, setHoveredTool] = useState(null);
+  const [activeCategorysetActiveCategory] = useState('productivity');
+  const [isVisiblesetIsVisible] = useState(false);
+  const [hoveredToolsetHoveredTool] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = {
     productivity: {
@@ -89,7 +90,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'AI Task Manager',
         description: 'Intelligent task prioritization and scheduling',
         icon: Target,
-        features: ['Auto-prioritization', 'Smart scheduling', 'Progress tracking'],
+        features: ['Auto-'prioritization', 'Smart 'scheduling', 'Progress tracking'],
         rating: 4.9,
         users: '50K+',
         price: 'Free',
@@ -99,7 +100,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Smart Document Processor',
         description: 'Extract and organize information from any document',
         icon: FileText,
-        features: ['OCR processing', 'Data extraction', 'Auto-categorization'],
+        features: ['OCR 'processing', 'Data 'extraction', 'Auto-categorization'],
         rating: 4.8,
         users: '25K+',
         price: '$29/mo',
@@ -107,9 +108,9 @@ const AIToolsUltimateShowcase2026 = () => {
       },
       {
         name: 'AI Meeting Assistant',
-        description: 'Transcribe, summarize, and action items from meetings',
+        description: 'Transcribesummarizeand action items from meetings',
         icon: Mic,
-        features: ['Live transcription', 'Auto-summaries', 'Action items'],
+        features: ['Live 'transcription', 'Auto-'summaries', 'Action items'],
         rating: 4.9,
         users: '75K+',
         price: '$49/mo',
@@ -119,7 +120,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Intelligent Email Manager',
         description: 'Smart email organization and response suggestions',
         icon: Globe,
-        features: ['Auto-categorization', 'Smart replies', 'Priority inbox'],
+        features: ['Auto-'categorization', 'Smart 'replies', 'Priority inbox'],
         rating: 4.7,
         users: '100K+',
         price: '$19/mo',
@@ -131,7 +132,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'AI Code Generator',
         description: 'Generate code from natural language descriptions',
         icon: Code,
-        features: ['Multi-language', 'Code review', 'Auto-testing'],
+        features: ['Multi-'language', 'Code 'review', 'Auto-testing'],
         rating: 4.9,
         users: '200K+',
         price: 'Free',
@@ -141,7 +142,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Smart Debugger',
         description: 'AI-powered debugging and error resolution',
         icon: Cpu,
-        features: ['Error detection', 'Fix suggestions', 'Performance analysis'],
+        features: ['Error 'detection', 'Fix 'suggestions', 'Performance analysis'],
         rating: 4.8,
         users: '150K+',
         price: '$39/mo',
@@ -151,7 +152,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'API Documentation Generator',
         description: 'Automatically generate comprehensive API docs',
         icon: Database,
-        features: ['Auto-generation', 'Interactive docs', 'Version control'],
+        features: ['Auto-'generation', 'Interactive 'docs', 'Version control'],
         rating: 4.7,
         users: '80K+',
         price: '$25/mo',
@@ -161,7 +162,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Code Quality Analyzer',
         description: 'Analyze and improve code quality with AI insights',
         icon: BarChart3,
-        features: ['Quality metrics', 'Refactoring suggestions', 'Best practices'],
+        features: ['Quality 'metrics', 'Refactoring 'suggestions', 'Best practices'],
         rating: 4.8,
         users: '120K+',
         price: '$35/mo',
@@ -173,7 +174,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Predictive Analytics Engine',
         description: 'Forecast trends and outcomes with machine learning',
         icon: TrendingUp,
-        features: ['Predictive modeling', 'Trend analysis', 'Risk assessment'],
+        features: ['Predictive 'modeling', 'Trend 'analysis', 'Risk assessment'],
         rating: 4.9,
         users: '60K+',
         price: '$99/mo',
@@ -183,7 +184,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Business Intelligence AI',
         description: 'Transform data into actionable business insights',
         icon: BarChart3,
-        features: ['Data visualization', 'Custom dashboards', 'Real-time alerts'],
+        features: ['Data 'visualization', 'Custom 'dashboards', 'Real-time alerts'],
         rating: 4.8,
         users: '90K+',
         price: '$79/mo',
@@ -193,7 +194,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Customer Behavior Analyzer',
         description: 'Understand customer patterns and preferences',
         icon: Users,
-        features: ['Behavior tracking', 'Segmentation', 'Personalization'],
+        features: ['Behavior 'tracking', 'Segmentation'Personalization'],
         rating: 4.7,
         users: '45K+',
         price: '$59/mo',
@@ -203,7 +204,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'ROI Calculator Pro',
         description: 'Calculate and optimize return on investment',
         icon: Target,
-        features: ['ROI modeling', 'Cost analysis', 'Optimization tips'],
+        features: ['ROI 'modeling', 'Cost 'analysis', 'Optimization tips'],
         rating: 4.9,
         users: '30K+',
         price: '$49/mo',
@@ -215,7 +216,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'AI Image Generator',
         description: 'Create stunning images from text descriptions',
         icon: Image,
-        features: ['Text-to-image', 'Style transfer', 'High resolution'],
+        features: ['Text-to-'image', 'Style 'transfer', 'High resolution'],
         rating: 4.9,
         users: '500K+',
         price: '$19/mo',
@@ -225,7 +226,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Video Content Creator',
         description: 'Generate professional videos with AI',
         icon: Video,
-        features: ['Auto-editing', 'Voice synthesis', 'Multiple formats'],
+        features: ['Auto-'editing', 'Voice 'synthesis', 'Multiple formats'],
         rating: 4.8,
         users: '200K+',
         price: '$39/mo',
@@ -235,7 +236,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Audio Processing Suite',
         description: 'Enhance and process audio with AI technology',
         icon: Mic,
-        features: ['Noise reduction', 'Voice enhancement', 'Auto-transcription'],
+        features: ['Noise 'reduction', 'Voice 'enhancement', 'Auto-transcription'],
         rating: 4.7,
         users: '150K+',
         price: '$29/mo',
@@ -245,7 +246,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: '3D Model Generator',
         description: 'Create 3D models from 2D images or text',
         icon: Camera,
-        features: ['2D to 3D', 'Text to 3D', 'Model optimization'],
+        features: ['2D to 3'D', 'Text to 3'D', 'Model optimization'],
         rating: 4.8,
         users: '80K+',
         price: '$49/mo',
@@ -257,7 +258,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'AI Threat Detector',
         description: 'Advanced threat detection and prevention',
         icon: Shield,
-        features: ['Real-time monitoring', 'Threat analysis', 'Auto-response'],
+        features: ['Real-time 'monitoring', 'Threat 'analysis', 'Auto-response'],
         rating: 4.9,
         users: '100K+',
         price: '$99/mo',
@@ -267,7 +268,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Password Security Manager',
         description: 'AI-powered password generation and management',
         icon: Lock,
-        features: ['Smart generation', 'Breach monitoring', 'Auto-updates'],
+        features: ['Smart 'generation', 'Breach 'monitoring', 'Auto-updates'],
         rating: 4.8,
         users: '200K+',
         price: '$15/mo',
@@ -277,7 +278,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Network Security Scanner',
         description: 'Comprehensive network vulnerability assessment',
         icon: Network,
-        features: ['Vulnerability scanning', 'Risk assessment', 'Compliance check'],
+        features: ['Vulnerability 'scanning', 'Risk 'assessment', 'Compliance check'],
         rating: 4.7,
         users: '75K+',
         price: '$79/mo',
@@ -287,7 +288,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Data Privacy Guardian',
         description: 'Protect sensitive data with AI privacy controls',
         icon: Database,
-        features: ['Data classification', 'Privacy monitoring', 'Compliance tracking'],
+        features: ['Data 'classification', 'Privacy 'monitoring', 'Compliance tracking'],
         rating: 4.8,
         users: '60K+',
         price: '$59/mo',
@@ -299,7 +300,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'AI Translation Hub',
         description: 'Real-time translation for 100+ languages',
         icon: Globe,
-        features: ['100+ languages', 'Real-time translation', 'Context awareness'],
+        features: ['100+ 'languages', 'Real-time 'translation', 'Context awareness'],
         rating: 4.9,
         users: '300K+',
         price: 'Free',
@@ -309,7 +310,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Smart Chat Assistant',
         description: 'Intelligent chatbot for customer support',
         icon: Users,
-        features: ['Natural conversations', 'Multi-channel', 'Learning capability'],
+        features: ['Natural 'conversations', 'Multi-'channel', 'Learning capability'],
         rating: 4.8,
         users: '150K+',
         price: '$29/mo',
@@ -319,7 +320,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'Voice Command Center',
         description: 'Control applications with natural voice commands',
         icon: Mic,
-        features: ['Voice recognition', 'Command execution', 'Custom commands'],
+        features: ['Voice 'recognition', 'Command 'execution', 'Custom commands'],
         rating: 4.7,
         users: '120K+',
         price: '$25/mo',
@@ -329,7 +330,7 @@ const AIToolsUltimateShowcase2026 = () => {
         name: 'AI Writing Assistant',
         description: 'Enhance writing with AI-powered suggestions',
         icon: FileText,
-        features: ['Grammar check', 'Style suggestions', 'Content generation'],
+        features: ['Grammar 'check', 'Style 'suggestions', 'Content generation'],
         rating: 4.8,
         users: '250K+',
         price: '$19/mo',
@@ -339,10 +340,10 @@ const AIToolsUltimateShowcase2026 = () => {
   };
 
   const stats = [
-    { value: '1M+', label: 'Active Users', icon: Users },
-    { value: '50+', label: 'AI Tools', icon: Brain },
-    { value: '99.9%', label: 'Uptime', icon: Server },
-    { value: '4.8/5', label: 'Rating', icon: Star }
+    { value: '1M+'label: 'Active 'Users', 'icon: Users },
+    { value: '50+'label: 'AI 'Tools', 'icon: Brain },
+    { value: '99.9%'label: ''Uptime', 'icon: Server },
+    { value: '4.8/5'label: ''Rating', 'icon: Star }
   ];
 
   return (
@@ -372,7 +373,7 @@ const AIToolsUltimateShowcase2026 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover our comprehensive collection of AI-powered tools designed to 
-            revolutionize productivity, development, analytics, and more. 
+            revolutionize productivitydevelopmentanalyticsand more. 
             Choose from 50+ cutting-edge solutions.
           </p>
         </motion.div>
@@ -381,10 +382,10 @@ const AIToolsUltimateShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => {
+          {stats.map((statindex) => {
             const StatIcon = stat.icon;
             
             return (
@@ -407,10 +408,10 @@ const AIToolsUltimateShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(categories).map(([key, category]) => {
+          {Object.entries(categories).map(([keycategory]) => {
             const Icon = category.icon;
             
             return (
@@ -465,10 +466,10 @@ const AIToolsUltimateShowcase2026 = () => {
           key={activeCategory}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5delay: 0.2 }}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
-          {tools[activeCategory].map((tool, index) => {
+          {tools[activeCategory].map((toolindex) => {
             const ToolIcon = tool.icon;
             
             return (
@@ -476,7 +477,7 @@ const AIToolsUltimateShowcase2026 = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 onHoverStart={() => setHoveredTool(index)}
                 onHoverEnd={() => setHoveredTool(null)}
                 className="group relative"
@@ -506,7 +507,7 @@ const AIToolsUltimateShowcase2026 = () => {
 
                   {/* Features */}
                   <div className="space-y-2 mb-4">
-                    {tool.features.map((feature, featureIndex) => (
+                    {tool.features.map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
@@ -540,8 +541,8 @@ const AIToolsUltimateShowcase2026 = () => {
                 {/* Hover Effect */}
                 {hoveredTool === index && (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: 1scale: 1 }}
                     className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Popular
@@ -556,7 +557,7 @@ const AIToolsUltimateShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 relative overflow-hidden">

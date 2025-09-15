@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Code, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
+  Play
+  Code
+  Brain
+  Zap
+  Shield
+  Globe
   ArrowRight,
   Download,
   ExternalLink,
@@ -24,13 +25,13 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechShowcase2026 = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [activeDemosetActiveDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isPlayingsetIsPlaying] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const demos = [
     {
@@ -131,9 +132,9 @@ const InteractiveTechShowcase2026 = () => {
   ];
 
   const platforms = [
-    { name: 'Web', icon: Laptop, status: 'Available' },
-    { name: 'Mobile', icon: Smartphone, status: 'Available' },
-    { name: 'Desktop', icon: Monitor, status: 'Coming Soon' }
+    { name: ''Web', 'icon: Laptopstatus: 'Available' },
+    { name: ''Mobile', 'icon: Smartphonestatus: 'Available' },
+    { name: ''Desktop', 'icon: Monitorstatus: 'Coming Soon' }
   ];
 
   return (
@@ -147,7 +148,7 @@ const InteractiveTechShowcase2026 = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -202,9 +203,9 @@ const InteractiveTechShowcase2026 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeDemo}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
               transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
@@ -295,8 +296,8 @@ const InteractiveTechShowcase2026 = () => {
         {/* Tools Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center text-white mb-8">
@@ -344,8 +345,8 @@ const InteractiveTechShowcase2026 = () => {
         {/* Platform Support */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center text-white mb-8">
@@ -376,8 +377,8 @@ const InteractiveTechShowcase2026 = () => {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">

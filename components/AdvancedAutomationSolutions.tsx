@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Bot, Zap, TrendingUp, Shield, Users, CheckCircle } from 'lucide-react';
+BotZapTrendingUpShieldUsersCheckCircle
 
 const AdvancedAutomationSolutions = () => {
   const features = [
@@ -50,7 +50,7 @@ const AdvancedAutomationSolutions = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <feature.icon className="w-8 h-8 text-blue-600" />

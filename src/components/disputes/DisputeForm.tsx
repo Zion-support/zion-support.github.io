@@ -10,14 +10,16 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue} from "@/components/ui/select";
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -29,7 +31,8 @@ const formSchema = z.object({
     .min(1, { message: "Please select a reason for the dispute" }),
   description: z.string()
     .min(20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array(z.any()).optional()});
+  attachments: z.array(z.any()).optional(),
+});
 
 type DisputeFormProps = {
   projectId: string;
@@ -53,7 +56,9 @@ export function DisputeForm({
     defaultValues: {
       reason_code: "",
       description: "",
-      attachments: []}});
+      attachments: [],
+    },
+  });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -78,7 +83,8 @@ export function DisputeForm({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-        description: values.description});
+        description: values.description,
+      });
       
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments

@@ -1,15 +1,27 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+=======
 import React, { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Interview } from "@/types/interview";
 import { useAuth } from "@/hooks/useAuth";
 import { useInterviews } from "@/hooks/useInterviews";
+<<<<<<< HEAD
+import { formatDistanceToNowisPastparseISO } from "date-fns";
+import { AlertDialogActionAlertDialogCancelAlertDialogContentAlertDialogDescriptionAlertDialogFooterAlertDialogHeaderAlertDialogTitleAlertDialogTrigger } from "@/components/ui/alert-dialog";
+import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
+import { ClockExternalLinkMessageSquareVideoX } from "lucide-react";
+=======
 import { format, formatDistanceToNow, isPast, parseISO } from "date-fns";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 
@@ -18,24 +30,41 @@ interface InterviewCardProps {
   onRefresh: () => Promise<void>;
 }
 
+<<<<<<< HEAD
+export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
+  const { user } = useAuth();
+  const { respondToInterviewcancelInterview } = useInterviews();
+  const [isResponseDialogOpensetIsResponseDialogOpen] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
+=======
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const isClient = user?.id === interview.client_id;
   const isTalent = user?.id === interview.talent_id;
 
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date);
+<<<<<<< HEAD
+  const formattedDate = format(interviewDate'EEEEMMMM d');
+  const formattedTime = format(interviewDate'h:mm a');
+=======
   const formattedDate = format(interviewDate, 'EEEE, MMMM d');
   const formattedTime = format(interviewDate, 'h:mm a');
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Calculate when interview ends
   const endTime = new Date(interviewDate);
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
+<<<<<<< HEAD
+  const formattedEndTime = format(endTime'h:mm a');
+=======
   const formattedEndTime = format(endTime, 'h:mm a');
+>>>>>>> origin/auto/autonomy-17186719616
   
   const isInterviewPending = interview.status === 'requested';
   const isInterviewConfirmed = interview.status === 'confirmed';
@@ -52,8 +81,13 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true);
+<<<<<<< HEAD
+    const success = await respondToInterview(interview.id{ 
+      interview_id: interview.id
+=======
     const success = await respondToInterview(interview.id, { 
       interview_id: interview.id, 
+>>>>>>> origin/auto/autonomy-17186719616
       status 
     });
     

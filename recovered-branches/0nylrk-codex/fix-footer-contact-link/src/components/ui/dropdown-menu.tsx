@@ -1,6 +1,10 @@
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
+<<<<<<< HEAD
+import { CheckChevronRightCircle } from "lucide-react"
+=======
 import { Check, ChevronRight, Circle } from "lucide-react"
+>>>>>>> origin/auto/autonomy-17186719616
 
 import { cn } from "@/lib/utils"
 
@@ -21,7 +25,11 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
   }
+<<<<<<< HEAD
+>(({ classNameinsetchildren...props }ref) => (
+=======
 >(({ className, inset, children, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
@@ -41,7 +49,11 @@ DropdownMenuSubTrigger.displayName =
 const DropdownMenuSubContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+=======
 >(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
@@ -57,7 +69,11 @@ DropdownMenuSubContent.displayName =
 const DropdownMenuContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
+<<<<<<< HEAD
+>(({ classNamesideOffset = 4...props }ref) => (
+=======
 >(({ className, sideOffset = 4, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.Portal>
     <DropdownMenuPrimitive.Content
       ref={ref}
@@ -77,7 +93,11 @@ const DropdownMenuItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean
   }
+<<<<<<< HEAD
+>(({ classNameinset...props }ref) => (
+=======
 >(({ className, inset, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
@@ -93,7 +113,11 @@ DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName
 const DropdownMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>
+<<<<<<< HEAD
+>(({ classNamechildrenchecked...props }ref) => (
+=======
 >(({ className, children, checked, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.CheckboxItem
     ref={ref}
     className={cn(
@@ -117,7 +141,11 @@ DropdownMenuCheckboxItem.displayName =
 const DropdownMenuRadioItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>
+<<<<<<< HEAD
+>(({ classNamechildren...props }ref) => (
+=======
 >(({ className, children, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.RadioItem
     ref={ref}
     className={cn(
@@ -141,7 +169,11 @@ const DropdownMenuLabel = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {
     inset?: boolean
   }
+<<<<<<< HEAD
+>(({ classNameinset...props }ref) => (
+=======
 >(({ className, inset, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DropdownMenuPrimitive.Label
     ref={ref}
     className={cn(
@@ -157,10 +189,17 @@ DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName
 const DropdownMenuSeparator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
+<<<<<<< HEAD
+>(({ className...props }ref) => (
+  <DropdownMenuPrimitive.Separator
+    ref={ref}
+    className={cn("-mx-1 my-1 h-px bg-muted"className)}
+=======
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
+>>>>>>> origin/auto/autonomy-17186719616
     {...props}
   />
 ))
@@ -172,7 +211,11 @@ const DropdownMenuShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
+<<<<<<< HEAD
+      className={cn("ml-auto text-xs tracking-widest opacity-60"className)}
+=======
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
+>>>>>>> origin/auto/autonomy-17186719616
       {...props}
     />
   )
@@ -194,4 +237,9 @@ export {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
+<<<<<<< HEAD
   DropdownMenuRadioGroup}
+=======
+  DropdownMenuRadioGroup,
+}
+>>>>>>> origin/auto/autonomy-17186719616

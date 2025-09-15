@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  ArrowRight, 
-  Star, 
+  Brain
+  Zap
+  ArrowRight
+  Star
   Sparkles,
   TrendingUp,
   Award,
@@ -14,8 +15,8 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryTechShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -23,10 +24,10 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
     // Rotate features every 3 seconds
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
     'AI Revolution 2025',
@@ -36,10 +37,10 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'Technologies', value: '50+' },
-    { label: 'Success Rate', value: '99%' },
-    { label: 'Client Satisfaction', value: '5.0' },
-    { label: 'ROI Improvement', value: '300%' }
+    { label: ''Technologies', 'value: '50+' },
+    { label: 'Success 'Rate', 'value: '99%' },
+    { label: 'Client 'Satisfaction', 'value: '5.0' },
+    { label: 'ROI 'Improvement', 'value: '300%' }
   ];
 
   return (
@@ -57,15 +58,15 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
+            initial={{ opacity: 0x: -50 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -50 }}
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
@@ -75,8 +76,8 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.3 }}
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
               Experience the
@@ -88,18 +89,18 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
-              Discover cutting-edge AI, quantum computing, blockchain, and IoT solutions that are transforming industries and creating unprecedented opportunities for growth.
+              Discover cutting-edge AIquantum computingblockchainand IoT solutions that are transforming industries and creating unprecedented opportunities for growth.
             </motion.p>
 
             {/* Rotating Features */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.5 }}
               className="mb-8"
             >
               <div className="flex items-center text-lg text-gray-300">
@@ -122,8 +123,8 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center group">
@@ -139,9 +140,9 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
 
           {/* Right Content - Stats & Visual */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 50 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="relative"
           >
             {/* Main Visual */}
@@ -160,12 +161,12 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
 
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-                    transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+                    transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
@@ -188,21 +189,21 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
         {/* Bottom Stats Bar */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: TrendingUp, label: 'Performance', value: '10x Faster' },
-            { icon: Award, label: 'Awards', value: '25+ Won' },
-            { icon: Rocket, label: 'Deployments', value: '1000+' },
-            { icon: Star, label: 'Rating', value: '5.0/5.0' }
-          ].map((item, index) => (
+            { icon: TrendingUplabel: ''Performance', 'value: '10x Faster' },
+            { icon: Awardlabel: ''Awards', 'value: '25+ Won' },
+            { icon: Rocketlabel: ''Deployments', 'value: '1000+' },
+            { icon: Starlabel: ''Rating', 'value: '5.0/5.0' }
+          ].map((itemindex) => (
             <motion.div
               key={item.label}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6delay: 1.2 + index * 0.1 }}
               className="text-center"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">

@@ -3,13 +3,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Cpu, 
-  Network, 
+  Brain
+  Zap
+  Shield
+  Cloud
+  Database
+  Cpu
+  Network
   Lock,
   TrendingUp,
   Globe,
@@ -85,12 +85,12 @@ const AdvancedTechTrends2026 = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {trends.map((trend, index) => (
+          {trends.map((trendindex) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative"
             >
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group-hover:scale-105">
@@ -120,7 +120,7 @@ const AdvancedTechTrends2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">

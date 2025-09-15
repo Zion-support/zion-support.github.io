@@ -1,5 +1,9 @@
 import { useTheme } from "next-themes"
+<<<<<<< HEAD
+import { Toaster as Sonnertoast } from "sonner"
+=======
 import { Toaster as Sonner, toast } from "sonner"
+>>>>>>> origin/auto/autonomy-17186719616
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
@@ -18,10 +22,20 @@ const Toaster = ({ ...props }: ToasterProps) => {
           actionButton:
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
           cancelButton:
+<<<<<<< HEAD
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
+=======
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
+        },
+      }}
+>>>>>>> origin/auto/autonomy-17186719616
       {...props}
     />
   )
 }
 
+<<<<<<< HEAD
+export { Toastertoast }
+=======
 export { Toaster, toast }
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
 import { GradientHeading } from "./GradientHeading";
+<<<<<<< HEAD
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { Button } from "./ui/button";
+import { 
+  Users
+  Zap
+  Settings
+  MessageSquare
+=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
 import { 
@@ -7,6 +16,7 @@ import {
   Zap, 
   Settings, 
   MessageSquare, 
+>>>>>>> origin/auto/autonomy-17186719616
   Sparkles,
   ArrowRight,
   BarChart3,
@@ -33,11 +43,19 @@ export function FeaturesGuideSection() {
     {
       id: "talent-directory",
       title: "Talent Directory",
+<<<<<<< HEAD
+      description: "Browse our curated collection of AI and tech specialistsfiltered by expertiseavailabilityand ratings.",
+      icon: <Users className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Access the talent directory from the main navigation",
+        "Use filters to narrow down by skillsexperienceand pricing",
+=======
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
       icon: <Users className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Access the talent directory from the main navigation",
         "Use filters to narrow down by skills, experience, and pricing",
+>>>>>>> origin/auto/autonomy-17186719616
         "Save favorite profiles for future reference",
         "Contact talents directly or request quotes through their profiles"
       ],
@@ -47,7 +65,11 @@ export function FeaturesGuideSection() {
     {
       id: "services",
       title: "Services Marketplace",
+<<<<<<< HEAD
+      description: "Discover professional services for your AI and tech needsfrom development to consulting.",
+=======
       description: "Discover professional services for your AI and tech needs, from development to consulting.",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Browse service categories on the marketplace",
@@ -75,7 +97,11 @@ export function FeaturesGuideSection() {
     {
       id: "analytics",
       title: "Marketplace Analytics",
+<<<<<<< HEAD
+      description: "Gain insights into industry trendspricing benchmarksand marketplace activity.",
+=======
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Access analytics from your user dashboard",
@@ -89,7 +115,11 @@ export function FeaturesGuideSection() {
     {
       id: "ai-assistant",
       title: "Zion AI Assistant",
+<<<<<<< HEAD
+      description: "Get real-time helprecommendationsand marketplace guidance from our AI assistant.",
+=======
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Click on the chat icon in the bottom right corner",
@@ -109,7 +139,11 @@ export function FeaturesGuideSection() {
       instructions: [
         "Create or log in to your account",
         "Navigate to 'Create Listing' in your dashboard",
+<<<<<<< HEAD
+        "Choose between talent profileserviceor equipment listing",
+=======
         "Choose between talent profile, service, or equipment listing",
+>>>>>>> origin/auto/autonomy-17186719616
         "Complete the guided form and publish your listing"
       ],
       link: "/create-profile",
@@ -118,7 +152,11 @@ export function FeaturesGuideSection() {
     {
       id: "help-center",
       title: "Help & Resources",
+<<<<<<< HEAD
+      description: "Access guidestutorialsand support resources to maximize your marketplace experience.",
+=======
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Visit our comprehensive knowledge base",
@@ -144,7 +182,11 @@ export function FeaturesGuideSection() {
 
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
+<<<<<<< HEAD
+            {features.slice(04).map(feature => (
+=======
             {features.slice(0, 4).map(feature => (
+>>>>>>> origin/auto/autonomy-17186719616
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
@@ -189,7 +231,11 @@ export function FeaturesGuideSection() {
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
+<<<<<<< HEAD
+                    {feature.instructions.map((instructionidx) => (
+=======
                     {feature.instructions.map((instruction, idx) => (
+>>>>>>> origin/auto/autonomy-17186719616
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}

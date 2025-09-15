@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  TrendingUp
   ArrowRight,
   Play,
   X,
@@ -17,21 +18,21 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true)1000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
     {
@@ -110,13 +111,13 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentFeature}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       className="flex items-center gap-2"
                     >
                       <div className={`w-8 h-8 bg-gradient-to-r ${features[currentFeature].color} rounded-lg flex items-center justify-center`}>
-                        {React.createElement(features[currentFeature].icon, { className: "w-4 h-4 text-white" })}
+                        {React.createElement(features[currentFeature].icon{ className: "w-4 h-4 text-white" })}
                       </div>
                       <div>
                         <div className="text-white font-semibold text-sm">
@@ -155,7 +156,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
 
                 <motion.button
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-purple-500/25"
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <span>Explore Now</span>
@@ -186,7 +187,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
                   className="flex items-center gap-2"
                 >
                   <div className={`w-6 h-6 bg-gradient-to-r ${features[currentFeature].color} rounded-lg flex items-center justify-center`}>
-                    {React.createElement(features[currentFeature].icon, { className: "w-3 h-3 text-white" })}
+                    {React.createElement(features[currentFeature].icon{ className: "w-3 h-3 text-white" })}
                   </div>
                   <div className="text-center">
                     <div className="text-white font-semibold text-sm">
@@ -208,7 +209,7 @@ const UltimateContentShowcase2025PromotionBanner = () => {
           className="absolute bottom-0 left-0 h-1 bg-white"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
-          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 3repeat: Infinityease: "linear" }}
         ></motion.div>
       </motion.div>
     </AnimatePresence>
