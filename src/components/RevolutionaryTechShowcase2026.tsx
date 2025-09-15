@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 import React from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -106,8 +99,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

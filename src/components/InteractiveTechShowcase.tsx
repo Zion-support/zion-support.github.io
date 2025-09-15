@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
@@ -26,21 +17,6 @@ const InteractiveTechShowcase: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      link: "/pages/AdvancedAITransformation2026"
-<<<<<<< HEAD
-    },
-    {
-      id: 1,
-<<<<<<< HEAD
-=======
-      link: "/pages/AIInnovationHub2026"
-    },
-    {
-      id: 1,
->>>>>>> cursor/create-and-deploy-new-content-f977
       name: "Quantum Computing 2026",
       description: "Exponential computational power with quantum algorithms and quantum supremacy",
       icon: "⚡",
@@ -257,10 +233,6 @@ const InteractiveTechShowcase: React.FC = () => {
       description: "Revolutionary AI technologies with consciousness and emotional intelligence",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
-<<<<<<< HEAD
-      stats: { performance: "1000x", accuracy: "99.9%", speed: "Real-time" }
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
     },
     {
       id: 2,
@@ -352,9 +324,6 @@ const InteractiveTechShowcase: React.FC = () => {
     },
     {
       id: 1,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       name: "Quantum Computing Revolution",
       description: "Breakthrough quantum processors with 1000+ qubits and quantum supremacy",
@@ -422,36 +391,11 @@ const InteractiveTechShowcase: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Cards */}
           <div className="space-y-6">
-<<<<<<< HEAD
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={tech.id}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                onClick={() => handleTechClick(index)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className={`w-full p-6 rounded-xl transition-all duration-300 ${
-                  activeTech === index
-                    ? `bg-gradient-to-r ${tech.color} shadow-lg`
-                    : 'bg-white/10 hover:bg-white/20'
-                }`}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{tech.icon}</div>
-                  <div className="text-left">
-                    <h4 className="text-xl font-bold">{tech.name}</h4>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -469,10 +413,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   <div className="text-4xl">{tech.icon}</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                     <p className="text-sm opacity-90">{tech.description}</p>
                   </div>
@@ -484,38 +424,6 @@ const InteractiveTechShowcase: React.FC = () => {
                     />
                   )}
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              </motion.button>
-            ))}
-          </div>
-
-          {/* Technology Display */}
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTech}
-                initial={{ opacity: 0, x: 50, rotateY: 90 }}
-                animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                exit={{ opacity: 0, x: -50, rotateY: -90 }}
-                transition={{ duration: 0.5 }}
-                className={`bg-gradient-to-br ${technologies[activeTech].color} p-8 rounded-2xl shadow-2xl`}
-              >
-                <div className="text-center mb-8">
-                  <div className="text-8xl mb-4">{technologies[activeTech].icon}</div>
-                  <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].name}</h3>
-                  <p className="text-xl opacity-90">{technologies[activeTech].description}</p>
-                </div>
-
-                {/* Features Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  {technologies[activeTech].features.map((feature, index) => (
-=======
-                    <p className="text-sm opacity-90">{tech.description}</p>
-                  </div>
-                  {activeTech === tech.id && (
->>>>>>> cursor/create-and-deploy-new-content-f977
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -523,70 +431,6 @@ const InteractiveTechShowcase: React.FC = () => {
                     />
                   )}
                 </div>
-<<<<<<< HEAD
-
-                {/* Performance Stats */}
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.performance}</div>
-                    <div className="text-xs opacity-90">Performance</div>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.accuracy}</div>
-                    <div className="text-xs opacity-90">Accuracy</div>
-                  </div>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold mb-1">{technologies[activeTech].stats.speed}</div>
-                    <div className="text-xs opacity-90">Speed</div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-
-        {/* Interactive Demo Section */}
-        <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">🎮</div>
-              <h4 className="text-xl font-bold mb-3">Virtual Reality Demo</h4>
-              <p className="text-sm opacity-90 mb-4">Experience our technologies in immersive VR environments</p>
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Launch VR Demo
-              </button>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">🧪</div>
-              <h4 className="text-xl font-bold mb-3">Live Simulation</h4>
-              <p className="text-sm opacity-90 mb-4">Watch real-time simulations of our technologies in action</p>
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start Simulation
-              </button>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">📊</div>
-              <h4 className="text-xl font-bold mb-3">Performance Analytics</h4>
-              <p className="text-sm opacity-90 mb-4">View detailed performance metrics and analytics</p>
-              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                View Analytics
-              </button>
-            </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
           </div>
 =======
@@ -658,10 +502,6 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         {/* Technology Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-8">
           <motion.div
@@ -700,10 +540,6 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-4xl font-bold text-orange-400 mb-2">2026</div>
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======

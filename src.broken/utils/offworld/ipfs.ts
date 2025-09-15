@@ -68,12 +68,6 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       ? new PinataSDK({ pinataJWTKey: pinataJwt })
       : new PinataSDK(pinataApiKey, pinataSecret);
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
-<<<<<<< HEAD
-      pinataMetadata: { name: filename }} as any);
-=======
-      pinataMetadata: { name: filename },
-    } as any);
->>>>>>> origin/auto/autonomy-17186719616
     return { cid: res.IpfsHash, provider: 'pinata' };
   }
 
@@ -170,9 +164,3 @@ export async function publishManifesto(topic: string, message: string): Promise<
 export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
-<<<<<<< HEAD
-  votes: 'zion.dao.votes'};
-=======
-  votes: 'zion.dao.votes',
-};
->>>>>>> origin/auto/autonomy-17186719616

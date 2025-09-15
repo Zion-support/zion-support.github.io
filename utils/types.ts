@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-export interface Application {
-export interface Application {;
-  id: string;
-  name: string;
-  email: string;
-  position: string;
-  experience: number;
-  skills: string[];
-  createdAt: string;
-  updatedAt?: string;
-}
-
-
-export interface Application {;
-
-  id: string;
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   job_id: string;
   talent_slug: string;
