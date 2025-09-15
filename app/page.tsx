@@ -37,12 +37,11 @@ import RevolutionaryContent2026Banner from './components/RevolutionaryContent202
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
@@ -218,12 +217,12 @@ export default function HomePage() {
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Finance</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Autonomous Finance Operating System</h3>
-                  <p className="text-gray-600">Real-time cash, autonomous close, and policy-as-code guardrails.</p>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Governance</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI Governance 2026: Policy, Risk, Compliance</h3>
+                  <p className="text-gray-600">Practical controls and assurance to operate AI safely at scale.</p>
                 </div>
                 <div className="mt-4">
-                  <Link href="/blog/ai-2026-autonomous-finance-operating-system" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                  <Link href="/content/ai-governance-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
             </div>
@@ -261,8 +260,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        {/* Latest Content Showcase 2025 - FEATURED */}
+        <LatestContentShowcase2025 />
 
-<<<<<<< HEAD
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -283,10 +283,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
-        {/* Latest Content Showcase 2025 - NEW FEATURED */}
-        <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
@@ -358,6 +354,22 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
+        {/* Promote new content */}
+        <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New in 2026</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Trustworthy AI Systems Blueprint</h2>
+                <p className="text-gray-600 mt-2">Engineering practices for reliable, secure, and transparent AI systems.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/blog/ai-2026-trustworthy-ai-systems-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
+                <Link href="/content/ai-governance-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">AI Governance 2026</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <FeaturedContentShowcase2026 />
