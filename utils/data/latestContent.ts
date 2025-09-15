@@ -25,6 +25,22 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "secure-agent-architecture-2026",
+    title: "AI 2026: Secure Agent Architecture",
+    summary: "Zero-trust agent design with isolation domains, runtime guards, and policy-as-code.",
+    href: "/blog/ai-2026-secure-agent-architecture",
+    tag: "Architecture",
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-agents-red-team-scenarios-2026",
+    title: "AI 2026: Autonomous Agents Red-Team Scenarios",
+    summary: "Adversarial scenarios, pass criteria, and CI/CD gates to harden agents.",
+    href: "/blog/ai-2026-autonomous-agents-red-team-scenarios",
+    tag: "Safety",
+    date: "2025-09-15",
+  },
+  {
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",

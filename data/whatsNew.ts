@@ -66,6 +66,28 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "secure-agent-architecture-2026-blog",
+    title: "AI 2026: Secure Agent Architecture",
+    description:
+      "Zero-trust agents with isolation domains, policy-as-code, and runtime guards.",
+    ctaLabel: "Read Architecture",
+    href: "/blog/ai-2026-secure-agent-architecture",
+    emoji: "🔐",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-agents-red-team-scenarios-2026",
+    title: "AI 2026: Autonomous Agents Red-Team Scenarios",
+    description:
+      "Adversarial scenarios, pass criteria, and CI/CD integration to harden agents.",
+    ctaLabel: "Read Scenarios",
+    href: "/blog/ai-2026-autonomous-agents-red-team-scenarios",
+    emoji: "🧨",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-posture-management-2026",
     title: "AI 2026: Agent Posture Management",
     description:

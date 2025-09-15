@@ -96,12 +96,12 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Autonomous Support + Eval Harness</h2>
-              <p className="text-gray-600 mt-2">Deploy guardrailed support agents and adopt an evaluation harness to gate releases.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Secure Agents + Red-Team Scenarios</h2>
+              <p className="text-gray-600 mt-2">Zero-trust agent architecture and adversarial scenario testing to harden systems.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-autonomous-customer-support-agents" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Support Agents</Link>
-              <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Harness</Link>
+              <Link href="/blog/ai-2026-secure-agent-architecture" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Secure Agents</Link>
+              <Link href="/blog/ai-2026-autonomous-agents-red-team-scenarios" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Red-Team Scenarios</Link>
             </div>
           </div>
         </div>
@@ -137,28 +137,28 @@ export default function HomePage() {
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
         
-        {/* New Content Promo: Sept 15, 2025 - Agent Safety + Observability */}
+        {/* New Content Promo: Sept 15, 2025 - Support Agents + Secure Architecture */}
         <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Safety</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Agentic Risk and Safety Playbook</h3>
-                  <p className="text-gray-600">Safeguards, monitoring, and governance patterns for production agent systems.</p>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Operations</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Autonomous Customer Support Agents</h3>
+                  <p className="text-gray-600">Routing, guardrails, and eval gates to scale safe customer operations.</p>
                 </div>
                 <div className="mt-4">
-                  <Link href="/blog/ai-2026-agentic-risk-and-safety-playbook" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                  <Link href="/blog/ai-2026-autonomous-customer-support-agents" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Observability</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Enterprise Agent Observability Guide</h3>
-                  <p className="text-gray-600">Telemetry, tracing, and evals for deep visibility into autonomous workflows.</p>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Security</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Secure Agent Architecture</h3>
+                  <p className="text-gray-600">Zero-trust design with isolation domains and runtime protections.</p>
                 </div>
                 <div className="mt-4">
-                  <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                  <Link href="/blog/ai-2026-secure-agent-architecture" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
             </div>
