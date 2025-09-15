@@ -9,6 +9,24 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
+    id: 'ai-agents-lab-opening',
+    title: 'Launch: AI Agents Innovation Lab',
+    summary:
+      'Hands-on lab with real-world agentic workflows, evals, and governance. Apply to join the first cohort.',
+    href: '/updates/ai-agents-lab-opening',
+    date: '2025-09-15',
+    tag: 'Announcement',
+  },
+  {
+    id: 'quantum-partnership-announcement',
+    title: 'Partnership: Quantum Computing Center of Excellence',
+    summary:
+      'We partnered with leading research institutions to accelerate quantum neural networks for enterprise.',
+    href: '/updates/quantum-partnership',
+    date: '2025-09-14',
+    tag: 'Announcement',
+  },
+  {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
