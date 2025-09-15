@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { ApiLogsChart } from "./ApiLogsChart";
+// Temporarily disable chart to fix missing module in build
+// import { ApiLogsChart } from "./ApiLogsChart";
 
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -88,11 +89,7 @@ export function ApiLogs() {
         </div>
 
         {/* Visualization of logs per day */}
-        {logs.length > 0 && (
-          <div className="mb-6">
-            <ApiLogsChart logs={logs} />
-          </div>
-        )}
+        {/* Chart disabled until module is available */}
 
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
