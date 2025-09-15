@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Finance OS (v1.0)',
+    summary:
+      'Real-time cash visibility, autonomous close, and policy-as-code controls for finance.',
+    href: '/updates/autonomous-finance-os-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Retrieval Observability (2026)',
+    summary:
+      'End-to-end SLIs, tracing, and evals to keep RAG systems reliable in production.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',
     summary:
       'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',

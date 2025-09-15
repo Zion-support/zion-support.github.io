@@ -114,6 +114,13 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+                href="/updates/autonomous-finance-os-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Autonomous Finance OS v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/auto-data-governance-v3"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
@@ -160,6 +167,13 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
                 Guide: RAG Production Patterns
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/enterprise-retrieval-observability-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Guide: Retrieval Observability 2026
                 <span aria-hidden>→</span>
               </a>
               <a
