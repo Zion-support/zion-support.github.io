@@ -39,6 +39,32 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold">Read Article →</Link>
         </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-autonomous-enterprise-blueprint" className="hover:underline">
+              AI 2026: Autonomous Enterprise Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evolve from automation to truly autonomous, outcome-driven operations with policy-as-code guardrails.
+          </p>
+          <Link href="/content/ai-2026-autonomous-enterprise-blueprint" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Architecture</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-secure-agent-architecture" className="hover:underline">
+              AI 2026: Secure Agent Architecture
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Zero-trust design, scoped tools, and runtime guardrails for secure enterprise AI agents.
+          </p>
+          <Link href="/content/ai-2026-secure-agent-architecture" className="text-indigo-600 font-semibold">Read Guide →</Link>
+        </article>
       </div>
     </main>
   );
