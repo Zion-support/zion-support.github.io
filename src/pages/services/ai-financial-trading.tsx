@@ -19,7 +19,7 @@ import {
   Mail,
   MapPin,
   ExternalLink,
-  TrendingUp,
+  
   Target,
   Cpu,
   Activity

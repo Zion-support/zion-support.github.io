@@ -91,7 +91,7 @@ export const blogPosts = [
   },
   // New content - 2025 posts
   {
-    id: 7,
+    id: 21,
     title: "AI-Powered IT Operations: From Reactive to Predictive in 2025",
     excerpt: "How AIOps is enabling proactive incident prevention, automated remediation, and smarter capacity planning.",
     content: "In 2025, AIOps platforms leverage telemetry, logs, and traces with advanced ML to predict incidents before they happen, auto-remediate common failures, and right-size infrastructure in real-time. This shift reduces MTTR, improves reliability, and lowers cloud spend...",
@@ -106,7 +106,7 @@ export const blogPosts = [
     slug: "ai-powered-it-operations-2025"
   },
   {
-    id: 8,
+    id: 22,
     title: "Sustainable Cloud: Practical Steps to Cut Your Carbon Footprint",
     excerpt: "Actionable tactics to measure, report, and reduce emissions from cloud workloads using modern tooling.",
     content: "Sustainable cloud practices combine workload efficiency, renewable-powered regions, and carbon-aware scheduling. Teams can adopt efficient instance types, autoscaling, and green-region placement while leveraging provider emissions reports and open-source tooling to track progress...",
@@ -122,7 +122,7 @@ export const blogPosts = [
   }
   ,
   {
-    id: 7,
+    id: 23,
     title: "Enterprise AI Security Blueprint (2025)",
     excerpt: "Layered controls for model, data, runtime, and supply chain risk.",
     content: "In 2025, enterprise AI systems require a holistic security blueprint across data pipelines, model lifecycle, runtime isolation, and vendor supply chains. This guide outlines practical guardrails, policy-as-code, and continuous compliance.",
@@ -137,7 +137,7 @@ export const blogPosts = [
     slug: "ai-2025-enterprise-ai-security-blueprint"
   },
   {
-    id: 8,
+    id: 24,
     title: "Multimodal Agents in the Enterprise (2025)",
     excerpt: "Deploy agents that see, hear, and act for real outcomes.",
     content: "Multimodal enterprise agents combine vision, speech, and action models with deterministic workflows. We cover reference architectures, RAG+tools design, evaluation, and safe rollout patterns across functions.",
@@ -152,7 +152,7 @@ export const blogPosts = [
     slug: "ai-2025-multimodal-agents-in-the-enterprise"
   },
   {
-    id: 9,
+    id: 25,
     title: "AI 2026: Autonomous Finance Operating System",
     excerpt: "Real-time cash, autonomous close, and policy-as-code guardrails.",
     content: "Finance is shifting to continuous, autonomous operations. This primer covers event-driven ledgers, policy-as-code, automated close, and linking planning to execution with AI services.",
@@ -168,7 +168,7 @@ export const blogPosts = [
   }
   ,
   {
-    id: 10,
+    id: 26,
     title: "Enterprise AI Governance Blueprint (2026)",
     excerpt: "Policy-as-code, risk tiers, and continuous evaluations for safe scale.",
     content: "This blueprint shows how to govern AI systems with policy-as-code, risk-tiered approvals, automated CI/CD checks, runtime monitoring, and auditable trails to meet enterprise compliance in 2026.",
@@ -183,7 +183,7 @@ export const blogPosts = [
     slug: "ai-2026-enterprise-ai-governance-blueprint"
   },
   {
-    id: 11,
+    id: 27,
     title: "AI-Ops 2026: Autonomous Incident Response",
     excerpt: "Agentic playbooks and event-driven pipelines to cut MTTR by half.",
     content: "Design autonomous incident response using streaming telemetry, anomaly detection, and agents executing safe runbooks with human-in-the-loop for high-risk changes.",
@@ -199,7 +199,7 @@ export const blogPosts = [
   }
   ,
   {
-    id: 12,
+    id: 28,
     title: "AI 2026: Agentic Risk and Safety Playbook",
     excerpt: "Practical safeguards, monitoring, and governance patterns for production agent systems.",
     content: "This playbook distills proven patterns for safely operating agentic systems at scale: policy-as-code guardrails, evaluation harnesses, runtime tripwires, behavior analytics, and rollback strategies. It includes rollout checklists and reference architectures for high-assurance deployments.",
@@ -214,7 +214,7 @@ export const blogPosts = [
     slug: "ai-2026-agentic-risk-and-safety-playbook"
   },
   {
-    id: 13,
+    id: 29,
     title: "AI 2026: Enterprise Agent Observability Guide",
     excerpt: "End-to-end telemetry, tracing, and evals for visibility into autonomous workflows.",
     content: "A practical guide to agent observability: structured traces for tool use, state snapshots, dataset-linked evals, red-team scenarios, and SLAs/SLOs for AI-driven processes. Learn how to integrate with existing observability stacks and close the loop with feedback to training and prompts.",
@@ -229,7 +229,7 @@ export const blogPosts = [
     slug: "ai-2026-enterprise-agent-observability-guide"
   },
   {
-    id: 14,
+    id: 30,
     title: "AI 2026: Real-Time Retrieval Architectures",
     excerpt: "Low-latency retrieval patterns for RAG systems at enterprise scale.",
     content: "Enterprises need sub-200ms retrieval for interactive agent systems. This guide covers vector DB sharding, hybrid search, ANN index tuning, caching layers, and streaming generation patterns to achieve real-time performance.",
@@ -244,7 +244,7 @@ export const blogPosts = [
     slug: "ai-2026-real-time-retrieval-architectures"
   },
   {
-    id: 15,
+    id: 31,
     title: "AI 2026: Autonomous Ops Playbook",
     excerpt: "Runbooks, guardrails, and evals for safe autonomous operations.",
     content: "A practical playbook for autonomous operations: event-driven observability, action gating, safety envelopes, human-in-the-loop escalation, and policy-as-code. Includes reference architectures and rollout checklist.",
@@ -259,7 +259,7 @@ export const blogPosts = [
     slug: "ai-2026-autonomous-ops-playbook"
   },
   {
-    id: 16,
+    id: 32,
     title: "AI 2026: Agent Safety Certification",
     excerpt: "Certification model for validating agent safety across scenarios and domains.",
     content: "This guide introduces a structured certification program for agent systems, covering scenario test suites, red teaming, governance workflows, and production drift monitoring to ensure sustained safety.",
@@ -274,7 +274,7 @@ export const blogPosts = [
     slug: "ai-2026-agent-safety-certification"
   },
   {
-    id: 17,
+    id: 33,
     title: "AI 2026: Edge Agents On-Device Inference",
     excerpt: "Design patterns for reliable, private, and low-latency edge agents.",
     content: "We cover on-device LLMs, hybrid offload, energy-aware scheduling, secure model updates, and telemetry for agents running on phones, cars, and IoT devices.",
@@ -289,7 +289,7 @@ export const blogPosts = [
     slug: "ai-2026-edge-agents-on-device"
   },
   {
-    id: 18,
+    id: 34,
     title: "AI 2026: Agentic Evaluation Checklists",
     excerpt: "Gate releases with scenario-driven evals and measurable pass criteria.",
     content: "Ship safer agents with structured evaluation checklists spanning capability, safety, and reliability. Define scenario suites, pass thresholds, regression gates, and drift monitors to continuously validate behavior in CI/CD and production.",
@@ -304,7 +304,7 @@ export const blogPosts = [
     slug: "ai-2026-agentic-evaluation-checklists"
   },
   {
-    id: 19,
+    id: 35,
     title: "AI 2026: Policy-as-Code for Agent Governance",
     excerpt: "Codify guardrails and approvals to scale autonomous operations.",
     content: "Adopt policy-as-code to define constraints, approvals, and evidence across the agent lifecycle. Integrate with pipelines, runtime enforcement, and audit logs to ensure consistent, reviewable decisions at scale.",
@@ -319,7 +319,7 @@ export const blogPosts = [
     slug: "ai-2026-agent-governance-policy-as-code"
   },
   {
-    id: 20,
+    id: 36,
     title: "AI 2026: Evals Maturity Model",
     excerpt: "A roadmap for evolving from ad-hoc tests to evaluation-first ops.",
     content: "This maturity model outlines levels from basic correctness checks to continuous, dataset-backed evaluation ecosystems with risk-tiered gates, red teaming, and business KPI alignment.",
@@ -332,6 +332,38 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/evals-maturity-model-2026.jpg",
     slug: "ai-2026-evals-maturity-model"
+  }
+  ,
+  {
+    id: 37,
+    title: "GenAI for Regulated Industries: Practical Compliance Patterns (2025)",
+    excerpt: "How to deploy GenAI in finance and healthcare with auditability and control.",
+    content: "Highly regulated industries can leverage GenAI safely by adopting data minimization, policy-as-code guardrails, human-in-the-loop checkpoints for high-risk actions, and comprehensive audit trails. We break down reference architectures, vendor selection criteria, and rollout playbooks.",
+    author: "Amelia Brooks",
+    authorRole: "Chief Compliance Architect",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Compliance",
+    tags: ["GenAI", "Regulated Industries", "Audit", "Governance"],
+    featured: true,
+    imageUrl: "/images/blog/genai-regulated-industries-2025.jpg",
+    slug: "genai-2025-practical-compliance-patterns"
+  }
+  ,
+  {
+    id: 38,
+    title: "Agentic CRM: Autonomous Revenue Workflows (2025)",
+    excerpt: "From lead-to-cash with agents: enrichment, outreach, pipeline hygiene, and renewals.",
+    content: "Agentic CRM orchestrates data enrichment, targeted outreach, meeting scheduling, customer notes summarization, and renewal risk mitigation with policy gates and human approvals for sensitive actions. Learn patterns, evaluation metrics, and safety rails.",
+    author: "Sofia Ramirez",
+    authorRole: "VP, Revenue Operations",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Go-To-Market",
+    tags: ["Agents", "CRM", "RevOps", "Automation"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-crm-autonomous-revenue-2025.jpg",
+    slug: "agentic-crm-autonomous-revenue-workflows-2025"
   }
 ];
 

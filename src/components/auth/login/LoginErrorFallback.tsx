@@ -1,12 +1,12 @@
-import React from 'react.ts';
-import { AlertTriangle, RefreshCw  } from 'lucide-react.ts';
-interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
+import React from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
 
-  error: anyError;
-  resetErrorBoundary: ()  => void;
-
+interface LoginErrorFallbackProps {
+  error: Error;
+  resetErrorBoundary: () => void;
 }
-export default function LoginErrorFallback(...args: any[]): any {
+
+export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-futuristic p-4">
       <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">
@@ -19,7 +19,7 @@ export default function LoginErrorFallback(...args: any[]): any {
         <p className="text-zion-slate-light mb-6">
           We encountered an error while processing your login. Please try again.
         </p>
-        {process.env.NODE_ENV === 'development' && (
+        {process.env.NODE_ENV === 'development' && error?.message && (
           <details className="text-left mb-6">
             <summary className="text-zion-cyan cursor-pointer text-sm">
               Error details
