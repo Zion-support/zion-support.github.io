@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import EmptyState from '../../components/ui/EmptyState',
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
->>>>>>> origin/auto/autonomy-17186719616
 
 const Messages: NextPage = () => {
   return (
@@ -25,14 +19,7 @@ const Messages: NextPage = () => {
         secondaryAction={{ label: 'Browse services', href: '/services' }}
       />
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default Messages,
-=======
   );
 };
 
 export default Messages;
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react',
-import type { NextPage } from 'next',
-
-type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid',
-
-type DeployFormState = {
-  instanceName: string,
-  defaultLanguage: string,
-  deploymentRegion: string,
-  tokenActivation: boolean,
-  governanceMode: GovernanceMode,
-  branding: {
-    logoUrl: string,
-    primaryColor: string,
-    secondaryColor: string,
-    subdomain: string
-  },
-  modules: Record<string boolean>,
-  bonusModules: Record<string boolean>
-},
-=======
 import { useState } from 'react';
 import type { NextPage } from 'next';
 
@@ -40,7 +18,6 @@ type DeployFormState = {
   modules: Record<string, boolean>;
   bonusModules: Record<string, boolean>;
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 const defaultModules: DeployFormState['modules'] = {
   marketplace: true,
@@ -53,12 +30,8 @@ const defaultModules: DeployFormState['modules'] = {
   'book-builder': true,
   'roadmap-whitepaper': true,
   'api-docs-wiki': true,
-<<<<<<< HEAD
-  'zion-brain': true},
-=======
   'zion-brain': true,
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 const defaultBonus: DeployFormState['bonusModules'] = {
   'global-map': false,
@@ -66,12 +39,8 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   'referral-ambassadors': false,
   'grant-portal': false,
   trailer: false,
-<<<<<<< HEAD
-  'book-store': false},
-=======
   'book-store': false,
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
@@ -82,32 +51,15 @@ const InitPage: NextPage = () => {
     governanceMode: 'Hybrid',
     branding: { logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' },
     modules: defaultModules,
-<<<<<<< HEAD
-    bonusModules: defaultBonus}),
-  const [submitting, setSubmitting] = useState(false),
-  const [result, setResult] = useState<any>(null),
-  const [error, setError] = useState<string | null>(null),
-=======
     bonusModules: defaultBonus,
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState((prev) => ({
       ...prev,
-<<<<<<< HEAD
-      [group]: { ...prev[group], [key]: !prev[group][key] }})),
-  },
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setSubmitting(true),
-    setError(null),
-    setResult(null),
-=======
       [group]: { ...prev[group], [key]: !prev[group][key] },
     }));
   };
@@ -117,23 +69,10 @@ const InitPage: NextPage = () => {
     setSubmitting(true);
     setError(null);
     setResult(null);
->>>>>>> origin/auto/autonomy-17186719616
     try {
       const res = await fetch('/api/deploy/genesis', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-        body: JSON.stringify(state)}),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json?.error || 'Deployment failed'),
-      setResult(json),
-    } catch (err: any) {
-      setError(err.message || 'Unexpected error')
-    } finally {
-      setSubmitting(false),
-    }
-  },
-=======
         body: JSON.stringify(state),
       });
       const json = await res.json();
@@ -145,7 +84,6 @@ const InitPage: NextPage = () => {
       setSubmitting(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-8">
@@ -244,14 +182,7 @@ const InitPage: NextPage = () => {
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default InitPage,
-=======
   );
 };
 
 export default InitPage;
->>>>>>> origin/auto/autonomy-17186719616

@@ -123,9 +123,7 @@ export default function ServicesPage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
             {serviceProcess.map((step, index) => (
               <div key={step.step} className="relative">
-                {index < serviceProcess.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
-                )}
+                {index < serviceProcess.length - 1 && (<div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>)}
                 <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4">
                     <step.icon className="h-8 w-8 text-blue-400" />
