@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
+    summary:
+      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (even later night batch - fresh content)
   {
     title: 'Launch: Realtime Agent Observatory 1.0',
