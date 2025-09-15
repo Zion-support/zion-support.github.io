@@ -7,6 +7,9 @@ const UltimateTechShowcase2026: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a22
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 ULTIMATE TECH SHOWCASE • JANUARY 2026
           </div>
@@ -22,6 +25,7 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold text-lg">
               Watch Demo
+<<<<<<< HEAD
 =======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE TECH SHOWCASE • JANUARY 2026
@@ -137,11 +141,16 @@ const UltimateTechShowcase2026: React.FC = () => {
             <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Enter Metaverse →
 >>>>>>> cursor/create-and-deploy-new-content-425b
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a22
             </button>
           </div>
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a22
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -290,6 +299,7 @@ const UltimateTechShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg">
               Download Brochure
+<<<<<<< HEAD
 =======
         {/* Technology Impact Section */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
@@ -430,6 +440,8 @@ const UltimateTechShowcase2026: React.FC = () => {
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
               Learn More
 >>>>>>> cursor/create-and-deploy-new-content-425b
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9a22
             </button>
           </div>
         </div>
