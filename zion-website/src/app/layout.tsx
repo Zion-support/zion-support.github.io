@@ -100,6 +100,14 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
+          <div className="bg-blue-600/10 border-b border-blue-900/30">
+            <div className="mx-auto max-w-7xl px-6 py-3 text-sm text-blue-300 flex items-center justify-between">
+              <span>
+                New: <a href="/research/agentic-sales-playbooks" className="font-semibold text-blue-400 hover:text-blue-300 underline underline-offset-4">Agentic Sales Playbooks 2025</a>
+              </span>
+              <a href="/research/agentic-sales-playbooks" className="text-blue-300 hover:text-blue-200">Read →</a>
+            </div>
+          </div>
           {children}
         </main>
         <Footer />
