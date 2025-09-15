@@ -9,8 +9,8 @@ const navigation = [
   { name: 'Services', href: '/services' },
 <<<<<<< HEAD
   { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
 =======
   { name: 'Blog', href: '/blog' },
