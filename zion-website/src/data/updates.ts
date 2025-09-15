@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Research Assistant 2.0',
+    summary:
+      'Major upgrade with better sources, multimodal inputs, and faster research pipelines.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Course: Web3 Fundamentals Track',
+    summary:
+      'Hands-on introduction to wallets, smart contracts, tokens, and decentralized applications.',
+    href: '/updates/web3-fundamentals-track',
+    date: '2025-09-15',
+    tag: 'Course'
+  },
+  {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
     summary:
       'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',
