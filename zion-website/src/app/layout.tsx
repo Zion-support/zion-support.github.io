@@ -30,12 +30,7 @@ export const metadata: Metadata = {
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group',
-      },
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Zion Tech Group' },
     ],
     locale: 'en_US',
     type: 'website',
