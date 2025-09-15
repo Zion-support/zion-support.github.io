@@ -106,6 +106,13 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/updates/autonomous-compliance-auditor-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Auditor v1.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/agent-policy-as-code-starter-kit"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
@@ -131,6 +138,20 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
                 Launch: Ops Control Center v2.2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-compliance-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-procurement-playbook-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: AI Procurement 2026
                 <span aria-hidden>→</span>
               </a>
               <a
