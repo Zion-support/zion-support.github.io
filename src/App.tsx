@@ -13,6 +13,7 @@ import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
 import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
 import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
 import ComprehensiveTechShowcase2026 from './components/ComprehensiveTechShowcase2026';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import NextGenAIRevolution2026 from './pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
@@ -23,6 +24,10 @@ import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import UltimateServiceShowcase2026 from './pages/UltimateServiceShowcase2026';
+import AdvancedBlockchainSolutions2026 from './pages/AdvancedBlockchainSolutions2026';
+import AdvancedIoTPlatform2026 from './pages/AdvancedIoTPlatform2026';
+import AdvancedCybersecurity2026 from './pages/AdvancedCybersecurity2026';
+import AdvancedCloudSolutions2026 from './pages/AdvancedCloudSolutions2026';
 
 export default function App(): JSX.Element {
   return (
@@ -46,26 +51,26 @@ export default function App(): JSX.Element {
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
                       Experience the future of technology with our groundbreaking new content featuring Advanced AI Transformation, 
-                      Next-Gen Tech Showcase, Quantum-Neural Fusion, Synthetic Intelligence, and Revolutionary Neural Interfaces
+                      Blockchain Solutions, IoT Platforms, Cybersecurity, Cloud Solutions, and Revolutionary Neural Interfaces
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-w-7xl mx-auto">
                       <a href="/pages/AdvancedAITransformation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
                         🧠 AI Transformation →
                       </a>
+                      <a href="/pages/AdvancedBlockchainSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🔗 Blockchain →
+                      </a>
+                      <a href="/pages/AdvancedIoTPlatform2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🌐 IoT Platform →
+                      </a>
+                      <a href="/pages/AdvancedCybersecurity2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🛡️ Cybersecurity →
+                      </a>
+                      <a href="/pages/AdvancedCloudSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        ☁️ Cloud Solutions →
+                      </a>
                       <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        ⚛️ Quantum-Neural Fusion →
-                      </a>
-                      <a href="/pages/NextGenTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🌟 Next-Gen Showcase →
-                      </a>
-                      <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🧬 Neural Interface →
-                      </a>
-                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🤖 Synthetic AI →
-                      </a>
-                      <a href="/pages/SpaceTechInnovation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🚀 Space Tech →
+                        ⚛️ Quantum-Neural →
                       </a>
                     </div>
                   </div>
@@ -82,6 +87,11 @@ export default function App(): JSX.Element {
                   <p className="text-xl text-gray-600 mb-8">
                     Leading the future of technology with AI, quantum computing, and innovative solutions
                   </p>
+                </div>
+
+                {/* New Content Showcase 2026 */}
+                <div className="mb-12">
+                  <NewContentShowcase2026 />
                 </div>
 
                 {/* Revolutionary Content Showcase 2026 */}
@@ -107,6 +117,50 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                   
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🔗</div>
+                    <h3 className="text-xl font-semibold mb-2">Blockchain Solutions</h3>
+                    <p className="text-gray-600 mb-4">
+                      Revolutionary blockchain technology with DeFi protocols and smart contracts.
+                    </p>
+                    <a href="/pages/AdvancedBlockchainSolutions2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Explore Blockchain →
+                    </a>
+                  </div>
+                  
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🌐</div>
+                    <h3 className="text-xl font-semibold mb-2">IoT Platform</h3>
+                    <p className="text-gray-600 mb-4">
+                      Intelligent Internet of Things with edge computing and AI analytics.
+                    </p>
+                    <a href="/pages/AdvancedIoTPlatform2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      IoT Solutions →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">🛡️</div>
+                    <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
+                    <p className="text-gray-600 mb-4">
+                      Next-generation security solutions with AI threat detection.
+                    </p>
+                    <a href="/pages/AdvancedCybersecurity2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Security Solutions →
+                    </a>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-4xl mb-4">☁️</div>
+                    <h3 className="text-xl font-semibold mb-2">Cloud Solutions</h3>
+                    <p className="text-gray-600 mb-4">
+                      Multi-cloud infrastructure with serverless computing and AI optimization.
+                    </p>
+                    <a href="/pages/AdvancedCloudSolutions2026" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      Cloud Services →
+                    </a>
+                  </div>
+
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">⚛️</div>
                     <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
@@ -222,6 +276,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/UltimateServiceShowcase2026" element={<UltimateServiceShowcase2026 />} />
+          <Route path="/pages/AdvancedBlockchainSolutions2026" element={<AdvancedBlockchainSolutions2026 />} />
+          <Route path="/pages/AdvancedIoTPlatform2026" element={<AdvancedIoTPlatform2026 />} />
+          <Route path="/pages/AdvancedCybersecurity2026" element={<AdvancedCybersecurity2026 />} />
+          <Route path="/pages/AdvancedCloudSolutions2026" element={<AdvancedCloudSolutions2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           
           <Route path="/contact" element={
