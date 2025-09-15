@@ -2,6 +2,24 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-policy-as-code-governance-blueprint',
+    title: 'AI 2026: Policy-as-Code Governance Blueprint',
+    summary:
+      'Operationalizing AI governance with versioned policies, automated checks, and continuous compliance.'
+  },
+  {
+    slug: 'ai-2026-agent-risk-metrics',
+    title: 'AI 2026: Agent Risk Metrics',
+    summary:
+      'Shared risk signals: override rates, policy violations, groundedness, and incident MTTR.'
+  },
+  {
+    slug: 'ai-2026-production-evals-blueprint',
+    title: 'AI 2026: Production Evals Blueprint',
+    summary:
+      'From offline suites to live canaries and deployment gates with auto rollback.'
+  },
+  {
     slug: 'ai-2026-agentic-evals-blueprint',
     title: 'AI 2026: Agentic Evals Blueprint',
     summary:

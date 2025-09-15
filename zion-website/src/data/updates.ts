@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Research Copilot (v1.1)',
+    summary:
+      'Context-grounded copilots for research teams with retrieval observability, evals, and live citations.',
+    href: '/updates/autonomous-research-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production-Grade Agent Safety Reviews',
+    summary:
+      'Lightweight but rigorous design reviews, checklists, and scorecards to ship safer agents.',
+    href: '/updates/production-agent-safety-reviews',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Blueprint: Cost-Aware Routing with Live Evals',
+    summary:
+      'Combine offline evals with canary live tests to continuously optimize quality, latency, and cost.',
+    href: '/updates/cost-aware-routing-live-evals',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Autonomous Data Governance Suite (v3)',
     summary:
       'End-to-end governance with policy-as-code, lineage, and real-time audit trails for AI systems.',
