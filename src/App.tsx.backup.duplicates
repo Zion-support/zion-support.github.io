@@ -30,8 +30,6 @@ import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
-import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
-import NewShowcase2025 from './src/pages/NewShowcase2025';
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
@@ -52,8 +50,10 @@ import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation20
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-6f00
+import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
+import ConsciousnessTransfer2027 from './src/pages/ConsciousnessTransfer2027';
+import QuantumConsciousnessRevolution2027 from './src/pages/QuantumConsciousnessRevolution2027';
+import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 
 export default function App(): JSX.Element {
   return (
@@ -394,6 +394,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
+                </div>
+
+                {/* Revolutionary Content Showcase 2027 */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2027 />
                 </div>
 
                 {/* NEW: 2026 Revolutionary Content Showcase */}
@@ -908,6 +913,9 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
+          <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/pages/ConsciousnessTransfer2027" element={<ConsciousnessTransfer2027 />} />
+          <Route path="/pages/QuantumConsciousnessRevolution2027" element={<QuantumConsciousnessRevolution2027 />} />
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
