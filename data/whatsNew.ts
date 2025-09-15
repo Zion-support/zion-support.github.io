@@ -115,5 +115,47 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     emoji: "💹",
     date: "2025-09-14",
   },
+  {
+    id: "real-time-rag-2026",
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    description:
+      "Design sub-200ms RAG with hybrid search, streaming generation, and eval-gated upgrades.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-real-time-retrieval-architectures",
+    emoji: "⚡",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-playbook-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
+    description:
+      "SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.",
+    ctaLabel: "Explore Playbook",
+    href: "/content/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-certification-2026",
+    title: "AI 2026: Agent Safety Certification",
+    description:
+      "Structured certification to validate agent safety with scenario test suites and governance.",
+    ctaLabel: "Read Framework",
+    href: "/blog/ai-2026-agent-safety-certification",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "edge-agents-on-device-2026",
+    title: "AI 2026: Edge Agents On-Device",
+    description:
+      "Private, low-latency agents with hybrid offload, secure updates, and telemetry.",
+    ctaLabel: "Explore",
+    href: "/blog/ai-2026-edge-agents-on-device",
+    emoji: "📱",
+    date: "2025-09-15",
+  },
 ];
 

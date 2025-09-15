@@ -257,6 +257,36 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/autonomous-ops-playbook-2026.jpg",
     slug: "ai-2026-autonomous-ops-playbook"
+  },
+  {
+    id: 16,
+    title: "AI 2026: Agent Safety Certification",
+    excerpt: "Certification model for validating agent safety across scenarios and domains.",
+    content: "This guide introduces a structured certification program for agent systems, covering scenario test suites, red teaming, governance workflows, and production drift monitoring to ensure sustained safety.",
+    author: "Avery Singh",
+    authorRole: "Head of Responsible AI",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Safety",
+    tags: ["Certification", "Safety", "Governance", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/agent-safety-certification-2026.jpg",
+    slug: "ai-2026-agent-safety-certification"
+  },
+  {
+    id: 17,
+    title: "AI 2026: Edge Agents On-Device Inference",
+    excerpt: "Design patterns for reliable, private, and low-latency edge agents.",
+    content: "We cover on-device LLMs, hybrid offload, energy-aware scheduling, secure model updates, and telemetry for agents running on phones, cars, and IoT devices.",
+    author: "Kenji Watanabe",
+    authorRole: "Edge AI Architect",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Edge AI",
+    tags: ["Edge", "On-Device", "Latency", "Privacy"],
+    featured: true,
+    imageUrl: "/images/blog/edge-agents-on-device-2026.jpg",
+    slug: "ai-2026-edge-agents-on-device"
   }
 ];
 
