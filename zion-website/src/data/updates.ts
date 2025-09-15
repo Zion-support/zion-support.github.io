@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Compliance Auditor (v1.0)',
+    summary:
+      'Automated GenAI compliance auditing with policy-as-code, lineage, PII detection, and exportable audit reports.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Course: GenAI for Executives',
+    summary:
+      'Executive program on GenAI strategy, governance, risk, operating models, and ROI with practical playbooks.',
+    href: '/updates/genai-executive-course',
+    date: '2025-09-15',
+    tag: 'Course'
+  },
+  {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',
     summary:
       'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',

@@ -107,6 +107,20 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/updates/compliance-auditor-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Auditor v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/genai-executive-course"
+                className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 bg-pink-500/10 px-4 py-2 text-sm font-semibold text-pink-200 hover:bg-pink-500/20 transition-colors duration-200"
+              >
+                New Course: GenAI for Executives
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/autonomous-sales-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
