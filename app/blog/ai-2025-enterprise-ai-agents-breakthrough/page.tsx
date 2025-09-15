@@ -1,87 +1,60 @@
-import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import React from 'react';
+import SEO from '../../components/SEO';
 
-export const metadata = {
-  title: 'Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact | Zion Tech Group',
-  description: 'How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.',
-  keywords: [
-    'enterprise ai agents', 'ai agents 2025', 'autonomous workflows', 'business transformation', 'ai automation'
-  ],
-};
-
-const EnterpriseAIAgentsBreakthroughPage = () => {
+const EnterpriseAIAgentsBreakthrough2025 = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <SEO
         title="Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact"
         description="How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025."
-        keywords="enterprise ai agents, ai agents 2025, autonomous workflows, business transformation, ai automation"
+        keywords="enterprise AI agents, automation, AI 2025, autonomous workflows, productivity"
         url="/blog/ai-2025-enterprise-ai-agents-breakthrough"
       />
 
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact
-          </h1>
-          <div className="opacity-90">Published: 2025-09-15 • Category: Enterprise AI</div>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Enterprise AI agents are moving from pilots to production at scale. They orchestrate complex
-            processes, collaborate with humans, and connect systems end-to-end—driving measurable ROI and
-            accelerating digital transformation.
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <header className="mb-10">
+          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Enterprise AI</p>
+          <h1 className="text-4xl font-bold text-gray-900 mt-2">Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact</h1>
+          <p className="text-lg text-gray-600 mt-4">
+            From autonomous L2 workflows to agent swarms, enterprises are operationalizing AI beyond chat to deliver measurable business value.
           </p>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Capabilities</h2>
-          <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-8">
-            <li>Autonomous task planning with guardrails and human-in-the-loop checkpoints</li>
-            <li>Secure integrations with CRM, ERP, data warehouses, and LLM gateways</li>
-            <li>Policy-aware execution, audit trails, and role-based access</li>
-            <li>Multimodal understanding: text, tables, documents, tickets, and dashboards</li>
+        </header>
+
+        <div className="prose prose-lg max-w-none">
+          <h2>What Changed in 2025</h2>
+          <ul>
+            <li>Reliable tool use with structured function calling and policy enforcement.</li>
+            <li>Long-horizon planning with memory and retrieval orchestration.</li>
+            <li>Enterprise guardrails: observability, approvals, and role-based actions.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Outcomes We See</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="bg-white rounded-xl p-6 shadow">
-              <div className="text-3xl">⚙️</div>
-              <h3 className="font-semibold text-gray-900 mt-3 mb-2">Ops Efficiency</h3>
-              <p className="text-gray-600">35–60% cycle-time reduction across repetitive workflows.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <div className="text-3xl">📈</div>
-              <h3 className="font-semibold text-gray-900 mt-3 mb-2">Revenue Impact</h3>
-              <p className="text-gray-600">Higher conversion via always-on assistants and proactive outreach.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow">
-              <div className="text-3xl">🔒</div>
-              <h3 className="font-semibold text-gray-900 mt-3 mb-2">Governance</h3>
-              <p className="text-gray-600">Compliant execution with full observability and rollback.</p>
-            </div>
-          </div>
+          <h2>High-Impact Use Cases</h2>
+          <ul>
+            <li>Finance close automation and cash reconciliation.</li>
+            <li>Sales operations: pipeline hygiene, quote assembly, and renewals.</li>
+            <li>IT ops: incident triage, runbook execution, and ticket resolution.</li>
+          </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Getting Started</h2>
-          <p className="text-gray-700 mb-6">
-            Start with a value-backed pilot: one process, clear KPIs, and a staged rollout. We provide
-            the agent framework, integrations, and operational guardrails so you can scale confidently.
-          </p>
+          <h2>Architecture Patterns</h2>
+          <ol>
+            <li>Task router + specialist agents.</li>
+            <li>Policy-as-code approval gates for sensitive actions.</li>
+            <li>Event-driven orchestration with retries and idempotency.</li>
+          </ol>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
-              Talk to an Expert
-            </Link>
-            <Link href="/services/ai-automation" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
-              Explore AI Automation
-            </Link>
-          </div>
+          <h2>Measuring Impact</h2>
+          <p>Track cycle time, escalation rate, right-first-time, and value per task. Tie outcomes to revenue, cost, and risk KPIs.</p>
         </div>
-      </section>
+
+        <footer className="mt-12 flex items-center justify-between">
+          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
+          <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Start with AI Agents</Link>
+        </footer>
+      </article>
     </div>
   );
 };
 
-export default EnterpriseAIAgentsBreakthroughPage;
+export default EnterpriseAIAgentsBreakthrough2025;
 
