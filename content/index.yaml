@@ -678,4 +678,8 @@ content_index:
         downtime_reduction: "85%"
         cost_savings: "60%"
         prediction_accuracy: "95%"
+<<<<<<< HEAD
       reading_time: "18 min read"
+=======
+      reading_time: "18 min read"
+>>>>>>> cursor/create-and-deploy-new-content-81d0
