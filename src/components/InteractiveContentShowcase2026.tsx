@@ -3,6 +3,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-79e6
+<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   ArrowRight
@@ -293,7 +297,13 @@ const InteractiveContentShowcase2026 = () => {
         </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-45eb
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
+>>>>>>> cursor/create-and-deploy-new-content-79e6
       </div>
     </div>
   );

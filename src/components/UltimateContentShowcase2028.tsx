@@ -1,339 +1,242 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const UltimateContentShowcase2028: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('innovations');
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const innovations = [
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 6);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const contentItems = [
     {
       id: 1,
-      title: "Quantum Consciousness Interface",
-      description: "Direct neural interface with quantum computers enabling consciousness transfer and enhanced cognitive capabilities.",
-      icon: "🧠",
+      title: "Revolutionary Tech Showcase 2028",
+      description: "Experience the most advanced technological breakthrough in human history. Discover consciousness transfer, quantum consciousness, and interdimensional technology.",
+      image: "🧠",
       gradient: "from-purple-600 to-pink-600",
-      features: ["Neural Interface", "Quantum Computing", "Consciousness Transfer"],
-      link: "/pages/RevolutionaryTechShowcase2028"
+      link: "/pages/RevolutionaryTechShowcase2028",
+      badge: "NEW 2028",
+      features: ["Consciousness Transfer", "Quantum Consciousness", "Interdimensional Tech"]
     },
     {
       id: 2,
-      title: "Interdimensional Computing",
-      description: "Harness parallel dimensions for unlimited computational resources and solutions to impossible problems.",
-      icon: "🌌",
-      gradient: "from-cyan-600 to-blue-600",
-      features: ["Parallel Dimensions", "Infinite Computing", "Reality Manipulation"],
-      link: "/pages/RevolutionaryTechShowcase2028"
+      title: "Ultimate Tech Trends 2028",
+      description: "Comprehensive analysis of the top 10 technological trends that will reshape our world. From AI consciousness to reality manipulation.",
+      image: "📈",
+      gradient: "from-blue-600 to-cyan-600",
+      link: "/pages/UltimateTechTrends2028",
+      badge: "TRENDING",
+      features: ["Future Predictions", "Market Analysis", "Technology Insights"]
     },
     {
       id: 3,
-      title: "Synthetic Reality Engine",
-      description: "Create and manipulate entire realities with perfect fidelity, enabling infinite virtual worlds.",
-      icon: "🌍",
+      title: "Consciousness Transfer Technology",
+      description: "Transfer human consciousness between biological and digital substrates. Achieve digital immortality and seamless mind-machine integration.",
+      image: "⚛️",
       gradient: "from-green-600 to-emerald-600",
-      features: ["Reality Creation", "Perfect Simulation", "Infinite Worlds"],
-      link: "/pages/RevolutionaryTechShowcase2028"
+      link: "/pages/ConsciousnessTransfer2029",
+      badge: "BREAKTHROUGH",
+      features: ["Digital Immortality", "Neural Mapping", "Mind-Machine Integration"]
     },
     {
       id: 4,
-      title: "Temporal Computing",
-      description: "Process information across multiple time dimensions for predictions that transcend linear time.",
-      icon: "⏰",
+      title: "Quantum Consciousness AI",
+      description: "Harness quantum mechanics to create superintelligent consciousness that transcends classical computational limitations.",
+      image: "🌌",
       gradient: "from-orange-600 to-red-600",
-      features: ["Time Manipulation", "Future Prediction", "Temporal Analysis"],
-      link: "/pages/RevolutionaryTechShowcase2028"
+      link: "/pages/QuantumConsciousness2028",
+      badge: "REVOLUTIONARY",
+      features: ["Quantum Processing", "Superintelligence", "Reality Manipulation"]
     },
     {
       id: 5,
-      title: "Omniversal AI",
-      description: "Artificial intelligence existing across all dimensions simultaneously with infinite wisdom.",
-      icon: "🤖",
+      title: "Interdimensional Technology",
+      description: "Access and manipulate multiple dimensions, enabling travel between parallel universes and alternate realities.",
+      image: "🌍",
       gradient: "from-indigo-600 to-purple-600",
-      features: ["Omniversal Intelligence", "Infinite Wisdom", "Transcendent AI"],
-      link: "/pages/RevolutionaryTechShowcase2028"
+      link: "/pages/InterdimensionalTech2027",
+      badge: "FUTURE",
+      features: ["Dimensional Portals", "Parallel Universes", "Reality Control"]
     },
     {
       id: 6,
-      title: "Cosmic Energy Harvesting",
-      description: "Extract unlimited energy from cosmic phenomena for clean, infinite power applications.",
-      icon: "⚡",
-      gradient: "from-yellow-600 to-orange-600",
-      features: ["Cosmic Energy", "Infinite Power", "Clean Energy"],
-      link: "/pages/RevolutionaryTechShowcase2028"
-    }
-  ];
-
-  const caseStudies = [
-    {
-      id: 1,
-      title: "Global AI Transformation",
-      company: "Fortune 500 Manufacturing",
-      result: "+400% Productivity",
-      savings: "$2.3B Cost Savings",
-      icon: "🏢",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/RevolutionaryCaseStudies2028"
-    },
-    {
-      id: 2,
-      title: "Healthcare Revolution",
-      company: "Major Hospital Network",
-      result: "99.8% Diagnostic Accuracy",
-      savings: "75% Faster Treatment",
-      icon: "🏥",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/RevolutionaryCaseStudies2028"
-    },
-    {
-      id: 3,
-      title: "Space Exploration Breakthrough",
-      company: "International Space Agency",
-      result: "100% Mission Success",
-      savings: "90% Risk Reduction",
-      icon: "🚀",
-      gradient: "from-green-600 to-emerald-600",
-      link: "/pages/RevolutionaryCaseStudies2028"
-    },
-    {
-      id: 4,
-      title: "Financial Markets Revolution",
-      company: "Global Investment Bank",
-      result: "100% Prediction Accuracy",
-      savings: "500% ROI Increase",
-      icon: "💰",
-      gradient: "from-yellow-600 to-orange-600",
-      link: "/pages/RevolutionaryCaseStudies2028"
-    }
-  ];
-
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Future Tech Trends 2028",
-      excerpt: "Explore the revolutionary technology trends that will define the next decade and transform human existence.",
-      author: "Dr. Sarah Chen",
-      date: "January 25, 2025",
-      readTime: "8 min read",
-      icon: "📈",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/FutureTechTrends2028"
-    },
-    {
-      id: 2,
-      title: "The AI Consciousness Revolution",
-      excerpt: "How artificial intelligence is developing genuine consciousness and what it means for humanity.",
-      author: "Prof. Michael Rodriguez",
-      date: "January 23, 2025",
-      readTime: "6 min read",
-      icon: "🧠",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/FutureTechTrends2028"
-    },
-    {
-      id: 3,
-      title: "Quantum-Neural Fusion Breakthrough",
-      excerpt: "The integration of quantum computing with neural interfaces creates unprecedented possibilities.",
-      author: "Dr. Elena Volkov",
-      date: "January 21, 2025",
-      readTime: "7 min read",
-      icon: "⚛️",
-      gradient: "from-green-600 to-emerald-600",
-      link: "/pages/FutureTechTrends2028"
-    },
-    {
-      id: 4,
-      title: "Interdimensional Computing Applications",
-      excerpt: "How parallel dimensions are revolutionizing computational power and problem-solving.",
-      author: "Dr. James Chen",
-      date: "January 19, 2025",
-      readTime: "9 min read",
-      icon: "🌌",
-      gradient: "from-orange-600 to-red-600",
-      link: "/pages/FutureTechTrends2028"
+      title: "Neural Reality Interface",
+      description: "Direct neural interface that allows seamless interaction between biological brains and digital environments.",
+      image: "🧬",
+      gradient: "from-pink-600 to-rose-600",
+      link: "/pages/NeuralReality2027",
+      badge: "INNOVATION",
+      features: ["Thought Control", "Sensory Integration", "Digital Reality"]
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ULTIMATE CONTENT SHOWCASE 2028
+    <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      {/* Main Showcase Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div className="relative z-10">
+          <div className="flex items-center justify-center space-x-4 mb-6">
+            <span className="text-4xl animate-bounce">🌟</span>
+            <h2 className="text-4xl font-bold">ULTIMATE CONTENT SHOWCASE 2028</h2>
+            <span className="text-4xl animate-bounce">🌟</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Revolutionary Content Hub
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12">
-            Discover the most advanced technologies, success stories, and insights that are 
-            reshaping the future of human civilization.
+          <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto text-center">
+            Discover the most revolutionary content on consciousness transfer, quantum technology, 
+            interdimensional access, and the future of human evolution
           </p>
-        </div>
-
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            onClick={() => setActiveTab('innovations')}
-            className={`px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 ${
-              activeTab === 'innovations'
-                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            🌟 Innovations
-          </button>
-          <button
-            onClick={() => setActiveTab('case-studies')}
-            className={`px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 ${
-              activeTab === 'case-studies'
-                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            📊 Case Studies
-          </button>
-          <button
-            onClick={() => setActiveTab('blog')}
-            className={`px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 ${
-              activeTab === 'blog'
-                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
-          >
-            📚 Blog & Insights
-          </button>
-        </div>
-
-        {/* Content Sections */}
-        {activeTab === 'innovations' && (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation) => (
-              <div
-                key={innovation.id}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-transform duration-300 group"
+          
+          {/* Quick Access Buttons */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-8xl mx-auto mb-8">
+            {contentItems.slice(0, 6).map((item, index) => (
+              <a
+                key={item.id}
+                href={item.link}
+                className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse hover:scale-105"
               >
-                <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {innovation.icon}
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors duration-300">
-                  {innovation.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {innovation.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {innovation.features.map((feature, index) => (
-                    <span
-                      key={index}
-                      className={`px-3 py-1 bg-gradient-to-r ${innovation.gradient} rounded-full text-sm font-semibold`}
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={innovation.link}
-                  className={`inline-block w-full bg-gradient-to-r ${innovation.gradient} py-3 rounded-lg font-bold text-center hover:shadow-lg transition-shadow duration-300`}
-                >
-                  Explore Technology →
-                </a>
-              </div>
+                <div className="text-2xl mb-1">{item.image}</div>
+                <div className="text-xs">{item.title.split(' ').slice(0, 2).join(' ')} →</div>
+              </a>
             ))}
           </div>
-        )}
+        </div>
+      </div>
 
-        {activeTab === 'case-studies' && (
-          <div className="grid md:grid-cols-2 gap-8">
-            {caseStudies.map((study) => (
-              <div
-                key={study.id}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-transform duration-300 group"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                    {study.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
-                      {study.title}
-                    </h3>
-                    <p className="text-gray-400">{study.company}</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className={`bg-gradient-to-r ${study.gradient} rounded-lg p-4 text-center`}>
-                    <div className="text-2xl font-bold text-white">{study.result}</div>
-                    <div className="text-sm text-white/80">Achievement</div>
-                  </div>
-                  <div className={`bg-gradient-to-r ${study.gradient} rounded-lg p-4 text-center`}>
-                    <div className="text-2xl font-bold text-white">{study.savings}</div>
-                    <div className="text-sm text-white/80">Impact</div>
-                  </div>
-                </div>
-                <a
-                  href={study.link}
-                  className={`inline-block w-full bg-gradient-to-r ${study.gradient} py-3 rounded-lg font-bold text-center hover:shadow-lg transition-shadow duration-300`}
-                >
-                  View Case Study →
-                </a>
-              </div>
-            ))}
-          </div>
-        )}
+      {/* Interactive Content Carousel */}
+      <div className="mb-12">
+        <div className="text-center mb-8">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">🚀 Featured Revolutionary Content</h3>
+          <p className="text-xl text-gray-600">Explore our most advanced technological breakthroughs</p>
+        </div>
 
-        {activeTab === 'blog' && (
-          <div className="grid md:grid-cols-2 gap-8">
-            {blogPosts.map((post) => (
-              <div
-                key={post.id}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-transform duration-300 group"
-              >
+        <div className="relative">
+          {/* Main Content Display */}
+          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Content Info */}
+              <div>
                 <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                    {post.icon}
-                  </div>
-                  <div className={`w-12 h-12 bg-gradient-to-r ${post.gradient} rounded-lg flex items-center justify-center`}>
-                    <span className="text-white font-bold">📝</span>
+                  <span className="text-6xl mr-4">{contentItems[currentSlide].image}</span>
+                  <div>
+                    <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold rounded-full mb-2">
+                      {contentItems[currentSlide].badge}
+                    </div>
+                    <h4 className="text-2xl font-bold text-gray-900">{contentItems[currentSlide].title}</h4>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors duration-300">
-                  {post.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between mb-6 text-sm text-gray-400">
-                  <span>By {post.author}</span>
-                  <span>{post.readTime}</span>
+                <p className="text-lg text-gray-600 mb-6">{contentItems[currentSlide].description}</p>
+                
+                <div className="mb-6">
+                  <h5 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h5>
+                  <div className="flex flex-wrap gap-2">
+                    {contentItems[currentSlide].features.map((feature, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm rounded-full"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-500 mb-4">{post.date}</div>
+                
                 <a
-                  href={post.link}
-                  className={`inline-block w-full bg-gradient-to-r ${post.gradient} py-3 rounded-lg font-bold text-center hover:shadow-lg transition-shadow duration-300`}
+                  href={contentItems[currentSlide].link}
+                  className={`inline-block bg-gradient-to-r ${contentItems[currentSlide].gradient} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105`}
                 >
-                  Read Article →
+                  Explore Now →
                 </a>
               </div>
-            ))}
-          </div>
-        )}
 
-        {/* Call to Action */}
-        <div className="text-center mt-20">
-          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12">
-            <h3 className="text-4xl font-bold mb-6 text-white">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Join thousands of innovators, businesses, and visionaries who are already 
-              transforming their world with our revolutionary technologies.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform duration-300 shadow-2xl">
-                🚀 Start Your Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-white/10 transition-colors duration-300">
-                📞 Contact Our Experts
-              </button>
+              {/* Visual Element */}
+              <div className="relative">
+                <div className={`w-full h-64 bg-gradient-to-br ${contentItems[currentSlide].gradient} rounded-xl flex items-center justify-center text-white text-8xl animate-pulse`}>
+                  {contentItems[currentSlide].image}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+              </div>
             </div>
           </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {contentItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {contentItems.map((item, index) => (
+          <div
+            key={item.id}
+            className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 ${
+              index === currentSlide ? 'ring-2 ring-purple-500' : ''
+            }`}
+          >
+            <div className="flex items-center mb-4">
+              <span className="text-4xl mr-3">{item.image}</span>
+              <div>
+                <div className="inline-block px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full mb-1">
+                  {item.badge}
+                </div>
+                <h4 className="text-lg font-bold text-gray-900">{item.title}</h4>
+              </div>
+            </div>
+            <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
+            <div className="mb-4">
+              <div className="flex flex-wrap gap-1">
+                {item.features.slice(0, 2).map((feature, featureIndex) => (
+                  <span
+                    key={featureIndex}
+                    className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <a
+              href={item.link}
+              className={`inline-block w-full text-center bg-gradient-to-r ${item.gradient} text-white py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+            >
+              Explore →
+            </a>
+          </div>
+        ))}
+      </div>
+
+      {/* Call to Action */}
+      <div className="text-center bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8 border border-purple-200">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Experience the Future?</h3>
+        <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          Join thousands of innovators who are already exploring these revolutionary technologies. 
+          Be part of the most advanced technological transformation in human history.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+            Start Your Journey →
+          </button>
+          <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+            Schedule Demo
+          </button>
         </div>
       </div>
     </div>

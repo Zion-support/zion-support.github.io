@@ -8,10 +8,10 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
@@ -23,9 +23,9 @@ const navigation = [
 >>>>>>> cursor/create-and-deploy-new-content-8472
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-7857
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> cursor/create-and-deploy-new-content-425b
 ]
 
 export default function Navigation() {

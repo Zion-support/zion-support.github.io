@@ -1,5 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 import Link from 'next/link';
 import { 
   Mail, 
@@ -222,20 +224,21 @@ const Footer: React.FC = () => {
           </div>
 import { Link } from 'react-router-dom';
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-=======
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
+<<<<<<< HEAD
+=======
           <div>
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400">
               Leading the future of technology with cutting-edge AI, quantum computing, 
               and neural interface solutions.
+>>>>>>> cursor/create-and-deploy-new-content-425b
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -246,7 +249,10 @@ const Footer: React.FC = () => {
             </div>
             <p className="text-gray-400 mb-4">
               Leading the future of technology with AI, blockchain, and innovative solutions that transform businesses and create new possibilities.
+<<<<<<< HEAD
+=======
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+>>>>>>> cursor/create-and-deploy-new-content-425b
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -269,11 +275,14 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
 
           {/* Quick Links */}
           <div>
+<<<<<<< HEAD
+=======
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               <li><a href="/pages/AdvancedAITransformation2025" className="text-gray-400 hover:text-white">AI Solutions</a></li>
               <li><a href="/pages/QuantumComputingRevolution2025" className="text-gray-400 hover:text-white">Quantum Computing</a></li>
               <li><a href="/pages/NeuralInterfaceRevolution2025" className="text-gray-400 hover:text-white">Neural Interfaces</a></li>
+>>>>>>> cursor/create-and-deploy-new-content-425b
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -301,17 +310,23 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
                   Tech Insights
                 </Link>
               </li>
+<<<<<<< HEAD
+=======
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+>>>>>>> cursor/create-and-deploy-new-content-425b
             </ul>
           </div>
 
           {/* Services */}
           <div>
+<<<<<<< HEAD
+=======
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               <li><a href="/pages/BlogPost2025" className="text-gray-400 hover:text-white">Blog</a></li>
               <li><a href="/pages/TechnologyInsights2025" className="text-gray-400 hover:text-white">Insights</a></li>
               <li><a href="/pages/RevolutionaryTechTrends2026" className="text-gray-400 hover:text-white">Trends</a></li>
+>>>>>>> cursor/create-and-deploy-new-content-425b
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
@@ -339,12 +354,17 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
                   Technology Consulting
                 </Link>
               </li>
+<<<<<<< HEAD
+=======
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+>>>>>>> cursor/create-and-deploy-new-content-425b
             </ul>
           </div>
 
           {/* Contact */}
           <div>
+<<<<<<< HEAD
+=======
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="text-gray-400 mb-2">Email: info@ziontechgroup.com</p>
             <p className="text-gray-400">Phone: +1 (555) 123-4567</p>
@@ -353,6 +373,7 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">&copy; 2026 Zion Tech Group. All rights reserved.</p>
 cursor/create-and-deploy-new-content-7857
+>>>>>>> cursor/create-and-deploy-new-content-425b
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-400">
               <p>Email: info@ziontechgroup.com</p>
@@ -386,9 +407,9 @@ cursor/create-and-deploy-new-content-7857
             </div>
           </div>
 <<<<<<< HEAD
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+>>>>>>> cursor/create-and-deploy-new-content-425b
         </div>
       </div>
     </footer>

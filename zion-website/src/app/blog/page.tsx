@@ -6,13 +6,6 @@ const posts = [
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
 <<<<<<< HEAD
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> cursor/create-and-deploy-new-content-7857
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
 <<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 <<<<<<< HEAD
@@ -23,7 +16,14 @@ const posts = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+>>>>>>> cursor/create-and-deploy-new-content-425b
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -47,6 +47,14 @@ const posts = [
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
 =======
 =======
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
@@ -65,15 +73,7 @@ const posts = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8472
-=======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
@@ -113,12 +113,12 @@ const posts = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 <<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> cursor/create-and-deploy-new-content-7857
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',

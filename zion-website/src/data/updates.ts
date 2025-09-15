@@ -10,6 +10,14 @@ export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
@@ -21,15 +29,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> cursor/create-and-deploy-new-content-7857
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -53,14 +53,14 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-7857
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+>>>>>>> cursor/create-and-deploy-new-content-425b
 =======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
@@ -70,6 +70,9 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
@@ -78,10 +81,7 @@ export const siteUpdates: SiteUpdate[] = [
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> cursor/create-and-deploy-new-content-7857
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {

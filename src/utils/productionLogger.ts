@@ -1,21 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-425b
+// Production-safe logging utility
+// Production logger utility for handling logging in production environment
+
+<<<<<<< HEAD
+=======
+// Production logger utility
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
-<<<<<<< HEAD
-// Production-safe logging utility
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Production logger utility for handling logging in production environment
-
-=======
-// Production logger utility
->>>>>>> main
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -28,8 +30,6 @@ const LOG_LEVELS: LogLevel = {
   WARN: 'warn',
   INFO: 'info',
 <<<<<<< HEAD
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
 <<<<<<< HEAD
   DEBUG: 'debug'
 };
@@ -95,6 +95,14 @@ class ProductionLogger {
       console.warn('Failed to send log to remote endpoint:', error);
     }
   }
+=======
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+    }
+  }
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-425b
 
   error(message: string, data?: any): void {
     if (!this.shouldLog('ERROR')) return;
@@ -149,15 +157,7 @@ class ProductionLogger {
 
     if (!this.isDevelopment) {
       this.sendToRemote('DEBUG', message, data);
-=======
-  DEBUG: 'debug',
-};
-=======
-/**
- * Production-safe logging utilities
- */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
@@ -246,6 +246,34 @@ class ProductionLogger {
     }
   }
 
+<<<<<<< HEAD
+=======
+  debug(message: string, data?: any): void {
+    this.log('debug', message, data);
+  }
+
+  info(message: string, data?: any): void {
+    this.log('info', message, data);
+  }
+
+  warn(message: string, data?: any): void {
+    this.log('warn', message, data);
+  }
+
+  error(message: string, data?: any): void {
+    this.log('error', message, data);
+  }
+
+  // Get stored logs (useful for debugging in production)
+  getStoredLogs(): LogEntry[] {
+    try {
+      return JSON.parse(localStorage.getItem('app_logs') || '[]');
+    } catch {
+      return [];
+  debug(message: string, ...args: any[]): void {
+    if (this.shouldLog(LOG_LEVELS.DEBUG)) {
+      console.debug(`[DEBUG] ${message}`, ...args);
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
   info(message: string, context?: Record<string, any>): void {
     const entry = this.createLogEntry('info', message, context);
@@ -272,12 +300,34 @@ class ProductionLogger {
   }
 }
 
+<<<<<<< HEAD
+=======
+// Create default logger instance
+const productionLogger = new ProductionLogger();
+
+// Convenience exports
+export const logInfo = (message: string, data?: any) => productionLogger.info(message, data);
+export const logWarn = (message: string, data?: any) => productionLogger.warn(message, data);
+export const logError = (message: string, data?: any) => productionLogger.error(message, data);
+export const logDebug = (message: string, data?: any) => productionLogger.debug(message, data);
+export const logErrorToProduction = (message: string, data?: any) => productionLogger.error(message, data);
+
+export default productionLogger;
+export { ProductionLogger, LOG_LEVELS };
+export type { LoggerOptions };
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 // Create singleton instance
 const productionLogger = new ProductionLogger();
 
+<<<<<<< HEAD
+=======
+export default productionLogger;
+export { ProductionLogger, type LogLevel, type LogEntry };
+>>>>>>> cursor/create-and-deploy-new-content-c963
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
+=======
 =======
 }
 
@@ -286,5 +336,4 @@ const productionLogger = new ProductionLogger();
 }
 
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b

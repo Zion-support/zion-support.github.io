@@ -74,6 +74,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.27.1",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.1.2",
@@ -93,11 +94,13 @@
     "jsdom": "^24.0.0",
     "postcss": "^8.4.35",
     "rimraf": "^5.0.5",
+    "rollup-plugin-visualizer": "^6.0.3",
     "tailwindcss": "^3.4.1",
     "terser": "^5.43.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
+    "vite-plugin-pwa": "^1.0.3",
     "vitest": "^1.4.0"
   },
   "peerDependencies": {

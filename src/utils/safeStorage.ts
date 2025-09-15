@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 =======
@@ -114,6 +116,7 @@ export const safeStorage = {
         console.warn('sessionStorage.clear failed:', error);
         return false;
       }
+>>>>>>> cursor/create-and-deploy-new-content-425b
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -124,45 +127,6 @@ export const safeStorage = {
       return null;
     }
   },
-  
-  setItem: (key: string, value: string): void => {
-    try {
-      localStorage.setItem(key, value);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-  
-  removeItem: (key: string): void => {
-    try {
-      localStorage.removeItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-  
-  clear: (): void => {
-    try {
-      localStorage.clear();
-    } catch (error) {
-      console.warn('localStorage not available:', error);
->>>>>>> cursor/create-and-deploy-new-content-c963
-=======
-=======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key: string): string | null => {
-    try {
-      return localStorage.getItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return null;
-    }
-  },
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   
   setItem: (key: string, value: string): void => {
     try {
@@ -186,6 +150,44 @@ export const safeStorage = {
     } catch (error) {
       console.warn('localStorage not available:', error);
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+=======
+=======
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+    } catch (error) {
+      console.warn('localStorage not available:', error);
 >>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
@@ -196,8 +198,7 @@ export const safeStorage = {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
     }
   }
 };

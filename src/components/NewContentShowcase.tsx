@@ -1,7 +1,10 @@
 import React from 'react';
 
 const NewContentShowcase: React.FC = () => {
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
   const newContent = [
@@ -99,7 +102,10 @@ const NewContentShowcase: React.FC = () => {
         >
           View All Content
         </a>
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -109,20 +115,33 @@ const NewContentShowcase: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 export { NewContentShowcase };
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
-export { NewContentShowcase };
->>>>>>> cursor/create-and-deploy-new-content-8735
-export default NewContentShowcase;
-=======
 <<<<<<< HEAD
 export default NewContentShowcase;
 >>>>>>> cursor/create-and-deploy-new-content-7857
 =======
 export default NewContentShowcase;
 >>>>>>> cursor/create-and-deploy-new-content-45eb
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+=======
+export { NewContentShowcase };
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+export { NewContentShowcase };
+>>>>>>> cursor/create-and-deploy-new-content-8735
+<<<<<<< HEAD
+export default NewContentShowcase;
+=======
+=======
+export { NewContentShowcase };
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+
+export default NewContentShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b

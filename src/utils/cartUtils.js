@@ -33,14 +33,14 @@ export const cartUtils = {
   },
   
 <<<<<<< HEAD
-  // Clear cart
-  clearCart: () => {
-    return [];
-=======
   // Get total price
   getTotalPrice: (cart) => {
     return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+  // Clear cart
+  clearCart: () => {
+    return [];
+>>>>>>> cursor/create-and-deploy-new-content-425b
   },
   
   // Get total items count
@@ -49,14 +49,14 @@ export const cartUtils = {
   },
   
 <<<<<<< HEAD
-  // Get total price
-  getTotalPrice: (cart) => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-=======
   // Clear cart
   clearCart: () => {
     return [];
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+  // Get total price
+  getTotalPrice: (cart) => {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+>>>>>>> cursor/create-and-deploy-new-content-425b
   },
   
   // Check if item is in cart

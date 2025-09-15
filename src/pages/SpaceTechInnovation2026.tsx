@@ -1,4 +1,157 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-2def
+
+const SpaceTechInnovation2026: React.FC = () => {
+  const [activeMission, setActiveMission] = useState('mars');
+  const [missionStatus, setMissionStatus] = useState('active');
+
+  const spaceMissions = {
+    mars: {
+      title: "Mars Colonization",
+      icon: "🔴",
+      description: "Establishing permanent human settlements on Mars",
+      features: [
+        "Habitat construction",
+        "Life support systems",
+        "Resource extraction",
+        "Sustainable agriculture"
+      ],
+      timeline: "2026-2030",
+      status: "In Progress"
+    },
+    moon: {
+      title: "Lunar Base Alpha",
+      icon: "🌙",
+      description: "Building the first permanent lunar base",
+      features: [
+        "Lunar mining operations",
+        "Research facilities",
+        "Launch platform",
+        "Tourism hub"
+      ],
+      timeline: "2026-2028",
+      status: "Active"
+    },
+    asteroid: {
+      title: "Asteroid Mining",
+      icon: "☄️",
+      description: "Extracting valuable resources from near-Earth asteroids",
+      features: [
+        "Precious metals extraction",
+        "Water ice harvesting",
+        "Rare earth elements",
+        "Fuel production"
+      ],
+      timeline: "2026-2029",
+      status: "Pilot Phase"
+    },
+    deepspace: {
+      title: "Deep Space Exploration",
+      icon: "🌌",
+      description: "Missions to the outer solar system and beyond",
+      features: [
+        "Jupiter exploration",
+        "Saturn moon missions",
+        "Interstellar probes",
+        "Exoplanet discovery"
+      ],
+      timeline: "2026-2035",
+      status: "Planning"
+    }
+  };
+
+  const technologies = [
+    {
+      title: "Advanced Propulsion",
+      icon: "🚀",
+      description: "Next-generation propulsion systems for faster space travel",
+      capabilities: [
+        "Nuclear thermal propulsion",
+        "Ion drive systems",
+        "Solar sail technology",
+        "Antimatter engines"
+      ],
+      impact: "10x faster travel",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Space Habitats",
+      icon: "🏠",
+      description: "Self-sustaining habitats for long-term space living",
+      capabilities: [
+        "Closed-loop life support",
+        "Artificial gravity",
+        "Radiation shielding",
+        "Modular construction"
+      ],
+      impact: "100% self-sufficient",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "AI Space Systems",
+      icon: "🤖",
+      description: "Autonomous AI systems for space operations",
+      capabilities: [
+        "Mission planning",
+        "Autonomous navigation",
+        "Resource management",
+        "Emergency response"
+      ],
+      impact: "Fully autonomous",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Space Manufacturing",
+      icon: "🏭",
+      description: "Zero-gravity manufacturing and construction",
+      capabilities: [
+        "3D printing in space",
+        "Crystal growth",
+        "Metal alloy production",
+        "Pharmaceutical manufacturing"
+      ],
+      impact: "Superior quality products",
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  const spaceTimeline = [
+    {
+      year: "2026",
+      event: "Lunar Base Alpha Launch",
+      description: "First permanent human settlement on the Moon",
+      status: "Completed"
+    },
+    {
+      year: "2027",
+      event: "Mars Mission Launch",
+      description: "First crewed mission to Mars",
+      status: "In Progress"
+    },
+    {
+      year: "2028",
+      event: "Asteroid Mining Begins",
+      description: "First commercial asteroid mining operations",
+      status: "Planned"
+    },
+    {
+      year: "2030",
+      event: "Mars Colony Established",
+      description: "First self-sustaining Mars colony",
+      status: "Vision"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMissionStatus(prev => prev === 'active' ? 'standby' : 'active');
+    }, 3000);
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -173,256 +326,12 @@ const SpaceTechInnovation2026: React.FC = () => {
     const interval = setInterval(() => {
       setMissionProgress(prev => (prev + 1) % 101);
     }, 100);
-=======
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-2def
-
-const SpaceTechInnovation2026: React.FC = () => {
-  const [activeMission, setActiveMission] = useState('mars');
-  const [missionStatus, setMissionStatus] = useState('active');
-
-  const spaceMissions = {
-    mars: {
-      title: "Mars Colonization",
-      icon: "🔴",
-      description: "Establishing permanent human settlements on Mars",
-      features: [
-        "Habitat construction",
-        "Life support systems",
-        "Resource extraction",
-        "Sustainable agriculture"
-      ],
-      timeline: "2026-2030",
-      status: "In Progress"
-    },
-    moon: {
-      title: "Lunar Base Alpha",
-      icon: "🌙",
-      description: "Building the first permanent lunar base",
-      features: [
-        "Lunar mining operations",
-        "Research facilities",
-        "Launch platform",
-        "Tourism hub"
-      ],
-      timeline: "2026-2028",
-      status: "Active"
-    },
-    asteroid: {
-      title: "Asteroid Mining",
-      icon: "☄️",
-      description: "Extracting valuable resources from near-Earth asteroids",
-      features: [
-        "Precious metals extraction",
-        "Water ice harvesting",
-        "Rare earth elements",
-        "Fuel production"
-      ],
-      timeline: "2026-2029",
-      status: "Pilot Phase"
-    },
-    deepspace: {
-      title: "Deep Space Exploration",
-      icon: "🌌",
-      description: "Missions to the outer solar system and beyond",
-      features: [
-        "Jupiter exploration",
-        "Saturn moon missions",
-        "Interstellar probes",
-        "Exoplanet discovery"
-      ],
-      timeline: "2026-2035",
-      status: "Planning"
-    }
-  };
-
-  const technologies = [
-    {
-      title: "Advanced Propulsion",
-      icon: "🚀",
-      description: "Next-generation propulsion systems for faster space travel",
-      capabilities: [
-        "Nuclear thermal propulsion",
-        "Ion drive systems",
-        "Solar sail technology",
-        "Antimatter engines"
-      ],
-      impact: "10x faster travel",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Space Habitats",
-      icon: "🏠",
-      description: "Self-sustaining habitats for long-term space living",
-      capabilities: [
-        "Closed-loop life support",
-        "Artificial gravity",
-        "Radiation shielding",
-        "Modular construction"
-      ],
-      impact: "100% self-sufficient",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "AI Space Systems",
-      icon: "🤖",
-      description: "Autonomous AI systems for space operations",
-      capabilities: [
-        "Mission planning",
-        "Autonomous navigation",
-        "Resource management",
-        "Emergency response"
-      ],
-      impact: "Fully autonomous",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Space Manufacturing",
-      icon: "🏭",
-      description: "Zero-gravity manufacturing and construction",
-      capabilities: [
-        "3D printing in space",
-        "Crystal growth",
-        "Metal alloy production",
-        "Pharmaceutical manufacturing"
-      ],
-      impact: "Superior quality products",
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
-
-  const spaceTimeline = [
-    {
-      year: "2026",
-      event: "Lunar Base Alpha Launch",
-      description: "First permanent human settlement on the Moon",
-      status: "Completed"
-    },
-    {
-      year: "2027",
-      event: "Mars Mission Launch",
-      description: "First crewed mission to Mars",
-      status: "In Progress"
-    },
-    {
-      year: "2028",
-      event: "Asteroid Mining Begins",
-      description: "First commercial asteroid mining operations",
-      status: "Planned"
-    },
-    {
-      year: "2030",
-      event: "Mars Colony Established",
-      description: "First self-sustaining Mars colony",
-      status: "Vision"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMissionStatus(prev => prev === 'active' ? 'standby' : 'active');
-    }, 3000);
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
     return () => clearInterval(interval);
   }, []);
 
   return (
 <<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>Space Tech Innovation 2026 | Zion Tech Group</title>
-        <meta name="description" content="Explore revolutionary space technology including Mars colonization, asteroid mining, advanced propulsion systems, and space habitats. The future of humanity in space starts here." />
-        <meta name="keywords" content="Space Technology, Mars Colonization, Asteroid Mining, Space Habitats, Interstellar Travel, Space Innovation, 2026" />
-        <meta property="og:title" content="Space Tech Innovation 2026 | Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary space technology that's taking humanity to the stars" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Space Tech Innovation 2026" />
-        <meta name="twitter:description" content="The future of space exploration is here" />
-        <link rel="canonical" href="https://ziontechgroup.com/pages/SpaceTechInnovation2026" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="publish_date" content="2026-01-25" />
-        <meta name="last_modified" content="2026-01-25" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
-          <div className="container mx-auto relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-white text-sm font-bold mb-6 animate-pulse">
-                🚀 SPACE REVOLUTION • 2026
-              </div>
-              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                Space Tech Innovation 2026
-              </h1>
-              <p className="text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                Experience the space revolution with advanced propulsion, Mars colonization, asteroid mining, and the future of human civilization in space
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Explore Space Tech →
-                </button>
-                <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-gray-900 transition-colors font-semibold">
-                  View Missions
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Space Technologies */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6 text-blue-300">🚀 Space Technologies</h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Revolutionary space technologies that are making humanity a multi-planetary species
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {Object.entries(spaceTechnologies).map(([key, tech], index) => (
-                <motion.div
-                  key={key}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
-                    activeSpaceTech === key ? 'ring-2 ring-blue-400' : ''
-                  }`}
-                  onClick={() => setActiveSpaceTech(key)}
-                >
-                  <div className="text-5xl mb-6 text-center animate-pulse">{tech.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-center text-blue-300">{tech.title}</h3>
-                  <p className="text-blue-100 mb-6 text-center">{tech.description}</p>
-                  <div className="text-center">
-                    <div className="text-sm text-blue-200 mb-2">Applications:</div>
-                    <div className="text-xs text-blue-300">{tech.applications.join(', ')}</div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Active Technology Details */}
-            <AnimatePresence mode="wait">
-=======
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -783,11 +692,117 @@ const SpaceTechInnovation2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technologies.map((tech, index) => (
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+    <>
+      <Helmet>
+        <title>Space Tech Innovation 2026 | Zion Tech Group</title>
+        <meta name="description" content="Explore revolutionary space technology including Mars colonization, asteroid mining, advanced propulsion systems, and space habitats. The future of humanity in space starts here." />
+        <meta name="keywords" content="Space Technology, Mars Colonization, Asteroid Mining, Space Habitats, Interstellar Travel, Space Innovation, 2026" />
+        <meta property="og:title" content="Space Tech Innovation 2026 | Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary space technology that's taking humanity to the stars" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Space Tech Innovation 2026" />
+        <meta name="twitter:description" content="The future of space exploration is here" />
+        <link rel="canonical" href="https://ziontechgroup.com/pages/SpaceTechInnovation2026" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="publish_date" content="2026-01-25" />
+        <meta name="last_modified" content="2026-01-25" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+          <div className="container mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-white text-sm font-bold mb-6 animate-pulse">
+                🚀 SPACE REVOLUTION • 2026
+              </div>
+              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                Space Tech Innovation 2026
+              </h1>
+              <p className="text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+                Experience the space revolution with advanced propulsion, Mars colonization, asteroid mining, and the future of human civilization in space
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Explore Space Tech →
+                </button>
+                <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-gray-900 transition-colors font-semibold">
+                  View Missions
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Space Technologies */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-blue-300">🚀 Space Technologies</h2>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Revolutionary space technologies that are making humanity a multi-planetary species
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {Object.entries(spaceTechnologies).map(([key, tech], index) => (
+                <motion.div
+                  key={key}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className={`bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
+                    activeSpaceTech === key ? 'ring-2 ring-blue-400' : ''
+                  }`}
+                  onClick={() => setActiveSpaceTech(key)}
+                >
+                  <div className="text-5xl mb-6 text-center animate-pulse">{tech.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-center text-blue-300">{tech.title}</h3>
+                  <p className="text-blue-100 mb-6 text-center">{tech.description}</p>
+                  <div className="text-center">
+                    <div className="text-sm text-blue-200 mb-2">Applications:</div>
+                    <div className="text-xs text-blue-300">{tech.applications.join(', ')}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Active Technology Details */}
+            <AnimatePresence mode="wait">
+>>>>>>> cursor/create-and-deploy-new-content-425b
               <motion.div
                 key={activeSpaceTech}
                 initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4">{tech.icon}</div>
+                <h3 className="text-xl font-bold mb-3 text-white">{tech.title}</h3>
+                <p className="text-blue-200 mb-4 text-sm">{tech.description}</p>
+                <ul className="space-y-1 mb-4">
+                  {tech.capabilities.slice(0, 2).map((capability, idx) => (
+                    <li key={idx} className="text-cyan-200 text-xs">• {capability}</li>
+                  ))}
+                </ul>
+                <div className={`inline-block px-3 py-1 bg-gradient-to-r ${tech.color} text-white text-xs font-semibold rounded-full`}>
+                  {tech.impact}
+=======
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
@@ -828,22 +843,7 @@ const SpaceTechInnovation2026: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-=======
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4">{tech.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-white">{tech.title}</h3>
-                <p className="text-blue-200 mb-4 text-sm">{tech.description}</p>
-                <ul className="space-y-1 mb-4">
-                  {tech.capabilities.slice(0, 2).map((capability, idx) => (
-                    <li key={idx} className="text-cyan-200 text-xs">• {capability}</li>
-                  ))}
-                </ul>
-                <div className={`inline-block px-3 py-1 bg-gradient-to-r ${tech.color} text-white text-xs font-semibold rounded-full`}>
-                  {tech.impact}
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -851,58 +851,6 @@ const SpaceTechInnovation2026: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-        {/* Space Missions */}
-        <section className="py-20 px-4 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6 text-indigo-300">🌌 Active Space Missions</h2>
-              <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
-                Revolutionary space missions that are transforming humanity's future
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {spaceMissions.map((mission, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30"
-                >
-                  <div className="text-5xl mb-6 text-center">{mission.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-center text-indigo-300">{mission.mission}</h3>
-                  <p className="text-indigo-100 mb-6 text-center">{mission.description}</p>
-                  <div className="mb-4">
-                    <div className="text-sm text-indigo-200 mb-2">Timeline: {mission.timeline}</div>
-                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold ${
-                      mission.status === 'Completed' ? 'bg-green-600 text-white' :
-                      mission.status === 'In Progress' ? 'bg-yellow-600 text-white' :
-                      mission.status === 'Planning' ? 'bg-blue-600 text-white' :
-                      'bg-purple-600 text-white'
-                    }`}>
-                      {mission.status}
-                    </div>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    {mission.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="text-indigo-100 text-sm">
-                        • {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="text-center">
-                    <div className="text-sm text-indigo-200 mb-2">Impact:</div>
-                    <div className="text-sm font-bold text-indigo-300">{mission.impact}</div>
-                  </div>
-                </motion.div>
-              ))}
-=======
       {/* Space Timeline */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -1053,7 +1001,59 @@ const SpaceTechInnovation2026: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold">
                 Download Space Report
               </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+        {/* Space Missions */}
+        <section className="py-20 px-4 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-indigo-300">🌌 Active Space Missions</h2>
+              <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+                Revolutionary space missions that are transforming humanity's future
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {spaceMissions.map((mission, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30"
+                >
+                  <div className="text-5xl mb-6 text-center">{mission.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-center text-indigo-300">{mission.mission}</h3>
+                  <p className="text-indigo-100 mb-6 text-center">{mission.description}</p>
+                  <div className="mb-4">
+                    <div className="text-sm text-indigo-200 mb-2">Timeline: {mission.timeline}</div>
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold ${
+                      mission.status === 'Completed' ? 'bg-green-600 text-white' :
+                      mission.status === 'In Progress' ? 'bg-yellow-600 text-white' :
+                      mission.status === 'Planning' ? 'bg-blue-600 text-white' :
+                      'bg-purple-600 text-white'
+                    }`}>
+                      {mission.status}
+                    </div>
+                  </div>
+                  <ul className="space-y-2 mb-6">
+                    {mission.achievements.map((achievement, achievementIndex) => (
+                      <li key={achievementIndex} className="text-indigo-100 text-sm">
+                        • {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-center">
+                    <div className="text-sm text-indigo-200 mb-2">Impact:</div>
+                    <div className="text-sm font-bold text-indigo-300">{mission.impact}</div>
+                  </div>
+                </motion.div>
+              ))}
+>>>>>>> cursor/create-and-deploy-new-content-425b
             </div>
           </div>
         </section>

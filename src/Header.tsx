@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+=======
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -155,15 +158,14 @@ import React from 'react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+<<<<<<< HEAD
+=======
     <header className="bg-white shadow-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -175,6 +177,7 @@ const Header: React.FC = () => {
             <a href="/pages/InnovationLanding2025" className="text-gray-600 hover:text-gray-900">Innovation</a>
             <a href="/pages/ComprehensiveServices2025" className="text-gray-600 hover:text-gray-900">Services</a>
             <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
+>>>>>>> cursor/create-and-deploy-new-content-425b
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -203,7 +206,10 @@ const Header: React.FC = () => {
             <Link to="/pages/ComprehensiveTechInsights2026" className="text-gray-700 hover:text-purple-600 font-medium transition-colors">
               Tech Insights
             </Link>
+<<<<<<< HEAD
+=======
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+>>>>>>> cursor/create-and-deploy-new-content-425b
           </nav>
 
           {/* CTA Button */}
@@ -227,9 +233,9 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
           </button>
         </div>
 <<<<<<< HEAD
-cursor/create-and-deploy-new-content-7857
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+cursor/create-and-deploy-new-content-7857
+>>>>>>> cursor/create-and-deploy-new-content-425b
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -281,9 +287,9 @@ cursor/create-and-deploy-new-content-7857
           </div>
         )}
 <<<<<<< HEAD
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+>>>>>>> cursor/create-and-deploy-new-content-425b
       </div>
     </header>
   );

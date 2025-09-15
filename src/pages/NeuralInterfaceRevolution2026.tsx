@@ -737,31 +737,31 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
 <<<<<<< HEAD
+            <div className="text-5xl mb-4 text-center">🎮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Thought Control</h3>
+=======
             <div className="text-5xl mb-4 text-center">💭</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-2xl font-bold mb-4 text-center">Memory Enhancement</h3>
-=======
-            <div className="text-5xl mb-4 text-center">🎮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Thought Control</h3>
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+>>>>>>> cursor/create-and-deploy-new-content-425b
             <p className="text-cyan-100 mb-6 text-center">
               Control devices and applications directly with your thoughts using advanced neural pattern recognition
             </p>
 <<<<<<< HEAD
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Digital memory storage</li>
-              <li>• Instant information access</li>
-              <li>• Enhanced learning speed</li>
-              <li>• Perfect recall</li>
-=======
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Device control via thoughts</li>
               <li>• Gesture-free interaction</li>
               <li>• Multi-device synchronization</li>
               <li>• Accessibility enhancement</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Digital memory storage</li>
+              <li>• Instant information access</li>
+              <li>• Enhanced learning speed</li>
+              <li>• Perfect recall</li>
+>>>>>>> cursor/create-and-deploy-new-content-425b
             </ul>
           </motion.div>
 
@@ -1872,8 +1872,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               Start Neural Journey
             </button>
 <<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1904,7 +1902,9 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             <div className="text-3xl mb-3">🎯</div>
             <h3 className="text-lg font-bold mb-2">User Control</h3>
             <p className="text-sm opacity-90">Complete user control over data sharing and neural interface settings</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-425b
           </div>
         </div>
       </div>
