@@ -14,6 +14,24 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
+      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
+      slug: "ai-2026-secure-agent-architecture",
+      category: "Security Architecture",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/secure-agent-architecture-2026.jpg"
+    },
+    {
+      title: "AI 2025: LLM Evaluation Best Practices - Reliable, Fair, and Robust",
+      description: "A practical guide to evaluating large language models in 2025: metrics, human evaluation, bias audits, reliability, and production monitoring.",
+      slug: "ai-2025-llm-evaluation-best-practices",
+      category: "Best Practices",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evaluation-best-practices-2025.jpg"
+    },
+    {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
       description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
       slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
