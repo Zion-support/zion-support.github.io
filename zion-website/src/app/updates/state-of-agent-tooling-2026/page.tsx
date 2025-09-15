@@ -1,4 +1,4 @@
-export default function Page() {
+export default function StateOfAgentTooling2026() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">

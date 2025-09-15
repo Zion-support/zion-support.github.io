@@ -8,6 +8,38 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Incident Simulator v1.1',
+    summary:
+      'New scenarios, live eval gates, and evidence exports to harden agent systems.',
+    href: '/updates/ai-incident-simulator-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Real-Time Model Routing Playbook (2026)',
+    summary:
+      'Implement latency- and quality-aware routing with budgets, canaries, and audits.',
+    href: '/updates/real-time-model-routing-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 48% Cost Savings via Eval-Driven Routing',
+    summary:
+      'How a global support org cut cost and improved CSAT with eval-driven routing.',
+    href: '/updates/case-study-eval-driven-routing-48-savings',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Report: State of Agent Tooling 2026 (Preview)',
+    summary:
+      'Landscape of tracing, guardrails, evals, and policy-as-code across leading stacks.',
+    href: '/updates/state-of-agent-tooling-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Launch: Agent Evals & Observability Suite v1.0',
     summary:
       'Unified live evals, guardrail events, tracing, and budget dashboards to operate agents safely.',
