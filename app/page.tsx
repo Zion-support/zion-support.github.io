@@ -72,6 +72,13 @@ import NewContent2025AdvancedAutomationBanner from './components/NewContent2025A
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+
+// Import new 2026 promotional components
+import NewContent2026UltimateBanner from '../src/components/NewContent2026UltimateBanner';
+import LatestServicesShowcase2026 from '../src/components/LatestServicesShowcase2026';
+import UltimateContentPromotion2026 from '../src/components/UltimateContentPromotion2026';
+import LatestBlogContent2026 from '../src/components/LatestBlogContent2026';
+import SuccessStoriesShowcase2026 from '../src/components/SuccessStoriesShowcase2026';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -89,6 +96,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2026 Ultimate Banner - NEW FEATURED */}
+        <NewContent2026UltimateBanner />
+        
+        {/* Ultimate Content Promotion 2026 - NEW FEATURED */}
+        <UltimateContentPromotion2026 />
+        
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
@@ -424,6 +437,15 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Latest Services Showcase 2026 - NEW FEATURED */}
+        <LatestServicesShowcase2026 />
+
+        {/* Latest Blog Content 2026 - NEW FEATURED */}
+        <LatestBlogContent2026 />
+
+        {/* Success Stories Showcase 2026 - NEW FEATURED */}
+        <SuccessStoriesShowcase2026 />
 
         {/* Services Section */}
         <section className="py-16">
