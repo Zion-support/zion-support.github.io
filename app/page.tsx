@@ -108,6 +108,29 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={6} />
+      {/* Inline promo for new content (Reliability + Playbooks) */}
+      <section className="py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Reliability</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Agent Reliability Engineering</h3>
+              <p className="text-gray-600">SLOs, chaos testing, and eval-gated releases to make agents dependable.</p>
+              <div className="mt-4">
+                <Link href="/blog/ai-2026-agent-reliability-engineering" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Evaluation</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Evaluation Playbooks</h3>
+              <p className="text-gray-600">Scenarios, metrics, and CI gates to evaluate and harden autonomous agents.</p>
+              <div className="mt-4">
+                <Link href="/content/ai-2026-evaluation-playbooks" className="text-purple-600 font-semibold hover:text-purple-800">Use Playbooks →</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />

@@ -11,6 +11,27 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-reliability-engineering-2026",
+    title: "AI 2026: Agent Reliability Engineering",
+    description:
+      "SLOs, chaos testing, and eval-gated releases to make agents dependable.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-reliability-engineering",
+    emoji: "🧰",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-playbooks-2026",
+    title: "AI 2026: Evaluation Playbooks",
+    description:
+      "Scenarios, metrics, and CI gates to evaluate and harden autonomous agents.",
+    ctaLabel: "Use Playbooks",
+    href: "/content/ai-2026-evaluation-playbooks",
+    emoji: "📘",
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-evals-blueprint-2026",
     title: "AI 2026: Autonomous Evals Blueprint",
     description:
