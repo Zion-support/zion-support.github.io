@@ -72,10 +72,6 @@ export const notifications = {
       body: message,
       icon: '/favicon.ico'
     });
-<<<<<<< HEAD
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-=======
->>>>>>> cursor/create-and-deploy-new-content-abae
   }
 };
 

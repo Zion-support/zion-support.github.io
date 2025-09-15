@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-=======
 import React, { useEffect, useState } from 'react';
 
 const ScrollToTop: React.FC = () => {
@@ -62,7 +49,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
->>>>>>> cursor/create-and-deploy-new-content-abae
 };
 
 export default ScrollToTop;

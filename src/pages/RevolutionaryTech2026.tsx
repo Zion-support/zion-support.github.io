@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 
 const RevolutionaryTech2026: React.FC = () => {
   return (
@@ -176,6 +179,7 @@ const RevolutionaryTech2026: React.FC = () => {
             <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Us
             </a>
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 
@@ -473,6 +477,8 @@ const RevolutionaryTech2026: React.FC = () => {
               Contact Us
             </button>
 >>>>>>> origin/cursor/create-and-deploy-new-content-ec44
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </div>
       </div>

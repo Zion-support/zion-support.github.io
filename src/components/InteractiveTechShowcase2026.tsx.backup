@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 const InteractiveTechShowcase2026: React.FC = () => {
 <<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase2026: React.FC = () => {
+<<<<<<< HEAD
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -49,6 +57,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
       color: 'from-orange-600 to-red-600',
       bgColor: 'from-orange-600/30 to-red-600/30',
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -91,11 +103,15 @@ const InteractiveTechShowcase2026: React.FC = () => {
       features: ['AI Revolution', 'Quantum Computing', 'Neural Interfaces'],
       color: 'from-orange-600 to-red-600',
       bgColor: 'from-orange-600/20 to-red-600/20',
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       borderColor: 'border-orange-400/30'
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className={`bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -239,6 +255,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
             </div>
           </div>
 =======
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -367,7 +385,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
         <div className="text-center">
           <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
           <div className="text-gray-300 text-sm">Possibilities</div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         </div>
       </div>
     </div>

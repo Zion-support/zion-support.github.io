@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 =======
@@ -23,6 +24,8 @@ const NewsletterSignup: React.FC = () => {
     setEmail('');
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 "use client";
 import React{ useState } from 'react';
 
@@ -46,13 +49,17 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
     setIsSubscribed(true);
     setIsSubmitting(false);
     setEmail(', ');
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-abae
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   };
 
   if (isSubscribed) {
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <motion.div
@@ -107,6 +114,8 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col md:flex-row gap-4">
 =======
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       <div className={`text-center p-6 bg-green-50 border border-green-200 rounded-lg ${className}`}>
         <div className="text-green-600 text-4xl mb-4">✅</div>
         <h3 className="text-lg font-semibold text-green-800 mb-2">Successfully Subscribed!</h3>
@@ -126,63 +135,16 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
         </div>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-4">
->>>>>>> cursor/create-and-deploy-new-content-abae
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-<<<<<<< HEAD
-              className="flex-1 px-6 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 focus:ring-offset-purple-600"
-=======
               className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
->>>>>>> cursor/create-and-deploy-new-content-abae
               required
             />
             <button
               type="submit"
-<<<<<<< HEAD
-              disabled={isLoading}
-              className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? (
-                <div className="flex items-center space-x-2">
-                  <div className="w-4 h-4 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-                  <span>Subscribing...</span>
-                </div>
-              ) : (
-                'Subscribe Now'
-              )}
-            </button>
-          </div>
-        </form>
-
-        <div className="mt-6 text-center">
-          <p className="text-sm opacity-80">
-            Join 50,000+ tech enthusiasts who trust our insights
-          </p>
-          <div className="flex justify-center space-x-6 mt-4 text-sm">
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              <span>Weekly Updates</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-              <span>Exclusive Content</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-              <span>No Spam</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-export default NewsletterSignup;
-=======
               disabled={isSubmitting}
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50"
             >
@@ -294,6 +256,7 @@ export default NewsletterSignup;
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-abae
 =======
             className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
@@ -318,3 +281,5 @@ export default NewsletterSignup;
 
 export default NewsletterSignup;
 >>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

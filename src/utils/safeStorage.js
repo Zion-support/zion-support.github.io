@@ -107,10 +107,6 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
-<<<<<<< HEAD
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-    }
-=======
     }
   },
   
@@ -129,7 +125,6 @@ export const safeStorage = {
   
   clear: () => {
     return safeStorage.localStorage.clear();
->>>>>>> cursor/create-and-deploy-new-content-abae
   }
 };
 

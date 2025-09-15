@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -57,6 +64,7 @@ const NextGenTechShowcase2026: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -80,6 +88,8 @@ const NextGenTechShowcase2026: React.FC = () => {
             </button>
           </div>
 =======
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -109,7 +119,12 @@ const NextGenTechShowcase2026: React.FC = () => {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         </div>
       </section>
 
@@ -202,6 +217,7 @@ const NextGenTechShowcase2026: React.FC = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Technologies */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -400,6 +416,8 @@ const NextGenTechShowcase2026: React.FC = () => {
         </div>
       </div>
 =======
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -556,7 +574,12 @@ const NextGenTechShowcase2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

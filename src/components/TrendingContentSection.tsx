@@ -1,15 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 const TrendingContentSection: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
   const trendingContent = [
     {
       id: 1,
       title: "Synthetic Intelligence: The Future is Here",
-      description: "Exploring how synthetic AI will revolutionize every aspect of human life and create new forms of intelligence.",
+      description: "Exploring how synthetic AI will revolutionize every aspect of human life with self-evolving systems that transcend traditional limitations.",
       views: "2.3M",
-      trend: "up",
-      category: "AI",
+      category: "AI Revolution",
       color: "purple",
       icon: "🧠",
       link: "/pages/SyntheticIntelligence2026"
@@ -17,150 +18,171 @@ const TrendingContentSection: React.FC = () => {
     {
       id: 2,
       title: "Quantum-Neural Fusion Breakthrough",
-      description: "The revolutionary convergence of quantum computing and neural networks for exponential processing power.",
+      description: "The revolutionary convergence of quantum computing and neural networks creating unprecedented computational power and intelligence.",
       views: "1.8M",
-      trend: "up",
-      category: "Quantum",
+      category: "Quantum Computing",
       color: "cyan",
       icon: "⚛️",
       link: "/pages/QuantumNeuralFusion2026"
     },
     {
       id: 3,
-      title: "Transcendent AI: Beyond Human Limits",
-      description: "AI systems that surpass human cognitive capabilities and achieve true consciousness.",
+      title: "Advanced Biotech Revolution 2026",
+      description: "Revolutionary biotechnology solutions transforming healthcare, agriculture, and environmental sustainability through genetic engineering.",
       views: "1.5M",
-      trend: "up",
-      category: "AI",
-      color: "indigo",
-      icon: "✨",
-      link: "/pages/TranscendentAI2026"
+      category: "Biotechnology",
+      color: "green",
+      icon: "🧬",
+      link: "/pages/AdvancedBiotechRevolution2026"
     },
     {
       id: 4,
-      title: "Quantum Consciousness Revolution",
-      description: "The fusion of quantum computing and consciousness research creating AI systems beyond classical limitations.",
+      title: "Space Technology Revolution",
+      description: "Making interplanetary travel, space colonization, and cosmic exploration a reality with advanced propulsion and habitat systems.",
       views: "1.2M",
-      trend: "up",
-      category: "Quantum",
-      color: "blue",
-      icon: "⚛️",
-      link: "/pages/QuantumConsciousnessRevolution2026"
+      category: "Space Tech",
+      color: "indigo",
+      icon: "🚀",
+      link: "/pages/SpaceTechRevolution2026"
     },
     {
       id: 5,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer communication systems that bridge mind and machine.",
-      views: "980K",
-      trend: "up",
-      category: "Neural",
-      color: "emerald",
-      icon: "🧬",
-      link: "/pages/NeuralInterfaceRevolution2025"
-    },
-    {
-      id: 6,
-      title: "Ultimate Tech Revolution 2026",
-      description: "The convergence of AI, Quantum Computing, Neural Interfaces, and Synthetic Intelligence reshaping reality.",
-      views: "850K",
-      trend: "up",
-      category: "Tech",
-      color: "pink",
-      icon: "🚀",
-      link: "/pages/UltimateTechRevolution2026"
+      title: "Advanced Robotics Revolution",
+      description: "Intelligent machines that can think, learn, and adapt to any environment, revolutionizing industries and human-robot collaboration.",
+      views: "1.0M",
+      category: "Robotics",
+      color: "orange",
+      icon: "🤖",
+      link: "/pages/AdvancedRoboticsRevolution2026"
     }
   ];
 
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % trendingContent.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, trendingContent.length]);
+
   const getColorClasses = (color: string) => {
     const colorMap = {
-      purple: "from-purple-600/30 to-pink-600/30 border-purple-400/30 text-purple-100",
-      cyan: "from-cyan-600/30 to-blue-600/30 border-cyan-400/30 text-cyan-100",
-      indigo: "from-indigo-600/30 to-purple-600/30 border-indigo-400/30 text-indigo-100",
-      blue: "from-blue-600/30 to-indigo-600/30 border-blue-400/30 text-blue-100",
-      emerald: "from-emerald-600/30 to-teal-600/30 border-emerald-400/30 text-emerald-100",
-      pink: "from-pink-600/30 to-rose-600/30 border-pink-400/30 text-pink-100"
+      purple: "from-purple-500 to-pink-500 border-purple-200 bg-purple-50 text-purple-700",
+      cyan: "from-cyan-500 to-blue-500 border-cyan-200 bg-cyan-50 text-cyan-700",
+      green: "from-green-500 to-emerald-500 border-green-200 bg-green-50 text-green-700",
+      indigo: "from-indigo-500 to-purple-500 border-indigo-200 bg-indigo-50 text-indigo-700",
+      orange: "from-orange-500 to-red-500 border-orange-200 bg-orange-50 text-orange-700"
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.purple;
   };
 
-  const getButtonColor = (color: string) => {
-    const colorMap = {
-      purple: "text-purple-600 hover:bg-purple-50",
-      cyan: "text-cyan-600 hover:bg-cyan-50",
-      indigo: "text-indigo-600 hover:bg-indigo-50",
-      blue: "text-blue-600 hover:bg-blue-50",
-      emerald: "text-emerald-600 hover:bg-emerald-50",
-      pink: "text-pink-600 hover:bg-pink-50"
-    };
-    return colorMap[color as keyof typeof colorMap] || colorMap.purple;
-  };
+  const currentContent = trendingContent[currentIndex];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🔥 TRENDING NOW • JANUARY 2026
-          </div>
-          <h2 className="text-4xl font-bold mb-4">Most Popular Technology Content</h2>
-          <p className="text-xl opacity-90">Discover what's capturing the world's attention in revolutionary technology</p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {trendingContent.map((content, index) => (
-            <motion.div
-              key={content.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-gradient-to-br ${getColorClasses(content.color)} backdrop-blur-sm rounded-2xl p-6 border hover:scale-105 transition-all duration-300`}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                  <span className="text-3xl">{content.icon}</span>
-                  <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-xs rounded-full font-semibold">
-                    #{index + 1} TRENDING
-                  </span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm opacity-80">{content.views} views</span>
-                  <span className="text-green-400 text-sm">↗</span>
-                </div>
-              </div>
-
-              <h3 className="text-xl font-bold mb-3">{content.title}</h3>
-              <p className="text-sm opacity-90 mb-4 line-clamp-3">{content.description}</p>
-
-              <div className="flex items-center justify-between">
-                <span className="px-2 py-1 bg-white/20 backdrop-blur-sm text-xs rounded-full">
-                  {content.category}
-                </span>
-                <a
-                  href={content.link}
-                  className={`text-sm font-semibold ${getButtonColor(content.color)} transition-colors`}
-                >
-                  Read More →
-                </a>
-              </div>
-            </motion.div>
-          ))}
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-10 mb-12">
+      <div className="text-center mb-8">
+        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-4">
+          🔥 TRENDING NOW • JANUARY 2026
         </div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Most Popular Technology Content</h2>
+        <p className="text-lg text-gray-600">Discover what's capturing the world's attention</p>
+      </div>
+      
+      {/* Main Trending Card */}
+      <div className="bg-white rounded-2xl p-8 shadow-xl mb-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full -translate-y-16 translate-x-16 opacity-10"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <span className={`px-3 py-1 bg-gradient-to-r ${getColorClasses(currentContent.color).split(' ')[0]} ${getColorClasses(currentContent.color).split(' ')[1]} text-white text-xs rounded-full font-semibold`}>
+                #{currentIndex + 1} TRENDING
+              </span>
+              <span className="text-sm text-gray-500">{currentContent.views} views</span>
+            </div>
+            <div className="flex space-x-2">
+              <button
+                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                title={isAutoPlaying ? "Pause auto-play" : "Resume auto-play"}
+              >
+                {isAutoPlaying ? "⏸️" : "▶️"}
+              </button>
+            </div>
+          </div>
+          
+          <div className="flex items-start space-x-6">
+            <div className="text-6xl">{currentContent.icon}</div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">{currentContent.title}</h3>
+              <p className="text-gray-600 mb-4 text-lg">{currentContent.description}</p>
+              <div className="flex items-center space-x-4">
+                <a 
+                  href={currentContent.link}
+                  className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${getColorClasses(currentContent.color).split(' ')[0]} ${getColorClasses(currentContent.color).split(' ')[1]} text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+                >
+                  Read Full Article →
+                </a>
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(currentContent.color).split(' ')[2]} ${getColorClasses(currentContent.color).split(' ')[3]}`}>
+                  {currentContent.category}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-12"
-        >
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-            View All Trending Content
-          </button>
-        </motion.div>
+      {/* Navigation Dots */}
+      <div className="flex justify-center space-x-2 mb-8">
+        {trendingContent.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'bg-indigo-600 scale-125' 
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Trending List */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {trendingContent.slice(0, 3).map((content, index) => (
+          <div 
+            key={content.id}
+            className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-l-4 ${
+              index === 0 ? 'border-purple-500' : 
+              index === 1 ? 'border-cyan-500' : 
+              'border-emerald-500'
+            } ${currentIndex === content.id - 1 ? 'ring-2 ring-indigo-500' : ''}`}
+            onClick={() => setCurrentIndex(content.id - 1)}
+          >
+            <div className="flex items-center space-x-3 mb-3">
+              <span className={`px-3 py-1 ${
+                index === 0 ? 'bg-purple-100 text-purple-700' :
+                index === 1 ? 'bg-cyan-100 text-cyan-700' :
+                'bg-emerald-100 text-emerald-700'
+              } text-xs rounded-full font-semibold`}>
+                #{index + 1} TRENDING
+              </span>
+              <span className="text-sm text-gray-500">{content.views} views</span>
+            </div>
+            <h3 className="text-lg font-bold mb-2 text-gray-900">{content.title}</h3>
+            <p className="text-gray-600 mb-4 text-sm">{content.description}</p>
+            <a 
+              href={content.link}
+              className={`text-sm font-semibold ${
+                index === 0 ? 'text-purple-600 hover:text-purple-700' :
+                index === 1 ? 'text-cyan-600 hover:text-cyan-700' :
+                'text-emerald-600 hover:text-emerald-700'
+              }`}
+            >
+              Read Full Article →
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

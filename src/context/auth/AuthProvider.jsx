@@ -2,12 +2,21 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+<<<<<<< HEAD
     // Check for existing authentication
     const checkAuth = async () => {
       try {
@@ -31,11 +40,30 @@ export const AuthProvider = ({ children }) => {
       console.error('Login failed:', error);
       return false;
     }
+=======
+    // Check for existing auth state
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+      setIsAuthenticated(true);
+    }
+    setLoading(false);
+  }, []);
+
+  const login = (userData) => {
+    setUser(userData);
+    setIsAuthenticated(true);
+    localStorage.setItem('user', JSON.stringify(userData));
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   };
 
   const logout = () => {
     setUser(null);
     setIsAuthenticated(false);
+<<<<<<< HEAD
+=======
+    localStorage.removeItem('user');
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   };
 
   const value = {
@@ -43,7 +71,11 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated,
     loading,
     login,
+<<<<<<< HEAD
     logout,
+=======
+    logout
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   };
 
   return (
@@ -51,12 +83,4 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
 };

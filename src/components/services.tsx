@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import { motionAnimatePresenceVariants } from 'framer-motion';
-import { 
-  SearchFilterStarUsersTrendingUp
-  DollarSignClockCheckCircleArrowRight,
-  BrainRocketDnaGlobeShieldWifi
-  PackageBotCarBuilding2MonitorCpu
-  ZapAtomDatabaseCloudLockCode
-=======
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
@@ -15,7 +5,6 @@ import {
   Brain, Rocket, Dna, Globe, Shield, Wifi, 
   Package, Bot, Car, Building2, Monitor, Cpu, 
   Zap, Atom, Database, Cloud, Lock, Code
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
@@ -35,26 +24,15 @@ import { realMarketServices } from '../data/real-market-services';
 import { new2025Services } from '../data/new-2025-services';
 import { newRealInnovations } from '../data/new-real-innovations';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
-<<<<<<< HEAD
-import React{ useState } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  SearchGridList,
-  BrainAtomShieldTargetRocket,
-  ArrowRightCheckPaletteHeartTruckGraduationCap,
-  UsersDollarSignSettingsTrendingUpBarChart3ChevronDown
-=======
   Search, Grid, List,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -90,10 +68,6 @@ const allServices = [
   ...newInnovativeAIServices
 ];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -122,11 +96,7 @@ const serviceCategories: Array<{
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-<<<<<<< HEAD
-    description: 'Quantum computingDNA computingand beyond',
-=======
     description: 'Quantum computing, DNA computing, and beyond',
->>>>>>> origin/auto/autonomy-17186719616
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -144,11 +114,7 @@ const serviceCategories: Array<{
   {
     id: 'space-metaverse',
     title: '🌌 Space & Metaverse',
-<<<<<<< HEAD
-    description: 'Space miningmetaverse developmentand more',
-=======
     description: 'Space mining, metaverse development, and more',
->>>>>>> origin/auto/autonomy-17186719616
     icon: Rocket,
     color: 'from-teal-500 to-emerald-500',
     services: [...quantumSpaceServices],
@@ -160,21 +126,13 @@ const serviceCategories: Array<{
     description: 'Innovative solutions for every business need',
     icon: Target,
     color: 'from-green-500 to-yellow-500',
-<<<<<<< HEAD
-    services: [...realMicroSaasServices2025...enhancedRealMicroSaasServices],
-=======
     services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices],
->>>>>>> origin/auto/autonomy-17186719616
     gradient: 'from-green-500/20 to-orange-500/20'
   },
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-<<<<<<< HEAD
-    description: 'Innovative fintechDeFiand financial services',
-=======
     description: 'Innovative fintech, DeFi, and financial services',
->>>>>>> origin/auto/autonomy-17186719616
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -281,22 +239,12 @@ const serviceCategories: Array<{
     description: 'Quantum-powered data analytics and insights'
   }
 ];
-<<<<<<< HEAD
-import { realVerifiedServices } from '../data/real-verified-services';
-
-export default function ServicesPage() {
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('All');
-  const [sortBysetSortBy] = useState('name');
-=======
-=======
 import { realVerifiedServices } from '../data/real-verified-services';
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name');
->>>>>>> origin/auto/autonomy-17186719616
 
   // Combine all services
   const allServices = [
@@ -305,10 +253,6 @@ export default function ServicesPage() {
     ...quantumSpaceInnovations2029,
     ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
     ...additionalEnhancedServices,
     ...newRealServices,
     ...industryRealServices,
@@ -328,20 +272,12 @@ export default function ServicesPage() {
   ];
 
   // Get unique services by ID
-<<<<<<< HEAD
-  const uniqueServices = allServices.filter((serviceindexself) => 
-=======
   const uniqueServices = allServices.filter((service, index, self) => 
->>>>>>> origin/auto/autonomy-17186719616
     index === self.findIndex(s => s.id === service.id)
   );
 
   // Get all categories
-<<<<<<< HEAD
-  const categories = ['All'...Array.from(new Set(uniqueServices.map(s => 
-=======
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
->>>>>>> origin/auto/autonomy-17186719616
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
 
@@ -357,20 +293,12 @@ export default function ServicesPage() {
                                service.category === selectedCategory);
       return matchesSearch && matchesCategory;
     })
-<<<<<<< HEAD
-    .sort((ab) => {
-=======
     .sort((a, b) => {
->>>>>>> origin/auto/autonomy-17186719616
       switch (sortBy) {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-<<<<<<< HEAD
-          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
-=======
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
->>>>>>> origin/auto/autonomy-17186719616
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'rating':
@@ -391,15 +319,9 @@ export default function ServicesPage() {
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Services | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousnessquantum computingspace miningand advanced biotechnology." />
-        <meta name="keywords" content="AI servicesquantum computingspace technologybiotechnology2029 technologyrevolutionary services" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-=======
         <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
         <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
 
@@ -429,15 +351,9 @@ export default function ServicesPage() {
               className="text-center mb-20"
             >
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.9 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 1delay: 0.2 }}
-=======
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="mb-6"
               >
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
@@ -453,22 +369,14 @@ export default function ServicesPage() {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-<<<<<<< HEAD
-                Discover our comprehensive suite of cutting-edge AIquantum computingemerging technology
-=======
                 Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
->>>>>>> origin/auto/autonomy-17186719616
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
               >
                 <div className="flex items-center">
@@ -494,11 +402,7 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.2 }}
-=======
               transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="mb-12"
             >
               <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
@@ -618,11 +522,7 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.4 }}
-=======
               transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="mb-20"
             >
               <div className="text-center mb-16">
@@ -637,22 +537,14 @@ export default function ServicesPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-                {categories.map((categoryindex) => {
-=======
                 {categories.map((category, index) => {
->>>>>>> origin/auto/autonomy-17186719616
                   const stats = getCategoryStats(category.id);
                   return (
                     <motion.div
                       key={category.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                      transition={{ duration: 0.8delay: 0.6 + index * 0.1 }}
-=======
                       transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
                       onClick={() => setSelectedCategory(category.id)}
                     >
@@ -688,11 +580,7 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.8 }}
-=======
               transition={{ duration: 0.8, delay: 0.8 }}
->>>>>>> origin/auto/autonomy-17186719616
             >
               <h2 className="text-3xl font-bold text-center mb-12">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -702,20 +590,12 @@ export default function ServicesPage() {
 
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-                  {sortedServices.map((serviceindex) => (
-=======
                   {sortedServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                      transition={{ duration: 0.8delay: 1 + index * 0.05 }}
-=======
                       transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
->>>>>>> origin/auto/autonomy-17186719616
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
                     >
                       {/* Animated Background */}
@@ -755,11 +635,7 @@ export default function ServicesPage() {
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>
                 <button
                   onClick={() => {
-<<<<<<< HEAD
-                    setSearchTerm(', ');
-=======
                     setSearchTerm('');
->>>>>>> origin/auto/autonomy-17186719616
                     setSelectedCategory('All');
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
@@ -784,11 +660,7 @@ export default function ServicesPage() {
                       <div className="mb-6 relative z-10">
                         <div className="text-sm text-cyan-400 font-medium mb-3">✨ Key Features</div>
                         <ul className="space-y-2">
-<<<<<<< HEAD
-                          {service.features.slice(03).map((featureidx) => (
-=======
                           {service.features.slice(0, 3).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <li key={idx} className="text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300">
                               <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                               {feature}
@@ -828,21 +700,12 @@ export default function ServicesPage() {
                 </div>
               ) : (
                 <div className="space-y-4">
-<<<<<<< HEAD
-                  {sortedServices.map((serviceindex) => (
-                    <motion.div
-                      key={service.id}
-                      initial={{ opacity: 0x: -20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      transition={{ duration: 0.8delay: 1 + index * 0.05 }}
-=======
                   {sortedServices.map((service, index) => (
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
->>>>>>> origin/auto/autonomy-17186719616
                       className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300"
                     >
                       <div className="flex flex-col lg:flex-row gap-6">
@@ -860,11 +723,7 @@ export default function ServicesPage() {
                           <p className="text-gray-300 mb-3">{service.description}</p>
                           
                           <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                            {service.features.slice(04).map((featureidx) => (
-=======
                             {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                               <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">
                                 {feature}
                               </span>
@@ -910,11 +769,7 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 1.2 }}
-=======
               transition={{ duration: 0.8, delay: 1.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="text-center mt-24"
             >
               <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">
@@ -924,15 +779,9 @@ export default function ServicesPage() {
                 
                 <div className="relative z-10">
                   <motion.div
-<<<<<<< HEAD
-                    initial={{ opacity: 0scale: 0.9 }}
-                    animate={{ opacity: 1scale: 1 }}
-                    transition={{ duration: 1delay: 1.4 }}
-=======
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
@@ -948,11 +797,7 @@ export default function ServicesPage() {
                   </h2>
                   
                   <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                    Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AIquantum computingand emerging technologies.
-=======
                     Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies.
->>>>>>> origin/auto/autonomy-17186719616
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
