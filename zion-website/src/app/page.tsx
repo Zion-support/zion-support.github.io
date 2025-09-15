@@ -1,7 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 import React from 'react'
 import {
   ChartBarIcon,
@@ -11,6 +20,18 @@ import {
   ShieldCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 import { getLatestUpdates } from '../data/updates'
 
 const features = [
@@ -144,14 +165,29 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+              New: Real-Time Agent Cost Controller v1.0 —
+              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
               AI Agent Orchestration Platform v2.0 —
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -163,6 +199,23 @@ export default function HomePage() {
               New: Real-Time Agent Cost Controller v1.0 —
               <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+              New: AI Autonomous Workflow Engine v1.0 —
+              <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
+>>>>>>> cursor/create-and-deploy-new-content-23cd
+=======
+              New: Real-Time Agent Cost Controller v1.0 —
+              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
@@ -173,11 +226,23 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-8472
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -214,6 +279,7 @@ export default function HomePage() {
                 href="/updates/autonomous-data-quality-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
+<<<<<<< HEAD
                 Launch: Data Quality Copilot v1.0
                 <span aria-hidden>→</span>
               </a>
@@ -222,6 +288,72 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
                 Launch: Benchmark Suite v2
+=======
+                New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-it-ops-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-innovation-hub-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Launch: Innovation Hub v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-runbooks-live-evals"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                New Guide: Agent Runbooks Live Evals
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-control-center-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Agentic Ops Control Center
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-finance-os-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Autonomous Finance OS v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/auto-data-governance-v3"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Launch: Data Governance v3
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-research-assistant-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 hover:bg-teal-500/20 transition-colors duration-200"
+              >
+                Launch: AI Research Assistant 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-agent-safety-certification-beta"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Agent Safety Certification (Beta)
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/real-time-agent-cost-controller-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Cost Controller v1.0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                 <span aria-hidden>→</span>
               </a>
               <a

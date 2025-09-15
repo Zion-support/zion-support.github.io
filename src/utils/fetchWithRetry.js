@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
 // Fetch with retry utility
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   let lastError;
@@ -22,6 +26,10 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   
   throw lastError;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 // Fetch with retry utility for robust API calls
 
 =======
@@ -52,7 +60,14 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
       await new Promise(resolve => setTimeout(resolve, delay * attempt));
     }
   }
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 };
 
 export default fetchWithRetry;

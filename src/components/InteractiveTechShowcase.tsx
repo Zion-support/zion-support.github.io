@@ -1,13 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -436,6 +445,9 @@ const InteractiveTechShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
 =======
@@ -658,11 +670,18 @@ const InteractiveTechShowcase: React.FC = () => {
             </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
           </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+          </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
         </div>
       </div>
     </div>

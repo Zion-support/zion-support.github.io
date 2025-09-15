@@ -34,6 +34,11 @@ export default function ResearchPage() {
 		</div>
 	)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 }
 =======
 import { LightBulbIcon, CpuChipIcon, AcademicCapIcon, GlobeAltIcon, ChartBarIcon, UserGroupIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -194,6 +199,10 @@ export default function ResearchPage() {
 }
 
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa

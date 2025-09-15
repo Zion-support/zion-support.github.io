@@ -7,7 +7,10 @@ const EnhancedContentShowcase: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
   const contentSlides = [
     {
       id: 1,
@@ -42,7 +45,12 @@ const EnhancedContentShowcase: React.FC = () => {
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
   const showcaseItems = [
     {
       id: 1,
@@ -168,6 +176,11 @@ const EnhancedContentShowcase: React.FC = () => {
       year: "2026"
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
   const contentSlides = [
     {
@@ -203,9 +216,13 @@ const EnhancedContentShowcase: React.FC = () => {
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     }
   ];
 
@@ -214,7 +231,10 @@ const EnhancedContentShowcase: React.FC = () => {
       const interval = setInterval(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
       }, 5000);
       return () => clearInterval(interval);
@@ -228,7 +248,12 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
 <<<<<<< HEAD
       }, 5000);
@@ -285,8 +310,14 @@ const EnhancedContentShowcase: React.FC = () => {
           <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
       }, 5000);
@@ -301,9 +332,13 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
   };
 
   const goToSlide = (index: number) => {
@@ -313,6 +348,10 @@ const EnhancedContentShowcase: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -333,8 +372,12 @@ const EnhancedContentShowcase: React.FC = () => {
           <div className="relative overflow-hidden rounded-2xl">
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Showcase Container */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8">
@@ -358,6 +401,7 @@ const EnhancedContentShowcase: React.FC = () => {
         {/* Carousel Container */}
         <div className="relative z-10">
           <div className="relative h-96 overflow-hidden rounded-xl">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -384,12 +428,39 @@ const EnhancedContentShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+=======
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ENHANCED CONTENT SHOWCASE • 2026
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology Content
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Explore our comprehensive collection of cutting-edge technology content featuring 
+            AI transformation, quantum computing, neural interfaces, and synthetic intelligence.
+          </p>
+        </div>
+
+        {/* Main Showcase Carousel */}
+        <div className="relative max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl">
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.5 }}
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
@@ -398,6 +469,9 @@ const EnhancedContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
               >
@@ -418,7 +492,12 @@ const EnhancedContentShowcase: React.FC = () => {
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                             <span className="text-sm text-gray-200">{feature}</span>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                 transition={{ duration: 0.5 }}
 <<<<<<< HEAD
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
@@ -473,6 +552,11 @@ const EnhancedContentShowcase: React.FC = () => {
                           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                             <span className="text-sm font-semibold">{feature}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
@@ -494,16 +578,23 @@ const EnhancedContentShowcase: React.FC = () => {
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                             <span className="text-sm text-gray-200">{feature}</span>
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                           </div>
                         ))}
                       </div>
                       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                       <a
                         href={contentSlides[currentSlide].link}
                         className={`inline-block bg-gradient-to-r ${contentSlides[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
@@ -519,7 +610,12 @@ const EnhancedContentShowcase: React.FC = () => {
                       </div>
                     </div>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                       <div className="flex gap-4">
                         <a
                           href={showcaseItems[currentSlide].link}
@@ -558,6 +654,11 @@ const EnhancedContentShowcase: React.FC = () => {
                     </div>
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
                       <a
                         href={contentSlides[currentSlide].link}
@@ -574,10 +675,14 @@ const EnhancedContentShowcase: React.FC = () => {
                       </div>
                     </div>
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                   </div>
                 </div>
               </motion.div>
@@ -587,6 +692,11 @@ const EnhancedContentShowcase: React.FC = () => {
           {/* Navigation Controls */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 <<<<<<< HEAD
           <div className="flex justify-center items-center space-x-4 mb-8">
             <button
@@ -603,9 +713,13 @@ const EnhancedContentShowcase: React.FC = () => {
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
           <div className="flex justify-center items-center mt-6 space-x-4">
             <button
               onClick={prevSlide}
@@ -624,6 +738,7 @@ const EnhancedContentShowcase: React.FC = () => {
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 =======
@@ -644,6 +759,28 @@ const EnhancedContentShowcase: React.FC = () => {
                   className={`w-3 h-3 rounded-full transition-colors ${
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+<<<<<<< HEAD
+          <div className="flex justify-center items-center space-x-4 mb-8">
+            <button
+              onClick={prevSlide}
+              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+            >
+              ←
+            </button>
+            
+            <div className="flex space-x-2">
+              {showcaseItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
@@ -651,7 +788,10 @@ const EnhancedContentShowcase: React.FC = () => {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
             
             <button
               onClick={nextSlide}
@@ -676,7 +816,12 @@ const EnhancedContentShowcase: React.FC = () => {
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 
             <button
               onClick={nextSlide}
@@ -852,6 +997,11 @@ const EnhancedContentShowcase: React.FC = () => {
               Experience stunning visual design with gradient backgrounds and smooth transitions
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
             
             <button
@@ -877,16 +1027,23 @@ const EnhancedContentShowcase: React.FC = () => {
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
@@ -910,7 +1067,12 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
@@ -965,6 +1127,11 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
@@ -989,9 +1156,13 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
       </div>
     </div>
   );

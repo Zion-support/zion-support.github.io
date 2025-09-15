@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const insights = [
     {
       category: "Synthetic Intelligence",
@@ -87,6 +88,8 @@ const ComprehensiveTechInsights2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
   return (
     <>
       <Helmet>
@@ -644,8 +647,12 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
   );
 };
 
