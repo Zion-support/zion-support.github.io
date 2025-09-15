@@ -14,14 +14,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Menu, ChevronDown;
-  Brain, Rocket, Shield, 
-  Zap;
-  Target, Atom;
-  BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+  Menu, X, ChevronDown, Search, 
+  Brain, Cpu, Rocket, Shield, 
+  Zap, Globe, Star, Users,
+  Target, Microscope, Atom, Database,
+  Lock, Cloud, BarChart3, Settings,
+  Eye, Code, Palette, Layers,
+  Network, Server, ShieldCheck,
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, HelpCircle,
+  Sparkles, Crown, Award, MessageCircle
 } from 'lucide-react';
 const navigationItems = [
   {
@@ -241,43 +242,37 @@ icon: <Globe className="w-5 h-5" />,
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
     ]
-};
+  },
   {
-    name: 'Healthcare & Biotech',
-    href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
-    description: 'AI-powered healthcare and biotechnology',
-    badge: 'New',
+    name: 'Financial Technology',
+    href: '/fintech',
+    icon: <DollarSign className="w-5 h-5" />,
+    description: 'Next-generation fintech and blockchain solutions',
+    badge: 'FinTech',
+    color: 'from-amber-500 to-orange-600',
     children: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'AI-powered drug development' },
-      { name: 'Precision Medicine', href: '/precision-medicine-genomics', description: 'Personalized healthcare' },
-      { name: 'Medical Imaging AI', href: '/ai-medical-imaging-analysis', description: 'AI image analysis' },
-      { name: 'Digital Health Platform', href: '/digital-health-telemedicine', description: 'Telemedicine solutions' },
-      { name: 'Clinical Trial Management', href: '/clinical-trial-management-optimization', description: 'Trial optimization' },
-      { name: 'Healthcare Analytics', href: '/healthcare-analytics', description: 'Health data insights' },
-      { name: 'Patient Engagement', href: '/patient-engagement-platform', description: 'Patient communication' },
-      { name: 'Medical Device AI', href: '/medical-device-ai', description: 'Smart medical devices' },
-      { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
-      { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
+      { name: 'Quantum Trading Platform', href: '/quantum-trading-platform', description: 'Quantum-enhanced trading algorithms' },
+      { name: 'AI Risk Management Suite', href: '/ai-risk-management-suite', description: 'Intelligent risk assessment' },
+      { name: 'Blockchain Payment Gateway', href: '/blockchain-payment-gateway', description: 'Secure crypto payments' },
+      { name: 'AI Credit Scoring Platform', href: '/ai-credit-scoring-platform', description: 'Advanced credit analysis' },
+      { name: 'Quantum Portfolio Optimizer', href: '/quantum-portfolio-optimizer', description: 'Quantum portfolio management' },
+      { name: 'DeFi Yield Farming Platform', href: '/defi-yield-farming-platform', description: 'Automated yield optimization' }
     ]
-};
+  },
   {
     name: 'Healthcare & Biotech',
-    href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
-    description: 'AI-powered healthcare and biotechnology',
-    badge: 'New',
+    href: '/healthcare-biotech',
+    icon: <Dna className="w-5 h-5" />,
+    description: 'Revolutionary healthcare and biotechnology innovations',
+    badge: 'HealthTech',
+    color: 'from-pink-500 to-rose-600',
     children: [
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery-platform', description: 'AI-powered drug development' },
-      { name: 'Precision Medicine', href: '/precision-medicine-genomics', description: 'Personalized healthcare' },
-      { name: 'Medical Imaging AI', href: '/ai-medical-imaging-analysis', description: 'AI image analysis' },
-      { name: 'Digital Health Platform', href: '/digital-health-telemedicine', description: 'Telemedicine solutions' },
-      { name: 'Clinical Trial Management', href: '/clinical-trial-management-optimization', description: 'Trial optimization' },
-      { name: 'Healthcare Analytics', href: '/healthcare-analytics', description: 'Health data insights' },
-      { name: 'Patient Engagement', href: '/patient-engagement-platform', description: 'Patient communication' },
-      { name: 'Medical Device AI', href: '/medical-device-ai', description: 'Smart medical devices' },
-      { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
-      { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
+      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', description: 'AI-powered pharmaceutical research' },
+      { name: 'Quantum Medical Imaging', href: '/quantum-medical-imaging', description: 'Quantum-enhanced diagnostics' },
+      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Individualized treatment plans' },
+      { name: 'Biotech Lab Automation', href: '/biotech-lab-automation', description: 'Automated laboratory processes' },
+      { name: 'AI Clinical Trial Manager', href: '/ai-clinical-trial-manager', description: 'Intelligent trial management' },
+      { name: 'Quantum DNA Sequencing', href: '/quantum-dna-sequencing', description: 'Ultra-fast genetic analysis' }
     ]
 };
   {
@@ -365,9 +360,6 @@ icon: <Globe className="w-5 h-5" />,
 ]
   }
 ];
-    ]
-  }
-],
 
 const contactInfo = {
   phone: '+1 302 464 0950',
@@ -375,188 +367,113 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
 export default function EnhancedNavigation2025() {
-
-
-
-
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [searchTerm, setSearchTerm] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
 
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 20);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
 
   }, []);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+
+  const toggleItem = (name: string) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(name)) {
+      newExpanded.delete(name);
+    } else {
+      newExpanded.add(name);
+    }
+    setExpandedItems(newExpanded);
+  };
+
+  const filteredItems = navigationItems.filter(item =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.children?.some(child => 
+      child.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      child.description?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  const closeMobileMenu = () => setIsOpen(false);
+
   return (
-    <>;
-      {/* Top Contact Bar */}
-
-      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">;
-        <div className="container mx-auto px-4">;
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">;
-            <div className="flex items-center gap-4 mb-2 sm:mb-0">;
-              <div className="flex items-center gap-2">;
-                <Phone className="w-4 h-4 text-cyan-300" />;
-                <span>{contactInfo && contactInfo.phone}</span>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <Mail className="w-4 h-4 text-purple-300" />;
-                <span>{contactInfo && contactInfo.email}</span>;
-              </div>;
-            </div>;
-            <div className="flex items-center gap-2">;
-              <MapPin className="w-4 h-4 text-green-300" />;
-              <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Main Navigation */}
-      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
-
-          : 'bg-transparent'
-      }`}>;
-        <div className="container mx-auto px-4">;
-          <div className="flex items-center justify-between h-20">;
+    <>
+      {/* Desktop Navigation */}
+      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20' : 'bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Sparkles className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h1>
+                <p className="text-xs text-zion-slate-light">Innovation • Intelligence • Impact</p>
+              </div>
+            </Link>
 
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="relative">;
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                  <Star className="w-6 h-6 text-white" />;
-                </div>;
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
-              </div>;
-              <div>;
-                <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>;
-                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>;
-              </div>;
-            </Link>;
-
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">;
-              {navigationItems && navigationItems.map((item) => (;
-                <div key={item && item.name} className="relative group">;
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">
                   <button
-                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    onClick={() => toggleItem(item.name)}
+                    className="flex items-center space-x-2 px-4 py-2 text-zion-slate-light hover:text-white rounded-lg hover:bg-zion-slate-dark/50 transition-all duration-300"
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeSubmenu === item.name ? 'rotate-180' : ''
+                    {item.icon}
+                    <span className="font-medium">{item.name}</span>
+                    {item.badge && (
+                      <span className="px-2 py-1 text-xs font-medium bg-zion-cyan/20 text-zion-cyan rounded-full">
+                        {item.badge}
+                      </span>
+                    )}
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                      expandedItems.has(item.name) ? 'rotate-180' : ''
                     }`} />
                   </button>
 
-
-
-
-
-
-                    onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
-                  >;
-                    <item && item.icon className="w-4 h-4" />;
-                    <span>{item && item.name}</span>;
-                    <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
-                      activeSubmenu === item && item.name ? 'rotate-180' : ''
-                    }`} />;
-                  </button>;
-
-
-
-
-
-
-
-
-
-
-
-                  {/* Submenu */}
-                  <AnimatePresence>;
-                    {activeSubmenu === item && item.name && (;
-                      <motion&& motion.div
-                        initial={{ opacity: 0, y: 10 }}
+                  {/* Dropdown */}
+                  <AnimatePresence>
+                    {expandedItems.has(item.name) && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0 && 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
-                        <div className="p-6">;
-                          {item && item.submenu?.map((subitem) => (;
-                            <Link
-                              key={subitem && subitem.name}
-                              href={subitem && subitem.href}
-                              onClick={() => setActiveSubmenu(null)}
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0";
-                            >;
-                              <div className="flex items-start space-x-3">;
-                                {subitem && subitem.icon && (;
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">;
-                                    <subitem && subitem.icon className="w-5 h-5 text-cyan-400" />;
-                                  </div>;
-                                )}
-                                <div className="flex-1">;
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">;
-                                    {subitem && subitem.name}
-                                  </h3>;
-                                  <p className="text-sm text-gray-400 mt-1">;
-                                    {subitem && subitem.description}
-                                  </p>;
-                                  {subitem && subitem.services && (;
-                                    <div className="mt-2 flex flex-wrap gap-1">;
-                                      {subitem && subitem.services.slice(0, 2).map((service) => (;
-                                        <span
-                                          key={service}
-
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
-                            >
-                              <div className="flex items-start space-x-3">
-                                {subitem.icon && (
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
-                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
-                                  </div>
-                                )}
-                                <div className="flex-1">
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                    {subitem.name}
-                                  </h3>
-                                  <p className="text-sm text-gray-400 mt-1">
-                                    {subitem.description}
-                                  </p>
-                                  {subitem.services && (
-                                    <div className="mt-2 flex flex-wrap gap-1">
-                                      {subitem.services.slice(0, 2).map((service) => (
-                                        <span
-                                          key={service}
-
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
-                                        >
-                                          {service}
-                                        </span>
-                                      ))}
-                                      {subitem.services.length > 2 && (
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
-                                          +{subitem.services.length - 2} more
-                                        </span>
-                                      )}
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/10"
+                      >
+                        <div className="p-4">
+                          <div className="mb-3">
+                            <h3 className="text-lg font-semibold text-white">{item.name}</h3>
+                            <p className="text-sm text-zion-slate-light">{item.description}</p>
+                          </div>
+                          <div className="space-y-2">
+                            {item.children?.map((child) => (
+                              <Link
+                                key={child.href}
+                                href={child.href}
+                                className="block p-3 rounded-lg hover:bg-zion-slate-dark/70 transition-all duration-300 group"
+                              >
+                                <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                                  {child.name}
+                                </h4>
+                                <p className="text-sm text-zion-slate-light mt-1">
+                                  {child.description}
+                                </p>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </motion.div>
                     )}
@@ -565,452 +482,177 @@ export default function EnhancedNavigation2025() {
               ))}
             </div>
 
-
-
-
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">;
-              <Link
-                href="/pricing"
-                className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200">;
-                Pricing;
-              </Link>;
+            {/* Contact & Search */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-64 pl-10 pr-4 py-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
+              </div>
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
-                Get Started
+                Contact Us
               </Link>
             </div>
-
-
-
-
-
-
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
-                Get Started;
-              </Link>;
-            </div>;
-
-
-
-
-
-
-
-
-
-
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
           </div>
         </div>
       </nav>
 
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="lg:hidden fixed top-4 right-4 z-50 p-3 bg-zion-slate-dark/80 backdrop-blur-sm border border-zion-cyan/20 rounded-lg text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-300"
+      >
+        <Menu className="w-6 h-6" />
+      </button>
 
-
-
-
-
-
-
-
-
-
-
-
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            onClick={closeMobileMenu}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Mobile Menu */}
-      <AnimatePresence>;
-        {isOpen && (;
-          <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
-                      {item && item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
-                          {item && item.badge}
-                        </span>;
-                      )}
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0 && 0.2 }}
-                      className="ml-8 mt-2 space-y-2">;
-                      {item && item.children?.map((child) => (;
-                        <Link
-                          key={child && child.name}
-                          href={child && child.href}
-                          className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                          onClick={() => setIsOpen(false)}
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm";
-                        >;
-                          <subItem && subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">;
-                            {subItem && subItem.name}
-                          </span>;
-                        </Link>;
-                      ))}
-                    </motion && motion.div>;
-                  )}
-                </div>;
-              ))}
-
-              {/* Mobile CTA */}
-              <div className="pt-4">;
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >;
-                  Get Started;
-                </Link>;
-            className="fixed inset-0 z-50 lg:hidden";
-          >;
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={closeMenu}
-
-
-            />
-
-            
-
-
-
-
-            {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
-              <div className="p-6">
-                {/* Close Button */}
-                <div className="flex justify-end mb-6">
-                  <button
-                    onClick={closeMenu}
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed right-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-l border-zion-cyan/20 z-50 lg:hidden"
+          >
+            <div className="flex flex-col h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-zion-cyan/20">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-white">Zion Tech</span>
                 </div>
-                {/* Mobile Navigation Items */}
-                <div className="space-y-4">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
-                      <button
-                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
+                <button
+                  onClick={closeMobileMenu}
+                  className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-slate-dark/50 rounded-lg transition-all duration-300"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Search */}
+              <div className="p-6 border-b border-zion-cyan/20">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <nav className="flex-1 overflow-y-auto p-6 space-y-4">
+                {filteredItems.map((item) => (
+                  <div key={item.name} className="space-y-2">
+                    <button
+                      onClick={() => toggleItem(item.name)}
+                      className="w-full flex items-center justify-between p-3 bg-zion-slate-dark/50 hover:bg-zion-slate-dark/70 border border-zion-cyan/20 hover:border-zion-cyan/40 rounded-lg transition-all duration-300 group"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
+                          {item.icon}
                         </div>
-                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          activeSubmenu === item.name ? 'rotate-180' : ''
+                        <div className="text-left">
+                          <h3 className="font-semibold text-white group-hover:text-zion-cyan transition-colors duration-300">
+                            {item.name}
+                          </h3>
+                          <p className="text-xs text-zion-slate-light">{item.description}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        {item.badge && (
+                          <span className="px-2 py-1 text-xs font-medium bg-zion-cyan/20 text-zion-cyan rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                        <ChevronDown className={`w-4 h-4 text-zion-cyan transition-transform duration-300 ${
+                          expandedItems.has(item.name) ? 'rotate-180' : ''
                         }`} />
-                      </button>
+                      </div>
+                    </button>
 
+                    {/* Children */}
+                    <AnimatePresence>
+                      {expandedItems.has(item.name) && item.children && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="ml-6 space-y-2"
+                        >
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              onClick={closeMobileMenu}
+                              className="block p-3 bg-zion-slate-dark/30 hover:bg-zion-slate-dark/50 border border-zion-cyan/10 hover:border-zion-cyan/30 rounded-lg transition-all duration-300 group"
+                            >
+                              <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                                {child.name}
+                              </h4>
+                              <p className="text-sm text-zion-slate-light mt-1">
+                                {child.description}
+                              </p>
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </nav>
 
-
-
-            {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
-              <div className="p-6">;
-                {/* Close Button */}
-                <div className="flex justify-end mb-6">;
-                  <button
-                    onClick={closeMenu}
-
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200">;
-                    <X className="w-6 h-6" />;
-                  </button>;
-                </div>;
-
-
-                {/* Mobile Navigation Items */}
-                <div className="space-y-4">;
-                  {navigationItems && navigationItems.map((item) => (;
-                    <div key={item && item.name}>;
-                      <button
-
-                        onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
-                      >;
-                        <div className="flex items-center space-x-3">;
-                          <item && item.icon className="w-5 h-5 text-cyan-400" />;
-                          <span className="text-white font-medium">{item && item.name}</span>;
-                        </div>;
-                        <ChevronDownclassName={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          activeSubmenu === item && item.name ? 'rotate-180' : ''
-                        }`} />;
-                      </button>;
-
-
-
-
-
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>;
-                        {activeSubmenu === item && item.name && (;
-                          <motion&& motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0 && 0.2 }}
-                            className="ml-8 space-y-2">;
-                            {item && item.submenu?.map((subitem) => (;
-                              <Link
-                                key={subitem && subitem.name}
-                                href={subitem && subitem.href}
-                                onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200">;
-                                <h4 className="text-white font-medium">{subitem && subitem.name}</h4>;
-                                <p className="text-sm text-gray-400 mt-1">{subitem && subitem.description}</p>;
-                              </Link>;
-                            ))}
-                          </motion && motion.div>;
-                        )}
-                      </AnimatePresence>;
-                    </div>;
-                  ))}
-
-                </div>;
-
-
-
-
-
-
-
-                {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">;
-                  <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200">;
-                    View Pricing;
-                  </Link>;
+              {/* Footer */}
+              <div className="p-6 border-t border-zion-cyan/20">
+                <div className="space-y-3">
                   <Link
                     href="/contact"
-                    onClick={closeMenu}
-
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;
-                    Contact Us;
-                  </Link>;
-                </div>;
-
-
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">;
-                  <div className="space-y-3 text-sm">;
-                    <div className="flex items-center space-x-3 text-gray-400">;
-                      <Phone className="w-4 h-4 text-cyan-400" />;
-                      <span>{contactInfo && contactInfo.phone}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-3 text-gray-400">;
-                      <Mail className="w-4 h-4 text-purple-400" />;
-                      <span>{contactInfo && contactInfo.email}</span>;
-                    </div>;
-                    <div className="flex items-start space-x-3 text-gray-400">;
-                      <MapPin className="w-4 h-4 text-green-400 mt-0 && 0.5" />;
-                      <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-      {/* Mobile Menu */}
-      <AnimatePresence>;
-        {is_open && (
-          <motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
-                      {item.badge && (
-                        <span className="px - 2 py - 1 text - xs font - medium bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - full">;
-                          {item.badge}
-                        </span>)}
-                    </div>;
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${
-                      active_dropdown === item.name ? 'rotate - 180' : '';
-                    }`} />;
-                  </button>;
-                  {active_dropdown === item.name && (
-                    <motion.div;
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="ml - 8 mt - 2 space - y-2";
-                    >;
-                      {item.children?.map ((child) => (
-                        <Link;
-                          key={child.name}
-                          href={child.href}
-                          className="block px - 4 py - 2 text - sm text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200";
-                          on_click={() => setIsOpen (false)}
-                          className="block p - 2 text - gray - 300 hover:text - white transition - colors text - sm";
-                        >;
-                          <sub_item.icon className="w - 5 h - 5 text - gray - 400 group - hover:text - cyan - 400 transition - colors duration - 200" />;
-                          <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
-                            {sub_item.name}
-                          </span>;
-                        </Link>))}
-                    </motion.div>)}
-                </div>))}
-              {/* Mobile CTA */}
-              <div className="pt - 4">;
-                <Link;
-                  href="/contact";
-                  className="block w - full text - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300";
-                  on_click={() => setIsOpen (false)}
-                >;
-                  Get Started;
-                </Link>;
-            className="fixed inset - 0 z - 50 lg:hidden";
-          >;
-            {/* Backdrop */}
-            <div;
-              className="absolute inset - 0 bg - black / 50 backdrop - blur - sm";
-              on_click={close_menu}
-            />;
-            {/* Menu Panel */}
-            <div className="absolute right - 0 top - 0 h - full w - 80 bg - gray - 900 / 95 backdrop - blur - md border - l border - gray - 700 / 50 overflow - y-auto">;
-              <div className="p - 6">;
-                {/* Close Button */}
-                <div className="flex justify - end mb - 6">;
-                  <button;
-                    on_click={close_menu}
-                    className="p - 2 text - gray - 400 hover:text - white transition - colors duration - 200";
-                  >;
-                    <X className="w - 6 h - 6" />;
-                  </button>;
-                </div>;
-                {/* Mobile Navigation Items */}
-                <div className="space - y-4">;
-                  {navigation_items.map ((item) => (
-                    <div key={item.name}>;
-                      <button;
-                        on_click={() => setActiveSubmenu (active_submenu === item.name ? null : item.name)}
-                        className="flex items - center justify - between w - full text - left p - 4 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
-                      >;
-                        <div className="flex items - center space - x-3">;
-                          <item.icon className="w - 5 h - 5 text - cyan - 400" />;
-                          <span className="text - white font - medium">{item.name}</span>;
-                        </div>;
-                        <ChevronDown className={`w - 4 h - 4 text - gray - 400 transition - transform duration - 200 ${
-                          active_submenu === item.name ? 'rotate - 180' : '';
-                        }`} />;
-                      </button>;
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>;
-                        {active_submenu === item.name && (
-                          <motion.div;
-
-
-
-
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>
-                        {activeSubmenu === item.name && (
-                          <motion.div
-
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-
-
-
-                                on_click={close_menu}
-                                className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200";
-                              >;
-                                <h4 className="text - white font - medium">{subitem.name}</h4>;
-                                <p className="text - sm text - gray - 400 mt - 1">{subitem.description}</p>;
-                              </Link>))}
-                          </motion.div>)}
-                      </AnimatePresence>;
-                    </div>))}
-                </div>;
-                {/* Mobile CTA */}
-                <div className="mt - 8 space - y-4">;
-                  <Link;
-                    href="/pricing";
-                    on_click={close_menu}
-                    className="block w - full text - center px - 6 py - 3 border border - gray - 600 text - gray - 300 rounded - xl hover:border - gray - 500 hover:text - white transition - all duration - 200";
-                  >;
-                    View Pricing;
-                  </Link>;
-                  <Link;
-                    href="/contact";
-                    on_click={close_menu}
-                    className="block w - full text - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
-                  >;
-                    Contact Us;
-                  </Link>;
-                </div>;
-                {/* Mobile Contact Info */}
-                <div className="mt - 8 pt - 6 border - t border - gray - 700 / 50">;
-                  <div className="space - y-3 text - sm">;
-                    <div className="flex items - center space - x-3 text - gray - 400">;
-                      <Phone className="w - 4 h - 4 text - cyan - 400" />;
-                      <span>{contact_info.phone}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-3 text - gray - 400">;
-                      <Mail className="w - 4 h - 4 text - purple - 400" />;
-                      <span>{contact_info.email}</span>;
-                    </div>;
-                    <div className="flex items - start space - x-3 text - gray - 400">;
-                      <MapPin className="w - 4 h - 4 text - green - 400 mt - 0.5" />;
-                      <span className="text - xs">{contact_info.address}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-
-
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.phone}</span>
+                    onClick={closeMobileMenu}
+                    className="flex items-center space-x-3 p-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span className="font-medium">Contact Us</span>
+                  </Link>
+                  <div className="text-sm text-zion-slate-light space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Phone className="w-4 h-4 text-zion-cyan" />
+                      <a href={`tel:${contactInfo.mobile}`} className="hover:text-zion-cyan transition-colors duration-300">
+                        {contactInfo.mobile}
+                      </a>
                     </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
+                    <div className="flex items-center space-x-2">
+                      <Mail className="w-4 h-4 text-zion-cyan" />
+                      <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors duration-300">
+                        {contactInfo.email}
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1019,106 +661,6 @@ export default function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
-
-
-
-
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
     </>
-  )
-}
-
-
-      </AnimatePresence>;
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />;
-    </>;
   );
-};
-
-
-          </motion.div>)}
-      </AnimatePresence>;
-                            className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
-                              <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
-                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-
-
-                {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
-                  <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
-                  >
-                    View Pricing
-                  </Link>
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* Spacer for fixed navigation */}
-      <div className="h - 20" />;
-    </>);
 }
-
-
-
-
-
