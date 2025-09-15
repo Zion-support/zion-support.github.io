@@ -32,12 +32,44 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Agent Orchestration Toolkit (v2)',
+    summary:
+      'Unified workflows for multi-agent planning, tool-use, and guardrails with production templates.',
+    href: '/updates/agent-orchestration-toolkit-v2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: ZionGPT 2.0 Real-Time Reasoning',
+    summary:
+      'Next-gen streaming reasoning with tool-use, low-latency retrieval, and safety gates.',
+    href: '/updates/ziongpt-2-real-time-reasoning',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Guide: Production Agent Red Teaming (2025)',
     summary:
       'End-to-end adversarial evaluation playbook with jailbreak taxonomies and measurable mitigations.',
     href: '/updates/production-agent-red-teaming-2025',
     date: '2025-09-15',
     tag: 'Guide'
+  },
+  {
+    title: 'Guide: Production Agent Risk Reviews',
+    summary:
+      'Lightweight operational reviews with shared risk signals and rollback criteria for agents.',
+    href: '/updates/production-agent-risk-reviews',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: MTTR -42% With Real-Time RAG',
+    summary:
+      'How live retrieval + evals reduced incident time-to-resolution in a Fortune 100 stack.',
+    href: '/updates/mttr-reduction-real-time-rag',
+    date: '2025-09-15',
+    tag: 'Case Study'
   },
   {
     title: 'Launch: Autonomous Finance OS (v1.0)',
@@ -52,6 +84,14 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'End-to-end SLIs, tracing, and evals to keep RAG systems reliable in production.',
     href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Building Eval-Ready AI Pipelines',
+    summary:
+      'How to instrument datasets, harnesses, and live canaries to ship trustworthy AI changes.',
+    href: '/updates/eval-ready-ai-pipelines',
     date: '2025-09-15',
     tag: 'Guide'
   },
