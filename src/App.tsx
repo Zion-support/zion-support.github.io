@@ -44,6 +44,34 @@ import QuantumConsciousness2028 from './pages/QuantumConsciousness2028';
 import NeuralReality2027 from './pages/NeuralReality2027';
 import NeuralRealityInterface2026 from './pages/NeuralRealityInterface2026';
 import NewsletterSignup from './components/NewsletterSignup';
+import EnhancedContentShowcase from './components/EnhancedContentShowcase';
+import RevolutionaryContentShowcase from './components/RevolutionaryContentShowcase';
+import InnovationLanding2025 from './pages/InnovationLanding2025';
+import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
+import BlogPost2025 from './pages/BlogPost2025';
+import AdvancedTechSolutions2025 from './pages/AdvancedTechSolutions2025';
+import FutureTechTrends2025 from './pages/FutureTechTrends2025';
+import ComprehensiveServices2025 from './pages/ComprehensiveServices2025';
+import AIInnovationPlaybook2025 from './pages/AIInnovationPlaybook2025';
+import TechnologyInsights2025 from './pages/TechnologyInsights2025';
+import AITransformationGuide2025 from './pages/AITransformationGuide2025';
+import QuantumComputingSolutions2025 from './pages/QuantumComputingSolutions2025';
+import NewAIUseCases2025 from './pages/NewAIUseCases2025';
+import EdgeAIandIoT2025 from './pages/EdgeAIandIoT2025';
+import AIInnovationHub2025 from './pages/AIInnovationHub2025';
+import DigitalTransformation2025 from './pages/DigitalTransformation2025';
+import AdvancedAnalytics2025 from './pages/AdvancedAnalytics2025';
+import CybersecurityFortress2025 from './pages/CybersecurityFortress2025';
+import AIRevolution2025 from './pages/AIRevolution2025';
+import QuantumComputingBreakthrough from './pages/QuantumComputingBreakthrough';
+import NeuralInterfaceFuture from './pages/NeuralInterfaceFuture';
+import AIEnterpriseCopilot2025 from './pages/AIEnterpriseCopilot2025';
+import NewShowcase2025 from './pages/NewShowcase2025';
+import BusinessAutomationGuide2025 from './pages/BusinessAutomationGuide2025';
+import UltimateTechRevolution2027 from './pages/UltimateTechRevolution2027';
+import ConsciousAIRevolution2027 from './pages/ConsciousAIRevolution2027';
+import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
+import QuantumConsciousnessRevolution2027 from './pages/QuantumConsciousnessRevolution2027';
 
 export default function App(): JSX.Element {
   return (
@@ -84,15 +112,24 @@ export default function App(): JSX.Element {
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
                       Experience the most advanced technological breakthroughs in human history: AI Innovation 2027, Quantum Consciousness 2028, Neural Reality 2027, and Revolutionary Tech Showcases
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                       <a href="/pages/AIInnovation2027" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
                         🧠 NEW: AI Innovation 2027 →
+                      </a>
+                      <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+                        🚀 Ultimate Tech 2027 →
                       </a>
                       <a href="/pages/QuantumConsciousness2028" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
                         🌌 NEW: Quantum Consciousness 2028 →
                       </a>
                       <a href="/pages/NeuralReality2027" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
                         🧬 NEW: Neural Reality 2027 →
+                      </a>
+                      <a href="/pages/SyntheticBiologyRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+                        🧬 Synthetic Biology →
+                      </a>
+                      <a href="/pages/QuantumConsciousnessRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-pink-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+                        ⚛️ Quantum Consciousness →
                       </a>
                     </div>
                   </div>
@@ -159,6 +196,32 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveCaseStudies2026" element={<ComprehensiveCaseStudies2026 />} />
           <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/pages/ConsciousAIRevolution2027" element={<ConsciousAIRevolution2027 />} />
+          <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
+          <Route path="/pages/QuantumConsciousnessRevolution2027" element={<QuantumConsciousnessRevolution2027 />} />
+          <Route path="/blog" element={
+            <main className="container mx-auto px-4 py-16">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+                <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
+              </div>
+            </main>
+          } />
+          <Route path="/contact" element={
+            <main className="container mx-auto px-4 py-16">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+                <p className="text-xl text-gray-600">Get in touch with our team</p>
+              </div>
+            </main>
+          } />
+          <Route path="*" element={
+            <main className="container mx-auto px-4 py-16 text-center">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+              <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
+            </main>
+          } />
         </Routes>
         
         <Footer />
