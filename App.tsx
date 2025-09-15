@@ -429,8 +429,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
-<<<<<<< HEAD
-=======
           <Route path="/pages/AdvancedSpaceTech2026" element={<AdvancedSpaceTech2026 />} />
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
@@ -438,7 +436,6 @@ export default function App(): JSX.Element {
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/revolutionary-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
->>>>>>> cursor/create-and-deploy-new-content-cf43
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
