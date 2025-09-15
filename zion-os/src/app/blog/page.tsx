@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -9,14 +8,14 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
-      id: 'ai-foundation-models-2025',
-      title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
-      excerpt: 'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. David Kim',
+      id: 'ai-safety-governance-2025',
+      title: 'AI Safety and Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'A practical framework for policy-as-code, graded permissions, and human-in-the-loop controls.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
       date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/foundation-models-2025.jpg',
+      readTime: '8 min read',
+      image: '/blog/ai-safety-governance.jpg',
       featured: true
     },
     {
@@ -76,29 +75,16 @@ export default function BlogPage() {
     }
   ];
 
-  // Inject new featured post
-  featuredPosts.unshift({
-    id: 'agent-safety-red-teaming-2025',
-    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-    excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '11 min read',
-    image: '/blog/agent-safety-red-teaming.jpg',
-    featured: true
-  });
-
   const recentPosts = [
     {
-      id: 'enterprise-agent-guardrails',
-      title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
-      excerpt: 'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
-      category: 'Cybersecurity',
+      id: 'ai-safety-governance-2025',
+      title: 'AI Safety and Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Implement measurable guardrails for autonomous AI: policy-as-code, graded permissions, red‑team loops.',
+      category: 'AI Ethics',
       author: 'Dr. Emily Watson',
-      date: '2025-09-14',
+      date: '2025-09-15',
       readTime: '8 min read',
-      image: '/blog/enterprise-agent-guardrails.jpg'
+      image: '/blog/ai-safety-governance.jpg'
     },
     {
       id: 'autonomous-it-operations',
@@ -139,46 +125,6 @@ export default function BlogPage() {
       date: '2024-01-12',
       readTime: '6 min read',
       image: '/blog/ai-cybersecurity.jpg'
-    },
-    {
-      id: 'edge-ai-on-device-inference',
-      title: 'Edge AI: On-Device Inference for Privacy and Speed',
-      excerpt: 'How to deploy efficient on-device models to reduce latency and protect user data.',
-      category: 'AI Solutions',
-      author: 'Priya Natarajan',
-      date: '2024-01-18',
-      readTime: '7 min read',
-      image: '/blog/edge-ai.jpg'
-    },
-    {
-      id: 'autonomous-agents-in-enterprise',
-      title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls',
-      excerpt: 'Design patterns for safe, measurable, and ROI-positive agent deployments across workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2024-01-16',
-      readTime: '9 min read',
-      image: '/blog/enterprise-agents.jpg'
-    },
-    {
-      id: 'post-quantum-cryptography-roadmap',
-      title: 'Post-Quantum Cryptography: A Practical Migration Roadmap',
-      excerpt: 'Assessing risk, selecting algorithms, and planning phased rollouts to PQC.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-14',
-      readTime: '8 min read',
-      image: '/blog/pqc-roadmap.jpg'
-    },
-    {
-      id: 'llm-evals-in-production',
-      title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics',
-      excerpt: 'Move beyond static benchmarks with continuous evals, guardrails, and feedback loops.',
-      category: 'Data Science',
-      author: 'Michael Rodriguez',
-      date: '2024-01-11',
-      readTime: '7 min read',
-      image: '/blog/llm-evals.jpg'
     },
     {
       id: 'data-science-business-intelligence',
@@ -232,37 +178,13 @@ export default function BlogPage() {
     }
   ];
 
-  // Add new recent posts
-  recentPosts.unshift(
-    {
-      id: 'agent-safety-red-teaming-2025',
-      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-      excerpt: 'Playbooks to systematically evaluate and improve multi‑agent safety.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '11 min read',
-      image: '/blog/agent-safety-red-teaming.jpg'
-    },
-    {
-      id: 'ai-automation-case-studies-2025',
-      title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
-      excerpt: 'Five deployments with measurable KPIs and lessons learned.',
-      category: 'Case Studies',
-      author: 'Michael Rodriguez',
-      date: '2025-09-12',
-      readTime: '9 min read',
-      image: '/blog/ai-automation-case-studies.jpg'
-    }
-  );
-
   const categories = [
-    { name: 'All Posts', count: 16, active: true },
+    { name: 'All Posts', count: 12, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 4, active: false },
-    { name: 'Quantum Computing', count: 3, active: false },
+    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
-    { name: 'Data Science', count: 2, active: false },
+    { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
@@ -291,13 +213,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-foundation-models-2025"
+            href="/blog/sovereign-ai-commerce-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Foundation Models in 2025: Practical Enterprise Patterns That Work"
+            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                FM
+                SA
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -305,10 +227,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Foundation Models in 2025: Practical Enterprise Patterns That Work
+                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.
+                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
