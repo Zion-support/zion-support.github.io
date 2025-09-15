@@ -53,6 +53,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "llm-evals-maturity-model-2026",
+    title: "AI 2026: LLM Evals Maturity Model",
+    description:
+      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+    ctaLabel: "Read Framework",
+    href: "/blog/ai-2026-llm-evals-maturity-model",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-compliance-2026",
+    title: "AI 2026: Autonomous Compliance Operating Model",
+    description:
+      "Automate controls, evidence, and tests for audit-ready AI operations with policy-as-code.",
+    ctaLabel: "Explore Model",
+    href: "/content/ai-2026-autonomous-compliance",
+    emoji: "✅",
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-finance-os",
     title: "AI 2026: Autonomous Finance OS",
     description:
