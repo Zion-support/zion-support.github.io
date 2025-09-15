@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Brain, Zap, Atom, Bot } from 'lucide-react';
+ArrowRightStarBrainZapAtomBot
 
 export default function NewContent2025InnovationShowcaseBanner() {
   return (
@@ -21,7 +21,7 @@ export default function NewContent2025InnovationShowcaseBanner() {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Explore groundbreaking AI innovations, quantum computing breakthroughs, and advanced automation solutions that will transform your business in 2025-2026.
+            Explore groundbreaking AI innovationsquantum computing breakthroughsand advanced automation solutions that will transform your business in 2025-2026.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function NewContent2025InnovationShowcaseBanner() {
             </div>
             <h3 className="text-xl font-bold text-white mb-3">AI Innovation Showcase</h3>
             <p className="text-gray-300 text-sm mb-4">
-              Revolutionary AI technologies including quantum AI fusion, neural interfaces, and autonomous business systems.
+              Revolutionary AI technologies including quantum AI fusioneural interfacesand autonomous business systems.
             </p>
             <Link 
               href="/ai-innovation-showcase-2025-2026"
@@ -51,7 +51,7 @@ export default function NewContent2025InnovationShowcaseBanner() {
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Quantum Computing</h3>
             <p className="text-gray-300 text-sm mb-4">
-              Next-generation quantum processors, quantum AI fusion, and unbreakable quantum cryptography systems.
+              Next-generation quantum processorsquantum AI fusionand unbreakable quantum cryptography systems.
             </p>
             <Link 
               href="/quantum-computing-breakthrough-2025-2026"
@@ -69,7 +69,7 @@ export default function NewContent2025InnovationShowcaseBanner() {
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Advanced Automation</h3>
             <p className="text-gray-300 text-sm mb-4">
-              Intelligent automation solutions that work 24/7, learn continuously, and deliver unprecedented efficiency.
+              Intelligent automation solutions that work 24/7learn continuouslyand deliver unprecedented efficiency.
             </p>
             <Link 
               href="/advanced-automation-solutions-2025-2026"

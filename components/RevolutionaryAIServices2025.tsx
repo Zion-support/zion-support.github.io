@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Globe, Target, TrendingUp } from 'lucide-react';
+ArrowRightBrainZapShieldGlobeTargetTrendingUp
 import Link from 'next/link';
 
 const RevolutionaryAIServices2025: React.FC = () => {
@@ -113,7 +113,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
     {
       id: 6,
       title: "Synthetic Intelligence Ecosystem",
-      description: "Complete AI ecosystem that creates, manages, and evolves multiple AI entities",
+      description: "Complete AI ecosystem that createsmanagesand evolves multiple AI entities",
       price: "$5,999/month",
       marketPrice: "$10,000-30,000/month",
       features: [
@@ -153,12 +153,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105"
             >
               {/* Gradient Background */}
@@ -192,7 +192,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
               {/* Features */}
               <div className="space-y-2 mb-6">
                 <h4 className="text-white font-semibold">Key Features:</h4>
-                {service.features.map((feature, idx) => (
+                {service.features.map((featureidx) => (
                   <div key={idx} className="flex items-center text-gray-300">
                     <ArrowRight className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-sm">{feature}</span>
@@ -203,7 +203,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
               {/* Benefits */}
               <div className="space-y-2 mb-8">
                 <h4 className="text-white font-semibold">Benefits:</h4>
-                {service.benefits.map((benefit, idx) => (
+                {service.benefits.map((benefitidx) => (
                   <div key={idx} className="flex items-center text-green-300">
                     <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
                     <span className="text-sm">{benefit}</span>
@@ -226,7 +226,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-600/10 backdrop-blur-lg rounded-2xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-4">

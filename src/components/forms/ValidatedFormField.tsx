@@ -43,7 +43,8 @@ export function ValidatedFormField({
   className,
   disabled = false,
   showValidIcon = true,
-  debounceMs = 300}: ValidatedFormFieldProps) {
+  debounceMs = 300,
+}: ValidatedFormFieldProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle');
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
@@ -298,10 +299,11 @@ export function ValidatedFormField({
 
 // Validation helpers for common patterns
 export const validationPatterns = {
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/,
   url: /^https?:\/\/.+/,
-  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/};
+  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+};
 
 // Pre-configured validation rules
 export const commonValidations = {
@@ -334,4 +336,5 @@ export const commonValidations = {
       }
       return null;
     }
-  }}; 
+  },
+}; 

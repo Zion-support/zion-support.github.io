@@ -48,7 +48,8 @@ const WhitepaperViewPage: React.FC = () => {
       setError(null);
       try {
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
-          body: { id }});
+          body: { id },
+        });
 
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error);

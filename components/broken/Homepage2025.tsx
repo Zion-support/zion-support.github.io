@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+"use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -33,18 +37,31 @@ import { real2036AIServices } from '../data/real-2036-ai-services';
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
+<<<<<<< HEAD
+  const [activeSectionsetActiveSection] = useState('hero');
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isMobileMenuOpensetIsMobileMenuOpen] = useState(false);
+=======
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
+<<<<<<< HEAD
+    }5000);
+    return () => clearInterval(interval);
+  }[]);
+=======
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -70,6 +87,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...quantumCybersecurityServices
   ];
 
+<<<<<<< HEAD
+  const featuredServices = allServices.filter(service => service.popular).slice(012);
+
+  const navigationSections = [
+    { id: ''hero', 'label: ''Home', 'icon: '🏠' },
+    { id: ''services', 'label: 'Micro 'SAAS', 'icon: '🚀' },
+    { id: ''ai', 'label: 'AI 'Services', 'icon: '🧠' },
+    { id: ''automation', 'label: 'AI 'Automation', 'icon: '⚡' },
+    { id: ''quantum', 'label: 'Quantum 'Security', 'icon: '🔐' },
+    { id: ''it', 'label: 'IT 'Solutions', 'icon: '💻' },
+    { id: ''emerging', 'label: 'Emerging 'Tech', 'icon: '🌟' },
+    { id: ''contact', 'label: ''Contact', 'icon: '📞' }
+=======
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const navigationSections = [
@@ -81,6 +111,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'it', label: 'IT Solutions', icon: '💻' },
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   return (
@@ -92,8 +123,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <motion.div
+<<<<<<< HEAD
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+=======
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
+>>>>>>> origin/auto/autonomy-17186719616
               className="flex items-center space-x-2"
             >
               Zion Tech Group
@@ -101,15 +137,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+              className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+            >
+              Pioneering the future of technology with revolutionary AIQuantum ComputingSpace Technologyand cutting-edge IT solutions that drive business transformation
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation
+>>>>>>> origin/auto/autonomy-17186719616
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.4 }}
+=======
               transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
               className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
             >
               <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
@@ -124,7 +171,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.6 }}
+=======
               transition={{ duration: 0.8, delay: 0.6 }}
+>>>>>>> origin/auto/autonomy-17186719616
               className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
             >
               <div className="flex items-center gap-2">
@@ -156,18 +207,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Revolutionary Services Portfolio
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+                Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AIQuantum ComputingSpace Technologyand cutting-edge IT solutions
+=======
                 Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
 
             {/* Featured Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<<<<<<< HEAD
+              {featuredServices.map((serviceindex) => (
+=======
               {featuredServices.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 >
                   <UltraFuturisticServiceCard2026
                     service={{
@@ -224,9 +287,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
+<<<<<<< HEAD
+                initial={{ opacity: 0height: 0 }}
+                animate={{ opacity: 1height: 'auto' }}
+                exit={{ opacity: 0height: 0 }}
+=======
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="lg:hidden border-t border-white/10"
                 id="mobile-navigation"
               >
@@ -287,16 +356,27 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
+          >
+            Revolutionary micro SAAS servicescutting-edge AI solutionsquantum cybersecurityand emerging technologies that transform businesses and industries.
+=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
           >
             Revolutionary micro SAAS services, cutting-edge AI solutions, quantum cybersecurity, and emerging technologies that transform businesses and industries.
+>>>>>>> origin/auto/autonomy-17186719616
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            transition={{ duration: 0.8delay: 0.4 }}
+=======
             transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <button
@@ -317,15 +397,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            transition={{ duration: 1delay: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          >
+            {featuredServices.slice(03).map((serviceindex) => (
+=======
             transition={{ duration: 1, delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
           >
             {featuredServices.slice(0, 3).map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.8 + index * 0.2 }}
+=======
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
@@ -358,12 +449,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {innovativeRealMicroSaasServices2025.slice(09).map((serviceindex) => (
+=======
             {innovativeRealMicroSaasServices2025.slice(0, 9).map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
               >
                 <UltraFuturisticServiceCard2026 
@@ -397,12 +496,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {innovativeAIServicesEnhanced2025.slice(09).map((serviceindex) => (
+=======
             {innovativeAIServicesEnhanced2025.slice(0, 9).map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
               >
                 <UltraFuturisticServiceCard2026 
@@ -431,17 +538,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+<<<<<<< HEAD
+              Intelligent automation solutions that learnadaptand continuously optimize your business processes.
+=======
               Intelligent automation solutions that learn, adapt, and continuously optimize your business processes.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {advancedAIAutomationServices.map((serviceindex) => (
+=======
             {advancedAIAutomationServices.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
               >
                 <UltraFuturisticServiceCard2026 
@@ -475,12 +594,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {quantumCybersecurityServices.map((serviceindex) => (
+=======
             {quantumCybersecurityServices.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
               >
                 <UltraFuturisticServiceCard2026 
@@ -514,12 +641,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {innovativeITServicesEnhanced2025.slice(09).map((serviceindex) => (
+=======
             {innovativeITServicesEnhanced2025.slice(0, 9).map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
               >
                 <UltraFuturisticServiceCard2026 
@@ -553,12 +688,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {emergingTechServicesEnhanced2025.slice(09).map((serviceindex) => (
+=======
             {emergingTechServicesEnhanced2025.slice(0, 9).map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
               >
                 <UltraFuturisticServiceCard2026 
@@ -640,7 +783,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <div>
               <h3 className="text-white font-bold text-lg mb-4">ZionTech Group</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
+<<<<<<< HEAD
+                Revolutionary technology solutions that transform businesses and industries through innovationAIand emerging technologies.
+=======
                 Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies.
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             </div>
             <div>
@@ -690,7 +837,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
+<<<<<<< HEAD
+                'We', 're not just another technology company - 'we', 're pioneers shaping the future of business and technology
+=======
                 We're not just another technology company - we're pioneers shaping the future of business and technology
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
 
@@ -703,17 +854,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 },
                 {
                   title: 'Proven Results',
+<<<<<<< HEAD
+                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiencycost savingsand competitive advantage.',
+=======
                   description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.',
+>>>>>>> origin/auto/autonomy-17186719616
                   icon: '📈'
                 },
                 {
                   title: 'Future-Proof Technology',
+<<<<<<< HEAD
+                  description: 'Built with quantum computingAI consciousnessand space technology - ensuring your business stays ahead of the curve.',
+=======
                   description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.',
+>>>>>>> origin/auto/autonomy-17186719616
                   icon: '🔮'
                 },
                 {
                   title: 'Expert Team',
+<<<<<<< HEAD
+                  description: 'World-class engineerscientistsand business strategists with decades of experience in emerging technologies.',
+=======
                   description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.',
+>>>>>>> origin/auto/autonomy-17186719616
                   icon: '👥'
                 },
                 {
@@ -723,15 +886,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 },
                 {
                   title: 'Scalable Solutions',
+<<<<<<< HEAD
+                  description: 'From startups to enterprisesour solutions scale with your business and grow with your ambitions.',
+                  icon: '📊'
+                }
+              ].map((featureindex) => (
+=======
                   description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',
                   icon: '📊'
                 }
               ].map((feature, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   className="text-center p-8"
                 >
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">

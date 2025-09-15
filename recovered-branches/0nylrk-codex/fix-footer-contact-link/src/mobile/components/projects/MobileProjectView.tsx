@@ -1,10 +1,18 @@
 
 import React from "react";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
+import { CheckCircleChevronRightFileTextMessageSquareVideo } from "lucide-react";
+=======
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useNavigate } from "react-router-dom";
@@ -37,12 +45,20 @@ interface ProjectViewProps {
   milestones: Milestone[];
 }
 
+<<<<<<< HEAD
+export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
+=======
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const navigate = useNavigate();
   
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
+<<<<<<< HEAD
+    toast.success("Starting project call"{
+=======
     toast.success("Starting project call", {
+>>>>>>> origin/auto/autonomy-17186719616
       description: "Initializing video connection..."
     });
     
@@ -50,7 +66,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   };
   
   const messageClient = () => {
+<<<<<<< HEAD
+    toast.info("Opening message thread with client"{
+=======
     toast.info("Opening message thread with client", {
+>>>>>>> origin/auto/autonomy-17186719616
       description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
@@ -167,7 +187,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Status:</span>
+<<<<<<< HEAD
+                    <span className="capitalize">{milestone.status.replace('_' ')}</span>
+=======
                     <span className="capitalize">{milestone.status.replace('_', ' ')}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                   </div>
                   <Button 
                     size="sm" 

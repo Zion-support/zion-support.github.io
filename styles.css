@@ -316,7 +316,6 @@ h3 { font-size: 1.1rem; }
     gap: 8px;
   }
 }
-
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

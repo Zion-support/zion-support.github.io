@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react',
 
 
 export default function AnalyticsPage() {
@@ -25,16 +25,13 @@ export default function AnalyticsPage() {
       title: 'Performance Monitoring',
       description: 'Track system performance and user behavior'
     }
-  ];
+  ],
 
   const benefits = [
-    'Make data-driven decisions',
-    'Identify growth opportunities',
-    'Optimize user experience',
-    'Monitor system health',
-    'Track business metrics',
-    'Generate actionable insights'
-  ];
+    'Make data-driven decisionsIdentify growth opportunities',
+    'Optimize user experienceMonitor system health',
+    'Track business metricsGenerate actionable insights'
+  ],
 
   return (
     <>
@@ -154,7 +151,7 @@ export default function AnalyticsPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data?
             </h2>
@@ -175,5 +172,5 @@ export default function AnalyticsPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

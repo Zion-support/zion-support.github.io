@@ -10,15 +10,18 @@ export default function GreenIT() {
     {
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server},
+      icon: Server,
+    },
     {
       title: "Optimized Cooling Systems",
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
+      icon: Cloud,
+    },
     {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
+      icon: Leaf,
+    }
   ];
 
   return (

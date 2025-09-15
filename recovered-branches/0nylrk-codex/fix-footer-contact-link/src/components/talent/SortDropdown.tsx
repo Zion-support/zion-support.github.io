@@ -2,19 +2,37 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
+<<<<<<< HEAD
+import { SortDescChevronDown } from "lucide-react";
+=======
 import { SortDesc, ChevronDown } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+=======
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> main
+}
+
+export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {
+=======
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

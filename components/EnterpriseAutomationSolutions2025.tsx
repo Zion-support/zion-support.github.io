@@ -1,707 +1,596 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Settings,
-  ArrowRight,
+  Building2
+  Zap
+  BarChart3
+  Users
+  Clock
+  Shield
+  TrendingUp
   CheckCircle,
+  ArrowRight,
   Play,
-  Download,
   Star,
-  TrendingUp,
-  Clock,
-  Award,
   Target,
+  DollarSign,
   Globe,
+  Settings,
+  Database,
+  Cloud,
   Lock,
+  Smartphone,
+  Monitor,
+  Server,
+  Workflow,
+  Brain,
+  Bot,
+  FileText,
+  MessageSquare,
+  Calendar,
+  Mail,
+  CreditCard,
+  PieChart,
+  Activity,
+  AlertTriangle,
   RefreshCw,
-  Sparkles
+  Download,
+  Upload,
+  Eye,
+  Edit,
+  Trash2,
+  Plus,
+  Minus,
+  Maximize,
+  Minimize
 } from 'lucide-react';
 
 interface AutomationSolution {
   id: string;
-  title: string;
+  name: string;
   description: string;
   category: string;
-  industry: string;
   icon: React.ReactNode;
-  gradient: string;
   features: string[];
-  benefits: {
-    efficiency: number;
-    costSavings: number;
-    timeReduction: number;
-    accuracy: number;
-  };
-  implementation: {
-    duration: string;
-    complexity: 'Low' | 'Medium' | 'High';
-    teamSize: string;
-  };
+  benefits: string[];
   pricing: {
-    tier: 'Starter' | 'Professional' | 'Enterprise';
-    price: string;
-    features: string[];
-  }[];
+    starter: string;
+    professional: string;
+    enterprise: string;
+  };
+  roi: string;
+  implementation: string;
+  isPopular?: boolean;
+  isNew?: boolean;
 }
 
 const EnterpriseAutomationSolutions2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSolution, setSelectedSolution] = useState<AutomationSolution | null>(null);
-  const [hoveredSolution, setHoveredSolution] = useState<string | null>(null);
+  const [selectedSolutionsetSelectedSolution] = useState<string | null>(null);
+  const [activeCategorysetActiveCategory] = useState<string>('all');
+  const [isDemoRunningsetIsDemoRunning] = useState(false);
+  const [demoStepsetDemoStep] = useState(0);
+
+  const categories = [
+    { id: ''all', 'name: 'All 'Solutions', 'count: 12 },
+    { id: ''workflow', 'name: 'Workflow 'Automation', 'count: 4 },
+    { id: ''data', 'name: 'Data 'Processing', 'count: 3 },
+    { id: ''communication', 'name: ''Communication', 'count: 2 },
+    { id: ''analytics', 'name: 'Analytics & 'Reporting', 'count: 3 }
+  ];
 
   const solutions: AutomationSolution[] = [
     {
-      id: 'hr-automation',
-      title: 'HR Process Automation Suite',
-      description: 'Complete automation of recruitment, onboarding, performance management, and employee lifecycle processes.',
-      category: 'Human Resources',
-      industry: 'All Industries',
-      icon: <Users className="w-8 h-8" />,
-      gradient: 'from-blue-600 to-cyan-600',
+      id: 'workflow-orchestrator',
+      name: 'Workflow Orchestrator Pro',
+      description: 'End-to-end business process automation with AI-powered decision making',
+      category: 'workflow',
+      icon: <Workflow className="w-8 h-8" />,
       features: [
-        'Automated resume screening',
-        'AI-powered candidate matching',
-        'Automated interview scheduling',
-        'Performance review automation',
-        'Employee onboarding workflows',
-        'Compliance tracking'
+        'Visual workflow designer',
+        'AI-powered decision trees',
+        'Multi-system integration',
+        'Real-time monitoring',
+        'Exception handling',
+        'Scalable architecture'
       ],
-      benefits: {
-        efficiency: 85,
-        costSavings: 60,
-        timeReduction: 70,
-        accuracy: 92
+      benefits: [
+        'Reduce manual work by 80%',
+        'Improve process accuracy by 95%',
+        'Cut operational costs by 60%',
+        'Accelerate time-to-market by 70%'
+      ],
+      pricing: {
+        starter: '$500/month',
+        professional: '$1,500/month',
+        enterprise: 'Custom'
       },
-      implementation: {
-        duration: '4-6 weeks',
-        complexity: 'Medium',
-        teamSize: '3-5 people'
-      },
-      pricing: [
-        {
-          tier: 'Starter',
-          price: '$2,999/month',
-          features: ['Up to 100 employees', 'Basic automation', 'Email support']
-        },
-        {
-          tier: 'Professional',
-          price: '$7,999/month',
-          features: ['Up to 500 employees', 'Advanced AI', 'Priority support']
-        },
-        {
-          tier: 'Enterprise',
-          price: 'Custom',
-          features: ['Unlimited employees', 'Custom integrations', 'Dedicated support']
-        }
-      ]
+      roi: '300% ROI in 6 months',
+      implementation: '4-6 weeks',
+      isPopular: true
     },
     {
-      id: 'finance-automation',
-      title: 'Financial Operations Automation',
-      description: 'End-to-end automation of accounting, invoicing, expense management, and financial reporting processes.',
-      category: 'Finance',
-      industry: 'All Industries',
-      icon: <BarChart3 className="w-8 h-8" />,
-      gradient: 'from-green-600 to-emerald-600',
+      id: 'data-pipeline',
+      name: 'Data Pipeline Automation',
+      description: 'Automated data collectionprocessingand analysis across all systems',
+      category: 'data',
+      icon: <Database className="w-8 h-8" />,
       features: [
-        'Automated invoice processing',
-        'Expense categorization',
-        'Financial report generation',
-        'Budget tracking automation',
-        'Tax compliance monitoring',
-        'Payment processing automation'
+        'Real-time data ingestion',
+        'Automated data cleaning',
+        'Machine learning integration',
+        'Data quality monitoring',
+        'Compliance reporting',
+        'Cloud-native architecture'
       ],
-      benefits: {
-        efficiency: 90,
-        costSavings: 45,
-        timeReduction: 80,
-        accuracy: 98
+      benefits: [
+        'Process 10x more data',
+        'Reduce data errors by 90%',
+        'Enable real-time insights',
+        'Ensure compliance automatically'
+      ],
+      pricing: {
+        starter: '$800/month',
+        professional: '$2,000/month',
+        enterprise: 'Custom'
       },
-      implementation: {
-        duration: '6-8 weeks',
-        complexity: 'High',
-        teamSize: '5-8 people'
-      },
-      pricing: [
-        {
-          tier: 'Starter',
-          price: '$1,999/month',
-          features: ['Basic accounting', 'Invoice automation', 'Standard reports']
-        },
-        {
-          tier: 'Professional',
-          price: '$4,999/month',
-          features: ['Advanced analytics', 'Multi-currency', 'API integrations']
-        },
-        {
-          tier: 'Enterprise',
-          price: 'Custom',
-          features: ['Custom reporting', 'Dedicated support', 'SLA guarantees']
-        }
-      ]
+      roi: '250% ROI in 4 months',
+      implementation: '6-8 weeks'
     },
     {
       id: 'customer-service',
-      title: 'Customer Service Automation',
-      description: 'Intelligent customer support automation with AI chatbots, ticket routing, and sentiment analysis.',
-      category: 'Customer Service',
-      industry: 'Retail, E-commerce, SaaS',
-      icon: <Users className="w-8 h-8" />,
-      gradient: 'from-purple-600 to-pink-600',
+      name: 'Customer Service Automation',
+      description: 'AI-powered customer support with intelligent routing and response',
+      category: 'communication',
+      icon: <MessageSquare className="w-8 h-8" />,
       features: [
-        'AI-powered chatbots',
-        'Automated ticket routing',
+        'Intelligent ticket routing',
+        'AI-powered responses',
+        'Multi-channel support',
         'Sentiment analysis',
-        'Knowledge base automation',
-        'Customer feedback processing',
-        'Escalation management'
+        'Escalation management',
+        'Performance analytics'
       ],
-      benefits: {
-        efficiency: 75,
-        costSavings: 50,
-        timeReduction: 65,
-        accuracy: 88
+      benefits: [
+        'Resolve 70% of tickets automatically',
+        'Improve response time by 85%',
+        'Increase customer satisfaction by 40%',
+        'Reduce support costs by 50%'
+      ],
+      pricing: {
+        starter: '$300/month',
+        professional: '$800/month',
+        enterprise: 'Custom'
       },
-      implementation: {
-        duration: '3-4 weeks',
-        complexity: 'Medium',
-        teamSize: '2-4 people'
-      },
-      pricing: [
-        {
-          tier: 'Starter',
-          price: '$999/month',
-          features: ['Basic chatbot', 'Email support', 'Standard templates']
-        },
-        {
-          tier: 'Professional',
-          price: '$2,999/month',
-          features: ['Advanced AI', 'Multi-channel', 'Analytics dashboard']
-        },
-        {
-          tier: 'Enterprise',
-          price: 'Custom',
-          features: ['Custom AI training', 'White-label', '24/7 support']
-        }
-      ]
+      roi: '400% ROI in 3 months',
+      implementation: '2-4 weeks',
+      isNew: true
     },
     {
-      id: 'supply-chain',
-      title: 'Supply Chain Automation',
-      description: 'Comprehensive supply chain optimization with demand forecasting, inventory management, and logistics automation.',
-      category: 'Supply Chain',
-      industry: 'Manufacturing, Retail, Logistics',
-      icon: <Globe className="w-8 h-8" />,
-      gradient: 'from-orange-600 to-red-600',
+      id: 'financial-automation',
+      name: 'Financial Process Automation',
+      description: 'Automated accountinginvoicingand financial reporting',
+      category: 'workflow',
+      icon: <CreditCard className="w-8 h-8" />,
       features: [
-        'Demand forecasting',
-        'Inventory optimization',
-        'Supplier management',
-        'Order processing automation',
-        'Logistics tracking',
-        'Quality control automation'
+        'Automated invoicing',
+        'Expense management',
+        'Financial reporting',
+        'Compliance tracking',
+        'Audit trails',
+        'Integration with ERP'
       ],
-      benefits: {
-        efficiency: 88,
-        costSavings: 35,
-        timeReduction: 55,
-        accuracy: 94
+      benefits: [
+        'Reduce accounting errors by 95%',
+        'Speed up month-end close by 80%',
+        'Improve cash flow visibility',
+        'Ensure regulatory compliance'
+      ],
+      pricing: {
+        starter: '$400/month',
+        professional: '$1,200/month',
+        enterprise: 'Custom'
       },
-      implementation: {
-        duration: '8-12 weeks',
-        complexity: 'High',
-        teamSize: '6-10 people'
-      },
-      pricing: [
-        {
-          tier: 'Starter',
-          price: '$3,999/month',
-          features: ['Basic forecasting', 'Inventory tracking', 'Standard reports']
-        },
-        {
-          tier: 'Professional',
-          price: '$8,999/month',
-          features: ['Advanced analytics', 'Multi-warehouse', 'API integrations']
-        },
-        {
-          tier: 'Enterprise',
-          price: 'Custom',
-          features: ['Custom algorithms', 'Global deployment', 'Dedicated team']
-        }
-      ]
+      roi: '350% ROI in 5 months',
+      implementation: '4-6 weeks'
     },
     {
-      id: 'marketing-automation',
-      title: 'Marketing Automation Platform',
-      description: 'Complete marketing automation with lead generation, email campaigns, social media management, and analytics.',
-      category: 'Marketing',
-      industry: 'All Industries',
-      icon: <Target className="w-8 h-8" />,
-      gradient: 'from-indigo-600 to-purple-600',
+      id: 'hr-automation',
+      name: 'HR Process Automation',
+      description: 'Streamlined human resources with automated workflows and AI insights',
+      category: 'workflow',
+      icon: <Users className="w-8 h-8" />,
       features: [
-        'Lead generation automation',
-        'Email campaign management',
-        'Social media automation',
-        'Content personalization',
-        'Marketing analytics',
-        'A/B testing automation'
+        'Automated recruitment',
+        'Employee onboarding',
+        'Performance tracking',
+        'Leave management',
+        'Payroll integration',
+        'Compliance reporting'
       ],
-      benefits: {
-        efficiency: 82,
-        costSavings: 40,
-        timeReduction: 60,
-        accuracy: 85
+      benefits: [
+        'Reduce hiring time by 60%',
+        'Improve employee experience',
+        'Ensure policy compliance',
+        'Reduce HR administrative costs'
+      ],
+      pricing: {
+        starter: '$600/month',
+        professional: '$1,800/month',
+        enterprise: 'Custom'
       },
-      implementation: {
-        duration: '4-6 weeks',
-        complexity: 'Medium',
-        teamSize: '3-5 people'
-      },
-      pricing: [
-        {
-          tier: 'Starter',
-          price: '$1,499/month',
-          features: ['Email automation', 'Basic analytics', 'Standard templates']
-        },
-        {
-          tier: 'Professional',
-          price: '$3,999/month',
-          features: ['Multi-channel', 'Advanced analytics', 'Custom workflows']
-        },
-        {
-          tier: 'Enterprise',
-          price: 'Custom',
-          features: ['Custom integrations', 'Dedicated support', 'White-label']
-        }
-      ]
+      roi: '280% ROI in 6 months',
+      implementation: '6-8 weeks'
     },
     {
-      id: 'it-operations',
-      title: 'IT Operations Automation',
-      description: 'Comprehensive IT infrastructure automation with monitoring, incident management, and deployment automation.',
-      category: 'IT Operations',
-      industry: 'Technology, Finance, Healthcare',
-      icon: <Cpu className="w-8 h-8" />,
-      gradient: 'from-cyan-600 to-blue-600',
+      id: 'analytics-dashboard',
+      name: 'Business Intelligence Automation',
+      description: 'Automated reporting and analytics with real-time insights',
+      category: 'analytics',
+      icon: <PieChart className="w-8 h-8" />,
       features: [
-        'Infrastructure monitoring',
-        'Automated incident response',
-        'Deployment automation',
-        'Security monitoring',
-        'Performance optimization',
-        'Backup automation'
+        'Automated report generation',
+        'Real-time dashboards',
+        'Predictive analytics',
+        'Custom KPI tracking',
+        'Alert systems',
+        'Data visualization'
       ],
-      benefits: {
-        efficiency: 92,
-        costSavings: 55,
-        timeReduction: 85,
-        accuracy: 96
+      benefits: [
+        'Generate reports 10x faster',
+        'Enable data-driven decisions',
+        'Identify trends automatically',
+        'Reduce reporting errors by 90%'
+      ],
+      pricing: {
+        starter: '$500/month',
+        professional: '$1,500/month',
+        enterprise: 'Custom'
       },
-      implementation: {
-        duration: '6-10 weeks',
-        complexity: 'High',
-        teamSize: '5-8 people'
-      },
-      pricing: [
-        {
-          tier: 'Starter',
-          price: '$2,499/month',
-          features: ['Basic monitoring', 'Email alerts', 'Standard dashboards']
-        },
-        {
-          tier: 'Professional',
-          price: '$5,999/month',
-          features: ['Advanced monitoring', 'Custom alerts', 'API access']
-        },
-        {
-          tier: 'Enterprise',
-          price: 'Custom',
-          features: ['Custom integrations', 'Dedicated support', 'SLA guarantees']
-        }
-      ]
+      roi: '320% ROI in 4 months',
+      implementation: '3-5 weeks'
     }
   ];
 
-  const categories = ['all', 'Human Resources', 'Finance', 'Customer Service', 'Supply Chain', 'Marketing', 'IT Operations'];
+  const filteredSolutions = solutions.filter(solution => 
+    activeCategory === 'all' || solution.category === activeCategory
+  );
 
-  const filteredSolutions = selectedCategory === 'all' 
-    ? solutions 
-    : solutions.filter(solution => solution.category === selectedCategory);
+  const selectedSolutionData = solutions.find(s => s.id === selectedSolution);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+  const runDemo = () => {
+    setIsDemoRunning(true);
+    setDemoStep(0);
+    
+    const steps = [
+      'Initializing automation engine...',
+      'Connecting to enterprise systems...',
+      'Configuring workflow rules...',
+      'Deploying AI models...',
+      'Testing automation processes...',
+      'Monitoring performance metrics...',
+      'Demo completed successfully!'
+    ];
+
+    let currentStep = 0;
+    const interval = setInterval(() => {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        setDemoStep(currentStep);
+      } else {
+        clearInterval(interval);
+        setTimeout(() => {
+          setIsDemoRunning(false);
+          setDemoStep(0);
+        }2000);
       }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.5 }
-    }
+    }1500);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <div className="flex items-center justify-center mb-6">
-            <Building2 className="w-12 h-12 text-yellow-400 mr-4" />
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-              Enterprise Automation
-            </h1>
-            <Building2 className="w-12 h-12 text-yellow-400 ml-4" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Solutions 2025
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business operations with our comprehensive automation solutions. 
-            Increase efficiency, reduce costs, and scale your enterprise with AI-powered automation.
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Enterprise Automation
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Solutions 2025
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your enterprise with AI-powered automation solutions. 
+            Streamline processesreduce costsand accelerate growth.
           </p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
             <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25'
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                activeCategory === category.id
+                  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
             >
-              {category === 'all' ? 'All Solutions' : category}
+              {category.name} ({category.count})
             </button>
           ))}
         </motion.div>
 
-        {/* Solutions Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {filteredSolutions.map((solution) => (
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Solutions Grid */}
+          <div className="lg:col-span-2">
             <motion.div
-              key={solution.id}
-              variants={cardVariants}
-              className="group cursor-pointer"
-              onClick={() => setSelectedSolution(solution)}
-              onMouseEnter={() => setHoveredSolution(solution.id)}
-              onMouseLeave={() => setHoveredSolution(null)}
-            >
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 h-full">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.gradient}`}>
-                    {solution.icon}
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm text-gray-400">{solution.industry}</div>
-                    <div className="text-sm font-semibold text-white">{solution.category}</div>
-                  </div>
-                </div>
-
-                {/* Title and Description */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors">
-                  {solution.title}
-                </h3>
-                <p className="text-gray-300 mb-6 line-clamp-3">
-                  {solution.description}
-                </p>
-
-                {/* Benefits Preview */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
-                      {solution.benefits.efficiency}%
-                    </div>
-                    <div className="text-xs text-gray-400">Efficiency</div>
-                  </div>
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-400 mb-1">
-                      {solution.benefits.costSavings}%
-                    </div>
-                    <div className="text-xs text-gray-400">Cost Savings</div>
-                  </div>
-                </div>
-
-                {/* Features Preview */}
-                <div className="space-y-2 mb-6">
-                  {solution.features.slice(0, 3).map((feature, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </div>
-                  ))}
-                  {solution.features.length > 3 && (
-                    <div className="text-sm text-gray-400">
-                      +{solution.features.length - 3} more features
-                    </div>
-                  )}
-                </div>
-
-                {/* Implementation Info */}
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {solution.implementation.duration}
-                  </div>
-                  <div className={`px-2 py-1 rounded-full text-xs ${
-                    solution.implementation.complexity === 'Low' 
-                      ? 'bg-green-500/20 text-green-400'
-                      : solution.implementation.complexity === 'Medium'
-                      ? 'bg-yellow-500/20 text-yellow-400'
-                      : 'bg-red-500/20 text-red-400'
-                  }`}>
-                    {solution.implementation.complexity}
-                  </div>
-                </div>
-
-                {/* Action Button */}
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">Starting at {solution.pricing[0].price}</span>
-                  <div className="flex items-center text-yellow-400 group-hover:text-white transition-colors">
-                    <span className="text-sm font-semibold mr-2">Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Solution Detail Modal */}
-        <AnimatePresence>
-          {selectedSolution && (
-            <motion.div
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedSolution(null)}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="grid gap-6"
             >
-              <motion.div
-                className="bg-slate-900 rounded-2xl p-8 max-w-6xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-8">
-                  <div className="flex items-center">
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${selectedSolution.gradient} mr-6`}>
-                      {selectedSolution.icon}
+              {filteredSolutions.map((solutionindex) => (
+                <motion.div
+                  key={solution.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
+                  className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
+                    selectedSolution === solution.id ? 'ring-2 ring-blue-500' : ''
+                  }`}
+                  onClick={() => setSelectedSolution(solution.id)}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="p-3 bg-blue-500/20 rounded-lg text-blue-400">
+                        {solution.icon}
+                      </div>
+                      <div>
+                        <div className="flex items-center space-x-2 mb-2">
+                          <h3 className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                            {solution.name}
+                          </h3>
+                          {solution.isNew && (
+                            <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                              New
+                            </span>
+                          )}
+                          {solution.isPopular && (
+                            <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
+                              Popular
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-gray-300 mb-3">{solution.description}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                          <div className="flex items-center space-x-1">
+                            <TrendingUp className="w-4 h-4" />
+                            <span>{solution.roi}</span>
+                          </div>
+                          <div className="flex items-center space-x-1">
+                            <Clock className="w-4 h-4" />
+                            <span>{solution.implementation}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">
-                        {selectedSolution.title}
-                      </h3>
-                      <div className="flex items-center gap-4">
-                        <span className="text-gray-400">{selectedSolution.category}</span>
-                        <span className="text-gray-400">•</span>
-                        <span className="text-gray-400">{selectedSolution.industry}</span>
+                      <h4 className="text-white font-medium mb-3">Key Features</h4>
+                      <div className="space-y-2">
+                        {solution.features.slice(03).map((featureidx) => (
+                          <div key={idx} className="flex items-center space-x-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                            <span className="text-gray-300 text-sm">{feature}</span>
+                          </div>
+                        ))}
+                        {solution.features.length > 3 && (
+                          <div className="text-gray-400 text-sm">
+                            +{solution.features.length - 3} more features
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-white font-medium mb-3">Benefits</h4>
+                      <div className="space-y-2">
+                        {solution.benefits.slice(02).map((benefitidx) => (
+                          <div key={idx} className="flex items-center space-x-2">
+                            <Target className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                            <span className="text-gray-300 text-sm">{benefit}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
-                  <button
-                    onClick={() => setSelectedSolution(null)}
-                    className="text-gray-400 hover:text-white transition-colors"
+
+                  <div className="mt-6 pt-6 border-t border-white/10">
+                    <div className="flex items-center justify-between">
+                      <div className="flex space-x-4">
+                        {Object.entries(solution.pricing).map(([tierprice]) => (
+                          <div key={tier} className="text-center">
+                            <div className="text-xs text-gray-400 capitalize">{tier}</div>
+                            <div className="text-white font-medium">{price}</div>
+                          </div>
+                        ))}
+                      </div>
+                      <button className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center space-x-2">
+                        <Play className="w-4 h-4" />
+                        <span>Demo</span>
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Demo Panel */}
+          <div className="lg:col-span-1">
+            <motion.div
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
+              
+              <AnimatePresence mode="wait">
+                {selectedSolutionData ? (
+                  <motion.div
+                    key={selectedSolutionData.id}
+                    initial={{ opacity: 0scale: 0.95 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    exit={{ opacity: 0scale: 0.95 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* Description */}
-                <p className="text-xl text-gray-300 mb-8">
-                  {selectedSolution.description}
-                </p>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Features */}
-                  <div>
-                    <h4 className="text-2xl font-bold text-white mb-6">Key Features</h4>
-                    <div className="space-y-3">
-                      {selectedSolution.features.map((feature, index) => (
-                        <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
-                        </div>
-                      ))}
+                    <div className="text-center mb-6">
+                      <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">
+                        {selectedSolutionData.icon}
+                      </div>
+                      <h4 className="text-xl font-semibold text-white mb-2">
+                        {selectedSolutionData.name}
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        {selectedSolutionData.description}
+                      </p>
                     </div>
-                  </div>
 
-                  {/* Benefits */}
-                  <div>
-                    <h4 className="text-2xl font-bold text-white mb-6">Expected Benefits</h4>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-white/5 rounded-lg">
-                        <div className="text-3xl font-bold text-green-400 mb-2">
-                          {selectedSolution.benefits.efficiency}%
+                    {isDemoRunning ? (
+                      <div className="space-y-4">
+                        <div className="text-center">
+                          <div className="w-16 h-16 mx-auto mb-4 relative">
+                            <div className="w-full h-full border-4 border-blue-500/20 rounded-full"></div>
+                            <div 
+                              className="absolute top-0 left-0 w-full h-full border-4 border-blue-500 rounded-full border-t-transparent animate-spin"
+                              style={{ animationDuration: '1s' }}
+                            ></div>
+                          </div>
+                          <p className="text-white font-medium">Running Demo...</p>
+                          <p className="text-gray-400 text-sm">
+                            {demoStep < 7 ? `Step ${demoStep + 1} of 7` : 'Complete'}
+                          </p>
                         </div>
-                        <div className="text-gray-300">Efficiency Gain</div>
-                      </div>
-                      <div className="text-center p-4 bg-white/5 rounded-lg">
-                        <div className="text-3xl font-bold text-blue-400 mb-2">
-                          {selectedSolution.benefits.costSavings}%
-                        </div>
-                        <div className="text-gray-300">Cost Savings</div>
-                      </div>
-                      <div className="text-center p-4 bg-white/5 rounded-lg">
-                        <div className="text-3xl font-bold text-purple-400 mb-2">
-                          {selectedSolution.benefits.timeReduction}%
-                        </div>
-                        <div className="text-gray-300">Time Reduction</div>
-                      </div>
-                      <div className="text-center p-4 bg-white/5 rounded-lg">
-                        <div className="text-3xl font-bold text-yellow-400 mb-2">
-                          {selectedSolution.benefits.accuracy}%
-                        </div>
-                        <div className="text-gray-300">Accuracy</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Implementation Details */}
-                <div className="mt-8">
-                  <h4 className="text-2xl font-bold text-white mb-6">Implementation Details</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="p-6 bg-white/5 rounded-lg">
-                      <div className="flex items-center mb-3">
-                        <Clock className="w-5 h-5 text-blue-400 mr-2" />
-                        <span className="text-white font-semibold">Duration</span>
-                      </div>
-                      <div className="text-2xl font-bold text-blue-400">
-                        {selectedSolution.implementation.duration}
-                      </div>
-                    </div>
-                    <div className="p-6 bg-white/5 rounded-lg">
-                      <div className="flex items-center mb-3">
-                        <Settings className="w-5 h-5 text-purple-400 mr-2" />
-                        <span className="text-white font-semibold">Complexity</span>
-                      </div>
-                      <div className={`text-2xl font-bold ${
-                        selectedSolution.implementation.complexity === 'Low' 
-                          ? 'text-green-400'
-                          : selectedSolution.implementation.complexity === 'Medium'
-                          ? 'text-yellow-400'
-                          : 'text-red-400'
-                      }`}>
-                        {selectedSolution.implementation.complexity}
-                      </div>
-                    </div>
-                    <div className="p-6 bg-white/5 rounded-lg">
-                      <div className="flex items-center mb-3">
-                        <Users className="w-5 h-5 text-green-400 mr-2" />
-                        <span className="text-white font-semibold">Team Size</span>
-                      </div>
-                      <div className="text-2xl font-bold text-green-400">
-                        {selectedSolution.implementation.teamSize}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pricing */}
-                <div className="mt-8">
-                  <h4 className="text-2xl font-bold text-white mb-6">Pricing Plans</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {selectedSolution.pricing.map((plan, index) => (
-                      <div key={index} className={`p-6 rounded-lg border ${
-                        plan.tier === 'Professional' 
-                          ? 'border-purple-500 bg-purple-500/10' 
-                          : 'border-white/20 bg-white/5'
-                      }`}>
-                        <div className="text-center mb-4">
-                          <h5 className="text-xl font-bold text-white mb-2">{plan.tier}</h5>
-                          <div className="text-3xl font-bold text-yellow-400">{plan.price}</div>
-                        </div>
+                        
                         <div className="space-y-2">
-                          {plan.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                              {feature}
+                          {[
+                            'Initializing automation engine...',
+                            'Connecting to enterprise systems...',
+                            'Configuring workflow rules...',
+                            'Deploying AI models...',
+                            'Testing automation processes...',
+                            'Monitoring performance metrics...',
+                            'Demo completed successfully!'
+                          ].map((stepindex) => (
+                            <div key={index} className={`flex items-center space-x-2 text-sm ${
+                              index <= demoStep ? 'text-green-400' : 'text-gray-500'
+                            }`}>
+                              <CheckCircle className={`w-4 h-4 ${
+                                index <= demoStep ? 'text-green-400' : 'text-gray-500'
+                              }`} />
+                              <span>{step}</span>
                             </div>
                           ))}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    ) : (
+                      <div className="space-y-4">
+                        <div className="text-center">
+                          <Brain className="w-16 h-16 text-blue-400 mx-auto mb-4" />
+                          <p className="text-white font-medium">Ready to Demo</p>
+                          <p className="text-gray-400 text-sm">
+                            Experience {selectedSolutionData.name} in action
+                          </p>
+                        </div>
+                        
+                        <div className="space-y-3">
+                          <h5 className="text-white font-medium">Key Benefits:</h5>
+                          {selectedSolutionData.benefits.map((benefitindex) => (
+                            <div key={index} className="flex items-center space-x-2">
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{benefit}</span>
+                            </div>
+                          ))}
+                        </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-4 mt-8">
-                  <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-                    <Play className="w-5 h-5 mr-2" />
-                    Schedule Demo
-                  </button>
-                  <button className="flex-1 bg-white/10 text-white py-4 px-8 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
-                    <Download className="w-5 h-5 mr-2" />
-                    Download Brochure
-                  </button>
-                </div>
-              </motion.div>
+                        <div className="pt-4 border-t border-white/10">
+                          <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+                            <span>ROI</span>
+                            <span className="text-green-400 font-medium">{selectedSolutionData.roi}</span>
+                          </div>
+                          <div className="flex items-center justify-between text-sm text-gray-400">
+                            <span>Implementation</span>
+                            <span>{selectedSolutionData.implementation}</span>
+                          </div>
+                        </div>
+
+                        <button 
+                          onClick={runDemo}
+                          className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                        >
+                          <Play className="w-4 h-4" />
+                          <span>Start Demo</span>
+                        </button>
+                      </div>
+                    )}
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-center py-12"
+                  >
+                    <Building2 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      Select a Solution
+                    </h4>
+                    <p className="text-gray-400">
+                      Choose an automation solution to see it in action
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
-          )}
-        </AnimatePresence>
+          </div>
+        </div>
 
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-20"
+        {/* Enterprise Stats */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.8 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Automate Your Enterprise?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join 500+ enterprises already using our automation solutions to transform their operations and achieve unprecedented efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
-              <Building2 className="w-5 h-5 mr-2" />
-              Start Your Automation Journey
-            </button>
-            <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
-              <Users className="w-5 h-5 mr-2" />
-              Contact Sales Team
-            </button>
-          </div>
+          {[
+            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise 'Clients', 'value: '500+' },
+            { icon: <TrendingUp className="w-8 h-8" />label: 'Average 'ROI', 'value: '300%' },
+            { icon: <Clock className="w-8 h-8" />label: 'Time 'Saved', 'value: '80%' },
+            { icon: <Shield className="w-8 h-8" />label: ''Uptime', 'value: '99.9%' }
+          ].map((statindex) => (
+            <div key={index} className="text-center">
+              <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">
+                {stat.icon}
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </div>

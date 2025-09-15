@@ -3,198 +3,139 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting SEO Optimizer...');
-
+<<<<<<< HEAD
 class SEOOptimizer {
   constructor() {
-    this.results = {
-      timestamp: new Date().toISOString(),
-      seoScore: 0,
-      issues: [],
-      recommendations: [],
-      metrics: {},
+    this.seoData = new Map();
+  }
+
+  async analyzeSEO() {
+    const pagesDir = path.join(__dirname, '..', '..', 'pages');
+    this.scanPages(pagesDir);
+    
+    const issues = this.findSEOIssues();
+    const suggestions = this.generateSuggestions(issues);
+    
+    console.log('SEO analysis completed');
+    return { issues, suggestions };
+  }
+
+  scanPages(dir) {
+    if (!fs.existsSync(dir)) return;
+    
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        this.scanPages(filePath);
+      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+        this.analyzePage(filePath);
+      }
+    }
+  }
+
+  analyzePage(filePath) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const route = filePath.replace(path.join(__dirname, '..', '..', 'pages'), '').replace(/\.[jt]sx?$/, '');
+    
+    const seoData = {
+      hasTitle: /<title>/.test(content),
+      hasDescription: /meta.*description/.test(content),
+      hasKeywords: /meta.*keywords/.test(content),
+      hasOpenGraph: /og:/i.test(content),
+      hasTwitterCard: /twitter:/i.test(content),
+      hasStructuredData: /application\/ld\+json/.test(content)
     };
+    
+    this.seoData.set(route, seoData);
   }
 
-  async analyzePages() {
-    console.log('📄 Analyzing pages for SEO...');
-
-    const pagesDir = path.join(process.cwd(), 'pages');
-    const appDir = path.join(process.cwd(), 'app');
-
-    let pages = [];
-
-    if (fs.existsSync(pagesDir)) {
-      pages = this.findPages(pagesDir);
-    } else if (fs.existsSync(appDir)) {
-      pages = this.findAppPages(appDir);
+  findSEOIssues() {
+    const issues = [];
+    
+    for (const [route, data] of this.seoData) {
+      if (!data.hasTitle) issues.push({ route, type: 'missing-title', severity: 'high' });
+      if (!data.hasDescription) issues.push({ route, type: 'missing-description', severity: 'medium' });
+      if (!data.hasOpenGraph) issues.push({ route, type: 'missing-og', severity: 'medium' });
+      if (!data.hasStructuredData) issues.push({ route, type: 'missing-structured-data', severity: 'low' });
     }
+    
+    return issues;
+  }
 
-    this.results.metrics.totalPages = pages.length;
-
-    for (const page of pages) {
-      await this.analyzePage(page);
+  generateSuggestions(issues) {
+    const suggestions = [];
+    
+    for (const issue of issues) {
+      switch (issue.type) {
+        case 'missing-title':
+          suggestions.push(`Add <title> tag to ${issue.route}`);
+          break;
+        case 'missing-description':
+          suggestions.push(`Add meta description to ${issue.route}`);
+          break;
+        case 'missing-og':
+          suggestions.push(`Add Open Graph tags to ${issue.route}`);
+          break;
+        case 'missing-structured-data':
+          suggestions.push(`Add structured data to ${issue.route}`);
+          break;
+      }
     }
-  }
-
-  findPages(dir) {
-    const pages = [];
-    const files = fs.readdirSync(dir);
-
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stats = fs.statSync(filePath);
-
-      if (stats.isDirectory()) {
-        pages.push(...this.findPages(filePath));
-      } else if (
-        file.endsWith('.js') ||
-        file.endsWith('.jsx') ||
-        file.endsWith('.ts') ||
-        file.endsWith('.tsx')
-      ) {
-        pages.push(filePath);
-      }
-    });
-
-    return pages;
-  }
-
-  findAppPages(dir) {
-    const pages = [];
-    const files = fs.readdirSync(dir);
-
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stats = fs.statSync(filePath);
-
-      if (stats.isDirectory()) {
-        pages.push(...this.findAppPages(filePath));
-      } else if (
-        file === 'page.js' ||
-        file === 'page.tsx' ||
-        file === 'layout.js' ||
-        file === 'layout.tsx'
-      ) {
-        pages.push(filePath);
-      }
-    });
-
-    return pages;
-  }
-
-  async analyzePage(pagePath) {
-    try {
-      const content = fs.readFileSync(pagePath, 'utf8');
-
-      // Check for meta tags
-      if (!content.includes('<title>') && !content.includes('title:')) {
-        this.results.issues.push({
-          type: 'missing_title',
-          file: pagePath,
-          severity: 'high',
-        });
-      }
-
-      if (
-        !content.includes('description') &&
-        !content.includes('meta name="description"')
-      ) {
-        this.results.issues.push({
-          type: 'missing_description',
-          file: pagePath,
-          severity: 'medium',
-        });
-      }
-
-      // Check for heading structure
-      const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
-      if (h1Count === 0) {
-        this.results.issues.push({
-          type: 'missing_h1',
-          file: pagePath,
-          severity: 'medium',
-        });
-      }
-    } catch (error) {
-      console.error(`Error analyzing page ${pagePath}:`, error.message);
-    }
-  }
-
-  async generateRecommendations() {
-    console.log('💡 Generating SEO recommendations...');
-
-    this.results.recommendations = [
-      {
-        type: 'meta_tags',
-        priority: 'high',
-        description:
-          'Add proper meta tags including title, description, and keywords',
-      },
-      {
-        type: 'heading_structure',
-        priority: 'medium',
-        description: 'Ensure proper heading hierarchy (H1, H2, H3)',
-      },
-      {
-        type: 'alt_text',
-        priority: 'medium',
-        description: 'Add alt text to all images for accessibility and SEO',
-      },
-      {
-        type: 'sitemap',
-        priority: 'low',
-        description: 'Generate and submit XML sitemap to search engines',
-      },
-    ];
-  }
-
-  calculateSEOScore() {
-    const totalIssues = this.results.issues.length;
-    const highSeverityIssues = this.results.issues.filter(
-      issue => issue.severity === 'high'
-    ).length;
-    const mediumSeverityIssues = this.results.issues.filter(
-      issue => issue.severity === 'medium'
-    ).length;
-
-    // Calculate score based on issues (100 - penalties)
-    let score = 100;
-    score -= highSeverityIssues * 20;
-    score -= mediumSeverityIssues * 10;
-    score -= (totalIssues - highSeverityIssues - mediumSeverityIssues) * 5;
-
-    this.results.seoScore = Math.max(0, score);
-  }
-
-  async saveReport() {
-    const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-
-    const reportPath = path.join(
-      logsDir,
-      `seo-optimization-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
-  }
-
-  async run() {
-    console.log('🚀 Starting SEO optimization...');
-
-    await this.analyzePages();
-    await this.generateRecommendations();
-    this.calculateSEOScore();
-    await this.saveReport();
-
-    console.log(
-      `✅ SEO optimization completed! Score: ${this.results.seoScore}/100`
-    );
+    
+    return suggestions;
   }
 }
 
-// Run the SEO optimizer
-const seoOptimizer = new SEOOptimizer();
-seoOptimizer.run().catch(console.error);
+const optimizer = new SEOOptimizer();
+optimizer.analyzeSEO();
+=======
+const logsDir = path.join(__dirname, 'logs');
+const logFile = path.join(logsDir, 'seo-optimizer.log');
+const reportFile = path.join(logsDir, 'seo-report.json');
+
+function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
+function log(msg) {
+  const line = `[${new Date().toISOString()}] ${msg}\n`;
+  console.log(msg);
+  fs.appendFileSync(logFile, line);
+}
+
+function scanPages(rootDir) {
+  const results = [];
+  const walk = (dir) => {
+    if (!fs.existsSync(dir)) return;
+    for (const item of fs.readdirSync(dir)) {
+      const full = path.join(dir, item);
+      const s = fs.statSync(full);
+      if (s.isDirectory()) walk(full);
+      else if (/\.(tsx|ts|jsx|js)$/.test(item)) {
+        const content = fs.readFileSync(full, 'utf8');
+        const issues = [];
+        if (!content.includes('<title>')) issues.push('missing-title');
+        if (!/meta[^>]+name=["']description["']/i.test(content)) issues.push('missing-description');
+        if (!/og:/i.test(content)) issues.push('missing-og');
+        if (!/application\/ld\+json/i.test(content)) issues.push('missing-structured-data');
+        if (issues.length) {
+          results.push({ file: full, issues });
+        }
+      }
+    }
+  };
+  walk(rootDir);
+  return results;
+}
+
+function main() {
+  ensureDir(logsDir);
+  log('Starting SEO optimizer...');
+  const pagesRoot = path.join(__dirname, '..', 'pages');
+  const issues = scanPages(pagesRoot);
+  fs.writeFileSync(reportFile, JSON.stringify({ timestamp: new Date().toISOString(), issues }, null, 2));
+  log(`Found ${issues.length} file(s) with SEO issues`);
+}
+
+if (require.main === module) main();
+>>>>>>> origin/auto/autonomy-17186719616

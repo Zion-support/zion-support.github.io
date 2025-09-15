@@ -1,37 +1,37 @@
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../../components/layout/EnhancedLayout';
-import Link from 'next/link';
-import type { GetServerSideProps } from 'next';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',
+import Link from 'next/link',
+import type { GetServerSideProps } from 'next',
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(';').reduce((acc: any, part: string) => {
-    const [k, v] = part.trim().split('=');
-    if (k) acc[k] = decodeURIComponent(v || '');
-    return acc;
-  }, {} as Record<string, string>);
-  let role = 'guest';
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
+    const [k, v] = part.trim().split('='),
+    if (k) acc[k] = decodeURIComponent(v || ''),
+    return acc,
+  }, {} as Record<string string>),
+  let role = 'guest',
   try {
-    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
-    role = user?.role || 'guest';
+    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null,
+    role = user?.role || 'guest',
   } catch {}
   if (role !== 'admin') {
-    return { redirect: { destination: '/', permanent: false } };
+    return { redirect: { destination: '/', permanent: false } },
   }
-  return { props: {} };
-};
+  return { props: {} },
+},
 
 export default function AdminDisputesDashboard() {
-  const { data } = useSWR('/api/disputes', fetcher);
-  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open');
+  const { data } = useSWR('/api/disputes', fetcher),
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
 
   const disputes = useMemo(() => {
-    const list = data?.disputes || [];
-    if (statusFilter === 'All') return list;
-    return list.filter((d: any) => d.status === statusFilter);
-  }, [data, statusFilter]);
+    const list = data?.disputes || [],
+    if (statusFilter === 'All') return list,
+    return list.filter((d: any) => d.status === statusFilter)
+  }, [data, statusFilter]),
 
   return (
     <EnhancedLayout>
@@ -39,7 +39,7 @@ export default function AdminDisputesDashboard() {
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Dispute Resolution Center</h1>
           <select value={statusFilter} onChange={e => setStatusFilter(e.target.value as any)} className="border rounded px-2 py-1 text-sm">
-            {(['Open','Under Review','Resolved','All'] as const).map(s => (<option key={s} value={s}>{s}</option>))}
+            {(['OpenUnder Review','ResolvedAll'] as const).map(s => (<option key={s} value={s}>{s}</option>))}
           </select>
         </div>
         <div className="overflow-auto border rounded">
@@ -76,5 +76,5 @@ export default function AdminDisputesDashboard() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

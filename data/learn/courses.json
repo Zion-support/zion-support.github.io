@@ -79,10 +79,14 @@
     "certificationBadge": "Freelancing Pro",
     "description": "Client acquisition, pricing, and delivery workflows.",
     "lessons": [],
+<<<<<<< HEAD
     "finalQuiz": {
       "questions": [],
       "passThreshold": 0
     }
+=======
+    "finalQuiz": { "questions": [], "passThreshold": 0 }
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "remote-hiring-masterclass",
@@ -94,10 +98,14 @@
     "certificationBadge": "Remote Hiring Specialist",
     "description": "Build a world-class remote team.",
     "lessons": [],
+<<<<<<< HEAD
     "finalQuiz": {
       "questions": [],
       "passThreshold": 0
     }
+=======
+    "finalQuiz": { "questions": [], "passThreshold": 0 }
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "cloud-architecture-essentials",
@@ -109,9 +117,13 @@
     "certificationBadge": "Cloud Architect",
     "description": "Design resilient cloud systems.",
     "lessons": [],
+<<<<<<< HEAD
     "finalQuiz": {
       "questions": [],
       "passThreshold": 0
     }
+=======
+    "finalQuiz": { "questions": [], "passThreshold": 0 }
+>>>>>>> origin/auto/autonomy-17186719616
   }
 ]

@@ -6,9 +6,16 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { CalendarIconSearch } from "lucide-react";
+=======
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -21,42 +28,73 @@ export function TeamActivity() {
       action: "Posted a job",
       target: "Senior AI Engineer",
       timestamp: new Date(Date.now() - 1000 * 60 * 30),
+<<<<<<< HEAD
       category: "jobs"},
+=======
+      category: "jobs",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 2,
       user: "Jamie Smith",
       action: "Contacted candidate",
       target: "Michael Chen",
       timestamp: new Date(Date.now() - 1000 * 60 * 120),
+<<<<<<< HEAD
       category: "candidates"},
+=======
+      category: "candidates",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 3,
       user: "Sam Williams",
       action: "Updated job",
       target: "Frontend Developer",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),
+<<<<<<< HEAD
       category: "jobs"},
+=======
+      category: "jobs",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 4,
       user: "Alex Johnson",
       action: "Added team member",
       target: "Chris Rodriguez",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),
+<<<<<<< HEAD
       category: "team"},
+=======
+      category: "team",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 5,
       user: "Taylor Brown",
       action: "Viewed candidate profile",
       target: "Sarah Kim",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),
+<<<<<<< HEAD
       category: "candidates"},
+=======
+      category: "candidates",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+<<<<<<< HEAD
       category: "billing"}];
+=======
+      category: "billing",
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
@@ -78,11 +116,20 @@ export function TeamActivity() {
   };
 
   const getCategoryBadge = (category: string) => {
-    const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+<<<<<<< HEAD
+    const categoryStyles: Record<string{ variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }};
+=======
+    const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+      jobs: { variant: "default" },
+      candidates: { variant: "outline" },
+      team: { variant: "secondary" },
+      billing: { variant: "destructive" },
+    };
+>>>>>>> origin/auto/autonomy-17186719616
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   };

@@ -13,19 +13,23 @@ export function ClientOnboardingSteps() {
       label: "Post your first job",
       completed: onboardingStatus.jobPosted,
       link: "/post-job",
-      action: "Post Job"},
+      action: "Post Job",
+    },
     {
       id: "invite",
       label: "Send invitation to talent",
       completed: onboardingStatus.inviteSent,
       link: "/talent",
-      action: "Find Talent"},
+      action: "Find Talent",
+    },
     {
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
       link: "/client-dashboard",
-      action: "Check Dashboard"}];
+      action: "Check Dashboard",
+    },
+  ];
   
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }

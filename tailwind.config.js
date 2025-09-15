@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
 module.exports = {
   darkMode: "class",
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}'],
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -28,8 +30,6 @@ module.exports = {
         'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
         'cyber-grid': 'cyberGrid 15s linear infinite',
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -40,7 +40,8 @@ module.exports = {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-          950: '#172554'},
+          950: '#172554',
+        },
         // Extended color palette
         gray: {
           50: '#f9fafb',
@@ -53,7 +54,8 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#030712'},
+          950: '#030712',
+        },
         blue: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -65,7 +67,8 @@ module.exports = {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-          950: '#172554'},
+          950: '#172554',
+        },
         indigo: {
           50: '#eef2ff',
           100: '#e0e7ff',
@@ -77,7 +80,8 @@ module.exports = {
           700: '#4338ca',
           800: '#3730a3',
           900: '#312e81',
-          950: '#1e1b4b'},
+          950: '#1e1b4b',
+        },
         purple: {
           50: '#faf5ff',
           100: '#f3e8ff',
@@ -89,7 +93,8 @@ module.exports = {
           700: '#7c3aed',
           800: '#6b21a8',
           900: '#581c87',
-          950: '#3b0764'},
+          950: '#3b0764',
+        },
         cyan: {
           50: '#ecfeff',
           100: '#cffafe',
@@ -101,7 +106,8 @@ module.exports = {
           700: '#0e7490',
           800: '#155e75',
           900: '#164e63',
-          950: '#083344'},
+          950: '#083344',
+        },
         emerald: {
           50: '#ecfdf5',
           100: '#d1fae5',
@@ -113,7 +119,8 @@ module.exports = {
           700: '#047857',
           800: '#065f46',
           900: '#064e3b',
-          950: '#022c22'},
+          950: '#022c22',
+        },
         orange: {
           50: '#fff7ed',
           100: '#ffedd5',
@@ -125,7 +132,8 @@ module.exports = {
           700: '#c2410c',
           800: '#9a3412',
           900: '#7c2d12',
-          950: '#431407'},
+          950: '#431407',
+        },
         red: {
           50: '#fef2f2',
           100: '#fee2e2',
@@ -137,7 +145,8 @@ module.exports = {
           700: '#b91c1c',
           800: '#991b1b',
           900: '#7f1d1d',
-          950: '#450a0a'},
+          950: '#450a0a',
+        },
         fuchsia: {
           50: '#fdf4ff',
           100: '#fae8ff',
@@ -149,7 +158,8 @@ module.exports = {
           700: '#a21caf',
           800: '#86198f',
           900: '#701a75',
-          950: '#4a044e'},
+          950: '#4a044e',
+        },
         teal: {
           50: '#f0fdfa',
           100: '#ccfbf1',
@@ -161,10 +171,13 @@ module.exports = {
           700: '#0f766e',
           800: '#115e59',
           900: '#134e4a',
-          950: '#042f2e'}},
+          950: '#042f2e',
+        },
+      },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace']},
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+      },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.875rem', { lineHeight: '1.25rem' }],
@@ -178,7 +191,8 @@ module.exports = {
         '6xl': ['3.75rem', { lineHeight: '1' }],
         '7xl': ['4.5rem', { lineHeight: '1' }],
         '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }]},
+        '9xl': ['8rem', { lineHeight: '1' }],
+      },
       fontWeight: {
         thin: '100',
         extralight: '200',
@@ -188,7 +202,8 @@ module.exports = {
         semibold: '600',
         bold: '700',
         extrabold: '800',
-        black: '900'},
+        black: '900',
+      },
       // Add cursor color palette to match CSS variables
       colors: {
         // ... existing colors ...
@@ -202,18 +217,23 @@ module.exports = {
           light: '#374151',
           lighter: '#4b5563',
           dark: '#1f2937',
-          darker: '#111827'}},
+          darker: '#111827',
+        },
+      },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem'},
+        '128': '32rem',
+      },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem'},
+        '5xl': '2.5rem',
+      },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'},
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -287,7 +307,8 @@ module.exports = {
         'scan-line': 'scanLine 3s ease-in-out infinite',
         'gradient-x': 'gradientX 3s ease-in-out infinite',
         'bounce-x': 'bounceX 2s ease-in-out infinite',
-        'count-up': 'countUp 2s ease-out forwards'},
+        'count-up': 'countUp 2s ease-out forwards',
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -299,80 +320,101 @@ module.exports = {
         },
         slideInUp: {
           '0%': { transform: 'translateY(100%)' },
-          '100%': { transform: 'translateY(0)' }},
+          '100%': { transform: 'translateY(0)' },
+        },
         slideInDown: {
           '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(0)' }},
+          '100%': { transform: 'translateY(0)' },
+        },
         slideInLeft: {
           '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0)' }},
+          '100%': { transform: 'translateX(0)' },
+        },
         slideInRight: {
           '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0)' }},
+          '100%': { transform: 'translateX(0)' },
+        },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' }},
+          '100%': { transform: 'scale(1)' },
+        },
         scaleOut: {
           '0%': { transform: 'scale(1)' },
-          '100%': { transform: 'scale(0)' }},
+          '100%': { transform: 'scale(0)' },
+        },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
           '50%': { transform: 'scale(1.05)' },
           '70%': { transform: 'scale(0.9)' },
-          '100%': { transform: 'scale(1)', opacity: '1' }},
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
         bounceOut: {
           '0%': { transform: 'scale(1)', opacity: '1' },
           '20%': { transform: 'scale(0.9)' },
           '50%': { transform: 'scale(1.05)' },
-          '100%': { transform: 'scale(0.3)', opacity: '0' }},
+          '100%': { transform: 'scale(0.3)', opacity: '0' },
+        },
         rotateIn: {
           '0%': { transform: 'rotate(-200deg)', opacity: '0' },
-          '100%': { transform: 'rotate(0)', opacity: '1' }},
+          '100%': { transform: 'rotate(0)', opacity: '1' },
+        },
         rotateOut: {
           '0%': { transform: 'rotate(0)', opacity: '1' },
-          '100%': { transform: 'rotate(200deg)', opacity: '0' }},
+          '100%': { transform: 'rotate(200deg)', opacity: '0' },
+        },
         flipInX: {
           '0%': { transform: 'perspective(400px) rotateX(90deg)', opacity: '0' },
           '40%': { transform: 'perspective(400px) rotateX(-20deg)' },
           '60%': { transform: 'perspective(400px) rotateX(10deg)' },
           '80%': { transform: 'perspective(400px) rotateX(-5deg)' },
-          '100%': { transform: 'perspective(400px) rotateX(0deg)', opacity: '1' }},
+          '100%': { transform: 'perspective(400px) rotateX(0deg)', opacity: '1' },
+        },
         flipInY: {
           '0%': { transform: 'perspective(400px) rotateY(90deg)', opacity: '0' },
           '40%': { transform: 'perspective(400px) rotateY(-20deg)' },
           '60%': { transform: 'perspective(400px) rotateY(10deg)' },
           '80%': { transform: 'perspective(400px) rotateY(-5deg)' },
-          '100%': { transform: 'perspective(400px) rotateY(0deg)', opacity: '1' }},
+          '100%': { transform: 'perspective(400px) rotateY(0deg)', opacity: '1' },
+        },
         zoomIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
           '50%': { opacity: '1' },
-          '100%': { transform: 'scale(1)', opacity: '1' }},
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
         zoomOut: {
           '0%': { transform: 'scale(1)', opacity: '1' },
           '50%': { opacity: '0' },
-          '100%': { transform: 'scale(0.3)', opacity: '0' }},
+          '100%': { transform: 'scale(0.3)', opacity: '0' },
+        },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' }},
+          '50%': { transform: 'translateY(-20px)' },
+        },
         gridFlow: {
           '0%': { transform: 'translateX(0) translateY(0)' },
-          '100%': { transform: 'translateX(60px) translateY(60px)' }},
+          '100%': { transform: 'translateX(60px) translateY(60px)' },
+        },
         particle: {
           '0%': { transform: 'translateY(0) scale(1)', opacity: '1' },
           '50%': { transform: 'translateY(-100px) scale(1.5)', opacity: '0.7' },
-          '100%': { transform: 'translateY(-200px) scale(0.5)', opacity: '0' }},
+          '100%': { transform: 'translateY(-200px) scale(0.5)', opacity: '0' },
+        },
         scanLine: {
           '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' }},
+          '100%': { transform: 'translateX(100%)' },
+        },
         gradientX: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' }},
+          '50%': { backgroundPosition: '100% 50%' },
+        },
         bounceX: {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(25%)' }},
+          '50%': { transform: 'translateX(25%)' },
+        },
         countUp: {
           '0%': { transform: 'scale(0.8)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' }},
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
         quantumCompute: {
           '0%': { transform: 'rotate(0deg) scale(1)' },
           '25%': { transform: 'rotate(90deg) scale(1.2)' },
@@ -606,9 +648,11 @@ module.exports = {
       },
       animationDelay: {
         '2000': '2s',
-        '4000': '4s'},
+        '4000': '4s',
+      },
       backdropBlur: {
-        xs: '2px'},
+        xs: '2px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -617,7 +661,8 @@ module.exports = {
         'gradient-quantum': 'linear-gradient(45deg, #8b5cf6, #06b6d4, #ec4899, #10b981, #f59e0b)',
         'gradient-neon': 'linear-gradient(45deg, #ff0080, #00ffff, #ffff00, #ff00ff, #8000ff)',
         'gradient-hologram': 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57)',
-        'gradient-space': 'linear-gradient(45deg, #1e3a8a, #7c3aed, #059669, #dc2626, #ea580c)'},
+        'gradient-space': 'linear-gradient(45deg, #1e3a8a, #7c3aed, #059669, #dc2626, #ea580c)',
+      },
       backgroundSize: {
         'auto': 'auto',
         'cover': 'cover',
@@ -625,7 +670,8 @@ module.exports = {
         '200%': '200%',
         '300%': '300%',
         '400%': '400%',
-        '500%': '500%'},
+        '500%': '500%',
+      },
       backgroundPosition: {
         'center': 'center',
         'top': 'top',
@@ -635,27 +681,32 @@ module.exports = {
         'top-left': 'top left',
         'top-right': 'top right',
         'bottom-left': 'bottom left',
-        'bottom-right': 'bottom right'},
+        'bottom-right': 'bottom right',
+      },
       backgroundAttachment: {
         'fixed': 'fixed',
         'local': 'local',
-        'scroll': 'scroll'},
+        'scroll': 'scroll',
+      },
       backgroundClip: {
         'border': 'border-box',
         'padding': 'padding-box',
         'content': 'content-box',
-        'text': 'text'},
+        'text': 'text',
+      },
       backgroundOrigin: {
         'border': 'border-box',
         'padding': 'padding-box',
-        'content': 'content-box'},
+        'content': 'content-box',
+      },
       backgroundRepeat: {
         'repeat': 'repeat',
         'no-repeat': 'no-repeat',
         'repeat-x': 'repeat-x',
         'repeat-y': 'repeat-y',
         'repeat-round': 'repeat-round',
-        'repeat-space': 'repeat-space'},
+        'repeat-space': 'repeat-space',
+      },
       backgroundBlendMode: {
         'normal': 'normal',
         'multiply': 'multiply',
@@ -672,7 +723,8 @@ module.exports = {
         'hue': 'hue',
         'saturation': 'saturation',
         'color': 'color',
-        'luminosity': 'luminosity'},
+        'luminosity': 'luminosity',
+      },
       mixBlendMode: {
         'normal': 'normal',
         'multiply': 'multiply',
@@ -689,7 +741,8 @@ module.exports = {
         'hue': 'hue',
         'saturation': 'saturation',
         'color': 'color',
-        'luminosity': 'luminosity'},
+        'luminosity': 'luminosity',
+      },
       filter: {
         'none': 'none',
         'blur': 'blur(4px)',
@@ -739,7 +792,8 @@ module.exports = {
         'drop-shadow-lg': 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
         'drop-shadow-xl': 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))',
         'drop-shadow-2xl': 'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))',
-        'drop-shadow-none': 'drop-shadow(0 0 #0000)'},
+        'drop-shadow-none': 'drop-shadow(0 0 #0000)',
+      },
       backdropFilter: {
         'none': 'none',
         'blur': 'blur(4px)',
@@ -782,7 +836,8 @@ module.exports = {
         'saturate-150': 'saturate(1.5)',
         'saturate-200': 'saturate(2)',
         'sepia': 'sepia(1)',
-        'sepia-0': 'sepia(0)'},
+        'sepia-0': 'sepia(0)',
+      },
       transitionProperty: {
         'none': 'none',
         'all': 'all',
@@ -794,7 +849,8 @@ module.exports = {
         'border': 'border-color, border-width, border-style, border-radius',
         'spacing': 'margin, padding, width, height, top, right, bottom, left',
         'typography': 'color, background-color, font-size, font-weight, line-height, text-align, text-decoration, text-transform, letter-spacing, word-spacing',
-        'layout': 'display, position, top, right, bottom, left, z-index, float, clear, vertical-align, text-align, white-space, word-break, word-wrap, overflow, overflow-x, overflow-y, clip, visibility, opacity, zoom, cursor, pointer-events, user-select, resize, transition, animation, transform, transform-origin, transform-style, perspective, perspective-origin, backface-visibility'},
+        'layout': 'display, position, top, right, bottom, left, z-index, float, clear, vertical-align, text-align, white-space, word-break, word-wrap, overflow, overflow-x, overflow-y, clip, visibility, opacity, zoom, cursor, pointer-events, user-select, resize, transition, animation, transform, transform-origin, transform-style, perspective, perspective-origin, backface-visibility',
+      },
       transitionDuration: {
         '75': '75ms',
         '100': '100ms',
@@ -808,7 +864,8 @@ module.exports = {
         '2000': '2000ms',
         '3000': '3000ms',
         '4000': '4000ms',
-        '5000': '5000ms'},
+        '5000': '5000ms',
+      },
       transitionTimingFunction: {
         'linear': 'linear',
         'in': 'cubic-bezier(0.4, 0, 1, 1)',
@@ -821,7 +878,8 @@ module.exports = {
         'ease-neon': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         'ease-hologram': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
         'ease-cyberpunk': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-        'ease-space': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'},
+        'ease-space': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+      },
       transitionDelay: {
         '75': '75ms',
         '100': '100ms',
@@ -835,22 +893,61 @@ module.exports = {
         '2000': '2000ms',
         '3000': '3000ms',
         '4000': '4000ms',
-        '5000': '5000ms'},
+        '5000': '5000ms',
+      },
       zIndex: {
         '60': '60',
         '70': '70',
         '80': '80',
         '90': '90',
-        '100': '100'},
+        '100': '100',
+      },
       screens: {
         'xs': '475px',
         '3xl': '1600px',
         '4xl': '1920px',
-        '5xl': '2560px'}}},
-  plugins: []}
+        '5xl': '2560px',
+=======
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}'],
+  ],
+  darkMode: 'class',
   theme: {
-    extend: {}},
-  plugins: []}
+    extend: {
+      colors: {
+        'zion-blue-dark': '#172d67',
+        'zion-blue': '#1e3a8a',
+        'zion-blue-light': '#2e73ea',
+        'zion-purple': '#8c15e9',
+        'zion-purple-dark': '#6b21a8',
+        'zion-purple-light': '#a855f7',
+        'zion-cyan': '#06b6d4',
+        'zion-cyan-light': '#22d3ee',
+        'zion-slate-dark': '#0b1220',
+        'zion-slate': '#111827',
+        'zion-slate-light': '#1f2937',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+>>>>>>> 83a51f4ac071 (feat: add latest content data and advertise on Home; fix configs for build)
+      },
+    },
+  },
+  plugins: [],
+}
+<<<<<<< HEAD
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 
+=======
+>>>>>>> 83a51f4ac071 (feat: add latest content data and advertise on Home; fix configs for build)

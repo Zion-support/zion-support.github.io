@@ -13,7 +13,11 @@ export function EnterpriseHero() {
               Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
+<<<<<<< HEAD
+              Scale your talent acquisition with a custom-branded hiring portaldedicated talent pooland powerful admin controls.
+=======
               Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto">

@@ -6,7 +6,8 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow,
+} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
@@ -15,7 +16,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from "@/components/ui/tooltip";
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function RoleManagement() {
   // Mock team members data
@@ -31,7 +33,9 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: true,
         viewBilling: true,
-        manageBilling: true}},
+        manageBilling: true,
+      },
+    },
     {
       id: 2,
       name: "Jamie Smith",
@@ -43,7 +47,9 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: false,
         viewBilling: false,
-        manageBilling: false}},
+        manageBilling: false,
+      },
+    },
     {
       id: 3,
       name: "Sam Williams",
@@ -55,7 +61,9 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: false,
         viewBilling: true,
-        manageBilling: false}},
+        manageBilling: false,
+      },
+    },
     {
       id: 4,
       name: "Taylor Brown",
@@ -67,20 +75,25 @@ export function RoleManagement() {
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
-        manageBilling: false}}];
+        manageBilling: false,
+      },
+    },
+  ];
 
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
       title: "Permission updated",
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`,
+    });
   };
 
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
-    "Viewer": "Read-only access to candidates"};
+    "Viewer": "Read-only access to candidates",
+  };
 
   return (
     <div className="space-y-6">

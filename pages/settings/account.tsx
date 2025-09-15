@@ -53,7 +53,8 @@ export default function AccountSettingsPage() {
       const res = await fetch('/api/did/link', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ payload, message: msg, signature })});
+        body: JSON.stringify({ payload, message: msg, signature }),
+      });
       if (!res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully');
     } catch (e: any) {
@@ -72,11 +73,13 @@ export default function AccountSettingsPage() {
         did: { ens, lens, ceramic, farcaster },
         resume: {},
         projects: [],
-        reviews: []};
+        reviews: [],
+      };
       const res = await fetch('/api/backup/upload', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(profile)});
+        body: JSON.stringify(profile),
+      });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Backup failed');
       setBackupCid(data.cid);

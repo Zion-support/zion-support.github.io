@@ -1,27 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { logErrorToProduction } from '../utils/productionLogger';
+import { safeStorage } from '../utils/safeStorage';
 import Cookies from 'js-cookie';
-
-// Simple localStorage wrapper
-const safeStorage = {
-  setItem: (key: string, value: string) => {
-    try {
-      localStorage.setItem(key, value);
-    } catch (e) {
-      console.warn('localStorage not available');
-    }
-  },
-  getItem: (key: string) => {
-    try {
-      return localStorage.getItem(key);
-    } catch (e) {
-      console.warn('localStorage not available');
-      return null;
-    }
-  }
-};
 
 import enTranslation from '../../public/locales/en-US/common.json';
 import esTranslation from '../../public/locales/es-ES/common.json';
@@ -70,13 +51,12 @@ i18n
     i18n.on('languageChanged', (lng) => {
       document.documentElement.dir = i18n.dir();
 
-      // Save language preference to cookie and localStorage
-      Cookies.set('zion_language', lng, { expires: 365 });
-      safeStorage.setItem('zion_language', lng);
-      
-      // If user is authenticated, save language preference to profile
-      // This will be implemented in the LanguageContext
-    });
-  }
+  // Save language preference to cookie and localStorage
+  Cookies.set('zion_language', lng, { expires: 365 });
+  safeStorage.setItem('zion_language', lng);
+  
+  // If user is authenticated, save language preference to profile
+  // This will be implemented in the LanguageContext
+});
 
 export default i18n;

@@ -26,7 +26,8 @@ export default function ClientHirePage() {
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" },
-      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })});
+      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl }),
+    });
     const json = await res.json();
     setLoading(false);
     if (!json.ok) {

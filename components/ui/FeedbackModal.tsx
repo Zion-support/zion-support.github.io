@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+"use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import { useState } from 'react';
 
 export type FeedbackContext = { actionType?: string; metadata?: any };
@@ -7,11 +11,25 @@ export default function FeedbackModal({
   onClose,
   defaultContext,
   defaultKind = 'general',
+<<<<<<< HEAD
   userHeaders}: {
+=======
+  userHeaders,
+}: {
+>>>>>>> origin/auto/autonomy-17186719616
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
+<<<<<<< HEAD
+  userHeaders?: Record<string>;
+}) {
+  const [ratingsetRating] = useState<number>(0);
+  const [hoversetHover] = useState<number>(0);
+  const [kindsetKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
+  const [commentsetComment] = useState('');
+  const [loadingsetLoading] = useState(false);
+=======
   userHeaders?: Record<string, string>;
 }) {
   const [rating, setRating] = useState<number>(0);
@@ -19,6 +37,7 @@ export default function FeedbackModal({
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (!isOpen) return null;
 
@@ -26,10 +45,18 @@ export default function FeedbackModal({
     if (rating < 1) return onClose(false);
     setLoading(true);
     try {
+<<<<<<< HEAD
+      await fetch('/api/feedback'{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'...(userHeaders || {}) },
+        body: JSON.stringify({ ratingcommentkindcontext: defaultContext || {} })});
+=======
       await fetch('/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })});
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} }),
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } catch {}
     setLoading(false);
     onClose(true);

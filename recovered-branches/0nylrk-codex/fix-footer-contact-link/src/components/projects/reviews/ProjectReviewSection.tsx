@@ -2,7 +2,11 @@
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
 import { useReviews } from "@/hooks/useReviews";
@@ -15,8 +19,13 @@ interface ProjectReviewSectionProps {
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
+<<<<<<< HEAD
+  const { reviewsuserReviewisLoadingreportReview } = useReviews(project.id);
+  const [isReviewModalOpensetIsReviewModalOpen] = useState(false);
+=======
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const isCompleted = project.status === "completed";
   const isClient = user?.id === project.client_id;
@@ -87,7 +96,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           <div className="bg-muted/20 rounded-lg p-6 text-center">
             <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+              After the project is marked as completedboth parties will be able to leave reviews
+=======
               After the project is marked as completed, both parties will be able to leave reviews
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
         )}

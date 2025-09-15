@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
@@ -6,6 +6,7 @@ import MilestoneCard from '../../../components/monetization/MilestoneCard';
 import { Milestone } from '../../../utils/types/milestones';
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 
+// Minimal demo auth role detection via query/cookies; replace with real auth
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
   const url = new URL(window.location.href);
@@ -16,7 +17,7 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
 
 export default function ProjectMilestonesPage() {
   const router = useRouter();
-  const { 'project-id': projectId } = router.query as any;
+  const { projectId } = router.query as { projectId: string };
 
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -27,16 +28,6 @@ export default function ProjectMilestonesPage() {
     setRole(getRoleFromEnvOrQuery());
   }, []);
 
-  // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
-    if (!role) return;
-    try {
-      const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
-      document.cookie = `x-user-id=${userId}; path=/`;
-      document.cookie = `x-user-role=${role}; path=/`;
-    } catch {}
-  }, [role]);
-
   useEffect(() => {
     if (!projectId) return;
     let cancelled = false;
@@ -44,7 +35,7 @@ export default function ProjectMilestonesPage() {
       setLoading(true);
       setError(null);
       try {
-        const data = await fetchMilestones(projectId as string);
+        const data = await fetchMilestones(projectId);
         if (!cancelled) setMilestones(data.milestones || []);
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Failed to load milestones');
@@ -59,7 +50,7 @@ export default function ProjectMilestonesPage() {
 
   const handleCreate = async (payload: { title: string; description?: string; dueDate: string; amountUsd: number }) => {
     if (!projectId) return;
-    const res = await createMilestone(projectId as string, payload);
+    const res = await createMilestone(projectId, payload);
     setMilestones((prev) => [res.milestone, ...prev]);
   };
 
@@ -72,9 +63,10 @@ export default function ProjectMilestonesPage() {
       in_progress: 'In Progress',
       submitted: 'Submitted',
       approved: 'Approved',
-      paid: 'Paid'};
+      paid: 'Paid',
+    };
     const status = map[action];
-    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status });
+    const res = await updateMilestoneStatus(projectId, milestoneId, { status });
     setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)));
   };
 
@@ -88,7 +80,7 @@ export default function ProjectMilestonesPage() {
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
-          <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+          <p className="text-sm text-gray-600">Project: {projectId}</p>
         </div>
 
         {role !== 'talent' && (

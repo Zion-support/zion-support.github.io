@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
 import { 
   HelpCircle, MessageCircle, Phone, Mail, Clock, 
   BookOpen, Video, FileText, Search, Filter,
   CheckCircle, ArrowRight, Brain, Atom, Rocket, 
   Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function Support() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const supportCategories = [
     {
@@ -54,7 +54,7 @@ export default function Support() {
       description: 'Bug reports and technical troubleshooting',
       articles: 42
     }
-  ];
+  ],
 
   const quickActions = [
     {
@@ -89,7 +89,7 @@ export default function Support() {
       color: 'from-orange-500 to-red-600',
       available: true
     }
-  ];
+  ],
 
   const popularArticles = [
     {
@@ -127,7 +127,7 @@ export default function Support() {
       views: '1.5k',
       helpful: '89%'
     }
-  ];
+  ],
 
   const supportHours = [
     {
@@ -145,11 +145,11 @@ export default function Support() {
       hours: '12:00 PM - 6:00 PM EST',
       status: 'Limited'
     }
-  ];
+  ],
 
   const filteredCategories = selectedCategory === 'all' 
     ? supportCategories 
-    : supportCategories.filter(cat => cat.id === selectedCategory);
+    : supportCategories.filter(cat => cat.id === selectedCategory),
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -700,7 +700,7 @@ export default function Support() {
               Our support team is dedicated to ensuring your success with our 
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
@@ -719,10 +719,10 @@ export default function Support() {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default Support;
+export default Support,
           </div>
         </section>
 
@@ -759,8 +759,7 @@ export default Support;
               <div className="mt-8 p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30">
                 <h3 className="text-xl font-bold text-white mb-4">Emergency Support</h3>
                 <p className="text-gray-300 mb-4">
-                  For critical issues affecting production systems, contact our emergency support line:
-                </p>
+                  For critical issues affecting production systems, contact our emergency support line: </p>
                 <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>
                 <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>
               </div>
@@ -769,7 +768,7 @@ export default Support;
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default SupportPage;
+export default SupportPage,

@@ -34,6 +34,9 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
+<<<<<<< HEAD
+    if grep -q "        
+=======
     if grep -q "<<<<<<< HEAD" "$file"; then
         log_message "⚠️  Found conflicts in $file, resolving..."
         
@@ -44,6 +47,7 @@ resolve_conflicts() {
         sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
         sed -i '/>>>>>>> /d' "$file"
         
+>>>>>>> origin/auto/autonomy-17186719616
         log_message "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi

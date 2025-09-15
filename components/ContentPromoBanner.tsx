@@ -1,9 +1,10 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function ContentPromoBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +19,9 @@ export default function ContentPromoBanner() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isDismissed]);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
+  }[isDismissed]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -44,7 +45,7 @@ export default function ContentPromoBanner() {
                 15+ New AI Resources Just Dropped!
               </h3>
               <p className="text-sm opacity-90 mb-3">
-                Interactive tools, guides, and case studies to accelerate your success.
+                Interactive toolsguidesand case studies to accelerate your success.
               </p>
             </div>
             <button

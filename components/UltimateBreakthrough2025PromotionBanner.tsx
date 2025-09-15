@@ -66,7 +66,7 @@ export default function UltimateBreakthrough2025PromotionBanner() {
         
         {/* Urgency Message */}
         <div className="mt-8 text-yellow-400 font-semibold text-lg">
-          ⏰ Limited Early Access Available - Don't Miss Out!
+          ⏰ Limited Early Access Available - 'Don', 't Miss Out!
         </div>
       </div>
     </div>

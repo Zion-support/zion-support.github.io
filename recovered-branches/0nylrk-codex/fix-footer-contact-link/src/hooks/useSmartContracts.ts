@@ -30,7 +30,12 @@ export function useSmartContracts() {
           endDate: values.endDate?.toISOString(),
           paymentTerms: values.paymentTerms,
           paymentAmount: values.paymentAmount,
+<<<<<<< HEAD
           additionalClauses: values.additionalClauses || []}
+=======
+          additionalClauses: values.additionalClauses || [],
+        }
+>>>>>>> origin/auto/autonomy-17186719616
       });
       
       if (error) throw error;

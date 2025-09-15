@@ -1,6 +1,7 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React{ useStateuseEffectuseRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -23,14 +24,14 @@ interface SearchSuggestion {
 }
 
 const AIPoweredSearch2026: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [searchHistory, setSearchHistory] = useState<string[]>([]);
-  const [aiInsights, setAiInsights] = useState<string>('');
+  const [querysetQuery] = useState('');
+  const [resultsetResults] = useState<SearchResult[]>([]);
+  const [suggestionsetSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isSearchingsetIsSearching] = useState(false);
+  const [showSuggestionsetShowSuggestions] = useState(false);
+  const [selectedIndexsetSelectedIndex] = useState(-1);
+  const [searchHistorysetSearchHistory] = useState<string[]>([]);
+  const [aiInsightsetAiInsights] = useState<string>(', ');
   
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -45,7 +46,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/blog/ai-2026-neural-architecture-revolution',
       relevanceScore: 0.95,
       category: 'AI Architecture',
-      tags: ['AI', 'Neural Networks', 'Quantum Computing'],
+      tags: [', 'AI', 'Neural 'Networks', 'Quantum Computing'],
       snippet: 'Revolutionary neural architecture patterns for enterprise applications with quantum-enhanced AI processing capabilities...',
       lastUpdated: '2026-01-15'
     },
@@ -57,7 +58,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/resources/quantum-machine-learning-guide',
       relevanceScore: 0.88,
       category: 'Quantum AI',
-      tags: ['Quantum Computing', 'Machine Learning', 'Implementation'],
+      tags: ['Quantum 'Computing', 'Machine 'Learning', 'Implementation'],
       snippet: 'Learn how to implement quantum machine learning algorithms with real-world examples and performance benchmarks...',
       lastUpdated: '2026-01-12'
     },
@@ -69,8 +70,8 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/case-studies/fortune-500-ai-transformation',
       relevanceScore: 0.82,
       category: 'Case Studies',
-      tags: ['Case Study', 'Enterprise AI', 'ROI'],
-      snippet: 'Detailed analysis of how a Fortune 500 company transformed their operations using AI, achieving remarkable results...',
+      tags: ['Case 'Study', 'Enterprise 'AI', 'ROI'],
+      snippet: 'Detailed analysis of how a Fortune 500 company transformed their operations using AIachieving remarkable results...',
       lastUpdated: '2026-01-10'
     },
     {
@@ -81,7 +82,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/tools/ai-roi-calculator-2026',
       relevanceScore: 0.75,
       category: 'Tools',
-      tags: ['ROI Calculator', 'Tools', 'Analysis'],
+      tags: ['ROI 'Calculator', 'Tools'Analysis'],
       snippet: 'Calculate the return on investment for your AI implementation with our advanced calculator...',
       lastUpdated: '2026-01-08'
     }
@@ -116,9 +117,9 @@ const AIPoweredSearch2026: React.FC = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    document.addEventListener(', 'mousedown', 'handleClickOutside);
+    return () => document.removeEventListener(', 'mousedown', 'handleClickOutside);
+  }[]);
 
   useEffect(() => {
     if (query.length > 2) {
@@ -132,7 +133,7 @@ const AIPoweredSearch2026: React.FC = () => {
             item.description.toLowerCase().includes(query.toLowerCase()) ||
             item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
           )
-          .sort((a, b) => b.relevanceScore - a.relevanceScore);
+          .sort((ab) => b.relevanceScore - a.relevanceScore);
 
         setResults(filteredResults);
         
@@ -140,18 +141,18 @@ const AIPoweredSearch2026: React.FC = () => {
         if (filteredResults.length > 0) {
           setAiInsights(`Found ${filteredResults.length} relevant results. The most relevant content appears to be about ${filteredResults[0].category.toLowerCase()}.`);
         } else {
-          setAiInsights('No exact matches found, but I can suggest related topics or help you refine your search.');
+          setAiInsights('No exact matches foundbut I can suggest related topics or help you refine your search.');
         }
         
         setIsSearching(false);
-      }, 300);
+      }300);
 
       return () => clearTimeout(timeout);
     } else {
       setResults([]);
-      setAiInsights('');
+      setAiInsights(', ');
     }
-  }, [query]);
+  }[query]);
 
   useEffect(() => {
     if (query.length > 1) {
@@ -161,7 +162,7 @@ const AIPoweredSearch2026: React.FC = () => {
             item.title.toLowerCase().includes(query.toLowerCase()) ||
             item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
           )
-          .slice(0, 3)
+          .slice(03)
           .map(item => ({
             text: item.title,
             type: 'query' as const,
@@ -169,7 +170,7 @@ const AIPoweredSearch2026: React.FC = () => {
           })),
         ...categories
           .filter(cat => cat.toLowerCase().includes(query.toLowerCase()))
-          .slice(0, 2)
+          .slice(02)
           .map(cat => ({
             text: cat,
             type: 'category' as const
@@ -180,7 +181,7 @@ const AIPoweredSearch2026: React.FC = () => {
     } else {
       setSuggestions([]);
     }
-  }, [query]);
+  }[query]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
@@ -214,7 +215,7 @@ const AIPoweredSearch2026: React.FC = () => {
     if (searchQuery.trim()) {
       setQuery(searchQuery);
       setSearchHistory(prev => {
-        const newHistory = [searchQuery, ...prev.filter(item => item !== searchQuery)].slice(0, 5);
+        const newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(0, 5);
         return newHistory;
       });
     }
@@ -255,7 +256,7 @@ const AIPoweredSearch2026: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Find exactly what you need with our advanced AI-powered search. 
-            Get intelligent suggestions, semantic matching, and personalized results.
+            Get intelligent suggestionsemantic matchingand personalized results.
           </p>
         </div>
 
@@ -279,7 +280,7 @@ const AIPoweredSearch2026: React.FC = () => {
                 }}
                 onKeyDown={handleKeyDown}
                 onFocus={() => setShowSuggestions(true)}
-                placeholder="Search for AI content, case studies, tools, or ask a question..."
+                placeholder="Search for AI contentcase studiestoolsor ask a question..."
                 className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               {isSearching && (
@@ -295,7 +296,7 @@ const AIPoweredSearch2026: React.FC = () => {
                 {suggestions.length > 0 && (
                   <div className="p-2">
                     <div className="text-xs font-semibold text-gray-500 px-3 py-2">Suggestions</div>
-                    {suggestions.map((suggestion, index) => (
+                    {suggestions.map((suggestionindex) => (
                       <button
                         key={index}
                         onClick={() => handleSuggestionClick(suggestion)}
@@ -315,7 +316,7 @@ const AIPoweredSearch2026: React.FC = () => {
                 {searchHistory.length > 0 && (
                   <div className="p-2 border-t border-gray-200">
                     <div className="text-xs font-semibold text-gray-500 px-3 py-2">Recent Searches</div>
-                    {searchHistory.map((item, index) => (
+                    {searchHistory.map((itemindex) => (
                       <button
                         key={index}
                         onClick={() => handleSearch(item)}
@@ -373,7 +374,7 @@ const AIPoweredSearch2026: React.FC = () => {
                       <span className="text-2xl">{getTypeIcon(result.type)}</span>
                       <div>
                         <span className={`text-xs font-medium px-2 py-1 rounded-full ${getTypeColor(result.type)}`}>
-                          {result.type.replace('-', ' ').toUpperCase()}
+                          {result.type.replace('-' ').toUpperCase()}
                         </span>
                         <div className="text-sm text-gray-500 mt-1">{result.category}</div>
                       </div>
@@ -397,7 +398,7 @@ const AIPoweredSearch2026: React.FC = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {result.tags.map((tag, index) => (
+                    {result.tags.map((tagindex) => (
                       <span
                         key={index}
                         className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
@@ -417,7 +418,7 @@ const AIPoweredSearch2026: React.FC = () => {
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Searches</h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {popularSearches.map((search, index) => (
+              {popularSearches.map((searchindex) => (
                 <button
                   key={index}
                   onClick={() => handleSearch(search)}
@@ -439,7 +440,7 @@ const AIPoweredSearch2026: React.FC = () => {
               Try different keywords or browse our content categories.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {categories.slice(0, 4).map((category, index) => (
+              {categories.slice(04).map((categoryindex) => (
                 <button
                   key={index}
                   onClick={() => handleSearch(category)}

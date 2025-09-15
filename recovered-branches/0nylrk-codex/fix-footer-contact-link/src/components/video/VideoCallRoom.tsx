@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
+import React{ useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { VideoOffMicOffPhoneScreenShareOffVolume2VolumeX } from '@/components/icons';
+=======
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons';
+>>>>>>> origin/auto/autonomy-17186719616
 import './video-call.css';
 
 interface Participant {
@@ -28,28 +37,48 @@ interface VideoCallRoomProps {
 }
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
+<<<<<<< HEAD
+  roomId
+  participants = []
+=======
   roomId, 
   participants = [], 
+>>>>>>> origin/auto/autonomy-17186719616
   onLeave,
   onToggleMute,
   onToggleVideo,
   onToggleScreenShare,
   className 
 }) => {
+<<<<<<< HEAD
+  const [isMutedsetIsMuted] = useState(false);
+  const [isVideoEnabledsetIsVideoEnabled] = useState(true);
+  const [isScreenSharingsetIsScreenSharing] = useState(false);
+  const [isAudioOnlysetIsAudioOnly] = useState(false);
+  const [callDurationsetCallDuration] = useState(0);
+=======
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoEnabled, setIsVideoEnabled] = useState(true);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [isAudioOnly, setIsAudioOnly] = useState(false);
   const [callDuration, setCallDuration] = useState(0);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Call duration timer
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCallDuration(prevDuration => prevDuration + 1);
+<<<<<<< HEAD
+    }1000);
+    
+    return () => clearInterval(timer);
+  }[]);
+=======
     }, 1000);
     
     return () => clearInterval(timer);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const formatDuration = (seconds: number) => {
     const hrs = Math.floor(seconds / 3600);
@@ -74,7 +103,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       onToggleVideo(newVideoState);
     }
     
+<<<<<<< HEAD
+    // If turning video back onensure we're not in audio-only mode
+=======
     // If turning video back on, ensure we're not in audio-only mode
+>>>>>>> origin/auto/autonomy-17186719616
     if (newVideoState) {
       setIsAudioOnly(false);
     }

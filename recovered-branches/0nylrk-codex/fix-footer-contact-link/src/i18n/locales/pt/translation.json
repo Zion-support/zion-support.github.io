@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 {
   "general": {
     "app_name": "Mercado de IA Zion",
@@ -59,4 +63,8 @@
     "language_changed": "Idioma alterado para {{language}}",
     "switch_to_detected": "Mudar para {{language}}?"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

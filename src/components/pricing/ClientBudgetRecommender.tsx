@@ -27,7 +27,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   timeline,
   scope,
   experienceLevel,
-  onSuggestionApplied}) => {
+  onSuggestionApplied,
+}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
@@ -41,7 +42,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     try {
       const params: ClientBudgetParams = {
         jobTitle,
-        category};
+        category,
+      };
 
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;

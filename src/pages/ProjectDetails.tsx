@@ -15,12 +15,14 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle} from "@/components/ui/card";
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger} from "@/components/ui/tabs";
+  TabsTrigger,
+} from "@/components/ui/tabs";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -30,7 +32,8 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger} from "@/components/ui/alert-dialog";
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
@@ -70,7 +73,8 @@ function ProjectDetailsContent() {
         toast({
           title: "Project not found",
           description: "The requested project could not be found.",
-          variant: "destructive"});
+          variant: "destructive",
+        });
         router.push("/dashboard");
       }
       
@@ -99,7 +103,8 @@ function ProjectDetailsContent() {
       toast({
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
   
@@ -114,7 +119,8 @@ function ProjectDetailsContent() {
         .insert({
           project_id: project.id,
           user_id: user.id,
-          content: newNote})
+          content: newNote,
+        })
         .select();
       
       if (error) throw error;
@@ -125,13 +131,15 @@ function ProjectDetailsContent() {
       
       toast({
         title: "Note added",
-        description: "Your note has been added to the project."});
+        description: "Your note has been added to the project.",
+      });
     } catch (err: any) {
       logErrorToProduction('Error adding note:', { data: err });
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSubmittingNote(false);
     }
@@ -145,13 +153,15 @@ function ProjectDetailsContent() {
     if (success) {
       setProject({
         ...project,
-        status: newStatus});
+        status: newStatus,
+      });
       
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!"});
+          description: "The project is now in progress. Congratulations!",
+        });
       }
     }
   };

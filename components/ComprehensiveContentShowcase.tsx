@@ -13,8 +13,8 @@ export default function ComprehensiveContentShowcase() {
             Your Complete AI Knowledge Hub
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Access our extensive library of AI insights, case studies, implementation guides, 
-            and tools designed to accelerate your organization's AI transformation journey.
+            Access our extensive library of AI insightscase studiesimplementation guides
+            and tools designed to accelerate your 'organization', 's AI transformation journey.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function ComprehensiveContentShowcase() {
               <h3 className="text-2xl font-bold text-gray-900">Implementation Guides</h3>
             </div>
             <p className="text-gray-600 mb-6">
-              Step-by-step guides, templates, and tools to successfully implement AI across your organization.
+              Step-by-step guidestemplatesand tools to successfully implement AI across your organization.
             </p>
             <div className="space-y-4">
               <Link href="/resources/ai-2025-enterprise-implementation-guide" className="block group">
@@ -185,7 +185,7 @@ export default function ComprehensiveContentShowcase() {
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all group-hover:scale-105">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
                 <h4 className="text-xl font-semibold mb-2">Readiness Assessment</h4>
-                <p className="text-sm opacity-90 mb-4">Evaluate your organization's AI readiness</p>
+                <p className="text-sm opacity-90 mb-4">Evaluate your 'organization', 's AI readiness</p>
                 <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs">15 MIN</span>
               </div>
             </Link>

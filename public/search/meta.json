@@ -1,5 +1,7 @@
 [
   {
+<<<<<<< HEAD
+=======
     "route": "/2025-advanced-services-showcase",
     "title": "",
     "h1": ""
@@ -65,6 +67,7 @@
     "h1": "Service not found"
   },
   {
+>>>>>>> origin/auto/autonomy-17186719616
     "route": "/_app",
     "title": "",
     "h1": ""
@@ -76,6 +79,20 @@
   },
   {
     "route": "/about",
+<<<<<<< HEAD
+    "title": "About Us — Zion Tech Group | Leading AI & Quantum Technology Company",
+    "h1": "About Zion Tech Group"
+  },
+  {
+    "route": "/comprehensive-2025-services-showcase",
+    "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
+    "h1": "2025 Innovative Services Showcase"
+  },
+  {
+    "route": "/contact",
+    "title": "Contact Us — Zion Tech Group | Get in Touch with AI & Quantum Experts",
+    "h1": "Get in Touch"
+=======
     "title": "About Us - Zion Tech Group",
     "h1": "We build practical AI and platform solutions"
   },
@@ -403,6 +420,7 @@
     "route": "/index.page",
     "title": "",
     "h1": ""
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "route": "/",
@@ -410,6 +428,21 @@
     "h1": "Zion Tech Group"
   },
   {
+<<<<<<< HEAD
+    "route": "/pricing-2025",
+    "title": "2025 Pricing & Services — Zion Tech Group",
+    "h1": "2025 Pricing & Services"
+  },
+  {
+    "route": "/services",
+    "title": "Services — Zion Tech Group | AI, Quantum Computing & Technology Solutions",
+    "h1": "Our Services"
+  },
+  {
+    "route": "/team",
+    "title": "Our Team — Zion Tech Group | World-Class AI & Quantum Technology Experts",
+    "h1": "Meet Our Team"
+=======
     "route": "/innovative-services-showcase-2025",
     "title": "Innovative Services Showcase 2025 | Zion Tech Group",
     "h1": ""
@@ -3933,5 +3966,6 @@
     "route": "/academy/founder-course",
     "title": "",
     "h1": "Founder Course: Launch Your Zion Instance"
+>>>>>>> origin/auto/autonomy-17186719616
   }
 ]

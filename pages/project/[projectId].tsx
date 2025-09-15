@@ -15,7 +15,8 @@ export default function ProjectPage() {
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>;
+    // "x-demo-talent-slug": "ava-chen",
+  } as Record<string, string>;
 
   useEffect(() => {
     async function load() {
@@ -41,7 +42,8 @@ export default function ProjectPage() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })});
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note }),
+    });
     const json = await res.json();
     if (json.ok) {
       setProject(json.project);
@@ -54,7 +56,8 @@ export default function ProjectPage() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })});
+      body: JSON.stringify({ id: projectId, action: "mark_completed" }),
+    });
     const json = await res.json();
     if (json.ok) {
       setProject(json.project);

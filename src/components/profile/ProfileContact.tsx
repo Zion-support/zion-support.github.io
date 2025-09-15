@@ -28,7 +28,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       setSubject("");
       toast({
         title: "Message Sent",
-        description: `Your message has been sent to ${profileName}.`});
+        description: `Your message has been sent to ${profileName}.`,
+      });
     }, 1000);
   };
 

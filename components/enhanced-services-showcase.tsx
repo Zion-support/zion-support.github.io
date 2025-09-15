@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+"use client";
+import React{ useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  StarTrendingUpZapBrainRocketShield
+  DollarSignUsersClockCheckCircleArrowRight,
+  PhoneMailMapPinExternalLinkSearchFilter,
+  GridListChevronDownChevronUpSparkles,
+  CrownAwardTargetGlobeCpuDatabase
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,6 +19,7 @@ import {
   Phone, Mail, MapPin, ExternalLink, Search, Filter,
   Grid, List, ChevronDown, ChevronUp, Sparkles,
   Crown, Award, Target, Globe, Cpu, Database
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -21,10 +34,17 @@ import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
 
 export default function EnhancedServicesShowcase() {
+<<<<<<< HEAD
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBysetSortBy] = useState<string>('name');
+=======
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<string>('name');
+>>>>>>> origin/auto/autonomy-17186719616
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -47,6 +67,23 @@ export default function EnhancedServicesShowcase() {
   ];
 
   const categories = [
+<<<<<<< HEAD
+    { id: ''all', 'name: 'All 'Services', 'icon: '🚀'count: allServices.length },
+    { id: 'next-gen-'ai', 'name: 'ArrowRight-Gen 'AI', 'icon: '🧠'count: nextGenerationAIServices.length },
+    { id: 'cutting-edge-'it', 'name: 'Cutting-Edge 'IT', 'icon: '⚡'count: cuttingEdgeITServices.length },
+    { id: 'innovative-'saas', 'name: 'Innovative 'SaaS', 'icon: '💻'count: innovativeMicroSaasV2Services.length },
+    { id: 'quantum-'space', 'name: 'Quantum & 'Space', 'icon: '⚛️'count: quantumSpaceServices.length },
+    { id: ''enterprise', 'name: 'Enterprise 'IT', 'icon: '🏢'count: enterpriseITServices.length }
+  ];
+
+  const sortOptions = [
+    { id: ''name', 'name: 'Name A-Z' },
+    { id: 'price-'low', 'name: 'Price Low to High' },
+    { id: 'price-'high', 'name: 'Price High to Low' },
+    { id: ''rating', 'name: 'Rating' },
+    { id: ''customers', 'name: 'Customer Count' },
+    { id: ''popularity', 'name: 'Popularity' }
+=======
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'next-gen-ai', name: 'ArrowRight-Gen AI', icon: '🧠', count: nextGenerationAIServices.length },
     { id: 'cutting-edge-it', name: 'Cutting-Edge IT', icon: '⚡', count: cuttingEdgeITServices.length },
@@ -62,6 +99,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },
     { id: 'popularity', name: 'Popularity' }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   // Filter and sort services
@@ -85,13 +123,31 @@ export default function EnhancedServicesShowcase() {
     // Sort services
     switch (sortBy) {
       case 'name':
+<<<<<<< HEAD
+        filtered.sort((ab) => a.name.localeCompare(b.name));
+        break;
+      case 'price-low':
+        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g', ')) - parseFloat(b.price.replace(/[$]/g', ')));
+        break;
+      case 'price-high':
+        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g', ')) - parseFloat(a.price.replace(/[$]/g', ')));
+        break;
+      case 'rating':
+        filtered.sort((ab) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case 'customers':
+        filtered.sort((ab) => (b.customers || 0) - (a.customers || 0));
+        break;
+      case 'popularity':
+        filtered.sort((ab) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+=======
         filtered.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, '')));
         break;
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$,]/g, '')) - parseFloat(a.price.replace(/[$,]/g, '')));
         break;
       case 'rating':
         filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
@@ -101,13 +157,18 @@ export default function EnhancedServicesShowcase() {
         break;
       case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+>>>>>>> origin/auto/autonomy-17186719616
         break;
       default:
         break;
     }
 
     return filtered;
+<<<<<<< HEAD
+  }[allServiceselectedCategorysearchTermsortBy]);
+=======
   }, [allServices, selectedCategory, searchTerm, sortBy]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -136,19 +197,31 @@ export default function EnhancedServicesShowcase() {
     {
       title: '🚀 ArrowRight-Generation AI Services',
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
+<<<<<<< HEAD
+      services: nextGenerationAIServices.slice(03),
+=======
       services: nextGenerationAIServices.slice(0, 3),
+>>>>>>> origin/auto/autonomy-17186719616
       color: 'from-purple-500 to-pink-600'
     },
     {
       title: '⚡ Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions for the modern enterprise',
+<<<<<<< HEAD
+      services: cuttingEdgeITServices.slice(03),
+=======
       services: cuttingEdgeITServices.slice(0, 3),
+>>>>>>> origin/auto/autonomy-17186719616
       color: 'from-blue-500 to-cyan-600'
     },
     {
       title: '💻 Innovative Micro SaaS Solutions',
       description: 'Creative and practical SaaS tools for every business need',
+<<<<<<< HEAD
+      services: innovativeMicroSaasV2Services.slice(03),
+=======
       services: innovativeMicroSaasV2Services.slice(0, 3),
+>>>>>>> origin/auto/autonomy-17186719616
       color: 'from-green-500 to-emerald-600'
     }
   ];
@@ -158,8 +231,13 @@ export default function EnhancedServicesShowcase() {
       <div className="min-h-screen">
         <Head>
           <title>Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions</title>
+<<<<<<< HEAD
+          <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AIquantum computingand IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="AI servicesquantum computingIT servicesmicro SaaScybersecuritycloud migrationeural interfacequantum internetcutting-edge technology" />
+=======
           <meta name="description" content="Discover our comprehensive portfolio of 600+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with cutting-edge solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, cutting-edge technology" />
+>>>>>>> origin/auto/autonomy-17186719616
           <meta property="og:title" content="Enhanced Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="600+ cutting-edge technology services showcase" />
           <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase" />
@@ -179,10 +257,17 @@ export default function EnhancedServicesShowcase() {
                 Enhanced Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+                600+ Revolutionary AIQuantum Computing & IT Services
+              </p>
+              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                From next-generation AI to cutting-edge infrastructurediscover solutions that deliver 1000% ROI and transform your business.
+=======
                 600+ Revolutionary AI, Quantum Computing & IT Services
               </p>
               <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 From next-generation AI to cutting-edge infrastructure, discover solutions that deliver 1000% ROI and transform your business.
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -222,12 +307,20 @@ export default function EnhancedServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+              {featuredServices.map((categoryindex) => (
+=======
               {featuredServices.map((category, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.6delay: index * 0.2 }}
+=======
                   transition={{ duration: 0.6, delay: index * 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="relative"
                 >
@@ -238,7 +331,11 @@ export default function EnhancedServicesShowcase() {
                       <p className="text-lg mb-6 opacity-90">{category.description}</p>
                       
                       <div className="space-y-3">
+<<<<<<< HEAD
+                        {category.services.map((serviceIndex) => (
+=======
                         {category.services.map((service, serviceIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                           <div key={serviceIndex} className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
                             <span className="text-2xl">{service.icon}</span>
                             <div className="flex-1">
@@ -251,7 +348,11 @@ export default function EnhancedServicesShowcase() {
                       </div>
                       
                       <Button 
+<<<<<<< HEAD
+                        href={`#${category.title.toLowerCase().replace(/\s+/g'-')}`}
+=======
                         href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+>>>>>>> origin/auto/autonomy-17186719616
                         variant="secondary"
                         className="mt-6 w-full"
                       >
@@ -356,11 +457,19 @@ export default function EnhancedServicesShowcase() {
                 : 'space-y-6'
               }
             >
+<<<<<<< HEAD
+              {filteredServices.map((serviceindex) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+                  className={viewMode === 'grid' ? ', ' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
+=======
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
                   className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
+>>>>>>> origin/auto/autonomy-17186719616
                 >
                   {viewMode === 'grid' ? (
                     <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full">
@@ -494,7 +603,11 @@ export default function EnhancedServicesShowcase() {
                 <Button 
                   href="#"
                   onClick={() => {
+<<<<<<< HEAD
+                    setSearchTerm(', ');
+=======
                     setSearchTerm('');
+>>>>>>> origin/auto/autonomy-17186719616
                     setSelectedCategory('all');
                   }}
                   variant="primary"
@@ -567,11 +680,19 @@ export default function EnhancedServicesShowcase() {
 
 // Button component (if not imported)
 const Button = ({ 
+<<<<<<< HEAD
+  href
+  variant = 'primary'
+  size = 'md'
+  className = ', '
+  children
+=======
   href, 
   variant = 'primary', 
   size = 'md', 
   className = '', 
   children, 
+>>>>>>> origin/auto/autonomy-17186719616
   onClick 
 }: {
   href?: string;

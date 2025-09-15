@@ -26,7 +26,8 @@ export default function EditJobPage() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, category })});
+      body: JSON.stringify({ title, description, category }),
+    });
     router.push('/client/dashboard');
   }
 

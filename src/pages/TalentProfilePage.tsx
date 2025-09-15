@@ -57,7 +57,8 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   }, [error]);
 
@@ -74,7 +75,8 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
-        variant: "default"});
+        variant: "default",
+      });
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return;
     }
@@ -86,7 +88,8 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to message this talent.",
-        variant: "default"});
+        variant: "default",
+      });
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return;
     }

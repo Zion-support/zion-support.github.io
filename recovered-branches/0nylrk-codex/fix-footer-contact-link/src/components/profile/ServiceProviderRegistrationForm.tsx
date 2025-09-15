@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+=======
 import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -16,9 +20,16 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { XSparklesUploadClockCheckBriefcaseMapPinUserRoundGlobe } from "lucide-react";
+=======
+  FormMessage,
+} from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -26,26 +37,49 @@ import { useAuth } from "@/hooks/useAuth";
 
 // Define form schema
 const serviceProfileSchema = z.object({
+<<<<<<< HEAD
+  name: z.string().min(2"Name must be at least 2 characters long"),
+  title: z.string().min(5"Business name/title is required"),
+  bio: z.string().min(50"Bio must be at least 50 characters long").max(1000"Bio cannot exceed 1000 characters"),
+  location: z.string().min(2"Location is required"),
+  services: z.string().min(2"Enter at least one service"),
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)){
+    message: "Rate must be a number"}),
+  availability: z.enum(["available"limited"unavailable"]),
+  enhancedProfile: z.boolean().default(true),
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
+=======
   name: z.string().min(2, "Name must be at least 2 characters long"),
   title: z.string().min(5, "Business name/title is required"),
   bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number"}),
+    message: "Rate must be a number",
+  }),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional(),
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();
+<<<<<<< HEAD
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [serviceTagsetServiceTags] = useState<string[]>([]);
+  const [isGeneratingsetIsGenerating] = useState(false);
+  const [generatedContentsetGeneratedContent] = useState<{ summary: string; services: string[] } | null>(null);
+  const [uploadedAvatarsetUploadedAvatar] = useState<string | null>(null);
+=======
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<{ summary: string; services: string[] } | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
@@ -59,14 +93,25 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: true,
+<<<<<<< HEAD
       website: ""}});
+=======
+      website: "",
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Handle adding service tags
   const handleAddService = () => {
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
+<<<<<<< HEAD
+      setServiceTags([...serviceTagserviceInput]);
+      form.setValue("services"");
+=======
       setServiceTags([...serviceTags, serviceInput]);
       form.setValue("services", "");
+>>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
@@ -101,7 +146,12 @@ export function ServiceProviderRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed",
+<<<<<<< HEAD
         description: "Please provide at least a detailed bio before generating enhanced content."});
+=======
+        description: "Please provide at least a detailed bio before generating enhanced content.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       return;
     }
 
@@ -109,7 +159,11 @@ export function ServiceProviderRegistrationForm() {
       setIsGenerating(true);
 
       // Call the Supabase Edge Function
+<<<<<<< HEAD
+      const { dataerror } = await supabase.functions.invoke('service-profile-enhancer'{
+=======
       const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
+>>>>>>> origin/auto/autonomy-17186719616
         body: {
           providerData: {
             name: formData.name,
@@ -129,14 +183,27 @@ export function ServiceProviderRegistrationForm() {
       
       toast({
         title: "Enhanced Profile Generated",
+<<<<<<< HEAD
         description: "AI has created a professional bio and suggested additional services for your profile."});
+      
+    } catch (error: any) {
+      console.error("Error generating enhanced profile:"error);
+      toast({
+        title: "Generation failed",
+        description: error.message || "There was an error generating your enhanced profile. Please try again.",
+        variant: "destructive"});
+=======
+        description: "AI has created a professional bio and suggested additional services for your profile.",
+      });
       
     } catch (error: any) {
       console.error("Error generating enhanced profile:", error);
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsGenerating(false);
     }
@@ -145,7 +212,11 @@ export function ServiceProviderRegistrationForm() {
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
+<<<<<<< HEAD
+      form.setValue("bio"generatedContent.summary);
+=======
       form.setValue("bio", generatedContent.summary);
+>>>>>>> origin/auto/autonomy-17186719616
       
       if (generatedContent.services && generatedContent.services.length > 0) {
         const newServices = generatedContent.services.filter(
@@ -153,7 +224,11 @@ export function ServiceProviderRegistrationForm() {
         );
         
         if (newServices.length > 0) {
+<<<<<<< HEAD
+          setServiceTags([...serviceTags...newServices]);
+=======
           setServiceTags([...serviceTags, ...newServices]);
+>>>>>>> origin/auto/autonomy-17186719616
         }
       }
     }
@@ -165,7 +240,12 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Services required",
         description: "Please add at least one service to your profile.",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       return;
     }
 
@@ -183,7 +263,11 @@ export function ServiceProviderRegistrationForm() {
       
       if (values.enhancedProfile && !generatedContent) {
         try {
+<<<<<<< HEAD
+          const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer'{
+=======
           const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
+>>>>>>> origin/auto/autonomy-17186719616
             body: {
               providerData: {
                 name: values.name,
@@ -199,15 +283,26 @@ export function ServiceProviderRegistrationForm() {
             finalSummary = (aiData as any).summary || values.bio;
             // Merge AI suggested services with user-provided services
             const aiServices = (aiData as any).services || [];
+<<<<<<< HEAD
+            finalServices = [...new Set([...serviceTags...aiServices])];
+          }
+        } catch (error) {
+          console.error("Error enhancing profile:"error);
+=======
             finalServices = [...new Set([...serviceTags, ...aiServices])];
           }
         } catch (error) {
           console.error("Error enhancing profile:", error);
+>>>>>>> origin/auto/autonomy-17186719616
           // Continue with submission even if enhancement fails
         }
       } else if (generatedContent) {
         finalSummary = generatedContent.summary;
+<<<<<<< HEAD
+        finalServices = [...new Set([...serviceTags...generatedContent.services])];
+=======
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       // Get user email for notification
@@ -215,18 +310,30 @@ export function ServiceProviderRegistrationForm() {
       const userEmail = userData.user?.email;
 
       // Create the service profile
+<<<<<<< HEAD
+      const { data: profileDataerror } = await supabase
+=======
       const { data: profileData, error } = await supabase
+>>>>>>> origin/auto/autonomy-17186719616
         .from('profiles')
         .update({
           display_name: values.name,
           bio: finalSummary,
+<<<<<<< HEAD
+          user_type: "creator"// Set as service provider
+=======
           user_type: "creator", // Set as service provider
+>>>>>>> origin/auto/autonomy-17186719616
           profile_complete: true,
           updated_at: new Date().toISOString(),
           headline: values.title,
           // Additional fields that might be in profiles table
         })
+<<<<<<< HEAD
+        .eq('id'user.id)
+=======
         .eq('id', user.id)
+>>>>>>> origin/auto/autonomy-17186719616
         .select();
 
       if (error) throw error;
@@ -243,7 +350,12 @@ export function ServiceProviderRegistrationForm() {
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
+<<<<<<< HEAD
           website: values.website || null});
+=======
+          website: values.website || null,
+        });
+>>>>>>> origin/auto/autonomy-17186719616
 
       if (serviceError) throw serviceError;
       */
@@ -251,12 +363,20 @@ export function ServiceProviderRegistrationForm() {
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
         try {
+<<<<<<< HEAD
+          await supabase.functions.invoke('send-email'{
+=======
           await supabase.functions.invoke('send-email', {
+>>>>>>> origin/auto/autonomy-17186719616
             body: {
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
               html: `
+<<<<<<< HEAD
+              <div style="font-family: Arialsans-serif; max-width: 600px; margin: 0 auto;">
+=======
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+>>>>>>> origin/auto/autonomy-17186719616
                 <h2 style="color: #6D28D9;">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
@@ -269,18 +389,37 @@ export function ServiceProviderRegistrationForm() {
             }
           });
         } catch (emailError) {
+<<<<<<< HEAD
+          console.error("Failed to send notification email:"emailError);
+=======
           console.error("Failed to send notification email:", emailError);
+>>>>>>> origin/auto/autonomy-17186719616
           // Continue with submission even if email fails
         }
       }
       
       toast({
         title: "Profile Created Successfully",
+<<<<<<< HEAD
         description: "Your service provider profile has been published and is now visible in the directory."});
+=======
+        description: "Your service provider profile has been published and is now visible in the directory.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
 
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
         window.location.href = "/service-dashboard";
+<<<<<<< HEAD
+      }1500);
+      
+    } catch (error: any) {
+      console.error("Error creating profile:"error);
+      toast({
+        title: "Error Creating Profile",
+        description: error.message || "There was an error creating your profile. Please try again.",
+        variant: "destructive"});
+=======
       }, 1500);
       
     } catch (error: any) {
@@ -288,7 +427,9 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSubmitting(false);
     }
@@ -346,7 +487,11 @@ export function ServiceProviderRegistrationForm() {
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+<<<<<<< HEAD
+                                placeholder="e.g.Creative Design Studio"
+=======
                                 placeholder="e.g., Creative Design Studio"
+>>>>>>> origin/auto/autonomy-17186719616
                                 {...field}
                               />
                             </div>
@@ -369,7 +514,11 @@ export function ServiceProviderRegistrationForm() {
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+<<<<<<< HEAD
+                                placeholder="CityState/ProvinceCountry"
+=======
                                 placeholder="City, State/Province, Country"
+>>>>>>> origin/auto/autonomy-17186719616
                                 {...field}
                               />
                             </div>
@@ -436,7 +585,11 @@ export function ServiceProviderRegistrationForm() {
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
+<<<<<<< HEAD
+                    For best resultsuse an image at least 400x400 pixels in JPGPNGor GIF format.
+=======
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
+>>>>>>> origin/auto/autonomy-17186719616
                   </p>
                 </div>
               </div>
@@ -455,7 +608,11 @@ export function ServiceProviderRegistrationForm() {
                       <FormControl>
                         <Textarea
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+<<<<<<< HEAD
+                          placeholder="Describe your servicesexpertiseand what sets you apart from others..."
+=======
                           placeholder="Describe your services, expertise, and what sets you apart from others..."
+>>>>>>> origin/auto/autonomy-17186719616
                           {...field}
                         />
                       </FormControl>
@@ -536,7 +693,11 @@ export function ServiceProviderRegistrationForm() {
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
+<<<<<<< HEAD
+                            {generatedContent.services.map((serviceindex) => (
+=======
                             {generatedContent.services.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                               <Badge
                                 key={index}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
@@ -627,7 +788,11 @@ export function ServiceProviderRegistrationForm() {
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
                             <Input
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white"
+<<<<<<< HEAD
+                              placeholder="e.g.85"
+=======
                               placeholder="e.g., 85"
+>>>>>>> origin/auto/autonomy-17186719616
                               {...field}
                             />
                           </div>

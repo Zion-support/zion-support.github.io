@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+} from 'lucide-react',
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
 
 export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
 
   // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -34,25 +34,25 @@ export default function ComprehensivePricingPage() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory);
+    : allServices.filter(service => service.category === selectedCategory),
 
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀';
-  };
+    const categoryData = categories.find(cat => cat.id === category),
+    return categoryData?.icon || '🚀'
+  },
 
   const calculateYearlyPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '').replace(',', ''));
-    return `$${(price * 12 * 0.8).toFixed(0)}`; // 20% discount for yearly
-  };
+    const price = parseFloat(monthlyPrice.replace('$', '').replace(, '')),
+    return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
+  },
 
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)
+  },
 
   return (
     <>
@@ -332,7 +332,7 @@ export default function ComprehensivePricingPage() {
                 <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
                   Contact our sales team to discuss your specific needs and get a customized quote for our revolutionary micro SAAS services.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -353,5 +353,5 @@ export default function ComprehensivePricingPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

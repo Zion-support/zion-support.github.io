@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Quote, TrendingUp, Users, Award, Zap } from 'lucide-react';
+StarQuoteTrendingUpUsersAwardZap
 
 const testimonials = [
   {
@@ -10,7 +10,7 @@ const testimonials = [
     company: "TechCorp Global",
     industry: "Technology",
     rating: 5,
-    content: "Zion Tech Group's AI solutions transformed our entire operation. We achieved 300% ROI within the first year. Their expertise in automation is unmatched.",
+    content: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 300% ROI within the first year. Their expertise in automation is unmatched.",
     results: "300% ROI in 12 months",
     image: "/images/testimonials/sarah-chen.jpg",
     featured: true
@@ -46,7 +46,7 @@ const testimonials = [
     company: "Financial Services Group",
     industry: "Finance",
     rating: 5,
-    content: "Zion Tech Group's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.",
+    content: "Zion Tech 'Group', 's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.",
     results: "99.7% fraud detection",
     image: "/images/testimonials/james-park.jpg",
     featured: false
@@ -78,10 +78,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { label: "Client Satisfaction", value: "98%", icon: Star },
-  { label: "Average ROI", value: "250%", icon: TrendingUp },
-  { label: "Projects Completed", value: "500+", icon: Award },
-  { label: "Global Clients", value: "50+", icon: Users }
+  { label: "Client Satisfaction"value: "98%"icon: Star },
+  { label: "Average ROI"value: "250%"icon: TrendingUp },
+  { label: "Projects Completed"value: "500+"icon: Award },
+  { label: "Global Clients"value: "50+"icon: Users }
 ];
 
 export default function RevolutionaryTestimonialsShowcase() {
@@ -106,7 +106,7 @@ export default function RevolutionaryTestimonialsShowcase() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Hear from industry leaders who've transformed their businesses 
+            'Don', 't just take our word for it. Hear from industry leaders 'who', 've transformed their businesses 
             with our AI solutions and achieved extraordinary results.
           </p>
         </motion.div>
@@ -115,16 +115,16 @@ export default function RevolutionaryTestimonialsShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              whileInView={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               viewport={{ once: true }}
               className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl"
             >
@@ -137,12 +137,12 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* Featured Testimonials */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {testimonials.filter(testimonial => testimonial.featured).map((testimonial, index) => (
+          {testimonials.filter(testimonial => testimonial.featured).map((testimonialindex) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 relative overflow-hidden"
             >
@@ -151,7 +151,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               
               {/* Rating */}
               <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(testimonial.rating)].map((_i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -170,11 +170,11 @@ export default function RevolutionaryTestimonialsShowcase() {
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.title}, {testimonial.company}</div>
+                  <div className="text-sm text-gray-600">{testimonial.title}{testimonial.company}</div>
                   <div className="text-xs text-blue-600">{testimonial.industry}</div>
                 </div>
               </div>
@@ -190,18 +190,18 @@ export default function RevolutionaryTestimonialsShowcase() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {testimonials.filter(testimonial => !testimonial.featured).map((testimonial, index) => (
+          {testimonials.filter(testimonial => !testimonial.featured).map((testimonialindex) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group"
             >
               {/* Rating */}
               <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(testimonial.rating)].map((_i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -219,7 +219,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
@@ -243,7 +243,7 @@ export default function RevolutionaryTestimonialsShowcase() {
             Ready to Join Our Success Stories?
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results. 
+            'Let', 's discuss how we can help you achieve similar results. 
             Our team is ready to transform your business with cutting-edge AI solutions.
           </p>
           

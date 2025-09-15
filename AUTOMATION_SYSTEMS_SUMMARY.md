@@ -86,10 +86,19 @@ We have successfully implemented a comprehensive intelligent automation system f
   - Status reporting
   - System coordination
 
+### 8. Link Monitor & Fix (New)
+- **Files**: `automation/site-link-crawler.cjs`, `automation/site-link-fixer.cjs`, `automation/site-link-factory.cjs`, `automation/site-link-orchestrator.cjs`, `automation/site-link-cron.sh`
+- **Purpose**: Continuously crawl `https://ziontechgroup.com`, verify all links and sublinks (internal and external), auto-generate small agents per cycle, and attempt fixes for broken internal references.
+- **Features**:
+  - Concurrent crawler with politeness delay and redirect resolution
+  - Status and latency capture; writes `data/reports/links/crawl-*.json`
+  - Heuristic fixer that updates in-repo references when safe and writes `fix-*.json`
+  - Orchestrator integrates crawler, fixer, and new link factory
+  - Cron script with start|stop|status|run interface (30-min cadence)
+
 ## Generated Automation Scripts
 
 ### 1. Code Quality Monitor
-
 - **File**: `automation/code-quality-monitor.cjs`
 - **Purpose**: Analyzes code quality metrics
 - **Features**:
@@ -99,7 +108,6 @@ We have successfully implemented a comprehensive intelligent automation system f
   - Quality recommendations
 
 ### 2. Performance Optimizer
-
 - **File**: `automation/performance-optimizer.cjs`
 - **Purpose**: Optimizes application performance
 - **Features**:
@@ -109,7 +117,6 @@ We have successfully implemented a comprehensive intelligent automation system f
   - Performance recommendations
 
 ### 3. Content Generator
-
 - **File**: `automation/content-generator.cjs`
 - **Purpose**: Generates new content automatically
 - **Features**:
@@ -119,7 +126,6 @@ We have successfully implemented a comprehensive intelligent automation system f
   - Template-based content creation
 
 ### 4. SEO Optimizer
-
 - **File**: `automation/seo-optimizer.cjs`
 - **Purpose**: Optimizes SEO across the application
 - **Features**:
@@ -129,7 +135,6 @@ We have successfully implemented a comprehensive intelligent automation system f
   - SEO recommendations
 
 ### 5. Security Scanner
-
 - **File**: `automation/security-scanner.cjs`
 - **Purpose**: Scans for security vulnerabilities
 - **Features**:
@@ -139,7 +144,6 @@ We have successfully implemented a comprehensive intelligent automation system f
   - Security score calculation
 
 ### 6. Test Generator
-
 - **File**: `automation/test-generator.cjs`
 - **Purpose**: Generates automated tests
 - **Features**:
@@ -246,6 +250,36 @@ node automation/intelligent-orchestrator.cjs run intelligent
 node automation/automation-factory.cjs list
 ```
 
+### Instagram Marketing
+
+The Instagram automation includes an orchestrator, analyzer, factory, and posting agent.
+
+- Orchestrator: `automation/instagram-marketing-orchestrator.cjs`
+- Analyzer: `automation/instagram-marketing-analyzer.cjs`
+- Factory: `automation/instagram-marketing-factory.cjs`
+- Posting Agent: `automation/instagram-agents/post-latest.cjs`
+
+Environment variables:
+
+- `APP_MARKETING_URL` (defaults to `https://ziontechgroup.com`)
+- `IG_USER_ID` (Instagram Business/Creator user ID)
+- `IG_ACCESS_TOKEN` (Meta Graph API access token)
+
+Run locally:
+
+```bash
+npm run instagram:marketing:analyze
+npm run instagram:marketing:start
+```
+
+### Link Monitoring & Fixing
+
+- Start orchestrator once: `node automation/site-link-orchestrator.cjs once`
+- Start cron: `npm run links:cron:start`
+- Manual crawl: `node automation/site-link-crawler.cjs`
+- Manual fix: `node automation/site-link-fixer.cjs`
+- Reports: `data/reports/links/`
+
 ## Benefits
 
 ### Continuous Improvement
@@ -315,3 +349,17 @@ The advanced automation systems are now fully operational and providing intellig
 **Git Integration**: ✅ **WORKING**
 
 The system is now capable of continuously improving the application, fixing errors automatically, generating new content, optimizing performance, and diversifying the app's capabilities without manual intervention.
+
+### 8. Marketing Automation Daily (GitHub Actions)
+- **File**: `.github/workflows/marketing-daily.yml`
+- **Purpose**: Runs daily LinkedIn and Instagram marketing orchestrators to generate and optionally publish promotional posts that reference the canonical site `https://ziontechgroup.com`.
+- **Notes**: Uses existing analyzers and factories under `automation/` and uploads logs and generated reports as workflow artifacts. No plaintext credentials; relies on environment secrets if posting is enabled.
+
+### 9. Performance Audit Weekly (GitHub Actions)
+- **Files**: `automation/performance-audit.cjs`, `.github/workflows/performance-weekly.yml`
+- **Purpose**: Builds the app, boots a local server, measures simple TTFB and HTML payload size for key pages, and writes JSON reports to `data/reports/performance/`.
+- **Output**: `performance-*.json` artifacts with thresholds and alert flags. Useful for tracking regressions in server responsiveness and page weight.
+
+### 10. Link Monitor Continuous (GitHub Actions)
+- **File**: `.github/workflows/link-monitor-continuous.yml`
+- **Purpose**: Runs crawler and fixer every 30 minutes against `https://ziontechgroup.com`, uploads `data/reports/links` and automation logs.

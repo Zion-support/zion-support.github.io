@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 
 export default function AIHealthcareDiagnosticsPage() {
   return (
@@ -10,5 +10,5 @@ export default function AIHealthcareDiagnosticsPage() {
         <p className="text-gray-300">Diagnostics and patient care optimization with AI. Details coming soon.</p>
       </div>
     </div>
-  );
+  ),
 }

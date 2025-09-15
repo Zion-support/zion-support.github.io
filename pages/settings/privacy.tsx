@@ -24,7 +24,8 @@ export default function PrivacySettingsPage() {
     const res = await fetch('/api/fraud/settings/opt-out', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, optOut })});
+      body: JSON.stringify({ userId, optOut }),
+    });
     const json = await res.json();
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');

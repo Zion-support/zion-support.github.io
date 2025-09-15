@@ -1,20 +1,38 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { WalletInfoCheckChevronRightArrowUpRight } from "lucide-react";
+=======
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
+<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip";
+=======
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 
 export function OnChainExport() {
+<<<<<<< HEAD
+  const [isConnectedsetIsConnected] = useState(false);
+  const [isExportingsetIsExporting] = useState(false);
+  const [exportStatusetExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+=======
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+>>>>>>> origin/auto/autonomy-17186719616
   const { toast } = useToast();
   const { user } = useAuth();
   
@@ -39,13 +57,22 @@ export function OnChainExport() {
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: 'personal_sign',
+<<<<<<< HEAD
+        params: [addressmessage]
+=======
         params: [address, message]
+>>>>>>> origin/auto/autonomy-17186719616
       });
       
       setIsConnected(true);
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
+<<<<<<< HEAD
+        description: `Wallet ${address.slice(06)}...${address.slice(-4)} connected successfully`});
+=======
+        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } catch (error: any) {
       toast({
         title: "Connection failed",
@@ -61,12 +88,21 @@ export function OnChainExport() {
     
     try {
       // Simulate token export
+<<<<<<< HEAD
+      await new Promise(resolve => setTimeout(resolve2000));
+=======
       await new Promise(resolve => setTimeout(resolve, 2000));
+>>>>>>> origin/auto/autonomy-17186719616
       
       setExportStatus('success');
       toast({
         title: "Tokens exported",
+<<<<<<< HEAD
         description: "Your ZION$ tokens have been exported to your wallet"});
+=======
+        description: "Your ZION$ tokens have been exported to your wallet",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } catch (error: any) {
       setExportStatus('error');
       toast({

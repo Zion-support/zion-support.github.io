@@ -14,12 +14,21 @@ type Props = { report: Report | null };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
+<<<<<<< HEAD
+    const file = path.join(process.cwd()', 'public', 'automation'repo-health.json');
+    const raw = fs.readFileSync('file', 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }revalidate: 3600 };
+  } catch {
+    return { props: { report: null }revalidate: 3600 };
+=======
     const file = path.join(process.cwd(), 'public', 'automation', 'repo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
     return { props: { report: data }, revalidate: 3600 };
   } catch {
     return { props: { report: null }, revalidate: 3600 };
+>>>>>>> origin/auto/autonomy-17186719616
   }
 };
 
@@ -40,7 +49,11 @@ export default function RepoHealth({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">Largest Files</h2>
         <ul className="text-sm space-y-1">
+<<<<<<< HEAD
+          {report.largestFiles.map((fi) => (
+=======
           {report.largestFiles.map((f, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f.file}</span><span className="text-gray-500">{(f.bytes/1024).toFixed(1)} KB</span></li>
           ))}
         </ul>
@@ -48,7 +61,11 @@ export default function RepoHealth({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>
         <ul className="text-sm space-y-1">
+<<<<<<< HEAD
+          {report.stalePages.map((pi) => (
+=======
           {report.stalePages.map((p, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.file}</span><span className="text-gray-500">{new Date(p.lastCommitAt).toLocaleDateString()}</span></li>
           ))}
         </ul>

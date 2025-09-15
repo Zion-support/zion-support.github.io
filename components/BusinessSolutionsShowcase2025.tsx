@@ -1,394 +1,321 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Target,
-  Award,
-  Clock,
-  DollarSign,
-  BarChart3,
-  ChevronRight,
+  Building2
+  TrendingUp
+  Users
+  DollarSign
+  Shield
+  Zap,
+  ArrowRight,
   CheckCircle,
   Star,
-  ArrowUpRight,
+  Target,
+  BarChart3,
+  Clock,
+  Award,
+  Lightbulb,
   Globe,
-  Smartphone,
-  Database,
-  Cloud
+  Smartphone
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2025 = () => {
-  const [activeSolution, setActiveSolution] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
-  const solutions = [
+  const categories = [
     {
-      id: 'enterprise-automation',
-      title: 'Enterprise Automation',
-      description: 'Transform your business operations with intelligent automation that scales with your growth.',
-      icon: Building2,
+      id: 'automation',
+      title: 'Business Automation',
+      icon: Zap,
       color: 'from-blue-500 to-cyan-500',
-      features: [
-        'Workflow Orchestration',
-        'Process Optimization',
-        'Resource Management',
-        'Performance Analytics'
-      ],
-      benefits: [
-        'Reduce operational costs by 40%',
-        'Increase productivity by 60%',
-        'Eliminate manual errors',
-        'Scale operations seamlessly'
-      ],
-      metrics: {
-        costSavings: '40%',
-        productivity: '60%',
-        accuracy: '99.9%',
-        satisfaction: '95%'
-      },
-      industries: ['Manufacturing', 'Healthcare', 'Finance', 'Retail']
+      solutions: [
+        {
+          title: 'Workflow Automation',
+          description: 'Streamline your business processes with intelligent automation.',
+          features: ['Process 'Optimization', 'Error 'Reduction', 'Time Savings'],
+          roi: '300%',
+          timeToValue: '30 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Document Processing',
+          description: 'Automate document handling and data extraction.',
+          features: ['OCR 'Technology', 'Smart 'Classification', 'Data Validation'],
+          roi: '250%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Customer Service AI',
+          description: 'Enhance customer support with AI-powered chatbots.',
+          features: ['24/7 'Support', 'Natural 'Language', 'Multi-language'],
+          roi: '400%',
+          timeToValue: '21 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     },
     {
-      id: 'ai-customer-service',
-      title: 'AI Customer Service',
-      description: 'Revolutionary customer service automation that provides human-like interactions at scale.',
-      icon: Users,
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        'Natural Language Processing',
-        'Sentiment Analysis',
-        'Multi-channel Support',
-        '24/7 Availability'
-      ],
-      benefits: [
-        'Improve response time by 80%',
-        'Increase customer satisfaction',
-        'Reduce support costs by 50%',
-        'Handle multiple languages'
-      ],
-      metrics: {
-        responseTime: '80%',
-        satisfaction: '92%',
-        costReduction: '50%',
-        availability: '99.9%'
-      },
-      industries: ['E-commerce', 'SaaS', 'Telecommunications', 'Banking']
-    },
-    {
-      id: 'data-analytics',
+      id: 'analytics',
       title: 'Advanced Analytics',
-      description: 'Unlock insights from your data with powerful AI-driven analytics and predictive modeling.',
       icon: BarChart3,
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        'Predictive Analytics',
-        'Real-time Dashboards',
-        'Data Visualization',
-        'Machine Learning Models'
-      ],
-      benefits: [
-        'Make data-driven decisions',
-        'Predict market trends',
-        'Optimize business processes',
-        'Identify new opportunities'
-      ],
-      metrics: {
-        accuracy: '94%',
-        insights: '300%',
-        decisionSpeed: '70%',
-        roi: '250%'
-      },
-      industries: ['Marketing', 'Sales', 'Operations', 'Strategy']
+      color: 'from-purple-500 to-pink-500',
+      solutions: [
+        {
+          title: 'Predictive Analytics',
+          description: 'Forecast trends and make data-driven decisions.',
+          features: ['Machine 'Learning', 'Real-time 'Insights', 'Custom Dashboards'],
+          roi: '500%',
+          timeToValue: '45 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Business Intelligence',
+          description: 'Transform data into actionable business insights.',
+          features: ['Data 'Visualization', 'KPI 'Tracking', 'Automated Reports'],
+          roi: '350%',
+          timeToValue: '28 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Customer Analytics',
+          description: 'Understand customer behavior and preferences.',
+          features: [', 'Segmentation', 'Churn 'Prediction', 'Personalization'],
+          roi: '450%',
+          timeToValue: '35 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     },
     {
-      id: 'cloud-infrastructure',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and reliable cloud solutions that grow with your business needs.',
-      icon: Cloud,
-      color: 'from-orange-500 to-red-500',
-      features: [
-        'Auto-scaling',
-        'High Availability',
-        'Security Compliance',
-        'Global Distribution'
-      ],
-      benefits: [
-        'Reduce infrastructure costs',
-        'Improve reliability',
-        'Scale on demand',
-        'Global reach'
-      ],
-      metrics: {
-        uptime: '99.99%',
-        costSavings: '35%',
-        scalability: '1000%',
-        performance: '90%'
-      },
-      industries: ['Technology', 'Media', 'Gaming', 'IoT']
+      id: 'security',
+      title: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500',
+      solutions: [
+        {
+          title: 'Cybersecurity Suite',
+          description: 'Protect your business from cyber threats.',
+          features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Incident Response'],
+          roi: '200%',
+          timeToValue: '7 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Compliance Management',
+          description: 'Ensure regulatory compliance across all operations.',
+          features: ['GDPR 'Compliance', 'Audit 'Trails', 'Risk Assessment'],
+          roi: '180%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Data Protection',
+          description: 'Secure sensitive data with advanced encryption.',
+          features: ['End-to-End 'Encryption', 'Access 'Control', 'Data Backup'],
+          roi: '220%',
+          timeToValue: '10 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CEO',
-      content: 'The automation solutions transformed our operations completely. We saw a 60% increase in productivity within the first month.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'Global Finance Ltd.',
-      role: 'CTO',
-      content: 'The AI customer service platform handles 10x more queries with higher satisfaction rates than our previous system.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'RetailMax',
-      role: 'Operations Director',
-      content: 'Our data analytics platform helped us identify new market opportunities worth $2M in additional revenue.',
-      rating: 5,
-      avatar: '/api/placeholder/60/60'
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
     }
-  ];
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const currentCategory = categories[activeCategory];
 
   return (
-    <div className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-gray-50 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] opacity-5"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.section
+      className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-medium mb-6">
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <motion.div
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
+            whileHover={{ scale: 1.05 }}
+          >
             <Building2 className="w-4 h-4 mr-2" />
-            BUSINESS SOLUTIONS 2025
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent mb-6">
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Intelligent Solutions
-            </span>
+            Business Solutions 2025
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Transform Your Business Operations
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover comprehensive business solutions powered by AI and automation that drive growth, efficiency, and innovation across all industries.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover comprehensive business solutions that drive growthefficiencyand innovation 
+            across every aspect of your organization.
           </p>
         </motion.div>
 
-        {/* Solution Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {solutions.map((solution, index) => (
-              <button
-                key={solution.id}
-                onClick={() => setActiveSolution(index)}
-                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeSolution === index
-                    ? `bg-gradient-to-r ${solution.color} text-white shadow-lg transform scale-105`
-                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
-                }`}
-              >
-                <solution.icon className="w-5 h-5 mr-2" />
-                {solution.title}
-              </button>
-            ))}
+        {/* Category Navigation */}
+        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+            {categories.map((categoryindex) => {
+              const Icon = category.icon;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(index)}
+                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    activeCategory === index
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                >
+                  <Icon className="w-5 h-5 mr-2" />
+                  {category.title}
+                </button>
+              );
+            })}
           </div>
-
-          {/* Solution Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeSolution}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="grid lg:grid-cols-2 gap-12 items-center"
-            >
-              {/* Left Side - Solution Details */}
-              <div className="space-y-8">
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${solutions[activeSolution].color} text-white`}>
-                      <solutions[activeSolution].icon className="w-8 h-8" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{solutions[activeSolution].title}</h3>
-                      <p className="text-gray-600">{solutions[activeSolution].description}</p>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-4">Key Features</h4>
-                      <ul className="space-y-2">
-                        {solutions[activeSolution].features.map((feature, index) => (
-                          <li key={index} className="flex items-center text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-4">Benefits</h4>
-                      <ul className="space-y-2">
-                        {solutions[activeSolution].benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-center text-gray-600">
-                            <ArrowUpRight className="w-4 h-4 text-blue-500 mr-2" />
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {solutions[activeSolution].industries.map((industry, index) => (
-                      <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                        {industry}
-                      </span>
-                    ))}
-                  </div>
-
-                  <button className={`w-full bg-gradient-to-r ${solutions[activeSolution].color} text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-all duration-300 flex items-center justify-center group`}>
-                    Learn More
-                    <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Side - Metrics */}
-              <div className="space-y-6">
-                <h4 className="text-2xl font-bold text-gray-900 mb-6">Performance Metrics</h4>
-                
-                <div className="grid grid-cols-2 gap-6">
-                  {Object.entries(solutions[activeSolution].metrics).map(([key, value], index) => (
-                    <motion.div
-                      key={key}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-white rounded-xl p-6 shadow-lg text-center"
-                    >
-                      <div className="text-3xl font-bold text-gray-900 mb-2">{value}</div>
-                      <div className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-                  <h5 className="font-bold text-gray-900 mb-4">Why Choose This Solution?</h5>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-500 mr-2" />
-                      Proven track record across industries
-                    </li>
-                    <li className="flex items-center">
-                      <Shield className="w-4 h-4 text-green-500 mr-2" />
-                      Enterprise-grade security
-                    </li>
-                    <li className="flex items-center">
-                      <Clock className="w-4 h-4 text-blue-500 mr-2" />
-                      Quick implementation
-                    </li>
-                    <li className="flex items-center">
-                      <Award className="w-4 h-4 text-purple-500 mr-2" />
-                      Award-winning technology
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
         </motion.div>
 
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">What Our Clients Say</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+        {/* Solutions Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {currentCategory.solutions.map((solutionindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
+                whileHover={{ y: -5scale: 1.02 }}
+                variants={itemVariants}
               >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div>
-                    <div className="font-bold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
+                {/* Header */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentCategory.color} flex items-center justify-center mb-4`}>
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    {solution.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {solution.description}
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
+                  <div className="space-y-2">
+                    {solution.features.map((featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
+
+                {/* Metrics */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="text-2xl font-bold text-green-600 mb-1">{solution.roi}</div>
+                    <div className="text-xs text-gray-500">ROI</div>
+                  </div>
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">{solution.timeToValue}</div>
+                    <div className="text-xs text-gray-500">Time to Value</div>
+                  </div>
                 </div>
-                <p className="text-gray-600 italic">"{testimonial.content}"</p>
+
+                {/* Action Button */}
+                <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center group">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
               </motion.div>
             ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Success Stories */}
+        <motion.div className="mt-20" variants={itemVariants}>
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
+              <p className="text-lg opacity-90">
+                Join thousands of businesses that have transformed their operations
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">10,000+</div>
+                <div className="text-sm opacity-80">Companies Transformed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">$2.5B+</div>
+                <div className="text-sm opacity-80">Cost Savings Generated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">98%</div>
+                <div className="text-sm opacity-80">Customer Satisfaction</div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-12 text-white"
-        >
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of companies already using our solutions to drive growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              <Building2 className="w-5 h-5 mr-2" />
-              Get Started
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">
-              <DollarSign className="w-5 h-5 mr-2" />
-              View Pricing
-            </button>
+        {/* Call to Action */}
+        <motion.div className="text-center mt-16" variants={itemVariants}>
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg text-gray-600 mb-6">
+              Get started with our comprehensive business solutions today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-colors flex items-center justify-center">
+                <Lightbulb className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="border-2 border-indigo-500 text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-colors flex items-center justify-center">
+                <Globe className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

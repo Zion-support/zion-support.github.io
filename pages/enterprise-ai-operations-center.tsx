@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 
 
@@ -16,7 +16,7 @@ export default function EnterpriseAIOpsPage() {
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Enterprise AI Operations Center</h1>
-            <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced performance.</p>
+            <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced window.window.window.performance.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
@@ -35,6 +35,6 @@ export default function EnterpriseAIOpsPage() {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 

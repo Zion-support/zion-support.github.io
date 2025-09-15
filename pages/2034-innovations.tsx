@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
+import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function Innovations2034Page() {
   return (
@@ -346,7 +346,7 @@ export default function Innovations2034Page() {
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
+                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
                 Start Your Innovation Journey
               </motion.button>
             </motion.div>
@@ -356,5 +356,5 @@ export default function Innovations2034Page() {
 
       <UltraFuturisticFooter2034 />
     </>
-  );
+  )
 }

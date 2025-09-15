@@ -10,7 +10,11 @@ interface MainNavigationProps {
 
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
+<<<<<<< HEAD
+    <nav className={cn("hidden md:flex items-center space-x-6"className)}>
+=======
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>
+>>>>>>> origin/auto/autonomy-17186719616
       <NavLink
         to="/"
         className={({ isActive }) =>

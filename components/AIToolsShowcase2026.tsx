@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
-  Users, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -32,16 +33,16 @@ import {
 } from 'lucide-react';
 
 const AIToolsShowcase2026 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [hoveredTool, setHoveredTool] = useState<number | null>(null);
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [hoveredToolsetHoveredTool] = useState<number | null>(null);
 
   const categories = [
-    { id: 'all', label: 'All Tools', icon: Grid, count: 24 },
-    { id: 'automation', label: 'Automation', icon: Settings, count: 8 },
-    { id: 'analytics', label: 'Analytics', icon: BarChart3, count: 6 },
-    { id: 'content', label: 'Content', icon: FileText, count: 5 },
-    { id: 'communication', label: 'Communication', icon: MessageSquare, count: 3 },
-    { id: 'development', label: 'Development', icon: Code, count: 2 }
+    { id: ''all', 'label: 'All 'Tools', 'icon: Gridcount: 24 },
+    { id: ''automation', 'label: ''Automation', 'icon: Settingscount: 8 },
+    { id: ''analytics', 'label: ''Analytics', 'icon: BarChart3count: 6 },
+    { id: ''content', 'label: ''Content', 'icon: FileTextcount: 5 },
+    { id: ''communication', 'label: ''Communication', 'icon: MessageSquarecount: 3 },
+    { id: ''development', 'label: ''Development', 'icon: Codecount: 2 }
   ];
 
   const aiTools = [
@@ -52,7 +53,7 @@ const AIToolsShowcase2026 = () => {
       category: 'development',
       icon: Code,
       color: 'from-blue-600 to-cyan-600',
-      features: ['Multi-language support', 'Context-aware generation', 'Real-time suggestions'],
+      features: ['Multi-language 'support', 'Context-aware 'generation', 'Real-time suggestions'],
       rating: 4.9,
       users: '50K+',
       price: 'Free',
@@ -66,7 +67,7 @@ const AIToolsShowcase2026 = () => {
       category: 'analytics',
       icon: BarChart3,
       color: 'from-green-600 to-emerald-600',
-      features: ['Auto-discovery', 'Predictive modeling', 'Visual dashboards'],
+      features: ['Auto-'discovery', 'Predictive 'modeling', 'Visual dashboards'],
       rating: 4.8,
       users: '35K+',
       price: '$99/mo',
@@ -76,11 +77,11 @@ const AIToolsShowcase2026 = () => {
     {
       id: 3,
       name: 'Content Creation Suite',
-      description: 'Complete content generation platform for blogs, social media, and marketing',
+      description: 'Complete content generation platform for blogsocial mediand marketing',
       category: 'content',
       icon: FileText,
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-format support', 'SEO optimization', 'Brand voice matching'],
+      features: ['Multi-format 'support', 'SEO 'optimization', 'Brand voice matching'],
       rating: 4.7,
       users: '75K+',
       price: '$149/mo',
@@ -94,7 +95,7 @@ const AIToolsShowcase2026 = () => {
       category: 'automation',
       icon: Settings,
       color: 'from-orange-600 to-red-600',
-      features: ['Process learning', 'Custom workflows', 'Integration hub'],
+      features: ['Process 'learning', 'Custom 'workflows', 'Integration hub'],
       rating: 4.9,
       users: '40K+',
       price: '$199/mo',
@@ -108,7 +109,7 @@ const AIToolsShowcase2026 = () => {
       category: 'communication',
       icon: MessageSquare,
       color: 'from-indigo-600 to-purple-600',
-      features: ['Natural conversations', 'Multi-language', 'Sentiment analysis'],
+      features: ['Natural 'conversations', 'Multi-'language', 'Sentiment analysis'],
       rating: 4.6,
       users: '60K+',
       price: '$79/mo',
@@ -122,7 +123,7 @@ const AIToolsShowcase2026 = () => {
       category: 'content',
       icon: Image,
       color: 'from-pink-600 to-rose-600',
-      features: ['Image generation', 'Video creation', 'Style transfer'],
+      features: ['Image 'generation', 'Video 'creation', 'Style transfer'],
       rating: 4.8,
       users: '45K+',
       price: '$129/mo',
@@ -136,7 +137,7 @@ const AIToolsShowcase2026 = () => {
       category: 'analytics',
       icon: TrendingUp,
       color: 'from-teal-600 to-cyan-600',
-      features: ['Time series analysis', 'Anomaly detection', 'Custom models'],
+      features: ['Time series 'analysis', 'Anomaly 'detection', 'Custom models'],
       rating: 4.7,
       users: '25K+',
       price: '$299/mo',
@@ -150,7 +151,7 @@ const AIToolsShowcase2026 = () => {
       category: 'automation',
       icon: Search,
       color: 'from-yellow-600 to-orange-600',
-      features: ['Semantic search', 'Auto-categorization', 'Smart filters'],
+      features: ['Semantic 'search', 'Auto-'categorization', 'Smart filters'],
       rating: 4.5,
       users: '30K+',
       price: '$59/mo',
@@ -170,7 +171,7 @@ const AIToolsShowcase2026 = () => {
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
         <div className="absolute inset-0">
-          {[...Array(15)].map((_, i) => (
+          {[...Array(15)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
@@ -179,9 +180,9 @@ const AIToolsShowcase2026 = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [0, -50, 0],
-                opacity: [0, 1, 0],
-                scale: [0.5, 1, 0.5],
+                y: [0-50],
+                opacity: [010],
+                scale: [0.510.5],
               }}
               transition={{
                 duration: 4 + Math.random() * 2,
@@ -210,7 +211,7 @@ const AIToolsShowcase2026 = () => {
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Every Business</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive suite of AI-powered tools designed to automate, optimize, and transform your business operations.
+            Discover our comprehensive suite of AI-powered tools designed to automateoptimizeand transform your business operations.
           </p>
         </motion.div>
 
@@ -218,7 +219,7 @@ const AIToolsShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => {
@@ -249,16 +250,16 @@ const AIToolsShowcase2026 = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           <AnimatePresence>
-            {filteredTools.map((tool, index) => {
+            {filteredTools.map((toolindex) => {
               const Icon = tool.icon;
               return (
                 <motion.div
                   key={tool.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  exit={{ opacity: 0scale: 0.8 }}
+                  transition={{ duration: 0.3delay: index * 0.05 }}
                   onHoverStart={() => setHoveredTool(tool.id)}
                   onHoverEnd={() => setHoveredTool(null)}
                   className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
@@ -293,7 +294,7 @@ const AIToolsShowcase2026 = () => {
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {tool.features.slice(0, 2).map((feature, featureIndex) => (
+                    {tool.features.slice(02).map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
                         <span className="text-xs text-gray-300">{feature}</span>
@@ -348,7 +349,7 @@ const AIToolsShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -356,7 +357,7 @@ const AIToolsShowcase2026 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI tools to automate processes, gain insights, and drive growth.
+              Join thousands of businesses already using our AI tools to automate processesgain insightsand drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">

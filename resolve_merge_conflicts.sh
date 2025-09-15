@@ -1,37 +1,35 @@
+#!/bin/bash
+
+echo "🔧 Resolving merge conflicts automatically..."
+
+# Find all files with merge conflict markers
+echo "📁 Searching for files with merge conflicts..."
+
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "🔧 Resolving conflicts in: $file"
     
-    # Step 1: Check git repository
-    check_git_repo
+    # Remove all conflict markers and keep the newer version (after =======)
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
     
-    # Step 2: Fetch latest changes
-    fetch_latest
-    
-    # Step 3: Check current branch
-    check_current_branch
-    
-    # Step 4: List open PRs
-    list_open_prs
-    
-    # Step 5: Merge all PRs
-    merge_all_prs
-    
-    # Step 6: Cleanup merged branches
-    cleanup_merged_branches
-    
-    # Step 7: Run validation
-    run_validation
-    
-    # Step 8: Push changes
-    push_changes
-    
-    echo ""
-    echo "🎉 Merge resolution completed successfully!"
-    echo "=================================================="
-    echo "✅ All PRs have been merged into main"
-    echo "✅ All conflicts have been resolved"
-    echo "✅ Build and tests have been validated"
-    echo "✅ Changes have been pushed to origin"
+    echo "✅ Resolved conflicts in: $file"
 }
 
-# Run main function
-main "$@"
-=======
+# Find and resolve conflicts in TypeScript/JavaScript files
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read -r file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        resolve_conflicts "$file"
+    fi
+done
+
+# Find and resolve conflicts in other source files
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .git | while read -r file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        resolve_conflicts "$file"
+    fi
+done
+
+echo "🎉 All merge conflicts resolved!"
+echo "📝 Please review the changes and test the application"

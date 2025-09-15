@@ -14,14 +14,14 @@ import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { TalentProfile } from '@/types/talent';
-import { SEO } from '@/components/SEO';
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious} from '@/components/ui/pagination';
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 
 export default function TalentDirectory() {
   const router = useRouterReady(); // Use our custom hook
@@ -64,7 +64,8 @@ export default function TalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters,
-    toggleSection} = useTalentDirectory(currentPage, itemsPerPage);
+    toggleSection,
+  } = useTalentDirectory(currentPage, itemsPerPage);
 
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
@@ -90,7 +91,8 @@ export default function TalentDirectory() {
       expMin,
       expMax,
       sort,
-      page} = router.query as Record<string, string>;
+      page,
+    } = router.query as Record<string, string>;
 
     if (page) setCurrentPage(parseInt(page, 10) || 1);
     if (search) setSearchTerm(search);
@@ -129,7 +131,8 @@ export default function TalentDirectory() {
     if (currentPage > 1) query.page = String(currentPage);
     
     router.replace({ pathname: router.pathname, query }, undefined, {
-      shallow: true});
+      shallow: true,
+    });
   }, [
     router.isReady,
     searchTerm,
@@ -140,7 +143,8 @@ export default function TalentDirectory() {
     experienceRange,
     sortOption,
     currentPage,
-    initialized]); // Fixed dependencies
+    initialized,
+  ]); // Fixed dependencies
 
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent);
@@ -292,7 +296,8 @@ export default function TalentDirectory() {
                   setPriceRange,
                   experienceRange,
                   setExperienceRange,
-                  clearFilters}}
+                  clearFilters,
+                }}
               />
 
               {totalPages > 1 && (
@@ -381,6 +386,6 @@ export default function TalentDirectory() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }

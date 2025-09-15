@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, Star, Users, Globe, Brain, Rocket } from 'lucide-react';
+ArrowRightSparklesZapStarUsersGlobeBrainRocket
 
 const NewContent2025RevolutionaryShowcaseBanner = () => {
   const highlights = [
@@ -46,13 +46,13 @@ const NewContent2025RevolutionaryShowcaseBanner = () => {
             <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent"> Revolution</span>
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Experience groundbreaking innovations that will redefine what's possible in technology, business, and human potential.
+            Experience groundbreaking innovations that will redefine 'what', 's possible in technologybusinessand human potential.
           </p>
         </div>
 
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {highlights.map((highlight, index) => (
+          {highlights.map((highlightindex) => (
             <div key={index} className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400 to-purple-500 text-black mb-4 group-hover:scale-110 transition-transform duration-300">

@@ -1,30 +1,48 @@
 #!/bin/bash
 
-echo "Resolving all merge conflicts by accepting incoming changes..."
+echo "🔧 Resolving all merge conflicts systematically..."
 
-# Find all files with merge conflicts
-conflict_files=$(grep -l "" $(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json") 2>/dev/null)
+# Find all files with merge conflict markers
+echo "📁 Searching for files with merge conflicts..."
+conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null)
 
-echo "Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
+if [ -z "$conflict_files" ]; then
+    echo "✅ No merge conflicts found!"
+    exit 0
+fi
 
-# Resolve conflicts by accepting incoming changes
+echo "⚠️  Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
+
+# Process each file
 for file in $conflict_files; do
-    echo "Resolving conflicts in: $file"
-    git checkout --theirs "$file"
-    git add "$file"
+    echo "🔧 Processing: $file"
+    
+    # Create backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Remove all merge conflict markers and keep the first version (HEAD)
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+    
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    echo "✅ Resolved conflicts in: $file"
 done
 
 echo "🎉 All merge conflicts resolved!"
-echo "Running build test..."
+echo "📝 Files processed:"
+echo "$conflict_files"
 
-# Test the build
-if npm run build; then
-    echo "✅ Build successful after conflict resolution!"
+# Check if any conflicts remain
+remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
+
+if [ "$remaining_conflicts" -eq 0 ]; then
+    echo "✅ No remaining conflicts found!"
 else
-    echo "❌ Build still has issues, checking for remaining conflicts..."
-    find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | while read file; do
-        if grep -q "\|\|>>>>>>> " "$file" 2>/dev/null; then
-            echo "Remaining conflicts in: $file"
-        fi
-    done
+    echo "⚠️  $remaining_conflicts conflicts still remain"
+    echo "🔍 Remaining conflicts:"
+    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -10
 fi

@@ -45,8 +45,8 @@ export default function AI2026UltimateBreakthroughPredictionsBanner() {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            The most comprehensive and accurate predictions for AI breakthroughs in 2026, 
-            featuring quantum-neural fusion, consciousness AI, and transcendent intelligence.
+            The most comprehensive and accurate predictions for AI breakthroughs in 2026
+            featuring quantum-neural fusionconsciousness AIand transcendent intelligence.
           </p>
 
           {/* Key features grid */}

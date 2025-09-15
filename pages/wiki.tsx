@@ -1,31 +1,31 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react',
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
   operatorPrompt,
-  slugify} from '../utils/data/zionContent';
+  slugify} from '../utils/data/zionContent',
 
-function CopyButton({ text, label }: { text: string; label: string }) {
-  const [copied, setCopied] = useState(false);
+function CopyButton({ text, label }: { text: string, label: string }) {
+  const [copied, setCopied] = useState(false),
   return (
     <button
       onClick={async () => {
-        await navigator.clipboard.writeText(text);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
+        await navigator.clipboard.writeText(text),
+        setCopied(true),
+        setTimeout(() => setCopied(false), 1500),
       }}
       className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
     >
       {copied ? 'Copied' : label}
     </button>
-  );
+  ),
 }
 
 export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []);
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]);
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
+  const wiki = useMemo(() => generateZionWiki(), []),
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
@@ -92,5 +92,5 @@ export default function WikiPage() {
         </div>
       </article>
     </div>
-  );
+  ),
 }

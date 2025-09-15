@@ -6,7 +6,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger} from '@/components/ui/accordion';
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns';
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';

@@ -1,33 +1,108 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  ArrowRight, 
-  X, 
-  Users, 
-  TrendingUp,
+  Building2
+  TrendingUp
+  DollarSign
+  Users,
+  ArrowRight
+  X,
+  CheckCircle,
+  Zap,
+  BarChart3,
   Shield,
   Award,
-  DollarSign,
-  BarChart3,
-  CheckCircle,
-  Star,
-  Sparkles
+  Clock
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentMetricsetCurrentMetric] = useState(0);
+
+  const metrics = [
+    { label: ''ROI', 'value: '300%'icon: TrendingUpcolor: 'text-green-500' },
+    { label: 'Cost 'Savings', 'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-500' },
+    { label: ''Companies', 'value: '10K+'icon: Building2color: 'text-purple-500' },
+    { label: ''Satisfaction', 'value: '98%'icon: Awardcolor: 'text-yellow-500' }
+  ];
+
+  const solutions = [
+    { name: ''Automation', 'icon: Zapcolor: 'from-blue-500 to-cyan-500' },
+    { name: ''Analytics', 'icon: BarChart3color: 'from-purple-500 to-pink-500' },
+    { name: ''Security', 'icon: Shieldcolor: 'from-green-500 to-emerald-500' }
+  ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true)3000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
+
+  useEffect(() => {
+    if (isVisible) {
+      const interval = setInterval(() => {
+        setCurrentMetric((prev) => (prev + 1) % metrics.length);
+      }2500);
+      return () => clearInterval(interval);
+    }
+  }[isVisiblemetrics.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
+  };
+
+  const containerVariants = {
+    hidden: { 
+      opacity: 0
+      y: -100,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        duration: 0.8
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -100,
+      scale: 0.9,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.3,
+        duration: 0.6
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.6,
+        duration: 0.4
+      }
+    }
   };
 
   if (isDismissed) return null;
@@ -36,236 +111,189 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
+          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
         >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          
-          {/* Animated Background Elements */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <motion.div
-              animate={{ 
-                x: [0, 100, 0],
-                y: [0, -50, 0],
-                rotate: [0, 180, 360]
-              }}
-              transition={{ 
-                duration: 20, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"
-            />
-            <motion.div
-              animate={{ 
-                x: [0, -80, 0],
-                y: [0, 60, 0],
-                rotate: [0, -180, -360]
-              }}
-              transition={{ 
-                duration: 25, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="absolute top-20 right-20 w-16 h-16 bg-pink-500/20 rounded-full blur-lg"
-            />
-            <motion.div
-              animate={{ 
-                x: [0, 60, 0],
-                y: [0, -40, 0],
-                rotate: [0, 90, 180]
-              }}
-              transition={{ 
-                duration: 15, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="absolute bottom-10 left-1/3 w-12 h-12 bg-purple-500/20 rounded-full blur-md"
-            />
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between py-4">
               {/* Left Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="flex items-center justify-center lg:justify-start gap-2 mb-4"
-                >
-                  <Building2 className="w-6 h-6 text-yellow-300 animate-pulse" />
-                  <span className="text-sm font-semibold uppercase tracking-wider text-yellow-300">
-                    BUSINESS SOLUTIONS 2025
-                  </span>
-                  <div className="flex items-center gap-1 ml-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
-                    ))}
-                  </div>
-                </motion.div>
-
-                <motion.h2
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-                >
-                  Transform Your Business with
-                  <span className="block bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-                    Intelligent Solutions
-                  </span>
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-lg md:text-xl text-purple-100 mb-6 max-w-2xl"
-                >
-                  Discover comprehensive business solutions powered by AI and automation that drive growth, efficiency, and innovation across all industries.
-                </motion.p>
-
-                {/* Feature Icons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-6"
-                >
-                  <div className="flex items-center gap-2">
-                    <Building2 className="w-5 h-5 text-cyan-300" />
-                    <span className="text-sm font-medium">Enterprise Automation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-yellow-300" />
-                    <span className="text-sm font-medium">AI Customer Service</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5 text-pink-300" />
-                    <span className="text-sm font-medium">Advanced Analytics</span>
-                  </div>
-                </motion.div>
-
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                >
-                  <button className="group bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    <Building2 className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                    Explore Solutions
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <button className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center backdrop-blur-sm">
-                    <DollarSign className="w-5 h-5 mr-2" />
-                    View Pricing
-                  </button>
-                </motion.div>
-              </div>
-
-              {/* Right Content - Success Metrics */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex-shrink-0"
+              <motion.div 
+                className="flex items-center space-x-4 flex-1"
+                variants={textVariants}
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-xl font-bold mb-6 text-center">Success Metrics</h3>
-                  
-                  {/* Key Metrics */}
-                  <div className="space-y-4 mb-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-purple-100">Cost Reduction</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-20 bg-gray-700 rounded-full h-2">
-                          <motion.div
-                            className="bg-gradient-to-r from-green-400 to-emerald-400 h-2 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: "40%" }}
-                            transition={{ duration: 2, delay: 0.5 }}
-                          />
-                        </div>
-                        <span className="text-green-300 font-bold">40%</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex justify-between items-center">
-                      <span className="text-purple-100">Productivity Boost</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-20 bg-gray-700 rounded-full h-2">
-                          <motion.div
-                            className="bg-gradient-to-r from-blue-400 to-cyan-400 h-2 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: "60%" }}
-                            transition={{ duration: 2, delay: 0.7 }}
-                          />
-                        </div>
-                        <span className="text-blue-300 font-bold">60%</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex justify-between items-center">
-                      <span className="text-purple-100">Customer Satisfaction</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-20 bg-gray-700 rounded-full h-2">
-                          <motion.div
-                            className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: "95%" }}
-                            transition={{ duration: 2, delay: 0.9 }}
-                          />
-                        </div>
-                        <span className="text-yellow-300 font-bold">95%</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Success Indicators */}
-                  <div className="grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-green-300 mb-1">5,000+</div>
-                      <div className="text-xs text-purple-100">Businesses Transformed</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-blue-300 mb-1">$2.5B+</div>
-                      <div className="text-xs text-purple-100">Cost Savings Generated</div>
-                    </div>
-                  </div>
-                  
+                <div className="flex items-center space-x-3">
                   <motion.div
-                    animate={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="mt-6 text-center"
+                    className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                    animate={{ 
+                      rotate: [0360],
+                      scale: [1.1]
+                    }}
+                    transition={{ 
+                      duration: 4
+                      repeat: Infinity
+                      ease: "easeInOut" 
+                    }}
                   >
-                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-blue-400 text-white px-4 py-2 rounded-full text-sm font-bold">
-                      <TrendingUp className="w-4 h-4" />
-                      Proven Results
-                    </div>
+                    <Building2 className="w-6 h-6 text-white" />
                   </motion.div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-1">
+                      🏢 Business Solutions 2025
+                    </h3>
+                    <p className="text-sm opacity-90 hidden sm:block">
+                      Transform your operations with proven solutions
+                    </p>
+                  </div>
                 </div>
               </motion.div>
+
+              {/* Center Metrics Rotator */}
+              <motion.div 
+                className="hidden md:flex items-center space-x-6"
+                variants={textVariants}
+              >
+                <div className="text-center">
+                  <div className="text-sm opacity-80 mb-1">Live Results</div>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentMetric}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.5 }}
+                      className="flex items-center space-x-2"
+                    >
+                      <div className={`w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center`}>
+                        {React.createElement(metrics[currentMetric].icon{ 
+                          className: `w-4 h-4 ${metrics[currentMetric].color}` 
+                        })}
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold">{metrics[currentMetric].value}</div>
+                        <div className="text-xs opacity-80">{metrics[currentMetric].label}</div>
+                      </div>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+                <div className="w-px h-8 bg-white/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">30</div>
+                  <div className="text-xs opacity-80">Days to Value</div>
+                </div>
+                <div className="w-px h-8 bg-white/30"></div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold">24/7</div>
+                  <div className="text-xs opacity-80">Support</div>
+                </div>
+              </motion.div>
+
+              {/* Right Actions */}
+              <motion.div 
+                className="flex items-center space-x-3"
+                variants={buttonVariants}
+              >
+                <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 backdrop-blur-sm">
+                  <Users className="w-4 h-4" />
+                  <span className="text-sm font-medium">Case Studies</span>
+                </button>
+                
+                <button className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
+                  <span>Explore Solutions</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                
+                <button 
+                  onClick={handleDismiss}
+                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </motion.div>
             </div>
+
+            {/* Mobile Content */}
+            <motion.div 
+              className="md:hidden flex items-center justify-between py-2 border-t border-white/20"
+              variants={textVariants}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <motion.div
+                    className={`w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center`}
+                    key={currentMetric}
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {React.createElement(metrics[currentMetric].icon{ 
+                      className: `w-3 h-3 ${metrics[currentMetric].color}` 
+                    })}
+                  </motion.div>
+                  <span className="text-sm font-medium">{metrics[currentMetric].value}</span>
+                </div>
+                <div className="w-px h-4 bg-white/30"></div>
+                <div className="flex items-center space-x-1">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm">30 Days to Value</span>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
+                {solutions.map((solutionindex) => (
+                  <div
+                    key={index}
+                    className={`w-6 h-6 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center`}
+                  >
+                    {React.createElement(solution.icon{ className: "w-3 h-3 text-white" })}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
-          {/* Dismiss Button */}
-          <button
-            onClick={handleDismiss}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/20 transition-colors"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          {/* Bottom Gradient */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.div
+              className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
+              animate={{
+                scale: [1.21],
+                opacity: [0.30.60.3]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
+              animate={{
+                scale: [1.31],
+                opacity: [0.20.40.2]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1
+              }}
+            />
+            <motion.div
+              className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
+              animate={{
+                scale: [1.51],
+                opacity: [0.10.30.1]
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

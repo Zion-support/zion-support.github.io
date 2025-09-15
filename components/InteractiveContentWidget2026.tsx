@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -13,9 +14,9 @@ interface ContentItem {
 }
 
 const InteractiveContentWidget2026: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [searchTermsetSearchTerm] = useState<string>(', ');
+  const [isExpandedsetIsExpanded] = useState<boolean>(false);
 
   const contentItems: ContentItem[] = [
     {
@@ -24,7 +25,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       category: 'Automation',
       readTime: '8 min',
       featured: true,
-      tags: ['AI', 'Automation', 'Business'],
+      tags: [', 'AI', 'Automation'Business'],
       description: 'Discover the latest AI automation strategies transforming businesses worldwide.',
       publishDate: '2026-01-15'
     },
@@ -34,7 +35,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       category: 'Quantum Computing',
       readTime: '12 min',
       featured: true,
-      tags: ['Quantum', 'Enterprise', 'Innovation'],
+      tags: [', 'Quantum', 'Enterprise'Innovation'],
       description: 'Explore how quantum computing is revolutionizing data processing and optimization.',
       publishDate: '2026-01-12'
     },
@@ -44,7 +45,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       category: 'Neural Interfaces',
       readTime: '10 min',
       featured: false,
-      tags: ['Neural', 'Interface', 'Future Tech'],
+      tags: [', 'Neural', 'Interface'Future Tech'],
       description: 'Dive deep into neural interface developments bridging human cognition and AI.',
       publishDate: '2026-01-10'
     },
@@ -54,7 +55,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       category: 'Customer Experience',
       readTime: '6 min',
       featured: false,
-      tags: ['AI', 'Customer', 'Experience'],
+      tags: [', 'AI', 'Customer'Experience'],
       description: 'Learn how AI is reshaping customer interactions and creating personalized experiences.',
       publishDate: '2026-01-08'
     },
@@ -64,7 +65,7 @@ const InteractiveContentWidget2026: React.FC = () => {
       category: 'Sustainability',
       readTime: '9 min',
       featured: true,
-      tags: ['Sustainability', 'Green AI', 'Environment'],
+      tags: [', 'Sustainability', 'Green 'AI', 'Environment'],
       description: 'Explore eco-friendly AI implementations and sustainable computing practices.',
       publishDate: '2026-01-05'
     },
@@ -74,13 +75,13 @@ const InteractiveContentWidget2026: React.FC = () => {
       category: 'Edge Computing',
       readTime: '7 min',
       featured: false,
-      tags: ['Edge AI', 'Real-time', 'Performance'],
+      tags: ['Edge 'AI', 'Real-'time', 'Performance'],
       description: 'Understand how edge AI enables real-time decision making in critical applications.',
       publishDate: '2026-01-03'
     }
   ];
 
-  const categories = ['all', ...Array.from(new Set(contentItems.map(item => item.category)))];
+  const categories = ['all'...Array.from(new Set(contentItems.map(item => item.category)))];
 
   const filteredContent = contentItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
@@ -125,7 +126,7 @@ const InteractiveContentWidget2026: React.FC = () => {
           <div className="relative mb-4">
             <input
               type="text"
-              placeholder="Search content, tags, or topics..."
+              placeholder="Search contentagsor topics..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -241,7 +242,7 @@ const InteractiveContentWidget2026: React.FC = () => {
             <p className="text-gray-600 mb-4">Try adjusting your search or category filter</p>
             <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchTerm(', ');
                 setSelectedCategory('all');
               }}
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"

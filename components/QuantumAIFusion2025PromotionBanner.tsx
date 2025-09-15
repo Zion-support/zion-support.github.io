@@ -24,7 +24,7 @@ export default function QuantumAIFusion2025PromotionBanner() {
         
         {/* Description */}
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-          The world's first fully integrated quantum computing and artificial intelligence platform. 
+          The 'world', 's first fully integrated quantum computing and artificial intelligence platform. 
           Experience <span className="text-cyan-400 font-bold">unprecedented processing power</span> and 
           <span className="text-purple-400 font-bold"> revolutionary business solutions</span>.
         </p>

@@ -6,7 +6,11 @@ on:
     - cron: '*/10 * * * *'
 
 permissions:
+<<<<<<< HEAD
+  contents: read
+=======
   contents: write
+>>>>>>> origin/auto/autonomy-17186719616
   actions: read
 
 jobs:

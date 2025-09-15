@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Shield, Cloud, Brain, Globe, TrendingUp, Star, CheckCircle } from 'lucide-react';
+ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
 
 const services = [
   {
@@ -23,7 +24,7 @@ const services = [
   {
     id: 2,
     title: "Enterprise AI Content Generation",
-    description: "Create high-quality, SEO-optimized content at scale with our advanced AI writing platform.",
+    description: "Create high-qualitySEO-optimized content at scale with our advanced AI writing platform.",
     price: "From $199/month",
     features: [
       "80% content creation time savings",
@@ -102,10 +103,10 @@ const services = [
   }
 ];
 
-const categories = ["All", "AI & Automation", "Content & Marketing", "Security", "Cloud & DevOps", "Analytics", "Consulting"];
+const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
 
 export default function UltimateServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [selectedCategorysetSelectedCategory] = React.useState("All");
 
   const filteredServices = selectedCategory === "All" 
     ? services 
@@ -132,7 +133,7 @@ export default function UltimateServicesShowcase2025() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Transform your business with our cutting-edge AI, cloud, and automation solutions. 
+            Transform your business with our cutting-edge AIcloudand automation solutions. 
             Join thousands of companies already achieving extraordinary results.
           </p>
 
@@ -156,12 +157,12 @@ export default function UltimateServicesShowcase2025() {
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group ${
                 service.popular ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
@@ -194,7 +195,7 @@ export default function UltimateServicesShowcase2025() {
 
                 {/* Features */}
                 <div className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{feature}</span>

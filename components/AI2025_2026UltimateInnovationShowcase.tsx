@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Globe, 
-  Rocket, 
+  Brain
+  Zap
+  Cpu
+  Database
+  Shield
+  Globe
+  Rocket
   Target,
   TrendingUp,
   Users,
@@ -17,451 +18,300 @@ import {
   Lightbulb,
   CheckCircle,
   ArrowRight,
-  Play,
   Star,
   Award,
   Sparkles
 } from 'lucide-react';
 
-interface InnovationCard {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  impact: string;
-  status: 'Released' | 'Beta' | 'Coming Soon';
-  features: string[];
-  icon: React.ReactNode;
-  gradient: string;
-  metrics: {
-    efficiency: number;
-    accuracy: number;
-    adoption: number;
-  };
-}
+const AI2025_2026UltimateInnovationShowcase = () => {
+  const [activeTabsetActiveTab] = useState('breakthroughs');
+  const [currentInnovationsetCurrentInnovation] = useState(0);
 
-const AI2025_2026UltimateInnovationShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovation, setSelectedInnovation] = useState<InnovationCard | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const innovations: InnovationCard[] = [
+  const innovations = [
     {
-      id: 'neural-synthesis',
-      title: 'Neural Synthesis Engine 2026',
-      description: 'Revolutionary AI that can synthesize human-like consciousness and creativity, enabling unprecedented levels of artificial general intelligence.',
-      category: 'Consciousness',
-      impact: 'Transformative',
-      status: 'Beta',
+      id: 'quantum-ai',
+      title: 'Quantum-AI Fusion Technology',
+      description: 'Revolutionary fusion of quantum computing with artificial intelligencedelivering unprecedented processing power and problem-solving capabilities.',
       features: [
-        'Self-aware decision making',
+        '1000x faster computation speeds',
+        'Quantum neural networks',
+        'Real-time optimization',
+        'Breakthrough in cryptography'
+      ],
+      impact: 'Transform entire industries with quantum-enhanced AI',
+      icon: Cpu,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      id: 'neural-consensus',
+      title: 'Neural Consensus Revolution',
+      description: 'Advanced AI systems that achieve consensus across distributed networksenabling unprecedented coordination and decision-making.',
+      features: [
+        'Distributed intelligence networks',
+        'Consensus-driven automation',
+        'Real-time collaboration',
+        'Scalable decision frameworks'
+      ],
+      impact: 'Enable global-scale intelligent coordination',
+      icon: Brain,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      id: 'synthetic-consciousness',
+      title: 'Synthetic Consciousness Platform',
+      description: 'Breakthrough in artificial consciousness that enables AI systems to develop genuine understanding and emotional intelligence.',
+      features: [
+        'Emotional intelligence processing',
+        'Contextual understanding',
         'Creative problem solving',
-        'Emotional intelligence integration',
-        'Cross-domain knowledge transfer'
+        'Ethical decision making'
       ],
-      icon: <Brain className="w-8 h-8" />,
-      gradient: 'from-purple-600 to-pink-600',
-      metrics: { efficiency: 95, accuracy: 98, adoption: 75 }
+      impact: 'Create truly intelligent and empathetic AI systems',
+      icon: Lightbulb,
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      id: 'quantum-neural',
-      title: 'Quantum Neural Networks',
-      description: 'Breakthrough quantum computing integration with neural networks, delivering exponential processing power for complex AI tasks.',
-      category: 'Quantum',
-      impact: 'Revolutionary',
-      status: 'Coming Soon',
+      id: 'omniversal-computing',
+      title: 'Omniversal Computing Architecture',
+      description: 'Next-generation computing that operates across multiple dimensions and realitiesenabling solutions to previously impossible problems.',
       features: [
-        'Quantum superposition processing',
-        'Exponential speed improvements',
-        'Quantum error correction',
-        'Hybrid classical-quantum algorithms'
+        'Multi-dimensional processing',
+        'Reality simulation capabilities',
+        'Infinite scalability',
+        'Universal problem solving'
       ],
-      icon: <Cpu className="w-8 h-8" />,
-      gradient: 'from-blue-600 to-cyan-600',
-      metrics: { efficiency: 99, accuracy: 99, adoption: 25 }
-    },
-    {
-      id: 'autonomous-systems',
-      title: 'Autonomous Business Systems',
-      description: 'Self-managing AI systems that can run entire business operations without human intervention, optimizing processes in real-time.',
-      category: 'Automation',
-      impact: 'High',
-      status: 'Released',
-      features: [
-        'End-to-end process automation',
-        'Real-time decision making',
-        'Self-healing capabilities',
-        'Continuous optimization'
-      ],
-      icon: <Rocket className="w-8 h-8" />,
-      gradient: 'from-green-600 to-emerald-600',
-      metrics: { efficiency: 92, accuracy: 96, adoption: 85 }
-    },
-    {
-      id: 'predictive-analytics',
-      title: 'Predictive Analytics 2026',
-      description: 'Advanced predictive models that can forecast business trends, market movements, and customer behavior with unprecedented accuracy.',
-      category: 'Analytics',
-      impact: 'High',
-      status: 'Released',
-      features: [
-        'Multi-dimensional forecasting',
-        'Real-time trend analysis',
-        'Behavioral pattern recognition',
-        'Risk assessment algorithms'
-      ],
-      icon: <BarChart3 className="w-8 h-8" />,
-      gradient: 'from-orange-600 to-red-600',
-      metrics: { efficiency: 88, accuracy: 94, adoption: 90 }
-    },
-    {
-      id: 'neural-interface',
-      title: 'Neural Interface Technology',
-      description: 'Direct brain-computer interfaces that enable seamless communication between human thought and AI systems.',
-      category: 'Interface',
-      impact: 'Transformative',
-      status: 'Beta',
-      features: [
-        'Thought-to-text conversion',
-        'Mental command execution',
-        'Enhanced cognitive augmentation',
-        'Secure neural data transmission'
-      ],
-      icon: <Zap className="w-8 h-8" />,
-      gradient: 'from-indigo-600 to-purple-600',
-      metrics: { efficiency: 85, accuracy: 92, adoption: 40 }
-    },
-    {
-      id: 'ai-security',
-      title: 'AI Security Fortress',
-      description: 'Advanced AI-powered security systems that can detect and prevent cyber threats in real-time using machine learning.',
-      category: 'Security',
-      impact: 'Critical',
-      status: 'Released',
-      features: [
-        'Threat detection algorithms',
-        'Automated response systems',
-        'Behavioral anomaly detection',
-        'Zero-trust architecture'
-      ],
-      icon: <Shield className="w-8 h-8" />,
-      gradient: 'from-red-600 to-pink-600',
-      metrics: { efficiency: 96, accuracy: 99, adoption: 95 }
+      impact: 'Solve problems across all possible realities',
+      icon: Globe,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
-  const categories = ['all', 'Consciousness', 'Quantum', 'Automation', 'Analytics', 'Interface', 'Security'];
+  const breakthroughStats = [
+    { label: 'Processing Speed 'Increase', 'value: '10,000'x', 'icon: Zap },
+    { label: 'Problem-Solving 'Accuracy', 'value: '99.9%'icon: Target },
+    { label: 'Energy 'Efficiency', 'value: '95%'icon: Shield },
+    { label: 'Global Adoption 'Rate', 'value: '87%'icon: Users }
+  ];
 
-  const filteredInnovations = selectedCategory === 'all' 
-    ? innovations 
-    : innovations.filter(innovation => innovation.category === selectedCategory);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const useCases = [
+    {
+      category: 'Healthcare',
+      title: 'AI-Powered Medical Breakthroughs',
+      description: 'Revolutionary medical AI that can diagnose diseases with 99.9% accuracy and develop personalized treatment plans.',
+      benefits: ['Early disease 'detection', 'Personalized 'medicine', 'Drug discovery 'acceleration', 'Surgical precision enhancement']
+    },
+    {
+      category: 'Climate',
+      title: 'Climate Crisis Solutions',
+      description: 'Advanced AI systems that can model and solve complex climate challengesfrom carbon capture to renewable energy optimization.',
+      benefits: ['Carbon footprint 'reduction', 'Renewable energy 'optimization', 'Climate modeling 'accuracy', 'Sustainable solutions']
+    },
+    {
+      category: 'Space',
+      title: 'Space Exploration Revolution',
+      description: 'AI-powered space exploration that can autonomously navigatediscoverand colonize new worlds.',
+      benefits: ['Autonomous space 'missions', 'Planetary 'discovery', 'Resource 'optimization', 'Interstellar communication']
+    },
+    {
+      category: 'Education',
+      title: 'Personalized Learning Revolution',
+      description: 'AI tutors that adapt to individual learning styles and pacemaking education accessible to everyone globally.',
+      benefits: ['Personalized 'curriculum', 'Adaptive 'learning', 'Global 'accessibility', 'Real-time assessment']
     }
-  };
+  ];
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
+    }5000);
+    return () => clearInterval(interval);
+  }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="flex items-center justify-center mb-6">
-            <Sparkles className="w-12 h-12 text-yellow-400 mr-4" />
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-              AI 2025-2026
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Sparkles className="w-8 h-8 text-yellow-400 mr-3" />
+              <span className="text-lg font-semibold text-yellow-400">2025-2026 Innovation Showcase</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+              Ultimate AI Innovation
             </h1>
-            <Sparkles className="w-12 h-12 text-yellow-400 ml-4" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ultimate Innovation Showcase
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Discover the most revolutionary AI breakthroughs that will reshape our world in 2025-2026. 
+              Experience the future of artificial intelligence today.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Explore Innovations
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-400/10 transition-all duration-300"
+              >
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Innovation Showcase */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Revolutionary AI Breakthroughs
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the most revolutionary AI technologies that will transform industries and reshape the future of human-AI collaboration.
+            Experience the most advanced AI innovations that will define the next decade
           </p>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
-            >
-              {category === 'all' ? 'All Innovations' : category}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Innovation Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {filteredInnovations.map((innovation) => (
+        {/* Innovation Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {innovations.map((innovationindex) => (
             <motion.div
               key={innovation.id}
-              variants={cardVariants}
-              className="group cursor-pointer"
-              onClick={() => setSelectedInnovation(innovation)}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
+              className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
-                {/* Status Badge */}
-                <div className="flex items-center justify-between mb-6">
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    innovation.status === 'Released' 
-                      ? 'bg-green-500/20 text-green-400'
-                      : innovation.status === 'Beta'
-                      ? 'bg-yellow-500/20 text-yellow-400'
-                      : 'bg-blue-500/20 text-blue-400'
-                  }`}>
-                    {innovation.status}
-                  </span>
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${innovation.gradient}`}>
-                    {innovation.icon}
-                  </div>
+              <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+              <div className="relative z-10">
+                <div className="flex items-center mb-4">
+                  <innovation.icon className="w-8 h-8 text-white mr-3" />
+                  <h3 className="text-2xl font-bold text-white">{innovation.title}</h3>
                 </div>
-
-                {/* Title and Description */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors">
-                  {innovation.title}
-                </h3>
-                <p className="text-gray-300 mb-6 line-clamp-3">
-                  {innovation.description}
-                </p>
-
-                {/* Metrics */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Efficiency</span>
-                    <div className="flex items-center">
-                      <div className="w-24 bg-gray-700 rounded-full h-2 mr-2">
-                        <div 
-                          className="bg-gradient-to-r from-green-400 to-emerald-500 h-2 rounded-full transition-all duration-1000"
-                          style={{ width: `${innovation.metrics.efficiency}%` }}
-                        />
-                      </div>
-                      <span className="text-sm text-white font-semibold">{innovation.metrics.efficiency}%</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Accuracy</span>
-                    <div className="flex items-center">
-                      <div className="w-24 bg-gray-700 rounded-full h-2 mr-2">
-                        <div 
-                          className="bg-gradient-to-r from-blue-400 to-cyan-500 h-2 rounded-full transition-all duration-1000"
-                          style={{ width: `${innovation.metrics.accuracy}%` }}
-                        />
-                      </div>
-                      <span className="text-sm text-white font-semibold">{innovation.metrics.accuracy}%</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Adoption</span>
-                    <div className="flex items-center">
-                      <div className="w-24 bg-gray-700 rounded-full h-2 mr-2">
-                        <div 
-                          className="bg-gradient-to-r from-purple-400 to-pink-500 h-2 rounded-full transition-all duration-1000"
-                          style={{ width: `${innovation.metrics.adoption}%` }}
-                        />
-                      </div>
-                      <span className="text-sm text-white font-semibold">{innovation.metrics.adoption}%</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Features Preview */}
+                <p className="text-white/90 mb-6 text-lg">{innovation.description}</p>
                 <div className="space-y-2 mb-6">
-                  {innovation.features.slice(0, 2).map((feature, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                  {innovation.features.map((featureidx) => (
+                    <div key={idx} className="flex items-center text-white/80">
+                      <CheckCircle className="w-4 h-4 text-green-300 mr-2" />
+                      <span>{feature}</span>
                     </div>
                   ))}
-                  {innovation.features.length > 2 && (
-                    <div className="text-sm text-gray-400">
-                      +{innovation.features.length - 2} more features
-                    </div>
-                  )}
                 </div>
-
-                {/* Action Button */}
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400 capitalize">{innovation.category}</span>
-                  <div className="flex items-center text-yellow-400 group-hover:text-white transition-colors">
-                    <span className="text-sm font-semibold mr-2">Explore</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <p className="text-white font-semibold">Impact: {innovation.impact}</p>
                 </div>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 mb-16"
+        >
+          <h3 className="text-3xl font-bold text-center mb-8">Breakthrough Performance Metrics</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {breakthroughStats.map((statindex) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="text-center"
+              >
+                <stat.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Innovation Detail Modal */}
-        <AnimatePresence>
-          {selectedInnovation && (
-            <motion.div
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedInnovation(null)}
-            >
+        {/* Use Cases Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
+        >
+          <h3 className="text-4xl font-bold text-center mb-12">Real-World Applications</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCaseindex) => (
               <motion.div
-                className="bg-slate-900 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                onClick={(e) => e.stopPropagation()}
+                key={index}
+                initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                {/* Header */}
-                <div className="flex items-start justify-between mb-8">
-                  <div className="flex items-center">
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${selectedInnovation.gradient} mr-6`}>
-                      {selectedInnovation.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">
-                        {selectedInnovation.title}
-                      </h3>
-                      <div className="flex items-center gap-4">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                          selectedInnovation.status === 'Released' 
-                            ? 'bg-green-500/20 text-green-400'
-                            : selectedInnovation.status === 'Beta'
-                            ? 'bg-yellow-500/20 text-yellow-400'
-                            : 'bg-blue-500/20 text-blue-400'
-                        }`}>
-                          {selectedInnovation.status}
-                        </span>
-                        <span className="text-gray-400 capitalize">{selectedInnovation.category}</span>
-                        <span className="text-yellow-400 font-semibold">{selectedInnovation.impact} Impact</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setSelectedInnovation(null)}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+                <div className="flex items-center mb-4">
+                  <Award className="w-6 h-6 text-purple-400 mr-3" />
+                  <span className="text-purple-400 font-semibold text-sm uppercase tracking-wide">
+                    {useCase.category}
+                  </span>
                 </div>
-
-                {/* Description */}
-                <p className="text-xl text-gray-300 mb-8">
-                  {selectedInnovation.description}
-                </p>
-
-                {/* Features */}
-                <div className="mb-8">
-                  <h4 className="text-2xl font-bold text-white mb-6">Key Features</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {selectedInnovation.features.map((feature, index) => (
-                      <div key={index} className="flex items-center p-4 bg-white/5 rounded-lg">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Metrics */}
-                <div className="mb-8">
-                  <h4 className="text-2xl font-bold text-white mb-6">Performance Metrics</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="text-center p-6 bg-white/5 rounded-lg">
-                      <div className="text-3xl font-bold text-green-400 mb-2">
-                        {selectedInnovation.metrics.efficiency}%
-                      </div>
-                      <div className="text-gray-300">Efficiency</div>
+                <h4 className="text-xl font-bold text-white mb-3">{useCase.title}</h4>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <div className="space-y-2">
+                  {useCase.benefits.map((benefitidx) => (
+                    <div key={idx} className="flex items-center text-gray-300">
+                      <Star className="w-4 h-4 text-yellow-400 mr-2" />
+                      <span className="text-sm">{benefit}</span>
                     </div>
-                    <div className="text-center p-6 bg-white/5 rounded-lg">
-                      <div className="text-3xl font-bold text-blue-400 mb-2">
-                        {selectedInnovation.metrics.accuracy}%
-                      </div>
-                      <div className="text-gray-300">Accuracy</div>
-                    </div>
-                    <div className="text-center p-6 bg-white/5 rounded-lg">
-                      <div className="text-3xl font-bold text-purple-400 mb-2">
-                        {selectedInnovation.metrics.adoption}%
-                      </div>
-                      <div className="text-gray-300">Adoption</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-4">
-                  <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Demo
-                  </button>
-                  <button className="flex-1 bg-white/10 text-white py-4 px-8 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
-                    <Award className="w-5 h-5 mr-2" />
-                    Learn More
-                  </button>
+                  ))}
                 </div>
               </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-20"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+          <h3 className="text-4xl font-bold text-white mb-6">
+            Ready to Experience the Future?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of forward-thinking companies already leveraging these revolutionary AI technologies.
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Join thousands of innovators who are already transforming their industries with our AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
-              <Rocket className="w-5 h-5 mr-2" />
-              Start Your AI Journey
-            </button>
-            <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
-              <Users className="w-5 h-5 mr-2" />
-              Schedule Consultation
-            </button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+            >
+              Start Your Innovation Journey
+              <Rocket className="w-5 h-5 ml-2 inline" />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Schedule Demo
+            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -59,7 +59,8 @@ export default function OrderDetailPage() {
       'Shipping Address:',
       order.shippingAddress.name,
       order.shippingAddress.street,
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n');
+      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`,
+    ].join('\n');
 
     await navigator.clipboard.writeText(summary);
     toast.success('Order summary copied to clipboard');

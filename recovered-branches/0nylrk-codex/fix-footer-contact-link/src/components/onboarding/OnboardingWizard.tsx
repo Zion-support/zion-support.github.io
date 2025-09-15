@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+import { useStateuseEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { CardContentCardFooterCardHeaderCardTitle } from '@/components/ui/card';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+FileTextUsersCalendarEyeMessageSquare
+=======
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -6,6 +15,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from '@/lib/utils';
 
 interface WizardStep {
@@ -26,8 +36,13 @@ interface OnboardingWizardProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+export function OnboardingWizard({ typeonCompleteonSkipclassName }: OnboardingWizardProps) {
+  const [currentStepsetCurrentStep] = useState(0);
+=======
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
+>>>>>>> origin/auto/autonomy-17186719616
   const navigate = useNavigate();
   const { user } = useAuth();
   
@@ -67,7 +82,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
+<<<<<<< HEAD
+      description: "Add your skillsexperienceand preferences",
+=======
       description: "Add your skills, experience, and preferences",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {
         text: "Edit Profile",
@@ -131,7 +150,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   };
   
   return (
+<<<<<<< HEAD
+    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md"className)}>
+=======
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+>>>>>>> origin/auto/autonomy-17186719616
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ? 
@@ -143,7 +166,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex items-center mb-6">
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">
+<<<<<<< HEAD
+            {steps.map((_index) => (
+=======
             {steps.map((_, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <div
                 key={index}
                 className={cn(

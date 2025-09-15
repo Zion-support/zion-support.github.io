@@ -1,6 +1,4 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App Smoke Tests', () => {
@@ -8,9 +6,13 @@ describe('App Smoke Tests', () => {
     expect(() => render(<App />)).not.toThrow();
   });
 
-  it('should render a basic structure', () => {
+  it('should render the main app component', () => {
     const { container } = render(<App />);
+    expect(container).toBeInTheDocument();
+  });
 
-    expect(container.firstChild).toBeTruthy();
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
 });

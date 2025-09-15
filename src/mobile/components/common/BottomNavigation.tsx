@@ -11,7 +11,8 @@ export function BottomNavigation() {
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/marketplace", icon: <ShoppingBag />, label: "Marketplace" },
     { path: "/mobile/community", icon: <Users />, label: "Community" },
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }];
+    { path: "/mobile/profile", icon: <User />, label: "Profile" },
+  ];
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">

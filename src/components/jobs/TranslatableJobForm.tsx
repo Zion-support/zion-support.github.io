@@ -31,21 +31,24 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
-    ar: ""});
+    ar: "",
+  });
   
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""});
+    ar: "",
+  });
   
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""});
+    ar: "",
+  });
   
   const [budget, setBudget] = useState("");
   const [deadline, setDeadline] = useState("");
@@ -75,7 +78,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       description,
       requirements,
       budget,
-      deadline});
+      deadline,
+    });
   };
   
   // Auto translate content when language tab changes
@@ -112,7 +116,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
     
@@ -123,7 +128,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         toast({
           title: t('translation.translation_failed'),
           description: error,
-          variant: "destructive"});
+          variant: "destructive",
+        });
         return;
       }
       
@@ -137,13 +143,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       
       toast({
         title: t('translation.translation_success'),
-        description: t('translation.content_translated')});
+        description: t('translation.content_translated'),
+      });
     } catch (error) {
       logErrorToProduction('Error translating ${field}:', { data: error });
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
   

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 {
   "general": {
     "app_name": "سوق زيون للذكاء الاصطناعي",
@@ -59,4 +63,8 @@
     "language_changed": "تم تغيير اللغة إلى {{language}}",
     "switch_to_detected": "التبديل إلى {{language}}؟"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

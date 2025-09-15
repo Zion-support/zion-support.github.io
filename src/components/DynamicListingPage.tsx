@@ -10,7 +10,8 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem} from "@/components/ui/select";
+  SelectItem,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -45,7 +46,8 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
-  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
+  detailBasePath = "/marketplace/listing",
+}: DynamicListingPageProps) {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -68,7 +70,8 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0,
-    max: 10000});
+    max: 10000,
+  });
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [selectedBrand, setSelectedBrand] = useState("all");
@@ -187,7 +190,8 @@ export function DynamicListingPage({
       if (listing) {
         toast({
           title: "Quote Requested",
-          description: `Your quote request for ${listing.title} has been sent.`});
+          description: `Your quote request for ${listing.title} has been sent.`,
+        });
 
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
@@ -196,7 +200,9 @@ export function DynamicListingPage({
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0]}};
+            image: listing.images?.[0],
+          },
+        };
         
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData));

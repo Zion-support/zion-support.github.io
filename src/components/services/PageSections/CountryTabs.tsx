@@ -8,7 +8,8 @@ import {
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious} from '@/components/ui/pagination';
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
@@ -28,7 +29,8 @@ export function CountryTabs({
   handleCountrySelect,
   onQuote,
   searchQuery,
-  setSearchQuery}: CountryTabsProps) {
+  setSearchQuery,
+}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 

@@ -1,28 +1,19 @@
-import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from './Footer';
+<<<<<<< HEAD
+"use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
+import React, { useState } from 'react';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-};
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-export default Layout;
-      {children};
-    </div>)
-};
-import React, { useState } from 'react';
+  return (
+    <>
       {/* Top Contact Bar */}
       <TopContactBar />
       
@@ -42,11 +33,24 @@ import React, { useState } from 'react';
       {/* Footer */}
       <UltraFuturisticFooter2034 />
       
+=======
+export default function Layout({ children }: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+      {/* Main Content */}
+      <main className="relative z-10 pt-24 lg:pt-28 min-h-screen">
+        {children}
+      </main>
+      
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Floating Elements */}
       <div className="fixed top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse z-50"></div>
       <div className="fixed top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000 z-50"></div>
       <div className="fixed bottom-40 left-20 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-2000 z-50"></div>
       <div className="fixed bottom-20 right-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-3000 z-50"></div>
+<<<<<<< HEAD
       
       {/* Mobile Sidebar Toggle */}
       <button
@@ -155,137 +159,13 @@ import React, { useState } from 'react';
           </motion.div>
         </div>
       )}
+    </>
+  );
+};
+
+export default Layout;
+=======
     </div>
   );
 }
-import EnhancedNavigation2025 from './EnhancedNavigation2025';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Skip to content link for accessibility */}
-      <a href="#main" className="skip-link">Skip to main content</a>
-      {/* Futuristic Background */}
-      {/* Skip to content link for accessibility */}
-      <a 
-        href="#main" 
-        className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300"
-      >
-        Skip to main content
-      </a>
-
-      {/* Enhanced Futuristic Background */}
-      <UltraFuturisticBackground2038 intensity="medium" theme="quantum-neon" />
-
-      {/* Loading State */}
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
-          >
-            <div className="text-center">
-              <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-cyan-400 text-lg font-semibold">Loading Zion Tech Group</p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Layout Structure */}
-      <div className="relative z-10">
-        {/* Top Contact Bar */}
-        <TopContactBar />
-        
-        {/* Navigation */}
-        <UltraAdvancedNavigation2035 />
-        
-        {/* Sidebar and Main Content */}
-        <div className="flex">
-          <EnhancedSidebar2025 
-            isOpen={sidebarOpen} 
-            onClose={() => setSidebarOpen(false)}
-            aria-hidden={!sidebarOpen}
-            aria-label="Main navigation menu"
-          />
-          
-          <main 
-            id="main" 
-            role="main" 
-            className="flex-1 pt-24 lg:pt-28 min-h-screen"
-            aria-label="Main content"
-          >
-            {/* Announcement for screen readers when sidebar opens/closes */}
-            <div 
-              aria-live="polite" 
-              aria-atomic="true" 
-              className="sr-only"
-            >
-              {sidebarOpen ? 'Sidebar opened' : 'Sidebar closed'}
-            </div>
-            
-            {children}
-          </main>
-        </div>
-        
-        {/* Footer */}
-        <UltraAdvancedFooter2035 />
-      </div>
-
-      {/* Back to top button */}
-      <motion.button
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
-        aria-label="Back to top"
-      >
-        <svg 
-          className="w-6 h-6" 
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M5 10l7-7m0 0l7 7m-7-7v18" 
-          />
-        </svg>
-      </motion.button>
-      <UltraFuturisticBackground2035>
-        {/* Layout Structure */}
-        <div className="relative z-10">
-          {/* Top Contact Bar */}
-          <TopContactBar />
-          
-          {/* Navigation */}
-          <UltraFuturisticNavigation2035 />
-          
-          {/* Sidebar and Main Content */}
-          <div className="flex">
-            <EnhancedSidebar2025 
-              isOpen={sidebarOpen} 
-              onClose={() => setSidebarOpen(false)} 
-            />
-            
-            <main id="main" role="main" className="flex-1 pt-24 lg:pt-28">
-              {children}
-            </main>
-          </div>
-          
-          {/* Footer */}
-          <UltraFuturisticFooter2035 />
-        </div>
-      </UltraFuturisticBackground2035>
-    </div>
-  );
-}
+>>>>>>> origin/auto/autonomy-17186719616

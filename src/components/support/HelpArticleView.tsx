@@ -35,7 +35,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       title: "Thank you for your feedback!",
       description: type === "helpful" 
         ? "We're glad this article was helpful." 
-        : "We'll work on improving this article."});
+        : "We'll work on improving this article.",
+    });
   };
   
   return (

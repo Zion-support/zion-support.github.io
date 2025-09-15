@@ -3,6 +3,15 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
+<<<<<<< HEAD
+  Brain
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
+=======
   Brain, 
   MessageSquare, 
   Image, 
@@ -10,6 +19,7 @@ import {
   Code, 
   FileText, 
   Zap, 
+>>>>>>> origin/auto/autonomy-17186719616
   Star,
   ExternalLink,
   CheckCircle,
@@ -22,7 +32,11 @@ export default function AiToolsPage() {
     {
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'ChatGPT Plus',
+<<<<<<< HEAD
+      description: 'Advanced AI chatbot with enhanced reasoningweb browsingand plugin capabilities for professional use.',
+=======
       description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+>>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
@@ -57,6 +71,10 @@ export default function AiToolsPage() {
       textColor: 'text-purple-400',
       gradient: 'from-purple-400 to-pink-500',
       popular: true,
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       category: 'Image Generation'
     },
     {
@@ -82,7 +100,11 @@ export default function AiToolsPage() {
     {
       icon: <Video className="w-8 h-8 text-white" />,
       title: 'Runway ML',
+<<<<<<< HEAD
+      description: 'Professional AI video generation and editing tools for filmmakersmarketersand content creators.',
+=======
       description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
+>>>>>>> origin/auto/autonomy-17186719616
       features: [
         'AI video generation',
         'Video editing tools',
@@ -102,7 +124,11 @@ export default function AiToolsPage() {
     {
       icon: <MessageSquare className="w-8 h-8 text-white" />,
       title: 'Claude Pro',
+<<<<<<< HEAD
+      description: 'Anthropic\'s advanced AI assistant with superior reasoninganalysisand document processing capabilities.',
+=======
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',
+>>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Advanced reasoning abilities',
         'Document analysis',
@@ -122,7 +148,11 @@ export default function AiToolsPage() {
     {
       icon: <FileText className="w-8 h-8 text-white" />,
       title: 'Jasper AI',
+<<<<<<< HEAD
+      description: 'AI-powered content creation platform for marketerswritersand businesses with enterprise features.',
+=======
       description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
+>>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Content generation',
         'Brand voice training',
@@ -171,13 +201,21 @@ export default function AiToolsPage() {
   const aiCategories = [
     {
       name: 'Conversational AI',
+<<<<<<< HEAD
+      description: 'Chatbotsvirtual assistantsand language models',
+=======
       description: 'Chatbots, virtual assistants, and language models',
+>>>>>>> origin/auto/autonomy-17186719616
       tools: 3,
       avgPrice: '$20/month'
     },
     {
       name: 'Image Generation',
+<<<<<<< HEAD
+      description: 'AI-powered artdesignand visual content creation',
+=======
       description: 'AI-powered art, design, and visual content creation',
+>>>>>>> origin/auto/autonomy-17186719616
       tools: 1,
       avgPrice: '$20/month'
     },
@@ -205,7 +243,11 @@ export default function AiToolsPage() {
     <>
       <Head>
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
+<<<<<<< HEAD
+        <meta name="description" content="Discover real AI tools and services including ChatGPTMidjourneyGitHub Copilotand more. All tools include real pricingfeaturesand direct links." />
+=======
         <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+>>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -245,7 +287,11 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+<<<<<<< HEAD
+            {aiMarketStats.map((statindex) => (
+=======
             {aiMarketStats.map((stat, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -271,12 +317,20 @@ export default function AiToolsPage() {
               Curated AI Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+              Each tool has been carefully selected based on performancereliabilityand real-world value.
+=======
               Each tool has been carefully selected based on performance, reliability, and real-world value.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<<<<<<< HEAD
+            {aiTools.map((toolindex) => (
+=======
             {aiTools.map((tool, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -327,7 +381,11 @@ export default function AiToolsPage() {
                     </div>
 
                     <ul className="space-y-2 mb-6">
+<<<<<<< HEAD
+                      {tool.features.map((featureIndex) => (
+=======
                       {tool.features.map((feature, featureIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -335,9 +393,19 @@ export default function AiToolsPage() {
                       ))}
                     </ul>
 
+<<<<<<< HEAD
+
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
+
+
+
+=======
+                    <div className="flex items-center justify-between">
+                      <Button
+                        href={tool.website}
+>>>>>>> origin/auto/autonomy-17186719616
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -371,7 +439,11 @@ export default function AiToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
+            {aiCategories.map((categoryindex) => (
+=======
             {aiCategories.map((category, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -432,7 +504,11 @@ export default function AiToolsPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li>• Always review and edit AI-generated content</li>
+<<<<<<< HEAD
+                  <li>• Use specificdetailed prompts</li>
+=======
                   <li>• Use specific, detailed prompts</li>
+>>>>>>> origin/auto/autonomy-17186719616
                   <li>• Maintain human oversight and creativity</li>
                 </ul>
               </div>

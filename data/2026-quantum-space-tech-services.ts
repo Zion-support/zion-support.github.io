@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+export const quantumSpaceTechServices2026 = [] as any[];
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 export interface QuantumSpaceTechService2026 {
   id: string;
   name: string;
@@ -14,7 +18,10 @@ export interface QuantumSpaceTechService2026 {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech",
@@ -38,4 +45,8 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616

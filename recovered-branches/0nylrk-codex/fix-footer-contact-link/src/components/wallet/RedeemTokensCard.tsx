@@ -1,16 +1,29 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+import { useWallet } from "@/hooks/useWallet";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { GiftArrowRightExternalLink } from "lucide-react";
+=======
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog";
+=======
+  DialogTrigger,
+} from "@/components/ui/dialog";
+>>>>>>> origin/auto/autonomy-17186719616
 
 type RewardOption = {
   id: string;
@@ -45,13 +58,22 @@ const REWARD_OPTIONS: RewardOption[] = [
 ];
 
 export function RedeemTokensCard() {
+<<<<<<< HEAD
+  const { walletspendTokens } = useWallet();
+  const [opensetOpen] = useState(false);
+=======
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return;
     
+<<<<<<< HEAD
+    await spendTokens(option.cost`Redeemed: ${option.title}`);
+=======
     await spendTokens(option.cost, `Redeemed: ${option.title}`);
+>>>>>>> origin/auto/autonomy-17186719616
     setOpen(false);
   };
 

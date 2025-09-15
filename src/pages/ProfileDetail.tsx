@@ -51,7 +51,8 @@ export default function ProfileDetail() {
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
-          variant: "destructive"});
+          variant: "destructive",
+        });
       } finally {
         setIsLoading(false);
       }

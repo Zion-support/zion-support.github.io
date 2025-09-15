@@ -16,7 +16,8 @@ import { useTheme } from "@/hooks/useTheme";
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }];
+  { id: "billing", text: "Billing help" },
+];
 
 type Message = {
   id: string;
@@ -31,7 +32,9 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
-      timestamp: new Date()}]);
+      timestamp: new Date(),
+    },
+  ]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
@@ -60,7 +63,8 @@ export function ChatBotPanel() {
       id: `user-${Date.now()}`,
       content: text,
       sender: "user",
-      timestamp: new Date()};
+      timestamp: new Date(),
+    };
     
     setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
@@ -74,7 +78,8 @@ export function ChatBotPanel() {
         id: `bot-${Date.now()}`,
         content: response.message || "Sorry, I couldn't process your request. Please try again.",
         sender: "bot",
-        timestamp: new Date()};
+        timestamp: new Date(),
+      };
       
       setMessages((prev) => [...prev, botMessage]);
       
@@ -95,7 +100,8 @@ export function ChatBotPanel() {
       toast({
         variant: "destructive",
         title: "Communication Error",
-        description: "We're having trouble connecting to our support service."});
+        description: "We're having trouble connecting to our support service.",
+      });
       
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {
@@ -111,10 +117,12 @@ export function ChatBotPanel() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"},
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
-        })});
+        }),
+      });
       
       if (!response.ok) {
         return {
@@ -143,7 +151,8 @@ export function ChatBotPanel() {
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
-      timestamp: new Date()};
+      timestamp: new Date(),
+    };
     
     setMessages((prev) => [...prev, escalationMessage]);
     
@@ -192,7 +201,8 @@ export function ChatBotPanel() {
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted",
-      description: "A support agent will be with you shortly."});
+      description: "A support agent will be with you shortly.",
+    });
   };
 
   const handleEmailSupport = () => {
