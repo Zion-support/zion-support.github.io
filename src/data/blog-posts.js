@@ -333,6 +333,38 @@ export const blogPosts = [
     imageUrl: "/images/blog/evals-maturity-model-2026.jpg",
     slug: "ai-2026-evals-maturity-model"
   }
+  ,
+  {
+    id: 21,
+    title: "AI 2026: Autonomous Agents Red-Team Scenarios",
+    excerpt: "Scenario-driven adversarial testing to harden agent systems before production.",
+    content: "Red teaming autonomous agents requires realistic, scenario-driven adversaries across prompts, tools, data, and environment. This guide provides a catalog of red-team scenarios, measurable pass criteria, safe rollback strategies, and how to integrate adversarial tests into CI/CD and pre-deployment gates.",
+    author: "Sofia Alvarez",
+    authorRole: "Principal AI Red Team Lead",
+    publishDate: "2025-09-15",
+    readTime: "10 min read",
+    category: "Safety",
+    tags: ["Red Team", "Agents", "Safety", "Reliability"],
+    featured: true,
+    imageUrl: "/images/blog/autonomous-agents-red-team-2026.jpg",
+    slug: "ai-2026-autonomous-agents-red-team-scenarios"
+  }
+  ,
+  {
+    id: 22,
+    title: "AI 2026: Production Guardrails Playbook",
+    excerpt: "Operational guardrails, policy-as-code, and runtime protections for safe AI scale.",
+    content: "A practical playbook for implementing production guardrails for AI systems: risk-tiered approvals, policy-as-code enforcement, runtime tripwires, action gating, and rollback automation. Includes reference architectures, checklists, and measurable SLAs/SLOs for AI-powered workflows.",
+    author: "Ethan Park",
+    authorRole: "Head of AI Platform",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Guardrails", "Policy-as-Code", "Operations", "Governance"],
+    featured: true,
+    imageUrl: "/images/blog/production-guardrails-playbook-2026.jpg",
+    slug: "ai-2026-production-guardrails-playbook"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
