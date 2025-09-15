@@ -45,6 +45,10 @@ import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import RevolutionaryPromoBanner2026 from './src/components/RevolutionaryPromoBanner2026';
 import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+import NewContentPromoBanner2026 from './src/components/NewContentPromoBanner2026';
+import AdvancedSpaceTech2026 from './src/pages/AdvancedSpaceTech2026';
+import AdvancedBiotechAI2026 from './src/pages/AdvancedBiotechAI2026';
+import AdvancedCybersecuritySuite2026 from './src/pages/AdvancedCybersecuritySuite2026';
 
 export default function App(): JSX.Element {
   return (
@@ -59,6 +63,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryPromoBanner2026 />
+
+                {/* New Content Promotional Banner */}
+                <NewContentPromoBanner2026 />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -111,6 +118,15 @@ export default function App(): JSX.Element {
                     <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 All Services
                     </a>
+                    <a href="/pages/AdvancedSpaceTech2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 Space Tech 2026
+                    </a>
+                    <a href="/pages/AdvancedBiotechAI2026" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧬 Biotech AI 2026
+                    </a>
+                    <a href="/pages/AdvancedCybersecuritySuite2026" className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🛡️ Cyber Security 2026
+                    </a>
                   </div>
                 </div>
 
@@ -132,6 +148,94 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
                 </div>
+
+                {/* Featured New Content 2026 */}
+                <section className="mb-12">
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse">
+                      🌟 BRAND NEW 2026 CONTENT
+                    </div>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Revolutionary Technology Content</h2>
+                    <p className="text-xl text-gray-600">Discover our latest cutting-edge content covering breakthrough technologies</p>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-3 gap-8 mb-8">
+                    <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-200">
+                      <div className="text-6xl mb-4 text-center">🚀</div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Advanced Space Tech 2026</h3>
+                      <p className="text-gray-600 mb-6 text-center">
+                        Revolutionary space technologies, quantum propulsion systems, and interplanetary AI networks
+                      </p>
+                      <div className="space-y-2 mb-6 text-sm text-gray-700">
+                        <div className="flex justify-between">
+                          <span>Quantum Propulsion:</span>
+                          <span className="font-semibold">99.7% light speed</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>AI Networks:</span>
+                          <span className="font-semibold">Autonomous control</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Terraforming:</span>
+                          <span className="font-semibold">Mars ready</span>
+                        </div>
+                      </div>
+                      <a href="/pages/AdvancedSpaceTech2026" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                        Explore Space Tech →
+                      </a>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200">
+                      <div className="text-6xl mb-4 text-center">🧬</div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Advanced Biotech AI 2026</h3>
+                      <p className="text-gray-600 mb-6 text-center">
+                        AI-powered biotechnology revolutionizing healthcare, agriculture, and human enhancement
+                      </p>
+                      <div className="space-y-2 mb-6 text-sm text-gray-700">
+                        <div className="flex justify-between">
+                          <span>Drug Discovery:</span>
+                          <span className="font-semibold">10x faster</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Gene Editing:</span>
+                          <span className="font-semibold">99.9% precision</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Agriculture:</span>
+                          <span className="font-semibold">300% yield</span>
+                        </div>
+                      </div>
+                      <a href="/pages/AdvancedBiotechAI2026" className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                        Explore Biotech AI →
+                      </a>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-red-200">
+                      <div className="text-6xl mb-4 text-center">🛡️</div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Advanced Cybersecurity 2026</h3>
+                      <p className="text-gray-600 mb-6 text-center">
+                        Next-generation security with AI threat detection, quantum encryption, and autonomous defense
+                      </p>
+                      <div className="space-y-2 mb-6 text-sm text-gray-700">
+                        <div className="flex justify-between">
+                          <span>Threat Detection:</span>
+                          <span className="font-semibold">99.9% accuracy</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Quantum Encryption:</span>
+                          <span className="font-semibold">Unbreakable</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Auto Defense:</span>
+                          <span className="font-semibold">24/7 protection</span>
+                        </div>
+                      </div>
+                      <a href="/pages/AdvancedCybersecuritySuite2026" className="block w-full bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                        Explore Security →
+                      </a>
+                    </div>
+                  </div>
+                </section>
 
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -430,6 +534,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/AdvancedSpaceTech2026" element={<AdvancedSpaceTech2026 />} />
+          <Route path="/pages/AdvancedBiotechAI2026" element={<AdvancedBiotechAI2026 />} />
+          <Route path="/pages/AdvancedCybersecuritySuite2026" element={<AdvancedCybersecuritySuite2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
