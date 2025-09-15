@@ -518,6 +518,18 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+                title: 'Enterprise Agent Architecture Patterns for 2026',
+                summary:
+                  'Designing scalable, secure, and maintainable agent systems for enterprise environments.',
+                href: '/blog/ai-2026-enterprise-agent-architecture'
+              },
+              {
+                title: 'Building Multimodal Agent Systems for Enterprise',
+                summary:
+                  'Integrating vision, language, and audio processing in production agent workflows.',
+                href: '/blog/ai-2026-multimodal-agent-systems'
+              },
+              {
                 title: 'AI 2026: Trustworthy Model Routing',
                 summary:
                   'Policy‑aware, evaluation‑driven routing balancing quality, latency, and cost with audit evidence.',

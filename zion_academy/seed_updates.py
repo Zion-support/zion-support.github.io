@@ -330,22 +330,56 @@ Submit your project for consideration by Friday and get feedback from mentors an
                 'update_type': 'event',
                 'priority': 'normal',
                 'created_at': datetime.utcnow() - timedelta(days=9)
+            },
+            {
+                'title': 'New Course: Enterprise Agent Architecture 2026',
+                'content': '''Master the art of building scalable, secure agent systems for enterprise environments.
+
+Course highlights:
+• Microservices-based agent design patterns
+• Event-driven architecture for agent coordination
+• Policy-as-code governance implementation
+• Security and compliance considerations
+• Monitoring and observability strategies
+
+Includes hands-on labs, real-world case studies, and certification exam. Perfect for architects and senior engineers.''',
+                'summary': 'Comprehensive course on designing enterprise-grade agent architectures with security and scalability.',
+                'update_type': 'course',
+                'priority': 'high',
+                'created_at': datetime.utcnow() - timedelta(hours=2)
+            },
+            {
+                'title': 'Multimodal AI Workshop: Vision + Language Integration',
+                'content': '''Learn to build production-ready multimodal AI systems that process text, images, and audio.
+
+Workshop covers:
+• Cross-modal attention mechanisms
+• Latency optimization techniques
+• Data quality and consistency strategies
+• Enterprise security considerations
+• Real-world implementation patterns
+
+Includes hands-on coding sessions, sample datasets, and deployment guides. Limited to 20 participants.''',
+                'summary': 'Hands-on workshop for building multimodal AI systems with vision, language, and audio processing.',
+                'update_type': 'workshop',
+                'priority': 'high',
+                'created_at': datetime.utcnow() - timedelta(hours=1)
             }
         ]
         
-        # Create and add additional updates
-        for update_data in more_updates:
-            update = Update(**update_data)
-            db.session.add(update)
+        # Create and add updates
+        for update_data in sample_updates:
+            if update_data['title'] not in existing_titles:
+                update = Update(**update_data)
+                db.session.add(update)
         
         # Commit all updates
         db.session.commit()
-        print(f"Successfully seeded {len(sample_updates) + len(more_updates)} total sample updates!")
+        print(f"Successfully seeded {len(sample_updates)} sample updates!")
         
         # Print summary
         print("\nAll updates now in database:")
         for update in Update.query.order_by(Update.created_at.desc()).all():
->>>>>>> ae78a241413f04b853a8cb652af3c863231dcf08
             print(f"• {update.title} ({update.priority} priority, {update.update_type})")
 
 if __name__ == '__main__':
