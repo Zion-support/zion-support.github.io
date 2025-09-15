@@ -183,6 +183,23 @@ export default function Home() {
       href: "/services/ai-sales-copilot",
       color: "from-green-400 to-emerald-500"
     }
+    ,
+    {
+      title: "AI Content Studio",
+      description: "Generate on-brand blogs, landing pages, and social posts with built-in SEO and approvals",
+      icon: BookOpen,
+      features: ["Programmatic SEO", "Brand Voice Controls", "Multi-channel Publishing"],
+      href: "/services/ai-content-creation-studio",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      title: "AI Support Agent",
+      description: "Omnichannel support deflection and agent assist with secure retrieval over your docs",
+      icon: HelpCircle,
+      features: ["RAG over Knowledge Base", "Multilingual", "Analytics & Deflection"],
+      href: "/services/ai-customer-support-agent",
+      color: "from-blue-400 to-indigo-500"
+    }
   ];
 
   const serviceCategories: ServiceCategory[] = [
@@ -275,6 +292,23 @@ export default function Home() {
       price: "$799/month",
       category: "Transportation"
     }
+    ,
+    {
+      title: "Digital Twins Platform",
+      description: "Simulate and optimize complex systems with real-time telemetry and what-if scenarios",
+      icon: Network,
+      href: "/services/digital-twins-platform",
+      price: "$1,999/month",
+      category: "Industrial Tech"
+    },
+    {
+      title: "Quantum-Safe Vault",
+      description: "Post-quantum key management and hybrid cryptography for long-term data protection",
+      icon: Lock,
+      href: "/services/quantum-ready-cryptography",
+      price: "$3,499/month",
+      category: "Cybersecurity"
+    }
   ];
 
   const microSaasServices: MicroSaasService[] = [
@@ -301,6 +335,23 @@ export default function Home() {
       href: "/services/ai-financial-advisor",
       price: "$399/month",
       category: "Finance"
+    }
+    ,
+    {
+      title: "SEO Content Optimizer",
+      description: "Programmatic landing pages, internal linking, and ongoing on-page audits",
+      icon: Gauge,
+      href: "/services/seo-content-optimizer",
+      price: "$129/month",
+      category: "Marketing"
+    },
+    {
+      title: "Cloud Cost Optimizer",
+      description: "Rightsizing, scheduling, and anomaly alerts with policy-based savings actions",
+      icon: BarChart3,
+      href: "/services/cloud-cost-optimizer",
+      price: "$600/month",
+      category: "FinOps"
     }
   ];
 
