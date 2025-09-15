@@ -1,12 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
 
-describe('EnhancedAnalyticsdynamic', () => {
+describe('EnhancedAnalytics', () => {
   test('renders without crashing', () => {
-    render(<EnhancedAnalyticsdynamic />);
-    expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument();
+    render(<EnhancedAnalytics />);
+    expect(screen.getByTestId('enhancedanalytics')).toBeInTheDocument();
   });
-});
+  
+  test('displays correct content', () => {
+    render(<EnhancedAnalytics />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<EnhancedAnalytics />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<EnhancedAnalytics />);
+  });
 });

@@ -1,26 +1,23 @@
 import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
+import AIChatbotSystem from '../components/AIChatbotSystem';
 
-describe('AIChatbotSystemtest', () => {
+describe('AIChatbotSystem', () => {
   test('renders without crashing', () => {
-    render(<AIChatbotSystemtest />);
-    expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
+    render(<AIChatbotSystem />);
+    expect(screen.getByTestId('aichatbotsystem')).toBeInTheDocument();
   });
   
   test('displays correct content', () => {
-    render(<AIChatbotSystemtest />);
+    render(<AIChatbotSystem />);
   });
   
   test('handles user interactions', () => {
-    render(<AIChatbotSystemtest />);
+    render(<AIChatbotSystem />);
   });
   
   test('applies correct styling', () => {
-    render(<AIChatbotSystemtest />);
+    render(<AIChatbotSystem />);
   });
 });

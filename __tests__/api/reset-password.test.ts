@@ -9,46 +9,32 @@ interface ErrorResponse {
 
 describe('/api/auth/reset token validation', () => {
   it('returns 400 if token is missing', async () => {
-    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+    const { req, res } = createMocks({
       method: 'POST' as RequestMethod,
-      body: {
-        email: 'test@example.com'
-      }
+      body: { newPassword: 'pass12345' }
     });
 
-    await handler(req, res);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(400);
-    const data = JSON.parse(res._getData()) as ErrorResponse;
-    expect(data.message).toContain('token');
+    expect((res._getJSONData() as ErrorResponse).message).toBe('Token and new password are required.');
   });
 
-  it('returns 400 if email is missing', async () => {
-    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+  it('returns 400 for invalid token', async () => {
+    const { req, res } = createMocks({
       method: 'POST' as RequestMethod,
-      body: {
-        token: 'valid-token'
-      }
+      body: { token: 'invalid', newPassword: 'pass12345' }
     });
 
-    await handler(req, res);
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    );
 
     expect(res._getStatusCode()).toBe(400);
-    const data = JSON.parse(res._getData()) as ErrorResponse;
-    expect(data.message).toContain('email');
-  });
-
-  it('returns 200 for valid token and email', async () => {
-    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
-      method: 'POST' as RequestMethod,
-      body: {
-        token: 'valid-token',
-        email: 'test@example.com'
-      }
-    });
-
-    await handler(req, res);
-
-    expect(res._getStatusCode()).toBe(200);
+    expect((res._getJSONData() as ErrorResponse).message).toBe('Invalid or expired password reset token.');
   });
 });

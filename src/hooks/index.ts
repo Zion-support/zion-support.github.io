@@ -1,30 +1,24 @@
-import {useState} from 'react'
-export const useLocalStorage = (key: string, initialValue: unknown) => {
+import { useState } from 'react';
 
-  } catch {
-export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
-      return initial_value;
+export const useLocalStorage = (key: string, initialValue: any) => {
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch {
+      return initialValue;
     }
   });
-  const set_value = (value: unknown, ) =>: any {
+
+  const setValue = (value: any) => {
     try {
-
       const valueToStore = value instanceof Function ? value(storedValue) : value;
-      window && window.localStorage.setItem(key, JSON && JSON.stringify(valueToStore));
-    } catch (_error) {
-      console && console.error('Error setting localStorage:', _error);
-
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+      console.error('Error setting localStorage:', error);
     }
-  }
-  return [storedValue, setValue] as const
-}
-      const valueToStore = value instanceof Function ? value (stored_value) : value;
-      window.local_storage.set_item (key, JSON.stringify (valueToStore));
-    } catch (_error) {
-      console.error ('Error setting local_storage:', _error);
-    }
-  }
-  return [stored_value, set_value] as const;
+  };
 
-}
-
+  return [storedValue, setValue] as const;
+};

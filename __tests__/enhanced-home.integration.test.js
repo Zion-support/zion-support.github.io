@@ -1,1 +1,23 @@
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home" describe('enhanced-home Integration Tests',() => {' test('page renders correctly',() => {' render(<enhanced-home / />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works',() => {' render(<enhanced-home / />) }) test('page content is accessible',() => {' render(<enhanced-home / />) }) test('page loads with correct data',() => {' render(<enhanced-home / />) })})
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import enhanced-home.integration from '../components/enhanced-home.integration';
+
+describe('enhanced-home.integration', () => {
+  test('renders without crashing', () => {
+    render(<enhanced-home.integration />);
+    expect(screen.getByTestId('enhanced-home.integration')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<enhanced-home.integration />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<enhanced-home.integration />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<enhanced-home.integration />);
+  });
+});

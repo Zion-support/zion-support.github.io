@@ -8,12 +8,5 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "avoid",
-<<<<<<< HEAD
   "endOfLine": "lf"
-=======
-  "endOfLine": "lf",
-  "quoteProps": "as-needed",
-  "jsxSingleQuote": true,
-  "proseWrap": "preserve"
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
 }

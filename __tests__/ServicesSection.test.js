@@ -1,1 +1,23 @@
-import _React from 'react"  import '@testing-library/jest-dom import ServicesSection from '../components/ServicesSection" describe('ServicesSection',() => {' test('renders without crashing',() => {' render(<ServicesSection / />) expect(screen.getByTestId("servicessection")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ServicesSection / />) }) test('handles user interactions',() => {' render(<ServicesSection / />) }) test('applies correct styling',() => {' render(<ServicesSection / />) }) })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ServicesSection from '../components/ServicesSection';
+
+describe('ServicesSection', () => {
+  test('renders without crashing', () => {
+    render(<ServicesSection />);
+    expect(screen.getByTestId('servicessection')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<ServicesSection />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<ServicesSection />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<ServicesSection />);
+  });
+});

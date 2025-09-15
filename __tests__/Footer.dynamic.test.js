@@ -1,1 +1,23 @@
-import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Footer from '../components/Footer';
+
+describe('Footer', () => {
+  test('renders without crashing', () => {
+    render(<Footer />);
+    expect(screen.getByTestId('footer')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<Footer />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<Footer />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<Footer />);
+  });
+});

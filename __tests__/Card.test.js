@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Card from '../components/Card';
 
@@ -8,17 +8,16 @@ describe('Card', () => {
     render(<Card />);
     expect(screen.getByTestId('card')).toBeInTheDocument();
   });
-
+  
   test('displays correct content', () => {
     render(<Card />);
   });
-
+  
   test('handles user interactions', () => {
     render(<Card />);
   });
-
+  
   test('applies correct styling', () => {
     render(<Card />);
   });
-});
 });

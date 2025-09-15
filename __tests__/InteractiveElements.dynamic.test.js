@@ -1,1 +1,23 @@
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import InteractiveElements from '../components/InteractiveElements';
+
+describe('InteractiveElements', () => {
+  test('renders without crashing', () => {
+    render(<InteractiveElements />);
+    expect(screen.getByTestId('interactiveelements')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<InteractiveElements />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<InteractiveElements />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<InteractiveElements />);
+  });
+});

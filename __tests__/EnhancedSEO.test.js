@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
@@ -8,17 +8,16 @@ describe('EnhancedSEO', () => {
     render(<EnhancedSEO />);
     expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();
   });
-
+  
   test('displays correct content', () => {
     render(<EnhancedSEO />);
   });
-
+  
   test('handles user interactions', () => {
     render(<EnhancedSEO />);
   });
-
+  
   test('applies correct styling', () => {
     render(<EnhancedSEO />);
   });
-});
 });

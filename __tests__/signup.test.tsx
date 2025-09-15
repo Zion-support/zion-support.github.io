@@ -1,10 +1,23 @@
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import signup from '../components/signup';
 
-
-// Mock test for signup
-describe('Signup'() => {
-  it('should render without crashing'() => {
-    expect(true).toBe(true);
+describe('signup', () => {
+  test('renders without crashing', () => {
+    render(<signup />);
+    expect(screen.getByTestId('signup')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<signup />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<signup />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<signup />);
   });
 });
-
-

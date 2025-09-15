@@ -1,190 +1,128 @@
-#!/usr/bin/env node
-
+const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class SecurityScanner {
-  constructor() {
-    this.vulnerabilities = [];
-    this.securityIssues = [];
-    this.logFile = path.join(__dirname, 'logs', 'security-scanner.log');
-    this.ensureLogDirectory();
-  }
+const SECURITY_LOG_PATH = path.join(process.cwd(), 'security-report.json');
 
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async scanSecurity() {
-    this.log('🔒 Starting security scan...');
-    
-    try {
-      // Scan for vulnerabilities
-      await this.scanVulnerabilities();
-      
-      // Scan for security issues in code
-      await this.scanCodeSecurity();
-      
-      // Scan for sensitive data
-      await this.scanSensitiveData();
-      
-      // Generate security report
-      await this.generateSecurityReport();
-      
-      this.log('Security scan completed');
-      return {
-        vulnerabilities: this.vulnerabilities,
-        securityIssues: this.securityIssues
-      };
-    } catch (error) {
-      this.log(`Security scan failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async scanVulnerabilities() {
-    try {
-      const result = execSync('npm audit --json', { 
-        stdio: 'pipe', 
-        cwd: process.cwd() 
+async function runSecurityScan() {
+  console.log('🔒 Running security scan...');
+  
+  try {
+    // Run npm audit
+    const auditResult = await new Promise((resolve, reject) => {
+      exec('npm audit --json', (error, stdout, stderr) => {
+        if (error && error.code !== 1) { // npm audit exits with code 1 for vulnerabilities
+          return reject(error);
+        }
+        resolve({ stdout, stderr });
       });
-      const auditData = JSON.parse(result);
-      
-      if (auditData.vulnerabilities) {
-        Object.entries(auditData.vulnerabilities).forEach(([name, vuln]) => {
-          this.vulnerabilities.push({
-            name,
-            severity: vuln.severity,
-            description: vuln.description,
-            recommendation: vuln.recommendation
-          });
-        });
-      }
-    } catch (error) {
-      this.log('Could not scan vulnerabilities', 'WARNING');
+    });
+
+    let auditData = {};
+    try {
+      auditData = JSON.parse(auditResult.stdout);
+    } catch (e) {
+      console.log('⚠️  Could not parse audit results');
     }
-  }
 
-  async scanCodeSecurity() {
-    const files = this.getSourceFiles();
-    const securityPatterns = {
-      hardcodedSecrets: /(password|secret|key|token)\s*[:=]\s*['"][^'"]+['"]/gi,
-      evalUsage: /eval\s*\(/gi,
-      innerHTML: /innerHTML\s*=/gi,
-      dangerousFunctions: /(document\.write|setTimeout|setInterval)\s*\(/gi
+    // Check for common security issues in code
+    const securityChecks = {
+      hardcodedSecrets: await checkForHardcodedSecrets(),
+      unsafeEval: await checkForUnsafeEval(),
+      consoleLogs: await checkForConsoleLogs(),
+      weakCrypto: await checkForWeakCrypto()
     };
 
-    files.forEach(file => {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        Object.entries(securityPatterns).forEach(([patternName, pattern]) => {
-          const matches = content.match(pattern);
-          if (matches) {
-            this.securityIssues.push({
-              file,
-              type: patternName,
-              matches: matches.length,
-              description: `Potential ${patternName} found`
-            });
-          }
-        });
-      } catch (error) {
-        // Skip files that can't be read
-      }
-    });
-  }
-
-  async scanSensitiveData() {
-    const sensitivePatterns = {
-      apiKeys: /(api[_-]?key|apikey)\s*[:=]\s*['"][^'"]+['"]/gi,
-      passwords: /(password|pwd)\s*[:=]\s*['"][^'"]+['"]/gi,
-      tokens: /(token|access[_-]?token)\s*[:=]\s*['"][^'"]+['"]/gi
-    };
-
-    const files = this.getSourceFiles();
-    
-    files.forEach(file => {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        Object.entries(sensitivePatterns).forEach(([patternName, pattern]) => {
-          const matches = content.match(pattern);
-          if (matches) {
-            this.securityIssues.push({
-              file,
-              type: 'sensitive_data',
-              pattern: patternName,
-              matches: matches.length,
-              description: `Potential ${patternName} found - review for sensitive data`
-            });
-          }
-        });
-      } catch (error) {
-        // Skip files that can't be read
-      }
-    });
-  }
-
-  getSourceFiles() {
-    const files = [];
-    const walkDir = (dir) => {
-      try {
-        const items = fs.readdirSync(dir);
-        items.forEach(item => {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            walkDir(fullPath);
-          } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
-            files.push(fullPath);
-          }
-        });
-      } catch (error) {
-        // Skip directories that can't be read
-      }
-    };
-    
-    walkDir(process.cwd());
-    return files;
-  }
-
-  async generateSecurityReport() {
-    const report = {
+    const securityReport = {
       timestamp: new Date().toISOString(),
-      vulnerabilities: this.vulnerabilities,
-      securityIssues: this.securityIssues,
-      summary: {
-        totalVulnerabilities: this.vulnerabilities.length,
-        totalSecurityIssues: this.securityIssues.length,
-        criticalIssues: this.vulnerabilities.filter(v => v.severity === 'critical').length
-      }
+      npmAudit: {
+        vulnerabilities: auditData.metadata?.vulnerabilities || {},
+        summary: auditData.metadata?.summary || {}
+      },
+      codeSecurity: securityChecks,
+      recommendations: []
     };
 
-    const reportFile = path.join(__dirname, 'reports', 'security-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    // Generate recommendations
+    if (auditData.metadata?.vulnerabilities?.high > 0) {
+      securityReport.recommendations.push('Fix high-severity vulnerabilities found in dependencies');
+    }
     
-    this.log(`Security report generated: ${reportFile}`);
+    if (securityChecks.hardcodedSecrets.length > 0) {
+      securityReport.recommendations.push('Remove hardcoded secrets from code');
+    }
+    
+    if (securityChecks.unsafeEval.length > 0) {
+      securityReport.recommendations.push('Replace unsafe eval() usage with safer alternatives');
+    }
+
+    fs.mkdirSync(path.dirname(SECURITY_LOG_PATH), { recursive: true });
+    fs.writeFileSync(SECURITY_LOG_PATH, JSON.stringify(securityReport, null, 2));
+    
+    console.log('✅ Security scan completed');
+    console.log(`🔍 Vulnerabilities found: ${auditData.metadata?.vulnerabilities?.total || 0}`);
+    console.log(`🔐 Code security issues: ${Object.values(securityChecks).flat().length}`);
+    
+    if (securityReport.recommendations.length > 0) {
+      console.log('💡 Security recommendations:');
+      securityReport.recommendations.forEach(rec => console.log(`   - ${rec}`));
+    }
+
+  } catch (error) {
+    console.error('❌ Security scan failed:', error);
   }
 }
 
-// Run if called directly
-if (require.main === module) {
-  const scanner = new SecurityScanner();
-  scanner.scanSecurity().catch(console.error);
+async function checkForHardcodedSecrets() {
+  return new Promise((resolve) => {
+    exec('grep -r "password\\|secret\\|key\\|token" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" | grep -v "//" | head -10', (error, stdout) => {
+      if (error) {
+        resolve([]);
+      } else {
+        resolve(stdout.trim().split('\n').filter(line => line.trim()));
+      }
+    });
+  });
 }
 
-module.exports = SecurityScanner;
+async function checkForUnsafeEval() {
+  return new Promise((resolve) => {
+    exec('grep -r "eval(" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js"', (error, stdout) => {
+      if (error) {
+        resolve([]);
+      } else {
+        resolve(stdout.trim().split('\n').filter(line => line.trim()));
+      }
+    });
+  });
+}
+
+async function checkForConsoleLogs() {
+  return new Promise((resolve) => {
+    exec('grep -r "console\\.log" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" | wc -l', (error, stdout) => {
+      if (error) {
+        resolve(0);
+      } else {
+        resolve(parseInt(stdout.trim()) || 0);
+      }
+    });
+  });
+}
+
+async function checkForWeakCrypto() {
+  return new Promise((resolve) => {
+    exec('grep -r "Math\\.random\\|crypto\\.randomBytes" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js"', (error, stdout) => {
+      if (error) {
+        resolve([]);
+      } else {
+        resolve(stdout.trim().split('\n').filter(line => line.trim()));
+      }
+    });
+  });
+}
+
+// Run security scan every hour
+setInterval(runSecurityScan, 60 * 60 * 1000);
+runSecurityScan(); // Run immediately on startup
+
+console.log('🛡️  Security scanner started');

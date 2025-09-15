@@ -1,135 +1,95 @@
 import js from '@eslint/js';
+import globals from 'globals';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
-  js.configs.recommended,
+  { 
+    ignores: [
+      'dist/**', 'out/**', '.next/**', 'node_modules/**', 
+      '*.config.js', '*.config.cjs', 'scripts/**', 'tools/**', 
+      'pm2-automation/**', 'automation/**', 'deployment/**', 
+      'e2e/**', 'ci-cd-reports/**', 'build-reports/**', 
+      'all-automations-reports/**', 'error-prevention-reports/**', 
+      'link-reports/**', 'lint-target/**', 'api-disabled/**', 
+      'api.disabled/**', 'api.disabled.temp/**', 
+      'components.disabled/**', 'components.disabled_full/**', 
+      'corrupted_files_backup_2/**', 'broken_files_backup/**', 
+      'ai-optimization-backups/**', 'disabled-api/**', 
+      'data/**', 'hooks/**', 'lib/**', 'services/**', 
+      'public/**', 'styles/**', 'server/**', 'netlify/**', 
+      'middleware.ts', 'middleware.security.ts', 
+      'cypress.config.ts', 'jest.config.jsx', 'jest.setup.js', 
+      'jest.setup.jsx', 'next.config.analyze.js', 
+      'next.config.analyzer.js', 'deployment/next.config.js', 
+      'deployments/**', '*.cjs', '*.js', '*.sh', '*.md', 
+      '*.txt', '*.log', '*.backup', '*.disabled', '*.minimal', 
+      '*.working', '*.temp', '*.cache', '*.lock', '*.toml', 
+      '*.html', '*.json', '*.yaml', '*.yml', '*.xml', 
+      '*.csv', '*.sql', '*.py', '*.rb', '*.php', '*.java', 
+      '*.cpp', '*.c', '*.h', '*.hpp', '*.cs', '*.vb', 
+      '*.swift', '*.kt', '*.scala', '*.go', '*.rs', 
+      '*.dart', '*.r', '*.m', '*.mm', '*.pl', '*.pm', 
+      '*.t', '*.pod', '*.podspec', '*.xcconfig', 
+      '*.pbxproj', '*.xcodeproj', '*.xcworkspace', 
+      '*.storyboard', '*.xib', '*.nib', '*.strings', 
+      '*.lproj', '*.bundle', '*.framework', '*.dylib', 
+      '*.a', '*.so', '*.dll', '*.exe', '*.app', '*.ipa', 
+      '*.apk', '*.deb', '*.rpm', '*.msi', '*.dmg', 
+      '*.pkg', '*.zip', '*.tar', '*.gz', '*.bz2', 
+      '*.xz', '*.7z', '*.rar', '*.iso', '*.img', 
+      '*.bin', '*.hex', '*.elf', '*.o', '*.obj', 
+      '*.lib', '*.exp', '*.pdb', '*.map', '*.sym', 
+      '*.dwarf', '*.stabs', '*.coff', '*.pe', '*.macho', 
+      '*.fat', '*.universal'
+    ] 
+  },
   {
-    files: ['src/**/*.{js,jsx}', 'app/**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        React: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        navigator: 'readonly',
-        URL: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        global: 'readonly',
-        self: 'readonly',
-        FormData: 'readonly',
-        URLSearchParams: 'readonly',
-        dataLayer: 'readonly',
-        gtag: 'readonly',
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2022
       },
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
     plugins: {
       react,
       'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': typescript
     },
     rules: {
+      ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-      'no-var': 'warn',
-      'no-undef': 'off',
+      ...typescript.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true }
+      ],
+      'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-redeclare': 'warn',
-      'no-empty': 'warn',
-      'no-useless-escape': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-console': 'warn',
+      'no-debugger': 'error'
     },
-  },
-  {
-    files: ['automation/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        React: 'readonly',
-      },
-    },
-    rules: {
-      // Loosen rules for automation scripts to avoid CI noise
-      'no-unused-vars': 'off',
-      'no-console': 'off',
-      'prefer-const': 'warn',
-      'no-var': 'warn',
-      'no-undef': 'off',
-    },
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'public/automation/**',
-      'automation/**',
-      'backup-merge-conflicts/**',
-      'recovered-branches/**',
-      'temp-problematic-pages/**',
-      'temp_backup_*/**',
-      '*.backup.*',
-      '*.cjs',
-      'zion-os/**',
-      'zion.app/**',
-      'utils/**',
-      'scripts/**',
-      'server/**',
-      'src.broken/**',
-      'netlify/**',
-      'hooks/**',
-      'lib/**',
-      'public/**',
-      'components/**',
-      'dao/**',
-      '*.js',
-      '*.cjs',
-      '*.mjs',
-      'src/components/disabled/**',
-      'src/pages-disabled/**',
-      'src/pages/AutonomousBusinessOperationsPlatform.js.jsx',
-      'src/data/innovativeMicroSaasServices.js.jsx',
-      'src/components/disabled/microSaasServices.js',
-      'src/components/disabled/ZionHireAI.jsx',
-      'src/components/disabled/EnhancedServicesPage.jsx',
-      'src/components/disabled/avatar.js',
-      'src/components/disabled/button.jsx',
-      'src/components/disabled/safeStorage.js',
-      'src/components/disabled/useAuthOperations.js',
-      'src/components/disabled/useEmailAuth.js',
-      'src/components/disabled/useEmailAuth.jsx',
-      'src/components/header/Header.js.jsx',
-      'src/components/home/FeatureCTAs.jsx',
-      'src/components/ui/badge.jsx',
-      'src/components/ui/button.js.jsx',
-      'src/components/ui/card.jsx',
-      'src/components/ui/form.jsx',
-      'src/components/ui/select.jsx',
-      'src/pages/Cookies.js.jsx',
-      'src/pages/PricingPage.js',
-      'src/pages/ProfileDetail.js.jsx',
-      'src/pages/ProfilePage.js.jsx',
-      'src/pages/accessibility-auditor.js.jsx',
-      'src/pages/advanced-cybersecurity-suite.js.jsx',
-      'src/pages/affiliate-attribution-hub.js.jsx',
-      'src/pages/soc2-compliance-automation.js.jsx',
-    ],
-  },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  }
 ];

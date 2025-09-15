@@ -1,1 +1,23 @@
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import sitemap from '../pages/sitemap" describe('sitemap Integration Tests',() => {' test('page renders correctly',() => {' render(<sitemap / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<sitemap / />) }) test('page content is accessible',() => {' render(<sitemap / />) }) test('page loads with correct data',() => {' render(<sitemap / />) }) })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import sitemap.integration from '../components/sitemap.integration';
+
+describe('sitemap.integration', () => {
+  test('renders without crashing', () => {
+    render(<sitemap.integration />);
+    expect(screen.getByTestId('sitemap.integration')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<sitemap.integration />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<sitemap.integration />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<sitemap.integration />);
+  });
+});

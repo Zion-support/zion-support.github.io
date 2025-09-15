@@ -1,12 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AnalyticsManagerdynamic from '../components/AnalyticsManager.dynamic';
+import AnalyticsManager from '../components/AnalyticsManager';
 
-describe('AnalyticsManagerdynamic', () => {
+describe('AnalyticsManager', () => {
   test('renders without crashing', () => {
-    render(<AnalyticsManagerdynamic />);
-    expect(screen.getByTestId('analyticsmanager.dynamic')).toBeInTheDocument();
+    render(<AnalyticsManager />);
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
   });
-});
+  
+  test('displays correct content', () => {
+    render(<AnalyticsManager />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<AnalyticsManager />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<AnalyticsManager />);
+  });
 });

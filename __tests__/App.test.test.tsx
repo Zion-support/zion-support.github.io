@@ -1,20 +1,23 @@
 import React from 'react';
-import { renderscreen } from '@testing-library/react';
-import App from '../App';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import App from '../components/App';
 
-describe('App'() => {
-  it('renders without crashing'() => {
+describe('App', () => {
+  test('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByTestId('app')).toBeInTheDocument();
   });
-
-  it('displays correct content'() => {
+  
+  test('displays correct content', () => {
     render(<App />);
-    // Add more specific tests here
   });
-
-  it('handles user interactions'() => {
+  
+  test('handles user interactions', () => {
     render(<App />);
-    // Add interaction tests here
+  });
+  
+  test('applies correct styling', () => {
+    render(<App />);
   });
 });

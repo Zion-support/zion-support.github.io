@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContactForm from '../components/ContactForm';
 
@@ -8,17 +8,16 @@ describe('ContactForm', () => {
     render(<ContactForm />);
     expect(screen.getByTestId('contactform')).toBeInTheDocument();
   });
-
+  
   test('displays correct content', () => {
     render(<ContactForm />);
   });
-
+  
   test('handles user interactions', () => {
     render(<ContactForm />);
   });
-
+  
   test('applies correct styling', () => {
     render(<ContactForm />);
   });
-});
 });

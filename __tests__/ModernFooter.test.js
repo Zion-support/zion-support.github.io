@@ -1,1 +1,23 @@
-import _React from 'react"  import '@testing-library/jest-dom import ModernFooter from '../components/ModernFooter" describe('ModernFooter',() => {' test('renders without crashing',() => {' render(<ModernFooter / / />) expect(screen.getByTestId("modernfooter")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ModernFooter / / />) }) test('handles user interactions',() => {' render(<ModernFooter / / />) }) test('applies correct styling',() => {' render(<ModernFooter / / />) }) })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ModernFooter from '../components/ModernFooter';
+
+describe('ModernFooter', () => {
+  test('renders without crashing', () => {
+    render(<ModernFooter />);
+    expect(screen.getByTestId('modernfooter')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<ModernFooter />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<ModernFooter />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<ModernFooter />);
+  });
+});

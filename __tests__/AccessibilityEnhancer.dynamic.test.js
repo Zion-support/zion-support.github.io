@@ -1,24 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dynamic';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
-describe('AccessibilityEnhancerdynamic', () => {
+describe('AccessibilityEnhancer', () => {
   test('renders without crashing', () => {
-    render(<AccessibilityEnhancerdynamic />);
-    expect(screen.getByTestId('accessibilityenhancer.dynamic')).toBeInTheDocument();
+    render(<AccessibilityEnhancer />);
+    expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();
   });
-
+  
   test('displays correct content', () => {
-    render(<AccessibilityEnhancerdynamic />);
+    render(<AccessibilityEnhancer />);
   });
-
+  
   test('handles user interactions', () => {
-    render(<AccessibilityEnhancerdynamic />);
+    render(<AccessibilityEnhancer />);
   });
-
+  
   test('applies correct styling', () => {
-    render(<AccessibilityEnhancerdynamic />);
+    render(<AccessibilityEnhancer />);
   });
-});
 });

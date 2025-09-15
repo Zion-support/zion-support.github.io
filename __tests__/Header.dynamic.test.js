@@ -1,1 +1,23 @@
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Header from '../components/Header';
+
+describe('Header', () => {
+  test('renders without crashing', () => {
+    render(<Header />);
+    expect(screen.getByTestId('header')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<Header />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<Header />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<Header />);
+  });
+});

@@ -1,12 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ContactFormdynamic from '../components/ContactForm.dynamic';
+import ContactForm from '../components/ContactForm';
 
-describe('ContactFormdynamic', () => {
+describe('ContactForm', () => {
   test('renders without crashing', () => {
-    render(<ContactFormdynamic />);
-    expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument();
+    render(<ContactForm />);
+    expect(screen.getByTestId('contactform')).toBeInTheDocument();
   });
-});
+  
+  test('displays correct content', () => {
+    render(<ContactForm />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<ContactForm />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<ContactForm />);
+  });
 });

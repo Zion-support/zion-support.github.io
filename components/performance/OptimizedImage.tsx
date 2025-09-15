@@ -4,23 +4,22 @@ import Image from 'next/image';
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  width: number;
-  height: number;
-  className?: string;
+  width?: number;
+  height?: number;
   priority?: boolean;
-  quality?: number;
+  className?: string;
   sizes?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
-  className = ', ',
   priority = false,
-  quality = 75,
-  sizes = '100vw'
+  className = '',
+  sizes = '100vw',
+  ...props
 }) => {
   return (
     <Image
@@ -28,12 +27,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       alt={alt}
       width={width}
       height={height}
-      className={className}
       priority={priority}
-      quality={quality}
+      className={className}
       sizes={sizes}
+      {...props}
     />
   );
 };
-
-export default OptimizedImage;
