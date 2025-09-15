@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useCallbackuseEffectuseState } from 'react';
-=======
-import React, { useCallback, useEffect, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import dynamic from 'next/dynamic';
 
 const isClient = typeof window !== 'undefined';
@@ -14,26 +8,12 @@ type Web3LoginModalProps = {
   onLoggedIn?: (user: { address: string; chain: 'evm' | 'sol'; displayName?: string }) => void;
 };
 
-<<<<<<< HEAD
-function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
-  const [loadingsetLoading] = useState(false);
-  const [errorsetError] = useState<string | null>(null);
-=======
-function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (!isOpen) {
       setError(null);
       setLoading(false);
     }
-<<<<<<< HEAD
-  }[isOpen]);
-=======
-  }, [isOpen]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleEvmConnect = useCallback(async () => {
     setError(null);
@@ -48,15 +28,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
           walletconnect: {
             package: WalletConnectProvider,
             options: {
-<<<<<<< HEAD
-              rpc: { 1: 'https://cloudflare-eth.com' }}}}});
-=======
-              rpc: { 1: 'https://cloudflare-eth.com' },
-            },
-          },
-        },
-      });
->>>>>>> origin/auto/autonomy-17186719616
 
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
@@ -76,24 +47,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 
       const signature = await signer.signMessage(siweMessage);
 
-<<<<<<< HEAD
-      const verifyRes = await fetch('/api/auth/verify-evm'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: siweMessagesignatureaddresschainId: network.chainId })});
-      if (!verifyRes.ok) throw new Error('Failed to verify signature');
-
-      onLoggedIn?.({ addresschain: 'evm' });
-=======
-      const verifyRes = await fetch('/api/auth/verify-evm', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: siweMessage, signature, address, chainId: network.chainId }),
-      });
-      if (!verifyRes.ok) throw new Error('Failed to verify signature');
-
-      onLoggedIn?.({ address, chain: 'evm' });
->>>>>>> origin/auto/autonomy-17186719616
       onClose();
     } catch (e: any) {
       console.error(e);
@@ -101,11 +54,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     } finally {
       setLoading(false);
     }
-<<<<<<< HEAD
-  }[onCloseonLoggedIn]);
-=======
-  }, [onClose, onLoggedIn]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handlePhantomConnect = useCallback(async () => {
     setError(null);
@@ -124,30 +72,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;
       const encodedMessage = new TextEncoder().encode(message);
-<<<<<<< HEAD
-      const { signature } = await provider.signMessage('encodedMessage', 'utf8');
-      const bs58 = (await import('bs58')).default;
-
-      const verifyRes = await fetch('/api/auth/verify-sol'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messagesignature: bs58.encode(signature)publicKey })});
-      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-
-      onLoggedIn?.({ address: publicKeychain: 'sol' });
-=======
-      const { signature } = await provider.signMessage(encodedMessage, 'utf8');
-      const bs58 = (await import('bs58')).default;
-
-      const verifyRes = await fetch('/api/auth/verify-sol', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey }),
-      });
-      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-
-      onLoggedIn?.({ address: publicKey, chain: 'sol' });
->>>>>>> origin/auto/autonomy-17186719616
       onClose();
     } catch (e: any) {
       console.error(e);
@@ -155,11 +79,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     } finally {
       setLoading(false);
     }
-<<<<<<< HEAD
-  }[onCloseonLoggedIn]);
-=======
-  }, [onClose, onLoggedIn]);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!isOpen) return null;
 

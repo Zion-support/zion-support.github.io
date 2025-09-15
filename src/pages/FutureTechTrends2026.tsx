@@ -1,272 +1,291 @@
-import React, { useState, useEffect } from 'react';
 
 const FutureTechTrends2026: React.FC = () => {
-  const [selectedTrend, setSelectedTrend] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTrend, setActiveTrend] = useState('ai');
 
-  const futureTrends = [
-    {
-      id: 1,
-      title: "Synthetic Consciousness",
-      description: "The emergence of truly conscious artificial beings that possess self-awareness, emotions, and subjective experiences.",
+  const techTrends = {
+    ai: {
+      title: "Artificial Intelligence Revolution",
       icon: "🧠",
-      gradient: "from-purple-600 to-pink-600",
-      timeline: "2026-2028",
-      impact: "Revolutionary",
-      applications: [
-        "Autonomous decision-making systems",
-        "Emotional AI companions",
-        "Creative AI artists and writers",
-        "Self-evolving problem solvers"
+      description: "AI systems achieving human-level intelligence and beyond",
+      keyPoints: [
+        "Synthetic consciousness achieved",
+        "Autonomous AI agents deployed",
+        "AI-human collaboration standard",
+        "Creative AI surpassing human capabilities"
       ],
-      stats: {
-        consciousness: "95%",
-        autonomy: "100%",
-        creativity: "87%"
-      }
+      impact: "Transform every industry",
+      timeline: "2026-2027"
     },
-    {
-      id: 2,
-      title: "Quantum-Neural Fusion",
-      description: "The convergence of quantum computing and neural interfaces, enabling direct brain-to-quantum computer communication.",
+    quantum: {
+      title: "Quantum Computing Breakthrough",
       icon: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      timeline: "2026-2029",
-      impact: "Transformative",
-      applications: [
-        "Instant knowledge transfer",
-        "Quantum-enhanced thinking",
-        "Real-time problem solving",
-        "Consciousness expansion"
+      description: "Quantum computers solving impossible problems",
+      keyPoints: [
+        "1000+ qubit processors available",
+        "Quantum supremacy achieved",
+        "Real-world quantum applications",
+        "Quantum internet launched"
       ],
-      stats: {
-        speed: "10^15x",
-        accuracy: "99.99%",
-        capacity: "Unlimited"
-      }
+      impact: "Exponential computational power",
+      timeline: "2026-2028"
+    },
+    neural: {
+      title: "Neural Interface Technology",
+      icon: "🧬",
+      description: "Direct brain-computer communication",
+      keyPoints: [
+        "Non-invasive BCI technology",
+        "Thought-controlled devices",
+        "Neural prosthetics advanced",
+        "Memory enhancement possible"
+      ],
+      impact: "Merge mind and machine",
+      timeline: "2026-2029"
+    },
+    space: {
+      title: "Space Colonization",
+      icon: "🚀",
+      description: "Human settlements beyond Earth",
+      keyPoints: [
+        "Mars colony established",
+        "Lunar base operational",
+        "Asteroid mining begins",
+        "Space tourism commercialized"
+      ],
+      impact: "Multi-planetary species",
+      timeline: "2026-2030"
+    },
+    biotech: {
+      title: "Biotechnology Revolution",
+      icon: "🧬",
+      description: "Genetic engineering and life extension",
+      keyPoints: [
+        "Gene editing perfected",
+        "Aging reversed",
+        "Custom organs grown",
+        "Life expectancy doubled"
+      ],
+      impact: "Redefine human potential",
+      timeline: "2026-2032"
+    },
+    energy: {
+      title: "Clean Energy Revolution",
+      icon: "⚡",
+      description: "100% renewable energy achieved",
+      keyPoints: [
+        "Fusion power commercialized",
+        "Solar efficiency 50%+",
+        "Energy storage breakthrough",
+        "Carbon negative technology"
+      ],
+      impact: "Solve climate change",
+      timeline: "2026-2028"
+    }
+  };
+
+  const industryTransformations = [
+    {
+      industry: "Healthcare",
+      icon: "🏥",
+      transformation: "AI doctors, personalized medicine, gene therapy",
+      impact: "95% disease prevention",
+      color: "from-red-500 to-pink-500"
     },
     {
-      id: 3,
-      title: "Molecular Manufacturing",
-      description: "Precision manufacturing at the atomic level, creating materials and devices with unprecedented properties.",
-      icon: "🔬",
-      gradient: "from-emerald-600 to-teal-600",
-      timeline: "2026-2030",
-      impact: "Revolutionary",
-      applications: [
-        "Self-healing materials",
-        "Programmable matter",
-        "Nano-scale electronics",
-        "Biological-compatible implants"
-      ],
-      stats: {
-        precision: "Atomic",
-        efficiency: "100%",
-        versatility: "Unlimited"
-      }
+      industry: "Transportation",
+      icon: "🚗",
+      transformation: "Autonomous vehicles, flying cars, hyperloop",
+      impact: "Zero traffic accidents",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      id: 4,
-      title: "Space-Time Manipulation",
-      description: "Theoretical and experimental research into manipulating space-time for faster-than-light travel and communication.",
-      icon: "🌌",
-      gradient: "from-indigo-600 to-purple-600",
-      timeline: "2026-2035",
-      impact: "Revolutionary",
-      applications: [
-        "Instantaneous travel",
-        "Time dilation effects",
-        "Gravitational field control",
-        "Wormhole creation"
-      ],
-      stats: {
-        speed: ">c",
-        range: "Unlimited",
-        energy: "Infinite"
-      }
+      industry: "Education",
+      icon: "🎓",
+      transformation: "AI tutors, virtual reality learning, neural implants",
+      impact: "10x faster learning",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      industry: "Manufacturing",
+      icon: "🏭",
+      transformation: "3D printing, nanomanufacturing, space factories",
+      impact: "Custom everything",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      industry: "Finance",
+      icon: "💰",
+      transformation: "Quantum cryptography, AI trading, digital currencies",
+      impact: "Instant global transactions",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      industry: "Entertainment",
+      icon: "🎮",
+      transformation: "Virtual reality, neural interfaces, AI content",
+      impact: "Immersive experiences",
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setSelectedTrend((prev) => (prev + 1) % futureTrends.length);
-        setIsAnimating(false);
-      }, 500);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleTrendSelect = (index: number) => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setSelectedTrend(index);
-      setIsAnimating(false);
-    }, 300);
-  };
+  const futurePredictions = [
+    {
+      year: "2026",
+      prediction: "AI achieves human-level consciousness",
+      probability: "85%",
+      impact: "Revolutionary"
+    },
+    {
+      year: "2027",
+      prediction: "Quantum computers solve climate modeling",
+      probability: "70%",
+      impact: "Transformative"
+    },
+    {
+      year: "2028",
+      prediction: "First Mars colony established",
+      probability: "60%",
+      impact: "Historic"
+    },
+    {
+      year: "2030",
+      prediction: "Neural interfaces become mainstream",
+      probability: "45%",
+      impact: "Paradigm shift"
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
-      <div className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
-              <span className="text-cyan-400">✨</span>
-              <span className="text-cyan-300 font-semibold">FUTURE TECH TRENDS 2026</span>
-            </div>
-            <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Tomorrow's Technology Today
-            </h1>
-            <p className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
-              Explore the most revolutionary technological trends that will define the next decade. 
-              From synthetic consciousness to space-time manipulation.
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-8 text-center">
+                  <div className="text-8xl mb-4">{techTrends[activeTrend as keyof typeof techTrends].icon}</div>
+                  <p className="text-gray-600 font-semibold mb-4">Interactive Analysis Available</p>
+                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    Deep Dive →
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Impact Matrix */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">📊 Technology Impact Matrix</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Compare the potential impact and timeline of different emerging technologies
             </p>
-          </div>
-        </div>
-      </div>
+          </motion.div>
 
-      {/* Trend Navigation */}
-      <div className="container mx-auto px-4 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {futureTrends.map((trend, index) => (
-            <button
-              key={trend.id}
-              onClick={() => handleTrendSelect(index)}
-              className={`p-6 rounded-2xl transition-all duration-300 transform hover:scale-105 ${
-                selectedTrend === index
-                  ? `bg-gradient-to-r ${trend.gradient} shadow-2xl scale-105`
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20'
-              }`}
-            >
-              <div className="text-4xl mb-3">{trend.icon}</div>
-              <h3 className="font-bold text-sm mb-2">{trend.title}</h3>
-              <div className="text-xs opacity-80">{trend.timeline}</div>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Selected Trend Details */}
-      <div className="container mx-auto px-4 mb-16">
-        <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
-          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${futureTrends[selectedTrend].gradient} rounded-2xl flex items-center justify-center text-white text-3xl mr-6`}>
-                    {futureTrends[selectedTrend].icon}
-                  </div>
-                  <div>
-                    <h2 className="text-4xl font-bold mb-2">{futureTrends[selectedTrend].title}</h2>
-                    <div className="flex items-center space-x-4">
-                      <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
-                        {futureTrends[selectedTrend].timeline}
-                      </span>
-                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                        futureTrends[selectedTrend].impact === 'Revolutionary' 
-                          ? 'bg-red-500/20 text-red-300' 
-                          : 'bg-orange-500/20 text-orange-300'
-                      }`}>
-                        {futureTrends[selectedTrend].impact}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  {futureTrends[selectedTrend].description}
-                </p>
-
-                <div className="grid grid-cols-3 gap-6 mb-8">
-                  {Object.entries(futureTrends[selectedTrend].stats).map(([key, value]) => (
-                    <div key={key} className="text-center">
-                      <div className="text-3xl font-bold text-cyan-400 mb-1">{value}</div>
-                      <div className="text-sm text-gray-400 capitalize">{key}</div>
-                    </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="px-6 py-4 text-left font-semibold">Technology</th>
+                    <th className="px-6 py-4 text-left font-semibold">Impact Level</th>
+                    <th className="px-6 py-4 text-left font-semibold">Timeline</th>
+                    <th className="px-6 py-4 text-left font-semibold">Market Size</th>
+                    <th className="px-6 py-4 text-left font-semibold">Readiness</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    {
+                      name: "AI Revolution",
+                      icon: "🧠",
+                      impact: "Revolutionary",
+                      timeline: "2026-2027",
+                      market: "$10T+",
+                      readiness: "Ready"
+                    },
+                    {
+                      name: "Quantum Computing",
+                      icon: "⚛️",
+                      impact: "Transformative",
+                      timeline: "2026-2028",
+                      market: "$1T+",
+                      readiness: "Emerging"
+                    },
+                    {
+                      name: "Neural Interfaces",
+                      icon: "🧬",
+                      impact: "Paradigm Shift",
+                      timeline: "2026-2029",
+                      market: "$500B+",
+                      readiness: "Research"
+                    },
+                    {
+                      name: "Space Colonization",
+                      icon: "🚀",
+                      impact: "Historic",
+                      timeline: "2026-2030",
+                      market: "$2T+",
+                      readiness: "Pilot"
+                    }
+                  ].map((tech, index) => (
+                    <tr key={index} className="border-b border-white/10">
+                      <td className="px-6 py-4 font-semibold">
+                        <span className="mr-2">{tech.icon}</span>
+                        {tech.name}
+                      </td>
+                      <td className="px-6 py-4">{tech.impact}</td>
+                      <td className="px-6 py-4">{tech.timeline}</td>
+                      <td className="px-6 py-4 font-bold text-green-300">{tech.market}</td>
+                      <td className="px-6 py-4">
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                          tech.readiness === 'Ready' ? 'bg-green-100 text-green-800' :
+                          tech.readiness === 'Emerging' ? 'bg-yellow-100 text-yellow-800' :
+                          tech.readiness === 'Research' ? 'bg-blue-100 text-blue-800' :
+                          'bg-purple-100 text-purple-800'
+                        }`}>
+                          {tech.readiness}
+                        </span>
+                      </td>
+                    </tr>
                   ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Key Applications</h3>
-                <div className="space-y-4">
-                  {futureTrends[selectedTrend].applications.map((application, index) => (
-                    <div key={index} className="flex items-center p-4 bg-white/10 rounded-xl">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></div>
-                      <span className="text-gray-300">{application}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Technology Timeline */}
-      <div className="container mx-auto px-4 mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Technology Evolution Timeline</h2>
-          <p className="text-xl text-gray-300">The roadmap to tomorrow's technology</p>
-        </div>
-        
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-500 rounded-full"></div>
-          
-          {futureTrends.map((trend, index) => (
-            <div key={trend.id} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-              <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                <div className={`bg-gradient-to-r ${trend.gradient} rounded-2xl p-6 shadow-2xl`}>
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-4">{trend.icon}</span>
-                    <div>
-                      <h3 className="text-2xl font-bold">{trend.title}</h3>
-                      <div className="text-sm opacity-90">{trend.timeline}</div>
-                    </div>
-                  </div>
-                  <p className="text-white/90">{trend.description}</p>
-                </div>
-              </div>
-              
-              <div className="w-8 h-8 bg-white rounded-full border-4 border-cyan-500 flex items-center justify-center relative z-10">
-                <div className="w-4 h-4 bg-cyan-500 rounded-full"></div>
-              </div>
-              
-              <div className="w-1/2"></div>
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white"
+          >
+            <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Join us in developing and implementing the technologies that will define the next decade
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Start Future Project →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
+                Download Trends Report
+              </button>
             </div>
-          ))}
+          </motion.div>
         </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 text-center border border-cyan-400/30">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Shape the Future
-          </h2>
-          <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Be part of the technological revolution that's reshaping our world. 
-            Explore our solutions and join the journey into tomorrow.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="/pages/AdvancedTechInsights2026" 
-              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-10 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
-            >
-              Explore Insights →
-            </a>
-            <a 
-              href="/pages/InnovationShowcase2026" 
-              className="inline-block border-2 border-cyan-400 text-cyan-300 px-10 py-4 rounded-xl hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-            >
-              View Showcase
-            </a>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
