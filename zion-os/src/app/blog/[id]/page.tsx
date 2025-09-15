@@ -11,6 +11,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-governance-2025': {
+    id: 'ai-safety-governance-2025',
+    title: 'AI Safety & Governance in 2025: Practical Playbooks for Enterprises',
+    excerpt:
+      'A hands-on guide to designing AI governance, risk, and safety controls that keep innovation moving while meeting regulatory and stakeholder expectations.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'Enterprises are accelerating AI adoption across critical workflows, yet governance often lags behind deployment velocity. In 2025, effective AI governance is not a compliance checkbox—it is an enabler of responsible scale.',
+      'We present an actionable framework built around four pillars: Model Risk Management (MRM), Policy-as-Code, Human-in-the-Loop (HITL) for sensitive actions, and Continuous Assurance. Each pillar maps to concrete controls with measurable outcomes.',
+      'Policy-as-Code operationalizes governance through automated guardrails: pre-deployment checks, runtime monitors, and post-deployment audits. Coupled with lineage and observability, organizations gain traceability for every AI decision.',
+      'Leaders should start with a small set of high-impact controls, define clear success metrics (e.g., incident rate, time-to-mitigation), and iterate. The result is a safety system that accelerates delivery instead of slowing it down.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
