@@ -511,6 +511,34 @@ content_index:
         rollout_speed: "2x"
         rollback_time: "< 5 min"
         incident_reduction: "40%"
+    - id: "ai-2026-foundation-model-ops"
+      type: "blog"
+      title: "AI 2026: Foundation Model Ops"
+      file_path: "/app/blog/ai-2026-foundation-model-ops/page.tsx"
+      url: "/blog/ai-2026-foundation-model-ops"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "Foundation Models", "Reliability", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollout_strategy: "progressive"
+        reliability: "99.9%"
+        cost_optimization: "up to 40%"
+    - id: "ai-2026-autonomous-finance-control-plane"
+      type: "blog"
+      title: "AI 2026: Autonomous Finance Control Plane"
+      file_path: "/app/blog/ai-2026-autonomous-finance-control-plane/page.tsx"
+      url: "/blog/ai-2026-autonomous-finance-control-plane"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Finance", "Autonomous Systems", "Policy-as-Code", "Audit", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        anomaly_detection: "real-time"
+        auditability: "continuous"
+        rollback_time: "< 5 min"
     - id: "ai-2026-secure-tooling-permissions-blueprint"
       type: "blueprint"
       title: "AI 2026: Secure Tooling Permissions Blueprint"

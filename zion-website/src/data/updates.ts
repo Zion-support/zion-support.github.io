@@ -275,7 +275,7 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: Autonomous Finance OS v1.1',
     summary:
-      'Enhanced financial automation with real-time risk scoring, audit trails, and policy-as-code.',
+      'Enhanced financial automation with real-time risk scoring, audit trails, policy-as-code, and automated reconciliations.',
     href: '/updates/autonomous-finance-os-1-1',
     date: '2025-09-15',
     tag: 'Launch'
@@ -287,6 +287,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-compliance-readiness-2026',
     date: '2025-09-15',
     tag: 'Report'
+  },
+  {
+    title: 'Guide: Evaluating Multimodal Agents (2026 Preview)',
+    summary:
+      'A practical rubric and harnesses to evaluate multimodal grounding, tool use, and safety.',
+    href: '/updates/evaluating-multimodal-agents-2026-preview',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Course: GenAI for Executives',
+    summary:
+      'Executive-focused program on AI strategy, governance, and ROI with hands-on frameworks.',
+    href: '/updates/genai-executive-course',
+    date: '2025-09-15',
+    tag: 'Course'
   }
 ]
 

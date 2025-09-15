@@ -338,5 +338,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     emoji: "💸",
     date: "2025-09-15",
   },
+  {
+    id: "foundation-model-ops-2026",
+    title: "AI 2026: Foundation Model Ops",
+    description:
+      "Operational patterns for safe, observable, and efficient foundation model deployments at scale.",
+    ctaLabel: "Read Playbook",
+    href: "/blog/ai-2026-foundation-model-ops",
+    emoji: "🏗️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-finance-control-plane-2026",
+    title: "AI 2026: Autonomous Finance Control Plane",
+    description:
+      "Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.",
+    ctaLabel: "Explore the Guide",
+    href: "/blog/ai-2026-autonomous-finance-control-plane",
+    emoji: "💰",
+    highlight: true,
+    date: "2025-09-15",
+  },
 ];
 
