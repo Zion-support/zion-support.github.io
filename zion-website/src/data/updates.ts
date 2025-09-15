@@ -8,12 +8,12 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
-    title: 'Launch: Agentic Ops Control Center v2.3',
+    title: 'Guide: Production RAG Observability (2026 Preview)',
     summary:
-      'Faster incident drilldowns, automated runbooks, and cross-environment policy dashboards.',
-    href: '/updates/agentic-ops-control-center-2-3',
+      'Telemetry for retrieval systems: coverage, freshness, drift, groundedness with per‑step spans.',
+    href: '/updates/production-rag-observability-2026',
     date: '2025-09-15',
-    tag: 'Launch'
+    tag: 'Guide'
   },
   {
     title: 'Launch: AI Incident Simulator v1.1',
