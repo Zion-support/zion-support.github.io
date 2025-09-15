@@ -5,6 +5,7 @@ const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -20,6 +21,13 @@ const CaseStudyPage: React.FC = () => {
           <p className="text-gray-600">
             This case study page is under development. Content for "{slug}" will be available soon.
           </p>
+=======
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Study: {slug}</h1>
+          <p className="text-xl text-gray-600">Coming soon - Detailed case study content</p>
+>>>>>>> cursor/create-and-deploy-new-content-7857
         </div>
       </div>
     </div>

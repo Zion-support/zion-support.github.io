@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -30,6 +31,9 @@ export const safeStorage = {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-7857
     }
   }
 };
