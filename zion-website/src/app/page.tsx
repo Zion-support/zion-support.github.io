@@ -121,13 +121,10 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-<<<<<<< HEAD
-                href="/updates/autonomous-data-quality-copilot-1-0"
-=======
-                href="/updates/autonomous-it-ops-copilot-1-0"
+                href="/updates/autonomous-analytics-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
               >
-                New Launch: IT Ops Copilot v1.0
+                New Launch: Analytics Copilot v1.0
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -181,7 +178,6 @@ export default function HomePage() {
               </a>
               <a
                 href="/updates/ai-trends-radar-2025"
->>>>>>> cursor/create-and-deploy-new-content-8191
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
                 Launch: Data Quality Copilot v1.0
