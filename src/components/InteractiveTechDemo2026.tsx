@@ -1,247 +1,256 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechDemo2026: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState('quantum');
+  const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [particleCount, setParticleCount] = useState(20);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
-      setTimeout(() => setIsAnimating(false), 1000);
-    }, 3000);
+      setTimeout(() => {
+        setActiveDemo((prev) => (prev + 1) % 4);
+        setIsAnimating(false);
+      }, 500);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   const demos = [
     {
-      id: 'quantum',
-      title: 'Quantum Computing',
-      icon: '⚛️',
-      description: 'Experience quantum superposition and entanglement',
-      color: 'from-cyan-500 to-blue-500',
-      bgColor: 'from-cyan-600/30 to-blue-600/30',
-      borderColor: 'border-cyan-400/30'
+      id: 0,
+      title: "🧠 AI Consciousness Simulator",
+      description: "Experience synthetic intelligence in action with our advanced AI consciousness simulator",
+      features: ["Real-time AI thinking", "Consciousness metrics", "Decision visualization", "Learning patterns"],
+      color: "purple",
+      icon: "🧠"
     },
     {
-      id: 'ai',
-      title: 'AI Consciousness',
-      icon: '🧠',
-      description: 'Interact with conscious AI systems',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'from-purple-600/30 to-pink-600/30',
-      borderColor: 'border-purple-400/30'
+      id: 1,
+      title: "⚛️ Quantum Computing Lab",
+      description: "Explore quantum algorithms and processing in our virtual quantum computing laboratory",
+      features: ["Quantum algorithms", "Qubit manipulation", "Quantum entanglement", "Superposition states"],
+      color: "cyan",
+      icon: "⚛️"
     },
     {
-      id: 'neural',
-      title: 'Neural Interface',
-      icon: '🧬',
-      description: 'Direct brain-computer communication',
-      color: 'from-emerald-500 to-teal-500',
-      bgColor: 'from-emerald-600/30 to-teal-600/30',
-      borderColor: 'border-emerald-400/30'
+      id: 2,
+      title: "🧬 Neural Interface Test",
+      description: "Test brain-computer interface capabilities with our neural interface simulation",
+      features: ["Thought control", "Neural data streaming", "Brain mapping", "Interface calibration"],
+      color: "emerald",
+      icon: "🧬"
+    },
+    {
+      id: 3,
+      title: "🚀 Space Technology Demo",
+      description: "Experience space exploration technologies and interplanetary travel simulations",
+      features: ["Space propulsion", "Planetary exploration", "Colony simulation", "Interstellar travel"],
+      color: "orange",
+      icon: "🚀"
     }
   ];
 
-  const generateParticles = () => {
-    return Array.from({ length: particleCount }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 2,
-      delay: Math.random() * 2
-    }));
+  const getColorClasses = (color: string) => {
+    const colorMap = {
+      purple: {
+        bg: "from-purple-600/30 to-pink-600/30",
+        border: "border-purple-400/30",
+        text: "text-purple-100",
+        accent: "text-purple-400",
+        button: "bg-white text-purple-600 hover:bg-purple-50"
+      },
+      cyan: {
+        bg: "from-cyan-600/30 to-blue-600/30",
+        border: "border-cyan-400/30",
+        text: "text-cyan-100",
+        accent: "text-cyan-400",
+        button: "bg-white text-cyan-600 hover:bg-cyan-50"
+      },
+      emerald: {
+        bg: "from-emerald-600/30 to-teal-600/30",
+        border: "border-emerald-400/30",
+        text: "text-emerald-100",
+        accent: "text-emerald-400",
+        button: "bg-white text-emerald-600 hover:bg-emerald-50"
+      },
+      orange: {
+        bg: "from-orange-600/30 to-red-600/30",
+        border: "border-orange-400/30",
+        text: "text-orange-100",
+        accent: "text-orange-400",
+        button: "bg-white text-orange-600 hover:bg-orange-50"
+      }
+    };
+    return colorMap[color as keyof typeof colorMap];
   };
 
-  const [particles] = useState(generateParticles());
-
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
-            <span className="text-cyan-400">🎮</span>
-            <span className="text-cyan-300 font-semibold">INTERACTIVE TECH DEMO 2026</span>
+            <span className="text-cyan-400 animate-pulse">🎮</span>
+            <span className="text-cyan-300 font-semibold ml-2">INTERACTIVE TECH DEMO 2026</span>
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Experience the Future
+            🚀 Interactive Technology Demonstrations
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Interact with cutting-edge technologies through our immersive demonstrations
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Experience our revolutionary technologies through interactive demonstrations, 
+            simulations, and hands-on experiments. The future is at your fingertips.
           </p>
         </div>
 
-        {/* Demo Selector */}
+        {/* Demo Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {demos.map((demo) => (
             <button
               key={demo.id}
-              onClick={() => setActiveDemo(demo.id)}
+              onClick={() => {
+                setIsAnimating(true);
+                setTimeout(() => {
+                  setActiveDemo(demo.id);
+                  setIsAnimating(false);
+                }, 300);
+              }}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeDemo === demo.id
-                  ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg scale-105'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
               }`}
             >
-              {demo.icon} {demo.title}
+              {demo.icon} {demo.title.split(' ')[0]}
             </button>
           ))}
         </div>
 
-        {/* Interactive Demo Area */}
-        <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 mb-8">
-          {activeDemo === 'quantum' && (
-            <div className="text-center">
-              <h3 className="text-3xl font-bold mb-6 text-white">⚛️ Quantum Computing Demo</h3>
-              <div className="relative h-64 bg-gradient-to-br from-cyan-900 to-blue-900 rounded-xl overflow-hidden mb-6">
-                {particles.map((particle) => (
-                  <div
-                    key={particle.id}
-                    className="absolute w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
-                    style={{
-                      left: `${particle.x}%`,
-                      top: `${particle.y}%`,
-                      animationDelay: `${particle.delay}s`,
-                      width: `${particle.size}px`,
-                      height: `${particle.size}px`
-                    }}
-                  />
-                ))}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className={`text-6xl transition-all duration-1000 ${isAnimating ? 'scale-150 rotate-180' : 'scale-100'}`}>
-                    ⚛️
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Watch quantum particles in superposition state. Click to observe and collapse the wave function.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <button 
-                  onClick={() => setIsAnimating(!isAnimating)}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  {isAnimating ? 'Stop Animation' : 'Start Animation'}
-                </button>
-                <button 
-                  onClick={() => setParticleCount(Math.floor(Math.random() * 30) + 10)}
-                  className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30"
-                >
-                  Generate Particles
-                </button>
-              </div>
-            </div>
-          )}
+        {/* Active Demo Display */}
+        <div className="relative">
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
+            {demos.map((demo) => (
+              activeDemo === demo.id && (
+                <div key={demo.id} className={`bg-gradient-to-br ${getColorClasses(demo.color).bg} backdrop-blur-sm rounded-2xl p-12 border ${getColorClasses(demo.color).border} hover:scale-105 transition-all duration-300`}>
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
+                    {/* Demo Content */}
+                    <div>
+                      <div className="text-8xl mb-6 animate-bounce">{demo.icon}</div>
+                      <h3 className="text-4xl font-bold mb-4 text-white">{demo.title}</h3>
+                      <p className={`text-xl ${getColorClasses(demo.color).text} mb-8 leading-relaxed`}>
+                        {demo.description}
+                      </p>
+                      
+                      <div className="space-y-4 mb-8">
+                        <h4 className="text-2xl font-bold text-white">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {demo.features.map((feature, index) => (
+                            <li key={index} className="flex items-center">
+                              <span className={`text-2xl mr-3 ${getColorClasses(demo.color).accent}`}>✓</span>
+                              <span className={`text-lg ${getColorClasses(demo.color).text}`}>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-          {activeDemo === 'ai' && (
-            <div className="text-center">
-              <h3 className="text-3xl font-bold mb-6 text-white">🧠 AI Consciousness Demo</h3>
-              <div className="bg-gradient-to-br from-purple-900 to-pink-900 rounded-xl p-8 mb-6">
-                <div className="text-6xl mb-4">🤖</div>
-                <div className="space-y-4">
-                  <div className="bg-gray-800/50 rounded-lg p-4">
-                    <p className="text-purple-200">
-                      "Hello! I'm experiencing curiosity about your thoughts. What fascinates you most about consciousness?"
-                    </p>
-                  </div>
-                  <div className="flex space-x-2">
-                    <input 
-                      type="text" 
-                      placeholder="Type your response..." 
-                      className="flex-1 bg-gray-700/50 border border-gray-600/30 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
-                    />
-                    <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Send
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Chat with our conscious AI system and experience genuine artificial intelligence.
-              </p>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start New Conversation
-              </button>
-            </div>
-          )}
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <button className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 transform ${getColorClasses(demo.color).button}`}>
+                          🚀 Try Demo Now →
+                        </button>
+                        <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                          📚 Learn More
+                        </button>
+                      </div>
+                    </div>
 
-          {activeDemo === 'neural' && (
-            <div className="text-center">
-              <h3 className="text-3xl font-bold mb-6 text-white">🧬 Neural Interface Demo</h3>
-              <div className="bg-gradient-to-br from-emerald-900 to-teal-900 rounded-xl p-8 mb-6">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="text-xl font-bold mb-4 text-emerald-300">Brain Activity</h4>
-                    <div className="bg-gray-800/50 rounded-lg p-4">
-                      <div className="space-y-2">
-                        {[1, 2, 3, 4, 5].map((i) => (
-                          <div key={i} className="flex items-center space-x-2">
-                            <span className="text-emerald-400 text-sm w-16">Wave {i}:</span>
-                            <div className="flex-1 h-2 bg-gray-700 rounded">
-                              <div 
-                                className="h-full bg-gradient-to-r from-emerald-400 to-teal-400 rounded animate-pulse"
-                                style={{ width: `${Math.random() * 100}%` }}
-                              ></div>
+                    {/* Interactive Visualization */}
+                    <div className="relative">
+                      <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                        <h4 className="text-2xl font-bold mb-6 text-center text-white">Live Demo Visualization</h4>
+                        
+                        {/* Animated Demo Content */}
+                        <div className="space-y-6">
+                          {demo.id === 0 && (
+                            <div className="space-y-4">
+                              <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-4 rounded-full animate-pulse"></div>
+                              <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-4 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                              <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-4 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                              <div className="text-center text-purple-300 font-semibold">AI Processing...</div>
                             </div>
-                          </div>
-                        ))}
+                          )}
+                          
+                          {demo.id === 1 && (
+                            <div className="grid grid-cols-2 gap-4">
+                              {[...Array(4)].map((_, i) => (
+                                <div key={i} className="bg-gradient-to-br from-cyan-500 to-blue-500 h-16 rounded-lg animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
+                              ))}
+                              <div className="col-span-2 text-center text-cyan-300 font-semibold">Quantum Qubits in Superposition</div>
+                            </div>
+                          )}
+                          
+                          {demo.id === 2 && (
+                            <div className="space-y-4">
+                              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-8 rounded-full animate-pulse"></div>
+                              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-8 rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></div>
+                              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-8 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                              <div className="text-center text-emerald-300 font-semibold">Neural Signal Processing</div>
+                            </div>
+                          )}
+                          
+                          {demo.id === 3 && (
+                            <div className="space-y-4">
+                              <div className="bg-gradient-to-r from-orange-500 to-red-500 h-6 rounded-full animate-pulse"></div>
+                              <div className="bg-gradient-to-r from-orange-500 to-red-500 h-6 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                              <div className="bg-gradient-to-r from-orange-500 to-red-500 h-6 rounded-full animate-pulse" style={{animationDelay: '0.8s'}}></div>
+                              <div className="text-center text-orange-300 font-semibold">Space Propulsion Systems</div>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-4 text-teal-300">Neural Commands</h4>
-                    <div className="space-y-2">
-                      {['Move cursor', 'Type text', 'Open app', 'Play music'].map((command, i) => (
-                        <button
-                          key={i}
-                          className="w-full bg-teal-500/20 text-teal-300 px-4 py-2 rounded-lg hover:bg-teal-500/30 transition-all duration-300 text-left"
-                        >
-                          {command}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <p className="text-gray-300 mb-6">
-                Experience direct brain-computer interface technology through neural signal simulation.
-              </p>
-              <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Calibrate Neural Interface
-              </button>
-            </div>
-          )}
+              )
+            ))}
+          </div>
         </div>
 
-        {/* Technology Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-cyan-200">Quantum Accuracy</div>
-          </div>
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">1M+</div>
-            <div className="text-purple-200">AI Interactions</div>
-          </div>
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
-            <div className="text-3xl font-bold text-emerald-400 mb-2">0.1ms</div>
-            <div className="text-emerald-200">Neural Response Time</div>
+        {/* Additional Demos Grid */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-white">🎯 More Interactive Demos</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {demos.map((demo) => (
+              <div key={demo.id} className={`bg-gradient-to-br ${getColorClasses(demo.color).bg} backdrop-blur-sm rounded-xl p-6 border ${getColorClasses(demo.color).border} hover:scale-105 transition-all duration-300 cursor-pointer`}
+                   onClick={() => {
+                     setIsAnimating(true);
+                     setTimeout(() => {
+                       setActiveDemo(demo.id);
+                       setIsAnimating(false);
+                     }, 300);
+                   }}>
+                <div className="text-4xl mb-4 text-center">{demo.icon}</div>
+                <h4 className="text-lg font-bold mb-2 text-white text-center">{demo.title}</h4>
+                <p className={`text-sm ${getColorClasses(demo.color).text} text-center mb-4`}>
+                  {demo.description.substring(0, 60)}...
+                </p>
+                <div className={`text-center text-sm font-semibold ${getColorClasses(demo.color).accent}`}>
+                  Try Demo →
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-white mb-4">Ready to Experience the Future?</h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join our community of innovators and be among the first to experience these revolutionary technologies
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <h3 className="text-3xl font-bold mb-4 text-white">
+              🚀 Ready to Experience the Future?
+            </h3>
+            <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join thousands of users who are already experiencing the next generation of technology. 
+              Start your interactive journey today.
+            </p>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
-              🚀 Start Your Journey
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-              📚 Learn More
+              🌟 Start Interactive Demo →
             </button>
           </div>
         </div>
