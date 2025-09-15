@@ -1,16 +1,16 @@
 'use client'
+import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/ai-autonomous-workflow-engine-1-0' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navigation() {
