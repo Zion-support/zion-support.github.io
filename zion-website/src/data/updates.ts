@@ -7,6 +7,23 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (even later night batch)
+  {
+    title: 'Launch: Autonomous Analytics Copilot v1.0',
+    summary:
+      'Automates insights, anomaly detection, and executive summaries with policy-aware data access and live evals.',
+    href: '/updates/autonomous-analytics-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI 2026 Platform Readiness Checklist',
+    summary:
+      'Engineer-ready checklist across data, governance, evals, and observability to ship enterprise AI safely.',
+    href: '/updates/ai-2026-platform-readiness-checklist',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   // Added 2025-09-15 (late night batch)
   {
     title: 'Launch: Autonomous Knowledge Ops Suite v1.0',
