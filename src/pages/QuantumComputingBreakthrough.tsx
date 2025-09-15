@@ -10,15 +10,22 @@ const QuantumComputingBreakthrough: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">QuantumComputingBreakthrough</h1>
+<<<<<<< HEAD
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
           <p className="text-xl text-gray-600">Coming soon - QuantumComputingBreakthrough content</p>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default QuantumComputingBreakthrough;

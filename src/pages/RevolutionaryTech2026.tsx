@@ -176,6 +176,7 @@ const RevolutionaryTech2026: React.FC = () => {
               Contact Us
             </a>
 =======
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -472,11 +473,15 @@ const RevolutionaryTech2026: React.FC = () => {
               Contact Us
             </button>
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default RevolutionaryTech2026;

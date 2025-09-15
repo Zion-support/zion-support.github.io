@@ -25,3 +25,4 @@ const GradientHeading: React.FC<GradientHeadingProps> = ({
 };
 
 export { GradientHeading };
+export default GradientHeading;

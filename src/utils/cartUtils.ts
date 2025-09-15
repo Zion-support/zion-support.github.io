@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+// Cart utility functions for managing shopping cart state
+// Cart utilities for handling shopping cart operations
+
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 /**
  * Cart utility functions for managing shopping cart operations
@@ -26,7 +32,23 @@ export interface Cart {
   itemCount: number;
 }
 
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+export const cartUtils = {
+  // Create a new empty cart
+  createEmptyCart: (): Cart => ({
+export const cartUtils = {
+  // Create empty cart
+  createEmptyCart: (): Cart => ({
+    items: [],
+    total: 0,
+    itemCount: 0
+  }),
+
+  // Add item to cart
+  addItem: (cart: Cart, item: Omit<CartItem, 'quantity'>): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -41,16 +63,30 @@ export interface Cart {
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
     items: [],
     total: 0,
     itemCount: 0,
   }),
 
+<<<<<<< HEAD
+=======
+  // Add item to cart
+  addItem: (cart: Cart, newItem: Omit<CartItem, 'quantity'>): Cart => {
+    const existingItemIndex = cart.items.findIndex(item => item.id === newItem.id);
+>>>>>>> cursor/create-and-deploy-new-content-c963
     }
     return item;
   });
 
+<<<<<<< HEAD
+=======
+  // Remove item from cart
+  removeItem: (cart: Cart, itemId: string): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
@@ -58,7 +94,10 @@ export interface Cart {
   },
 
   // Remove item from cart
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
     const newItems = cart.items.filter(item => item.id !== itemId);
@@ -66,7 +105,11 @@ export interface Cart {
   },
 
   // Update item quantity
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+  updateItemQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -93,6 +136,11 @@ export function calculateCartTotals(cart: Cart): Cart {
   // Calculate total
   const total = subtotal + shipping + tax - cart.discount;
 
+<<<<<<< HEAD
+=======
+  // Calculate totals
+  calculateTotals: (cart: Cart): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
@@ -108,7 +156,10 @@ export function calculateCartTotals(cart: Cart): Cart {
   },
 
   // Calculate totals
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -117,7 +168,11 @@ export function calculateCartTotals(cart: Cart): Cart {
     return {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+      itemCount
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
   return {
     ...cart,
@@ -142,12 +197,32 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
     };
   }
 
+<<<<<<< HEAD
 =======
+=======
+  // Clear cart
+  clearCart: (): Cart => cartUtils.createEmptyCart(),
+
+  // Get item by ID
+  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
+    return cart.items.find(item => item.id === itemId);
+  },
+
+  // Check if item exists in cart
+  hasItem: (cart: Cart, itemId: string): boolean => {
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
     };
   },
 
   // Clear cart
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
     };
   },
@@ -158,7 +233,79 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   },
 
   // Get cart summary
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+export default cartUtils;
+  getSummary: (cart: Cart) => ({
+    itemCount: cart.itemCount,
+    total: cart.total,
+    isEmpty: cart.items.length === 0,
+    uniqueItems: cart.items.length
+  }),
+
+  // Validate cart
+  validateCart: (cart: Cart): { isValid: boolean; errors: string[] } => {
+    const errors: string[] = [];
+
+    if (!Array.isArray(cart.items)) {
+      errors.push('Cart items must be an array');
+    }
+
+    cart.items.forEach((item, index) => {
+      if (!item.id) {
+        errors.push(`Item at index ${index} is missing ID`);
+      }
+      if (!item.name) {
+        errors.push(`Item at index ${index} is missing name`);
+      }
+      if (typeof item.price !== 'number' || item.price < 0) {
+        errors.push(`Item at index ${index} has invalid price`);
+      }
+      if (typeof item.quantity !== 'number' || item.quantity <= 0) {
+        errors.push(`Item at index ${index} has invalid quantity`);
+      }
+    });
+
+    return {
+      isValid: errors.length === 0,
+      errors
+    };
+  },
+
+  // Get cart key for storage
+  getCartKey: (userId?: string): string => {
+    return userId ? `cart_${userId}` : 'cart_guest';
+  },
+
+  // Merge cart items
+  mergeCartItems: (items1: CartItem[], items2: CartItem[]): CartItem[] => {
+    const mergedMap = new Map<string, CartItem>();
+
+    // Add items from first array
+    items1.forEach(item => {
+      mergedMap.set(item.id, { ...item });
+    });
+
+    // Merge items from second array
+    items2.forEach(item => {
+      const existing = mergedMap.get(item.id);
+      if (existing) {
+        existing.quantity += item.quantity;
+      } else {
+        mergedMap.set(item.id, { ...item });
+      }
+    });
+
+    return Array.from(mergedMap.values());
+  }
+};
+
+// Named exports for individual functions
+export const getCartKey = cartUtils.getCartKey;
+export const mergeCartItems = cartUtils.mergeCartItems;
+
+>>>>>>> cursor/create-and-deploy-new-content-c963
     return {
       cart,
       isValid: false,
@@ -356,6 +503,58 @@ export function importCart(cartData: string): { cart: Cart; isValid: boolean; er
     };
   },
 
+<<<<<<< HEAD
+=======
+  // Persist cart to localStorage
+  persistCart: (cart: Cart): boolean => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.warn('Failed to persist cart:', error);
+      return false;
+    }
+  },
+
+  // Load cart from localStorage
+  loadCart: (): Cart => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const stored = localStorage.getItem('cart');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          const validation = cartUtils.validateCart(parsed);
+          if (validation.isValid) {
+            return cartUtils.calculateTotals(parsed);
+          }
+        }
+      }
+    } catch (error) {
+      console.warn('Failed to load cart:', error);
+    }
+    return cartUtils.createEmptyCart();
+  },
+
+  // Clear persisted cart
+  clearPersistedCart: (): boolean => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.removeItem('cart');
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.warn('Failed to clear persisted cart:', error);
+      return false;
+    }
+  },
+};
+
+export default cartUtils;
+>>>>>>> cursor/create-and-deploy-new-content-c963
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 export default cartUtils;
