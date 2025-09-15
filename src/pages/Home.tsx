@@ -711,6 +711,90 @@ export default function Home() {
           </div>
         </motion.section>
 
+        {/* New Content Showcase */}
+        <motion.section 
+          className="py-20 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
+                  🆕 Fresh Content
+                </span>
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Latest Technology Solutions & Insights
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our newest services, cutting-edge solutions, and expert insights that are shaping the future of technology
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="text-center">
+                  <div className="text-4xl mb-4">⚛️</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing Solutions</h3>
+                  <p className="text-gray-300 mb-6">Revolutionary quantum computing solutions with quantum algorithms, machine learning, and cryptography services.</p>
+                  <Link to="/services/quantum-computing-solutions">
+                    <button className="w-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 border border-cyan-400/30 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-lg">
+                      Explore Quantum Solutions
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">The Future of AI in Business</h3>
+                  <p className="text-gray-300 mb-6">Expert insights on how AI is revolutionizing business operations with autonomous decision-making and predictive analytics.</p>
+                  <Link to="/blog/the-future-of-ai-in-business-2025">
+                    <button className="w-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 border border-cyan-400/30 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-lg">
+                      Read Article
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Ultimate Services Showcase 2025</h3>
+                  <p className="text-gray-300 mb-6">Comprehensive overview of our latest technology solutions including AI, quantum computing, and innovative platforms.</p>
+                  <Link to="/ultimate-services-showcase-2025">
+                    <button className="w-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 border border-cyan-400/30 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-lg">
+                      View Showcase
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+
         {/* Micro-SaaS Solutions */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
