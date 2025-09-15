@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Agentic Ops Control Center (v1.0)',
+    summary:
+      'Unified console for monitoring, guardrails, and live evals across agentic systems.',
+    href: '/updates/agentic-ops-control-center-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Real-Time RAG (2026 Preview)',
+    summary:
+      'Benchmarks of streaming retrieval latency, hit rate, and quality across architectures.',
+    href: '/updates/state-of-real-time-rag-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Hardening LLM Integrations for SOC 2',
+    summary:
+      'Practical controls for secrets, PII redaction, change management, and eval-backed releases.',
+    href: '/updates/hardening-llm-integrations-soc2',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Customer Support Copilot (v1.0)',
     summary:
       'Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.',
