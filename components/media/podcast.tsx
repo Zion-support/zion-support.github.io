@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseState } from 'react';
-=======
-import React, { useEffect, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Link from 'next/link';
 
 type EpisodeListItem = {
@@ -20,13 +14,6 @@ type EpisodeListItem = {
 };
 
 export default function PodcastIndexPage() {
-<<<<<<< HEAD
-  const [episodesetEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loadingsetLoading] = useState<boolean>(true);
-=======
-  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const load = async () => {
@@ -41,11 +28,6 @@ export default function PodcastIndexPage() {
       }
     };
     load();
-<<<<<<< HEAD
-  }[]);
-=======
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (loading) return <div>Loading episodes…</div>;
 

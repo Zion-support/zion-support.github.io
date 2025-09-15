@@ -135,11 +135,6 @@ export default function EnhancedServicesShowcase2025() {
 
   return (
     <EnhancedFuturisticBackground 
-<<<<<<< HEAD
-      intensity="high"
-=======
-      intensity="high" 
->>>>>>> origin/auto/autonomy-17186719616
       colorScheme="quantum"
       particleCount={300}
       animationSpeed={1.5}
@@ -214,25 +209,12 @@ export default function EnhancedServicesShowcase2025() {
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
-<<<<<<< HEAD
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-                    onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> origin/auto/autonomy-17186719616
                   />
                 </div>
 
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-=======
-                  onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
->>>>>>> origin/auto/autonomy-17186719616
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
@@ -243,13 +225,6 @@ export default function EnhancedServicesShowcase2025() {
                 {/* Price Range Filter */}
                 <select
                   value={selectedPriceRange}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-=======
-                  onChange={(e) => setSelectedPriceRange(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
->>>>>>> origin/auto/autonomy-17186719616
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
                       {range.name}
@@ -260,13 +235,6 @@ export default function EnhancedServicesShowcase2025() {
                 {/* Sort Options */}
                 <select
                   value={sortBy}
-<<<<<<< HEAD
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-=======
-                  onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
->>>>>>> origin/auto/autonomy-17186719616
                   {sortOptions.map((option) => (
                     <option key={option.id} value={option.id}>
                       {option.name}
@@ -284,25 +252,11 @@ export default function EnhancedServicesShowcase2025() {
             <motion.div
               variants={containerVariants}
               initial="hidden"
-<<<<<<< HEAD
-              animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-=======
-              animate="visible" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/auto/autonomy-17186719616
               <AnimatePresence>
                 {filteredServices.map((service) => (
                   <motion.div
                     key={service.id}
                     variants={itemVariants}
-<<<<<<< HEAD
-                    layout
-                    className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-=======
-                    layout className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
->>>>>>> origin/auto/autonomy-17186719616
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -370,26 +324,10 @@ export default function EnhancedServicesShowcase2025() {
                     <div className="flex gap-3">
                       <a 
                         href={service.link} 
-<<<<<<< HEAD
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                      >
-=======
-                        target="_blank" 
-                        rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
->>>>>>> origin/auto/autonomy-17186719616
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                       <a 
-<<<<<<< HEAD
-                        href="/contact"
-                        className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500"
-                      >
-=======
-                        href="/contact" className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500">
->>>>>>> origin/auto/autonomy-17186719616
                         Contact Us
                       </a>
                     </div>
@@ -412,13 +350,6 @@ export default function EnhancedServicesShowcase2025() {
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
-<<<<<<< HEAD
-                animate={{ opacity: 1 }}
-                className="text-center py-16"
-              >
-=======
-                animate={{ opacity: 1 }} className="text-center py-16">
->>>>>>> origin/auto/autonomy-17186719616
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -467,24 +398,10 @@ export default function EnhancedServicesShowcase2025() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-<<<<<<< HEAD
-                  href="/contact"
-                  className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline"
-                >
-=======
-                  href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
->>>>>>> origin/auto/autonomy-17186719616
                   <span className="relative">Start Your Transformation</span>
                   <Rocket className="ml-2 w-6 h-6" />
                 </a>
                 <a 
-<<<<<<< HEAD
-                  href="/pricing"
-                  className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline"
-                >
-=======
-                  href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
->>>>>>> origin/auto/autonomy-17186719616
                   <span className="relative">View Pricing</span>
                   <DollarSign className="ml-2 w-6 h-6" />
                 </a>

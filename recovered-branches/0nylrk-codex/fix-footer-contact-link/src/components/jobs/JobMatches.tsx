@@ -1,10 +1,5 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CardHeaderCardTitleCardDescriptionCardContent } from "@/components/ui/card";
-=======
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 import { useJobMatches } from "@/hooks/useJobMatches";
@@ -15,11 +10,6 @@ interface JobMatchesProps {
 }
 
 export function JobMatches({ jobId }: JobMatchesProps) {
-<<<<<<< HEAD
-  const { matchesisLoadingisProcessingtriggerAIMatching } = useJobMatches(jobId);
-=======
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);
->>>>>>> origin/auto/autonomy-17186719616
   
   if (isLoading) {
     return (
@@ -33,11 +23,6 @@ export function JobMatches({ jobId }: JobMatchesProps) {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-<<<<<<< HEAD
-          {[123].map((i) => (
-=======
-          {[1, 2, 3].map((i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <div key={i} className="flex items-center gap-4">
               <Skeleton className="h-12 w-12 rounded-full" />
               <div className="space-y-2">

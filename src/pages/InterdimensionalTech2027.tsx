@@ -1,314 +1,255 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
 
 const InterdimensionalTech2027: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      <Header />
-      
-      <main className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900">
+      <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 INTERDIMENSIONAL TECH • JANUARY 2027
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌌 INTERDIMENSIONAL TECH • 2027
           </div>
           <h1 className="text-6xl font-bold text-white mb-6">
-            🌀 Interdimensional Technology 2027
+            Interdimensional Technology 2027
           </h1>
-          <p className="text-2xl text-indigo-200 max-w-4xl mx-auto mb-8">
-            Breakthrough technology enabling access to parallel dimensions and alternate realities. 
-            Explore infinite possibilities across the multiverse with our revolutionary interdimensional systems.
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Access and communicate across multiple dimensions, bridging parallel universes and alternate realities. 
+            Explore the infinite possibilities of the multiverse with cutting-edge interdimensional technology.
           </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#dimensions" className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Dimensions
-            </a>
-            <a href="#portal" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-              Enter Portal
-            </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
+              🌌 Dimension Access
+            </span>
+            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
+              🔗 Cross-Reality Communication
+            </span>
+            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
+              🚀 Multiverse Navigation
+            </span>
+            <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold">
+              ⚡ Reality Bridging
+            </span>
           </div>
         </div>
 
-        {/* Dimension Access Technology */}
-        <section id="dimensions" className="mb-16">
+        {/* Interdimensional Features */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-6 text-center">🌌</div>
+            <h3 className="text-2xl font-bold text-white mb-4 text-center">Dimension Access</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Access any dimension in the multiverse, from parallel universes to alternate realities with different physics.
+            </p>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Parallel universe access</li>
+              <li>• Alternate reality portals</li>
+              <li>• Dimension scanning technology</li>
+              <li>• Multiverse mapping systems</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-6 text-center">🔗</div>
+            <h3 className="text-2xl font-bold text-white mb-4 text-center">Cross-Reality Communication</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Communicate instantly across dimensions with beings from parallel universes and alternate realities.
+            </p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Interdimensional messaging</li>
+              <li>• Cross-reality video calls</li>
+              <li>• Multiverse social networks</li>
+              <li>• Dimensional translation systems</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-6 text-center">🚀</div>
+            <h3 className="text-2xl font-bold text-white mb-4 text-center">Multiverse Navigation</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Navigate the infinite multiverse with precision, finding the perfect dimension for any purpose.
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Multiverse GPS systems</li>
+              <li>• Dimension search engines</li>
+              <li>• Reality comparison tools</li>
+              <li>• Optimal dimension finders</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-6 text-center">⚡</div>
+            <h3 className="text-2xl font-bold text-white mb-4 text-center">Reality Bridging</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Create stable bridges between dimensions, allowing matter and energy to flow between realities.
+            </p>
+            <ul className="text-orange-200 space-y-2 text-sm">
+              <li>• Dimensional bridge creation</li>
+              <li>• Matter transfer systems</li>
+              <li>• Energy flow conduits</li>
+              <li>• Reality stabilization fields</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Revolutionary Breakthrough Section */}
+        <div className="bg-gradient-to-r from-purple-600/20 via-cyan-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🌀 Dimension Access Technology</h2>
-            <p className="text-xl text-indigo-200">Revolutionary technology for interdimensional travel and communication</p>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              🌟 The First Interdimensional Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              For the first time in human history, we have created technology that can access and communicate 
+              across multiple dimensions. This breakthrough opens up infinite possibilities for exploration and discovery.
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Quantum Portal Network */}
-            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🌀</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Portal Network</h3>
-              <p className="text-cyan-100 mb-6 text-center">
-                Stable wormhole network connecting multiple dimensions with instant travel capabilities
-              </p>
-              <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-                <li>• Instant Dimensional Travel</li>
-                <li>• Stable Wormhole Maintenance</li>
-                <li>• Multi-Dimensional Network</li>
-                <li>• Safe Passage Guarantee</li>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Interdimensional Capabilities</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start space-x-3">
+                  <span className="text-purple-400 text-xl">🌌</span>
+                  <span>Access to infinite parallel universes and alternate realities</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-purple-400 text-xl">🔗</span>
+                  <span>Instant communication across all dimensions</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-purple-400 text-xl">🚀</span>
+                  <span>Precise navigation through the multiverse</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-purple-400 text-xl">⚡</span>
+                  <span>Creation of stable bridges between dimensions</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-purple-400 text-xl">🔬</span>
+                  <span>Scientific research across multiple realities</span>
+                </li>
               </ul>
-              <a href="#portal-demo" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-                Enter Portal →
-              </a>
-            </div>
-
-            {/* Reality Scanner */}
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🔍</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Reality Scanner</h3>
-              <p className="text-purple-100 mb-6 text-center">
-                Advanced scanning technology for mapping and analyzing parallel dimensions
-              </p>
-              <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-                <li>• Dimension Mapping</li>
-                <li>• Reality Analysis</li>
-                <li>• Threat Assessment</li>
-                <li>• Resource Detection</li>
-              </ul>
-              <a href="#scanner-demo" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-                Scan Reality →
-              </a>
-            </div>
-
-            {/* Dimensional Communication */}
-            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">📡</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Dimensional Communication</h3>
-              <p className="text-emerald-100 mb-6 text-center">
-                Real-time communication across dimensions with parallel universe civilizations
-              </p>
-              <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-                <li>• Cross-Dimensional Chat</li>
-                <li>• Parallel Universe Contact</li>
-                <li>• Knowledge Exchange</li>
-                <li>• Cultural Sharing</li>
-              </ul>
-              <a href="#comm-demo" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-                Start Communication →
-              </a>
-            </div>
-
-            {/* Reality Manipulation */}
-            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">⚡</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Reality Manipulation</h3>
-              <p className="text-orange-100 mb-6 text-center">
-                Controlled manipulation of dimensional properties and reality parameters
-              </p>
-              <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-                <li>• Physics Modification</li>
-                <li>• Gravity Control</li>
-                <li>• Time Dilation</li>
-                <li>• Matter Transformation</li>
-              </ul>
-              <a href="#manipulation-demo" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-                Manipulate Reality →
-              </a>
-            </div>
-
-            {/* Dimension Storage */}
-            <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">💾</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Dimension Storage</h3>
-              <p className="text-violet-100 mb-6 text-center">
-                Infinite storage capacity using pocket dimensions for data and physical objects
-              </p>
-              <ul className="text-violet-200 space-y-2 mb-6 text-sm">
-                <li>• Infinite Capacity</li>
-                <li>• Instant Access</li>
-                <li>• Secure Storage</li>
-                <li>• Dimensional Backup</li>
-              </ul>
-              <a href="#storage-demo" className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
-                Access Storage →
-              </a>
-            </div>
-
-            {/* Parallel Universe Explorer */}
-            <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🌍</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Parallel Universe Explorer</h3>
-              <p className="text-pink-100 mb-6 text-center">
-                Exploration tools for discovering and cataloging parallel universes
-              </p>
-              <ul className="text-pink-200 space-y-2 mb-6 text-sm">
-                <li>• Universe Discovery</li>
-                <li>• Civilization Mapping</li>
-                <li>• Resource Survey</li>
-                <li>• Contact Protocols</li>
-              </ul>
-              <a href="#explorer-demo" className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
-                Start Exploration →
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Portal Interface */}
-        <section id="portal" className="mb-16">
-          <div className="bg-gradient-to-br from-indigo-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold text-white mb-4">🌀 Interdimensional Portal Interface</h2>
-              <p className="text-xl text-indigo-200">Experience interdimensional travel through our advanced portal system</p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-black/50 rounded-lg p-6 text-center">
-                <div className="text-4xl mb-4">🌌</div>
-                <h3 className="text-xl font-bold text-white mb-2">Dimension Alpha-7</h3>
-                <p className="text-indigo-200 text-sm mb-4">A parallel Earth with advanced technology</p>
-                <a href="#alpha-7" className="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 transition-colors">
-                  Enter Alpha-7
-                </a>
-              </div>
-              
-              <div className="bg-black/50 rounded-lg p-6 text-center">
-                <div className="text-4xl mb-4">🔮</div>
-                <h3 className="text-xl font-bold text-white mb-2">Dimension Beta-12</h3>
-                <p className="text-indigo-200 text-sm mb-4">A world where magic and science coexist</p>
-                <a href="#beta-12" className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-                  Enter Beta-12
-                </a>
-              </div>
-              
-              <div className="bg-black/50 rounded-lg p-6 text-center">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-2">Dimension Gamma-3</h3>
-                <p className="text-indigo-200 text-sm mb-4">A universe of pure energy and consciousness</p>
-                <a href="#gamma-3" className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 transition-colors">
-                  Enter Gamma-3
-                </a>
-              </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Revolutionary Applications</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start space-x-3">
+                  <span className="text-cyan-400 text-xl">🌍</span>
+                  <span>Exploration of infinite Earth variations</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-cyan-400 text-xl">👥</span>
+                  <span>Communication with alternate versions of yourself</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-cyan-400 text-xl">🔬</span>
+                  <span>Scientific experiments across multiple realities</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-cyan-400 text-xl">🎨</span>
+                  <span>Artistic collaboration across dimensions</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="text-cyan-400 text-xl">💼</span>
+                  <span>Business partnerships across realities</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Discovered Dimensions */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🌍 Discovered Dimensions</h2>
-            <p className="text-xl text-indigo-200">Parallel universes we've successfully accessed and mapped</p>
-          </div>
-          
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg p-6 border border-cyan-400/30">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-white">Dimension Alpha-7: The Tech World</h3>
-                  <p className="text-cyan-200 text-sm">A parallel Earth where technology advanced 1000 years ahead</p>
-                  <div className="text-xs text-cyan-300 mt-2">
-                    • Population: 12 billion • Technology Level: 3027 • Status: Friendly
-                  </div>
-                </div>
-                <div className="text-2xl">🌌</div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 border border-purple-400/30">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-white">Dimension Beta-12: The Magic Realm</h3>
-                  <p className="text-purple-200 text-sm">A world where magic and technology have merged into one</p>
-                  <div className="text-xs text-purple-300 mt-2">
-                    • Population: 8 billion • Magic Level: Supreme • Status: Neutral
-                  </div>
-                </div>
-                <div className="text-2xl">🔮</div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-lg p-6 border border-emerald-400/30">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-white">Dimension Gamma-3: The Energy Universe</h3>
-                  <p className="text-emerald-200 text-sm">A universe composed entirely of pure energy and consciousness</p>
-                  <div className="text-xs text-emerald-300 mt-2">
-                    • Population: Infinite • Energy Level: Maximum • Status: Mysterious
-                  </div>
-                </div>
-                <div className="text-2xl">⚡</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Applications */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🔬 Applications</h2>
-            <p className="text-xl text-indigo-200">Revolutionary applications of interdimensional technology</p>
-          </div>
-          
+        {/* Technical Specifications */}
+        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-slate-600/30">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Technical Specifications</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-lg p-8 border border-green-400/30">
-              <div className="text-5xl mb-4 text-center">🌱</div>
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">Resource Access</h3>
-              <p className="text-green-200 text-center mb-4">
-                Access unlimited resources from parallel dimensions for sustainable development
-              </p>
-              <ul className="text-green-300 space-y-2 text-sm">
-                <li>• Infinite Energy Sources</li>
-                <li>• Rare Material Access</li>
-                <li>• Advanced Technology</li>
-                <li>• Knowledge Transfer</li>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🌌</div>
+              <h3 className="text-xl font-bold text-white mb-4">Dimension Access</h3>
+              <ul className="text-gray-300 space-y-2 text-sm">
+                <li>• Quantum dimension scanners</li>
+                <li>• Reality frequency analyzers</li>
+                <li>• Multiverse mapping systems</li>
+                <li>• Dimension portal generators</li>
               </ul>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-lg p-8 border border-blue-400/30">
-              <div className="text-5xl mb-4 text-center">🚀</div>
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">Space Colonization</h3>
-              <p className="text-blue-200 text-center mb-4">
-                Instant colonization of habitable worlds across parallel dimensions
-              </p>
-              <ul className="text-blue-300 space-y-2 text-sm">
-                <li>• Instant Transportation</li>
-                <li>• Parallel Earth Access</li>
-                <li>• Resource Abundance</li>
-                <li>• Population Distribution</li>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔗</div>
+              <h3 className="text-xl font-bold text-white mb-4">Communication Systems</h3>
+              <ul className="text-gray-300 space-y-2 text-sm">
+                <li>• Interdimensional messaging networks</li>
+                <li>• Cross-reality video systems</li>
+                <li>• Dimensional translation AI</li>
+                <li>• Multiverse social platforms</li>
               </ul>
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-8 border border-purple-400/30">
-              <div className="text-5xl mb-4 text-center">🌐</div>
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">Universal Network</h3>
-              <p className="text-purple-200 text-center mb-4">
-                Interdimensional communication network connecting all parallel universes
-              </p>
-              <ul className="text-purple-300 space-y-2 text-sm">
-                <li>• Cross-Dimensional Internet</li>
-                <li>• Universal Knowledge Base</li>
-                <li>• Cultural Exchange</li>
-                <li>• Peaceful Cooperation</li>
+            <div className="text-center">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-4">Bridge Technology</h3>
+              <ul className="text-gray-300 space-y-2 text-sm">
+                <li>• Reality bridge stabilizers</li>
+                <li>• Matter transfer conduits</li>
+                <li>• Energy flow regulators</li>
+                <li>• Dimensional safety systems</li>
               </ul>
             </div>
           </div>
-        </section>
+        </div>
+
+        {/* Multiverse Exploration */}
+        <div className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-indigo-400/30">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Multiverse Exploration</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Discovered Dimensions</h3>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Earth-2: Advanced civilization with flying cars</li>
+                <li>• Earth-3: Magic-based technology society</li>
+                <li>• Earth-4: Post-apocalyptic cyberpunk world</li>
+                <li>• Earth-5: Underwater civilization</li>
+                <li>• Earth-6: Space-faring human empire</li>
+                <li>• Earth-7: AI-dominated society</li>
+                <li>• Earth-8: Time-manipulation civilization</li>
+                <li>• Earth-9: Energy-based life forms</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Exploration Missions</h3>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>• Scientific research expeditions</li>
+                <li>• Cultural exchange programs</li>
+                <li>• Technology sharing initiatives</li>
+                <li>• Resource discovery missions</li>
+                <li>• Diplomatic relations establishment</li>
+                <li>• Trade agreement negotiations</li>
+                <li>• Knowledge transfer programs</li>
+                <li>• Joint research projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-indigo-600 to-pink-600 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Explore the Multiverse</h2>
-            <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-              Join us in exploring the infinite possibilities of the multiverse. 
-              Discover parallel worlds, access unlimited resources, and connect with civilizations across dimensions.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <a href="/contact" className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Begin Exploration
-              </a>
-              <a href="/pages/QuantumConsciousness2027" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-                Learn More
-              </a>
-            </div>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Explore the Infinite Multiverse
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join us in exploring the infinite possibilities of the multiverse. 
+            Discover alternate realities, meet parallel versions of yourself, and unlock the secrets of existence.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/pages/AdvancedTechRevolution2027" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore All Technologies →
+            </a>
+            <a href="/pages/QuantumRealityEngine2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Quantum Reality Engine →
+            </a>
+            <a href="/pages/ConsciousnessComputing2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Consciousness Computing →
+            </a>
           </div>
-        </section>
-      </main>
-      
-      <Footer />
+        </div>
+      </div>
     </div>
   );
 };

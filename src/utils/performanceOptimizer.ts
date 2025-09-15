@@ -399,7 +399,6 @@ class PerformanceOptimizer {
     
     return `
 Performance Report for Zion Tech Group
-======================================
 
 Overall Score: ${score}/100
 

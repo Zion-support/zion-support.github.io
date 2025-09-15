@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
-  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
-  PhoneMailMapPinSearchGridListSparklesTargetBarChart3
-  LightbulbCodeServerNetworkShieldCheckBrainCircuitAtomSatellite,
-  EyeClockDollarSignCheckCircleArrowUpRight
-=======
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, 
-  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite,
-  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -32,27 +15,10 @@ const QuantumLoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
     {/* Quantum particle effects */}
     <div className="absolute inset-0">
-<<<<<<< HEAD
-      {[...Array(100)].map((_i) => (
-=======
-      {[...Array(100)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"
           animate={{
-<<<<<<< HEAD
-            x: [0Math.random() * 1200],
-            y: [0Math.random() * 800],
-            opacity: [010],
-            scale: [010]}}
-=======
-            x: [0, Math.random() * 1200],
-            y: [0, Math.random() * 800],
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: Math.random() * 4 + 3,
             repeat: Infinity,
@@ -60,25 +26,12 @@ const QuantumLoadingFallback = () => (
           }}
           style={{
             left: Math.random() * 100 + '%',
-<<<<<<< HEAD
-            top: Math.random() * 100 + '%'}}
-=======
-            top: Math.random() * 100 + '%',
-          }}
->>>>>>> origin/auto/autonomy-17186719616
         />
       ))}
     </div>
     
     {/* Quantum loading animation */}
     <motion.div
-<<<<<<< HEAD
-      initial={{ opacity: 0scale: 0.5 }}
-      animate={{ opacity: 1scale: 1 }}
-=======
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
->>>>>>> origin/auto/autonomy-17186719616
       transition={{ duration: 1 }}
       className="text-center relative z-10"
     >
@@ -86,31 +39,6 @@ const QuantumLoadingFallback = () => (
         <motion.div
           animate={{ 
             rotate: 360,
-<<<<<<< HEAD
-            scale: [1.21],
-            boxShadow: [
-              "0 0 20px rgba(6182120.5)",
-              "0 0 40px rgba(16852470.8)",
-              "0 0 20px rgba(6182120.5)"
-            ]
-          }}
-          transition={{ 
-            rotate: { duration: 3repeat: Infinityease: "linear" },
-            scale: { duration: 2repeat: Infinityease: "easeInOut" },
-            boxShadow: { duration: 2repeat: Infinityease: "easeInOut" }
-=======
-            scale: [1, 1.2, 1],
-            boxShadow: [
-              "0 0 20px rgba(6, 182, 212, 0.5)",
-              "0 0 40px rgba(168, 85, 247, 0.8)",
-              "0 0 20px rgba(6, 182, 212, 0.5)"
-            ]
-          }}
-          transition={{ 
-            rotate: { duration: 3, repeat: Infinity, ease: "linear" },
-            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-            boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
->>>>>>> origin/auto/autonomy-17186719616
           }}
           className="w-32 h-32 mx-auto mb-8"
         >
@@ -122,13 +50,6 @@ const QuantumLoadingFallback = () => (
       </div>
       <motion.h1 
         className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent"
-<<<<<<< HEAD
-        animate={{ opacity: [0.510.5] }}
-        transition={{ duration: 3repeat: Infinity }}
-=======
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 3, repeat: Infinity }}
->>>>>>> origin/auto/autonomy-17186719616
       >
         Zion Tech Group 2046
       </motion.h1>
@@ -141,11 +62,6 @@ const QuantumLoadingFallback = () => (
           className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
-<<<<<<< HEAD
-          transition={{ duration: 3ease: "easeInOut" }}
-=======
-          transition={{ duration: 3, ease: "easeInOut" }}
->>>>>>> origin/auto/autonomy-17186719616
         />
       </div>
     </motion.div>
@@ -153,35 +69,11 @@ const QuantumLoadingFallback = () => (
 );
 
 const Homepage2046: React.FC = () => {
-<<<<<<< HEAD
-  const [isLoadingsetIsLoading] = useState(true);
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeSectionsetActiveSection] = useState('hero');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [searchQuerysetSearchQuery] = useState('');
-=======
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsVisible(true);
-<<<<<<< HEAD
-    }2000);
-
-    return () => clearTimeout(timer);
-  }[]);
-=======
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   // Intersection Observer for better performance
   useEffect(() => {
@@ -202,11 +94,6 @@ const Homepage2046: React.FC = () => {
 
       return () => observer.disconnect();
     }
-<<<<<<< HEAD
-  }[]);
-=======
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (isLoading) {
     return <QuantumLoadingFallback />;
@@ -225,11 +112,6 @@ const Homepage2046: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-<<<<<<< HEAD
-  const categories = ['all'...Array.from(new Set(allServices.map(s => s.category)))];
-=======
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Layout>
@@ -240,25 +122,10 @@ const Homepage2046: React.FC = () => {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
           
           {/* Floating orbs */}
-<<<<<<< HEAD
-          {[...Array(20)].map((_i) => (
-=======
-          {[...Array(20)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30"
               animate={{
-<<<<<<< HEAD
-                x: [0Math.random() * 100 - 50],
-                y: [0Math.random() * 100 - 50],
-                opacity: [0.30.80.3]}}
-=======
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * 100 - 50],
-                opacity: [0.3, 0.8, 0.3],
-              }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
@@ -266,12 +133,6 @@ const Homepage2046: React.FC = () => {
               }}
               style={{
                 left: Math.random() * 100 + '%',
-<<<<<<< HEAD
-                top: Math.random() * 100 + '%'}}
-=======
-                top: Math.random() * 100 + '%',
-              }}
->>>>>>> origin/auto/autonomy-17186719616
             />
           ))}
         </div>
@@ -286,15 +147,6 @@ const Homepage2046: React.FC = () => {
             >
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold text-white mb-8"
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.5 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 1.5delay: 0.5 }}
-=======
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.5, delay: 0.5 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
                   Zion Tech Group
@@ -305,17 +157,6 @@ const Homepage2046: React.FC = () => {
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 1delay: 1 }}
-              >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>
-                <span className="text-purple-400 font-semibold"> Neural Interfaces</span>and 
-=======
-                transition={{ duration: 1, delay: 1 }}
-              >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>, 
-                <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
->>>>>>> origin/auto/autonomy-17186719616
                 <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
               </motion.p>
               
@@ -323,19 +164,6 @@ const Homepage2046: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 1delay: 1.5 }}
-              >
-                <Link href="/services">
-                  <motion.button
-                    whileHover={{ scale: 1.05boxShadow: "0 0 30px rgba(6182120.5)" }}
-=======
-                transition={{ duration: 1, delay: 1.5 }}
-              >
-                <Link href="/services">
-                  <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
->>>>>>> origin/auto/autonomy-17186719616
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                   >
@@ -345,11 +173,6 @@ const Homepage2046: React.FC = () => {
                 
                 <Link href="/contact">
                   <motion.button
-<<<<<<< HEAD
-                    whileHover={{ scale: 1.05boxShadow: "0 0 30px rgba(16852470.5)" }}
-=======
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
->>>>>>> origin/auto/autonomy-17186719616
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
                   >
@@ -364,11 +187,6 @@ const Homepage2046: React.FC = () => {
               className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 1delay: 2 }}
-=======
-              transition={{ duration: 1, delay: 2 }}
->>>>>>> origin/auto/autonomy-17186719616
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="flex flex-col items-center">
@@ -407,11 +225,6 @@ const Homepage2046: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Discover our cutting-edge quantum AIneural interfaceand space technology solutions that are transforming industries worldwide.
-=======
-                Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
 
@@ -419,11 +232,6 @@ const Homepage2046: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 1delay: 0.2 }}
-=======
-              transition={{ duration: 1, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="mb-12"
             >
@@ -461,32 +269,10 @@ const Homepage2046: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 1delay: 0.4 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((serviceindex) => (
-=======
-              transition={{ duration: 1, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10scale: 1.02 }}
-=======
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10, scale: 1.02 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="group"
                 >
                   <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">
@@ -499,11 +285,6 @@ const Homepage2046: React.FC = () => {
                           {service.category}
                         </span>
                         <div className="flex items-center gap-1 mt-1">
-<<<<<<< HEAD
-                          {[...Array(5)].map((_i) => (
-=======
-                          {[...Array(5)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -536,11 +317,6 @@ const Homepage2046: React.FC = () => {
                     <div className="space-y-2 mb-6">
                       <h4 className="text-sm font-semibold text-white">Key Features:</h4>
                       <ul className="space-y-1">
-<<<<<<< HEAD
-                        {service.features.slice(03).map((featureidx) => (
-=======
-                        {service.features.slice(0, 3).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <li key={idx} className="flex items-start gap-2 text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-cyan-400 mt-0.5 flex-shrink-0" />
                             <span>{feature}</span>
@@ -580,11 +356,6 @@ const Homepage2046: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 1delay: 0.6 }}
-=======
-              transition={{ duration: 1, delay: 0.6 }}
->>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center mt-20"
             >
@@ -593,20 +364,10 @@ const Homepage2046: React.FC = () => {
                   Ready to Transform Your Business?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                  Join the future with our revolutionary quantum AIneural interfaceand space technology solutions.
-=======
-                  Join the future with our revolutionary quantum AI, neural interface, and space technology solutions.
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact">
                     <motion.button
-<<<<<<< HEAD
-                      whileHover={{ scale: 1.05boxShadow: "0 0 30px rgba(6182120.5)" }}
-=======
-                      whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
->>>>>>> origin/auto/autonomy-17186719616
                       whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                     >
@@ -615,11 +376,6 @@ const Homepage2046: React.FC = () => {
                   </Link>
                   <Link href="/services">
                     <motion.button
-<<<<<<< HEAD
-                      whileHover={{ scale: 1.05boxShadow: "0 0 30px rgba(16852470.5)" }}
-=======
-                      whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
->>>>>>> origin/auto/autonomy-17186719616
                       whileTap={{ scale: 0.95 }}
                       className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
                     >
