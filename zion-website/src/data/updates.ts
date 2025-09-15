@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Incident Simulation Toolkit v1.0',
+    summary:
+      'Scenario-driven drills, policy checks, and CI/CD gates to harden agent systems.',
+    href: '/updates/incident-simulation-toolkit-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Agent Governance Toolkit v2.0',
+    summary:
+      'Expanded policy library, evidence capture, and signed bundles for enterprise rollout.',
+    href: '/updates/agent-governance-toolkit-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Autonomous Incident Response v1.0',
     summary:
       'End-to-end automated incident detection, triage, and remediation workflows for AI systems.',

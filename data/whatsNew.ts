@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "incident-simulation-toolkit-1-0",
+    title: "Incident Simulation Toolkit v1.0",
+    description:
+      "Run red-team drills, validate mitigations, and prove safety with policy gates.",
+    ctaLabel: "Read Update",
+    href: "/updates/incident-simulation-toolkit-1-0",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-governance-toolkit-2-0",
+    title: "Agent Governance Toolkit v2.0",
+    description:
+      "Expanded policy library, signed bundles, and audit-ready evidence capture.",
+    ctaLabel: "Read Update",
+    href: "/updates/agent-governance-toolkit-2-0",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "gtm-agents-blueprint-2026",
     title: "AI 2026: Go-To-Market Agents Blueprint",
     description:
