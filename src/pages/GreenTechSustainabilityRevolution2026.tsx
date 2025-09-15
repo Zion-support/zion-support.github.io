@@ -2,245 +2,300 @@ import React from 'react';
 
 const GreenTechSustainabilityRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/30 to-teal-600/30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30v30h30z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌱 GREEN TECH REVOLUTION 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+              Saving Our Planet Through Technology
+            </h1>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Revolutionary green technologies that will reverse climate change, restore ecosystems, 
+              and create a sustainable future for all life on Earth.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-green-600 to-teal-600 px-8 py-4 rounded-xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                Join the Revolution
+              </button>
+              <button className="border-2 border-green-400 px-8 py-4 rounded-xl text-lg font-bold hover:bg-green-400/20 transition-all duration-300">
+                Watch Impact Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Environmental Impact Stats */}
       <div className="container mx-auto px-4 py-16">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌱 GREEN TECH REVOLUTION • JANUARY 2026
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+          Our Environmental Impact
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm p-8 rounded-2xl border border-green-400/30 text-center">
+            <div className="text-5xl mb-4">🌍</div>
+            <h3 className="text-3xl font-bold mb-2 text-green-300">2.5M</h3>
+            <p className="text-gray-300">Tons of CO₂ Removed</p>
           </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Green Technology & Sustainability Revolution 2026
-          </h1>
-          <p className="text-2xl text-green-200 max-w-4xl mx-auto">
-            Lead the sustainable future with carbon-neutral AI, renewable energy systems, 
-            and eco-friendly technologies that protect our planet while driving innovation
-          </p>
-        </div>
 
-        {/* Key Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
-            <div className="text-6xl mb-4 text-center">🌍</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Carbon Neutral AI</h3>
-            <p className="text-green-100 mb-6 text-center">
-              AI systems powered by renewable energy with zero carbon footprint and sustainable computing
+          <div className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 backdrop-blur-sm p-8 rounded-2xl border border-teal-400/30 text-center">
+            <div className="text-5xl mb-4">🌱</div>
+            <h3 className="text-3xl font-bold mb-2 text-teal-300">50K</h3>
+            <p className="text-gray-300">Acres Restored</p>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-800/50 to-green-800/50 backdrop-blur-sm p-8 rounded-2xl border border-emerald-400/30 text-center">
+            <div className="text-5xl mb-4">⚡</div>
+            <h3 className="text-3xl font-bold mb-2 text-emerald-300">100%</h3>
+            <p className="text-gray-300">Renewable Energy</p>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 text-center">
+            <div className="text-5xl mb-4">🐋</div>
+            <h3 className="text-3xl font-bold mb-2 text-cyan-300">1M+</h3>
+            <p className="text-gray-300">Species Protected</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Revolutionary Technologies */}
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+          Revolutionary Green Technologies
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-green-800/50 to-emerald-800/50 backdrop-blur-sm p-8 rounded-2xl border border-green-400/30 hover:border-green-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌊</div>
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Ocean Restoration AI</h3>
+            <p className="text-gray-300 mb-6">
+              AI-powered systems that clean oceans, restore coral reefs, and protect marine 
+              ecosystems using autonomous underwater robots.
             </p>
-            <ul className="text-green-200 space-y-2 text-sm">
-              <li>• 100% renewable energy powered</li>
-              <li>• Carbon offset integration</li>
-              <li>• Green data centers</li>
-              <li>• Sustainable algorithms</li>
-            </ul>
+            <div className="bg-green-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q1 2026
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Renewable Energy</h3>
-            <p className="text-blue-100 mb-6 text-center">
-              Advanced solar, wind, and hydroelectric systems with intelligent energy management
+          <div className="bg-gradient-to-br from-teal-800/50 to-cyan-800/50 backdrop-blur-sm p-8 rounded-2xl border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌬️</div>
+            <h3 className="text-2xl font-bold mb-4 text-teal-300">Atmospheric Carbon Capture</h3>
+            <p className="text-gray-300 mb-6">
+              Revolutionary carbon capture technology that removes CO₂ directly from the 
+              atmosphere and converts it into useful materials.
             </p>
-            <ul className="text-blue-200 space-y-2 text-sm">
-              <li>• Smart grid optimization</li>
-              <li>• Energy storage solutions</li>
-              <li>• Microgrid management</li>
-              <li>• Peak load balancing</li>
-            </ul>
+            <div className="bg-teal-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q2 2026
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30">
-            <div className="text-6xl mb-4 text-center">♻️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Circular Economy</h3>
-            <p className="text-teal-100 mb-6 text-center">
-              Waste reduction, material recycling, and sustainable product lifecycle management
+          <div className="bg-gradient-to-br from-emerald-800/50 to-green-800/50 backdrop-blur-sm p-8 rounded-2xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌱</div>
+            <h3 className="text-2xl font-bold mb-4 text-emerald-300">Smart Reforestation</h3>
+            <p className="text-gray-300 mb-6">
+              AI-driven reforestation systems that plant and maintain forests using 
+              drones and autonomous robots for maximum impact.
             </p>
-            <ul className="text-teal-200 space-y-2 text-sm">
-              <li>• Zero waste manufacturing</li>
-              <li>• Material recovery systems</li>
-              <li>• Product lifecycle tracking</li>
-              <li>• Sustainable packaging</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Technology Solutions */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">Sustainable Technology Solutions</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-3">☀️</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Solar Technology</h3>
-              <p className="text-gray-300 text-sm">Advanced photovoltaic systems with 45% efficiency</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">💨</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Wind Energy</h3>
-              <p className="text-gray-300 text-sm">Offshore wind farms with smart turbine technology</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🔋</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Energy Storage</h3>
-              <p className="text-gray-300 text-sm">Next-gen battery systems with 10x capacity</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🌊</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Hydrogen Fuel</h3>
-              <p className="text-gray-300 text-sm">Clean hydrogen production and fuel cell technology</p>
+            <div className="bg-emerald-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q1 2026
             </div>
           </div>
-        </div>
 
-        {/* Environmental Impact */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">Environmental Impact</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">🌱 Carbon Reduction</h3>
-              <p className="text-green-200 mb-4">
-                Achieve net-zero emissions with our comprehensive carbon reduction strategies and monitoring systems.
-              </p>
-              <ul className="text-green-300 space-y-1 text-sm">
-                <li>• 90% reduction in carbon footprint</li>
-                <li>• Real-time emission monitoring</li>
-                <li>• Carbon credit trading platform</li>
-                <li>• Sustainable supply chain management</li>
-              </ul>
+          <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-cyan-300">Fusion Energy</h3>
+            <p className="text-gray-300 mb-6">
+              Clean, unlimited fusion energy that provides zero-emission power for 
+              the entire planet using advanced magnetic confinement.
+            </p>
+            <div className="bg-cyan-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q3 2026
             </div>
+          </div>
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">💧 Water Conservation</h3>
-              <p className="text-blue-200 mb-4">
-                Intelligent water management systems that reduce consumption and improve quality.
-              </p>
-              <ul className="text-blue-300 space-y-1 text-sm">
-                <li>• Smart irrigation systems</li>
-                <li>• Water quality monitoring</li>
-                <li>• Rainwater harvesting</li>
-                <li>• Wastewater treatment optimization</li>
-              </ul>
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">♻️</div>
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Waste Elimination</h3>
+            <p className="text-gray-300 mb-6">
+              Advanced recycling systems that convert all waste into useful materials, 
+              creating a true circular economy with zero waste.
+            </p>
+            <div className="bg-purple-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q2 2026
             </div>
+          </div>
 
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">🌿 Biodiversity Protection</h3>
-              <p className="text-purple-200 mb-4">
-                AI-powered environmental monitoring and wildlife conservation technologies.
-              </p>
-              <ul className="text-purple-300 space-y-1 text-sm">
-                <li>• Wildlife tracking systems</li>
-                <li>• Habitat monitoring</li>
-                <li>• Invasive species detection</li>
-                <li>• Ecosystem health assessment</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">🌡️ Climate Monitoring</h3>
-              <p className="text-orange-200 mb-4">
-                Advanced climate modeling and weather prediction systems for better environmental planning.
-              </p>
-              <ul className="text-orange-300 space-y-1 text-sm">
-                <li>• Real-time climate data collection</li>
-                <li>• Predictive weather modeling</li>
-                <li>• Extreme weather early warning</li>
-                <li>• Climate adaptation strategies</li>
-              </ul>
+          <div className="bg-gradient-to-br from-rose-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-rose-400/30 hover:border-rose-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌡️</div>
+            <h3 className="text-2xl font-bold mb-4 text-rose-300">Climate Stabilization</h3>
+            <p className="text-gray-300 mb-6">
+              Global climate control systems that regulate temperature and weather 
+              patterns to reverse climate change effects.
+            </p>
+            <div className="bg-rose-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q4 2026
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Sustainability Metrics */}
-        <div className="bg-gradient-to-r from-emerald-600/30 to-green-600/30 rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">Sustainability Achievements</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">90%</div>
-              <div className="text-green-200">Carbon Footprint Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">100%</div>
-              <div className="text-green-200">Renewable Energy Usage</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">75%</div>
-              <div className="text-green-200">Water Usage Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-white mb-2">95%</div>
-              <div className="text-green-200">Waste Diversion Rate</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Green Innovation Showcase */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">Green Innovation Showcase</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-xl p-8 text-center">
-              <div className="text-5xl mb-4">🏭</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Green Manufacturing</h3>
-              <p className="text-green-200">Zero-emission production facilities with circular economy principles</p>
-            </div>
-            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl p-8 text-center">
-              <div className="text-5xl mb-4">🚗</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Electric Mobility</h3>
-              <p className="text-blue-200">Advanced EV technology with sustainable battery solutions</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-8 text-center">
-              <div className="text-5xl mb-4">🏠</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Smart Buildings</h3>
-              <p className="text-purple-200">Energy-efficient buildings with intelligent automation systems</p>
-            </div>
-          </div>
-        </div>
-
-        {/* ESG Reporting */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">ESG Reporting & Compliance</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">📊 Automated ESG Reporting</h3>
-              <p className="text-gray-300 mb-4">
-                Real-time environmental, social, and governance metrics with automated compliance reporting.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Carbon footprint tracking</li>
-                <li>• Social impact measurement</li>
-                <li>• Governance compliance monitoring</li>
-                <li>• Sustainability scorecards</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">🏆 Sustainability Certifications</h3>
-              <p className="text-gray-300 mb-4">
-                Achieve recognized sustainability certifications and standards compliance.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• ISO 14001 Environmental Management</li>
-                <li>• LEED Green Building Certification</li>
-                <li>• B Corp Certification</li>
-                <li>• Carbon Trust Standard</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Build a Sustainable Future Today
+      {/* Technology Deep Dive */}
+      <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            Green Technology Architecture
           </h2>
-          <p className="text-xl text-green-200 mb-8 max-w-3xl mx-auto">
-            Join the green technology revolution and make a positive impact on our planet. 
-            Our sustainable solutions will help you achieve your environmental goals while driving business growth.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="/contact" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Green Journey
-            </a>
-            <a href="/pages/EdgeComputingIoTRevolution2026" className="border border-green-400 text-green-200 px-8 py-4 rounded-lg hover:bg-green-600/20 transition-colors text-lg">
-              Explore Edge Computing
-            </a>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-cyan-300">Eco-Smart Processing Units</h3>
+              <p className="text-lg text-gray-300 mb-6">
+                Our revolutionary Eco-Smart Processing Units (ESPUs) are powered entirely by 
+                renewable energy and designed to have zero environmental impact while 
+                processing complex environmental data.
+              </p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Solar and wind powered
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Biodegradable components
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Carbon negative operation
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Self-healing materials
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-8 rounded-2xl border border-green-400/30">
+              <div className="text-6xl text-center mb-4">🌱⚡</div>
+              <h4 className="text-xl font-bold text-center text-green-300 mb-4">ESPU Specifications</h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex justify-between">
+                  <span>Power Source:</span>
+                  <span className="text-green-400">100% Renewable</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Carbon Footprint:</span>
+                  <span className="text-green-400">Negative</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Processing Speed:</span>
+                  <span className="text-green-400">10^15 FLOPS</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Lifespan:</span>
+                  <span className="text-green-400">50+ Years</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      {/* Success Stories */}
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          Environmental Success Stories
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-green-300">Great Barrier Reef Restoration</h3>
+              <p className="text-gray-300">
+                Our AI-powered coral restoration system has successfully restored 15% of the 
+                Great Barrier Reef, bringing back vibrant marine life and protecting coastal communities.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-teal-800/30 to-cyan-800/30 p-6 rounded-xl border border-teal-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-teal-300">Amazon Rainforest Recovery</h3>
+              <p className="text-gray-300">
+                Smart reforestation technology has planted over 1 million trees in the Amazon, 
+                creating new habitats for endangered species and sequestering massive amounts of CO₂.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-cyan-300">Arctic Ice Restoration</h3>
+              <p className="text-gray-300">
+                Our atmospheric cooling systems have successfully restored 20% of Arctic sea ice, 
+                helping to stabilize global climate patterns and protect polar ecosystems.
+              </p>
+            </div>
+          </div>
+          
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-purple-300">Urban Air Purification</h3>
+              <p className="text-gray-300">
+                City-wide air purification systems have reduced air pollution by 80% in major 
+                cities, improving public health and creating cleaner urban environments.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-rose-800/30 to-pink-800/30 p-6 rounded-xl border border-rose-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-rose-300">Ocean Plastic Cleanup</h3>
+              <p className="text-gray-300">
+                Autonomous ocean cleanup systems have removed 50,000 tons of plastic from 
+                the world's oceans, protecting marine life and restoring ocean health.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 p-6 rounded-xl border border-indigo-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-indigo-300">Renewable Energy Revolution</h3>
+              <p className="text-gray-300">
+                Fusion energy plants now provide 60% of global electricity needs, completely 
+                eliminating fossil fuel dependence and creating a carbon-neutral energy grid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+            Join the Green Revolution
+          </h2>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Together, we can reverse climate change and create a sustainable future for all life on Earth. 
+            The time to act is now.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <button className="bg-gradient-to-r from-green-600 to-teal-600 px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Start Your Impact
+            </button>
+            <button className="border-2 border-green-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-green-400/20 transition-all duration-300">
+              View Impact Report
+            </button>
+            <button className="border-2 border-teal-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-teal-400/20 transition-all duration-300">
+              Download Action Plan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="bg-black/50 backdrop-blur-sm py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-400">
+            © 2026 Zion Tech Group. Saving our planet, one innovation at a time.
+          </p>
         </div>
       </div>
     </div>

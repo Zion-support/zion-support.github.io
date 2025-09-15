@@ -181,28 +181,27 @@ const InteractiveTechShowcase2027: React.FC = () => {
         </div>
       </div>
 
-        {/* Technology Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-lg text-gray-300 mb-2">Accuracy Rate</div>
-            <div className="text-sm text-gray-400">Quantum consciousness processing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">10,000x</div>
-            <div className="text-lg text-gray-300 mb-2">Speed Increase</div>
-            <div className="text-sm text-gray-400">Neural quantum fusion computing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-pink-400 mb-2">∞</div>
-            <div className="text-lg text-gray-300 mb-2">Possibilities</div>
-            <div className="text-sm text-gray-400">Synthetic reality applications</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">0ms</div>
-            <div className="text-lg text-gray-300 mb-2">Latency</div>
-            <div className="text-sm text-gray-400">Dimensional computing response</div>
-          </div>
+      {/* Technology Stats */}
+      <div className="mt-16 grid md:grid-cols-4 gap-8">
+        <div className="text-center">
+          <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+          <div className="text-lg text-gray-300 mb-2">Accuracy Rate</div>
+          <div className="text-sm text-gray-400">Quantum consciousness processing</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-bold text-purple-400 mb-2">10,000x</div>
+          <div className="text-lg text-gray-300 mb-2">Speed Increase</div>
+          <div className="text-sm text-gray-400">Neural quantum fusion computing</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-bold text-pink-400 mb-2">∞</div>
+          <div className="text-lg text-gray-300 mb-2">Possibilities</div>
+          <div className="text-sm text-gray-400">Synthetic reality applications</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-bold text-yellow-400 mb-2">0ms</div>
+          <div className="text-lg text-gray-300 mb-2">Latency</div>
+          <div className="text-sm text-gray-400">Dimensional computing response</div>
         </div>
       </div>
     </div>
