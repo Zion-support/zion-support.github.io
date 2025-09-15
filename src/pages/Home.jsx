@@ -17,6 +17,7 @@ import {
   Award,
   Cloud
 } from 'lucide-react';
+import { latestContent } from '../../utils/data/latestContent';
 
 export default function Home() {
   const stats = [
@@ -393,6 +394,33 @@ export default function Home() {
                   <div className="text-white/70 text-sm">{testimonial.role}</div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Content */}
+      <section className="py-20 bg-black/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">Latest Content</h2>
+            <Link to="/resources" className="text-zion-cyan hover:text-zion-cyan-light inline-flex items-center">
+              View all <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {latestContent.map((item) => (
+              <div key={item.id} className="p-6 rounded-xl bg-zion-blue-dark/30 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs px-2 py-1 rounded bg-zion-cyan/10 text-zion-cyan border border-zion-cyan/20">{item.tag}</span>
+                  <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-zion-slate-light mb-4">{item.summary}</p>
+                <Link to={item.href} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light">
+                  Read more <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>
