@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
@@ -23,6 +36,45 @@ const navigation = {
     )},
   ],
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+
+<<<<<<< HEAD
+=======
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+export default function Footer() {
+  return (
+    <footer className="bg-black border-t border-white/10">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+        <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+          {navigation.main.map((item) => (
+            <div key={item.name} className="pb-6">
+              <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                {item.name}
+              </a>
+            </div>
+          ))}
+        </nav>
+        <div className="mt-10 flex justify-center space-x-10">
+          {navigation.social.map((item) => (
+            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+              <span className="sr-only">{item.name}</span>
+              <item.icon className="h-6 w-6" aria-hidden="true" />
+            </a>
+          ))}
+=======
 
 export default function Footer() {
   return (
@@ -84,7 +136,11 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-400 xl:text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
         </div>
+        <p className="mt-10 text-center text-xs leading-5 text-gray-400">
+          &copy; 2025 Zion Tech Group. All rights reserved.
+        </p>
       </div>
     </footer>
   )
