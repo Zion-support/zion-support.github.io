@@ -49,7 +49,11 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
+<<<<<<< HEAD
+    "**/*.spec.tsx"
+=======
     "**/*.spec.tsx",
     "coverage"
+>>>>>>> cursor/create-and-deploy-new-content-afc8
   ]
 }

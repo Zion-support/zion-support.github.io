@@ -2,7 +2,12 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 import React from 'react'
 import {
   ChartBarIcon,
@@ -12,8 +17,15 @@ import {
   ShieldCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 import { getLatestUpdates } from '../data/updates'
 =======
 import React from 'react'
@@ -63,14 +75,37 @@ export default function HomePage() {
             <p className="text-sm sm:text-base font-semibold text-blue-200">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
               AI Agent Orchestration Platform v2.0 —
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
@@ -81,8 +116,20 @@ export default function HomePage() {
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
 >>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -136,17 +183,371 @@ export default function HomePage() {
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
+<<<<<<< HEAD
               <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
+=======
+              <a
+                href="/contact"
+                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+              >
+                Get Started
+              </a>
+              <a href="#whats-new" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                What’s New <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
+              <a
+                href="/updates/autonomous-analytics-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-it-ops-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-innovation-hub-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Launch: Innovation Hub v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-runbooks-live-evals"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                New Guide: Agent Runbooks Live Evals
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-control-center-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Agentic Ops Control Center
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-finance-os-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Autonomous Finance OS v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/auto-data-governance-v3"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Launch: Data Governance v3
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-research-assistant-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 hover:bg-teal-500/20 transition-colors duration-200"
+              >
+                Launch: AI Research Assistant 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-agent-safety-certification-beta"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Agent Safety Certification (Beta)
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-benchmark-suite-v2"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Benchmark Suite v2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-policy-as-code-production-blueprint"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Blueprint: Policy‑as‑Code in Production
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-agent-red-teaming-field-guide"
+                className="inline-flex items-center gap-2 rounded-full border border-rose-400/30 bg-rose-500/10 px-4 py-2 text-sm font-semibold text-rose-200 hover:bg-rose-500/20 transition-colors duration-200"
+              >
+                Guide: Agent Red‑Teaming Field Guide
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/production-guardrails-tool-use-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Tool‑Use Guardrails 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-sovereign-ai-commerce"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                New: Sovereign AI Commerce
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-enterprise-rag-observability"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Guide: Enterprise RAG Observability
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-procurement-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Procurement Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-governance-readiness-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Report: AI Governance Readiness
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-ops-slo-dashboards-v2"
+                className="inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-500/10 px-4 py-2 text-sm font-semibold text-lime-200 hover:bg-lime-500/20 transition-colors duration-200"
+              >
+                Feature: Agent Ops SLO v2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-compliance-auditor-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Auditor v1.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-policy-as-code-starter-kit"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Policy-as-Code Starter Kit
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-datasets-portal"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Report: Research Datasets Portal
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/secure-agent-operations-blueprint-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Blueprint: Secure Agent Ops 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-control-center-2-2"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Ops Control Center v2.2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-compliance-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-procurement-playbook-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: AI Procurement 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-content-studio-2-1"
+                className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-500/10 px-4 py-2 text-sm font-semibold text-violet-200 hover:bg-violet-500/20 transition-colors duration-200"
+              >
+                Product: Content Studio 2.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-portal-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: AI Lab Research Portal 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/production-rag-evals-starter-pack"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Production RAG Evals Pack
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-research-copilot-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Research Copilot v1.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/state-of-real-time-rag-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                Report: Real-Time RAG 2026 Preview
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-incident-response-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-red-400/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-200 hover:bg-red-500/20 transition-colors duration-200"
+              >
+                Launch: Incident Response v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/enterprise-retrieval-observability-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Report: Retrieval Observability 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-portal"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: AI Lab Research Portal
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-ops-control-center-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: Ops Control Center 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/mentor-office-hours"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Mentor Office Hours
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/compliance-auditor-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Compliance Auditor v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-support-copilot-1-2"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Support Copilot v1.2
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/genai-executive-course"
+                className="inline-flex items-center gap-2 rounded-full border border-pink-400/30 bg-pink-500/10 px-4 py-2 text-sm font-semibold text-pink-200 hover:bg-pink-500/20 transition-colors duration-200"
+              >
+                New Course: GenAI for Executives
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/progress-streaks-badges"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                Feature: Streaks & Badges
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-safety-toolkit-v1"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Agent Safety Toolkit v1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-ops-playbook-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Course: AI Fundamentals v2.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/secure-prompt-engineering-2025"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Secure Prompt Engineering 2025
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/state-of-ai-governance-2026-preview"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Report: AI Governance 2026 Preview
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/cost-aware-routing-live-evals"
+                className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-sm font-semibold text-sky-200 hover:bg-sky-500/20 transition-colors duration-200"
+              >
+                Blueprint: Cost-Aware Routing
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-compliance-readiness-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Report: AI Compliance Readiness 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-finance-os-1-1"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Autonomous Finance OS v1.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-retail-fulfillment"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Case Study: Autonomous Retail Fulfillment
+                <span aria-hidden>→</span>
+              </a>
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-24 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What’s New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest updates and releases</p>
+=======
+      {/* What's New section (Latest Updates from data) */}
+      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
+          </p>
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-2">
           {whatsNew.map((item) => (
@@ -159,7 +560,63 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
 
+=======
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Latest on the blog</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            New articles on enterprise AI, security, and autonomous systems.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            {[
+              {
+                title: 'AI 2026: Trustworthy Model Routing',
+                summary:
+                  'Policy‑aware, evaluation‑driven routing balancing quality, latency, and cost with audit evidence.',
+                href: '/blog/ai-2026-trustworthy-model-routing'
+              },
+              {
+                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
+                summary:
+                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
+                href: '/blog/ai-2026-policy-as-code-production-blueprint'
+              },
+              {
+                title: 'AI 2026: Generative AI Risk Register',
+                summary:
+                  'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
+                href: '/blog/ai-2026-generative-ai-risk-register'
+              },
+              {
+                title: 'AI 2026: Real‑Time Retrieval Architectures',
+                summary:
+                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
+                href: '/blog/ai-2026-real-time-retrieval-architectures'
+              }
+            ].map((item) => (
+              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold leading-6 text-white">
+                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
+                    <span className="absolute inset-0" />
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
+                <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+                  Read more <span aria-hidden="true">→</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Features section */}
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
