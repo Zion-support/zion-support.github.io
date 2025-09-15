@@ -418,7 +418,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Latest Updates section (auto from data/updates) */}
+      {/* What's New section (Latest Updates from data) */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
