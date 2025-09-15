@@ -542,6 +542,36 @@ export default function HomePage() {
         </div>;
       </section>;
 
+      {/* Latest News (teaser) */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold">Latest News</h2>
+            <a href="/news" className="text-blue-400 hover:text-blue-300">View all →</a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="/news/ai-platform-launch" className="group card p-6 hover:bg-white/10 transition-colors">
+              <div className="text-sm text-gray-400">Sep 15, 2025 • AI • Platform</div>
+              <h3 className="mt-2 text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                Zion OS unveils AI Business Intelligence Platform
+              </h3>
+              <p className="mt-3 text-gray-400">
+                Real-time predictive insights, semantic search, and proactive alerts for enterprise teams.
+              </p>
+            </a>
+            <a href="/news/quantum-error-reduction" className="group card p-6 hover:bg-white/10 transition-colors">
+              <div className="text-sm text-gray-400">Sep 15, 2025 • Quantum • Research</div>
+              <h3 className="mt-2 text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                Quantum algorithm reduces error rates by 60%
+              </h3>
+              <p className="mt-3 text-gray-400">
+                Composite error mitigation delivers consistent gains on today’s NISQ hardware.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
         <div className=&quot;max - w-7xl mx - auto & quot;>;
