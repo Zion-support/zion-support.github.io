@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-// Fraud detection types
-export type AdminActionType =
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
-  | 'escalate';
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   id: string;
   case_id: string;

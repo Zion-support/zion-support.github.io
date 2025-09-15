@@ -501,6 +501,7 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
             </button>
           ))}
         </div>
+      </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

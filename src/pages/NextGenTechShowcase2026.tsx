@@ -87,6 +87,7 @@ const NextGenTechShowcase2026: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
+      </section>
 
         {/* Technology Features */}
         <div className="mb-16">

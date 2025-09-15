@@ -25,14 +25,20 @@ const AdvancedAITransformation2026: React.FC = () => {
           </div>
         </div>
 
-        {/* AI Transformation Capabilities */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">AI Transformation Capabilities</h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Discover the revolutionary AI capabilities that are transforming businesses
-            </p>
-          </div>
+        {/* AI Solutions Grid */}
+        <div className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6">Revolutionary AI Solutions</h2>
+              <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                Discover the cutting-edge AI technologies that are transforming 
+                every aspect of business and human interaction
+              </p>
+            </div>
+=======
+        </div>
+      </section>
+>>>>>>> cursor/create-and-deploy-new-content-f977
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
