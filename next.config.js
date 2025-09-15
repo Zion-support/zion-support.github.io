@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  async redirects() {
-    return [
-      { source: '/main', destination: '/', permanent: true },
-      { source: '/front', destination: '/', permanent: true },
-      { source: '/front/index', destination: '/', permanent: true }
-    ];
-  },
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+	reactStrictMode: true,
+	trailingSlash: true,
+	output: 'export',
+	images: {
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	}
 };
 
-module.exports = nextConfig;
+export default nextConfig;

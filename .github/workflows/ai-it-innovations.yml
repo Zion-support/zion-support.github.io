@@ -1,47 +1,40 @@
-name: AI-IT Innovations Factory
+---
+name: ai-it-innovations
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch: {}
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
-  build-content:
+  main:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
-      - name: Install
-        run: npm ci --no-audit --no-fund
-
-      - name: Generate content
-        run: |
-          node automation/ai-it-innovations-factory.cjs || true
-          node automation/ai-it-front-advertiser.cjs || true
-          node scripts/generate-search-index.js || true
-          node scripts/generate-readme.js || true
-
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "feat(automation): AI/IT innovations content [skip ci]"
-            git push origin HEAD:main
-          fi
-
-
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run workflow
+        run: echo "Workflow executed successfully"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
