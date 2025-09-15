@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Cart utilities
 export const cartUtils = {
   addItem: (cart, item) => {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
 =======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 // Cart utilities for managing shopping cart functionality
 
 export const cartUtils = {
@@ -11,7 +14,10 @@ export const cartUtils = {
   addItem: (cart, item) => {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     if (existingItem) {
       return cart.map(cartItem =>
         cartItem.id === item.id
@@ -20,43 +26,60 @@ export const cartUtils = {
       );
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     return [...cart, { ...item, quantity: 1 }];
   },
   
 =======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     
     return [...cart, { ...item, quantity: 1 }];
   },
   
   // Remove item from cart
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
   removeItem: (cart, itemId) => {
     return cart.filter(item => item.id !== itemId);
   },
   
 <<<<<<< HEAD
+  // Update item quantity
+=======
+<<<<<<< HEAD
 =======
   // Update item quantity
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
   updateQuantity: (cart, itemId, quantity) => {
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
 <<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     return cart.map(item =>
       item.id === itemId ? { ...item, quantity } : item
     );
   },
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   getTotalPrice: (cart) => {
     return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   },
   
 =======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
   // Clear cart
   clearCart: () => {
     return [];
@@ -85,7 +108,10 @@ export const cartUtils = {
   // Get item from cart
   getItem: (cart, itemId) => {
     return cart.find(item => item.id === itemId);
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
   }
 };
 

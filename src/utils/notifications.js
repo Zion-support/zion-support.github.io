@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Notifications utility
 export const notifications = {
   show: (message, type = 'info') => {
@@ -23,6 +25,7 @@ export const notifications = {
   info: (message) => {
     notifications.show(message, 'info');
 =======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 // Notifications utility for handling browser notifications
 
 export const notifications = {
@@ -83,13 +86,24 @@ export const notifications = {
     });
   },
   
+  // Show warning notification
+  warning: (message, title = 'Warning') => {
+    return notifications.show(title, {
+      body: message,
+      icon: '/favicon.ico'
+    });
+  },
+  
   // Show info notification
   info: (message, title = 'Info') => {
     return notifications.show(title, {
       body: message,
       icon: '/favicon.ico'
     });
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
   }
 };
 
