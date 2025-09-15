@@ -73,6 +73,11 @@ import NewContent2025AdvancedAutomationBanner from './components/NewContent2025A
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+>>>>>>> 49147c29baec (feat(content): add AI 2026 Autonomous Revenue Agents post and homepage promo; fix tsconfig and build setup conflicts)
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -112,6 +117,8 @@ export default function HomePage() {
         </section>
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
+        {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
+        <NewAutonomousRevenueAgentsPromo />
         
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
