@@ -16,6 +16,31 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
+  // Added 2025-09-15 (even later night batch - fresh content)
+  {
+    title: 'Launch: Realtime Agent Observatory 1.0',
+    summary:
+      'Unified live telemetry for agents: traces, eval signals, budgets, and incident evidence in one place.',
+    href: '/updates/realtime-agent-observatory-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Postmortems (2026 Edition)',
+    summary:
+      'Structured incident reviews with causal graphs, evidence bundles, and remediation playbooks.',
+    href: '/updates/production-agent-postmortems-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: Enterprise Retrieval Latency Benchmarks 2026',
+    summary:
+      'Latency distributions, SLO adherence, and architectural tradeoffs across hybrid retrieval stacks.',
+    href: '/updates/enterprise-retrieval-latency-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   // Added 2025-09-15 (new featured content)
   {
     title: 'Launch: Knowledge Graph Copilot v1.0',

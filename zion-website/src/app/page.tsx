@@ -87,7 +87,7 @@ export default function HomePage() {
               New: Autonomous Decision Engine v1.0 —
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/ai-governance-dashboard-v4" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">AI Governance Dashboard v4</a>
+              <a href="/updates/realtime-agent-observatory-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Realtime Agent Observatory 1.0</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
