@@ -121,7 +121,67 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+<<<<<<< HEAD
                 href="/updates/autonomous-data-quality-copilot-1-0"
+=======
+                href="/updates/autonomous-it-ops-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: IT Ops Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agent-runbooks-live-evals"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                New Guide: Agent Runbooks Live Evals
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-control-center-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
+              >
+                New Launch: Agentic Ops Control Center
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-sales-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Sales Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-finance-os-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: Autonomous Finance OS v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/auto-data-governance-v3"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Launch: Data Governance v3
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-research-assistant-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 hover:bg-teal-500/20 transition-colors duration-200"
+              >
+                Launch: AI Research Assistant 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-agent-safety-certification-beta"
+                className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
+              >
+                New: Agent Safety Certification (Beta)
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-trends-radar-2025"
+>>>>>>> cursor/create-and-deploy-new-content-8191
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
                 Launch: Data Quality Copilot v1.0
