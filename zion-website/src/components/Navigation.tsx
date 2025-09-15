@@ -7,9 +7,19 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
+<<<<<<< HEAD
+  { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
+<<<<<<< HEAD
   { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
+=======
+  { name: 'Contact', href: '/contact' },
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+>>>>>>> cursor/create-and-deploy-new-content-8472
+>>>>>>> cursor/create-and-deploy-new-content-23cd
 ]
 
 export default function Navigation() {
