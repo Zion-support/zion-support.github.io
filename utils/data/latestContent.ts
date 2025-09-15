@@ -9,6 +9,22 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "autonomous-support-agents-2026-new",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-harness-blueprint-2026-new",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+    tag: "Blueprint",
+    date: "2025-09-15",
+  },
+  {
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",

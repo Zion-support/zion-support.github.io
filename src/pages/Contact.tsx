@@ -6,14 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+// Tooltip components temporarily removed due to missing module path
 import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
@@ -21,6 +16,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Contact() {
+  const { showToast: toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -306,19 +302,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <h2 className="text-3xl font-bold text-white mb-6">
-                      Our Offices
-                    </h2>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    We list several offices so you can connect with the team
-                    closest to your region for faster support.
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
                 {offices.map((office, index) => (
                   <Card
