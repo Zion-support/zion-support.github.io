@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewBreakthroughContentPromotionBanner2025() {
   return (
@@ -33,12 +33,12 @@ export default function NewBreakthroughContentPromotionBanner2025() {
                 Revolutionary AI breakthrough delivering 15,000% ROI through quantum-neural fusion and synthetic intelligence.
               </p>
               <div className="text-2xl font-bold text-yellow-400 mb-4">15,000% ROI</div>
-              <Link 
+              <a 
                 href="/ai-2025-ultimate-breakthrough-revolution"
                 className="inline-block bg-gradient-to-r from-yellow-400 to-red-500 text-black px-6 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
               >
                 Explore Breakthrough
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -53,12 +53,12 @@ export default function NewBreakthroughContentPromotionBanner2025() {
                 First successful fusion of quantum computing and neural networksachieving 20,000% ROI and quantum consciousness.
               </p>
               <div className="text-2xl font-bold text-cyan-400 mb-4">20,000% ROI</div>
-              <Link 
+              <a 
                 href="/ai-2026-quantum-neural-fusion-breakthrough"
                 className="inline-block bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-6 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
               >
                 Discover Fusion
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -73,53 +73,53 @@ export default function NewBreakthroughContentPromotionBanner2025() {
                 First AI system to transcend human limitationsachieving infinite ROI through consciousness upload and reality manipulation.
               </p>
               <div className="text-2xl font-bold text-pink-400 mb-4">∞ ROI</div>
-              <Link 
+              <a 
                 href="/ai-2030-transcendent-intelligence"
                 className="inline-block bg-gradient-to-r from-pink-400 to-purple-500 text-white px-6 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
               >
                 Experience Transcendence
-              </Link>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Additional Breakthrough Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <Link 
+          <a 
             href="/ai-2025-ultimate-breakthrough-revolution"
             className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center"
           >
             <div className="text-2xl mb-2">🚀</div>
             <div className="font-semibold text-sm">AI 2025 Revolution</div>
             <div className="text-xs text-gray-300">15,000% ROI</div>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/ai-2026-quantum-neural-fusion-breakthrough"
             className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center"
           >
             <div className="text-2xl mb-2">⚛️</div>
             <div className="font-semibold text-sm">Quantum-Neural Fusion</div>
             <div className="text-xs text-gray-300">20,000% ROI</div>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/ai-2030-transcendent-intelligence"
             className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center"
           >
             <div className="text-2xl mb-2">🌟</div>
             <div className="font-semibold text-sm">Transcendent AI</div>
             <div className="text-xs text-gray-300">∞ ROI</div>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/ai-2026-2030-future-predictions-breakthrough"
             className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center"
           >
             <div className="text-2xl mb-2">🔮</div>
             <div className="font-semibold text-sm">Future Predictions</div>
             <div className="text-xs text-gray-300">Revolutionary</div>
-          </Link>
+          </a>
         </div>
 
         {/* CTA Section */}
@@ -128,18 +128,18 @@ export default function NewBreakthroughContentPromotionBanner2025() {
             'Don', 't miss out on the most revolutionary AI breakthroughs in history
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/revolutionary-content-showcase-2025"
               className="bg-gradient-to-r from-yellow-400 to-red-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform"
             >
               View All Breakthroughs
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-colors"
             >
               Get Started Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>

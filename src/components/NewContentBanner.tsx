@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   title: string;
@@ -126,25 +126,25 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog"
               className={`${variant === 'minimal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-blue-600 hover:bg-gray-100'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
             >
               📚 Read Latest Articles
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className={`${variant === 'minimal' ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-600'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
             >
               📋 Download Free Resources
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {content.map((item, index) => (
-            <Link key={item.href} href={item.href} className="group">
+            <a key={item.href} href={item.href} className="group">
               <div className={`${getCardClasses()} p-6 rounded-xl transition-all duration-300`}>
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
                   {item.icon}
@@ -184,23 +184,23 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
                   )}
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
         <div className="text-center mt-8">
-          <Link
+          <a
             href="/blog"
             className={`${variant === 'minimal' ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-blue-600 hover:bg-gray-100'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4`}
           >
             View All Articles
-          </Link>
-          <Link
+          </a>
+          <a
             href="/resources"
             className={`${variant === 'minimal' ? 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-600'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block`}
           >
             Download Resources
-          </Link>
+          </a>
         </div>
       </div>
     </section>

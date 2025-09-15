@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBreakthroughContentShowcase2025: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -253,7 +253,7 @@ const UltimateBreakthroughContentShowcase2025: React.FC = () => {
                 </div>
 
                 {/* CTA */}
-                <Link
+                <a
                   href={content.url}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${getCategoryColor(content.category)} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                 >
@@ -261,7 +261,7 @@ const UltimateBreakthroughContentShowcase2025: React.FC = () => {
                     {content.type === 'blog' ? '📖' : content.type === 'case-study' ? '📊' : '📋'}
                   </span>
                   {content.type === 'blog' ? 'Read Article' : content.type === 'case-study' ? 'View Case Study' : 'Download Guide'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -289,13 +289,13 @@ const UltimateBreakthroughContentShowcase2025: React.FC = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               <span className="mr-2">🚀</span>
               Start Your Breakthrough Journey
-            </Link>
+            </a>
           </div>
         </div>
       </div>

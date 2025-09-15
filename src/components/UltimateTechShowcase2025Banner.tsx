@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateTechShowcase2025Banner = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -101,18 +101,18 @@ const UltimateTechShowcase2025Banner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ultimate-tech-2025"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-10 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore All Technologies
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tech-demo"
               className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
               Try Interactive Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

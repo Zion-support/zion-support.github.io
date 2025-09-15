@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, TrendingUp, DollarSign, Zap, Target, Clock, Users, Award, CheckCircle, Star } from 'lucide-react';
 
 const AI2025AdvancedAutomationShowcase = () => {
@@ -231,13 +231,13 @@ const AI2025AdvancedAutomationShowcase = () => {
 
               {/* Content Footer */}
               <div className="px-6 py-4 bg-gray-50 border-t">
-                <Link
+                <a
                   href={item.url}
                   className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
                 >
                   Read {item.type}
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -254,19 +254,19 @@ const AI2025AdvancedAutomationShowcase = () => {
               and start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
               >
                 Get Implementation Guide
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="inline-flex items-center px-8 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

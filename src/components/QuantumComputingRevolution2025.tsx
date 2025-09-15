@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 CpuZapAtomShieldTargetTrendingUpGlobeLock
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingRevolution2025: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -175,19 +175,19 @@ const QuantumComputingRevolution2025: React.FC = () => {
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link
+            <a
               href="/quantum-computing-2025"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore Quantum Solutions
               <Cpu className="w-5 h-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="inline-flex items-center gap-2 border-2 border-gray-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
             >
               Schedule Quantum Demo
-            </Link>
+            </a>
           </div>
           <p className="text-gray-400 mt-6 text-sm">
             Join the quantum revolution - Limited access to quantum computing resources

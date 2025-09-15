@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025RevolutionaryBanner() {
   return (
@@ -53,42 +53,42 @@ export default function AI2025RevolutionaryBanner() {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <Link 
+          <a 
             href="/ai-2025-ultimate-breakthrough-revolution" 
             className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             🚀 Get 10,000% ROI Now
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/case-studies/ai-2025-global-transformation-breakthrough" 
             className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 shadow-lg"
           >
             📊 View Success Stories
-          </Link>
+          </a>
         </div>
         
         {/* Additional Links */}
         <div className="flex flex-wrap justify-center gap-4 text-sm">
-          <Link 
+          <a 
             href="/blog/ai-2025-revolutionary-trends-predictions" 
             className="text-cyan-400 hover:text-cyan-300 underline"
           >
             🔮 AI 2025 Trends & Predictions
-          </Link>
+          </a>
           <span className="text-gray-500">•</span>
-          <Link 
+          <a 
             href="/case-studies/ai-2025-quantum-manufacturing-transformation" 
             className="text-cyan-400 hover:text-cyan-300 underline"
           >
             ⚛️ Quantum Manufacturing Success
-          </Link>
+          </a>
           <span className="text-gray-500">•</span>
-          <Link 
+          <a 
             href="/resources/ai-2025-revolutionary-implementation-guide" 
             className="text-cyan-400 hover:text-cyan-300 underline"
           >
             📚 Implementation Guide
-          </Link>
+          </a>
         </div>
       </div>
     </div>

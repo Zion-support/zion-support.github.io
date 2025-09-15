@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RAGEvaluationLabPage() {
 	return (
@@ -51,7 +51,7 @@ export default function RAGEvaluationLabPage() {
 					</div>
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</a>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>

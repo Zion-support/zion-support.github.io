@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightWrenchCodeDatabaseBarChart3ShieldZapBrainStar
 
 export default function AIToolsUtilities2025Banner() {
@@ -59,20 +59,20 @@ export default function AIToolsUtilities2025Banner() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <a 
                 href="/ai-tools-utilities-2025"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore All Tools
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
               
-              <Link 
+              <a 
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Get Custom Solutions
-              </Link>
+              </a>
             </div>
           </div>
 

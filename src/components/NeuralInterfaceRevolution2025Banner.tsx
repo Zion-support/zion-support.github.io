@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralInterfaceRevolution2025Banner = () => {
   const [activeNeuron, setActiveNeuron] = useState(0);
@@ -119,18 +119,18 @@ const NeuralInterfaceRevolution2025Banner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/neural-interface-2025"
               className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-10 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Neural Tech
-            </Link>
-            <Link
+            </a>
+            <a
               href="/neural-demo"
               className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300"
             >
               Try Neural Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

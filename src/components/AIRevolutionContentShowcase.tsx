@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AIRevolutionContentShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -241,12 +241,12 @@ const AIRevolutionContentShowcase = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={item.url}
                   className={`w-full bg-gradient-to-r ${getTypeColor(item.type)} text-white py-3 px-6 rounded-lg font-semibold text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105 block`}
                 >
                   Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'} →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -260,18 +260,18 @@ const AIRevolutionContentShowcase = () => {
               Get started with our comprehensive AI Revolution implementation guide and transform your business today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/resources/ai-revolution-implementation-ultimate-guide-2025-2026"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Get Implementation Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

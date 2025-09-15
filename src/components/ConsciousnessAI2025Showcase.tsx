@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const ConsciousnessAI2025Showcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -199,18 +199,18 @@ const ConsciousnessAI2025Showcase: React.FC = () => {
 
                 {/* Actions */}
                 <div className="flex flex-col gap-3">
-                  <Link
+                  <a
                     href={content.url}
                     className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
                   >
                     Read {content.readingTime}
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-4 py-2 border border-purple-600 text-sm font-medium rounded-lg text-purple-600 hover:bg-purple-50 transition-colors duration-200"
                   >
                     Get Implementation Guide
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -227,18 +227,18 @@ const ConsciousnessAI2025Showcase: React.FC = () => {
               Join the consciousness revolution and transform your business with unprecedented AI capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-purple-600 bg-white hover:bg-gray-100 transition-colors duration-200"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources/consciousness-ai-implementation-ultimate-guide-2025-50000-roi"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white hover:bg-white hover:text-purple-600 transition-colors duration-200"
               >
                 Download Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>

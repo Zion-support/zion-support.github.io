@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -166,7 +166,7 @@ export default function AI2030ContentNavigation() {
                 <div className="space-y-3">
                   {section.items.slice(0isExpanded ? section.items.length : 2).map((itemIndex) => (
                     <div key={itemIndex} className="group">
-                      <Link href={item.href} className="block">
+                      <a href={item.href} className="block">
                         <div className="p-3 rounded-lg hover:bg-gray-50 transition-colors">
                           <div className="flex items-start gap-2 mb-2">
                             <Badge className={`text-xs ${item.badgeColor}`}>
@@ -184,7 +184,7 @@ export default function AI2030ContentNavigation() {
                             <ArrowRight className="h-3 w-3 ml-1" />
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   ))}
                   
@@ -218,16 +218,16 @@ export default function AI2030ContentNavigation() {
                 and networking opportunities with AI transformation leaders.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
+                <a href="/contact">
                   <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
                     Join Community <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
-                </Link>
-                <Link href="/newsletter">
+                </a>
+                <a href="/newsletter">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
                     Subscribe to Updates
                   </Button>
-                </Link>
+                </a>
               </div>
             </CardContent>
           </Card>

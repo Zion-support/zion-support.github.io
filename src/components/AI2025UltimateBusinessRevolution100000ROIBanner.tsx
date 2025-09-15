@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateBusinessRevolution100000ROIBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -171,25 +171,25 @@ const AI2025UltimateBusinessRevolution100000ROIBanner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
+              <a
                 href={currentItem.url}
                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 <span className="mr-2">🚀</span>
                 Explore {currentItem.type}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-transformation"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-transparent text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/50"
               >
                 Get Expert Consultation
-              </Link>
+              </a>
             </div>
           </div>
 

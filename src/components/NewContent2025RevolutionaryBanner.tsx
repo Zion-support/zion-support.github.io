@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025RevolutionaryBanner() {
   return (
@@ -20,7 +20,7 @@ export default function NewContent2025RevolutionaryBanner() {
           
           {/* Featured Content Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <Link href="/blog/ai-2025-enterprise-automation-revolution" className="group">
+            <a href="/blog/ai-2025-enterprise-automation-revolution" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
                 <h3 className="text-lg font-semibold mb-2">AI 2025 Enterprise Automation Revolution</h3>
@@ -31,9 +31,9 @@ export default function NewContent2025RevolutionaryBanner() {
                   <span className="bg-red-500 text-white px-2 py-1 rounded-full">NEW</span>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link href="/blog/ai-2025-trends-predictions" className="group">
+            <a href="/blog/ai-2025-trends-predictions" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
                 <h3 className="text-lg font-semibold mb-2">AI 2025 Trends & Predictions</h3>
@@ -44,9 +44,9 @@ export default function NewContent2025RevolutionaryBanner() {
                   <span className="bg-blue-500 text-white px-2 py-1 rounded-full">HOT</span>
                 </div>
               </div>
-            </Link>
+            </a>
 
-            <Link href="/case-studies/ai-2025-global-enterprise-transformation-success" className="group">
+            <a href="/case-studies/ai-2025-global-enterprise-transformation-success" className="group">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
                 <h3 className="text-lg font-semibold mb-2">Global Enterprise Transformation Success</h3>
@@ -57,22 +57,22 @@ export default function NewContent2025RevolutionaryBanner() {
                   <span className="bg-green-500 text-white px-2 py-1 rounded-full">BREAKTHROUGH</span>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/revolutionary-content-showcase-2025"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
               🔥 View All Revolutionary Content
-            </Link>
-            <Link
+            </a>
+            <a
               href="/newsletter"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
             >
               📧 Get Updates
-            </Link>
+            </a>
           </div>
         </div>
       </div>

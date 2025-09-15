@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpDollarSignUsersZapTargetCheckCircle
 
 export default function NewServicesShowcase2025() {
@@ -89,13 +89,13 @@ export default function NewServicesShowcase2025() {
                     ))}
                   </ul>
 
-                  <Link
+                  <a
                     href={service.link}
                     className={`group/btn w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             );
@@ -154,20 +154,20 @@ export default function NewServicesShowcase2025() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <span>Get Free Consultation</span>
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 flex items-center justify-center"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 BrainZapEyeStarArrowRightUsersTarget
 
 const NeuralInterfaceRevolution2035PromotionBanner = () => {
@@ -86,15 +86,15 @@ const NeuralInterfaceRevolution2035PromotionBanner = () => {
 
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/neural-interface-2035" className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-300 hover:to-cyan-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+            <a href="/neural-interface-2035" className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-300 hover:to-cyan-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               <Brain className="w-5 h-5 mr-2" />
               Explore Neural Interfaces
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link href="/neural-applications" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-400 hover:text-black transition-all duration-300 flex items-center justify-center">
+            </a>
+            <a href="/neural-applications" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-400 hover:text-black transition-all duration-300 flex items-center justify-center">
               View Applications
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
 
           {/* Urgency Message */}

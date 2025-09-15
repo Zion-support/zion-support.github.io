@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, X, Star, Zap, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,13 +97,13 @@ const NewContentPromotionBanner = () => {
                 </p>
 
                 <div className="flex items-center space-x-4">
-                  <Link
+                  <a
                     href={currentPromotion.link}
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${currentPromotion.color} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 group`}
                   >
                     Explore Now
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                   
                   <div className="flex items-center space-x-2 text-white/60">
                     <Zap className="w-4 h-4" />

@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentShowcase2026Advanced: React.FC = () => {
   const [activeFiltersetActiveFilter] = useState('all');
@@ -249,18 +249,18 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
               {/* Action Buttons */}
               <div className="p-6 pt-0">
                 <div className="flex flex-col space-y-3">
-                  <Link
+                  <a
                     href={item.url}
                     className={`w-full bg-gradient-to-r ${getTypeColor(item.type)} hover:opacity-90 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-center`}
                   >
                     Read Full {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'} →
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 text-center"
                   >
                     Get Consultation
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -278,18 +278,18 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
               Get personalized guidance from our experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
               >
                 Schedule Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors transform hover:scale-105"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

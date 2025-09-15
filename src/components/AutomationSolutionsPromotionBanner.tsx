@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 CalculatorArrowRightZapDollarSignClockTarget
 
 export default function AutomationSolutionsPromotionBanner() {
@@ -54,25 +54,25 @@ export default function AutomationSolutionsPromotionBanner() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/automation-solutions-showcase" 
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 flex items-center shadow-lg"
             >
               <Calculator className="mr-2" />
               Calculate ROI <ArrowRight className="ml-2" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/automation-solutions-showcase#solutions" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center"
             >
               View Solutions
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center"
             >
               Free Consultation
-            </Link>
+            </a>
           </div>
 
           <div className="mt-8 text-sm text-purple-200">

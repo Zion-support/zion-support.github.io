@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface DivineTechnology {
   id: string;
@@ -645,12 +645,12 @@ export default function DivineTechnologyPlatform({
       </div>
 
       <div className="mt-6 text-center">
-        <Link 
+        <a 
           href="/analytics-dashboard"
           className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
         >
           View Full Divine Technology Analytics →
-        </Link>
+        </a>
       </div>
     </div>
   );

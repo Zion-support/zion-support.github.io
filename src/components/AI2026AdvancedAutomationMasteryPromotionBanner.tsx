@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026AdvancedAutomationMasteryPromotionBanner: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const AI2026AdvancedAutomationMasteryPromotionBanner: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-advanced-automation-mastery"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
@@ -30,14 +30,14 @@ const AI2026AdvancedAutomationMasteryPromotionBanner: React.FC = () => {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
             >
               Start Automation Journey
-            </Link>
+            </a>
           </div>
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">

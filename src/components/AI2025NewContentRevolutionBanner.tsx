@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025NewContentRevolutionBanner: React.FC = () => {
   return (
@@ -59,12 +59,12 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
                 <span>40% improvement in engagement rates</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/content/blog/ai-2025-generative-automation-revolution-complete-guide"
               className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
             >
               Read Complete Guide
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Operations Card */}
@@ -88,12 +88,12 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
                 <span>90% improvement in task completion</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/content/blog/ai-2025-autonomous-business-operations-revolution"
               className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
             >
               Explore Revolution
-            </Link>
+            </a>
           </div>
 
           {/* Quantum AI Card */}
@@ -117,12 +117,12 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
                 <span>50-80% reduction in computational costs</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/content/blog/ai-2025-quantum-ai-business-transformation"
               className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
             >
               Discover Future
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -136,18 +136,18 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
               Get exclusive access to implementation guidesROI calculatorsand expert consultations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services/ai-automation"
                 className="bg-black text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors duration-300"
               >
                 Explore AI Services
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-black text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-yellow-400 transition-colors duration-300"
               >
                 Get Expert Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025NewContentPromotionBanner() {
   return (
@@ -26,24 +26,24 @@ export default function AI2025NewContentPromotionBanner() {
             and comprehensive implementation guides. Expert insights to accelerate your transformation in 2025.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-year-ahead-predictions"
               className="bg-white text-purple-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               🔮 Read AI 2025 Predictions
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2025-enterprise-transformation-breakthrough"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg backdrop-blur-sm"
             >
               🏆 View Success Stories
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Link href="/blog/ai-2025-year-ahead-predictions" className="group">
+          <a href="/blog/ai-2025-year-ahead-predictions" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🔮</div>
               <h3 className="text-lg font-semibold mb-2">AI 2025 Predictions</h3>
@@ -54,9 +54,9 @@ export default function AI2025NewContentPromotionBanner() {
                 <span className="bg-green-500 text-white px-2 py-1 rounded-full">NEW</span>
               </div>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/case-studies/ai-2025-enterprise-transformation-breakthrough" className="group">
+          <a href="/case-studies/ai-2025-enterprise-transformation-breakthrough" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
               <h3 className="text-lg font-semibold mb-2">Enterprise Success Story</h3>
@@ -67,9 +67,9 @@ export default function AI2025NewContentPromotionBanner() {
                 <span className="bg-blue-500 text-white px-2 py-1 rounded-full">BREAKTHROUGH</span>
               </div>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/resources/ai-2025-enterprise-implementation-guide" className="group">
+          <a href="/resources/ai-2025-enterprise-implementation-guide" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
               <h3 className="text-lg font-semibold mb-2">Implementation Guide</h3>
@@ -80,9 +80,9 @@ export default function AI2025NewContentPromotionBanner() {
                 <span className="bg-purple-500 text-white px-2 py-1 rounded-full">ESSENTIAL</span>
               </div>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/blog/ai-2025-quantum-breakthrough" className="group">
+          <a href="/blog/ai-2025-quantum-breakthrough" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20 group-hover:scale-105">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
               <h3 className="text-lg font-semibold mb-2">Quantum AI Revolution</h3>
@@ -93,7 +93,7 @@ export default function AI2025NewContentPromotionBanner() {
                 <span className="bg-indigo-500 text-white px-2 py-1 rounded-full">REVOLUTIONARY</span>
               </div>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Additional CTA */}
@@ -102,24 +102,24 @@ export default function AI2025NewContentPromotionBanner() {
             Join 10,000+ executives who are already transforming their organizations with AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/resources"
               className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors backdrop-blur-sm"
             >
               📋 Browse All Resources
-            </Link>
-            <Link
+            </a>
+            <a
               href="/webinars"
               className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors backdrop-blur-sm"
             >
               🎥 Watch Webinars
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-colors backdrop-blur-sm"
             >
               💬 Get Expert Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentDiscoveryWidget = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -298,12 +298,12 @@ const UltimateContentDiscoveryWidget = () => {
                   )}
                 </div>
 
-                <Link
+                <a
                   href={item.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
                   Read Content →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -337,12 +337,12 @@ const UltimateContentDiscoveryWidget = () => {
             <p className="text-xl mb-6 opacity-90">
               Our AI experts can help you discover the perfect content for your specific needs
             </p>
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Personalized Recommendations
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryContentShowcase2025PromotionBanner() {
   return (
@@ -19,7 +19,7 @@ export default function RevolutionaryContentShowcase2025PromotionBanner() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Link 
+          <a 
             href="/blog/ai-2030-ultimate-future-predictions"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group border border-white/20"
           >
@@ -39,9 +39,9 @@ export default function RevolutionaryContentShowcase2025PromotionBanner() {
                 🚀 BREAKTHROUGH PREDICTION
               </div>
             </div>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/case-studies/ai-2030-enterprise-transformation-breakthrough"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group border border-white/20"
           >
@@ -61,9 +61,9 @@ export default function RevolutionaryContentShowcase2025PromotionBanner() {
                 🏆 BREAKTHROUGH SUCCESS
               </div>
             </div>
-          </Link>
+          </a>
 
-          <Link 
+          <a 
             href="/revolutionary-content-showcase-2025"
             className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group border border-white/20"
           >
@@ -83,29 +83,29 @@ export default function RevolutionaryContentShowcase2025PromotionBanner() {
                 ⭐ FEATURED CONTENT
               </div>
             </div>
-          </Link>
+          </a>
         </div>
 
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/blog/ai-2030-ultimate-future-predictions"
               className="px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               🔮 Explore Predictions
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2030-enterprise-transformation-breakthrough"
               className="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               🏆 Read Success Story
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/revolutionary-content-showcase-2025"
               className="px-6 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               ⭐ View All Content
-            </Link>
+            </a>
           </div>
         </div>
       </div>

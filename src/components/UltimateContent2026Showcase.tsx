@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContent2026Showcase = () => {
   const contentItems = [
@@ -98,12 +98,12 @@ const UltimateContent2026Showcase = () => {
                 <p className="text-gray-600 mb-4">{item.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readTime}</span>
-                  <Link
+                  <a
                     href={`/content/${item.id}`}
                     className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -114,34 +114,34 @@ const UltimateContent2026Showcase = () => {
         <div className="bg-white rounded-3xl shadow-xl p-12 mb-16">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Content Categories</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <Link
+            <a
               href="/ai-content"
               className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-6 text-center hover:from-purple-200 hover:to-purple-300 transition-all duration-300"
             >
               <div className="text-4xl mb-3">🧠</div>
               <div className="font-bold text-gray-900">AI & Machine Learning</div>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-content"
               className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6 text-center hover:from-blue-200 hover:to-blue-300 transition-all duration-300"
             >
               <div className="text-4xl mb-3">⚛️</div>
               <div className="font-bold text-gray-900">Quantum Computing</div>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/neural-content"
               className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6 text-center hover:from-green-200 hover:to-green-300 transition-all duration-300"
             >
               <div className="text-4xl mb-3">🔗</div>
               <div className="font-bold text-gray-900">Neural Interfaces</div>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/business-content"
               className="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl p-6 text-center hover:from-orange-200 hover:to-orange-300 transition-all duration-300"
             >
               <div className="text-4xl mb-3">🏢</div>
               <div className="font-bold text-gray-900">Business Innovation</div>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -177,18 +177,18 @@ const UltimateContent2026Showcase = () => {
             Get exclusive access to the latest content, insights, and breakthroughs in AI and technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/newsletter"
               className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
               Subscribe to Newsletter
-            </Link>
-            <Link
+            </a>
+            <a
               href="/all-content"
               className="border-2 border-purple-500 text-purple-500 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
             >
               Browse All Content
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface RelatedPost {
   title: string;
@@ -21,7 +21,7 @@ export default function RelatedContentWidget({ titleposts }: RelatedContentWidge
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((postindex) => (
-            <Link
+            <a
               key={index}
               href={post.slug}
               className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -40,7 +40,7 @@ export default function RelatedContentWidget({ titleposts }: RelatedContentWidge
                   {post.excerpt}
                 </p>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

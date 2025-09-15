@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpZapTargetUsersBarChart3CheckCircleStar
 
 const UltimateBusinessTransformation2026 = () => {
@@ -268,19 +268,19 @@ const UltimateBusinessTransformation2026 = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/ultimate-business-transformation-2026"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
                 Start Transformation
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-green-400 text-green-200 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
               >
                 Get Free Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

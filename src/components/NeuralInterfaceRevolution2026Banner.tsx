@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralInterfaceRevolution2026Banner = () => {
   return (
@@ -26,18 +26,18 @@ const NeuralInterfaceRevolution2026Banner = () => {
             Direct neural interfaces that enable seamless communication between mind and machine.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/neural-interface-2026"
               className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Explore Neural Interface
-            </Link>
-            <Link
+            </a>
+            <a
               href="/brain-computer-interface"
               className="border-2 border-emerald-400 text-emerald-400 px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-400 hover:text-black transition-all duration-300"
             >
               BCI Technology
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -146,13 +146,13 @@ const NeuralInterfaceRevolution2026Banner = () => {
           <p className="text-xl text-gray-300 mb-8">
             Ready to transcend the limitations of traditional interfaces?
           </p>
-          <Link
+          <a
             href="/neural-interface-demo"
             className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
           >
             Experience Neural Interface
             <span className="ml-2">🧠</span>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

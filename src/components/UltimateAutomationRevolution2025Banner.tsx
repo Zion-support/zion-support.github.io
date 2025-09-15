@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateAutomationRevolution2025Banner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -118,7 +118,7 @@ const UltimateAutomationRevolution2025Banner = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
@@ -126,14 +126,14 @@ const UltimateAutomationRevolution2025Banner = () => {
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
               
-              <Link
+              <a
                 href="/services"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Get Implementation Help
-              </Link>
+              </a>
             </div>
           </div>
 

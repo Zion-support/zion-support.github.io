@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NextGenerationAutonomousSystems2025PromotionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -145,18 +145,18 @@ const NextGenerationAutonomousSystems2025PromotionBanner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentContent.url}
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white/30 hover:border-white text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-white/10"
               >
                 Get Consultation
-              </Link>
+              </a>
             </div>
 
             {/* Reading Time */}

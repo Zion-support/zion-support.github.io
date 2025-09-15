@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const ComprehensiveCaseStudiesShowcase = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -245,12 +245,12 @@ const ComprehensiveCaseStudiesShowcase = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
+                  <a
                     href={study.url}
                     className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                   >
                     Read Full Case Study →
-                  </Link>
+                  </a>
                   <button className="flex-1 border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300">
                     Download PDF
                   </button>
@@ -310,18 +310,18 @@ const ComprehensiveCaseStudiesShowcase = () => {
             with our AI solutions. Start your journey to unprecedented success today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/case-studies"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               View All Case Studies →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

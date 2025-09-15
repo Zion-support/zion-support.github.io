@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025AutonomousSystemsRevolutionBanner: React.FC = () => {
   return (
@@ -82,18 +82,18 @@ const AI2025AutonomousSystemsRevolutionBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link
+            <a
               href="/blog/ai-2025-enterprise-autonomous-systems-revolution-ultimate-guide"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Complete Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/ai-automation"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Get Implementation Support
-            </Link>
+            </a>
           </div>
           <p className="text-sm text-blue-200">
             Join 500+ enterprises already transforming with autonomous AI systems

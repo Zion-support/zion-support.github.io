@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026UltimateBreakthroughPredictionsPromotionBanner() {
   return (
@@ -51,12 +51,12 @@ export default function AI2026UltimateBreakthroughPredictionsPromotionBanner() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-ultimate-breakthrough-predictions"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Access Full Predictions
-            </Link>
+            </a>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300">
               Watch Demo
             </button>

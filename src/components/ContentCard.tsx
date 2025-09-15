@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentCardProps {
   title: string;
@@ -23,7 +23,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
   category
 }) => {
   return (
-    <Link
+    <a
       href={href}
       className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-500 hover-lift ${glow}`}
     >
@@ -68,7 +68,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
 
       {/* Hover Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    </Link>
+    </a>
   );
 };
 

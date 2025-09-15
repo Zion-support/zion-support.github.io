@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AITrends2025PromotionalBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -137,18 +137,18 @@ const AITrends2025PromotionalBanner = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/ai-trends-2025"
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
               >
                 Explore AI Trends
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/consultation"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all"
               >
                 Get Expert Consultation
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -176,12 +176,12 @@ const AITrends2025PromotionalBanner = () => {
                   <div className="text-2xl font-bold text-white">{currentTrendData.savings}</div>
                   <div className="text-sm text-white/80">Annual Savings</div>
                 </div>
-                <Link
+                <a
                   href="/ai-trends-2025"
                   className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Learn More
-                </Link>
+                </a>
               </div>
             </div>
 

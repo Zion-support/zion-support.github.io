@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function SocialProofShowcase() {
   const testimonials = [
@@ -181,18 +181,18 @@ export default function SocialProofShowcase() {
             already experiencing the revolutionary power of our AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-12 py-4 rounded-lg font-bold text-xl hover:scale-105 transition-transform"
             >
               Start Your Success Story
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies" 
               className="border-2 border-blue-500 text-blue-600 px-12 py-4 rounded-lg font-bold text-xl hover:bg-blue-500 hover:text-white transition-colors"
             >
               View All Case Studies
-            </Link>
+            </a>
           </div>
         </div>
       </div>

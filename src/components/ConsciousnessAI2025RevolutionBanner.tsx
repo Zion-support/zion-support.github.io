@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const ConsciousnessAI2025RevolutionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -143,18 +143,18 @@ const ConsciousnessAI2025RevolutionBanner: React.FC = () => {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentContent.url}
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-purple-900 bg-white hover:bg-gray-100 transition-colors duration-200"
               >
                 Read {currentContent.readingTime}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-medium rounded-lg text-white hover:bg-white hover:text-purple-900 transition-colors duration-200"
               >
                 Get Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InteractiveContentDiscoveryWidget2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -183,7 +183,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
                   ))}
                 </div>
                 
-                <Link
+                <a
                   href={item.href}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:translate-x-1 transform duration-200"
                 >
@@ -191,7 +191,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
                   <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -202,7 +202,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
           <p className="text-lg text-gray-600 mb-6">
             Showing {filteredContent.length} of {featuredContent.length} featured content pieces
           </p>
-          <Link
+          <a
             href="/content"
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
@@ -210,7 +210,7 @@ const InteractiveContentDiscoveryWidget2025 = () => {
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

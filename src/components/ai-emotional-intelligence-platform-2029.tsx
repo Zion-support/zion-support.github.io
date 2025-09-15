@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Brain, Heart, Eye, MessageCircle, Users, Shield, 
@@ -239,7 +239,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               transition={{ duration: 1, delay: 0.7 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
             >
-              <Link
+              <a
                 href="/contact"
                 className="group relative px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
               >
@@ -248,9 +248,9 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </Link>
+              </a>
 
-              <Link
+              <a
                 href="#pricing"
                 className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10"
               >
@@ -258,7 +258,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   View Pricing
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Key Stats */}
@@ -465,7 +465,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   ))}
                 </ul>
 
-                <Link
+                <a
                   href="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                     plan.popular
@@ -474,7 +474,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   }`}
                 >
                   Get Started
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -544,7 +544,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
             >
@@ -552,7 +552,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target } from 'lucide-react';
 
 export default function Fortune500AI600ROICaseStudyBanner() {
@@ -59,19 +59,19 @@ export default function Fortune500AI600ROICaseStudyBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/content/case-studies/fortune-500-ai-transformation-600-roi-case-study"
               className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Case Study
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/ai-transformation"
               className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-emerald-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -196,13 +196,13 @@ export default function Fortune500AI600ROICaseStudyBanner() {
           <p className="text-gray-300 mb-6">
             Ready to achieve similar results for your organization?
           </p>
-          <Link
+          <a
             href="/contact"
             className="inline-flex items-center bg-white text-emerald-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Schedule Strategy Session
             <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>
