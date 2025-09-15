@@ -1,0 +1,51 @@
+nohup: ignoring input
+🚀 Starting ultimate merge of all open PRs...
+⏰ Started at: Mon Sep 15 05:42:44 PM UTC 2025
+🔒 Creating backup branch: backup-main-20250915-174244
+Switched to a new branch 'backup-main-20250915-174244'
+remote: 
+remote: Create a pull request for 'backup-main-20250915-174244' on GitHub by visiting:        
+remote:      https://github.com/Zion-Holdings/zion.app/pull/new/backup-main-20250915-174244        
+remote: 
+To https://github.com/Zion-Holdings/zion.app
+ * [new branch]                backup-main-20250915-174244 -> backup-main-20250915-174244
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+🔄 Ensuring main branch is up to date...
+Already on 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+From https://github.com/Zion-Holdings/zion.app
+ * branch                      main       -> FETCH_HEAD
+Current branch main is up to date.
+📊 Getting all branches to merge...
+📊 Total branches to process: 8028
+🔄 Starting branch processing...
+---
+📋 [1/8028] Processing branch: 0t8m4m-codex/update-project-color-palette
+🔄 Attempting to merge 0t8m4m-codex/update-project-color-palette...
+❌ Failed to fetch 0t8m4m-codex/update-project-color-palette
+❌ Failed to process branch 0t8m4m-codex/update-project-color-palette
+📊 Progress: 0 successful, 0 failed, 0 conflicts resolved
+---
+📋 [2/8028] Processing branch: 1dcwqi-codex/implement-global-pricing-with-currency-selection
+🔄 Attempting to merge 1dcwqi-codex/implement-global-pricing-with-currency-selection...
+❌ Failed to fetch 1dcwqi-codex/implement-global-pricing-with-currency-selection
+❌ Failed to process branch 1dcwqi-codex/implement-global-pricing-with-currency-selection
+📊 Progress: 0 successful, 0 failed, 0 conflicts resolved
+---
+📋 [3/8028] Processing branch: 1nq1ky-codex/render-talent-profiles-with-error-states
+🔄 Attempting to merge 1nq1ky-codex/render-talent-profiles-with-error-states...
+❌ Failed to fetch 1nq1ky-codex/render-talent-profiles-with-error-states
+❌ Failed to process branch 1nq1ky-codex/render-talent-profiles-with-error-states
+📊 Progress: 0 successful, 0 failed, 0 conflicts resolved
+---
+📋 [4/8028] Processing branch: 2025-comprehensive-services-expansion
+🔄 Attempting to merge 2025-comprehensive-services-expansion...
+❌ Failed to fetch 2025-comprehensive-services-expansion
+❌ Failed to process branch 2025-comprehensive-services-expansion
+📊 Progress: 0 successful, 0 failed, 0 conflicts resolved
+---
+📋 [5/8028] Processing branch: 2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+🔄 Attempting to merge 2xbrce-codex/introduce-automated-testing-with-jest-and-cypress...
