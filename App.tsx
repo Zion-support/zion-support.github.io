@@ -6,22 +6,6 @@ import Footer from './src/Footer';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
-import InnovationLanding2025 from './src/pages/InnovationLanding2025';
-import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
-import BlogPost2025 from './src/pages/BlogPost2025';
-import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
-import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
-import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
-import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
-import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
-import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
-import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
-import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
-import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
-import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
-import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
-import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
-import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
 import AIRevolution2025 from './src/pages/AIRevolution2025';
 import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
@@ -29,7 +13,6 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
-import NewShowcase2025 from './src/pages/NewShowcase2025';
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
@@ -189,11 +172,11 @@ export default function App(): JSX.Element {
                     <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 All Services
                     </a>
-                    <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
-                      🌟 Innovation 2025
+                    <a href="/pages/AIRevolution2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+                      🌟 AI Revolution 2025
                     </a>
-                    <a href="/pages/AdvancedTechSolutions2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      ⚡ Advanced Solutions
+                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚡ Quantum Revolution
                     </a>
                     <a href="/pages/FutureTechTrends2025" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Future Trends
@@ -275,7 +258,7 @@ export default function App(): JSX.Element {
                     <p className="text-gray-600 mb-4">
                       Secure, decentralized solutions powered by blockchain technology.
                     </p>
-                    <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                    <a href="/pages/AIRevolution2025" className="text-blue-600 hover:text-blue-700 font-semibold">
                       Explore Blockchain →
                     </a>
                   </div>
@@ -360,7 +343,7 @@ export default function App(): JSX.Element {
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Innovation Showcase 2025</h3>
                       <p className="text-gray-600 mb-4">Explore our revolutionary services across cutting-edge technology domains...</p>
-                      <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      <a href="/pages/AIRevolution2025" className="text-blue-600 hover:text-blue-700 font-semibold">
                         Explore Innovations →
                       </a>
                     </div>
@@ -371,7 +354,7 @@ export default function App(): JSX.Element {
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Advanced Tech Solutions</h3>
                       <p className="text-gray-600 mb-4">Cutting-edge AI, quantum computing, and neural interface technologies...</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      <a href="/pages/AIRevolution2025" className="text-blue-600 hover:text-blue-700 font-semibold">
                         Explore Solutions →
                       </a>
                     </div>
@@ -467,7 +450,7 @@ export default function App(): JSX.Element {
                 {/* NEW: Ultra-Prominent 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+                  <div className="absolute inset-0 opacity-20"></div>
                   <div className="relative z-10">
                     <div className="text-center mb-8">
                       <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-bounce">
@@ -592,7 +575,7 @@ export default function App(): JSX.Element {
                     to helping you succeed in the digital age.
                   </p>
                   <div className="flex justify-center space-x-4">
-                    <a href="/pages/InnovationLanding2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    <a href="/pages/AIRevolution2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       Start Your Journey
                     </a>
                     <a href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
@@ -603,27 +586,10 @@ export default function App(): JSX.Element {
               </main>
             </div>
           } />
-          <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
-          <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
-          <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
-          <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
-          <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
-          <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
-          <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
-          <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
-          <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
-          <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
-          <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
-          <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
-          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
-          <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
-          <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
-          <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
           <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
-          <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
