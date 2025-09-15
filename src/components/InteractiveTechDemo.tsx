@@ -295,4 +295,5 @@ const InteractiveTechDemo: React.FC = () => {
   );
 };
 
+export { InteractiveTechDemo };
 export default InteractiveTechDemo;

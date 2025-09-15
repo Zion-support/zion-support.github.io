@@ -101,4 +101,5 @@ const NewContentShowcase: React.FC = () => {
   );
 };
 
+export { NewContentShowcase };
 export default NewContentShowcase;
