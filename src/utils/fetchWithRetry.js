@@ -9,6 +9,8 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
     ...options,
   };
 
+  let lastError;
+  
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await fetch(url, defaultOptions);
@@ -19,10 +21,11 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
       
       return response;
     } catch (error) {
+      lastError = error;
       console.warn(`Fetch attempt ${attempt} failed:`, error.message);
       
       if (attempt === maxRetries) {
-        throw error;
+        throw lastError;
       }
       
       // Wait before retrying with exponential backoff
