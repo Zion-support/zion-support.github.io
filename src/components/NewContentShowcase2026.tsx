@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -120,69 +119,6 @@ const NewContentShowcase2026: React.FC = () => {
               Experience the future with our groundbreaking new content featuring cutting-edge AI, 
               Quantum Computing, Biotechnology, Space Technology, and Neural Interface innovations
             </motion.p>
-=======
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const NewContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const contentTabs = [
-    {
-      id: 'next-gen-tech',
-      title: 'Next-Gen Tech Revolution',
-      icon: '🚀',
-      description: 'Revolutionary technologies including Synthetic Intelligence, Quantum-Neural Fusion, and Advanced AI Systems',
-      link: '/pages/NextGenTechRevolution2026',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Synthetic Intelligence', 'Quantum-Neural Fusion', 'Advanced AI Systems']
-    },
-    {
-      id: 'tech-insights',
-      title: 'Revolutionary Tech Insights',
-      icon: '📊',
-      description: 'Deep insights into the most revolutionary technologies of 2026 with expert analysis and market trends',
-      link: '/pages/RevolutionaryTechInsights2026',
-      color: 'from-cyan-600 to-blue-600',
-      features: ['Expert Analysis', 'Market Trends', 'Future Predictions']
-    },
-    {
-      id: 'future-showcase',
-      title: 'Future Tech Showcase',
-      icon: '🌟',
-      description: 'Interactive demonstrations of the most advanced technologies with cutting-edge innovations',
-      link: '/pages/FutureTechShowcase2026',
-      color: 'from-emerald-600 to-teal-600',
-      features: ['Interactive Demos', 'Live Statistics', 'Hands-on Experience']
-    }
-  ];
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
-            <span className="text-cyan-400">✨</span>
-            <span className="text-cyan-300 font-semibold ml-2">NEW CONTENT SHOWCASE 2026</span>
-            <span className="text-cyan-400 ml-2">✨</span>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
           
           {/* Interactive Content Carousel */}
@@ -284,7 +220,6 @@ const NewContentShowcase2026: React.FC = () => {
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </div>
-<<<<<<< HEAD
             </a>
           </motion.div>
         ))}
@@ -318,14 +253,10 @@ const NewContentShowcase2026: React.FC = () => {
               <div className="text-5xl mb-4">{stat.icon}</div>
               <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </motion.div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Call to Action */}
       <motion.div
@@ -350,9 +281,6 @@ const NewContentShowcase2026: React.FC = () => {
           </a>
         </div>
       </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };
