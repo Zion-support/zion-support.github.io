@@ -618,6 +618,40 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   }
   ,
+  // Added 2025-09-15 (night batch)
+  {
+    title: 'Launch: Real-Time Retrieval Evals 2026',
+    summary:
+      'Streaming metrics, canary routing, and automated rollback to safely evolve retrieval.',
+    href: '/updates/real-time-retrieval-evals-2026',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Enterprise Agent Safety 2026',
+    summary:
+      'Standardized safety reviews, incident drills, and audit-ready evidence across agent fleets.',
+    href: '/updates/enterprise-agent-safety-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Report: AI Readiness Index 2026',
+    summary:
+      'A composite readiness score across data, governance, and platform maturity.',
+    href: '/updates/enterprise-ai-readiness-index-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Production Agent Runbooks 2026',
+    summary:
+      'Runbooks, approvals, and controls to standardize safe operations of AI agents.',
+    href: '/updates/production-agent-runbooks-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
   // Fresh content added 2025-09-15 (new)
   {
     title: 'Launch: Autonomous Procurement Copilot v1.0',

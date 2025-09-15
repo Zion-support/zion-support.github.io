@@ -148,6 +148,22 @@ const posts = [
     title: 'AI 2026: Grounded Generation Blueprint',
     summary: 'Reduce hallucinations with retrieval, constraints, and eval gates.'
   }
+  ,
+  {
+    slug: 'ai-2026-generative-ai-risk-register',
+    title: 'AI 2026: Generative AI Risk Register',
+    summary: 'Templates, owners, mitigations, and audit evidence to operationalize AI risk.'
+  },
+  {
+    slug: 'ai-2026-policy-as-code-production-blueprint',
+    title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
+    summary: 'Executable policies with CI/CD gates, canaries, and audit‑ready evidence.'
+  },
+  {
+    slug: 'ai-2026-real-time-retrieval-architectures',
+    title: 'AI 2026: Real‑Time Retrieval Architectures',
+    summary: 'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.'
+  }
 ]
 
 export default function BlogIndexPage() {
