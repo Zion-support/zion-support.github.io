@@ -2,6 +2,18 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-eval-driven-release-engineering-deep-dive',
+    title: 'AI 2026: Eval‑Driven Release Engineering — Deep Dive',
+    summary:
+      'Objective eval gates in CI/CD and runtime with canaries and auto‑rollback.'
+  },
+  {
+    slug: 'ai-2026-agentic-observability-operating-model',
+    title: 'AI 2026: Agentic Observability Operating Model',
+    summary:
+      'Operating model for traces, evals, and policy signals to run agents safely.'
+  },
+  {
     slug: 'ai-2026-sovereign-ai-commerce',
     title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
     summary:
