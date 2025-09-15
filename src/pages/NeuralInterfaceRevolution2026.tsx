@@ -3,538 +3,189 @@ import { motion } from 'framer-motion';
 
 const NeuralInterfaceRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-rose-900 via-pink-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧬 NEURAL REVOLUTION • 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent">
+            Neural Interface Revolution 2026
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience the future of human-computer interaction with direct neural interfaces 
+            that enable thought-controlled devices and enhanced cognitive capabilities.
+          </p>
+        </motion.div>
+
+        {/* Core Technology Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-=======
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-<<<<<<< HEAD
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧬 NEURAL INTERFACE REVOLUTION • 2026
-=======
-<<<<<<< HEAD
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧬 NEURAL INTERFACE REVOLUTION • 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              Mind-Machine Integration
-            </h1>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-              Break through the barriers between human consciousness and digital systems. 
-              Experience direct neural interfaces that enable seamless thought-to-action control.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Neural Tech
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold">
-                Try Neural Demo
-=======
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧬 NEURAL REVOLUTION • JANUARY 2026
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              Mind-Machine Integration
-            </h1>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-              Break through the barriers between human consciousness and digital systems. 
-              Experience direct neural interfaces that enable seamless thought-to-action control.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Neural Tech
-              </button>
-<<<<<<< HEAD
-              <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold">
-                Try Neural Demo
-=======
-              <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-                Watch Neural Demo
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Neural Interface Features */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-4">Revolutionary Neural Interface Technology</h2>
-          <p className="text-xl opacity-90">Direct brain-computer communication that changes everything</p>
-=======
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-4">Revolutionary Neural Interface Technology</h2>
-          <p className="text-xl opacity-90">Direct brain-computer communication that changes everything</p>
-=======
-          <h2 className="text-4xl font-bold mb-4">🧠 Revolutionary Neural Capabilities</h2>
-          <p className="text-xl opacity-90">Experience the future of human-computer interaction</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 50 }}
-=======
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 50 }}
-=======
-            initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
-<<<<<<< HEAD
-            <div className="text-5xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Thought Control</h3>
-=======
-<<<<<<< HEAD
-            <div className="text-5xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Thought Control</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Control devices and applications directly with your thoughts, 
-              eliminating the need for physical interfaces and keyboards.
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• Direct neural commands</li>
-              <li>• Instant response time</li>
-              <li>• Multi-device control</li>
-              <li>• Intuitive operation</li>
-=======
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Non-Invasive BCI</h3>
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            <p className="text-emerald-100 mb-6 text-center">
-              Control devices and applications directly with your thoughts, 
-              eliminating the need for physical interfaces and keyboards.
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-<<<<<<< HEAD
-              <li>• Direct neural commands</li>
-              <li>• Instant response time</li>
-              <li>• Multi-device control</li>
-              <li>• Intuitive operation</li>
-=======
-              <li>• EEG-based neural reading</li>
-              <li>• Real-time signal processing</li>
-              <li>• Machine learning interpretation</li>
-              <li>• Wireless connectivity</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            </ul>
-          </motion.div>
-
-          <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 50 }}
-=======
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 50 }}
-=======
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30"
           >
-            <div className="text-5xl mb-4 text-center">🎮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Thought Control</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Control devices and applications directly with your thoughts using advanced neural pattern recognition
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Device control via thoughts</li>
-              <li>• Gesture-free interaction</li>
-              <li>• Multi-device synchronization</li>
-              <li>• Accessibility enhancement</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">💭</div>
-<<<<<<< HEAD
-            <h3 className="text-2xl font-bold mb-4 text-center">Memory Enhancement</h3>
-=======
-<<<<<<< HEAD
-            <h3 className="text-2xl font-bold mb-4 text-center">Memory Enhancement</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Augment your cognitive abilities with digital memory storage, 
-              instant recall, and enhanced learning capabilities.
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Digital memory storage</li>
-              <li>• Instant information access</li>
-              <li>• Enhanced learning speed</li>
-              <li>• Perfect recall</li>
-=======
-            <h3 className="text-2xl font-bold mb-4 text-center">Neural Feedback</h3>
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            <p className="text-purple-100 mb-6 text-center">
-              Augment your cognitive abilities with digital memory storage, 
-              instant recall, and enhanced learning capabilities.
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-<<<<<<< HEAD
-              <li>• Digital memory storage</li>
-              <li>• Instant information access</li>
-              <li>• Enhanced learning speed</li>
-              <li>• Perfect recall</li>
-=======
-              <li>• Real-time cognitive monitoring</li>
-              <li>• Focus enhancement protocols</li>
-              <li>• Learning acceleration</li>
-              <li>• Mental state optimization</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            </ul>
-          </motion.div>
-
-          <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 50 }}
-=======
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🌐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Neural Networking</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Connect directly with other neural interfaces for seamless 
-              communication, collaboration, and shared experiences.
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Direct mind-to-mind communication</li>
-              <li>• Shared virtual experiences</li>
-              <li>• Collaborative thinking</li>
-              <li>• Neural data sharing</li>
-=======
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🔮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              AI-powered neural analytics that predict user intentions and optimize system responses
-            </p>
-            <ul className="text-orange-200 space-y-2 text-sm">
-              <li>• Intention prediction</li>
-              <li>• Proactive assistance</li>
-              <li>• Contextual awareness</li>
-              <li>• Adaptive interfaces</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
->>>>>>> cursor/create-and-deploy-new-content-3afb
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🌐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Neural Networking</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Connect directly with other neural interfaces for seamless 
-              communication, collaboration, and shared experiences.
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Direct mind-to-mind communication</li>
-              <li>• Shared virtual experiences</li>
-              <li>• Collaborative thinking</li>
-<<<<<<< HEAD
-              <li>• Neural data sharing</li>
-=======
-              <li>• Shared neural spaces</li>
-              <li>• Collective intelligence</li>
-              <li>• Team synchronization</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Medical Applications</h3>
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Non-Invasive BCI</h3>
             <p className="text-rose-100 mb-6 text-center">
-              Advanced medical applications for rehabilitation, therapy, and cognitive enhancement
+              Advanced brain-computer interfaces that read neural signals without invasive procedures.
             </p>
             <ul className="text-rose-200 space-y-2 text-sm">
-              <li>• Stroke rehabilitation</li>
-              <li>• Cognitive therapy</li>
+              <li>• EEG signal processing</li>
+              <li>• Machine learning algorithms</li>
+              <li>• Real-time neural decoding</li>
+              <li>• High accuracy recognition</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
+          >
+            <div className="text-6xl mb-4 text-center">🎮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Thought Control</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Control devices and applications using only your thoughts with unprecedented precision.
+            </p>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Device control</li>
+              <li>• Application navigation</li>
+              <li>• Text input</li>
+              <li>• Gaming interfaces</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
+          >
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Enhanced Cognition</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Augment human cognitive abilities with neural enhancement technologies.
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
               <li>• Memory enhancement</li>
-              <li>• Motor skill recovery</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
+              <li>• Focus improvement</li>
+              <li>• Learning acceleration</li>
+              <li>• Cognitive augmentation</li>
             </ul>
           </motion.div>
         </div>
-      </div>
 
-<<<<<<< HEAD
-      {/* Applications */}
-      <div className="bg-gradient-to-r from-teal-900/50 to-emerald-900/50 py-20">
-=======
-<<<<<<< HEAD
-      {/* Applications */}
-      <div className="bg-gradient-to-r from-teal-900/50 to-emerald-900/50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Transformative Applications</h2>
-            <p className="text-xl opacity-90">Revolutionary uses for neural interface technology</p>
+        {/* Applications Section */}
+        <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Applications</h2>
+            <p className="text-xl text-gray-300">How neural interfaces are transforming human capabilities</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-2xl font-bold mb-4">Medical Rehabilitation</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Restore mobility and function for patients with paralysis, 
-                stroke, or neurological conditions through direct neural control.
-              </p>
-              <div className="text-xs opacity-75">
-                • Prosthetic limb control<br/>
-                • Speech restoration<br/>
-                • Motor function recovery<br/>
-                • Sensory feedback
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-rose-600/20 to-pink-600/20 rounded-lg p-6 border border-rose-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Medical Rehabilitation</h3>
+                <p className="text-gray-300 mb-4">
+                  Help patients with paralysis regain movement and communication through 
+                  neural interface technology and brain-computer interfaces.
+                </p>
+                <div className="flex items-center space-x-2 text-sm text-rose-300">
+                  <span className="w-2 h-2 bg-rose-400 rounded-full"></span>
+                  <span>Restore movement for paralyzed patients</span>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-lg p-6 border border-purple-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Gaming & Entertainment</h3>
+                <p className="text-gray-300 mb-4">
+                  Experience immersive gaming and entertainment through thought-controlled 
+                  interfaces that respond to your mental commands.
+                </p>
+                <div className="flex items-center space-x-2 text-sm text-purple-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                  <span>Thought-controlled gaming experiences</span>
+                </div>
               </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🎮</div>
-              <h3 className="text-2xl font-bold mb-4">Immersive Gaming</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Experience virtual worlds with unprecedented realism through 
-                direct neural input and full sensory feedback.
-              </p>
-              <div className="text-xs opacity-75">
-                • Thought-controlled gameplay<br/>
-                • Full sensory immersion<br/>
-                • Realistic virtual experiences<br/>
-                • Multiplayer neural networks
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Education & Learning</h3>
+                <p className="text-gray-300 mb-4">
+                  Accelerate learning and knowledge acquisition through neural interfaces 
+                  that enhance memory and cognitive processing.
+                </p>
+                <div className="flex items-center space-x-2 text-sm text-emerald-300">
+                  <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                  <span>Enhanced learning capabilities</span>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Professional Applications</h3>
+                <p className="text-gray-300 mb-4">
+                  Enhance productivity and efficiency in professional environments through 
+                  neural interfaces for complex task management.
+                </p>
+                <div className="flex items-center space-x-2 text-sm text-orange-300">
+                  <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                  <span>Enhanced professional productivity</span>
+                </div>
               </div>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">💼</div>
-              <h3 className="text-2xl font-bold mb-4">Professional Enhancement</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Boost productivity and creativity in professional environments 
-                with enhanced cognitive capabilities and instant information access.
-              </p>
-              <div className="text-xs opacity-75">
-                • Instant data access<br/>
-                • Enhanced creativity<br/>
-                • Multi-tasking capabilities<br/>
-                • Remote collaboration
-              </div>
-            </div>
-=======
-      {/* Technology Deep Dive */}
-      <div className="bg-gradient-to-r from-emerald-900/50 to-cyan-900/50 py-20">
->>>>>>> cursor/create-and-deploy-new-content-3afb
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Transformative Applications</h2>
-            <p className="text-xl opacity-90">Revolutionary uses for neural interface technology</p>
+          </div>
+        </div>
+
+        {/* Performance Metrics */}
+        <div className="grid md:grid-cols-4 gap-6 mb-16">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-rose-400 mb-2">99.9%</div>
+            <div className="text-lg text-white mb-2">Accuracy Rate</div>
+            <div className="text-gray-400 text-sm">Neural signal recognition</div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-2xl font-bold mb-4">Medical Rehabilitation</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Restore mobility and function for patients with paralysis, 
-                stroke, or neurological conditions through direct neural control.
-              </p>
-              <div className="text-xs opacity-75">
-                • Prosthetic limb control<br/>
-                • Speech restoration<br/>
-                • Motor function recovery<br/>
-                • Sensory feedback
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🎮</div>
-              <h3 className="text-2xl font-bold mb-4">Immersive Gaming</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Experience virtual worlds with unprecedented realism through 
-                direct neural input and full sensory feedback.
-              </p>
-              <div className="text-xs opacity-75">
-                • Thought-controlled gameplay<br/>
-                • Full sensory immersion<br/>
-                • Realistic virtual experiences<br/>
-                • Multiplayer neural networks
-              </div>
-<<<<<<< HEAD
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">💼</div>
-              <h3 className="text-2xl font-bold mb-4">Professional Enhancement</h3>
-              <p className="text-sm opacity-90 mb-4">
-                Boost productivity and creativity in professional environments 
-                with enhanced cognitive capabilities and instant information access.
-              </p>
-              <div className="text-xs opacity-75">
-                • Instant data access<br/>
-                • Enhanced creativity<br/>
-                • Multi-tasking capabilities<br/>
-                • Remote collaboration
-              </div>
-            </div>
-=======
-            </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">0.1s</div>
+            <div className="text-lg text-white mb-2">Response Time</div>
+            <div className="text-gray-400 text-sm">Thought to action latency</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">24/7</div>
+            <div className="text-lg text-white mb-2">Continuous Operation</div>
+            <div className="text-gray-400 text-sm">Non-invasive monitoring</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="text-4xl font-bold text-orange-400 mb-2">1000+</div>
+            <div className="text-lg text-white mb-2">Neural Channels</div>
+            <div className="text-gray-400 text-sm">Simultaneous signal processing</div>
           </div>
         </div>
-      </div>
 
-<<<<<<< HEAD
-      {/* Safety & Ethics */}
-=======
-<<<<<<< HEAD
-      {/* Safety & Ethics */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Safety & Ethical Standards</h2>
-          <p className="text-xl opacity-90">Your privacy and safety are our top priorities</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">🔒</div>
-            <h3 className="text-lg font-bold mb-2">Privacy Protection</h3>
-            <p className="text-sm opacity-90">End-to-end encryption and local processing ensure your thoughts remain private</p>
-          </div>
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">🛡️</div>
-            <h3 className="text-lg font-bold mb-2">Safety First</h3>
-            <p className="text-sm opacity-90">Extensive testing and safety protocols protect your neural health</p>
-          </div>
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">⚖️</div>
-            <h3 className="text-lg font-bold mb-2">Ethical AI</h3>
-            <p className="text-sm opacity-90">Transparent algorithms and ethical guidelines govern all neural interactions</p>
-          </div>
-          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">🎯</div>
-            <h3 className="text-lg font-bold mb-2">User Control</h3>
-            <p className="text-sm opacity-90">Complete user control over data sharing and neural interface settings</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the neural interface revolution and experience the future of human-computer interaction. 
-            Transform how you work, play, and connect with the digital world.
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-rose-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Experience the Neural Revolution</h2>
+          <p className="text-xl text-rose-200 mb-8 max-w-3xl mx-auto">
+            Join the neural revolution and discover how direct brain-computer interfaces 
+            can enhance your capabilities and transform the way you interact with technology.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Neural Journey
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Try Neural Interface
             </button>
-            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Schedule Neural Demo
-=======
-      {/* Applications Showcase */}
->>>>>>> cursor/create-and-deploy-new-content-3afb
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Safety & Ethical Standards</h2>
-          <p className="text-xl opacity-90">Your privacy and safety are our top priorities</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">🔒</div>
-            <h3 className="text-lg font-bold mb-2">Privacy Protection</h3>
-            <p className="text-sm opacity-90">End-to-end encryption and local processing ensure your thoughts remain private</p>
-          </div>
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">🛡️</div>
-            <h3 className="text-lg font-bold mb-2">Safety First</h3>
-            <p className="text-sm opacity-90">Extensive testing and safety protocols protect your neural health</p>
-          </div>
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">⚖️</div>
-            <h3 className="text-lg font-bold mb-2">Ethical AI</h3>
-            <p className="text-sm opacity-90">Transparent algorithms and ethical guidelines govern all neural interactions</p>
-          </div>
-          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 text-center">
-            <div className="text-3xl mb-3">🎯</div>
-            <h3 className="text-lg font-bold mb-2">User Control</h3>
-            <p className="text-sm opacity-90">Complete user control over data sharing and neural interface settings</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the neural interface revolution and experience the future of human-computer interaction. 
-            Transform how you work, play, and connect with the digital world.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Neural Journey
-            </button>
-<<<<<<< HEAD
-            <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Schedule Neural Demo
-=======
-            <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Contact Neural Experts
->>>>>>> origin/cursor/create-and-deploy-new-content-8472
->>>>>>> cursor/create-and-deploy-new-content-3afb
+            <button className="border-2 border-rose-400 text-rose-200 px-12 py-4 rounded-lg hover:bg-rose-400 hover:text-rose-900 transition-colors font-semibold text-xl">
+              Schedule Demo
             </button>
           </div>
         </div>
