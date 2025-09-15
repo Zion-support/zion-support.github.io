@@ -12,7 +12,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
+  'agentic-safety-patterns-2025': {
+    id: 'agentic-safety-patterns-2025',
+    title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+    excerpt:
+      'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
+      'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
+    ]
+  },
+  'multi-agent-supply-chains': {
+    id: 'multi-agent-supply-chains',
+    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+    excerpt:
+      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+    category: 'AI Solutions',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
+      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+    ]
+  },
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
@@ -43,8 +70,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
     ]
   },
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
     title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
