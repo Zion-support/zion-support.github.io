@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,6 +12,21 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'enterprise-agent-safety-2025': {
+    id: 'enterprise-agent-safety-2025',
+    title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
+    excerpt:
+      'A practical playbook for deploying autonomous agents with policy guardrails, human-in-the-loop controls, and auditable operations.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Enterprises are moving beyond pilots to production-scale autonomous agents. Safety must progress from guidelines to executable controls.',
+      'This playbook introduces an agent safety stack: identity and permissions, intent verification, bounded tools, rate limits, escalation paths, and forensic logging.',
+      'We outline a phased rollout with measurable KPIs and show how to blend policy-as-code with exception workflows to preserve velocity without sacrificing safety.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
