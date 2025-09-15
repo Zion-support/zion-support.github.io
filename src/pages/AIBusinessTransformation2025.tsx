@@ -4,368 +4,327 @@ import Footer from '../Footer';
 
 const AIBusinessTransformation2025: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-lg font-bold mb-6">
-            🤖 AI BUSINESS TRANSFORMATION 2025
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-semibold mb-6">
+            🤖 AI TRANSFORMATION • JANUARY 2025
           </div>
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Intelligent Automation</span>
+            AI Business Transformation 2025
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Unlock the full potential of AI-driven business transformation. Our comprehensive suite of intelligent solutions automates processes, optimizes operations, and drives exponential growth.
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+            Complete your digital transformation journey with our comprehensive AI-powered solutions that automate, optimize, and scale every aspect of your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold text-lg">
-              🎯 Get Transformation Roadmap
-            </button>
-            <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg">
-              📊 Calculate ROI
-            </button>
+            <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-semibold">🚀 Automated</span>
+            <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full font-semibold">📊 Optimized</span>
+            <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full font-semibold">📈 Scalable</span>
           </div>
         </div>
 
         {/* Transformation Framework */}
-        <section className="mb-16">
+        <div className="bg-white rounded-3xl p-12 shadow-2xl mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">🏗️ AI Transformation Framework</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">AI Transformation Framework</h2>
             <p className="text-xl text-gray-600">Our proven methodology for successful AI implementation</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            {/* Phase 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Assess & Analyze</h3>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">🔍</span>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-blue-600">•</span>
-                  <span>Current state analysis</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-blue-600">•</span>
-                  <span>Process optimization opportunities</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-blue-600">•</span>
-                  <span>Technology gap assessment</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-blue-600">•</span>
-                  <span>ROI potential calculation</span>
-                </li>
-              </ul>
+              <h3 className="text-2xl font-bold mb-4">1. Assess</h3>
+              <p className="text-gray-600">
+                Comprehensive analysis of your current processes, data, and technology stack to identify AI opportunities.
+              </p>
             </div>
-
-            {/* Phase 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Design & Plan</h3>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">🎯</span>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-purple-600">•</span>
-                  <span>Custom AI solution architecture</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-purple-600">•</span>
-                  <span>Implementation roadmap</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-purple-600">•</span>
-                  <span>Change management strategy</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-purple-600">•</span>
-                  <span>Training and support plan</span>
-                </li>
-              </ul>
+              <h3 className="text-2xl font-bold mb-4">2. Strategize</h3>
+              <p className="text-gray-600">
+                Develop a customized AI strategy aligned with your business objectives and growth goals.
+              </p>
             </div>
-
-            {/* Phase 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Implement & Deploy</h3>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-pink-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">⚡</span>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-green-600">•</span>
-                  <span>Phased rollout strategy</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-green-600">•</span>
-                  <span>System integration</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-green-600">•</span>
-                  <span>Data migration</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-green-600">•</span>
-                  <span>Quality assurance testing</span>
-                </li>
-              </ul>
+              <h3 className="text-2xl font-bold mb-4">3. Implement</h3>
+              <p className="text-gray-600">
+                Deploy AI solutions with minimal disruption to your operations while maximizing impact.
+              </p>
             </div>
-
-            {/* Phase 4 */}
-            <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  4
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Optimize & Scale</h3>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl text-white">📈</span>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-orange-600">•</span>
-                  <span>Performance monitoring</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-orange-600">•</span>
-                  <span>Continuous improvement</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-orange-600">•</span>
-                  <span>Scalability planning</span>
-                </li>
-                <li className="flex items-start text-gray-600">
-                  <span className="mr-2 text-orange-600">•</span>
-                  <span>Advanced feature deployment</span>
-                </li>
-              </ul>
+              <h3 className="text-2xl font-bold mb-4">4. Scale</h3>
+              <p className="text-gray-600">
+                Continuously optimize and expand AI capabilities across your entire organization.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* AI Solutions Showcase */}
-        <section className="mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold mb-4">Intelligent Process Automation</h3>
+            <p className="text-gray-600 mb-6">
+              Automate complex business processes with AI that learns and adapts to your specific workflows.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Document Processing</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Workflow Optimization</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Decision Automation</span>
+              </li>
+            </ul>
+            <div className="text-center">
+              <span className="text-3xl font-bold text-blue-600">85%</span>
+              <p className="text-sm text-gray-600">Process Efficiency Gain</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">📊</div>
+            <h3 className="text-2xl font-bold mb-4">Predictive Analytics Engine</h3>
+            <p className="text-gray-600 mb-6">
+              Forecast trends, predict outcomes, and make data-driven decisions with advanced machine learning models.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Demand Forecasting</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Risk Assessment</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Performance Optimization</span>
+              </li>
+            </ul>
+            <div className="text-center">
+              <span className="text-3xl font-bold text-purple-600">95%</span>
+              <p className="text-sm text-gray-600">Prediction Accuracy</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">💬</div>
+            <h3 className="text-2xl font-bold mb-4">Conversational AI Platform</h3>
+            <p className="text-gray-600 mb-6">
+              Deploy intelligent chatbots and virtual assistants that understand context and provide human-like interactions.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Natural Language Processing</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Multi-channel Support</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Sentiment Analysis</span>
+              </li>
+            </ul>
+            <div className="text-center">
+              <span className="text-3xl font-bold text-green-600">24/7</span>
+              <p className="text-sm text-gray-600">Customer Support</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">🎯</div>
+            <h3 className="text-2xl font-bold mb-4">Smart Operations Center</h3>
+            <p className="text-gray-600 mb-6">
+              Centralized AI-powered command center that monitors, analyzes, and optimizes all business operations in real-time.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Real-time Monitoring</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Anomaly Detection</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Automated Responses</span>
+              </li>
+            </ul>
+            <div className="text-center">
+              <span className="text-3xl font-bold text-orange-600">99.9%</span>
+              <p className="text-sm text-gray-600">System Uptime</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">🔒</div>
+            <h3 className="text-2xl font-bold mb-4">AI-Powered Security</h3>
+            <p className="text-gray-600 mb-6">
+              Advanced threat detection and prevention systems that learn and adapt to emerging security challenges.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Threat Detection</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Behavioral Analysis</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Automated Response</span>
+              </li>
+            </ul>
+            <div className="text-center">
+              <span className="text-3xl font-bold text-red-600">99.99%</span>
+              <p className="text-sm text-gray-600">Threat Prevention</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">📈</div>
+            <h3 className="text-2xl font-bold mb-4">Intelligent Business Intelligence</h3>
+            <p className="text-gray-600 mb-6">
+              Transform raw data into actionable insights with AI-powered analytics and visualization tools.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Data Visualization</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Trend Analysis</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm text-gray-600">Automated Reporting</span>
+              </li>
+            </ul>
+            <div className="text-center">
+              <span className="text-3xl font-bold text-cyan-600">3x</span>
+              <p className="text-sm text-gray-600">Faster Insights</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Success Stories */}
+        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 AI-Powered Solutions</h2>
-            <p className="text-xl text-gray-600">Comprehensive AI tools that transform every aspect of your business</p>
+            <h2 className="text-4xl font-bold mb-4">Transformation Success Stories</h2>
+            <p className="text-xl opacity-90">Real results from real businesses</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Solution 1 */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Intelligent Process Automation</h3>
-              <p className="text-gray-600 mb-6">
-                Automate complex business processes with AI that learns, adapts, and improves over time.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  <span>Workflow optimization</span>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+              <h3 className="text-xl font-bold mb-4">Fortune 500 Manufacturing</h3>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between">
+                  <span>Cost Reduction:</span>
+                  <span className="font-bold">40%</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  <span>Exception handling</span>
+                <div className="flex justify-between">
+                  <span>Efficiency Gain:</span>
+                  <span className="font-bold">250%</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  <span>Performance analytics</span>
+                <div className="flex justify-between">
+                  <span>Time to Market:</span>
+                  <span className="font-bold">60% faster</span>
                 </div>
               </div>
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                Automate Now →
-              </button>
+              <p className="text-sm opacity-90">
+                "AI transformation revolutionized our production line and supply chain management."
+              </p>
             </div>
-
-            {/* Solution 2 */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Predictive Analytics Engine</h3>
-              <p className="text-gray-600 mb-6">
-                Forecast trends, identify opportunities, and make data-driven decisions with advanced predictive models.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  <span>Demand forecasting</span>
+            
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+              <h3 className="text-xl font-bold mb-4">Global Retail Chain</h3>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between">
+                  <span>Customer Satisfaction:</span>
+                  <span className="font-bold">95%</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  <span>Risk assessment</span>
+                <div className="flex justify-between">
+                  <span>Inventory Optimization:</span>
+                  <span className="font-bold">30%</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                  <span>Market intelligence</span>
+                <div className="flex justify-between">
+                  <span>Revenue Growth:</span>
+                  <span className="font-bold">45%</span>
                 </div>
               </div>
-              <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-                Analyze Data →
-              </button>
+              <p className="text-sm opacity-90">
+                "AI-powered personalization and inventory management transformed our business."
+              </p>
             </div>
-
-            {/* Solution 3 */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Customer Intelligence Platform</h3>
-              <p className="text-gray-600 mb-6">
-                Understand and engage customers like never before with AI-powered insights and personalization.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  <span>Behavior analysis</span>
+            
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+              <h3 className="text-xl font-bold mb-4">Financial Services</h3>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between">
+                  <span>Fraud Detection:</span>
+                  <span className="font-bold">99.9%</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  <span>Personalization engine</span>
+                <div className="flex justify-between">
+                  <span>Processing Speed:</span>
+                  <span className="font-bold">10x faster</span>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                  <span>Churn prediction</span>
+                <div className="flex justify-between">
+                  <span>Risk Reduction:</span>
+                  <span className="font-bold">70%</span>
                 </div>
               </div>
-              <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
-                Engage Customers →
-              </button>
-            </div>
-
-            {/* Solution 4 */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border border-orange-200">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Smart Resource Management</h3>
-              <p className="text-gray-600 mb-6">
-                Optimize resource allocation, scheduling, and utilization with intelligent automation systems.
+              <p className="text-sm opacity-90">
+                "AI-driven risk management and fraud detection saved us millions."
               </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  <span>Dynamic scheduling</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  <span>Capacity planning</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  <span>Cost optimization</span>
-                </div>
-              </div>
-              <button className="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors font-semibold">
-                Optimize Resources →
-              </button>
-            </div>
-
-            {/* Solution 5 */}
-            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-8 border border-indigo-200">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Intelligent Security Suite</h3>
-              <p className="text-gray-600 mb-6">
-                Protect your business with AI-powered security that adapts to emerging threats in real-time.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                  <span>Threat detection</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                  <span>Anomaly monitoring</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                  <span>Automated response</span>
-                </div>
-              </div>
-              <button className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">
-                Secure Business →
-              </button>
-            </div>
-
-            {/* Solution 6 */}
-            <div className="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 border border-pink-200">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Innovation Acceleration Hub</h3>
-              <p className="text-gray-600 mb-6">
-                Accelerate innovation with AI-powered research, development, and market analysis tools.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                  <span>Market research</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                  <span>Competitive analysis</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                  <span>Innovation tracking</span>
-                </div>
-              </div>
-              <button className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors font-semibold">
-                Innovate Faster →
-              </button>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Success Metrics */}
-        <section className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">📈 Transformation Results</h2>
-            <p className="text-xl opacity-90">Real results from our AI transformation projects</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-blue-400 mb-2">95%</div>
-              <div className="text-lg opacity-90">Process Automation</div>
-              <div className="text-sm opacity-75 mt-2">Average automation rate achieved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-lg opacity-90">Cost Reduction</div>
-              <div className="text-sm opacity-75 mt-2">Operational cost savings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl font-bold text-purple-400 mb-2">400%</div>
-              <div className="text-lg opacity-90">Efficiency Gain</div>
-              <div className="text-sm opacity-75 mt-2">Productivity improvement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl font-bold text-pink-400 mb-2">85%</div>
-              <div className="text-lg opacity-90">Customer Satisfaction</div>
-              <div className="text-sm opacity-75 mt-2">Net Promoter Score</div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h2>
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Start Your AI Transformation Journey
+          </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join the AI revolution and transform your business with our comprehensive suite of intelligent solutions. Get started with a free consultation and transformation roadmap.
+            Don't get left behind in the AI revolution. Transform your business today with our proven AI solutions and expert guidance.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold text-lg">
-              🚀 Start Transformation
-            </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg">
-              📞 Book Consultation
-            </button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Begin Transformation →
+            </a>
+            <a href="/pages/RevolutionaryTechSolutions2025" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg">
+              Explore All Solutions
+            </a>
           </div>
-        </section>
+        </div>
       </main>
-      
       <Footer />
     </div>
   );
