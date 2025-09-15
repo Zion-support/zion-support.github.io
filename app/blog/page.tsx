@@ -41,6 +41,15 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
+      title: "Enterprise Foundation Models: A Practical Guide (2025)",
+      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
+      slug: "ai-2025-enterprise-foundation-models-practical-guide",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-foundation-models-2025.jpg"
+    },
+    {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
       description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
       slug: "ai-2025-enterprise-ai-agents-breakthrough",
