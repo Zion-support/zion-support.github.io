@@ -180,6 +180,22 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content Promo: GenAI Operations Playbook 2026 */}
+        <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New Playbook</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: GenAI Operations Playbook</h2>
+                <p className="text-gray-600 mt-2">Blueprint to operationalize Generative AI with governance, safety, and ROI controls.</p>
+              </div>
+              <Link href="/blog/ai-2026-genai-ops-playbook" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                Read the Playbook →
+              </Link>
+            </div>
+          </div>
+        </section>
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
