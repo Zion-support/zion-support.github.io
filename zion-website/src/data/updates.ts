@@ -79,6 +79,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Report'
   },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
@@ -269,6 +270,31 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-agents-case-study',
     date: '2025-09-15',
     tag: 'Case Study'
+  }
+  ,
+  {
+    title: 'Launch: Autonomous Data Guard v1.0',
+    summary:
+      'Real-time data policy enforcement for agents with lineage, masking, and audit trails.',
+    href: '/updates/autonomous-data-guard-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: LLM Cost Optimization (2025 Edition)',
+    summary:
+      'Benchmarks on quality-per-dollar across models, routing strategies, and caching patterns.',
+    href: '/updates/llm-cost-optimization-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Production Agent Safety Reviews v2',
+    summary:
+      'Expanded rubric, risk tiering, and runtime checks for safe tool use at scale.',
+    href: '/updates/production-agent-safety-reviews-v2',
+    date: '2025-09-15',
+    tag: 'Guide'
   }
 ]
 
