@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "ai-2026-operational-excellence-blueprint",
+    title: "AI 2026: Operational Excellence Blueprint",
+    description:
+      "Practical patterns to run reliable, efficient, and governed AI operations at scale.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-operational-excellence-blueprint",
+    emoji: "🏗️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-2026-agent-posture-hardening-guide",
+    title: "AI 2026: Agent Posture Hardening Guide",
+    description:
+      "Baseline controls, continuous posture checks, and remediation flows for agent systems.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-posture-management",
+    emoji: "🧰",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agents-oncall-automation-2026",
     title: "AI 2026: Agents-On-Call Automation",
     description:
@@ -18,6 +40,17 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     ctaLabel: "Read Guide",
     href: "/blog/ai-2026-agents-oncall-automation",
     emoji: "🛠️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "llm-evals-maturity-model-2026-content",
+    title: "AI 2026: LLM Evals Maturity Model",
+    description:
+      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-evals-maturity-model",
+    emoji: "📈",
     highlight: true,
     date: "2025-09-15",
   },
