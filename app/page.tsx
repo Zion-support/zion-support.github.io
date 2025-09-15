@@ -188,6 +188,16 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Enterprise AI</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Knowledge Agent Platform (2025)</h3>
+                  <p className="text-gray-600">Blueprint for knowledge-grounded agents with retrieval, actions, and governance.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2025-enterprise-knowledge-agent-platform" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
                   <div className="text-sm font-semibold text-purple-700 mb-2">Security</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise AI Security Blueprint (2025)</h3>
                   <p className="text-gray-600">Layered controls for model, data, runtime, and supply chain risk.</p>
@@ -215,6 +225,22 @@ export default function HomePage() {
                 <div className="mt-4">
                   <Link href="/blog/ai-2026-autonomous-finance-operating-system" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Promo: Enterprise Knowledge Agent Platform (2025) */}
+        <section className="py-12 bg-gradient-to-r from-purple-50 to-blue-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">Featured Article</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise Knowledge Agent Platform (2025)</h3>
+                <p className="text-gray-600 max-w-2xl">Launch knowledge-grounded agents with secure retrieval, observed actions, and policy-as-code governance to deliver real outcomes safely.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2025-enterprise-knowledge-agent-platform" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               </div>
             </div>
           </div>
