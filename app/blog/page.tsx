@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Agents-On-Call Automation",
+      description: "Autonomous triage, mitigation, and escalation via eval-gated playbooks and deep observability.",
+      slug: "ai-2026-agents-oncall-automation",
+      category: "Operations",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agents-oncall-automation-2026.jpg"
+    },
+    {
       title: "AI 2026: Real-Time Retrieval Architectures",
       description: "Low-latency retrieval patterns for RAG systems at enterprise scale.",
       slug: "ai-2026-real-time-retrieval-architectures",

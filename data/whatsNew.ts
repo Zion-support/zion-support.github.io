@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agents-oncall-automation-2026",
+    title: "AI 2026: Agents-On-Call Automation",
+    description:
+      "Autonomous incident triage, mitigation, and escalation with eval-gated playbooks and observability.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agents-oncall-automation",
+    emoji: "🛠️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "real-time-rag-2026",
     title: "AI 2026: Real-Time Retrieval Architectures",
     description:
