@@ -135,6 +135,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/autonomous-finance-os.jpg",
     slug: "ai-2026-autonomous-finance-operating-system"
   }
+  ,
+  {
+    id: 10,
+    title: "AI 2025: Autonomous Enterprise Operations Blueprint",
+    excerpt: "A practical roadmap to evolve from automation to truly autonomous, outcome-driven operations across functions.",
+    content: "This blueprint details the transition from task automation to end-to-end autonomous operations. It covers reference architectures, event-driven orchestration, policy-as-code, guardrails, and measurable KPIs to deploy safely at scale.",
+    author: "Amelia Rivera",
+    authorRole: "Chief Automation Architect",
+    publishDate: "2025-09-15",
+    readTime: "10 min read",
+    category: "Enterprise AI",
+    tags: ["Autonomous Operations", "Policy-as-Code", "Guardrails"],
+    featured: true,
+    imageUrl: "/images/blog/autonomous-enterprise-operations.jpg",
+    slug: "ai-2025-autonomous-enterprise-operations-blueprint"
+  },
+  {
+    id: 11,
+    title: "AI 2026: Edge AI Agents – Real-Time Decisioning at the Edge",
+    excerpt: "Design edge-native agents for ultra-low-latency perception, reasoning, and control in production.",
+    content: "Edge AI agents unlock real-time autonomy by colocating perception and policy near devices. We outline hardware constraints, streaming inference, safety envelopes, and reference deployments in manufacturing and logistics.",
+    author: "Noah Patel",
+    authorRole: "Principal Edge AI Engineer",
+    publishDate: "2025-09-14",
+    readTime: "9 min read",
+    category: "AI & Machine Learning",
+    tags: ["Edge AI", "Agents", "Realtime"],
+    featured: false,
+    imageUrl: "/images/blog/edge-ai-agents-2026.jpg",
+    slug: "ai-2026-edge-ai-agents-real-time-decisioning"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
