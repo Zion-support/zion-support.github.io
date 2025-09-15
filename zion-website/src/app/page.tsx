@@ -124,18 +124,33 @@ export default function HomePage() {
                 title: 'New Course: Advanced Blockchain Development',
                 summary:
                   'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                href: '/updates',
               },
               {
                 title: 'Community Challenge: Build a DApp',
                 summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
+                href: '/updates',
               },
               {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
-              }
+                href: '/updates',
+              },
+              {
+                title: 'Whitepaper: Autonomous IT Operations 2025',
+                summary: 'A strategic blueprint for AI-driven IT ops, cost savings, and resiliency.',
+                href: '/updates',
+              },
+              {
+                title: 'Case Study: 40% Faster Deployments',
+                summary: 'How a fintech scaled CI/CD with DevOps Flow to ship faster and safer.',
+                href: '/updates',
+              },
+              {
+                title: 'Launch: InsightAI Analytics 2.0',
+                summary: 'Major release with natural language insights and real-time streaming.',
+                href: '/updates',
+              },
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
