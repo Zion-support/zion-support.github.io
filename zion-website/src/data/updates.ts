@@ -7,11 +7,8 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-<<<<<<< HEAD
-=======
-  // Added 2025-09-15 (latest content)
+  // Fresh content added 2025-09-15
   {
-<<<<<<< HEAD
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -34,12 +31,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-=======
-    title: 'Launch: AI Autonomous Workflow Engine v1.0',
-    summary:
-      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
-    href: '/updates/ai-autonomous-workflow-engine-1-0',
->>>>>>> cursor/create-and-deploy-new-content-8472
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -93,7 +84,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
