@@ -136,6 +136,42 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Promo: New Article - Enterprise AI Security Blueprint 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Security Blueprint</h3>
+                <p className="text-gray-600 max-w-2xl">A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 2026.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                  Read Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Promo: New Article - Enterprise AI Security Blueprint 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Security Blueprint</h3>
+                <p className="text-gray-600 max-w-2xl">A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 2026.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                  Read Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
         <AI2026QuantumRevolutionUltimateBanner />
@@ -235,9 +271,7 @@ export default function HomePage() {
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2025: LLM Evaluation Best Practices</h2>
                 <p className="text-gray-600 mt-2">Reliable, fair, and robust evaluation methods for LLMs and AI agents in production.</p>
               </div>
-              <Link href="/blog/ai-2025-llm-evaluation-best-practices" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
-                Read the Guide →
-              </Link>
+              <Link href="/blog/ai-2025-llm-evaluation-best-practices" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read the Guide →</Link>
             </div>
           </div>
         </section>
@@ -251,9 +285,21 @@ export default function HomePage() {
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Secure Agent Architecture</h2>
                 <p className="text-gray-600 mt-2">Zero-trust design, scoped capabilities, and runtime guardrails for enterprise agents.</p>
               </div>
-              <Link href="/blog/ai-2026-secure-agent-architecture" className="shrink-0 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">
-                Read the Blueprint →
-              </Link>
+              <Link href="/blog/ai-2026-secure-agent-architecture" className="shrink-0 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read the Blueprint →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Autonomous Enterprise Blueprint 2026 */}
+        <section className="py-6 bg-gradient-to-r from-green-50 to-emerald-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700">New Blueprint</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Autonomous Enterprise Blueprint</h2>
+                <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
+              </div>
+              <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read the Blueprint →</Link>
             </div>
           </div>
         </section>
