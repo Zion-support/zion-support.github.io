@@ -230,6 +230,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Compact Promo: New — Agent SLOs Guide + Evidence Hub Starter */}
+      <section className="py-6 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white p-5 rounded-xl shadow border border-emerald-100 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-semibold text-emerald-700">New • Guide</div>
+                <h3 className="text-lg font-bold text-gray-900">AI 2026: Implementing Agent SLOs</h3>
+                <p className="text-gray-600 text-sm">Define, monitor, and enforce SLOs with eval gates and policy‑as‑code.</p>
+              </div>
+              <Link href="/blog/ai-2026-agent-slos-implementation-guide" className="shrink-0 inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Read</Link>
+            </div>
+            <div className="bg-white p-5 rounded-xl shadow border border-emerald-100 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-semibold text-emerald-700">New • Starter Kit</div>
+                <h3 className="text-lg font-bold text-gray-900">Agentic Evidence Hub</h3>
+                <p className="text-gray-600 text-sm">Centralize evals, incidents, approvals, and change records for audit‑readiness.</p>
+              </div>
+              <Link href="/content/ai-2026-agentic-evidence-hub-starter" className="shrink-0 inline-block border border-emerald-600 text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50">Explore</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Policy-as-Code in Production (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-cyan-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

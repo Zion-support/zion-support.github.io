@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-slos-implementation-guide-2026",
+    title: "AI 2026: Implementing Agent SLOs — Practical Guide",
+    description:
+      "Define, monitor, and enforce SLOs for agent platforms with policy‑as‑code and eval gates.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-slos-implementation-guide",
+    emoji: "📏",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-evidence-hub-starter-2026",
+    title: "AI 2026: Agentic Evidence Hub — Starter Kit",
+    description:
+      "Centralize eval results, incidents, approvals, and change records for audit‑ready operations.",
+    ctaLabel: "Get the Kit",
+    href: "/content/ai-2026-agentic-evidence-hub-starter",
+    emoji: "🧾",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "evaluation-harness-starter-kit-2026",
     title: "AI 2026: Evaluation Harness Starter Kit",
     description:
