@@ -275,6 +275,22 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content Promo: Autonomous Enterprise Blueprint 2026 */}
+        <section className="py-6 bg-gradient-to-r from-green-50 to-emerald-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700">New Blueprint</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Autonomous Enterprise Blueprint</h2>
+                <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
+              </div>
+              <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">
+                Read the Blueprint →
+              </Link>
+            </div>
+          </div>
+        </section>
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
