@@ -1,4 +1,5 @@
 import React from 'react.ts';
+import { BlogSection } from '@/components/BlogSection';
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -90,6 +91,8 @@ const Home: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
+      {/* Latest Articles */}
+      <BlogSection />
     </div>
   );
 };
