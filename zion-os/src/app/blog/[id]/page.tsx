@@ -11,6 +11,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-assurance-2025': {
+    id: 'ai-safety-assurance-2025',
+    title: 'AI Safety Assurance: Measurable Guardrails for Enterprise Autonomy',
+    excerpt:
+      'A practical methodology to define, implement, and continuously validate AI safety guardrails with measurable KPIs.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Enterprises need operational safety beyond principles. This article details a safety assurance lifecycle—hazard analysis, policy formalization, enforcement, monitoring, and post-incident learning.',
+      'We include reference KPIs (policy coverage, violation detection latency, near-miss rate), an audit trail schema, and rollout patterns that keep humans in control for high‑impact actions.'
+    ]
+  },
+  'sovereign-identity-and-reputation': {
+    id: 'sovereign-identity-and-reputation',
+    title: 'Sovereign Identity and Reputation: Trust Fabric for Agent Economies',
+    excerpt:
+      'Designing DID-backed identity, attestations, and composable reputations to enable trustworthy multi-agent marketplaces.',
+    category: 'Identity & Trust',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-13',
+    readTime: '8 min read',
+    content: [
+      'We present a modular trust fabric: decentralized identifiers, verifiable credentials, attestations, and domain-specific reputation signals.',
+      'Implementation notes cover issuance flows, revocation, sybil resistance, and policy hooks so marketplaces can grade risk and adapt incentives dynamically.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',

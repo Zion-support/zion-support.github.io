@@ -9,6 +9,13 @@ export const metadata = {
 const latest2025 = [
   {
     date: "September 15, 2025",
+    category: "GOVERNANCE",
+    title: "Enterprise AI Safety Assurance framework now available in Zion OS",
+    slug: "/blog/ai-safety-assurance-2025",
+    color: "emerald",
+  },
+  {
+    date: "September 15, 2025",
     category: "AI",
     title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
     slug: "/news/ziongpt-2-adaptive-reasoning",

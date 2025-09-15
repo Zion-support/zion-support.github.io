@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-safety-assurance-2025',
+      title: 'AI Safety Assurance: Measurable Guardrails for Enterprise Autonomy',
+      excerpt: 'Define, enforce, and validate AI safety policies with measurable KPIs and auditability.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-safety-assurance.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'sovereign-identity-and-reputation',
+      title: 'Sovereign Identity and Reputation: Trust Fabric for Agent Economies',
+      excerpt: 'DID-backed identity, attestations, and composable reputation signals for safe marketplaces.',
+      category: 'Identity & Trust',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-13',
+      readTime: '8 min read',
+      image: '/blog/sovereign-identity.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
