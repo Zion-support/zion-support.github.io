@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
 // Fetch with retry utility
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   let lastError;
@@ -21,6 +25,11 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   
   throw lastError;
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 // Fetch with retry utility for robust API calls
 
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
@@ -52,7 +61,14 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
       await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt - 1)));
     }
   }
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 };
 
 export default fetchWithRetry;
