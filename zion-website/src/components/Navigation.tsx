@@ -1,35 +1,17 @@
 "use client"
-<<<<<<< HEAD
-import React, { useState } from 'react'
-=======
 import { useState } from 'react'
->>>>>>> 230e5e007f55 (Checkpoint before follow-up message)
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-<<<<<<< HEAD
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-=======
   { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
->>>>>>> 230e5e007f55 (Checkpoint before follow-up message)
 ]
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-<<<<<<< HEAD
-
-=======
->>>>>>> 230e5e007f55 (Checkpoint before follow-up message)
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">

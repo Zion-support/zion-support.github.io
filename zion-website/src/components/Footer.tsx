@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-export default function Footer() {
-  return (
-    <footer className="mt-24 border-t border-white/10 py-10 text-center text-gray-400">
-      <p className="text-sm">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
-    </footer>
-  )
-}
-=======
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black">
@@ -26,5 +15,3 @@ export default function Footer() {
     </footer>
   )
 }
-
->>>>>>> 230e5e007f55 (Checkpoint before follow-up message)
