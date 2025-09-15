@@ -84,7 +84,7 @@ const PromotionalBanner: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <div className="relative">
                   <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r ${promotionalItems[currentPromo].color}`}>
-                    <promotionalItems[currentPromo].icon className="w-5 h-5 text-white" />
+                    {React.createElement(promotionalItems[currentPromo].icon, { className: 'w-5 h-5 text-white' })}
                   </div>
                   {promotionalItems[currentPromo].badge && (
                     <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold animate-pulse">
