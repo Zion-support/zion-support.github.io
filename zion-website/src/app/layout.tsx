@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -41,7 +41,12 @@ export const metadata: Metadata = {
     description: 'Transform your business with cutting-edge AI and technology solutions.',
     images: ['/og-image.jpg'],
   },
-  viewport: 'width=device-width, initial-scale=1',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'),
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#000000',
 }
 

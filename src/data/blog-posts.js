@@ -15,6 +15,36 @@ export const blogPosts = [
     slug: "generative-ai-in-it-operations-automation-to-autonomy"
   },
   {
+    id: 1003,
+    title: "AI 2026: Secure Agent Routing Strategies",
+    excerpt: "Least‑privilege, tiered trust, and eval‑gated routing for safe autonomy.",
+    content: "Secure agent routing requires mapping task risk to trust tiers, enforcing least‑privilege credentials, and gating high‑impact actions with evaluations. This guide covers policy‑as‑code routing rules, safety envelopes, rollback paths, and observability signals to ensure agents pick the safest viable route while meeting latency and cost targets.",
+    author: "Amara Collins",
+    authorRole: "Chief AI Architect",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Architecture",
+    tags: ["Routing", "Least‑Privilege", "Evals", "Safety"],
+    featured: true,
+    imageUrl: "/images/blog/secure-agent-routing-2026.jpg",
+    slug: "ai-2026-secure-agent-routing-strategies"
+  },
+  {
+    id: 1004,
+    title: "AI 2026: Go-To-Market Agents Blueprint",
+    excerpt: "Pipeline generation, deal acceleration, and expansion with policy‑as‑code guardrails.",
+    content: "This blueprint details GTM agent workflows for lead routing, outreach personalization, meeting prep, and expansion plays. It includes value‑based model routing, evaluation gates tied to revenue KPIs, safe tool use for CRM operations, and auditability to keep sales ops compliant.",
+    author: "Marcus Lee",
+    authorRole: "VP, Revenue Operations",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Revenue",
+    tags: ["Agents", "GTM", "CRM", "Policy‑as‑Code"],
+    featured: true,
+    imageUrl: "/images/blog/go-to-market-agents-blueprint-2026.jpg",
+    slug: "ai-2026-go-to-market-agents-blueprint"
+  },
+  {
     id: 8,
     title: "Zero Trust in Practice: 30-60-90 Day Adoption Plan",
     excerpt: "A practical blueprint to deploy zero trust quickly without breaking developer velocity.",

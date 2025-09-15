@@ -2,6 +2,60 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-eval-driven-release-engineering-deep-dive',
+    title: 'AI 2026: Eval‑Driven Release Engineering — Deep Dive',
+    summary:
+      'Objective eval gates in CI/CD and runtime with canaries and auto‑rollback.'
+  },
+  {
+    slug: 'ai-2026-agentic-observability-operating-model',
+    title: 'AI 2026: Agentic Observability Operating Model',
+    summary:
+      'Operating model for traces, evals, and policy signals to run agents safely.'
+  },
+  {
+    slug: 'ai-2026-sovereign-ai-commerce',
+    title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
+    summary:
+      'Reference architecture, safety gates, and rollout checklist for AI commerce.'
+  },
+  {
+    slug: 'ai-2026-realtime-evals-at-scale',
+    title: 'AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates',
+    summary:
+      'Wire objective evals into CI/CD and runtime for reliable AI systems.'
+  },
+  {
+    slug: 'ai-2026-enterprise-rag-observability',
+    title: 'AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry',
+    summary:
+      'Operate RAG with deep telemetry, groundedness checks, and governance hooks.'
+  },
+  {
+    slug: 'ai-2026-autonomous-procurement-blueprint',
+    title: 'AI 2026: Autonomous Procurement Blueprint',
+    summary:
+      'From sourcing to contract ops with policy-as-code and measurable savings.'
+  },
+  {
+    slug: 'ai-2026-safe-tool-use-blueprint',
+    title: 'AI 2026: Safe Tool Use Blueprint',
+    summary:
+      'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.'
+  },
+  {
+    slug: 'ai-2026-enterprise-agent-observability-guide',
+    title: 'AI 2026: Enterprise Agent Observability Guide',
+    summary:
+      'Traces, evals, and safety telemetry to operate autonomous agents in production.'
+  },
+  {
+    slug: 'ai-2026-guardrails-for-multimodal-agents',
+    title: 'AI 2026: Guardrails for Multimodal Agents',
+    summary:
+      'Design patterns for safe image/audio/text agents with continuous evals.'
+  },
+  {
     slug: 'ai-2026-policy-as-code-governance-blueprint',
     title: 'AI 2026: Policy-as-Code Governance Blueprint',
     summary:
@@ -72,6 +126,27 @@ const posts = [
     slug: 'ai-2026-enterprise-retrieval-observability',
     title: 'AI 2026: Enterprise Retrieval Observability',
     summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
+  },
+  {
+    slug: 'ai-2026-eval-ready-pipelines',
+    title: 'AI 2026: Eval-Ready AI Pipelines',
+    summary: 'From datasets to live canaries with objective rubrics and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-agent-orchestration-patterns',
+    title: 'AI 2026: Agent Orchestration Patterns',
+    summary: 'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.'
+  }
+  ,
+  {
+    slug: 'ai-2026-retrieval-latency-patterns',
+    title: 'AI 2026: Retrieval Latency Patterns',
+    summary: 'Designing sub-500ms retrieval with caches, hybrids, and streaming.'
+  },
+  {
+    slug: 'ai-2026-grounded-generation-blueprint',
+    title: 'AI 2026: Grounded Generation Blueprint',
+    summary: 'Reduce hallucinations with retrieval, constraints, and eval gates.'
   }
 ]
 
