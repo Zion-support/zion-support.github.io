@@ -45,6 +45,11 @@ import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
+import RevolutionaryPromoBanner from './src/components/RevolutionaryPromoBanner';
+import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
+import BiotechRevolution2026 from './src/pages/BiotechRevolution2026';
+import TechTrends2026 from './src/pages/TechTrends2026';
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
 export default function App(): JSX.Element {
@@ -59,37 +64,7 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
-                <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-center space-x-3 mb-4">
-                      <span className="text-3xl animate-bounce">🚀</span>
-                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h3>
-                      <span className="text-3xl animate-bounce">🚀</span>
-                    </div>
-                    <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-                      Experience the future of technology with our groundbreaking new content on Next-Gen AI Revolution, 
-                      Quantum Computing Breakthrough, Neural Interface Technology, and Revolutionary Tech Blog
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/NextGenAIRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 Next-Gen AI Revolution →
-                      </a>
-                      <a href="/pages/QuantumComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Computing Revolution →
-                      </a>
-                      <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural Interface Revolution →
-                      </a>
-                      <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        📚 Revolutionary Tech Blog →
-                      </a>
-                      <a href="/pages/ComprehensiveTechInsights2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🔍 Comprehensive Tech Insights →
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <RevolutionaryPromoBanner />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -126,6 +101,18 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-pink-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 All Services
+                    </a>
+                    <a href="/pages/AdvancedRobotics2026" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🤖 NEW: Advanced Robotics →
+                    </a>
+                    <a href="/pages/SpaceTechInnovation2026" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Space Tech →
+                    </a>
+                    <a href="/pages/BiotechRevolution2026" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧬 NEW: Biotech Revolution →
+                    </a>
+                    <a href="/pages/TechTrends2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      📈 NEW: Tech Trends 2026 →
                     </a>
                     <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                       🌟 Innovation 2025
@@ -167,6 +154,69 @@ export default function App(): JSX.Element {
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
                 </div>
+
+                {/* Revolutionary 2026 Content Showcase */}
+                <section className="mb-12">
+                  <div className="text-center mb-8">
+                    <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold mb-4 animate-pulse">
+                      🌟 BREAKTHROUGH 2026 CONTENT
+                    </div>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Revolutionary Technology Showcase</h2>
+                    <p className="text-xl text-gray-600">Experience the future with our groundbreaking new content</p>
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200">
+                      <div className="text-6xl mb-4 text-center">🤖</div>
+                      <h3 className="text-2xl font-bold mb-4 text-center text-blue-900">Advanced Robotics 2026</h3>
+                      <p className="text-gray-700 mb-6 text-center">
+                        Next-generation autonomous systems that learn, adapt, and perform complex tasks with human-like precision and intelligence.
+                      </p>
+                      <div className="space-y-2 mb-6 text-sm text-blue-800">
+                        <div>• AI-powered learning systems</div>
+                        <div>• Human-robot collaboration</div>
+                        <div>• Swarm intelligence coordination</div>
+                        <div>• Industry transformation</div>
+                      </div>
+                      <a href="/pages/AdvancedRobotics2026" className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                        Explore Robotics →
+                      </a>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-200">
+                      <div className="text-6xl mb-4 text-center">🚀</div>
+                      <h3 className="text-2xl font-bold mb-4 text-center text-purple-900">Space Tech Innovation 2026</h3>
+                      <p className="text-gray-700 mb-6 text-center">
+                        Pioneering the future of space exploration with revolutionary technologies enabling sustainable space travel and colonization.
+                      </p>
+                      <div className="space-y-2 mb-6 text-sm text-purple-800">
+                        <div>• Advanced propulsion systems</div>
+                        <div>• Space habitats & colonies</div>
+                        <div>• Asteroid mining operations</div>
+                        <div>• Interplanetary missions</div>
+                      </div>
+                      <a href="/pages/SpaceTechInnovation2026" className="block w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                        Explore Space Tech →
+                      </a>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200">
+                      <div className="text-6xl mb-4 text-center">🧬</div>
+                      <h3 className="text-2xl font-bold mb-4 text-center text-green-900">Biotech Revolution 2026</h3>
+                      <p className="text-gray-700 mb-6 text-center">
+                        Transforming healthcare, agriculture, and environmental solutions through cutting-edge biotechnology and gene editing.
+                      </p>
+                      <div className="space-y-2 mb-6 text-sm text-green-800">
+                        <div>• Gene editing & CRISPR</div>
+                        <div>• Synthetic biology</div>
+                        <div>• Neural interfaces</div>
+                        <div>• Environmental solutions</div>
+                      </div>
+                      <a href="/pages/BiotechRevolution2026" className="block w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                        Explore Biotech →
+                      </a>
+                    </div>
+                  </div>
+                </section>
 
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -464,6 +514,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
+          <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
+          <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
+          <Route path="/pages/TechTrends2026" element={<TechTrends2026 />} />
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
