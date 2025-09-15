@@ -121,6 +121,13 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+                href="/updates/ai-research-assistant-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Launch: AI Research Assistant 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/autonomous-ops-playbook-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
@@ -132,6 +139,13 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
                 Guide: RAG Production Patterns
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/agentic-ops-mttr-case-study"
+                className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-sm font-semibold text-sky-200 hover:bg-sky-500/20 transition-colors duration-200"
+              >
+                Case Study: Agentic Ops MTTR
                 <span aria-hidden>→</span>
               </a>
             </div>

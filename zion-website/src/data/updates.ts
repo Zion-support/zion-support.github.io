@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Research Assistant 2.0',
+    summary:
+      'Major upgrade with real-time retrieval evals, policy-as-code guardrails, and team workflows.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: RAG Production Blueprints (2026 Preview)',
+    summary:
+      'Reference architectures for ultra-low-latency retrieval, observability, and cost-aware routing.',
+    href: '/updates/rag-production-patterns',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 42% MTTR Reduction with Agentic Ops',
+    summary:
+      'How a global enterprise cut mean time to resolution using autonomous incident copilots.',
+    href: '/updates/agentic-ops-mttr-case-study',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Whitepaper: AI Agent Safety Framework (2025)',
     summary:
       'Operational guardrails, evals, and policy-as-code for autonomous agents in production.',
