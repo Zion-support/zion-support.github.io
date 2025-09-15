@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Support Copilot (v1.1)',
+    summary:
+      'Reliability and cost upgrades with retrieval observability, improved grounding, and safety guardrails.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Real-Time RAG Evals (2026)',
+    summary:
+      'Instrument retrieval pipelines and run continuous live evals with actionable dashboards.',
+    href: '/updates/real-time-rag-evals-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Compliance Auditor (v1.0)',
     summary:
       'Automated GenAI compliance auditing with policy-as-code, lineage, PII detection, and exportable audit reports.',
