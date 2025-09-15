@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 const posts = [
   {
+<<<<<<< HEAD
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -25,14 +26,14 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-  },
-  {
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
-  },
-  {
+=======
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -55,6 +56,7 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+>>>>>>> cursor/create-and-deploy-new-content-8472
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',

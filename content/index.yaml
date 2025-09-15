@@ -414,35 +414,6 @@ content_index:
         rollback_time: "< 5 min"
         audit_ready: true
 
-    - id: "ai-2026-autonomous-ops-roadmap"
-      type: "blog"
-      title: "AI 2026: Autonomous Ops Roadmap — Shipping Reliable Agents at Scale"
-      file_path: "/content/blog/ai-2026-autonomous-ops-roadmap.md"
-      url: "/blog/ai-2026-autonomous-ops-roadmap"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Operations", "Autonomous Agents", "SLOs", "Evals", "Governance", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        eval_pass_rate: "> 95%"
-        mttr: "< 30 min"
-        cost_per_task: "down QoQ"
-
-    - id: "ai-2026-evidence-vault-blueprint"
-      type: "blog"
-      title: "AI 2026: Evidence Vault Blueprint — Audit‑Ready AI Operations"
-      file_path: "/content/blog/ai-2026-evidence-vault-blueprint.md"
-      url: "/blog/ai-2026-evidence-vault-blueprint"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Governance", "Evidence", "Compliance", "Evals", "Audit", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        audit_speed: "2x"
-        change_risk: "reduced"
-        reliability: "improved"
     - id: "ai-2026-agent-platform-health-dashboard-starter"
       type: "resource"
       title: "AI 2026: Agent Platform Health Dashboard — Starter Kit"
@@ -711,4 +682,4 @@ content_index:
       reading_time: "18 min read"
 =======
       reading_time: "18 min read"
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-81d0
