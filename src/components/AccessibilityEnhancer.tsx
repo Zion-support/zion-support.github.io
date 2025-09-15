@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-=======
-import React, { useEffect, useState, useCallback } from 'react';
->>>>>>> origin/performance-accessibility-improvements
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface AccessibilityFeatures {
   highContrast: boolean;
   reducedMotion: boolean;
-<<<<<<< HEAD
   largeText: boolean;
   focusHighlight: boolean;
   screenReaderMode: boolean;
@@ -22,17 +17,8 @@ interface FocusTrapConfig {
 
 export function AccessibilityEnhancer() {
   const [features, setFeatures] = useState<AccessibilityFeatures>({
-=======
-  focusIndicator: boolean;
-  screenReader: boolean;
-}
-
-export function AccessibilityEnhancer() {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
->>>>>>> origin/performance-accessibility-improvements
     highContrast: false,
     reducedMotion: false,
-<<<<<<< HEAD
     largeText: false,
     focusHighlight: true,
     screenReaderMode: false
