@@ -7,10 +7,13 @@ const NewContentPromotionBanner: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Just published</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: LLM Evals Maturity Model</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">Evaluation-first framework: metrics, harnesses, and governance to ship reliable AI.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Real-Time Retrieval Architectures</h2>
+            <p className="text-lg text-gray-600 max-w-2xl">Blueprints for sub-200ms RAG: hybrid search, reranking, streaming UX, and SLOs.</p>
           </div>
-          <a href="/blog/ai-2026-llm-evals-maturity-model" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article →</a>
+          <div className="flex gap-3">
+            <a href="/blog/ai-2026-real-time-retrieval-architectures" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article →</a>
+            <a href="/content/ai-2026-autonomous-ops-playbook" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</a>
+          </div>
         </div>
       </div>
     </div>
