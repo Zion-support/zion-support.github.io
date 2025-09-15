@@ -3,29 +3,13 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// Translation resources
 const resources = {
   en: {
     translation: {
       welcome: 'Welcome',
-      home: 'Home',
-      about: 'About',
-      contact: 'Contact'
-    }
-  },
-  es: {
-    translation: {
-      welcome: 'Bienvenido',
-      home: 'Inicio',
-      about: 'Acerca de',
-      contact: 'Contacto'
-    }
-  },
-  fr: {
-    translation: {
-      welcome: 'Bienvenue',
-      home: 'Accueil',
-      about: 'À propos',
-      contact: 'Contact'
+      hello: 'Hello',
+      // Add more translations as needed
     }
   }
 };
@@ -38,8 +22,8 @@ i18n
     fallbackLng: 'en',
     debug: false,
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;
