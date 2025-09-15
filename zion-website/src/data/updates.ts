@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: ZionGPT 2.0 Real-Time Reasoning',
+    summary:
+      'Next-gen streaming reasoning with tool-use, low-latency retrieval, and safety gates.',
+    href: '/updates/ziongpt-2-real-time-reasoning',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Risk Reviews',
+    summary:
+      'Lightweight operational reviews with shared risk signals and rollback criteria for agents.',
+    href: '/updates/production-agent-risk-reviews',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: MTTR -42% With Real-Time RAG',
+    summary:
+      'How live retrieval + evals reduced incident time-to-resolution in a Fortune 100 stack.',
+    href: '/updates/mttr-reduction-real-time-rag',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Autonomous Finance OS (v1.0)',
     summary:
       'Real-time cash visibility, autonomous close, and policy-as-code controls for finance.',
