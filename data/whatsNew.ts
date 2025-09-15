@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "trust-grid-for-agents-2026",
+    title: "AI 2026: Trust Grid for Autonomous Agents",
+    description:
+      "Define, measure, and enforce trust across safety, security, reliability, and compliance.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-trust-grid-for-agents",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-revenue-blueprint-2026",
     title: "AI 2026: Autonomous Revenue Blueprint",
     description:

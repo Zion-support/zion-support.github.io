@@ -115,7 +115,6 @@ content_index:
         audit_coverage: "100%"
         incidents_reduction: "40%"
 
-<<<<<<< HEAD
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -279,7 +278,6 @@ content_index:
       is_new: true
       metrics:
         roi: "600%"
-<<<<<<< HEAD
         savings: "$2.8B"
         efficiency: "156%"
         uptime: "99.2%"
@@ -446,6 +444,20 @@ content_index:
         reliability: "99.9%"
         gated_releases: true
         ci_integration: true
+    - id: "ai-2026-trust-grid-for-agents"
+      type: "framework"
+      title: "AI 2026: Trust Grid for Autonomous Agents"
+      file_path: "/app/content/ai-2026-trust-grid-for-agents/page.tsx"
+      url: "/content/ai-2026-trust-grid-for-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Trust", "Safety", "Security", "Reliability", "Compliance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        gated_releases: true
+        audit_ready: true
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
