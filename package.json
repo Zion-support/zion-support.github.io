@@ -45,10 +45,6 @@
     "prefer-offline": true
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@esbuild/linux-x64": "^0.25.9",
-=======
->>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
