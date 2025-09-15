@@ -16,6 +16,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Agent Orchestration Toolkit (v2)',
+    summary:
+      'Unified workflows for multi-agent planning, tool-use, and guardrails with production templates.',
+    href: '/updates/agent-orchestration-toolkit-v2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Guide: Production Agent Red Teaming (2025)',
     summary:
       'End-to-end adversarial evaluation playbook with jailbreak taxonomies and measurable mitigations.',
@@ -36,6 +44,14 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'End-to-end SLIs, tracing, and evals to keep RAG systems reliable in production.',
     href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Building Eval-Ready AI Pipelines',
+    summary:
+      'How to instrument datasets, harnesses, and live canaries to ship trustworthy AI changes.',
+    href: '/updates/eval-ready-ai-pipelines',
     date: '2025-09-15',
     tag: 'Guide'
   },
