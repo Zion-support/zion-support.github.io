@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 "use client"
+=======
+'use client'
+
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
+<<<<<<< HEAD
+=======
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services', tag: 'New' },
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
   { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
@@ -13,6 +24,10 @@ const navigation = [
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -41,7 +56,12 @@ export default function Navigation() {
               href={item.href}
               className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
             >
-              {item.name}
+              <span className="inline-flex items-center gap-2">
+                {item.name}
+                {item.tag ? (
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
+                ) : null}
+              </span>
             </a>
           ))}
         </div>
@@ -83,7 +103,12 @@ export default function Navigation() {
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <span className="inline-flex items-center gap-2">
+                      {item.name}
+                      {item.tag ? (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
+                      ) : null}
+                    </span>
                   </a>
                 ))}
               </div>
