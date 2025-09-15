@@ -89,3 +89,8 @@
 2025-09-15 15:43:52 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch backup-main-20250915-093800
 2025-09-15 15:43:52 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch backup-main-20250915-093800
 2025-09-15 15:43:52 - Resolving conflicts in zion-os/src/app/page.tsx for branch backup-main-20250915-093800
+2025-09-15 15:43:57 - Merge conflicts detected in backup-main-20250915-095122
+2025-09-15 15:43:58 - Resolving conflicts in app/page.tsx for branch backup-main-20250915-095122
+2025-09-15 15:43:58 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch backup-main-20250915-095122
+2025-09-15 15:43:58 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch backup-main-20250915-095122
+2025-09-15 15:43:58 - Resolving conflicts in zion-os/src/components/Navigation.tsx for branch backup-main-20250915-095122
