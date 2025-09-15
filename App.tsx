@@ -16,9 +16,15 @@ import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution2026';
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import AIConsciousnessRevolution2026 from './src/pages/AIConsciousnessRevolution2026';
+import QuantumReality2026 from './src/pages/QuantumReality2026';
+import MetaverseAI2026 from './src/pages/MetaverseAI2026';
+import UltimateTechTrends2026 from './src/pages/UltimateTechTrends2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import FeaturedContentSection from './src/components/FeaturedContentSection';
 
 export default function App(): JSX.Element {
   return (
@@ -38,12 +44,24 @@ export default function App(): JSX.Element {
                       <span className="text-4xl animate-bounce">🌟</span>
                     </div>
                     <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
-                      Experience the most advanced technology content featuring AI Revolutionary Breakthrough, 
-                      Quantum Computing Revolution, Neural Interface Technology, Biotech Revolution, Space Tech Innovation, and Advanced Robotics
+                      Experience the most advanced technology content featuring AI Consciousness Revolution, 
+                      Quantum Reality, Metaverse AI Integration, and cutting-edge innovations that define the future
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-8xl mx-auto mb-8">
+                      <a href="/pages/AIConsciousnessRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🧠 AI Consciousness Revolution →
+                      </a>
+                      <a href="/pages/QuantumReality2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        ⚡ Quantum Reality 2026 →
+                      </a>
+                      <a href="/pages/MetaverseAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        🌐 Metaverse AI Integration →
+                      </a>
+                      <a href="/pages/UltimateTechTrends2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
+                        📈 Ultimate Tech Trends →
+                      </a>
                       <a href="/pages/AIRevolutionaryBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🧠 AI Revolutionary Breakthrough →
+                        🚀 AI Revolutionary Breakthrough →
                       </a>
                       <a href="/pages/QuantumComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         ⚡ Quantum Computing Revolution →
@@ -54,16 +72,10 @@ export default function App(): JSX.Element {
                       <a href="/pages/AdvancedBiotechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
                         🧬 Advanced Biotech Revolution →
                       </a>
-                      <a href="/pages/SpaceTechInnovation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🚀 Space Tech Innovation →
-                      </a>
-                      <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-                        🤖 Advanced Robotics →
-                      </a>
                     </div>
                     <div className="flex justify-center space-x-4">
                       <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                        ✨ 6 NEW REVOLUTIONARY PAGES
+                        ✨ 4 NEW REVOLUTIONARY PAGES
                       </span>
                       <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                         🚀 CUTTING-EDGE TECHNOLOGY
@@ -87,8 +99,20 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    <a href="/pages/AIConsciousnessRevolution2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 AI Consciousness
+                    </a>
+                    <a href="/pages/QuantumReality2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚡ Quantum Reality
+                    </a>
+                    <a href="/pages/MetaverseAI2026" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌐 Metaverse AI
+                    </a>
+                    <a href="/pages/UltimateTechTrends2026" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      📈 Tech Trends 2026
+                    </a>
                     <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🧠 AI Breakthrough 2026
+                      🚀 AI Breakthrough
                     </a>
                     <a href="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       ⚡ Quantum Revolution
@@ -96,22 +120,20 @@ export default function App(): JSX.Element {
                     <a href="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧬 Neural Interface
                     </a>
-                    <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🤖 Synthetic Intelligence
-                    </a>
-                    <a href="/pages/QuantumNeuralFusion2026" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🔗 Quantum-Neural Fusion
-                    </a>
-                    <a href="/pages/NextGenAIRevolution2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🚀 Next-Gen AI Revolution
-                    </a>
-                    <a href="/pages/RevolutionaryTechBlog2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      📚 Revolutionary Tech Blog
-                    </a>
-                    <a href="/pages/ComprehensiveTechInsights2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🔍 Tech Insights 2026
+                    <a href="/pages/AdvancedBiotechRevolution2026" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧬 Biotech Revolution
                     </a>
                   </div>
+                </div>
+
+                {/* Dynamic Content Carousel */}
+                <div className="mb-16">
+                  <DynamicContentCarousel />
+                </div>
+
+                {/* Featured Content Section */}
+                <div className="mb-16">
+                  <FeaturedContentSection />
                 </div>
 
                 {/* Enhanced Content Showcase */}
@@ -222,6 +244,10 @@ export default function App(): JSX.Element {
           } />
           
           {/* Routes for all the new pages */}
+          <Route path="/pages/AIConsciousnessRevolution2026" element={<AIConsciousnessRevolution2026 />} />
+          <Route path="/pages/QuantumReality2026" element={<QuantumReality2026 />} />
+          <Route path="/pages/MetaverseAI2026" element={<MetaverseAI2026 />} />
+          <Route path="/pages/UltimateTechTrends2026" element={<UltimateTechTrends2026 />} />
           <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
