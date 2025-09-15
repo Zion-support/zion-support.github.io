@@ -181,6 +181,12 @@ export default function HomePage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-blue-300 mb-4">📚 Latest: AI Governance Blueprint 2025</p>
+              <a href="/blog/ai-governance-blueprint-2025" className="text-blue-400 hover:text-blue-300 underline">
+                Read our comprehensive guide to dual-layer policy for safe autonomy →
+              </a>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
