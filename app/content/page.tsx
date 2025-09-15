@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Content Hub | Zion Tech Group',
