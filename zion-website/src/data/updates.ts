@@ -8,6 +8,39 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-15
+  // New content added 2025-09-15 (afternoon batch)
+  {
+    title: 'Launch: AI Content Studio 2.2',
+    summary:
+      'Faster renders, new brand kits, calendar scheduling, and bulk publish with guardrails.',
+    href: '/updates/ai-content-studio-2-2',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Evaluation-Driven Release Management',
+    summary:
+      'Ship safer with canary evals, rollback rules, and quality budgets wired into CI/CD.',
+    href: '/updates/eval-driven-release-management',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: MTTR Reduction with Real-Time RAG',
+    summary:
+      'How live evals and retrieval telemetry cut incident MTTR by 37% at scale.',
+    href: '/updates/mttr-reduction-real-time-rag',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+    summary:
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
   {
     title: 'Launch: Autonomous Sales Copilot v1.0',
     summary:
@@ -15,6 +48,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/autonomous-sales-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+  },
+  {
+    title: 'Deep Dive: Production Agent Telemetry (2025)',
+    summary:
+      'Unified tracing, eval signals, and guardrail events to operate agent fleets reliably.',
+    href: '/blog/ai-2025-production-agent-telemetry-deep-dive',
+    date: '2025-09-15',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Guide: AI Governance Maturity Model (2025)',
+    summary:
+      'A staged model to level up governance across policy, controls, telemetry, and auditability.',
+    href: '/blog/ai-2025-ai-governance-maturity-model',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Guide: Vendor Risk Management for AI (2026 Preview)',
