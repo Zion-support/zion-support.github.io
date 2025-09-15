@@ -30,13 +30,13 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Ops Incident Response 2026</h3>
+            <div className="text-4xl mb-4">🔐</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Agent Architecture 2026</h3>
             <p className="text-gray-600 mb-4">
-              Event-driven observability and agentic playbooks to cut MTTR and eliminate toil.
+              Design zero-trust autonomous agents with isolation domains and runtime guards.
             </p>
             <Link 
-              href="/content/ai-ops-autonomous-incident-response-2026"
+              href="/blog/ai-2026-secure-agent-architecture"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Explore Architecture →
