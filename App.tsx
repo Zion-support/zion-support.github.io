@@ -12,6 +12,9 @@ import BlogPost2025 from './src/pages/BlogPost2025';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
+import AITrends2025Blog from './src/pages/AITrends2025Blog';
+import AISolutionsCalculator from './src/pages/AISolutionsCalculator';
+import AIEnterpriseCaseStudy from './src/pages/AIEnterpriseCaseStudy';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -29,15 +32,20 @@ export default function App(): JSX.Element {
                 <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
                   <div className="flex items-center justify-center space-x-2 mb-2">
                     <span className="text-2xl">🎉</span>
-                    <h3 className="text-xl font-bold">NEW: Comprehensive Services 2025</h3>
+                    <h3 className="text-xl font-bold">NEW: AI Solutions Calculator & Latest Blog</h3>
                     <span className="text-2xl">🎉</span>
                   </div>
                   <p className="text-lg opacity-90 mb-4">
-                    Discover our complete suite of cutting-edge technology solutions
+                    Get personalized AI recommendations and read our latest insights on AI trends 2025
                   </p>
-                  <a href="/pages/ComprehensiveServices2025" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    Explore Now →
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/pages/AISolutionsCalculator" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      🧮 Try AI Calculator →
+                    </a>
+                    <a href="/pages/AITrends2025Blog" className="inline-block bg-white/20 text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold border border-white/30">
+                      📰 Read Latest Blog →
+                    </a>
+                  </div>
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -97,6 +105,67 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
+
+                {/* Interactive Tools Section */}
+                <section className="mb-12">
+                  <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold text-gray-900">🛠️ Interactive Tools & Resources</h2>
+                    <p className="text-gray-600">Try our new interactive tools and discover personalized solutions for your business.</p>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-8 mb-8">
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                      <div className="text-4xl mb-4">🧮</div>
+                      <h3 className="text-2xl font-bold mb-3">AI Solutions Calculator</h3>
+                      <p className="text-lg opacity-90 mb-6">
+                        Get personalized AI recommendations based on your industry, challenges, and budget. 
+                        Discover the perfect solutions for your business needs.
+                      </p>
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                          <span className="text-sm">Personalized recommendations</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                          <span className="text-sm">ROI calculations</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                          <span className="text-sm">Implementation timeline</span>
+                        </div>
+                      </div>
+                      <a href="/pages/AISolutionsCalculator" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                        Try Calculator Now →
+                      </a>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-8 text-white">
+                      <div className="text-4xl mb-4">📰</div>
+                      <h3 className="text-2xl font-bold mb-3">Latest AI Trends Blog</h3>
+                      <p className="text-lg opacity-90 mb-6">
+                        Stay ahead with our comprehensive analysis of AI trends shaping 2025. 
+                        Interactive sections and expert insights included.
+                      </p>
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                          <span className="text-sm">Interactive navigation</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                          <span className="text-sm">Real case studies</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                          <span className="text-sm">Future predictions</span>
+                        </div>
+                      </div>
+                      <a href="/pages/AITrends2025Blog" className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                        Read Latest Blog →
+                      </a>
+                    </div>
+                  </div>
+                </section>
 
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -217,37 +286,60 @@ export default function App(): JSX.Element {
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">NEW</span>
-                        <span className="text-sm text-gray-500">January 20, 2025</span>
+                        <span className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">HOT</span>
+                        <span className="text-sm text-gray-500">January 24, 2025</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">Technology Trends 2025</h3>
-                      <p className="text-gray-600 mb-4">Discover the most significant trends shaping our digital future...</p>
-                      <a href="/pages/BlogPost2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Read Full Article →
+                      <h3 className="text-xl font-semibold mb-2">AI Trends 2025: Interactive Blog</h3>
+                      <p className="text-gray-600 mb-4">Comprehensive analysis with interactive sections and real case studies...</p>
+                      <a href="/pages/AITrends2025Blog" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Interactive Blog →
                       </a>
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">FEATURED</span>
-                        <span className="text-sm text-gray-500">January 18, 2025</span>
+                        <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">NEW TOOL</span>
+                        <span className="text-sm text-gray-500">January 24, 2025</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">Innovation Showcase 2025</h3>
-                      <p className="text-gray-600 mb-4">Explore our revolutionary services across cutting-edge technology domains...</p>
-                      <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Innovations →
+                      <h3 className="text-xl font-semibold mb-2">AI Solutions Calculator</h3>
+                      <p className="text-gray-600 mb-4">Get personalized AI recommendations based on your specific business needs...</p>
+                      <a href="/pages/AISolutionsCalculator" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Try Calculator →
                       </a>
                     </div>
                     <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                       <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full">BREAKTHROUGH</span>
-                        <span className="text-sm text-gray-500">January 22, 2025</span>
+                        <span className="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">CASE STUDY</span>
+                        <span className="text-sm text-gray-500">January 24, 2025</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">Advanced Tech Solutions</h3>
-                      <p className="text-gray-600 mb-4">Cutting-edge AI, quantum computing, and neural interface technologies...</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Solutions →
+                      <h3 className="text-xl font-semibold mb-2">Fortune 500 AI Transformation</h3>
+                      <p className="text-gray-600 mb-4">See how TechCorp Global achieved 47% revenue growth with AI...</p>
+                      <a href="/pages/AIEnterpriseCaseStudy" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Case Study →
                       </a>
                     </div>
+                  </div>
+                </div>
+
+                {/* Newsletter Signup Section */}
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
+                  <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold mb-4">📧 Stay Ahead of the Curve</h2>
+                    <p className="text-lg opacity-90">Get exclusive access to our latest AI insights, trends, and interactive tools</p>
+                  </div>
+                  <div className="max-w-md mx-auto">
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <input 
+                        type="email" 
+                        placeholder="Enter your email address"
+                        className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
+                      />
+                      <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
+                        Subscribe
+                      </button>
+                    </div>
+                    <p className="text-sm opacity-75 text-center mt-4">
+                      Join 10,000+ professionals getting weekly AI insights
+                    </p>
                   </div>
                 </div>
 
@@ -336,6 +428,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
+          <Route path="/pages/AITrends2025Blog" element={<AITrends2025Blog />} />
+          <Route path="/pages/AISolutionsCalculator" element={<AISolutionsCalculator />} />
+          <Route path="/pages/AIEnterpriseCaseStudy" element={<AIEnterpriseCaseStudy />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
