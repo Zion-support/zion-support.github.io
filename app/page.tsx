@@ -204,12 +204,12 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Secure Agent Routing Strategies</h2>
-              <p className="text-gray-600 mt-2">Least‑privilege, tiered trust, and eval‑gated routing for safe autonomy.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Evidence-Driven AI Operations</h2>
+              <p className="text-gray-600 mt-2">Evaluation-first operations with policy gates, observability, and SLOs for safe scale.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-secure-agent-routing-strategies" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
-              <Link href="/content/ai-2026-agent-incident-response-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Related Playbook</Link>
+              <Link href="/content/ai-2026-evidence-driven-operations" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
+              <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Platform SLOs</Link>
             </div>
           </div>
         </div>
