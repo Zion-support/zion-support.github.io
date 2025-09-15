@@ -2,6 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './src/index.css';
 
+// Import enhanced components
+import EnhancedNavigation from './src/components/EnhancedNavigation';
+import EnhancedFooter from './src/components/EnhancedFooter';
+import ContentSearch from './src/components/ContentSearch';
+
 // Import only the pages that exist
 import AIRevolutionaryBreakthrough2026 from './src/pages/AIRevolutionaryBreakthrough2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
@@ -24,10 +29,21 @@ export default function App(): JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
+        <EnhancedNavigation />
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Enhanced Search Section */}
+                <div className="text-center mb-12">
+                  <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                    Welcome to Zion Tech Group
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-8">
+                    Leading the future of technology with AI, blockchain, and innovative solutions
+                  </p>
+                  <ContentSearch />
+                </div>
                 {/* NEW: Ultimate 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -218,45 +234,120 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
               </main>
+              <EnhancedFooter />
             </div>
           } />
           
           {/* Routes for all the new pages */}
-          <Route path="/pages/AIRevolutionaryBreakthrough2026" element={<AIRevolutionaryBreakthrough2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
-          <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
-          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
-          <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
-          <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
-          <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
-          <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
-          <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/AIRevolutionaryBreakthrough2026" element={
+            <div>
+              <AIRevolutionaryBreakthrough2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/QuantumComputingRevolution2026" element={
+            <div>
+              <QuantumComputingRevolution2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/NeuralInterfaceRevolution2026" element={
+            <div>
+              <NeuralInterfaceRevolution2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/SyntheticIntelligence2026" element={
+            <div>
+              <SyntheticIntelligence2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/QuantumNeuralFusion2026" element={
+            <div>
+              <QuantumNeuralFusion2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/NextGenAIRevolution2026" element={
+            <div>
+              <NextGenAIRevolution2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/RevolutionaryTechBlog2026" element={
+            <div>
+              <RevolutionaryTechBlog2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/ComprehensiveTechInsights2026" element={
+            <div>
+              <ComprehensiveTechInsights2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedAITransformation2026" element={
+            <div>
+              <AdvancedAITransformation2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/NextGenTechShowcase2026" element={
+            <div>
+              <NextGenTechShowcase2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedBiotechRevolution2026" element={
+            <div>
+              <AdvancedBiotechRevolution2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/SpaceTechInnovation2026" element={
+            <div>
+              <SpaceTechInnovation2026 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedRobotics2026" element={
+            <div>
+              <AdvancedRobotics2026 />
+              <EnhancedFooter />
+            </div>
+          } />
           
           <Route path="/blog" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
-                <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
-              </div>
-            </main>
+            <div>
+              <main className="container mx-auto px-4 py-16">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+                  <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
+                </div>
+              </main>
+              <EnhancedFooter />
+            </div>
           } />
           <Route path="/contact" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-                <p className="text-xl text-gray-600">Get in touch with our team</p>
-              </div>
-            </main>
+            <div>
+              <main className="container mx-auto px-4 py-16">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+                  <p className="text-xl text-gray-600">Get in touch with our team</p>
+                </div>
+              </main>
+              <EnhancedFooter />
+            </div>
           } />
           <Route path="*" element={
-            <main className="container mx-auto px-4 py-16 text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
-              <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
-            </main>
+            <div>
+              <main className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+                <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
+              </main>
+              <EnhancedFooter />
+            </div>
           } />
         </Routes>
       </div>
