@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 import os
-from datetime import datetime
+from datetime import datetime, date
+import uuid
+from sqlalchemy import desc, func
 
 # Import db instance from models.py FIRST
 from models import db, AnalyticsEvent, FeedbackSubmission, ContentAnalytics
@@ -33,20 +35,10 @@ def init_db_command():
 @app.route('/academy')
 @app.route('/learn')
 def index():
-<<<<<<< HEAD
-    """Homepage with featured and latest courses."""
+    """Homepage with hero, latest updates, and quick links."""
     with app.app_context():
-        latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
-        featured_courses = Course.query.filter_by(is_premium_tier=False).order_by(desc(Course.created_at)).limit(3).all()
-    return render_template(
-        'index.html',
-        title='Welcome to Zion Academy',
-        latest_courses=latest_courses,
-        featured_courses=featured_courses,
-    )
-=======
-    return render_template('index.html', title='Welcome to Zion Academy')
->>>>>>> origin/auto/autonomy-17186719616
+        latest_updates = Update.query.filter_by(is_published=True).order_by(desc(Update.created_at)).limit(3).all()
+    return render_template('index.html', title='Welcome to Zion Academy', latest_updates=latest_updates)
 
 @app.route('/academy/founder-course')
 @app.route('/learn/launch')
