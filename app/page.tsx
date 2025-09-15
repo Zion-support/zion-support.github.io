@@ -145,6 +145,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Operational Excellence + Operational Blueprint (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-blue-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Operational Excellence + Blueprint</h2>
+              <p className="text-gray-600 mt-2">Run safe, reliable, and efficient autonomous agent platforms at scale.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-operational-excellence-handbook" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">Excellence Handbook</Link>
+              <Link href="/blog/ai-2026-operational-blueprint" className="inline-block border border-blue-600 text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-blue-50">Operational Blueprint</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Eval-Gated Autonomy + Evaluation Hub */}
       <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
