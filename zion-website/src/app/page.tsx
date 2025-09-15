@@ -121,19 +121,19 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'Zion AI Platform v2.1 Released',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                  'Major stability and performance improvements, plus new multi-agent orchestration.',
+                href: '/updates'
+              },
+              {
+                title: 'New Course: Advanced Blockchain Development',
+                summary: 'Hands-on path covering smart contracts, DeFi, L2, and audits.',
                 href: '/updates'
               },
               {
                 title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
-              },
-              {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                summary: 'Join and win prizes up to $1000 in ZION tokens.',
                 href: '/updates'
               }
             ].map((item) => (
