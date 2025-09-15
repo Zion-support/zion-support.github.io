@@ -1,27 +1,36 @@
-"use client"
-import React from 'react'
-
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
-        <p className="text-sm font-semibold text-blue-300">Guide • 2025-09-15</p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-white">Secure Prompt Engineering (2025 Edition)</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          Practical strategies for prompt hardening, jailbreak resistance, and least-privilege tool-use in production systems.
-        </p>
-        <div className="mt-8 space-y-4 text-gray-300">
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Guide</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Guide: Secure Prompt Engineering (2025 Edition)
+        </h1>
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
           <p>
-            This guide covers threat models, defense-in-depth patterns, and measurable safeguards to reduce abuse and prompt
-            injection risks while preserving capability.
+            Threat-model prompts, enforce guardrails, and prevent prompt injection with patterns tested
+            in production. Includes policy-as-code checks and sandboxing strategies.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Template discipline with explicit instructions and deny lists</li>
-            <li>Context sandboxing and structural parsing</li>
-            <li>Guardrail evaluators with rollback criteria</li>
+          <h2>Key patterns</h2>
+          <ul>
+            <li>Role isolation and tool permissioning</li>
+            <li>Context segmentation and provenance tags</li>
+            <li>Red-team prompts and automated regression suites</li>
           </ul>
+          <h2>Outcomes</h2>
+          <p>
+            Reduce security incidents, improve groundedness, and maintain auditable evidence for reviews
+            and certifications.
+          </p>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Download the guide
+            </a>
+          </p>
         </div>
       </div>
     </div>
   )
 }
+

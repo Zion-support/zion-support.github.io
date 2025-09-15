@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Guide: Production Guardrails for Multimodal Agents (2026)',
+    summary:
+      'Risk tiers, live eval gates, and audit-ready evidence for safe multimodal agent deployments.',
+    href: '/updates/production-guardrails-multimodal-agents',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Agent Benchmark Suite v1',
+    summary:
+      'Standard task suites, rubrics, and golden datasets with CI and canary integrations.',
+    href: '/updates/agent-benchmark-suite-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025 Edition)',
+    summary:
+      'Threat modeling, guardrails, and regression suites to harden prompts and tool use.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Guide: AI 2026 Production Safety Checklist',
     summary:
       'Risk tiers, guardrails, evals, canaries, and audit evidence to ship safer AI.',
