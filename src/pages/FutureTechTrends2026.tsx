@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-afc8
+import { motion, AnimatePresence } from 'framer-motion';
 
 const FutureTechTrends2026: React.FC = () => {
   const [activeTrend, setActiveTrend] = useState('ai');
