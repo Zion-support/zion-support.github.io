@@ -11,111 +11,14 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-    id: "llm-evals-maturity-model-2026-content",
-    title: "AI 2026: LLM Evals Maturity Model",
+    id: "agents-oncall-automation-2026",
+    title: "AI 2026: Agents-On-Call Automation",
     description:
-      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
-    ctaLabel: "Read Framework",
-    href: "/content/ai-2026-evals-maturity-model",
-    emoji: "📈",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "agent-safety-certification-2026-content",
-    title: "AI 2026: Agent Safety Certification",
-    description:
-      "Structured certification to validate agent safety with scenario test suites and governance.",
-    ctaLabel: "Read Certification",
-    href: "/content/ai-2026-agent-safety-certification",
-    emoji: "🛡️",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-evals-blueprint-2026",
-    title: "AI 2026: Autonomous Evals Blueprint",
-    description:
-      "Eval-first, guardrail-driven blueprint to ship reliable autonomous agents at scale.",
-    ctaLabel: "Read Blueprint",
-    href: "/content/ai-2026-autonomous-evals-blueprint",
-    emoji: "🧪",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "agentic-risk-and-safety-playbook-2026",
-    title: "AI 2026: Agentic Risk and Safety Playbook",
-    description:
-      "Safeguards, monitoring, and governance patterns for production agent systems.",
-    ctaLabel: "Read Playbook",
-    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
-    emoji: "🛡️",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-customer-support-agents-2026",
-    title: "AI 2026: Autonomous Customer Support Agents",
-    description:
-      "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
-    ctaLabel: "Read Article",
-    href: "/blog/ai-2026-autonomous-customer-support-agents",
-    emoji: "🤝",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "secure-agent-architecture-2026-blog",
-    title: "AI 2026: Secure Agent Architecture",
-    description:
-      "Zero-trust agents with isolation domains, policy-as-code, and runtime guards.",
-    ctaLabel: "Read Architecture",
-    href: "/blog/ai-2026-secure-agent-architecture",
-    emoji: "🔐",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-agents-red-team-scenarios-2026",
-    title: "AI 2026: Autonomous Agents Red-Team Scenarios",
-    description:
-      "Adversarial scenarios, pass criteria, and CI/CD integration to harden agents.",
-    ctaLabel: "Read Scenarios",
-    href: "/blog/ai-2026-autonomous-agents-red-team-scenarios",
-    emoji: "🧨",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "agent-posture-management-2026",
-    title: "AI 2026: Agent Posture Management",
-    description:
-      "Continuously assess, harden, and govern autonomous agents with baselines and controls.",
-    ctaLabel: "Read Article",
-    href: "/blog/ai-2026-agent-posture-management",
-    emoji: "🧭",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "agentic-evaluation-checklists-2026",
-    title: "AI 2026: Agentic Evaluation Checklists",
-    description:
-      "Practical red-team, reliability, and safety checklists for agent releases.",
-    ctaLabel: "Use Checklists",
-    href: "/content/ai-2026-agentic-evaluation-checklists",
-    emoji: "✅",
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-ops-playbook-blog-2026",
-    title: "AI 2026: Autonomous Ops Playbook",
-    description:
-      "SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.",
-    ctaLabel: "Explore Playbook",
-    href: "/blog/ai-2026-autonomous-ops-playbook",
+      "Autonomous incident triage, mitigation, and escalation with eval-gated playbooks and observability.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agents-oncall-automation",
     emoji: "🛠️",
+    highlight: true,
     date: "2025-09-15",
   },
   {
