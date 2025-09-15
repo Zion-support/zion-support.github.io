@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
     slug: 'ai-2026-production-agent-postmortems',
     title: 'AI 2026: Production Agent Postmortems',
     summary:

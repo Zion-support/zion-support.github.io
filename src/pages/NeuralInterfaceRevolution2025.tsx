@@ -29,16 +29,19 @@ import {
   Layers,
   Network,
   MessageSquare,
-  Atom,
-  CircuitBoard,
-  Microscope,
-  TestTube,
-  Beaker,
-  Flask,
-  CpuIcon
+  Activity,
+  Headphones,
+  Monitor,
+  Smartphone,
+  Watch,
+  Gamepad2,
+  Mic,
+  Camera,
+  Wifi,
+  Bluetooth
 } from 'lucide-react';
 
-const QuantumComputingRevolution2025: React.FC = () => {
+const NeuralInterfaceRevolution2025: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -46,106 +49,129 @@ const QuantumComputingRevolution2025: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const quantumFeatures = [
-    {
-      icon: Atom,
-      title: 'Quantum Supremacy',
-      description: 'Achieve computational power that exceeds classical computers for specific problems',
-      color: 'from-purple-500 to-pink-500',
-      benefits: ['Exponential Speed', 'Parallel Processing', 'Quantum Advantage']
-    },
-    {
-      icon: CircuitBoard,
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum mechanical principles',
-      color: 'from-blue-500 to-cyan-500',
-      benefits: ['Quantum Key Distribution', 'Unhackable Security', 'Future-Proof Encryption']
-    },
-    {
-      icon: Microscope,
-      title: 'Quantum Simulation',
-      description: 'Simulate complex molecular and quantum systems with unprecedented accuracy',
-      color: 'from-green-500 to-emerald-500',
-      benefits: ['Drug Discovery', 'Material Science', 'Chemical Reactions']
-    },
-    {
-      icon: TestTube,
-      title: 'Quantum Optimization',
-      description: 'Solve complex optimization problems that are intractable for classical computers',
-      color: 'from-orange-500 to-red-500',
-      benefits: ['Supply Chain', 'Financial Modeling', 'Logistics Optimization']
-    },
+  const neuralFeatures = [
     {
       icon: Brain,
-      title: 'Quantum Machine Learning',
-      description: 'Revolutionary AI algorithms powered by quantum computing principles',
+      title: 'Non-Invasive BCI',
+      description: 'Direct brain-computer interfaces without surgical implantation',
+      color: 'from-purple-500 to-pink-500',
+      benefits: ['EEG Technology', 'Real-time Processing', 'Safe & Comfortable']
+    },
+    {
+      icon: Eye,
+      title: 'Eye Tracking Control',
+      description: 'Control devices and interfaces through eye movement and gaze patterns',
+      color: 'from-blue-500 to-cyan-500',
+      benefits: ['Precision Control', 'Accessibility', 'Hands-Free Operation']
+    },
+    {
+      icon: Mic,
+      title: 'Thought-to-Speech',
+      description: 'Convert neural signals directly into speech and text output',
+      color: 'from-green-500 to-emerald-500',
+      benefits: ['Voice Synthesis', 'Communication Aid', 'Real-time Translation']
+    },
+    {
+      icon: Gamepad2,
+      title: 'Neural Gaming',
+      description: 'Control games and virtual environments using brain signals',
+      color: 'from-orange-500 to-red-500',
+      benefits: ['Immersive Experience', 'Reaction Speed', 'New Gaming Paradigms']
+    },
+    {
+      icon: Monitor,
+      title: 'Screen Control',
+      description: 'Navigate computer interfaces and applications through neural commands',
       color: 'from-indigo-500 to-purple-500',
-      benefits: ['Pattern Recognition', 'Quantum Neural Networks', 'Enhanced Learning']
+      benefits: ['Cursor Movement', 'Click Commands', 'Multi-tasking']
     },
     {
-      icon: Network,
-      title: 'Quantum Internet',
-      description: 'Ultra-secure quantum communication networks for the future',
+      icon: Activity,
+      title: 'Health Monitoring',
+      description: 'Continuous monitoring of brain activity and cognitive health',
       color: 'from-teal-500 to-blue-500',
-      benefits: ['Quantum Teleportation', 'Secure Communication', 'Global Quantum Network']
+      benefits: ['Mental Health', 'Cognitive Assessment', 'Early Detection']
     }
   ];
 
-  const quantumApplications = [
+  const applications = [
     {
-      industry: 'Healthcare',
-      icon: Flask,
-      applications: ['Drug Discovery', 'Protein Folding', 'Personalized Medicine'],
-      impact: '10x Faster Research',
-      description: 'Accelerate pharmaceutical research and enable personalized treatments'
+      category: 'Healthcare',
+      icon: Shield,
+      useCases: ['Paralysis Recovery', 'Cognitive Therapy', 'Mental Health Monitoring'],
+      impact: 'Life-Changing',
+      description: 'Restore communication and mobility for patients with neurological conditions'
     },
     {
-      industry: 'Finance',
-      icon: BarChart3,
-      applications: ['Risk Analysis', 'Portfolio Optimization', 'Fraud Detection'],
-      impact: '95% Accuracy',
-      description: 'Revolutionary financial modeling and risk assessment capabilities'
+      category: 'Education',
+      icon: Lightbulb,
+      useCases: ['Learning Enhancement', 'Attention Tracking', 'Personalized Learning'],
+      impact: 'Enhanced Learning',
+      description: 'Optimize learning experiences through real-time cognitive feedback'
     },
     {
-      industry: 'Manufacturing',
-      icon: CpuIcon,
-      applications: ['Supply Chain', 'Quality Control', 'Process Optimization'],
-      impact: '40% Efficiency',
-      description: 'Optimize complex manufacturing processes and supply chains'
+      category: 'Workplace',
+      icon: Workflow,
+      useCases: ['Productivity Tools', 'Focus Enhancement', 'Collaboration'],
+      impact: 'Increased Efficiency',
+      description: 'Boost workplace productivity through neural-enhanced tools'
     },
     {
-      industry: 'Energy',
-      icon: Zap,
-      applications: ['Battery Design', 'Nuclear Fusion', 'Grid Optimization'],
-      impact: 'Clean Energy',
-      description: 'Accelerate clean energy research and grid optimization'
+      category: 'Entertainment',
+      icon: Gamepad2,
+      useCases: ['Immersive Gaming', 'VR Control', 'Interactive Media'],
+      impact: 'Next-Gen Experience',
+      description: 'Revolutionary entertainment experiences through direct neural control'
     }
   ];
 
-  const quantumMilestones = [
+  const technologyBreakthroughs = [
     {
-      year: '2025',
-      milestone: 'Quantum Advantage',
-      description: 'Achieve quantum advantage in specific business applications',
-      status: 'Achieved'
+      breakthrough: 'Neural Signal Processing',
+      description: 'Advanced algorithms that decode brain signals with 95% accuracy',
+      status: 'Available Now',
+      applications: ['Communication', 'Control', 'Monitoring']
     },
     {
-      year: '2026',
-      milestone: 'Fault-Tolerant Quantum',
-      description: 'Deploy error-corrected quantum computers for commercial use',
-      status: 'In Progress'
+      breakthrough: 'Wireless Neural Interfaces',
+      description: 'High-bandwidth wireless communication with neural implants',
+      status: 'In Development',
+      applications: ['Mobility', 'Sensory Feedback', 'Enhanced Control']
     },
     {
-      year: '2027',
-      milestone: 'Quantum Internet',
-      description: 'Launch quantum communication networks',
-      status: 'Planned'
+      breakthrough: 'AI-Neural Integration',
+      description: 'Seamless integration between AI systems and neural interfaces',
+      status: 'Prototype',
+      applications: ['Cognitive Enhancement', 'Decision Support', 'Learning Acceleration']
     },
     {
-      year: '2030',
-      milestone: 'General Quantum Computing',
-      description: 'Achieve general-purpose quantum computing',
-      status: 'Vision'
+      breakthrough: 'Multi-Modal Interfaces',
+      description: 'Combining neural signals with other input modalities',
+      status: 'Research Phase',
+      applications: ['Hybrid Control', 'Enhanced Precision', 'Fallback Options']
+    }
+  ];
+
+  const safetyFeatures = [
+    {
+      feature: 'Non-Invasive Design',
+      description: 'No surgical procedures required for most applications',
+      icon: Shield
+    },
+    {
+      feature: 'Privacy Protection',
+      description: 'Advanced encryption and local processing for neural data',
+      icon: Lock
+    },
+    {
+      feature: 'Fail-Safe Mechanisms',
+      description: 'Built-in safety systems to prevent neural overload',
+      icon: CheckCircle
+    },
+    {
+      feature: 'Regulatory Compliance',
+      description: 'Full compliance with medical device regulations',
+      icon: Award
     }
   ];
 
@@ -162,13 +188,13 @@ const QuantumComputingRevolution2025: React.FC = () => {
             className="text-center text-white"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse">
-              ⚡ QUANTUM COMPUTING REVOLUTION • 2025
+              🧬 NEURAL INTERFACE REVOLUTION • 2025
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Quantum Computing Revolution 2025
+              Neural Interface Revolution 2025
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
-              Experience the next frontier of computing with quantum technologies that solve impossible problems and unlock unprecedented possibilities
+              Bridge the gap between mind and machine with cutting-edge neural interfaces that enable direct brain-computer communication
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -176,21 +202,21 @@ const QuantumComputingRevolution2025: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
-                Explore Quantum Solutions
+                Experience Neural Interface
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                View Quantum Demo
+                View Technology Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Quantum Features Section */}
+      {/* Neural Features Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -200,15 +226,15 @@ const QuantumComputingRevolution2025: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Revolutionary Quantum Technologies
+              Revolutionary Neural Technologies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the quantum technologies that are reshaping the future of computing and problem-solving
+              Discover the neural interface technologies that are connecting minds to machines
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumFeatures.map((feature, index) => (
+            {neuralFeatures.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -235,7 +261,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
       </div>
 
-      {/* Industry Applications */}
+      {/* Applications Section */}
       <div className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -245,15 +271,15 @@ const QuantumComputingRevolution2025: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Quantum Applications Across Industries
+              Neural Interface Applications
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how quantum computing is transforming industries and solving previously impossible problems
+              Transforming industries through direct neural communication
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {quantumApplications.map((app, index) => (
+            {applications.map((app, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -266,16 +292,70 @@ const QuantumComputingRevolution2025: React.FC = () => {
                     <app.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{app.industry}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">{app.category}</h3>
                     <div className="text-purple-600 font-semibold">{app.impact}</div>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">{app.description}</p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-900">Applications:</h4>
+                  <h4 className="font-semibold text-gray-900">Use Cases:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {app.applications.map((application, appIndex) => (
-                      <span key={appIndex} className="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">
+                    {app.useCases.map((useCase, useCaseIndex) => (
+                      <span key={useCaseIndex} className="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full">
+                        {useCase}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Technology Breakthroughs */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Technology Breakthroughs
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cutting-edge developments in neural interface technology
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologyBreakthroughs.map((breakthrough, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="text-center mb-6">
+                  <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
+                    breakthrough.status === 'Available Now' ? 'bg-green-100 text-green-700' :
+                    breakthrough.status === 'In Development' ? 'bg-blue-100 text-blue-700' :
+                    breakthrough.status === 'Prototype' ? 'bg-yellow-100 text-yellow-700' :
+                    'bg-purple-100 text-purple-700'
+                  }`}>
+                    {breakthrough.status}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{breakthrough.breakthrough}</h3>
+                <p className="text-gray-600 mb-4 text-center">{breakthrough.description}</p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-gray-900 text-sm">Applications:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {breakthrough.applications.map((application, appIndex) => (
+                      <span key={appIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
                         {application}
                       </span>
                     ))}
@@ -287,52 +367,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
         </div>
       </div>
 
-      {/* Quantum Timeline */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Quantum Computing Roadmap
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The journey to quantum supremacy and beyond
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quantumMilestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
-                    milestone.status === 'Achieved' ? 'bg-green-100 text-green-700' :
-                    milestone.status === 'In Progress' ? 'bg-blue-100 text-blue-700' :
-                    milestone.status === 'Planned' ? 'bg-yellow-100 text-yellow-700' :
-                    'bg-purple-100 text-purple-700'
-                  }`}>
-                    {milestone.status}
-                  </div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">{milestone.year}</div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{milestone.milestone}</h3>
-                <p className="text-gray-600 text-center">{milestone.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Quantum Advantages */}
+      {/* Safety Features */}
       <div className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -342,90 +377,81 @@ const QuantumComputingRevolution2025: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Quantum vs Classical Computing
+              Safety & Security First
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Understanding the revolutionary advantages of quantum computing
+              Built with the highest standards of safety and privacy protection
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Classical Computing</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3" />
-                  <span className="text-gray-600">Binary processing (0s and 1s)</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3" />
-                  <span className="text-gray-600">Linear problem solving</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3" />
-                  <span className="text-gray-600">Sequential operations</span>
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3" />
-                  <span className="text-gray-600">Limited by Moore's Law</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6 text-center">Quantum Computing</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <Sparkles className="w-5 h-5 text-yellow-300 mr-3" />
-                  <span>Quantum superposition (0s and 1s simultaneously)</span>
-                </li>
-                <li className="flex items-center">
-                  <Sparkles className="w-5 h-5 text-yellow-300 mr-3" />
-                  <span>Parallel problem solving</span>
-                </li>
-                <li className="flex items-center">
-                  <Sparkles className="w-5 h-5 text-yellow-300 mr-3" />
-                  <span>Quantum entanglement</span>
-                </li>
-                <li className="flex items-center">
-                  <Sparkles className="w-5 h-5 text-yellow-300 mr-3" />
-                  <span>Exponential speed advantage</span>
-                </li>
-              </ul>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {safetyFeatures.map((safety, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.9 + index * 0.1 }}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <safety.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{safety.feature}</h3>
+                <p className="text-gray-600">{safety.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* Future Vision */}
       <div className="py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="text-white"
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="text-center text-white"
           >
             <h2 className="text-4xl font-bold mb-6">
-              Ready for the Quantum Revolution?
+              The Future of Human-Computer Interaction
             </h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-              Be among the first to harness the power of quantum computing for your business
+            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
+              Neural interfaces represent the next evolution in human-computer interaction, enabling seamless communication between minds and machines
             </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <div className="text-4xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold mb-4">Direct Neural Control</h3>
+                <p className="opacity-90">Control devices and applications through thought alone</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <div className="text-4xl mb-4">🌐</div>
+                <h3 className="text-xl font-bold mb-4">Enhanced Communication</h3>
+                <p className="opacity-90">Break down language barriers with neural translation</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold mb-4">Cognitive Enhancement</h3>
+                <p className="opacity-90">Augment human capabilities with AI assistance</p>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
-                Schedule Quantum Consultation
+                Schedule Neural Interface Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                Download Quantum Guide
+                Download Technology Guide
               </motion.button>
             </div>
           </motion.div>
@@ -435,4 +461,4 @@ const QuantumComputingRevolution2025: React.FC = () => {
   );
 };
 
-export default QuantumComputingRevolution2025;
+export default NeuralInterfaceRevolution2025;

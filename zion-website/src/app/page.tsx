@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react'
-=======
->>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 import {
   ChartBarIcon,
   CpuChipIcon,
@@ -114,11 +111,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Enterprise Retrieval Observability 2026 —
-              <a href="/updates/enterprise-retrieval-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read report</a>
+              New: AI Autonomous Workflow Engine v1.0 —
+              <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
               <span className="mx-2 text-blue-300/60">|</span>
-              AI Lab Open Benchmarks Portal —
-              <a href="/updates/ai-lab-open-benchmarks-portal" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore launch</a>
+              <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
+              <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
+              <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -187,13 +187,6 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/autonomous-data-quality-copilot-1-0"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
-              >
-                Launch: Data Quality Copilot v1.0
-                <span aria-hidden>→</span>
-              </a>
-              <a
                 href="/updates/autonomous-finance-os-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
@@ -243,10 +236,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/blog/ai-2026-real-time-retrieval-architectures"
+                href="/updates/production-guardrails-tool-use-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                New: Real‑Time Retrieval Architectures
+                Guide: Tool‑Use Guardrails 2026
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -485,16 +478,14 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* What's New section */}
-=======
       {/* What's New section (Latest Updates from data) */}
->>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content and announcements. Visit Updates for more.</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
+          </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
@@ -515,9 +506,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-      {/* Latest on the blog */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Latest on the blog</h2>
@@ -571,8 +559,6 @@ export default function HomePage() {
         </div>
       </div>
 
-=======
->>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">

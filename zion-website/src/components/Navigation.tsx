@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/ai-governance-dashboard-v5' },
+  { name: 'New', href: '/updates/real-time-agent-debugger-1-1' },
 ]
 
 export default function Navigation() {
@@ -45,9 +45,6 @@ export default function Navigation() {
             >
               <span className="inline-flex items-center gap-2">
                 {item.name}
-                {item.tag ? (
-                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
-                ) : null}
               </span>
             </a>
           ))}
@@ -92,9 +89,6 @@ export default function Navigation() {
                   >
                     <span className="inline-flex items-center gap-2">
                       {item.name}
-                      {item.tag ? (
-                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
-                      ) : null}
                     </span>
                   </a>
                 ))}
