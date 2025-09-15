@@ -29,8 +29,7 @@ export const AnalyticsProvider = ({ children }) => {
   };
 
   const value = {
-    analyticsEnabled,
-    setAnalyticsEnabled,
+    analytics,
     trackEvent,
     events
   };

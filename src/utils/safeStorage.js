@@ -107,7 +107,6 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     }
   }
 };

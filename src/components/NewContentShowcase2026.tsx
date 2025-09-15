@@ -35,6 +35,7 @@ const NewContentShowcase2026: React.FC = () => {
   ];
 
   return (
+    <>
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
@@ -197,6 +198,7 @@ const NewContentShowcase2026: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
