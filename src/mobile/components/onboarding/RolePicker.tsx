@@ -75,3 +75,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     </div>
   );
 }
+
+export default RolePicker;

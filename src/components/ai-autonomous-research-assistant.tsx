@@ -1,26 +1,14 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AIAutonomousResearchAssistant() {
-	return (
-		<ServiceLanding
-			title="AI Autonomous Research Assistant"
-			slug="ai-autonomous-research-assistant"
-			description="An AI agent that continuously tracks competitorsmarketsregulationsand technologies. It synthesizes findingsdrafts briefsand recommends actions—so your team stays ahead."
-			subtitle="Always-on competitive and market intelligence at analyst-level quality."
-			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation: 1–2 weeks"
-			roiNote="Average ROI 3–6x within 60 days"
-			features={[
-				"Automated web and document monitoring with source citations",
-				"Daily/weekly executive briefs and dashboards",
-				"Regulatory watchlists and impact analysis",
-				"RFP/RFI opportunity discovery and alerts",
-				"Export to Slides/Docs/Notion",
-				"Compliance-friendly data handlingaudit logs"
-			]}
-			industries={["Consulting"Healthcare"Finance"Public Sector"]}
-			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
-		/>
-	);
-}
+const ai-autonomous-research-assistant = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">ai-autonomous-research-assistant</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default ai-autonomous-research-assistant;

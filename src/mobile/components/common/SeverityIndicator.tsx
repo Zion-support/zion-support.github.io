@@ -45,3 +45,5 @@ export function SeverityIndicator({
     </div>
   );
 }
+
+export default SeverityIndicator;

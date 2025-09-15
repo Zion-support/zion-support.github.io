@@ -1,20 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 
-export default function EntertainmentMediaSolutions() {
+const entertainment-media-solutions = () => {
   return (
-    <>
-      <Head>
-        <title>Entertainment & Media Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI solutions for entertainment and media: content automationpersonalizationanalyticsand monetization." />
-        <link rel="canonical" href="https://ziontechgroup.com/entertainment-media-solutions" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">Entertainment & Media Solutions</h1>
-          <p className="text-gray-300">Accelerate productionoptimize distributionand personalize experiences with AI-driven media platforms.</p>
-        </section>
-      </div>
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">entertainment-media-solutions</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
   );
-}
+};
+
+export default entertainment-media-solutions;

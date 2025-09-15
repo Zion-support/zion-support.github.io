@@ -131,3 +131,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     </div>
   );
 }
+
+export default BrowseCards;

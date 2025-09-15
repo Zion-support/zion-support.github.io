@@ -1,20 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
 
-export default function RealEstateTechnologySolutions() {
+const real-estate-technology-solutions = () => {
   return (
-    <>
-      <Head>
-        <title>Real Estate Technology Solutions | Zion Tech Group</title>
-        <meta name="description" content="Datanalyticsand automation for real estate technology including valuationrisk modelingand operations." />
-        <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">Real Estate Technology Solutions</h1>
-          <p className="text-gray-300">Unlock data-driven decisions and automation across property lifecyclevaluationand operations.</p>
-        </section>
-      </div>
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">real-estate-technology-solutions</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
   );
-}
+};
+
+export default real-estate-technology-solutions;

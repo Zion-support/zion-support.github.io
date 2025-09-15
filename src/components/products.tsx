@@ -1,18 +1,14 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react';
 
-export default function Placeholder() {
+const products = () => {
   return (
-    <main className="min-h-screen p-8">
-      <Head>
-        <title>Products - Placeholder</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl font-semibold mb-2">Products</h1>
-        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/products</code>.</p>
-        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
-      </div>
-    </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">products</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
   );
-}
+};
+
+export default products;

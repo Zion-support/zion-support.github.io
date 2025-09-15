@@ -1,24 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export function MainNavigation() {
+const MainNavigation = () => {
   return (
-    <nav className="hidden md:flex space-x-8">
-      <Link to="/" className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-colors">
-        Home
-      </Link>
-      <Link to="/services" className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-colors">
-        Services
-      </Link>
-      <Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-colors">
-        Solutions
-      </Link>
-      <Link to="/about" className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-colors">
-        About
-      </Link>
-      <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-colors">
-        Contact
-      </Link>
-    </nav>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">Main Navigation</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
   );
-}
+};
+
+export default MainNavigation;

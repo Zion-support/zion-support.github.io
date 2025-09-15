@@ -248,3 +248,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     </>
   );
 }
+
+export default MainNavigation;

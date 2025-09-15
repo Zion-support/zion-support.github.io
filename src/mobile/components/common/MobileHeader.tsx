@@ -73,3 +73,5 @@ export function MobileHeader({
     </header>
   );
 }
+
+export default MobileHeader;

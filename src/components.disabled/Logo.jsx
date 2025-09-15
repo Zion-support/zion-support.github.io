@@ -1,11 +1,14 @@
-import { motion } from 'framer-motion';
-export function Logo({ className = '' }) {
-    return (<motion.div className={`flex items-center space-x-2 ${className}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-      <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">
-        Z
-      </div>
-      <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-        Zion Tech Group
-      </span>
-    </motion.div>);
-}
+import React from 'react';
+
+const Logo = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">Logo</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default Logo;

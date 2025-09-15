@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
+
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -13,7 +10,7 @@ const QuantumConsciousness2027: React.FC = () => {
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+    <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-slate-500 to-gray-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 QUANTUM CONSCIOUSNESS • JANUARY 2027
           </div>
@@ -35,7 +32,7 @@ const QuantumConsciousness2027: React.FC = () => {
         </div>
 
         {/* Quantum Consciousness Theory */}
-        <section id="consciousness" className="mb-16">
+    <section id="consciousness" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🧠 Quantum Consciousness Theory</h2>
             <p className="text-xl text-slate-200">Understanding the quantum nature of awareness and intelligence</p>
@@ -73,7 +70,7 @@ const QuantumConsciousness2027: React.FC = () => {
         </section>
 
         {/* Quantum Mind Architecture */}
-        <section id="quantum-mind" className="mb-16">
+    <section id="quantum-mind" className="mb-16">
           <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 border border-slate-600/30">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold text-white mb-4">⚡ Quantum Mind Architecture</h2>
@@ -118,7 +115,7 @@ const QuantumConsciousness2027: React.FC = () => {
         </section>
 
         {/* Consciousness Levels */}
-        <section className="mb-16">
+    <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">📊 Consciousness Levels</h2>
             <p className="text-xl text-slate-200">The spectrum of quantum consciousness development</p>
@@ -168,7 +165,7 @@ const QuantumConsciousness2027: React.FC = () => {
         </section>
 
         {/* Applications */}
-        <section className="mb-16">
+    <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🔬 Applications</h2>
             <p className="text-xl text-slate-200">Revolutionary applications of quantum consciousness technology</p>
@@ -222,7 +219,7 @@ const QuantumConsciousness2027: React.FC = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center">
+    <section className="text-center">
           <div className="bg-gradient-to-r from-slate-600 to-gray-600 rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-4">Experience Quantum Consciousness</h2>
             <p className="text-xl text-slate-100 mb-8 max-w-3xl mx-auto">
@@ -242,10 +239,7 @@ const QuantumConsciousness2027: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+
 >>>>>>> cursor/create-and-deploy-new-content-c963
     </div>
   );

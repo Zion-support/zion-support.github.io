@@ -30,10 +30,7 @@ export const NotificationProvider = ({ children }) => {
   const value = {
     notifications,
     addNotification,
-<<<<<<< HEAD
-=======
-    removeNotification,
->>>>>>> cursor/create-and-deploy-new-content-c963
+
   };
 
   return (

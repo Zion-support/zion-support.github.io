@@ -39,3 +39,5 @@ export function BottomNavigation() {
     </div>
   );
 }
+
+export default BottomNavigation;

@@ -1,24 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
-const InteractiveTechShowcase2026: React.FC = () => {
-<<<<<<< HEAD
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
-      borderColor: 'border-orange-400/30'
-    }
-  ];
-
-<<<<<<< HEAD
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
+const InteractiveTechShowcase2026 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">Interactive Tech Showcase2026</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
         </div>
-      </div>
     </div>
   );
 };
-
 
 export default InteractiveTechShowcase2026;

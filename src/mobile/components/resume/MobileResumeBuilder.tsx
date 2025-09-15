@@ -345,3 +345,5 @@ function SkillsStep() {
     </div>
   );
 }
+
+export default MobileResumeBuilder;

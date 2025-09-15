@@ -171,3 +171,5 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>
   );
 }
+
+export default BrowseFilters;

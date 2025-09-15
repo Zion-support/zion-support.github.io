@@ -2,29 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 const ViewModeContext = createContext();
 
-<<<<<<< HEAD
-=======
-export const ViewModeProvider = ({ children }) => {
-  const [viewMode, setViewMode] = useState('desktop');
 
-  const toggleViewMode = () => {
-    setViewMode(prev => prev === 'desktop' ? 'mobile' : 'desktop');
-  };
-
-  const value = {
-    viewMode,
-    setViewMode,
-    toggleViewMode,
-  };
-
-  return (
-    <ViewModeContext.Provider value={value}>
-      {children}
-    </ViewModeContext.Provider>
-  );
-};
-
->>>>>>> cursor/create-and-deploy-new-content-c963
 export const useViewMode = () => {
   const context = useContext(ViewModeContext);
   if (!context) {

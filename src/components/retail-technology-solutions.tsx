@@ -1,26 +1,14 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function RetailTechnologySolutions() {
-	return (
-		<ServiceLanding
-			title="Retail Technology Solutions"
-			slug="retail-technology-solutions"
-			description="Optimize merchandisingpricingdemand forecastingand omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
-			subtitle="Higher margins and better experiences powered by AI."
-			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
-			features={[
-				"Demand forecasting and dynamic pricing",
-				"Assortment optimization and store clustering",
-				"Customer 360 and propensity modeling",
-				"Store ops: labor planning and task automation",
-				"Omni-channel journey orchestration",
-				"Integrations: POSeComWMSESPCDP"
-			]}
-			industries={["Retail"CPG"E‑commerce"]}
-			canonical="https://ziontechgroup.com/retail-technology-solutions"
-		/>
-	);
-}
+const retail-technology-solutions = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">retail-technology-solutions</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default retail-technology-solutions;

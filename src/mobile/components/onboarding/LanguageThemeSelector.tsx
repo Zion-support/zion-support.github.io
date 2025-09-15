@@ -97,3 +97,5 @@ export function LanguageThemeSelector() {
     </div>
   );
 }
+
+export default LanguageThemeSelector;

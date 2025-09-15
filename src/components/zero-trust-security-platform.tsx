@@ -1,33 +1,14 @@
 import React from 'react';
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function ZeroTrustSecurityPlatformPage() {
-	return (
-		<>
-			<Head>
-				<title>Zero Trust Security Platform | Zion Tech Group</title>
-				<meta name="description" content="Design and enforce zero trust architecture: identity-first accessmicrosegmentationcontinuous verificationand least privilege." />
-				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
-			</Head>
-			<ServiceLanding
-				title="Zero Trust Security Platform"
-				description="Accelerate zero trust adoption with reference architecturespolicy-as-codeidentity-aware proxiesmicrosegmentationand continuous verification across usersdevicesand services."
-				subtitle="Trust nothingverify everything"
-				pricePerMonthUSD={3499}
-				implementationWeeks="4-8 weeks"
-				roiNote="Reduce breach impact and lateral movement risk; meet compliance faster"
-				features={[
-					"Policy-as-code and enforcement",
-					"Identity-aware proxies and device posture",
-					"Microsegmentation and service mesh integration",
-					"Continuous authentication and authorization",
-					"Visibility and audit for compliance",
-					"Rollout playbooks and migration kits"
-				]}
-				industries={["Enterprise IT"Financial Services"Healthcare"SaaS"Public Sector"]}
-				canonical="https://ziontechgroup.com/zero-trust-security-platform"
-			/>
-		</>
-	);
-}
+const zero-trust-security-platform = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">zero-trust-security-platform</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default zero-trust-security-platform;

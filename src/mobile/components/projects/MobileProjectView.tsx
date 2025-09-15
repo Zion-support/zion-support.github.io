@@ -185,3 +185,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     </div>
   );
 }
+
+export default MobileProjectView;

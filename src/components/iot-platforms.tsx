@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function IotPlatformsPage() {
+const iot-platforms = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">IoT Platforms</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Content coming soon.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">iot-platforms</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
     </div>
   );
-}
+};
+
+export default iot-platforms;

@@ -385,3 +385,5 @@ function PreviewStep() {
     </div>
   );
 }
+
+export default MobileJobPost;

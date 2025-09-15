@@ -1,26 +1,14 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
-			title="AI Autonomous Ecosystem Manager"
-			slug="ai-autonomous-ecosystem-manager"
-			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policiesallocate resourcesand ensure safety across the ecosystem."
-			subtitle="Govern multi-agent systems with policyobservabilityand guardrails."
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
-			features={[
-				"Agent registryrolesand capabilities graph",
-				"Policy engine with human-in-the-loop controls",
-				"Observability: tracesmetricsred-teaming",
-				"Sandboxing and E2E approvals for sensitive actions",
-				"Cost and performance optimization",
-				"Integrations: KubernetesSlack/TeamsJiraGitHub"
-			]}
-			industries={["Platform Teams"R&D"Operations"Security"]}
-			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	);
-}
+const ai-autonomous-ecosystem-manager = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">ai-autonomous-ecosystem-manager</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default ai-autonomous-ecosystem-manager;

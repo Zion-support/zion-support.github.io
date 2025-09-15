@@ -1,39 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-  const promotionalContent = [
-    {
-      id: 1,
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      bgGradient: "from-purple-600/50 to-pink-600/50"
-    },
-    {
-      id: 2,
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      bgGradient: "from-cyan-600/50 to-blue-600/50"
-    },
-    {
-      id: 3,
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      bgGradient: "from-emerald-600/50 to-teal-600/50"
-    },
-    {
-      id: 4,
-    }
-  ];
-
-  useEffect(() => {
-            {promotionalContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                }`}
-              />
-            ))}
-          </div>
-        ))}
-      </div>
-
-      {/* Special Announcement Banner */}
+const RevolutionaryPromoBanner2026 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">Revolutionary Promo Banner2026</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
     </div>
   );
 };

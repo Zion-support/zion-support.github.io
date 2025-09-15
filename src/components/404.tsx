@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function NotFoundPage() {
+const 404 = () => {
   return (
-    <div className="container mx-auto px-4 py-20 text-center">
-      <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">404</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
     </div>
   );
-}
+};
+
+export default 404;

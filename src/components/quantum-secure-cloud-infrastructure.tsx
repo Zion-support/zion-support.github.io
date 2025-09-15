@@ -1,27 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
 
-export default function QuantumSecureCloudInfrastructure() {
-	return (
-		<ServiceLanding
-			title="Quantum-Secure Cloud Infrastructure"
-			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
-			subtitle="Protect data beyond the quantum horizon"
-			pricePerMonthUSD={5999}
-			implementationWeeks="6-10 weeks"
-			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
-			features={[
-				"PQC algorithms for data at-rest and in-transit",
-				"Hybrid crypto transition plans",
-				"HSM/KMS integrations and key rotation",
-				"Zero Trust + PQC reference designs",
-				"Threat modeling and validation",
-				"NIST PQC roadmap alignment]}
-			]}
-			industries={["Financial Services", "Healthcare", "Government"]}
-			url="https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
-		/>
-	);
-}
+const quantum-secure-cloud-infrastructure = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4">quantum-secure-cloud-infrastructure</h2>
+          <p className="text-gray-300">Revolutionary component showcase</p>
+        </div>
+    </div>
+  );
+};
+
+export default quantum-secure-cloud-infrastructure;

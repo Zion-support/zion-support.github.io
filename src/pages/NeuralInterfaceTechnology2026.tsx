@@ -114,17 +114,14 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         'Enhanced situational awareness',
         'Reduced cognitive load'
       ],
-<<<<<<< HEAD
-=======
-      description: "Enhanced productivity and efficiency in professional environments"
->>>>>>> cursor/create-and-deploy-new-content-c963
+
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
+    <section className="relative py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
           <motion.div
@@ -171,7 +168,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       )}
 
       {/* Technology Showcase */}
-      <section className="py-20 px-4">
+    <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">🧠 Neural Interface Technologies</h2>
@@ -237,7 +234,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </section>
 
       {/* Interactive Demos */}
-      <section className="py-20 px-4 bg-gradient-to-r from-teal-900/50 to-emerald-900/50">
+    <section className="py-20 px-4 bg-gradient-to-r from-teal-900/50 to-emerald-900/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">🎮 Interactive Neural Demos</h2>
@@ -303,7 +300,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 px-4">
+    <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">💡 Real-World Applications</h2>
@@ -353,7 +350,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/50 to-teal-900/50">
+    <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/50 to-teal-900/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">⚙️ Technical Specifications</h2>
@@ -387,7 +384,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-4">
+    <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">💰 Neural Interface Pricing</h2>
@@ -414,8 +411,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
-                <div className="text-center mb-6">
+    <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                   <p className="text-sm opacity-80 mb-4">{tier.description}</p>
                   <div className="text-4xl font-bold text-emerald-300">
@@ -447,7 +443,7 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+    <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

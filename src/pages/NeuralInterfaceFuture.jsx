@@ -2,8 +2,6 @@ import React from 'react';
 
 const NeuralInterfaceFuture = () => {
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -37,7 +35,6 @@ const NeuralInterfaceFuture = () => {
               Future applications of neural interface technology.
             </p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>

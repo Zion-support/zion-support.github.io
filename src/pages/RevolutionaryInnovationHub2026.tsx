@@ -4,15 +4,10 @@ import { motion } from 'framer-motion';
 const RevolutionaryInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-<<<<<<< HEAD
-=======
-            </button>
-          </div>
-        </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-c963
+
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+    <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-black rounded-full text-lg font-bold mb-6">
             🌟 REVOLUTIONARY INNOVATION HUB 2026
           </div>
@@ -26,7 +21,7 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
         </div>
 
         {/* Innovation Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
             <div className="text-5xl mb-4">🤖</div>
             <h3 className="text-2xl font-bold mb-4">Autonomous AI Systems</h3>
@@ -119,7 +114,7 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
         </div>
 
         {/* Innovation Showcase */}
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 mb-16">
+    <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Featured Innovations</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-blue-900 to-purple-900 p-6 rounded-xl">
@@ -146,7 +141,7 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
         </div>
 
         {/* Success Metrics */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
+    <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-5xl font-bold text-cyan-400 mb-2">500+</div>
             <div className="text-gray-300">Innovations Developed</div>
@@ -166,7 +161,12 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the most innovative community on the planet. Together, we're building 
@@ -175,21 +175,6 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Innovating
-            </button>
-<<<<<<< HEAD
-=======
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Explore Solutions
->>>>>>> cursor/create-and-deploy-new-content-8735
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Explore Solutions
-=======
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-800 transition-all duration-300">
-              Explore Projects
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> cursor/create-and-deploy-new-content-c963
             </button>
           </div>
         </motion.div>

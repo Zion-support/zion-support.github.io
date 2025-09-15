@@ -1,22 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
-const AdvancedQuantumComputing2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl"></div>
-          <div className="relative z-10 p-12">
-            <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-8">
-              <span className="text-cyan-400 text-2xl">⚛️</span>
-              <span className="text-cyan-300 font-bold text-lg">ADVANCED QUANTUM COMPUTING 2026</span>
-            </div>
-            <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Quantum Computing Revolution
->>>>>>> cursor/create-and-deploy-new-content-c963
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -27,7 +10,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+    <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-sm font-semibold mb-6">
             ⚡ QUANTUM BREAKTHROUGH 2026
           </div>
@@ -49,7 +32,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
 
         {/* Quantum Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+    <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Supremacy</h3>
@@ -94,7 +77,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
 
         {/* Quantum Applications */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16">
+    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Applications 2026</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -121,7 +104,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
 
         {/* Quantum Technology Stack */}
-        <div className="mb-16">
+    <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Technology Stack</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
@@ -170,7 +153,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">
+    <div className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Computing?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the quantum revolution and unlock unprecedented computational power 
@@ -188,13 +171,9 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       </main>
       
       <Footer />
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+
+
+
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 import { motion } from 'framer-motion';
 
@@ -202,7 +181,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
@@ -229,60 +208,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-<<<<<<< HEAD
-            <p className="text-cyan-100 mb-6 text-center">
-              Achieve computational tasks impossible for classical computers with our 1000+ qubit quantum processors
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• 1000+ logical qubits</li>
-              <li>• 99.9% quantum fidelity</li>
-              <li>• Sub-millisecond gate operations</li>
-              <li>• Error correction algorithms</li>
-            </ul>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🧬</div>
-=======
-          </div>
-        </div>
-
-        {/* Revolutionary Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Exponential Speed</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Quantum algorithms that process millions of calculations simultaneously, delivering unprecedented computational speed
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• 1000x faster than classical computers</li>
-              <li>• Parallel processing capabilities</li>
-              <li>• Real-time optimization</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Cryptography</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Unbreakable encryption using quantum mechanics principles for ultimate data security
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Quantum key distribution</li>
-              <li>• Unhackable communication</li>
-              <li>• Future-proof security</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧬</div>
->>>>>>> cursor/create-and-deploy-new-content-c963
             <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
             <p className="text-purple-100 mb-6 text-center">
               Simulate complex molecular structures and chemical reactions with quantum precision
@@ -295,89 +221,14 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             </ul>
           </motion.div>
 
-<<<<<<< HEAD
-=======
-        {/* Quantum Applications */}
-        <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            🌟 Revolutionary Quantum Applications
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🤖</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">AI Optimization</h3>
-                  <p className="text-gray-300">Quantum-enhanced machine learning algorithms that solve optimization problems exponentially faster</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">💊</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Drug Discovery</h3>
-                  <p className="text-gray-300">Accelerate pharmaceutical research with quantum molecular modeling and simulation</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🌍</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Climate Modeling</h3>
-                  <p className="text-gray-300">Complex climate simulations with quantum accuracy for environmental predictions</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">💰</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Financial Modeling</h3>
-                  <p className="text-gray-300">Quantum algorithms for risk assessment and portfolio optimization</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🚀</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Space Exploration</h3>
-                  <p className="text-gray-300">Quantum computing for spacecraft navigation and mission planning</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="text-3xl">🧠</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Neural Networks</h3>
-                  <p className="text-gray-300">Quantum neural networks for advanced pattern recognition and learning</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold mb-6">Ready to Experience Quantum Computing?</h2>
-            <p className="text-xl mb-8 opacity-95">
-              Join the quantum revolution and unlock unlimited computational possibilities
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
-                🚀 Start Quantum Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
-                📚 Learn More
-              </button>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
+
 >>>>>>> cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+
+
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
     </div>
   );
