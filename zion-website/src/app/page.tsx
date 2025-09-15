@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 import {
   ChartBarIcon,
   CpuChipIcon,
@@ -482,14 +485,16 @@ export default function HomePage() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* What's New section */}
+=======
+      {/* What's New section (Latest Updates from data) */}
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
-          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content and announcements. Visit Updates for more.</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
@@ -510,6 +515,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Latest on the blog */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
@@ -565,6 +571,8 @@ export default function HomePage() {
         </div>
       </div>
 
+=======
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">

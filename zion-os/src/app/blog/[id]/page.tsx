@@ -163,6 +163,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'ai-safety-red-teaming-2025': {
+    id: 'ai-safety-red-teaming-2025',
+    title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
+    excerpt:
+      'Hands-on red teaming techniques, tooling, and governance patterns to harden AI systems against prompt injection, data exfiltration, and policy evasion.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Enterprises deploying AI at scale face evolving attack surfaces: prompt injection, tool misuse, covert data exfiltration, and model evasion. Red teaming must be continuous and automated.',
+      'This playbook catalogs realistic adversary techniques, safe sandboxes, and CI-integrated evaluations. It includes attack libraries, policy tests, and response runbooks tied to severity levels.',
+      'We outline how to design guardrails with layered defenses: input sanitization, capability routing, authorization boundaries, and human-in-the-loop escalation for sensitive actions.'
+    ]
+  },
+  'multi-agent-systems-at-scale': {
+    id: 'multi-agent-systems-at-scale',
+    title: 'Operating Multi‑Agent Systems at Scale: Reliability, Cost, and Policy',
+    excerpt:
+      'A field guide to running large multi-agent systems with predictable reliability, bounded cost, and enforceable organizational policy.',
+    category: 'Autonomous Systems',
+    author: 'Michael Rodriguez',
+    date: '2025-09-12',
+    readTime: '11 min read',
+    content: [
+      'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
+      'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
+      'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
+    ]
+  },
 };
 
 export function generateStaticParams() {
