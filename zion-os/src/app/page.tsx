@@ -89,20 +89,17 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Launch Sovereign</span>
               <br />
-              <span className="text-white">Digital Economies</span>
+              <span className="text-white">AI-Powered Digital Economies</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              One-click deployment of complete AI-powered digital economies with marketplace, 
-              governance, identity, and token systems. Built for scale, designed for sovereignty.
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="/multiverse/launch" className="btn-primary text-lg px-8 py-4">
-                Launch Your Economy
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+                🚀 Launch Your Economy
               </a>
-<<<<<<< HEAD
-              <a href="/docs" className="btn-secondary text-lg px-8 py-4">
-                View Documentation
-=======
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
@@ -114,18 +111,45 @@ export default function HomePage() {
               </a>
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
               </a>
             </div>
           </div>
         </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        </div>
       </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+      {/* Promo Banner - New Articles */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
+          <a
+            href="/blog/agent-safety-red-teaming-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
+          >
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -135,10 +159,6 @@ export default function HomePage() {
               <h3 className="text-2xl md:text-3xl font-bold mb-2">AI Governance Framework 2025 & Agent Safety Red Teaming</h3>
               <p className="text-white/70">Latest AI governance frameworks and safety playbooks now available for enterprise deployment.</p>
             </div>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/blog/agent-safety-red-teaming-2025" className="btn-primary hover-lift text-sm px-6 py-3">
-=======
             <a href="/blog" className="btn-primary whitespace-nowrap">Read the updates →</a>
           </div>
         </div>
@@ -338,7 +358,11 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+=======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -394,69 +418,135 @@ export default function HomePage() {
                 📊 View Instances
               </a>
               <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
                 📰 New: Agent Safety Red Teaming 2025
-              </a>
-              <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-sm px-6 py-3">
-                ✅ Read: Foundation Models 2025
               </a>
             </div>
           </div>
         </div>
       </section>
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
-      {/* Features Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Need to Build
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything You Need to Build the Future
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Complete toolkit for launching and managing sovereign digital economies
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              for launching sovereign digital economies.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="card group">
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${feature.gradient} group-hover:scale-110 transition-transform duration-200`}>
-                  <span className="text-2xl">{feature.icon}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-white transition-colors">{feature.title}</h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors mb-4">{feature.description}</p>
-                <div className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
-                      {item}
-                    </div>
-                  ))}
-                </div>
+<<<<<<< HEAD
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />
+=======
+              <div key={index}>
+                <FeatureCard
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  features={feature.features}
+                  gradient={feature.gradient}
+                />
               </div>
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
             ))}
           </div>
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect rounded-2xl p-12 animate-slide-up">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Build the Future?
+            </h2>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
+                🚀 Start Building Now
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📊 Explore Examples
+              </a>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+              <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Foundation Models 2025
+              </a>
+              <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                ✅ Read: Agent Safety Evaluation 2025
+              </a>
+<<<<<<< HEAD
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+=======
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="animate-fade-in">
+              <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
+              <div className="text-white/70">Features Available</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-white/70">Deployment Options</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-white/70">AI Orchestration</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
+              <div className="text-white/70">Scalability</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Latest from the Blog */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Insights</h2>
-            <p className="text-xl text-gray-400">Stay ahead with our latest research and case studies</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest from the Blog</h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">Fresh insights from our team across AI, data, and quantum.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { id: 'agent-safety-red-teaming-2025', title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems' },
-              { id: 'ai-foundation-models-2025', title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work' },
               { id: 'edge-ai-on-device-inference', title: 'Edge AI: On-Device Inference for Privacy and Speed' },
               { id: 'autonomous-agents-in-enterprise', title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls' },
               { id: 'post-quantum-cryptography-roadmap', title: 'Post-Quantum Cryptography: A Practical Migration Roadmap' },
               { id: 'llm-evals-in-production', title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics' }
             ].map((post) => (
               <a key={post.id} href={`/blog/${post.id}`} className="glass-effect rounded-xl p-6 hover-lift block">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                <div className="h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-white text-2xl font-bold">{post.title.split(' ').slice(0, 2).map((w) => w[0]).join('')}</span>
                 </div>
                 <h3 className="text-lg font-semibold">{post.title}</h3>
@@ -472,3 +562,4 @@ export default function HomePage() {
     </div>
   );
 }
+
