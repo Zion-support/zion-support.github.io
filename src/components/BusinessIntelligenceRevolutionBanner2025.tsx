@@ -6,7 +6,7 @@ const BusinessIntelligenceRevolutionBanner2025 = () => {
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
       {/* Data Visualization Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3Cpath d="M20 20c0 11.046 8.954 20 20 20V20H20z"/%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3Cpath d="M20 20c0 11.046 8.954 20 20 20V20H20z"/%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
       
       {/* Animated Charts */}

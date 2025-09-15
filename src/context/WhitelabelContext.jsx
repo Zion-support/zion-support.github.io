@@ -11,6 +11,23 @@ export const useWhitelabel = () => {
 };
 
 export const WhitelabelProvider = ({ children }) => {
+<<<<<<< HEAD
+=======
+  const [whitelabelConfig, setWhitelabelConfig] = useState({
+    brandName: 'Zion Tech Group',
+    logo: '/logo.png',
+    primaryColor: '#1e40af',
+    secondaryColor: '#3b82f6',
+  });
+
+  const updateConfig = (newConfig) => {
+    setWhitelabelConfig(prev => ({ ...prev, ...newConfig }));
+  };
+
+  const value = {
+    whitelabelConfig,
+    updateConfig,
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (
@@ -18,4 +35,3 @@ export const WhitelabelProvider = ({ children }) => {
       {children}
     </WhitelabelContext.Provider>
   );
-};

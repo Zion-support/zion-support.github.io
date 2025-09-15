@@ -175,6 +175,7 @@ const ContentNavigation2026: React.FC = () => {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 import React, { useState, useEffect } from 'react';
@@ -267,9 +268,15 @@ const ContentNavigation2026: React.FC = () => {
           ))}
         </div>
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+=======
+>>>>>>> origin/revolutionary-content-2026
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
   );
 };
+
 
 export default ContentNavigation2026;
