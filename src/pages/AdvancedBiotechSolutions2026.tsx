@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 const AdvancedBiotechSolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-<<<<<<< HEAD
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 to-cyan-600/10"></div>
@@ -24,6 +23,14 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             <p className="text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
               Revolutionary biotechnology solutions that are transforming healthcare, agriculture, and environmental sustainability through cutting-edge genetic engineering and synthetic biology
             </p>
+            <div className="flex justify-center space-x-4">
+              <a href="#solutions" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Solutions →
+              </a>
+              <a href="#contact" className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg">
+                Get Started
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -199,33 +206,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             View All Solutions
           </a>
         </div>
-=======
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 BREAKTHROUGH BIOTECH 2026
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Advanced Biotech Solutions 2026
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Revolutionary biotechnology solutions that are transforming healthcare, agriculture, and environmental sustainability
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#solutions" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Solutions →
-            </a>
-            <a href="#contact" className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg">
-              Get Started
-            </a>
-          </div>
-        </motion.div>
 
         {/* Revolutionary Features Banner */}
         <motion.div
@@ -454,7 +434,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
             </a>
           </div>
         </motion.section>
->>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
       </div>
     </div>
   );
