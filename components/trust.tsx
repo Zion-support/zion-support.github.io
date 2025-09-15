@@ -29,7 +29,7 @@ export default function TrustPage() {
   }[userId]);
 
   async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer'{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ userIdreviewerId: 'demo-reviewer'type }) });
+    await fetch('/api/trust/peer'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ userIdreviewerId: 'demo-'reviewer', 'type }) });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
   }
 
@@ -39,7 +39,7 @@ export default function TrustPage() {
     const formData = new FormData(form);
     const message = formData.get('message');
     const contactEmail = formData.get('email');
-    await fetch('/api/trust/appeal'{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ userIdmessagecontactEmail }) });
+    await fetch('/api/trust/appeal'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ userIdmessagecontactEmail }) });
     alert('Appeal submitted');
     form.reset();
   }

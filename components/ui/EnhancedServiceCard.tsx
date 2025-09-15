@@ -47,7 +47,7 @@ interface EnhancedServiceCardProps {
 
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
   const cardVariants = {
-    hidden: { opacity: 0y: 20scale: 0.95 },
+    hidden: { opacity: 0, y: 20scale: 0.95 },
     visible: { 
       opacity: 1
       y: 0
@@ -100,7 +100,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
       <div 
         className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
         style={{
-          background: `linear-gradient(135deg${service.color.replace('from-'').replace('to-'').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(')})`
+          background: `linear-gradient(135deg${service.color.replace('from-', ').replace('to-', ').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(')})`
         }}
       />
       

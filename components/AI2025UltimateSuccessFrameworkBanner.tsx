@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025UltimateSuccessFrameworkBanner = () => {
@@ -57,7 +57,7 @@ const AI2025UltimateSuccessFrameworkBanner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2025-ultimate-framework-banner-dismissed'true');
+    localStorage.setItem('ai2025-ultimate-framework-banner-'dismissed', 'true');
   };
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -84,14 +84,14 @@ export default function PasswordCheckerPage() {
 
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-      'password'123456'123456789'qwerty'abc123'password123',
-      'admin'letmein'welcome'monkey'dragon'master'hello'
+      'password'123456'123456789', 'qwerty', 'abc123'password123',
+      ', 'admin', 'letmein', 'welcome', 'monkey', 'dragon', 'master'hello'
     ];
     return commonPasswords.includes(pass.toLowerCase());
   };
 
   const hasSequentialChars = (pass: string) => {
-    const sequences = ['123'abc'qwe'asd'zxc'789'456'];
+    const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc'789'456'];
     return sequences.some(seq => pass.toLowerCase().includes(seq));
   };
 
@@ -114,8 +114,8 @@ export default function PasswordCheckerPage() {
 
   const resetAnalysis = () => {
     setStrength(0);
-    setStrengthText('');
-    setStrengthColor('');
+    setStrengthText(', ');
+    setStrengthColor(', ');
     setChecks({
       length: false,
       uppercase: false,
@@ -131,7 +131,7 @@ export default function PasswordCheckerPage() {
   const generateStrongPassword = () => {
     const length = 16;
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
-    let result = '';
+    let result = ', ';
     
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)]; // Uppercase
@@ -145,7 +145,7 @@ export default function PasswordCheckerPage() {
     }
     
     // Shuffle the password
-    result = result.split('').sort(() => Math.random() - 0.5).join('');
+    result = result.split(', ').sort(() => Math.random() - 0.5).join(', ');
     setGeneratedPassword(result);
     setPassword(result);
   };
@@ -436,7 +436,7 @@ export default function PasswordCheckerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Do's</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">'Do', 's</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -463,11 +463,11 @@ export default function PasswordCheckerPage() {
 
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="text-4xl mb-4">❌</div>
-              <h3 className="text-2xl font-bold text-white mb-4">Don'ts</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">'Don', 'ts</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Don't use personal information (namesbirthdays)
+                  'Don', 't use personal information (namesbirthdays)
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -479,7 +479,7 @@ export default function PasswordCheckerPage() {
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Don't reuse passwords across accounts
+                  'Don', 't reuse passwords across accounts
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />

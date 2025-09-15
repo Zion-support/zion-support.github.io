@@ -63,7 +63,7 @@ export default function AI2025ContentDiscoveryWidget() {
       items: [
         {
           title: "AI Readiness Assessment",
-          description: "Evaluate your organization's AI readiness and get personalized recommendations",
+          description: "Evaluate your 'organization', 's AI readiness and get personalized recommendations",
           href: "/tools/ai-readiness-assessment",
           badge: "ASSESSMENT",
           badgeColor: "bg-orange-500",

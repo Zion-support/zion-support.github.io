@@ -18,7 +18,7 @@ const ClientTestimonials = () => {
       company: "InnovateCorp",
       image: "/images/testimonials/michael-chen.jpg",
       rating: 5,
-      testimonial: "The quantum-neural computing implementation was revolutionary. We're now solving complex problems in minutes that previously took days. This is the future of business intelligence.",
+      testimonial: "The quantum-neural computing implementation was revolutionary. 'We', 're now solving complex problems in minutes that previously took days. This is the future of business intelligence.",
       results: "1000% faster problem solving"
     },
     {
@@ -27,7 +27,7 @@ const ClientTestimonials = () => {
       company: "Global Manufacturing Ltd",
       image: "/images/testimonials/emily-rodriguez.jpg",
       rating: 5,
-      testimonial: "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. It's like having a team of AI experts working 24/7.",
+      testimonial: "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. 'It', 's like having a team of AI experts working 24/7.",
       results: "95% downtime reduction"
     },
     {
@@ -36,7 +36,7 @@ const ClientTestimonials = () => {
       company: "FutureTech Industries",
       image: "/images/testimonials/david-kim.jpg",
       rating: 5,
-      testimonial: "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 500%. We're now developing solutions that were previously impossible.",
+      testimonial: "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 500%. 'We', 're now developing solutions that were previously impossible.",
       results: "500% innovation acceleration"
     },
     {
@@ -45,7 +45,7 @@ const ClientTestimonials = () => {
       company: "NextGen Systems",
       image: "/images/testimonials/lisa-thompson.jpg",
       rating: 5,
-      testimonial: "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our team's cognitive capabilities beyond what we thought possible.",
+      testimonial: "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our 'team', 's cognitive capabilities beyond what we thought possible.",
       results: "300% cognitive enhancement"
     },
     {
@@ -79,7 +79,7 @@ const ClientTestimonials = () => {
             <div key={index} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900">{testimonial.name}</h4>

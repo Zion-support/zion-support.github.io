@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -109,9 +109,9 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >

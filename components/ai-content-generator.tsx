@@ -107,35 +107,35 @@ export default function AIContentGeneratorPage() {
       title: 'Blog Writing',
       description: 'Generate engaging blog postsarticlesand long-form content in minutes.',
       icon: '📝',
-      examples: ['Tech reviews'How-to guides'Industry insights'Product comparisons']
+      examples: ['Tech 'reviews', 'How-to 'guides', 'Industry 'insights', 'Product comparisons']
     },
     {
       title: 'Marketing Copy',
       description: 'Create compelling ad copylanding pagesand marketing materials.',
       icon: '🎯',
-      examples: ['Facebook ads'Google ads'Landing pages'Email campaigns']
+      examples: ['Facebook 'ads', 'Google 'ads', 'Landing 'pages', 'Email campaigns']
     },
     {
       title: 'Social Media',
       description: 'Generate engaging social media postscaptionsand hashtag suggestions.',
       icon: '📱',
-      examples: ['Instagram posts'Twitter threads'LinkedIn articles'TikTok captions']
+      examples: ['Instagram 'posts', 'Twitter 'threads', 'LinkedIn 'articles', 'TikTok captions']
     },
     {
       title: 'E-commerce',
       description: 'Write product descriptionscategory pagesand promotional content.',
       icon: '🛍️',
-      examples: ['Product descriptions'Category pages'Promotional emails'FAQ sections']
+      examples: ['Product 'descriptions', 'Category 'pages', 'Promotional 'emails', 'FAQ sections']
     }
   ];
 
   const integrations = [
-    { name: 'WordPress'icon: '🔌'description: 'Direct plugin integration' },
-    { name: 'Shopify'icon: '🛒'description: 'E-commerce content automation' },
-    { name: 'HubSpot'icon: '📊'description: 'Marketing automation sync' },
-    { name: 'Mailchimp'icon: '📧'description: 'Email campaign content' },
-    { name: 'Slack'icon: '💬'description: 'Team collaboration' },
-    { name: 'Zapier'icon: '⚡'description: '500+ app integrations' }
+    { name: ''WordPress', 'icon: '🔌'description: 'Direct plugin integration' },
+    { name: ''Shopify', 'icon: '🛒'description: 'E-commerce content automation' },
+    { name: ''HubSpot', 'icon: '📊'description: 'Marketing automation sync' },
+    { name: ''Mailchimp', 'icon: '📧'description: 'Email campaign content' },
+    { name: ''Slack', 'icon: '💬'description: 'Team collaboration' },
+    { name: ''Zapier', 'icon: '⚡'description: '500+ app integrations' }
   ];
 
   return (
@@ -167,7 +167,7 @@ export default function AIContentGeneratorPage() {
             AI Content Generator
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
-            Create engagingSEO-optimized content in seconds with the world's most advanced AI writing assistant
+            Create engagingSEO-optimized content in seconds with the 'world', 's most advanced AI writing assistant
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">

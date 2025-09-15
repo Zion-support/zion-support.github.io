@@ -14,7 +14,7 @@ const RevolutionaryNewsletterSignup: React.FC = () => {
     
     setIsSubmitted(true);
     setIsLoading(false);
-    setEmail('');
+    setEmail(', ');
     
     // Reset after 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000);

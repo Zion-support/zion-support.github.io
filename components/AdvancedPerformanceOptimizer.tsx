@@ -35,9 +35,9 @@ const AdvancedPerformanceOptimizer = () => {
   }[]);
 
   const getPerformanceStatus = () => {
-    if (metrics.loadTime < 500) return { status: 'Excellent'color: 'text-green-500' };
-    if (metrics.loadTime < 1000) return { status: 'Good'color: 'text-yellow-500' };
-    return { status: 'Needs Improvement'color: 'text-red-500' };
+    if (metrics.loadTime < 500) return { status: ''Excellent', 'color: 'text-green-500' };
+    if (metrics.loadTime < 1000) return { status: ''Good', 'color: 'text-yellow-500' };
+    return { status: 'Needs 'Improvement', 'color: 'text-red-500' };
   };
 
   const performanceStatus = getPerformanceStatus();

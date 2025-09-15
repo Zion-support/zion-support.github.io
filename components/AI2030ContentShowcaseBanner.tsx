@@ -38,7 +38,7 @@ export default function AI2030ContentShowcaseBanner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge insightstrategiesand tools to transform your organization 
-            for the autonomous AI future that's arriving faster than you think.
+            for the autonomous AI future 'that', 's arriving faster than you think.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function AI2030ContentShowcaseBanner() {
                       AI 2030 Readiness Assessment
                     </h4>
                     <p className="text-white opacity-90 mb-4">
-                      Evaluate your organization's readiness for the AI-driven future. 
+                      Evaluate your 'organization', 's readiness for the AI-driven future. 
                       Get personalized recommendations and a comprehensive roadmap.
                     </p>
                     <Link href="/tools/ai-2030-readiness-assessment">

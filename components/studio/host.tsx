@@ -8,7 +8,7 @@ type PersonaConfig = {
 };
 
 export default function StudioHostPage() {
-  const [personasetPersona] = useState<PersonaConfig>({ voice: 'Visionary'language: 'English' });
+  const [personasetPersona] = useState<PersonaConfig>({ voice: ''Visionary', 'language: 'English' });
   const [inviteeNamesetInviteeName] = useState('');
   const [inviteeBiosetInviteeBio] = useState('');
   const [topicsetTopic] = useState('');
@@ -94,7 +94,7 @@ export default function StudioHostPage() {
           </div>
           <div>
             <label className="block text-sm font-medium">Clone Style (optional)</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...personacloneStyleText: e.target.value })} />
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ', '} onChange={(e) => setPersona({ ...personacloneStyleText: e.target.value })} />
           </div>
         </div>
       </section>

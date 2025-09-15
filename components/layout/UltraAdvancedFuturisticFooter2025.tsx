@@ -25,72 +25,72 @@ const footerSections: FooterSection[] = [
   {
     title: 'Services',
     links: [
-      { label: 'AI & Machine Learning'href: '/ai-services'description: 'Advanced AI solutions' },
-      { label: 'Quantum Computing'href: '/quantum-computing'description: 'Next-gen quantum tech' },
-      { label: 'Space Technology'href: '/space-tech'description: 'Innovative space solutions' },
-      { label: 'Q4 2025 Innovation'href: '/innovative-2025-q4-showcase'description: 'Latest revolutionary services' },
-      { label: 'Pricing Guide'href: '/comprehensive-pricing-2025-q4'description: 'Comprehensive pricing' },
-      { label: 'Cybersecurity'href: '/cybersecurity'description: 'Enterprise security' },
-      { label: 'Cloud Solutions'href: '/cloud-platform'description: 'Scalable cloud infrastructure' },
-      { label: 'View All Services'href: '/services'description: 'Complete service portfolio' }
+      { label: 'AI & Machine 'Learning', 'href: '/ai-'services', 'description: 'Advanced AI solutions' },
+      { label: 'Quantum 'Computing', 'href: '/quantum-'computing', 'description: 'Next-gen quantum tech' },
+      { label: 'Space 'Technology', 'href: '/space-'tech', 'description: 'Innovative space solutions' },
+      { label: 'Q4 2025 'Innovation', 'href: '/innovative-2025-q4-'showcase', 'description: 'Latest revolutionary services' },
+      { label: 'Pricing 'Guide', 'href: '/comprehensive-pricing-2025-'q4', 'description: 'Comprehensive pricing' },
+      { label: ''Cybersecurity', 'href: '/'cybersecurity', 'description: 'Enterprise security' },
+      { label: 'Cloud 'Solutions', 'href: '/cloud-'platform', 'description: 'Scalable cloud infrastructure' },
+      { label: 'View All 'Services', 'href: '/'services', 'description: 'Complete service portfolio' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { label: 'Healthcare & Biotech'href: '/healthcare-solutions'description: 'Medical technology' },
-      { label: 'Financial Services'href: '/solutions?industry=financial'description: 'Fintech solutions' },
-      { label: 'Manufacturing'href: '/solutions?industry=manufacturing'description: 'Industry 4.0' },
-      { label: 'Retail & E-commerce'href: '/solutions?industry=retail'description: 'Digital commerce' },
-      { label: 'Government'href: '/solutions?industry=government'description: 'Public sector' },
-      { label: 'Education'href: '/solutions?industry=education'description: 'EdTech solutions' }
+      { label: 'Healthcare & 'Biotech', 'href: '/healthcare-'solutions', 'description: 'Medical technology' },
+      { label: 'Financial 'Services', 'href: '/solutions?industry='financial', 'description: 'Fintech solutions' },
+      { label: ''Manufacturing', 'href: '/solutions?industry='manufacturing', 'description: 'Industry 4.0' },
+      { label: 'Retail & E-'commerce', 'href: '/solutions?industry='retail', 'description: 'Digital commerce' },
+      { label: ''Government', 'href: '/solutions?industry='government', 'description: 'Public sector' },
+      { label: ''Education', 'href: '/solutions?industry='education', 'description: 'EdTech solutions' }
     ]
   },
   {
     title: 'Company',
     links: [
-      { label: 'About Us'href: '/about'description: 'Our mission and values' },
-      { label: 'Careers'href: '/careers'description: 'Join our team' },
-      { label: 'Contact'href: '/contact'description: 'Get in touch' }
+      { label: 'About 'Us', 'href: '/'about', 'description: 'Our mission and values' },
+      { label: ''Careers', 'href: '/'careers', 'description: 'Join our team' },
+      { label: ''Contact', 'href: '/'contact', 'description: 'Get in touch' }
     ]
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Blog'href: '/blog'description: 'Industry insights' },
-      { label: 'White Papers'href: '/white-papers'description: 'In-depth research' },
-      { label: 'Webinars'href: '/webinars'description: 'Educational content' },
-      { label: 'Documentation'href: '/docs'description: 'Technical guides' },
-      { label: 'Blog'href: '/blog'description: 'Industry insights' },
-      { label: 'Case Studies'href: '/case-studies'description: 'Success stories' },
-      { label: 'Support'href: '/support'description: 'Help & assistance' }
+      { label: ''Blog', 'href: '/'blog', 'description: 'Industry insights' },
+      { label: 'White 'Papers', 'href: '/white-'papers', 'description: 'In-depth research' },
+      { label: ''Webinars', 'href: '/'webinars', 'description: 'Educational content' },
+      { label: ''Documentation', 'href: '/'docs', 'description: 'Technical guides' },
+      { label: ''Blog', 'href: '/'blog', 'description: 'Industry insights' },
+      { label: 'Case 'Studies', 'href: '/case-'studies', 'description: 'Success stories' },
+      { label: ''Support', 'href: '/'support', 'description: 'Help & assistance' }
     ]
   },
   {
     title: 'Industries',
     links: [
-      { label: 'Healthcare'href: '/healthcare-solutions'description: 'Medical technology' },
-      { label: 'Finance'href: '/financial-solutions'description: 'Fintech solutions' },
-      { label: 'Manufacturing'href: '/manufacturing-ai-solutions'description: 'Industry 4.0' },
-      { label: 'Government'href: '/government-technology-solutions'description: 'Public sector' },
-      { label: 'Education'href: '/education-technology-solutions'description: 'EdTech solutions' }
+      { label: ''Healthcare', 'href: '/healthcare-'solutions', 'description: 'Medical technology' },
+      { label: ''Finance', 'href: '/financial-'solutions', 'description: 'Fintech solutions' },
+      { label: ''Manufacturing', 'href: '/manufacturing-ai-'solutions', 'description: 'Industry 4.0' },
+      { label: ''Government', 'href: '/government-technology-'solutions', 'description: 'Public sector' },
+      { label: ''Education', 'href: '/education-technology-'solutions', 'description: 'EdTech solutions' }
     ]
   }
 ];
 
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />href: 'https://linkedin.com/company/ziontechgroup'label: 'LinkedIn'external: true },
-  { icon: <Twitter className="w-5 h-5" />href: 'https://twitter.com/ziontechgroup'label: 'Twitter'external: true },
-  { icon: <Github className="w-5 h-5" />href: 'https://github.com/ziontechgroup'label: 'GitHub'external: true }
+  { icon: <Linkedin className="w-5 h-5" />href: 'https://linkedin.com/company/'ziontechgroup', 'label: ''LinkedIn', 'external: true },
+  { icon: <Twitter className="w-5 h-5" />href: 'https://twitter.com/'ziontechgroup', 'label: ''Twitter', 'external: true },
+  { icon: <Github className="w-5 h-5" />href: 'https://github.com/'ziontechgroup', 'label: ''GitHub', 'external: true }
 ];
 
 const quickLinks = [
-  { name: 'About Us'href: '/about'icon: <Users className="w-4 h-4" /> },
-  { name: 'Contact'href: '/contact'icon: <Phone className="w-4 h-4" /> },
-  { name: 'Support'href: '/support'icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Documentation'href: '/docs'icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference'href: '/api'icon: <Code className="w-4 h-4" /> },
-  { name: 'Status'href: '/status'icon: <TrendingUp className="w-4 h-4" /> }
+  { name: 'About 'Us', 'href: '/'about', 'icon: <Users className="w-4 h-4" /> },
+  { name: ''Contact', 'href: '/'contact', 'icon: <Phone className="w-4 h-4" /> },
+  { name: ''Support', 'href: '/'support', 'icon: <HelpCircle className="w-4 h-4" /> },
+  { name: ''Documentation', 'href: '/'docs', 'icon: <FileText className="w-4 h-4" /> },
+  { name: 'API 'Reference', 'href: '/'api', 'icon: <Code className="w-4 h-4" /> },
+  { name: ''Status', 'href: '/'status', 'icon: <TrendingUp className="w-4 h-4" /> }
 ];
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
@@ -102,50 +102,50 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     {
       title: 'Services',
       items: [
-        { label: 'AI & Machine Learning'href: '/ai-services' },
-        { label: 'Quantum Computing'href: '/quantum-computing' },
-        { label: 'Space Technology'href: '/space-tech' },
-        { label: 'Cybersecurity'href: '/cybersecurity' },
-        { label: '2040 Services'href: '/innovative-2040-services-showcase' }
+        { label: 'AI & Machine 'Learning', 'href: '/ai-services' },
+        { label: 'Quantum 'Computing', 'href: '/quantum-computing' },
+        { label: 'Space 'Technology', 'href: '/space-tech' },
+        { label: ''Cybersecurity', 'href: '/cybersecurity' },
+        { label: '2040 'Services', 'href: '/innovative-2040-services-showcase' }
       ]
     },
     {
       title: 'Solutions',
       items: [
-        { label: 'Enterprise Solutions'href: '/enterprise-solutions' },
-        { label: 'Micro SAAS'href: '/micro-saas' },
-        { label: 'IT Services'href: '/it-services' },
-        { label: 'Innovation Lab'href: '/innovation-lab' },
-        { label: 'Research & Development'href: '/research-development' }
+        { label: 'Enterprise 'Solutions', 'href: '/enterprise-solutions' },
+        { label: 'Micro 'SAAS', 'href: '/micro-saas' },
+        { label: 'IT 'Services', 'href: '/it-services' },
+        { label: 'Innovation 'Lab', 'href: '/innovation-lab' },
+        { label: 'Research & 'Development', 'href: '/research-development' }
       ]
     },
     {
       title: 'Company',
       items: [
-        { label: 'About Us'href: '/about' },
-        { label: 'Our Team'href: '/team' },
-        { label: 'Careers'href: '/careers' },
-        { label: 'Investors'href: '/investors' },
-        { label: 'Press & Media'href: '/press' }
+        { label: 'About 'Us', 'href: '/about' },
+        { label: 'Our 'Team', 'href: '/team' },
+        { label: ''Careers', 'href: '/careers' },
+        { label: ''Investors', 'href: '/investors' },
+        { label: 'Press & 'Media', 'href: '/press' }
       ]
     },
     {
       title: 'Resources',
       items: [
-        { label: 'Blog'href: '/blog' },
-        { label: 'Case Studies'href: '/case-studies' },
-        { label: 'White Papers'href: '/white-papers' },
-        { label: 'Documentation'href: '/docs' },
-        { label: 'Support'href: '/support' }
+        { label: ''Blog', 'href: '/blog' },
+        { label: 'Case 'Studies', 'href: '/case-studies' },
+        { label: 'White 'Papers', 'href: '/white-papers' },
+        { label: ''Documentation', 'href: '/docs' },
+        { label: ''Support', 'href: '/support' }
       ]
     }
   ];
 
   const socialLinks = [
-    { icon: Twitterhref: 'https://twitter.com/ziontechgroup'label: 'Twitter' },
-    { icon: Linkedinhref: 'https://linkedin.com/company/ziontechgroup'label: 'LinkedIn' },
-    { icon: Githubhref: 'https://github.com/Zion-Holdings'label: 'GitHub' },
-    { icon: Globehref: 'https://ziontechgroup.com'label: 'Website' }
+    { icon: Twitterhref: 'https://twitter.com/'ziontechgroup', 'label: 'Twitter' },
+    { icon: Linkedinhref: 'https://linkedin.com/company/'ziontechgroup', 'label: 'LinkedIn' },
+    { icon: Githubhref: 'https://github.com/Zion-'Holdings', 'label: 'GitHub' },
+    { icon: Globehref: 'https://ziontechgroup.'com', 'label: 'Website' }
   ];
 
   const containerVariants = {
@@ -289,8 +289,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
           {/* Social Links & Newsletter */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mt-16 pt-12 border-t border-gray-800/50"

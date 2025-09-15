@@ -41,8 +41,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://zapier.com',
       useCase: 'Perfect for businesses looking to automate customer supportmarketingand sales processes.',
-      pros: ['Easy to use'Extensive integrations'Reliable'Great support'],
-      cons: ['Can get expensive'Limited customization']
+      pros: ['Easy to 'use', 'Extensive 'integrations', 'Reliable'Great support'],
+      cons: ['Can get 'expensive', 'Limited customization']
     },
     {
       name: 'Notion',
@@ -63,8 +63,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://notion.so',
       useCase: 'Ideal for teams that need a flexible workspace for documentationproject managementand knowledge sharing.',
-      pros: ['Highly flexible'Beautiful interface'Great templates'Free tier'],
-      cons: ['Learning curve'Limited offline access']
+      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'],
+      cons: ['Learning 'curve', 'Limited offline access']
     },
     {
       name: 'Stripe',
@@ -85,8 +85,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://stripe.com',
       useCase: 'Essential for any online business that needs to accept paymentsespecially SaaS companies and e-commerce.',
-      pros: ['Developer-friendly'Global reach'Excellent docs'Reliable'],
-      cons: ['Higher fees than some alternatives'Complex for beginners']
+      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'],
+      cons: ['Higher fees than some 'alternatives', 'Complex for beginners']
     },
     {
       name: 'Intercom',
@@ -107,8 +107,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UX'Powerful features'Good integrations'Mobile apps'],
-      cons: ['Expensive'Complex pricing'Can be overwhelming']
+      pros: ['Great 'UX', 'Powerful 'features', 'Good 'integrations', 'Mobile apps'],
+      cons: [', 'Expensive', 'Complex 'pricing', 'Can be overwhelming']
     },
     {
       name: 'Mixpanel',
@@ -129,8 +129,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://mixpanel.com',
       useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.',
-      pros: ['Powerful analytics'Real-time data'Good documentation'Flexible'],
-      cons: ['Complex setup'Expensive at scale'Steep learning curve']
+      pros: ['Powerful 'analytics', 'Real-time 'data', 'Good 'documentation', 'Flexible'],
+      cons: ['Complex 'setup', 'Expensive at 'scale', 'Steep learning curve']
     },
     {
       name: 'MongoDB Atlas',
@@ -151,8 +151,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://mongodb.com/atlas',
       useCase: 'Perfect for developers who want to use MongoDB without managing infrastructurespecially for modern web applications.',
-      pros: ['Fully managed'Global distribution'Auto-scaling'Good free tier'],
-      cons: ['Can be expensive'Vendor lock-in'Limited customization']
+      pros: ['Fully 'managed', 'Global 'distribution', 'Auto-'scaling', 'Good free tier'],
+      cons: ['Can be 'expensive', 'Vendor lock-'in', 'Limited customization']
     },
     {
       name: 'Vercel',
@@ -173,8 +173,8 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero config'Excellent performance'Great DX'Free tier'],
-      cons: ['Limited backend features'Can be expensive for high traffic']
+      pros: ['Zero 'config', 'Excellent 'performance', 'Great 'DX', 'Free tier'],
+      cons: ['Limited backend 'features', 'Can be expensive for high traffic']
     },
     {
       name: 'Linear',
@@ -195,12 +195,12 @@ export default function SaaSMarketplacePage() {
       ],
       website: 'https://linear.app',
       useCase: 'Perfect for software development teams that need a fastintuitive issue tracking and project management tool.',
-      pros: ['Lightning fast'Beautiful design'Great keyboard shortcuts'Git integration'],
-      cons: ['Limited reporting'No time tracking'Smaller ecosystem']
+      pros: ['Lightning 'fast', 'Beautiful 'design', 'Great keyboard 'shortcuts', 'Git integration'],
+      cons: ['Limited 'reporting', 'No time 'tracking', 'Smaller ecosystem']
     }
   ];
 
-  const categories = ['All'Automation'Productivity'Payments'Customer Support'Analytics'Database'Hosting'Project Management'];
+  const categories = [', 'All', 'Automation', 'Productivity', 'Payments'Customer 'Support', 'Analytics', 'Database', 'Hosting'Project Management'];
   const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredServices = selectedCategory === 'All' 

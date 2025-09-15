@@ -16,7 +16,7 @@ export type Toast = {
 
 export type ToastContextValue = {
   toasts: Toast[]
-  addToast: (toast: Omit<Toast'id'>) => string
+  addToast: (toast: Omit<'Toast', 'id'>) => string
   removeToast: (id: string) => void
   clearToasts: () => void
 }
@@ -30,9 +30,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     setToasts(prev => prev.filter(t => t.id !== id))
   }[])
 
-  const addToast = useCallback((toast: Omit<Toast'id'>) => {
+  const addToast = useCallback((toast: Omit<'Toast', 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
-    const item: Toast = { idvariant: 'default'durationMs: 4000...toast }
+    const item: Toast = { idvariant: ''default', 'durationMs: 4000...toast }
     setToasts(prev => [...previtem])
     if (item.durationMs && item.durationMs > 0) {
       setTimeout(() => removeToast(id)item.durationMs)
@@ -52,10 +52,10 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
           {toasts.map(t => (
             <motion.div
               key={t.id}
-              initial={{ opacity: 0y: 16scale: 0.98 }}
-              animate={{ opacity: 1y: 0scale: 1 }}
-              exit={{ opacity: 0y: 8scale: 0.98 }}
-              transition={{ type: 'spring'stiffness: 400damping: 30 }}
+              initial={{ opacity: 0, y: 16scale: 0.98 }}
+              animate={{ opacity: 1, y: 0scale: 1 }}
+              exit={{ opacity: 0, y: 8scale: 0.98 }}
+              transition={{ type: ''spring', 'stiffness: 400damping: 30 }}
               className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 dark:bg-black/60 ${
                 t.variant === 'success' ? 'border-emerald-400/40' : t.variant === 'error' ? 'border-rose-400/40' : t.variant === 'info' ? 'border-sky-400/40' : 'border-gray-300/40 dark:border-gray-700/40'
               }`}

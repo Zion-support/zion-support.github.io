@@ -57,15 +57,15 @@ const UltimateContentRevolutionShowcase = () => {
       description: 'Global manufacturer automated content creation for 23 languages with zero human intervention.',
       link: '/case-studies/ai-2025-manufacturing-transformation-ultimate-success'
   const testimonials = [
-      quote: "The AI 2025 Ultimate Content Revolution Platform has completely transformed our business. We've achieved a 5,000% ROI in just 6 months, and our content now reaches audiences in 47 countries with zero additional effort.",
+      quote: "The AI 2025 Ultimate Content Revolution Platform has completely transformed our business. 'We', 've achieved a 5,000% ROI in just 6 months, and our content now reaches audiences in 47 countries with zero additional effort.",
       author: "Sarah Johnson",
       position: "CMO, Global Tech Corporation",
       company: "Fortune 500"
-      quote: "This is the future of content creation. The quantum-neural fusion technology is unlike anything we've seen before. Our engagement rates have increased by 2,500%.",
+      quote: "This is the future of content creation. The quantum-neural fusion technology is unlike anything 'we', 've seen before. Our engagement rates have increased by 2,500%.",
       author: "Michael Chen",
       position: "VP of Marketing, Tech Innovations Inc.",
       company: "Fortune 1000"
-      quote: "The autonomous content creation capabilities have freed up our team to focus on strategy while the AI handles all routine content. It's revolutionary.",
+      quote: "The autonomous content creation capabilities have freed up our team to focus on strategy while the AI handles all routine content. 'It', 's revolutionary.",
       author: "Emily Rodriguez",
       position: "Head of Content, Digital Solutions Ltd.",
       company: "Enterprise"
@@ -179,7 +179,7 @@ const UltimateContentRevolutionShowcase = () => {
             AI 2025 Ultimate Content Revolution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Experience the breakthrough technology that's transforming businesses worldwide with 
+            Experience the breakthrough technology 'that', 's transforming businesses worldwide with 
             unprecedented efficiency and results.
           </p>
         </div>

@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -57,7 +57,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
         position: 'CEOTechCorp Global',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Neural Consensus AI'Workflow Automation'Predictive Analytics'],
+      technologies: ['Neural Consensus 'AI', 'Workflow 'Automation', 'Predictive Analytics'],
       duration: '6 months',
       featured: true,
       rating: 5.0,
@@ -84,7 +84,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
         position: 'CISOFinanceFirst Bank',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Quantum-Safe Encryption'AI Threat Detection'Zero-Trust Security'],
+      technologies: ['Quantum-Safe 'Encryption', 'AI Threat 'Detection', 'Zero-Trust Security'],
       duration: '4 months',
       featured: false,
       rating: 4.9,
@@ -111,7 +111,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
         position: 'Operations DirectorManufacturingPro',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Predictive Maintenance AI'Quality Control Automation'IoT Integration'],
+      technologies: ['Predictive Maintenance 'AI', 'Quality Control 'Automation', 'IoT Integration'],
       duration: '5 months',
       featured: true,
       rating: 4.8,
@@ -138,7 +138,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
         position: 'VP OperationsRetailMax',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Inventory AI'Customer Analytics'Demand Forecasting'],
+      technologies: ['Inventory 'AI', 'Customer 'Analytics', 'Demand Forecasting'],
       duration: '3 months',
       featured: false,
       rating: 4.9,
@@ -165,7 +165,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
         position: 'Chief Medical OfficerHealthTech',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['AI Diagnostics'Real-time Analytics'Medical AI'],
+      technologies: ['AI 'Diagnostics', 'Real-time 'Analytics', 'Medical AI'],
       duration: '7 months',
       featured: true,
       rating: 5.0,
@@ -192,7 +192,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
         position: 'Logistics DirectorLogisticsPro',
         avatar: '/api/placeholder/60/60'
       },
-      technologies: ['Route Optimization AI'Fuel Efficiency'Supply Chain AI'],
+      technologies: ['Route Optimization 'AI', 'Fuel 'Efficiency', 'Supply Chain AI'],
       duration: '4 months',
       featured: false,
       rating: 4.7,
@@ -233,8 +233,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -253,8 +253,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* Featured Stories */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
@@ -267,8 +267,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               return (
                 <motion.div
                   key={story.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   whileHover={{ y: -5scale: 1.02 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
@@ -375,8 +375,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* All Stories Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
@@ -389,8 +389,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
               return (
                 <motion.div
                   key={story.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   whileHover={{ y: -3scale: 1.01 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
@@ -458,8 +458,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
@@ -469,7 +469,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             </h3>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already achieving remarkable results with our AI solutions. 
-              Let's create your success story together.
+              'Let', 's create your success story together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors flex items-center gap-2">

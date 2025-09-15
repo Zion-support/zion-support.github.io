@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -65,7 +65,7 @@ const AI2025UltimateTechnologyShowcase = () => {
         'Molecular Simulation',
         'Financial Modeling'
       ],
-      stats: { value: '1000x'label: 'Processing Speed' },
+      stats: { value: '1000'x', 'label: 'Processing Speed' },
       link: '/quantum-computing-2025'
     },
     {
@@ -141,7 +141,7 @@ const AI2025UltimateTechnologyShowcase = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -173,7 +173,7 @@ const AI2025UltimateTechnologyShowcase = () => {
 
         {/* Technology Tabs */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
@@ -255,7 +255,7 @@ const AI2025UltimateTechnologyShowcase = () => {
 
         {/* Success Stories */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
@@ -278,7 +278,7 @@ const AI2025UltimateTechnologyShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"

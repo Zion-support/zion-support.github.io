@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -124,14 +124,14 @@ export default function EnhancedContentDiscoveryWidget() {
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: contentItems.length },
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
     { id: 'ai-2025'name: 'AI 2025'count: contentItems.filter(item => item.category === 'ai-2025').length },
     { id: 'ai-2026'name: 'AI 2026'count: contentItems.filter(item => item.category === 'ai-2026').length },
     { id: 'ai-2029'name: 'AI 2029'count: contentItems.filter(item => item.category === 'ai-2029').length },
     { id: 'ai-2030'name: 'AI 2030'count: contentItems.filter(item => item.category === 'ai-2030').length },
-    { id: 'quantum'name: 'Quantum Computing'count: contentItems.filter(item => item.category === 'quantum').length },
-    { id: 'predictions'name: 'Future Predictions'count: contentItems.filter(item => item.category === 'predictions').length },
-    { id: 'automation'name: 'Automation'count: contentItems.filter(item => item.category === 'automation').length }
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'count: contentItems.filter(item => item.category === 'quantum').length },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'count: contentItems.filter(item => item.category === 'predictions').length },
+    { id: ''automation', 'name: ''Automation', 'count: contentItems.filter(item => item.category === 'automation').length }
   ];
 
   const filteredContent = contentItems.filter(item => {
@@ -200,7 +200,7 @@ export default function EnhancedContentDiscoveryWidget() {
         </div>
 
         {/* Featured Content */}
-        {selectedCategory === 'all' && searchTerm === '' && (
+        {selectedCategory === 'all' && searchTerm === ', ' && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">⭐ Featured Content</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -308,7 +308,7 @@ export default function EnhancedContentDiscoveryWidget() {
         <div className="mt-12 text-center">
           <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-8 border border-purple-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Can't Find What You're Looking For?
+              'Can', 't Find What 'You', 're Looking For?
             </h3>
             <p className="text-gray-300 mb-6">
               Our AI-powered content recommendation system can help you discover 

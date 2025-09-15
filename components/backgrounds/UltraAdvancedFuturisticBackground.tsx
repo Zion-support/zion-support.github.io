@@ -75,7 +75,7 @@ export default function UltraAdvancedFuturisticBackground({
           size: Math.random() * 6 + 2,
           opacity: Math.random() * 0.9 + 0.1,
           color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
-          type: ['quantum'neon'holographic'cyberpunk'][Math.floor(Math.random() * 4)] as any,
+          type: [', 'quantum', 'neon', 'holographic', 'cyberpunk'][Math.floor(Math.random() * 4)] as any,
           life: Math.random() * 100,
           maxLife: 100 + Math.random() * 100,
           rotation: Math.random() * Math.PI * 2,
@@ -270,12 +270,12 @@ export default function UltraAdvancedFuturisticBackground({
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
     initParticles();
     animate();
 
     return () => {
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 MenuXChevronDownSearchPhoneMailMapPinZapBrainAtomMicroscopeGamepad2ShieldRocketDatabaseTestTubeCarGlobeCodePaletteCloudServerNetworkCpu
 
 export default function UltraAdvancedNavigation2026V2() {
@@ -13,8 +13,8 @@ export default function UltraAdvancedNavigation2026V2() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   const navigationItems = [
@@ -28,22 +28,22 @@ export default function UltraAdvancedNavigation2026V2() {
       href: '/services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI & Machine Learning'href: '/services?category=ai'icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum & Space Tech'href: '/services?category=quantum'icon: <Atom className="w-4 h-4" /> },
-        { name: 'Emerging Technologies'href: '/services?category=emerging'icon: <Microscope className="w-4 h-4" /> },
-        { name: 'Micro SaaS'href: '/services?category=micro-saas'icon: <Code className="w-4 h-4" /> },
-        { name: 'Metaverse & VR'href: '/services?category=metaverse'icon: <Gamepad2 className="w-4 h-4" /> },
-        { name: 'Cybersecurity'href: '/services?category=cybersecurity'icon: <Shield className="w-4 h-4" /> },
-        { name: 'Space Technology'href: '/services?category=space'icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Biotech & Healthcare'href: '/services?category=biotech'icon: <TestTube className="w-4 h-4" /> },
-        { name: 'Blockchain & Web3'href: '/services?category=blockchain'icon: <Database className="w-4 h-4" /> },
-        { name: 'Autonomous Vehicles'href: '/services?category=transportation'icon: <Car className="w-4 h-4" /> },
-        { name: 'Cloud & Infrastructure'href: '/services?category=cloud'icon: <Cloud className="w-4 h-4" /> },
-        { name: 'Edge Computing'href: '/services?category=edge'icon: <Server className="w-4 h-4" /> },
-        { name: 'IoT & Connectivity'href: '/services?category=iot'icon: <Network className="w-4 h-4" /> },
-        { name: 'Semiconductor Tech'href: '/services?category=semiconductor'icon: <Cpu className="w-4 h-4" /> },
-        { name: 'Creative & Design'href: '/services?category=creative'icon: <Palette className="w-4 h-4" /> },
-        { name: 'Global Solutions'href: '/services?category=global'icon: <Globe className="w-4 h-4" /> }
+        { name: 'AI & Machine 'Learning', 'href: '/services?category='ai', 'icon: <Brain className="w-4 h-4" /> },
+        { name: 'Quantum & Space 'Tech', 'href: '/services?category='quantum', 'icon: <Atom className="w-4 h-4" /> },
+        { name: 'Emerging 'Technologies', 'href: '/services?category='emerging', 'icon: <Microscope className="w-4 h-4" /> },
+        { name: 'Micro 'SaaS', 'href: '/services?category=micro-'saas', 'icon: <Code className="w-4 h-4" /> },
+        { name: 'Metaverse & 'VR', 'href: '/services?category='metaverse', 'icon: <Gamepad2 className="w-4 h-4" /> },
+        { name: ''Cybersecurity', 'href: '/services?category='cybersecurity', 'icon: <Shield className="w-4 h-4" /> },
+        { name: 'Space 'Technology', 'href: '/services?category='space', 'icon: <Rocket className="w-4 h-4" /> },
+        { name: 'Biotech & 'Healthcare', 'href: '/services?category='biotech', 'icon: <TestTube className="w-4 h-4" /> },
+        { name: 'Blockchain & 'Web3', 'href: '/services?category='blockchain', 'icon: <Database className="w-4 h-4" /> },
+        { name: 'Autonomous 'Vehicles', 'href: '/services?category='transportation', 'icon: <Car className="w-4 h-4" /> },
+        { name: 'Cloud & 'Infrastructure', 'href: '/services?category='cloud', 'icon: <Cloud className="w-4 h-4" /> },
+        { name: 'Edge 'Computing', 'href: '/services?category='edge', 'icon: <Server className="w-4 h-4" /> },
+        { name: 'IoT & 'Connectivity', 'href: '/services?category='iot', 'icon: <Network className="w-4 h-4" /> },
+        { name: 'Semiconductor 'Tech', 'href: '/services?category='semiconductor', 'icon: <Cpu className="w-4 h-4" /> },
+        { name: 'Creative & 'Design', 'href: '/services?category='creative', 'icon: <Palette className="w-4 h-4" /> },
+        { name: 'Global 'Solutions', 'href: '/services?category='global', 'icon: <Globe className="w-4 h-4" /> }
       ]
     },
     {

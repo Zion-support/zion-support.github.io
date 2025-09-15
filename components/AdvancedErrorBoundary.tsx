@@ -111,7 +111,7 @@ class AdvancedErrorBoundary extends Component<PropsState> {
             </h1>
             
             <p className="text-gray-600 mb-6">
-              We're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
+              'We', 're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -195,7 +195,7 @@ export const useErrorHandler = () => {
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props'children'>
+  errorBoundaryProps?: Omit<'Props', 'children'>
 ) => {
   const WrappedComponent = (props: P) => (
     <AdvancedErrorBoundary {...errorBoundaryProps}>

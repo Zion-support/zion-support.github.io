@@ -19,30 +19,30 @@ const navigationItems: NavItem[] = [
     label: 'AI Solutions',
     href: '/solutions',
     children: [
-      { label: 'AI Automation'href: '/solutions/ai-automation' },
-      { label: 'Machine Learning'href: '/solutions/machine-learning' },
-      { label: 'Data Analytics'href: '/solutions/data-analytics' },
-      { label: 'Cloud Infrastructure'href: '/solutions/cloud-infrastructure' },
+      { label: 'AI 'Automation', 'href: '/solutions/ai-automation' },
+      { label: 'Machine 'Learning', 'href: '/solutions/machine-learning' },
+      { label: 'Data 'Analytics', 'href: '/solutions/data-analytics' },
+      { label: 'Cloud 'Infrastructure', 'href: '/solutions/cloud-infrastructure' },
     ],
   },
   {
     label: 'Case Studies',
     href: '/case-studies',
     children: [
-      { label: 'Fortune 500 Success'href: '/case-studies/fortune-500' },
-      { label: 'Manufacturing AI'href: '/case-studies/manufacturing' },
-      { label: 'Healthcare AI'href: '/case-studies/healthcare' },
-      { label: 'Financial Services'href: '/case-studies/financial' },
+      { label: 'Fortune 500 'Success', 'href: '/case-studies/fortune-500' },
+      { label: 'Manufacturing 'AI', 'href: '/case-studies/manufacturing' },
+      { label: 'Healthcare 'AI', 'href: '/case-studies/healthcare' },
+      { label: 'Financial 'Services', 'href: '/case-studies/financial' },
     ],
   },
   {
     label: 'Resources',
     href: '/resources',
     children: [
-      { label: 'Implementation Guides'href: '/resources/guides' },
-      { label: 'ROI Calculator'href: '/tools/roi-calculator' },
-      { label: 'AI Readiness Assessment'href: '/tools/readiness-assessment' },
-      { label: 'White Papers'href: '/resources/whitepapers' },
+      { label: 'Implementation 'Guides', 'href: '/resources/guides' },
+      { label: 'ROI 'Calculator', 'href: '/tools/roi-calculator' },
+      { label: 'AI Readiness 'Assessment', 'href: '/tools/readiness-assessment' },
+      { label: 'White 'Papers', 'href: '/resources/whitepapers' },
     ],
   },
   {
@@ -67,8 +67,8 @@ export default function MobileOptimizedNav() {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   // Close mobile menu on route change

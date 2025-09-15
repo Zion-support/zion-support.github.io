@@ -17,7 +17,7 @@ export default function UltraQuantumHolographicBackground({
   colorScheme = 'quantum',
   particleCount = 300,
   animationSpeed = 1.5,
-  className = ''
+  className = ', '
 }: UltraQuantumHolographicBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensionsetDimensions] = useState({ width: 0height: 0 });
@@ -71,10 +71,10 @@ export default function UltraQuantumHolographicBackground({
     };
 
     updateDimensions();
-    window.addEventListener('resize'updateDimensions);
+    window.addEventListener(', 'resize', 'updateDimensions);
     setIsVisible(true);
 
-    return () => window.removeEventListener('resize'updateDimensions);
+    return () => window.removeEventListener(', 'resize', 'updateDimensions);
   }[]);
 
   useEffect(() => {
@@ -108,7 +108,7 @@ export default function UltraQuantumHolographicBackground({
         this.color = [colors.primarycolors.secondarycolors.tertiarycolors.accent][Math.floor(Math.random() * 4)];
         this.life = Math.random() * 100;
         this.maxLife = 100;
-        this.type = ['quantum'holographic'energy'matrix'][Math.floor(Math.random() * 4)] as any;
+        this.type = [', 'quantum', 'holographic', 'energy', 'matrix'][Math.floor(Math.random() * 4)] as any;
       }
 
       update() {

@@ -18,7 +18,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         satisfaction: '99.7%'
       },
       readingTime: '28 min read',
-      tags: ['Neural Interfaces'Brain-Computer Interface'AI Innovation'ROI'],
+      tags: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'AI 'Innovation', 'ROI'],
       featured: true,
       category: 'ai-innovation'
     },
@@ -35,7 +35,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         satisfaction: '99.9%'
       },
       readingTime: '32 min read',
-      tags: ['Synthetic Consciousness'AGI'AI Innovation'ROI'],
+      tags: ['Synthetic 'Consciousness', 'AGI'AI 'Innovation', 'ROI'],
       featured: true,
       category: 'ai-innovation'
     },
@@ -52,7 +52,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         adoption: '98.7%'
       },
       readingTime: '22 min read',
-      tags: ['Neural Interfaces'Fortune 500'Case Study'ROI'],
+      tags: ['Neural 'Interfaces', 'Fortune 500'Case 'Study', 'ROI'],
       featured: true,
       category: 'case-studies'
     },
@@ -69,7 +69,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         accuracy: '99.97%'
       },
       readingTime: '25 min read',
-      tags: ['Quantum AI'Business Revolution'ROI'Fortune 500'],
+      tags: ['Quantum 'AI', 'Business 'Revolution', 'ROI'Fortune 500'],
       featured: false,
       category: 'ai-innovation'
     },
@@ -86,7 +86,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         uptime: '99.2%'
       },
       readingTime: '18 min read',
-      tags: ['Quantum AI'Fortune 500'Case Study'ROI'],
+      tags: ['Quantum 'AI', 'Fortune 500'Case 'Study', 'ROI'],
       featured: false,
       category: 'case-studies'
     },
@@ -103,17 +103,17 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         payback: '3.8 months'
       },
       readingTime: '20 min read',
-      tags: ['Quantum AI'Implementation Guide'ROI'Strategy'],
+      tags: ['Quantum 'AI', 'Implementation 'Guide', 'ROI'Strategy'],
       featured: false,
       category: 'resources'
     }
   ];
 
   const filters = [
-    { id: 'all'label: 'All Content'count: content.length },
-    { id: 'ai-innovation'label: 'AI Innovation'count: content.filter(c => c.category === 'ai-innovation').length },
-    { id: 'case-studies'label: 'Case Studies'count: content.filter(c => c.category === 'case-studies').length },
-    { id: 'resources'label: 'Implementation Guides'count: content.filter(c => c.category === 'resources').length }
+    { id: ''all', 'label: 'All 'Content', 'count: content.length },
+    { id: 'ai-'innovation', 'label: 'AI 'Innovation', 'count: content.filter(c => c.category === 'ai-innovation').length },
+    { id: 'case-'studies', 'label: 'Case 'Studies', 'count: content.filter(c => c.category === 'case-studies').length },
+    { id: ''resources', 'label: 'Implementation 'Guides', 'count: content.filter(c => c.category === 'resources').length }
   ];
 
   const filteredContent = activeFilter === 'all' 

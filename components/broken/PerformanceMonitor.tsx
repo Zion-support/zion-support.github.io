@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffectuseCallbackuseRef } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ActivityZapClockTrendingUpTrendingDown
   AlertTriangleCheckCircleXSettingsRefreshCw,
@@ -202,7 +202,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
   };
 
-  // Don't render anything in production
+  // 'Don', 't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
@@ -216,9 +216,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: 20scale: 0.95 }}
-          animate={{ opacity: 1y: 0scale: 1 }}
-          exit={{ opacity: 0y: 20scale: 0.95 }}
+          initial={{ opacity: 0, y: 20scale: 0.95 }}
+          animate={{ opacity: 1, y: 0scale: 1 }}
+          exit={{ opacity: 0, y: 20scale: 0.95 }}
           className="fixed bottom-4 left-4 z-50"
         >
           {/* Performance Monitor Panel */}
@@ -295,7 +295,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               {isExpanded && (
                 <motion.div
                   initial={{ height: 0opacity: 0 }}
-                  animate={{ height: 'auto'opacity: 1 }}
+                  animate={{ height: ''auto', 'opacity: 1 }}
                   exit={{ height: 0opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="border-t border-gray-700/50"

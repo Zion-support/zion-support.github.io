@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -131,9 +131,9 @@ const CaseStudyShowcase2026 = () => {
       description: 'TechCorp Solutions transformed their customer service operations using our AI-powered chatbot systemresulting in significant cost savings and improved customer satisfaction.',
       duration: '6 months',
       teamSize: '12 people',
-      technologies: ['Natural Language Processing'Machine Learning'API Integration'Cloud Computing'],
+      technologies: ['Natural Language 'Processing', 'Machine 'Learning', 'API 'Integration', 'Cloud Computing'],
       testimonial: {
-        quote: "The AI solution completely transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+        quote: "The AI solution completely transformed our customer service operations. 'We', 've seen incredible improvements in efficiency and customer satisfaction.",
         author: "Sarah Johnson",
         role: "VP of Customer Experience",
         company: "TechCorp Solutions"
@@ -158,9 +158,9 @@ const CaseStudyShowcase2026 = () => {
       description: 'MedTech Innovations leveraged our predictive analytics platform to improve patient outcomes and reduce healthcare costs through early disease detection.',
       duration: '8 months',
       teamSize: '15 people',
-      technologies: ['Machine Learning'Data Analytics'IoT Integration'Cloud Infrastructure'],
+      technologies: ['Machine 'Learning', 'Data 'Analytics', 'IoT 'Integration', 'Cloud Infrastructure'],
       testimonial: {
-        quote: "The predictive analytics system has revolutionized our approach to patient care. We're saving lives and reducing costs simultaneously.",
+        quote: "The predictive analytics system has revolutionized our approach to patient care. 'We', 're saving lives and reducing costs simultaneously.",
         author: "Dr. Michael Chen",
         role: "Chief Medical Officer",
         company: "MedTech Innovations"
@@ -185,9 +185,9 @@ const CaseStudyShowcase2026 = () => {
       description: 'FinanceFlow Capital implemented our AI trading system to automate their investment strategies and maximize returns while minimizing risk.',
       duration: '10 months',
       teamSize: '20 people',
-      technologies: ['Machine Learning'Real-time Analytics'Blockchain'High-frequency Trading'],
+      technologies: ['Machine 'Learning', 'Real-time 'Analytics', 'Blockchain'High-frequency Trading'],
       testimonial: {
-        quote: "The automated trading system has been a game-changer for our business. We've seen unprecedented growth in both volume and profitability.",
+        quote: "The automated trading system has been a game-changer for our business. 'We', 've seen unprecedented growth in both volume and profitability.",
         author: "Robert Martinez",
         role: "Head of Trading",
         company: "FinanceFlow Capital"
@@ -204,8 +204,8 @@ const CaseStudyShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -228,8 +228,8 @@ const CaseStudyShowcase2026 = () => {
 
         {/* Industry Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.1 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -256,17 +256,17 @@ const CaseStudyShowcase2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndustry}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredCaseStudies.map((caseStudyindex) => (
               <motion.div
                 key={caseStudy.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 onHoverStart={() => setHoveredCase(caseStudy.id)}
                 onHoverEnd={() => setHoveredCase(null)}
@@ -400,8 +400,8 @@ const CaseStudyShowcase2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
           className="text-center mt-16"
         >

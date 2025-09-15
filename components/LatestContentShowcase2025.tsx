@@ -14,7 +14,7 @@ const LatestContentShowcase2025: React.FC = () => {
       url: '/blog/ai-2025-generative-ai-business-transformation',
       excerpt: 'Explore how generative AI is revolutionizing business operations in 2025from content creation to customer service automation.',
       image: '/images/ai-content.jpg',
-      stats: { views: '12.5K'likes: '890'shares: '234' }
+      stats: { views: '12.5'K', 'likes: '890'shares: '234' }
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const LatestContentShowcase2025: React.FC = () => {
       url: '/case-studies/ai-automation-manufacturing-success-2025',
       excerpt: 'How a leading manufacturing company achieved 500% productivity increase through comprehensive AI automationreducing costs by $75M annually.',
       image: '/images/manufacturing-ai.jpg',
-      stats: { views: '8.2K'likes: '567'shares: '189' }
+      stats: { views: '8.2'K', 'likes: '567'shares: '189' }
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ const LatestContentShowcase2025: React.FC = () => {
       url: '/blog/quantum-computing-2025-business-applications',
       excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025from optimization problems to advanced cryptography.',
       image: '/images/quantum-computing.jpg',
-      stats: { views: '15.3K'likes: '1.2K'shares: '456' }
+      stats: { views: '15.3'K', 'likes: '1.2'K', 'shares: '456' }
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ const LatestContentShowcase2025: React.FC = () => {
       url: '/resources/ai-implementation-checklist-2025',
       excerpt: 'Comprehensive checklist for successful AI implementation in 2025covering strategytechnologyand change management.',
       image: '/images/ai-implementation.jpg',
-      stats: { views: '9.7K'likes: '743'shares: '312' }
+      stats: { views: '9.7'K', 'likes: '743'shares: '312' }
     }
   ];
 

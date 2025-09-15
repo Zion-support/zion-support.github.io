@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const EdgeAI2025RevolutionBanner = () => {
@@ -63,7 +63,7 @@ const EdgeAI2025RevolutionBanner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('edgeAI2025BannerDismissed'true');
+    localStorage.setItem(', 'edgeAI2025BannerDismissed', 'true');
   };
 
   useEffect(() => {

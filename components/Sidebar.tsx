@@ -75,54 +75,54 @@ export default function Sidebar() {
       {
         title: 'Core Pages',
         links: [
-          { href: '/'label: 'Home'icon: Homedescription: 'Main homepage' },
-          { href: '/about'label: 'About Us'icon: Usersdescription: 'Company information' },
-          { href: '/contact'label: 'Contact'icon: Usersdescription: 'Get in touch' },
-          { href: '/team'label: 'Team'icon: Usersdescription: 'Leadership team' }
+          { href: '/'label: ''Home', 'icon: Homedescription: 'Main homepage' },
+          { href: '/'about', 'label: 'About 'Us', 'icon: Usersdescription: 'Company information' },
+          { href: '/'contact', 'label: ''Contact', 'icon: Usersdescription: 'Get in touch' },
+          { href: '/'team', 'label: ''Team', 'icon: Usersdescription: 'Leadership team' }
         ]
       },
       {
         title: 'Services & Solutions',
         links: [
-          { href: '/services'label: 'All Services'icon: Rocketdescription: 'Complete services overview'badge: 'Featured' },
-          { href: '/solutions'label: 'Solutions'icon: Targetdescription: 'Technology solutions' },
-          { href: '/ai-services'label: 'AI Services'icon: Braindescription: 'Artificial intelligence solutions' },
-          { href: '/quantum-technology'label: 'Quantum Tech'icon: Atomdescription: 'Quantum computing solutions' },
-          { href: '/it-infrastructure'label: 'IT Infrastructure'icon: Monitordescription: 'IT infrastructure services' },
-          { href: '/cybersecurity'label: 'Cybersecurity'icon: Shieldescription: 'Security solutions' },
-          { href: '/cloud-solutions'label: 'Cloud Solutions'icon: Cloudescription: 'Cloud computing services' },
-          { href: '/blockchain-solutions'label: 'Blockchain'icon: Databasedescription: 'Blockchain technology' },
-          { href: '/iot-platforms'label: 'IoT Platforms'icon: Networkdescription: 'Internet of Things' }
+          { href: '/'services', 'label: 'All 'Services', 'icon: Rocketdescription: 'Complete services 'overview', 'badge: 'Featured' },
+          { href: '/'solutions', 'label: ''Solutions', 'icon: Targetdescription: 'Technology solutions' },
+          { href: '/ai-'services', 'label: 'AI 'Services', 'icon: Braindescription: 'Artificial intelligence solutions' },
+          { href: '/quantum-'technology', 'label: 'Quantum 'Tech', 'icon: Atomdescription: 'Quantum computing solutions' },
+          { href: '/it-'infrastructure', 'label: 'IT 'Infrastructure', 'icon: Monitordescription: 'IT infrastructure services' },
+          { href: '/'cybersecurity', 'label: ''Cybersecurity', 'icon: Shieldescription: 'Security solutions' },
+          { href: '/cloud-'solutions', 'label: 'Cloud 'Solutions', 'icon: Cloudescription: 'Cloud computing services' },
+          { href: '/blockchain-'solutions', 'label: ''Blockchain', 'icon: Databasedescription: 'Blockchain technology' },
+          { href: '/iot-'platforms', 'label: 'IoT 'Platforms', 'icon: Networkdescription: 'Internet of Things' }
         ]
       },
       {
         title: 'Resources & Insights',
         links: [
-          { href: '/blog'label: 'Blog & Articles'icon: FileTextdescription: 'Latest insights' },
-          { href: '/technology-insights'label: 'Tech Insights'icon: TrendingUpdescription: 'Technology trends' },
-          { href: '/case-studies'label: 'Case Studies'icon: Stardescription: 'Success stories' },
-          { href: '/white-papers'label: 'White Papers'icon: FileTextdescription: 'Research & analysis' },
-          { href: '/docs'label: 'Documentation'icon: Codescription: 'Technical docs' },
-          { href: '/api'label: 'API Reference'icon: Codescription: 'API documentation' }
+          { href: '/'blog', 'label: 'Blog & 'Articles', 'icon: FileTextdescription: 'Latest insights' },
+          { href: '/technology-'insights', 'label: 'Tech 'Insights', 'icon: TrendingUpdescription: 'Technology trends' },
+          { href: '/case-'studies', 'label: 'Case 'Studies', 'icon: Stardescription: 'Success stories' },
+          { href: '/white-'papers', 'label: 'White 'Papers', 'icon: FileTextdescription: 'Research & analysis' },
+          { href: '/'docs', 'label: ''Documentation', 'icon: Codescription: 'Technical docs' },
+          { href: '/'api', 'label: 'API 'Reference', 'icon: Codescription: 'API documentation' }
         ]
       },
       {
         title: 'Company & Support',
         links: [
-          { href: '/careers'label: 'Careers'icon: Usersdescription: 'Join our team' },
-          { href: '/support'label: 'Support'icon: Cogdescription: 'Get help' },
-          { href: '/privacy'label: 'Privacy Policy'icon: Lockdescription: 'Data protection' },
-          { href: '/terms'label: 'Terms of Service'icon: FileTextdescription: 'Legal terms' },
-          { href: '/cookies'label: 'Cookie Policy'icon: FileTextdescription: 'Cookie information' }
+          { href: '/'careers', 'label: ''Careers', 'icon: Usersdescription: 'Join our team' },
+          { href: '/'support', 'label: ''Support', 'icon: Cogdescription: 'Get help' },
+          { href: '/'privacy', 'label: 'Privacy 'Policy', 'icon: Lockdescription: 'Data protection' },
+          { href: '/'terms', 'label: 'Terms of 'Service', 'icon: FileTextdescription: 'Legal terms' },
+          { href: '/'cookies', 'label: 'Cookie 'Policy', 'icon: FileTextdescription: 'Cookie information' }
         ]
       },
       {
         title: 'Specialized Services',
         links: [
-          { href: '/quantum-neural-network-platform'label: 'Quantum Neural Networks'icon: Atomdescription: 'Quantum AI platform'badge: 'New' },
-          { href: '/autonomous-business-operations-platform'label: 'Autonomous Business'icon: Braindescription: 'AI business automation'badge: 'New' },
-          { href: '/ai-powered-it-asset-management'label: 'IT Asset Management'icon: Monitordescription: 'AI-powered IT management'badge: 'New' },
-          { href: '/ai-consciousness-evolution-2029'label: 'AI Consciousness'icon: Braindescription: 'AI consciousness evolution'badge: 'Featured' }
+          { href: '/quantum-neural-network-'platform', 'label: 'Quantum Neural 'Networks', 'icon: Atomdescription: 'Quantum AI 'platform', 'badge: 'New' },
+          { href: '/autonomous-business-operations-'platform', 'label: 'Autonomous 'Business', 'icon: Braindescription: 'AI business 'automation', 'badge: 'New' },
+          { href: '/ai-powered-it-asset-'management', 'label: 'IT Asset 'Management', 'icon: Monitordescription: 'AI-powered IT 'management', 'badge: 'New' },
+          { href: '/ai-consciousness-evolution-2029'label: 'AI 'Consciousness', 'icon: Braindescription: 'AI consciousness 'evolution', 'badge: 'Featured' }
         ]
       }
     ],
@@ -131,9 +131,9 @@ export default function Sidebar() {
 
   const utilityLinks: NavLink[] = useMemo(
     () => [
-      { href: '/site-health'label: 'Site Health'icon: CheckCircledescription: 'Website health monitoring' },
-      { href: '/sitemap'label: 'Sitemap'icon: Globedescription: 'Site structure overview' },
-      { href: '/search'label: 'Search'icon: BarChart3description: 'Search functionality' }
+      { href: '/site-'health', 'label: 'Site 'Health', 'icon: CheckCircledescription: 'Website health monitoring' },
+      { href: '/'sitemap', 'label: ''Sitemap', 'icon: Globedescription: 'Site structure overview' },
+      { href: '/'search', 'label: ''Search', 'icon: BarChart3description: 'Search functionality' }
     ],
     []
   );

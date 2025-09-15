@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Calendar
   TrendingUp
@@ -136,7 +136,7 @@ const FuturePredictionsShowcase2025 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -153,7 +153,7 @@ const FuturePredictionsShowcase2025 = () => {
 
         {/* Year Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -194,8 +194,8 @@ const FuturePredictionsShowcase2025 = () => {
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 30 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative"
                 >
@@ -240,7 +240,7 @@ const FuturePredictionsShowcase2025 = () => {
 
         {/* Timeline Visualization */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
@@ -273,7 +273,7 @@ const FuturePredictionsShowcase2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"

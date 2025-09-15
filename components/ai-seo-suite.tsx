@@ -47,22 +47,22 @@ export default function AISeosuitePage() {
     {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
-      tools: ['Long-tail keyword finder'Competitor keyword analysis'Search volume estimation'Keyword difficulty scoring'Trending keywords']
+      tools: ['Long-tail keyword 'finder', 'Competitor keyword 'analysis', 'Search volume 'estimation', 'Keyword difficulty 'scoring', 'Trending keywords']
     },
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
-      tools: ['Content optimization'Meta tag generator'Schema markup builder'Internal linking suggestions'Image optimization']
+      tools: ['Content 'optimization', 'Meta tag 'generator', 'Schema markup 'builder', 'Internal linking 'suggestions', 'Image optimization']
     },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
-      tools: ['Site audit tool'Page speed analyzer'Mobile optimization'Core Web Vitals'XML sitemap generator']
+      tools: ['Site audit 'tool', 'Page speed 'analyzer', 'Mobile 'optimization', 'Core Web 'Vitals', 'XML sitemap generator']
     },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      tools: ['Ranking tracker'Traffic analysis'Conversion tracking'Competitor monitoring'Custom dashboards']
+      tools: ['Ranking 'tracker', 'Traffic 'analysis', 'Conversion 'tracking', 'Competitor 'monitoring', 'Custom dashboards']
     }
   ];
 
@@ -125,14 +125,14 @@ export default function AISeosuitePage() {
   ];
 
   const integrations = [
-    { name: 'Google Analytics'icon: '📊'description: 'Traffic data integration' },
-    { name: 'Google Search Console'icon: '🔍'description: 'Search performance data' },
-    { name: 'WordPress'icon: '🔌'description: 'Plugin integration' },
-    { name: 'Shopify'icon: '🛒'description: 'E-commerce optimization' },
-    { name: 'HubSpot'icon: '📈'description: 'Marketing automation sync' },
-    { name: 'Slack'icon: '💬'description: 'Team notifications' },
-    { name: 'Zapier'icon: '⚡'description: '500+ app integrations' },
-    { name: 'API Access'icon: '🔑'description: 'Custom integrations' }
+    { name: 'Google 'Analytics', 'icon: '📊'description: 'Traffic data integration' },
+    { name: 'Google Search 'Console', 'icon: '🔍'description: 'Search performance data' },
+    { name: ''WordPress', 'icon: '🔌'description: 'Plugin integration' },
+    { name: ''Shopify', 'icon: '🛒'description: 'E-commerce optimization' },
+    { name: ''HubSpot', 'icon: '📈'description: 'Marketing automation sync' },
+    { name: ''Slack', 'icon: '💬'description: 'Team notifications' },
+    { name: ''Zapier', 'icon: '⚡'description: '500+ app integrations' },
+    { name: 'API 'Access', 'icon: '🔑'description: 'Custom integrations' }
   ];
 
   const useCases = [
@@ -140,33 +140,33 @@ export default function AISeosuitePage() {
       title: 'E-commerce Websites',
       description: 'Optimize product pagescategory pagesand search functionality for better conversions.',
       icon: '🛍️',
-      benefits: ['Higher search rankings'Increased organic traffic'Better conversion rates'Competitive advantage']
+      benefits: ['Higher search 'rankings', 'Increased organic 'traffic', 'Better conversion 'rates', 'Competitive advantage']
     },
     {
       title: 'Content Marketing',
       description: 'Optimize blog postsarticlesand content for search engines and user engagement.',
       icon: '📝',
-      benefits: ['Better content visibility'Higher engagement rates'More organic traffic'Authority building']
+      benefits: ['Better content 'visibility', 'Higher engagement 'rates', 'More organic 'traffic', 'Authority building']
     },
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
       icon: '📍',
-      benefits: ['Local search dominance'Increased foot traffic'Better customer acquisition'Competitive positioning']
+      benefits: ['Local search 'dominance', 'Increased foot 'traffic', 'Better customer 'acquisition', 'Competitive positioning']
     },
     {
       title: 'SaaS Companies',
       description: 'Optimize landing pagesfeature pagesand documentation for better user acquisition.',
       icon: '💻',
-      benefits: ['Higher conversion rates'Better user experience'Reduced acquisition costs'Market expansion']
+      benefits: ['Higher conversion 'rates', 'Better user 'experience', 'Reduced acquisition 'costs', 'Market expansion']
     }
   ];
 
   const successMetrics = [
-    { metric: 'Organic Traffic'value: '+150%'description: 'Average increase in organic traffic' },
-    { metric: 'Search Rankings'value: '+45%'description: 'Improvement in search rankings' },
-    { metric: 'Conversion Rate'value: '+80%'description: 'Increase in conversion rates' },
-    { metric: 'ROI'value: '400%'description: 'Average return on investment' }
+    { metric: 'Organic 'Traffic', 'value: '+150%'description: 'Average increase in organic traffic' },
+    { metric: 'Search 'Rankings', 'value: '+45%'description: 'Improvement in search rankings' },
+    { metric: 'Conversion 'Rate', 'value: '+80%'description: 'Increase in conversion rates' },
+    { metric: ''ROI', 'value: '400%'description: 'Average return on investment' }
   ];
 
   return (

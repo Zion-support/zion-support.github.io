@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -65,13 +65,13 @@ const TechnologyTrends2026: React.FC = () => {
   const [viewModesetViewMode] = useState<'grid' | 'timeline'>('grid');
 
   const categories = [
-    { id: 'all'name: 'All Trends'icon: Globecount: 45color: 'blue' },
-    { id: 'ai'name: 'Artificial Intelligence'icon: Braincount: 18color: 'purple' },
-    { id: 'quantum'name: 'Quantum Computing'icon: Atomcount: 12color: 'cyan' },
-    { id: 'automation'name: 'Automation'icon: Zapcount: 8color: 'yellow' },
-    { id: 'biotech'name: 'Biotechnology'icon: Microscopecount: 5color: 'green' },
-    { id: 'robotics'name: 'Robotics'icon: Cpucount: 7color: 'red' },
-    { id: 'sustainability'name: 'Sustainability'icon: Shieldcount: 5color: 'emerald' }
+    { id: ''all', 'name: 'All 'Trends', 'icon: Globecount: 45color: 'blue' },
+    { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: Braincount: 18color: 'purple' },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: 12color: 'cyan' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8color: 'yellow' },
+    { id: ''biotech', 'name: ''Biotechnology', 'icon: Microscopecount: 5color: 'green' },
+    { id: ''robotics', 'name: ''Robotics', 'icon: Cpucount: 7color: 'red' },
+    { id: ''sustainability', 'name: ''Sustainability', 'icon: Shieldcount: 5color: 'emerald' }
   ];
 
   const trends: TrendItem[] = [
@@ -85,7 +85,7 @@ const TechnologyTrends2026: React.FC = () => {
       adoption: 15,
       marketSize: '$2.3T',
       growth: 450,
-      tags: ['Consciousness'Self-Awareness'Meta-Cognition'AGI'],
+      tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'AGI'],
       image: '/api/placeholder/600/400',
       url: '/consciousness-ai-trends-2026',
       featured: true,
@@ -94,8 +94,8 @@ const TechnologyTrends2026: React.FC = () => {
         mediumTerm: 'Widespread adoption in research and development',
         longTerm: 'Integration into everyday applications and services'
       },
-      keyPlayers: ['OpenAI'Google DeepMind'Anthropic'Microsoft'],
-      challenges: ['Ethical implications'Computational requirements'Safety concerns']
+      keyPlayers: [', 'OpenAI', 'Google 'DeepMind', 'Anthropic'Microsoft'],
+      challenges: ['Ethical 'implications', 'Computational 'requirements', 'Safety concerns']
     },
     {
       id: '2',
@@ -107,7 +107,7 @@ const TechnologyTrends2026: React.FC = () => {
       adoption: 8,
       marketSize: '$1.8T',
       growth: 680,
-      tags: ['Quantum Computing'Neural Networks'Hybrid Systems'Breakthrough'],
+      tags: ['Quantum 'Computing', 'Neural 'Networks', 'Hybrid 'Systems', 'Breakthrough'],
       image: '/api/placeholder/600/400',
       url: '/quantum-neural-hybrid-trends-2026',
       featured: true,
@@ -116,8 +116,8 @@ const TechnologyTrends2026: React.FC = () => {
         mediumTerm: 'Integration into cloud computing platforms',
         longTerm: 'Consumer-level quantum-neural devices'
       },
-      keyPlayers: ['IBM'Google'Microsoft'IonQ'Rigetti'],
-      challenges: ['Technical complexity'Cost barriers'Scalability issues']
+      keyPlayers: [', 'IBM', 'Google', 'Microsoft', 'IonQ'Rigetti'],
+      challenges: ['Technical 'complexity', 'Cost 'barriers', 'Scalability issues']
     },
     {
       id: '3',
@@ -129,7 +129,7 @@ const TechnologyTrends2026: React.FC = () => {
       adoption: 35,
       marketSize: '$4.2T',
       growth: 320,
-      tags: ['Business Automation'Autonomous Systems'Digital Transformation'AI Operations'],
+      tags: ['Business 'Automation', 'Autonomous 'Systems', 'Digital 'Transformation', 'AI Operations'],
       image: '/api/placeholder/600/400',
       url: '/autonomous-business-trends-2026',
       featured: false,
@@ -138,8 +138,8 @@ const TechnologyTrends2026: React.FC = () => {
         mediumTerm: 'Widespread adoption across industries',
         longTerm: 'Standard business model for new enterprises'
       },
-      keyPlayers: ['Salesforce'Microsoft'Oracle'SAP'ServiceNow'],
-      challenges: ['Regulatory compliance'Job displacement'System reliability']
+      keyPlayers: [', 'Salesforce', 'Microsoft', 'Oracle', 'SAP'ServiceNow'],
+      challenges: ['Regulatory 'compliance', 'Job 'displacement', 'System reliability']
     },
     {
       id: '4',
@@ -151,7 +151,7 @@ const TechnologyTrends2026: React.FC = () => {
       adoption: 5,
       marketSize: '$850B',
       growth: 890,
-      tags: ['Neural Interface'Brain-Computer'BCI'Human Enhancement'],
+      tags: ['Neural 'Interface', 'Brain-'Computer', 'BCI'Human Enhancement'],
       image: '/api/placeholder/600/400',
       url: '/neural-interface-trends-2026',
       featured: true,
@@ -160,8 +160,8 @@ const TechnologyTrends2026: React.FC = () => {
         mediumTerm: 'Consumer applications for productivity',
         longTerm: 'Integration with everyday devices'
       },
-      keyPlayers: ['Neuralink'Kernel'Synchron'Blackrock Neurotech'],
-      challenges: ['Safety concerns'Ethical implications'Technical limitations']
+      keyPlayers: [', 'Neuralink', 'Kernel', 'Synchron', 'Blackrock Neurotech'],
+      challenges: ['Safety 'concerns', 'Ethical 'implications', 'Technical limitations']
     },
     {
       id: '5',
@@ -173,7 +173,7 @@ const TechnologyTrends2026: React.FC = () => {
       adoption: 25,
       marketSize: '$1.2T',
       growth: 280,
-      tags: ['Robotics'Self-Evolution'Autonomous Learning'Adaptive Systems'],
+      tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptive Systems'],
       image: '/api/placeholder/600/400',
       url: '/self-evolving-robots-trends-2026',
       featured: false,
@@ -182,8 +182,8 @@ const TechnologyTrends2026: React.FC = () => {
         mediumTerm: 'Consumer and household robots',
         longTerm: 'Human-robot collaboration in all sectors'
       },
-      keyPlayers: ['Boston Dynamics'Tesla'Honda'SoftBank'ABB'],
-      challenges: ['Safety and reliability'Cost optimization'Human acceptance']
+      keyPlayers: ['Boston 'Dynamics', 'Tesla', 'Honda', 'SoftBank'ABB'],
+      challenges: ['Safety and 'reliability', 'Cost 'optimization', 'Human acceptance']
     },
     {
       id: '6',
@@ -195,7 +195,7 @@ const TechnologyTrends2026: React.FC = () => {
       adoption: 40,
       marketSize: '$3.1T',
       growth: 420,
-      tags: ['Climate AI'Sustainability'Environmental Tech'Green AI'],
+      tags: ['Climate 'AI', 'Sustainability'Environmental 'Tech', 'Green AI'],
       image: '/api/placeholder/600/400',
       url: '/climate-ai-trends-2026',
       featured: false,
@@ -204,14 +204,14 @@ const TechnologyTrends2026: React.FC = () => {
         mediumTerm: 'Automated environmental monitoring',
         longTerm: 'Global climate management systems'
       },
-      keyPlayers: ['Google'Microsoft'IBM'ClimateAI'Carbon Clean'],
-      challenges: ['Data accuracy'Global coordination'Implementation costs']
+      keyPlayers: [', 'Google', 'Microsoft', 'IBM', 'ClimateAI'Carbon Clean'],
+      challenges: ['Data 'accuracy', 'Global 'coordination', 'Implementation costs']
     }
   ];
 
   const filteredTrends = trends.filter(trend => {
     const matchesCategory = activeCategory === 'all' || trend.category === activeCategory;
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === ', ' || 
       trend.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       trend.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       trend.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -249,8 +249,8 @@ const TechnologyTrends2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -306,8 +306,8 @@ const TechnologyTrends2026: React.FC = () => {
       {/* Featured Trends */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
@@ -321,8 +321,8 @@ const TechnologyTrends2026: React.FC = () => {
               return (
                 <motion.div
                   key={trend.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedTrend(trend)}
@@ -386,8 +386,8 @@ const TechnologyTrends2026: React.FC = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
@@ -418,8 +418,8 @@ const TechnologyTrends2026: React.FC = () => {
 
         {/* Trends Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -428,8 +428,8 @@ const TechnologyTrends2026: React.FC = () => {
               return (
                 <motion.div
                   key={trend.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.05 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedTrend(trend)}
@@ -498,9 +498,9 @@ const TechnologyTrends2026: React.FC = () => {
             onClick={() => setSelectedTrend(null)}
           >
             <motion.div
-              initial={{ scale: 0.9opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
-              exit={{ scale: 0.9opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >

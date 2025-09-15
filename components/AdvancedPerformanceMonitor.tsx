@@ -93,11 +93,11 @@ const AdvancedPerformanceMonitor = () => {
     if (document.readyState === 'complete') {
       collectMetrics();
     } else {
-      window.addEventListener('load'collectMetrics);
+      window.addEventListener(', 'load', 'collectMetrics);
     }
 
     return () => {
-      window.removeEventListener('load'collectMetrics);
+      window.removeEventListener(', 'load', 'collectMetrics);
     };
   }[]);
 

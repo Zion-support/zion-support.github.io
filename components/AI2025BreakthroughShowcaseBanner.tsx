@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 ArrowRightBrainCpuDatabaseNetworkShieldZapTargetTrendingUpUsers
 
@@ -83,7 +83,7 @@ const AI2025BreakthroughShowcaseBanner = () => {
             Revolutionary AI Showcase
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Experience the future of artificial intelligence with our groundbreaking 2025 technology suite that's reshaping industries worldwide.
+            Experience the future of artificial intelligence with our groundbreaking 2025 technology suite 'that', 's reshaping industries worldwide.
           </p>
         </div>
 

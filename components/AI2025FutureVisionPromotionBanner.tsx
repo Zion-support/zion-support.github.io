@@ -176,7 +176,7 @@ const AI2025FutureVisionPromotionBanner = () => {
             Be Part of the Future
           </h3>
           <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-            Don't just witness the future – help create it. Join the AI revolution and transform your business with cutting-edge technologies.
+            'Don', 't just witness the future – help create it. Join the AI revolution and transform your business with cutting-edge technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Play
@@ -26,12 +26,12 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
 
   const tools = [
-    { name: 'GPT-5 Ultra'icon: <Brain className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
-    { name: 'CodeGen Pro'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
-    { name: 'Analytics AI'icon: <BarChart3 className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
-    { name: 'Smart Chat'icon: <MessageSquare className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
-    { name: 'Image Creator'icon: <Image className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
-    { name: 'Video Editor'icon: <Video className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
+    { name: 'GPT-5 'Ultra', 'icon: <Brain className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'CodeGen 'Pro', 'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Analytics 'AI', 'icon: <BarChart3 className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Smart 'Chat', 'icon: <MessageSquare className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Video 'Editor', 'icon: <Video className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
   ];
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16"

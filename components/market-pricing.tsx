@@ -12,10 +12,10 @@ export default function MarketPricing() {
   const [selectedMarketsetSelectedMarket] = useState('ai-consciousness');
 
   const markets = [
-    { id: 'ai-consciousness'name: 'AI Consciousness'icon: <Brain className="w-6 h-6" /> },
-    { id: 'quantum-computing'name: 'Quantum Computing'icon: <Atom className="w-6 h-6" /> },
-    { id: 'autonomous-systems'name: 'Autonomous Systems'icon: <Zap className="w-6 h-6" /> },
-    { id: 'enterprise-it'name: 'Enterprise IT'icon: <Shield className="w-6 h-6" /> }
+    { id: 'ai-'consciousness', 'name: 'AI 'Consciousness', 'icon: <Brain className="w-6 h-6" /> },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: <Atom className="w-6 h-6" /> },
+    { id: 'autonomous-'systems', 'name: 'Autonomous 'Systems', 'icon: <Zap className="w-6 h-6" /> },
+    { id: 'enterprise-'it', 'name: 'Enterprise 'IT', 'icon: <Shield className="w-6 h-6" /> }
   ];
 
   const marketData = {
@@ -29,24 +29,24 @@ export default function MarketPricing() {
           name: 'OpenAI',
           marketShare: '32%',
           pricing: '$0.002-$0.02 per 1K tokens',
-          strengths: ['Advanced language models'Strong brand recognition'Large user base'],
-          weaknesses: ['Limited consciousness features'High API costs'Privacy concerns'],
+          strengths: ['Advanced language 'models', 'Strong brand 'recognition', 'Large user base'],
+          weaknesses: ['Limited consciousness 'features', 'High API 'costs', 'Privacy concerns'],
           rating: 4.2
         },
         {
           name: 'Anthropic',
           marketShare: '18%',
           pricing: '$0.015-$0.03 per 1K tokens',
-          strengths: ['Safety-focused approach'Constitutional AI'Research-driven'],
-          weaknesses: ['Smaller model variety'Limited enterprise features'Higher pricing'],
+          strengths: ['Safety-focused 'approach', 'Constitutional 'AI', 'Research-driven'],
+          weaknesses: ['Smaller model 'variety', 'Limited enterprise 'features', 'Higher pricing'],
           rating: 4.0
         },
         {
           name: 'Zion Tech Group',
           marketShare: '12%',
           pricing: '$0.008-$0.015 per 1K tokens',
-          strengths: ['True AI consciousness'Enterprise-grade security'Competitive pricing'],
-          weaknesses: ['Smaller market presence'Limited brand recognition'Newer player'],
+          strengths: ['True AI 'consciousness', 'Enterprise-grade 'security', 'Competitive pricing'],
+          weaknesses: ['Smaller market 'presence', 'Limited brand 'recognition', 'Newer player'],
           rating: 4.8
         }
       ],
@@ -67,24 +67,24 @@ export default function MarketPricing() {
           name: 'IBM',
           marketShare: '28%',
           pricing: '$1.60 per quantum hour',
-          strengths: ['Established infrastructure'Qiskit ecosystem'Research partnerships'],
-          weaknesses: ['Limited qubit count'High costs'Complex access'],
+          strengths: ['Established 'infrastructure', 'Qiskit 'ecosystem', 'Research partnerships'],
+          weaknesses: ['Limited qubit 'count', 'High 'costs', 'Complex access'],
           rating: 4.1
         },
         {
           name: 'Google',
           marketShare: '22%',
           pricing: '$2.00 per quantum hour',
-          strengths: ['Quantum supremacy'Advanced algorithms'Research focus'],
-          weaknesses: ['Limited commercial access'High pricing'Complex setup'],
+          strengths: ['Quantum 'supremacy', 'Advanced 'algorithms', 'Research focus'],
+          weaknesses: ['Limited commercial 'access', 'High 'pricing', 'Complex setup'],
           rating: 4.3
         },
         {
           name: 'Zion Tech Group',
           marketShare: '8%',
           pricing: '$1.20 per quantum hour',
-          strengths: ['Competitive pricing'Enterprise focus'Simplified access'],
-          weaknesses: ['Smaller infrastructure'Limited qubit variety'Newer platform'],
+          strengths: ['Competitive 'pricing', 'Enterprise 'focus', 'Simplified access'],
+          weaknesses: ['Smaller 'infrastructure', 'Limited qubit 'variety', 'Newer platform'],
           rating: 4.5
         }
       ],
@@ -105,24 +105,24 @@ export default function MarketPricing() {
           name: 'UiPath',
           marketShare: '25%',
           pricing: '$420-$1,200 per user/month',
-          strengths: ['Market leader'Comprehensive platform'Strong partnerships'],
-          weaknesses: ['High costs'Complex implementation'Limited AI features'],
+          strengths: ['Market 'leader', 'Comprehensive 'platform', 'Strong partnerships'],
+          weaknesses: ['High 'costs', 'Complex 'implementation', 'Limited AI features'],
           rating: 4.0
         },
         {
           name: 'Automation Anywhere',
           marketShare: '20%',
           pricing: '$750-$1,500 per user/month',
-          strengths: ['Enterprise focus'Cloud-native'Security features'],
-          weaknesses: ['Expensive'Steep learning curve'Limited customization'],
+          strengths: ['Enterprise 'focus', 'Cloud-'native', 'Security features'],
+          weaknesses: [', 'Expensive', 'Steep learning 'curve', 'Limited customization'],
           rating: 3.8
         },
         {
           name: 'Zion Tech Group',
           marketShare: '6%',
           pricing: '$350-$800 per user/month',
-          strengths: ['AI-powered automation'Competitive pricing'Easy implementation'],
-          weaknesses: ['Smaller ecosystem'Limited integrations'Newer platform'],
+          strengths: ['AI-powered 'automation', 'Competitive 'pricing', 'Easy implementation'],
+          weaknesses: ['Smaller 'ecosystem', 'Limited 'integrations', 'Newer platform'],
           rating: 4.4
         }
       ],
@@ -143,24 +143,24 @@ export default function MarketPricing() {
           name: 'Microsoft',
           marketShare: '35%',
           pricing: '$22-$57 per user/month',
-          strengths: ['Market dominance'Integrated ecosystem'Global presence'],
-          weaknesses: ['Complex licensing'High costs'Vendor lock-in'],
+          strengths: ['Market 'dominance', 'Integrated 'ecosystem', 'Global presence'],
+          weaknesses: ['Complex 'licensing', 'High 'costs', 'Vendor lock-in'],
           rating: 4.2
         },
         {
           name: 'Salesforce',
           marketShare: '18%',
           pricing: '$25-$300 per user/month',
-          strengths: ['CRM leadership'Cloud-native'Extensive integrations'],
-          weaknesses: ['Expensive'Complex pricing'Implementation costs'],
+          strengths: ['CRM 'leadership', 'Cloud-'native', 'Extensive integrations'],
+          weaknesses: [', 'Expensive', 'Complex 'pricing', 'Implementation costs'],
           rating: 4.1
         },
         {
           name: 'Zion Tech Group',
           marketShare: '3%',
           pricing: '$18-$45 per user/month',
-          strengths: ['AI-powered features'Competitive pricing'Modern architecture'],
-          weaknesses: ['Smaller ecosystem'Limited integrations'Newer player'],
+          strengths: ['AI-powered 'features', 'Competitive 'pricing', 'Modern architecture'],
+          weaknesses: ['Smaller 'ecosystem', 'Limited 'integrations', 'Newer player'],
           rating: 4.3
         }
       ],
@@ -351,8 +351,8 @@ export default function MarketPricing() {
           </div>
           
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
             viewport={{ once: true }}
             className="text-center"
@@ -368,8 +368,8 @@ export default function MarketPricing() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
@@ -381,8 +381,8 @@ export default function MarketPricing() {
             {currentMarket.competitors.map((competitorindex) => (
               <motion.div
                 key={competitor.name}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
@@ -708,8 +708,8 @@ export default function MarketPricing() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
@@ -719,15 +719,15 @@ export default function MarketPricing() {
           
           <div className="grid lg:grid-cols-4 gap-6 mb-12">
             {[
-              { label: 'Low End'price: currentMarket.pricingAnalysis.lowEndcolor: 'from-green-500 to-emerald-600' },
-              { label: 'Mid Range'price: currentMarket.pricingAnalysis.midRangecolor: 'from-yellow-500 to-orange-600' },
-              { label: 'High End'price: currentMarket.pricingAnalysis.highEndcolor: 'from-red-500 to-pink-600' },
-              { label: 'Our Position'price: currentMarket.pricingAnalysis.ourPositioncolor: 'from-cyan-500 to-blue-600' }
+              { label: 'Low 'End', 'price: currentMarket.pricingAnalysis.lowEndcolor: 'from-green-500 to-emerald-600' },
+              { label: 'Mid 'Range', 'price: currentMarket.pricingAnalysis.midRangecolor: 'from-yellow-500 to-orange-600' },
+              { label: 'High 'End', 'price: currentMarket.pricingAnalysis.highEndcolor: 'from-red-500 to-pink-600' },
+              { label: 'Our 'Position', 'price: currentMarket.pricingAnalysis.ourPositioncolor: 'from-cyan-500 to-blue-600' }
             ].map((tierindex) => (
               <motion.div
                 key={tier.label}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
@@ -742,8 +742,8 @@ export default function MarketPricing() {
           </div>
           
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.5 }}
             viewport={{ once: true }}
             className="text-center"
@@ -778,8 +778,8 @@ export default function MarketPricing() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-16"
@@ -843,8 +843,8 @@ export default function MarketPricing() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -853,7 +853,7 @@ export default function MarketPricing() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Our competitive pricing and unique AI consciousness features give you the edge 
-              you need to succeed in today's rapidly evolving technology landscape.
+              you need to succeed in 'today', 's rapidly evolving technology landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

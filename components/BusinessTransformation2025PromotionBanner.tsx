@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Building2
@@ -24,10 +24,10 @@ const BusinessTransformation2025PromotionBanner = () => {
   const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
-    { icon: DollarSignvalue: '340%'label: 'Revenue Increase'color: 'text-green-400' },
-    { icon: TrendingUpvalue: '65%'label: 'Cost Reduction'color: 'text-blue-400' },
-    { icon: BarChart3value: '280%'label: 'Efficiency Gain'color: 'text-yellow-400' },
-    { icon: Starvalue: '98%'label: 'Customer Satisfaction'color: 'text-purple-400' }
+    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increase', 'color: 'text-green-400' },
+    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reduction', 'color: 'text-blue-400' },
+    { icon: BarChart3value: '280%'label: 'Efficiency 'Gain', 'color: 'text-yellow-400' },
+    { icon: Starvalue: '98%'label: 'Customer 'Satisfaction', 'color: 'text-purple-400' }
   ];
 
   useEffect(() => {
@@ -48,9 +48,9 @@ const BusinessTransformation2025PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.6ease: "easeOut" }}
         className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
       >

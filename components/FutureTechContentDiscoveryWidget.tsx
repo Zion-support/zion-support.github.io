@@ -36,7 +36,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'singularity',
       url: '/ai-2035-singularity-breakthrough',
       image: '🧠',
-      features: ['Consciousness Evolution'Neural Integration'Quantum Consciousness'],
+      features: ['Consciousness 'Evolution', 'Neural 'Integration', 'Quantum Consciousness'],
       gradient: 'from-purple-800 to-indigo-800'
     },
     {
@@ -46,7 +46,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'quantum',
       url: '/quantum-ai-fusion-2030',
       image: '⚛️',
-      features: ['Quantum Supremacy'AI Evolution'Future Computing'],
+      features: ['Quantum 'Supremacy', 'AI 'Evolution', 'Future Computing'],
       gradient: 'from-cyan-800 to-emerald-800'
     },
     {
@@ -56,7 +56,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'neural',
       url: '/neural-interface-revolution-2035',
       image: '🔗',
-      features: ['Neural Enhancement'Consciousness Bridge'Direct Thought Control'],
+      features: ['Neural 'Enhancement', 'Consciousness 'Bridge', 'Direct Thought Control'],
       gradient: 'from-violet-800 to-fuchsia-800'
     },
     {
@@ -66,7 +66,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'singularity',
       url: '/ai-2026-advanced-automation-revolution',
       image: '🤖',
-      features: ['Autonomous Systems'Smart Automation'Industry Transformation'],
+      features: ['Autonomous 'Systems', 'Smart 'Automation', 'Industry Transformation'],
       gradient: 'from-blue-800 to-purple-800'
     },
     {
@@ -76,7 +76,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'quantum',
       url: '/quantum-computing-solutions-2026',
       image: '⚡',
-      features: ['Quantum Processing'Complex Problem Solving'Exponential Speed'],
+      features: ['Quantum 'Processing', 'Complex Problem 'Solving', 'Exponential Speed'],
       gradient: 'from-teal-800 to-cyan-800'
     },
     {
@@ -86,7 +86,7 @@ export default function FutureTechContentDiscoveryWidget() {
       category: 'neural',
       url: '/brain-computer-interface-2030',
       image: '🧬',
-      features: ['Telepathic Communication'Enhanced Cognition'Neural Enhancement'],
+      features: ['Telepathic 'Communication', 'Enhanced 'Cognition', 'Neural Enhancement'],
       gradient: 'from-purple-800 to-pink-800'
     }
   ];

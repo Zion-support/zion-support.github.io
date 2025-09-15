@@ -6,8 +6,8 @@ ArrowRightZapStarTrendingUpUsersAwardClockCheckCircle
 export default function UltimatePromotionalBanner() {
   return (
     <motion.section
-      initial={{ opacity: 0y: 50 }}
-      animate={{ opacity: 1y: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       className="py-16 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white relative overflow-hidden"
     >
@@ -33,8 +33,8 @@ export default function UltimatePromotionalBanner() {
 
           {/* Main heading */}
           <motion.h2
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-3xl md:text-5xl font-bold mb-6 leading-tight"
           >
@@ -45,19 +45,19 @@ export default function UltimatePromotionalBanner() {
 
           {/* Subheading */}
           <motion.p
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             Join 10,000+ businesses already saving 60% on costs and increasing productivity by 300%. 
-            Don't miss this exclusive offer - limited time only!
+            'Don', 't miss this exclusive offer - limited time only!
           </motion.p>
 
           {/* Benefits Grid */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
           >
@@ -81,8 +81,8 @@ export default function UltimatePromotionalBanner() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >

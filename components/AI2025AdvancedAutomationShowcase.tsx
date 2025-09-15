@@ -111,7 +111,7 @@ const AI2025AdvancedAutomationShowcase = () => {
             AI 2025 Advanced Automation Revolution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the revolutionary AI automation framework that's delivering 2,000% ROI 
+            Discover the revolutionary AI automation framework 'that', 's delivering 2,000% ROI 
             to Fortune 500 companies worldwide. Get the complete roadmap to transformation.
           </p>
         </div>

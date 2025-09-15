@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -43,12 +43,12 @@ const InteractiveAIToolsShowcase2027 = () => {
   const [isPlayingsetIsPlaying] = useState(false);
 
   const categories = [
-    { id: 'all'name: 'All Tools'icon: Gridcolor: 'from-purple-600 to-pink-600' },
-    { id: 'ai-assistants'name: 'AI Assistants'icon: Braincolor: 'from-blue-600 to-cyan-600' },
-    { id: 'automation'name: 'Automation'icon: Zapcolor: 'from-green-600 to-emerald-600' },
-    { id: 'analytics'name: 'Analytics'icon: TrendingUpcolor: 'from-orange-600 to-red-600' },
-    { id: 'development'name: 'Development'icon: Cpucolor: 'from-indigo-600 to-purple-600' },
-    { id: 'security'name: 'Security'icon: Shieldcolor: 'from-red-600 to-pink-600' }
+    { id: ''all', 'name: 'All 'Tools', 'icon: Gridcolor: 'from-purple-600 to-pink-600' },
+    { id: 'ai-'assistants', 'name: 'AI 'Assistants', 'icon: Braincolor: 'from-blue-600 to-cyan-600' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-600 to-emerald-600' },
+    { id: ''analytics', 'name: ''Analytics', 'icon: TrendingUpcolor: 'from-orange-600 to-red-600' },
+    { id: ''development', 'name: ''Development', 'icon: Cpucolor: 'from-indigo-600 to-purple-600' },
+    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-600 to-pink-600' }
   ];
 
   const aiTools = [
@@ -181,8 +181,8 @@ const InteractiveAIToolsShowcase2027 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -208,8 +208,8 @@ const InteractiveAIToolsShowcase2027 = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
@@ -274,8 +274,8 @@ const InteractiveAIToolsShowcase2027 = () => {
         {/* Featured Tools */}
         {featuredTools.length > 0 && (
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
             className="mb-16"
           >
@@ -288,8 +288,8 @@ const InteractiveAIToolsShowcase2027 = () => {
               {featuredTools.map((toolindex) => (
                 <motion.div
                   key={tool.id}
-                  initial={{ opacity: 0y: 30 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => setSelectedTool(tool)}
@@ -375,8 +375,8 @@ const InteractiveAIToolsShowcase2027 = () => {
 
         {/* All Tools Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="flex items-center justify-between mb-8">
@@ -394,8 +394,8 @@ const InteractiveAIToolsShowcase2027 = () => {
             {filteredTools.map((toolindex) => (
               <motion.div
                 key={tool.id}
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: index * 0.05 }}
                 className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
@@ -486,8 +486,8 @@ const InteractiveAIToolsShowcase2027 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
@@ -526,7 +526,7 @@ const InteractiveAIToolsShowcase2027 = () => {
           >
             <motion.div
               initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
+              animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
               className="bg-slate-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}

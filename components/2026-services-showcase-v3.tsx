@@ -11,21 +11,21 @@ export default function ServicesShowcase2026V3() {
       name: 'AI Automation 2026',
       description: 'Next-generation AI automation with quantum-enhanced processing and neural interfaces.',
       icon: Brain,
-      features: ['Quantum AI Processing'Neural Interface Integration'Predictive Automation']
+      features: ['Quantum AI 'Processing', 'Neural Interface 'Integration', 'Predictive Automation']
     },
     {
       id: 'quantum-security-2026',
       name: 'Quantum Security 2026',
       description: 'Revolutionary quantum encryption and AI-powered threat detection systems.',
       icon: Shield,
-      features: ['Quantum Encryption'AI Threat Detection'Zero Trust Architecture']
+      features: ['Quantum 'Encryption', 'AI Threat 'Detection', 'Zero Trust Architecture']
     },
     {
       id: 'advanced-infrastructure-2026',
       name: 'Advanced Infrastructure 2026',
       description: 'Cutting-edge cloud infrastructure with AI optimization and autonomous management.',
       icon: Zap,
-      features: ['AI Optimization'Autonomous Scaling'Real-time Monitoring']
+      features: ['AI 'Optimization', 'Autonomous 'Scaling', 'Real-time Monitoring']
     }
   ];
 
@@ -35,8 +35,8 @@ export default function ServicesShowcase2026V3() {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0y: -50 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -56,8 +56,8 @@ export default function ServicesShowcase2026V3() {
           {services.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
             >
@@ -93,8 +93,8 @@ export default function ServicesShowcase2026V3() {
         {/* CTA Section */}
         <motion.div 
           className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center"
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
         >
           <h2 className="text-3xl font-bold text-white mb-4">Ready for the Future?</h2>

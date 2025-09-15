@@ -72,7 +72,7 @@ export default function ServicesIndexPage() {
   };
   for (const s of all) {
     const service = s as { category?: string };
-    const rawCat = (service.category || '').trim();
+    const rawCat = (service.category || ', ').trim();
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
     byCategory[mapped].push(s);
   }

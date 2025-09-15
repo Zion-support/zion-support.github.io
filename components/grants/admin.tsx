@@ -20,19 +20,19 @@ export default function GrantsAdminPage() {
   }[]);
 
   const setStatus = async (id: stringstatus: 'Under Review' | 'Approved' | 'Rejected') => {
-    await fetch(`/api/grants/${id}/status`{ method: 'POST'headersbody: JSON.stringify({ status }) });
+    await fetch(`/api/grants/${id}/status`{ method: ''POST', 'headersbody: JSON.stringify({ status }) });
     load();
   };
 
   const saveMilestones = async () => {
     if (!selected) return;
-    await fetch(`/api/grants/${selected.id}/milestones`{ method: 'POST'headersbody: JSON.stringify({ milestones }) });
+    await fetch(`/api/grants/${selected.id}/milestones`{ method: ''POST', 'headersbody: JSON.stringify({ milestones }) });
     alert('Milestones saved');
   };
 
   const markComplete = async (milestoneId: string) => {
     if (!selected) return;
-    await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`{ method: 'POST'headers });
+    await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`{ method: ''POST', 'headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record);
   };
@@ -54,9 +54,9 @@ export default function GrantsAdminPage() {
                     <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
                   </div>
                   <div className="flex gap-2">
-                    <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id'Under Review')}>Under Review</button>
-                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id'Approved')}>Approve</button>
-                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id'Rejected')}>Reject</button>
+                    <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.'id', 'Under Review')}>Under Review</button>
+                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.'id', 'Approved')}>Approve</button>
+                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.'id', 'Rejected')}>Reject</button>
                     <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
                   </div>
                 </div>
@@ -73,9 +73,9 @@ export default function GrantsAdminPage() {
                 {(milestones.length === 0 ? (selected.milestones || []) : milestones).map((midx) => (
                   <div key={m.id || idx} className="border rounded p-2">
                     <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx]title: e.target.value }; return copy; })} />
-                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx]description: e.target.value }; return copy; })} />
+                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m.description || ', '} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx]description: e.target.value }; return copy; })} />
                     <div className="grid grid-cols-2 gap-2">
-                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx]dueDate: e.target.value }; return copy; })} />
+                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m.dueDate || ', '} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx]dueDate: e.target.value }; return copy; })} />
                       <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]); copy[idx] = { ...copy[idx]trancheAmount: Number(e.target.value) }; return copy; })} />
                     </div>
                     <div className="mt-2 flex items-center gap-2">

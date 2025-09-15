@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function QuantumComputingBreakthrough2027() {
@@ -14,7 +14,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2027',
       icon: '⚛️',
       color: 'from-blue-500 to-cyan-500',
-      applications: ['Drug Discovery'Climate Modeling'Financial Optimization'Space Exploration']
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Optimization', 'Space Exploration']
     },
     {
       title: 'Quantum Internet',
@@ -23,7 +23,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2027',
       icon: '🌐',
       color: 'from-purple-500 to-pink-500',
-      applications: ['Secure Banking'Government Communications'Medical Data'Military Operations']
+      applications: ['Secure 'Banking', 'Government 'Communications', 'Medical 'Data', 'Military Operations']
     },
     {
       title: 'Quantum AI Integration',
@@ -32,7 +32,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2028',
       icon: '🧠',
       color: 'from-green-500 to-teal-500',
-      applications: ['Machine Learning'Pattern Recognition'Optimization'Neural Networks']
+      applications: ['Machine 'Learning', 'Pattern 'Recognition', 'Optimization'Neural Networks']
     },
     {
       title: 'Quantum Consciousness',
@@ -41,7 +41,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2029',
       icon: '🌟',
       color: 'from-yellow-500 to-orange-500',
-      applications: ['Self-Aware AI'Creative Problem Solving'Emotional Intelligence'Moral Reasoning']
+      applications: ['Self-Aware 'AI', 'Creative Problem 'Solving', 'Emotional 'Intelligence', 'Moral Reasoning']
     },
     {
       title: 'Universal Quantum Computer',
@@ -50,7 +50,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2030',
       icon: '♾️',
       color: 'from-indigo-500 to-purple-500',
-      applications: ['Universe Simulation'Time Travel Research'Parallel Universe Exploration'Reality Manipulation']
+      applications: ['Universe 'Simulation', 'Time Travel 'Research', 'Parallel Universe 'Exploration', 'Reality Manipulation']
     }
   ];
 

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -38,7 +38,7 @@ const UltimateContentPromotionBanner2026 = () => {
     {
       icon: Rocket,
       title: "Future Technology Predictions",
-      subtitle: "Explore what's coming in the next decade of innovation",
+      subtitle: "Explore 'what', 's coming in the next decade of innovation",
       color: "from-blue-600 to-cyan-600",
       bgColor: "bg-gradient-to-r from-blue-600/10 to-cyan-600/10",
       borderColor: "border-blue-500/30"
@@ -67,9 +67,9 @@ const UltimateContentPromotionBanner2026 = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         className="relative overflow-hidden"
       >

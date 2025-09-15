@@ -6,7 +6,7 @@ interface NewsletterSignupProps {
   className?: string;
 }
 
-export default function NewsletterSignup({ variant = 'default'className = '' }: NewsletterSignupProps) {
+export default function NewsletterSignup({ variant = ', 'default', 'className = ', ' }: NewsletterSignupProps) {
   const [emailsetEmail] = useState('');
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -20,7 +20,7 @@ export default function NewsletterSignup({ variant = 'default'className = '' }: 
     
     setIsSubscribed(true);
     setIsSubmitting(false);
-    setEmail('');
+    setEmail(', ');
   };
 
   if (isSubscribed) {
@@ -28,7 +28,7 @@ export default function NewsletterSignup({ variant = 'default'className = '' }: 
       <div className={`text-center p-6 bg-green-50 border border-green-200 rounded-lg ${className}`}>
         <div className="text-green-600 text-4xl mb-4">✅</div>
         <h3 className="text-lg font-semibold text-green-800 mb-2">Successfully Subscribed!</h3>
-        <p className="text-green-700">Thank you for joining our newsletter. You'll receive our latest AI insights and updates.</p>
+        <p className="text-green-700">Thank you for joining our newsletter. 'You', 'll receive our latest AI insights and updates.</p>
       </div>
     );
   }

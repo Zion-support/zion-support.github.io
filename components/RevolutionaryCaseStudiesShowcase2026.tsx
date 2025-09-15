@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   CheckCircle
@@ -49,7 +49,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
       },
       timeline: '6 months',
       team: '15 experts',
-      technologies: ['AI/ML'Blockchain'Cloud Infrastructure'Real-time Analytics'],
+      technologies: ['AI/'ML', 'Blockchain'Cloud 'Infrastructure', 'Real-time Analytics'],
       testimonial: {
         name: 'Sarah Chen',
         role: 'CTO',
@@ -73,7 +73,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
       },
       timeline: '8 months',
       team: '20 experts',
-      technologies: ['Computer Vision'NLP'Predictive Analytics'IoT Integration'],
+      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT Integration'],
       testimonial: {
         name: 'Dr. Michael Rodriguez',
         role: 'Chief Medical Officer',
@@ -97,7 +97,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
       },
       timeline: '10 months',
       team: '25 experts',
-      technologies: ['Machine Learning'NLP'Computer Vision'Cloud Computing'],
+      technologies: ['Machine 'Learning', 'NLP'Computer 'Vision', 'Cloud Computing'],
       testimonial: {
         name: 'Jennifer Walsh',
         role: 'CEO',
@@ -121,7 +121,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
       },
       timeline: '12 months',
       team: '18 experts',
-      technologies: ['IoT'Edge Computing'Predictive Analytics'Digital Twins'],
+      technologies: [', 'IoT', 'Edge 'Computing', 'Predictive 'Analytics', 'Digital Twins'],
       testimonial: {
         name: 'Robert Kim',
         role: 'Operations Director',
@@ -131,10 +131,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
   ];
 
   const overallStats = [
-    { label: 'Projects Completed'value: '200+'icon: CheckCircle },
-    { label: 'Average ROI'value: '450%'icon: TrendingUp },
-    { label: 'Client Satisfaction'value: '96%'icon: Star },
-    { label: 'Years Experience'value: '8+'icon: Award }
+    { label: 'Projects 'Completed', 'value: '200+'icon: CheckCircle },
+    { label: 'Average 'ROI', 'value: '450%'icon: TrendingUp },
+    { label: 'Client 'Satisfaction', 'value: '96%'icon: Star },
+    { label: 'Years 'Experience', 'value: '8+'icon: Award }
   ];
 
   if (!isVisible) return null;
@@ -144,8 +144,8 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -159,8 +159,8 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -177,8 +177,8 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
 
         {/* Case Study Selector */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
@@ -206,9 +206,9 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCase}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-12"
           >
@@ -300,8 +300,8 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >

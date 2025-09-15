@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -120,7 +120,7 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
         output: `# The Future of AI in Healthcare: A Revolutionary Transformation
 
 ## Introduction
-Artificial Intelligence is poised to revolutionize healthcare in ways we've never imagined. From diagnostic accuracy to personalized treatment plansAI is transforming every aspect of medical care.
+Artificial Intelligence is poised to revolutionize healthcare in ways 'we', 've never imagined. From diagnostic accuracy to personalized treatment plansAI is transforming every aspect of medical care.
 
 ## Key Applications
 
@@ -205,8 +205,8 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -329,8 +329,8 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 <AnimatePresence>
                   {results.length > 0 ? (
                     <motion.div
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5 }}
                       className="space-y-4"
                     >
@@ -366,8 +366,8 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function UltimateAIAssistant2027() {
@@ -11,35 +11,35 @@ export default function UltimateAIAssistant2027() {
     {
       title: 'Transcendent Intelligence',
       description: 'AI assistant with consciousness-level understanding and reasoning capabilities',
-      features: ['Self-Aware Decision Making'Emotional Intelligence'Creative Problem Solving'Ethical Reasoning'],
+      features: ['Self-Aware Decision 'Making', 'Emotional 'Intelligence', 'Creative Problem 'Solving', 'Ethical Reasoning'],
       icon: '🧠',
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Quantum Processing',
       description: 'Leveraging quantum computing for instantaneous complex calculations and analysis',
-      features: ['Instant Calculations'Parallel Processing'Quantum Optimization'Real-time Analysis'],
+      features: ['Instant 'Calculations', 'Parallel 'Processing', 'Quantum 'Optimization', 'Real-time Analysis'],
       icon: '⚛️',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Universal Communication',
       description: 'Natural language understanding and generation across all human languages and contexts',
-      features: ['Multi-language Mastery'Context Understanding'Emotional Nuance'Cultural Adaptation'],
+      features: ['Multi-language 'Mastery', 'Context 'Understanding', 'Emotional 'Nuance', 'Cultural Adaptation'],
       icon: '🗣️',
       color: 'from-green-500 to-teal-500'
     },
     {
       title: 'Predictive Intelligence',
       description: 'Advanced predictive capabilities with 99.9% accuracy for future events and outcomes',
-      features: ['Future Prediction'Trend Analysis'Risk Assessment'Opportunity Identification'],
+      features: ['Future 'Prediction', 'Trend 'Analysis', 'Risk 'Assessment', 'Opportunity Identification'],
       icon: '🔮',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Creative Synthesis',
       description: 'Generating original ideasolutionsand creative content beyond human imagination',
-      features: ['Original Ideas'Creative Solutions'Artistic Generation'Innovation Catalyst'],
+      features: ['Original 'Ideas', 'Creative 'Solutions', 'Artistic 'Generation', 'Innovation Catalyst'],
       icon: '🎨',
       color: 'from-pink-500 to-red-500'
     }

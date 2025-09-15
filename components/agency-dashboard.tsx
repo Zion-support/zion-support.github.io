@@ -9,7 +9,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendorsetActiveVendor] = useState(vendor);
   const [pkgTitlesetPkgTitle] = useState('');
   const [pkgDescsetPkgDesc] = useState('');
-  const [pkgPricesetPkgPrice] = useState<number | ''>('');
+  const [pkgPricesetPkgPrice] = useState<number | ', '>(', ');
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
@@ -19,8 +19,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     const updated = {
       ...activeVendor,
       name: String(formData.get('name') || activeVendor.name),
-      about: String(formData.get('about') || activeVendor.about || ''),
-      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join(',') || '')
+      about: String(formData.get('about') || activeVendor.about || ', '),
+      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join(',') || ', ')
         .split(',')
         .map(s => s.trim())
         .filter(Boolean)} as Vendor;
@@ -36,9 +36,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       description: pkgDesc,
       priceUsd: Number(pkgPrice)}];
     setActiveVendor({ ...activeVendorpackages });
-    setPkgTitle('');
-    setPkgDesc('');
-    setPkgPrice('');
+    setPkgTitle(', ');
+    setPkgDesc(', ');
+    setPkgPrice(', ');
   }
 
   return (
@@ -57,11 +57,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm mb-1">About</label>
-            <textarea name="about" defaultValue={activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
+            <textarea name="about" defaultValue={activeVendor.about || ', '} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm mb-1">Services Offered</label>
-            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join(') || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
+            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join(') || ', '} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
             <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>

@@ -23,7 +23,7 @@ const UltimateBreakthroughShowcase2025 = () => {
       readingTime: '45 min read',
       isNew: true,
       featured: true,
-      tags: ['AI Revolution'Ultimate Breakthrough'ROI'Fortune 500'2025-2026']
+      tags: ['AI 'Revolution', 'Ultimate 'Breakthrough', 'ROI'Fortune 500'2025-2026']
     },
     {
       id: 'fortune-500-ultimate-success',
@@ -41,7 +41,7 @@ const UltimateBreakthroughShowcase2025 = () => {
       readingTime: '25 min read',
       isNew: true,
       featured: true,
-      tags: ['Fortune 500'Ultimate Breakthrough'15,000% ROI'Success Story'AI Transformation']
+      tags: ['Fortune 500'Ultimate Breakthrough'15,000% 'ROI', 'Success 'Story', 'AI Transformation']
     },
     {
       id: 'ultimate-implementation-guide',
@@ -59,7 +59,7 @@ const UltimateBreakthroughShowcase2025 = () => {
       readingTime: '50 min read',
       isNew: true,
       featured: true,
-      tags: ['Implementation Guide'Ultimate Breakthrough'ROI'Strategy'Framework'2025-2026']
+      tags: ['Implementation 'Guide', 'Ultimate 'Breakthrough', 'ROI', 'Strategy', 'Framework'2025-2026']
     },
     {
       id: 'neural-superintelligence-revolution',
@@ -77,7 +77,7 @@ const UltimateBreakthroughShowcase2025 = () => {
       readingTime: '35 min read',
       isNew: true,
       featured: true,
-      tags: ['Neural Superintelligence'AI Revolution'ROI'Fortune 500'2025-2026']
+      tags: ['Neural 'Superintelligence', 'AI 'Revolution', 'ROI'Fortune 500'2025-2026']
     },
     {
       id: 'fortune-500-neural-superintelligence-success',
@@ -95,7 +95,7 @@ const UltimateBreakthroughShowcase2025 = () => {
       readingTime: '25 min read',
       isNew: true,
       featured: true,
-      tags: ['Fortune 500'Neural Superintelligence'12,000% ROI'Success Story'Manufacturing']
+      tags: ['Fortune 500'Neural Superintelligence'12,000% 'ROI', 'Success 'Story', 'Manufacturing']
     },
     {
       id: 'neural-superintelligence-implementation-guide',
@@ -113,15 +113,15 @@ const UltimateBreakthroughShowcase2025 = () => {
       readingTime: '45 min read',
       isNew: true,
       featured: true,
-      tags: ['Implementation Guide'Neural Superintelligence'ROI'Strategy'Framework'2025-2026']
+      tags: ['Implementation 'Guide', 'Neural 'Superintelligence', 'ROI', 'Strategy', 'Framework'2025-2026']
     }
   ];
 
   const categories = [
-    { id: 'all'label: 'All Content'count: breakthroughContent.length },
-    { id: 'revolution'label: 'AI Revolution'count: breakthroughContent.filter(item => item.category === 'revolution').length },
-    { id: 'success'label: 'Success Stories'count: breakthroughContent.filter(item => item.category === 'success').length },
-    { id: 'implementation'label: 'Implementation'count: breakthroughContent.filter(item => item.category === 'implementation').length }
+    { id: ''all', 'label: 'All 'Content', 'count: breakthroughContent.length },
+    { id: ''revolution', 'label: 'AI 'Revolution', 'count: breakthroughContent.filter(item => item.category === 'revolution').length },
+    { id: ''success', 'label: 'Success 'Stories', 'count: breakthroughContent.filter(item => item.category === 'success').length },
+    { id: ''implementation', 'label: ''Implementation', 'count: breakthroughContent.filter(item => item.category === 'implementation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

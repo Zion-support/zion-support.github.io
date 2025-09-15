@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen
   Video
@@ -27,12 +27,12 @@ const UltimateContentHub2026 = () => {
   const [searchQuerysetSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all'name: 'All Content'count: 156 },
-    { id: 'ai'name: 'AI & Automation'count: 45 },
-    { id: 'tech'name: 'Technology'count: 38 },
-    { id: 'business'name: 'Business Strategy'count: 32 },
-    { id: 'case-studies'name: 'Case Studies'count: 28 },
-    { id: 'tutorials'name: 'Tutorials'count: 13 }
+    { id: ''all', 'name: 'All 'Content', 'count: 156 },
+    { id: ''ai', 'name: 'AI & 'Automation', 'count: 45 },
+    { id: ''tech', 'name: ''Technology', 'count: 38 },
+    { id: ''business', 'name: 'Business 'Strategy', 'count: 32 },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 28 },
+    { id: ''tutorials', 'name: ''Tutorials', 'count: 13 }
   ];
 
   const contentItems = [
@@ -147,8 +147,8 @@ const UltimateContentHub2026 = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -166,8 +166,8 @@ const UltimateContentHub2026 = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
@@ -243,9 +243,9 @@ const UltimateContentHub2026 = () => {
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3delay: index * 0.1 }}
                   className={`group bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 ${
                     viewMode === 'list' ? 'flex' : ''
@@ -319,8 +319,8 @@ const UltimateContentHub2026 = () => {
 
         {/* Load More */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-12"
         >

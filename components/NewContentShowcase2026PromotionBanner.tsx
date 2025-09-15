@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Sparkles
@@ -32,8 +32,8 @@ const NewContentShowcase2026PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
-      animate={isVisible ? { opacity: 1y: 0 } : {}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"
     >

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -45,7 +45,7 @@ const InteractiveAIToolsShowcase2025 = () => {
       name: 'AI Assistant',
       icon: Brain,
       description: 'Intelligent conversational AI that understands context and provides human-like responses',
-      features: ['Natural Language Processing'Context Awareness'Multi-language Support'Real-time Learning'],
+      features: ['Natural Language 'Processing', 'Context 'Awareness', 'Multi-language 'Support', 'Real-time Learning'],
       stats: { users: '10M+'accuracy: '98.5%'languages: '50+' },
       color: 'from-blue-500 to-cyan-500'
     },
@@ -53,7 +53,7 @@ const InteractiveAIToolsShowcase2025 = () => {
       name: 'Data Analyzer',
       icon: BarChart3,
       description: 'Advanced analytics tool that processes complex datasets and generates actionable insights',
-      features: ['Predictive Analytics'Real-time Processing'Visual Dashboards'Custom Reports'],
+      features: ['Predictive 'Analytics', 'Real-time 'Processing', 'Visual 'Dashboards', 'Custom Reports'],
       stats: { datasets: '1B+'insights: '99.2%'speed: '10x faster' },
       color: 'from-green-500 to-emerald-500'
     },
@@ -61,7 +61,7 @@ const InteractiveAIToolsShowcase2025 = () => {
       name: 'Content Generator',
       icon: FileText,
       description: 'AI-powered content creation tool that generates high-quality textimagesand multimedia',
-      features: ['Multi-format Support'Brand Consistency'SEO Optimization'Plagiarism Detection'],
+      features: ['Multi-format 'Support', 'Brand 'Consistency', 'SEO 'Optimization', 'Plagiarism Detection'],
       stats: { content: '100M+'quality: '95%'formats: '20+' },
       color: 'from-purple-500 to-pink-500'
     },
@@ -69,7 +69,7 @@ const InteractiveAIToolsShowcase2025 = () => {
       name: 'Automation Engine',
       icon: Zap,
       description: 'Smart automation platform that streamlines workflows and reduces manual tasks',
-      features: ['Workflow Automation'Task Scheduling'Error Handling'Performance Monitoring'],
+      features: ['Workflow 'Automation', 'Task 'Scheduling', 'Error 'Handling', 'Performance Monitoring'],
       stats: { tasks: '50M+'efficiency: '85%'errors: '0.1%' },
       color: 'from-orange-500 to-red-500'
     },
@@ -77,7 +77,7 @@ const InteractiveAIToolsShowcase2025 = () => {
       name: 'Security Guard',
       icon: Shield,
       description: 'AI-powered security system that protects against threats and ensures data privacy',
-      features: ['Threat Detection'Real-time Monitoring'Encryption'Compliance'],
+      features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Encryption'Compliance'],
       stats: { threats: '99.9%'uptime: '99.99%'compliance: '100%' },
       color: 'from-red-500 to-rose-500'
     },
@@ -85,7 +85,7 @@ const InteractiveAIToolsShowcase2025 = () => {
       name: 'Smart Search',
       icon: Search,
       description: 'Intelligent search engine that understands intent and delivers precise results',
-      features: ['Semantic Search'Voice Search'Image Search'Personalization'],
+      features: ['Semantic 'Search', 'Voice 'Search', 'Image 'Search', 'Personalization'],
       stats: { queries: '1B+'accuracy: '96%'speed: '0.1s' },
       color: 'from-indigo-500 to-blue-500'
     }
@@ -154,8 +154,8 @@ const InteractiveAIToolsShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -169,8 +169,8 @@ const InteractiveAIToolsShowcase2025 = () => {
 
         {/* AI Tools Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
@@ -214,9 +214,9 @@ const InteractiveAIToolsShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTool}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
             className="bg-white rounded-3xl p-8 shadow-xl mb-16"
           >
@@ -265,7 +265,7 @@ const InteractiveAIToolsShowcase2025 = () => {
                       <span className="text-sm text-slate-600">AI is processing your request...</span>
                     </div>
                     <div className="text-sm text-slate-800">
-                      {activeTool === 'ai-assistant' && "Hello! I'm your AI assistant. How can I help you today?"}
+                      {activeTool === 'ai-assistant' && "Hello! 'I', 'm your AI assistant. How can I help you today?"}
                       {activeTool === 'data-analyzer' && "Analyzing data patterns... Found 3 key insights in your dataset."}
                       {activeTool === 'content-generator' && "Generating content... Created 5 high-quality articles based on your requirements."}
                       {activeTool === 'automation-engine' && "Automation running... Completed 12 tasks in the last hour."}
@@ -285,8 +285,8 @@ const InteractiveAIToolsShowcase2025 = () => {
 
         {/* Use Cases */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
@@ -297,8 +297,8 @@ const InteractiveAIToolsShowcase2025 = () => {
             {useCases.map((useCaseindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4delay: 0.6 + index * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
@@ -322,8 +322,8 @@ const InteractiveAIToolsShowcase2025 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="mb-16"
         >
@@ -334,8 +334,8 @@ const InteractiveAIToolsShowcase2025 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4delay: 1.0 + index * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg"
               >
@@ -361,8 +361,8 @@ const InteractiveAIToolsShowcase2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 1.2 }}
           className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-white"
         >

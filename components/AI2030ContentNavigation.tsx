@@ -52,7 +52,7 @@ export default function AI2030ContentNavigation() {
       items: [
         {
           title: "AI 2030 Readiness Assessment",
-          description: "Evaluate your organization's AI transformation readiness",
+          description: "Evaluate your 'organization', 's AI transformation readiness",
           href: "/tools/ai-2030-readiness-assessment",
           badge: "ASSESSMENT",
           badgeColor: "bg-purple-500 text-purple-900"

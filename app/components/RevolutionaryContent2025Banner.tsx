@@ -88,9 +88,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -143,11 +140,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge AI insights, proven strategies, and actionable frameworks 
             that are transforming businesses worldwide in 2025.
-=======
-=======
->>>>>>> origin/main
-=======
->>>>>>> cursor/create-and-deploy-new-content-60fa
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -160,11 +152,9 @@ const RevolutionaryContent2025Banner: React.FC = () => {
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Explore groundbreaking insights, real-world case studies, and comprehensive resources 
             that will revolutionize your understanding of AI in 2025.
->>>>>>> origin/main
           </p>
         </motion.div>
 
-<<<<<<< HEAD
         {/* Main Content Slider */}
         <div className="relative mb-16">
           <div className="overflow-hidden rounded-3xl">
@@ -325,7 +315,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Resources
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {/* Blog Posts */}
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -425,14 +414,7 @@ const RevolutionaryContent2025Banner: React.FC = () => {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
               >
                 Schedule Consultation
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/main
               </Link>
-<<<<<<< HEAD
-=======
-=======
     <div className="relative overflow-hidden">
       {/* Background with animated gradient */}
       <div className={`absolute inset-0 bg-gradient-to-r ${currentContent.gradient} opacity-90`} />
@@ -541,8 +523,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-510b
->>>>>>> cursor/create-and-deploy-new-content-60fa
             </div>
           </div>
         </motion.div>

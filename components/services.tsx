@@ -299,7 +299,7 @@ export default function ServicesPage() {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
+          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'rating':
@@ -346,8 +346,8 @@ export default function ServicesPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             {/* Enhanced Header */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
@@ -375,8 +375,8 @@ export default function ServicesPage() {
               </p>
               
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
                 className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
               >
@@ -401,8 +401,8 @@ export default function ServicesPage() {
 
             {/* Enhanced Search and Filters */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               className="mb-12"
             >
@@ -521,8 +521,8 @@ export default function ServicesPage() {
 
             {/* Enhanced Category Overview */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="mb-20"
             >
@@ -543,8 +543,8 @@ export default function ServicesPage() {
                   return (
                     <motion.div
                       key={category.id}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8delay: 0.6 + index * 0.1 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
                       onClick={() => setSelectedCategory(category.id)}
@@ -579,8 +579,8 @@ export default function ServicesPage() {
 
             {/* Services Grid/List */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-center mb-12">
@@ -594,8 +594,8 @@ export default function ServicesPage() {
                   {sortedServices.map((serviceindex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8delay: 1 + index * 0.05 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
                     >
@@ -636,7 +636,7 @@ export default function ServicesPage() {
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
+                    setSearchTerm(', ');
                     setSelectedCategory('All');
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
@@ -768,8 +768,8 @@ export default function ServicesPage() {
 
             {/* Enhanced CTA Section */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 1.2 }}
               className="text-center mt-24"
             >

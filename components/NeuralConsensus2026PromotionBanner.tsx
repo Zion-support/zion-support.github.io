@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 BrainZapTrendingUpUsersArrowRightXCheckCircleStar
 import Link from 'next/link';
 
@@ -21,13 +21,13 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('neural-consensus-banner-dismissed'true');
+    localStorage.setItem('neural-consensus-banner-'dismissed', 'true');
   };
 
   const handleLearnMore = () => {
     // Track banner interaction
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event'neural_consensus_banner_click'{
+      window.gtag(', 'event', 'neural_consensus_banner_click'{
         event_category: 'engagement',
         event_label: 'learn_more_clicked'
       });
@@ -40,9 +40,9 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white shadow-2xl"
         >

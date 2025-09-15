@@ -12,7 +12,7 @@ export default function AvatarDropdown() {
   return (
     <div className="relative">
       <button onClick={() => setOpen(o => !o)} className="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40">
-        {user.name.split(' ').map(n => n[0]).slice(0,2).join('')}
+        {user.name.split(' ').map(n => n[0]).slice(0,2).join(', ')}
       </button>
       {open && (
         <div className="absolute right-0 mt-2 w-44 rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-lg py-2 text-sm">

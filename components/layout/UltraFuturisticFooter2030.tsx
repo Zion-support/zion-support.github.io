@@ -19,46 +19,46 @@ const serviceCategories = [
   {
     title: '🚀 AI & Consciousness',
     services: [
-      { name: 'AI Consciousness Evolution'href: '/ai-consciousness-evolution-platform' },
-      { name: 'AI Emotional Intelligence'href: '/ai-emotion-intelligence-platform' },
-      { name: 'AI Creativity Orchestrator'href: '/ai-creativity-orchestrator' },
-      { name: 'AI Autonomous Business Manager'href: '/ai-autonomous-business-manager' }
+      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-platform' },
+      { name: 'AI Emotional 'Intelligence', 'href: '/ai-emotion-intelligence-platform' },
+      { name: 'AI Creativity 'Orchestrator', 'href: '/ai-creativity-orchestrator' },
+      { name: 'AI Autonomous Business 'Manager', 'href: '/ai-autonomous-business-manager' }
     ]
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
     services: [
-      { name: 'Quantum Internet Security'href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Learning Accelerator'href: '/quantum-learning-accelerator' },
-      { name: 'Quantum Financial Trading'href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Cloud Infrastructure'href: '/quantum-cloud-infrastructure' }
+      { name: 'Quantum Internet 'Security', 'href: '/quantum-internet-security-gateway' },
+      { name: 'Quantum Learning 'Accelerator', 'href: '/quantum-learning-accelerator' },
+      { name: 'Quantum Financial 'Trading', 'href: '/quantum-financial-trading-platform' },
+      { name: 'Quantum Cloud 'Infrastructure', 'href: '/quantum-cloud-infrastructure' }
     ]
   },
   {
     title: '🧬 Biotech & DNA Computing',
     services: [
-      { name: 'DNA Computing Platform'href: '/biotech-dna-computing-platform' },
-      { name: 'Personalized Nutrition'href: '/biotech-personalized-nutrition' },
-      { name: 'Predictive Health Analytics'href: '/ai-predictive-health-analytics' },
-      { name: 'Research Automation'href: '/advanced-research-automation' }
+      { name: 'DNA Computing 'Platform', 'href: '/biotech-dna-computing-platform' },
+      { name: 'Personalized 'Nutrition', 'href: '/biotech-personalized-nutrition' },
+      { name: 'Predictive Health 'Analytics', 'href: '/ai-predictive-health-analytics' },
+      { name: 'Research 'Automation', 'href: '/advanced-research-automation' }
     ]
   },
   {
     title: '🏙️ Enterprise IT Solutions',
     services: [
-      { name: 'Autonomous DevOps'href: '/autonomous-devops-platform' },
-      { name: 'Autonomous IT Operations'href: '/autonomous-it-operations-center' },
-      { name: 'AI Enterprise Security'href: '/ai-powered-enterprise-security' },
-      { name: 'Intelligent Data Governance'href: '/intelligent-data-governance' }
+      { name: 'Autonomous 'DevOps', 'href: '/autonomous-devops-platform' },
+      { name: 'Autonomous IT 'Operations', 'href: '/autonomous-it-operations-center' },
+      { name: 'AI Enterprise 'Security', 'href: '/ai-powered-enterprise-security' },
+      { name: 'Intelligent Data 'Governance', 'href: '/intelligent-data-governance' }
     ]
   },
   {
     title: '🌌 Space & Metaverse Tech',
     services: [
-      { name: 'Space Mining Automation'href: '/space-mining-automation-platform' },
-      { name: 'Metaverse Digital Reality'href: '/metaverse-digital-reality-platform' },
-      { name: 'Quantum Research Platform'href: '/quantum-research-platform' },
-      { name: 'AI Research Assistant'href: '/ai-research-assistant' }
+      { name: 'Space Mining 'Automation', 'href: '/space-mining-automation-platform' },
+      { name: 'Metaverse Digital 'Reality', 'href: '/metaverse-digital-reality-platform' },
+      { name: 'Quantum Research 'Platform', 'href: '/quantum-research-platform' },
+      { name: 'AI Research 'Assistant', 'href: '/ai-research-assistant' }
     ]
   },
   {
@@ -73,32 +73,32 @@ const serviceCategories = [
 ];
 
 const quickLinks = [
-  { name: 'Home'href: '/' },
-  { name: 'Services'href: '/services' },
-  { name: 'Solutions'href: '/solutions' },
-  { name: 'Pricing'href: '/pricing' },
-  { name: 'Resources'href: '/resources' },
-  { name: 'Case Studies'href: '/case-studies' },
-  { name: 'Blog'href: '/blog' },
-  { name: 'Contact'href: '/contact' }
+  { name: ''Home', 'href: '/' },
+  { name: ''Services', 'href: '/services' },
+  { name: ''Solutions', 'href: '/solutions' },
+  { name: ''Pricing', 'href: '/pricing' },
+  { name: ''Resources', 'href: '/resources' },
+  { name: 'Case 'Studies', 'href: '/case-studies' },
+  { name: ''Blog', 'href: '/blog' },
+  { name: ''Contact', 'href: '/contact' }
 ];
 
 const companyInfo = [
-  { name: 'About Us'href: '/about' },
-  { name: 'Careers'href: '/careers' },
-  { name: 'Press'href: '/press' },
-  { name: 'Partners'href: '/partners' },
-  { name: 'Support'href: '/support' },
-  { name: 'Status'href: '/status' }
+  { name: 'About 'Us', 'href: '/about' },
+  { name: ''Careers', 'href: '/careers' },
+  { name: ''Press', 'href: '/press' },
+  { name: ''Partners', 'href: '/partners' },
+  { name: ''Support', 'href: '/support' },
+  { name: ''Status', 'href: '/status' }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedin },
-  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twitter },
-  { name: 'Facebook'href: 'https://facebook.com/ziontechgroup'icon: Facebook },
-  { name: 'Instagram'href: 'https://instagram.com/ziontechgroup'icon: Instagram },
-  { name: 'YouTube'href: 'https://youtube.com/ziontechgroup'icon: Youtube },
-  { name: 'GitHub'href: 'https://github.com/ziontechgroup'icon: Github }
+  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedin },
+  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twitter },
+  { name: ''Facebook', 'href: 'https://facebook.com/'ziontechgroup', 'icon: Facebook },
+  { name: ''Instagram', 'href: 'https://instagram.com/'ziontechgroup', 'icon: Instagram },
+  { name: ''YouTube', 'href: 'https://youtube.com/'ziontechgroup', 'icon: Youtube },
+  { name: ''GitHub', 'href: 'https://github.com/'ziontechgroup', 'icon: Github }
 ];
 
 const certifications = [
@@ -168,7 +168,7 @@ export default function UltraFuturisticFooter2030() {
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <Globe className="w-4 h-4 text-purple-400" />
                   <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.website.replace('https://'')}
+                    {contactInfo.website.replace('https://', ')}
                   </a>
                 </div>
               </div>

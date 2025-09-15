@@ -26,7 +26,7 @@ export default function EnhancedButton({
 }: EnhancedButtonProps) {
   return (
     <button
-      className={clsx(baseStylesizeStyles[size]variantStyles[variant]fullWidth && 'w-full'className)}
+      className={clsx(baseStylesizeStyles[size]variantStyles[variant]fullWidth && 'w-'full', 'className)}
       {...props}
     />
   );

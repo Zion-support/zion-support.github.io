@@ -71,8 +71,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50scale: 0.9 }}
-      animate={{ opacity: 1y: 0scale: 1 }}
+      initial={{ opacity: 0, y: 50scale: 0.9 }}
+      animate={{ opacity: 1, y: 0scale: 1 }}
       transition={{
         duration: 0.6,
         delay: index * 0.1,

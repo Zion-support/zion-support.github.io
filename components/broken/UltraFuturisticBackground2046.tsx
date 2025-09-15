@@ -21,7 +21,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Particle class
     class Particle {
@@ -44,7 +44,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.life = Math.random() * 100;
         this.maxLife = 100;
         
-        const types = ['quantum'neural'data'energy'];
+        const types = [', 'quantum', 'neural', 'data', 'energy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
         
         switch (this.type) {
@@ -260,7 +260,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -22,7 +22,7 @@ const contentItems: ContentItem[] = [
     url: '/ai-trends-2025-2030',
     icon: '🔮',
     featured: true,
-    tags: ['quantum AI'neural interfaces'autonomous AI']
+    tags: ['quantum 'AI', 'neural 'interfaces', 'autonomous AI']
   },
   {
     id: 'quantum-computing-breakthroughs',
@@ -32,7 +32,7 @@ const contentItems: ContentItem[] = [
     url: '/quantum-computing-breakthroughs-2030',
     icon: '⚛️',
     featured: true,
-    tags: ['quantum AI'quantum cryptography'quantum simulation']
+    tags: ['quantum 'AI', 'quantum 'cryptography', 'quantum simulation']
   },
   {
     id: 'neural-interface-revolution',
@@ -42,7 +42,7 @@ const contentItems: ContentItem[] = [
     url: '/neural-interface-revolution-2030',
     icon: '🧠',
     featured: true,
-    tags: ['BCI'thought control'memory enhancement']
+    tags: [', 'BCI', 'thought 'control', 'memory enhancement']
   },
   {
     id: 'autonomous-business-ai',
@@ -52,7 +52,7 @@ const contentItems: ContentItem[] = [
     url: '/autonomous-business-ai',
     icon: '🤖',
     featured: false,
-    tags: ['autonomous AI'business automation'self-managing systems']
+    tags: ['autonomous 'AI', 'business 'automation', 'self-managing systems']
   },
   {
     id: 'emotional-ai-platform',
@@ -62,7 +62,7 @@ const contentItems: ContentItem[] = [
     url: '/emotional-ai-platform',
     icon: '💝',
     featured: false,
-    tags: ['emotional AI'empathy'human interaction']
+    tags: ['emotional 'AI', 'empathy'human interaction']
   },
   {
     id: 'synthetic-intelligence',
@@ -72,13 +72,13 @@ const contentItems: ContentItem[] = [
     url: '/synthetic-intelligence',
     icon: '🔬',
     featured: false,
-    tags: ['artificial consciousness'synthetic minds'AI creativity']
+    tags: ['artificial 'consciousness', 'synthetic 'minds', 'AI creativity']
   }
 ];
 
 export default function InteractiveContentDiscoveryWidget2030() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
-  const [searchTermsetSearchTerm] = useState<string>('');
+  const [searchTermsetSearchTerm] = useState<string>(', ');
   const [filteredContentsetFilteredContent] = useState<ContentItem[]>(contentItems);
 
   const categories = ['All'...Array.from(new Set(contentItems.map(item => item.category)))];
@@ -228,7 +228,7 @@ export default function InteractiveContentDiscoveryWidget2030() {
             </p>
             <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchTerm(', ');
                 setSelectedCategory('All');
               }}
               className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors"

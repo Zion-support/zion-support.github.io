@@ -186,11 +186,11 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
   }[makeRequest]);
 
   const post = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ urlmethod: 'POST'body...options });
+    return makeRequest<T>({ urlmethod: ''POST', 'body...options });
   }[makeRequest]);
 
   const put = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ urlmethod: 'PUT'body...options });
+    return makeRequest<T>({ urlmethod: ''PUT', 'body...options });
   }[makeRequest]);
 
   const del = useCallback(<T = any>(url: stringoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
@@ -198,7 +198,7 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
   }[makeRequest]);
 
   const patch = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ urlmethod: 'PATCH'body...options });
+    return makeRequest<T>({ urlmethod: ''PATCH', 'body...options });
   }[makeRequest]);
 
   const clearCache = useCallback(() => {

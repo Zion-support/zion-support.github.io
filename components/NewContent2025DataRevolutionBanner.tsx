@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const NewContent2025DataRevolutionBanner = () => {
@@ -63,7 +63,7 @@ const NewContent2025DataRevolutionBanner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('data-revolution-banner-dismissed'true');
+    localStorage.setItem('data-revolution-banner-'dismissed', 'true');
   };
 
   useEffect(() => {

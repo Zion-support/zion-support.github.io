@@ -5,13 +5,13 @@ import { TALENT_PROFILES } from '../../data/talent';
 type TalentSummary = { slug: string; summary: string };
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd()'data'talent_ai.json');
-  let generatedAt = '';
+  const file = path.join(process.cwd()', 'data', 'talent_ai.json');
+  let generatedAt = ', ';
   let summaries: TalentSummary[] = [];
   try {
-    const raw = fs.readFileSync(file'utf-8');
+    const raw = fs.readFileSync('file', 'utf-8');
     const json = JSON.parse(raw);
-    generatedAt = json.generatedAt || '';
+    generatedAt = json.generatedAt || ', ';
     summaries = json.summaries || [];
   } catch {}
   return { props: { generatedAtsummaries } };

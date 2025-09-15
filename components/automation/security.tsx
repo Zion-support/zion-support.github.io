@@ -14,8 +14,8 @@ type Props = { report: AuditReport };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd()'public'automation'security-audit.json');
-    const raw = fs.readFileSync(file'utf8');
+    const file = path.join(process.cwd()', 'public', 'automation'security-audit.json');
+    const raw = fs.readFileSync('file', 'utf8');
     const data = JSON.parse(raw);
     return { props: { report: data }revalidate: 86400 };
   } catch {

@@ -10,11 +10,11 @@ const UltimateContentDiscovery2025 = () => {
   const [selectedCategorysetSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: <BookOpen className="w-5 h-5" /> },
-    { id: 'ai'name: 'AI & Machine Learning'icon: <Zap className="w-5 h-5" /> },
-    { id: 'automation'name: 'Automation'icon: <TrendingUp className="w-5 h-5" /> },
-    { id: 'cloud'name: 'Cloud Computing'icon: <Users className="w-5 h-5" /> },
-    { id: 'quantum'name: 'Quantum Computing'icon: <Star className="w-5 h-5" /> }
+    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-5 h-5" /> },
+    { id: ''ai', 'name: 'AI & Machine 'Learning', 'icon: <Zap className="w-5 h-5" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <TrendingUp className="w-5 h-5" /> },
+    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: <Users className="w-5 h-5" /> },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <Star className="w-5 h-5" /> }
   ];
 
   const contentItems = [

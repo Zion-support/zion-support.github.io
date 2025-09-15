@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -40,7 +40,7 @@ const aiTools: AITool[] = [
     description: 'Advanced AI-powered code generation and debugging tool with real-time suggestions and error detection.',
     category: 'Development',
     icon: <Code className="w-8 h-8" />,
-    features: ['Code Generation'Bug Detection'Performance Optimization'Documentation'],
+    features: ['Code 'Generation', 'Bug 'Detection', 'Performance 'Optimization', 'Documentation'],
     pricing: '$29/month',
     rating: 4.9,
     isNew: true,
@@ -52,7 +52,7 @@ const aiTools: AITool[] = [
     description: 'Comprehensive business intelligence platform powered by advanced neural networks.',
     category: 'Analytics',
     icon: <BarChart3 className="w-8 h-8" />,
-    features: ['Predictive Analytics'Real-time Insights'Custom Dashboards'API Integration'],
+    features: ['Predictive 'Analytics', 'Real-time 'Insights', 'Custom 'Dashboards', 'API Integration'],
     pricing: '$49/month',
     rating: 4.8,
     isPopular: true
@@ -63,7 +63,7 @@ const aiTools: AITool[] = [
     description: 'Next-generation cybersecurity solution using quantum-resistant encryption algorithms.',
     category: 'Security',
     icon: <Shield className="w-8 h-8" />,
-    features: ['Quantum Encryption'Threat Detection'Zero Trust Architecture'Compliance'],
+    features: ['Quantum 'Encryption', 'Threat 'Detection', 'Zero Trust 'Architecture', 'Compliance'],
     pricing: '$99/month',
     rating: 4.9,
     isNew: true
@@ -74,7 +74,7 @@ const aiTools: AITool[] = [
     description: 'Multi-modal content creation tool for textimagesand video using cutting-edge AI models.',
     category: 'Content',
     icon: <FileText className="w-8 h-8" />,
-    features: ['Text Generation'Image Creation'Video Editing'SEO Optimization'],
+    features: ['Text 'Generation', 'Image 'Creation', 'Video 'Editing', 'SEO Optimization'],
     pricing: '$39/month',
     rating: 4.7
   },
@@ -84,7 +84,7 @@ const aiTools: AITool[] = [
     description: 'Semantic search solution with natural language processing and contextual understanding.',
     category: 'Search',
     icon: <Search className="w-8 h-8" />,
-    features: ['Natural Language'Contextual Results'Voice Search'Multi-language'],
+    features: ['Natural 'Language', 'Contextual 'Results', 'Voice 'Search', 'Multi-language'],
     pricing: '$19/month',
     rating: 4.6
   },
@@ -94,14 +94,14 @@ const aiTools: AITool[] = [
     description: 'Advanced conversational AI with emotional intelligence and multi-turn dialogue capabilities.',
     category: 'Communication',
     icon: <MessageSquare className="w-8 h-8" />,
-    features: ['Emotional AI'Multi-language'Voice Integration'Custom Training'],
+    features: ['Emotional 'AI', 'Multi-'language', 'Voice 'Integration', 'Custom Training'],
     pricing: '$25/month',
     rating: 4.8,
     isPopular: true
   }
 ];
 
-const categories = ['All'Development'Analytics'Security'Content'Search'Communication'];
+const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content', 'Search'Communication'];
 
 export default function AIToolsShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
@@ -121,8 +121,8 @@ export default function AIToolsShowcase2025() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -144,8 +144,8 @@ export default function AIToolsShowcase2025() {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -175,9 +175,9 @@ export default function AIToolsShowcase2025() {
             {filteredTools.map((toolindex) => (
               <motion.div
                 key={tool.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
                 onMouseEnter={() => setHoveredTool(tool.id)}
@@ -261,8 +261,8 @@ export default function AIToolsShowcase2025() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >

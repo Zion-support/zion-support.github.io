@@ -34,14 +34,14 @@ export default function URLShortenerPage() {
     };
     
     setShortenedUrls(prev => [newShortUrl...prev]);
-    setLongUrl('');
-    setCustomAlias('');
+    setLongUrl(', ');
+    setCustomAlias(', ');
     setIsShortening(false);
   };
 
   const generateRandomAlias = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
+    let result = ', ';
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }

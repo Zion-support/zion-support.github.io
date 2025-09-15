@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Settings
@@ -51,19 +51,19 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
   ];
 
   const stats = [
-    { value: '1,247'label: 'Content Items'icon: Database },
-    { value: '2.8M+'label: 'Total Views'icon: Eye },
-    { value: '156K+'label: 'Engagements'icon: Heart },
-    { value: '5.5%'label: 'Avg. Rate'icon: TrendingUp }
+    { value: '1,247'label: 'Content 'Items', 'icon: Database },
+    { value: '2.8M+'label: 'Total 'Views', 'icon: Eye },
+    { value: '156K+'label: ''Engagements', 'icon: Heart },
+    { value: '5.5%'label: 'Avg. 'Rate', 'icon: TrendingUp }
   ];
 
   const contentTypes = [
-    { icon: Globelabel: 'Blog Posts'count: '342'color: 'green' },
-    { icon: Targetlabel: 'Case Studies'count: '156'color: 'purple' },
-    { icon: Brainlabel: 'Tutorials'count: '289'color: 'orange' },
-    { icon: Cpulabel: 'Research'count: '123'color: 'cyan' },
-    { icon: Activitylabel: 'Videos'count: '89'color: 'red' },
-    { icon: Shieldlabel: 'Whitepapers'count: '78'color: 'indigo' }
+    { icon: Globelabel: 'Blog 'Posts', 'count: '342'color: 'green' },
+    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' },
+    { icon: Brainlabel: ''Tutorials', 'count: '289'color: 'orange' },
+    { icon: Cpulabel: ''Research', 'count: '123'color: 'cyan' },
+    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' },
+    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
   ];
 
   return (
@@ -80,7 +80,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
@@ -118,7 +118,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
 
         {/* Stats Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
@@ -136,7 +136,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
@@ -158,7 +158,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
 
         {/* Content Types Showcase */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
@@ -183,7 +183,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-12"

@@ -9,7 +9,7 @@ interface RevolutionaryContentPromotionBanner2025Props {
 
 export default function RevolutionaryContentPromotionBanner2025({ 
   variant = 'featured'
-  className = '' 
+  className = ', ' 
 }: RevolutionaryContentPromotionBanner2025Props) {
   const content = {
     featured: {

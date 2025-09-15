@@ -81,12 +81,12 @@ export default function ContactPage() {
   };
 
   const stats = [
-    { value: '500+'label: 'Micro SaaS Services'icon: <Zap className="w-6 h-6" />color: 'text-cyan-400' },
-    { value: '99.99%'label: 'Uptime Guarantee'icon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' },
-    { value: '30'label: 'Day Free Trials'icon: <Star className="w-6 h-6" />color: 'text-blue-400' },
-    { value: '24/7'label: 'AI Support'icon: <Brain className="w-6 h-6" />color: 'text-green-400' },
-    { value: '$1B+'label: 'Market Value'icon: <DollarSign className="w-6 h-6" />color: 'text-yellow-400' },
-    { value: '2500%+'label: 'Average ROI'icon: <TrendingUp className="w-6 h-6" />color: 'text-purple-400' }
+    { value: '500+'label: 'Micro SaaS 'Services', 'icon: <Zap className="w-6 h-6" />color: 'text-cyan-400' },
+    { value: '99.99%'label: 'Uptime 'Guarantee', 'icon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' },
+    { value: '30'label: 'Day Free 'Trials', 'icon: <Star className="w-6 h-6" />color: 'text-blue-400' },
+    { value: '24/7'label: 'AI 'Support', 'icon: <Brain className="w-6 h-6" />color: 'text-green-400' },
+    { value: '$1B+'label: 'Market 'Value', 'icon: <DollarSign className="w-6 h-6" />color: 'text-yellow-400' },
+    { value: '2500%+'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" />color: 'text-purple-400' }
   ];
 
   return (
@@ -107,13 +107,13 @@ export default function ContactPage() {
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-              Let's Transform Your Business
+              'Let', 's Transform Your Business
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Ready to leverage the power of AIquantum computingand cutting-edge technology? 
@@ -123,8 +123,8 @@ export default function ContactPage() {
 
           {/* Stats Grid */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
                     <p className="text-gray-300 mb-6">
-                      Your message has been sent successfully. We'll get back to you within 24 hours.
+                      Your message has been sent successfully. 'We', 'll get back to you within 24 hours.
                     </p>
                     <div className="text-sm text-gray-400">
                       <p>✓ Free consultation scheduled</p>
@@ -203,8 +203,8 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -228,8 +228,8 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Phone Contact */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -247,8 +247,8 @@ export default function ContactPage() {
 
               {/* Email Contact */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.1 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -266,8 +266,8 @@ export default function ContactPage() {
 
               {/* Address Contact */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.2 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -286,8 +286,8 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
@@ -297,7 +297,7 @@ export default function ContactPage() {
                   Start Your Transformation Journey
                 </h2>
                 <p className="text-xl text-gray-300">
-                  Tell us about your project and we'll connect you with the perfect revolutionary technology solution
+                  Tell us about your project and 'we', 'll connect you with the perfect revolutionary technology solution
                 </p>
               </div>
 
@@ -449,8 +449,8 @@ export default function ContactPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -467,8 +467,8 @@ export default function ContactPage() {
               {popularServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
@@ -520,8 +520,8 @@ export default function ContactPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -530,7 +530,7 @@ export default function ContactPage() {
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-                We're not just another technology company - we're your partners in building the future
+                'We', 're not just another technology company - 'we', 're your partners in building the future
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -539,7 +539,7 @@ export default function ContactPage() {
                     <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3>
-                  <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p>
+                  <p className="text-gray-300">Access to cutting-edge 2029 technology 'that', 's already operational and delivering results</p>
                 </div>
                 
                 <div className="text-center">

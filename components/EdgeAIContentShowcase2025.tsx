@@ -113,7 +113,7 @@ const EdgeAIContentShowcase2025 = () => {
     }
   ];
 
-  const categories = ['All'Technology'Success Story'Strategy'Calculator'Security'Applications'];
+  const categories = [', 'All', 'Technology'Success 'Story', 'Strategy', 'Calculator', 'Security'Applications'];
   const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredContent = selectedCategory === 'All' 

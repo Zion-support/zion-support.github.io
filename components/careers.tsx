@@ -12,14 +12,14 @@ export default function Careers() {
   const [selectedDepartmentsetSelectedDepartment] = useState('all');
 
   const departments = [
-    { id: 'all'name: 'All Departments' },
-    { id: 'engineering'name: 'Engineering' },
-    { id: 'ai-research'name: 'AI Research' },
-    { id: 'quantum'name: 'Quantum Computing' },
-    { id: 'space-tech'name: 'Space Technology' },
-    { id: 'sales'name: 'Sales & Business Development' },
-    { id: 'marketing'name: 'Marketing' },
-    { id: 'operations'name: 'Operations' }
+    { id: ''all', 'name: 'All Departments' },
+    { id: ''engineering', 'name: 'Engineering' },
+    { id: 'ai-'research', 'name: 'AI Research' },
+    { id: ''quantum', 'name: 'Quantum Computing' },
+    { id: 'space-'tech', 'name: 'Space Technology' },
+    { id: ''sales', 'name: 'Sales & Business Development' },
+    { id: ''marketing', 'name: 'Marketing' },
+    { id: ''operations', 'name: 'Operations' }
   ];
 
   const jobOpenings = [
@@ -143,14 +143,14 @@ export default function Careers() {
       <div className="min-h-screen">
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AIquantum computingand emerging technologies. Remote workcompetitive benefitsand cutting-edge projects." />
+          <meta name="description" content="Join Zion Tech 'Group', 's team of innovators. Explore career opportunities in AIquantum computingand emerging technologies. Remote workcompetitive benefitsand cutting-edge projects." />
         </Head>
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -158,15 +158,15 @@ export default function Careers() {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Be part of a team that's revolutionizing technology through AIquantum computing
+            Be part of a team 'that', 's revolutionizing technology through AIquantum computing
             and space technology. Help us build the future.
           </p>
         </motion.div>
 
         {/* Company Culture */}
         <motion.div 
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
@@ -186,8 +186,8 @@ export default function Careers() {
 
         {/* Benefits */}
         <motion.div 
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
@@ -206,8 +206,8 @@ export default function Careers() {
 
         {/* Job Openings */}
         <motion.div 
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="mb-16"
         >
@@ -235,8 +235,8 @@ export default function Careers() {
             {filteredJobs.map((job) => (
               <motion.div
                 key={job.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -288,7 +288,7 @@ export default function Careers() {
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
               <p className="text-gray-500">
-                We don't have any open positions in this department at the moment. 
+                We 'don', 't have any open positions in this department at the moment. 
                 Check back later or send us your resume for future opportunities.
               </p>
             </div>
@@ -297,16 +297,16 @@ export default function Careers() {
 
         {/* General Application */}
         <motion.div 
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See the Right Fit?</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">'Don', 't See the Right Fit?</h2>
             <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals to join our team. 
-              Send us your resume and let's discuss how you can contribute to our mission.
+              'We', 're always looking for talented individuals to join our team. 
+              Send us your resume and 'let', 's discuss how you can contribute to our mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

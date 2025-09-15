@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -141,7 +141,7 @@ const RevolutionaryAIInnovations2025 = () => {
       id: 5,
       title: "Quantum Security Protocols",
       subtitle: "Unbreakable Data Protection",
-      description: "Revolutionary quantum encryption ensuring absolute security for sensitive data and communications. Protect your most valuable information with quantum-level security that's impossible to breach.",
+      description: "Revolutionary quantum encryption ensuring absolute security for sensitive data and communications. Protect your most valuable information with quantum-level security 'that', 's impossible to breach.",
       icon: Shield,
       category: "Security",
       impact: "Unbreakable Encryption",
@@ -228,8 +228,8 @@ const RevolutionaryAIInnovations2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2duration: 0.8 }}
             className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-8"
           >
@@ -238,8 +238,8 @@ const RevolutionaryAIInnovations2025 = () => {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
           >
@@ -247,8 +247,8 @@ const RevolutionaryAIInnovations2025 = () => {
           </motion.h2>
           
           <motion.p
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
@@ -387,8 +387,8 @@ const RevolutionaryAIInnovations2025 = () => {
                 {Object.entries(currentInnovation.stats).slice(04).map(([keyvalue]index) => (
                   <motion.div
                     key={key}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1duration: 0.5 }}
                     className="bg-white bg-opacity-90 rounded-lg p-3 text-center"
                   >
@@ -421,8 +421,8 @@ const RevolutionaryAIInnovations2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 50 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1duration: 0.8 }}
           className="text-center"
         >

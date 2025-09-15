@@ -48,9 +48,9 @@ export default function PerformanceMonitor() {
 
     // Observe different types of performance entries
     try {
-      observer.observe({ entryTypes: ['paint'largest-contentful-paint'first-input'layout-shift'] });
+      observer.observe({ entryTypes: [', 'paint', 'largest-contentful-'paint', 'first-'input', 'layout-shift'] });
     } catch (e) {
-      // Fallback for browsers that don't support all entry types
+      // Fallback for browsers that 'don', 't support all entry types
       observer.observe({ entryTypes: ['paint'] });
     }
 
@@ -83,7 +83,7 @@ export default function PerformanceMonitor() {
       if (typeof gtag !== 'undefined') {
         Object.entries(metrics).forEach(([keyvalue]) => {
           if (value !== null) {
-            gtag('event'performance_metric'{
+            gtag(', 'event', 'performance_metric'{
               metric_name: key,
               metric_value: Math.round(value),
               event_category: 'Performance',
@@ -94,7 +94,7 @@ export default function PerformanceMonitor() {
     }
   }[metrics]);
 
-  // Don't render anything in production
+  // 'Don', 't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }

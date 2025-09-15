@@ -31,7 +31,7 @@ export default function GlobalSearchBar() {
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
-    fetch('/api/telemetry/search'{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ q: query }) }).catch(() => {});
+    fetch('/api/telemetry/search'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ q: query }) }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false);
   };
@@ -43,7 +43,7 @@ export default function GlobalSearchBar() {
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-      const transcript = e.results?.[0]?.[0]?.transcript || '';
+      const transcript = e.results?.[0]?.[0]?.transcript || ', ';
       if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript));
     };
     rec.start();

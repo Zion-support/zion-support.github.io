@@ -9,11 +9,11 @@ type ChatMessage = {
 };
 
 function generateSessionId(): string {
-  if (typeof window === 'undefined') return '';
+  if (typeof window === 'undefined') return ', ';
   const existing = window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
   const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  window.localStorage.setItem('zion_support_session_id'id);
+  window.localStorage.setItem(', 'zion_support_session_id', 'id);
   return id;
 }
 
@@ -24,7 +24,7 @@ export default function ChatWidget() {
   const [isLoadingsetIsLoading] = useState(false);
   const [failedIntentsetFailedIntents] = useState(0);
   const [showEscalationsetShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>('');
+  const sessionIdRef = useRef<string>(', ');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function ChatWidget() {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-        { role: 'assistant'content: 'Hi! How can I help you?'timestamp: Date.now() }]);
+        { role: ''assistant', 'content: 'Hi! How can I help you?'timestamp: Date.now() }]);
     }
   }[isOpenmessages.length]);
 
@@ -71,9 +71,9 @@ export default function ChatWidget() {
     const text = (messageText ?? input).trim();
     if (!text) return;
 
-    const newUserMessage: ChatMessage = { role: 'user'content: textimestamp: Date.now() };
+    const newUserMessage: ChatMessage = { role: ''user', 'content: textimestamp: Date.now() };
     setMessages((prev) => [...prevnewUserMessage]);
-    setInput('');
+    setInput(', ');
     setIsLoading(true);
     await logEvent('message/user'{ content: text });
 
@@ -109,7 +109,7 @@ export default function ChatWidget() {
     } catch (e) {
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant'content: 'Sorrysomething went wrong. Please try again or contact support.'timestamp: Date.now() }]);
+        { role: ''assistant', 'content: 'Sorrysomething went wrong. Please try again or contact support.'timestamp: Date.now() }]);
     } finally {
       setIsLoading(false);
     }

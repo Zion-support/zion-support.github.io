@@ -81,7 +81,7 @@ const NewContent2025UltimateBreakthroughPromotionBanner: React.FC = () => {
 
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Discover cutting-edge AI insights, interactive calculators, success stories, 
-              and exclusive content that's transforming businesses worldwide.
+              and exclusive content 'that', 's transforming businesses worldwide.
             </p>
 
             {/* Feature Grid */}

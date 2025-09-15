@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateBreakthrough2025Banner = () => {
@@ -68,7 +68,7 @@ const UltimateBreakthrough2025Banner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ultimateBreakthrough2025BannerDismissed'true');
+    localStorage.setItem(', 'ultimateBreakthrough2025BannerDismissed', 'true');
   };
 
   useEffect(() => {

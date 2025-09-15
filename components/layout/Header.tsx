@@ -4,12 +4,12 @@ import Button from '../ui/Button';
 
 const Header: React.FC = () => {
   const navigation = [
-    { name: 'About'href: '/about' },
-    { name: 'Services'href: '/services' },
-    { name: 'Resources'href: '/resources' },
-    { name: 'Case Studies'href: '/case-studies' },
-    { name: 'Blog'href: '/blog' },
-    { name: 'Contact'href: '/contact' }];
+    { name: ''About', 'href: '/about' },
+    { name: ''Services', 'href: '/services' },
+    { name: ''Resources', 'href: '/resources' },
+    { name: 'Case 'Studies', 'href: '/case-studies' },
+    { name: ''Blog', 'href: '/blog' },
+    { name: ''Contact', 'href: '/contact' }];
 
   return (
     <header className="bg-white/5 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">

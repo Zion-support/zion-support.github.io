@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 BellZapTrendingUpUsersAwardGlobeArrowRightClock
 import Link from 'next/link';
@@ -50,7 +50,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"
@@ -84,8 +84,8 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
             {/* Animated Announcement */}
             <motion.div
               key={currentAnnouncement}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 mb-6"
             >
@@ -109,7 +109,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.6duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -28,10 +28,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
   }[]);
 
   const solutions = [
-    { icon: Braintitle: 'Enterprise AI'color: 'from-blue-500 to-purple-500' },
-    { icon: Rocketitle: 'Quantum AI'color: 'from-purple-500 to-pink-500' },
-    { icon: Zaptitle: 'Automation'color: 'from-green-500 to-blue-500' },
-    { icon: Shieldtitle: 'Security AI'color: 'from-red-500 to-orange-500' }
+    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-500 to-purple-500' },
+    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Zaptitle: ''Automation', 'color: 'from-green-500 to-blue-500' },
+    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-500 to-orange-500' }
   ];
 
   const benefits = [
@@ -68,8 +68,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
             >
               {/* Badge */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.2 }}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
@@ -79,8 +79,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
               {/* Main Heading */}
               <motion.h2
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
               >
@@ -94,8 +94,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
               {/* Description */}
               <motion.p
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.4 }}
                 className="text-xl text-gray-300 leading-relaxed"
               >
@@ -105,8 +105,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
               {/* Solutions Grid */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.5 }}
                 className="grid grid-cols-2 gap-4"
               >
@@ -122,8 +122,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
               {/* Benefits */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.6 }}
                 className="space-y-3"
               >
@@ -137,8 +137,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4"
               >

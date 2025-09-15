@@ -31,21 +31,21 @@ const pricingPlans = [
     name: 'Starter',
     price: 199,
     period: 'month',
-    features: ['Basic algorithms'5 asset classes'Daily rebalancing'Standard support'],
+    features: ['Basic algorithms'5 asset 'classes', 'Daily 'rebalancing', 'Standard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 499,
     period: 'month',
-    features: ['Advanced algorithms'All asset classes'Real-time rebalancing'Custom strategies'Priority support'],
+    features: ['Advanced 'algorithms', 'All asset 'classes', 'Real-time 'rebalancing', 'Custom 'strategies', 'Priority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1299,
     period: 'month',
-    features: ['Quantum algorithms'White-label solution'API access'Dedicated support'Custom integrations'],
+    features: ['Quantum 'algorithms', 'White-label 'solution', 'API 'access', 'Dedicated 'support', 'Custom integrations'],
     popular: false
   }
 ];
@@ -75,8 +75,8 @@ export default function QuantumTradingAlgorithm() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -98,8 +98,8 @@ export default function QuantumTradingAlgorithm() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
@@ -125,8 +125,8 @@ export default function QuantumTradingAlgorithm() {
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -143,8 +143,8 @@ export default function QuantumTradingAlgorithm() {
             {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300"
@@ -163,8 +163,8 @@ export default function QuantumTradingAlgorithm() {
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -181,8 +181,8 @@ export default function QuantumTradingAlgorithm() {
             {pricingPlans.map((planindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${
@@ -229,8 +229,8 @@ export default function QuantumTradingAlgorithm() {
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -245,8 +245,8 @@ export default function QuantumTradingAlgorithm() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.1 }}
               viewport={{ once: true }}
               className="text-center"
@@ -259,8 +259,8 @@ export default function QuantumTradingAlgorithm() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center"
@@ -273,8 +273,8 @@ export default function QuantumTradingAlgorithm() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.3 }}
               viewport={{ once: true }}
               className="text-center"

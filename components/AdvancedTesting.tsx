@@ -179,7 +179,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
       },
     ];
 
-    await runTestSuite('Performance Tests'tests);
+    await runTestSuite('Performance 'Tests', 'tests);
   }[runTestSuite]);
 
   // Accessibility Tests
@@ -224,7 +224,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
             const color = styles.color;
             const backgroundColor = styles.backgroundColor;
             
-            // This is a simplified check - in real implementationyou'd use a proper contrast ratio calculator
+            // This is a simplified check - in real 'implementationyou', 'd use a proper contrast ratio calculator
             if (color && backgroundColor && color !== backgroundColor) {
               hasGoodContrast = true;
             }
@@ -236,7 +236,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
       },
     ];
 
-    await runTestSuite('Accessibility Tests'tests);
+    await runTestSuite('Accessibility 'Tests', 'tests);
   }[runTestSuite]);
 
   // Integration Tests
@@ -274,7 +274,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
       },
     ];
 
-    await runTestSuite('Integration Tests'tests);
+    await runTestSuite('Integration 'Tests', 'tests);
   }[runTestSuite]);
 
   // Unit Tests
@@ -306,7 +306,7 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
       },
     ];
 
-    await runTestSuite('Unit Tests'tests);
+    await runTestSuite('Unit 'Tests', 'tests);
   }[runTestSuite]);
 
   // Run all tests
@@ -351,10 +351,10 @@ const AdvancedTesting: React.FC<{ children: React.ReactNode }> = ({ children }) 
     };
 
     // Listen for route changes (this would need to be adapted based on your routing solution)
-    window.addEventListener('popstate'handleRouteChange);
+    window.addEventListener(', 'popstate', 'handleRouteChange);
     
     return () => {
-      window.removeEventListener('popstate'handleRouteChange);
+      window.removeEventListener(', 'popstate', 'handleRouteChange);
     };
   }[configrunAllTests]);
 

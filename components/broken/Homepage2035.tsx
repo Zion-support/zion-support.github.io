@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
   Loader2ChevronDownZapGlobeTargetLightbulbCodeDatabase,
@@ -47,8 +47,8 @@ const Homepage2035: React.FC = () => {
   }[]);
 
   const fadeInUp = {
-    initial: { opacity: 0y: 60 },
-    animate: { opacity: 1y: 0 },
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6ease: "easeOut" }
   };
 
@@ -71,14 +71,14 @@ const Homepage2035: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: <Globe className="w-5 h-5" /> },
-    { id: 'ai'name: 'AI & ML'icon: <Brain className="w-5 h-5" /> },
-    { id: 'it'name: 'IT Enterprise'icon: <Cpu className="w-5 h-5" /> },
-    { id: 'quantum'name: 'Quantum Tech'icon: <Atom className="w-5 h-5" /> },
-    { id: 'space'name: 'Space Tech'icon: <Satellite className="w-5 h-5" /> },
-    { id: 'cyber'name: 'Cybersecurity'icon: <Shield className="w-5 h-5" /> },
-    { id: 'cloud'name: 'Cloud & DevOps'icon: <Cloud className="w-5 h-5" /> },
-    { id: 'fintech'name: 'FinTech'icon: <ChartBar className="w-5 h-5" /> }
+    { id: ''all', 'name: 'All 'Services', 'icon: <Globe className="w-5 h-5" /> },
+    { id: ''ai', 'name: 'AI & 'ML', 'icon: <Brain className="w-5 h-5" /> },
+    { id: ''it', 'name: 'IT 'Enterprise', 'icon: <Cpu className="w-5 h-5" /> },
+    { id: ''quantum', 'name: 'Quantum 'Tech', 'icon: <Atom className="w-5 h-5" /> },
+    { id: ''space', 'name: 'Space 'Tech', 'icon: <Satellite className="w-5 h-5" /> },
+    { id: ''cyber', 'name: ''Cybersecurity', 'icon: <Shield className="w-5 h-5" /> },
+    { id: ''cloud', 'name: 'Cloud & 'DevOps', 'icon: <Cloud className="w-5 h-5" /> },
+    { id: ''fintech', 'name: ''FinTech', 'icon: <ChartBar className="w-5 h-5" /> }
   ];
 
   const allServices = [
@@ -111,8 +111,8 @@ const Homepage2035: React.FC = () => {
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
@@ -146,8 +146,8 @@ const Homepage2035: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
@@ -177,8 +177,8 @@ const Homepage2035: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -193,8 +193,8 @@ const Homepage2035: React.FC = () => {
 
             {/* Category Filter */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -238,8 +238,8 @@ const Homepage2035: React.FC = () => {
 
             {/* View All Services Button */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.4 }}
               viewport={{ once: true }}
               className="text-center mt-16"
@@ -260,8 +260,8 @@ const Homepage2035: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -309,8 +309,8 @@ const Homepage2035: React.FC = () => {
               ].map((featureindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
@@ -330,8 +330,8 @@ const Homepage2035: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

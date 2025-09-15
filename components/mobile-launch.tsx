@@ -68,7 +68,7 @@ function SmartBanner({ iosUrlandroidUrldeepLink }: { iosUrl: string; androidUrl:
     if (typeof window === 'undefined') return;
     const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
     if (dismissed) return;
-    const ua = navigator.userAgent || '';
+    const ua = navigator.userAgent || ', ';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobile) setVisible(true);
   }[]);
@@ -107,12 +107,12 @@ const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.c
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
 
-const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
+const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || ', ';
 
 const testimonials = [
-  { name: 'Priya K.'role: 'Startup Founder'quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.'role: 'CTO'quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.'role: 'Project Lead'quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }];
+  { name: 'Priya K.'role: 'Startup 'Founder', 'quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.'role: ''CTO', 'quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.'role: 'Project 'Lead', 'quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }];
 
 export default function MobileLaunchPage() {
   const [emailsetEmail] = useState('');
@@ -135,12 +135,12 @@ export default function MobileLaunchPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus('loading');
-    setError('');
+    setError(', ');
     try {
-      const res = await fetch('/api/subscribe'{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ email }) });
+      const res = await fetch('/api/subscribe'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ email }) });
       if (!res.ok) throw new Error(await res.text());
       setStatus('success');
-      setEmail('');
+      setEmail(', ');
     } catch (err: any) {
       setStatus('error');
       setError(err?.message || 'Something went wrong.');

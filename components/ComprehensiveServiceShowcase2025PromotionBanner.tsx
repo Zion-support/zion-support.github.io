@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -91,7 +91,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
@@ -138,8 +138,8 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
             {/* Service Categories */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="space-y-4"
             >
@@ -169,8 +169,8 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
             {/* Key Benefits */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
               className="space-y-3"
             >
@@ -192,8 +192,8 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -289,8 +289,8 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                 {stats.map((statindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                     className="bg-white/5 rounded-lg p-4 text-center"
                   >

@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -46,12 +46,12 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
   }[]);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: Gridcount: 156 },
+    { id: ''all', 'name: 'All 'Content', 'icon: Gridcount: 156 },
     { id: 'ai-2025'name: 'AI 2025'icon: Braincount: 42 },
     { id: 'ai-2026'name: 'AI 2026'icon: Cpucount: 38 },
-    { id: 'quantum'name: 'Quantum Computing'icon: Zapcount: 24 },
-    { id: 'automation'name: 'Automation'icon: Targetcount: 32 },
-    { id: 'future-tech'name: 'Future Tech'icon: Rocketcount: 20 }
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Zapcount: 24 },
+    { id: ''automation', 'name: ''Automation', 'icon: Targetcount: 32 },
+    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcount: 20 }
   ];
 
   const contentItems = [
@@ -70,7 +70,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       image: '/api/placeholder/400/250',
       author: 'Dr. Sarah Chen',
       publishedAt: '2025-01-15',
-      tags: ['AI'Consciousness'Neural Networks'Future Tech']
+      tags: [', 'AI', 'Consciousness'Neural 'Networks', 'Future Tech']
     },
     {
       id: 2,
@@ -87,7 +87,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       image: '/api/placeholder/400/250',
       author: 'Prof. Michael Rodriguez',
       publishedAt: '2025-01-12',
-      tags: ['Quantum Computing'Neural Networks'AI'Technology']
+      tags: ['Quantum 'Computing', 'Neural 'Networks', 'AI'Technology']
     },
     {
       id: 3,
@@ -104,7 +104,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       image: '/api/placeholder/400/250',
       author: 'AI Research Team',
       publishedAt: '2025-01-10',
-      tags: ['AI 2026'Global Ecosystem'Future Vision'Technology']
+      tags: ['AI 2026'Global 'Ecosystem', 'Future 'Vision', 'Technology']
     },
     {
       id: 4,
@@ -121,7 +121,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       image: '/api/placeholder/400/250',
       author: 'Business AI Team',
       publishedAt: '2025-01-08',
-      tags: ['Automation'Business'AI'Operations']
+      tags: [', 'Automation', 'Business', 'AI', 'Operations']
     },
     {
       id: 5,
@@ -138,7 +138,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       image: '/api/placeholder/400/250',
       author: 'Space Tech Division',
       publishedAt: '2025-01-05',
-      tags: ['Space'AI'Computing'Future Tech']
+      tags: [', 'Space', 'AI', 'Computing', 'Future Tech']
     },
     {
       id: 6,
@@ -155,7 +155,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       image: '/api/placeholder/400/250',
       author: 'Consciousness Research Lab',
       publishedAt: '2025-01-03',
-      tags: ['Consciousness'AI'Future'Philosophy']
+      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy']
     }
   ];
 
@@ -198,8 +198,8 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0y: -20 }}
-        animate={isVisible ? { opacity: 1y: 0 } : {}}
+        initial={{ opacity: 0, y: -20 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
         className="mb-8"
       >
@@ -213,8 +213,8 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
 
       {/* Search and Filters */}
       <motion.div
-        initial={{ opacity: 0y: 20 }}
-        animate={isVisible ? { opacity: 1y: 0 } : {}}
+        initial={{ opacity: 0, y: 20 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6delay: 0.2 }}
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
       >
@@ -302,9 +302,9 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             return (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 group cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
@@ -465,7 +465,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
           >
             <motion.div
               initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
+              animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}

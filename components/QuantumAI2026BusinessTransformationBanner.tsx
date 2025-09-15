@@ -52,7 +52,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Perfect Optimization</h3>
             <p className="text-gray-300 text-sm">
-              QAOA and Grover's algorithms for portfolio optimizationsupply chainand resource allocation.
+              QAOA and 'Grover', 's algorithms for portfolio optimizationsupply chainand resource allocation.
             </p>
           </div>
           
@@ -165,7 +165,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Prepare for the Quantum AI Revolution</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Don't get left behind in the quantum computing era. Start your quantum AI transformation journey today 
+              'Don', 't get left behind in the quantum computing era. Start your quantum AI transformation journey today 
               with expert guidance from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

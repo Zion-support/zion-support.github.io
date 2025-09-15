@@ -9,17 +9,17 @@ import {
 
 export default function UltraFuturisticHero2028() {
   const features = [
-    { icon: Braintext: 'AI Consciousness Evolution'color: 'from-emerald-500 to-teal-500' },
-    { icon: Atomtext: 'Quantum Time Manipulation'color: 'from-violet-500 to-purple-500' },
-    { icon: Rocketext: 'Space Debris Management'color: 'from-blue-500 to-cyan-500' },
-    { icon: Shieldtext: 'Quantum Internet Security'color: 'from-red-500 to-orange-500' }
+    { icon: Braintext: 'AI Consciousness 'Evolution', 'color: 'from-emerald-500 to-teal-500' },
+    { icon: Atomtext: 'Quantum Time 'Manipulation', 'color: 'from-violet-500 to-purple-500' },
+    { icon: Rocketext: 'Space Debris 'Management', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: Shieldtext: 'Quantum Internet 'Security', 'color: 'from-red-500 to-orange-500' }
   ];
 
   const stats = [
-    { value: '50+'label: 'Cutting-Edge Services'icon: Rocket },
-    { value: '25+'label: 'AI Solutions'icon: Brain },
-    { value: '15+'label: 'Quantum Technologies'icon: Atom },
-    { value: '1000+'label: 'Happy Clients'icon: Users }
+    { value: '50+'label: 'Cutting-Edge 'Services', 'icon: Rocket },
+    { value: '25+'label: 'AI 'Solutions', 'icon: Brain },
+    { value: '15+'label: 'Quantum 'Technologies', 'icon: Atom },
+    { value: '1000+'label: 'Happy 'Clients', 'icon: Users }
   ];
 
   return (
@@ -59,8 +59,8 @@ export default function UltraFuturisticHero2028() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
@@ -73,8 +73,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Main Heading */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-8"
         >
@@ -93,14 +93,14 @@ export default function UltraFuturisticHero2028() {
           
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
             Experience revolutionary 2028 technology with AI Consciousness EvolutionQuantum Time Manipulation
-            and Autonomous AI Civilization. We're building tomorrow's solutions today.
+            and Autonomous AI Civilization. 'We', 're building 'tomorrow', 's solutions today.
           </p>
         </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
@@ -125,8 +125,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
@@ -154,8 +154,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="mb-16"
         >
@@ -184,8 +184,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 1.4 }}
           className="mb-16"
         >
@@ -204,8 +204,8 @@ export default function UltraFuturisticHero2028() {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 1.6 }}
           className="text-center"
         >

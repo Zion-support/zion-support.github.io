@@ -20,7 +20,7 @@ const DataRevolutionContentShowcase2025 = () => {
       },
       url: '/blog/ai-2025-enterprise-data-revolution-ultimate-guide',
       featured: true,
-      tags: ['AI'Enterprise Data'ROI'Data Transformation'Business Intelligence']
+      tags: [', 'AI', 'Enterprise 'Data', 'ROI'Data 'Transformation', 'Business Intelligence']
     },
     {
       id: 'fortune-500-case-study',
@@ -37,7 +37,7 @@ const DataRevolutionContentShowcase2025 = () => {
       },
       url: '/case-studies/fortune-500-data-transformation-500-roi-success',
       featured: true,
-      tags: ['Case Study'Fortune 500'Data Transformation'ROI'Manufacturing']
+      tags: ['Case 'Study', 'Fortune 500'Data 'Transformation', 'ROI'Manufacturing']
     },
     {
       id: 'implementation-guide',
@@ -54,15 +54,15 @@ const DataRevolutionContentShowcase2025 = () => {
       },
       url: '/resources/ai-data-transformation-implementation-guide-2025',
       featured: true,
-      tags: ['Implementation Guide'AI Data Transformation'Strategy'ROI'Best Practices']
+      tags: ['Implementation 'Guide', 'AI Data 'Transformation', 'Strategy', 'ROI', 'Best Practices']
     }
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: contentItems.length },
-    { id: 'guides'name: 'Implementation Guides'count: contentItems.filter(item => item.category === 'guides').length },
-    { id: 'case-studies'name: 'Success Stories'count: contentItems.filter(item => item.category === 'case-studies').length },
-    { id: 'resources'name: 'Resources & Tools'count: contentItems.filter(item => item.category === 'resources').length }
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
+    { id: ''guides', 'name: 'Implementation 'Guides', 'count: contentItems.filter(item => item.category === 'guides').length },
+    { id: 'case-'studies', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'case-studies').length },
+    { id: ''resources', 'name: 'Resources & 'Tools', 'count: contentItems.filter(item => item.category === 'resources').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

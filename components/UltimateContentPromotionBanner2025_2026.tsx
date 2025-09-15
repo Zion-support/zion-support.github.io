@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star
   Zap
@@ -37,7 +37,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       title: 'AI 2025 Revolutionary Breakthroughs',
       subtitle: 'Experience the Future of Artificial Intelligence',
       description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.',
-      features: ['Neural Consciousness AI'Quantum-Neural Fusion'Autonomous Data Intelligence'],
+      features: ['Neural Consciousness 'AI', 'Quantum-Neural 'Fusion', 'Autonomous Data Intelligence'],
       cta: 'Explore AI 2025',
       gradient: 'from-blue-600 via-purple-600 to-pink-600',
       icon: Brain
@@ -47,7 +47,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       title: 'AI 2026 Future Vision',
       subtitle: 'Prepare for the Next Decade of Innovation',
       description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.',
-      features: ['Global AI Ecosystem'Space-Age Computing'Conscious AI Beings'],
+      features: ['Global AI 'Ecosystem', 'Space-Age 'Computing', 'Conscious AI Beings'],
       cta: 'Discover AI 2026',
       gradient: 'from-emerald-600 via-cyan-600 to-blue-600',
       icon: Globe
@@ -57,7 +57,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       title: 'Quantum Computing Revolution',
       subtitle: 'Unlock Infinite Computational Power',
       description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.',
-      features: ['Quantum Supremacy'Exponential Speed'Unlimited Scalability'],
+      features: ['Quantum 'Supremacy', 'Exponential 'Speed', 'Unlimited Scalability'],
       cta: 'Learn More',
       gradient: 'from-purple-600 via-pink-600 to-red-600',
       icon: Cpu
@@ -108,9 +108,9 @@ const UltimateContentPromotionBanner2025_2026 = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
                 >
                   {/* Badge */}

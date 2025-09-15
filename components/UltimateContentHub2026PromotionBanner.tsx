@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Grid
@@ -75,7 +75,7 @@ const UltimateContentHub2026PromotionBanner = () => {
       author: 'Dr. Sarah Chen',
       views: '15.4K',
       likes: 892,
-      tags: ['AI'Machine Learning'Innovation']
+      tags: [', 'AI', 'Machine 'Learning', 'Innovation']
     },
     {
       title: 'Quantum Computing: The Future is Now',
@@ -83,7 +83,7 @@ const UltimateContentHub2026PromotionBanner = () => {
       author: 'Prof. Michael Rodriguez',
       views: '8.9K',
       likes: 567,
-      tags: ['Quantum Computing'Physics'Technology']
+      tags: ['Quantum 'Computing', 'Physics'Technology']
     },
     {
       title: 'Smart Automation Implementation Guide',
@@ -91,17 +91,17 @@ const UltimateContentHub2026PromotionBanner = () => {
       author: 'Alex Thompson',
       views: '6.8K',
       likes: 423,
-      tags: ['Automation'Implementation'Guide']
+      tags: [', 'Automation', 'Implementation'Guide']
     }
   ];
 
   const contentTypes = [
-    { icon: FileTextlabel: 'Articles'count: '456'color: 'text-blue-400' },
-    { icon: Videolabel: 'Videos'count: '234'color: 'text-red-400' },
-    { icon: GraduationCaplabel: 'Tutorials'count: '189'color: 'text-green-400' },
-    { icon: Briefcaselabel: 'Case Studies'count: '156'color: 'text-purple-400' },
-    { icon: BookOpenlabel: 'Whitepapers'count: '98'color: 'text-orange-400' },
-    { icon: Calendarlabel: 'Webinars'count: '67'color: 'text-pink-400' }
+    { icon: FileTextlabel: ''Articles', 'count: '456'color: 'text-blue-400' },
+    { icon: Videolabel: ''Videos', 'count: '234'color: 'text-red-400' },
+    { icon: GraduationCaplabel: ''Tutorials', 'count: '189'color: 'text-green-400' },
+    { icon: Briefcaselabel: 'Case 'Studies', 'count: '156'color: 'text-purple-400' },
+    { icon: BookOpenlabel: ''Whitepapers', 'count: '98'color: 'text-orange-400' },
+    { icon: Calendarlabel: ''Webinars', 'count: '67'color: 'text-pink-400' }
   ];
 
   const getTypeIcon = (type) => {
@@ -117,9 +117,9 @@ const UltimateContentHub2026PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-purple-900 text-white overflow-hidden"
         >
@@ -149,8 +149,8 @@ const UltimateContentHub2026PromotionBanner = () => {
                 </motion.div>
 
                 <motion.h2
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.3 }}
                   className="text-3xl md:text-4xl font-bold mb-4"
                 >
@@ -158,8 +158,8 @@ const UltimateContentHub2026PromotionBanner = () => {
                 </motion.h2>
 
                 <motion.p
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.4 }}
                   className="text-lg md:text-xl opacity-90 mb-6"
                 >
@@ -168,8 +168,8 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                 {/* Content Types */}
                 <motion.div
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.5 }}
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
                 >
@@ -184,8 +184,8 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                 {/* Stats */}
                 <motion.div
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.6 }}
                   className="flex flex-wrap items-center gap-6 text-sm mb-6"
                 >
@@ -205,8 +205,8 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                 {/* CTA Buttons */}
                 <motion.div
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-4"
                 >
@@ -241,9 +241,9 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activePreview}
-                      initial={{ opacity: 0y: 10 }}
-                      animate={{ opacity: 1y: 0 }}
-                      exit={{ opacity: 0y: -10 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.5 }}
                       className="space-y-4"
                     >
@@ -316,8 +316,8 @@ const UltimateContentHub2026PromotionBanner = () => {
 
             {/* Bottom Features */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.9 }}
               className="mt-12 pt-6 border-t border-white/20"
             >

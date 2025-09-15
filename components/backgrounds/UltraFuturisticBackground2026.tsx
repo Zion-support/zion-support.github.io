@@ -9,7 +9,7 @@ interface UltraFuturisticBackground2026Props {
 
 const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({ 
   children
-  className = '' 
+  className = ', ' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -178,12 +178,12 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
     initParticles();
     animate();
 
     return () => {
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

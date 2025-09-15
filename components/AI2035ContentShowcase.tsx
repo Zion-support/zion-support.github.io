@@ -77,7 +77,7 @@ const AI2035ContentShowcase: React.FC = () => {
       readTime: '15 min read',
       trending: true,
       href: '/ai-2035-future-predictions',
-      features: ['Quantum AI Revolution'Neural Interfaces'Autonomous Systems'AI Safety']
+      features: ['Quantum AI 'Revolution', 'Neural 'Interfaces', 'Autonomous 'Systems', 'AI Safety']
     },
     {
       title: 'AI Implementation Mastery 2035',
@@ -87,7 +87,7 @@ const AI2035ContentShowcase: React.FC = () => {
       readTime: '12 months',
       trending: true,
       href: '/ai-implementation-mastery-2035',
-      features: ['Quantum AI Implementation'Neural Interface Development'Autonomous Systems'AI Safety & Governance']
+      features: ['Quantum AI 'Implementation', 'Neural Interface 'Development', 'Autonomous 'Systems', 'AI Safety & Governance']
     }
   ];
 

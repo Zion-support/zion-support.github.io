@@ -33,7 +33,7 @@ export default function InteractiveStats() {
   );
 }
 
-function Stat({ labelvaluesuffix = '' }: { label: string; value: number; suffix?: string }) {
+function Stat({ labelvaluesuffix = ', ' }: { label: string; value: number; suffix?: string }) {
   return (
     <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
       <div className="text-3xl font-bold">{value}{suffix}</div>

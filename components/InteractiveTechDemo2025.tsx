@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -72,10 +72,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       features: [
-        { name: 'Neural Pattern Recognition'value: 99.7unit: '%' },
-        { name: 'Consciousness Index'value: 8.9unit: '/10' },
-        { name: 'Learning Rate'value: 0.95unit: 'α' },
-        { name: 'Memory Retention'value: 99.9unit: '%' }
+        { name: 'Neural Pattern 'Recognition', 'value: 99.7unit: '%' },
+        { name: 'Consciousness 'Index', 'value: 8.9unit: '/10' },
+        { name: 'Learning 'Rate', 'value: 0.95unit: 'α' },
+        { name: 'Memory 'Retention', 'value: 99.9unit: '%' }
       ],
       visualization: 'neural-network'
     },
@@ -85,10 +85,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       features: [
-        { name: 'Qubit Coherence'value: 99.8unit: '%' },
-        { name: 'Processing Speed'value: 1000unit: 'x' },
-        { name: 'Error Rate'value: 0.001unit: '%' },
-        { name: 'Quantum Volume'value: 64unit: 'QV' }
+        { name: 'Qubit 'Coherence', 'value: 99.8unit: '%' },
+        { name: 'Processing 'Speed', 'value: 1000unit: 'x' },
+        { name: 'Error 'Rate', 'value: 0.001unit: '%' },
+        { name: 'Quantum 'Volume', 'value: 64unit: 'QV' }
       ],
       visualization: 'quantum-circuit'
     },
@@ -98,10 +98,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Cpu,
       color: 'from-green-500 to-teal-500',
       features: [
-        { name: 'Signal Accuracy'value: 99.9unit: '%' },
-        { name: 'Response Time'value: 12unit: 'ms' },
-        { name: 'Bandwidth'value: 1.2unit: 'Gbps' },
-        { name: 'Neural Channels'value: 1024unit: 'ch' }
+        { name: 'Signal 'Accuracy', 'value: 99.9unit: '%' },
+        { name: 'Response 'Time', 'value: 12unit: 'ms' },
+        { name: ''Bandwidth', 'value: 1.2unit: 'Gbps' },
+        { name: 'Neural 'Channels', 'value: 1024unit: 'ch' }
       ],
       visualization: 'neural-signals'
     },
@@ -111,10 +111,10 @@ const InteractiveTechDemo2025 = () => {
       icon: Network,
       color: 'from-blue-500 to-cyan-500',
       features: [
-        { name: 'Latency Reduction'value: 95unit: '%' },
-        { name: 'Processing Nodes'value: 10000unit: '+' },
-        { name: 'Data Throughput'value: 50unit: 'TB/s' },
-        { name: 'Energy Efficiency'value: 85unit: '%' }
+        { name: 'Latency 'Reduction', 'value: 95unit: '%' },
+        { name: 'Processing 'Nodes', 'value: 10000unit: '+' },
+        { name: 'Data 'Throughput', 'value: 50unit: 'TB/s' },
+        { name: 'Energy 'Efficiency', 'value: 85unit: '%' }
       ],
       visualization: 'edge-network'
     }
@@ -145,7 +145,7 @@ const InteractiveTechDemo2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -161,8 +161,8 @@ const InteractiveTechDemo2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: -30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -189,8 +189,8 @@ const InteractiveTechDemo2025 = () => {
 
         {/* Demo Selector */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -435,8 +435,8 @@ const InteractiveTechDemo2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >

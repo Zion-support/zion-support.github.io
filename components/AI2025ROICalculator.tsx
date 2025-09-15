@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function AI2025ROICalculator() {
   const [currentRevenuesetCurrentRevenue] = useState(1000000);

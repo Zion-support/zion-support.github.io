@@ -71,21 +71,21 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
     trackPageView();
     
     // Set up event listeners
-    window.addEventListener('scroll'trackScrollDepth{ passive: true });
-    document.addEventListener('click'trackClicks);
+    window.addEventListener(', 'scroll', 'trackScrollDepth{ passive: true });
+    document.addEventListener(', 'click', 'trackClicks);
     
     // Update time every 5 seconds
     const timeInterval = setInterval(trackTimeOnPage5000);
     
     // Cleanup
     return () => {
-      window.removeEventListener('scroll'trackScrollDepth);
-      document.removeEventListener('click'trackClicks);
+      window.removeEventListener(', 'scroll', 'trackScrollDepth);
+      document.removeEventListener(', 'click', 'trackClicks);
       clearInterval(timeInterval);
     };
   }[]);
 
-  // Don't render in production
+  // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }

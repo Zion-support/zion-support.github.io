@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -68,7 +68,7 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
   const stats = [
     { value: '850%'label: 'Avg ROI' },
-    { value: '$2.4M'label: 'Avg Savings' },
+    { value: '$2.4'M', 'label: 'Avg Savings' },
     { value: '99.8%'label: 'Success Rate' },
     { value: '15k+'label: 'Hours Saved' }
   ];
@@ -86,9 +86,9 @@ const BusinessSuccessStories2027PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >

@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -77,9 +77,9 @@ const AI2025RevolutionaryContentBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -50 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -50 }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
         >
@@ -146,8 +146,8 @@ const AI2025RevolutionaryContentBanner = () => {
                   {/* Current feature highlight */}
                   <motion.div
                     key={currentFeature}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
                   >

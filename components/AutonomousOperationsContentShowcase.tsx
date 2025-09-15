@@ -19,7 +19,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
         efficiency: '95%',
         market: '$5.2T'
       },
-      tags: ['Autonomous Operations'AI Revolution'Enterprise'ROI'],
+      tags: ['Autonomous 'Operations', 'AI 'Revolution', 'Enterprise'ROI'],
       readingTime: '22 min read',
       url: '/blog/ai-2025-autonomous-business-operations-revolution',
       featured: true,
@@ -37,7 +37,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
         efficiency: '156%',
         uptime: '99.97%'
       },
-      tags: ['Fortune 100'Case Study'Manufacturing'Success Story'],
+      tags: ['Fortune 100'Case 'Study', 'Manufacturing'Success Story'],
       readingTime: '18 min read',
       url: '/case-studies/fortune-100-autonomous-operations-890-roi-success',
       featured: true,
@@ -55,7 +55,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
         payback: '1.4 months',
         implementations: '500+'
       },
-      tags: ['Implementation Guide'Strategy'Framework'Best Practices'],
+      tags: ['Implementation 'Guide', 'Strategy', 'Framework', 'Best Practices'],
       readingTime: '35 min read',
       url: '/resources/autonomous-operations-implementation-guide-2025',
       featured: true,
@@ -64,10 +64,10 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
   ];
 
   const categories = [
-    { id: 'all'label: 'All Content'count: contentItems.length },
-    { id: 'blog'label: 'Blog Posts'count: contentItems.filter(item => item.category === 'blog').length },
-    { id: 'case-study'label: 'Case Studies'count: contentItems.filter(item => item.category === 'case-study').length },
-    { id: 'resource'label: 'Resources'count: contentItems.filter(item => item.category === 'resource').length }
+    { id: ''all', 'label: 'All 'Content', 'count: contentItems.length },
+    { id: ''blog', 'label: 'Blog 'Posts', 'count: contentItems.filter(item => item.category === 'blog').length },
+    { id: 'case-'study', 'label: 'Case 'Studies', 'count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: ''resource', 'label: ''Resources', 'count: contentItems.filter(item => item.category === 'resource').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -238,7 +238,7 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
               Ready to Transform Your Business with Autonomous Operations?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Join the revolution that's delivering 890% ROI and $12.8B savings to enterprise leaders worldwide.
+              Join the revolution 'that', 's delivering 890% ROI and $12.8B savings to enterprise leaders worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -68,17 +68,17 @@ const BusinessSuccessStories2025PromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'Success Stories'value: '1,200+'icon: BookOpen },
-    { label: 'Average ROI'value: '300%'icon: TrendingUp },
-    { label: 'Client Satisfaction'value: '99.8%'icon: Star },
-    { label: 'Cost Savings'value: '$50M+'icon: DollarSign }
+    { label: 'Success 'Stories', 'value: '1,200+'icon: BookOpen },
+    { label: 'Average 'ROI', 'value: '300%'icon: TrendingUp },
+    { label: 'Client 'Satisfaction', 'value: '99.8%'icon: Star },
+    { label: 'Cost 'Savings', 'value: '$50M+'icon: DollarSign }
   ];
 
   const industries = [
-    { name: 'Technology'projects: 45icon: Brain },
-    { name: 'Finance'projects: 32icon: DollarSign },
-    { name: 'Healthcare'projects: 28icon: Shield },
-    { name: 'Manufacturing'projects: 25icon: Building2 }
+    { name: ''Technology', 'projects: 45icon: Brain },
+    { name: ''Finance', 'projects: 32icon: DollarSign },
+    { name: ''Healthcare', 'projects: 28icon: Shield },
+    { name: ''Manufacturing', 'projects: 25icon: Building2 }
   ];
 
   return (
@@ -101,8 +101,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
@@ -112,8 +112,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h2
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
@@ -125,8 +125,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-gray-300 mb-8"
             >
@@ -136,8 +136,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 gap-4 mb-8"
             >
@@ -151,8 +151,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* Industries */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.6 }}
               className="mb-8"
             >
@@ -170,8 +170,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -215,8 +215,8 @@ const BusinessSuccessStories2025PromotionBanner = () => {
               {/* Testimonial Content */}
               <motion.div
                 key={currentTestimonial}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="mb-6"
               >

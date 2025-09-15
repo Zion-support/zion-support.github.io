@@ -8,7 +8,7 @@ interface UltraFuturisticCardProps {
 
 export default function UltraFuturisticCard({ 
   children
-  className = ''
+  className = ', '
   variant = 'default' 
 }: UltraFuturisticCardProps) {
   const getVariantClasses = () => {

@@ -106,11 +106,11 @@ const UltimateAI2025ContentShowcase = () => {
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: content.length },
-    { id: 'transformation'name: 'Transformation'count: content.filter(c => c.category === 'transformation').length },
-    { id: 'case-study'name: 'Case Studies'count: content.filter(c => c.category === 'case-study').length },
-    { id: 'implementation'name: 'Implementation'count: content.filter(c => c.category === 'implementation').length },
-    { id: 'innovation'name: 'Innovation'count: content.filter(c => c.category === 'innovation').length }
+    { id: ''all', 'name: 'All 'Content', 'count: content.length },
+    { id: ''transformation', 'name: ''Transformation', 'count: content.filter(c => c.category === 'transformation').length },
+    { id: 'case-'study', 'name: 'Case 'Studies', 'count: content.filter(c => c.category === 'case-study').length },
+    { id: ''implementation', 'name: ''Implementation', 'count: content.filter(c => c.category === 'implementation').length },
+    { id: ''innovation', 'name: ''Innovation', 'count: content.filter(c => c.category === 'innovation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

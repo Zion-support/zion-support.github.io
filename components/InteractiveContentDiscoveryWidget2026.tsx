@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -19,7 +19,7 @@ const contentItems: ContentItem[] = [
     category: 'AI Breakthrough',
     url: '/ai-2025-2026-ultimate-breakthrough',
     featured: true,
-    tags: ['AI'Breakthrough'2025'2026'Neural Networks']
+    tags: [', 'AI', 'Breakthrough'2025'2026'Neural Networks']
   },
   {
     id: 'quantum-ai-2026',
@@ -28,7 +28,7 @@ const contentItems: ContentItem[] = [
     category: 'Quantum AI',
     url: '/quantum-ai-2026-breakthrough',
     featured: true,
-    tags: ['Quantum'AI'Computing'2026'Revolution']
+    tags: [', 'Quantum', 'AI'Computing'2026'Revolution']
   },
   {
     id: 'neural-architectures-2026',
@@ -37,7 +37,7 @@ const contentItems: ContentItem[] = [
     category: 'Neural Networks',
     url: '/advanced-neural-architectures-2026',
     featured: true,
-    tags: ['Neural'Architecture'2026'Learning'AI']
+    tags: [', 'Neural', 'Architecture'2026', 'Learning', 'AI']
   },
   {
     id: 'ai-automation',
@@ -46,7 +46,7 @@ const contentItems: ContentItem[] = [
     category: 'Automation',
     url: '/services/ai-automation',
     featured: false,
-    tags: ['Automation'AI'Productivity'Solutions']
+    tags: [', 'Automation', 'AI', 'Productivity', 'Solutions']
   },
   {
     id: 'cloud-infrastructure',
@@ -55,7 +55,7 @@ const contentItems: ContentItem[] = [
     category: 'Cloud',
     url: '/services/cloud-infrastructure',
     featured: false,
-    tags: ['Cloud'Infrastructure'Scalable'Security']
+    tags: [', 'Cloud', 'Infrastructure', 'Scalable', 'Security']
   },
   {
     id: 'micro-saas',
@@ -64,17 +64,17 @@ const contentItems: ContentItem[] = [
     category: 'SaaS',
     url: '/services/micro-saas',
     featured: false,
-    tags: ['SaaS'Micro'Custom'Solutions']
+    tags: [', 'SaaS', 'Micro', 'Custom', 'Solutions']
   }
 ];
 
 export default function InteractiveContentDiscoveryWidget2026() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
-  const [searchTermsetSearchTerm] = useState<string>('');
+  const [searchTermsetSearchTerm] = useState<string>(', ');
   const [filteredContentsetFilteredContent] = useState<ContentItem[]>(contentItems);
   const [isVisiblesetIsVisible] = useState(false);
 
-  const categories = ['All'AI Breakthrough'Quantum AI'Neural Networks'Automation'Cloud'SaaS'];
+  const categories = [', 'All', 'AI 'Breakthrough', 'Quantum 'AI', 'Neural 'Networks', 'Automation', 'Cloud', 'SaaS'];
 
   useEffect(() => {
     let filtered = contentItems;

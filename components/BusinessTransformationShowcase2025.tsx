@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -120,8 +120,8 @@ const BusinessTransformationShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
-    visible: { opacity: 1y: 0 }
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
@@ -184,9 +184,9 @@ const BusinessTransformationShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeMetric}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 mb-16"
           >
@@ -256,8 +256,8 @@ const BusinessTransformationShowcase2025 = () => {
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
               >

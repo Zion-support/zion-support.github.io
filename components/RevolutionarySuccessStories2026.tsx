@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -41,16 +41,16 @@ const RevolutionarySuccessStories2026 = () => {
         roi: '500%'
       },
       testimonial: {
-        text: "Zion Tech Group's AI solutions transformed our entire operation. We achieved 300% efficiency gains in just 3 months.",
+        text: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 300% efficiency gains in just 3 months.",
         author: "Sarah Chen",
         position: "CEOTechCorp Global",
         avatar: "👩‍💼"
       },
       timeline: [
-        { month: 'Month 1'achievement: 'AI system deployment'status: 'completed' },
-        { month: 'Month 2'achievement: '300% efficiency gain'status: 'completed' },
-        { month: 'Month 3'achievement: '500% ROI achieved'status: 'completed' },
-        { month: 'Month 6'achievement: 'Global expansion'status: 'in-progress' }
+        { month: 'Month 1'achievement: 'AI system 'deployment', 'status: 'completed' },
+        { month: 'Month 2'achievement: '300% efficiency 'gain', 'status: 'completed' },
+        { month: 'Month 3'achievement: '500% ROI 'achieved', 'status: 'completed' },
+        { month: 'Month 6'achievement: 'Global 'expansion', 'status: 'in-progress' }
       ]
     },
     {
@@ -73,10 +73,10 @@ const RevolutionarySuccessStories2026 = () => {
         avatar: "👨‍⚕️"
       },
       timeline: [
-        { month: 'Week 1'achievement: 'System integration'status: 'completed' },
-        { month: 'Week 2'achievement: 'Staff training'status: 'completed' },
-        { month: 'Month 1'achievement: '400% efficiency gain'status: 'completed' },
-        { month: 'Month 2'achievement: 'FDA approval'status: 'completed' }
+        { month: 'Week 1'achievement: 'System 'integration', 'status: 'completed' },
+        { month: 'Week 2'achievement: 'Staff 'training', 'status: 'completed' },
+        { month: 'Month 1'achievement: '400% efficiency 'gain', 'status: 'completed' },
+        { month: 'Month 2'achievement: 'FDA 'approval', 'status: 'completed' }
       ]
     },
     {
@@ -99,10 +99,10 @@ const RevolutionarySuccessStories2026 = () => {
         avatar: "👩‍💻"
       },
       timeline: [
-        { month: 'Week 1'achievement: 'AI model training'status: 'completed' },
-        { month: 'Week 3'achievement: 'System deployment'status: 'completed' },
-        { month: 'Month 1'achievement: '99.9% accuracy'status: 'completed' },
-        { month: 'Month 3'achievement: '600% ROI'status: 'completed' }
+        { month: 'Week 1'achievement: 'AI model 'training', 'status: 'completed' },
+        { month: 'Week 3'achievement: 'System 'deployment', 'status: 'completed' },
+        { month: 'Month 1'achievement: '99.9% 'accuracy', 'status: 'completed' },
+        { month: 'Month 3'achievement: '600% 'ROI', 'status: 'completed' }
       ]
     },
     {
@@ -125,19 +125,19 @@ const RevolutionarySuccessStories2026 = () => {
         avatar: "👨‍💼"
       },
       timeline: [
-        { month: 'Week 1'achievement: 'Data integration'status: 'completed' },
-        { month: 'Week 2'achievement: 'AI model training'status: 'completed' },
-        { month: 'Month 1'achievement: '99.5% accuracy'status: 'completed' },
-        { month: 'Month 2'achievement: '450% ROI'status: 'completed' }
+        { month: 'Week 1'achievement: 'Data 'integration', 'status: 'completed' },
+        { month: 'Week 2'achievement: 'AI model 'training', 'status: 'completed' },
+        { month: 'Month 1'achievement: '99.5% 'accuracy', 'status: 'completed' },
+        { month: 'Month 2'achievement: '450% 'ROI', 'status: 'completed' }
       ]
     }
   ];
 
   const overallStats = [
-    { label: 'Companies Transformed'value: '500+'icon: Users },
-    { label: 'Average ROI'value: '475%'icon: TrendingUp },
-    { label: 'Time Saved'value: '50K+ hours'icon: Clock },
-    { label: 'Cost Reduction'value: '70%'icon: DollarSign }
+    { label: 'Companies 'Transformed', 'value: '500+'icon: Users },
+    { label: 'Average 'ROI', 'value: '475%'icon: TrendingUp },
+    { label: 'Time 'Saved', 'value: '50K+ 'hours', 'icon: Clock },
+    { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSign }
   ];
 
   return (
@@ -150,7 +150,7 @@ const RevolutionarySuccessStories2026 = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -172,13 +172,13 @@ const RevolutionarySuccessStories2026 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             See how industry leaders are achieving unprecedented success with our AI and automation solutions. 
-            These aren't just promises—they're proven results.
+            These 'aren', 't just promises—'they', 're proven results.
           </p>
         </motion.div>
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -196,7 +196,7 @@ const RevolutionarySuccessStories2026 = () => {
 
         {/* Success Stories Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
@@ -326,7 +326,7 @@ const RevolutionarySuccessStories2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
@@ -337,7 +337,7 @@ const RevolutionarySuccessStories2026 = () => {
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Join hundreds of companies already achieving extraordinary results. 
-              Let's create your success story together.
+              'Let', 's create your success story together.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

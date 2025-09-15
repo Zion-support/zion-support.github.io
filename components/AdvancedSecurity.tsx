@@ -36,8 +36,8 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     enableContentTypeSniffing: true,
     enableReferrerPolicy: true,
     enablePermissionsPolicy: true,
-    allowedOrigins: ['https://ziontechgroup.com'https://www.ziontechgroup.com'],
-    trustedDomains: ['google.com'googleapis.com'gstatic.com'],
+    allowedOrigins: ['https://ziontechgroup.'com', 'https://www.ziontechgroup.com'],
+    trustedDomains: ['google.'com', 'googleapis.'com', 'gstatic.com'],
   });
 
   const logSecurityEvent = useCallback((
@@ -90,8 +90,8 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     let sanitized = input;
     dangerousPatterns.forEach(pattern => {
       if (pattern.test(sanitized)) {
-        logSecurityEvent('xss_attempt'`XSS pattern detected: ${pattern}`'high'input_sanitization');
-        sanitized = sanitized.replace(pattern'');
+        logSecurityEvent('xss_attempt'`XSS pattern detected: ${pattern}`', 'high', 'input_sanitization');
+        sanitized = sanitized.replace(pattern', ');
       }
     });
 
@@ -101,7 +101,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
   // Clickjacking Protection
   const checkClickjacking = useCallback(() => {
     if (window.top !== window.self) {
-      logSecurityEvent('clickjacking_attempt'Page loaded in iframe'high'clickjacking_protection');
+      logSecurityEvent(', 'clickjacking_attempt', 'Page loaded in 'iframe', 'high'clickjacking_protection');
       setIsSecure(false);
       
       // Prevent clickjacking by redirecting
@@ -167,14 +167,14 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       }
     };
 
-    document.addEventListener('click'handleClick);
-    return () => document.removeEventListener('click'handleClick);
+    document.addEventListener(', 'click', 'handleClick);
+    return () => document.removeEventListener(', 'click', 'handleClick);
   }[logSecurityEvent]);
 
   // Input Validation
   const validateInput = useCallback((input: stringtype: 'email' | 'url' | 'text'): boolean => {
     let isValid = true;
-    let errorMessage = '';
+    let errorMessage = ', ';
 
     switch (type) {
       case 'email':
@@ -304,7 +304,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     if (typeof window === 'undefined') return;
 
     // CSP Violation Handler
-    document.addEventListener('securitypolicyviolation'handleCSPViolation);
+    document.addEventListener(', 'securitypolicyviolation', 'handleCSPViolation);
 
     // Clickjacking Check
     checkClickjacking();
@@ -313,7 +313,7 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     const cleanupSuspicious = detectSuspiciousActivity();
 
     return () => {
-      document.removeEventListener('securitypolicyviolation'handleCSPViolation);
+      document.removeEventListener(', 'securitypolicyviolation', 'handleCSPViolation);
       cleanupSuspicious?.();
     };
   }[handleCSPViolationcheckClickjackingdetectSuspiciousActivity]);

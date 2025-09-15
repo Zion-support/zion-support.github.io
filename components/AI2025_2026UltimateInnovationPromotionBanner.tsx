@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   ArrowRight
@@ -21,10 +21,10 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
   const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
-    { icon: Braintext: 'Quantum-AI Fusion Technology'color: 'text-purple-400' },
-    { icon: Zaptext: '10,000x Processing Speed'color: 'text-yellow-400' },
-    { icon: Cputext: 'Neural Consensus Revolution'color: 'text-blue-400' },
-    { icon: Startext: 'Synthetic Consciousness'color: 'text-green-400' }
+    { icon: Braintext: 'Quantum-AI Fusion 'Technology', 'color: 'text-purple-400' },
+    { icon: Zaptext: '10,000x Processing 'Speed', 'color: 'text-yellow-400' },
+    { icon: Cputext: 'Neural Consensus 'Revolution', 'color: 'text-blue-400' },
+    { icon: Startext: 'Synthetic 'Consciousness', 'color: 'text-green-400' }
   ];
 
   useEffect(() => {
@@ -39,9 +39,9 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="relative bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Background Pattern */}

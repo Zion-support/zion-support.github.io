@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -89,7 +89,7 @@ const FeaturedBlogPost2026 = () => {
       publishDate: '2026-01-15',
       readTime: '8 min read',
       category: 'AI Research',
-      tags: ['AI'Machine Learning'Quantum Computing'Future Tech'],
+      tags: [', 'AI', 'Machine 'Learning', 'Quantum 'Computing', 'Future Tech'],
       image: '/api/placeholder/800/400',
       views: 12500,
       likes: 890,
@@ -108,7 +108,7 @@ const FeaturedBlogPost2026 = () => {
       publishDate: '2026-01-12',
       readTime: '12 min read',
       category: 'Infrastructure',
-      tags: ['Cloud Computing'AI Infrastructure'Scalability'DevOps'],
+      tags: ['Cloud 'Computing', 'AI 'Infrastructure', 'Scalability'DevOps'],
       image: '/api/placeholder/800/400',
       views: 8900,
       likes: 567,
@@ -127,7 +127,7 @@ const FeaturedBlogPost2026 = () => {
       publishDate: '2026-01-10',
       readTime: '10 min read',
       category: 'Quantum Computing',
-      tags: ['Quantum Computing'AI'Research'Innovation'],
+      tags: ['Quantum 'Computing', 'AI', 'Research', 'Innovation'],
       image: '/api/placeholder/800/400',
       views: 15600,
       likes: 1200,
@@ -138,12 +138,12 @@ const FeaturedBlogPost2026 = () => {
   ];
 
   const categories = [
-    { name: 'AI Research'count: 24color: 'from-blue-600 to-purple-600' },
-    { name: 'Infrastructure'count: 18color: 'from-green-600 to-teal-600' },
-    { name: 'Quantum Computing'count: 12color: 'from-orange-600 to-red-600' },
-    { name: 'Machine Learning'count: 31color: 'from-purple-600 to-pink-600' },
-    { name: 'Automation'count: 15color: 'from-cyan-600 to-blue-600' },
-    { name: 'Cloud Computing'count: 22color: 'from-indigo-600 to-purple-600' }
+    { name: 'AI 'Research', 'count: 24color: 'from-blue-600 to-purple-600' },
+    { name: ''Infrastructure', 'count: 18color: 'from-green-600 to-teal-600' },
+    { name: 'Quantum 'Computing', 'count: 12color: 'from-orange-600 to-red-600' },
+    { name: 'Machine 'Learning', 'count: 31color: 'from-purple-600 to-pink-600' },
+    { name: ''Automation', 'count: 15color: 'from-cyan-600 to-blue-600' },
+    { name: 'Cloud 'Computing', 'count: 22color: 'from-indigo-600 to-purple-600' }
   ];
 
   const formatDate = (dateString: string) => {
@@ -160,8 +160,8 @@ const FeaturedBlogPost2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -186,8 +186,8 @@ const FeaturedBlogPost2026 = () => {
           {/* Featured Post */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.1 }}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
@@ -302,8 +302,8 @@ const FeaturedBlogPost2026 = () => {
           <div className="space-y-8">
             {/* Categories */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
@@ -330,8 +330,8 @@ const FeaturedBlogPost2026 = () => {
 
             {/* Popular Posts */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.3 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
@@ -361,8 +361,8 @@ const FeaturedBlogPost2026 = () => {
 
             {/* Newsletter Signup */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white"
             >
@@ -386,8 +386,8 @@ const FeaturedBlogPost2026 = () => {
 
         {/* View All Posts CTA */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
           className="text-center mt-16"
         >

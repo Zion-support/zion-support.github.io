@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Chen",
     role: "CTO",
     company: "TechCorp Global",
-    content: "The AI solutions from Zion Tech Group have transformed our operations. We've seen a 300% increase in efficiency and our team productivity has never been higher.",
+    content: "The AI solutions from Zion Tech Group have transformed our operations. 'We', 've seen a 300% increase in efficiency and our team productivity has never been higher.",
     rating: 5,
     avatar: "👩‍💼"
   },
@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
     name: "Michael Rodriguez",
     role: "CEO",
     company: "InnovateLabs",
-    content: "Working with Zion Tech Group has been a game-changer. Their AI technology is not just advancedit's revolutionary. Our business has grown exponentially.",
+    content: "Working with Zion Tech Group has been a game-changer. Their AI technology is not just 'advancedit', 's revolutionary. Our business has grown exponentially.",
     rating: 5,
     avatar: "👨‍💼"
   },
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     name: "Dr. Emily Watson",
     role: "Research Director",
     company: "Quantum Dynamics",
-    content: "The quantum computing integration is phenomenal. We're solving problems that were previously impossibleand the results speak for themselves.",
+    content: "The quantum computing integration is phenomenal. 'We', 're solving problems that were previously impossibleand the results speak for themselves.",
     rating: 5,
     avatar: "👩‍🔬"
   },
@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     name: "James Thompson",
     role: "VP of Engineering",
     company: "CloudScale Inc",
-    content: "Zion Tech Group's AI solutions have revolutionized our cloud infrastructure. The performance improvements and cost savings are remarkable.",
+    content: "Zion Tech 'Group', 's AI solutions have revolutionized our cloud infrastructure. The performance improvements and cost savings are remarkable.",
     rating: 5,
     avatar: "👨‍🔧"
   },
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     name: "Lisa Park",
     role: "Head of Data Science",
     company: "DataFlow Systems",
-    content: "The data intelligence capabilities are outstanding. We're getting insights we never thought possibleand the predictive analytics are incredibly accurate.",
+    content: "The data intelligence capabilities are outstanding. 'We', 're getting insights we never thought possibleand the predictive analytics are incredibly accurate.",
     rating: 5,
     avatar: "👩‍💻"
   },
@@ -79,8 +79,8 @@ export default function AdvancedTestimonials() {
           {testimonials.map((testimonialindex) => (
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
             >

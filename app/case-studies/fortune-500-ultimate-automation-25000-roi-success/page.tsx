@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story',

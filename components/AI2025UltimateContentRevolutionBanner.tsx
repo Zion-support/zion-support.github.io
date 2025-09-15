@@ -27,7 +27,7 @@ const AI2025UltimateContentRevolutionBanner = () => {
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-200">
-            The breakthrough that's transforming businesses worldwide with 
+            The breakthrough 'that', 's transforming businesses worldwide with 
             <span className="text-yellow-400 font-bold"> 5,000% ROI</span> and 
             <span className="text-green-400 font-bold"> 98% efficiency gains</span>
           </p>

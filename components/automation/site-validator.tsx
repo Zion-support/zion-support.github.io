@@ -9,8 +9,8 @@ type Props = { report: Report | null };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd()'public'automation'site-validator.json');
-    const raw = fs.readFileSync(file'utf8');
+    const file = path.join(process.cwd()', 'public', 'automation'site-validator.json');
+    const raw = fs.readFileSync('file', 'utf8');
     const data = JSON.parse(raw);
     return { props: { report: data }revalidate: 21600 };
   } catch {

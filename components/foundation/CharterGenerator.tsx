@@ -46,7 +46,7 @@ export default function CharterGenerator() {
 
     const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;
 
-    return [header''preamble''registry''mission''neutrality''treasury''contributors''dao''grants''governance''transparency''amendments''liability]
+    return [header', 'preamble', 'registry', 'mission', 'neutrality', 'treasury', 'contributors', 'dao', 'grants', 'governance', 'transparency', 'amendments', 'liability]
       .filter(Boolean)
       .join('\n');
   }[legalStructureprotocolNametokenSymbolincludeContributorRulesincludeGrantsincludeDAOIntegration]);

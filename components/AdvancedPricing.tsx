@@ -92,8 +92,8 @@ export default function AdvancedPricing() {
           {pricingTiers.map((tierindex) => (
             <motion.div
               key={tier.name}
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className={`relative rounded-xl p-8 ${
                 tier.popular
@@ -159,7 +159,7 @@ export default function AdvancedPricing() {
 
         <div className="text-center mt-12">
           <p className="text-white/70 mb-4">
-            Need a custom solution? We're here to help.
+            Need a custom solution? 'We', 're here to help.
           </p>
           <a
             href="/contact"

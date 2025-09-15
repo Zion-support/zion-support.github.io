@@ -117,8 +117,8 @@ export default function UltimateServicesShowcase2025() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -160,8 +160,8 @@ export default function UltimateServicesShowcase2025() {
           {filteredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0y: 50 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group ${
@@ -218,8 +218,8 @@ export default function UltimateServicesShowcase2025() {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="bg-white rounded-2xl shadow-xl p-8 mb-16"
@@ -251,8 +251,8 @@ export default function UltimateServicesShowcase2025() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"

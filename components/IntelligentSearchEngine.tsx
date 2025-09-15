@@ -43,7 +43,7 @@ const IntelligentSearchEngine: React.FC = () => {
       category: 'AI & Automation',
       relevanceScore: 95,
       lastModified: '2025-01-13',
-      tags: ['AI'Automation'Business'2025'],
+      tags: ['AI', 'Automation', 'Business', '2025'],
       url: '/content/ai-business-automation-2025'
     },
     {
@@ -54,7 +54,7 @@ const IntelligentSearchEngine: React.FC = () => {
       category: 'AI Services',
       relevanceScore: 88,
       lastModified: '2025-01-12',
-      tags: ['Machine Learning'AI Services'Implementation'],
+      tags: ['Machine 'Learning', 'AI 'Services', 'Implementation'],
       url: '/services/machine-learning-implementation'
     },
     {
@@ -65,7 +65,7 @@ const IntelligentSearchEngine: React.FC = () => {
       category: 'Technology',
       relevanceScore: 82,
       lastModified: '2025-01-11',
-      tags: ['Quantum Computing'Technology'Tutorial'],
+      tags: ['Quantum 'Computing', 'Technology'Tutorial'],
       url: '/blog/quantum-computing-basics'
     },
     {
@@ -76,7 +76,7 @@ const IntelligentSearchEngine: React.FC = () => {
       category: 'API',
       relevanceScore: 75,
       lastModified: '2025-01-10',
-      tags: ['API'Documentation'Integration'],
+      tags: [', 'API', 'Documentation'Integration'],
       url: '/docs/api-ai-services'
     },
     {
@@ -87,21 +87,21 @@ const IntelligentSearchEngine: React.FC = () => {
       category: 'Integration',
       relevanceScore: 90,
       lastModified: '2025-01-09',
-      tags: ['FAQ'Integration'AI Services'],
+      tags: [', 'FAQ', 'Integration'AI Services'],
       url: '/faq/ai-integration'
     }
   ];
 
   const mockSuggestions: SearchSuggestion[] = [
-    { id: '1'text: 'AI automation'type: 'trending'count: 1250 },
-    { id: '2'text: 'machine learning services'type: 'trending'count: 980 },
-    { id: '3'text: 'quantum computing'type: 'trending'count: 756 },
-    { id: '4'text: 'API integration'type: 'suggestion'count: 432 },
-    { id: '5'text: 'business automation'type: 'recent' },
-    { id: '6'text: 'AI implementation guide'type: 'recent' }
+    { id: '1'text: 'AI 'automation', 'type: ''trending', 'count: 1250 },
+    { id: '2'text: 'machine learning 'services', 'type: ''trending', 'count: 980 },
+    { id: '3'text: 'quantum 'computing', 'type: ''trending', 'count: 756 },
+    { id: '4'text: 'API 'integration', 'type: ''suggestion', 'count: 432 },
+    { id: '5'text: 'business 'automation', 'type: 'recent' },
+    { id: '6'text: 'AI implementation 'guide', 'type: 'recent' }
   ];
 
-  const categories = ['AI & Automation'AI Services'Technology'API'Integration'Blockchain'IoT'Cybersecurity'];
+  const categories = ['AI & 'Automation', 'AI 'Services', 'Technology', 'API', 'Integration', 'Blockchain', 'IoT'Cybersecurity'];
 
   useEffect(() => {
     // Load search history from localStorage
@@ -136,7 +136,7 @@ const IntelligentSearchEngine: React.FC = () => {
     // Add to search history
     const newHistory = [searchQuery...searchHistory.filter(item => item !== searchQuery)].slice(010);
     setSearchHistory(newHistory);
-    localStorage.setItem('searchHistory'JSON.stringify(newHistory));
+    localStorage.setItem(', 'searchHistory', 'JSON.stringify(newHistory));
 
     // Simulate AI-powered search
     await new Promise(resolve => setTimeout(resolve800));
@@ -213,7 +213,7 @@ const IntelligentSearchEngine: React.FC = () => {
           🔍 Intelligent Search Engine
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Powered by advanced AI algorithms to find exactly what you're looking for across our entire knowledge base.
+          Powered by advanced AI algorithms to find exactly what 'you', 're looking for across our entire knowledge base.
         </p>
       </div>
 
@@ -268,7 +268,7 @@ const IntelligentSearchEngine: React.FC = () => {
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">Recent Searches</h3>
           <div className="flex flex-wrap gap-2">
-            {searchHistory.slice(05).map((itemindex) => (
+            {searchHistory.slice(0, 5).map((itemindex) => (
               <button
                 key={index}
                 onClick={() => {
@@ -389,7 +389,7 @@ const IntelligentSearchEngine: React.FC = () => {
           <h4 className="text-xl font-semibold text-gray-900 mb-2">No results found</h4>
           <p className="text-gray-600 mb-6">Try adjusting your search terms or filters.</p>
           <button
-            onClick={() => setQuery('')}
+            onClick={() => setQuery(', ')}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             Clear Search
@@ -413,7 +413,7 @@ const IntelligentSearchEngine: React.FC = () => {
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">🔍 Try different terms</h4>
-            <p className="text-gray-600 text-sm">If you don't find what you're looking fortry synonyms or related terms.</p>
+            <p className="text-gray-600 text-sm">If you 'don', 't find what 'you', 're looking fortry synonyms or related terms.</p>
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 mb-2">📊 Use filters</h4>

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const AdvancedSecurityDashboard: React.FC = () => {
   const [securityMetricsetSecurityMetrics] = useState({

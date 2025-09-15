@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Search
   Filter
@@ -36,18 +36,18 @@ export default function AdvancedContentDiscoveryWidget2025() {
   const [isExpandedsetIsExpanded] = useState(false);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: Globecount: 150 },
-    { id: 'ai-innovation'name: 'AI Innovation'icon: Braincount: 45 },
-    { id: 'ai-tools'name: 'AI Tools'icon: Zapcount: 38 },
-    { id: 'predictions'name: 'Future Predictions'icon: Rocketcount: 25 },
-    { id: 'code'name: 'Code & Development'icon: Codecount: 20 },
-    { id: 'visual'name: 'Visual Content'icon: Imagecount: 15 },
-    { id: 'video'name: 'Video & Media'icon: Videocount: 12 },
-    { id: 'audio'name: 'Audio & Music'icon: Musicount: 8 },
-    { id: 'writing'name: 'Content Writing'icon: FileTextcount: 18 },
-    { id: 'analytics'name: 'Data & Analytics'icon: BarChart3count: 14 },
-    { id: 'communication'name: 'Communication'icon: MessageSquarecount: 10 },
-    { id: 'security'name: 'Security & Ethics'icon: Shieldcount: 6 }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecount: 150 },
+    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Braincount: 45 },
+    { id: 'ai-'tools', 'name: 'AI 'Tools', 'icon: Zapcount: 38 },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Rocketcount: 25 },
+    { id: ''code', 'name: 'Code & 'Development', 'icon: Codecount: 20 },
+    { id: ''visual', 'name: 'Visual 'Content', 'icon: Imagecount: 15 },
+    { id: ''video', 'name: 'Video & 'Media', 'icon: Videocount: 12 },
+    { id: ''audio', 'name: 'Audio & 'Music', 'icon: Musicount: 8 },
+    { id: ''writing', 'name: 'Content 'Writing', 'icon: FileTextcount: 18 },
+    { id: ''analytics', 'name: 'Data & 'Analytics', 'icon: BarChart3count: 14 },
+    { id: ''communication', 'name: ''Communication', 'icon: MessageSquarecount: 10 },
+    { id: ''security', 'name: 'Security & 'Ethics', 'icon: Shieldcount: 6 }
   ];
 
   const contentItems = [
@@ -60,7 +60,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.9,
       views: '125K',
       date: '2025-01-15',
-      tags: ['AI'Innovation'Breakthrough'Interactive'],
+      tags: [', 'AI', 'Innovation', 'Breakthrough', 'Interactive'],
       image: '/api/placeholder/400/250',
       link: '/ai-innovation-showcase-2025',
       featured: true
@@ -74,7 +74,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.8,
       views: '98K',
       date: '2025-01-14',
-      tags: ['Tools'Productivity'Automation'AI'],
+      tags: [', 'Tools', 'Productivity', 'Automation', 'AI'],
       image: '/api/placeholder/400/250',
       link: '/ai-tools-ultimate-showcase-2025',
       featured: true
@@ -88,7 +88,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.7,
       views: '87K',
       date: '2025-01-13',
-      tags: ['Future'Predictions'Technology'Research'],
+      tags: [', 'Future', 'Predictions', 'Technology', 'Research'],
       image: '/api/placeholder/400/250',
       link: '/ai-2030-future-predictions-ultimate',
       featured: true
@@ -102,7 +102,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.9,
       views: '76K',
       date: '2025-01-12',
-      tags: ['Code'AI'Development'Automation'],
+      tags: [', 'Code', 'AI', 'Development', 'Automation'],
       image: '/api/placeholder/400/250',
       link: '/tools/neural-code-generator',
       featured: false
@@ -116,7 +116,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.8,
       views: '65K',
       date: '2025-01-11',
-      tags: ['Image'AI'Art'Quantum'],
+      tags: [', 'Image', 'AI', 'Art', 'Quantum'],
       image: '/api/placeholder/400/250',
       link: '/tools/quantum-image-creator',
       featured: false
@@ -130,7 +130,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.7,
       views: '54K',
       date: '2025-01-10',
-      tags: ['Voice'AI'Audio'Synthesis'],
+      tags: [', 'Voice', 'AI', 'Audio', 'Synthesis'],
       image: '/api/placeholder/400/250',
       link: '/tools/voice-synthesis-studio',
       featured: false
@@ -148,7 +148,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
   const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
       case 'trending':
-        return parseInt(b.views.replace('K'')) - parseInt(a.views.replace('K''));
+        return parseInt(b.views.replace('K', ')) - parseInt(a.views.replace('K', '));
       case 'rating':
         return b.rating - a.rating;
       case 'newest':

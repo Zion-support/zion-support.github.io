@@ -52,8 +52,8 @@ const RevolutionaryFeatures2025 = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -69,8 +69,8 @@ const RevolutionaryFeatures2025 = () => {
           {features.map((featureindex) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative"
             >
@@ -113,8 +113,8 @@ const RevolutionaryFeatures2025 = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >

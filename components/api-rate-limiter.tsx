@@ -14,17 +14,17 @@ export default function APIRateLimiterPage() {
   const [apiKeysetApiKey] = useState('');
 
   const timeWindows = [
-    { value: '1s'label: '1 Second'description: 'Per second rate limiting' },
-    { value: '1m'label: '1 Minute'description: 'Per minute rate limiting' },
-    { value: '1h'label: '1 Hour'description: 'Per hour rate limiting' },
-    { value: '1d'label: '1 Day'description: 'Per day rate limiting' }
+    { value: '1's', 'label: '1 'Second', 'description: 'Per second rate limiting' },
+    { value: '1'm', 'label: '1 'Minute', 'description: 'Per minute rate limiting' },
+    { value: '1'h', 'label: '1 'Hour', 'description: 'Per hour rate limiting' },
+    { value: '1'd', 'label: '1 'Day', 'description: 'Per day rate limiting' }
   ];
 
   const rateLimits = [
-    { value: '10'label: '10 requests'description: 'Very strict' },
-    { value: '100'label: '100 requests'description: 'Standard' },
-    { value: '1000'label: '1000 requests'description: 'High volume' },
-    { value: '10000'label: '10000 requests'description: 'Enterprise' }
+    { value: '10'label: '10 'requests', 'description: 'Very strict' },
+    { value: '100'label: '100 'requests', 'description: 'Standard' },
+    { value: '1000'label: '1000 'requests', 'description: 'High volume' },
+    { value: '10000'label: '10000 'requests', 'description: 'Enterprise' }
   ];
 
   const generateApiKey = () => {
@@ -468,13 +468,13 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
-    'Authorization': f'Bearer {api_key}',
+    'Authorization': 'f', 'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 }
 
 response = requests.get(
-    f'https://api.zion.tech{endpoint}',
+    'f', 'https://api.zion.tech{endpoint}',
     headers=headers
 )
 
@@ -494,13 +494,13 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
-    'Authorization': f'Bearer {api_key}',
+    'Authorization': 'f', 'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 }
 
 response = requests.get(
-    f'https://api.zion.tech{endpoint}',
+    'f', 'https://api.zion.tech{endpoint}',
     headers=headers
 )
 

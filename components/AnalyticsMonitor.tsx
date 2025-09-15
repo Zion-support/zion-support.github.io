@@ -59,8 +59,8 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
         (window.gtag as any).q.push(arguments);
       };
       
-      (window.gtag as any)('js'new Date());
-      (window.gtag as any)('config'ga4MeasurementId);
+      (window.gtag as any)(', 'js', 'new Date());
+      (window.gtag as any)(', 'config', 'ga4MeasurementId);
     }
 
     // Performance monitoring
@@ -85,27 +85,27 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
       import('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
         getCLS((metric) => {
           setMetrics(prev => ({ ...prevcumulativeLayoutShift: metric.value } as PerformanceMetrics));
-          trackEvent('web_vitals'cls'metric.value);
+          trackEvent(', 'web_vitals', 'cls'metric.value);
         });
 
         getFID((metric) => {
           setMetrics(prev => ({ ...prevfirstInputDelay: metric.value } as PerformanceMetrics));
-          trackEvent('web_vitals'fid'metric.value);
+          trackEvent(', 'web_vitals', 'fid'metric.value);
         });
 
         getFCP((metric) => {
           setMetrics(prev => ({ ...prevfirstContentfulPaint: metric.value } as PerformanceMetrics));
-          trackEvent('web_vitals'fcp'metric.value);
+          trackEvent(', 'web_vitals', 'fcp'metric.value);
         });
 
         getLCP((metric) => {
           setMetrics(prev => ({ ...prevlargestContentfulPaint: metric.value } as PerformanceMetrics));
-          trackEvent('web_vitals'lcp'metric.value);
+          trackEvent(', 'web_vitals', 'lcp'metric.value);
         });
 
         getTTFB((metric) => {
           setMetrics(prev => ({ ...prevtimeToInteractive: metric.value } as PerformanceMetrics));
-          trackEvent('web_vitals'ttfb'metric.value);
+          trackEvent(', 'web_vitals', 'ttfb'metric.value);
         });
       });
 
@@ -114,7 +114,7 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         setMetrics(prev => ({ ...prevpageLoadTime: loadTime } as PerformanceMetrics));
-        trackEvent('performance'page_load_time'loadTime);
+        trackEvent(', 'performance', 'page_load_time'loadTime);
       });
     }
   };
@@ -133,7 +133,7 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
         };
         
         setErrors(prev => [...preverror]);
-        trackEvent('error'javascript_error'error.message);
+        trackEvent(', 'error', 'javascript_error'error.message);
       });
 
       // Unhandled promise rejections
@@ -144,7 +144,7 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
         };
         
         setErrors(prev => [...preverror]);
-        trackEvent('error'unhandled_promise_rejection'event.reason);
+        trackEvent(', 'error', 'unhandled_promise_rejection'event.reason);
       });
     }
   };
@@ -170,7 +170,7 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           conversionEvents: 0
         });
 
-        trackEvent('user_behavior'page_view'pageViews);
+        trackEvent(', 'user_behavior', 'page_view'pageViews);
       };
 import React{ useEffect } from 'react';
 
@@ -189,7 +189,7 @@ export default function AnalyticsMonitor() {
     const trackEvent = (event: AnalyticsEvent) => {
       // Send to Google Analytics (if configured)
       if (typeof gtag !== 'undefined') {
-        gtag('event'event.action{
+        gtag(', 'event', 'event.action{
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -270,7 +270,7 @@ export default function AnalyticsMonitor() {
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         if (scrollDepth > maxScrollDepth) {
           maxScrollDepth = scrollDepth;
-          trackEvent('user_behavior'scroll_depth'scrollDepth);
+          trackEvent(', 'user_behavior', 'scroll_depth'scrollDepth);
         }
       };
 
@@ -281,7 +281,7 @@ export default function AnalyticsMonitor() {
         const className = target.className;
         const id = target.id;
 
-        trackEvent('user_behavior'click'{
+        trackEvent(', 'user_behavior', 'click'{
           tagName,
           className,
           id,
@@ -291,13 +291,13 @@ export default function AnalyticsMonitor() {
 
       // Initialize tracking
       trackPageView();
-      window.addEventListener('scroll'trackScrollDepth);
-      document.addEventListener('click'trackClicks);
+      window.addEventListener(', 'scroll', 'trackScrollDepth);
+      document.addEventListener(', 'click', 'trackClicks);
 
       // Cleanup
       return () => {
-        window.removeEventListener('scroll'trackScrollDepth);
-        document.removeEventListener('click'trackClicks);
+        window.removeEventListener(', 'scroll', 'trackScrollDepth);
+        document.removeEventListener(', 'click', 'trackClicks);
       };
     }
   };
@@ -313,9 +313,9 @@ export default function AnalyticsMonitor() {
 
   const trackEvent = (category: stringaction: stringvalue?: any) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event'action{
+      (window as any).gtag(', 'event', 'action{
         event_category: category,
-        event_label: value?.toString() || '',
+        event_label: value?.toString() || ', ',
         value: typeof value === 'number' ? value : undefined
       });
     }
@@ -324,13 +324,13 @@ export default function AnalyticsMonitor() {
   // Custom hooks for analytics
   const usePageView = (pageName: string) => {
     useEffect(() => {
-      trackEvent('page_view'pageName);
+      trackEvent(', 'page_view', 'pageName);
     }[pageName]);
   };
 
   const useConversion = (conversionName: string) => {
     const trackConversion = (value?: number) => {
-      trackEvent('conversion'conversionNamevalue);
+      trackEvent(', 'conversion', 'conversionNamevalue);
       setUserBehavior(prev => prev ? {
         ...prev,
         conversionEvents: prev.conversionEvents + 1
@@ -442,7 +442,7 @@ export default AnalyticsMonitor;
         }
       };
 
-      window.addEventListener('scroll'trackScrollDepth{ passive: true });
+      window.addEventListener(', 'scroll', 'trackScrollDepth{ passive: true });
 
       // Track time on page
       const startTime = Date.now();
@@ -469,7 +469,7 @@ export default AnalyticsMonitor;
 
       return () => {
         clearInterval(timeInterval);
-        window.removeEventListener('scroll'trackScrollDepth);
+        window.removeEventListener(', 'scroll', 'trackScrollDepth);
       };
     };
 
@@ -478,7 +478,7 @@ export default AnalyticsMonitor;
       // Track Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          let metricName = '';
+          let metricName = ', ';
           let value = 0;
 
           switch (entry.entryType) {
@@ -510,7 +510,7 @@ export default AnalyticsMonitor;
       });
 
       observer.observe({
-        entryTypes: ['largest-contentful-paint'first-input'layout-shift']
+        entryTypes: ['largest-contentful-'paint', 'first-'input', 'layout-shift']
       });
 
       return () => observer.disconnect();

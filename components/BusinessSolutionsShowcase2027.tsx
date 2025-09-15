@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   TrendingUp
@@ -44,21 +44,21 @@ const BusinessSolutionsShowcase2027 = () => {
         {
           title: 'AI-Powered Business Intelligence',
           description: 'Advanced analytics and insights powered by machine learning algorithms',
-          features: ['Real-time Analytics'Predictive Modeling'Custom Dashboards'],
+          features: ['Real-time 'Analytics', 'Predictive 'Modeling', 'Custom Dashboards'],
           icon: BarChart3,
           roi: '300% ROI'
         },
         {
           title: 'Enterprise Security Suite',
           description: 'Comprehensive security solutions protecting your digital assets',
-          features: ['Zero-Trust Architecture'AI Threat Detection'Compliance Management'],
+          features: ['Zero-Trust 'Architecture', 'AI Threat 'Detection', 'Compliance Management'],
           icon: Shield,
           roi: '99.9% Security'
         },
         {
           title: 'Cloud Infrastructure Management',
           description: 'Scalable cloud solutions optimized for enterprise workloads',
-          features: ['Multi-Cloud Support'Auto-Scaling'Cost Optimization'],
+          features: ['Multi-Cloud 'Support', 'Auto-'Scaling', 'Cost Optimization'],
           icon: Cloud,
           roi: '50% Cost Reduction'
         }
@@ -73,21 +73,21 @@ const BusinessSolutionsShowcase2027 = () => {
         {
           title: 'Rapid MVP Development',
           description: 'Fast-track your product development with our proven frameworks',
-          features: ['2-Week Delivery'Scalable Architecture'Technical Support'],
+          features: ['2-Week 'Delivery', 'Scalable 'Architecture', 'Technical Support'],
           icon: Zap,
           roi: '80% Faster Launch'
         },
         {
           title: 'Growth Analytics Platform',
           description: 'Data-driven insights to accelerate your startup growth',
-          features: ['User Behavior Analysis'Conversion Tracking'Growth Hacking Tools'],
+          features: ['User Behavior 'Analysis', 'Conversion 'Tracking', 'Growth Hacking Tools'],
           icon: TrendingUp,
           roi: '200% Growth Rate'
         },
         {
           title: 'Automated Operations',
           description: 'Streamline operations with intelligent automation tools',
-          features: ['Process Automation'Workflow Optimization'Resource Management'],
+          features: ['Process 'Automation', 'Workflow 'Optimization', 'Resource Management'],
           icon: Settings,
           roi: '60% Efficiency Gain'
         }
@@ -102,21 +102,21 @@ const BusinessSolutionsShowcase2027 = () => {
         {
           title: 'Digital Transformation Package',
           description: 'Complete digital transformation tailored for SMBs',
-          features: ['Process Digitization'Customer Experience'Operational Efficiency'],
+          features: ['Process 'Digitization', 'Customer 'Experience', 'Operational Efficiency'],
           icon: Lightbulb,
           roi: '150% Productivity'
         },
         {
           title: 'Customer Relationship Management',
           description: 'AI-powered CRM to enhance customer relationships',
-          features: ['Lead Management'Sales Automation'Customer Insights'],
+          features: ['Lead 'Management', 'Sales 'Automation', 'Customer Insights'],
           icon: Target,
           roi: '40% Sales Increase'
         },
         {
           title: 'Financial Management Suite',
           description: 'Comprehensive financial tools for better business management',
-          features: ['Expense Tracking'Revenue Analytics'Financial Forecasting'],
+          features: ['Expense 'Tracking', 'Revenue 'Analytics', 'Financial Forecasting'],
           icon: BarChart3,
           roi: '25% Cost Savings'
         }
@@ -145,7 +145,7 @@ const BusinessSolutionsShowcase2027 = () => {
       name: "Emily Rodriguez",
       role: "Operations DirectorLocalBiz",
       company: "SMB",
-      content: "The digital transformation package revolutionized our operations. We're now 60% more efficient and our customers love the new experience.",
+      content: "The digital transformation package revolutionized our operations. 'We', 're now 60% more efficient and our customers love the new experience.",
       rating: 5,
       avatar: "ER"
     }
@@ -169,8 +169,8 @@ const BusinessSolutionsShowcase2027 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -185,8 +185,8 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Category Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -210,9 +210,9 @@ const BusinessSolutionsShowcase2027 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="max-w-7xl mx-auto"
           >
@@ -236,8 +236,8 @@ const BusinessSolutionsShowcase2027 = () => {
                   {categories[activeCategory].solutions.map((solutionindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0y: 30 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6delay: index * 0.1 }}
                       className="group"
                     >
@@ -280,8 +280,8 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mt-20"
         >
@@ -309,8 +309,8 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mt-20"
         >
@@ -321,8 +321,8 @@ const BusinessSolutionsShowcase2027 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
@@ -349,8 +349,8 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-20"
         >

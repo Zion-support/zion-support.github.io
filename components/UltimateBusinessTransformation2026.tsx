@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 ArrowRightTrendingUpZapTargetUsersBarChart3CheckCircleStar
 
@@ -18,7 +18,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '80%',
         timeSaved: '40 hours/week'
       },
-      benefits: ['Automated Workflows'Smart Decision Making'Predictive Analytics']
+      benefits: ['Automated 'Workflows', 'Smart Decision 'Making', 'Predictive Analytics']
     },
     {
       title: 'Digital Transformation',
@@ -30,7 +30,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '70%',
         timeSaved: '35 hours/week'
       },
-      benefits: ['Cloud Migration'API Integration'Data Analytics']
+      benefits: ['Cloud 'Migration', 'API 'Integration', 'Data Analytics']
     },
     {
       title: 'Customer Experience Revolution',
@@ -42,7 +42,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '60%',
         timeSaved: '30 hours/week'
       },
-      benefits: ['Personalization'Omnichannel'Real-time Support']
+      benefits: [', 'Personalization', 'Omnichannel'Real-time Support']
     },
     {
       title: 'Data-Driven Intelligence',
@@ -54,7 +54,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '75%',
         timeSaved: '25 hours/week'
       },
-      benefits: ['Predictive Modeling'Real-time Insights'Automated Reporting']
+      benefits: ['Predictive 'Modeling', 'Real-time 'Insights', 'Automated Reporting']
     }
   ];
 

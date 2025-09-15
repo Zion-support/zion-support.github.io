@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Wrench
   Zap
@@ -160,8 +160,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -217,9 +217,9 @@ const AI2025ToolsUtilitiesShowcase = () => {
             {filteredTools.map((toolindex) => (
               <motion.div
                 key={tool.id}
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -30 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 group"
               >
@@ -283,8 +283,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
             {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
@@ -300,8 +300,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="text-center"
         >

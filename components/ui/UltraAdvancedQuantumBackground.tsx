@@ -9,7 +9,7 @@ interface UltraAdvancedQuantumBackgroundProps {
 
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
   children
-  className = '' 
+  className = ', ' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -243,10 +243,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
 
     return () => {
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
       cancelAnimationFrame(animationFrameId);
     };
   }[]);

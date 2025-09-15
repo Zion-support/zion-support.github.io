@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useStateuseEffectuseRef } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronLeft
   ChevronRight
@@ -56,7 +56,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🧠',
       author: 'Dr. Sarah Chen',
       publishedAt: '2025-01-20',
-      tags: ['AI'Consciousness'Breakthrough'2025'],
+      tags: ['AI', 'Consciousness', 'Breakthrough', '2025'],
       gradient: 'from-purple-600 to-blue-600',
       stats: {
         performance: '+5000%',
@@ -80,7 +80,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '⚛️',
       author: 'Prof. Marcus Rodriguez',
       publishedAt: '2025-01-18',
-      tags: ['Quantum'Neural Networks'Computing'Tutorial'],
+      tags: [', 'Quantum', 'Neural 'Networks', 'Computing'Tutorial'],
       gradient: 'from-cyan-600 to-teal-600',
       stats: {
         qubits: '1000+',
@@ -104,7 +104,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🔗',
       author: 'Dr. Emily Watson',
       publishedAt: '2025-01-15',
-      tags: ['Neural Interface'BCI'Implementation'Guide'],
+      tags: ['Neural 'Interface', 'BCI', 'Implementation', 'Guide'],
       gradient: 'from-pink-600 to-rose-600',
       stats: {
         resolution: '1μV',
@@ -128,7 +128,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🤖',
       author: 'Alex Thompson',
       publishedAt: '2025-01-12',
-      tags: ['Automation'Business'AI'Operations'],
+      tags: [', 'Automation', 'Business', 'AI', 'Operations'],
       gradient: 'from-green-600 to-emerald-600',
       stats: {
         efficiency: '+300%',
@@ -152,7 +152,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🔬',
       author: 'Dr. James Liu',
       publishedAt: '2025-01-10',
-      tags: ['Quantum AI'Fusion'Technology'Research'],
+      tags: ['Quantum 'AI', 'Fusion', 'Technology', 'Research'],
       gradient: 'from-indigo-600 to-purple-600',
       stats: {
         processing: '1000x',
@@ -176,7 +176,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🛠️',
       author: 'Tech Academy',
       publishedAt: '2025-01-08',
-      tags: ['AI Tools'Course'Tutorial'Mastery'],
+      tags: ['AI 'Tools', 'Course', 'Tutorial', 'Mastery'],
       gradient: 'from-orange-600 to-red-600',
       stats: {
         students: '50K+',
@@ -283,8 +283,8 @@ const DynamicContentCarousel = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-4"
           >
             <Sparkles className="w-4 h-4" />
@@ -292,8 +292,8 @@ const DynamicContentCarousel = () => {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
@@ -301,8 +301,8 @@ const DynamicContentCarousel = () => {
           </motion.h2>
           
           <motion.p
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >

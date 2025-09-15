@@ -20,7 +20,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
       },
       readingTime: '18 min read',
       featured: true,
-      tags: ['Neural Interfaces'Business Revolution'ROI'Enterprise'2025']
+      tags: ['Neural 'Interfaces', 'Business 'Revolution', 'ROI'Enterprise'2025']
     },
     {
       id: 'fortune-500-neural-transformation',
@@ -37,7 +37,7 @@ const NeuralInterfaceContentShowcase2025 = () => {
       },
       readingTime: '15 min read',
       featured: true,
-      tags: ['Case Study'Fortune 500'Neural Interfaces'ROI'Success Story']
+      tags: ['Case 'Study', 'Fortune 500'Neural 'Interfaces', 'ROI'Success Story']
     },
     {
       id: 'neural-interface-implementation-guide',
@@ -54,15 +54,15 @@ const NeuralInterfaceContentShowcase2025 = () => {
       },
       readingTime: '25 min read',
       featured: true,
-      tags: ['Implementation Guide'Neural Interfaces'Strategy'ROI'Framework']
+      tags: ['Implementation 'Guide', 'Neural 'Interfaces', 'Strategy', 'ROI', 'Framework']
     }
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: neuralContent.length },
-    { id: 'guides'name: 'Guides'count: neuralContent.filter(item => item.category === 'guides').length },
-    { id: 'case-studies'name: 'Case Studies'count: neuralContent.filter(item => item.category === 'case-studies').length },
-    { id: 'resources'name: 'Resources'count: neuralContent.filter(item => item.category === 'resources').length }
+    { id: ''all', 'name: 'All 'Content', 'count: neuralContent.length },
+    { id: ''guides', 'name: ''Guides', 'count: neuralContent.filter(item => item.category === 'guides').length },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: neuralContent.filter(item => item.category === 'case-studies').length },
+    { id: ''resources', 'name: ''Resources', 'count: neuralContent.filter(item => item.category === 'resources').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

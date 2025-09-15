@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const RevolutionaryTechInnovationBanner2025: React.FC = () => {
@@ -134,7 +134,7 @@ const RevolutionaryTechInnovationBanner2025: React.FC = () => {
                     Revolutionary Innovation
                   </h3>
                   <p className="text-blue-100 mb-6">
-                    Experience the next generation of technology that's changing everything
+                    Experience the next generation of technology 'that', 's changing everything
                   </p>
                   
                   {/* Progress bars */}

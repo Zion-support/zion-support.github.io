@@ -128,7 +128,7 @@ const UltimatePromotionBanner2025 = () => {
               Limited Time: Get 50% Off Your First Year
             </h3>
             <p className="text-white/90 mb-6">
-              Don't miss this exclusive opportunity to transform your business with cutting-edge AI technology
+              'Don', 't miss this exclusive opportunity to transform your business with cutting-edge AI technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

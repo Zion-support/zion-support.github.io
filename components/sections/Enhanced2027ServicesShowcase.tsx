@@ -1,7 +1,7 @@
 "use client";
 import React{ useState } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightStarTrendingUpZapBrainAtom
   RocketShieldTargetCheckCircleExternalLink,
@@ -41,9 +41,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
+          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
         case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g'')) - parseFloat(b.roi.replace(/[^0-9.]/g''));
+          return parseFloat(a.roi.replace(/[^0-9.]/g', ')) - parseFloat(b.roi.replace(/[^0-9.]/g', '));
         default:
           return 0;
       }
@@ -91,8 +91,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl font-bold mb-6">
@@ -110,8 +110,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* Search and Filters */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
         >
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
@@ -216,8 +216,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group"
                 >
@@ -361,11 +361,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
             <p className="text-gray-400 mb-8">
-              Try adjusting your search terms or category filter to find what you're looking for.
+              Try adjusting your search terms or category filter to find what 'you', 're looking for.
             </p>
             <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchTerm(', ');
                 setSelectedCategory('all');
               }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -378,8 +378,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* CTA Section */}
         <motion.div 
           className="mt-20 text-center"
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
         >
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
@@ -388,7 +388,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these revolutionary services 
-              and achieve unprecedented growth. Let's build the future together.
+              and achieve unprecedented growth. 'Let', 's build the future together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 

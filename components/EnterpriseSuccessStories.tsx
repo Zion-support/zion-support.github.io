@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   TrendingUp
@@ -142,8 +142,8 @@ const EnterpriseSuccessStories = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -164,8 +164,8 @@ const EnterpriseSuccessStories = () => {
 
         {/* Key Metrics */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid md:grid-cols-4 gap-6 mb-16"
         >
@@ -186,8 +186,8 @@ const EnterpriseSuccessStories = () => {
 
         {/* Story Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -209,8 +209,8 @@ const EnterpriseSuccessStories = () => {
         {/* Active Story Display */}
         <motion.div
           key={activeStory}
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
         >
@@ -281,8 +281,8 @@ const EnterpriseSuccessStories = () => {
 
         {/* Benefits Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"
         >
@@ -301,8 +301,8 @@ const EnterpriseSuccessStories = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >

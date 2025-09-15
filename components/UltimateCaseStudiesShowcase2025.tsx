@@ -17,7 +17,7 @@ const UltimateCaseStudiesShowcase2025 = () => {
         efficiency: "85%",
         timeReduction: "70%"
       },
-      testimonial: "Zion Tech Group's AI solutions transformed our entire manufacturing process. We achieved 2,400% ROI in just 18 months.",
+      testimonial: "Zion Tech 'Group', 's AI solutions transformed our entire manufacturing process. We achieved 2,400% ROI in just 18 months.",
       author: "John Smith, CTO",
       logo: "🏭",
       color: "from-blue-600 to-cyan-600"
@@ -51,7 +51,7 @@ const UltimateCaseStudiesShowcase2025 = () => {
         efficiency: "99.9%",
         timeReduction: "95%"
       },
-      testimonial: "Our fraud detection accuracy improved to 99.9% with Zion's AI. The ROI of 4,800% speaks for itself.",
+      testimonial: "Our fraud detection accuracy improved to 99.9% with 'Zion', 's AI. The ROI of 4,800% speaks for itself.",
       author: "Michael Chen, Chief Risk Officer",
       logo: "🏦",
       color: "from-purple-600 to-indigo-600"

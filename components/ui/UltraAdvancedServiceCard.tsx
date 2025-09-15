@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightExternalLinkStarTrendingUp
   UsersZapShieldClockCheckBrain,
@@ -66,7 +66,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   };
 
   const containerVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1
       y: 0,
@@ -259,7 +259,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => window.open(service.link'_blank')}
+              onClick={() => window.open(service.'link', '_blank')}
             >
               <span>Learn More</span>
               <ExternalLink className="w-4 h-4" />

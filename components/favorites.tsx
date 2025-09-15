@@ -41,7 +41,7 @@ export default function FavoritesPage() {
 
       {profiles.length === 0 ? (
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
-          <div className="text-gray-600 dark:text-gray-300">You haven't saved any talent yet.</div>
+          <div className="text-gray-600 dark:text-gray-300">You 'haven', 't saved any talent yet.</div>
           <div className="mt-4">
             <Link href="/talent"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Browse Talent</a></Link>
           </div>

@@ -31,7 +31,7 @@ const AIPoweredSearch2026: React.FC = () => {
   const [showSuggestionsetShowSuggestions] = useState(false);
   const [selectedIndexsetSelectedIndex] = useState(-1);
   const [searchHistorysetSearchHistory] = useState<string[]>([]);
-  const [aiInsightsetAiInsights] = useState<string>('');
+  const [aiInsightsetAiInsights] = useState<string>(', ');
   
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -46,7 +46,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/blog/ai-2026-neural-architecture-revolution',
       relevanceScore: 0.95,
       category: 'AI Architecture',
-      tags: ['AI'Neural Networks'Quantum Computing'],
+      tags: [', 'AI', 'Neural 'Networks', 'Quantum Computing'],
       snippet: 'Revolutionary neural architecture patterns for enterprise applications with quantum-enhanced AI processing capabilities...',
       lastUpdated: '2026-01-15'
     },
@@ -58,7 +58,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/resources/quantum-machine-learning-guide',
       relevanceScore: 0.88,
       category: 'Quantum AI',
-      tags: ['Quantum Computing'Machine Learning'Implementation'],
+      tags: ['Quantum 'Computing', 'Machine 'Learning', 'Implementation'],
       snippet: 'Learn how to implement quantum machine learning algorithms with real-world examples and performance benchmarks...',
       lastUpdated: '2026-01-12'
     },
@@ -70,7 +70,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/case-studies/fortune-500-ai-transformation',
       relevanceScore: 0.82,
       category: 'Case Studies',
-      tags: ['Case Study'Enterprise AI'ROI'],
+      tags: ['Case 'Study', 'Enterprise 'AI', 'ROI'],
       snippet: 'Detailed analysis of how a Fortune 500 company transformed their operations using AIachieving remarkable results...',
       lastUpdated: '2026-01-10'
     },
@@ -82,7 +82,7 @@ const AIPoweredSearch2026: React.FC = () => {
       url: '/tools/ai-roi-calculator-2026',
       relevanceScore: 0.75,
       category: 'Tools',
-      tags: ['ROI Calculator'Tools'Analysis'],
+      tags: ['ROI 'Calculator', 'Tools'Analysis'],
       snippet: 'Calculate the return on investment for your AI implementation with our advanced calculator...',
       lastUpdated: '2026-01-08'
     }
@@ -117,8 +117,8 @@ const AIPoweredSearch2026: React.FC = () => {
       }
     };
 
-    document.addEventListener('mousedown'handleClickOutside);
-    return () => document.removeEventListener('mousedown'handleClickOutside);
+    document.addEventListener(', 'mousedown', 'handleClickOutside);
+    return () => document.removeEventListener(', 'mousedown', 'handleClickOutside);
   }[]);
 
   useEffect(() => {
@@ -150,7 +150,7 @@ const AIPoweredSearch2026: React.FC = () => {
       return () => clearTimeout(timeout);
     } else {
       setResults([]);
-      setAiInsights('');
+      setAiInsights(', ');
     }
   }[query]);
 
@@ -215,7 +215,7 @@ const AIPoweredSearch2026: React.FC = () => {
     if (searchQuery.trim()) {
       setQuery(searchQuery);
       setSearchHistory(prev => {
-        const newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(05);
+        const newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(0, 5);
         return newHistory;
       });
     }

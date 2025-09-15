@@ -267,7 +267,7 @@ const UltimateROICalculator2025 = () => {
               <div className="text-4xl font-bold text-green-600 mb-2">2,400%</div>
               <div className="text-gray-600 mb-4">ROI Achieved</div>
               <div className="text-sm text-gray-500">
-                "Zion Tech Group's AI solutions transformed our operations completely. The ROI exceeded all expectations."
+                "Zion Tech 'Group', 's AI solutions transformed our operations completely. The ROI exceeded all expectations."
               </div>
               <div className="text-sm font-semibold text-gray-700 mt-2">- Fortune 500 CEO</div>
             </div>

@@ -69,7 +69,7 @@ export default function UltimateContent2025ShowcaseBanner() {
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Transform Your Business Today</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already transforming with Zion Tech Group's cutting-edge AI solutions and expert guidance.
+              Join thousands of businesses already transforming with Zion Tech 'Group', 's cutting-edge AI solutions and expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

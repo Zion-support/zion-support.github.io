@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -35,13 +35,13 @@ const AdvancedContentDiscoveryWidget2026 = () => {
   const [favoritesetFavorites] = useState(new Set());
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: Globecolor: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-innovations'name: 'AI Innovations'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-computing'name: 'Quantum Computing'icon: Zapcolor: 'from-cyan-500 to-teal-500' },
-    { id: 'automation'name: 'Automation'icon: Rocketcolor: 'from-orange-500 to-red-500' },
-    { id: 'predictions'name: 'Future Predictions'icon: Targetcolor: 'from-green-500 to-emerald-500' },
-    { id: 'case-studies'name: 'Case Studies'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
-    { id: 'tutorials'name: 'Tutorials'icon: Playcolor: 'from-yellow-500 to-orange-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecolor: 'from-blue-500 to-cyan-500' },
+    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-cyan-500 to-teal-500' },
+    { id: ''automation', 'name: ''Automation', 'icon: Rocketcolor: 'from-orange-500 to-red-500' },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Targetcolor: 'from-green-500 to-emerald-500' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: Playcolor: 'from-yellow-500 to-orange-500' }
   ];
 
   const contentItems = [
@@ -57,7 +57,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       featured: true,
       trending: true,
-      tags: ['AI'Neural Networks'Consciousness'Machine Learning'],
+      tags: [', 'AI', 'Neural 'Networks', 'Consciousness'Machine Learning'],
       author: 'Dr. Sarah Chen',
       publishedAt: '2026-01-15',
       thumbnail: '/api/placeholder/400/250'
@@ -74,7 +74,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       featured: true,
       trending: true,
-      tags: ['Quantum Computing'AI'Fusion'Computational Power'],
+      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Computational Power'],
       author: 'Prof. Michael Rodriguez',
       publishedAt: '2026-01-12',
       thumbnail: '/api/placeholder/400/250'
@@ -91,7 +91,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.7,
       featured: false,
       trending: true,
-      tags: ['Automation'Business'Operations'Implementation'],
+      tags: [', 'Automation', 'Business', 'Operations', 'Implementation'],
       author: 'Alex Thompson',
       publishedAt: '2026-01-10',
       thumbnail: '/api/placeholder/400/250'
@@ -108,7 +108,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       featured: true,
       trending: false,
-      tags: ['Predictions'AI Consciousness'Future'Society'],
+      tags: [', 'Predictions', 'AI 'Consciousness', 'Future'Society'],
       author: 'Dr. Elena Volkov',
       publishedAt: '2026-01-08',
       thumbnail: '/api/placeholder/400/250'
@@ -125,7 +125,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.6,
       featured: false,
       trending: true,
-      tags: ['Case Study'Enterprise'ROI'Transformation'],
+      tags: ['Case 'Study', 'Enterprise', 'ROI', 'Transformation'],
       author: 'Jennifer Walsh',
       publishedAt: '2026-01-05',
       thumbnail: '/api/placeholder/400/250'
@@ -142,7 +142,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       featured: false,
       trending: false,
-      tags: ['Tutorial'Neural Networks'Hands-on'Learning'],
+      tags: [', 'Tutorial', 'Neural 'Networks', 'Hands-'on', 'Learning'],
       author: 'David Kim',
       publishedAt: '2026-01-03',
       thumbnail: '/api/placeholder/400/250'
@@ -296,9 +296,9 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`relative group cursor-pointer ${
                     item.featured ? 'lg:col-span-2' : ''

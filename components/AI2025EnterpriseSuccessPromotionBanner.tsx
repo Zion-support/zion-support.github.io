@@ -59,7 +59,7 @@ export default function AI2025EnterpriseSuccessPromotionBanner() {
             <div className="text-4xl text-emerald-200 mb-4">"</div>
             <blockquote className="text-lg md:text-xl text-emerald-100 italic mb-4">
               "The AI automation implementation has been nothing short of transformational. 
-              We've achieved results that exceeded our wildest expectations."
+              'We', 've achieved results that exceeded our wildest expectations."
             </blockquote>
             <div className="text-sm text-emerald-200">
               — Sarah JohnsonCTOGlobal Manufacturing Corp

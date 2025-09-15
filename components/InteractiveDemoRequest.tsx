@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 CalendarClockUsersZapCheckCircleArrowRightX
 
 interface DemoFormData {
@@ -18,7 +18,7 @@ interface DemoFormData {
 }
 
 const industries = [
-  'Technology'Healthcare'Finance'Manufacturing'Retail'Education'Government'Other'
+  ', 'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Other'
 ];
 
 const companySizes = [
@@ -26,7 +26,7 @@ const companySizes = [
 ];
 
 const interests = [
-  'AI Automation'Cybersecurity'Cloud Solutions'Data Analytics'Digital Transformation'Process Optimization'
+  'AI 'Automation', 'Cybersecurity'Cloud 'Solutions', 'Data 'Analytics', 'Digital 'Transformation', 'Process Optimization'
 ];
 
 const timeSlots = [
@@ -106,7 +106,7 @@ export default function InteractiveDemoRequest() {
           >
             <motion.div
               initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
+              animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
               className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
               onClick={(e) => e.stopPropagation()}
@@ -189,7 +189,7 @@ export default function InteractiveDemoRequest() {
                                 type="text"
                                 required
                                 value={formData.name}
-                                onChange={(e) => handleInputChange('name'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'name', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 placeholder="John Doe"
                               />
@@ -200,7 +200,7 @@ export default function InteractiveDemoRequest() {
                                 type="email"
                                 required
                                 value={formData.email}
-                                onChange={(e) => handleInputChange('email'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'email', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 placeholder="john@company.com"
                               />
@@ -213,7 +213,7 @@ export default function InteractiveDemoRequest() {
                               <input
                                 type="tel"
                                 value={formData.phone}
-                                onChange={(e) => handleInputChange('phone'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'phone', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 placeholder="+1 (555) 123-4567"
                               />
@@ -224,7 +224,7 @@ export default function InteractiveDemoRequest() {
                                 type="text"
                                 required
                                 value={formData.role}
-                                onChange={(e) => handleInputChange('role'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'role', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 placeholder="CTOCEOetc."
                               />
@@ -250,7 +250,7 @@ export default function InteractiveDemoRequest() {
                               type="text"
                               required
                               value={formData.company}
-                              onChange={(e) => handleInputChange('company'e.target.value)}
+                              onChange={(e) => handleInputChange(', 'company', 'e.target.value)}
                               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               placeholder="Your Company"
                             />
@@ -262,7 +262,7 @@ export default function InteractiveDemoRequest() {
                               <select
                                 required
                                 value={formData.companySize}
-                                onChange={(e) => handleInputChange('companySize'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'companySize', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               >
                                 <option value="">Select size</option>
@@ -276,7 +276,7 @@ export default function InteractiveDemoRequest() {
                               <select
                                 required
                                 value={formData.industry}
-                                onChange={(e) => handleInputChange('industry'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'industry', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               >
                                 <option value="">Select industry</option>
@@ -327,7 +327,7 @@ export default function InteractiveDemoRequest() {
                                 type="date"
                                 required
                                 value={formData.preferredDate}
-                                onChange={(e) => handleInputChange('preferredDate'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'preferredDate', 'e.target.value)}
                                 min={new Date().toISOString().split('T')[0]}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               />
@@ -337,7 +337,7 @@ export default function InteractiveDemoRequest() {
                               <select
                                 required
                                 value={formData.preferredTime}
-                                onChange={(e) => handleInputChange('preferredTime'e.target.value)}
+                                onChange={(e) => handleInputChange(', 'preferredTime', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               >
                                 <option value="">Select time</option>
@@ -352,7 +352,7 @@ export default function InteractiveDemoRequest() {
                             <label className="block text-sm font-medium text-gray-700 mb-2">Additional Message</label>
                             <textarea
                               value={formData.message}
-                              onChange={(e) => handleInputChange('message'e.target.value)}
+                              onChange={(e) => handleInputChange(', 'message', 'e.target.value)}
                               rows={4}
                               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               placeholder="Tell us about your specific needs or questions..."

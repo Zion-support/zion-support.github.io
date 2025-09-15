@@ -45,7 +45,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       const particleCount = prefersReducedMotion ? 15 : (isSmallScreen ? 60 : 150);
       
       for (let i = 0; i < particleCount; i++) {
-        const type = ['quantum'hologram'neon'energy'][Math.floor(Math.random() * 4)] as any;
+        const type = [', 'quantum', 'hologram', 'neon', 'energy'][Math.floor(Math.random() * 4)] as any;
         const maxLife = Math.random() * 200 + 100;
         
         particles.push({
@@ -263,12 +263,12 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       initParticles();
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
     initParticles();
     updateParticles();
 
     return () => {
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

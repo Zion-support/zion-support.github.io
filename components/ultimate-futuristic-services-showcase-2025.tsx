@@ -2,7 +2,7 @@
 import React{ useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   StarTrendingUpUsersAwardClockHeart
   BrainAtomShieldRocketZapGlobe
@@ -101,10 +101,10 @@ const serviceCategories = [
 ];
 
 const stats = [
-  { number: '15+'label: 'Revolutionary Services'icon: Starcolor: 'text-cyan-400' },
-  { number: '1000%+'label: 'Average ROI'icon: TrendingUpcolor: 'text-purple-400' },
-  { number: '99.9%'label: 'Success Rate'icon: Awardcolor: 'text-green-400' },
-  { number: '24/7'label: 'Expert Support'icon: Clockcolor: 'text-pink-400' }
+  { number: '15+'label: 'Revolutionary 'Services', 'icon: Starcolor: 'text-cyan-400' },
+  { number: '1000%+'label: 'Average 'ROI', 'icon: TrendingUpcolor: 'text-purple-400' },
+  { number: '99.9%'label: 'Success 'Rate', 'icon: Awardcolor: 'text-green-400' },
+  { number: '24/7'label: 'Expert 'Support', 'icon: Clockcolor: 'text-pink-400' }
 ];
 
 export default function UltimateFuturisticServicesShowcase2025() {
@@ -124,9 +124,9 @@ export default function UltimateFuturisticServicesShowcase2025() {
   const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
+        return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g'')) - parseFloat(a.price.replace(/[^0-9.]/g''));
+        return parseFloat(b.price.replace(/[^0-9.]/g', ')) - parseFloat(a.price.replace(/[^0-9.]/g', '));
       case 'rating':
         return b.rating - a.rating;
       case 'customers':
@@ -175,8 +175,8 @@ export default function UltimateFuturisticServicesShowcase2025() {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
@@ -434,7 +434,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
               <button
                 onClick={() => {
-                  setSearchTerm('');
+                  setSearchTerm(', ');
                   setSelectedCategory('all');
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
@@ -450,8 +450,8 @@ export default function UltimateFuturisticServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >

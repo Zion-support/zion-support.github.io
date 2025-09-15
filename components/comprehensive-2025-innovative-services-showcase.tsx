@@ -11,15 +11,15 @@ import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas
 
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
-    { name: 'AI & Marketing'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum & Finance'icon: Atomcolor: 'from-cyan-500 to-blue-500' },
-    { name: 'Space Technology'icon: Rocketcolor: 'from-indigo-500 to-purple-500' },
-    { name: 'Metaverse & AI'icon: Globecolor: 'from-green-500 to-teal-500' },
-    { name: 'Cybersecurity'icon: Shieldcolor: 'from-red-500 to-orange-500' },
-    { name: 'Supply Chain & AI'icon: Factorycolor: 'from-yellow-500 to-orange-500' },
-    { name: 'Quantum & Healthcare'icon: Cpucolor: 'from-violet-500 to-purple-500' },
-    { name: 'AI & Creativity'icon: Palettecolor: 'from-pink-500 to-rose-500' },
-    { name: 'AI & Robotics'icon: Databasecolor: 'from-emerald-500 to-green-500' }
+    { name: 'AI & 'Marketing', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum & 'Finance', 'icon: Atomcolor: 'from-cyan-500 to-blue-500' },
+    { name: 'Space 'Technology', 'icon: Rocketcolor: 'from-indigo-500 to-purple-500' },
+    { name: 'Metaverse & 'AI', 'icon: Globecolor: 'from-green-500 to-teal-500' },
+    { name: ''Cybersecurity', 'icon: Shieldcolor: 'from-red-500 to-orange-500' },
+    { name: 'Supply Chain & 'AI', 'icon: Factorycolor: 'from-yellow-500 to-orange-500' },
+    { name: 'Quantum & 'Healthcare', 'icon: Cpucolor: 'from-violet-500 to-purple-500' },
+    { name: 'AI & 'Creativity', 'icon: Palettecolor: 'from-pink-500 to-rose-500' },
+    { name: 'AI & 'Robotics', 'icon: Databasecolor: 'from-emerald-500 to-green-500' }
   ];
 
   const getCategoryIcon = (category: string) => {
@@ -60,8 +60,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
@@ -85,8 +85,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             
             {/* Enhanced Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
@@ -116,8 +116,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -136,8 +136,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               return (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
@@ -164,8 +164,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -184,8 +184,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
@@ -240,8 +240,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -260,8 +260,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.05 }}
                   viewport={{ once: true }}
                   className="group relative"
@@ -294,8 +294,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"

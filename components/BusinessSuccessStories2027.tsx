@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -56,16 +56,16 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Process Automation'value: '95%'icon: Zap },
-        { label: 'Error Reduction'value: '98%'icon: Shield },
-        { label: 'Customer Satisfaction'value: '99.2%'icon: Users },
-        { label: 'Revenue Growth'value: '+340%'icon: TrendingUp }
+        { label: 'Process 'Automation', 'value: '95%'icon: Zap },
+        { label: 'Error 'Reduction', 'value: '98%'icon: Shield },
+        { label: 'Customer 'Satisfaction', 'value: '99.2%'icon: Users },
+        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUp }
       ],
       timeline: [
-        { month: 'Month 1'milestone: 'Initial AI Integration'status: 'completed' },
-        { month: 'Month 3'milestone: 'First Automation Wave'status: 'completed' },
-        { month: 'Month 6'milestone: 'Full System Deployment'status: 'completed' },
-        { month: 'Month 12'milestone: '850% ROI Achieved'status: 'completed' }
+        { month: 'Month 1'milestone: 'Initial AI 'Integration', 'status: 'completed' },
+        { month: 'Month 3'milestone: 'First Automation 'Wave', 'status: 'completed' },
+        { month: 'Month 6'milestone: 'Full System 'Deployment', 'status: 'completed' },
+        { month: 'Month 12'milestone: '850% ROI 'Achieved', 'status: 'completed' }
       ]
     },
     {
@@ -89,16 +89,16 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Research Speed'value: '+600%'icon: Brain },
-        { label: 'Data Processing'value: '1000x faster'icon: BarChart3 },
-        { label: 'Breakthrough Rate'value: '+450%'icon: Rocket },
-        { label: 'Patent Applications'value: '+280%'icon: Award }
+        { label: 'Research 'Speed', 'value: '+600%'icon: Brain },
+        { label: 'Data 'Processing', 'value: '1000x 'faster', 'icon: BarChart3 },
+        { label: 'Breakthrough 'Rate', 'value: '+450%'icon: Rocket },
+        { label: 'Patent 'Applications', 'value: '+280%'icon: Award }
       ],
       timeline: [
-        { month: 'Month 1'milestone: 'Quantum AI Setup'status: 'completed' },
-        { month: 'Month 2'milestone: 'First Breakthrough'status: 'completed' },
-        { month: 'Month 4'milestone: 'Full Integration'status: 'completed' },
-        { month: 'Month 8'milestone: '720% ROI Achieved'status: 'completed' }
+        { month: 'Month 1'milestone: 'Quantum AI 'Setup', 'status: 'completed' },
+        { month: 'Month 2'milestone: 'First 'Breakthrough', 'status: 'completed' },
+        { month: 'Month 4'milestone: 'Full 'Integration', 'status: 'completed' },
+        { month: 'Month 8'milestone: '720% ROI 'Achieved', 'status: 'completed' }
       ]
     },
     {
@@ -122,16 +122,16 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Uptime'value: '99.8%'icon: Clock },
-        { label: 'Quality Score'value: '99.9%'icon: Award },
-        { label: 'Maintenance Cost'value: '-75%'icon: DollarSign },
-        { label: 'Production Output'value: '+350%'icon: Target }
+        { label: ''Uptime', 'value: '99.8%'icon: Clock },
+        { label: 'Quality 'Score', 'value: '99.9%'icon: Award },
+        { label: 'Maintenance 'Cost', 'value: '-75%'icon: DollarSign },
+        { label: 'Production 'Output', 'value: '+350%'icon: Target }
       ],
       timeline: [
-        { month: 'Month 1'milestone: 'Neural Interface Installation'status: 'completed' },
-        { month: 'Month 2'milestone: 'Predictive Model Training'status: 'completed' },
-        { month: 'Month 4'milestone: 'Full Production Integration'status: 'completed' },
-        { month: 'Month 10'milestone: '920% ROI Achieved'status: 'completed' }
+        { month: 'Month 1'milestone: 'Neural Interface 'Installation', 'status: 'completed' },
+        { month: 'Month 2'milestone: 'Predictive Model 'Training', 'status: 'completed' },
+        { month: 'Month 4'milestone: 'Full Production 'Integration', 'status: 'completed' },
+        { month: 'Month 10'milestone: '920% ROI 'Achieved', 'status: 'completed' }
       ]
     }
   ];
@@ -179,7 +179,7 @@ const BusinessSuccessStories2027 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -207,7 +207,7 @@ const BusinessSuccessStories2027 = () => {
 
         {/* Story Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center mb-8"
@@ -372,7 +372,7 @@ const BusinessSuccessStories2027 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"

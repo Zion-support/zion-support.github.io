@@ -39,42 +39,42 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       if (!meta) {
         meta = document.createElement('meta');
         if (property) {
-          meta.setAttribute('property'name);
+          meta.setAttribute(', 'property', 'name);
         } else {
-          meta.setAttribute('name'name);
+          meta.setAttribute(', 'name', 'name);
         }
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content'content);
+      meta.setAttribute(', 'content', 'content);
     };
 
     // Basic meta tags
-    updateMetaTag('description'description);
-    updateMetaTag('keywords'keywords);
-    updateMetaTag('author'Zion Tech Group');
-    updateMetaTag('robots'indexfollow');
-    updateMetaTag('viewport'width=device-widthinitial-scale=1.0');
+    updateMetaTag(', 'description', 'description);
+    updateMetaTag(', 'keywords', 'keywords);
+    updateMetaTag(', 'author', 'Zion Tech Group');
+    updateMetaTag(', 'robots', 'indexfollow');
+    updateMetaTag(', 'viewport', 'width=device-widthinitial-scale=1.0');
     updateMetaTag('theme-color'#1e40af');
 
     // Open Graph tags
-    updateMetaTag('og:title'titletrue);
-    updateMetaTag('og:description'descriptiontrue);
-    updateMetaTag('og:url'canonicalUrltrue);
-    updateMetaTag('og:image'ogImagetrue);
-    updateMetaTag('og:type'ogTypetrue);
-    updateMetaTag('og:site_name'Zion Tech Group'true);
+    updateMetaTag('og:'title', 'titletrue);
+    updateMetaTag('og:'description', 'descriptiontrue);
+    updateMetaTag('og:'url', 'canonicalUrltrue);
+    updateMetaTag('og:'image', 'ogImagetrue);
+    updateMetaTag('og:'type', 'ogTypetrue);
+    updateMetaTag('og:'site_name', 'Zion Tech 'Group', 'true);
 
     // Twitter Card tags
-    updateMetaTag('twitter:card'twitterCard);
-    updateMetaTag('twitter:title'title);
-    updateMetaTag('twitter:description'description);
-    updateMetaTag('twitter:image'ogImage);
+    updateMetaTag('twitter:'card', 'twitterCard);
+    updateMetaTag('twitter:'title', 'title);
+    updateMetaTag('twitter:'description', 'description);
+    updateMetaTag('twitter:'image', 'ogImage);
 
     // Additional SEO tags
-    updateMetaTag('language'en');
+    updateMetaTag(', 'language', 'en');
     updateMetaTag('revisit-after'7 days');
-    updateMetaTag('distribution'global');
-    updateMetaTag('rating'general');
+    updateMetaTag(', 'distribution', 'global');
+    updateMetaTag(', 'rating', 'general');
 
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -146,7 +146,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   }[titledescriptionkeywordscanonicalUrlogImageogTypetwitterCardstructuredData]);
 
-  return null; // This component doesn't render anything visible
+  return null; // This component 'doesn', 't render anything visible
 };
 
 export default SEOEnhancer;

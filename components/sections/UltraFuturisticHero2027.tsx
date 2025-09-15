@@ -9,17 +9,17 @@ import {
 
 export default function UltraFuturisticHero2027() {
   const features = [
-    { icon: Braintext: 'AI Consciousness Evolution'color: 'from-purple-400 to-pink-400' },
-    { icon: Atomtext: 'Quantum Computing'color: 'from-blue-400 to-cyan-400' },
-    { icon: Globetext: 'Digital Reality'color: 'from-green-400 to-emerald-400' },
-    { icon: Shieldtext: 'Enterprise Security'color: 'from-red-400 to-orange-400' }
+    { icon: Braintext: 'AI Consciousness 'Evolution', 'color: 'from-purple-400 to-pink-400' },
+    { icon: Atomtext: 'Quantum 'Computing', 'color: 'from-blue-400 to-cyan-400' },
+    { icon: Globetext: 'Digital 'Reality', 'color: 'from-green-400 to-emerald-400' },
+    { icon: Shieldtext: 'Enterprise 'Security', 'color: 'from-red-400 to-orange-400' }
   ];
 
   const stats = [
-    { number: '1000+'label: 'Happy Customers'icon: Userscolor: 'text-cyan-400' },
-    { number: '4.9★'label: 'Average Rating'icon: Starcolor: 'text-purple-400' },
-    { number: '99.9%'label: 'Uptime SLA'icon: CheckCirclecolor: 'text-green-400' },
-    { number: '24/7'label: 'Support'icon: Zapcolor: 'text-pink-400' }
+    { number: '1000+'label: 'Happy 'Customers', 'icon: Userscolor: 'text-cyan-400' },
+    { number: '4.9★'label: 'Average 'Rating', 'icon: Starcolor: 'text-purple-400' },
+    { number: '99.9%'label: 'Uptime 'SLA', 'icon: CheckCirclecolor: 'text-green-400' },
+    { number: '24/7'label: ''Support', 'icon: Zapcolor: 'text-pink-400' }
   ];
 
   return (
@@ -77,8 +77,8 @@ export default function UltraFuturisticHero2027() {
         <div className="text-center">
           {/* Main Heading */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -97,8 +97,8 @@ export default function UltraFuturisticHero2027() {
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
             className="text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed"
           >
@@ -107,8 +107,8 @@ export default function UltraFuturisticHero2027() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
           >
@@ -132,8 +132,8 @@ export default function UltraFuturisticHero2027() {
 
           {/* Features Grid */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.6 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           >
@@ -159,8 +159,8 @@ export default function UltraFuturisticHero2027() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 1.0 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           >
@@ -187,8 +187,8 @@ export default function UltraFuturisticHero2027() {
 
           {/* Trust Indicators */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 1.4 }}
             className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto"
           >
@@ -196,7 +196,7 @@ export default function UltraFuturisticHero2027() {
               Trusted by Industry Leaders
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {['Fortune 500'Tech Giants'Research Labs'Government'].map((trustindex) => (
+              {['Fortune 500'Tech 'Giants', 'Research 'Labs', 'Government'].map((trustindex) => (
                 <motion.div
                   key={trust}
                   initial={{ opacity: 0x: -20 }}

@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetric {
   id: string;
@@ -189,7 +189,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
             📊 Real-Time Performance Dashboard
           </h2>
           <p className="text-xl text-gray-600">
-            Monitor your application's performance metrics in real-time
+            Monitor your 'application', 's performance metrics in real-time
           </p>
         </div>
         <div className="flex items-center space-x-4">
@@ -214,25 +214,25 @@ const RealTimePerformanceDashboard: React.FC = () => {
         <h3 className="text-2xl font-bold mb-6">🖥️ System Health Overview</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.cpu'cpu')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'cpu', 'cpu')}`}>
               {systemHealth.cpu.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">CPU Usage</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.memory'memory')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'memory', 'memory')}`}>
               {systemHealth.memory.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">Memory</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.disk'disk')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'disk', 'disk')}`}>
               {systemHealth.disk.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">Disk Usage</div>
           </div>
           <div className="text-center">
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.network'network')}`}>
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'network', 'network')}`}>
               {systemHealth.network.toFixed(1)}%
             </div>
             <div className="text-sm opacity-90">Network</div>

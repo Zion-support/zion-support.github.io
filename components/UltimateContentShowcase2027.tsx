@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -40,19 +40,19 @@ const UltimateContentShowcase2027 = () => {
         {
           title: 'Neural Interface Revolution',
           description: 'Direct brain-computer interfaces enabling unprecedented human-AI collaboration',
-          features: ['Real-time thought processing'Enhanced cognitive abilities'Seamless AI integration'],
+          features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless AI integration'],
           impact: '500% productivity increase'
         },
         {
           title: 'Quantum AI Processing',
           description: 'Quantum-enhanced AI algorithms solving complex problems in seconds',
-          features: ['Quantum neural networks'Exponential speed improvements'Breakthrough problem solving'],
+          features: ['Quantum neural 'networks', 'Exponential speed 'improvements', 'Breakthrough problem solving'],
           impact: '1000x faster processing'
         },
         {
           title: 'Conscious AI Systems',
           description: 'Self-aware AI systems with emotional intelligence and ethical reasoning',
-          features: ['Emotional understanding'Ethical decision making'Autonomous problem solving'],
+          features: ['Emotional 'understanding', 'Ethical decision 'making', 'Autonomous problem solving'],
           impact: 'Human-level consciousness'
         }
       ]
@@ -66,19 +66,19 @@ const UltimateContentShowcase2027 = () => {
         {
           title: 'Autonomous Operations',
           description: 'Fully automated business operations requiring zero human intervention',
-          features: ['Self-managing systems'Predictive maintenance'Automatic optimization'],
+          features: ['Self-managing 'systems', 'Predictive 'maintenance', 'Automatic optimization'],
           impact: '99.9% uptime achieved'
         },
         {
           title: 'Intelligent Workflows',
           description: 'AI-powered workflow optimization adapting to business needs in real-time',
-          features: ['Dynamic process adaptation'Resource optimization'Performance monitoring'],
+          features: ['Dynamic process 'adaptation', 'Resource 'optimization', 'Performance monitoring'],
           impact: '300% efficiency gain'
         },
         {
           title: 'Predictive Analytics',
           description: 'Advanced forecasting and trend analysis for strategic decision making',
-          features: ['Market prediction'Risk assessment'Opportunity identification'],
+          features: ['Market 'prediction', 'Risk 'assessment', 'Opportunity identification'],
           impact: '95% accuracy rate'
         }
       ]
@@ -92,19 +92,19 @@ const UltimateContentShowcase2027 = () => {
         {
           title: 'Holographic Interfaces',
           description: '3D holographic displays and interaction systems for immersive experiences',
-          features: ['3D visualization'Gesture control'Immersive collaboration'],
+          features: ['3D 'visualization', 'Gesture 'control', 'Immersive collaboration'],
           impact: 'Revolutionary user experience'
         },
         {
           title: 'Blockchain Integration',
           description: 'Decentralized systems ensuring securitytransparencyand trust',
-          features: ['Smart contracts'Decentralized storage'Cryptographic security'],
+          features: ['Smart 'contracts', 'Decentralized 'storage', 'Cryptographic security'],
           impact: '100% data integrity'
         },
         {
           title: 'Edge Computing',
           description: 'Distributed computing infrastructure for ultra-low latency applications',
-          features: ['Real-time processing'Local data handling'Reduced latency'],
+          features: ['Real-time 'processing', 'Local data 'handling', 'Reduced latency'],
           impact: '10ms response time'
         }
       ]
@@ -112,10 +112,10 @@ const UltimateContentShowcase2027 = () => {
   };
 
   const stats = [
-    { label: 'Active Users'value: '2.5M+'icon: Users },
-    { label: 'Success Rate'value: '99.8%'icon: Award },
-    { label: 'ROI Increase'value: '500%'icon: TrendingUp },
-    { label: 'Time Saved'value: '10M+ hrs'icon: Clock }
+    { label: 'Active 'Users', 'value: '2.5M+'icon: Users },
+    { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
+    { label: 'ROI 'Increase', 'value: '500%'icon: TrendingUp },
+    { label: 'Time 'Saved', 'value: '10M+ 'hrs', 'icon: Clock }
   ];
 
   const testimonials = [
@@ -161,7 +161,7 @@ const UltimateContentShowcase2027 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -190,7 +190,7 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -206,7 +206,7 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Content Tabs */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
@@ -249,8 +249,8 @@ const UltimateContentShowcase2027 = () => {
                 {contentSections[activeTab].content.map((itemindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5delay: index * 0.1 }}
                     className="p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 hover:border-white/40 transition-all duration-300 group"
                   >
@@ -281,7 +281,7 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
@@ -291,8 +291,8 @@ const UltimateContentShowcase2027 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                 className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300"
               >
@@ -313,7 +313,7 @@ const UltimateContentShowcase2027 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"

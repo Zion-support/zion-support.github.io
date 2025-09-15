@@ -52,7 +52,7 @@ const NewSuccessStoriesShowcase2025 = () => {
         costSavings: "$25M",
         timeframe: "4 months"
       },
-      testimonial: "Diagnostic accuracy improved by 340%. We're saving lives and reducing costs simultaneously.",
+      testimonial: "Diagnostic accuracy improved by 340%. 'We', 're saving lives and reducing costs simultaneously.",
       author: "Dr. Emily Rodriguez, Chief Medical Officer",
       logo: "🏥"
     },

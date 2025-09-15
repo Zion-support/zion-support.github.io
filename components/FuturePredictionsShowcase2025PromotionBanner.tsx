@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Calendar
@@ -60,7 +60,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 md:p-12 my-8"
@@ -89,7 +89,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h2
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.3 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -102,7 +102,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 max-w-2xl"
@@ -113,7 +113,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* Features */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.5 }}
               className="flex flex-wrap gap-4 mb-8"
@@ -132,7 +132,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"

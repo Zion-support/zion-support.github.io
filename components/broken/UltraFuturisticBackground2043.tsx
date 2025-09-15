@@ -19,7 +19,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Particle system
     const particles: Array<{
@@ -119,7 +119,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
     animate();
 
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
     };
   }[]);
 

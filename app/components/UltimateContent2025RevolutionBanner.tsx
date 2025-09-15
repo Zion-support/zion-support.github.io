@@ -22,7 +22,6 @@ const UltimateContent2025RevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
 
-<<<<<<< HEAD
   const featuredContent: ContentItem[] = [
     {
       id: 'advanced-neural-architectures',
@@ -58,7 +57,6 @@ const UltimateContent2025RevolutionBanner = () => {
         success: '94%',
         timeline: '67% faster'
       },
-=======
   const featuredContent = [
     {
       id: 'ai-2025-ultimate-business-transformation-revolution',
@@ -106,7 +104,6 @@ const UltimateContent2025RevolutionBanner = () => {
         timeline: '18 months'
       },
       tags: ['Implementation', 'Roadmap', 'Strategy', 'ROI'],
->>>>>>> main
       featured: true
     }
   ];
@@ -133,7 +130,6 @@ const UltimateContent2025RevolutionBanner = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   if (isDismissed) return null;
 
   const currentContent = featuredContent[currentSlide];
@@ -155,7 +151,6 @@ const UltimateContent2025RevolutionBanner = () => {
       default: return 'Content';
     }
   };
-=======
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
@@ -179,32 +174,27 @@ const UltimateContent2025RevolutionBanner = () => {
   if (isDismissed) return null;
 
   const currentContent = featuredContent[currentSlide];
->>>>>>> main
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
         <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce delay-1000"></div>
         <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-bounce delay-2000"></div>
         <div className="absolute bottom-20 right-1/3 w-14 h-14 bg-white/10 rounded-full animate-bounce delay-3000"></div>
-=======
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
         <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
         <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-32 right-1/3 w-8 h-8 bg-purple-400/30 rounded-full animate-pulse delay-3000"></div>
->>>>>>> main
       </div>
 
       <div className="relative z-10">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/20">
           <div className="flex items-center space-x-2">
-<<<<<<< HEAD
             <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
               <Star className="w-5 h-5 text-white" />
             </div>
@@ -216,7 +206,6 @@ const UltimateContent2025RevolutionBanner = () => {
           <button
             onClick={handleDismiss}
             className="p-2 hover:bg-white/10 rounded-full transition-colors"
-=======
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span className="text-sm font-medium text-green-400">NEW CONTENT 2025</span>
           </div>
@@ -224,13 +213,11 @@ const UltimateContent2025RevolutionBanner = () => {
             onClick={handleDismiss}
             className="p-1 hover:bg-white/20 rounded-full transition-colors"
             aria-label="Dismiss banner"
->>>>>>> main
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-<<<<<<< HEAD
         {/* Content Showcase */}
         <div className="p-6">
           <div className="max-w-6xl mx-auto">
@@ -340,7 +327,6 @@ const UltimateContent2025RevolutionBanner = () => {
                 <Award className="w-5 h-5 mr-2" />
                 Download Resources
               </Link>
-=======
         {/* Main Content */}
         <div className="p-6">
           <div className="max-w-6xl mx-auto">
@@ -447,12 +433,10 @@ const UltimateContent2025RevolutionBanner = () => {
                   <ChevronRight className="w-6 h-6" />
                 </button>
               </div>
->>>>>>> main
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 pb-4">
           {featuredContent.map((_, index) => (
@@ -464,14 +448,12 @@ const UltimateContent2025RevolutionBanner = () => {
               }`}
             />
           ))}
-=======
         {/* Progress Bar */}
         <div className="h-1 bg-white/20">
           <div 
             className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-5000 ease-linear"
             style={{ width: `${((currentSlide + 1) / featuredContent.length) * 100}%` }}
           />
->>>>>>> main
         </div>
       </div>
     </div>

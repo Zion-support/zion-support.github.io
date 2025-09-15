@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 SearchFilterStarClockTrendingUpBookOpenVideoFileTextUsersZap
 import { 
   Search
@@ -38,12 +38,12 @@ const UltimateContentDiscoveryWidget2026 = () => {
   const [isSearchingsetIsSearching] = useState(false);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: <BookOpen className="w-4 h-4" /> },
-    { id: 'ai'name: 'AI Solutions'icon: <Zap className="w-4 h-4" /> },
-    { id: 'quantum'name: 'Quantum Computing'icon: <TrendingUp className="w-4 h-4" /> },
-    { id: 'automation'name: 'Automation'icon: <Users className="w-4 h-4" /> },
-    { id: 'tutorials'name: 'Tutorials'icon: <Video className="w-4 h-4" /> },
-    { id: 'case-studies'name: 'Case Studies'icon: <FileText className="w-4 h-4" /> }
+    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-4 h-4" /> },
+    { id: ''ai', 'name: 'AI 'Solutions', 'icon: <Zap className="w-4 h-4" /> },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <TrendingUp className="w-4 h-4" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <Users className="w-4 h-4" /> },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: <Video className="w-4 h-4" /> },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: <FileText className="w-4 h-4" /> }
   const [viewModesetViewMode] = useState('grid');
   const [sortBysetSortBy] = useState('trending');
   const [isFilterOpensetIsFilterOpen] = useState(false);
@@ -54,12 +54,12 @@ const UltimateContentDiscoveryWidget2026 = () => {
   }[]);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: Gridcolor: 'from-purple-500 to-pink-500' },
-    { id: 'ai-innovations'name: 'AI Innovations'icon: Braincolor: 'from-blue-500 to-cyan-500' },
-    { id: 'automation'name: 'Automation'icon: Zapcolor: 'from-green-500 to-emerald-500' },
-    { id: 'future-tech'name: 'Future Tech'icon: Rocketcolor: 'from-orange-500 to-red-500' },
-    { id: 'tutorials'name: 'Tutorials'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
-    { id: 'case-studies'name: 'Case Studies'icon: TrendingUpcolor: 'from-pink-500 to-rose-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: Gridcolor: 'from-purple-500 to-pink-500' },
+    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-blue-500 to-cyan-500' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-500 to-emerald-500' },
+    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcolor: 'from-orange-500 to-red-500' },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: TrendingUpcolor: 'from-pink-500 to-rose-500' }
   ];
 
   const contentItems = [
@@ -77,7 +77,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['AI'Neural Networks'Brain-Computer Interface'Revolutionary']
+      tags: [', 'AI', 'Neural 'Networks', 'Brain-Computer 'Interface', 'Revolutionary']
     },
     {
       id: 2,
@@ -90,7 +90,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Quantum Computing'AI'Fusion'Advanced']
+      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Advanced']
     },
     {
       id: 3,
@@ -103,7 +103,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.7,
       trending: false,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Automation'Business'AI'Operations']
+      tags: [', 'Automation', 'Business', 'AI', 'Operations']
     },
     {
       id: 4,
@@ -116,7 +116,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Consciousness'AI'Self-Awareness'Emotional Intelligence']
+      tags: [', 'Consciousness', 'AI'Self-'Awareness', 'Emotional Intelligence']
     },
     {
       id: 5,
@@ -129,7 +129,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: false,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Manufacturing'AI'Predictive Maintenance'Industry 4.0']
+      tags: [', 'Manufacturing', 'AI'Predictive 'Maintenance', 'Industry 4.0']
     },
     {
       id: 6,
@@ -142,7 +142,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Space'AI'Exploration'Communication']
+      tags: [', 'Space', 'AI', 'Exploration', 'Communication']
     }
   ];
 
@@ -203,8 +203,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -218,8 +218,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2duration: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
         >
@@ -227,8 +227,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
@@ -253,7 +253,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 30 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
       transition={{ duration: 0.8 }}
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -372,9 +372,9 @@ const UltimateContentDiscoveryWidget2026 = () => {
             {sortedContent.map((itemindex) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 ${
                   viewMode === 'list' ? 'flex' : ''

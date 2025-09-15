@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Code
@@ -38,10 +38,10 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
   }[]);
 
   const tools = [
-    { icon: Codename: 'AI Code Review'color: 'text-blue-400' },
-    { icon: BarChart3name: 'Data Analytics'color: 'text-green-400' },
-    { icon: Networkname: 'Infrastructure'color: 'text-purple-400' },
-    { icon: Shieldname: 'Security Scan'color: 'text-red-400' }
+    { icon: Codename: 'AI Code 'Review', 'color: 'text-blue-400' },
+    { icon: BarChart3name: 'Data 'Analytics', 'color: 'text-green-400' },
+    { icon: Networkname: ''Infrastructure', 'color: 'text-purple-400' },
+    { icon: Shieldname: 'Security 'Scan', 'color: 'text-red-400' }
   ];
 
   const features = [
@@ -54,7 +54,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
   const stats = [
     { label: '95%'value: 'Efficiency' },
     { label: '98%'value: 'Accuracy' },
-    { label: '3x'value: 'Faster' }
+    { label: '3'x', 'value: 'Faster' }
   ];
 
   if (!isVisible || isDismissed) return null;
@@ -62,9 +62,9 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.6ease: "easeOut" }}
         className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden"
       >

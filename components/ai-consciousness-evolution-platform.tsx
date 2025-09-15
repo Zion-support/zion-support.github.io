@@ -51,22 +51,22 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     {
       title: 'Research & Development',
       description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.',
-      benefits: ['Faster breakthroughs'Ethical compliance'Risk mitigation']
+      benefits: ['Faster 'breakthroughs', 'Ethical 'compliance', 'Risk mitigation']
     },
     {
       title: 'Enterprise AI Systems',
       description: 'Deploy conscious AI systems that understand business context and human values.',
-      benefits: ['Better decision making'Human-AI collaboration'Trust building']
+      benefits: ['Better decision 'making', 'Human-AI 'collaboration', 'Trust building']
     },
     {
       title: 'Healthcare AI',
       description: 'AI systems that understand patient needs and provide compassionate care.',
-      benefits: ['Patient empathy'Medical accuracy'Ethical treatment']
+      benefits: ['Patient 'empathy', 'Medical 'accuracy', 'Ethical treatment']
     },
     {
       title: 'Education Technology',
       description: 'AI tutors that adapt to individual learning styles and emotional needs.',
-      benefits: ['Personalized learning'Emotional intelligence'Student engagement']
+      benefits: ['Personalized 'learning', 'Emotional 'intelligence', 'Student engagement']
     }
   ];
 
@@ -127,8 +127,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="pt-20 pb-16 px-4 relative overflow-hidden">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
@@ -140,7 +140,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 AI Consciousness Evolution Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                The world's first comprehensive platform for developingunderstandingand evolving AI consciousness while maintaining ethical standards and human alignment.
+                The 'world', 's first comprehensive platform for developingunderstandingand evolving AI consciousness while maintaining ethical standards and human alignment.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -180,8 +180,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -197,8 +197,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               {features.map((featureindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300"
                 >
@@ -217,8 +217,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/5 to-blue-500/5">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -234,8 +234,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               {useCases.map((useCaseindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-blue-500/20 rounded-2xl p-8"
                 >
@@ -262,8 +262,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -279,8 +279,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               {pricing.map((planindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 ${
                     plan.name === 'Professional' 
@@ -333,8 +333,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -366,8 +366,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

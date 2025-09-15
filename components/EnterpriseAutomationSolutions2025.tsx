@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   Zap
@@ -74,11 +74,11 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
   const [demoStepsetDemoStep] = useState(0);
 
   const categories = [
-    { id: 'all'name: 'All Solutions'count: 12 },
-    { id: 'workflow'name: 'Workflow Automation'count: 4 },
-    { id: 'data'name: 'Data Processing'count: 3 },
-    { id: 'communication'name: 'Communication'count: 2 },
-    { id: 'analytics'name: 'Analytics & Reporting'count: 3 }
+    { id: ''all', 'name: 'All 'Solutions', 'count: 12 },
+    { id: ''workflow', 'name: 'Workflow 'Automation', 'count: 4 },
+    { id: ''data', 'name: 'Data 'Processing', 'count: 3 },
+    { id: ''communication', 'name: ''Communication', 'count: 2 },
+    { id: ''analytics', 'name: 'Analytics & 'Reporting', 'count: 3 }
   ];
 
   const solutions: AutomationSolution[] = [
@@ -294,8 +294,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -313,8 +313,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -345,8 +345,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               {filteredSolutions.map((solutionindex) => (
                 <motion.div
                   key={solution.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
                     selectedSolution === solution.id ? 'ring-2 ring-blue-500' : ''
@@ -572,16 +572,16 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
 
         {/* Enterprise Stats */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise Clients'value: '500+' },
-            { icon: <TrendingUp className="w-8 h-8" />label: 'Average ROI'value: '300%' },
-            { icon: <Clock className="w-8 h-8" />label: 'Time Saved'value: '80%' },
-            { icon: <Shield className="w-8 h-8" />label: 'Uptime'value: '99.9%' }
+            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise 'Clients', 'value: '500+' },
+            { icon: <TrendingUp className="w-8 h-8" />label: 'Average 'ROI', 'value: '300%' },
+            { icon: <Clock className="w-8 h-8" />label: 'Time 'Saved', 'value: '80%' },
+            { icon: <Shield className="w-8 h-8" />label: ''Uptime', 'value: '99.9%' }
           ].map((statindex) => (
             <div key={index} className="text-center">
               <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">

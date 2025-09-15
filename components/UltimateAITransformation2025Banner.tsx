@@ -25,7 +25,7 @@ const UltimateAITransformation2025Banner = () => {
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold mb-4 text-emerald-400">Future-Ready</h3>
-            <p className="text-teal-100">Advanced AI systems designed for tomorrow's challenges</p>
+            <p className="text-teal-100">Advanced AI systems designed for 'tomorrow', 's challenges</p>
           </div>
         </div>
         

@@ -224,9 +224,9 @@ export default function FeaturedContentSection2025() {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Don't Miss Out on the Latest Content</h3>
+          <h3 className="text-3xl font-bold mb-4">'Don', 't Miss Out on the Latest Content</h3>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter and get notified about new articlescase studiesand tutorials as soon as they're published.
+            Subscribe to our newsletter and get notified about new articlescase studiesand tutorials as soon as 'they', 're published.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 

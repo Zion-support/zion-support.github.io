@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Building2
@@ -36,19 +36,19 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
 
   const stats = [
-    { value: '300%'label: 'Average ROI'icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '80%'label: 'Time Saved'icon: <Clock className="w-6 h-6" /> },
-    { value: '500+'label: 'Enterprise Clients'icon: <Building2 className="w-6 h-6" /> },
-    { value: '99.9%'label: 'Uptime'icon: <Shield className="w-6 h-6" /> }
+    { value: '300%'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" /> },
+    { value: '80%'label: 'Time 'Saved', 'icon: <Clock className="w-6 h-6" /> },
+    { value: '500+'label: 'Enterprise 'Clients', 'icon: <Building2 className="w-6 h-6" /> },
+    { value: '99.9%'label: ''Uptime', 'icon: <Shield className="w-6 h-6" /> }
   ];
 
   const solutions = [
-    { name: 'Workflow Orchestrator'icon: <Workflow className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
-    { name: 'Data Pipeline'icon: <Database className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
-    { name: 'Customer Service'icon: <MessageSquare className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
-    { name: 'Financial Automation'icon: <CreditCard className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
-    { name: 'HR Automation'icon: <Users className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
-    { name: 'Business Intelligence'icon: <PieChart className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
+    { name: 'Workflow 'Orchestrator', 'icon: <Workflow className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'Data 'Pipeline', 'icon: <Database className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Customer 'Service', 'icon: <MessageSquare className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Financial 'Automation', 'icon: <CreditCard className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'HR 'Automation', 'icon: <Users className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Business 'Intelligence', 'icon: <PieChart className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
   ];
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 py-20"
@@ -174,8 +174,8 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               {solutions.slice(04).map((solutionindex) => (
                 <motion.div
                   key={solution.name}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                   className={`p-4 rounded-lg border transition-all duration-300 ${
                     index === 0 ? 'bg-gradient-to-r ' + solution.color + ' border-white/20' : 'bg-white/5 border-white/10'
@@ -203,8 +203,8 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               {solutions.slice(4).map((solutionindex) => (
                 <motion.div
                   key={solution.name}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                   className="p-4 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300"
                 >
@@ -265,16 +265,16 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
 
         {/* Bottom Stats Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 1.0 }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: <Building2 className="w-6 h-6" />label: 'Enterprise Clients'value: '500+' },
-            { icon: <TrendingUp className="w-6 h-6" />label: 'Average ROI'value: '300%' },
-            { icon: <Clock className="w-6 h-6" />label: 'Time Saved'value: '80%' },
-            { icon: <Shield className="w-6 h-6" />label: 'Uptime'value: '99.9%' }
+            { icon: <Building2 className="w-6 h-6" />label: 'Enterprise 'Clients', 'value: '500+' },
+            { icon: <TrendingUp className="w-6 h-6" />label: 'Average 'ROI', 'value: '300%' },
+            { icon: <Clock className="w-6 h-6" />label: 'Time 'Saved', 'value: '80%' },
+            { icon: <Shield className="w-6 h-6" />label: ''Uptime', 'value: '99.9%' }
           ].map((statindex) => (
             <div key={index} className="text-center">
               <div className="p-3 bg-blue-500/20 rounded-lg text-blue-400 mb-3 inline-block">

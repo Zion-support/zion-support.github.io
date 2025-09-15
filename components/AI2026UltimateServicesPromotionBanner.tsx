@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -31,8 +31,8 @@ const AI2026UltimateServicesPromotionBanner = () => {
   return (
     <motion.div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4"
-      initial={{ opacity: 0y: 50 }}
-      animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8 }}
     >
       {/* Background Effects */}

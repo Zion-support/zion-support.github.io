@@ -1,6 +1,6 @@
 "use client";
 import React{ useEffectuseStateuseCallback } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
   ArrowRightPlayTrendingUpBrainShieldRocketGlobeCpuDatabaseAtomTargetStarSparkles as SparklesIcon,
@@ -53,14 +53,14 @@ const Homepage2047: React.FC = () => {
       setScrollY(window.scrollY);
     };
     
-    window.addEventListener('mousemove'handleMouseMove);
-    window.addEventListener('scroll'handleScroll);
+    window.addEventListener(', 'mousemove', 'handleMouseMove);
+    window.addEventListener(', 'scroll', 'handleScroll);
     
     return () => {
       clearInterval(interval);
       clearInterval(consciousnessInterval);
-      window.removeEventListener('mousemove'handleMouseMove);
-      window.removeEventListener('scroll'handleScroll);
+      window.removeEventListener(', 'mousemove', 'handleMouseMove);
+      window.removeEventListener(', 'scroll', 'handleScroll);
     };
   }[]);
 
@@ -84,10 +84,10 @@ const Homepage2047: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: SparklesIconcolor: 'from-purple-500 to-pink-500'count: allInnovativeServices.length },
-    { id: 'ai'name: 'AI & Autonomous'icon: BrainIconcolor: 'from-cyan-500 to-blue-500'count: innovative2025AIAutonomousEcosystemV2.length },
-    { id: 'quantum'name: 'Quantum & Emerging'icon: AtomIconcolor: 'from-blue-500 to-indigo-500'count: emergingTechBreakthroughs2025V4.length },
-    { id: 'it'name: 'IT Infrastructure'icon: Cpucolor: 'from-emerald-500 to-teal-500'count: innovative2025ITInfrastructureV2.length }
+    { id: ''all', 'name: 'All 'Services', 'icon: SparklesIconcolor: 'from-purple-500 to-pink-500'count: allInnovativeServices.length },
+    { id: ''ai', 'name: 'AI & 'Autonomous', 'icon: BrainIconcolor: 'from-cyan-500 to-blue-500'count: innovative2025AIAutonomousEcosystemV2.length },
+    { id: ''quantum', 'name: 'Quantum & 'Emerging', 'icon: AtomIconcolor: 'from-blue-500 to-indigo-500'count: emergingTechBreakthroughs2025V4.length },
+    { id: ''it', 'name: 'IT 'Infrastructure', 'icon: Cpucolor: 'from-emerald-500 to-teal-500'count: innovative2025ITInfrastructureV2.length }
   ];
 
   const features = [
@@ -107,8 +107,8 @@ const Homepage2047: React.FC = () => {
   ];
 
   const fadeInUp = {
-    initial: { opacity: 0y: 60 },
-    animate: { opacity: 1y: 0 },
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
 
@@ -141,8 +141,8 @@ const Homepage2047: React.FC = () => {
             >
               <div className="space-y-6">
                 <motion.div
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: 0.2 }}
                   className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
                 >
@@ -169,8 +169,8 @@ const Homepage2047: React.FC = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
@@ -278,8 +278,8 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -341,8 +341,8 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -394,8 +394,8 @@ const Homepage2047: React.FC = () => {
 
           {/* View All Services CTA */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8delay: 0.2 }}
             className="text-center mt-16"
@@ -415,8 +415,8 @@ const Homepage2047: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >

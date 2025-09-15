@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star
   TrendingUp
@@ -44,7 +44,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.9,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['AI'Predictions'Future'Technology'Revolutionary'],
+      tags: [', 'AI', 'Predictions', 'Future', 'Technology'Revolutionary'],
       author: 'AI Research Team',
       publishedAt: '2025-01-15',
       color: 'from-purple-500 to-pink-500'
@@ -61,7 +61,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.8,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['Quantum'Neural Networks'AI'Computing'Breakthrough'],
+      tags: [', 'Quantum', 'Neural 'Networks', 'AI', 'Computing', 'Breakthrough'],
       author: 'Quantum AI Lab',
       publishedAt: '2025-01-14',
       color: 'from-blue-500 to-cyan-500'
@@ -78,7 +78,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.9,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['Automation'Business'Operations'AI'Autonomous'],
+      tags: [', 'Automation', 'Business', 'Operations', 'AI'Autonomous'],
       author: 'Business AI Institute',
       publishedAt: '2025-01-13',
       color: 'from-green-500 to-emerald-500'
@@ -95,7 +95,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.7,
       thumbnail: '/api/placeholder/800/400',
       featured: false,
-      tags: ['Tutorial'Neural Interface'Implementation'Technology'],
+      tags: [', 'Tutorial', 'Neural 'Interface', 'Implementation'Technology'],
       author: 'NeuroTech Academy',
       publishedAt: '2025-01-12',
       color: 'from-orange-500 to-red-500'
@@ -112,7 +112,7 @@ const RevolutionaryContentShowcase2026 = () => {
       rating: 4.8,
       thumbnail: '/api/placeholder/800/400',
       featured: true,
-      tags: ['Consciousness'AI'Future'Philosophy'Ethics'],
+      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy'Ethics'],
       author: 'Consciousness Research Group',
       publishedAt: '2025-01-10',
       color: 'from-yellow-500 to-orange-500'
@@ -120,19 +120,19 @@ const RevolutionaryContentShowcase2026 = () => {
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: 156icon: Globe },
-    { id: 'ai-predictions'name: 'AI Predictions'count: 42icon: Brain },
-    { id: 'quantum-computing'name: 'Quantum Computing'count: 28icon: Zap },
-    { id: 'automation'name: 'Automation'count: 35icon: Rocket },
-    { id: 'tutorials'name: 'Tutorials'count: 31icon: Play },
-    { id: 'case-studies'name: 'Case Studies'count: 20icon: Target }
+    { id: ''all', 'name: 'All 'Content', 'count: 156icon: Globe },
+    { id: 'ai-'predictions', 'name: 'AI 'Predictions', 'count: 42icon: Brain },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'count: 28icon: Zap },
+    { id: ''automation', 'name: ''Automation', 'count: 35icon: Rocket },
+    { id: ''tutorials', 'name: ''Tutorials', 'count: 31icon: Play },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 20icon: Target }
   ];
 
   const stats = [
-    { label: 'Total Content'value: '500+'icon: Globe },
-    { label: 'Active Users'value: '50K+'icon: Users },
-    { label: 'Content Views'value: '2M+'icon: TrendingUp },
-    { label: 'Average Rating'value: '4.8'icon: Star }
+    { label: 'Total 'Content', 'value: '500+'icon: Globe },
+    { label: 'Active 'Users', 'value: '50K+'icon: Users },
+    { label: 'Content 'Views', 'value: '2M+'icon: TrendingUp },
+    { label: 'Average 'Rating', 'value: '4.8'icon: Star }
   ];
 
   useEffect(() => {
@@ -181,8 +181,8 @@ const RevolutionaryContentShowcase2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -232,7 +232,7 @@ const RevolutionaryContentShowcase2026 = () => {
             Featured Content
           </h3>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The most revolutionary and impactful content that's changing how we think about AI and technology
+            The most revolutionary and impactful content 'that', 's changing how we think about AI and technology
           </p>
         </motion.div>
 
@@ -400,8 +400,8 @@ const RevolutionaryContentShowcase2026 = () => {
       {/* Categories Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -417,8 +417,8 @@ const RevolutionaryContentShowcase2026 = () => {
           {categories.map((categoryindex) => (
             <motion.div
               key={category.id}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 + index * 0.1duration: 0.5 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300 cursor-pointer group"
             >
@@ -435,8 +435,8 @@ const RevolutionaryContentShowcase2026 = () => {
       {/* Call to Action */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1duration: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-12"
         >

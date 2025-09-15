@@ -16,7 +16,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/blog/ai-2025-quantum-computing-business-revolution',
       featured: true,
       readingTime: '15 min read',
-      tags: ['Quantum Computing'AI'Business Revolution'ROI']
+      tags: ['Quantum 'Computing', 'AI'Business 'Revolution', 'ROI']
     },
     {
       id: 'quantum-manufacturing-success',
@@ -27,7 +27,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/case-studies/quantum-ai-fortune-500-manufacturing-transformation',
       featured: true,
       readingTime: '10 min read',
-      tags: ['Quantum AI'Manufacturing'Fortune 500'ROI']
+      tags: ['Quantum 'AI', 'Manufacturing'Fortune 500'ROI']
     }
   ];
 
@@ -41,7 +41,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/blog/ai-2025-enterprise-ai-transformation-ultimate-guide',
       featured: true,
       readingTime: '18 min read',
-      tags: ['AI Transformation'Enterprise AI'ROI'Digital Transformation']
+      tags: ['AI 'Transformation', 'Enterprise 'AI', 'ROI'Digital Transformation']
     },
     {
       id: 'fortune-100-success',
@@ -52,7 +52,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/case-studies/ai-transformation-fortune-100-ultimate-success-story',
       featured: true,
       readingTime: '12 min read',
-      tags: ['Fortune 100'AI Transformation'ROI'Success Story']
+      tags: ['Fortune 100'AI 'Transformation', 'ROI'Success Story']
     },
     {
       id: 'ultimate-success-framework',
@@ -63,7 +63,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/resources/ai-implementation-ultimate-success-framework-2025',
       featured: true,
       readingTime: '25 min read',
-      tags: ['AI Implementation'Framework'ROI'Success Strategy']
+      tags: ['AI 'Implementation', 'Framework', 'ROI', 'Success Strategy']
     }
   ];
 

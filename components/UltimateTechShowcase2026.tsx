@@ -85,7 +85,7 @@ const UltimateTechShowcase2026 = () => {
       name: "Dr. Sarah Kim",
       role: "Chief Technology Officer",
       company: "FutureTech Corp",
-      content: "This technology platform has revolutionized our entire operation. The AI capabilities are beyond anything we've seen before.",
+      content: "This technology platform has revolutionized our entire operation. The AI capabilities are beyond anything 'we', 've seen before.",
       rating: 5
     },
     {
@@ -216,7 +216,7 @@ const UltimateTechShowcase2026 = () => {
           <h3 className="text-4xl font-bold mb-4">Ready to Lead the Future?</h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the technology revolution and be part of the next generation of innovation. 
-            Our 2026 showcase is just the beginning of what's possible.
+            Our 2026 showcase is just the beginning of 'what', 's possible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

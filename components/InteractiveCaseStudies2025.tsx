@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -50,10 +50,10 @@ const caseStudies: CaseStudy[] = [
     challenge: 'Inefficient supply chain management leading to 30% inventory waste and delayed deliveries',
     solution: 'Implemented AI-driven demand forecasting and automated inventory management system',
     results: [
-      { metric: 'Cost Reduction'value: '$2.3M'improvement: '35%' },
-      { metric: 'Delivery Time'value: '2.1 days'improvement: '60% faster' },
-      { metric: 'Inventory Waste'value: '8%'improvement: '73% reduction' },
-      { metric: 'Customer Satisfaction'value: '94%'improvement: '28% increase' }
+      { metric: 'Cost 'Reduction', 'value: '$2.3'M', 'improvement: '35%' },
+      { metric: 'Delivery 'Time', 'value: '2.1 'days', 'improvement: '60% faster' },
+      { metric: 'Inventory 'Waste', 'value: '8%'improvement: '73% reduction' },
+      { metric: 'Customer 'Satisfaction', 'value: '94%'improvement: '28% increase' }
     ],
     duration: '6 months',
     teamSize: '12 members',
@@ -62,7 +62,7 @@ const caseStudies: CaseStudy[] = [
     author: 'Sarah Chen',
     role: 'VP of Operations',
     image: '/api/placeholder/400/300',
-    tags: ['AI'Supply Chain'Manufacturing'ROI'],
+    tags: [', 'AI', 'Supply 'Chain', 'Manufacturing'ROI'],
     isFeatured: true
   },
   {
@@ -73,10 +73,10 @@ const caseStudies: CaseStudy[] = [
     challenge: 'High customer service costs and low satisfaction rates with traditional support systems',
     solution: 'Deployed advanced AI chatbots with emotional intelligence and human handoff capabilities',
     results: [
-      { metric: 'Response Time'value: '15 seconds'improvement: '95% faster' },
-      { metric: 'Cost Reduction'value: '$180K'improvement: '65% savings' },
-      { metric: 'Customer Satisfaction'value: '91%'improvement: '42% increase' },
-      { metric: 'Resolution Rate'value: '87%'improvement: '38% increase' }
+      { metric: 'Response 'Time', 'value: '15 'seconds', 'improvement: '95% faster' },
+      { metric: 'Cost 'Reduction', 'value: '$180'K', 'improvement: '65% savings' },
+      { metric: 'Customer 'Satisfaction', 'value: '91%'improvement: '42% increase' },
+      { metric: 'Resolution 'Rate', 'value: '87%'improvement: '38% increase' }
     ],
     duration: '4 months',
     teamSize: '8 members',
@@ -85,7 +85,7 @@ const caseStudies: CaseStudy[] = [
     author: 'Michael Rodriguez',
     role: 'Head of Customer Success',
     image: '/api/placeholder/400/300',
-    tags: ['AI'Customer Service'Automation'Satisfaction']
+    tags: [', 'AI', 'Customer 'Service', 'Automation'Satisfaction']
   },
   {
     id: '3',
@@ -95,10 +95,10 @@ const caseStudies: CaseStudy[] = [
     challenge: 'Complex risk assessment and fraud detection requiring massive computational power',
     solution: 'Implemented quantum-inspired algorithms for real-time risk analysis and fraud prevention',
     results: [
-      { metric: 'Fraud Detection'value: '99.7%'improvement: '23% more accurate' },
-      { metric: 'Processing Speed'value: '0.3ms'improvement: '1000x faster' },
-      { metric: 'False Positives'value: '0.1%'improvement: '89% reduction' },
-      { metric: 'Cost Savings'value: '$5.2M'improvement: '45% reduction' }
+      { metric: 'Fraud 'Detection', 'value: '99.7%'improvement: '23% more accurate' },
+      { metric: 'Processing 'Speed', 'value: '0.3'ms', 'improvement: '1000x faster' },
+      { metric: 'False 'Positives', 'value: '0.1%'improvement: '89% reduction' },
+      { metric: 'Cost 'Savings', 'value: '$5.2'M', 'improvement: '45% reduction' }
     ],
     duration: '8 months',
     teamSize: '15 members',
@@ -107,7 +107,7 @@ const caseStudies: CaseStudy[] = [
     author: 'Dr. Emily Watson',
     role: 'Chief Technology Officer',
     image: '/api/placeholder/400/300',
-    tags: ['Quantum AI'Finance'Security'Performance'],
+    tags: ['Quantum 'AI', 'Finance', 'Security', 'Performance'],
     isFeatured: true
   },
   {
@@ -118,10 +118,10 @@ const caseStudies: CaseStudy[] = [
     challenge: 'Manual diagnostic processes causing delays and inconsistent accuracy in medical imaging',
     solution: 'Deployed deep learning models for automated medical image analysis and diagnostic assistance',
     results: [
-      { metric: 'Diagnostic Accuracy'value: '96.8%'improvement: '18% increase' },
-      { metric: 'Processing Time'value: '2 minutes'improvement: '85% faster' },
-      { metric: 'Early Detection'value: '89%'improvement: '34% improvement' },
-      { metric: 'Cost per Diagnosis'value: '$45'improvement: '60% reduction' }
+      { metric: 'Diagnostic 'Accuracy', 'value: '96.8%'improvement: '18% increase' },
+      { metric: 'Processing 'Time', 'value: '2 'minutes', 'improvement: '85% faster' },
+      { metric: 'Early 'Detection', 'value: '89%'improvement: '34% improvement' },
+      { metric: 'Cost per 'Diagnosis', 'value: '$45'improvement: '60% reduction' }
     ],
     duration: '10 months',
     teamSize: '20 members',
@@ -130,11 +130,11 @@ const caseStudies: CaseStudy[] = [
     author: 'Dr. James Park',
     role: 'Chief Medical Officer',
     image: '/api/placeholder/400/300',
-    tags: ['AI'Healthcare'Diagnostics'Life-Saving']
+    tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
   }
 ];
 
-const industries = ['All'Manufacturing'Technology'Financial Services'Healthcare'];
+const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
 
 export default function InteractiveCaseStudies2025() {
   const [selectedIndustrysetSelectedIndustry] = useState('All');
@@ -154,8 +154,8 @@ export default function InteractiveCaseStudies2025() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -177,8 +177,8 @@ export default function InteractiveCaseStudies2025() {
 
         {/* Industry Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -208,9 +208,9 @@ export default function InteractiveCaseStudies2025() {
             {filteredCaseStudies.map((caseStudyindex) => (
               <motion.div
                 key={caseStudy.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`group relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer ${
                   caseStudy.isFeatured ? 'border-blue-500/50 shadow-lg shadow-blue-500/10' : 'border-white/10'
@@ -292,8 +292,8 @@ export default function InteractiveCaseStudies2025() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >
@@ -330,9 +330,9 @@ export default function InteractiveCaseStudies2025() {
             onClick={() => setSelectedCase(null)}
           >
             <motion.div
-              initial={{ scale: 0.9opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
-              exit={{ scale: 0.9opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >

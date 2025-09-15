@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -69,7 +69,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 892,
         publishedAt: '2025-01-15',
         author: 'Dr. Sarah Chen',
-        tags: ['ai'automation'business'2026'],
+        tags: ['ai', 'automation', 'business', '2026'],
         featured: true,
         aiScore: 9.2,
         trending: true
@@ -85,7 +85,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 456,
         publishedAt: '2025-01-14',
         author: 'Prof. Michael Rodriguez',
-        tags: ['quantum'computing'applications'],
+        tags: [', 'quantum', 'computing'applications'],
         featured: true,
         aiScore: 8.7,
         trending: false
@@ -101,7 +101,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 234,
         publishedAt: '2025-01-13',
         author: 'Emily Watson',
-        tags: ['neural-interface'guide'tutorial'],
+        tags: ['neural-'interface', 'guide'tutorial'],
         featured: false,
         aiScore: 9.0,
         trending: true
@@ -117,7 +117,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 189,
         publishedAt: '2025-01-12',
         author: 'Alex Thompson',
-        tags: ['edge-ai'performance'optimization'],
+        tags: ['edge-'ai', 'performance'optimization'],
         featured: false,
         aiScore: 8.5,
         trending: false
@@ -133,7 +133,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 156,
         publishedAt: '2025-01-11',
         author: 'Dr. Lisa Park',
-        tags: ['ml'healthcare'ethics'],
+        tags: [', 'ml', 'healthcare'ethics'],
         featured: false,
         aiScore: 8.9,
         trending: false
@@ -149,7 +149,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 201,
         publishedAt: '2025-01-10',
         author: 'James Wilson',
-        tags: ['blockchain'ai'convergence'],
+        tags: [', 'blockchain', 'ai'convergence'],
         featured: false,
         aiScore: 8.6,
         trending: true
@@ -161,13 +161,13 @@ const AIPoweredContentRecommendationSystem = () => {
   };
 
   const categories = [
-    { id: 'all'name: 'All Recommendations'icon: Braincount: 1247 },
-    { id: 'ai-innovation'name: 'AI Innovation'icon: Cpucount: 342 },
-    { id: 'quantum-computing'name: 'Quantum Computing'icon: Zapcount: 156 },
-    { id: 'neural-interface'name: 'Neural Interface'icon: Braincount: 89 },
-    { id: 'edge-computing'name: 'Edge Computing'icon: Cloudcount: 123 },
-    { id: 'healthcare-ai'name: 'Healthcare AI'icon: Shieldcount: 78 },
-    { id: 'blockchain-ai'name: 'Blockchain AI'icon: Databasecount: 45 }
+    { id: ''all', 'name: 'All 'Recommendations', 'icon: Braincount: 1247 },
+    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Cpucount: 342 },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcount: 156 },
+    { id: 'neural-'interface', 'name: 'Neural 'Interface', 'icon: Braincount: 89 },
+    { id: 'edge-'computing', 'name: 'Edge 'Computing', 'icon: Cloudcount: 123 },
+    { id: 'healthcare-'ai', 'name: 'Healthcare 'AI', 'icon: Shieldcount: 78 },
+    { id: 'blockchain-'ai', 'name: 'Blockchain 'AI', 'icon: Databasecount: 45 }
   ];
 
   const getConfidenceColor = (confidence) => {
@@ -198,7 +198,7 @@ const AIPoweredContentRecommendationSystem = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
@@ -223,16 +223,16 @@ const AIPoweredContentRecommendationSystem = () => {
 
         {/* AI Stats */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
           {[
-            { label: 'AI Accuracy'value: '94.2%'icon: Targetcolor: 'green' },
-            { label: 'Personalization'value: '98.7%'icon: Userscolor: 'blue' },
-            { label: 'Engagement Boost'value: '+67%'icon: TrendingUpcolor: 'purple' },
-            { label: 'Content Matched'value: '1,247'icon: Databasecolor: 'orange' }
+            { label: 'AI 'Accuracy', 'value: '94.2%'icon: Targetcolor: 'green' },
+            { label: ''Personalization', 'value: '98.7%'icon: Userscolor: 'blue' },
+            { label: 'Engagement 'Boost', 'value: '+67%'icon: TrendingUpcolor: 'purple' },
+            { label: 'Content 'Matched', 'value: '1,247'icon: Databasecolor: 'orange' }
           ].map((statindex) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${stat.color}-100 mb-4`}>
@@ -246,7 +246,7 @@ const AIPoweredContentRecommendationSystem = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
@@ -288,7 +288,7 @@ const AIPoweredContentRecommendationSystem = () => {
 
         {/* Recommendations Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -299,8 +299,8 @@ const AIPoweredContentRecommendationSystem = () => {
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
                 >
@@ -407,7 +407,7 @@ const AIPoweredContentRecommendationSystem = () => {
 
         {/* Load More */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-12"

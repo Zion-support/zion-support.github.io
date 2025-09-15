@@ -9,7 +9,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
   const [titlesetTitle] = useState('');
   const [descriptionsetDescription] = useState('');
   const [dueDatesetDueDate] = useState('');
-  const [amountUsdsetAmountUsd] = useState<string>('');
+  const [amountUsdsetAmountUsd] = useState<string>(', ');
   const [errorsetError] = useState<string | null>(null);
   const [loadingsetLoading] = useState(false);
 
@@ -24,10 +24,10 @@ export default function MilestoneForm({ onSubmit }: Props) {
     setLoading(true);
     try {
       await onSubmit({ titledescription: description || undefinedueDateamountUsd: parsedAmount });
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('');
+      setTitle(', ');
+      setDescription(', ');
+      setDueDate(', ');
+      setAmountUsd(', ');
     } catch (err: any) {
       setError(err?.message || 'Failed to create milestone');
     } finally {

@@ -19,11 +19,11 @@ export default function GrantDetailPage() {
 
   const addUpdate = async () => {
     if (!id || !updateContent.trim()) return;
-    const resp = await fetch(`/api/grants/${id}/updates`{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content: updateContent }) });
+    const resp = await fetch(`/api/grants/${id}/updates`{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content: updateContent }) });
     if (resp.ok) {
       const u = await resp.json();
       setItem((prev) => prev ? { ...prevupdates: [...(prev.updates || [])u.update] } : prev);
-      setUpdateContent('');
+      setUpdateContent(', ');
     }
   };
 

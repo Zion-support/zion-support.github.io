@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Mail
   CheckCircle
@@ -36,7 +36,7 @@ const NewsletterSignup2026 = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setError('');
+    setError(', ');
 
     try {
       // Simulate API call
@@ -44,7 +44,7 @@ const NewsletterSignup2026 = () => {
       
       // Simulate success
       setIsSubscribed(true);
-      setEmail('');
+      setEmail(', ');
     } catch (err) {
       setError('Something went wrong. Please try again.');
     } finally {
@@ -86,9 +86,9 @@ const NewsletterSignup2026 = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50 }}
-      animate={{ opacity: 1y: 0 }}
-      exit={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.6ease: "easeOut" }}
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
     >
@@ -161,8 +161,8 @@ const NewsletterSignup2026 = () => {
                 return (
                   <motion.div
                     key={benefit.title}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6delay: 0.2 + index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
@@ -241,8 +241,8 @@ const NewsletterSignup2026 = () => {
 
                     {error && (
                       <motion.div
-                        initial={{ opacity: 0y: -10 }}
-                        animate={{ opacity: 1y: 0 }}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-red-400 text-sm"
                       >
                         {error}
@@ -292,12 +292,12 @@ const NewsletterSignup2026 = () => {
                   </h3>
                   
                   <p className="text-gray-300 mb-6">
-                    You're now part of our exclusive community. Check your email for a confirmation 
+                    'You', 're now part of our exclusive community. Check your email for a confirmation 
                     and get ready for amazing content delivered to your inbox.
                   </p>
 
                   <div className="bg-white/10 rounded-lg p-4 mb-6">
-                    <h4 className="text-white font-medium mb-2">What's Next?</h4>
+                    <h4 className="text-white font-medium mb-2">'What', 's Next?</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
                       <li>• Confirmation email within 5 minutes</li>
                       <li>• First newsletter tomorrow morning</li>
@@ -320,8 +320,8 @@ const NewsletterSignup2026 = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-12"
         >
@@ -330,8 +330,8 @@ const NewsletterSignup2026 = () => {
               Join the AI Revolution Today
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Don't miss out on the most important technological shift of our lifetime. 
-              Be part of the community that's shaping the future.
+              'Don', 't miss out on the most important technological shift of our lifetime. 
+              Be part of the community 'that', 's shaping the future.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <div className="flex items-center">

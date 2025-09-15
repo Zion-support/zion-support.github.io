@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
 const InteractiveROICalculator2025_2026: React.FC = () => {

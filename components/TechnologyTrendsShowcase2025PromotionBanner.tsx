@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   TrendingUp
@@ -38,9 +38,9 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -50 }}
-      animate={{ opacity: 1y: 0 }}
-      exit={{ opacity: 0y: -50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
       className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -80,9 +80,9 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
                 <span className="text-lg opacity-90">Trending:</span>
                 <motion.div
                   key={currentTrend}
-                  initial={{ opacity: 0y: 10 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -10 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="flex items-center gap-2"
                 >
                   <trends[currentTrend].icon className="w-4 h-4" />

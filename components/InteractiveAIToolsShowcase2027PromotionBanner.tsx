@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -108,9 +108,9 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -50 }}
-      animate={{ opacity: 1y: 0 }}
-      exit={{ opacity: 0y: -50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
       className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 overflow-hidden"
     >
       {/* Background Effects */}
@@ -158,8 +158,8 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.1 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -180,8 +180,8 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
 
             {/* Rotating Featured Tool */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
             >
@@ -232,8 +232,8 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.3 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
@@ -255,8 +255,8 @@ const InteractiveAIToolsShowcase2027PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4"
             >

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -69,7 +69,7 @@ const FuturisticAIServices2026Showcase = () => {
   }[services.length]);
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -81,7 +81,7 @@ const FuturisticAIServices2026Showcase = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,

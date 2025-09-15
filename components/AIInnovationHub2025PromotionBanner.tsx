@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -90,17 +90,17 @@ const AIInnovationHub2025PromotionBanner = () => {
   ];
 
   const categories = [
-    { name: 'AI Core Technologies'count: '150+'icon: Brain },
-    { name: 'Business AI Solutions'count: '80+'icon: Target },
-    { name: 'Future Technologies'count: '45+'icon: Rocket },
-    { name: 'Tools & Utilities'count: '120+'icon: Wrench }
+    { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain },
+    { name: 'Business AI 'Solutions', 'count: '80+'icon: Target },
+    { name: 'Future 'Technologies', 'count: '45+'icon: Rocket },
+    { name: 'Tools & 'Utilities', 'count: '120+'icon: Wrench }
   ];
 
   const stats = [
-    { number: '400+'label: 'AI Innovations'icon: Brain },
-    { number: '1M+'label: 'Downloads'icon: Download },
-    { number: '4.8'label: 'Average Rating'icon: Star },
-    { number: '50+'label: 'Categories'icon: Grid }
+    { number: '400+'label: 'AI 'Innovations', 'icon: Brain },
+    { number: '1M+'label: ''Downloads', 'icon: Download },
+    { number: '4.8'label: 'Average 'Rating', 'icon: Star },
+    { number: '50+'label: ''Categories', 'icon: Grid }
   ];
 
   if (isDismissed) return null;
@@ -109,9 +109,9 @@ const AIInnovationHub2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden"
         >
@@ -154,8 +154,8 @@ const AIInnovationHub2025PromotionBanner = () => {
                   {/* Rotating Innovation Showcase */}
                   <motion.div
                     key={currentInnovation}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="mb-8"
                   >
@@ -180,8 +180,8 @@ const AIInnovationHub2025PromotionBanner = () => {
 
                   {/* Categories */}
                   <motion.div
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8delay: 0.4 }}
                     className="mb-8"
                   >
@@ -200,8 +200,8 @@ const AIInnovationHub2025PromotionBanner = () => {
 
                   {/* Stats */}
                   <motion.div
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8delay: 0.6 }}
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
                   >
@@ -215,8 +215,8 @@ const AIInnovationHub2025PromotionBanner = () => {
 
                   {/* Action Buttons */}
                   <motion.div
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8delay: 0.8 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                   >
@@ -257,10 +257,10 @@ const AIInnovationHub2025PromotionBanner = () => {
                       {/* Feature Grid */}
                       <div className="grid grid-cols-2 gap-4 mb-6">
                         {[
-                          { icon: Brainlabel: 'Neural Networks'color: 'from-purple-500 to-pink-500' },
-                          { icon: Zaplabel: 'Quantum AI'color: 'from-blue-500 to-cyan-500' },
-                          { icon: Shieldlabel: 'Privacy AI'color: 'from-green-500 to-emerald-500' },
-                          { icon: Rocketlabel: 'Edge Computing'color: 'from-orange-500 to-red-500' }
+                          { icon: Brainlabel: 'Neural 'Networks', 'color: 'from-purple-500 to-pink-500' },
+                          { icon: Zaplabel: 'Quantum 'AI', 'color: 'from-blue-500 to-cyan-500' },
+                          { icon: Shieldlabel: 'Privacy 'AI', 'color: 'from-green-500 to-emerald-500' },
+                          { icon: Rocketlabel: 'Edge 'Computing', 'color: 'from-orange-500 to-red-500' }
                         ].map((featureindex) => (
                           <div key={index} className={`bg-gradient-to-r ${feature.color} rounded-xl p-4 text-center`}>
                             <feature.icon className="w-6 h-6 text-white mx-auto mb-2" />

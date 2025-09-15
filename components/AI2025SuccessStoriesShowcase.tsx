@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -79,7 +79,7 @@ const AI2025SuccessStoriesShowcase = () => {
       },
       icon: Lightbulb,
       color: "from-purple-500 to-pink-500",
-      testimonial: "AI helps us diagnose patients faster and more accurately. It's revolutionizing healthcare delivery."
+      testimonial: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery."
     },
     {
       id: 4,
@@ -123,8 +123,8 @@ const AI2025SuccessStoriesShowcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -253,8 +253,8 @@ const AI2025SuccessStoriesShowcase = () => {
             {metrics.map((metricindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
@@ -292,8 +292,8 @@ const AI2025SuccessStoriesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="text-center"
         >

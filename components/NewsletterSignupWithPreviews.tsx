@@ -67,10 +67,10 @@ export default function NewsletterSignupWithPreviews() {
             Welcome to the Revolution!
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            You're now subscribed to our revolutionary AI insights newsletter. Get ready for breakthrough content delivered directly to your inbox.
+            'You', 're now subscribed to our revolutionary AI insights newsletter. Get ready for breakthrough content delivered directly to your inbox.
           </p>
           <div className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 p-6 rounded-xl border border-green-500/30">
-            <h3 className="text-2xl font-bold mb-4 text-green-400">What's Next?</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-400">'What', 's Next?</h3>
             <div className="space-y-3 text-left">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -147,7 +147,7 @@ export default function NewsletterSignupWithPreviews() {
 
             {/* Benefits */}
             <div className="mt-8 space-y-4">
-              <h3 className="text-xl font-bold text-cyan-400">What You'll Get:</h3>
+              <h3 className="text-xl font-bold text-cyan-400">What 'You', 'll Get:</h3>
               <div className="space-y-2">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>

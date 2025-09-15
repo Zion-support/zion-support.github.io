@@ -29,7 +29,7 @@ const AI2025UltimateContentRevolution50000ROIBanner = () => {
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-            The breakthrough that's delivering <span className="font-bold text-yellow-400">50,000% ROI</span> and transforming 
+            The breakthrough 'that', 's delivering <span className="font-bold text-yellow-400">50,000% ROI</span> and transforming 
             businesses across every industry with revolutionary content automation and intelligence.
           </p>
           

@@ -64,7 +64,7 @@ export default function AI2035FutureVisionPromotionBanner() {
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Global AI Ecosystem</h3>
             <p className="text-gray-300 text-sm">
-              Unified planetary-scale intelligence solving humanity's greatest challenges.
+              Unified planetary-scale intelligence solving 'humanity', 's greatest challenges.
             </p>
           </div>
         </div>

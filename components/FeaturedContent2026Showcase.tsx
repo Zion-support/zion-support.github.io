@@ -30,7 +30,7 @@ export default function FeaturedContent2026Showcase({
   subtitle = "Discover the latest AI breakthroughsuccess storiesand implementation guides that are transforming industries worldwide",
   showStats = true,
   maxItems = 6,
-  className = ''
+  className = ', '
 }: FeaturedContent2026ShowcaseProps) {
   
   const featuredContent: ContentItem[] = [
@@ -47,7 +47,7 @@ export default function FeaturedContent2026Showcase({
       icon: "🔮"
     },
     {
-      title: "TechCorp's AI Transformation: $500M ROI in 6 Months",
+      title: "'TechCorp', 's AI Transformation: $500M ROI in 6 Months",
       description: "How TechCorp achieved unprecedented success through comprehensive AI transformationdelivering $500 million in ROI within 6 months and revolutionizing their industry.",
       href: "/case-studies/techcorp-ai-transformation-2026-500-million-roi",
       type: "case-study",

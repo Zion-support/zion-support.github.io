@@ -12,15 +12,15 @@ export default function MainFrontIndex() {
   const [mobileOpensetMobileOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setShowToTop(window.scrollY > 400);
-    window.addEventListener('scroll'onScroll{ passive: true } as any);
+    window.addEventListener(', 'scroll', 'onScroll{ passive: true } as any);
     onScroll();
-    return () => window.removeEventListener('scroll'onScroll);
+    return () => window.removeEventListener(', 'scroll', 'onScroll);
   }[]);
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Zion — Front Systems Hub | Autonomous Cloud Automations</title>
-        <meta name="description" content="Futuristic front experience showcasing Zion's autonomous cloud automations — featurescapabilitiesand benefits." />
+        <meta name="description" content="Futuristic front experience showcasing 'Zion', 's autonomous cloud automations — featurescapabilitiesand benefits." />
         <meta property="og:title" content="Zion — Front Systems Hub" />
         <meta property="og:description" content="Explore the featurescapabilitiesand benefits behind our autonomous cloud automations." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -143,8 +143,8 @@ export default function MainFrontIndex() {
       {/* Hero */}
       <div role="main" className="relative z-10">
         <motion.section
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
         >
@@ -166,7 +166,7 @@ export default function MainFrontIndex() {
               <a href="#reports" className="hover:text-white">Integrations</a>
             </div>
             <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">
-              Explore the featurescapabilitiesand benefits that power Zion's autonomous cloud automations — optimized for your front‑of‑house experience.
+              Explore the featurescapabilitiesand benefits that power 'Zion', 's autonomous cloud automations — optimized for your front‑of‑house experience.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
@@ -194,9 +194,9 @@ export default function MainFrontIndex() {
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 ['24/7'Autonomous'],
-                ['Main'Direct Sync'],
-                ['0 Ops'Cloud‑Native'],
-                ['Safety'Guardrails']].map(([k,v]) => (
+                [', 'Main', 'Direct Sync'],
+                ['0 'Ops', 'Cloud‑Native'],
+                [', 'Safety', 'Guardrails']].map(([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
                   <div className="text-lg font-bold text-white">{k}</div>
                   <div className="text-xs text-white/70">{v}</div>
@@ -246,8 +246,8 @@ export default function MainFrontIndex() {
                  {/* Showcase */}
          <motion.section
            id="showcase"
-           initial={{ opacity: 0y: 24 }}
-           whileInView={{ opacity: 1y: 0 }}
+           initial={{ opacity: 0, y: 24 }}
+           whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: trueamount: 0.2 }}
            transition={{ duration: 0.5 }}
            className="mx-auto max-w-7xl px-6 pb-14"
@@ -324,21 +324,21 @@ export default function MainFrontIndex() {
         <aside className="fixed left-4 top-1/2 z-30 -translate-y-1/2 block">
           <nav aria-label="Quick section navigation" className="space-y-2">
             {[
-              ['#command-center'Command'],
-              ['#feature-map'Map'],
-              ['#engines'Engines'],
-              ['#suites'Suites'],
-              ['#capabilities'Capabilities'],
-              ['#use-cases'Use Cases'],
-              ['#pillars'Pillars'],
-              ['#benefits'Benefits'],
-              ['#templates'Templates'],
-              ['#demos'Demos'],
-              ['#highlights'Highlights'],
-              ['#cases'Cases'],
-              ['#reports'Reports'],
-              ['#guardrails'Guardrails'],
-              ['#roadmap'Docs']].map(([hreflabel]) => (
+              ['#command-'center', 'Command'],
+              ['#feature-'map', 'Map'],
+              ['#'engines', 'Engines'],
+              ['#'suites', 'Suites'],
+              ['#'capabilities', 'Capabilities'],
+              ['#use-'cases', 'Use Cases'],
+              ['#'pillars', 'Pillars'],
+              ['#'benefits', 'Benefits'],
+              ['#'templates', 'Templates'],
+              ['#'demos', 'Demos'],
+              ['#'highlights', 'Highlights'],
+              ['#'cases', 'Cases'],
+              ['#'reports', 'Reports'],
+              ['#'guardrails', 'Guardrails'],
+              ['#'roadmap', 'Docs']].map(([hreflabel]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
                 {label}
               </a>
@@ -349,8 +349,8 @@ export default function MainFrontIndex() {
         {/* Engines: Alternative Automation Runtimes */}
         <motion.section
           id="engines"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -478,8 +478,8 @@ export default function MainFrontIndex() {
         {/* Autonomous Innovations */}
         <motion.section
           id="innovations"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -530,14 +530,14 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Command Center</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Automation Hub'desc: 'Runbooksfactoriesand live autonomous agents.'href: '/automation' },
-              { title: 'Site Health'desc: 'A11yperformanceand link‑health dashboards.'href: '/site-health' },
-              { title: 'SEO Audit'desc: 'Continuous on‑site SEO scans with proposed diffs.'href: '/reports/seo' },
-              { title: 'AI Trends'desc: 'Intelligence signals from the AI/cloud ecosystem.'href: '/reports/ai-trends' },
-              { title: 'Newsroom'desc: 'Curated updates and product evolution highlights.'href: '/newsroom' },
-              { title: 'Cloud Automations'desc: 'Netlify scheduled functions powering jobs 24/7.'href: '/automation' },
-              { title: 'Docs'desc: 'Technical notes and guides for the platform.'href: '/reports/seo'external: true },
-              { title: 'AI Changelog'desc: 'Summarized autonomous changes and highlights.'href: '/newsroom'external: true }
+              { title: 'Automation 'Hub', 'desc: 'Runbooksfactoriesand live autonomous agents.'href: '/automation' },
+              { title: 'Site 'Health', 'desc: 'A11yperformanceand link‑health dashboards.'href: '/site-health' },
+              { title: 'SEO 'Audit', 'desc: 'Continuous on‑site SEO scans with proposed diffs.'href: '/reports/seo' },
+              { title: 'AI 'Trends', 'desc: 'Intelligence signals from the AI/cloud ecosystem.'href: '/reports/ai-trends' },
+              { title: ''Newsroom', 'desc: 'Curated updates and product evolution highlights.'href: '/newsroom' },
+              { title: 'Cloud 'Automations', 'desc: 'Netlify scheduled functions powering jobs 24/7.'href: '/automation' },
+              { title: ''Docs', 'desc: 'Technical notes and guides for the platform.'href: '/reports/'seo', 'external: true },
+              { title: 'AI 'Changelog', 'desc: 'Summarized autonomous changes and highlights.'href: '/'newsroom', 'external: true }
             ].map((card) => (
               <article key={card.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 holo tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -556,8 +556,8 @@ export default function MainFrontIndex() {
         {/* Netlify Automations */}
         <motion.section
           id="netlify-automations"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -567,17 +567,17 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[ 
               { label: 'Autonomous Cloud Brain (1m)'desc: 'Selectively triggers and syncs key pipelines every minute.'href: '/.netlify/functions/autonomous-cloud-brain' },
-              { label: 'Homepage Advertiser'desc: 'Curates and updates the home explore section.'href: '/.netlify/functions/homepage_advertiser' },
-              { label: 'Autonomous Meta Orchestrator'desc: 'Intelligently triggers cloud functions and syncs to main every minute.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
-              { label: 'Cloud Orchestrator'desc: 'Runs fast improvement cycle and git sync.'href: '/.netlify/functions/cloud_orchestrator' },
+              { label: 'Homepage 'Advertiser', 'desc: 'Curates and updates the home explore section.'href: '/.netlify/functions/homepage_advertiser' },
+              { label: 'Autonomous Meta 'Orchestrator', 'desc: 'Intelligently triggers cloud functions and syncs to main every minute.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
+              { label: 'Cloud 'Orchestrator', 'desc: 'Runs fast improvement cycle and git sync.'href: '/.netlify/functions/cloud_orchestrator' },
               { label: 'Autonomous Meta Orchestrator (1m)'desc: 'Curates and triggers critical cloud functionsthen syncs.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Cloud Trigger Hub (2m)'desc: 'Triggers most functions concurrentlythen rebuilds/stamps.'href: '/.netlify/functions/cloud-trigger-hub' },
-              { label: 'Sitemap Runner'desc: 'Keeps sitemap fresh for SEO visibility.'href: '/.netlify/functions/sitemap_runner' },
-              { label: 'SEO Audit Runner'desc: 'Analyzes meta and content signals; writes public report.'href: '/.netlify/functions/seo-audit-runner' },
-              { label: 'AI Trends Radar'desc: 'Builds AI trends report from curated sources.'href: '/.netlify/functions/ai-trends-radar-runner' },
-              { label: 'Dependency Auto‑Upgrade'desc: 'Safely bumps deps and verifies a clean build.'href: '/.netlify/functions/deps-auto-upgrade-runner' },
-              { label: 'Autonomous Meta Orchestrator'desc: 'Invents and triggers cloud automations; syncs changes.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
-              { label: 'Trigger All & Commit'desc: 'Invokes all functions and triggers a build or commit.'href: '/.netlify/functions/trigger-all-and-commit' }
+              { label: 'Sitemap 'Runner', 'desc: 'Keeps sitemap fresh for SEO visibility.'href: '/.netlify/functions/sitemap_runner' },
+              { label: 'SEO Audit 'Runner', 'desc: 'Analyzes meta and content signals; writes public report.'href: '/.netlify/functions/seo-audit-runner' },
+              { label: 'AI Trends 'Radar', 'desc: 'Builds AI trends report from curated sources.'href: '/.netlify/functions/ai-trends-radar-runner' },
+              { label: 'Dependency Auto‑'Upgrade', 'desc: 'Safely bumps deps and verifies a clean build.'href: '/.netlify/functions/deps-auto-upgrade-runner' },
+              { label: 'Autonomous Meta 'Orchestrator', 'desc: 'Invents and triggers cloud automations; syncs changes.'href: '/.netlify/functions/autonomous-meta-orchestrator' },
+              { label: 'Trigger All & 'Commit', 'desc: 'Invokes all functions and triggers a build or commit.'href: '/.netlify/functions/trigger-all-and-commit' }
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -611,8 +611,8 @@ export default function MainFrontIndex() {
 
         {/* Feature Spotlight */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -621,12 +621,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick tour of the most impactful capabilities — each card links to a deep dive.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: Rocketitle: 'Automation Hub'desc: 'Factoriesagentsand live workflows'href: '/automation' },
-              { Icon: Searchtitle: 'AI SEO Auditor'desc: 'Continuous on‑site SEO improvements'href: '/reports/seo' },
-              { Icon: Gaugetitle: 'Site Health'desc: 'A11yperformanceand link integrity'href: '/site-health' },
-              { Icon: Globetitle: 'AI Trends Radar'desc: 'Signals that inspire new automations'href: '/reports/ai-trends' },
-              { Icon: GitBranchtitle: 'Main Sync'desc: 'Safeincremental diffs shipped continuously'href: '/automation' },
-              { Icon: ShieldChecktitle: 'Guardrails'desc: 'Defense‑in‑depth quality gates'href: '/site-health' }].map(({ Icontitledeschref }) => (
+              { Icon: Rocketitle: 'Automation 'Hub', 'desc: 'Factoriesagentsand live 'workflows', 'href: '/automation' },
+              { Icon: Searchtitle: 'AI SEO 'Auditor', 'desc: 'Continuous on‑site SEO 'improvements', 'href: '/reports/seo' },
+              { Icon: Gaugetitle: 'Site 'Health', 'desc: 'A11yperformanceand link 'integrity', 'href: '/site-health' },
+              { Icon: Globetitle: 'AI Trends 'Radar', 'desc: 'Signals that inspire new 'automations', 'href: '/reports/ai-trends' },
+              { Icon: GitBranchtitle: 'Main 'Sync', 'desc: 'Safeincremental diffs shipped 'continuously', 'href: '/automation' },
+              { Icon: ShieldChecktitle: ''Guardrails', 'desc: 'Defense‑in‑depth quality 'gates', 'href: '/site-health' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -662,8 +662,8 @@ export default function MainFrontIndex() {
 
         {/* Outcome Benefits */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -672,12 +672,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { label: 'Grow organic traffic'desc: 'On‑site SEO improvementsbetter metadataricher links'href: '/reports/seo' },
-              { label: 'Improve UX quality'desc: 'A11y fixesperformance gainsresilient links'href: '/site-health' },
-              { label: 'Reduce engineering toil'desc: 'Automated upgradesrefactorsand maintenance'href: '/automation' },
-              { label: 'Ship faster with confidence'desc: 'Small safe diffs synced to main'href: '/automation' },
-              { label: 'Stay compliant & accessible'desc: 'Policy guardrails and WCAG checks'href: '/site-health' },
-              { label: 'Learn from market signals'desc: 'AI + cloud trends to guide strategy'href: '/reports/ai-trends' }].map((b) => (
+              { label: 'Grow organic 'traffic', 'desc: 'On‑site SEO improvementsbetter metadataricher 'links', 'href: '/reports/seo' },
+              { label: 'Improve UX 'quality', 'desc: 'A11y fixesperformance gainsresilient 'links', 'href: '/site-health' },
+              { label: 'Reduce engineering 'toil', 'desc: 'Automated upgradesrefactorsand 'maintenance', 'href: '/automation' },
+              { label: 'Ship faster with 'confidence', 'desc: 'Small safe diffs synced to 'main', 'href: '/automation' },
+              { label: 'Stay compliant & 'accessible', 'desc: 'Policy guardrails and WCAG 'checks', 'href: '/site-health' },
+              { label: 'Learn from market 'signals', 'desc: 'AI + cloud trends to guide 'strategy', 'href: '/reports/ai-trends' }].map((b) => (
               <Link key={b.label} href={b.href}>
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -691,8 +691,8 @@ export default function MainFrontIndex() {
         {/* Suites */}
         <motion.section
           id="suites"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -700,15 +700,15 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Quick Fixes'desc: 'Build rescuesitemap/robotsecurity remediation'href: '/automation' },
-              { title: 'Deep Maintenance'desc: 'Orchestrated smoke tests and link checks'href: '/automation' },
-              { title: 'Marketing & SEO'desc: 'Content factories and on‑site optimizations'href: '/automation' },
-              { title: 'Content Curation'desc: 'Homepage promos generated continuously'href: '/automation' },
-              { title: 'Dependency Upgrades'desc: 'Minor/patch bumps with safe auto‑merge'href: '/automation' },
-              { title: 'Live Workflows'desc: 'Observe pipelines running 24/7'href: '/site-health'external: true },
-              { title: 'Site Health'desc: 'A11yperformancelink checks dashboards'href: '/site-health' },
-              { title: 'AI SEO Auditor'desc: 'Continuous on‑site audits with safe proposed diffs'href: '/reports/seo' },
-              { title: 'AI Trends Radar'desc: 'Signal scanning to inspire new factories'href: '/reports/ai-trends' }].map((suite) => (
+              { title: 'Quick 'Fixes', 'desc: 'Build rescuesitemap/robotsecurity 'remediation', 'href: '/automation' },
+              { title: 'Deep 'Maintenance', 'desc: 'Orchestrated smoke tests and link 'checks', 'href: '/automation' },
+              { title: 'Marketing & 'SEO', 'desc: 'Content factories and on‑site 'optimizations', 'href: '/automation' },
+              { title: 'Content 'Curation', 'desc: 'Homepage promos generated 'continuously', 'href: '/automation' },
+              { title: 'Dependency 'Upgrades', 'desc: 'Minor/patch bumps with safe auto‑'merge', 'href: '/automation' },
+              { title: 'Live 'Workflows', 'desc: 'Observe pipelines running 24/7'href: '/site-'health', 'external: true },
+              { title: 'Site 'Health', 'desc: 'A11yperformancelink checks 'dashboards', 'href: '/site-health' },
+              { title: 'AI SEO 'Auditor', 'desc: 'Continuous on‑site audits with safe proposed 'diffs', 'href: '/reports/seo' },
+              { title: 'AI Trends 'Radar', 'desc: 'Signal scanning to inspire new 'factories', 'href: '/reports/ai-trends' }].map((suite) => (
               <article key={suite.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{suite.title}</h3>
@@ -727,8 +727,8 @@ export default function MainFrontIndex() {
 
         {/* Superpowers */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -736,9 +736,9 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { Icon: Rocketitle: 'Generative Factories'desc: 'Spins up domain‑specific automation factories that build for you.' },
-              { Icon: ShieldChecktitle: 'Safety by Design'desc: 'Layered validations — type checksbuildsa11ylinksand more.' },
-              { Icon: GitBranchtitle: 'Main Sync'desc: 'Smallreviewable edits committed and pushed continuously.' }].map(({ Icontitledesc }) => (
+              { Icon: Rocketitle: 'Generative 'Factories', 'desc: 'Spins up domain‑specific automation factories that build for you.' },
+              { Icon: ShieldChecktitle: 'Safety by 'Design', 'desc: 'Layered validations — type checksbuildsa11ylinksand more.' },
+              { Icon: GitBranchtitle: 'Main 'Sync', 'desc: 'Smallreviewable edits committed and pushed continuously.' }].map(({ Icontitledesc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <Icon className="h-6 w-6 text-cyan-300" />
@@ -751,8 +751,8 @@ export default function MainFrontIndex() {
 
         {/* Get Started */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -793,8 +793,8 @@ export default function MainFrontIndex() {
         {/* Features */}
         <motion.section
           id="features"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -802,38 +802,38 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: Zaptitle: 'Self‑Improving'desc: 'Agents continuously analyzeinventand evolve automations.'href: '/automation' },
-              { Icon: GitBranchtitle: 'Repo Sync'desc: 'Changes are committed and pushed automatically to main.'href: '/automation' },
-              { Icon: Cputitle: 'Zero Ops'desc: 'Runs fully in the cloud—no servers or manual intervention.'href: '/automation' },
-              { Icon: ShieldChecktitle: 'Safety‑First'desc: 'Conservative edits with logsreportsand guardrails.'href: '/site-health' },
-              { Icon: Gaugetitle: 'Observability'desc: 'Dashboardsreportsand cloud automation artifacts.'href: '/site-health' },
-              { Icon: Layerstitle: 'Composable Systems'desc: 'Chain multiple factories into higher‑order workflows.'href: '/automation' },
-              { Icon: Activitytitle: 'AI SEO Auditor'desc: 'Continuously scans pages and proposes SEO improvements.'href: '/reports/seo' },
-              { Icon: Globetitle: 'AI Trends Radar'desc: 'Tracks AI and cloud signals to inspire new automations.'href: '/reports/ai-trends' },
-              { Icon: Searchtitle: 'Deep Indexing'desc: 'Content and code search powering smart linking and PRs.'href: '/newsroom' },
-              { Icon: BarChart3title: 'Live Dashboards'desc: 'Real‑time quality and impact metrics at a glance.'href: '/site-health' },
-              { Icon: Activitytitle: 'Health Monitors'desc: 'A11ylinksand performance monitored 24/7.'href: '/site-health' },
-              { Icon: Globetitle: 'Intelligence Signals'desc: 'AI research integrated into product improvements.'href: '/reports/ai-trends' },
-              { Icon: ShieldChecktitle: 'Security Scans'desc: 'Audit dependencies and surface risks with reports.'href: '/site-health' },
-              { Icon: GitBranchtitle: 'Automated Changelogs'desc: 'Summarized changes and AI notes published continuously.'href: '/newsroom' },
-              { Icon: Rocketitle: 'OG Image Maker'desc: 'Auto‑generates rich Open Graph images for content.'href: '/newsroom' },
-              { Icon: ShieldChecktitle: 'Policy & Compliance'desc: 'Safety rails and audits applied before shipping.'href: '/site-health' },
-              { Icon: Layerstitle: 'Factories Library'desc: 'Reusable building blocks for new automations.'href: '/automation' },
-              { Icon: Gaugetitle: 'Site Health API'desc: 'Programmatic access to health signals and artifacts.'href: '/site-health' },
-              { Icon: Searchtitle: 'Link Integrity'desc: 'Broken links detected and fixed before shipping.'href: '/site-health' },
-              { Icon: Palettetitle: 'Design System Evolution'desc: 'Consistentmodern UI upgrades across the app.'href: '/newsroom' },
-              { Icon: BarChart3title: 'Analytics Exports'desc: 'Download artifacts and reports for deeper analysis.'href: '/reports/seo' },
-              { Icon: Searchtitle: 'Automated PR Reviews'desc: 'Bots review diffs for qualitystyleand policy.'href: '/automation' },
-              { Icon: Gaugetitle: 'Asset Optimizer'desc: 'Compresses images and scripts for faster pages.'href: '/site-health' },
-              { Icon: Layerstitle: 'i18n Readiness'desc: 'Prepares content and routes for localization.'href: '/newsroom' },
-              { Icon: Globetitle: 'Sitemap & Robots'desc: 'Maintains search‑friendly routing metadata.'href: '/site-health' },
-              { Icon: Palettetitle: 'Design Tokens'desc: 'Automates consistent theming and spacing.'href: '/newsroom' },
-              { Icon: LineChartitle: 'Experiment Telemetry'desc: 'Measures impact across experiments and releases.'href: '/reports/seo' },
-              { Icon: Activitytitle: 'Automated Dependencies'desc: 'Minor/patch upgrades proposed and merged safely.'href: '/automation' },
-              { Icon: Searchtitle: 'Broken Link Defender'desc: 'Continuously scans and fixes link integrity issues.'href: '/site-health' },
-              { Icon: LineChartitle: 'Experimentation'desc: 'Automate A/B setups and monitor telemetry automatically.'href: '/automation' },
-              { Icon: Palettetitle: 'Design Tokens & Theming'desc: 'Enforce consistent themingspacingand motion.'href: '/newsroom' },
-              { Icon: Gaugetitle: 'Image Pipeline'desc: 'Optimize and transform media assets automatically.'href: '/site-health' }
+              { Icon: Zaptitle: 'Self‑'Improving', 'desc: 'Agents continuously analyzeinventand evolve automations.'href: '/automation' },
+              { Icon: GitBranchtitle: 'Repo 'Sync', 'desc: 'Changes are committed and pushed automatically to main.'href: '/automation' },
+              { Icon: Cputitle: 'Zero 'Ops', 'desc: 'Runs fully in the cloud—no servers or manual intervention.'href: '/automation' },
+              { Icon: ShieldChecktitle: 'Safety‑'First', 'desc: 'Conservative edits with logsreportsand guardrails.'href: '/site-health' },
+              { Icon: Gaugetitle: ''Observability', 'desc: 'Dashboardsreportsand cloud automation artifacts.'href: '/site-health' },
+              { Icon: Layerstitle: 'Composable 'Systems', 'desc: 'Chain multiple factories into higher‑order workflows.'href: '/automation' },
+              { Icon: Activitytitle: 'AI SEO 'Auditor', 'desc: 'Continuously scans pages and proposes SEO improvements.'href: '/reports/seo' },
+              { Icon: Globetitle: 'AI Trends 'Radar', 'desc: 'Tracks AI and cloud signals to inspire new automations.'href: '/reports/ai-trends' },
+              { Icon: Searchtitle: 'Deep 'Indexing', 'desc: 'Content and code search powering smart linking and PRs.'href: '/newsroom' },
+              { Icon: BarChart3title: 'Live 'Dashboards', 'desc: 'Real‑time quality and impact metrics at a glance.'href: '/site-health' },
+              { Icon: Activitytitle: 'Health 'Monitors', 'desc: 'A11ylinksand performance monitored 24/7.'href: '/site-health' },
+              { Icon: Globetitle: 'Intelligence 'Signals', 'desc: 'AI research integrated into product improvements.'href: '/reports/ai-trends' },
+              { Icon: ShieldChecktitle: 'Security 'Scans', 'desc: 'Audit dependencies and surface risks with reports.'href: '/site-health' },
+              { Icon: GitBranchtitle: 'Automated 'Changelogs', 'desc: 'Summarized changes and AI notes published continuously.'href: '/newsroom' },
+              { Icon: Rocketitle: 'OG Image 'Maker', 'desc: 'Auto‑generates rich Open Graph images for content.'href: '/newsroom' },
+              { Icon: ShieldChecktitle: 'Policy & 'Compliance', 'desc: 'Safety rails and audits applied before shipping.'href: '/site-health' },
+              { Icon: Layerstitle: 'Factories 'Library', 'desc: 'Reusable building blocks for new automations.'href: '/automation' },
+              { Icon: Gaugetitle: 'Site Health 'API', 'desc: 'Programmatic access to health signals and artifacts.'href: '/site-health' },
+              { Icon: Searchtitle: 'Link 'Integrity', 'desc: 'Broken links detected and fixed before shipping.'href: '/site-health' },
+              { Icon: Palettetitle: 'Design System 'Evolution', 'desc: 'Consistentmodern UI upgrades across the app.'href: '/newsroom' },
+              { Icon: BarChart3title: 'Analytics 'Exports', 'desc: 'Download artifacts and reports for deeper analysis.'href: '/reports/seo' },
+              { Icon: Searchtitle: 'Automated PR 'Reviews', 'desc: 'Bots review diffs for qualitystyleand policy.'href: '/automation' },
+              { Icon: Gaugetitle: 'Asset 'Optimizer', 'desc: 'Compresses images and scripts for faster pages.'href: '/site-health' },
+              { Icon: Layerstitle: 'i18n 'Readiness', 'desc: 'Prepares content and routes for localization.'href: '/newsroom' },
+              { Icon: Globetitle: 'Sitemap & 'Robots', 'desc: 'Maintains search‑friendly routing metadata.'href: '/site-health' },
+              { Icon: Palettetitle: 'Design 'Tokens', 'desc: 'Automates consistent theming and spacing.'href: '/newsroom' },
+              { Icon: LineChartitle: 'Experiment 'Telemetry', 'desc: 'Measures impact across experiments and releases.'href: '/reports/seo' },
+              { Icon: Activitytitle: 'Automated 'Dependencies', 'desc: 'Minor/patch upgrades proposed and merged safely.'href: '/automation' },
+              { Icon: Searchtitle: 'Broken Link 'Defender', 'desc: 'Continuously scans and fixes link integrity issues.'href: '/site-health' },
+              { Icon: LineChartitle: ''Experimentation', 'desc: 'Automate A/B setups and monitor telemetry automatically.'href: '/automation' },
+              { Icon: Palettetitle: 'Design Tokens & 'Theming', 'desc: 'Enforce consistent themingspacingand motion.'href: '/newsroom' },
+              { Icon: Gaugetitle: 'Image 'Pipeline', 'desc: 'Optimize and transform media assets automatically.'href: '/site-health' }
             ].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>
                 <a className="group glow-card relative block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30 tilt-on-hover neon-ring">
@@ -852,8 +852,8 @@ export default function MainFrontIndex() {
 
         {/* Outcomes */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -868,14 +868,14 @@ export default function MainFrontIndex() {
             <div className="marquee">
               <div className="marquee__track">
                 {[
-                  { label: 'Accessibility fixes'href: '/site-health' },
-                  { label: 'Performance boosts'href: '/site-health' },
-                  { label: 'SEO improvements'href: '/reports/seo' },
-                  { label: 'Safer main merges'href: '/automation' },
-                  { label: 'Cleaner codebase'href: '/automation' },
-                  { label: 'Better content curation'href: '/newsroom' },
-                  { label: 'Operational visibility'href: '/site-health' },
-                  { label: 'Experiment velocity'href: '/automation' }]
+                  { label: 'Accessibility 'fixes', 'href: '/site-health' },
+                  { label: 'Performance 'boosts', 'href: '/site-health' },
+                  { label: 'SEO 'improvements', 'href: '/reports/seo' },
+                  { label: 'Safer main 'merges', 'href: '/automation' },
+                  { label: 'Cleaner 'codebase', 'href: '/automation' },
+                  { label: 'Better content 'curation', 'href: '/newsroom' },
+                  { label: 'Operational 'visibility', 'href: '/site-health' },
+                  { label: 'Experiment 'velocity', 'href: '/automation' }]
                   .flatMap((item) => [item])
                   .map((itemidx) => (
                     <Link key={`${item.label}-${idx}`} href={item.href}>
@@ -892,8 +892,8 @@ export default function MainFrontIndex() {
         {/* Feature Map */}
         <motion.section
           id="feature-map"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -904,18 +904,18 @@ export default function MainFrontIndex() {
           </p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: 'Automation Hub'desc: 'Live agents & workflows'href: '/automation' },
-              { label: 'Repo Sync to Main'desc: 'Safeincremental edits'href: '/automation' },
-              { label: 'Zero‑Ops Cloud'desc: 'Fully managed execution'href: '/automation' },
-              { label: 'Safety Guardrails'desc: 'Defense‑in‑depth checks'href: '/site-health' },
-              { label: 'Observability'desc: 'Dashboards & artifacts'href: '/site-health' },
-              { label: 'Composable Systems'desc: 'Higher‑order workflows'href: '/automation' },
-              { label: 'AI SEO Auditor'desc: 'On‑site improvements'href: '/reports/seo' },
-              { label: 'AI Trends Radar'desc: 'Intelligence signals'href: '/reports/ai-trends' },
-              { label: 'Deep Indexing'desc: 'Smart linking & PRs'href: '/newsroom' },
-              { label: 'Live Dashboards'desc: 'Impact at a glance'href: '/site-health' },
-              { label: 'Health Monitors'desc: 'A11yperflinks'href: '/site-health' },
-              { label: 'Docs & Guides'desc: 'Technical notes'href: '/reports/seo'external: true }].map((item) => (
+              { label: 'Automation 'Hub', 'desc: 'Live agents & 'workflows', 'href: '/automation' },
+              { label: 'Repo Sync to 'Main', 'desc: 'Safeincremental 'edits', 'href: '/automation' },
+              { label: 'Zero‑Ops 'Cloud', 'desc: 'Fully managed 'execution', 'href: '/automation' },
+              { label: 'Safety 'Guardrails', 'desc: 'Defense‑in‑depth 'checks', 'href: '/site-health' },
+              { label: ''Observability', 'desc: 'Dashboards & 'artifacts', 'href: '/site-health' },
+              { label: 'Composable 'Systems', 'desc: 'Higher‑order 'workflows', 'href: '/automation' },
+              { label: 'AI SEO 'Auditor', 'desc: 'On‑site 'improvements', 'href: '/reports/seo' },
+              { label: 'AI Trends 'Radar', 'desc: 'Intelligence 'signals', 'href: '/reports/ai-trends' },
+              { label: 'Deep 'Indexing', 'desc: 'Smart linking & 'PRs', 'href: '/newsroom' },
+              { label: 'Live 'Dashboards', 'desc: 'Impact at a 'glance', 'href: '/site-health' },
+              { label: 'Health 'Monitors', 'desc: ''A11yperflinks', 'href: '/site-health' },
+              { label: 'Docs & 'Guides', 'desc: 'Technical 'notes', 'href: '/reports/'seo', 'external: true }].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -963,8 +963,8 @@ export default function MainFrontIndex() {
         {/* Platform Modules */}
         <motion.section
            id="modules"
-           initial={{ opacity: 0y: 24 }}
-           whileInView={{ opacity: 1y: 0 }}
+           initial={{ opacity: 0, y: 24 }}
+           whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: trueamount: 0.2 }}
            transition={{ duration: 0.5 }}
            className="mx-auto max-w-7xl px-6 pb-16"
@@ -972,15 +972,15 @@ export default function MainFrontIndex() {
            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: Rocketitle: 'Autonomous Factories'desc: 'Composabledomain‑specific automation factories.'href: '/automation' },
-              { Icon: ShieldChecktitle: 'Guardrails'desc: 'Defense‑in‑depth validations and policy enforcement.'href: '/site-health' },
-              { Icon: Gaugetitle: 'Observability'desc: 'Dashboardsartifactsand live CI telemetry.'href: '/site-health' },
-              { Icon: Activitytitle: 'SEO Ops'desc: 'Continuous audits and safesuggested diffs.'href: '/reports/seo' },
-              { Icon: Globetitle: 'AI Intelligence'desc: 'Trends radar to guide new automation ideas.'href: '/reports/ai-trends' },
-              { Icon: Layerstitle: 'Workflow Composer'desc: 'Chain factories into higher‑order systems.'href: '/automation' },
-              { Icon: GitBranchtitle: 'Main Sync Engine'desc: 'Smallreviewable edits merged continuously.'href: '/automation' },
-              { Icon: Cputitle: 'Zero‑Ops Runtime'desc: 'Cloud‑native execution with no servers to manage.'href: '/automation' },
-              { Icon: BarChart3title: 'Impact Analytics'desc: 'Track outcomes and ROI from automations.'href: '/site-health' }].map(({ Icontitledeschref }) => (
+              { Icon: Rocketitle: 'Autonomous 'Factories', 'desc: 'Composabledomain‑specific automation factories.'href: '/automation' },
+              { Icon: ShieldChecktitle: ''Guardrails', 'desc: 'Defense‑in‑depth validations and policy enforcement.'href: '/site-health' },
+              { Icon: Gaugetitle: ''Observability', 'desc: 'Dashboardsartifactsand live CI telemetry.'href: '/site-health' },
+              { Icon: Activitytitle: 'SEO 'Ops', 'desc: 'Continuous audits and safesuggested diffs.'href: '/reports/seo' },
+              { Icon: Globetitle: 'AI 'Intelligence', 'desc: 'Trends radar to guide new automation ideas.'href: '/reports/ai-trends' },
+              { Icon: Layerstitle: 'Workflow 'Composer', 'desc: 'Chain factories into higher‑order systems.'href: '/automation' },
+              { Icon: GitBranchtitle: 'Main Sync 'Engine', 'desc: 'Smallreviewable edits merged continuously.'href: '/automation' },
+              { Icon: Cputitle: 'Zero‑Ops 'Runtime', 'desc: 'Cloud‑native execution with no servers to manage.'href: '/automation' },
+              { Icon: BarChart3title: 'Impact 'Analytics', 'desc: 'Track outcomes and ROI from automations.'href: '/site-health' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -998,8 +998,8 @@ export default function MainFrontIndex() {
 
         {/* Neural Feature Matrix */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1008,22 +1008,22 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denserat-a-glance atlas of what Zion ships autonomously. Every tile links to the live hubreportor docs.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: 'Automation Hub'desc: 'Factoriesagentsworkflows'href: '/automation' },
-              { label: 'Main Sync Engine'desc: 'Safe diffs to main'href: '/automation' },
-              { label: 'Zero‑Ops Cloud'desc: 'Run in the cloudno servers'href: '/automation' },
-              { label: 'Guardrails'desc: 'Policy + safety gates'href: '/site-health' },
-              { label: 'Site Health'desc: 'A11yperformancelinks'href: '/site-health' },
-              { label: 'AI SEO Auditor'desc: 'Continuous on‑site SEO'href: '/reports/seo' },
-              { label: 'AI Trends Radar'desc: 'Signals powering strategy'href: '/reports/ai-trends' },
-              { label: 'Content Curation'desc: 'Promos and deep links'href: '/newsroom' },
-              { label: 'Factories Library'desc: 'Composable building blocks'href: '/automation' },
-              { label: 'Impact Dashboards'desc: 'Artifacts and telemetry'href: '/site-health' },
-              { label: 'Link Integrity'desc: 'Broken links defender'href: '/site-health' },
-              { label: 'Design Evolution'desc: 'Futuristic UI upgrades'href: '/newsroom' },
-              { label: 'Docs & Guides'desc: 'Technical notes'href: '/reports/seo'external: true },
-              { label: 'AI Changelog'desc: 'Summarized updates'href: '/newsroom'external: true },
-                             { label: 'Cloud Automations'desc: 'Netlify scheduled functions'href: '/automation' },
-               { label: 'Roadmap & Issues'desc: "What's next"href: '//issues'external: true }
+              { label: 'Automation 'Hub', 'desc: ''Factoriesagentsworkflows', 'href: '/automation' },
+              { label: 'Main Sync 'Engine', 'desc: 'Safe diffs to 'main', 'href: '/automation' },
+              { label: 'Zero‑Ops 'Cloud', 'desc: 'Run in the cloudno 'servers', 'href: '/automation' },
+              { label: ''Guardrails', 'desc: 'Policy + safety 'gates', 'href: '/site-health' },
+              { label: 'Site 'Health', 'desc: ''A11yperformancelinks', 'href: '/site-health' },
+              { label: 'AI SEO 'Auditor', 'desc: 'Continuous on‑site 'SEO', 'href: '/reports/seo' },
+              { label: 'AI Trends 'Radar', 'desc: 'Signals powering 'strategy', 'href: '/reports/ai-trends' },
+              { label: 'Content 'Curation', 'desc: 'Promos and deep 'links', 'href: '/newsroom' },
+              { label: 'Factories 'Library', 'desc: 'Composable building 'blocks', 'href: '/automation' },
+              { label: 'Impact 'Dashboards', 'desc: 'Artifacts and 'telemetry', 'href: '/site-health' },
+              { label: 'Link 'Integrity', 'desc: 'Broken links 'defender', 'href: '/site-health' },
+              { label: 'Design 'Evolution', 'desc: 'Futuristic UI 'upgrades', 'href: '/newsroom' },
+              { label: 'Docs & 'Guides', 'desc: 'Technical 'notes', 'href: '/reports/'seo', 'external: true },
+              { label: 'AI 'Changelog', 'desc: 'Summarized 'updates', 'href: '/'newsroom', 'external: true },
+                             { label: 'Cloud 'Automations', 'desc: 'Netlify scheduled 'functions', 'href: '/automation' },
+               { label: 'Roadmap & 'Issues', 'desc: "'What', 's next"href: '//'issues', 'external: true }
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
@@ -1048,8 +1048,8 @@ export default function MainFrontIndex() {
 
         {/* Extended Feature Directory */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1058,15 +1058,15 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hubreportor live workflow.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: GitBranchtitle: 'Automated Changelogs'desc: 'AI-authored CHANGELOG with continuous updates.'href: '/newsroom'external: true },
-              { Icon: Rocketitle: 'Content Curation'desc: 'Homepage promos and deep links generated on the fly.'href: '/newsroom' },
-              { Icon: Searchtitle: 'Deep Site Index'desc: 'Smarter internal linking and content discovery.'href: '/newsroom' },
-              { Icon: ShieldChecktitle: 'Policy & Compliance'desc: 'Safety rails and audits before changes ship.'href: '/site-health' },
-              { Icon: BarChart3title: 'Impact Dashboards'desc: 'Real-time visibility into outcomes and ROI.'href: '/site-health' },
-              { Icon: Layerstitle: 'Factories Library'desc: 'Composable building blocks for new automations.'href: '/automation' },
-              { Icon: Activitytitle: 'Health Monitors'desc: 'A11ylinksand performance monitored 24/7.'href: '/site-health' },
-              { Icon: Cputitle: 'Zero-Ops Runtime'desc: 'Fully managed cloud execution with no servers.'href: '/automation' },
-              { Icon: Globetitle: 'Intelligence Signals'desc: 'AI + cloud trend tracking fueling new ideas.'href: '/reports/ai-trends' }].map(({ Icontitledeschrefexternal }) => (
+              { Icon: GitBranchtitle: 'Automated 'Changelogs', 'desc: 'AI-authored CHANGELOG with continuous updates.'href: '/'newsroom', 'external: true },
+              { Icon: Rocketitle: 'Content 'Curation', 'desc: 'Homepage promos and deep links generated on the fly.'href: '/newsroom' },
+              { Icon: Searchtitle: 'Deep Site 'Index', 'desc: 'Smarter internal linking and content discovery.'href: '/newsroom' },
+              { Icon: ShieldChecktitle: 'Policy & 'Compliance', 'desc: 'Safety rails and audits before changes ship.'href: '/site-health' },
+              { Icon: BarChart3title: 'Impact 'Dashboards', 'desc: 'Real-time visibility into outcomes and ROI.'href: '/site-health' },
+              { Icon: Layerstitle: 'Factories 'Library', 'desc: 'Composable building blocks for new automations.'href: '/automation' },
+              { Icon: Activitytitle: 'Health 'Monitors', 'desc: 'A11ylinksand performance monitored 24/7.'href: '/site-health' },
+              { Icon: Cputitle: 'Zero-Ops 'Runtime', 'desc: 'Fully managed cloud execution with no servers.'href: '/automation' },
+              { Icon: Globetitle: 'Intelligence 'Signals', 'desc: 'AI + cloud trend tracking fueling new ideas.'href: '/reports/ai-trends' }].map(({ Icontitledeschrefexternal }) => (
               external ? (
                 <a key={title} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1090,8 +1090,8 @@ export default function MainFrontIndex() {
 
         {/* Capability Deep Links */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1100,14 +1100,14 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ['SEO Automation'On-site scans and safe diffs to improve visibility'/reports/seo'],
-              ['Site Health'A11yperformanceand resilient links at a glance'/site-health'],
-              ['Automation Hub'Factories and live autonomous workflows'/automation'],
-              ['AI Trends Radar'Signals inspiring new factories and experiments'/reports/ai-trends'],
-              ['Newsroom'Curated updates and product evolution highlights'/newsroom'],
-              ['Live Pipelines'Observe CI pipelineslogsand artifacts'/site-health'],
-              ['Documentation'Technical notesguidesand changelog'/reports/seo'],
-              ['AI Changelog'Summarized autonomous changes and highlights'/newsroom']].map(([labeldeschref]) => (
+              ['SEO 'Automation', 'On-site scans and safe diffs to improve visibility'/reports/seo'],
+              ['Site 'Health', 'A11yperformanceand resilient links at a glance'/site-health'],
+              ['Automation 'Hub', 'Factories and live autonomous workflows'/automation'],
+              ['AI Trends 'Radar', 'Signals inspiring new factories and experiments'/reports/ai-trends'],
+              [', 'Newsroom', 'Curated updates and product evolution highlights'/newsroom'],
+              ['Live 'Pipelines', 'Observe CI pipelineslogsand artifacts'/site-health'],
+              [', 'Documentation', 'Technical notesguidesand changelog'/reports/seo'],
+              ['AI 'Changelog', 'Summarized autonomous changes and highlights'/newsroom']].map(([labeldeschref]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1132,8 +1132,8 @@ export default function MainFrontIndex() {
         {/* Use Cases */}
         <motion.section
           id="use-cases"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1141,12 +1141,12 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'AI SEO Auditor'desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
-              { title: 'Design Beautifier'desc: 'Upgrades UI components with moderncohesive visual language.' },
-              { title: 'Content Curator'desc: 'Surfaces and promotes high‑value content with links and metadata.' },
-              { title: 'Performance Tuner'desc: 'Optimizes bundlesimagesand scripts for faster loads.' },
-              { title: 'A11y Guardian'desc: 'Catches and fixes accessibility issues before they ship.' },
-              { title: 'Growth Experiments'desc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
+              { title: 'AI SEO 'Auditor', 'desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
+              { title: 'Design 'Beautifier', 'desc: 'Upgrades UI components with moderncohesive visual language.' },
+              { title: 'Content 'Curator', 'desc: 'Surfaces and promotes high‑value content with links and metadata.' },
+              { title: 'Performance 'Tuner', 'desc: 'Optimizes bundlesimagesand scripts for faster loads.' },
+              { title: 'A11y 'Guardian', 'desc: 'Catches and fixes accessibility issues before they ship.' },
+              { title: 'Growth 'Experiments', 'desc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{u.title}</h3>
@@ -1158,8 +1158,8 @@ export default function MainFrontIndex() {
 
         {/* Stats */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1168,12 +1168,12 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>
           <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
             {[
-              { label: 'Workflows'value: '1,200+'href: '/site-health'external: true },
-              { label: 'Commits Synced'value: '800+'href: '/automation' },
-              { label: 'Automated Edits'value: '3,500+'href: '/automation' },
-              { label: 'Uptime'value: '99.95%'href: '/site-health' },
-              { label: 'A11y Checks'value: '20k+'href: '/site-health' },
-              { label: 'SEO Fixes'value: '4.2k+'href: '/reports/seo' }].map((item) => (
+              { label: ''Workflows', 'value: '1,200+'href: '/site-'health', 'external: true },
+              { label: 'Commits 'Synced', 'value: '800+'href: '/automation' },
+              { label: 'Automated 'Edits', 'value: '3,500+'href: '/automation' },
+              { label: ''Uptime', 'value: '99.95%'href: '/site-health' },
+              { label: 'A11y 'Checks', 'value: '20k+'href: '/site-health' },
+              { label: 'SEO 'Fixes', 'value: '4.2k+'href: '/reports/seo' }].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30">
                   <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>
@@ -1194,8 +1194,8 @@ export default function MainFrontIndex() {
         {/* Capabilities */}
         <motion.section
           id="capabilities"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1203,20 +1203,20 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { Icon: Palettetitle: 'Design Evolution'desc: 'Autonomously beautifies UI with consistentfuturistic patterns.'href: '/newsroom' },
-              { Icon: BarChart3title: 'Performance & A11y'desc: 'Optimizes bundlesassetsand accessibility with continuous checks.'href: '/site-health' },
-              { Icon: LineChartitle: 'Content & SEO'desc: 'Curates contentupdates promosand tunes metadata for reach.'href: '/reports/seo' },
-              { Icon: Layerstitle: 'Code Quality & Refactors'desc: 'Lintsfixesand proposes refactors with type‑safety improvements.'href: '/automation' },
-              { Icon: Gaugetitle: 'Observability & Reports'desc: 'Artifactsdashboardsand live logs for every automation.'href: '/site-health' },
-              { Icon: Globetitle: 'Intelligence Signals'desc: 'AI + cloud trend tracking to spark new factory ideas.'href: '/reports/ai-trends' },
-              { Icon: GitBranchtitle: 'Repo Sync to Main'desc: 'Smallsafe diffs merged continuously for momentum.'href: '/automation' },
-              { Icon: ShieldChecktitle: 'Guardrails & Policy'desc: 'Organization‑wide safety rules enforced automatically.'href: '/site-health' },
-              { Icon: Cputitle: 'Zero‑Ops Cloud'desc: 'Fully managed cloud execution with no servers to babysit.'href: '/automation' },
-              { Icon: Activitytitle: 'Automated Dependencies'desc: 'Minor/patch upgrades proposed and merged safely.'href: '/automation' },
-              { Icon: Searchtitle: 'Broken Link Defender'desc: 'Continuously scans and fixes link integrity issues.'href: '/site-health' },
-              { Icon: LineChartitle: 'Experimentation'desc: 'Automate A/B setups and monitor telemetry automatically.'href: '/automation' },
-              { Icon: Palettetitle: 'Design Tokens & Theming'desc: 'Enforce consistent themingspacingand motion.'href: '/newsroom' },
-              { Icon: Gaugetitle: 'Image Pipeline'desc: 'Optimize and transform media assets automatically.'href: '/site-health' }].map(({ Icontitledeschref }) => (
+              { Icon: Palettetitle: 'Design 'Evolution', 'desc: 'Autonomously beautifies UI with consistentfuturistic patterns.'href: '/newsroom' },
+              { Icon: BarChart3title: 'Performance & 'A11y', 'desc: 'Optimizes bundlesassetsand accessibility with continuous checks.'href: '/site-health' },
+              { Icon: LineChartitle: 'Content & 'SEO', 'desc: 'Curates contentupdates promosand tunes metadata for reach.'href: '/reports/seo' },
+              { Icon: Layerstitle: 'Code Quality & 'Refactors', 'desc: 'Lintsfixesand proposes refactors with type‑safety improvements.'href: '/automation' },
+              { Icon: Gaugetitle: 'Observability & 'Reports', 'desc: 'Artifactsdashboardsand live logs for every automation.'href: '/site-health' },
+              { Icon: Globetitle: 'Intelligence 'Signals', 'desc: 'AI + cloud trend tracking to spark new factory ideas.'href: '/reports/ai-trends' },
+              { Icon: GitBranchtitle: 'Repo Sync to 'Main', 'desc: 'Smallsafe diffs merged continuously for momentum.'href: '/automation' },
+              { Icon: ShieldChecktitle: 'Guardrails & 'Policy', 'desc: 'Organization‑wide safety rules enforced automatically.'href: '/site-health' },
+              { Icon: Cputitle: 'Zero‑Ops 'Cloud', 'desc: 'Fully managed cloud execution with no servers to babysit.'href: '/automation' },
+              { Icon: Activitytitle: 'Automated 'Dependencies', 'desc: 'Minor/patch upgrades proposed and merged safely.'href: '/automation' },
+              { Icon: Searchtitle: 'Broken Link 'Defender', 'desc: 'Continuously scans and fixes link integrity issues.'href: '/site-health' },
+              { Icon: LineChartitle: ''Experimentation', 'desc: 'Automate A/B setups and monitor telemetry automatically.'href: '/automation' },
+              { Icon: Palettetitle: 'Design Tokens & 'Theming', 'desc: 'Enforce consistent themingspacingand motion.'href: '/newsroom' },
+              { Icon: Gaugetitle: 'Image 'Pipeline', 'desc: 'Optimize and transform media assets automatically.'href: '/site-health' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>
                 <a className="relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
@@ -1233,8 +1233,8 @@ export default function MainFrontIndex() {
 
         {/* Why Zion */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1242,9 +1242,9 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              ['🚀'Speed'Continuous delivery to main with safeincremental changes.'],
-              ['🛡️'Safety'Conservative edits and guardrails keep production stable.'],
-              ['📈'Scale'Automatically generates new factories as your needs grow.']].map(([icontitledesc]) => (
+              ['🚀', 'Speed', 'Continuous delivery to main with safeincremental changes.'],
+              ['🛡️', 'Safety', 'Conservative edits and guardrails keep production stable.'],
+              ['📈', 'Scale', 'Automatically generates new factories as your needs grow.']].map(([icontitledesc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <div className="text-2xl">{icon as string}</div>
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
@@ -1257,8 +1257,8 @@ export default function MainFrontIndex() {
         {/* Value Pillars */}
         <motion.section
           id="pillars"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1267,10 +1267,10 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Four pillars that guide every autonomous change — jump into the systems behind each.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { Icon: ShieldChecktitle: 'Security & Safety'desc: 'Guardrailspolicyand quality gates.'href: '/site-health' },
-              { Icon: Rocketitle: 'Speed & Momentum'desc: 'Small diffs shipped continuously.'href: '/automation' },
-              { Icon: Gaugetitle: 'Quality & Reliability'desc: 'A11yperformanceand link integrity.'href: '/site-health' },
-              { Icon: Layerstitle: 'Scale & Composability'desc: 'Factories chained into higher‑order workflows.'href: '/automation' }].map(({ Icontitledeschref }) => (
+              { Icon: ShieldChecktitle: 'Security & 'Safety', 'desc: 'Guardrailspolicyand quality gates.'href: '/site-health' },
+              { Icon: Rocketitle: 'Speed & 'Momentum', 'desc: 'Small diffs shipped continuously.'href: '/automation' },
+              { Icon: Gaugetitle: 'Quality & 'Reliability', 'desc: 'A11yperformanceand link integrity.'href: '/site-health' },
+              { Icon: Layerstitle: 'Scale & 'Composability', 'desc: 'Factories chained into higher‑order workflows.'href: '/automation' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1288,8 +1288,8 @@ export default function MainFrontIndex() {
         {/* Benefits */}
         <motion.section
           id="benefits"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-20"
@@ -1302,14 +1302,14 @@ export default function MainFrontIndex() {
             <div className="marquee">
               <div className="marquee__track">
                 {[
-                  { label: '24/7 autonomous progress'href: '/automation' },
-                  { label: 'Main branch delivery'href: '/automation' },
-                  { label: 'A11y & performance wins'href: '/site-health' },
-                  { label: 'Continuous SEO gains'href: '/reports/seo' },
-                  { label: 'Transparent artifacts'href: '/site-health' },
-                  { label: 'Guardrails & policy'href: '/site-health' },
-                  { label: 'Faster iteration loops'href: '/newsroom' },
-                  { label: 'Lower operational toil'href: '/automation' }].flatMap((i) => [i]).map((idx) => (
+                  { label: '24/7 autonomous 'progress', 'href: '/automation' },
+                  { label: 'Main branch 'delivery', 'href: '/automation' },
+                  { label: 'A11y & performance 'wins', 'href: '/site-health' },
+                  { label: 'Continuous SEO 'gains', 'href: '/reports/seo' },
+                  { label: 'Transparent 'artifacts', 'href: '/site-health' },
+                  { label: 'Guardrails & 'policy', 'href: '/site-health' },
+                  { label: 'Faster iteration 'loops', 'href: '/newsroom' },
+                  { label: 'Lower operational 'toil', 'href: '/automation' }].flatMap((i) => [i]).map((idx) => (
                   <Link key={`${i.label}-${idx}`} href={i.href}>
                     <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> {i.label}
@@ -1352,8 +1352,8 @@ export default function MainFrontIndex() {
 
         {/* Benefits in Practice */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1362,12 +1362,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">See where each benefit shows up in the product.</p>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[
-              { label: '24/7 progress'desc: 'Agents keep shipping while you sleep'href: '/automation' },
-              { label: 'Rapid feedback loop'desc: 'Tight iteration cycles on UX & code'href: '/newsroom' },
-              { label: 'Main branch delivery'desc: 'Smallsafe diffs merged continuously'href: '/site-health'external: true },
-              { label: 'Fewer regressions'desc: 'Layered checks catch issues early'href: '/site-health' },
-              { label: 'Increased reach'desc: 'Continuous SEO improvements'href: '/reports/seo' },
-              { label: 'Strategic insights'desc: 'AI + cloud trend tracking'href: '/reports/ai-trends' }].map((b) => (
+              { label: '24/7 'progress', 'desc: 'Agents keep shipping while you 'sleep', 'href: '/automation' },
+              { label: 'Rapid feedback 'loop', 'desc: 'Tight iteration cycles on UX & 'code', 'href: '/newsroom' },
+              { label: 'Main branch 'delivery', 'desc: 'Smallsafe diffs merged 'continuously', 'href: '/site-'health', 'external: true },
+              { label: 'Fewer 'regressions', 'desc: 'Layered checks catch issues 'early', 'href: '/site-health' },
+              { label: 'Increased 'reach', 'desc: 'Continuous SEO 'improvements', 'href: '/reports/seo' },
+              { label: 'Strategic 'insights', 'desc: 'AI + cloud trend 'tracking', 'href: '/reports/ai-trends' }].map((b) => (
               b.external ? (
                 <a key={b.label} href={b.href as string} target="_blank" rel="noopener" className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover:border-cyan-400/30">
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -1390,10 +1390,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Tailored Value by Team</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { title: 'Developers'desc: 'Code qualityrefactorsupgradesreliability'href: '/automation' },
-              { title: 'Product'desc: 'Faster UX improvementsexperimentsinsights'href: '/newsroom' },
-              { title: 'Marketing'desc: 'SEO automationcontent curationreach'href: '/reports/seo' },
-              { title: 'Operations'desc: 'A11yperformanceand link‑health dashboards'href: '/site-health' }].map((card) => (
+              { title: ''Developers', 'desc: 'Code 'qualityrefactorsupgradesreliability', 'href: '/automation' },
+              { title: ''Product', 'desc: 'Faster UX 'improvementsexperimentsinsights', 'href: '/newsroom' },
+              { title: ''Marketing', 'desc: 'SEO automationcontent 'curationreach', 'href: '/reports/seo' },
+              { title: ''Operations', 'desc: 'A11yperformanceand link‑health 'dashboards', 'href: '/site-health' }].map((card) => (
               <Link key={card.title} href={card.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1409,8 +1409,8 @@ export default function MainFrontIndex() {
         {/* Ecosystem & Integrations */}
         <motion.section
           id="reports"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1459,8 +1459,8 @@ export default function MainFrontIndex() {
         {/* Quality Gates & Guardrails */}
         <motion.section
           id="guardrails"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1468,10 +1468,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quality Gates & Guardrails</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { title: 'Accessibility'desc: 'Automated checks and fixes for WCAG compliance.'href: '/site-health' },
-              { title: 'Link Integrity'desc: 'Broken links detected before release.'href: '/site-health' },
-              { title: 'Performance'desc: 'Budgets enforced and improved continuously.'href: '/site-health' },
-              { title: 'Safe Diffs'desc: 'Conservativereviewable changes synced to main.'href: '/automation' }].map((g) => (
+              { title: ''Accessibility', 'desc: 'Automated checks and fixes for WCAG compliance.'href: '/site-health' },
+              { title: 'Link 'Integrity', 'desc: 'Broken links detected before release.'href: '/site-health' },
+              { title: ''Performance', 'desc: 'Budgets enforced and improved continuously.'href: '/site-health' },
+              { title: 'Safe 'Diffs', 'desc: 'Conservativereviewable changes synced to main.'href: '/automation' }].map((g) => (
               <Link key={g.title} href={g.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1485,8 +1485,8 @@ export default function MainFrontIndex() {
 
         {/* Tech */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1508,10 +1508,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md:grid-cols-4">
             {[
-              ['Explore'Browse live automations'/automation'],
-              ['Audit'Check site health'/site-health'],
-              ['Optimize'Run the SEO auditor'/reports/seo'],
-              ['Learn'Follow AI trends'/reports/ai-trends']].map(([titledeschref]) => (
+              [', 'Explore', 'Browse live automations'/automation'],
+              [', 'Audit', 'Check site health'/site-health'],
+              [', 'Optimize', 'Run the SEO auditor'/reports/seo'],
+              [', 'Learn', 'Follow AI trends'/reports/ai-trends']].map(([titledeschref]) => (
               <Link key={title as string} href={href as string}>
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="text-sm font-semibold text-white">{title as string}</div>
@@ -1524,8 +1524,8 @@ export default function MainFrontIndex() {
 
         {/* CTA */}
         <motion.section
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-24"
@@ -1710,8 +1710,8 @@ export default function MainFrontIndex() {
         {/* AI Agents Gallery */}
         <motion.section
           id="agents"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1720,12 +1720,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: Searchtitle: 'AI SEO Auditor'desc: 'Continuously improves on‑site SEO with safe diffs.'href: '/reports/seo' },
-              { Icon: Link2title: 'Link Healer'desc: 'Finds and fixes broken links with dashboards.'href: '/site-health' },
-              { Icon: Palettetitle: 'Design Beautifier'desc: 'Evolves UI with cohesivefuturistic patterns.'href: '/newsroom' },
-              { Icon: Gaugetitle: 'Performance Tuner'desc: 'Optimizes bundles and runtime for speed.'href: '/site-health' },
-              { Icon: Layerstitle: 'Factory Composer'desc: 'Chains automations into higher‑order workflows.'href: '/automation' },
-              { Icon: GitBranchtitle: 'Main Sync'desc: 'Ships smallsafe diffs to main continuously.'href: '/automation' }].map(({ Icontitledeschref }) => (
+              { Icon: Searchtitle: 'AI SEO 'Auditor', 'desc: 'Continuously improves on‑site SEO with safe diffs.'href: '/reports/seo' },
+              { Icon: Link2title: 'Link 'Healer', 'desc: 'Finds and fixes broken links with dashboards.'href: '/site-health' },
+              { Icon: Palettetitle: 'Design 'Beautifier', 'desc: 'Evolves UI with cohesivefuturistic patterns.'href: '/newsroom' },
+              { Icon: Gaugetitle: 'Performance 'Tuner', 'desc: 'Optimizes bundles and runtime for speed.'href: '/site-health' },
+              { Icon: Layerstitle: 'Factory 'Composer', 'desc: 'Chains automations into higher‑order workflows.'href: '/automation' },
+              { Icon: GitBranchtitle: 'Main 'Sync', 'desc: 'Ships smallsafe diffs to main continuously.'href: '/automation' }].map(({ Icontitledeschref }) => (
               <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1744,8 +1744,8 @@ export default function MainFrontIndex() {
         {/* Capabilities Matrix */}
         <motion.section
           id="capability-matrix"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1754,18 +1754,18 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hubreportor workflow.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {[
-              { title: 'Autonomous Agents'desc: 'Self‑improving cloud workers'href: '/automation' },
-              { title: 'Repo Sync to Main'desc: 'Safecontinuous delivery'href: '/automation' },
-              { title: 'AI SEO Auditor'desc: 'On‑site improvements daily'href: '/reports/seo' },
-              { title: 'AI Trends Radar'desc: 'Signals for new factories'href: '/reports/ai-trends' },
-              { title: 'Site Health'desc: 'A11yperformancelinks'href: '/site-health' },
-              { title: 'Guardrails'desc: 'Defense‑in‑depth quality'href: '/site-health' },
-              { title: 'Design Evolution'desc: 'Cohesive futuristic UI'href: '/newsroom' },
-              { title: 'Observability'desc: 'Dashboards & artifacts'href: '/site-health' },
-              { title: 'Analytics'desc: 'Outcomes & insights'href: '/site-health' },
-              { title: 'Link Integrity'desc: 'Broken link healing'href: '/site-health' },
-              { title: 'Factory Composer'desc: 'Higher‑order workflows'href: '/automation' },
-              { title: 'Docs & Changelog'desc: 'Technical notes & AI log'href: '/reports/seo'external: true }].map((item) => (
+              { title: 'Autonomous 'Agents', 'desc: 'Self‑improving cloud 'workers', 'href: '/automation' },
+              { title: 'Repo Sync to 'Main', 'desc: 'Safecontinuous 'delivery', 'href: '/automation' },
+              { title: 'AI SEO 'Auditor', 'desc: 'On‑site improvements 'daily', 'href: '/reports/seo' },
+              { title: 'AI Trends 'Radar', 'desc: 'Signals for new 'factories', 'href: '/reports/ai-trends' },
+              { title: 'Site 'Health', 'desc: ''A11yperformancelinks', 'href: '/site-health' },
+              { title: ''Guardrails', 'desc: 'Defense‑in‑depth 'quality', 'href: '/site-health' },
+              { title: 'Design 'Evolution', 'desc: 'Cohesive futuristic 'UI', 'href: '/newsroom' },
+              { title: ''Observability', 'desc: 'Dashboards & 'artifacts', 'href: '/site-health' },
+              { title: ''Analytics', 'desc: 'Outcomes & 'insights', 'href: '/site-health' },
+              { title: 'Link 'Integrity', 'desc: 'Broken link 'healing', 'href: '/site-health' },
+              { title: 'Factory 'Composer', 'desc: 'Higher‑order 'workflows', 'href: '/automation' },
+              { title: 'Docs & 'Changelog', 'desc: 'Technical notes & AI 'log', 'href: '/reports/'seo', 'external: true }].map((item) => (
               item.external ? (
                 <a key={item.title} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1790,8 +1790,8 @@ export default function MainFrontIndex() {
         {/* Benefits Directory */}
         <motion.section
           id="benefits-directory"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-16"
@@ -1800,12 +1800,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { label: '24/7 Progress'desc: 'Always‑on autonomous delivery'href: '/automation' },
-              { label: 'Safe Incremental Diffs'desc: 'Smallreviewable changes'href: '/automation' },
-              { label: 'Zero‑Ops Cloud‑Native'desc: 'No servers to babysit'href: '/automation' },
-              { label: 'Layered Quality Checks'desc: 'Guardrails & audits'href: '/site-health' },
-              { label: 'Faster Iteration Loops'desc: 'Shorten idea‑to‑impact'href: '/newsroom' },
-              { label: 'SEO Visibility Gains'desc: 'Continuous improvements'href: '/reports/seo' }].map((b) => (
+              { label: '24/7 'Progress', 'desc: 'Always‑on autonomous 'delivery', 'href: '/automation' },
+              { label: 'Safe Incremental 'Diffs', 'desc: 'Smallreviewable 'changes', 'href: '/automation' },
+              { label: 'Zero‑Ops Cloud‑'Native', 'desc: 'No servers to 'babysit', 'href: '/automation' },
+              { label: 'Layered Quality 'Checks', 'desc: 'Guardrails & 'audits', 'href: '/site-health' },
+              { label: 'Faster Iteration 'Loops', 'desc: 'Shorten idea‑to‑'impact', 'href: '/newsroom' },
+              { label: 'SEO Visibility 'Gains', 'desc: 'Continuous 'improvements', 'href: '/reports/seo' }].map((b) => (
               <Link key={b.label} href={b.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1843,8 +1843,8 @@ export default function MainFrontIndex() {
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
-          initial={{ opacity: 0y: 24 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: trueamount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
@@ -1853,12 +1853,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore deep links across the app that showcase our capabilities and benefits.</p>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'SEO Audit'desc: 'Continuous on‑site improvements and artifacts.'href: '/reports/seo' },
-              { title: 'AI Trends'desc: 'Signals that inspire new automation factories.'href: '/reports/ai-trends' },
-              { title: 'Site Health'desc: 'A11yperformance and link integrity.'href: '/site-health' },
-              { title: 'Automation Hub'desc: 'Factoriesagents and live workflows.'href: '/automation' },
-              { title: 'Newsroom'desc: 'Autonomous updates and product evolution.'href: '/newsroom' },
-              { title: 'Front Systems Hub'desc: 'Futuristic templateseffects and layouts.'href: '/main/front' }].map((card) => (
+              { title: 'SEO 'Audit', 'desc: 'Continuous on‑site improvements and artifacts.'href: '/reports/seo' },
+              { title: 'AI 'Trends', 'desc: 'Signals that inspire new automation factories.'href: '/reports/ai-trends' },
+              { title: 'Site 'Health', 'desc: 'A11yperformance and link integrity.'href: '/site-health' },
+              { title: 'Automation 'Hub', 'desc: 'Factoriesagents and live workflows.'href: '/automation' },
+              { title: ''Newsroom', 'desc: 'Autonomous updates and product evolution.'href: '/newsroom' },
+              { title: 'Front Systems 'Hub', 'desc: 'Futuristic templateseffects and layouts.'href: '/main/front' }].map((card) => (
               <a key={card.title} href={card.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{card.title}</h3>
@@ -1879,10 +1879,10 @@ export default function MainFrontIndex() {
           <h2 className="text-2xl font-bold tracking-wide text-white/90 text-center">New Intelligent Automations</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { title: 'SEO Audit Runner'href: '/.netlify/functions/seo-audit-runner' },
-              { title: 'AI Trends Radar'href: '/.netlify/functions/ai-trends-radar-runner' },
-              { title: 'Front Index Directory Builder'href: '/.netlify/functions/front-index-directory-builder' },
-              { title: 'Revenue Ideas Promoter'href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
+              { title: 'SEO Audit 'Runner', 'href: '/.netlify/functions/seo-audit-runner' },
+              { title: 'AI Trends 'Radar', 'href: '/.netlify/functions/ai-trends-radar-runner' },
+              { title: 'Front Index Directory 'Builder', 'href: '/.netlify/functions/front-index-directory-builder' },
+              { title: 'Revenue Ideas 'Promoter', 'href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">
                 <div className="text-base font-semibold text-white">{tool.title}</div>
                 <div className="mt-1 text-xs text-white/70">Open ↗</div>

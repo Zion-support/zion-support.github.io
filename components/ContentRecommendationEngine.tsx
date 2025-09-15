@@ -2,7 +2,7 @@
 'use client';
 
 // @ts-nocheck
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function ContentRecommendationEngine() {
@@ -11,14 +11,14 @@ export default function ContentRecommendationEngine() {
   const [userInterestsetUserInterests] = useState([]);
 
   const interestCategories = [
-    { id: 'ai'name: 'Artificial Intelligence'icon: '🤖' },
-    { id: 'automation'name: 'Business Automation'icon: '⚡' },
-    { id: 'security'name: 'Cybersecurity'icon: '🛡️' },
-    { id: 'cloud'name: 'Cloud Computing'icon: '☁️' },
-    { id: 'analytics'name: 'Data Analytics'icon: '📊' },
-    { id: 'content'name: 'Content Management'icon: '📝' },
-    { id: 'marketing'name: 'Digital Marketing'icon: '📈' },
-    { id: 'finance'name: 'Financial Technology'icon: '💰' }
+    { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: '🤖' },
+    { id: ''automation', 'name: 'Business 'Automation', 'icon: '⚡' },
+    { id: ''security', 'name: ''Cybersecurity', 'icon: '🛡️' },
+    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: '☁️' },
+    { id: ''analytics', 'name: 'Data 'Analytics', 'icon: '📊' },
+    { id: ''content', 'name: 'Content 'Management', 'icon: '📝' },
+    { id: ''marketing', 'name: 'Digital 'Marketing', 'icon: '📈' },
+    { id: ''finance', 'name: 'Financial 'Technology', 'icon: '💰' }
   ];
 
   const allContent = [
@@ -32,7 +32,7 @@ export default function ContentRecommendationEngine() {
       image: '📝',
       popularity: 95,
       relevance: 98,
-      tags: ['AI'Content'Management'Automation'],
+      tags: [', 'AI', 'Content', 'Management', 'Automation'],
       readTime: '5 min read',
       difficulty: 'Intermediate'
     },
@@ -46,7 +46,7 @@ export default function ContentRecommendationEngine() {
       image: '⚡',
       popularity: 92,
       relevance: 96,
-      tags: ['Automation'AI'Productivity'ROI'],
+      tags: [', 'Automation', 'AI', 'Productivity', 'ROI'],
       readTime: '7 min read',
       difficulty: 'Advanced'
     },
@@ -60,7 +60,7 @@ export default function ContentRecommendationEngine() {
       image: '🛡️',
       popularity: 88,
       relevance: 94,
-      tags: ['Security'Threat Protection'Compliance'AI'],
+      tags: [', 'Security', 'Threat 'Protection', 'Compliance'AI'],
       readTime: '6 min read',
       difficulty: 'Expert'
     },
@@ -74,7 +74,7 @@ export default function ContentRecommendationEngine() {
       image: '☁️',
       popularity: 85,
       relevance: 90,
-      tags: ['Cloud'Infrastructure'Scalability'Security'],
+      tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'Security'],
       readTime: '8 min read',
       difficulty: 'Intermediate'
     },
@@ -88,7 +88,7 @@ export default function ContentRecommendationEngine() {
       image: '📊',
       popularity: 90,
       relevance: 92,
-      tags: ['Analytics'Dashboard'Insights'Data'],
+      tags: [', 'Analytics', 'Dashboard', 'Insights', 'Data'],
       readTime: '4 min read',
       difficulty: 'Beginner'
     },
@@ -102,7 +102,7 @@ export default function ContentRecommendationEngine() {
       image: '🛠️',
       popularity: 87,
       relevance: 89,
-      tags: ['AI Tools'Utilities'Productivity'Business'],
+      tags: ['AI 'Tools', 'Utilities', 'Productivity', 'Business'],
       readTime: '5 min read',
       difficulty: 'Beginner'
     }

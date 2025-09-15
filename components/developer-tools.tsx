@@ -210,22 +210,22 @@ export default function DeveloperToolsPage() {
   const devWorkflow = [
     {
       phase: 'Development',
-      tools: ['GitHub Copilot'VS Code'Git'],
+      tools: ['GitHub 'Copilot', 'VS 'Code', 'Git'],
       description: 'Write and manage code with AI assistance'
     },
     {
       phase: 'Testing',
-      tools: ['Jest'Cypress'Postman'],
+      tools: [', 'Jest', 'Cypress'Postman'],
       description: 'Test code quality and API functionality'
     },
     {
       phase: 'Security',
-      tools: ['Snyk'GitHub Advanced Security'],
+      tools: [', 'Snyk', 'GitHub Advanced Security'],
       description: 'Scan for vulnerabilities and security issues'
     },
     {
       phase: 'Deployment',
-      tools: ['Vercel'GitHub Actions'Docker'],
+      tools: [', 'Vercel', 'GitHub 'Actions', 'Docker'],
       description: 'Deploy and host applications'
     }
   ];

@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MenuChevronDownXPhoneMailArrowRight,
   BrainRocketTargetAtomShield,
@@ -238,10 +238,10 @@ const contactInfo = {
 };
 
 const socialLinks = [
-  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedincolor: 'hover:text-blue-400' },
-  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twittercolor: 'hover:text-sky-400' },
-  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Githubcolor: 'hover:text-gray-400' },
-  { name: 'YouTube'href: 'https://youtube.com/@ziontechgroup'icon: Youtubecolor: 'hover:text-red-500' }
+  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedincolor: 'hover:text-blue-400' },
+  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twittercolor: 'hover:text-sky-400' },
+  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Githubcolor: 'hover:text-gray-400' },
+  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Youtubecolor: 'hover:text-red-500' }
 ];
 
 const UltraFuturisticNavigation2047 = () => {
@@ -263,8 +263,8 @@ const UltraFuturisticNavigation2047 = () => {
       }
     };
 
-    window.addEventListener('resize'handleResize);
-    return () => window.removeEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
+    return () => window.removeEventListener(', 'resize', 'handleResize);
   }[]);
 
   return (
@@ -299,9 +299,9 @@ const UltraFuturisticNavigation2047 = () => {
                 <AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
-                      initial={{ opacity: 0y: 10 }}
-                      animate={{ opacity: 1y: 0 }}
-                      exit={{ opacity: 0y: 10 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
                     >

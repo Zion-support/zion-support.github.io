@@ -15,10 +15,10 @@ const contactInfo = {
 };
 
 const heroStats = [
-  { number: '1000+'label: 'Innovative Services'icon: Sparklescolor: 'from-cyan-400 to-blue-400' },
-  { number: '24/7'label: 'Expert Support'icon: Shieldcolor: 'from-purple-400 to-pink-400' },
-  { number: '1000%'label: 'Average ROI'icon: Starcolor: 'from-yellow-400 to-orange-400' },
-  { number: '99.9%'label: 'Uptime Guarantee'icon: CheckCirclecolor: 'from-green-400 to-emerald-400' }
+  { number: '1000+'label: 'Innovative 'Services', 'icon: Sparklescolor: 'from-cyan-400 to-blue-400' },
+  { number: '24/7'label: 'Expert 'Support', 'icon: Shieldcolor: 'from-purple-400 to-pink-400' },
+  { number: '1000%'label: 'Average 'ROI', 'icon: Starcolor: 'from-yellow-400 to-orange-400' },
+  { number: '99.9%'label: 'Uptime 'Guarantee', 'icon: CheckCirclecolor: 'from-green-400 to-emerald-400' }
 ];
 
 const featuredServices = [
@@ -83,8 +83,8 @@ export default function UltraFuturisticHero2032() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Hero Badge */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
         >
@@ -95,8 +95,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Main Heading */}
         <motion.h1
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
         >
@@ -109,8 +109,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Subheading */}
         <motion.p
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
         >
@@ -121,8 +121,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
@@ -145,8 +145,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Stats Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
@@ -171,8 +171,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Featured Services */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 1.2 }}
           className="mb-16"
         >
@@ -183,8 +183,8 @@ export default function UltraFuturisticHero2032() {
             {featuredServices.map((serviceindex) => (
               <motion.div
                 key={service.name}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 1.4 + index * 0.1 }}
                 className="group"
               >
@@ -220,8 +220,8 @@ export default function UltraFuturisticHero2032() {
 
         {/* Contact Information */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 1.6 }}
           className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto"
         >

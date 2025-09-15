@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -37,12 +37,12 @@ const AIToolsShowcase2026 = () => {
   const [hoveredToolsetHoveredTool] = useState<number | null>(null);
 
   const categories = [
-    { id: 'all'label: 'All Tools'icon: Gridcount: 24 },
-    { id: 'automation'label: 'Automation'icon: Settingscount: 8 },
-    { id: 'analytics'label: 'Analytics'icon: BarChart3count: 6 },
-    { id: 'content'label: 'Content'icon: FileTextcount: 5 },
-    { id: 'communication'label: 'Communication'icon: MessageSquarecount: 3 },
-    { id: 'development'label: 'Development'icon: Codecount: 2 }
+    { id: ''all', 'label: 'All 'Tools', 'icon: Gridcount: 24 },
+    { id: ''automation', 'label: ''Automation', 'icon: Settingscount: 8 },
+    { id: ''analytics', 'label: ''Analytics', 'icon: BarChart3count: 6 },
+    { id: ''content', 'label: ''Content', 'icon: FileTextcount: 5 },
+    { id: ''communication', 'label: ''Communication', 'icon: MessageSquarecount: 3 },
+    { id: ''development', 'label: ''Development', 'icon: Codecount: 2 }
   ];
 
   const aiTools = [
@@ -53,7 +53,7 @@ const AIToolsShowcase2026 = () => {
       category: 'development',
       icon: Code,
       color: 'from-blue-600 to-cyan-600',
-      features: ['Multi-language support'Context-aware generation'Real-time suggestions'],
+      features: ['Multi-language 'support', 'Context-aware 'generation', 'Real-time suggestions'],
       rating: 4.9,
       users: '50K+',
       price: 'Free',
@@ -67,7 +67,7 @@ const AIToolsShowcase2026 = () => {
       category: 'analytics',
       icon: BarChart3,
       color: 'from-green-600 to-emerald-600',
-      features: ['Auto-discovery'Predictive modeling'Visual dashboards'],
+      features: ['Auto-'discovery', 'Predictive 'modeling', 'Visual dashboards'],
       rating: 4.8,
       users: '35K+',
       price: '$99/mo',
@@ -81,7 +81,7 @@ const AIToolsShowcase2026 = () => {
       category: 'content',
       icon: FileText,
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-format support'SEO optimization'Brand voice matching'],
+      features: ['Multi-format 'support', 'SEO 'optimization', 'Brand voice matching'],
       rating: 4.7,
       users: '75K+',
       price: '$149/mo',
@@ -95,7 +95,7 @@ const AIToolsShowcase2026 = () => {
       category: 'automation',
       icon: Settings,
       color: 'from-orange-600 to-red-600',
-      features: ['Process learning'Custom workflows'Integration hub'],
+      features: ['Process 'learning', 'Custom 'workflows', 'Integration hub'],
       rating: 4.9,
       users: '40K+',
       price: '$199/mo',
@@ -109,7 +109,7 @@ const AIToolsShowcase2026 = () => {
       category: 'communication',
       icon: MessageSquare,
       color: 'from-indigo-600 to-purple-600',
-      features: ['Natural conversations'Multi-language'Sentiment analysis'],
+      features: ['Natural 'conversations', 'Multi-'language', 'Sentiment analysis'],
       rating: 4.6,
       users: '60K+',
       price: '$79/mo',
@@ -123,7 +123,7 @@ const AIToolsShowcase2026 = () => {
       category: 'content',
       icon: Image,
       color: 'from-pink-600 to-rose-600',
-      features: ['Image generation'Video creation'Style transfer'],
+      features: ['Image 'generation', 'Video 'creation', 'Style transfer'],
       rating: 4.8,
       users: '45K+',
       price: '$129/mo',
@@ -137,7 +137,7 @@ const AIToolsShowcase2026 = () => {
       category: 'analytics',
       icon: TrendingUp,
       color: 'from-teal-600 to-cyan-600',
-      features: ['Time series analysis'Anomaly detection'Custom models'],
+      features: ['Time series 'analysis', 'Anomaly 'detection', 'Custom models'],
       rating: 4.7,
       users: '25K+',
       price: '$299/mo',
@@ -151,7 +151,7 @@ const AIToolsShowcase2026 = () => {
       category: 'automation',
       icon: Search,
       color: 'from-yellow-600 to-orange-600',
-      features: ['Semantic search'Auto-categorization'Smart filters'],
+      features: ['Semantic 'search', 'Auto-'categorization', 'Smart filters'],
       rating: 4.5,
       users: '30K+',
       price: '$59/mo',
@@ -197,8 +197,8 @@ const AIToolsShowcase2026 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -217,8 +217,8 @@ const AIToolsShowcase2026 = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
@@ -347,8 +347,8 @@ const AIToolsShowcase2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >

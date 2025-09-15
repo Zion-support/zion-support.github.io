@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   TrendingUp
@@ -24,16 +24,16 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
   const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
-    { label: 'ROI'value: '300%'icon: TrendingUpcolor: 'text-green-500' },
-    { label: 'Cost Savings'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-500' },
-    { label: 'Companies'value: '10K+'icon: Building2color: 'text-purple-500' },
-    { label: 'Satisfaction'value: '98%'icon: Awardcolor: 'text-yellow-500' }
+    { label: ''ROI', 'value: '300%'icon: TrendingUpcolor: 'text-green-500' },
+    { label: 'Cost 'Savings', 'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-500' },
+    { label: ''Companies', 'value: '10K+'icon: Building2color: 'text-purple-500' },
+    { label: ''Satisfaction', 'value: '98%'icon: Awardcolor: 'text-yellow-500' }
   ];
 
   const solutions = [
-    { name: 'Automation'icon: Zapcolor: 'from-blue-500 to-cyan-500' },
-    { name: 'Analytics'icon: BarChart3color: 'from-purple-500 to-pink-500' },
-    { name: 'Security'icon: Shieldcolor: 'from-green-500 to-emerald-500' }
+    { name: ''Automation', 'icon: Zapcolor: 'from-blue-500 to-cyan-500' },
+    { name: ''Analytics', 'icon: BarChart3color: 'from-purple-500 to-pink-500' },
+    { name: ''Security', 'icon: Shieldcolor: 'from-green-500 to-emerald-500' }
   ];
 
   useEffect(() => {
@@ -160,9 +160,9 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentMetric}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
-                      exit={{ opacity: 0y: -20 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center space-x-2"
                     >

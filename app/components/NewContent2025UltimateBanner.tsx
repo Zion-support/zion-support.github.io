@@ -1,8 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 const NewContent2025UltimateBanner: React.FC = () => {
   return (
@@ -124,9 +121,7 @@ const NewContent2025UltimateBanner: React.FC = () => {
               >
                 Read Full Guide →
               </Link>
-=======
 import { ArrowRight, Star, TrendingUp, Users, Zap, ArrowRight } from 'lucide-react';
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
 
 const NewContent2025UltimateBanner = () => {
   return (
@@ -162,7 +157,6 @@ const NewContent2025UltimateBanner = () => {
               Transform your data into actionable intelligence with AI-powered analytics. 
               Achieve 500%+ ROI through advanced business intelligence solutions.
             </p>
-<<<<<<< HEAD
             <div className="space-y-2 mb-6">
               <div className="flex items-center text-sm">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
@@ -176,12 +170,9 @@ const NewContent2025UltimateBanner = () => {
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 <span>Predictive Intelligence</span>
               </div>
-=======
             <div className="flex items-center text-sm text-green-400 mb-4">
               <TrendingUp className="w-4 h-4 mr-2" />
               <span>400% Average ROI Achieved</span>
->>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
             </div>
             <Link 
               href="/blog/ai-2025-data-analytics-revolution-enterprise-intelligence"
@@ -252,7 +243,6 @@ const NewContent2025UltimateBanner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Additional Resources */}
         <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -274,8 +264,6 @@ const NewContent2025UltimateBanner = () => {
                   </div>
                 </div>
               </div>
-=======
-<<<<<<< HEAD
         {/* Case Studies Section */}
         <div className="bg-gradient-to-r from-emerald-800 to-cyan-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
@@ -318,7 +306,6 @@ const NewContent2025UltimateBanner = () => {
                   Read Full Case Study →
                 </Link>
               </div>
-=======
         {/* Implementation Checklist */}
         <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
@@ -327,8 +314,6 @@ const NewContent2025UltimateBanner = () => {
               <p className="text-gray-200">
                 The definitive step-by-step guide to AI success. Don't miss any critical steps.
               </p>
->>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
             </div>
             <div className="flex flex-col justify-center">
               <div className="text-center">
@@ -347,7 +332,6 @@ const NewContent2025UltimateBanner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Call to Action */}
         <div className="text-center mt-12">
           <p className="text-lg text-gray-300 mb-6">
@@ -366,8 +350,6 @@ const NewContent2025UltimateBanner = () => {
             >
               Explore Services
             </Link>
-=======
-<<<<<<< HEAD
         {/* Resources Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-8">Free Implementation Resources</h3>
@@ -393,7 +375,6 @@ const NewContent2025UltimateBanner = () => {
                 Schedule Consultation →
               </Link>
             </div>
-=======
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
           <p className="text-gray-300 mb-4">Trusted by leading organizations worldwide</p>
@@ -402,8 +383,6 @@ const NewContent2025UltimateBanner = () => {
             <div className="text-2xl font-bold">Enterprise</div>
             <div className="text-2xl font-bold">Startups</div>
             <div className="text-2xl font-bold">Government</div>
->>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const ContentRevolutionNewsletter = () => {
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
+    setEmail(', ');
   };
 
   if (isSubscribed) {
@@ -26,11 +26,11 @@ const ContentRevolutionNewsletter = () => {
           <div className="text-6xl mb-6">🎉</div>
           <h2 className="text-4xl font-bold mb-4">Welcome to the Revolution!</h2>
           <p className="text-xl mb-8 opacity-90">
-            You're now part of the AI 2025 Ultimate Content Revolution. 
+            'You', 're now part of the AI 2025 Ultimate Content Revolution. 
             Check your email for exclusive access to our latest breakthroughs.
           </p>
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">What's Next?</h3>
+            <h3 className="text-2xl font-bold mb-4">'What', 's Next?</h3>
             <ul className="text-left space-y-2">
               <li>✅ Exclusive access to new AI content tools</li>
               <li>✅ Weekly case studies with 2,500%+ ROI results</li>

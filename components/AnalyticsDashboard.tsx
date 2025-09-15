@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -38,22 +38,22 @@ export default function AnalyticsDashboard() {
         avgSessionDuration: Math.random() * 300 + 120,
         topPages: [
           { path: '/'views: Math.floor(Math.random() * 2000) + 1000 },
-          { path: '/ai-2026-advanced-automation-mastery'views: Math.floor(Math.random() * 1500) + 800 },
-          { path: '/ai-2026-neural-interface-revolution'views: Math.floor(Math.random() * 1200) + 600 },
-          { path: '/services'views: Math.floor(Math.random() * 1000) + 500 },
-          { path: '/about'views: Math.floor(Math.random() * 800) + 400 },
+          { path: '/ai-2026-advanced-automation-'mastery', 'views: Math.floor(Math.random() * 1500) + 800 },
+          { path: '/ai-2026-neural-interface-'revolution', 'views: Math.floor(Math.random() * 1200) + 600 },
+          { path: '/'services', 'views: Math.floor(Math.random() * 1000) + 500 },
+          { path: '/'about', 'views: Math.floor(Math.random() * 800) + 400 },
         ],
         trafficSources: [
-          { source: 'Direct'percentage: 35 },
-          { source: 'Google'percentage: 28 },
-          { source: 'Social Media'percentage: 20 },
-          { source: 'Referral'percentage: 12 },
-          { source: 'Email'percentage: 5 },
+          { source: ''Direct', 'percentage: 35 },
+          { source: ''Google', 'percentage: 28 },
+          { source: 'Social 'Media', 'percentage: 20 },
+          { source: ''Referral', 'percentage: 12 },
+          { source: ''Email', 'percentage: 5 },
         ],
         deviceTypes: [
-          { type: 'Desktop'percentage: 45 },
-          { type: 'Mobile'percentage: 40 },
-          { type: 'Tablet'percentage: 15 },
+          { type: ''Desktop', 'percentage: 45 },
+          { type: ''Mobile', 'percentage: 40 },
+          { type: ''Tablet', 'percentage: 15 },
         ],
         performance: {
           fcp: Math.random() * 1000 + 800,

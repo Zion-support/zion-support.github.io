@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffectuseMemo } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaRocket
   FaBrain
@@ -120,7 +120,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['TensorFlow'PyTorch'OpenAI'LangChain'React'Node.js'],
+    technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
     benefits: [
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
@@ -147,7 +147,7 @@ const services: Service[] = [
       professional: 2499,
       enterprise: 4999
     },
-    technologies: ['Qiskit'Cirq'PennyLane'Python'C++'CUDA'],
+    technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'Python'C++'CUDA'],
     benefits: [
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -174,7 +174,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['TensorFlow Lite'ONNX Runtime'Edge TPU'Raspberry Pi'Arduino'],
+    technologies: ['TensorFlow 'Lite', 'ONNX 'Runtime', 'Edge 'TPU', 'Raspberry 'Pi', 'Arduino'],
     benefits: [
       'Reduced latency by 90%',
       'Lower bandwidth costs',
@@ -201,7 +201,7 @@ const services: Service[] = [
       professional: 999,
       enterprise: 2499
     },
-    technologies: ['NIST PQC'QKD protocols'Zero Trust'SIEM'SOAR'],
+    technologies: ['NIST 'PQC', 'QKD 'protocols', 'Zero 'Trust', 'SIEM'SOAR'],
     benefits: [
       'Future-proof security',
       'Quantum-resistant encryption',
@@ -228,7 +228,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['Apache Kafka'Apache Spark'Snowflake'Databricks'Airflow'],
+    technologies: ['Apache 'Kafka', 'Apache 'Spark', 'Snowflake', 'Databricks', 'Airflow'],
     benefits: [
       'Unified data view',
       'Real-time insights',
@@ -255,7 +255,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['Kubernetes'Docker'Helm'ArgoCD'Prometheus'Grafana'],
+    technologies: [', 'Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
     benefits: [
       'Faster deployment',
       'Improved scalability',
@@ -311,8 +311,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       {/* Header */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -321,14 +321,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our cutting-edge technology solutions designed for the future. 
-            From AI-powered automation to quantum computingwe're building tomorrow's innovations today.
+            From AI-powered automation to quantum 'computingwe', 're building 'tomorrow', 's innovations today.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
@@ -358,8 +358,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
@@ -393,16 +393,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               whileHover={{ y: -5scale: 1.02 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
@@ -474,9 +474,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.9opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
-              exit={{ scale: 0.9opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >

@@ -34,19 +34,19 @@ export default function TechnologyInsightsPage() {
     {
       title: 'Autonomous Systems Research',
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-      focus: ['Decision Making'Self-Learning'Adaptive Behavior'System Integration'],
+      focus: ['Decision 'Making', 'Self-'Learning', 'Adaptive 'Behavior', 'System Integration'],
       icon: '🔬'
     },
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AI'Bias Detection'Transparency'Accountability'],
+      focus: ['Ethical 'AI', 'Bias 'Detection', 'Transparency'Accountability'],
       icon: '⚖️'
     },
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
-      focus: ['Human-AI Interface'Collaborative Decision Making'Safety Protocols'Trust Building'],
+      focus: ['Human-AI 'Interface', 'Collaborative Decision 'Making', 'Safety 'Protocols', 'Trust Building'],
       icon: '🤝'
     }
   ];
@@ -82,7 +82,7 @@ export default function TechnologyInsightsPage() {
     <>
       <Head>
         <title>Technology Insights | Zion Tech Group - Research & Innovation</title>
-        <meta name="description" content="Explore Zion Tech Group's technology insightsresearchand thought leadership in AIautomationand emerging technologies." />
+        <meta name="description" content="Explore Zion Tech 'Group', 's technology insightsresearchand thought leadership in AIautomationand emerging technologies." />
         <meta property="og:title" content="Technology Insights | Zion Tech Group" />
         <meta property="og:description" content="Research insightstechnology trendsand thought leadership in AI and automation." />
         <meta name="twitter:card" content="summary_large_image" />

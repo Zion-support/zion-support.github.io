@@ -19,7 +19,7 @@ export default function InnovativeServicesPage() {
   const [showFiltersetShowFilters] = useState(false);
 
   const priceRanges = [
-    { value: 'All'label: 'All Prices' },
+    { value: ''All', 'label: 'All Prices' },
     { value: '0-1000'label: '$0 - $1,000' },
     { value: '1001-2000'label: '$1,001 - $2,000' },
     { value: '2001-3000'label: '$2,001 - $3,000' },
@@ -28,11 +28,11 @@ export default function InnovativeServicesPage() {
   ];
 
   const sortOptions = [
-    { value: 'innovation'label: 'Innovation Level' },
-    { value: 'price'label: 'Price Low-High' },
-    { value: 'popularity'label: 'Most Popular' },
-    { value: 'category'label: 'Category' },
-    { value: 'roi'label: 'Highest ROI' }
+    { value: ''innovation', 'label: 'Innovation Level' },
+    { value: ''price', 'label: 'Price Low-High' },
+    { value: ''popularity', 'label: 'Most Popular' },
+    { value: ''category', 'label: 'Category' },
+    { value: ''roi', 'label: 'Highest ROI' }
   ];
 
   // Filter and sort services
@@ -117,7 +117,7 @@ export default function InnovativeServicesPage() {
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Discover the future of technology with our breakthrough micro SAAS services. 
-                  From quantum AI to autonomous systemswe're redefining what's possible.
+                  From quantum AI to autonomous 'systemswe', 're redefining 'what', 's possible.
                 </p>
               </div>
 

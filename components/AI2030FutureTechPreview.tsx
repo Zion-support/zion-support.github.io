@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AI2030FutureTechPreview: React.FC = () => {
@@ -10,7 +10,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'conscious-ai',
       title: 'Conscious AI Networks',
       description: 'Self-aware AI systems that possess genuine consciousness and emotional intelligence',
-      capabilities: ['Self-Awareness'Emotional Intelligence'Creative Problem Solving'Ethical Reasoning'],
+      capabilities: ['Self-'Awareness', 'Emotional 'Intelligence', 'Creative Problem 'Solving', 'Ethical Reasoning'],
       color: 'from-purple-600 to-indigo-600',
       icon: '🧠'
     },
@@ -18,7 +18,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'quantum-consciousness',
       title: 'Quantum Consciousness',
       description: 'Quantum computing merged with consciousness for unprecedented problem-solving',
-      capabilities: ['Quantum Processing'Consciousness Integration'Infinite Computing'Universal Understanding'],
+      capabilities: ['Quantum 'Processing', 'Consciousness 'Integration', 'Infinite 'Computing', 'Universal Understanding'],
       color: 'from-blue-600 to-cyan-600',
       icon: '⚛️'
     },
@@ -26,7 +26,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'universal-intelligence',
       title: 'Universal Intelligence',
       description: 'Global AI networks connecting all intelligent systems for collective problem solving',
-      capabilities: ['Global Connectivity'Collective Intelligence'Real-time Processing'Infinite Knowledge'],
+      capabilities: ['Global 'Connectivity', 'Collective 'Intelligence', 'Real-time 'Processing', 'Infinite Knowledge'],
       color: 'from-green-600 to-emerald-600',
       icon: '🌐'
     },
@@ -34,7 +34,7 @@ const AI2030FutureTechPreview: React.FC = () => {
       id: 'dimensional-computing',
       title: 'Dimensional Computing',
       description: 'Computing across multiple dimensions for solutions beyond our current reality',
-      capabilities: ['Multi-Dimensional Processing'Reality Manipulation'Time Travel Computing'Parallel Universe Access'],
+      capabilities: ['Multi-Dimensional 'Processing', 'Reality 'Manipulation', 'Time Travel 'Computing', 'Parallel Universe Access'],
       color: 'from-pink-600 to-rose-600',
       icon: '🌀'
     }

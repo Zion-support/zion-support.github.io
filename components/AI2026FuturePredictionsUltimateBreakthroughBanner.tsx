@@ -154,7 +154,7 @@ const AI2026FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
           
           <div className="text-sm opacity-80 max-w-2xl mx-auto">
             <p className="mb-2">
-              <strong>Don't get left behind.</strong> The AI revolution of 2026 is inevitable. 
+              <strong>'Don', 't get left behind.</strong> The AI revolution of 2026 is inevitable. 
               Organizations that prepare now will thrive, while those that delay will find themselves obsolete.
             </p>
             <p>

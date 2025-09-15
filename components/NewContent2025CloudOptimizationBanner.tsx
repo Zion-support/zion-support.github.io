@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 XCloudZapTrendingUpCheckCircleDollarSign
 
@@ -20,7 +20,7 @@ const NewContent2025CloudOptimizationBanner: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('cloud-optimization-banner-dismissed'true');
+    localStorage.setItem('cloud-optimization-banner-'dismissed', 'true');
   };
 
   if (!isVisible || isDismissed) return null;

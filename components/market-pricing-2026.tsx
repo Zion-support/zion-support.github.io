@@ -24,27 +24,27 @@ export default function MarketPricing2026() {
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
     const matchesPrice = priceRange === 'all' || 
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g'')) < 5000) ||
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g'')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g'')) < 15000) ||
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g'')) >= 15000);
+      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g', ')) < 5000) ||
+      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g', ')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g', ')) < 15000) ||
+      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g', ')) >= 15000);
     return matchesCategory && matchesPrice;
   });
 
   const categories = [
-    { id: 'all'name: 'All Categories'icon: BarChart3count: allServices.length },
-    { id: 'AI'name: 'AI & Machine Learning'icon: Braincount: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum'name: 'Quantum Computing'icon: Atomcount: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging'name: 'Emerging Technology'icon: Sparklescount: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT'name: 'IT & Infrastructure'icon: Shieldcount: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous'name: 'Autonomous Systems'icon: Targetcount: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud'name: 'Cloud & DevOps'icon: Cloudcount: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+    { id: ''all', 'name: 'All 'Categories', 'icon: BarChart3count: allServices.length },
+    { id: ''AI', 'name: 'AI & Machine 'Learning', 'icon: Braincount: allServices.filter(s => s.category.includes('AI')).length },
+    { id: ''Quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: ''Emerging', 'name: 'Emerging 'Technology', 'icon: Sparklescount: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: ''IT', 'name: 'IT & 'Infrastructure', 'icon: Shieldcount: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: ''Autonomous', 'name: 'Autonomous 'Systems', 'icon: Targetcount: allServices.filter(s => s.category.includes('Autonomous')).length },
+    { id: ''Cloud', 'name: 'Cloud & 'DevOps', 'icon: Cloudcount: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
   ];
 
   const priceRanges = [
-    { id: 'all'name: 'All Prices'range: 'All price ranges' },
-    { id: 'budget'name: 'Budget ($0 - $5K)'range: 'Affordable solutions for startups and small businesses' },
-    { id: 'mid'name: 'Mid-Range ($5K - $15K)'range: 'Professional solutions for growing companies' },
-    { id: 'premium'name: 'Premium ($15K+)'range: 'Enterprise-grade solutions for large organizations' }
+    { id: ''all', 'name: 'All 'Prices', 'range: 'All price ranges' },
+    { id: ''budget', 'name: 'Budget ($0 - $5K)'range: 'Affordable solutions for startups and small businesses' },
+    { id: ''mid', 'name: 'Mid-Range ($5K - $15K)'range: 'Professional solutions for growing companies' },
+    { id: ''premium', 'name: 'Premium ($15K+)'range: 'Enterprise-grade solutions for large organizations' }
   ];
 
   const contactInfo = {
@@ -57,9 +57,9 @@ export default function MarketPricing2026() {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length,
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
+    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, ', ')), 0) / allServices.length,
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ', ')))),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ', ')))),
     totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
     averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
   };
@@ -76,7 +76,7 @@ export default function MarketPricing2026() {
       <div className="min-h-screen">
         <Head>
           <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title>
-          <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare pricesROIand competitive positioning. Contact: +1 302 464 0950" />
+          <meta name="description" content="Comprehensive market pricing analysis for Zion Tech 'Group', 's revolutionary 2026 services. Compare pricesROIand competitive positioning. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 pricingAI services pricingquantum computing pricingemerging technology pricingIT solutions pricingcompetitive analysismarket positioningROI analysis" />
           <meta name="author" content="Zion Tech Group" />
           <meta name="robots" content="indexfollow" />
@@ -94,8 +94,8 @@ export default function MarketPricing2026() {
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -193,8 +193,8 @@ export default function MarketPricing2026() {
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
@@ -209,8 +209,8 @@ export default function MarketPricing2026() {
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <motion.div
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6delay: 0.1 }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
@@ -228,8 +228,8 @@ export default function MarketPricing2026() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6delay: 0.2 }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
@@ -247,8 +247,8 @@ export default function MarketPricing2026() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6delay: 0.3 }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
@@ -272,8 +272,8 @@ export default function MarketPricing2026() {
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
@@ -288,8 +288,8 @@ export default function MarketPricing2026() {
               {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 30 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group"
                 >
@@ -410,8 +410,8 @@ export default function MarketPricing2026() {
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"

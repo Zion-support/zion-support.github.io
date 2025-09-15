@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Atom
   Zap
@@ -42,7 +42,7 @@ const QuantumComputingSolutions2026 = () => {
         'Resource Allocation Problems',
         'Route Planning & Scheduling'
       ],
-      performance: { speed: '10,000x'accuracy: '99.9%' },
+      performance: { speed: '10,000'x', 'accuracy: '99.9%' },
       useCases: [
         'Global supply chain optimization',
         'Real-time trading algorithms',
@@ -63,7 +63,7 @@ const QuantumComputingSolutions2026 = () => {
         'Quantum Random Number Generation',
         'Secure Communication Networks'
       ],
-      performance: { speed: 'Instant'accuracy: '100%' },
+      performance: { speed: ''Instant', 'accuracy: '100%' },
       useCases: [
         'Government communications',
         'Financial transactions',
@@ -84,7 +84,7 @@ const QuantumComputingSolutions2026 = () => {
         'Materials Science Research',
         'Climate Modeling'
       ],
-      performance: { speed: '1Mx'accuracy: '99.99%' },
+      performance: { speed: '1'Mx', 'accuracy: '99.99%' },
       useCases: [
         'Pharmaceutical research',
         'New material discovery',
@@ -105,7 +105,7 @@ const QuantumComputingSolutions2026 = () => {
         'Quantum Clustering Algorithms',
         'Quantum Feature Selection'
       ],
-      performance: { speed: '100x'accuracy: '95%' },
+      performance: { speed: '100'x', 'accuracy: '95%' },
       useCases: [
         'Image recognition',
         'Natural language processing',
@@ -143,12 +143,12 @@ const QuantumComputingSolutions2026 = () => {
   ];
 
   const industries = [
-    { name: 'Healthcare'icon: '🏥'applications: ['Drug Discovery'Medical Imaging'Genomics'] },
-    { name: 'Finance'icon: '💰'applications: ['Risk Analysis'Algorithmic Trading'Fraud Detection'] },
-    { name: 'Energy'icon: '⚡'applications: ['Grid Optimization'Renewable Energy'Storage Solutions'] },
-    { name: 'Transportation'icon: '🚗'applications: ['Route Optimization'Autonomous Vehicles'Traffic Management'] },
-    { name: 'Manufacturing'icon: '🏭'applications: ['Supply Chain'Quality Control'Predictive Maintenance'] },
-    { name: 'Research'icon: '🔬'applications: ['Scientific Computing'Climate Modeling'Materials Science'] }
+    { name: ''Healthcare', 'icon: '🏥'applications: ['Drug 'Discovery', 'Medical 'Imaging', 'Genomics'] },
+    { name: ''Finance', 'icon: '💰'applications: ['Risk 'Analysis', 'Algorithmic 'Trading', 'Fraud Detection'] },
+    { name: ''Energy', 'icon: '⚡'applications: ['Grid 'Optimization', 'Renewable 'Energy', 'Storage Solutions'] },
+    { name: ''Transportation', 'icon: '🚗'applications: ['Route 'Optimization', 'Autonomous 'Vehicles', 'Traffic Management'] },
+    { name: ''Manufacturing', 'icon: '🏭'applications: ['Supply 'Chain', 'Quality 'Control', 'Predictive Maintenance'] },
+    { name: ''Research', 'icon: '🔬'applications: ['Scientific 'Computing', 'Climate 'Modeling', 'Materials Science'] }
   ];
 
   return (
@@ -184,8 +184,8 @@ const QuantumComputingSolutions2026 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -207,15 +207,15 @@ const QuantumComputingSolutions2026 = () => {
           </h1>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Harness the power of quantum computing to solve the world's most complex problems. 
+            Harness the power of quantum computing to solve the 'world', 's most complex problems. 
             From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
         </motion.div>
 
         {/* Benefits Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
@@ -235,8 +235,8 @@ const QuantumComputingSolutions2026 = () => {
 
         {/* Solutions Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
@@ -296,9 +296,9 @@ const QuantumComputingSolutions2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSolution}
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -30 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
@@ -353,8 +353,8 @@ const QuantumComputingSolutions2026 = () => {
 
         {/* Industry Applications */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="mb-16"
         >
@@ -386,8 +386,8 @@ const QuantumComputingSolutions2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"
         >

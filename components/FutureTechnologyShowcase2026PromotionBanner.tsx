@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Rocket
@@ -30,10 +30,10 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
   }[]);
 
   const technologies = [
-    { icon: Rocketitle: 'Quantum Computing'color: 'from-purple-500 to-pink-500' },
-    { icon: Braintitle: 'Neural Interfaces'color: 'from-blue-500 to-cyan-500' },
-    { icon: Globetitle: 'Space Technology'color: 'from-green-500 to-emerald-500' },
-    { icon: Zaptitle: 'Biotech AI'color: 'from-orange-500 to-red-500' }
+    { icon: Rocketitle: 'Quantum 'Computing', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Braintitle: 'Neural 'Interfaces', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: Globetitle: 'Space 'Technology', 'color: 'from-green-500 to-emerald-500' },
+    { icon: Zaptitle: 'Biotech 'AI', 'color: 'from-orange-500 to-red-500' }
   ];
 
   const benefits = [
@@ -70,8 +70,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
             >
               {/* Badge */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.2 }}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
@@ -81,8 +81,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* Main Heading */}
               <motion.h2
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
               >
@@ -96,8 +96,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* Description */}
               <motion.p
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.4 }}
                 className="text-xl text-gray-300 leading-relaxed"
               >
@@ -107,8 +107,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* Technologies Grid */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.5 }}
                 className="grid grid-cols-2 gap-4"
               >
@@ -124,8 +124,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* Benefits */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.6 }}
                 className="space-y-3"
               >
@@ -139,8 +139,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4"
               >

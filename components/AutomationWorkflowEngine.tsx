@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Workflow {
   id: string;
@@ -69,8 +69,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Customer Onboarding Sequence',
         description: 'Automated welcome emails and setup tasks for new customers',
         status: 'active',
-        triggers: ['New Customer Registration'Payment Confirmed'],
-        actions: ['Send Welcome Email'Create User Account'Assign Support Agent'],
+        triggers: ['New Customer 'Registration', 'Payment Confirmed'],
+        actions: ['Send Welcome 'Email', 'Create User 'Account', 'Assign Support Agent'],
         executions: 1247,
         successRate: 98.5,
         lastRun: new Date(Date.now() - 2 * 60 * 60 * 1000),
@@ -83,7 +83,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         description: 'Send reminder emails to customers who left items in their cart',
         status: 'active',
         triggers: ['Cart Abandoned'24 Hours Passed'],
-        actions: ['Send Reminder Email'Apply Discount Code'Update Customer Profile'],
+        actions: ['Send Reminder 'Email', 'Apply Discount 'Code', 'Update Customer Profile'],
         executions: 3421,
         successRate: 23.4,
         lastRun: new Date(Date.now() - 30 * 60 * 1000),
@@ -95,8 +95,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Support Ticket Escalation',
         description: 'Automatically escalate high-priority support tickets',
         status: 'active',
-        triggers: ['High Priority Ticket'No Response 2 Hours'],
-        actions: ['Notify Manager'Send Customer Update'Create Internal Alert'],
+        triggers: ['High Priority 'Ticket', 'No Response 2 Hours'],
+        actions: ['Notify 'Manager', 'Send Customer 'Update', 'Create Internal Alert'],
         executions: 156,
         successRate: 94.2,
         lastRun: new Date(Date.now() - 15 * 60 * 1000),
@@ -108,8 +108,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Invoice Generation',
         description: 'Automatically generate and send invoices for completed orders',
         status: 'active',
-        triggers: ['Order Completed'Payment Processed'],
-        actions: ['Generate Invoice'Send Email'Update Accounting System'],
+        triggers: ['Order 'Completed', 'Payment Processed'],
+        actions: ['Generate 'Invoice', 'Send 'Email', 'Update Accounting System'],
         executions: 892,
         successRate: 99.1,
         lastRun: new Date(Date.now() - 45 * 60 * 1000),
@@ -121,8 +121,8 @@ const AutomationWorkflowEngine: React.FC = () => {
         name: 'Security Alert Processing',
         description: 'Process and respond to security alerts automatically',
         status: 'paused',
-        triggers: ['Security Alert'Failed Login Attempts'],
-        actions: ['Block IP Address'Send Alert Email'Log Security Event'],
+        triggers: ['Security 'Alert', 'Failed Login Attempts'],
+        actions: ['Block IP 'Address', 'Send Alert 'Email', 'Log Security Event'],
         executions: 234,
         successRate: 87.3,
         lastRun: new Date(Date.now() - 4 * 60 * 60 * 1000),
@@ -135,7 +135,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         description: 'Collect feedback from customers after service completion',
         status: 'draft',
         triggers: ['Service Completed'7 Days Passed'],
-        actions: ['Send Feedback Request'Collect Rating'Follow Up if Low Rating'],
+        actions: ['Send Feedback 'Request', 'Collect 'Rating', 'Follow Up if Low Rating'],
         executions: 0,
         successRate: 0,
         lastRun: new Date(0),
@@ -186,7 +186,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         endTime: new Date(Date.now() - 2 * 60 * 60 * 1000 + 5 * 60 * 1000),
         duration: 5,
         recordsProcessed: 47,
-        logs: ['Starting customer onboarding workflow'Processing 47 new customers'Sending welcome emails'Creating user accounts'Assigning support agents'Workflow completed successfully']
+        logs: ['Starting customer onboarding 'workflow', 'Processing 47 new 'customers', 'Sending welcome 'emails', 'Creating user 'accounts', 'Assigning support 'agents', 'Workflow completed successfully']
       },
       {
         id: '2',
@@ -194,7 +194,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         status: 'running',
         startTime: new Date(Date.now() - 30 * 60 * 1000),
         recordsProcessed: 123,
-        logs: ['Starting abandoned cart recovery'Processing 123 abandoned carts'Sending reminder emails...']
+        logs: ['Starting abandoned cart 'recovery', 'Processing 123 abandoned 'carts', 'Sending reminder emails...']
       },
       {
         id: '3',
@@ -205,7 +205,7 @@ const AutomationWorkflowEngine: React.FC = () => {
         duration: 2,
         recordsProcessed: 8,
         errors: ['Failed to notify manager: Email service unavailable'],
-        logs: ['Starting support ticket escalation'Processing 8 high-priority tickets'Error: Email service unavailable']
+        logs: ['Starting support ticket 'escalation', 'Processing 8 high-priority 'tickets', 'Error: Email service unavailable']
       }
     ];
 

@@ -6,10 +6,10 @@ type Props = {
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid'milestoneId: string) => Promise<void> | void;
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | ', 'paid', 'milestoneId: string) => Promise<void> | void;
 };
 
-const statusSteps = ['Pending'In Progress'Submitted'Approved'Paid'] as const;
+const statusSteps = [', 'Pending', 'In 'Progress', 'Submitted', 'Approved', 'Paid'] as const;
 
 export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props) {
   const [expandedsetExpanded] = useState(false);
@@ -77,7 +77,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
-            onClick={() => onAction('in_progress'milestone.id)}
+            onClick={() => onAction(', 'in_progress', 'milestone.id)}
           >
             Mark In Progress
           </button>
@@ -85,7 +85,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         {canTalentSubmit && (
           <button
             className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
-            onClick={() => onAction('submitted'milestone.id)}
+            onClick={() => onAction(', 'submitted', 'milestone.id)}
           >
             Submit Work
           </button>
@@ -93,7 +93,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         {canClientApprove && (
           <button
             className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
-            onClick={() => onAction('approved'milestone.id)}
+            onClick={() => onAction(', 'approved', 'milestone.id)}
           >
             Approve
           </button>
@@ -101,7 +101,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         {canClientMarkPaid && (
           <button
             className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
-            onClick={() => onAction('paid'milestone.id)}
+            onClick={() => onAction(', 'paid', 'milestone.id)}
           >
             Mark as Paid
           </button>

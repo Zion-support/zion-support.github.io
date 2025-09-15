@@ -16,9 +16,9 @@ export default function PdfExportButton({ targetRefileName = 'resume.pdf' }: Pdf
     const opt = {
       margin: [1010],
       filename: fileName,
-      image: { type: 'jpeg'quality: 0.98 },
+      image: { type: ''jpeg', 'quality: 0.98 },
       html2canvas: { scale: 2useCORS: true },
-      jsPDF: { unit: 'mm'format: 'a4'orientation: 'portrait' }
+      jsPDF: { unit: ''mm', 'format: ''a4', 'orientation: 'portrait' }
     } as any;
 
     html2pdf().set(opt).from(element).save();

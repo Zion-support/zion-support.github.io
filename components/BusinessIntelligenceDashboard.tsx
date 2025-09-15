@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Metric {
   id: string;

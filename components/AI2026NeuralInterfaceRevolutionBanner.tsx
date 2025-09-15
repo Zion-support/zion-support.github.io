@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
@@ -49,7 +49,7 @@ const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2026-neural-interface-banner-dismissed'true');
+    localStorage.setItem('ai2026-neural-interface-banner-'dismissed', 'true');
   };
 
   if (!isVisible) return null;

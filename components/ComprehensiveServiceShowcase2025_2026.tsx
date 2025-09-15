@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -304,8 +304,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
     <div className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0y: -50 }}
-        animate={isVisible ? { opacity: 1y: 0 } : {}}
+        initial={{ opacity: 0, y: -50 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
         className="text-center py-16 px-4"
       >
@@ -321,8 +321,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
 
       {/* Service Navigation */}
       <motion.div
-        initial={{ opacity: 0y: 20 }}
-        animate={isVisible ? { opacity: 1y: 0 } : {}}
+        initial={{ opacity: 0, y: 20 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8delay: 0.2 }}
         className="container mx-auto px-4 mb-12"
       >
@@ -332,8 +332,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
             return (
               <motion.button
                 key={service.id}
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 onClick={() => setActiveService(service.id)}
                 onMouseEnter={() => setHoveredService(service.id)}
@@ -366,8 +366,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
       {/* Service Details */}
       <motion.div
         key={activeService}
-        initial={{ opacity: 0y: 50 }}
-        animate={{ opacity: 1y: 0 }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="container mx-auto px-4 mb-16"
       >
@@ -448,8 +448,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
                 {currentService.caseStudies.map((studyindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6delay: index * 0.2 }}
                     className="p-4 bg-slate-700/50 rounded-xl"
                   >
@@ -468,8 +468,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
 
       {/* CTA Section */}
       <motion.div
-        initial={{ opacity: 0y: 50 }}
-        animate={isVisible ? { opacity: 1y: 0 } : {}}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8delay: 0.6 }}
         className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-t border-white/20 py-16"
       >

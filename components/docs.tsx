@@ -15,30 +15,30 @@ export default function DocsPage() {
     {
       title: 'Getting Started',
       links: [
-        { name: 'Overview'href: '/enhanced-services-showcase' },
-        { name: 'Pricing & Market Benchmarks'href: '/market-pricing' },
-        { name: 'Contact Sales'href: '/contact' }]
+        { name: ''Overview', 'href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market 'Benchmarks', 'href: '/market-pricing' },
+        { name: 'Contact 'Sales', 'href: '/contact' }]
     },
     {
       title: 'AI Services Docs',
       links: [
-        { name: 'AI Guardrails'href: '/ai-guardrails' },
-        { name: 'AI Evals'href: '/ai-evals' },
-        { name: 'Agentic RAG'href: '/agentic-rag' }]
+        { name: 'AI 'Guardrails', 'href: '/ai-guardrails' },
+        { name: 'AI 'Evals', 'href: '/ai-evals' },
+        { name: 'Agentic 'RAG', 'href: '/agentic-rag' }]
     },
     {
       title: 'IT & Platform Docs',
       links: [
-        { name: 'API Observability'href: '/api-observability' },
-        { name: 'Cloud Cost Optimizer'href: '/cloud-cost-optimizer' },
-        { name: 'Status Pages & SLO'href: '/status-pages-slo' }]
+        { name: 'API 'Observability', 'href: '/api-observability' },
+        { name: 'Cloud Cost 'Optimizer', 'href: '/cloud-cost-optimizer' },
+        { name: 'Status Pages & 'SLO', 'href: '/status-pages-slo' }]
     }];
 
   const external = [
-    { name: 'OpenAI API pricing'url: 'https://openai.com/api/pricing' },
-    { name: 'Anthropic pricing'url: 'https://www.anthropic.com/pricing' },
-    { name: 'Pinecone pricing'url: 'https://www.pinecone.io/pricing/' },
-    { name: 'Snowflake pricing'url: 'https://www.snowflake.com/pricing/' }];
+    { name: 'OpenAI API 'pricing', 'url: 'https://openai.com/api/pricing' },
+    { name: 'Anthropic 'pricing', 'url: 'https://www.anthropic.com/pricing' },
+    { name: 'Pinecone 'pricing', 'url: 'https://www.pinecone.io/pricing/' },
+    { name: 'Snowflake 'pricing', 'url: 'https://www.snowflake.com/pricing/' }];
 
   const quickLinks = [
     {
@@ -139,7 +139,7 @@ export default function DocsPage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>
               <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
-              <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g'')}`}>{contact.mobile}</a>
+              <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g', ')}`}>{contact.mobile}</a>
               <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
             </div>
           </Card>

@@ -33,7 +33,7 @@ const AI2025UltimateBusinessTransformationPromotionBanner: React.FC = () => {
             </div>
           </div>
           <div className="bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm">
-            <h3 className="text-xl font-bold mb-4">What You'll Learn:</h3>
+            <h3 className="text-xl font-bold mb-4">What 'You', 'll Learn:</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
                 <span className="text-green-400 mr-3">✓</span>

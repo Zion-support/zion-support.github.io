@@ -46,19 +46,19 @@ export default function SocialProofShowcase() {
   ];
 
   const successMetrics = [
-    { label: 'Companies Transformed'value: '500+'icon: '🏢' },
-    { label: 'Average ROI Achieved'value: '15,000%'icon: '📈' },
-    { label: 'Countries Served'value: '50+'icon: '🌍' },
-    { label: 'Success Rate'value: '99.9%'icon: '✅' }
+    { label: 'Companies 'Transformed', 'value: '500+'icon: '🏢' },
+    { label: 'Average ROI 'Achieved', 'value: '15,000%'icon: '📈' },
+    { label: 'Countries 'Served', 'value: '50+'icon: '🌍' },
+    { label: 'Success 'Rate', 'value: '99.9%'icon: '✅' }
   ];
 
   const logos = [
-    { name: 'Microsoft'logo: 'MS' },
-    { name: 'Google'logo: 'GO' },
-    { name: 'Amazon'logo: 'AM' },
-    { name: 'Tesla'logo: 'TS' },
-    { name: 'Meta'logo: 'ME' },
-    { name: 'Apple'logo: 'AP' }
+    { name: ''Microsoft', 'logo: 'MS' },
+    { name: ''Google', 'logo: 'GO' },
+    { name: ''Amazon', 'logo: 'AM' },
+    { name: ''Tesla', 'logo: 'TS' },
+    { name: ''Meta', 'logo: 'ME' },
+    { name: ''Apple', 'logo: 'AP' }
   ];
 
   return (
@@ -177,7 +177,7 @@ export default function SocialProofShowcase() {
             Join the Revolution
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Don't just read about our success stories. Become one. Join thousands of companies 
+            'Don', 't just read about our success stories. Become one. Join thousands of companies 
             already experiencing the revolutionary power of our AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

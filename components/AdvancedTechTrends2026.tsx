@@ -67,8 +67,8 @@ const AdvancedTechTrends2026 = () => {
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -88,8 +88,8 @@ const AdvancedTechTrends2026 = () => {
           {trends.map((trendindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative"
             >
@@ -118,8 +118,8 @@ const AdvancedTechTrends2026 = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >

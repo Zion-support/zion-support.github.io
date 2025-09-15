@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface ErrorLog {
   id: string;
@@ -151,7 +151,7 @@ export default function AdvancedMonitoring() {
         if (document.readyState === 'complete') {
           measurePerformance();
         } else {
-          window.addEventListener('load'measurePerformance);
+          window.addEventListener(', 'load', 'measurePerformance);
         }
       };
 
@@ -208,8 +208,8 @@ export default function AdvancedMonitoring() {
         });
 
         // Listen for errors
-        window.addEventListener('error'trackError);
-        window.addEventListener('unhandledrejection'trackError);
+        window.addEventListener(', 'error', 'trackError);
+        window.addEventListener(', 'unhandledrejection', 'trackError);
 
         // Calculate performance score
         const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
@@ -261,7 +261,7 @@ export default function AdvancedMonitoring() {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = Math.random().toString(36).substr(29);
-      sessionStorage.setItem('sessionId'sessionId);
+      sessionStorage.setItem(', 'sessionId', 'sessionId);
     }
     return sessionId;
   };
@@ -319,7 +319,7 @@ export default function AdvancedMonitoring() {
   const clearErrors = () => setErrors([]);
   const clearSessions = () => setSessions([]);
 
-  // Don't render in production
+  // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
@@ -367,7 +367,7 @@ export default function AdvancedMonitoring() {
               </button>
             </div>
             <div className="max-h-32 overflow-y-auto space-y-1">
-              {errors.slice(05).map((error) => (
+              {errors.slice(0, 5).map((error) => (
                 <div key={error.id} className="text-xs bg-red-900 p-2 rounded">
                   <div className="text-red-300">{error.type.toUpperCase()}</div>
                   <div className="text-gray-300 truncate">{error.message}</div>

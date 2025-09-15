@@ -46,9 +46,9 @@ interface QuantumHolographicCardProps {
   className?: string;
 }
 
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ serviceclassName = '' }) => {
+const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ serviceclassName = ', ' }) => {
   const cardVariants = {
-    hidden: { opacity: 0y: 50scale: 0.9 },
+    hidden: { opacity: 0, y: 50scale: 0.9 },
     visible: { 
       opacity: 1
       y: 0

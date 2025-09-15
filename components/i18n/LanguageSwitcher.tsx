@@ -23,9 +23,9 @@ export default function LanguageSwitcher() {
 
   const changeLanguage = async (lng: string) => {
     await i18n.changeLanguage(lng);
-    localStorage.setItem('preferredLanguage'lng);
-    document.documentElement.setAttribute('dir'isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang'lng);
+    localStorage.setItem(', 'preferredLanguage', 'lng);
+    document.documentElement.setAttribute(', 'dir', 'isRtl(lng) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute(', 'lang', 'lng);
     setOpen(false);
   };
 

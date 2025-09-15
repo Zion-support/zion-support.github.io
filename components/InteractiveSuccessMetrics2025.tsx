@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   DollarSign
@@ -142,7 +142,7 @@ const InteractiveSuccessMetrics2025 = () => {
   }[isPlayingmetrics.length]);
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -154,7 +154,7 @@ const InteractiveSuccessMetrics2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -245,8 +245,8 @@ const InteractiveSuccessMetrics2025 = () => {
                     {metrics[currentMetric].details.map((detailindex) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0y: 20 }}
-                        animate={{ opacity: 1y: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         className="flex items-center text-white/90"
                       >

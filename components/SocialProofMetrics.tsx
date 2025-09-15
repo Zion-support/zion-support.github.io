@@ -81,12 +81,12 @@ const testimonials = [
 ];
 
 const logos = [
-  { name: 'Microsoft'logo: '🏢' },
-  { name: 'Google'logo: '🔍' },
-  { name: 'Amazon'logo: '📦' },
-  { name: 'Tesla'logo: '⚡' },
-  { name: 'SpaceX'logo: '🚀' },
-  { name: 'OpenAI'logo: '🧠' }
+  { name: ''Microsoft', 'logo: '🏢' },
+  { name: ''Google', 'logo: '🔍' },
+  { name: ''Amazon', 'logo: '📦' },
+  { name: ''Tesla', 'logo: '⚡' },
+  { name: ''SpaceX', 'logo: '🚀' },
+  { name: ''OpenAI', 'logo: '🧠' }
 ];
 
 export default function SocialProofMetrics() {
@@ -177,7 +177,7 @@ export default function SocialProofMetrics() {
               Ready to Join the Revolution?
             </h3>
             <p className="text-xl mb-6 text-blue-100">
-              Don't miss out on the most significant technological breakthrough in history. 
+              'Don', 't miss out on the most significant technological breakthrough in history. 
               Transform your business today and achieve unprecedented success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

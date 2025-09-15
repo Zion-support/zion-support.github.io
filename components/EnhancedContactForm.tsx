@@ -60,7 +60,7 @@ const EnhancedContactForm: React.FC = () => {
     e.preventDefault();
     
     if (!validateForm()) {
-      showError('Validation Error'Please fix the errors in the form');
+      showError('Validation 'Error', 'Please fix the errors in the form');
       return;
     }
 
@@ -83,7 +83,7 @@ const EnhancedContactForm: React.FC = () => {
       setErrors({});
     } catch (error) {
       console.error('Error submitting form:'error);
-      showError('Submission Failed'There was an error sending your message. Please try again.');
+      showError('Submission 'Failed', 'There was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -119,7 +119,7 @@ const EnhancedContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
         <p className="text-white/70 mb-6">
-          Thank you for reaching out. We'll get back to you within 24 hours.
+          Thank you for reaching out. 'We', 'll get back to you within 24 hours.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
@@ -139,7 +139,7 @@ const EnhancedContactForm: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
             <p className="text-white/70 leading-relaxed mb-8">
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.
+              Ready to transform your business with cutting-edge technology? 'Let', 's discuss your project and explore how our solutions can drive innovation and growth.
             </p>
           </div>
 
@@ -200,8 +200,8 @@ const EnhancedContactForm: React.FC = () => {
                 />
                 {errors.name && (
                   <motion.p
-                    initial={{ opacity: 0y: -10 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
@@ -230,8 +230,8 @@ const EnhancedContactForm: React.FC = () => {
                 />
                 {errors.email && (
                   <motion.p
-                    initial={{ opacity: 0y: -10 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mt-2 text-sm text-red-400 flex items-center gap-2"
                   >
                     <AlertCircle className="w-4 h-4" />
@@ -298,8 +298,8 @@ const EnhancedContactForm: React.FC = () => {
               />
               {errors.message && (
                 <motion.p
-                  initial={{ opacity: 0y: -10 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="mt-2 text-sm text-red-400 flex items-center gap-2"
                 >
                   <AlertCircle className="w-4 h-4" />

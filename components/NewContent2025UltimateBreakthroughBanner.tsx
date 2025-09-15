@@ -30,7 +30,7 @@ const NewContent2025UltimateBreakthroughBanner: React.FC = () => {
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
             Revolutionary AI technologies delivering <strong className="text-yellow-400">50,000% ROI</strong> and 
-            transforming businesses worldwide. Don't miss the most comprehensive AI content collection ever created.
+            transforming businesses worldwide. 'Don', 't miss the most comprehensive AI content collection ever created.
           </p>
           
           {/* Key Benefits */}

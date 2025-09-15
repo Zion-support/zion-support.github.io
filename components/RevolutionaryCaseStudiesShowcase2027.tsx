@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -44,7 +44,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '18 months',
       teamSize: '150+ experts',
-      technologies: ['AI/ML'Cloud Migration'Microservices'DevOps'],
+      technologies: ['AI/'ML', 'Cloud 'Migration', 'Microservices'DevOps'],
       description: 'Transformed a traditional enterprise into an AI-first organizationresulting in unprecedented growth and efficiency gains.',
       highlights: [
         'Implemented 50+ AI models across all business functions',
@@ -53,16 +53,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Reduced manual processes by 85% through intelligent automation'
       ],
       testimonial: {
-        quote: "This transformation exceeded our wildest expectations. We've become a completely different company.",
+        quote: "This transformation exceeded our wildest expectations. 'We', 've become a completely different company.",
         author: "Sarah Chen",
         position: "CTOTechCorp Global",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Revenue Growth'value: '+340%'icon: TrendingUpcolor: 'text-green-500' },
-        { label: 'Efficiency Gain'value: '+280%'icon: Zapcolor: 'text-blue-500' },
-        { label: 'Cost Reduction'value: '-65%'icon: DollarSigncolor: 'text-red-500' },
-        { label: 'Time to Market'value: '-75%'icon: Clockcolor: 'text-purple-500' }
+        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUpcolor: 'text-green-500' },
+        { label: 'Efficiency 'Gain', 'value: '+280%'icon: Zapcolor: 'text-blue-500' },
+        { label: 'Cost 'Reduction', 'value: '-65%'icon: DollarSigncolor: 'text-red-500' },
+        { label: 'Time to 'Market', 'value: '-75%'icon: Clockcolor: 'text-purple-500' }
       ]
     },
     {
@@ -79,7 +79,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '12 months',
       teamSize: '80+ experts',
-      technologies: ['Computer Vision'NLP'Predictive Analytics'IoT'],
+      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT'],
       description: 'Revolutionized healthcare delivery through AI-powered diagnostics and personalized treatment recommendations.',
       highlights: [
         'Achieved 95% accuracy in early disease detection',
@@ -88,16 +88,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Saved $50M+ in healthcare costs annually'
       ],
       testimonial: {
-        quote: "The AI system has transformed how we approach patient care. It's like having a superhuman diagnostician on every team.",
+        quote: "The AI system has transformed how we approach patient care. 'It', 's like having a superhuman diagnostician on every team.",
         author: "Dr. Michael Rodriguez",
         position: "Chief Medical OfficerMediTech Solutions",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Diagnosis Accuracy'value: '+95%'icon: Targetcolor: 'text-green-500' },
-        { label: 'Diagnosis Time'value: '-80%'icon: Clockcolor: 'text-blue-500' },
-        { label: 'Patient Outcomes'value: '+60%'icon: Userscolor: 'text-purple-500' },
-        { label: 'Cost Savings'value: '-45%'icon: DollarSigncolor: 'text-red-500' }
+        { label: 'Diagnosis 'Accuracy', 'value: '+95%'icon: Targetcolor: 'text-green-500' },
+        { label: 'Diagnosis 'Time', 'value: '-80%'icon: Clockcolor: 'text-blue-500' },
+        { label: 'Patient 'Outcomes', 'value: '+60%'icon: Userscolor: 'text-purple-500' },
+        { label: 'Cost 'Savings', 'value: '-45%'icon: DollarSigncolor: 'text-red-500' }
       ]
     },
     {
@@ -114,7 +114,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '15 months',
       teamSize: '120+ experts',
-      technologies: ['Quantum Computing'Machine Learning'Blockchain'Real-time Analytics'],
+      technologies: ['Quantum 'Computing', 'Machine 'Learning', 'Blockchain'Real-time Analytics'],
       description: 'Built the world\'s most advanced fraud detection system using quantum computing and AI.',
       highlights: [
         'Detected 99.7% of fraudulent transactions in real-time',
@@ -123,16 +123,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Achieved 99.99% system reliability'
       ],
       testimonial: {
-        quote: "We've set a new standard for financial security. Our customers trust us with their most sensitive data.",
+        quote: "'We', 've set a new standard for financial security. Our customers trust us with their most sensitive data.",
         author: "Jennifer Liu",
         position: "CEOFinanceFlow Inc.",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Fraud Detection'value: '+99.7%'icon: Shieldcolor: 'text-green-500' },
-        { label: 'False Positives'value: '-90%'icon: Targetcolor: 'text-blue-500' },
-        { label: 'Processing Speed'value: '+500%'icon: Zapcolor: 'text-purple-500' },
-        { label: 'Customer Satisfaction'value: '+85%'icon: Userscolor: 'text-orange-500' }
+        { label: 'Fraud 'Detection', 'value: '+99.7%'icon: Shieldcolor: 'text-green-500' },
+        { label: 'False 'Positives', 'value: '-90%'icon: Targetcolor: 'text-blue-500' },
+        { label: 'Processing 'Speed', 'value: '+500%'icon: Zapcolor: 'text-purple-500' },
+        { label: 'Customer 'Satisfaction', 'value: '+85%'icon: Userscolor: 'text-orange-500' }
       ]
     },
     {
@@ -149,7 +149,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '24 months',
       teamSize: '200+ experts',
-      technologies: ['IoT'Computer Vision'Predictive Maintenance'Robotics'],
+      technologies: [', 'IoT', 'Computer 'Vision', 'Predictive 'Maintenance', 'Robotics'],
       description: 'Transformed traditional manufacturing into a smartAI-powered production facility.',
       highlights: [
         'Increased productivity by 200% through intelligent automation',
@@ -158,25 +158,25 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Reduced energy consumption by 40%'
       ],
       testimonial: {
-        quote: "We've created the factory of the future. Every process is optimizedevery decision is data-driven.",
+        quote: "'We', 've created the factory of the future. Every process is optimizedevery decision is data-driven.",
         author: "Robert Kim",
         position: "VP of OperationsAutoManufacturing Co.",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Productivity'value: '+200%'icon: TrendingUpcolor: 'text-green-500' },
-        { label: 'Downtime Reduction'value: '-85%'icon: Clockcolor: 'text-blue-500' },
-        { label: 'Quality Improvement'value: '+95%'icon: Awardcolor: 'text-purple-500' },
-        { label: 'Energy Efficiency'value: '+40%'icon: Zapcolor: 'text-orange-500' }
+        { label: ''Productivity', 'value: '+200%'icon: TrendingUpcolor: 'text-green-500' },
+        { label: 'Downtime 'Reduction', 'value: '-85%'icon: Clockcolor: 'text-blue-500' },
+        { label: 'Quality 'Improvement', 'value: '+95%'icon: Awardcolor: 'text-purple-500' },
+        { label: 'Energy 'Efficiency', 'value: '+40%'icon: Zapcolor: 'text-orange-500' }
       ]
     }
   ];
 
   const overallStats = [
-    { label: 'Projects Completed'value: '500+'icon: CheckCircle },
-    { label: 'Client Satisfaction'value: '99.2%'icon: Star },
-    { label: 'Average ROI'value: '340%'icon: TrendingUp },
-    { label: 'Years Experience'value: '15+'icon: Award }
+    { label: 'Projects 'Completed', 'value: '500+'icon: CheckCircle },
+    { label: 'Client 'Satisfaction', 'value: '99.2%'icon: Star },
+    { label: 'Average 'ROI', 'value: '340%'icon: TrendingUp },
+    { label: 'Years 'Experience', 'value: '15+'icon: Award }
   ];
 
   if (!isVisible) return null;
@@ -186,8 +186,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -206,8 +206,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -224,8 +224,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
 
         {/* Case Study Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
@@ -357,8 +357,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >

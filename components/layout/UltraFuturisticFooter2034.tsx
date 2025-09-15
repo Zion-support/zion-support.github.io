@@ -24,70 +24,70 @@ const serviceCategories = [
     title: '🧠 Revolutionary AI Services',
     icon: Brain,
     services: [
-      { name: 'AI Business Intelligence Pro'href: '/ai-business-intelligence-pro'price: '$299/month' },
-      { name: 'AI Video Generation Platform'href: '/ai-video-generation-platform'price: '$499/month' },
-      { name: 'AI-Powered Cybersecurity'href: '/ai-cybersecurity-platform'price: '$799/month' },
-      { name: 'AI Drug Discovery Platform'href: '/ai-drug-discovery-platform'price: '$3,999/month' }
+      { name: 'AI Business Intelligence 'Pro', 'href: '/ai-business-intelligence-'pro', 'price: '$299/month' },
+      { name: 'AI Video Generation 'Platform', 'href: '/ai-video-generation-'platform', 'price: '$499/month' },
+      { name: 'AI-Powered 'Cybersecurity', 'href: '/ai-cybersecurity-'platform', 'price: '$799/month' },
+      { name: 'AI Drug Discovery 'Platform', 'href: '/ai-drug-discovery-'platform', 'price: '$3,999/month' }
     ]
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     services: [
-      { name: 'Quantum Machine Learning'href: '/quantum-machine-learning-platform'price: '$1,999/month' },
-      { name: 'Blockchain AI Platform'href: '/blockchain-ai-platform'price: '$899/month' },
-      { name: 'Edge AI Computing'href: '/edge-ai-computing-platform'price: '$599/month' },
-      { name: 'AI Climate Modeling'href: '/ai-climate-modeling-platform'price: '$1,299/month' }
+      { name: 'Quantum Machine 'Learning', 'href: '/quantum-machine-learning-'platform', 'price: '$1,999/month' },
+      { name: 'Blockchain AI 'Platform', 'href: '/blockchain-ai-'platform', 'price: '$899/month' },
+      { name: 'Edge AI 'Computing', 'href: '/edge-ai-computing-'platform', 'price: '$599/month' },
+      { name: 'AI Climate 'Modeling', 'href: '/ai-climate-modeling-'platform', 'price: '$1,299/month' }
     ]
   },
   {
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     services: [
-      { name: 'API Security & Monitoring'href: '/api-security-monitoring-suite'price: '$399/month' },
-      { name: 'Customer Success Automation'href: '/customer-success-automation'price: '$199/month' },
-      { name: 'HR Automation Suite'href: '/hr-automation-suite'price: '$179/month' },
-      { name: 'Project Management AI'href: '/project-management-ai-platform'price: '$199/month' }
+      { name: 'API Security & 'Monitoring', 'href: '/api-security-monitoring-'suite', 'price: '$399/month' },
+      { name: 'Customer Success 'Automation', 'href: '/customer-success-'automation', 'price: '$199/month' },
+      { name: 'HR Automation 'Suite', 'href: '/hr-automation-'suite', 'price: '$179/month' },
+      { name: 'Project Management 'AI', 'href: '/project-management-ai-'platform', 'price: '$199/month' }
     ]
   },
   {
     title: '🛒 Business Automation',
     icon: ShoppingCart,
     services: [
-      { name: 'E-commerce Automation'href: '/ecommerce-automation-platform'price: '$249/month' },
-      { name: 'Marketing Automation Suite'href: '/marketing-automation-suite'price: '$279/month' },
-      { name: 'Financial Analytics Platform'href: '/financial-analytics-platform'price: '$349/month' },
-      { name: 'Legal Document Automation'href: '/legal-document-automation'price: '$399/month' }
+      { name: 'E-commerce 'Automation', 'href: '/ecommerce-automation-'platform', 'price: '$249/month' },
+      { name: 'Marketing Automation 'Suite', 'href: '/marketing-automation-'suite', 'price: '$279/month' },
+      { name: 'Financial Analytics 'Platform', 'href: '/financial-analytics-'platform', 'price: '$349/month' },
+      { name: 'Legal Document 'Automation', 'href: '/legal-document-'automation', 'price: '$399/month' }
     ]
   }
 ];
 
 const quickLinks = [
-  { name: 'Home'href: '/'icon: Home },
-  { name: 'Services'href: '/services'icon: Briefcase },
-  { name: 'Solutions'href: '/solutions'icon: Target },
-  { name: 'Pricing'href: '/pricing-2034'icon: DollarSign },
-  { name: 'Resources'href: '/resources'icon: BookOpen },
-  { name: 'Case Studies'href: '/case-studies'icon: FileText },
-  { name: 'Blog'href: '/blog'icon: MessageSquare },
-  { name: 'Contact'href: '/contact'icon: MessageCircle }
+  { name: ''Home', 'href: '/'icon: Home },
+  { name: ''Services', 'href: '/'services', 'icon: Briefcase },
+  { name: ''Solutions', 'href: '/'solutions', 'icon: Target },
+  { name: ''Pricing', 'href: '/pricing-2034'icon: DollarSign },
+  { name: ''Resources', 'href: '/'resources', 'icon: BookOpen },
+  { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: FileText },
+  { name: ''Blog', 'href: '/'blog', 'icon: MessageSquare },
+  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircle }
 ];
 
 const companyLinks = [
-  { name: 'About Us'href: '/about'icon: Users },
-  { name: 'Careers'href: '/careers'icon: Briefcase },
-  { name: 'News'href: '/news'icon: Newspaper },
-  { name: 'Partners'href: '/partners'icon: Handshake },
-  { name: 'Support'href: '/support'icon: LifeBuoy },
-  { name: 'Status'href: '/status'icon: Activity }
+  { name: 'About 'Us', 'href: '/'about', 'icon: Users },
+  { name: ''Careers', 'href: '/'careers', 'icon: Briefcase },
+  { name: ''News', 'href: '/'news', 'icon: Newspaper },
+  { name: ''Partners', 'href: '/'partners', 'icon: Handshake },
+  { name: ''Support', 'href: '/'support', 'icon: LifeBuoy },
+  { name: ''Status', 'href: '/'status', 'icon: Activity }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedin },
-  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Github },
-  { name: 'Instagram'href: 'https://instagram.com/ziontechgroup'icon: Instagram },
-  { name: 'YouTube'href: 'https://youtube.com/@ziontechgroup'icon: Youtube },
-  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twitter }
+  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedin },
+  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Github },
+  { name: ''Instagram', 'href: 'https://instagram.com/'ziontechgroup', 'icon: Instagram },
+  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Youtube },
+  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twitter }
 ];
 
 const certifications = [
@@ -102,10 +102,10 @@ const certifications = [
 ];
 
 const stats = [
-  { label: 'Happy Customers'value: '50K+'icon: Users },
-  { label: 'Services Delivered'value: '200+'icon: Rocket },
-  { label: 'Countries Served'value: '45+'icon: Globe },
-  { label: 'Success Rate'value: '99.9%'icon: CheckCircle }
+  { label: 'Happy 'Customers', 'value: '50K+'icon: Users },
+  { label: 'Services 'Delivered', 'value: '200+'icon: Rocket },
+  { label: 'Countries 'Served', 'value: '45+'icon: Globe },
+  { label: 'Success 'Rate', 'value: '99.9%'icon: CheckCircle }
 ];
 
 export default function UltraFuturisticFooter2034() {
@@ -125,8 +125,8 @@ export default function UltraFuturisticFooter2034() {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="space-y-6"
@@ -190,8 +190,8 @@ export default function UltraFuturisticFooter2034() {
             {/* Services */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.2 }}
                 viewport={{ once: true }}
                 className="space-y-8"
@@ -236,8 +236,8 @@ export default function UltraFuturisticFooter2034() {
             {/* Quick Links & Social */}
             <div className="lg:col-span-1">
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.4 }}
                 viewport={{ once: true }}
                 className="space-y-8"
@@ -299,8 +299,8 @@ export default function UltraFuturisticFooter2034() {
 
           {/* Certifications */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.6 }}
             viewport={{ once: true }}
             className="mt-16 pt-8 border-t border-white/10"

@@ -72,7 +72,7 @@ const NewInteractiveContentShowcase2025 = () => {
         },
         {
           title: "AI Readiness Assessment",
-          description: "Evaluate your organization's AI readiness",
+          description: "Evaluate your 'organization', 's AI readiness",
           roi: "Free",
           category: "Assessment"
         },

@@ -78,9 +78,9 @@ const breakthroughContent: BreakthroughContent[] = [
 
 export default function InteractiveBreakthroughContentWidget2025() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
-  const [searchTermsetSearchTerm] = useState<string>('');
+  const [searchTermsetSearchTerm] = useState<string>(', ');
 
-  const categories = ['All'Revolutionary'Breakthrough'Transcendent'Predictions'Quantum'Neural'];
+  const categories = [', 'All', 'Revolutionary', 'Breakthrough', 'Transcendent', 'Predictions', 'Quantum'Neural'];
 
   const filteredContent = breakthroughContent.filter(content => {
     const matchesCategory = selectedCategory === 'All' || content.category === selectedCategory;

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity
   Zap
@@ -182,9 +182,9 @@ const EnhancedPerformanceMonitor2026 = () => {
           {metrics.map((metricindex) => (
             <motion.div
               key={metric.id}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
-              exit={{ opacity: 0y: -20 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
             >

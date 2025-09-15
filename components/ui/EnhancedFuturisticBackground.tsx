@@ -13,7 +13,7 @@ interface EnhancedFuturisticBackgroundProps {
 
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   children,
-  className = '',
+  className = ', ',
   intensity = 'medium',
   colorScheme = 'quantum',
   particleCount = 100,
@@ -84,7 +84,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
@@ -308,7 +308,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
     };
   }[colorSchemeintensityparticleCountanimationSpeed]);
 

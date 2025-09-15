@@ -41,7 +41,7 @@ export default function AI2026RevolutionaryBreakthroughPromotionBanner() {
             {/* Subheading */}
             <p className="text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the future of artificial intelligence with our revolutionary breakthrough technology. 
-              Quantum-powered AI solutions that redefine what's possible in business transformation.
+              Quantum-powered AI solutions that redefine 'what', 's possible in business transformation.
             </p>
             
             {/* Feature Showcase */}

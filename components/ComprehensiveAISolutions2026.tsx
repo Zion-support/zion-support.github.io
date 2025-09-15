@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -139,12 +139,12 @@ const ComprehensiveAISolutions2026 = () => {
   ];
 
   const industries = [
-    { name: 'Healthcare'icon: Userscount: '500+'color: 'from-blue-500 to-cyan-500' },
-    { name: 'Finance'icon: BarChart3count: '300+'color: 'from-green-500 to-emerald-500' },
-    { name: 'Manufacturing'icon: Settingscount: '400+'color: 'from-orange-500 to-red-500' },
-    { name: 'Retail'icon: Globecount: '600+'color: 'from-purple-500 to-pink-500' },
-    { name: 'Education'icon: Lightbulbcount: '200+'color: 'from-indigo-500 to-blue-500' },
-    { name: 'Government'icon: Shieldcount: '100+'color: 'from-gray-500 to-slate-500' }
+    { name: ''Healthcare', 'icon: Userscount: '500+'color: 'from-blue-500 to-cyan-500' },
+    { name: ''Finance', 'icon: BarChart3count: '300+'color: 'from-green-500 to-emerald-500' },
+    { name: ''Manufacturing', 'icon: Settingscount: '400+'color: 'from-orange-500 to-red-500' },
+    { name: ''Retail', 'icon: Globecount: '600+'color: 'from-purple-500 to-pink-500' },
+    { name: ''Education', 'icon: Lightbulbcount: '200+'color: 'from-indigo-500 to-blue-500' },
+    { name: ''Government', 'icon: Shieldcount: '100+'color: 'from-gray-500 to-slate-500' }
   ];
 
   const testimonials = [
@@ -179,8 +179,8 @@ const ComprehensiveAISolutions2026 = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -206,8 +206,8 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Solutions Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
@@ -318,8 +318,8 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Industries Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
@@ -347,8 +347,8 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
@@ -359,8 +359,8 @@ const ComprehensiveAISolutions2026 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5delay: 0.7 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
@@ -382,8 +382,8 @@ const ComprehensiveAISolutions2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >

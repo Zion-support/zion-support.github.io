@@ -44,14 +44,14 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientXy: e.clientY });
     };
 
-    window.addEventListener('mousemove'handleMouseMove);
+    window.addEventListener(', 'mousemove', 'handleMouseMove);
 
     // Initialize particles with different types
     const initParticles = () => {
@@ -64,7 +64,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       };
       
       for (let i = 0; i < 150; i++) {
-        const type = ['energy'data'quantum'neon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
+        const type = [', 'energy', 'data', 'quantum', 'neon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -259,8 +259,8 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     animate();
 
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
-      window.removeEventListener('mousemove'handleMouseMove);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
+      window.removeEventListener(', 'mousemove', 'handleMouseMove);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

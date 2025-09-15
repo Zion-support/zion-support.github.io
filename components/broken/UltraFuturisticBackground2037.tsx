@@ -395,12 +395,12 @@ export default function UltraFuturisticBackground2037({
     };
 
     if (typeof window !== 'undefined') {
-      window.addEventListener('resize'handleResize);
+      window.addEventListener(', 'resize', 'handleResize);
     }
 
     return () => {
       if (typeof window !== 'undefined') {
-        window.removeEventListener('resize'handleResize);
+        window.removeEventListener(', 'resize', 'handleResize);
       }
       cancelAnimationFrame(animationFrameId);
     };

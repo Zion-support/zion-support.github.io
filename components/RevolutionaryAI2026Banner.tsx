@@ -62,7 +62,7 @@ const RevolutionaryAI2026Banner = () => {
             <div className="text-3xl mb-4">🚀</div>
             <h3 className="text-xl font-bold mb-3">Revolutionary Breakthroughs</h3>
             <p className="text-gray-200">
-              Quantum-enhanced neural networksautonomous AI systemsand predictive intelligence that's changing everything.
+              Quantum-enhanced neural networksautonomous AI systemsand predictive intelligence 'that', 's changing everything.
             </p>
           </div>
           

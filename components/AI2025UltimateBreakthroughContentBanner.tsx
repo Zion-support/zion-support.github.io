@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025UltimateBreakthroughContentBanner = () => {
@@ -17,7 +17,7 @@ const AI2025UltimateBreakthroughContentBanner = () => {
       description: 'Discover how Fortune 500 companies are achieving 800% ROI through AI-powered enterprise automation.',
       url: '/blog/ai-2025-enterprise-automation-revolution-ultimate-breakthrough',
       readingTime: '18 min read',
-      tags: ['AI'Enterprise Automation'ROI'Fortune 500']
+      tags: [', 'AI', 'Enterprise 'Automation', 'ROI'Fortune 500']
     },
     {
       id: 'fortune-500-success-story',
@@ -28,7 +28,7 @@ const AI2025UltimateBreakthroughContentBanner = () => {
       description: 'How a global manufacturing leader achieved 567% ROI through comprehensive AI automation.',
       url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story',
       readingTime: '12 min read',
-      tags: ['Case Study'Fortune 500'AI Transformation'ROI']
+      tags: ['Case 'Study', 'Fortune 500'AI 'Transformation', 'ROI']
     },
     {
       id: 'implementation-roadmap',
@@ -39,7 +39,7 @@ const AI2025UltimateBreakthroughContentBanner = () => {
       description: 'Complete step-by-step guide to implementing AI automation in your enterprise.',
       url: '/resources/ai-implementation-ultimate-roadmap-2025',
       readingTime: '20 min read',
-      tags: ['Implementation Guide'AI Strategy'ROI'Roadmap']
+      tags: ['Implementation 'Guide', 'AI 'Strategy', 'ROI'Roadmap']
     }
   ];
 
@@ -53,7 +53,7 @@ const AI2025UltimateBreakthroughContentBanner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2025-ultimate-breakthrough-banner-dismissed'true');
+    localStorage.setItem('ai2025-ultimate-breakthrough-banner-'dismissed', 'true');
   };
 
   useEffect(() => {

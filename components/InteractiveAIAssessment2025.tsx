@@ -34,7 +34,7 @@ const InteractiveAIAssessment2025 = () => {
     },
     {
       id: 3,
-      question: "What is your team's AI expertise level?",
+      question: "What is your 'team', 's AI expertise level?",
       options: [
         "No AI expertise",
         "Basic understanding",

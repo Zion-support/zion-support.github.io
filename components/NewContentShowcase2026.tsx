@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -67,7 +67,7 @@ const NewContentShowcase2026 = () => {
         category: 'AI Research',
         featured: true,
         href: '/ai-2026-multimodal-revolution',
-        stats: { views: '2.3k'likes: '187' }
+        stats: { views: '2.3'k', 'likes: '187' }
       },
       {
         title: 'Neural Architecture Search: Automating AI Design',
@@ -76,7 +76,7 @@ const NewContentShowcase2026 = () => {
         category: 'AI Engineering',
         featured: false,
         href: '/ai-2026-neural-architecture-search',
-        stats: { views: '1.8k'likes: '142' }
+        stats: { views: '1.8'k', 'likes: '142' }
       },
       {
         title: 'AI Consciousness: The Next Frontier',
@@ -85,7 +85,7 @@ const NewContentShowcase2026 = () => {
         category: 'AI Philosophy',
         featured: true,
         href: '/ai-2026-consciousness-frontier',
-        stats: { views: '3.1k'likes: '256' }
+        stats: { views: '3.1'k', 'likes: '256' }
       }
     ],
     'quantum-computing': [
@@ -96,7 +96,7 @@ const NewContentShowcase2026 = () => {
         category: 'Quantum AI',
         featured: true,
         href: '/quantum-ai-2026-future',
-        stats: { views: '1.9k'likes: '134' }
+        stats: { views: '1.9'k', 'likes: '134' }
       },
       {
         title: 'Quantum Machine Learning Algorithms',
@@ -105,7 +105,7 @@ const NewContentShowcase2026 = () => {
         category: 'Quantum ML',
         featured: false,
         href: '/quantum-ml-algorithms-2026',
-        stats: { views: '1.2k'likes: '98' }
+        stats: { views: '1.2'k', 'likes: '98' }
       }
     ],
     'sustainability': [
@@ -116,7 +116,7 @@ const NewContentShowcase2026 = () => {
         category: 'Green Tech',
         featured: true,
         href: '/green-ai-sustainability-2026',
-        stats: { views: '2.1k'likes: '178' }
+        stats: { views: '2.1'k', 'likes: '178' }
       },
       {
         title: 'Carbon-Neutral AI Infrastructure',
@@ -125,7 +125,7 @@ const NewContentShowcase2026 = () => {
         category: 'Sustainability',
         featured: false,
         href: '/carbon-neutral-ai-infrastructure',
-        stats: { views: '1.5k'likes: '123' }
+        stats: { views: '1.5'k', 'likes: '123' }
       }
     ],
     'automation': [
@@ -136,7 +136,7 @@ const NewContentShowcase2026 = () => {
         category: 'Business Automation',
         featured: true,
         href: '/autonomous-business-ops-2026',
-        stats: { views: '2.7k'likes: '201' }
+        stats: { views: '2.7'k', 'likes: '201' }
       },
       {
         title: 'Intelligent Process Automation',
@@ -145,13 +145,13 @@ const NewContentShowcase2026 = () => {
         category: 'Process Automation',
         featured: false,
         href: '/intelligent-process-automation-2026',
-        stats: { views: '1.6k'likes: '145' }
+        stats: { views: '1.6'k', 'likes: '145' }
       }
     ]
   };
 
   const containerVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -163,8 +163,8 @@ const NewContentShowcase2026 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
-    visible: { opacity: 1y: 0 }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
 
   return (

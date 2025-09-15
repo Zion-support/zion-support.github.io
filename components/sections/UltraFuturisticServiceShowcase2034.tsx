@@ -100,8 +100,8 @@ export default function UltraFuturisticServiceShowcase2034() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
-    visible: { opacity: 1y: 0 }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
@@ -116,8 +116,8 @@ export default function UltraFuturisticServiceShowcase2034() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -133,10 +133,10 @@ export default function UltraFuturisticServiceShowcase2034() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {[
-              { label: 'Total Services'value: allServices.length.toString()icon: Rocket },
-              { label: 'Happy Customers'value: '50K+'icon: Users },
-              { label: 'Success Rate'value: '99.9%'icon: CheckCircle },
-              { label: 'Global Reach'value: '45+ Countries'icon: Globe }
+              { label: 'Total 'Services', 'value: allServices.length.toString()icon: Rocket },
+              { label: 'Happy 'Customers', 'value: '50K+'icon: Users },
+              { label: 'Success 'Rate', 'value: '99.9%'icon: CheckCircle },
+              { label: 'Global 'Reach', 'value: '45+ 'Countries', 'icon: Globe }
             ].map((statindex) => (
               <motion.div
                 key={stat.label}
@@ -156,8 +156,8 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Search and Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           viewport={{ once: true }}
           className="mb-12"
@@ -193,8 +193,8 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Service Categories */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           viewport={{ once: true }}
           className="mb-16"
@@ -203,8 +203,8 @@ export default function UltraFuturisticServiceShowcase2034() {
             {serviceCategories.map((categoryindex) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
@@ -348,8 +348,8 @@ export default function UltraFuturisticServiceShowcase2034() {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           viewport={{ once: true }}
           className="text-center mt-20"

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ShowcaseItem {
@@ -144,7 +144,7 @@ export default function AnimatedContentShowcase() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the most revolutionary AI and technology content that's transforming the world.
+            Discover the most revolutionary AI and technology content 'that', 's transforming the world.
           </p>
         </div>
 

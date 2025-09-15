@@ -8,7 +8,7 @@ export default function AccessibilityEnhancer2026() {
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach(button => {
         if (!button.getAttribute('aria-label') && button.textContent) {
-          button.setAttribute('aria-label'button.textContent.trim());
+          button.setAttribute('aria-'label', 'button.textContent.trim());
         }
       });
 

@@ -222,7 +222,7 @@ const InteractiveDemoWidget: React.FC = () => {
 
             {/* Demo Features */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What You'll See</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What 'You', 'll See</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">

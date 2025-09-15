@@ -22,10 +22,10 @@ const contactInfo = {
 };
 
 const heroStats = [
-  { label: 'Cutting-Edge Services'value: '25+'icon: <Star className="w-5 h-5" /> },
-  { label: 'Innovation Areas'value: '8+'icon: <Brain className="w-5 h-5" /> },
-  { label: 'Market Coverage'value: '$500B+'icon: <TrendingUp className="w-5 h-5" /> },
-  { label: 'Success Rate'value: '99.9%'icon: <Award className="w-5 h-5" /> }
+  { label: 'Cutting-Edge 'Services', 'value: '25+'icon: <Star className="w-5 h-5" /> },
+  { label: 'Innovation 'Areas', 'value: '8+'icon: <Brain className="w-5 h-5" /> },
+  { label: 'Market 'Coverage', 'value: '$500B+'icon: <TrendingUp className="w-5 h-5" /> },
+  { label: 'Success 'Rate', 'value: '99.9%'icon: <Award className="w-5 h-5" /> }
 ];
 
 const serviceCategories = [
@@ -124,8 +124,8 @@ export default function CuttingEdgeServicesShowcase2025() {
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -143,8 +143,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
@@ -154,8 +154,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               {/* Hero Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.6 }}
               >
                 {heroStats.map((statindex) => (
@@ -174,8 +174,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.8 }}
               >
                 <a
@@ -201,8 +201,8 @@ export default function CuttingEdgeServicesShowcase2025() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
@@ -392,7 +392,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
+                    setSearchTerm(', ');
                     setSelectedCategory('all');
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -408,8 +408,8 @@ export default function CuttingEdgeServicesShowcase2025() {
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -418,7 +418,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. 
-                Let's discuss how we can help you achieve your goals.
+                'Let', 's discuss how we can help you achieve your goals.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

@@ -19,13 +19,13 @@ export default function VendorRegisterPage() {
         body: JSON.stringify({
           slug: String(payload.slug),
           name: String(payload.name),
-          servicesOffered: String(payload.servicesOffered || '')
+          servicesOffered: String(payload.servicesOffered || ', ')
             .split(',')
             .map(s => s.trim())
             .filter(Boolean),
           teamSize: Number(payload.teamSize || 0),
-          about: String(payload.about || ''),
-          verificationDocs: String(payload.verificationDocs || '')
+          about: String(payload.about || ', '),
+          verificationDocs: String(payload.verificationDocs || ', ')
             .split(',')
             .map(s => s.trim())
             .filter(Boolean),

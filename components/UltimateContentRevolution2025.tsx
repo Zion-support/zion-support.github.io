@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -138,7 +138,7 @@ const UltimateContentRevolution2025 = () => {
     {
       name: "Sarah Chen",
       role: "CTOFortune 500 Company",
-      content: "Zion Tech's AI solutions increased our operational efficiency by 300% and reduced costs by $50M annually.",
+      content: "Zion 'Tech', 's AI solutions increased our operational efficiency by 300% and reduced costs by $50M annually.",
       avatar: "SC",
       rating: 5
     },
@@ -152,7 +152,7 @@ const UltimateContentRevolution2025 = () => {
     {
       name: "Dr. Emily Watson",
       role: "Chief Medical Officer",
-      content: "Our diagnostic accuracy improved to 99.7% with Zion's AI healthcare solutions. Patient outcomes are remarkable.",
+      content: "Our diagnostic accuracy improved to 99.7% with 'Zion', 's AI healthcare solutions. Patient outcomes are remarkable.",
       avatar: "EW",
       rating: 5
     }
@@ -179,8 +179,8 @@ const UltimateContentRevolution2025 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -221,8 +221,8 @@ const UltimateContentRevolution2025 = () => {
             {stats.map((statindex) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
@@ -270,17 +270,17 @@ const UltimateContentRevolution2025 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
-              exit={{ opacity: 0y: -20 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {contentSections[activeTab].items.map((itemindex) => (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105"
                 >
@@ -305,7 +305,7 @@ const UltimateContentRevolution2025 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
-            <p className="text-xl text-gray-300">Hear from industry leaders who've transformed their businesses with our AI solutions</p>
+            <p className="text-xl text-gray-300">Hear from industry leaders 'who', 've transformed their businesses with our AI solutions</p>
           </div>
 
           <div className="relative">

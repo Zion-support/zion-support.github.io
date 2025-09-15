@@ -167,7 +167,7 @@ const AI2026BreakthroughAnnouncementBanner = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join thousands of forward-thinking organizations already transforming their operations with our breakthrough AI technologies. 
-              The future is hereand it's waiting for you.
+              The future is hereand 'it', 's waiting for you.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

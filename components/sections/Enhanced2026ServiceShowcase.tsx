@@ -136,8 +136,8 @@ export default function Enhanced2026ServiceShowcase() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -164,8 +164,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* AI Services Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-20"
         >
@@ -186,8 +186,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* IT Infrastructure Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-20"
         >
@@ -208,8 +208,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* Micro SAAS Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="flex items-center space-x-3 mb-8">
@@ -229,8 +229,8 @@ export default function Enhanced2026ServiceShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >

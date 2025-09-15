@@ -70,7 +70,7 @@ const SuccessMetricsShowcase2025 = () => {
       avatar: "MC"
     },
     {
-      quote: "Their neural interface technology revolutionized our customer experience. We're now industry leaders in innovation.",
+      quote: "Their neural interface technology revolutionized our customer experience. 'We', 're now industry leaders in innovation.",
       author: "Emily Rodriguez",
       role: "VP Innovation, FutureTech",
       avatar: "ER"
@@ -88,7 +88,7 @@ const SuccessMetricsShowcase2025 = () => {
             Success Metrics & Achievements
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Our track record speaks for itself. See how we've helped organizations 
+            Our track record speaks for itself. See how 'we', 've helped organizations 
             achieve unprecedented success with cutting-edge technology solutions.
           </p>
         </div>
@@ -163,7 +163,7 @@ const SuccessMetricsShowcase2025 = () => {
             <h3 className="text-4xl font-bold mb-6">Ready to Achieve Similar Success?</h3>
             <p className="text-xl opacity-90 mb-8 leading-relaxed">
               Join the ranks of successful organizations that have transformed their operations 
-              with our cutting-edge technology solutions. Let's discuss how we can help you achieve your goals.
+              with our cutting-edge technology solutions. 'Let', 's discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link

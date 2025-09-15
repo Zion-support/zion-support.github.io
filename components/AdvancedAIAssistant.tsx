@@ -78,7 +78,7 @@ const AdvancedAIAssistant: React.FC = () => {
     // Add welcome message
     const welcomeMessage: Message = {
       id: '1',
-      text: "Hello! I'm your advanced AI assistant. I can help you with business analysiscode reviewperformance optimizationsecurity auditsautomation suggestionsand market insights. What would you like to explore today?",
+      text: "Hello! 'I', 'm your advanced AI assistant. I can help you with business analysiscode reviewperformance optimizationsecurity auditsautomation suggestionsand market insights. What would you like to explore today?",
       sender: 'assistant',
       timestamp: new Date(),
       type: 'text'
@@ -98,7 +98,7 @@ const AdvancedAIAssistant: React.FC = () => {
     };
 
     setMessages(prev => [...prevuserMessage]);
-    setInputText('');
+    setInputText(', ');
     setIsLoading(true);
 
     // Simulate AI processing
@@ -247,7 +247,7 @@ Would you like me to dive deeper into any specific area?`;
 - Payback period: 2.5 months`;
     }
     
-    return `I understand you're asking about "${input}". Here's what I can help you with:
+    return `I understand 'you', 're asking about "${input}". 'Here', 's what I can help you with:
 
 🎯 **My Capabilities:**
 - Business analysis and strategic insights
@@ -257,7 +257,7 @@ Would you like me to dive deeper into any specific area?`;
 - Process automation suggestions
 - Market research and competitive analysis
 
-Could you provide more specific details about what you'd like me to analyze or help you with? I can dive deeper into any of these areas to give you actionable insights and recommendations.`;
+Could you provide more specific details about what 'you', 'd like me to analyze or help you with? I can dive deeper into any of these areas to give you actionable insights and recommendations.`;
   };
 
   const determineResponseType = (input: string): 'text' | 'code' | 'analysis' | 'recommendation' => {
@@ -272,7 +272,7 @@ Could you provide more specific details about what you'd like me to analyze or h
     setActiveCapability(capability.id);
     const capabilityMessage: Message = {
       id: Date.now().toString(),
-      text: `I'd like help with ${capability.name.toLowerCase()}. ${capability.description}`,
+      text: `'I', 'd like help with ${capability.name.toLowerCase()}. ${capability.description}`,
       sender: 'user',
       timestamp: new Date(),
       type: 'text'
@@ -282,7 +282,7 @@ Could you provide more specific details about what you'd like me to analyze or h
   };
 
   const formatTimestamp = (timestamp: Date) => {
-    return timestamp.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' });
+    return timestamp.toLocaleTimeString([]{ hour: '2-'digit', 'minute: '2-digit' });
   };
 
   return (

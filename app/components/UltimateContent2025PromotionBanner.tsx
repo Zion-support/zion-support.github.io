@@ -53,18 +53,15 @@ const UltimateContent2025PromotionBanner = () => {
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
-<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-=======
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
->>>>>>> origin/add-ultimate-content-2025
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
             <Star className="w-5 h-5 text-yellow-400 mr-2" />
@@ -79,10 +76,7 @@ const UltimateContent2025PromotionBanner = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Stats Grid */}
->>>>>>> origin/add-ultimate-content-2025
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {stats.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
@@ -93,17 +87,14 @@ const UltimateContent2025PromotionBanner = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">Featured Content</h3>
           
-=======
         {/* Content Showcase */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">Featured Content</h3>
           
           {/* Auto-rotating content */}
->>>>>>> origin/add-ultimate-content-2025
           <div className="relative overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -145,10 +136,7 @@ const UltimateContent2025PromotionBanner = () => {
               ))}
             </div>
             
-<<<<<<< HEAD
-=======
             {/* Slide indicators */}
->>>>>>> origin/add-ultimate-content-2025
             <div className="flex justify-center mt-6 space-x-2">
               {contentHighlights.map((_, index) => (
                 <button
@@ -163,10 +151,7 @@ const UltimateContent2025PromotionBanner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Call to Action */}
->>>>>>> origin/add-ultimate-content-2025
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg mb-6 inline-block">
             🎯 Limited Time: Get Your Free AI Transformation Assessment
@@ -191,10 +176,7 @@ const UltimateContent2025PromotionBanner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Dismiss Button */}
->>>>>>> origin/add-ultimate-content-2025
         <button
           onClick={() => setIsVisible(false)}
           className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
@@ -209,8 +191,5 @@ const UltimateContent2025PromotionBanner = () => {
   );
 };
 
-<<<<<<< HEAD
 export default UltimateContent2025PromotionBanner;
-=======
 export default UltimateContent2025PromotionBanner;
->>>>>>> origin/add-ultimate-content-2025

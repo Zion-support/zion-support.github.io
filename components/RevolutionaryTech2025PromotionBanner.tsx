@@ -73,7 +73,7 @@ const RevolutionaryTech2025PromotionBanner = () => {
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold mb-4">Transform Your Business Today</h3>
             <p className="text-xl opacity-90 mb-8">
-              Don't miss out on the revolutionary technologies that are shaping the future. 
+              'Don', 't miss out on the revolutionary technologies that are shaping the future. 
               Join industry leaders who are already experiencing unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

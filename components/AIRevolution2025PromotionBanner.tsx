@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -208,8 +208,8 @@ const AIRevolution2025PromotionBanner = () => {
 
         {/* Mobile Action Button */}
         <motion.div
-          initial={{ opacity: 0y: 10 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           className="md:hidden mt-4"
         >
           <motion.button

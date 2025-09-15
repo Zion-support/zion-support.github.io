@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   ArrowRight
@@ -67,19 +67,19 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
   ];
 
   const categories = [
-    { icon: Brainame: 'AI Core'count: '32+'color: 'purple' },
-    { icon: Atomname: 'Quantum AI'count: '18+'color: 'cyan' },
-    { icon: Networkname: 'Neural Networks'count: '24+'color: 'green' },
-    { icon: Zapname: 'Automation'count: '15+'color: 'yellow' },
-    { icon: Cpuname: 'Robotics'count: '12+'color: 'red' },
-    { icon: Microscopename: 'BioTech AI'count: '8+'color: 'pink' }
+    { icon: Brainame: 'AI 'Core', 'count: '32+'color: 'purple' },
+    { icon: Atomname: 'Quantum 'AI', 'count: '18+'color: 'cyan' },
+    { icon: Networkname: 'Neural 'Networks', 'count: '24+'color: 'green' },
+    { icon: Zapname: ''Automation', 'count: '15+'color: 'yellow' },
+    { icon: Cpuname: ''Robotics', 'count: '12+'color: 'red' },
+    { icon: Microscopename: 'BioTech 'AI', 'count: '8+'color: 'pink' }
   ];
 
   const stats = [
-    { label: 'Active Innovations'value: '89+'icon: Lightbulb },
-    { label: 'Research Projects'value: '156+'icon: Microscope },
-    { label: 'Deployed Solutions'value: '42+'icon: Rocket },
-    { label: 'Global Impact'value: '2.5M+'icon: Users }
+    { label: 'Active 'Innovations', 'value: '89+'icon: Lightbulb },
+    { label: 'Research 'Projects', 'value: '156+'icon: Microscope },
+    { label: 'Deployed 'Solutions', 'value: '42+'icon: Rocket },
+    { label: 'Global 'Impact', 'value: '2.5M+'icon: Users }
   ];
 
   useEffect(() => {
@@ -94,9 +94,9 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"
       >
         {/* Background Pattern */}
@@ -141,8 +141,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   return (
                     <motion.div
                       key={stat.label}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6delay: index * 0.1 }}
                       className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                     >

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -91,12 +91,12 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
   ];
 
   const categories = [
-    { name: 'Productivity'count: '12 tools'icon: Zap },
-    { name: 'Development'count: '15 tools'icon: Code },
-    { name: 'Analytics'count: '8 tools'icon: BarChart3 },
-    { name: 'Multimedia'count: '10 tools'icon: Image },
-    { name: 'Security'count: '6 tools'icon: Shield },
-    { name: 'Communication'count: '9 tools'icon: Globe }
+    { name: ''Productivity', 'count: '12 'tools', 'icon: Zap },
+    { name: ''Development', 'count: '15 'tools', 'icon: Code },
+    { name: ''Analytics', 'count: '8 'tools', 'icon: BarChart3 },
+    { name: ''Multimedia', 'count: '10 'tools', 'icon: Image },
+    { name: ''Security', 'count: '6 'tools', 'icon: Shield },
+    { name: ''Communication', 'count: '9 'tools', 'icon: Globe }
   ];
 
   const features = [
@@ -112,9 +112,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/30"
         >
@@ -210,7 +210,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   {/* Main Card */}
                   <motion.div
                     initial={{ scale: 0.8opacity: 0 }}
-                    animate={{ scale: 1opacity: 1 }}
+                    animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.6delay: 0.3 }}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl"
                   >

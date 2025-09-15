@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 XChevronLeftChevronRightStarTrendingUpUsersClock
 
@@ -19,7 +19,7 @@ const AI2025UltimateContentPromotionBanner = () => {
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai2025-ultimate-content-banner-dismissed'true');
+    localStorage.setItem('ai2025-ultimate-content-banner-'dismissed', 'true');
   };
 
   const content = [

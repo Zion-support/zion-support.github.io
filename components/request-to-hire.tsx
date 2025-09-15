@@ -27,7 +27,7 @@ export default function RequestToHirePage() {
       return;
     }
 
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g'');
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g', ');
 
     setSubmitting(true);
     try {

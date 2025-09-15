@@ -1,15 +1,14 @@
-"use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search
-  Filter
-  Grid
-  List
-  Star
-  Clock
+  Search,
+  Filter,
+  Grid,
+  List,
+  Star,
+  Clock,
   TrendingUp,
   ArrowRight,
   X,
@@ -33,12 +32,12 @@ const InteractiveContentDiscoveryWidget = () => {
   const [recentlyViewed, setRecentlyViewed] = useState([]);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: Gridcount: 156 },
-    { id: 'ai-breakthroughs'name: 'AI Breakthroughs'icon: Braincount: 42 },
-    { id: 'quantum-computing'name: 'Quantum Computing'icon: Cpucount: 28 },
-    { id: 'neural-interfaces'name: 'Neural Interfaces'icon: Zapcount: 19 },
-    { id: 'automation'name: 'Automation'icon: Rocketcount: 35 },
-    { id: 'tutorials'name: 'Tutorials'icon: Bookmarkcount: 32 }
+    { id: 'all', name: 'All Content', icon: Grid, count: 156 },
+    { id: 'ai-breakthroughs', name: 'AI Breakthroughs', icon: Brain, count: 42 },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Cpu, count: 28 },
+    { id: 'neural-interfaces', name: 'Neural Interfaces', icon: Zap, count: 19 },
+    { id: 'automation', name: 'Automation', icon: Rocket, count: 35 },
+    { id: 'tutorials', name: 'Tutorials', icon: Bookmark, count: 32 }
   ];
 
   const contentItems = [
@@ -53,7 +52,7 @@ const InteractiveContentDiscoveryWidget = () => {
       likes: 892,
       isTrending: true,
       isNew: true,
-      tags: ['AI'Consciousness'Breakthrough'2025'],
+      tags: ['AI', 'Consciousness', 'Breakthrough', '2025'],
       image: '🧠',
       author: 'Dr. Sarah Chen',
       publishedAt: '2025-01-15'
@@ -69,7 +68,7 @@ const InteractiveContentDiscoveryWidget = () => {
       likes: 456,
       isTrending: false,
       isNew: false,
-      tags: ['Quantum'Neural Networks'Computing'Tutorial'],
+      tags: ['Quantum', 'Neural Networks', 'Computing', 'Tutorial'],
       image: '⚛️',
       author: 'Prof. Marcus Rodriguez',
       publishedAt: '2025-01-12'
@@ -85,7 +84,7 @@ const InteractiveContentDiscoveryWidget = () => {
       likes: 234,
       isTrending: true,
       isNew: false,
-      tags: ['Neural Interface'BCI'Implementation'Guide'],
+      tags: ['Neural Interface', 'BCI', 'Implementation', 'Guide'],
       image: '🔗',
       author: 'Dr. Emily Watson',
       publishedAt: '2025-01-10'
@@ -101,7 +100,7 @@ const InteractiveContentDiscoveryWidget = () => {
       likes: 678,
       isTrending: false,
       isNew: true,
-      tags: ['Automation'Business'AI'Operations'],
+      tags: ['Automation', 'Business', 'AI', 'Operations'],
       image: '🤖',
       author: 'Alex Thompson',
       publishedAt: '2025-01-08'
@@ -117,7 +116,7 @@ const InteractiveContentDiscoveryWidget = () => {
       likes: 345,
       isTrending: true,
       isNew: false,
-      tags: ['Quantum AI'Fusion'Technology'Research'],
+      tags: ['Quantum AI', 'Fusion', 'Technology', 'Research'],
       image: '🔬',
       author: 'Dr. James Liu',
       publishedAt: '2025-01-05'
@@ -133,7 +132,7 @@ const InteractiveContentDiscoveryWidget = () => {
       likes: 567,
       isTrending: false,
       isNew: true,
-      tags: ['AI Tools'Course'Tutorial'Mastery'],
+      tags: ['AI Tools', 'Course', 'Tutorial', 'Mastery'],
       image: '🛠️',
       author: 'Tech Academy',
       publishedAt: '2025-01-03'
@@ -163,7 +162,7 @@ const InteractiveContentDiscoveryWidget = () => {
   const addToRecentlyViewed = (item) => {
     setRecentlyViewed(prev => {
       const filtered = prev.filter(i => i.id !== item.id);
-      return [item...filtered].slice(05);
+      return [item, ...filtered].slice(0, 5);
     });
   };
 
@@ -204,9 +203,9 @@ const InteractiveContentDiscoveryWidget = () => {
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              initial={{ scale: 0.9opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
-              exit={{ scale: 0.9opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
               className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden shadow-2xl"
             >
@@ -333,8 +332,8 @@ const InteractiveContentDiscoveryWidget = () => {
                     {filteredContent.map((item) => (
                       <motion.div
                         key={item.id}
-                        initial={{ opacity: 0y: 20 }}
-                        animate={{ opacity: 1y: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer ${
                           viewMode === 'list' ? 'flex' : ''
                         }`}
@@ -373,7 +372,7 @@ const InteractiveContentDiscoveryWidget = () => {
                           </p>
 
                           <div className="flex flex-wrap gap-1 mb-3">
-                            {item.tags.slice(03).map((tag) => (
+                            {item.tags.slice(0, 3).map((tag) => (
                               <span
                                 key={tag}
                                 className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-1 rounded-full"

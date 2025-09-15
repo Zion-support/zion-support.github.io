@@ -227,7 +227,7 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {
               technology today will gain unprecedented competitive advantages and position themselves as leaders in the quantum era.
             </p>
             <p>
-              Join the pioneers of the quantum-neural fusion revolution. The future is not just coming—it's already here.
+              Join the pioneers of the quantum-neural fusion revolution. The future is not just coming—'it', 's already here.
             </p>
           </div>
         </div>

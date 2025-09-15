@@ -83,23 +83,23 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About'href: '/about' },
-        { name: 'Services'href: '/services' },
-        { name: 'Case Studies'href: '/case-studies' },
-        { name: 'Contact'href: '/contact' }]},
+        { name: ''About', 'href: '/about' },
+        { name: ''Services', 'href: '/services' },
+        { name: 'Case 'Studies', 'href: '/case-studies' },
+        { name: ''Contact', 'href: '/contact' }]},
     {
       title: 'Resources',
       links: [
-        { name: 'Blog'href: '/blog' },
-        { name: 'Resources'href: '/resources' },
-        { name: 'Documentation'href: '/docs' },
-        { name: 'Support'href: '/support' }]},
+        { name: ''Blog', 'href: '/blog' },
+        { name: ''Resources', 'href: '/resources' },
+        { name: ''Documentation', 'href: '/docs' },
+        { name: ''Support', 'href: '/support' }]},
     {
       title: 'Legal',
       links: [
-        { name: 'Privacy Policy'href: '/privacy' },
-        { name: 'Terms of Service'href: '/terms' },
-        { name: 'Cookie Policy'href: '/cookies' }]}];
+        { name: 'Privacy 'Policy', 'href: '/privacy' },
+        { name: 'Terms of 'Service', 'href: '/terms' },
+        { name: 'Cookie 'Policy', 'href: '/cookies' }]}];
 
   const socialLinks = [
     {

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -87,10 +87,10 @@ const AI2025_2026UltimateInnovationShowcase = () => {
   ];
 
   const breakthroughStats = [
-    { label: 'Processing Speed Increase'value: '10,000x'icon: Zap },
-    { label: 'Problem-Solving Accuracy'value: '99.9%'icon: Target },
-    { label: 'Energy Efficiency'value: '95%'icon: Shield },
-    { label: 'Global Adoption Rate'value: '87%'icon: Users }
+    { label: 'Processing Speed 'Increase', 'value: '10,000'x', 'icon: Zap },
+    { label: 'Problem-Solving 'Accuracy', 'value: '99.9%'icon: Target },
+    { label: 'Energy 'Efficiency', 'value: '95%'icon: Shield },
+    { label: 'Global Adoption 'Rate', 'value: '87%'icon: Users }
   ];
 
   const useCases = [
@@ -98,25 +98,25 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       category: 'Healthcare',
       title: 'AI-Powered Medical Breakthroughs',
       description: 'Revolutionary medical AI that can diagnose diseases with 99.9% accuracy and develop personalized treatment plans.',
-      benefits: ['Early disease detection'Personalized medicine'Drug discovery acceleration'Surgical precision enhancement']
+      benefits: ['Early disease 'detection', 'Personalized 'medicine', 'Drug discovery 'acceleration', 'Surgical precision enhancement']
     },
     {
       category: 'Climate',
       title: 'Climate Crisis Solutions',
       description: 'Advanced AI systems that can model and solve complex climate challengesfrom carbon capture to renewable energy optimization.',
-      benefits: ['Carbon footprint reduction'Renewable energy optimization'Climate modeling accuracy'Sustainable solutions']
+      benefits: ['Carbon footprint 'reduction', 'Renewable energy 'optimization', 'Climate modeling 'accuracy', 'Sustainable solutions']
     },
     {
       category: 'Space',
       title: 'Space Exploration Revolution',
       description: 'AI-powered space exploration that can autonomously navigatediscoverand colonize new worlds.',
-      benefits: ['Autonomous space missions'Planetary discovery'Resource optimization'Interstellar communication']
+      benefits: ['Autonomous space 'missions', 'Planetary 'discovery', 'Resource 'optimization', 'Interstellar communication']
     },
     {
       category: 'Education',
       title: 'Personalized Learning Revolution',
       description: 'AI tutors that adapt to individual learning styles and pacemaking education accessible to everyone globally.',
-      benefits: ['Personalized curriculum'Adaptive learning'Global accessibility'Real-time assessment']
+      benefits: ['Personalized 'curriculum', 'Adaptive 'learning', 'Global 'accessibility', 'Real-time assessment']
     }
   ];
 
@@ -134,8 +134,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -174,8 +174,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       {/* Innovation Showcase */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -192,8 +192,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           {innovations.map((innovationindex) => (
             <motion.div
               key={innovation.id}
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
             >
@@ -222,8 +222,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 mb-16"
         >
@@ -247,8 +247,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Use Cases Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
@@ -285,8 +285,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >

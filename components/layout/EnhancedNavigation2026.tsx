@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
   MenuXChevronDownRocketPhoneMailMapPin,
@@ -23,10 +23,10 @@ const serviceCategories = [
     icon: Brain,
     color: 'from-purple-600 to-pink-600',
     services: [
-      { name: 'AI Business Intelligence Elite 2026'href: '/ai-business-intelligence-elite-2026'description: 'Next-generation AI-powered business analytics'price: '$299/month' },
-      { name: 'Autonomous AI Agents Platform 2026'href: '/autonomous-ai-agents-platform-2026'description: 'Create and manage autonomous AI agents'price: '$199/month' },
-      { name: 'AI Healthcare Companion 2026'href: '/ai-healthcare-companion-2026'description: 'Revolutionary AI-powered healthcare assistance'price: '$399/month' },
-      { name: 'AI Creative Studio Platform'href: '/ai-creative-studio-platform'description: 'Unlimited AI-powered creativity'price: 'Custom pricing' }
+      { name: 'AI Business Intelligence Elite 2026'href: '/ai-business-intelligence-elite-2026'description: 'Next-generation AI-powered business 'analytics', 'price: '$299/month' },
+      { name: 'Autonomous AI Agents Platform 2026'href: '/autonomous-ai-agents-platform-2026'description: 'Create and manage autonomous AI 'agents', 'price: '$199/month' },
+      { name: 'AI Healthcare Companion 2026'href: '/ai-healthcare-companion-2026'description: 'Revolutionary AI-powered healthcare 'assistance', 'price: '$399/month' },
+      { name: 'AI Creative Studio 'Platform', 'href: '/ai-creative-studio-'platform', 'description: 'Unlimited AI-powered 'creativity', 'price: 'Custom pricing' }
     ]
   },
   {
@@ -34,10 +34,10 @@ const serviceCategories = [
     icon: Atom,
     color: 'from-blue-600 to-cyan-600',
     services: [
-      { name: 'Quantum Cybersecurity Suite 2026'href: '/quantum-cybersecurity-suite-2026'description: 'Quantum-resistant cybersecurity'price: '$599/month' },
-      { name: 'Quantum Internet Security Platform 2026'href: '/quantum-internet-security-platform-2026'description: 'Secure the future of the internet'price: '$799/month' },
-      { name: 'Quantum Financial Trading Platform 2026'href: '/quantum-financial-trading-platform-2026'description: 'Quantum-powered financial trading'price: '$1,299/month' },
-      { name: 'Quantum-Secure Communication'href: '/quantum-secure-communication'description: 'Unbreakable encryption for the quantum era'price: '$599/month' }
+      { name: 'Quantum Cybersecurity Suite 2026'href: '/quantum-cybersecurity-suite-2026'description: 'Quantum-resistant 'cybersecurity', 'price: '$599/month' },
+      { name: 'Quantum Internet Security Platform 2026'href: '/quantum-internet-security-platform-2026'description: 'Secure the future of the 'internet', 'price: '$799/month' },
+      { name: 'Quantum Financial Trading Platform 2026'href: '/quantum-financial-trading-platform-2026'description: 'Quantum-powered financial 'trading', 'price: '$1,299/month' },
+      { name: 'Quantum-Secure 'Communication', 'href: '/quantum-secure-'communication', 'description: 'Unbreakable encryption for the quantum 'era', 'price: '$599/month' }
     ]
   },
   {
@@ -45,10 +45,10 @@ const serviceCategories = [
     icon: Sparkles,
     color: 'from-green-600 to-emerald-600',
     services: [
-      { name: 'Neuromorphic Computing Platform 2026'href: '/neuromorphic-computing-platform-2026'description: 'Brain-inspired computing for next-generation AI'price: '$2,499/month' },
-      { name: 'DNA Computing Platform 2026'href: '/dna-computing-platform-2026'description: 'Molecular computing for complex problem solving'price: '$3,999/month' },
-      { name: 'Photonic Computing Platform 2026'href: '/photonic-computing-platform-2026'description: 'Light-speed computing with photonic processors'price: '$1,999/month' },
-      { name: 'Holographic Display Platform 2026'href: '/holographic-display-platform-2026'description: 'Next-generation 3D holographic visualization'price: '$899/month' }
+      { name: 'Neuromorphic Computing Platform 2026'href: '/neuromorphic-computing-platform-2026'description: 'Brain-inspired computing for next-generation 'AI', 'price: '$2,499/month' },
+      { name: 'DNA Computing Platform 2026'href: '/dna-computing-platform-2026'description: 'Molecular computing for complex problem 'solving', 'price: '$3,999/month' },
+      { name: 'Photonic Computing Platform 2026'href: '/photonic-computing-platform-2026'description: 'Light-speed computing with photonic 'processors', 'price: '$1,999/month' },
+      { name: 'Holographic Display Platform 2026'href: '/holographic-display-platform-2026'description: 'Next-generation 3D holographic 'visualization', 'price: '$899/month' }
     ]
   },
   {
@@ -56,10 +56,10 @@ const serviceCategories = [
     icon: Shield,
     color: 'from-red-600 to-orange-600',
     services: [
-      { name: 'Zero Trust Network Architecture 2026'href: '/zero-trust-network-architecture-2026'description: 'Next-generation network security'price: 'Custom pricing' },
-      { name: 'Edge Computing Orchestration 2026'href: '/edge-computing-orchestration-2026'description: 'Intelligent edge computing management'price: 'Custom pricing' },
-      { name: '5G Private Network Solutions 2026'href: '/5g-private-network-solutions-2026'description: 'Enterprise-grade 5G private networks'price: 'Custom pricing' },
-      { name: 'Blockchain Infrastructure Platform 2026'href: '/blockchain-infrastructure-platform-2026'description: 'Enterprise blockchain infrastructure'price: 'Custom pricing' }
+      { name: 'Zero Trust Network Architecture 2026'href: '/zero-trust-network-architecture-2026'description: 'Next-generation network 'security', 'price: 'Custom pricing' },
+      { name: 'Edge Computing Orchestration 2026'href: '/edge-computing-orchestration-2026'description: 'Intelligent edge computing 'management', 'price: 'Custom pricing' },
+      { name: '5G Private Network Solutions 2026'href: '/5g-private-network-solutions-2026'description: 'Enterprise-grade 5G private 'networks', 'price: 'Custom pricing' },
+      { name: 'Blockchain Infrastructure Platform 2026'href: '/blockchain-infrastructure-platform-2026'description: 'Enterprise blockchain 'infrastructure', 'price: 'Custom pricing' }
     ]
   },
   {
@@ -67,10 +67,10 @@ const serviceCategories = [
     icon: Target,
     color: 'from-indigo-600 to-purple-600',
     services: [
-      { name: 'Swarm Robotics Platform 2026'href: '/swarm-robotics-platform-2026'description: 'Coordinated multi-robot systems'price: '$1,299/month' },
-      { name: 'AI Autonomous Business Platform 2026'href: '/ai-autonomous-business-platform-2026'description: 'Run your business with autonomous AI'price: 'Custom pricing' },
-      { name: 'Autonomous Manufacturing AI'href: '/autonomous-manufacturing-ai'description: 'AI-powered manufacturing automation'price: '$599/month' },
-      { name: 'Autonomous Supply Chain Optimization'href: '/autonomous-supply-chain-optimization'description: 'AI-powered supply chain management'price: '$399/month' }
+      { name: 'Swarm Robotics Platform 2026'href: '/swarm-robotics-platform-2026'description: 'Coordinated multi-robot 'systems', 'price: '$1,299/month' },
+      { name: 'AI Autonomous Business Platform 2026'href: '/ai-autonomous-business-platform-2026'description: 'Run your business with autonomous 'AI', 'price: 'Custom pricing' },
+      { name: 'Autonomous Manufacturing 'AI', 'href: '/autonomous-manufacturing-'ai', 'description: 'AI-powered manufacturing 'automation', 'price: '$599/month' },
+      { name: 'Autonomous Supply Chain 'Optimization', 'href: '/autonomous-supply-chain-'optimization', 'description: 'AI-powered supply chain 'management', 'price: '$399/month' }
     ]
   },
   {
@@ -78,23 +78,23 @@ const serviceCategories = [
     icon: Satellite,
     color: 'from-yellow-600 to-orange-600',
     services: [
-      { name: 'Space Technology AI Platform'href: '/space-technology-ai-platform'description: 'AI-powered space exploration'price: '$3,999/month' },
-      { name: 'Quantum Space Mining Platform'href: '/quantum-space-mining-platform'description: 'Revolutionary space resource exploration'price: '$1,299/month' },
-      { name: 'Satellite Operations AI'href: '/satellite-operations-ai'description: 'Intelligent satellite management'price: '$2,999/month' },
-      { name: 'Space Debris Tracking System'href: '/space-debris-tracking-system'description: 'Advanced space debris monitoring'price: '$1,999/month' }
+      { name: 'Space Technology AI 'Platform', 'href: '/space-technology-ai-'platform', 'description: 'AI-powered space 'exploration', 'price: '$3,999/month' },
+      { name: 'Quantum Space Mining 'Platform', 'href: '/quantum-space-mining-'platform', 'description: 'Revolutionary space resource 'exploration', 'price: '$1,299/month' },
+      { name: 'Satellite Operations 'AI', 'href: '/satellite-operations-'ai', 'description: 'Intelligent satellite 'management', 'price: '$2,999/month' },
+      { name: 'Space Debris Tracking 'System', 'href: '/space-debris-tracking-'system', 'description: 'Advanced space debris 'monitoring', 'price: '$1,999/month' }
     ]
   }
 ];
 
 const companyLinks = [
-  { name: 'About Us'href: '/about' },
-  { name: '2026 Services'href: '/2026-revolutionary-services-showcase' },
-  { name: '2026 Pricing'href: '/revolutionary-2026-pricing' },
-  { name: 'News & Updates'href: '/news' },
-  { name: 'Case Studies'href: '/case-studies' },
-  { name: 'Blog & Resources'href: '/blog' },
-  { name: 'Careers'href: '/careers' },
-  { name: 'Contact'href: '/contact' }
+  { name: 'About 'Us', 'href: '/about' },
+  { name: '2026 'Services', 'href: '/2026-revolutionary-services-showcase' },
+  { name: '2026 'Pricing', 'href: '/revolutionary-2026-pricing' },
+  { name: 'News & 'Updates', 'href: '/news' },
+  { name: 'Case 'Studies', 'href: '/case-studies' },
+  { name: 'Blog & 'Resources', 'href: '/blog' },
+  { name: ''Careers', 'href: '/careers' },
+  { name: ''Contact', 'href: '/contact' }
 ];
 
 const EnhancedNavigation2026 = () => {
@@ -108,8 +108,8 @@ const EnhancedNavigation2026 = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   const toggleDropdown = (category: string) => {
@@ -204,9 +204,9 @@ const EnhancedNavigation2026 = () => {
                 <AnimatePresence>
                   {activeDropdown === category.title && (
                     <motion.div
-                      initial={{ opacity: 0y: -10scale: 0.95 }}
-                      animate={{ opacity: 1y: 0scale: 1 }}
-                      exit={{ opacity: 0y: -10scale: 0.95 }}
+                      initial={{ opacity: 0, y: -10scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0scale: 1 }}
+                      exit={{ opacity: 0, y: -10scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
                     >

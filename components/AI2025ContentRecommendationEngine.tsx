@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -31,7 +31,7 @@ import {
 
 const AI2025ContentRecommendationEngine = () => {
   const [userProfilesetUserProfile] = useState({
-    interests: ['AI'Automation'Cloud Computing'],
+    interests: [', 'AI', 'Automation'Cloud Computing'],
     experience: 'intermediate',
     role: 'developer',
     timeAvailable: '30min'
@@ -65,7 +65,7 @@ const AI2025ContentRecommendationEngine = () => {
         views: 12500,
         likes: 892,
         comments: 156,
-        tags: ['Python'Machine Learning'AI'],
+        tags: [', 'Python', 'Machine 'Learning', 'AI'],
         image: '/api/placeholder/400/250',
         matchScore: 95,
         reason: 'Matches your AI interest and intermediate level',
@@ -86,7 +86,7 @@ const AI2025ContentRecommendationEngine = () => {
         views: 8900,
         likes: 654,
         comments: 98,
-        tags: ['Terraform'Cloud'DevOps'Automation'],
+        tags: [', 'Terraform', 'Cloud', 'DevOps', 'Automation'],
         image: '/api/placeholder/400/250',
         matchScore: 88,
         reason: 'Perfect for your cloud computing interest',
@@ -107,7 +107,7 @@ const AI2025ContentRecommendationEngine = () => {
         views: 15600,
         likes: 1123,
         comments: 234,
-        tags: ['SaaS'Business'Startup'Development'],
+        tags: [', 'SaaS', 'Business', 'Startup', 'Development'],
         image: '/api/placeholder/400/250',
         matchScore: 82,
         reason: 'Great for developers looking to build products',
@@ -128,7 +128,7 @@ const AI2025ContentRecommendationEngine = () => {
         views: 7200,
         likes: 445,
         comments: 67,
-        tags: ['Automation'AI'Business Process'ROI'],
+        tags: [', 'Automation', 'AI'Business 'Process', 'ROI'],
         image: '/api/placeholder/400/250',
         matchScore: 90,
         reason: 'Combines your AI and automation interests',
@@ -149,7 +149,7 @@ const AI2025ContentRecommendationEngine = () => {
         views: 4200,
         likes: 298,
         comments: 45,
-        tags: ['Quantum Computing'Advanced AI'Future Tech'],
+        tags: ['Quantum 'Computing', 'Advanced 'AI', 'Future Tech'],
         image: '/api/placeholder/400/250',
         matchScore: 75,
         reason: 'Advanced content for your AI expertise',
@@ -170,7 +170,7 @@ const AI2025ContentRecommendationEngine = () => {
         views: 6800,
         likes: 512,
         comments: 89,
-        tags: ['Security'Cloud'Enterprise'Compliance'],
+        tags: [', 'Security', 'Cloud', 'Enterprise', 'Compliance'],
         image: '/api/placeholder/400/250',
         matchScore: 78,
         reason: 'Advanced cloud security for your role',
@@ -190,11 +190,11 @@ const AI2025ContentRecommendationEngine = () => {
   };
 
   const categories = [
-    { id: 'all'name: 'All Recommendations'icon: Braincount: recommendations.length },
-    { id: 'ai-solutions'name: 'AI Solutions'icon: Braincount: recommendations.filter(r => r.category === 'ai-solutions').length },
-    { id: 'automation'name: 'Automation'icon: Zapcount: recommendations.filter(r => r.category === 'automation').length },
-    { id: 'cloud'name: 'Cloud Computing'icon: Cloudcount: recommendations.filter(r => r.category === 'cloud').length },
-    { id: 'tutorials'name: 'Tutorials'icon: BookOpencount: recommendations.filter(r => r.category === 'tutorials').length }
+    { id: ''all', 'name: 'All 'Recommendations', 'icon: Braincount: recommendations.length },
+    { id: 'ai-'solutions', 'name: 'AI 'Solutions', 'icon: Braincount: recommendations.filter(r => r.category === 'ai-solutions').length },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: recommendations.filter(r => r.category === 'automation').length },
+    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: Cloudcount: recommendations.filter(r => r.category === 'cloud').length },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencount: recommendations.filter(r => r.category === 'tutorials').length }
   ];
 
   const getTypeIcon = (type) => {
@@ -321,8 +321,8 @@ const AI2025ContentRecommendationEngine = () => {
               {recommendations.map((itemindex) => (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3delay: index * 0.1 }}
                   className="group bg-white rounded-xl border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
                 >

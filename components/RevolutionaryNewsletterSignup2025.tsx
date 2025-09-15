@@ -36,7 +36,7 @@ const RevolutionaryNewsletterSignup2025: React.FC = () => {
 
     setIsSubmitting(false);
     setIsSubscribed(true);
-    setEmail('');
+    setEmail(', ');
     setSelectedInterests([]);
   };
 
@@ -52,11 +52,11 @@ const RevolutionaryNewsletterSignup2025: React.FC = () => {
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Welcome to the AI Revolution!</h2>
             <p className="text-xl text-gray-600 mb-8">
-              You've successfully joined our exclusive community. Get ready for cutting-edge AI insights, 
+              'You', 've successfully joined our exclusive community. Get ready for cutting-edge AI insights, 
               breakthrough technologies, and exclusive content delivered straight to your inbox.
             </p>
             <div className="bg-purple-50 p-6 rounded-lg">
-              <h3 className="font-bold text-lg text-gray-900 mb-3">What's Next?</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-3">'What', 's Next?</h3>
               <ul className="text-left text-gray-700 space-y-2">
                 <li>• Weekly AI insights and trend analysis</li>
                 <li>• Exclusive case studies and success stories</li>

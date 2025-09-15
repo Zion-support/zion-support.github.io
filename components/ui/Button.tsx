@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   size = 'md',
   href,
   onClick,
-  className = '',
+  className = ', ',
   disabled = false,
   type = 'button',
   icon,

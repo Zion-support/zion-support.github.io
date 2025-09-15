@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 CheckCircleAlertCircleXInfo
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
@@ -147,7 +147,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toastsonRemove }
 export const useToast = () => {
   const [toastsetToasts] = useState<Toast[]>([]);
 
-  const addToast = (toast: Omit<Toast'id'>) => {
+  const addToast = (toast: Omit<'Toast', 'id'>) => {
     const id = Math.random().toString(36).substr(29);
     const newToast = { ...toastid };
     setToasts(prev => [...prevnewToast]);
@@ -158,19 +158,19 @@ export const useToast = () => {
   };
 
   const showSuccess = (title: stringmessage?: string) => {
-    addToast({ type: 'success'titlemessage });
+    addToast({ type: ''success', 'titlemessage });
   };
 
   const showError = (title: stringmessage?: string) => {
-    addToast({ type: 'error'titlemessage });
+    addToast({ type: ''error', 'titlemessage });
   };
 
   const showInfo = (title: stringmessage?: string) => {
-    addToast({ type: 'info'titlemessage });
+    addToast({ type: ''info', 'titlemessage });
   };
 
   const showWarning = (title: stringmessage?: string) => {
-    addToast({ type: 'warning'titlemessage });
+    addToast({ type: ''warning', 'titlemessage });
   };
 
   return {

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 ArrowRightZapBrainTrendingUpUsersAwardClock
 import Link from 'next/link';
@@ -33,7 +33,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
@@ -66,7 +66,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
 
             {/* Features List */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.4duration: 0.6 }}
               className="grid grid-cols-2 gap-2 mb-6"
@@ -81,7 +81,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ delay: 0.6duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"

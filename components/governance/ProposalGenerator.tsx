@@ -43,7 +43,7 @@ export default function ProposalGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)});
       const data = await res.json();
-      setDraftMarkdown(data.markdown || '');
+      setDraftMarkdown(data.markdown || ', ');
       setDraftJson(data.json || null);
       setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {
@@ -97,7 +97,7 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution'e.target.value)}
+              onChange={(e) => handleChange(', 'targetInstitution', 'e.target.value)}
               placeholder="UNDP / World Bank / ILO"
             />
           </div>
@@ -106,7 +106,7 @@ export default function ProposalGenerator() {
             <select
               className="w-full border rounded px-3 py-2"
               value={form.type}
-              onChange={(e) => handleChange('type'e.target.value as ProposalType)}
+              onChange={(e) => handleChange(', 'type', 'e.target.value as ProposalType)}
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -119,7 +119,7 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
-              onChange={(e) => handleChange('regionalScope'e.target.value)}
+              onChange={(e) => handleChange(', 'regionalScope', 'e.target.value)}
               placeholder="Global / Africa / LATAM / APAC / EU / ..."
             />
           </div>
@@ -128,7 +128,7 @@ export default function ProposalGenerator() {
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form.budgetOrGoals}
-              onChange={(e) => handleChange('budgetOrGoals'e.target.value)}
+              onChange={(e) => handleChange(', 'budgetOrGoals', 'e.target.value)}
               placeholder="$5M for pilot; goals: 10k workers onboarded70% female youthetc."
             />
           </div>
@@ -137,7 +137,7 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.supportingMultiverses}
-              onChange={(e) => handleChange('supportingMultiverses'e.target.value)}
+              onChange={(e) => handleChange(', 'supportingMultiverses', 'e.target.value)}
               placeholder="Eg. Zion.aiZion.IDZion.Work"
             />
           </div>
@@ -147,7 +147,7 @@ export default function ProposalGenerator() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={form.language}
-                onChange={(e) => handleChange('language'e.target.value)}
+                onChange={(e) => handleChange(', 'language', 'e.target.value)}
                 placeholder="English / French / Spanish / Arabic / ..."
               />
             </div>
@@ -156,7 +156,7 @@ export default function ProposalGenerator() {
               <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form.customPrompt}
-                onChange={(e) => handleChange('customPrompt'e.target.value)}
+                onChange={(e) => handleChange(', 'customPrompt', 'e.target.value)}
               />
             </div>
           </div>

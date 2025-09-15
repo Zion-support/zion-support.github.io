@@ -48,13 +48,13 @@ function getAllServices(): Service[] {
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g'');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ');
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g'');
+		const path = url.pathname.replace(/^\/+|\/+$/g', ');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length);
 		}
@@ -103,7 +103,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g'');
+	const incomingSlug = (params?.slug || ', ').replace(/^\/+|\/+$/g', ');
 
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
@@ -112,7 +112,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	});
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+		service = services.find((s) => toSlug(s.id || ', ') === incomingSlug || toSlug(s.name || ', ') === incomingSlug);
 	}
 
 	if (!service) {
@@ -225,7 +225,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
-								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g'')}`} className="hover:underline">{contactInfo.mobile}</a></div>
+								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g', ')}`} className="hover:underline">{contactInfo.mobile}</a></div>
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{contactInfo.address}</a></div>
 							</div>

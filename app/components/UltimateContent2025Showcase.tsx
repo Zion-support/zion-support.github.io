@@ -24,7 +24,6 @@ interface ContentItem {
 
 const UltimateContent2025Showcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'blog' | 'case-study' | 'resource'>('all');
->>>>>>> origin/cursor/create-and-deploy-new-content-18b4
 
   const featuredContent = [
     {

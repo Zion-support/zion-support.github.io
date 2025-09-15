@@ -47,9 +47,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             {toasts.map((toast) => (
               <motion.div
                 key={toast.id}
-                initial={{ opacity: 0y: -8 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -8 }}
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
                 className={`mb-2 pointer-events-auto rounded-lg border backdrop-blur px-4 py-3 shadow-lg ${
                   toast.tone === 'success'
                     ? 'border-emerald-300/50 bg-emerald-50 text-emerald-900 dark:bg-emerald-950/60 dark:text-emerald-200'

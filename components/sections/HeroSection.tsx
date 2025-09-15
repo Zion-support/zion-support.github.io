@@ -48,8 +48,8 @@ const HeroSection: React.FC = () => {
       <div className="relative container mx-auto px-4 text-center z-10">
         {/* Main Content */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
@@ -66,8 +66,8 @@ const HeroSection: React.FC = () => {
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
@@ -79,8 +79,8 @@ const HeroSection: React.FC = () => {
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
@@ -90,8 +90,8 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
@@ -113,8 +113,8 @@ const HeroSection: React.FC = () => {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.6 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >

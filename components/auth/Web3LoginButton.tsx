@@ -34,7 +34,7 @@ export default function Web3LoginButton() {
   }[userdisplayWeb3]);
 
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
-    window.localStorage.setItem('zion-web3-user'JSON.stringify(u));
+    window.localStorage.setItem('zion-web3-'user', 'JSON.stringify(u));
     setUser(u);
   };
 

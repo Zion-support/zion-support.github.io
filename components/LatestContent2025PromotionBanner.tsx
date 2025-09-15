@@ -8,7 +8,7 @@ const LatestContent2025PromotionBanner = () => {
   const latestContent = [
     {
       id: 1,
-      title: "AI Revolution 2025: What's Next?",
+      title: "AI Revolution 2025: 'What', 's Next?",
       type: 'article',
       readTime: '8 min',
       views: '15.2k',

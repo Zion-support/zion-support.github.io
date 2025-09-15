@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CheckCircleIcon, ArrowRightIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline';
@@ -119,7 +121,7 @@ const SuccessStoriesBanner2025: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our AI implementations have delivered measurable results across industries. 
-            See how we've helped companies achieve extraordinary ROI and transform their operations.
+            See how 'we', 've helped companies achieve extraordinary ROI and transform their operations.
           </p>
         </div>
 

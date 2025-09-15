@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -49,9 +49,9 @@ const UltimateContentRevolution2026 = () => {
           'Real-time Language Processing'
         ],
         stats: [
-          { label: 'ROI Increase'value: '340%'icon: TrendingUp },
-          { label: 'Efficiency Gain'value: '85%'icon: Zap },
-          { label: 'Cost Reduction'value: '60%'icon: Target }
+          { label: 'ROI 'Increase', 'value: '340%'icon: TrendingUp },
+          { label: 'Efficiency 'Gain', 'value: '85%'icon: Zap },
+          { label: 'Cost 'Reduction', 'value: '60%'icon: Target }
         ]
       }
     },
@@ -72,9 +72,9 @@ const UltimateContentRevolution2026 = () => {
           'Error Correction Systems'
         ],
         stats: [
-          { label: 'Processing Speed'value: '1000x'icon: Zap },
-          { label: 'Security Level'value: '99.9%'icon: Shield },
-          { label: 'Problem Solving'value: '∞'icon: Brain }
+          { label: 'Processing 'Speed', 'value: '1000'x', 'icon: Zap },
+          { label: 'Security 'Level', 'value: '99.9%'icon: Shield },
+          { label: 'Problem 'Solving', 'value: '∞'icon: Brain }
         ]
       }
     },
@@ -95,9 +95,9 @@ const UltimateContentRevolution2026 = () => {
           'Customer Service Bots'
         ],
         stats: [
-          { label: 'Uptime'value: '99.9%'icon: CheckCircle },
-          { label: 'Cost Savings'value: '75%'icon: TrendingUp },
-          { label: 'Error Reduction'value: '95%'icon: Target }
+          { label: ''Uptime', 'value: '99.9%'icon: CheckCircle },
+          { label: 'Cost 'Savings', 'value: '75%'icon: TrendingUp },
+          { label: 'Error 'Reduction', 'value: '95%'icon: Target }
         ]
       }
     }
@@ -135,8 +135,8 @@ const UltimateContentRevolution2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -155,8 +155,8 @@ const UltimateContentRevolution2026 = () => {
 
         {/* Content Tabs */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
@@ -225,8 +225,8 @@ const UltimateContentRevolution2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
@@ -237,8 +237,8 @@ const UltimateContentRevolution2026 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: 0.1 * index }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
               >
@@ -266,8 +266,8 @@ const UltimateContentRevolution2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >

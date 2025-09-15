@@ -51,7 +51,7 @@ const NewContent2025UltimateDiscoveryBanner = () => {
             Discover Our Latest AI Content Revolution
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Explore groundbreaking content that's transforming businesses worldwide with unprecedented ROI results
+            Explore groundbreaking content 'that', 's transforming businesses worldwide with unprecedented ROI results
           </p>
         </div>
 

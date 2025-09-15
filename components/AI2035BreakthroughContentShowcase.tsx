@@ -64,7 +64,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Quantum AI'Consciousness'Revolutionary'2035'],
+      tags: ['Quantum 'AI', 'Consciousness'Revolutionary'2035'],
       readTime: '15 min read',
       publishDate: '2025-01-17'
     },
@@ -76,7 +76,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Matter Creation'Manufacturing'Space Tech'2035'],
+      tags: ['Matter 'Creation', 'Manufacturing'Space Tech'2035'],
       readTime: '12 min read',
       publishDate: '2025-01-17'
     },
@@ -88,7 +88,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Dimensions'Consciousness'Parallel Universes'2035'],
+      tags: ['Dimensions', 'Consciousness', 'Parallel Universes', '2035'],
       readTime: '18 min read',
       publishDate: '2025-01-17'
     },
@@ -100,7 +100,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Peace'Conflict Resolution'Universal'2035'],
+      tags: [', 'Peace', 'Conflict 'Resolution', 'Universal'2035'],
       readTime: '20 min read',
       publishDate: '2025-01-17'
     },
@@ -112,7 +112,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Galaxy'Space Exploration'Expansion'2035'],
+      tags: [', 'Galaxy', 'Space 'Exploration', 'Expansion'2035'],
       readTime: '16 min read',
       publishDate: '2025-01-17'
     },
@@ -124,7 +124,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Immortality'Consciousness'Life Extension'2035'],
+      tags: ['Immortality', 'Consciousness', 'Life Extension', '2035'],
       readTime: '14 min read',
       publishDate: '2025-01-17'
     }

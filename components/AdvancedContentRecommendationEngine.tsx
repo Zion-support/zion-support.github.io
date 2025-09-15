@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -32,7 +32,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'AI & Machine Learning Revolution 2025',
       description: 'Comprehensive guide to the latest AI and ML breakthroughs transforming industries worldwide.',
       category: 'Artificial Intelligence',
-      tags: ['AI'Machine Learning'Automation'2025'],
+      tags: [', 'AI', 'Machine 'Learning', 'Automation'2025'],
       readTime: 15,
       difficulty: 'advanced',
       popularity: 95,
@@ -44,7 +44,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'Quantum Computing Fundamentals',
       description: 'Understanding quantum mechanics and their applications in modern computing systems.',
       category: 'Quantum Computing',
-      tags: ['Quantum'Physics'Computing'Fundamentals'],
+      tags: [', 'Quantum', 'Physics', 'Computing', 'Fundamentals'],
       readTime: 12,
       difficulty: 'intermediate',
       popularity: 87,
@@ -55,7 +55,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'Enterprise Blockchain Solutions',
       description: 'How blockchain technology is revolutionizing enterprise operations and supply chains.',
       category: 'Blockchain',
-      tags: ['Blockchain'Enterprise'Supply Chain'Decentralization'],
+      tags: [', 'Blockchain', 'Enterprise'Supply 'Chain', 'Decentralization'],
       readTime: 18,
       difficulty: 'advanced',
       popularity: 82,
@@ -66,7 +66,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'Getting Started with Web3 Development',
       description: 'Complete beginner guide to building decentralized applications and smart contracts.',
       category: 'Web3',
-      tags: ['Web3'DApps'Smart Contracts'Beginner'],
+      tags: [', 'Web3', 'DApps'Smart 'Contracts', 'Beginner'],
       readTime: 8,
       difficulty: 'beginner',
       popularity: 91,
@@ -77,7 +77,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'IoT Security Best Practices',
       description: 'Essential security measures for Internet of Things devices and networks.',
       category: 'IoT',
-      tags: ['IoT'Security'Best Practices'Networking'],
+      tags: [', 'IoT', 'Security'Best 'Practices', 'Networking'],
       readTime: 10,
       difficulty: 'intermediate',
       popularity: 78,
@@ -85,7 +85,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
     }
   ];
 
-  const categories = ['Artificial Intelligence'Quantum Computing'Blockchain'Web3'IoT'Cybersecurity'Cloud Computing'Data Science'];
+  const categories = ['Artificial 'Intelligence', 'Quantum 'Computing', 'Blockchain', 'Web3', 'IoT', 'Cybersecurity', 'Cloud 'Computing', 'Data Science'];
 
   useEffect(() => {
     generateRecommendations();
@@ -161,7 +161,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           🤖 Advanced Content Recommendation Engine
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover personalized content recommendations powered by AI. Tell us your preferences and we'll find the perfect content for you.
+          Discover personalized content recommendations powered by AI. Tell us your preferences and 'we', 'll find the perfect content for you.
         </p>
       </div>
 

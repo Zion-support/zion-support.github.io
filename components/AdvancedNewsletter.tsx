@@ -19,15 +19,15 @@ export default function AdvancedNewsletter() {
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
+    setEmail(', ');
   };
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center mb-6">
@@ -83,7 +83,7 @@ export default function AdvancedNewsletter() {
                 Successfully Subscribed!
               </h3>
               <p className="text-white/80">
-                Thank you for subscribing. You'll receive our latest updates soon.
+                Thank you for subscribing. 'You', 'll receive our latest updates soon.
               </p>
             </motion.div>
           )}

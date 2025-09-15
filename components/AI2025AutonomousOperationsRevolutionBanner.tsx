@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
@@ -54,7 +54,7 @@ const AI2025AutonomousOperationsRevolutionBanner: React.FC = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('autonomous-ops-banner-dismissed'true');
+    localStorage.setItem('autonomous-ops-banner-'dismissed', 'true');
   };
 
   if (!isVisible) return null;

@@ -6,7 +6,7 @@ interface ROICalculatorProps {
   className?: string;
 }
 
-const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = '' }) => {
+const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ', ' }) => {
   const [inputs, setInputs] = useState({
     currentRevenue: 1000000,
     operationalCosts: 500000,

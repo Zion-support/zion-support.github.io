@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {  Zap,  TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Circle, Award } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: The Quantum Neural Revolution Reshaping Enterprise Computing',

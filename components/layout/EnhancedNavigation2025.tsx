@@ -3,7 +3,7 @@
 
 import { useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MenuChevronDown,
   BrainRocketShield

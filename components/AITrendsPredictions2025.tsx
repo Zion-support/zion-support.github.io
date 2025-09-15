@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Calendar
@@ -185,7 +185,7 @@ const AITrendsPredictions2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -205,7 +205,7 @@ const AITrendsPredictions2025 = () => {
 
         {/* Year Selector */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center gap-4 mb-12"
@@ -251,8 +251,8 @@ const AITrendsPredictions2025 = () => {
                 return (
                   <motion.div
                     key={trend.id}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6delay: index * 0.1 }}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group"
                   >
@@ -286,8 +286,8 @@ const AITrendsPredictions2025 = () => {
 
             {/* Predictions */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
             >
@@ -314,7 +314,7 @@ const AITrendsPredictions2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"

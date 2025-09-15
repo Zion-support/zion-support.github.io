@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MenuXChevronDownSearchPhoneMailMapPin
   RocketBrainAtomGlobeZapSparklesShield
@@ -41,10 +41,10 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
     services: [
-      { name: 'AI Business Intelligence Pro'href: '/ai-business-intelligence-pro'description: 'Transform data into actionable insights'price: '$299/month' },
-      { name: 'AI Video Generation Platform'href: '/ai-video-generation-platform'description: 'Create professional videos with AI'price: '$499/month' },
-      { name: 'AI-Powered Cybersecurity'href: '/ai-cybersecurity-platform'description: 'Next-generation threat detection'price: '$799/month' },
-      { name: 'AI Drug Discovery Platform'href: '/ai-drug-discovery-platform'description: 'Accelerate drug discovery with AI'price: '$3,999/month' }
+      { name: 'AI Business Intelligence 'Pro', 'href: '/ai-business-intelligence-'pro', 'description: 'Transform data into actionable 'insights', 'price: '$299/month' },
+      { name: 'AI Video Generation 'Platform', 'href: '/ai-video-generation-'platform', 'description: 'Create professional videos with 'AI', 'price: '$499/month' },
+      { name: 'AI-Powered 'Cybersecurity', 'href: '/ai-cybersecurity-'platform', 'description: 'Next-generation threat 'detection', 'price: '$799/month' },
+      { name: 'AI Drug Discovery 'Platform', 'href: '/ai-drug-discovery-'platform', 'description: 'Accelerate drug discovery with 'AI', 'price: '$3,999/month' }
     ]
   },
   {
@@ -53,10 +53,10 @@ const serviceCategories = [
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
     services: [
-      { name: 'Quantum Machine Learning'href: '/quantum-machine-learning-platform'description: 'Harness quantum computing for ML'price: '$1,999/month' },
-      { name: 'Blockchain AI Platform'href: '/blockchain-ai-platform'description: 'Decentralized AI for the future'price: '$899/month' },
-      { name: 'Edge AI Computing'href: '/edge-ai-computing-platform'description: 'AI at the edge for real-time processing'price: '$599/month' },
-      { name: 'AI Climate Modeling'href: '/ai-climate-modeling-platform'description: 'Predict climate change with AI'price: '$1,299/month' }
+      { name: 'Quantum Machine 'Learning', 'href: '/quantum-machine-learning-'platform', 'description: 'Harness quantum computing for 'ML', 'price: '$1,999/month' },
+      { name: 'Blockchain AI 'Platform', 'href: '/blockchain-ai-'platform', 'description: 'Decentralized AI for the 'future', 'price: '$899/month' },
+      { name: 'Edge AI 'Computing', 'href: '/edge-ai-computing-'platform', 'description: 'AI at the edge for real-time 'processing', 'price: '$599/month' },
+      { name: 'AI Climate 'Modeling', 'href: '/ai-climate-modeling-'platform', 'description: 'Predict climate change with 'AI', 'price: '$1,299/month' }
     ]
   },
   {
@@ -65,10 +65,10 @@ const serviceCategories = [
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
     services: [
-      { name: 'API Security & Monitoring'href: '/api-security-monitoring-suite'description: 'Protect and monitor your APIs'price: '$399/month' },
-      { name: 'Customer Success Automation'href: '/customer-success-automation'description: 'Automate customer success workflows'price: '$199/month' },
-      { name: 'HR Automation Suite'href: '/hr-automation-suite'description: 'Streamline HR processes with AI'price: '$179/month' },
-      { name: 'Project Management AI'href: '/project-management-ai-platform'description: 'AI-powered project management'price: '$199/month' }
+      { name: 'API Security & 'Monitoring', 'href: '/api-security-monitoring-'suite', 'description: 'Protect and monitor your 'APIs', 'price: '$399/month' },
+      { name: 'Customer Success 'Automation', 'href: '/customer-success-'automation', 'description: 'Automate customer success 'workflows', 'price: '$199/month' },
+      { name: 'HR Automation 'Suite', 'href: '/hr-automation-'suite', 'description: 'Streamline HR processes with 'AI', 'price: '$179/month' },
+      { name: 'Project Management 'AI', 'href: '/project-management-ai-'platform', 'description: 'AI-powered project 'management', 'price: '$199/month' }
     ]
   },
   {
@@ -77,10 +77,10 @@ const serviceCategories = [
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Streamline business operations',
     services: [
-      { name: 'E-commerce Automation'href: '/ecommerce-automation-platform'description: 'Automate your entire e-commerce operation'price: '$249/month' },
-      { name: 'Marketing Automation Suite'href: '/marketing-automation-suite'description: 'Automate your entire marketing operation'price: '$279/month' },
-      { name: 'Financial Analytics Platform'href: '/financial-analytics-platform'description: 'Real-time financial insights'price: '$349/month' },
-      { name: 'Legal Document Automation'href: '/legal-document-automation'description: 'Automate legal document creation'price: '$399/month' }
+      { name: 'E-commerce 'Automation', 'href: '/ecommerce-automation-'platform', 'description: 'Automate your entire e-commerce 'operation', 'price: '$249/month' },
+      { name: 'Marketing Automation 'Suite', 'href: '/marketing-automation-'suite', 'description: 'Automate your entire marketing 'operation', 'price: '$279/month' },
+      { name: 'Financial Analytics 'Platform', 'href: '/financial-analytics-'platform', 'description: 'Real-time financial 'insights', 'price: '$349/month' },
+      { name: 'Legal Document 'Automation', 'href: '/legal-document-'automation', 'description: 'Automate legal document 'creation', 'price: '$399/month' }
     ]
   },
   {
@@ -89,10 +89,10 @@ const serviceCategories = [
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Intelligent automation solutions',
     services: [
-      { name: 'Autonomous Robotics Platform'href: '/autonomous-robotics-platform'description: 'Build and deploy intelligent robots'price: '$2,499/month' },
-      { name: 'AI Content Generator Elite'href: '/ai-content-generator-elite'description: 'Professional AI content creation'price: '$49/month' },
-      { name: 'AI Guardrails Suite'href: '/ai-guardrails-suite'description: 'Policy and safety for LLM apps'price: '$199/month' },
-      { name: 'AI Business Intelligence'href: '/ai-business-intelligence-suite'description: 'Intelligent business insights'price: '$299/month' }
+      { name: 'Autonomous Robotics 'Platform', 'href: '/autonomous-robotics-'platform', 'description: 'Build and deploy intelligent 'robots', 'price: '$2,499/month' },
+      { name: 'AI Content Generator 'Elite', 'href: '/ai-content-generator-'elite', 'description: 'Professional AI content 'creation', 'price: '$49/month' },
+      { name: 'AI Guardrails 'Suite', 'href: '/ai-guardrails-'suite', 'description: 'Policy and safety for LLM 'apps', 'price: '$199/month' },
+      { name: 'AI Business 'Intelligence', 'href: '/ai-business-intelligence-'suite', 'description: 'Intelligent business 'insights', 'price: '$299/month' }
     ]
   },
   {
@@ -101,40 +101,40 @@ const serviceCategories = [
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
     services: [
-      { name: 'Quantum DNA Computing'href: '/quantum-dna-computing-platform'description: 'DNA-based quantum computation'price: '$35,999/month' },
-      { name: 'Space Mining Automation'href: '/space-mining-automation-platform'description: 'Automated asteroid mining'price: '$45,999/month' },
-      { name: 'Metaverse AI Development'href: '/metaverse-ai-development-platform'description: 'Build immersive virtual worlds'price: '$2,999/month' },
-      { name: 'Holographic Event Platform'href: '/holographic-event-platform'description: 'Immersive holographic experiences'price: '$2,999/month' }
+      { name: 'Quantum DNA 'Computing', 'href: '/quantum-dna-computing-'platform', 'description: 'DNA-based quantum 'computation', 'price: '$35,999/month' },
+      { name: 'Space Mining 'Automation', 'href: '/space-mining-automation-'platform', 'description: 'Automated asteroid 'mining', 'price: '$45,999/month' },
+      { name: 'Metaverse AI 'Development', 'href: '/metaverse-ai-development-'platform', 'description: 'Build immersive virtual 'worlds', 'price: '$2,999/month' },
+      { name: 'Holographic Event 'Platform', 'href: '/holographic-event-'platform', 'description: 'Immersive holographic 'experiences', 'price: '$2,999/month' }
     ]
   }
 ];
 
 const quickLinks = [
-  { name: 'Home'href: '/'icon: Home },
-  { name: 'Services'href: '/services'icon: Briefcase },
-  { name: 'Solutions'href: '/solutions'icon: Target },
-  { name: 'Pricing'href: '/pricing-2034'icon: DollarSign },
-  { name: 'Resources'href: '/resources'icon: BookOpen },
-  { name: 'Case Studies'href: '/case-studies'icon: FileText },
-  { name: 'Blog'href: '/blog'icon: MessageCircle },
-  { name: 'Contact'href: '/contact'icon: MessageCircle }
+  { name: ''Home', 'href: '/'icon: Home },
+  { name: ''Services', 'href: '/'services', 'icon: Briefcase },
+  { name: ''Solutions', 'href: '/'solutions', 'icon: Target },
+  { name: ''Pricing', 'href: '/pricing-2034'icon: DollarSign },
+  { name: ''Resources', 'href: '/'resources', 'icon: BookOpen },
+  { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: FileText },
+  { name: ''Blog', 'href: '/'blog', 'icon: MessageCircle },
+  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircle }
 ];
 
 const companyLinks = [
-  { name: 'About Us'href: '/about'icon: Users },
-  { name: 'Careers'href: '/careers'icon: Briefcase },
-  { name: 'News'href: '/news'icon: FileText },
-  { name: 'Partners'href: '/partners'icon: Handshake },
-  { name: 'Support'href: '/support'icon: LifeBuoy },
-  { name: 'Status'href: '/status'icon: Activity }
+  { name: 'About 'Us', 'href: '/'about', 'icon: Users },
+  { name: ''Careers', 'href: '/'careers', 'icon: Briefcase },
+  { name: ''News', 'href: '/'news', 'icon: FileText },
+  { name: ''Partners', 'href: '/'partners', 'icon: Handshake },
+  { name: ''Support', 'href: '/'support', 'icon: LifeBuoy },
+  { name: ''Status', 'href: '/'status', 'icon: Activity }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn'href: 'https://linkedin.com/company/ziontechgroup'icon: Linkedin },
-  { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: Github },
-  { name: 'Instagram'href: 'https://instagram.com/ziontechgroup'icon: Instagram },
-  { name: 'YouTube'href: 'https://youtube.com/@ziontechgroup'icon: Youtube },
-  { name: 'Twitter'href: 'https://twitter.com/ziontechgroup'icon: Twitter }
+  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedin },
+  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Github },
+  { name: ''Instagram', 'href: 'https://instagram.com/'ziontechgroup', 'icon: Instagram },
+  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Youtube },
+  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twitter }
 ];
 
 const certifications = [
@@ -157,8 +157,8 @@ export default function UltraFuturisticNavigation2034() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   const toggleDropdown = (category: string) => {

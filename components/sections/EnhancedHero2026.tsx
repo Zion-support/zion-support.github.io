@@ -123,12 +123,12 @@ export default function EnhancedHero2026({ contactInfoserviceStats }: EnhancedHe
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto"
           >
             {[
-              { label: 'Total Services'value: serviceStats.totalServicesicon: Rocketcolor: 'from-blue-500 to-cyan-500' },
-              { label: 'AI Solutions'value: serviceStats.aiServicesicon: Braincolor: 'from-purple-500 to-pink-500' },
-              { label: 'Emerging Tech'value: serviceStats.emergingTechicon: TrendingUpcolor: 'from-green-500 to-emerald-500' },
-              { label: 'IT Infrastructure'value: serviceStats.itSolutionsicon: Globecolor: 'from-orange-500 to-red-500' },
-              { label: 'Micro SaaS'value: serviceStats.microSaasicon: Zapcolor: 'from-yellow-500 to-orange-500' },
-              { label: 'Revolutionary'value: serviceStats.revolutionaryServicesicon: Starcolor: 'from-pink-500 to-purple-500' }
+              { label: 'Total 'Services', 'value: serviceStats.totalServicesicon: Rocketcolor: 'from-blue-500 to-cyan-500' },
+              { label: 'AI 'Solutions', 'value: serviceStats.aiServicesicon: Braincolor: 'from-purple-500 to-pink-500' },
+              { label: 'Emerging 'Tech', 'value: serviceStats.emergingTechicon: TrendingUpcolor: 'from-green-500 to-emerald-500' },
+              { label: 'IT 'Infrastructure', 'value: serviceStats.itSolutionsicon: Globecolor: 'from-orange-500 to-red-500' },
+              { label: 'Micro 'SaaS', 'value: serviceStats.microSaasicon: Zapcolor: 'from-yellow-500 to-orange-500' },
+              { label: ''Revolutionary', 'value: serviceStats.revolutionaryServicesicon: Starcolor: 'from-pink-500 to-purple-500' }
             ].map((statindex) => (
               <motion.div
                 key={stat.label}

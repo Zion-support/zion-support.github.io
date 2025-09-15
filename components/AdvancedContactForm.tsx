@@ -117,7 +117,7 @@ const AdvancedContactForm: React.FC = () => {
           Get Your Free AI Transformation Consultation
         </h3>
         <p className="text-gray-600">
-          Tell us about your business challenges and we'll provide personalized AI automation recommendations.
+          Tell us about your business challenges and 'we', 'll provide personalized AI automation recommendations.
         </p>
       </div>
 
@@ -324,7 +324,7 @@ const AdvancedContactForm: React.FC = () => {
             onChange={handleInputChange}
             rows={4}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-            placeholder="Describe your current challengeswhat you're hoping to achieve with AI automationand any specific requirements..."
+            placeholder="Describe your current challengeswhat 'you', 're hoping to achieve with AI automationand any specific requirements..."
           />
         </div>
 
@@ -358,7 +358,7 @@ const AdvancedContactForm: React.FC = () => {
         <div className="text-center text-sm text-gray-500">
           <p>
             By submitting this formyou agree to our privacy policy and terms of service. 
-            We'll never share your information with third parties.
+            'We', 'll never share your information with third parties.
           </p>
         </div>
       </form>

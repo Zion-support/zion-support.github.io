@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Play
@@ -22,10 +22,10 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
   const [currentToolsetCurrentTool] = useState(0);
 
   const tools = [
-    { icon: Codename: 'Code Generator'color: 'from-blue-500 to-cyan-500' },
-    { icon: BarChart3name: 'Data Analyzer'color: 'from-green-500 to-emerald-500' },
-    { icon: Imagename: 'Image Generator'color: 'from-purple-500 to-pink-500' },
-    { icon: Brainame: 'AI Assistant'color: 'from-orange-500 to-red-500' }
+    { icon: Codename: 'Code 'Generator', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: BarChart3name: 'Data 'Analyzer', 'color: 'from-green-500 to-emerald-500' },
+    { icon: Imagename: 'Image 'Generator', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Brainame: 'AI 'Assistant', 'color: 'from-orange-500 to-red-500' }
   ];
 
   useEffect(() => {
@@ -50,8 +50,8 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -100 }}
-      animate={{ isVisible ? { opacity: 1y: 0 } : { opacity: 0y: -100 } }}
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
       transition={{ duration: 0.8ease: "easeOut" }}
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden"
     >

@@ -3,7 +3,7 @@
 
 import React{ useState } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -98,10 +98,10 @@ const AISuccessStoriesShowcase = () => {
   ];
 
   const metrics = [
-    { label: 'Average Efficiency Gain'value: '93.5%'icon: TrendingUp },
-    { label: 'Average Cost Reduction'value: '47.5%'icon: DollarSign },
-    { label: 'Hours Saved Monthly'value: '2,625'icon: Clock },
-    { label: 'Average Revenue Increase'value: '+$7.1M'icon: Star }
+    { label: 'Average Efficiency 'Gain', 'value: '93.5%'icon: TrendingUp },
+    { label: 'Average Cost 'Reduction', 'value: '47.5%'icon: DollarSign },
+    { label: 'Hours Saved 'Monthly', 'value: '2,625'icon: Clock },
+    { label: 'Average Revenue 'Increase', 'value: '+$7.1'M', 'icon: Star }
   ];
 
   const currentStory = successStories[activeStory];
@@ -112,8 +112,8 @@ const AISuccessStoriesShowcase = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-4"
           >
@@ -122,8 +122,8 @@ const AISuccessStoriesShowcase = () => {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
           >
@@ -132,8 +132,8 @@ const AISuccessStoriesShowcase = () => {
           </motion.h2>
           
           <motion.p
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
@@ -143,8 +143,8 @@ const AISuccessStoriesShowcase = () => {
 
         {/* Metrics Overview */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -258,8 +258,8 @@ const AISuccessStoriesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="text-center mt-16"
         >

@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Calendar
@@ -47,7 +47,7 @@ const AITrendsPredictions2025PromotionBanner = () => {
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai-trends-banner-dismissed'true');
+    localStorage.setItem('ai-trends-banner-'dismissed', 'true');
   };
 
   if (isDismissed || !isVisible) return null;
@@ -55,9 +55,9 @@ const AITrendsPredictions2025PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.6ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 border-b border-purple-400/30"
       >
@@ -78,9 +78,9 @@ const AITrendsPredictions2025PromotionBanner = () => {
                     <AnimatePresence mode="wait">
                       <motion.p
                         key={currentPrediction}
-                        initial={{ opacity: 0y: 10 }}
-                        animate={{ opacity: 1y: 0 }}
-                        exit={{ opacity: 0y: -10 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.5 }}
                         className="text-sm text-purple-200"
                       >

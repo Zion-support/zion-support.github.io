@@ -42,7 +42,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 );
 
 export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
-  ({ datatheme = 'light'maxPortfolioItems = 3 }ref) => {
+  ({ datatheme = ', 'light', 'maxPortfolioItems = 3 }ref) => {
     const portfolioItems = (data.portfolio || []).slice(0Math.max(0maxPortfolioItems));
 
     return (
@@ -118,7 +118,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
                       <div className="text-xs text-gray-600 dark:text-gray-300">
                         {(role.start || role.end) && (
                           <span>
-                            {role.start || ''}
+                            {role.start || ', '}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}

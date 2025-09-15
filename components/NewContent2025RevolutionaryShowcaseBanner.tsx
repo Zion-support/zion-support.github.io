@@ -46,7 +46,7 @@ const NewContent2025RevolutionaryShowcaseBanner = () => {
             <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent"> Revolution</span>
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Experience groundbreaking innovations that will redefine what's possible in technologybusinessand human potential.
+            Experience groundbreaking innovations that will redefine 'what', 's possible in technologybusinessand human potential.
           </p>
         </div>
 

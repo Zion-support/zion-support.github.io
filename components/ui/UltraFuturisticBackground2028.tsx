@@ -94,10 +94,10 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
 
     return () => {
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
     };
   }[]);
 

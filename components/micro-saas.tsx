@@ -1998,7 +1998,7 @@ export default function MicroSaasPage() {
                       rel="noopener noreferrer"
                       className="text-green-400 text-sm text-center hover:text-green-300 transition-colors"
                     >
-                      Visit {service.link.replace('https://'')}
+                      Visit {service.link.replace('https://', ')}
                     </a>
                   </div>
                 </div>

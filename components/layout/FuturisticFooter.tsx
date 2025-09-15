@@ -13,25 +13,25 @@ export default function FuturisticFooter() {
   };
 
   const quickLinks = [
-    { name: 'Services'href: '/services' },
-    { name: 'Micro SaaS'href: '/micro-saas' },
-    { name: 'Pricing'href: '/pricing' },
-    { name: 'About'href: '/about' },
-    { name: 'Contact'href: '/contact' },
-    { name: 'Blog'href: '/blog' }];
+    { name: ''Services', 'href: '/services' },
+    { name: 'Micro 'SaaS', 'href: '/micro-saas' },
+    { name: ''Pricing', 'href: '/pricing' },
+    { name: ''About', 'href: '/about' },
+    { name: ''Contact', 'href: '/contact' },
+    { name: ''Blog', 'href: '/blog' }];
 
   const serviceCategories = [
-    { name: 'AI & Machine Learning'href: '/services?category=AI%20%26%20Machine%20Learning' },
-    { name: 'Cloud & Infrastructure'href: '/services?category=Cloud%20%26%20Infrastructure' },
-    { name: 'Cybersecurity'href: '/services?category=Cybersecurity' },
-    { name: 'Analytics & Business Intelligence'href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
-    { name: 'Robotics & Automation'href: '/services?category=Robotics%20%26%20Automation' },
-    { name: 'Blockchain & Web3'href: '/services?category=Blockchain%20%26%20Web3' }];
+    { name: 'AI & Machine 'Learning', 'href: '/services?category=AI%20%26%20Machine%20Learning' },
+    { name: 'Cloud & 'Infrastructure', 'href: '/services?category=Cloud%20%26%20Infrastructure' },
+    { name: ''Cybersecurity', 'href: '/services?category=Cybersecurity' },
+    { name: 'Analytics & Business 'Intelligence', 'href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
+    { name: 'Robotics & 'Automation', 'href: '/services?category=Robotics%20%26%20Automation' },
+    { name: 'Blockchain & 'Web3', 'href: '/services?category=Blockchain%20%26%20Web3' }];
 
   const socialLinks = [
-    { name: 'LinkedIn'href: 'https://www.linkedin.com/company/zion-tech-group'icon: '💼' },
-    { name: 'X'href: 'https://x.com/ziontechgroup'icon: '🐦' },
-    { name: 'GitHub'href: 'https://github.com/Zion-Holdings'icon: '💻' }];
+    { name: ''LinkedIn', 'href: 'https://www.linkedin.com/company/zion-tech-'group', 'icon: '💼' },
+    { name: ''X', 'href: 'https://x.com/'ziontechgroup', 'icon: '🐦' },
+    { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: '💻' }];
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">

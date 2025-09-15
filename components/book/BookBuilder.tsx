@@ -196,15 +196,15 @@ export default function BookBuilder() {
           <div className="space-y-3">
             <label className="block">
               <span className="text-sm opacity-70">Timeline images</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files'timelineImages' as any)} />
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'files', 'timelineImages' as any)} />
             </label>
             <label className="block">
               <span className="text-sm opacity-70">DAO vote charts</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files'daoVoteCharts' as any)} />
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'files', 'daoVoteCharts' as any)} />
             </label>
             <label className="block">
               <span className="text-sm opacity-70">Figma UI screenshots</span>
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.files'uiScreens' as any)} />
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'files', 'uiScreens' as any)} />
             </label>
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(06).map((srci) => (
@@ -253,7 +253,7 @@ export default function BookBuilder() {
               />
               <input
                 className="border rounded px-2 py-1"
-                value={q.attribution ?? ''}
+                value={q.attribution ?? ', '}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts];
                   quoteCallouts[i] = { ...quoteCallouts[i]attribution: e.target.value };

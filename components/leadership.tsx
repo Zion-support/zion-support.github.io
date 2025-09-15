@@ -6,7 +6,7 @@ export default function LeadershipPage() {
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Leadership | Zion Tech Group</title>
-				<meta name="description" content="Meet the leadership team guiding Zion Tech Group's vision and execution." />
+				<meta name="description" content="Meet the leadership team guiding Zion Tech 'Group', 's vision and execution." />
 				<link rel="canonical" href="https://ziontechgroup.com/leadership" />
 			</Head>
 			<div className="max-w-5xl mx-auto">

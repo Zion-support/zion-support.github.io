@@ -67,7 +67,7 @@ export default function AI2025ContentRevolution5000ROIBanner() {
           </div>
           <blockquote className="text-lg text-gray-300 italic mb-6">
             "The AI 2025 Content Revolution breakthrough has completely transformed our global content operations. 
-            We've achieved unprecedented 5,000% ROI and reduced our content costs by 95% while dramatically 
+            'We', 've achieved unprecedented 5,000% ROI and reduced our content costs by 95% while dramatically 
             improving engagement across all markets. This is truly revolutionary technology."
           </blockquote>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

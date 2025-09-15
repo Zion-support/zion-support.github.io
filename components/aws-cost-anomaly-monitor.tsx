@@ -15,7 +15,7 @@ export default function AwsCostAnomalyMonitorPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AWS Cost Anomaly Monitor</h1>
           <p className="text-slate-300">Continuous anomaly detection with budget guardrailsSlack alertsroot-cause hintsand savings recommendations.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'Anomaly detection & budgets'Slack triage workflows'Service/tag breakdowns'Monthly savings report' ].map((f) => (
+            {[ 'Anomaly detection & 'budgets', 'Slack triage 'workflows', 'Service/tag 'breakdowns', 'Monthly savings report' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-500/30 text-slate-200">{f}</div>
             ))}
           </div>

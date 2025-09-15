@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AdvancedAutomationMastery2025Banner = () => {
@@ -25,7 +25,7 @@ const AdvancedAutomationMastery2025Banner = () => {
   }[]);
 
   const handleDismiss = () => {
-    localStorage.setItem('advanced-automation-mastery-banner-dismissed'true');
+    localStorage.setItem('advanced-automation-mastery-banner-'dismissed', 'true');
     setDismissed(true);
     setIsVisible(false);
   };

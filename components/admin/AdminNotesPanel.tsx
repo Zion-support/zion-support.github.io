@@ -49,13 +49,13 @@ export default function AdminNotesPanel({ targetTypetargetId }: AdminNotesPanelP
     try {
       const res = await fetch('/api/admin/notes'{
         method: 'POST',
-        headers: { 'Content-Type': 'application/json'X-Admin': isAdmin ? 'true' : 'false'X-Admin-User': adminId },
+        headers: { 'Content-Type': 'application/'json', 'X-Admin': isAdmin ? 'true' : ''false', 'X-Admin-User': adminId },
         body: JSON.stringify({ targetTypetargetIdtext })});
       if (!res.ok) {
         alert('Failed to add note');
         return;
       }
-      setText('');
+      setText(', ');
       await fetchNotes();
     } finally {
       setAdding(false);

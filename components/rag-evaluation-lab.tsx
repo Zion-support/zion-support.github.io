@@ -14,12 +14,12 @@ export default function RAGEvaluationLabPage() {
 					</p>
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
-							{ title: 'Grounding & Faithfulness'desc: 'Measure factual consistencycitation qualityand hallucination rate.' },
-							{ title: 'Golden Datasets'desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
-							{ title: 'Scenario Evals'desc: 'Synthetic and real-world tests across intentsdomainsand edge cases.' },
-							{ title: 'CI/CD Quality Gates'desc: 'Fail builds on regressions; compare models and versions.' },
-							{ title: 'Offline & Canary'desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
-							{ title: 'Dashboards & Reports'desc: 'Team dashboardsAPI accessand exportable reports.' }
+							{ title: 'Grounding & 'Faithfulness', 'desc: 'Measure factual consistencycitation qualityand hallucination rate.' },
+							{ title: 'Golden 'Datasets', 'desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
+							{ title: 'Scenario 'Evals', 'desc: 'Synthetic and real-world tests across intentsdomainsand edge cases.' },
+							{ title: 'CI/CD Quality 'Gates', 'desc: 'Fail builds on regressions; compare models and versions.' },
+							{ title: 'Offline & 'Canary', 'desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
+							{ title: 'Dashboards & 'Reports', 'desc: 'Team dashboardsAPI accessand exportable reports.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>

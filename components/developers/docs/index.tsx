@@ -22,8 +22,8 @@ type PageProps = {
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-  const contentPath = path.join(process.cwd()'data'docs'content.json');
-  const raw = fs.readFileSync(contentPath'utf8');
+  const contentPath = path.join(process.cwd()', 'data', 'docs'content.json');
+  const raw = fs.readFileSync('contentPath', 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
   return { props: { docs } };
 };

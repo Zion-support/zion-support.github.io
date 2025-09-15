@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -52,10 +52,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth'value: '340%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Efficiency Gain'value: '280%'icon: Zapcolor: 'text-blue-600' },
-        { label: 'Cost Reduction'value: '65%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time Saved'value: '2,400h'icon: Clockcolor: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '340%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '65%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '2,400'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     },
     {
@@ -78,10 +78,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth'value: '520%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Conversion Rate'value: '180%'icon: Targetcolor: 'text-blue-600' },
-        { label: 'Cost Reduction'value: '45%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time Saved'value: '1,800h'icon: Clockcolor: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '520%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Conversion 'Rate', 'value: '180%'icon: Targetcolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '45%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '1,800'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     },
     {
@@ -104,10 +104,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth'value: '280%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Patient Capacity'value: '320%'icon: Userscolor: 'text-blue-600' },
-        { label: 'Cost Reduction'value: '55%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time Saved'value: '3,200h'icon: Clockcolor: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '280%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Patient 'Capacity', 'value: '320%'icon: Userscolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '55%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '3,200'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     },
     {
@@ -130,19 +130,19 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth'value: '450%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Processing Speed'value: '400%'icon: Zapcolor: 'text-blue-600' },
-        { label: 'Cost Reduction'value: '70%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time Saved'value: '4,100h'icon: Clockcolor: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '450%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Processing 'Speed', 'value: '400%'icon: Zapcolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '4,100'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     }
   ];
 
   const overallStats = [
-    { number: '500+'label: 'Successful Projects'icon: CheckCircle },
-    { number: '99.9%'label: 'Client Satisfaction'icon: Star },
-    { number: '350%'label: 'Average ROI'icon: TrendingUp },
-    { number: '50+'label: 'Countries Served'icon: Globe }
+    { number: '500+'label: 'Successful 'Projects', 'icon: CheckCircle },
+    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Star },
+    { number: '350%'label: 'Average 'ROI', 'icon: TrendingUp },
+    { number: '50+'label: 'Countries 'Served', 'icon: Globe }
   ];
 
   if (!isVisible) return null;
@@ -157,8 +157,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -172,8 +172,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
@@ -190,8 +190,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* Success Stories Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -214,9 +214,9 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStory}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
             className="bg-white rounded-3xl p-8 shadow-xl mb-16"
           >
@@ -278,8 +278,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* Results Summary */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
         >
@@ -312,8 +312,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >

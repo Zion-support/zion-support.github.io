@@ -135,8 +135,8 @@ export default function AIConsciousnessEvolution2025() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
@@ -166,15 +166,15 @@ export default function AIConsciousnessEvolution2025() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               {[
-                { label: 'Success Rate'value: '94%'icon: <Award className="w-8 h-8" /> },
-                { label: 'Active Users'value: '12.5K+'icon: <Users className="w-8 h-8" /> },
-                { label: 'Improvement'value: '300%'icon: <TrendingUp className="w-8 h-8" /> },
-                { label: 'Satisfaction'value: '4.9/5'icon: <Star className="w-8 h-8" /> }
+                { label: 'Success 'Rate', 'value: '94%'icon: <Award className="w-8 h-8" /> },
+                { label: 'Active 'Users', 'value: '12.5K+'icon: <Users className="w-8 h-8" /> },
+                { label: ''Improvement', 'value: '300%'icon: <TrendingUp className="w-8 h-8" /> },
+                { label: ''Satisfaction', 'value: '4.9/5'icon: <Star className="w-8 h-8" /> }
               ].map((statindex) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: 0.4 + index * 0.1 }}
                   className="text-center"
                 >
@@ -214,8 +214,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -234,8 +234,8 @@ export default function AIConsciousnessEvolution2025() {
             {features.map((featureindex) => (
               <motion.div
                 key={feature}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
@@ -259,8 +259,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -298,8 +298,8 @@ export default function AIConsciousnessEvolution2025() {
             ].map((stepindex) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className="text-center"
@@ -325,8 +325,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -345,8 +345,8 @@ export default function AIConsciousnessEvolution2025() {
             {useCases.map((useCaseindex) => (
               <motion.div
                 key={useCase}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300"
@@ -370,8 +370,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -410,8 +410,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -429,8 +429,8 @@ export default function AIConsciousnessEvolution2025() {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={testimonial.name}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6"
@@ -459,8 +459,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -525,8 +525,8 @@ export default function AIConsciousnessEvolution2025() {
             ].map((planindex) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
@@ -578,8 +578,8 @@ export default function AIConsciousnessEvolution2025() {
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -604,14 +604,14 @@ export default function AIConsciousnessEvolution2025() {
             {/* Contact Info */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { icon: <Phone className="w-6 h-6" />label: 'Call Us'value: contactInfo.mobile },
-                { icon: <Mail className="w-6 h-6" />label: 'Email Us'value: contactInfo.email },
-                { icon: <MapPin className="w-6 h-6" />label: 'Visit Us'value: contactInfo.address }
+                { icon: <Phone className="w-6 h-6" />label: 'Call 'Us', 'value: contactInfo.mobile },
+                { icon: <Mail className="w-6 h-6" />label: 'Email 'Us', 'value: contactInfo.email },
+                { icon: <MapPin className="w-6 h-6" />label: 'Visit 'Us', 'value: contactInfo.address }
               ].map((contactindex) => (
                 <motion.div
                   key={contact.label}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center"

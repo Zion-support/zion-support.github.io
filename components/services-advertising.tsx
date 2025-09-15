@@ -2,7 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 
 const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://'')}</a>
+	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', ')}</a>
 );
 
 export default function ServicesAdvertisingPage() {
@@ -69,15 +69,15 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: 'LLM Gateway & Cost Control'price: '$299/mo'href: '/llm-gateway' },
-                { name: 'API Observability Starter'price: '$149/mo'href: '/api-observability-starter' },
-                { name: 'Cloud Cost Optimizer'price: '$399/mo'href: '/cloud-cost-optimizer' },
-                { name: 'SOC 2 Evidence Automation'price: '$499/mo'href: '/soc2-evidence-automation' },
-                { name: 'Vector Search Starter'price: '$249/mo'href: '/vector-search-starter' },
-                { name: 'TLS Certificate Monitor'price: '$49/mo'href: '/tls-certificate-monitor' },
-                { name: 'Affiliate Marketing Tracking Suite'price: '$149/mo'href: '/services/affiliate-marketing-tracking-suite' },
-                { name: 'SMB Website Analytics Dashboard'price: '$29/mo'href: '/services/smb-website-analytics-dashboard' },
-                { name: 'Customer Support Helpdesk Pro'price: '$79/mo'href: '/services/customer-support-helpdesk-pro' }
+                { name: 'LLM Gateway & Cost 'Control', 'price: '$299/'mo', 'href: '/llm-gateway' },
+                { name: 'API Observability 'Starter', 'price: '$149/'mo', 'href: '/api-observability-starter' },
+                { name: 'Cloud Cost 'Optimizer', 'price: '$399/'mo', 'href: '/cloud-cost-optimizer' },
+                { name: 'SOC 2 Evidence 'Automation', 'price: '$499/'mo', 'href: '/soc2-evidence-automation' },
+                { name: 'Vector Search 'Starter', 'price: '$249/'mo', 'href: '/vector-search-starter' },
+                { name: 'TLS Certificate 'Monitor', 'price: '$49/'mo', 'href: '/tls-certificate-monitor' },
+                { name: 'Affiliate Marketing Tracking 'Suite', 'price: '$149/'mo', 'href: '/services/affiliate-marketing-tracking-suite' },
+                { name: 'SMB Website Analytics 'Dashboard', 'price: '$29/'mo', 'href: '/services/smb-website-analytics-dashboard' },
+                { name: 'Customer Support Helpdesk 'Pro', 'price: '$79/'mo', 'href: '/services/customer-support-helpdesk-pro' }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>

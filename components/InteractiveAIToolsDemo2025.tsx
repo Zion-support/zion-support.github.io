@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -61,7 +61,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 2.3,
       accuracy: 96,
-      features: ['Natural Language'Multiple Languages'Style Adaptation'SEO Optimized']
+      features: ['Natural 'Language', 'Multiple 'Languages', 'Style 'Adaptation', 'SEO Optimized']
     },
     {
       id: 'image-generator',
@@ -74,7 +74,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 4.7,
       accuracy: 94,
-      features: ['High Resolution'Multiple Styles'Custom Prompts'Batch Generation']
+      features: ['High 'Resolution', 'Multiple 'Styles', 'Custom 'Prompts', 'Batch Generation']
     },
     {
       id: 'code-assistant',
@@ -87,7 +87,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 1.8,
       accuracy: 98,
-      features: ['Multi-Language'Error Detection'Optimization'Documentation']
+      features: ['Multi-'Language', 'Error 'Detection', 'Optimization'Documentation']
     },
     {
       id: 'data-analyzer',
@@ -100,7 +100,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 3.2,
       accuracy: 97,
-      features: ['Pattern Recognition'Predictive Analysis'Visualization'Export Options']
+      features: ['Pattern 'Recognition', 'Predictive 'Analysis', 'Visualization'Export Options']
     },
     {
       id: 'video-generator',
@@ -113,7 +113,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 8.5,
       accuracy: 92,
-      features: ['Multiple Formats'Custom Duration'Voice Synthesis'Visual Effects']
+      features: ['Multiple 'Formats', 'Custom 'Duration', 'Voice 'Synthesis', 'Visual Effects']
     },
     {
       id: 'music-composer',
@@ -126,7 +126,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       output: '',
       processingTime: 5.1,
       accuracy: 89,
-      features: ['Genre Selection'Custom Instruments'Mood Setting'Export Options']
+      features: ['Genre 'Selection', 'Custom 'Instruments', 'Mood 'Setting', 'Export Options']
     }
   ];
 
@@ -144,7 +144,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
 
 Dear Valued Customer,
 
-I'm thrilled to announce the launch of our groundbreaking AI platform that will transform how you approach business automation. This innovative solution combines cutting-edge machine learning with intuitive design to deliver unprecedented efficiency gains.
+'I', 'm thrilled to announce the launch of our groundbreaking AI platform that will transform how you approach business automation. This innovative solution combines cutting-edge machine learning with intuitive design to deliver unprecedented efficiency gains.
 
 Key features include:
 • Advanced predictive analytics
@@ -152,13 +152,13 @@ Key features include:
 • 24/7 intelligent monitoring
 • Customizable automation workflows
 
-We're offering an exclusive early-bird discount of 30% for the first 100 customers. Don't miss this opportunity to stay ahead of the competition.
+'We', 're offering an exclusive early-bird discount of 30% for the first 100 customers. 'Don', 't miss this opportunity to stay ahead of the competition.
 
 Best regards,
 [Your Name]
 Product Launch Team`,
     'image-generator': 'Generated: A stunning futuristic cityscape featuring towering glass buildings with neon lightsflying cars zipping through the skyand a beautiful sunset casting golden light across the scene.',
-    'code-assistant': `import React{ useStateuseEffect } from 'react';
+    'code-assistant': `import React, { useState, useEffect } from 'react';
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
 import { BarChartBarXAxisYAxisCartesianGridTooltip } from 'recharts';
 
@@ -258,7 +258,7 @@ Recommendations:
   };
 
   const handleReset = () => {
-    setInputText('');
+    setInputText(', ');
     setResults(prev => {
       const newResults = { ...prev };
       delete newResults[selectedTool];
@@ -287,8 +287,8 @@ Recommendations:
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0y: -20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div className="flex items-center justify-center mb-6">
@@ -317,7 +317,7 @@ Recommendations:
                     key={tool.id}
                     onClick={() => {
                       setSelectedTool(tool.id);
-                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || '');
+                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || ', ');
                     }}
                     className={`w-full p-4 rounded-lg text-left transition-all duration-300 ${
                       selectedTool === tool.id
@@ -454,8 +454,8 @@ Recommendations:
                 <div className="bg-slate-800 rounded-lg p-6 min-h-[200px] border border-white/10">
                   {results[selectedTool] ? (
                     <motion.div
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       className="text-gray-300 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
@@ -487,8 +487,8 @@ Recommendations:
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-20"
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
         >
           <h3 className="text-3xl font-bold text-white mb-4">

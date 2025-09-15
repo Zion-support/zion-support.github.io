@@ -26,7 +26,7 @@ const AI2026FutureVisionBanner = () => {
           
           <p className="text-2xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed text-gray-200">
             Step into the future with revolutionary AI technologies that will transform every aspect of human life. 
-            Experience tomorrow's innovations today.
+            Experience 'tomorrow', 's innovations today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">

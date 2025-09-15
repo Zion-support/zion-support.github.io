@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -32,7 +32,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       title: 'Quantum-AI Fusion Technology',
       description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power',
       icon: Brain,
-      features: ['1000x faster processing'Quantum neural networks'Breakthrough algorithms'],
+      features: ['1000x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'],
       impact: 'Transform entire industries',
       color: 'from-purple-600 to-blue-600'
     },
@@ -41,7 +41,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       title: 'Neural Interface Revolution',
       description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',
       icon: Network,
-      features: ['Real-time thought processing'Enhanced cognitive abilities'Seamless integration'],
+      features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'],
       impact: 'Redefine human potential',
       color: 'from-blue-600 to-cyan-600'
     },
@@ -50,7 +50,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       title: 'Autonomous Business Systems',
       description: 'Self-managing AI systems that operate independently while maintaining peak performance',
       icon: Cpu,
-      features: ['Self-optimization'Predictive maintenance'Adaptive learning'],
+      features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'],
       impact: 'Revolutionize business operations',
       color: 'from-green-600 to-emerald-600'
     },
@@ -59,17 +59,17 @@ const NextGenAIInnovationShowcase2025 = () => {
       title: 'Conscious AI Framework',
       description: 'Advanced AI systems with genuine understanding and emotional intelligence',
       icon: Lightbulb,
-      features: ['Emotional intelligence'Contextual understanding'Ethical decision making'],
+      features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'],
       impact: 'Create truly intelligent systems',
       color: 'from-orange-600 to-red-600'
     }
   ];
 
   const stats = [
-    { number: '500%'label: 'Performance Increase'icon: TrendingUp },
-    { number: '99.9%'label: 'Accuracy Rate'icon: Target },
-    { number: '10x'label: 'Faster Deployment'icon: Rocket },
-    { number: '24/7'label: 'Autonomous Operation'icon: Globe }
+    { number: '500%'label: 'Performance 'Increase', 'icon: TrendingUp },
+    { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target },
+    { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket },
+    { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe }
   ];
 
   const testimonials = [
@@ -108,8 +108,8 @@ const NextGenAIInnovationShowcase2025 = () => {
         
         <div className="relative z-10 container mx-auto px-6 py-20">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -162,8 +162,8 @@ const NextGenAIInnovationShowcase2025 = () => {
             {stats.map((statindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
@@ -182,8 +182,8 @@ const NextGenAIInnovationShowcase2025 = () => {
       <div className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -252,8 +252,8 @@ const NextGenAIInnovationShowcase2025 = () => {
                     
                     {isPlaying && (
                       <motion.div
-                        initial={{ opacity: 0y: 20 }}
-                        animate={{ opacity: 1y: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="space-y-3"
                       >
                         {innovations[activeFeature].features.map((featureidx) => (
@@ -286,8 +286,8 @@ const NextGenAIInnovationShowcase2025 = () => {
       <div className="py-20 bg-black/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
@@ -298,8 +298,8 @@ const NextGenAIInnovationShowcase2025 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
               >
@@ -323,8 +323,8 @@ const NextGenAIInnovationShowcase2025 = () => {
       <div className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

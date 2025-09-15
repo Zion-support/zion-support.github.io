@@ -34,8 +34,8 @@ export default function ToolComparisonPage() {
       rating: 4.8,
       users: '100M+',
       bestFor: 'Content creatorsdevelopersresearchers',
-      pros: ['Powerful capabilities'Easy to use'Regular updates'Good free tier'],
-      cons: ['Sometimes inaccurate'Limited context'Privacy concerns'],
+      pros: ['Powerful 'capabilities', 'Easy to 'use', 'Regular 'updates', 'Good free tier'],
+      cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'],
       website: 'https://chat.openai.com',
       icon: <Brain className="w-6 h-6" />,
       color: 'text-green-400'
@@ -47,8 +47,8 @@ export default function ToolComparisonPage() {
       rating: 4.7,
       users: '1M+',
       bestFor: 'Designersmarketerscontent creators',
-      pros: ['High-quality output'Creative control'Commercial rights'Active community'],
-      cons: ['Discord-only interface'Limited customization'Monthly subscription'],
+      pros: ['High-quality 'output', 'Creative 'control', 'Commercial 'rights', 'Active community'],
+      cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'],
       website: 'https://midjourney.com',
       icon: <Zap className="w-6 h-6" />,
       color: 'text-purple-400'
@@ -60,8 +60,8 @@ export default function ToolComparisonPage() {
       rating: 4.6,
       users: '100K+',
       bestFor: 'Marketing teamscontent creatorsbusinesses',
-      pros: ['Specialized for marketing'Brand voice training'SEO optimization'Team features'],
-      cons: ['Expensive'Limited free trial'Can be repetitive'],
+      pros: ['Specialized for 'marketing', 'Brand voice 'training', 'SEO 'optimization', 'Team features'],
+      cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'],
       website: 'https://jasper.ai',
       icon: <Brain className="w-6 h-6" />,
       color: 'text-blue-400'
@@ -74,8 +74,8 @@ export default function ToolComparisonPage() {
       rating: 4.8,
       users: '2M+',
       bestFor: 'Businesses looking to automate workflows',
-      pros: ['Easy to use'Extensive integrations'Reliable'Great support'],
-      cons: ['Can get expensive'Limited customization'],
+      pros: ['Easy to 'use', 'Extensive 'integrations', 'Reliable'Great support'],
+      cons: ['Can get 'expensive', 'Limited customization'],
       website: 'https://zapier.com',
       icon: <Zap className="w-6 h-6" />,
       color: 'text-orange-400'
@@ -87,8 +87,8 @@ export default function ToolComparisonPage() {
       rating: 4.7,
       users: '20M+',
       bestFor: 'Teams that need flexible workspace',
-      pros: ['Highly flexible'Beautiful interface'Great templates'Free tier'],
-      cons: ['Learning curve'Limited offline access'Can be overwhelming'],
+      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'],
+      cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'],
       website: 'https://notion.so',
       icon: <Globe className="w-6 h-6" />,
       color: 'text-gray-400'
@@ -100,8 +100,8 @@ export default function ToolComparisonPage() {
       rating: 4.9,
       users: '1M+',
       bestFor: 'Online businessesSaaS companiese-commerce',
-      pros: ['Developer-friendly'Global reach'Excellent docs'Reliable'],
-      cons: ['Higher fees than some alternatives'Complex for beginners'Strict requirements'],
+      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'],
+      cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'],
       website: 'https://stripe.com',
       icon: <DollarSign className="w-6 h-6" />,
       color: 'text-blue-400'
@@ -114,8 +114,8 @@ export default function ToolComparisonPage() {
       rating: 4.7,
       users: '135K+',
       bestFor: 'B2B startupsSaaS companiesmarketing teams',
-      pros: ['Free tier'All-in-one solution'Great for beginners'Excellent support'],
-      cons: ['Can get expensive'Complex for small teams'Limited customization'],
+      pros: ['Free 'tier', 'All-in-one 'solution', 'Great for 'beginners', 'Excellent support'],
+      cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'],
       website: 'https://hubspot.com',
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'text-orange-400'
@@ -127,8 +127,8 @@ export default function ToolComparisonPage() {
       rating: 4.5,
       users: '12M+',
       bestFor: 'E-commercecontent creatorsmall businesses',
-      pros: ['Free tier'Easy to use'Good templates'Affordable'],
-      cons: ['Limited free features'Basic automation'Can be expensive'],
+      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
+      cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'],
       website: 'https://mailchimp.com',
       icon: <Users className="w-6 h-6" />,
       color: 'text-yellow-400'
@@ -140,15 +140,15 @@ export default function ToolComparisonPage() {
       rating: 4.8,
       users: '10M+',
       bestFor: 'Sales teamsconsultantsremote teams',
-      pros: ['Free tier'Easy integration'Professional appearance'Time-saving'],
-      cons: ['Limited free features'Basic customization'Can be expensive'],
+      pros: ['Free 'tier', 'Easy 'integration', 'Professional 'appearance', 'Time-saving'],
+      cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'],
       website: 'https://calendly.com',
       icon: <Globe className="w-6 h-6" />,
       color: 'text-blue-400'
     }
   ];
 
-  const categories = ['All'AI Assistant'AI Art'AI Writing'Automation'Productivity'Payments'Marketing & Sales'Email Marketing'];
+  const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'Automation', 'Productivity', 'Payments'Marketing & 'Sales', 'Email Marketing'];
 
   const filteredTools = allTools.filter(tool => {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -163,7 +163,7 @@ export default function ToolComparisonPage() {
       case 'rating':
         return b.rating - a.rating;
       case 'users':
-        return parseInt(b.users.replace(/[^0-9]/g'')) - parseInt(a.users.replace(/[^0-9]/g''));
+        return parseInt(b.users.replace(/[^0-9]/g', ')) - parseInt(a.users.replace(/[^0-9]/g', '));
       case 'name':
         return a.name.localeCompare(b.name);
       default:
@@ -419,7 +419,7 @@ export default function ToolComparisonPage() {
               Detailed Analysis
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Deep dive into each tool's prosconsand use cases to make the best decision for your business.
+              Deep dive into each 'tool', 's prosconsand use cases to make the best decision for your business.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 /**
  * Enhanced UI Components Library
@@ -30,7 +30,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
   loading = false,
   disabled = false,
   onClick,
-  className = ''
+  className = ', '
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
@@ -54,8 +54,8 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
       disabled={disabled || loading}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      initial={{ opacity: 0y: 20 }}
-      animate={{ opacity: 1y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
     >
       <AnimatePresence mode="wait">
@@ -94,13 +94,13 @@ interface CardProps {
 export const EnhancedCard: React.FC<CardProps> = ({
   children,
   hover = true,
-  className = ''
+  className = ', '
 }) => {
   return (
     <motion.div
       className={`bg-white rounded-xl shadow-lg border border-gray-200 p-6 ${className}`}
-      initial={{ opacity: 0y: 20 }}
-      animate={{ opacity: 1y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       whileHover={hover ? { y: -5shadow: "0 20px 25px -5px rgba(00.1)" } : {}}
     >
@@ -178,9 +178,9 @@ export const EnhancedModal: React.FC<ModalProps> = ({
           <div className="fixed inset-0 bg-black bg-opacity-50" />
           <motion.div
             className="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
-            initial={{ scale: 0.9opacity: 0 }}
-            animate={{ scale: 1opacity: 1 }}
-            exit={{ scale: 0.9opacity: 0 }}
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
@@ -211,7 +211,7 @@ interface ProgressBarProps {
 
 export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
   progress,
-  className = ''
+  className = ', '
 }) => {
   return (
     <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>

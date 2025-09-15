@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const NextGenInnovationShowcase2025: React.FC = () => {
@@ -16,7 +16,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'AI-Powered Analytics',
       icon: '📊',
       description: 'Advanced machine learning algorithms for predictive insights',
-      features: ['Real-time Analysis'Predictive Modeling'Automated Insights'],
+      features: ['Real-time 'Analysis', 'Predictive 'Modeling', 'Automated Insights'],
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
@@ -24,7 +24,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Quantum Computing',
       icon: '⚛️',
       description: 'Revolutionary computing power for complex problem solving',
-      features: ['Quantum Algorithms'Optimization'Cryptography'],
+      features: ['Quantum 'Algorithms', 'Optimization'Cryptography'],
       gradient: 'from-purple-500 to-pink-500'
     },
     {
@@ -32,7 +32,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Neural Interfaces',
       icon: '🧠',
       description: 'Direct brain-computer interaction technologies',
-      features: ['BCI Systems'Cognitive Enhancement'Mind Control'],
+      features: ['BCI 'Systems', 'Cognitive 'Enhancement', 'Mind Control'],
       gradient: 'from-green-500 to-teal-500'
     },
     {
@@ -40,7 +40,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Blockchain Solutions',
       icon: '⛓️',
       description: 'Securedecentralized systems for modern applications',
-      features: ['Smart Contracts'DeFi'NFT Integration'],
+      features: ['Smart 'Contracts', 'DeFi'NFT Integration'],
       gradient: 'from-orange-500 to-red-500'
     },
     {
@@ -48,7 +48,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'IoT Networks',
       icon: '🌐',
       description: 'Connected devices creating smart ecosystems',
-      features: ['Sensor Networks'Edge Computing'Real-time Monitoring'],
+      features: ['Sensor 'Networks', 'Edge 'Computing', 'Real-time Monitoring'],
       gradient: 'from-indigo-500 to-purple-500'
     },
     {
@@ -56,7 +56,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Robotic Automation',
       icon: '🤖',
       description: 'Intelligent robots transforming industries',
-      features: ['Industrial Robots'Service Bots'Autonomous Systems'],
+      features: ['Industrial 'Robots', 'Service 'Bots', 'Autonomous Systems'],
       gradient: 'from-pink-500 to-rose-500'
     }
   ];

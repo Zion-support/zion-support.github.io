@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Rocket
@@ -79,7 +79,7 @@ const RevolutionaryContentBanner2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -165,8 +165,8 @@ const RevolutionaryContentBanner2025 = () => {
                   <div className="text-white">
                     <motion.div
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6"
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}
                     >
                       <slides[currentSlide].icon className="w-5 h-5" />
@@ -175,8 +175,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.h2
                       className="text-4xl md:text-6xl font-bold mb-6"
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
                     >
                       {slides[currentSlide].title}
@@ -184,8 +184,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.p
                       className="text-xl text-white/90 mb-8 leading-relaxed"
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
                     >
                       {slides[currentSlide].description}
@@ -193,8 +193,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.div
                       className="space-y-3 mb-8"
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5 }}
                     >
                       {slides[currentSlide].features.map((featureidx) => (
@@ -207,8 +207,8 @@ const RevolutionaryContentBanner2025 = () => {
                     
                     <motion.div
                       className="flex flex-col sm:flex-row gap-4"
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6 }}
                     >
                       <motion.button

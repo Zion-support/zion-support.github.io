@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MenuXChevronDownSearchUser
   SettingsLogOutBellGlobeZap
@@ -11,7 +11,7 @@ interface EnhancedNavigationProps {
   className?: string;
 }
 
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' }) => {
+const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = ', ' }) => {
   const [isOpensetIsOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(false);
   const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
@@ -21,8 +21,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   const navigationItems = [
@@ -31,29 +31,29 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       href: '/services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI & Machine Learning'href: '/services?category=ai-ml'icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum Computing'href: '/services?category=quantum'icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Space Technology'href: '/services?category=space'icon: <Globe className="w-4 h-4" /> },
-        { name: 'Biotech & Healthcare'href: '/services?category=biotech'icon: <Dna className="w-4 h-4" /> },
-        { name: 'Financial Services'href: '/services?category=finance'icon: <DollarSign className="w-4 h-4" /> },
-        { name: 'Cybersecurity'href: '/services?category=security'icon: <Lock className="w-4 h-4" /> },
-        { name: 'IoT & Smart Devices'href: '/services?category=iot'icon: <Wifi className="w-4 h-4" /> },
-        { name: 'Logistics & Supply Chain'href: '/services?category=logistics'icon: <Truck className="w-4 h-4" /> },
-        { name: 'Metaverse & Gaming'href: '/services?category=metaverse'icon: <Gamepad2 className="w-4 h-4" /> },
-        { name: 'Robotics & Automation'href: '/services?category=robotics'icon: <Bot className="w-4 h-4" /> },
-        { name: 'Manufacturing'href: '/services?category=manufacturing'icon: <Factory className="w-4 h-4" /> },
-        { name: 'Autonomous Vehicles'href: '/services?category=vehicles'icon: <Car className="w-4 h-4" /> }
+        { name: 'AI & Machine 'Learning', 'href: '/services?category=ai-'ml', 'icon: <Brain className="w-4 h-4" /> },
+        { name: 'Quantum 'Computing', 'href: '/services?category='quantum', 'icon: <Rocket className="w-4 h-4" /> },
+        { name: 'Space 'Technology', 'href: '/services?category='space', 'icon: <Globe className="w-4 h-4" /> },
+        { name: 'Biotech & 'Healthcare', 'href: '/services?category='biotech', 'icon: <Dna className="w-4 h-4" /> },
+        { name: 'Financial 'Services', 'href: '/services?category='finance', 'icon: <DollarSign className="w-4 h-4" /> },
+        { name: ''Cybersecurity', 'href: '/services?category='security', 'icon: <Lock className="w-4 h-4" /> },
+        { name: 'IoT & Smart 'Devices', 'href: '/services?category='iot', 'icon: <Wifi className="w-4 h-4" /> },
+        { name: 'Logistics & Supply 'Chain', 'href: '/services?category='logistics', 'icon: <Truck className="w-4 h-4" /> },
+        { name: 'Metaverse & 'Gaming', 'href: '/services?category='metaverse', 'icon: <Gamepad2 className="w-4 h-4" /> },
+        { name: 'Robotics & 'Automation', 'href: '/services?category='robotics', 'icon: <Bot className="w-4 h-4" /> },
+        { name: ''Manufacturing', 'href: '/services?category='manufacturing', 'icon: <Factory className="w-4 h-4" /> },
+        { name: 'Autonomous 'Vehicles', 'href: '/services?category='vehicles', 'icon: <Car className="w-4 h-4" /> }
       hasDropdown: true,
       dropdownItems: [
-        { name: 'AI & Machine Learning'href: '/services?category=ai-ml' },
-        { name: 'Quantum Computing'href: '/services?category=quantum' },
-        { name: 'Space Technology'href: '/services?category=space' },
-        { name: 'Biotech & Healthcare'href: '/services?category=biotech' },
-        { name: 'Financial Services'href: '/services?category=finance' },
-        { name: 'Cybersecurity'href: '/services?category=security' },
-        { name: 'Edge Computing'href: '/services?category=edge' },
-        { name: 'Blockchain'href: '/services?category=blockchain' },
-        { name: 'View All Services'href: '/services' }
+        { name: 'AI & Machine 'Learning', 'href: '/services?category=ai-ml' },
+        { name: 'Quantum 'Computing', 'href: '/services?category=quantum' },
+        { name: 'Space 'Technology', 'href: '/services?category=space' },
+        { name: 'Biotech & 'Healthcare', 'href: '/services?category=biotech' },
+        { name: 'Financial 'Services', 'href: '/services?category=finance' },
+        { name: ''Cybersecurity', 'href: '/services?category=security' },
+        { name: 'Edge 'Computing', 'href: '/services?category=edge' },
+        { name: ''Blockchain', 'href: '/services?category=blockchain' },
+        { name: 'View All 'Services', 'href: '/services' }
       ]
     },
     {
@@ -61,17 +61,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       href: '/solutions',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Enterprise Solutions'href: '/solutions?type=enterprise' },
-        { name: 'Startup Solutions'href: '/solutions?type=startup' },
-        { name: 'Government Solutions'href: '/solutions?type=government' },
-        { name: 'Healthcare Solutions'href: '/solutions?type=healthcare' },
-        { name: 'Financial Solutions'href: '/solutions?type=financial' }
+        { name: 'Enterprise 'Solutions', 'href: '/solutions?type=enterprise' },
+        { name: 'Startup 'Solutions', 'href: '/solutions?type=startup' },
+        { name: 'Government 'Solutions', 'href: '/solutions?type=government' },
+        { name: 'Healthcare 'Solutions', 'href: '/solutions?type=healthcare' },
+        { name: 'Financial 'Solutions', 'href: '/solutions?type=financial' }
       ]
     },
-    { name: 'Pricing'href: '/pricing' },
-    { name: 'Resources'href: '/resources' },
-    { name: 'Blog'href: '/blog' },
-    { name: 'Contact'href: '/contact' }
+    { name: ''Pricing', 'href: '/pricing' },
+    { name: ''Resources', 'href: '/resources' },
+    { name: ''Blog', 'href: '/blog' },
+    { name: ''Contact', 'href: '/contact' }
   ];
 
   const contactInfo = {
@@ -117,8 +117,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
             {navigationItems.map((itemindex) => (
               <motion.div
                 key={item.name}
-                initial={{ opacity: 0y: -20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className="relative"
                 onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
@@ -136,9 +136,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0y: 10scale: 0.95 }}
-                          animate={{ opacity: 1y: 0scale: 1 }}
-                          exit={{ opacity: 0y: 10scale: 0.95 }}
+                          initial={{ opacity: 0, y: 10scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0scale: 1 }}
+                          exit={{ opacity: 0, y: 10scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
                         >

@@ -1,7 +1,7 @@
 "use client";
 import React{ useState } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BrainShieldRocketCpuDatabaseAtomUsers
   CheckCircleTrendingUpClockStarFilterChevronDown
@@ -51,7 +51,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Improved operational efficiency',
         'Data-driven insights'
       ],
-      technologies: ['TensorFlow'PyTorch'OpenAI'Hugging Face'AWS SageMaker'],
+      technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'Hugging 'Face', 'AWS SageMaker'],
       href: '/services/ai'
     },
     {
@@ -74,7 +74,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Reduced operational costs',
         'Enhanced security'
       ],
-      technologies: ['AWS'Azure'Google Cloud'Kubernetes'Docker'],
+      technologies: [', 'AWS', 'Azure'Google 'Cloud', 'Kubernetes'Docker'],
       href: '/services/cloud'
     },
     {
@@ -97,7 +97,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         '24/7 threat monitoring',
         'Reduced security risks'
       ],
-      technologies: ['SIEM'SOAR'EDR'XDR'Zero Trust'],
+      technologies: [', 'SIEM', 'SOAR', 'EDR', 'XDR'Zero Trust'],
       href: '/services/security'
     },
     {
@@ -120,7 +120,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Future-ready technology',
         'Competitive advantage'
       ],
-      technologies: ['Qiskit'Cirq'PennyLane'IBM Quantum'Google Quantum'],
+      technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'IBM 'Quantum', 'Google Quantum'],
       href: '/services/quantum'
     }
   ];
@@ -137,8 +137,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -311,8 +311,8 @@ const EnhancedServicesShowcase: React.FC = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >

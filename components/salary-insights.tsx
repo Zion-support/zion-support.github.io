@@ -104,9 +104,9 @@ export default function SalaryInsightsPage() {
     const lower = Math.max(0median - min);
     const upper = Math.max(0max - median);
     return [
-      { label: 'Below Median'value: lower || 1 },
-      { label: 'Median'value: median || 1 },
-      { label: 'Above Median'value: upper || 1 }];
+      { label: 'Below 'Median', 'value: lower || 1 },
+      { label: ''Median', 'value: median || 1 },
+      { label: 'Above 'Median', 'value: upper || 1 }];
   }[data]);
 
   return (

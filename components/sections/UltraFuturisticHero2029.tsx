@@ -5,19 +5,19 @@ import Link from 'next/link';
 
 export default function UltraFuturisticHero2029() {
   const features = [
-    { icon: Braintext: 'AI Consciousness Evolution'color: 'from-violet-500 to-purple-600' },
-    { icon: Atomtext: 'Quantum Computing Solutions'color: 'from-blue-500 to-cyan-600' },
-    { icon: Rocketext: 'Space Technology Innovation'color: 'from-emerald-500 to-teal-600' },
-    { icon: Targetext: 'Micro SAAS Excellence'color: 'from-orange-500 to-red-600' },
-    { icon: Shieldtext: 'Enterprise Security'color: 'from-indigo-500 to-blue-600' },
-    { icon: Cputext: 'Autonomous IT Operations'color: 'from-cyan-500 to-teal-600' }
+    { icon: Braintext: 'AI Consciousness 'Evolution', 'color: 'from-violet-500 to-purple-600' },
+    { icon: Atomtext: 'Quantum Computing 'Solutions', 'color: 'from-blue-500 to-cyan-600' },
+    { icon: Rocketext: 'Space Technology 'Innovation', 'color: 'from-emerald-500 to-teal-600' },
+    { icon: Targetext: 'Micro SAAS 'Excellence', 'color: 'from-orange-500 to-red-600' },
+    { icon: Shieldtext: 'Enterprise 'Security', 'color: 'from-indigo-500 to-blue-600' },
+    { icon: Cputext: 'Autonomous IT 'Operations', 'color: 'from-cyan-500 to-teal-600' }
   ];
 
   const stats = [
-    { number: '500+'label: 'Innovative Services'icon: Sparkles },
-    { number: '$2.5B+'label: 'Market Opportunity'icon: TrendingUp },
-    { number: '99.9%'label: 'Success Rate'icon: Star },
-    { number: '24/7'label: 'AI Operations'icon: Zap }
+    { number: '500+'label: 'Innovative 'Services', 'icon: Sparkles },
+    { number: '$2.5B+'label: 'Market 'Opportunity', 'icon: TrendingUp },
+    { number: '99.9%'label: 'Success 'Rate', 'icon: Star },
+    { number: '24/7'label: 'AI 'Operations', 'icon: Zap }
   ];
 
   return (
@@ -63,8 +63,8 @@ export default function UltraFuturisticHero2029() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
@@ -83,15 +83,15 @@ export default function UltraFuturisticHero2029() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with Zion Tech Group's revolutionary 2029 services. 
-            From AI consciousness evolution to quantum space miningwe're building tomorrow's solutions today.
+            Experience the future of technology with Zion Tech 'Group', 's revolutionary 2029 services. 
+            From AI consciousness evolution to quantum space 'miningwe', 're building 'tomorrow', 's solutions today.
           </p>
         </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
@@ -114,8 +114,8 @@ export default function UltraFuturisticHero2029() {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
@@ -139,8 +139,8 @@ export default function UltraFuturisticHero2029() {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
         >

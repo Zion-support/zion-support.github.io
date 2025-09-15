@@ -77,10 +77,10 @@ const EnhancedTestimonialsSection: React.FC = () => {
   ];
 
   const stats = [
-    { number: '500+'label: 'Projects Delivered'icon: CheckCircle },
-    { number: '50+'label: 'Enterprise Clients'icon: Users },
-    { number: '99.9%'label: 'Client Satisfaction'icon: Award },
-    { number: '4.9/5'label: 'Average Rating'icon: Star }
+    { number: '500+'label: 'Projects 'Delivered', 'icon: CheckCircle },
+    { number: '50+'label: 'Enterprise 'Clients', 'icon: Users },
+    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Award },
+    { number: '4.9/5'label: 'Average 'Rating', 'icon: Star }
   ];
 
   const renderStars = (rating: number) => {
@@ -186,7 +186,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Experience the same transformative results that our clients have achieved. 
-              Let's discuss how Zion Tech Group can accelerate your innovation journey.
+              'Let', 's discuss how Zion Tech Group can accelerate your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

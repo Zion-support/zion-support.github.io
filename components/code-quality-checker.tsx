@@ -37,12 +37,12 @@ export default function CodeQualityCheckerPage() {
       gradient: 'from-purple-400 to-indigo-500'}];
 
   const supportedLanguages = [
-    { name: 'JavaScript/TypeScript'icon: '⚡'features: ['ESLint rules'TypeScript checks'React best practices'] },
-    { name: 'Python'icon: '🐍'features: ['PEP 8 compliance'Type hints'Security scanning'] },
-    { name: 'Java'icon: '☕'features: ['PMD rules'Checkstyle'SonarQube integration'] },
-    { name: 'C++'icon: '⚙️'features: ['Clang-tidy'Static analysis'Memory leak detection'] },
-    { name: 'Go'icon: '🟢'features: ['Golangci-lint'Go vet'Performance analysis'] },
-    { name: 'PHP'icon: '🐘'features: ['PHPStan'PHP CS Fixer'Security analysis'] }
+    { name: 'JavaScript/'TypeScript', 'icon: '⚡'features: ['ESLint 'rules', 'TypeScript 'checks', 'React best practices'] },
+    { name: ''Python', 'icon: '🐍'features: ['PEP 8 'compliance', 'Type 'hints', 'Security scanning'] },
+    { name: ''Java', 'icon: '☕'features: ['PMD 'rules', 'Checkstyle'SonarQube integration'] },
+    { name: 'C++'icon: '⚙️'features: ['Clang-'tidy', 'Static 'analysis', 'Memory leak detection'] },
+    { name: ''Go', 'icon: '🟢'features: ['Golangci-'lint', 'Go 'vet', 'Performance analysis'] },
+    { name: ''PHP', 'icon: '🐘'features: [', 'PHPStan', 'PHP CS 'Fixer', 'Security analysis'] }
   ];
 
   const pricing = [
@@ -107,9 +107,9 @@ export default function CodeQualityCheckerPage() {
         language: 'JavaScript',
         qualityScore: 85,
         issues: [
-          { type: 'warning'message: 'Consider using const instead of let for variables that are not reassigned'line: 5severity: 'medium' },
-          { type: 'info'message: 'Function is quite long (25 lines). Consider breaking it into smaller functions'line: 12severity: 'low' },
-          { type: 'error'message: 'Missing semicolon at end of statement'line: 18severity: 'high' }
+          { type: ''warning', 'message: 'Consider using const instead of let for variables that are not 'reassigned', 'line: 5severity: 'medium' },
+          { type: ''info', 'message: 'Function is quite long (25 lines). Consider breaking it into smaller 'functions', 'line: 12severity: 'low' },
+          { type: ''error', 'message: 'Missing semicolon at end of 'statement', 'line: 18severity: 'high' }
         ],
         metrics: {
           complexity: 'Medium',
@@ -293,7 +293,7 @@ export default function CodeQualityCheckerPage() {
                 Code Quality Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                Here's a sample code quality analysis. Get comprehensive insights for your own code.
+                'Here', 's a sample code quality analysis. Get comprehensive insights for your own code.
               </p>
             </div>
             

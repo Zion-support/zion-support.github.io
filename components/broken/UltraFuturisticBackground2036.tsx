@@ -76,7 +76,7 @@ export default function UltraFuturisticBackground2036({
         size: Math.random() * config.size * multiplier,
         opacity: Math.random() * 0.8 + 0.2,
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
-        type: variant === 'default' ? ['quantum'neon'energy'data'][Math.floor(Math.random() * 4)] as any : variant
+        type: variant === 'default' ? [', 'quantum', 'neon', 'energy', 'data'][Math.floor(Math.random() * 4)] as any : variant
       });
     }
 
@@ -279,7 +279,7 @@ export default function UltraFuturisticBackground2036({
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
     };
   }[variantintensity]);
 

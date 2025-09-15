@@ -99,8 +99,8 @@ const UltimateContentDiscoveryWidget = () => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     
     const matchesROI = selectedROI === 'all' || 
-                      (selectedROI === 'high' && parseInt(item.roi.replace(/,/g, '')) >= 50000) ||
-                      (selectedROI === 'ultra' && parseInt(item.roi.replace(/,/g, '')) >= 100000);
+                      (selectedROI === 'high' && parseInt(item.roi.replace(/,/g, ', ')) >= 50000) ||
+                      (selectedROI === 'ultra' && parseInt(item.roi.replace(/,/g, ', ')) >= 100000);
     
     return matchesSearch && matchesCategory && matchesROI;
   });
@@ -318,7 +318,7 @@ const UltimateContentDiscoveryWidget = () => {
             </p>
             <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchTerm(', ');
                 setSelectedCategory('all');
                 setSelectedROI('all');
               }}
@@ -332,7 +332,7 @@ const UltimateContentDiscoveryWidget = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Can't Find What You're Looking For?</h3>
+            <h3 className="text-2xl font-bold mb-4">'Can', 't Find What 'You', 're Looking For?</h3>
             <p className="text-xl mb-6 opacity-90">
               Our AI experts can help you discover the perfect content for your specific needs
             </p>

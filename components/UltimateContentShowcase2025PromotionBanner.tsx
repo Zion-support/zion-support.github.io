@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -66,9 +66,9 @@ const UltimateContentShowcase2025PromotionBanner = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="relative bg-gradient-to-r from-purple-900 via-slate-900 to-blue-900 border-b border-purple-500/30 overflow-hidden"
       >
         {/* Animated Background */}
@@ -181,9 +181,9 @@ const UltimateContentShowcase2025PromotionBanner = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentFeature}
-                  initial={{ opacity: 0y: 10 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -10 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="flex items-center gap-2"
                 >
                   <div className={`w-6 h-6 bg-gradient-to-r ${features[currentFeature].color} rounded-lg flex items-center justify-center`}>

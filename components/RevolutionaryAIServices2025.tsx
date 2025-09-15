@@ -138,8 +138,8 @@ const RevolutionaryAIServices2025: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -156,8 +156,8 @@ const RevolutionaryAIServices2025: React.FC = () => {
           {services.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105"
             >
@@ -224,8 +224,8 @@ const RevolutionaryAIServices2025: React.FC = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-600/10 backdrop-blur-lg rounded-2xl p-12 border border-white/10"
         >

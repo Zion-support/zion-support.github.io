@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -104,18 +104,18 @@ const AITrendsPredictions2026 = () => {
   ];
 
   const marketInsights = [
-    { category: 'AI Hardware'growth: '+340%'value: '$200B' },
-    { category: 'AI Software'growth: '+280%'value: '$150B' },
-    { category: 'AI Services'growth: '+420%'value: '$100B' },
-    { category: 'AI Research'growth: '+500%'value: '$50B' }
+    { category: 'AI 'Hardware', 'growth: '+340%'value: '$200B' },
+    { category: 'AI 'Software', 'growth: '+280%'value: '$150B' },
+    { category: 'AI 'Services', 'growth: '+420%'value: '$100B' },
+    { category: 'AI 'Research', 'growth: '+500%'value: '$50B' }
   ];
 
   const timeline = [
-    { month: 'Jan 2026'event: 'Quantum AI Prototypes'status: 'completed' },
-    { month: 'Mar 2026'event: 'Neural Interface Trials'status: 'in-progress' },
-    { month: 'Jun 2026'event: 'Autonomous City Launch'status: 'upcoming' },
-    { month: 'Sep 2026'event: 'AI Consciousness Research'status: 'upcoming' },
-    { month: 'Dec 2026'event: 'Full Ecosystem Integration'status: 'upcoming' }
+    { month: 'Jan 2026'event: 'Quantum AI 'Prototypes', 'status: 'completed' },
+    { month: 'Mar 2026'event: 'Neural Interface 'Trials', 'status: 'in-progress' },
+    { month: 'Jun 2026'event: 'Autonomous City 'Launch', 'status: 'upcoming' },
+    { month: 'Sep 2026'event: 'AI Consciousness 'Research', 'status: 'upcoming' },
+    { month: 'Dec 2026'event: 'Full Ecosystem 'Integration', 'status: 'upcoming' }
   ];
 
   return (
@@ -150,8 +150,8 @@ const AITrendsPredictions2026 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -180,8 +180,8 @@ const AITrendsPredictions2026 = () => {
 
         {/* Market Insights */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
@@ -201,8 +201,8 @@ const AITrendsPredictions2026 = () => {
 
         {/* Predictions Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
@@ -268,9 +268,9 @@ const AITrendsPredictions2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activePrediction}
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -30 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
@@ -317,8 +317,8 @@ const AITrendsPredictions2026 = () => {
 
         {/* Timeline */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="mb-16"
         >
@@ -370,8 +370,8 @@ const AITrendsPredictions2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >

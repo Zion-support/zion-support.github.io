@@ -177,7 +177,7 @@ const AI2026ContentShowcase = () => {
 
                 {/* CTA */}
                 <Link
-                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
+                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ', ')}`}
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Read Article

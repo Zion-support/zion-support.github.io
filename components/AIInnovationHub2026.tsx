@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -56,13 +56,13 @@ const AIInnovationHub2026: React.FC = () => {
   const [searchQuerysetSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all'name: 'All Innovations'icon: Globecount: 89color: 'blue' },
-    { id: 'ai-core'name: 'AI Core'icon: Braincount: 32color: 'purple' },
-    { id: 'quantum'name: 'Quantum AI'icon: Atomcount: 18color: 'cyan' },
-    { id: 'neural'name: 'Neural Networks'icon: Networkcount: 24color: 'green' },
-    { id: 'automation'name: 'Automation'icon: Zapcount: 15color: 'yellow' },
-    { id: 'robotics'name: 'Robotics'icon: Cpucount: 12color: 'red' },
-    { id: 'biotech'name: 'BioTech AI'icon: Microscopecount: 8color: 'pink' }
+    { id: ''all', 'name: 'All 'Innovations', 'icon: Globecount: 89color: 'blue' },
+    { id: 'ai-'core', 'name: 'AI 'Core', 'icon: Braincount: 32color: 'purple' },
+    { id: ''quantum', 'name: 'Quantum 'AI', 'icon: Atomcount: 18color: 'cyan' },
+    { id: ''neural', 'name: 'Neural 'Networks', 'icon: Networkcount: 24color: 'green' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 15color: 'yellow' },
+    { id: ''robotics', 'name: ''Robotics', 'icon: Cpucount: 12color: 'red' },
+    { id: ''biotech', 'name: 'BioTech 'AI', 'icon: Microscopecount: 8color: 'pink' }
   ];
 
   const innovations: InnovationItem[] = [
@@ -74,7 +74,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'revolutionary',
       timeline: 'Q2 2026',
       status: 'testing',
-      tags: ['Consciousness'Self-Awareness'Meta-Cognition'Breakthrough'],
+      tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'Breakthrough'],
       image: '/api/placeholder/600/400',
       url: '/consciousness-ai-architecture-2026',
       featured: true,
@@ -93,7 +93,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'revolutionary',
       timeline: 'Q3 2026',
       status: 'development',
-      tags: ['Quantum Computing'Neural Networks'Fusion'Processor'],
+      tags: ['Quantum 'Computing', 'Neural 'Networks', 'Fusion'Processor'],
       image: '/api/placeholder/600/400',
       url: '/quantum-neural-fusion-processor-2026',
       featured: true,
@@ -112,7 +112,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'high',
       timeline: 'Q1 2026',
       status: 'deployed',
-      tags: ['Business Automation'Autonomous'Operations'Ethical AI'],
+      tags: ['Business 'Automation', 'Autonomous', 'Operations', 'Ethical AI'],
       image: '/api/placeholder/600/400',
       url: '/autonomous-business-ai-2026',
       featured: false,
@@ -131,7 +131,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'revolutionary',
       timeline: 'Q4 2026',
       status: 'research',
-      tags: ['Neural Interface'Brain-Computer'Direct Communication'BCI'],
+      tags: ['Neural 'Interface', 'Brain-'Computer', 'Direct 'Communication', 'BCI'],
       image: '/api/placeholder/600/400',
       url: '/neural-interface-communication-2026',
       featured: true,
@@ -150,7 +150,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'high',
       timeline: 'Q2 2026',
       status: 'testing',
-      tags: ['Robotics'Self-Evolution'Autonomous Learning'Adaptation'],
+      tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptation'],
       image: '/api/placeholder/600/400',
       url: '/self-evolving-robots-2026',
       featured: false,
@@ -169,7 +169,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'high',
       timeline: 'Q3 2026',
       status: 'development',
-      tags: ['Drug Discovery'Biotech'Pharmaceutical'AI Platform'],
+      tags: ['Drug 'Discovery', 'Biotech', 'Pharmaceutical', 'AI Platform'],
       image: '/api/placeholder/600/400',
       url: '/ai-drug-discovery-2026',
       featured: false,
@@ -184,7 +184,7 @@ const AIInnovationHub2026: React.FC = () => {
 
   const filteredInnovations = innovations.filter(innovation => {
     const matchesCategory = activeCategory === 'all' || innovation.category === activeCategory;
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === ', ' || 
       innovation.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       innovation.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       innovation.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -225,8 +225,8 @@ const AIInnovationHub2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -262,8 +262,8 @@ const AIInnovationHub2026: React.FC = () => {
       {/* Featured Innovations */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
@@ -277,8 +277,8 @@ const AIInnovationHub2026: React.FC = () => {
               return (
                 <motion.div
                   key={innovation.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedInnovation(innovation)}
@@ -330,8 +330,8 @@ const AIInnovationHub2026: React.FC = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
@@ -362,8 +362,8 @@ const AIInnovationHub2026: React.FC = () => {
 
         {/* Innovation Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -372,8 +372,8 @@ const AIInnovationHub2026: React.FC = () => {
               return (
                 <motion.div
                   key={innovation.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.05 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedInnovation(innovation)}
@@ -432,9 +432,9 @@ const AIInnovationHub2026: React.FC = () => {
             onClick={() => setSelectedInnovation(null)}
           >
             <motion.div
-              initial={{ scale: 0.9opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
-              exit={{ scale: 0.9opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >

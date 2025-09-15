@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -56,7 +56,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -100 }}
+      initial={{ opacity: 0, y: -100 }}
       animate={{ 
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
@@ -137,8 +137,8 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
             >
@@ -146,8 +146,8 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7duration: 0.8 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl"
             >
@@ -197,8 +197,8 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
             {/* Action Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
@@ -263,8 +263,8 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 {/* Innovation Stats */}
                 <motion.div
                   key={currentInnovation}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-90 rounded-xl p-4"
                 >

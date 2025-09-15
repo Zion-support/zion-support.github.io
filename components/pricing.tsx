@@ -44,11 +44,11 @@ export default function PricingPage() {
 
   // Price ranges
   const priceRanges = [
-    { id: 'All'name: 'All Prices'range: 'All' },
-    { id: 'Under $1K'name: 'Under $1K/month'range: 'Under $1K' },
-    { id: '$1K - $5K'name: '$1K - $5K/month'range: '$1K - $5K' },
-    { id: '$5K - $20K'name: '$5K - $20K/month'range: '$5K - $20K' },
-    { id: '$20K+'name: '$20K+/month'range: '$20K+' }
+    { id: ''All', 'name: 'All 'Prices', 'range: 'All' },
+    { id: 'Under $1'K', 'name: 'Under $1K/'month', 'range: 'Under $1K' },
+    { id: '$1K - $5'K', 'name: '$1K - $5K/'month', 'range: '$1K - $5K' },
+    { id: '$5K - $20'K', 'name: '$5K - $20K/'month', 'range: '$5K - $20K' },
+    { id: '$20K+'name: '$20K+/'month', 'range: '$20K+' }
   ];
 
   // Filter services
@@ -58,7 +58,7 @@ export default function PricingPage() {
                              service.category.includes(selectedCategory) : 
                              service.category === selectedCategory);
     
-    const price = parseFloat(service.price.replace(/[^0-9.]/g''));
+    const price = parseFloat(service.price.replace(/[^0-9.]/g', '));
     const matchesPrice = selectedPriceRange === 'All' ||
                         (selectedPriceRange === 'Under $1K' && price < 1000) ||
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
@@ -148,8 +148,8 @@ export default function PricingPage() {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -199,8 +199,8 @@ export default function PricingPage() {
             {Object.entries(servicesByCategory).map(([categoryservices]categoryIndex) => (
               <motion.div
                 key={category}
-                initial={{ opacity: 0y: 30 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className="mb-20"
@@ -218,8 +218,8 @@ export default function PricingPage() {
                   {services.map((serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0y: 20 }}
-                      whileInView={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className="group cursor-pointer"
@@ -351,8 +351,8 @@ export default function PricingPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

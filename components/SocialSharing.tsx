@@ -12,9 +12,9 @@ interface SocialSharingProps {
 export default function SocialSharing({ 
   title
   url
-  description = ''
-  hashtags = ['AI2025'AI'ArtificialIntelligence'Technology'],
-  className = ''
+  description = ', '
+  hashtags = [', 'AI2025', 'AI', 'ArtificialIntelligence', 'Technology'],
+  className = ', '
 }: SocialSharingProps) {
   const encodedTitle = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(url);

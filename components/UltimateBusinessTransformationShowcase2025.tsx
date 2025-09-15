@@ -24,7 +24,7 @@ const UltimateBusinessTransformationShowcase2025 = () => {
       readingTime: '35 min read',
       featured: true,
       image: '🎯',
-      tags: ['AI Revolution'Business Transformation'ROI'Fortune 500'Quantum AI']
+      tags: ['AI 'Revolution', 'Business 'Transformation', 'ROI'Fortune 500'Quantum AI']
     },
     {
       id: 'fortune-500-ultimate-transformation-case-study',
@@ -43,7 +43,7 @@ const UltimateBusinessTransformationShowcase2025 = () => {
       readingTime: '25 min read',
       featured: true,
       image: '🏆',
-      tags: ['Fortune 500'Case Study'Success Story'ROI'Manufacturing']
+      tags: ['Fortune 500'Case 'Study', 'Success 'Story', 'ROI'Manufacturing']
     },
     {
       id: 'ultimate-implementation-guide',
@@ -62,7 +62,7 @@ const UltimateBusinessTransformationShowcase2025 = () => {
       readingTime: '45 min read',
       featured: true,
       image: '📋',
-      tags: ['Implementation Guide'ROI'Strategy'Framework'Best Practices']
+      tags: ['Implementation 'Guide', 'ROI', 'Strategy', 'Framework'Best Practices']
     }
   ];
 
@@ -71,10 +71,10 @@ const UltimateBusinessTransformationShowcase2025 = () => {
     : contentData.filter(item => item.category === activeTab);
 
   const tabs = [
-    { id: 'all'label: 'All Content'count: contentData.length },
-    { id: 'guides'label: 'Guides'count: contentData.filter(item => item.category === 'guides').length },
-    { id: 'case-studies'label: 'Case Studies'count: contentData.filter(item => item.category === 'case-studies').length },
-    { id: 'resources'label: 'Resources'count: contentData.filter(item => item.category === 'resources').length }
+    { id: ''all', 'label: 'All 'Content', 'count: contentData.length },
+    { id: ''guides', 'label: ''Guides', 'count: contentData.filter(item => item.category === 'guides').length },
+    { id: 'case-'studies', 'label: 'Case 'Studies', 'count: contentData.filter(item => item.category === 'case-studies').length },
+    { id: ''resources', 'label: ''Resources', 'count: contentData.filter(item => item.category === 'resources').length }
   ];
 
   return (

@@ -15,7 +15,7 @@ export default function AdvancedNewsletterSignup() {
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
+    setEmail(', ');
   };
 
   if (isSubscribed) {
@@ -24,7 +24,7 @@ export default function AdvancedNewsletterSignup() {
         <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-2xl font-bold text-white mb-2">Welcome to the AI Revolution!</h3>
         <p className="text-green-100 mb-4">
-          You're now subscribed to our exclusive AI breakthrough updates. Check your email for confirmation.
+          'You', 're now subscribed to our exclusive AI breakthrough updates. Check your email for confirmation.
         </p>
         <div className="text-sm text-green-200">
           Get ready for insights that will transform your business!

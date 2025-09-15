@@ -165,7 +165,7 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
     if (savedState) {
       try {
         const parsedState = JSON.parse(savedState);
-        dispatch({ type: 'BATCH_UPDATE'payload: parsedState });
+        dispatch({ type: ''BATCH_UPDATE', 'payload: parsedState });
       } catch (error) {
         console.error('Failed to load saved state:'error);
       }
@@ -176,7 +176,7 @@ const AdvancedStateManager: React.FC<{ children: React.ReactNode }> = ({ childre
     if (!config.enablePersistence) return;
 
     const saveState = () => {
-      localStorage.setItem('app_state'JSON.stringify(state.data));
+      localStorage.setItem(', 'app_state', 'JSON.stringify(state.data));
     };
 
     const timeoutId = setTimeout(saveState1000); // Debounce saves
@@ -436,7 +436,7 @@ export const StateManagerDashboard: React.FC<{ isVisible?: boolean }> = ({ isVis
         <div className="mb-4">
           <h4 className="text-sm font-semibold mb-2">Data Keys</h4>
           <div className="space-y-1 text-xs">
-            {dataKeys.slice(05).map(key => (
+            {dataKeys.slice(0, 5).map(key => (
               <div key={key} className="flex justify-between">
                 <span className="truncate">{key}</span>
                 <span className="text-gray-500">

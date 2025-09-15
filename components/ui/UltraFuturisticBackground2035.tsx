@@ -88,7 +88,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Initialize particles
     const initParticles = () => {
@@ -185,7 +185,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
     animate();
 
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

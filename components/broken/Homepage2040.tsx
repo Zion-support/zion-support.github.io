@@ -2,7 +2,7 @@
 import React{ SuspenselazyuseStateuseEffect } from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightStar
   BrainAtomShieldZapTrendingUpGlobe,
@@ -44,7 +44,7 @@ const Homepage2040: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -443,8 +443,8 @@ const Homepage2040: React.FC = () => {
 
                 {/* View All Services Button */}
                 <motion.div
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8delay: 0.4 }}
                   className="text-center mt-12"

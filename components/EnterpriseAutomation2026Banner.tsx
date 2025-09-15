@@ -15,7 +15,7 @@ export default function EnterpriseAutomation2026Banner() {
             Transform $100B+ in Business Operations
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Achieve 99.8% process accuracy and 500% efficiency improvements with the ultimate enterprise automation revolution that's reshaping how organizations operate.
+            Achieve 99.8% process accuracy and 500% efficiency improvements with the ultimate enterprise automation revolution 'that', 's reshaping how organizations operate.
           </p>
         </div>
 

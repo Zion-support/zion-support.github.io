@@ -88,10 +88,10 @@ const AI2025_2026TechnologyShowcase = () => {
   };
 
   const tabs = [
-    { id: 'ai'name: 'AI & ML'icon: <Brain className="w-5 h-5" /> },
-    { id: 'quantum'name: 'Quantum'icon: <Cpu className="w-5 h-5" /> },
-    { id: 'automation'name: 'Automation'icon: <Zap className="w-5 h-5" /> },
-    { id: 'cloud'name: 'Cloud'icon: <Globe className="w-5 h-5" /> }
+    { id: ''ai', 'name: 'AI & 'ML', 'icon: <Brain className="w-5 h-5" /> },
+    { id: ''quantum', 'name: ''Quantum', 'icon: <Cpu className="w-5 h-5" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <Zap className="w-5 h-5" /> },
+    { id: ''cloud', 'name: ''Cloud', 'icon: <Globe className="w-5 h-5" /> }
   ];
 
   const currentTech = technologies[activeTab as keyof typeof technologies];

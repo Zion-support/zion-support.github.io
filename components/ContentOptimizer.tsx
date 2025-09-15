@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface CacheStats {
   hits: number;
@@ -235,7 +235,7 @@ export default function ContentOptimizer() {
         // Add font-display: swap
         if (!link.href.includes('display=swap')) {
           const url = new URL(link.href);
-          url.searchParams.set('display'swap');
+          url.searchParams.set(', 'display', 'swap');
           link.href = url.toString();
         }
 
@@ -287,7 +287,7 @@ export default function ContentOptimizer() {
     if (document.readyState === 'complete') {
       runOptimizations();
     } else {
-      window.addEventListener('load'runOptimizations);
+      window.addEventListener(', 'load', 'runOptimizations);
     }
 
   }[]);
@@ -313,12 +313,12 @@ export default function ContentOptimizer() {
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
-    const sizes = ['Bytes'KB'MB'GB'];
+    const sizes = [', 'Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  // Don't render in production
+  // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }

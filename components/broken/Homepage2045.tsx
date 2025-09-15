@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
   Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
@@ -71,8 +71,8 @@ const Homepage2045: React.FC = () => {
   }[]);
 
   const fadeInUp = {
-    initial: { opacity: 0y: 60 },
-    animate: { opacity: 1y: 0 },
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6ease: "easeOut" }
   };
 
@@ -162,14 +162,14 @@ const Homepage2045: React.FC = () => {
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
               <motion.h1
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
@@ -178,19 +178,19 @@ const Homepage2045: React.FC = () => {
                 </span>
               </motion.h1>
               <motion.p
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               >
-                Transform your business with Zion Tech Group's revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.
+                Transform your business with Zion Tech 'Group', 's revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.
               </motion.p>
             </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -210,8 +210,8 @@ const Homepage2045: React.FC = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.8 }}
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
@@ -235,8 +235,8 @@ const Homepage2045: React.FC = () => {
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -247,7 +247,7 @@ const Homepage2045: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
+                Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of 'what', 's possible with technology.
               </p>
             </motion.div>
 
@@ -299,8 +299,8 @@ const Homepage2045: React.FC = () => {
               ].map((serviceindex) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group"
@@ -328,8 +328,8 @@ const Homepage2045: React.FC = () => {
         <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -384,8 +384,8 @@ const Homepage2045: React.FC = () => {
 
             {/* View All Services CTA */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mt-12"
@@ -405,8 +405,8 @@ const Homepage2045: React.FC = () => {
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -416,7 +416,7 @@ const Homepage2045: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our revolutionary technology solutions can drive your business into the future.
+                'Let', 's discuss how our revolutionary technology solutions can drive your business into the future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link

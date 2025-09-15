@@ -1,31 +1,30 @@
-"use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-ArrowRightXStarZapTrendingUp
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, X, Star, Zap, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
 const NewContentPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     // Show banner after 2 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }2000);
+    }, 2000);
 
     return () => clearTimeout(timer);
-  }[]);
+  }, []);
 
   useEffect(() => {
     // Auto-rotate slides every 5 seconds
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
-    }5000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }[]);
+  }, []);
 
   const promotions = [
     {

@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServicesrevolutionaryServiceCategoriesgetRevolutionaryServicesByCategorygetPopularRevolutionaryServicesgetRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function RevolutionaryServicesPage() {
   const [selectedCategorysetSelectedCategory] = useState('All');
@@ -18,7 +18,7 @@ export default function RevolutionaryServicesPage() {
   const [selectedServicesetSelectedService] = useState<any>(null);
 
   const priceRanges = [
-    { value: 'All'label: 'All Prices' },
+    { value: ''All', 'label: 'All Prices' },
     { value: '0-1000'label: '$0 - $1,000' },
     { value: '1001-2500'label: '$1,001 - $2,500' },
     { value: '2501-5000'label: '$2,501 - $5,000' },
@@ -26,11 +26,11 @@ export default function RevolutionaryServicesPage() {
   ];
 
   const sortOptions = [
-    { value: 'name'label: 'Name A-Z' },
-    { value: 'price'label: 'Price Low-High' },
-    { value: 'popularity'label: 'Most Popular' },
-    { value: 'category'label: 'Category' },
-    { value: 'roi'label: 'Highest ROI' }
+    { value: ''name', 'label: 'Name A-Z' },
+    { value: ''price', 'label: 'Price Low-High' },
+    { value: ''popularity', 'label: 'Most Popular' },
+    { value: ''category', 'label: 'Category' },
+    { value: ''roi', 'label: 'Highest ROI' }
   ];
 
   // Filter and sort services
@@ -61,7 +61,7 @@ export default function RevolutionaryServicesPage() {
   filteredServices.sort((ab) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$'').replace(','')) - parseFloat(b.price.replace('$'').replace(',''));
+        return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', '));
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -200,8 +200,8 @@ export default function RevolutionaryServicesPage() {
             <div className="max-w-5xl mx-auto">
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -212,19 +212,19 @@ export default function RevolutionaryServicesPage() {
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.2 }}
               >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
-                Quantum AIautonomous systemspace technologyand cutting-edge solutions that redefine what's possible.
+                Quantum AIautonomous systemspace technologyand cutting-edge solutions that redefine 'what', 's possible.
               </motion.p>
               
               {/* Service Count Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
               >
                 <div className="text-center">
@@ -248,8 +248,8 @@ export default function RevolutionaryServicesPage() {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.6 }}
               >
                 <Button 
@@ -263,7 +263,7 @@ export default function RevolutionaryServicesPage() {
                 <Button 
                   variant="futuristic" 
                   size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact'_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
@@ -335,8 +335,8 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
@@ -392,7 +392,7 @@ export default function RevolutionaryServicesPage() {
                                                  <Button 
                              variant="primary" 
                              size="md"
-                             onClick={() => window.open(service.link'_blank')}
+                             onClick={() => window.open(service.'link', '_blank')}
                              className="w-full"
                            >
                              Learn More
@@ -412,8 +412,8 @@ export default function RevolutionaryServicesPage() {
             {/* Filters and Controls */}
             <motion.div 
               className="mb-8"
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
@@ -526,7 +526,7 @@ export default function RevolutionaryServicesPage() {
                           <Button 
                             variant="primary" 
                             size="sm"
-                            onClick={() => window.open(service.link'_blank')}
+                            onClick={() => window.open(service.'link', '_blank')}
                             className="w-full"
                           >
                             Learn More
@@ -576,7 +576,7 @@ export default function RevolutionaryServicesPage() {
                                                          <Button 
                                variant="primary" 
                                size="sm"
-                               onClick={() => window.open(service.link'_blank')}
+                               onClick={() => window.open(service.'link', '_blank')}
                              >
                                Learn More
                                <ExternalLink className="ml-2 w-4 h-4" />
@@ -611,7 +611,7 @@ export default function RevolutionaryServicesPage() {
                                          <Button 
                            variant="primary"
                            onClick={() => {
-                             setSearchQuery('');
+                             setSearchQuery(', ');
                              setSelectedCategory('All');
                              setPriceRange('All');
                            }}
@@ -635,9 +635,9 @@ export default function RevolutionaryServicesPage() {
             >
               <motion.div
                 className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-                initial={{ scale: 0.9opacity: 0 }}
-                animate={{ scale: 1opacity: 1 }}
-                exit={{ scale: 0.9opacity: 0 }}
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="p-8">
@@ -733,14 +733,14 @@ export default function RevolutionaryServicesPage() {
                       <div className="flex gap-4">
                                                  <Button 
                            variant="primary"
-                           onClick={() => window.open(selectedService.link'_blank')}
+                           onClick={() => window.open(selectedService.'link', '_blank')}
                          >
                            Visit Service
                            <ExternalLink className="ml-2 w-4 h-4" />
                          </Button>
                          <Button 
                            variant="futuristic"
-                           onClick={() => window.open('https://ziontechgroup.com/contact'_blank')}
+                           onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
@@ -759,8 +759,8 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
@@ -775,7 +775,7 @@ export default function RevolutionaryServicesPage() {
                                  <Button 
                    variant="primary" 
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact'_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
                  >
                    Start Free Trial
                    <Rocket className="ml-2 w-5 h-5" />
@@ -783,7 +783,7 @@ export default function RevolutionaryServicesPage() {
                  <Button 
                    variant="futuristic" 
                    size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact'_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
                  >
                    Schedule Demo
                    <Calendar className="ml-2 w-5 h-5" />

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -183,7 +183,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -195,7 +195,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,

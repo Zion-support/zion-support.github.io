@@ -16,7 +16,7 @@ export default function CoachWidget() {
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
-      setReply(data.text || '');
+      setReply(data.text || ', ');
     } finally {
       setLoading(false);
     }

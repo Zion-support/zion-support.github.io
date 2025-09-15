@@ -19,7 +19,7 @@ const GenerativeAIContentShowcase2025 = () => {
         efficiency: '156%',
         satisfaction: '98%'
       },
-      tags: ['Generative AI'Enterprise Revolution'ROI'Digital Transformation'],
+      tags: ['Generative 'AI', 'Enterprise 'Revolution', 'ROI'Digital Transformation'],
       readingTime: '25 min read',
       featured: true
     },
@@ -35,7 +35,7 @@ const GenerativeAIContentShowcase2025 = () => {
         timeline: '18 months',
         satisfaction: '98.7%'
       },
-      tags: ['Fortune 500'Case Study'Success Story'ROI'],
+      tags: ['Fortune 500'Case 'Study', 'Success 'Story', 'ROI'],
       readingTime: '22 min read',
       featured: true
     },
@@ -51,7 +51,7 @@ const GenerativeAIContentShowcase2025 = () => {
         timeline: '18 months',
         guide: 'Complete'
       },
-      tags: ['Implementation Guide'ROI'Strategy'Complete Guide'],
+      tags: ['Implementation 'Guide', 'ROI', 'Strategy', 'Complete Guide'],
       readingTime: '45 min read',
       featured: true
     },
@@ -67,7 +67,7 @@ const GenerativeAIContentShowcase2025 = () => {
         accuracy: '99.7%',
         satisfaction: '98%'
       },
-      tags: ['Generative AI'Enterprise'ROI'Market Analysis'],
+      tags: ['Generative 'AI', 'Enterprise', 'ROI', 'Market Analysis'],
       readingTime: '20 min read',
       featured: false
     },
@@ -83,7 +83,7 @@ const GenerativeAIContentShowcase2025 = () => {
         satisfaction: '99.2%',
         efficiency: '78%'
       },
-      tags: ['Retail'AI Transformation'ROI'Case Study'],
+      tags: [', 'Retail', 'AI 'Transformation', 'ROI'Case Study'],
       readingTime: '18 min read',
       featured: false
     },
@@ -99,17 +99,17 @@ const GenerativeAIContentShowcase2025 = () => {
         success_rate: '94%',
         savings: '$2.8B'
       },
-      tags: ['Implementation Guide'Strategy'ROI'Best Practices'],
+      tags: ['Implementation 'Guide', 'Strategy', 'ROI', 'Best Practices'],
       readingTime: '30 min read',
       featured: false
     }
   ];
 
   const filters = [
-    { id: 'all'label: 'All Content'count: contentItems.length },
-    { id: 'blog'label: 'Blog Posts'count: contentItems.filter(item => item.type === 'blog').length },
-    { id: 'case-study'label: 'Case Studies'count: contentItems.filter(item => item.type === 'case-study').length },
-    { id: 'resource'label: 'Resources'count: contentItems.filter(item => item.type === 'resource').length }
+    { id: ''all', 'label: 'All 'Content', 'count: contentItems.length },
+    { id: ''blog', 'label: 'Blog 'Posts', 'count: contentItems.filter(item => item.type === 'blog').length },
+    { id: 'case-'study', 'label: 'Case 'Studies', 'count: contentItems.filter(item => item.type === 'case-study').length },
+    { id: ''resource', 'label: ''Resources', 'count: contentItems.filter(item => item.type === 'resource').length }
   ];
 
   const filteredContent = activeFilter === 'all' 

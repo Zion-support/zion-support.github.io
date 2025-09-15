@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
 import Link from 'next/link';
@@ -55,7 +55,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
@@ -66,7 +66,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.2duration: 0.8 }}
           className="text-center mb-16"
@@ -88,7 +88,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           {innovations.map((innovationindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0y: 50 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
               transition={{ delay: 0.4 + index * 0.1duration: 0.8 }}
               className="group relative"
@@ -109,7 +109,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
 
         {/* Benefits Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.8duration: 0.8 }}
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
@@ -135,7 +135,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 1.2duration: 0.8 }}
           className="text-center"

@@ -35,10 +35,10 @@ export default function OnboardingWizard() {
           <button onClick={completeOnboarding} className="text-sm opacity-70 hover:opacity-100">Skip</button>
         </div>
         <div className="p-4 space-y-4">
-          <div className="text-sm opacity-80">Let's get you started. Who are you?</div>
+          <div className="text-sm opacity-80">'Let', 's get you started. Who are you?</div>
           <div className="flex gap-2">
-            <button onClick={() => setRole('client')} className={`px-3 py-1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>
-            <button onClick={() => setRole('talent')} className={`px-3 py-1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>
+            <button onClick={() => setRole('client')} className={`px-3 py-1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>'I', 'm a Client</button>
+            <button onClick={() => setRole('talent')} className={`px-3 py-1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>'I', 'm Talent</button>
           </div>
           {role === 'client' ? (
             <div className="space-y-2">

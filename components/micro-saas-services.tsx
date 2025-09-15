@@ -47,12 +47,12 @@ export default function MicroSaasServicesPage() {
         'Newsletter content'
       ],
       pricing: {
-        starter: { price: 29features: ['100 generations/month'Basic templates'SEO analysis'Email support'] },
-        professional: { price: 99features: ['500 generations/month'Premium templates'Advanced SEO'Priority support'API access'] },
-        enterprise: { price: 299features: ['Unlimited generations'Custom templates'White-label options'SLA guarantee'] }
+        starter: { price: 29features: ['100 generations/'month', 'Basic 'templates', 'SEO 'analysis', 'Email support'] },
+        professional: { price: 99features: ['500 generations/'month', 'Premium 'templates', 'Advanced 'SEO', 'Priority 'support', 'API access'] },
+        enterprise: { price: 299features: ['Unlimited 'generations', 'Custom 'templates', 'White-label 'options', 'SLA guarantee'] }
       },
       marketPrice: '$29-299/month',
-      competitors: ['Jasper AI'Copy.ai'Writesonic'],
+      competitors: ['Jasper 'AI', 'Copy.'ai', 'Writesonic'],
       website: 'https://ai-content.ziontech.ai',
       demo: 'https://demo.ai-content.ziontech.ai'
     },
@@ -80,12 +80,12 @@ export default function MicroSaasServicesPage() {
         'Mobile performance testing'
       ],
       pricing: {
-        starter: { price: 19features: ['5 URLs'5-min monitoring'Basic metrics'Email alerts'7-day retention'] },
-        professional: { price: 49features: ['25 URLs'1-min monitoring'Advanced metrics'Multiple alerts'30-day retention'API access'] },
-        enterprise: { price: 149features: ['Unlimited URLs'Real-time monitoring'All metrics'Custom dashboards'1-year retention'SLA guarantee'] }
+        starter: { price: 19features: ['5 URLs'5-min 'monitoring', 'Basic 'metrics', 'Email alerts'7-day retention'] },
+        professional: { price: 49features: ['25 URLs'1-min 'monitoring', 'Advanced 'metrics', 'Multiple alerts'30-day 'retention', 'API access'] },
+        enterprise: { price: 149features: ['Unlimited 'URLs', 'Real-time 'monitoring', 'All 'metrics', 'Custom dashboards'1-year 'retention', 'SLA guarantee'] }
       },
       marketPrice: '$19-149/month',
-      competitors: ['Pingdom'GTmetrix'WebPageTest'],
+      competitors: [', 'Pingdom', 'GTmetrix'WebPageTest'],
       website: 'https://performance.ziontech.ai',
       demo: 'https://demo.performance.ziontech.ai'
     },
@@ -113,12 +113,12 @@ export default function MicroSaasServicesPage() {
         'Content optimization'
       ],
       pricing: {
-        starter: { price: 39features: ['100 keywords'Basic analysis'Monthly reports'Email support'7-day retention'] },
-        professional: { price: 89features: ['500 keywords'Advanced analysis'Weekly reports'Priority support'30-day retention'API access'] },
-        enterprise: { price: 199features: ['Unlimited keywords'Full SEO suite'Daily reports'Dedicated support'1-year retention'White-label options'] }
+        starter: { price: 39features: ['100 'keywords', 'Basic 'analysis', 'Monthly 'reports', 'Email support'7-day retention'] },
+        professional: { price: 89features: ['500 'keywords', 'Advanced 'analysis', 'Weekly 'reports', 'Priority support'30-day 'retention', 'API access'] },
+        enterprise: { price: 199features: ['Unlimited 'keywords', 'Full SEO 'suite', 'Daily 'reports', 'Dedicated support'1-year 'retention', 'White-label options'] }
       },
       marketPrice: '$39-199/month',
-      competitors: ['Ahrefs'SEMrush'Moz'],
+      competitors: [', 'Ahrefs', 'SEMrush'Moz'],
       website: 'https://seo.ziontech.ai',
       demo: 'https://demo.seo.ziontech.ai'
     },
@@ -146,12 +146,12 @@ export default function MicroSaasServicesPage() {
         'Enterprise API governance'
       ],
       pricing: {
-        starter: { price: 25features: ['10 rate limit rules'Basic limiting'API key management'Email notifications'7-day retention'] },
-        professional: { price: 79features: ['50 rate limit rules'Advanced limiting'Unlimited API keys'Real-time monitoring'30-day retention'API access'] },
-        enterprise: { price: 199features: ['Unlimited rules'Enterprise security'Advanced features'Custom integrations'1-year retention'SLA guarantee'] }
+        starter: { price: 25features: ['10 rate limit 'rules', 'Basic 'limiting', 'API key 'management', 'Email notifications'7-day retention'] },
+        professional: { price: 79features: ['50 rate limit 'rules', 'Advanced 'limiting', 'Unlimited API 'keys', 'Real-time monitoring'30-day 'retention', 'API access'] },
+        enterprise: { price: 199features: ['Unlimited 'rules', 'Enterprise 'security', 'Advanced 'features', 'Custom integrations'1-year 'retention', 'SLA guarantee'] }
       },
       marketPrice: '$25-199/month',
-      competitors: ['Kong'Tyk'AWS API Gateway'],
+      competitors: [', 'Kong', 'Tyk'AWS API Gateway'],
       website: 'https://rate-limiter.ziontech.ai',
       demo: 'https://demo.rate-limiter.ziontech.ai'
     },
@@ -179,12 +179,12 @@ export default function MicroSaasServicesPage() {
         'Lead nurturing'
       ],
       pricing: {
-        starter: { price: 29features: ['1,000 subscribers'Basic templates'Simple automation'Basic analytics'Email support'] },
-        professional: { price: 79features: ['10,000 subscribers'Advanced templates'Advanced automation'Advanced analytics'Priority support'API access'] },
-        enterprise: { price: 199features: ['Unlimited subscribers'Custom templates'Complex workflows'Enterprise analytics'Dedicated support'White-label options'] }
+        starter: { price: 29features: ['1,000 'subscribers', 'Basic 'templates', 'Simple 'automation', 'Basic 'analytics', 'Email support'] },
+        professional: { price: 79features: ['10,000 'subscribers', 'Advanced 'templates', 'Advanced 'automation', 'Advanced 'analytics', 'Priority 'support', 'API access'] },
+        enterprise: { price: 199features: ['Unlimited 'subscribers', 'Custom 'templates', 'Complex 'workflows', 'Enterprise 'analytics', 'Dedicated 'support', 'White-label options'] }
       },
       marketPrice: '$29-199/month',
-      competitors: ['Mailchimp'ConvertKit'ActiveCampaign'],
+      competitors: [', 'Mailchimp', 'ConvertKit'ActiveCampaign'],
       website: 'https://email.ziontech.ai',
       demo: 'https://demo.email.ziontech.ai'
     },
@@ -212,12 +212,12 @@ export default function MicroSaasServicesPage() {
         'Brand consistency'
       ],
       pricing: {
-        starter: { price: 19features: ['3 social accounts'Basic scheduling'Simple calendar'Basic analytics'Email support'] },
-        professional: { price: 49features: ['10 social accounts'Advanced scheduling'Content calendar'Advanced analytics'Priority support'API access'] },
-        enterprise: { price: 129features: ['Unlimited accounts'Enterprise scheduling'Advanced calendar'Enterprise analytics'Dedicated support'White-label options'] }
+        starter: { price: 19features: ['3 social 'accounts', 'Basic 'scheduling', 'Simple 'calendar', 'Basic 'analytics', 'Email support'] },
+        professional: { price: 49features: ['10 social 'accounts', 'Advanced 'scheduling', 'Content 'calendar', 'Advanced 'analytics', 'Priority 'support', 'API access'] },
+        enterprise: { price: 129features: ['Unlimited 'accounts', 'Enterprise 'scheduling', 'Advanced 'calendar', 'Enterprise 'analytics', 'Dedicated 'support', 'White-label options'] }
       },
       marketPrice: '$19-129/month',
-      competitors: ['Buffer'Hootsuite'Later'],
+      competitors: [', 'Buffer', 'Hootsuite'Later'],
       website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai'
     }

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -60,10 +60,10 @@ const NewContentShowcase2025PromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'New Features'value: '50+'icon: Sparkles },
-    { label: 'Success Rate'value: '99.8%'icon: Award },
-    { label: 'Client Satisfaction'value: '5.0★'icon: Star },
-    { label: 'ROI Increase'value: '300%'icon: TrendingUp }
+    { label: 'New 'Features', 'value: '50+'icon: Sparkles },
+    { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
+    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star },
+    { label: 'ROI 'Increase', 'value: '300%'icon: TrendingUp }
   ];
 
   return (
@@ -86,8 +86,8 @@ const NewContentShowcase2025PromotionBanner = () => {
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
@@ -97,8 +97,8 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h2
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
@@ -110,8 +110,8 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-gray-300 mb-8"
             >
@@ -122,8 +122,8 @@ const NewContentShowcase2025PromotionBanner = () => {
             {/* Rotating Feature */}
             <motion.div
               key={currentFeature}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="mb-8"
             >
@@ -144,8 +144,8 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
@@ -159,8 +159,8 @@ const NewContentShowcase2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >

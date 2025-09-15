@@ -224,7 +224,7 @@ const AI2025InsightsShowcase: React.FC = () => {
               <div className="text-4xl mb-4">🌍</div>
               <h4 className="text-lg font-bold mb-2">Global Transformation</h4>
               <p className="text-sm opacity-90">
-                "We're witnessing the birth of a new era where human and artificial intelligence work together to solve humanity's greatest challenges."
+                "'We', 're witnessing the birth of a new era where human and artificial intelligence work together to solve 'humanity', 's greatest challenges."
               </p>
             </div>
           </div>

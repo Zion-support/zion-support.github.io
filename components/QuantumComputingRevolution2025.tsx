@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 CpuZapAtomShieldTargetTrendingUpGlobeLock
 import Link from 'next/link';
@@ -58,7 +58,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20"
@@ -73,7 +73,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.2duration: 0.8 }}
           className="text-center mb-16"
@@ -118,7 +118,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
           {quantumFeatures.map((featureindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0y: 50 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
               transition={{ delay: 0.4 + index * 0.1duration: 0.8 }}
               className={`group relative cursor-pointer ${activeFeature === index ? 'scale-105' : ''}`}
@@ -142,7 +142,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
         {/* Quantum Capabilities */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 0.8duration: 0.8 }}
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
@@ -169,7 +169,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ delay: 1.2duration: 0.8 }}
           className="text-center"

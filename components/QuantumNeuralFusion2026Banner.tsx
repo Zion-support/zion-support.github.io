@@ -28,7 +28,7 @@ const QuantumNeuralFusion2026Banner = () => {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            The world's first quantum-neural hybrid AI system that combines quantum computing power 
+            The 'world', 's first quantum-neural hybrid AI system that combines quantum computing power 
             with advanced neural networks to deliver unprecedented intelligence and processing capabilities.
           </p>
           

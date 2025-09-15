@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -77,7 +77,7 @@ const NeuralInterface2025PromotionBanner: React.FC = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('neural-interface-banner-dismissed'true');
+    localStorage.setItem('neural-interface-banner-'dismissed', 'true');
   };
 
   useEffect(() => {

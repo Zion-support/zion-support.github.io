@@ -1,7 +1,7 @@
 "use client";
 import React{ useEffectuseStateuseCallback } from 'react';
 import Layout from './layout/Layout';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightPlayUsersTrendingUpBrainShieldRocketGlobeLockCpuDatabaseCloudBarChart3,
   AtomTargetZapInfinitySparklesStarEyeHeartCodePaletteLayersChevronRightChevronLeft,
@@ -106,7 +106,7 @@ const Homepage2043: React.FC = () => {
       name: "Dr. Sarah Chen",
       role: "Chief AI Officer",
       company: "QuantumTech Industries",
-      content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
+      content: "Zion Tech 'Group', 's quantum neural consciousness platform has revolutionized our AI research. 'We', 've achieved breakthroughs that would have taken decades using traditional methods.",
       rating: 5,
       avatar: "👩‍🔬"
     },
@@ -114,7 +114,7 @@ const Homepage2043: React.FC = () => {
       name: "Marcus Rodriguez",
       role: "CTO",
       company: "SpaceMining Corp",
-      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",
+      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. 'It', 's like having a team of expert miners working 24/7 without breaks.",
       rating: 5,
       avatar: "👨‍🚀"
     },
@@ -122,7 +122,7 @@ const Homepage2043: React.FC = () => {
       name: "Dr. Emily Watson",
       role: "Research Director",
       company: "Consciousness Research Institute",
-      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
+      content: "Working with Zion Tech 'Group', 's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
       rating: 5,
       avatar: "👩‍💻"
     }
@@ -200,7 +200,7 @@ const Homepage2043: React.FC = () => {
           {/* Hero Content */}
           <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8 }}
             >
@@ -224,8 +224,8 @@ const Homepage2043: React.FC = () => {
 
               {/* Enhanced Subtitle */}
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the world's most advanced AI consciousness platformsquantum computing solutions
-                and autonomous systems that redefine what's possible in technology.
+                Experience the 'world', 's most advanced AI consciousness platformsquantum computing solutions
+                and autonomous systems that redefine 'what', 's possible in technology.
               </p>
 
               {/* Enhanced CTA Buttons */}
@@ -256,7 +256,7 @@ const Homepage2043: React.FC = () => {
                 {stats.map((statindex) => (
                   <motion.div
                     key={stat.label}
-                    initial={{ opacity: 0y: 20 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
                     transition={{ duration: 0.6delay: index * 0.1 }}
                     className="text-center"
@@ -277,8 +277,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -299,8 +299,8 @@ const Homepage2043: React.FC = () => {
               {features.map((featureindex) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10scale: 1.02 }}
@@ -335,8 +335,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -424,8 +424,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -446,9 +446,9 @@ const Homepage2043: React.FC = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentTestimonialIndex}
-                  initial={{ opacity: 0y: 30 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -30 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5 }}
                   className="text-center max-w-4xl mx-auto"
                 >
@@ -499,8 +499,8 @@ const Homepage2043: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

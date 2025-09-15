@@ -123,13 +123,13 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
 
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
     };
   }[]);
 

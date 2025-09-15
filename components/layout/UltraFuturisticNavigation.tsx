@@ -1,14 +1,14 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 MenuXChevronDownSearchPhoneMailMapPinRocketBrainAtomShield
 
 interface UltraFuturisticNavigationProps {
   className?: string;
 }
 
-export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
+export default function UltraFuturisticNavigation({ className = ', ' }: UltraFuturisticNavigationProps) {
   const [isOpensetIsOpen] = useState(false);
   const [isScrolledsetIsScrolled] = useState(false);
   const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
@@ -18,8 +18,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   const navigationItems = [
@@ -28,17 +28,17 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       href: '/services',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'AI & Machine Learning'href: '/services/ai-ml'icon: Braincolor: 'from-purple-500 to-pink-600' },
-        { name: 'Quantum Computing'href: '/services/quantum'icon: Atomcolor: 'from-cyan-500 to-blue-600' },
-        { name: 'Cybersecurity'href: '/services/cybersecurity'icon: Shieldcolor: 'from-red-500 to-pink-600' },
-        { name: 'IT Solutions'href: '/services/it-solutions'icon: Rocketcolor: 'from-green-500 to-emerald-600' },
-        { name: 'View All Services'href: '/services'icon: Rocketcolor: 'from-gray-500 to-gray-600' }
+        { name: 'AI & Machine 'Learning', 'href: '/services/ai-'ml', 'icon: Braincolor: 'from-purple-500 to-pink-600' },
+        { name: 'Quantum 'Computing', 'href: '/services/'quantum', 'icon: Atomcolor: 'from-cyan-500 to-blue-600' },
+        { name: ''Cybersecurity', 'href: '/services/'cybersecurity', 'icon: Shieldcolor: 'from-red-500 to-pink-600' },
+        { name: 'IT 'Solutions', 'href: '/services/it-'solutions', 'icon: Rocketcolor: 'from-green-500 to-emerald-600' },
+        { name: 'View All 'Services', 'href: '/'services', 'icon: Rocketcolor: 'from-gray-500 to-gray-600' }
       ]
     },
-    { name: 'Solutions'href: '/solutions' },
-    { name: 'About'href: '/about' },
-    { name: 'Contact'href: '/contact' },
-    { name: 'Pricing'href: '/pricing' }
+    { name: ''Solutions', 'href: '/solutions' },
+    { name: ''About', 'href: '/about' },
+    { name: ''Contact', 'href: '/contact' },
+    { name: ''Pricing', 'href: '/pricing' }
   ];
 
   const contactInfo = {
@@ -91,9 +91,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0y: 10scale: 0.95 }}
-                          animate={{ opacity: 1y: 0scale: 1 }}
-                          exit={{ opacity: 0y: 10scale: 0.95 }}
+                          initial={{ opacity: 0, y: 10scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0scale: 1 }}
+                          exit={{ opacity: 0, y: 10scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
                         >
@@ -201,9 +201,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                       
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0y: -10 }}
-                          animate={{ opacity: 1y: 0 }}
-                          exit={{ opacity: 0y: -10 }}
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
                         >

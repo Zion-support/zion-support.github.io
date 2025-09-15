@@ -59,15 +59,15 @@ function ChangelogWidget() {
   const [messagesetMessage] = useState('');
 
   async function load() {
-    setMessage('');
+    setMessage(', ');
     const res = await fetch('/api/docs/changelog');
     const data = await res.json();
-    setContent(data.content || '');
+    setContent(data.content || ', ');
   }
 
   async function save() {
-    setMessage('');
-    await fetch('/api/docs/changelog'{ method: 'POST'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content }) });
+    setMessage(', ');
+    await fetch('/api/docs/changelog'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content }) });
     setMessage('Saved');
   }
 

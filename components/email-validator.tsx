@@ -39,16 +39,16 @@ export default function EmailValidatorPage() {
     
     // Check for common disposable email domains
     const disposableDomains = [
-      'tempmail.org'guerrillamail.com'mailinator.com'10minutemail.com',
-      'throwaway.email'temp-mail.org'sharklasers.com'getairmail.com'
+      'tempmail.'org', 'guerrillamail.'com', 'mailinator.com'10minutemail.com',
+      'throwaway.'email', 'temp-mail.'org', 'sharklasers.'com', 'getairmail.com'
     ];
     
     // Check for common typos
     const commonTypos = {
-      'gmail.com': ['gmial.com'gamil.com'gmai.com'],
-      'yahoo.com': ['yaho.com'yahooo.com'yhaoo.com'],
-      'hotmail.com': ['hotmai.com'hotmial.com'hotmeil.com'],
-      'outlook.com': ['outlok.com'outloook.com'outlok.com']
+      'gmail.com': ['gmial.'com', 'gamil.'com', 'gmai.com'],
+      'yahoo.com': ['yaho.'com', 'yahooo.'com', 'yhaoo.com'],
+      'hotmail.com': ['hotmai.'com', 'hotmial.'com', 'hotmeil.com'],
+      'outlook.com': ['outlok.'com', 'outloook.'com', 'outlok.com']
     };
     
     const domain = email.split('@')[1];
@@ -146,7 +146,7 @@ export default function EmailValidatorPage() {
 
   const clearResults = () => {
     setValidationResults([]);
-    setEmails('');
+    setEmails(', ');
   };
 
   const getStats = () => {

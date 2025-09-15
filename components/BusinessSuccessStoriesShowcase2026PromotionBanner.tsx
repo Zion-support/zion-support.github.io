@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -73,10 +73,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'Success Stories'value: '500+'icon: Award },
-    { label: 'Average ROI'value: '380%'icon: TrendingUp },
-    { label: 'Industries'value: '15+'icon: Building },
-    { label: 'Happy Clients'value: '10K+'icon: Users }
+    { label: 'Success 'Stories', 'value: '500+'icon: Award },
+    { label: 'Average 'ROI', 'value: '380%'icon: TrendingUp },
+    { label: ''Industries', 'value: '15+'icon: Building },
+    { label: 'Happy 'Clients', 'value: '10K+'icon: Users }
   ];
 
   useEffect(() => {
@@ -112,8 +112,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-400/30 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
@@ -124,8 +124,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
 
             {/* Title */}
             <motion.h2
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
@@ -140,8 +140,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
 
             {/* Subtitle */}
             <motion.p
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-purple-100 mb-6"
             >
@@ -180,8 +180,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
@@ -201,8 +201,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -219,8 +219,8 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
 
             {/* Trust Indicators */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.8 }}
               className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400"
             >

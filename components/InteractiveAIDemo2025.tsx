@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Bot
   MessageCircle
@@ -27,7 +27,7 @@ const InteractiveAIDemo2025 = () => {
       type: 'ai',
       content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
       timestamp: new Date(),
-      features: ['Neural Interfaces'Quantum AI'Business Automation']
+      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
     }
   ]);
   const [inputValuesetInputValue] = useState('');
@@ -41,25 +41,25 @@ const InteractiveAIDemo2025 = () => {
   const aiResponses = [
     {
       content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
-      features: ['Neural Interfaces'Brain-Computer Interface'Efficiency Boost'],
+      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
     },
     {
       content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
-      features: ['Quantum Computing'AI Algorithms'Real-time Processing'],
+      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
       icon: Zap,
       color: 'from-blue-500 to-cyan-500'
     },
     {
       content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
-      features: ['Enterprise Automation'Cost Reduction'Process Optimization'],
+      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
       icon: Target,
       color: 'from-green-500 to-emerald-500'
     },
     {
       content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
-      features: ['Future Predictions'Market Forecasting'Market Opportunity'],
+      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
       icon: TrendingUp,
       color: 'from-orange-500 to-red-500'
     }
@@ -76,7 +76,7 @@ const InteractiveAIDemo2025 = () => {
     };
 
     setMessages(prev => [...prevuserMessage]);
-    setInputValue('');
+    setInputValue(', ');
     setIsTyping(true);
 
     // Simulate AI response delay
@@ -104,7 +104,7 @@ const InteractiveAIDemo2025 = () => {
   };
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -116,7 +116,7 @@ const InteractiveAIDemo2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -192,9 +192,9 @@ const InteractiveAIDemo2025 = () => {
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-xs lg:max-w-md ${
@@ -228,8 +228,8 @@ const InteractiveAIDemo2025 = () => {
             {/* Typing Indicator */}
             {isTyping && (
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 className="flex justify-start"
               >
                 <div className="bg-white/10 text-gray-100 rounded-2xl p-4 flex items-center gap-2">
@@ -278,10 +278,10 @@ const InteractiveAIDemo2025 = () => {
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
-            { icon: Braintitle: 'Neural Interfaces'description: '500% efficiency boost' },
-            { icon: Zaptitle: 'Quantum AI'description: '1000x faster processing' },
-            { icon: Targetitle: 'Business Automation'description: '90% cost reduction' },
-            { icon: TrendingUptitle: 'Future Predictions'description: '95% accuracy rate' }
+            { icon: Braintitle: 'Neural 'Interfaces', 'description: '500% efficiency boost' },
+            { icon: Zaptitle: 'Quantum 'AI', 'description: '1000x faster processing' },
+            { icon: Targetitle: 'Business 'Automation', 'description: '90% cost reduction' },
+            { icon: TrendingUptitle: 'Future 'Predictions', 'description: '95% accuracy rate' }
           ].map((featureindex) => {
             const Icon = feature.icon;
             return (

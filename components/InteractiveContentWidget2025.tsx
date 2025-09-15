@@ -10,10 +10,10 @@ const InteractiveContentWidget2025 = () => {
   const [viewModesetViewMode] = useState('grid');
 
   const contentCategories = [
-    { id: 'trending'label: 'Trending'icon: TrendingUp },
-    { id: 'new'label: 'New'icon: Star },
-    { id: 'popular'label: 'Popular'icon: Users },
-    { id: 'ai'label: 'AI Solutions'icon: Zap }
+    { id: ''trending', 'label: ''Trending', 'icon: TrendingUp },
+    { id: ''new', 'label: ''New', 'icon: Star },
+    { id: ''popular', 'label: ''Popular', 'icon: Users },
+    { id: ''ai', 'label: 'AI 'Solutions', 'icon: Zap }
   ];
 
   const contentItems = [

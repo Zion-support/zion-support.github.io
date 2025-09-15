@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Settings, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Zap, BarChart3, Award } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: The Ultimate Enterprise Automation Revolution Transforming $100B+ in Business Operations',

@@ -13,7 +13,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '6 months',
       description: 'Complete AI transformation of manufacturing operations with autonomous quality control and predictive maintenance.',
       image: '/images/case-studies/manufacturing-transformation.jpg',
-      tags: ['AI Automation'Predictive Analytics'Quality Control'],
+      tags: ['AI 'Automation', 'Predictive 'Analytics', 'Quality Control'],
       metrics: {
         efficiency: '+340%',
         costReduction: '-68%',
@@ -29,7 +29,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '8 months',
       description: 'Revolutionary AI implementation in risk managementfraud detectionand customer service automation.',
       image: '/images/case-studies/financial-transformation.jpg',
-      tags: ['Risk Management'Fraud Detection'Customer Service'],
+      tags: ['Risk 'Management', 'Fraud 'Detection', 'Customer Service'],
       metrics: {
         processingSpeed: '+450%',
         accuracy: '+98%',
@@ -45,7 +45,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '12 months',
       description: 'AI-powered diagnostic systems that reduced diagnosis time by 85% while improving accuracy to 98.7%.',
       image: '/images/case-studies/healthcare-ai.jpg',
-      tags: ['Medical AI'Diagnostic Systems'Patient Care'],
+      tags: ['Medical 'AI', 'Diagnostic 'Systems', 'Patient Care'],
       metrics: {
         diagnosisSpeed: '+850%',
         accuracy: '+98.7%',
@@ -61,7 +61,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '9 months',
       description: 'Complete retail ecosystem transformation with AI-powered inventory managementcustomer insightsand personalized experiences.',
       image: '/images/case-studies/retail-transformation.jpg',
-      tags: ['Inventory Management'Customer Analytics'Personalization'],
+      tags: ['Inventory 'Management', 'Customer 'Analytics', 'Personalization'],
       metrics: {
         salesGrowth: '+156%',
         inventoryEfficiency: '+234%',
@@ -77,7 +77,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '10 months',
       description: 'Revolutionary logistics optimization with AI-driven route planningpredictive maintenanceand autonomous operations.',
       image: '/images/case-studies/logistics-ai.jpg',
-      tags: ['Route Optimization'Predictive Maintenance'Autonomous Operations'],
+      tags: ['Route 'Optimization', 'Predictive 'Maintenance', 'Autonomous Operations'],
       metrics: {
         deliverySpeed: '+290%',
         fuelEfficiency: '+67%',
@@ -93,7 +93,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       timeframe: '18 months',
       description: 'Breakthrough quantum AI implementation for portfolio optimization and risk analysisdelivering unprecedented returns.',
       image: '/images/case-studies/quantum-finance.jpg',
-      tags: ['Quantum Computing'Portfolio Optimization'Risk Analysis'],
+      tags: ['Quantum 'Computing', 'Portfolio 'Optimization', 'Risk Analysis'],
       metrics: {
         portfolioReturns: '+340%',
         riskReduction: '-78%',
@@ -127,8 +127,8 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -228,8 +228,8 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"

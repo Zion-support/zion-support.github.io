@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search
   Filter
@@ -36,21 +36,21 @@ const EnhancedContentDiscoveryWidget2025 = () => {
   const [showFiltersetShowFilters] = useState(false);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: Globecount: 1247 },
-    { id: 'breakthroughs'name: 'AI Breakthroughs'icon: Braincount: 156 },
-    { id: 'solutions'name: 'Enterprise Solutions'icon: Targetcount: 89 },
-    { id: 'predictions'name: 'Future Predictions'icon: Rocketcount: 67 },
-    { id: 'case-studies'name: 'Case Studies'icon: BarChart3count: 234 },
-    { id: 'tutorials'name: 'Tutorials'icon: Bookmarkcount: 189 },
-    { id: 'tools'name: 'AI Tools'icon: Cpucount: 312 },
-    { id: 'security'name: 'Security'icon: Shieldcount: 45 }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecount: 1247 },
+    { id: ''breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: Braincount: 156 },
+    { id: ''solutions', 'name: 'Enterprise 'Solutions', 'icon: Targetcount: 89 },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Rocketcount: 67 },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BarChart3count: 234 },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: Bookmarkcount: 189 },
+    { id: ''tools', 'name: 'AI 'Tools', 'icon: Cpucount: 312 },
+    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 45 }
   ];
 
   const sortOptions = [
-    { id: 'trending'name: 'Trending'icon: TrendingUp },
-    { id: 'newest'name: 'Newest'icon: Clock },
-    { id: 'popular'name: 'Most Popular'icon: Star },
-    { id: 'views'name: 'Most Viewed'icon: Eye }
+    { id: ''trending', 'name: ''Trending', 'icon: TrendingUp },
+    { id: ''newest', 'name: ''Newest', 'icon: Clock },
+    { id: ''popular', 'name: 'Most 'Popular', 'icon: Star },
+    { id: ''views', 'name: 'Most 'Viewed', 'icon: Eye }
   ];
 
   const contentItems = [
@@ -220,9 +220,9 @@ const EnhancedContentDiscoveryWidget2025 = () => {
               <AnimatePresence>
                 {showFilters && (
                   <motion.div
-                    initial={{ opacity: 0y: -10 }}
-                    animate={{ opacity: 1y: 0 }}
-                    exit={{ opacity: 0y: -10 }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50"
                   >
                     <div className="p-2">
@@ -280,9 +280,9 @@ const EnhancedContentDiscoveryWidget2025 = () => {
               return (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 ${
                     item.featured ? 'ring-2 ring-blue-500/30' : ''
@@ -355,7 +355,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
 
                     {/* CTA */}
                     <Link
-                      href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.title.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g'')}`}
+                      href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.title.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ')}`}
                       className="group/btn inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
                       <span>Read More</span>

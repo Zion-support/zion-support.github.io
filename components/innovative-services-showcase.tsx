@@ -31,7 +31,7 @@ export default function InnovativeServicesShowcase() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -50,7 +50,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B cybersecurity market300% annual growth',
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
-      features: ['Quantum key distribution (QKD)'Post-quantum cryptography'Quantum-resistant VPN tunnels'Real-time threat detection'Zero-trust architecture'],
+      features: ['Quantum key distribution (QKD)'Post-quantum 'cryptography', 'Quantum-resistant VPN 'tunnels', 'Real-time threat 'detection', 'Zero-trust architecture'],
       link: 'https://ziontechgroup.com/quantum-internet-security-platform',
       color: 'from-indigo-600 to-purple-700'
     },
@@ -61,7 +61,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B AI in healthcare400% annual growth',
       competitors: 'Insitro ($100M+ funding)Recursion ($2B+ funding)',
       savings: '100x faster drug discovery vs. traditional methods',
-      features: ['Quantum molecular simulation'AI-powered drug screening'Protein folding prediction'Drug interaction modeling'Clinical trial optimization'],
+      features: ['Quantum molecular 'simulation', 'AI-powered drug 'screening', 'Protein folding 'prediction', 'Drug interaction 'modeling', 'Clinical trial optimization'],
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
       color: 'from-emerald-600 to-teal-700'
     },
@@ -72,7 +72,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$15T algorithmic trading200% annual growth',
       competitors: 'Renaissance TechnologiesTwo SigmaCitadel',
       savings: 'Accessible quantum AI for smaller firms',
-      features: ['Quantum AI trading algorithms'Nanosecond execution'Real-time market analysis'Risk management'Portfolio optimization'],
+      features: ['Quantum AI trading 'algorithms', 'Nanosecond 'execution', 'Real-time market 'analysis', 'Risk 'management', 'Portfolio optimization'],
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
       color: 'from-yellow-600 to-orange-700'
     },
@@ -83,7 +83,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$5B neural interface market500% annual growth',
       competitors: 'Basic research toolsTraditional medical devices',
       savings: 'First comprehensive neural interface platform',
-      features: ['Neural signal processing'Brain activity monitoring'AI-powered interpretation'Real-time communication'Safety protocols'],
+      features: ['Neural signal 'processing', 'Brain activity 'monitoring', 'AI-powered 'interpretation', 'Real-time 'communication', 'Safety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
       color: 'from-purple-600 to-indigo-700'
     }
@@ -107,8 +107,8 @@ export default function InnovativeServicesShowcase() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 50 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1ease: "easeOut" }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -151,8 +151,8 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -162,7 +162,7 @@ export default function InnovativeServicesShowcase() {
                 </span> Innovative Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our most revolutionary services that are pushing the boundaries of what's possible
+                Our most revolutionary services that are pushing the boundaries of 'what', 's possible
               </p>
             </motion.div>
 
@@ -225,8 +225,8 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -244,8 +244,8 @@ export default function InnovativeServicesShowcase() {
                               {emergingTechServicesEnhanced2025.slice(06).map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 50 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -272,8 +272,8 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className="text-center mt-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -295,8 +295,8 @@ export default function InnovativeServicesShowcase() {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -314,8 +314,8 @@ export default function InnovativeServicesShowcase() {
               {nextGenAIServices.slice(06).map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 50 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -342,8 +342,8 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className="text-center mt-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -364,8 +364,8 @@ export default function InnovativeServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

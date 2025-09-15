@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -58,19 +58,19 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
   ];
 
   const stats = [
-    { value: '94.2%'label: 'AI Accuracy'icon: Target },
-    { value: '98.7%'label: 'Personalization'icon: Users },
-    { value: '+67%'label: 'Engagement Boost'icon: TrendingUp },
-    { value: '1,247'label: 'Content Matched'icon: Database }
+    { value: '94.2%'label: 'AI 'Accuracy', 'icon: Target },
+    { value: '98.7%'label: ''Personalization', 'icon: Users },
+    { value: '+67%'label: 'Engagement 'Boost', 'icon: TrendingUp },
+    { value: '1,247'label: 'Content 'Matched', 'icon: Database }
   ];
 
   const recommendationTypes = [
-    { icon: BookOpenlabel: 'Blog Posts'count: '342'color: 'blue' },
-    { icon: Targetlabel: 'Case Studies'count: '156'color: 'purple' },
-    { icon: Playlabel: 'Tutorials'count: '289'color: 'green' },
-    { icon: Cpulabel: 'Research'count: '123'color: 'orange' },
-    { icon: Activitylabel: 'Videos'count: '89'color: 'red' },
-    { icon: Shieldlabel: 'Whitepapers'count: '78'color: 'indigo' }
+    { icon: BookOpenlabel: 'Blog 'Posts', 'count: '342'color: 'blue' },
+    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' },
+    { icon: Playlabel: ''Tutorials', 'count: '289'color: 'green' },
+    { icon: Cpulabel: ''Research', 'count: '123'color: 'orange' },
+    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' },
+    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
   ];
 
   const aiCapabilities = [
@@ -115,7 +115,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
@@ -153,7 +153,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* AI Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
@@ -171,7 +171,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* AI Capabilities */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -194,7 +194,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
@@ -216,7 +216,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* Content Types Showcase */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
@@ -241,7 +241,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* AI Demo Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
@@ -317,7 +317,7 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"

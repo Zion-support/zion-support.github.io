@@ -81,7 +81,7 @@ export default function AutomationInsightsPage() {
     <>
       <Head>
         <title>Automation Insights | Zion Tech Group - AI Automation Expertise</title>
-        <meta name="description" content="Explore Zion Tech Group's automation insightstrendsand expertise in building autonomous systems." />
+        <meta name="description" content="Explore Zion Tech 'Group', 's automation insightstrendsand expertise in building autonomous systems." />
         <meta property="og:title" content="Automation Insights | Zion Tech Group" />
         <meta property="og:description" content="Expert insights on AI automationautonomous systemsand industry trends." />
         <meta name="twitter:card" content="summary_large_image" />

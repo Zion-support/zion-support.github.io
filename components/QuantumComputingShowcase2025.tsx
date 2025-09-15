@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 AtomZapCpuShieldTargetTrendingUpArrowRightPlayPause
 import Link from 'next/link';
 
@@ -123,8 +123,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -167,9 +167,9 @@ const QuantumComputingShowcase2025: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
-              exit={{ opacity: 0y: -20 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10"
             >
@@ -286,8 +286,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
 
         {/* Use Cases Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
@@ -299,8 +299,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
             {useCases.map((useCaseindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 text-center group hover:transform hover:scale-105"
               >
@@ -315,8 +315,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-lg rounded-3xl p-16 border border-white/10"
         >

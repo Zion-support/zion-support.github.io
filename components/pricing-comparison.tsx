@@ -18,24 +18,24 @@ export default function PricingComparisonPage() {
           name: 'Jasper AI',
           pricing: '$39/month',
           rating: '4.8/5',
-          pros: ['Excellent templates'Good AI quality'Wide integrations'],
-          cons: ['Higher pricing'Limited customization'No unlimited plan'],
+          pros: ['Excellent 'templates', 'Good AI 'quality', 'Wide integrations'],
+          cons: ['Higher 'pricing', 'Limited 'customization', 'No unlimited plan'],
           savings: 'Save $20/month with Zion'
         },
         {
           name: 'Copy.ai',
           pricing: '$36/month',
           rating: '4.6/5',
-          pros: ['Unlimited words'Good value'Simple interface'],
-          cons: ['Basic features'Limited templates'No advanced SEO'],
+          pros: ['Unlimited 'words', 'Good 'value', 'Simple interface'],
+          cons: ['Basic 'features', 'Limited 'templates', 'No advanced SEO'],
           savings: 'Save $17/month with Zion'
         },
         {
           name: 'Writesonic',
           pricing: '$19/month',
           rating: '4.4/5',
-          pros: ['Affordable'Good for beginners'Basic features'],
-          cons: ['Limited features'Basic AI models'No team features'],
+          pros: [', 'Affordable', 'Good for 'beginners', 'Basic features'],
+          cons: ['Limited 'features', 'Basic AI 'models', 'No team features'],
           savings: 'Same pricebetter features'
         }
       ],
@@ -62,24 +62,24 @@ export default function PricingComparisonPage() {
           name: 'Datadog',
           pricing: '$15/host/month',
           rating: '4.7/5',
-          pros: ['Comprehensive features'Great integrations'Advanced analytics'],
-          cons: ['Very expensive'Complex pricing'Steep learning curve'],
+          pros: ['Comprehensive 'features', 'Great 'integrations', 'Advanced analytics'],
+          cons: ['Very 'expensive', 'Complex 'pricing', 'Steep learning curve'],
           savings: 'Save $121/month for 10 servers'
         },
         {
           name: 'New Relic',
           pricing: '$99/user/month',
           rating: '4.5/5',
-          pros: ['Good APM'User-based pricing'Reliable'],
-          cons: ['Expensive for teams'Limited server monitoring'Complex setup'],
+          pros: ['Good 'APM', 'User-based 'pricing', 'Reliable'],
+          cons: ['Expensive for 'teams', 'Limited server 'monitoring', 'Complex setup'],
           savings: 'Save $396/month for 5 users'
         },
         {
           name: 'Prometheus + Grafana',
           pricing: 'Free',
           rating: '4.3/5',
-          pros: ['Completely free'Highly customizable'Open source'],
-          cons: ['Requires DevOps expertise'No managed service'Maintenance overhead'],
+          pros: ['Completely 'free', 'Highly 'customizable', 'Open source'],
+          cons: ['Requires DevOps 'expertise', 'No managed 'service', 'Maintenance overhead'],
           savings: 'Professional service for $29/month'
         }
       ],
@@ -106,24 +106,24 @@ export default function PricingComparisonPage() {
           name: 'GitHub Actions',
           pricing: 'Free + $0.008/min',
           rating: '4.6/5',
-          pros: ['GitHub native'Good free tier'Wide adoption'],
-          cons: ['Expensive for teams'Limited features'Complex pricing'],
+          pros: ['GitHub 'native', 'Good free 'tier', 'Wide adoption'],
+          cons: ['Expensive for 'teams', 'Limited 'features', 'Complex pricing'],
           savings: 'Save $200+/month for active teams'
         },
         {
           name: 'GitLab CI/CD',
           pricing: '$19/user/month',
           rating: '4.4/5',
-          pros: ['Integrated platform'Good CI/CD'Unlimited repos'],
-          cons: ['User-based pricing'Limited integrations'Higher cost for teams'],
+          pros: ['Integrated 'platform', 'Good CI/'CD', 'Unlimited repos'],
+          cons: ['User-based 'pricing', 'Limited 'integrations', 'Higher cost for teams'],
           savings: 'Save $56/month for 5 users'
         },
         {
           name: 'Jenkins',
           pricing: 'Free',
           rating: '4.2/5',
-          pros: ['Completely free'Highly customizable'Open source'],
-          cons: ['Requires maintenance'No managed service'Complex setup'],
+          pros: ['Completely 'free', 'Highly 'customizable', 'Open source'],
+          cons: ['Requires 'maintenance', 'No managed 'service', 'Complex setup'],
           savings: 'Professional service for $39/month'
         }
       ],
@@ -167,9 +167,9 @@ export default function PricingComparisonPage() {
     <>
       <Head>
         <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition</title>
-        <meta name="description" content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value." />
+        <meta name="description" content="See how 'Zion', 's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value." />
         <meta property="og:title" content="Pricing Comparison - Zion Tech Group" />
-        <meta property="og:description" content="Compare Zion's pricing to Jasper AIDatadogGitHub Actions and more. Save 30-60% with better features." />
+        <meta property="og:description" content="Compare 'Zion', 's pricing to Jasper AIDatadogGitHub Actions and more. Save 30-60% with better features." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -187,7 +187,7 @@ export default function PricingComparisonPage() {
               How We Compare to the Competition
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              See how Zion's micro SaaS services stack up against market leaders. 
+              See how 'Zion', 's micro SaaS services stack up against market leaders. 
               Get professional-grade features at startup-friendly prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

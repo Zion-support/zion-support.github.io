@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   SearchListStarCheckCircleArrowRightCheck,
   BrainShieldBuildingGlobe,
@@ -128,8 +128,8 @@ export default function AdvancedServicesShowcase() {
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
-      animate={{ opacity: 1y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
@@ -362,16 +362,16 @@ export default function AdvancedServicesShowcase() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               2025 Advanced Services Showcase
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
@@ -379,8 +379,8 @@ export default function AdvancedServicesShowcase() {
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >

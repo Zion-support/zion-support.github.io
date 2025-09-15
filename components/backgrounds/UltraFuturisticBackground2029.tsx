@@ -31,7 +31,7 @@ export default function UltraFuturisticBackground2029() {
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Initialize particles
     const initParticles = () => {
@@ -39,7 +39,7 @@ export default function UltraFuturisticBackground2029() {
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 
       for (let i = 0; i < particleCount; i++) {
-        const type = ['quantum'holographic'neural'cyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'];
+        const type = [', 'quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'];
         const colors = {
           quantum: ['#00ffff'#0080ff'#0040ff'],
           holographic: ['#8b5cf6'#a855f7'#c084fc'],
@@ -202,7 +202,7 @@ export default function UltraFuturisticBackground2029() {
     animate();
 
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

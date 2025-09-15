@@ -104,7 +104,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -242,7 +241,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 text-center border border-white border-opacity-20">
             <div className="text-2xl font-bold text-purple-400 mb-1">500+</div>
             <div className="text-xs opacity-90">Success Stories</div>
-=======
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -399,7 +397,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
             >
               Browse All Resources
             </Link>
->>>>>>> main
           </div>
         </div>
 

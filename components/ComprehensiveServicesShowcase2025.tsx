@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -203,16 +203,16 @@ const ComprehensiveServicesShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Comprehensive Services Showcase
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
           >
@@ -222,8 +222,8 @@ const ComprehensiveServicesShowcase2025 = () => {
           
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
@@ -248,8 +248,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Service Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -276,9 +276,9 @@ const ComprehensiveServicesShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeService}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
           >
@@ -382,16 +382,16 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* All Services Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((serviceindex) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
@@ -445,8 +445,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >

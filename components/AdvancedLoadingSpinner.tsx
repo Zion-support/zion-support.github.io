@@ -16,7 +16,7 @@ const AdvancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   color = 'primary',
   text,
   fullScreen = false,
-  className = ''
+  className = ', '
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -60,7 +60,7 @@ const AdvancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 // Skeleton loading components
-export const SkeletonCard: React.FC<{ className?: string }> = ({ className = '' }) => (
+export const SkeletonCard: React.FC<{ className?: string }> = ({ className = ', ' }) => (
   <div className={`animate-pulse bg-gray-200 rounded-lg ${className}`}>
     <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
     <div className="h-3 bg-gray-300 rounded w-1/2"></div>
@@ -69,7 +69,7 @@ export const SkeletonCard: React.FC<{ className?: string }> = ({ className = '' 
 
 export const SkeletonText: React.FC<{ lines?: number; className?: string }> = ({ 
   lines = 3
-  className = '' 
+  className = ', ' 
 }) => (
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map((_i) => (
@@ -83,7 +83,7 @@ export const SkeletonText: React.FC<{ lines?: number; className?: string }> = ({
   </div>
 );
 
-export const SkeletonImage: React.FC<{ className?: string }> = ({ className = '' }) => (
+export const SkeletonImage: React.FC<{ className?: string }> = ({ className = ', ' }) => (
   <div className={`animate-pulse bg-gray-200 rounded ${className}`}></div>
 );
 
@@ -113,7 +113,7 @@ export const ProgressiveLoader: React.FC<{
 };
 
 // Shimmer effect component
-export const ShimmerEffect: React.FC<{ className?: string }> = ({ className = '' }) => (
+export const ShimmerEffect: React.FC<{ className?: string }> = ({ className = ', ' }) => (
   <div className={`relative overflow-hidden ${className}`}>
     <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
   </div>

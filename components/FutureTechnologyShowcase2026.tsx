@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket
   Brain
@@ -49,21 +49,21 @@ const FutureTechnologyShowcase2026 = () => {
           description: 'Hybrid quantum-classical neural networks for superior pattern recognition',
           status: 'Available Now',
           impact: '1000x faster processing',
-          applications: ['Drug Discovery'Financial Modeling'Climate Simulation']
+          applications: ['Drug 'Discovery', 'Financial 'Modeling', 'Climate Simulation']
         },
         {
           name: 'Quantum Cryptography',
           description: 'Unbreakable encryption using quantum principles',
           status: 'Beta Testing',
           impact: 'Theoretically unbreakable',
-          applications: ['Secure Communications'Data Protection'Blockchain Security']
+          applications: ['Secure 'Communications', 'Data 'Protection', 'Blockchain Security']
         },
         {
           name: 'Quantum Optimization',
           description: 'Solving complex optimization problems in seconds',
           status: 'In Development',
           impact: 'Exponential speedup',
-          applications: ['Logistics'Supply Chain'Resource Allocation']
+          applications: [', 'Logistics', 'Supply 'Chain', 'Resource Allocation']
         }
       ]
     },
@@ -79,21 +79,21 @@ const FutureTechnologyShowcase2026 = () => {
           description: 'Control devices and applications using only your thoughts',
           status: 'Available Now',
           impact: '95% accuracy in neural signal processing',
-          applications: ['Accessibility'Gaming'Medical Devices']
+          applications: [', 'Accessibility', 'Gaming'Medical Devices']
         },
         {
           name: 'Memory Enhancement',
           description: 'AI-powered memory augmentation and cognitive enhancement',
           status: 'Beta Testing',
           impact: '300% memory improvement',
-          applications: ['Learning'Medical Treatment'Cognitive Therapy']
+          applications: [', 'Learning', 'Medical 'Treatment', 'Cognitive Therapy']
         },
         {
           name: 'Emotional AI',
           description: 'AI systems that understand and respond to human emotions',
           status: 'In Development',
           impact: '99.7% emotional recognition',
-          applications: ['Mental Health'Customer Service'Education']
+          applications: ['Mental 'Health', 'Customer 'Service', 'Education']
         }
       ]
     },
@@ -109,21 +109,21 @@ const FutureTechnologyShowcase2026 = () => {
           description: 'Global high-speed internet coverage from space',
           status: 'Available Now',
           impact: 'Global coverage with 1ms latency',
-          applications: ['Remote Areas'IoT Connectivity'Emergency Communications']
+          applications: ['Remote 'Areas', 'IoT 'Connectivity', 'Emergency Communications']
         },
         {
           name: 'Space Manufacturing',
           description: 'Manufacturing in zero-gravity for superior materials',
           status: 'Beta Testing',
           impact: 'Revolutionary material properties',
-          applications: ['Semiconductors'Pharmaceuticals'Advanced Materials']
+          applications: [', 'Semiconductors', 'Pharmaceuticals'Advanced Materials']
         },
         {
           name: 'Asteroid Mining',
           description: 'Extracting rare materials from asteroids',
           status: 'In Development',
           impact: 'Unlimited rare earth elements',
-          applications: ['Electronics'Renewable Energy'Space Exploration']
+          applications: [', 'Electronics', 'Renewable 'Energy', 'Space Exploration']
         }
       ]
     },
@@ -139,31 +139,31 @@ const FutureTechnologyShowcase2026 = () => {
           description: 'AI-powered personalized treatment plans based on genetics',
           status: 'Available Now',
           impact: '50% better treatment outcomes',
-          applications: ['Cancer Treatment'Rare Diseases'Preventive Care']
+          applications: ['Cancer 'Treatment', 'Rare 'Diseases', 'Preventive Care']
         },
         {
           name: 'Synthetic Biology',
           description: 'Designing biological systems using AI',
           status: 'Beta Testing',
           impact: 'Revolutionary drug development',
-          applications: ['Drug Discovery'Biofuels'Environmental Cleanup']
+          applications: ['Drug 'Discovery', 'Biofuels'Environmental Cleanup']
         },
         {
           name: 'Longevity Research',
           description: 'AI-driven research into extending human lifespan',
           status: 'In Development',
           impact: 'Potential 50% lifespan extension',
-          applications: ['Anti-Aging'Disease Prevention'Health Optimization']
+          applications: ['Anti-'Aging', 'Disease 'Prevention', 'Health Optimization']
         }
       ]
     }
   ];
 
   const stats = [
-    { label: 'Technologies'value: '50+'icon: Lightbulb },
-    { label: 'Patents'value: '200+'icon: Award },
-    { label: 'Research Papers'value: '500+'icon: Star },
-    { label: 'Global Impact'value: '1M+'icon: Users }
+    { label: ''Technologies', 'value: '50+'icon: Lightbulb },
+    { label: ''Patents', 'value: '200+'icon: Award },
+    { label: 'Research 'Papers', 'value: '500+'icon: Star },
+    { label: 'Global 'Impact', 'value: '1M+'icon: Users }
   ];
 
   const testimonials = [
@@ -198,8 +198,8 @@ const FutureTechnologyShowcase2026 = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -225,8 +225,8 @@ const FutureTechnologyShowcase2026 = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -243,8 +243,8 @@ const FutureTechnologyShowcase2026 = () => {
 
         {/* Category Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
@@ -290,8 +290,8 @@ const FutureTechnologyShowcase2026 = () => {
                 {categories[activeCategory].technologies.map((techindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5delay: index * 0.1 }}
                     className="group"
                   >
@@ -341,8 +341,8 @@ const FutureTechnologyShowcase2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
@@ -353,8 +353,8 @@ const FutureTechnologyShowcase2026 = () => {
             {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5delay: 0.7 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
@@ -376,8 +376,8 @@ const FutureTechnologyShowcase2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >

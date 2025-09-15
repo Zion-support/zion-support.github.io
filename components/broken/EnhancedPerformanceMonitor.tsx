@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffectuseCallback } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity
   AlertTriangle
@@ -126,7 +126,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       // Wait for page to be fully loaded
       if (document.readyState !== 'complete') {
         await new Promise(resolve => {
-          window.addEventListener('load'resolve{ once: true });
+          window.addEventListener(', 'load', 'resolve{ once: true });
         });
       }
 
@@ -216,8 +216,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   return (
     <motion.div
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
-      initial={{ opacity: 0y: 20 }}
-      animate={{ opacity: 1y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
     >
       {/* Header */}
       <div className="p-4 bg-gray-800/50 border-b border-gray-700">

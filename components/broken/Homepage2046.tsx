@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
   Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
@@ -185,8 +185,8 @@ const Homepage2046: React.FC = () => {
         <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 50 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
               <motion.h1 
@@ -202,8 +202,8 @@ const Homepage2046: React.FC = () => {
               
               <motion.p 
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1delay: 1 }}
               >
                 Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>
@@ -213,8 +213,8 @@ const Homepage2046: React.FC = () => {
               
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-                initial={{ opacity: 0y: 30 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1delay: 1.5 }}
               >
                 <Link href="/services">
@@ -242,8 +242,8 @@ const Homepage2046: React.FC = () => {
             {/* Contact Information */}
             <motion.div
               className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30"
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1delay: 2 }}
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -271,8 +271,8 @@ const Homepage2046: React.FC = () => {
         <section id="services" className="relative z-10 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 50 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -289,8 +289,8 @@ const Homepage2046: React.FC = () => {
 
             {/* Search and Filter */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1delay: 0.2 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -327,8 +327,8 @@ const Homepage2046: React.FC = () => {
 
             {/* Services Grid */}
             <motion.div
-              initial={{ opacity: 0y: 50 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1delay: 0.4 }}
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -336,8 +336,8 @@ const Homepage2046: React.FC = () => {
               {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10scale: 1.02 }}
@@ -424,8 +424,8 @@ const Homepage2046: React.FC = () => {
 
             {/* Call to Action */}
             <motion.div
-              initial={{ opacity: 0y: 50 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1delay: 0.6 }}
               viewport={{ once: true }}
               className="text-center mt-20"

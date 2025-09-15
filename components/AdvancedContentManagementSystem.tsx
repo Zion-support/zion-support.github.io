@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Settings
   BarChart3
@@ -55,14 +55,14 @@ const AdvancedContentManagementSystem = () => {
   }[]);
 
   const contentTypes = [
-    { id: 'all'name: 'All Content'count: 1247icon: Databasecolor: 'blue' },
-    { id: 'blog'name: 'Blog Posts'count: 342icon: Globecolor: 'green' },
-    { id: 'case-studies'name: 'Case Studies'count: 156icon: Targetcolor: 'purple' },
-    { id: 'tutorials'name: 'Tutorials'count: 289icon: Braincolor: 'orange' },
-    { id: 'research'name: 'Research'count: 123icon: Cpucolor: 'cyan' },
-    { id: 'videos'name: 'Videos'count: 89icon: Activitycolor: 'red' },
-    { id: 'whitepapers'name: 'Whitepapers'count: 78icon: Shieldcolor: 'indigo' },
-    { id: 'tools'name: 'Tools'count: 170icon: Zapcolor: 'yellow' }
+    { id: ''all', 'name: 'All 'Content', 'count: 1247icon: Databasecolor: 'blue' },
+    { id: ''blog', 'name: 'Blog 'Posts', 'count: 342icon: Globecolor: 'green' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 156icon: Targetcolor: 'purple' },
+    { id: ''tutorials', 'name: ''Tutorials', 'count: 289icon: Braincolor: 'orange' },
+    { id: ''research', 'name: ''Research', 'count: 123icon: Cpucolor: 'cyan' },
+    { id: ''videos', 'name: ''Videos', 'count: 89icon: Activitycolor: 'red' },
+    { id: ''whitepapers', 'name: ''Whitepapers', 'count: 78icon: Shieldcolor: 'indigo' },
+    { id: ''tools', 'name: ''Tools', 'count: 170icon: Zapcolor: 'yellow' }
   ];
 
   const recentContent = [
@@ -75,7 +75,7 @@ const AdvancedContentManagementSystem = () => {
       engagement: 892,
       publishedAt: '2025-01-15',
       author: 'Dr. Sarah Chen',
-      tags: ['ai'automation'business'2026'],
+      tags: ['ai', 'automation', 'business', '2026'],
       featured: true
     },
     {
@@ -87,7 +87,7 @@ const AdvancedContentManagementSystem = () => {
       engagement: 456,
       publishedAt: '2025-01-14',
       author: 'Prof. Michael Rodriguez',
-      tags: ['quantum'computing'applications'],
+      tags: [', 'quantum', 'computing'applications'],
       featured: true
     },
     {
@@ -99,7 +99,7 @@ const AdvancedContentManagementSystem = () => {
       engagement: 0,
       publishedAt: null,
       author: 'Emily Watson',
-      tags: ['neural-interface'guide'tutorial'],
+      tags: ['neural-'interface', 'guide'tutorial'],
       featured: false
     },
     {
@@ -111,7 +111,7 @@ const AdvancedContentManagementSystem = () => {
       engagement: 234,
       publishedAt: '2025-01-13',
       author: 'Alex Thompson',
-      tags: ['edge-ai'performance'optimization'],
+      tags: ['edge-'ai', 'performance'optimization'],
       featured: false
     }
   ];
@@ -127,17 +127,17 @@ const AdvancedContentManagementSystem = () => {
       { date: '2025-01-07'views: 32000 }
     ],
     topContent: [
-      { title: 'AI 2026: The Future of Autonomous Business Operations'views: 15420engagement: 892 },
-      { title: 'Quantum Computing Breakthrough: Real-World Applications'views: 8930engagement: 456 },
-      { title: 'Edge AI Computing: Performance Optimization'views: 6780engagement: 234 },
-      { title: 'Neural Interface Revolution: A Complete Guide'views: 5420engagement: 189 }
+      { title: 'AI 2026: The Future of Autonomous Business 'Operations', 'views: 15420engagement: 892 },
+      { title: 'Quantum Computing Breakthrough: Real-World 'Applications', 'views: 8930engagement: 456 },
+      { title: 'Edge AI Computing: Performance 'Optimization', 'views: 6780engagement: 234 },
+      { title: 'Neural Interface Revolution: A Complete 'Guide', 'views: 5420engagement: 189 }
     ],
     engagementByType: [
-      { type: 'Blog Posts'engagement: 45.2 },
-      { type: 'Case Studies'engagement: 32.1 },
-      { type: 'Tutorials'engagement: 28.7 },
-      { type: 'Research'engagement: 24.3 },
-      { type: 'Videos'engagement: 38.9 }
+      { type: 'Blog 'Posts', 'engagement: 45.2 },
+      { type: 'Case 'Studies', 'engagement: 32.1 },
+      { type: ''Tutorials', 'engagement: 28.7 },
+      { type: ''Research', 'engagement: 24.3 },
+      { type: ''Videos', 'engagement: 38.9 }
     ]
   };
 
@@ -160,7 +160,7 @@ const AdvancedContentManagementSystem = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
@@ -189,16 +189,16 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Stats Overview */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
           {[
-            { label: 'Total Content'value: contentStats.totalContenticon: Databasecolor: 'blue' },
-            { label: 'Total Views'value: contentStats.totalViews.toLocaleString()icon: Eyecolor: 'green' },
-            { label: 'Engagement'value: contentStats.totalEngagement.toLocaleString()icon: Heartcolor: 'purple' },
-            { label: 'Avg. Engagement Rate'value: `${contentStats.avgEngagementRate}%`icon: TrendingUpcolor: 'orange' }
+            { label: 'Total 'Content', 'value: contentStats.totalContenticon: Databasecolor: 'blue' },
+            { label: 'Total 'Views', 'value: contentStats.totalViews.toLocaleString()icon: Eyecolor: 'green' },
+            { label: ''Engagement', 'value: contentStats.totalEngagement.toLocaleString()icon: Heartcolor: 'purple' },
+            { label: 'Avg. Engagement 'Rate', 'value: `${contentStats.avgEngagementRate}%`icon: TrendingUpcolor: 'orange' }
           ].map((statindex) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-between">
@@ -216,18 +216,18 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Navigation Tabs */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
             {[
-              { id: 'dashboard'name: 'Dashboard'icon: BarChart3 },
-              { id: 'content'name: 'Content'icon: Database },
-              { id: 'analytics'name: 'Analytics'icon: TrendingUp },
-              { id: 'users'name: 'Users'icon: Users },
-              { id: 'settings'name: 'Settings'icon: Settings }
+              { id: ''dashboard', 'name: ''Dashboard', 'icon: BarChart3 },
+              { id: ''content', 'name: ''Content', 'icon: Database },
+              { id: ''analytics', 'name: ''Analytics', 'icon: TrendingUp },
+              { id: ''users', 'name: ''Users', 'icon: Users },
+              { id: ''settings', 'name: ''Settings', 'icon: Settings }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -247,7 +247,7 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Content Types Overview */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-8"
@@ -270,7 +270,7 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Recent Content */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white rounded-xl shadow-lg p-6"
@@ -366,7 +366,7 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Analytics Charts Placeholder */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"

@@ -21,7 +21,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Transform your business with revolutionary AI automation achieving unprecedented returns',
       featured: true,
       readingTime: '28 min read',
-      tags: ['AI Automation'Enterprise'ROI'Breakthrough']
+      tags: ['AI 'Automation', 'Enterprise', 'ROI', 'Breakthrough']
     },
     {
       id: 'fortune-500-success',
@@ -37,7 +37,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Real-world success story of comprehensive AI transformation',
       featured: true,
       readingTime: '22 min read',
-      tags: ['Fortune 500'Case Study'ROI'Success Story']
+      tags: ['Fortune 500'Case 'Study', 'ROI'Success Story']
     },
     {
       id: 'implementation-roadmap',
@@ -53,7 +53,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Step-by-step guide to achieving unprecedented AI success',
       featured: true,
       readingTime: '35 min read',
-      tags: ['Implementation'Strategy'ROI'Roadmap']
+      tags: [', 'Implementation', 'Strategy', 'ROI', 'Roadmap']
     },
     {
       id: 'quantum-computing',
@@ -69,7 +69,7 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Revolutionary quantum AI transforming enterprise operations',
       featured: false,
       readingTime: '30 min read',
-      tags: ['Quantum Computing'AI Revolution'Business Transformation']
+      tags: ['Quantum 'Computing', 'AI 'Revolution', 'Business Transformation']
     },
     {
       id: 'fortune-500-650',
@@ -85,15 +85,15 @@ const AI2025BreakthroughContentShowcase = () => {
       description: 'Comprehensive AI transformation delivering exceptional results',
       featured: false,
       readingTime: '22 min read',
-      tags: ['Fortune 500'AI Transformation'ROI'Manufacturing']
+      tags: ['Fortune 500'AI 'Transformation', 'ROI'Manufacturing']
     }
   ];
 
   const tabs = [
-    { id: 'all'label: 'All Content'count: content.length },
-    { id: 'blog'label: 'Blog Posts'count: content.filter(c => c.type === 'blog').length },
-    { id: 'case-study'label: 'Case Studies'count: content.filter(c => c.type === 'case-study').length },
-    { id: 'resource'label: 'Resources'count: content.filter(c => c.type === 'resource').length }
+    { id: ''all', 'label: 'All 'Content', 'count: content.length },
+    { id: ''blog', 'label: 'Blog 'Posts', 'count: content.filter(c => c.type === 'blog').length },
+    { id: 'case-'study', 'label: 'Case 'Studies', 'count: content.filter(c => c.type === 'case-study').length },
+    { id: ''resource', 'label: ''Resources', 'count: content.filter(c => c.type === 'resource').length }
   ];
 
   const filteredContent = activeTab === 'all' 

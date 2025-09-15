@@ -1,7 +1,7 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MenuXZapSparklesChevronDownChevronRight
   BrainAtomGlobeShieldCpuDatabase
@@ -25,10 +25,10 @@ const serviceCategories = [
     color: 'from-violet-600 to-purple-600',
     description: 'Beyond the future of technology',
     services: [
-      { name: 'AI Consciousness Evolution'href: '/ai-consciousness-evolution-platform'description: 'Evolve AI beyond human limits'price: '$9,999/month' },
-      { name: 'Quantum Consciousness Interface'href: '/quantum-consciousness-interface'description: 'Bridge quantum computing with consciousness'price: '$15,999/month' },
-      { name: 'Autonomous AI Civilization'href: '/autonomous-ai-civilization-platform'description: 'Create AI civilizations'price: '$19,999/month' },
-      { name: 'Quantum Time Manipulation'href: '/quantum-time-manipulation-platform'description: 'Manipulate time through quantum computing'price: '$25,999/month' }
+      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-'platform', 'description: 'Evolve AI beyond human 'limits', 'price: '$9,999/month' },
+      { name: 'Quantum Consciousness 'Interface', 'href: '/quantum-consciousness-'interface', 'description: 'Bridge quantum computing with 'consciousness', 'price: '$15,999/month' },
+      { name: 'Autonomous AI 'Civilization', 'href: '/autonomous-ai-civilization-'platform', 'description: 'Create AI 'civilizations', 'price: '$19,999/month' },
+      { name: 'Quantum Time 'Manipulation', 'href: '/quantum-time-manipulation-'platform', 'description: 'Manipulate time through quantum 'computing', 'price: '$25,999/month' }
     ]
   },
   {
@@ -37,10 +37,10 @@ const serviceCategories = [
     color: 'from-blue-600 to-cyan-600',
     description: 'Real business solutions for today',
     services: [
-      { name: 'AI Customer Success Automation'href: '/ai-customer-success-automation-2028'description: 'Automate customer success with AI'price: '$299/month' },
-      { name: 'Smart Inventory Management'href: '/smart-inventory-management-2028'description: 'AI inventory optimization'price: '$399/month' },
-      { name: 'Automated HR Recruitment'href: '/automated-hr-recruitment-2028'description: 'AI-powered hiring automation'price: '$249/month' },
-      { name: 'AI Content Marketing Suite'href: '/ai-content-marketing-suite-2028'description: 'AI-powered content creation'price: '$199/month' }
+      { name: 'AI Customer Success 'Automation', 'href: '/ai-customer-success-automation-2028'description: 'Automate customer success with 'AI', 'price: '$299/month' },
+      { name: 'Smart Inventory 'Management', 'href: '/smart-inventory-management-2028'description: 'AI inventory 'optimization', 'price: '$399/month' },
+      { name: 'Automated HR 'Recruitment', 'href: '/automated-hr-recruitment-2028'description: 'AI-powered hiring 'automation', 'price: '$249/month' },
+      { name: 'AI Content Marketing 'Suite', 'href: '/ai-content-marketing-suite-2028'description: 'AI-powered content 'creation', 'price: '$199/month' }
     ]
   },
   {
@@ -49,10 +49,10 @@ const serviceCategories = [
     color: 'from-indigo-600 to-blue-600',
     description: 'Quantum computing and space exploration',
     services: [
-      { name: 'Quantum Internet Security'href: '/quantum-internet-security-gateway-2028'description: 'Unbreakable quantum encryption'price: '$3,999/month' },
-      { name: 'Quantum Neural Interface'href: '/quantum-neural-interface-platform-2028'description: 'Brain-computer quantum interface'price: '$8,999/month' },
-      { name: 'Space Debris Management AI'href: '/space-debris-management-ai-2028'description: 'AI space safety and management'price: '$5,999/month' },
-      { name: 'Quantum Financial Trading'href: '/quantum-financial-trading-algorithm-platform-2028'description: 'Quantum trading algorithms'price: '$12,999/month' }
+      { name: 'Quantum Internet 'Security', 'href: '/quantum-internet-security-gateway-2028'description: 'Unbreakable quantum 'encryption', 'price: '$3,999/month' },
+      { name: 'Quantum Neural 'Interface', 'href: '/quantum-neural-interface-platform-2028'description: 'Brain-computer quantum 'interface', 'price: '$8,999/month' },
+      { name: 'Space Debris Management 'AI', 'href: '/space-debris-management-ai-2028'description: 'AI space safety and 'management', 'price: '$5,999/month' },
+      { name: 'Quantum Financial 'Trading', 'href: '/quantum-financial-trading-algorithm-platform-2028'description: 'Quantum trading 'algorithms', 'price: '$12,999/month' }
     ]
   },
   {
@@ -61,10 +61,10 @@ const serviceCategories = [
     color: 'from-emerald-600 to-teal-600',
     description: 'Next-generation AI solutions',
     services: [
-      { name: 'AI Consciousness Evolution'href: '/ai-consciousness-evolution-platform-2028'description: 'Evolve AI beyond human limits'price: '$9,999/month' },
-      { name: 'Autonomous AI Civilization'href: '/autonomous-ai-civilization-platform-2028'description: 'Create AI civilizations'price: '$19,999/month' },
-      { name: 'AI Healthcare Companion'href: '/ai-healthcare-companion-2028'description: 'Revolutionary healthcare AI'price: '$399/month' },
-      { name: 'AI Content Creation Revolution'href: '/ai-content-creation-revolution-2028'description: 'Unlimited AI content generation'price: '$599/month' }
+      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-platform-2028'description: 'Evolve AI beyond human 'limits', 'price: '$9,999/month' },
+      { name: 'Autonomous AI 'Civilization', 'href: '/autonomous-ai-civilization-platform-2028'description: 'Create AI 'civilizations', 'price: '$19,999/month' },
+      { name: 'AI Healthcare 'Companion', 'href: '/ai-healthcare-companion-2028'description: 'Revolutionary healthcare 'AI', 'price: '$399/month' },
+      { name: 'AI Content Creation 'Revolution', 'href: '/ai-content-creation-revolution-2028'description: 'Unlimited AI content 'generation', 'price: '$599/month' }
     ]
   },
   {
@@ -73,10 +73,10 @@ const serviceCategories = [
     color: 'from-red-600 to-orange-600',
     description: 'Enterprise-grade solutions',
     services: [
-      { name: 'Zero Trust Architecture 2028'href: '/zero-trust-network-architecture-2028'description: 'Next-gen security architecture'price: 'Custom pricing' },
-      { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration-2028'description: 'Intelligent edge computing'price: 'Custom pricing' },
-      { name: '5G Private Networks'href: '/5g-private-network-solutions-2028'description: 'Enterprise 5G solutions'price: 'Custom pricing' },
-      { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform-2028'description: 'Enterprise blockchain'price: 'Custom pricing' }
+      { name: 'Zero Trust Architecture 2028'href: '/zero-trust-network-architecture-2028'description: 'Next-gen security 'architecture', 'price: 'Custom pricing' },
+      { name: 'Edge Computing 'Orchestration', 'href: '/edge-computing-orchestration-2028'description: 'Intelligent edge 'computing', 'price: 'Custom pricing' },
+      { name: '5G Private 'Networks', 'href: '/5g-private-network-solutions-2028'description: 'Enterprise 5G 'solutions', 'price: 'Custom pricing' },
+      { name: 'Blockchain 'Infrastructure', 'href: '/blockchain-infrastructure-platform-2028'description: 'Enterprise 'blockchain', 'price: 'Custom pricing' }
     ]
   },
   {
@@ -85,34 +85,34 @@ const serviceCategories = [
     color: 'from-pink-600 to-rose-600',
     description: 'Virtual and augmented reality',
     services: [
-      { name: 'Holographic Metaverse'href: '/holographic-metaverse-development-platform-2028'description: '3D holographic experiences'price: '$2,999/month' },
-      { name: 'AI Multiverse Creation'href: '/ai-multiverse-creation-platform-2028'description: 'Create AI-powered multiverses'price: '$29,999/month' },
-      { name: 'Virtual Event Holograms'href: '/virtual-event-hologram-platform-2028'description: 'Holographic event platform'price: '$1,999/month' },
-      { name: 'Digital Reality Interface'href: '/digital-reality-interface-2028'description: 'Next-gen reality interface'price: '$4,999/month' }
+      { name: 'Holographic 'Metaverse', 'href: '/holographic-metaverse-development-platform-2028'description: '3D holographic 'experiences', 'price: '$2,999/month' },
+      { name: 'AI Multiverse 'Creation', 'href: '/ai-multiverse-creation-platform-2028'description: 'Create AI-powered 'multiverses', 'price: '$29,999/month' },
+      { name: 'Virtual Event 'Holograms', 'href: '/virtual-event-hologram-platform-2028'description: 'Holographic event 'platform', 'price: '$1,999/month' },
+      { name: 'Digital Reality 'Interface', 'href: '/digital-reality-interface-2028'description: 'Next-gen reality 'interface', 'price: '$4,999/month' }
     ]
   }
 ];
 
 const companyLinks = [
-  { name: '🏠 Home'href: '/'icon: Home },
-  { name: '🚀 2028 Services'href: '/ultimate-2028-services-showcase'icon: Rocket },
-  { name: '⭐ Ultimate 2028'href: '/ultimate-2028-services-showcase'icon: Star },
-  { name: '💰 2028 Pricing'href: '/revolutionary-2028-pricing'icon: DollarSign },
-  { name: '📊 Case Studies'href: '/case-studies'icon: Briefcase },
-  { name: '📚 Blog & Resources'href: '/blog'icon: BookOpen },
-  { name: '📈 Reports'href: '/reports'icon: TrendingUp },
-  { name: '🔧 Solutions'href: '/solutions'icon: Layers },
-  { name: '💼 Careers'href: '/careers'icon: Users },
-  { name: '📞 Contact'href: '/contact'icon: MessageCircle }
+  { name: '🏠 'Home', 'href: '/'icon: Home },
+  { name: '🚀 2028 'Services', 'href: '/ultimate-2028-services-'showcase', 'icon: Rocket },
+  { name: '⭐ Ultimate 2028'href: '/ultimate-2028-services-'showcase', 'icon: Star },
+  { name: '💰 2028 'Pricing', 'href: '/revolutionary-2028-'pricing', 'icon: DollarSign },
+  { name: '📊 Case 'Studies', 'href: '/case-'studies', 'icon: Briefcase },
+  { name: '📚 Blog & 'Resources', 'href: '/'blog', 'icon: BookOpen },
+  { name: '📈 'Reports', 'href: '/'reports', 'icon: TrendingUp },
+  { name: '🔧 'Solutions', 'href: '/'solutions', 'icon: Layers },
+  { name: '💼 'Careers', 'href: '/'careers', 'icon: Users },
+  { name: '📞 'Contact', 'href: '/'contact', 'icon: MessageCircle }
 ];
 
 const technologyLinks = [
-  { name: '🤖 AI Services'href: '/ai-services'icon: Brain },
-  { name: '⚛️ Quantum Services'href: '/quantum-services'icon: Atom },
-  { name: '☁️ Cloud Platform'href: '/cloud-platform'icon: Cloud },
-  { name: '🔒 Cybersecurity'href: '/cybersecurity'icon: Lock },
-  { name: '📊 Analytics'href: '/analytics'icon: Database },
-  { name: '🔄 Automation'href: '/automation'icon: Cpu }
+  { name: '🤖 AI 'Services', 'href: '/ai-'services', 'icon: Brain },
+  { name: '⚛️ Quantum 'Services', 'href: '/quantum-'services', 'icon: Atom },
+  { name: '☁️ Cloud 'Platform', 'href: '/cloud-'platform', 'icon: Cloud },
+  { name: '🔒 'Cybersecurity', 'href: '/'cybersecurity', 'icon: Lock },
+  { name: '📊 'Analytics', 'href: '/'analytics', 'icon: Database },
+  { name: '🔄 'Automation', 'href: '/'automation', 'icon: Cpu }
 ];
 
 export default function UltraFuturisticNavigation2027() {
@@ -131,8 +131,8 @@ export default function UltraFuturisticNavigation2027() {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[isClient]);
 
   const navigation = [
@@ -404,10 +404,10 @@ export default function UltraFuturisticNavigation2027() {
   };
 
   const quickLinks = [
-    { name: 'Pricing'href: '/pricing'icon: <CreditCard className="w-4 h-4" /> },
-    { name: 'Case Studies'href: '/case-studies'icon: <FileText className="w-4 h-4" /> },
-    { name: 'Support'href: '/support'icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'Contact'href: '/contact'icon: <Mail className="w-4 h-4" /> }
+    { name: ''Pricing', 'href: '/'pricing', 'icon: <CreditCard className="w-4 h-4" /> },
+    { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: <FileText className="w-4 h-4" /> },
+    { name: ''Support', 'href: '/'support', 'icon: <MessageSquare className="w-4 h-4" /> },
+    { name: ''Contact', 'href: '/'contact', 'icon: <Mail className="w-4 h-4" /> }
   ];
 
   return (
@@ -462,9 +462,9 @@ export default function UltraFuturisticNavigation2027() {
                 <AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
-                      initial={{ opacity: 0y: 10scale: 0.95 }}
-                      animate={{ opacity: 1y: 0scale: 1 }}
-                      exit={{ opacity: 0y: 10scale: 0.95 }}
+                      initial={{ opacity: 0, y: 10scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0scale: 1 }}
+                      exit={{ opacity: 0, y: 10scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
                     >

@@ -16,7 +16,7 @@ export default function MarketResearchPage() {
         'Natural language processing growth',
         'Computer vision applications expanding'
       ],
-      topPlayers: ['OpenAI'Anthropic'Google AI'Microsoft Azure AI'],
+      topPlayers: [', 'OpenAI', 'Anthropic'Google 'AI', 'Microsoft Azure AI'],
       opportunities: [
         'AI content generation tools',
         'Predictive analytics platforms',
@@ -36,7 +36,7 @@ export default function MarketResearchPage() {
         'Data privacy regulations',
         'Performance optimization focus'
       ],
-      topPlayers: ['DataDog'New Relic'SolarWinds'Splunk'],
+      topPlayers: [', 'DataDog', 'New 'Relic', 'SolarWinds'Splunk'],
       opportunities: [
         'Database performance monitoring',
         'Real-time analytics dashboards',
@@ -56,7 +56,7 @@ export default function MarketResearchPage() {
         'API security concerns',
         'Compliance requirements increasing'
       ],
-      topPlayers: ['Okta'Auth0'Ping Identity'OneLogin'],
+      topPlayers: [', 'Okta', 'Auth0'Ping 'Identity', 'OneLogin'],
       opportunities: [
         'Identity verification platforms',
         'API security gateways',
@@ -76,7 +76,7 @@ export default function MarketResearchPage() {
         'Mobile BI growth',
         'Predictive analytics demand'
       ],
-      topPlayers: ['Tableau'Power BI'Looker'Qlik'],
+      topPlayers: [', 'Tableau', 'Power 'BI', 'Looker'Qlik'],
       opportunities: [
         'Custom dashboard builders',
         'Data integration platforms',
@@ -96,7 +96,7 @@ export default function MarketResearchPage() {
         'Rate limiting importance',
         'Developer experience focus'
       ],
-      topPlayers: ['Kong'Tyk'AWS API Gateway'Azure API Management'],
+      topPlayers: [', 'Kong', 'Tyk'AWS API 'Gateway', 'Azure API Management'],
       opportunities: [
         'API rate limiting services',
         'Developer portal platforms',
@@ -116,7 +116,7 @@ export default function MarketResearchPage() {
         'Conversion optimization focus',
         'Mobile app analytics growth'
       ],
-      topPlayers: ['Hotjar'FullStory'Mixpanel'Amplitude'],
+      topPlayers: [', 'Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
       opportunities: [
         'Heatmap and session recording',
         'A/B testing platforms',
@@ -131,7 +131,7 @@ export default function MarketResearchPage() {
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
-      examples: ['Salesforce'Microsoft'Oracle'SAP'],
+      examples: [', 'Salesforce', 'Microsoft', 'Oracle', 'SAP'],
       strengths: [
         'Extensive resources and R&D',
         'Established customer base',
@@ -149,7 +149,7 @@ export default function MarketResearchPage() {
     },
     {
       company: 'Mid-Market Leaders',
-      examples: ['HubSpot'Atlassian'Slack'Zoom'],
+      examples: [', 'HubSpot', 'Atlassian', 'Slack', 'Zoom'],
       strengths: [
         'Balanced features and pricing',
         'Strong user experience',
@@ -167,7 +167,7 @@ export default function MarketResearchPage() {
     },
     {
       company: 'Micro SaaS Innovators',
-      examples: ['Zapier'Notion'Airtable'Linear'],
+      examples: [', 'Zapier', 'Notion', 'Airtable', 'Linear'],
       strengths: [
         'Focused feature sets',
         'Fast innovation cycles',

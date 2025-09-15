@@ -29,8 +29,8 @@ export default function PerformanceOptimizations() {
               window.addEventListener('load'() => {
                 const perfData = performance.getEntriesByType('navigation')[0];
                 if (perfData) {
-                  console.log('Page Load Time:'perfData.loadEventEnd - perfData.loadEventStart'ms');
-                  console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart'ms');
+                  console.log('Page Load Time:'perfData.loadEventEnd - perfData.'loadEventStart', 'ms');
+                  console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.'domContentLoadedEventStart', 'ms');
                 }
               });
             }

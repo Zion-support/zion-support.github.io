@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -57,7 +57,7 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
       description: 'Automated code analysis and optimization suggestions',
-      features: ['Security Scanning'Performance Optimization'Best Practices'Bug Detection'],
+      features: ['Security 'Scanning', 'Performance 'Optimization', 'Best 'Practices', 'Bug Detection'],
       metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
     },
     {
@@ -66,7 +66,7 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
       description: 'Real-time data processing and predictive insights',
-      features: ['Real-time Processing'Predictive Analytics'Data Visualization'Trend Analysis'],
+      features: ['Real-time 'Processing', 'Predictive 'Analytics', 'Data 'Visualization', 'Trend Analysis'],
       metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
     },
     {
@@ -75,7 +75,7 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: Network,
       color: 'from-purple-500 to-pink-500',
       description: 'Comprehensive system health and performance monitoring',
-      features: ['Health Monitoring'Performance Tracking'Alert System'Auto-scaling'],
+      features: ['Health 'Monitoring', 'Performance 'Tracking', 'Alert 'System', 'Auto-scaling'],
       metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
     },
     {
@@ -84,7 +84,7 @@ const InteractiveAIToolsDemo2026 = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       description: 'Advanced threat detection and vulnerability assessment',
-      features: ['Threat Detection'Vulnerability Scanning'Risk Assessment'Compliance Check'],
+      features: ['Threat 'Detection', 'Vulnerability 'Scanning', 'Risk 'Assessment', 'Compliance Check'],
       metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
     }
   ];
@@ -135,8 +135,8 @@ const InteractiveAIToolsDemo2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -151,8 +151,8 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Demo Selector */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
@@ -177,8 +177,8 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Interactive Demo Area */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
         >
@@ -269,8 +269,8 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="mb-12"
         >
@@ -297,8 +297,8 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >

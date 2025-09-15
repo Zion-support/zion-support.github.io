@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star
   ArrowRight
@@ -92,9 +92,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="text-center"
           >
@@ -110,8 +110,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
               </motion.div>
               
               <motion.h2
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white mb-4"
               >
@@ -119,8 +119,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
               </motion.h2>
               
               <motion.p
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-blue-100 mb-6"
               >
@@ -128,8 +128,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
               </motion.p>
               
               <motion.p
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 className="text-lg text-gray-200 mb-8 max-w-4xl mx-auto"
               >
@@ -139,8 +139,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
 
             {/* Stats and CTA */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8"
             >

@@ -88,7 +88,7 @@ const SearchBar: React.FC = () => {,
 ,
   const handleResultClick = () => {,
     setIsOpen(false),
-    setQuery('')
+    setQuery(', ')
   };
 ,
   const handleKeyDown = (e: React.KeyboardEvent) => {,

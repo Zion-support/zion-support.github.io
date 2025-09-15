@@ -11,17 +11,17 @@ export default function TryItConsole({ methodpathrequiresAuth }: TryItProps) {
   const [baseUrlsetBaseUrl] = useState('https://api.zion.os');
   const [tokensetToken] = useState('');
   const [bodysetBody] = useState('');
-  const [responsetResponse] = useState<string>('');
+  const [responsetResponse] = useState<string>(', ');
   const [loadingsetLoading] = useState(false);
 
   const url = useMemo(() => {
     if (path.startsWith('http')) return path;
-    return baseUrl.replace(/\/$/'') + path;
+    return baseUrl.replace(/\/$/', ') + path;
   }[baseUrlpath]);
 
   async function onSend() {
     setLoading(true);
-    setResponse('');
+    setResponse(', ');
     try {
       const headers: Record<string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;

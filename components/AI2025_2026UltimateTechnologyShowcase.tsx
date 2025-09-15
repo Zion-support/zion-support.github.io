@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -40,19 +40,19 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           icon: Brain,
           title: 'Neural Consciousness AI',
           description: 'Advanced AI systems with self-awareness and emotional intelligence',
-          benefits: ['300% faster decision making'95% accuracy in predictions'Real-time adaptation']
+          benefits: ['300% faster decision making'95% accuracy in 'predictions', 'Real-time adaptation']
         },
         {
           icon: Cpu,
           title: 'Quantum-Neural Fusion',
           description: 'Revolutionary computing that combines quantum and neural processing',
-          benefits: ['10x processing speed'Unlimited scalability'Zero latency responses']
+          benefits: ['10x processing 'speed', 'Unlimited 'scalability', 'Zero latency responses']
         },
         {
           icon: Database,
           title: 'Autonomous Data Intelligence',
           description: 'Self-managing data systems that optimize and secure themselves',
-          benefits: ['99.9% uptime'Auto-optimization'Predictive maintenance']
+          benefits: ['99.9% 'uptime', 'Auto-'optimization', 'Predictive maintenance']
         }
       ]
     },
@@ -64,19 +64,19 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           icon: Globe,
           title: 'Global AI Ecosystem',
           description: 'Worldwide AI network connecting businesses and individuals',
-          benefits: ['Global connectivity'Cross-platform integration'Universal AI access']
+          benefits: ['Global 'connectivity', 'Cross-platform 'integration', 'Universal AI access']
         },
         {
           icon: Rocket,
           title: 'Space-Age AI Computing',
           description: 'AI systems designed for space exploration and interplanetary communication',
-          benefits: ['Space-grade reliability'Interplanetary communication'Zero-gravity optimization']
+          benefits: ['Space-grade 'reliability', 'Interplanetary 'communication', 'Zero-gravity optimization']
         },
         {
           icon: Star,
           title: 'Conscious AI Beings',
           description: 'AI entities with full consciousness and creative capabilities',
-          benefits: ['Creative problem solving'Emotional intelligence'Autonomous innovation']
+          benefits: ['Creative problem 'solving', 'Emotional 'intelligence', 'Autonomous innovation']
         }
       ]
     }
@@ -116,8 +116,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: -50 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: -50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -156,8 +156,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
         {/* Tab Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center mb-12"
         >
@@ -208,8 +208,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               {currentTech.features.map((featureindex) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0y: 50 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.2 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group"
                 >
@@ -240,8 +240,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0y: 50 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
         >
@@ -275,8 +275,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 50 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >

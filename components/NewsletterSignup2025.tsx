@@ -11,7 +11,7 @@ const NewsletterSignup2025: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError('');
+    setError(', ');
 
     // Simulate API call
     try {
@@ -19,7 +19,7 @@ const NewsletterSignup2025: React.FC = () => {
       
       if (email.includes('@')) {
         setIsSubscribed(true);
-        setEmail('');
+        setEmail(', ');
       } else {
         setError('Please enter a valid email address');
       }
@@ -37,11 +37,11 @@ const NewsletterSignup2025: React.FC = () => {
           <div className="text-6xl mb-4">🎉</div>
           <h2 className="text-3xl font-bold mb-4">Welcome to the AI Revolution!</h2>
           <p className="text-xl opacity-90 mb-6">
-            You're now subscribed to our exclusive AI insights newsletter. 
+            'You', 're now subscribed to our exclusive AI insights newsletter. 
             Get ready for cutting-edge content delivered to your inbox.
           </p>
           <div className="bg-white bg-opacity-20 rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold mb-2">What's Next?</h3>
+            <h3 className="text-lg font-semibold mb-2">'What', 's Next?</h3>
             <ul className="text-left space-y-2">
               <li>• Weekly AI trend reports and insights</li>
               <li>• Exclusive case studies and success stories</li>

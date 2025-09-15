@@ -8,7 +8,7 @@ export default function AISolutionsPage() {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analyticspattern recognitionand intelligent decision making.',
-      features: ['Predictive Analytics'Pattern Recognition'Anomaly Detection'Recommendation Systems'],
+      features: ['Predictive 'Analytics', 'Pattern 'Recognition', 'Anomaly 'Detection', 'Recommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
@@ -17,7 +17,7 @@ export default function AISolutionsPage() {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysisentiment analysisand language understanding.',
-      features: ['Text Analysis'Sentiment Analysis'Language Translation'Chatbot Development'],
+      features: ['Text 'Analysis', 'Sentiment 'Analysis', 'Language 'Translation', 'Chatbot Development'],
       icon: '💬',
       category: 'Language AI',
       complexity: 'Advanced'
@@ -26,7 +26,7 @@ export default function AISolutionsPage() {
       id: 'computer-vision',
       title: 'Computer Vision',
       description: 'Computer vision solutions for image recognitionobject detectionand visual analytics.',
-      features: ['Image Recognition'Object Detection'Facial Recognition'Quality Control'],
+      features: ['Image 'Recognition', 'Object 'Detection', 'Facial 'Recognition', 'Quality Control'],
       icon: '👁️',
       category: 'Visual AI',
       complexity: 'Advanced'
@@ -35,7 +35,7 @@ export default function AISolutionsPage() {
       id: 'autonomous-systems',
       title: 'Autonomous Systems',
       description: 'Self-operating systems that can make decisions and take actions independently.',
-      features: ['Decision Making'Self-Learning'Adaptive Behavior'Continuous Improvement'],
+      features: ['Decision 'Making', 'Self-'Learning', 'Adaptive 'Behavior', 'Continuous Improvement'],
       icon: '🤖',
       category: 'Autonomy',
       complexity: 'Expert'
@@ -44,7 +44,7 @@ export default function AISolutionsPage() {
       id: 'predictive-analytics',
       title: 'Predictive Analytics',
       description: 'Data-driven insights that help predict future trends and behaviors.',
-      features: ['Trend Analysis'Risk Assessment'Forecasting'Behavioral Prediction'],
+      features: ['Trend 'Analysis', 'Risk 'Assessment', 'Forecasting'Behavioral Prediction'],
       icon: '📊',
       category: 'Analytics',
       complexity: 'Intermediate'
@@ -53,7 +53,7 @@ export default function AISolutionsPage() {
       id: 'ai-automation',
       title: 'AI-Powered Automation',
       description: 'Intelligent automation that learns and improves over time.',
-      features: ['Process Automation'Workflow Optimization'Intelligent Routing'Adaptive Workflows'],
+      features: ['Process 'Automation', 'Workflow 'Optimization', 'Intelligent 'Routing', 'Adaptive Workflows'],
       icon: '⚡',
       category: 'Automation',
       complexity: 'Intermediate'
@@ -63,35 +63,35 @@ export default function AISolutionsPage() {
   const useCases = [
     {
       industry: 'Manufacturing',
-      solutions: ['Quality Control'Predictive Maintenance'Supply Chain Optimization'],
+      solutions: ['Quality 'Control', 'Predictive 'Maintenance', 'Supply Chain Optimization'],
       icon: '🏭'
     },
     {
       industry: 'Healthcare',
-      solutions: ['Diagnostic Support'Patient Care Optimization'Drug Discovery'],
+      solutions: ['Diagnostic 'Support', 'Patient Care 'Optimization', 'Drug Discovery'],
       icon: '🏥'
     },
     {
       industry: 'Finance',
-      solutions: ['Fraud Detection'Risk Assessment'Algorithmic Trading'],
+      solutions: ['Fraud 'Detection', 'Risk 'Assessment', 'Algorithmic Trading'],
       icon: '💳'
     },
     {
       industry: 'Retail',
-      solutions: ['Customer Segmentation'Inventory Management'Personalized Marketing'],
+      solutions: ['Customer 'Segmentation', 'Inventory 'Management', 'Personalized Marketing'],
       icon: '🛍️'
     }
   ];
 
   const technologies = [
-    'TensorFlow'PyTorch'Scikit-learn'OpenAI GPT'BERT'YOLO'Keras'Pandas'
+    ', 'TensorFlow', 'PyTorch'Scikit-'learn', 'OpenAI 'GPT', 'BERT', 'YOLO', 'Keras'Pandas'
   ];
 
   return (
     <>
       <Head>
         <title>AI Solutions | Zion Tech Group - Advanced AI & Machine Learning</title>
-        <meta name="description" content="Explore Zion Tech Group's comprehensive AI solutions including machine learningNLPcomputer visionand autonomous systems." />
+        <meta name="description" content="Explore Zion Tech 'Group', 's comprehensive AI solutions including machine learningNLPcomputer visionand autonomous systems." />
         <meta property="og:title" content="AI Solutions | Zion Tech Group" />
         <meta property="og:description" content="Advanced AI solutions for machine learningnatural language processingcomputer visionand autonomous systems." />
         <meta name="twitter:card" content="summary_large_image" />

@@ -2,7 +2,7 @@
 import React{ useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
 
-const defaultTargets = ['en'pt'es'ar'];
+const defaultTargets = [', 'en', 'pt', 'es', 'ar'];
 
 export default function TranslationPreview() {
   const [textsetText] = useState('');

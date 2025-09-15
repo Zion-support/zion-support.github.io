@@ -2,12 +2,12 @@ import React from 'react';
 
 const TechnologyStack: React.FC = () => {
   const technologies = [
-    { name: 'Next.js'category: 'Framework'description: 'React framework for production' },
-    { name: 'React'category: 'Library'description: 'JavaScript library for building user interfaces' },
-    { name: 'TypeScript'category: 'Language'description: 'Typed superset of JavaScript' },
-    { name: 'Tailwind CSS'category: 'Styling'description: 'Utility-first CSS framework' },
-    { name: 'Node.js'category: 'Runtime'description: 'JavaScript runtime for server-side development' },
-    { name: 'AI/ML'category: 'Technology'description: 'Artificial Intelligence and Machine Learning' },
+    { name: 'Next.js', category: 'Framework', description: 'React framework for production' },
+    { name: 'React', category: 'Library', description: 'JavaScript library for building user interfaces' },
+    { name: 'TypeScript', category: 'Language', description: 'Typed superset of JavaScript' },
+    { name: 'Tailwind CSS', category: 'Styling', description: 'Utility-first CSS framework' },
+    { name: 'Node.js', category: 'Runtime', description: 'JavaScript runtime for server-side development' },
+    { name: 'AI/ML', category: 'Technology', description: 'Artificial Intelligence and Machine Learning' },
   ];
 
   return (

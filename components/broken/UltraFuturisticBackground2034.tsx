@@ -27,7 +27,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     type ParticleType = 'quantum' | 'neural' | 'holographic';
     
@@ -72,7 +72,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           size: Math.random() * 3 + 1,
           life: Math.random() * 100,
           maxLife: 100,
-          type: ['quantum'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType
+          type: [', 'quantum', 'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType
         });
       }
     };
@@ -237,7 +237,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           size: Math.random() * 3 + 1,
           life: 100,
           maxLife: 100,
-          type: ['quantum'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType
+          type: [', 'quantum', 'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType
         });
       }
 
@@ -267,7 +267,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
     };
   }[intensity]);
 
@@ -277,8 +277,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       setMousePosition({ x: e.clientXy: e.clientY });
     };
 
-    window.addEventListener('mousemove'handleMouseMove);
-    return () => window.removeEventListener('mousemove'handleMouseMove);
+    window.addEventListener(', 'mousemove', 'handleMouseMove);
+    return () => window.removeEventListener(', 'mousemove', 'handleMouseMove);
   }[]);
 
   return (

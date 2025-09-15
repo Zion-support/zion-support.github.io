@@ -47,22 +47,22 @@ export default function CloudMonitoringPage() {
     {
       category: 'Infrastructure',
       icon: <Server className="w-6 h-6 text-blue-400" />,
-      metrics: ['CPU Usage'Memory Utilization'Disk I/O'Network Performance'Container Metrics']
+      metrics: ['CPU 'Usage', 'Memory 'Utilization', 'Disk I/'O', 'Network 'Performance', 'Container Metrics']
     },
     {
       category: 'Applications',
       icon: <Code className="w-6 h-6 text-green-400" />,
-      metrics: ['Response Time'Error Rates'Throughput'User Experience'API Performance']
+      metrics: ['Response 'Time', 'Error 'Rates', 'Throughput'User 'Experience', 'API Performance']
     },
     {
       category: 'Databases',
       icon: <Database className="w-6 h-6 text-purple-400" />,
-      metrics: ['Query Performance'Connection Pool'Index Usage'Replication Lag'Storage Growth']
+      metrics: ['Query 'Performance', 'Connection 'Pool', 'Index 'Usage', 'Replication 'Lag', 'Storage Growth']
     },
     {
       category: 'Security',
       icon: <Shield className="w-6 h-6 text-red-400" />,
-      metrics: ['Threat Detection'Access Logs'Vulnerability Scans'Compliance Status'Audit Trails']
+      metrics: ['Threat 'Detection', 'Access 'Logs', 'Vulnerability 'Scans', 'Compliance 'Status', 'Audit Trails']
     }
   ];
 
@@ -125,14 +125,14 @@ export default function CloudMonitoringPage() {
   ];
 
   const integrations = [
-    { name: 'AWS'icon: '☁️'description: 'CloudWatch integration' },
-    { name: 'Azure'icon: '🔷'description: 'Monitor integration' },
-    { name: 'GCP'icon: '☁️'description: 'Stackdriver integration' },
-    { name: 'Docker'icon: '🐳'description: 'Container monitoring' },
-    { name: 'Kubernetes'icon: '☸️'description: 'K8s native support' },
-    { name: 'Slack'icon: '💬'description: 'Team notifications' },
-    { name: 'PagerDuty'icon: '🚨'description: 'Incident management' },
-    { name: 'Jira'icon: '📋'description: 'Issue tracking' }
+    { name: ''AWS', 'icon: '☁️'description: 'CloudWatch integration' },
+    { name: ''Azure', 'icon: '🔷'description: 'Monitor integration' },
+    { name: ''GCP', 'icon: '☁️'description: 'Stackdriver integration' },
+    { name: ''Docker', 'icon: '🐳'description: 'Container monitoring' },
+    { name: ''Kubernetes', 'icon: '☸️'description: 'K8s native support' },
+    { name: ''Slack', 'icon: '💬'description: 'Team notifications' },
+    { name: ''PagerDuty', 'icon: '🚨'description: 'Incident management' },
+    { name: ''Jira', 'icon: '📋'description: 'Issue tracking' }
   ];
 
   const useCases = [
@@ -140,25 +140,25 @@ export default function CloudMonitoringPage() {
       title: 'DevOps Teams',
       description: 'Monitor CI/CD pipelinesdeployment success ratesand infrastructure health.',
       icon: '🔄',
-      benefits: ['Faster deployments'Reduced downtime'Better collaboration'Automated scaling']
+      benefits: ['Faster 'deployments', 'Reduced 'downtime', 'Better 'collaboration', 'Automated scaling']
     },
     {
       title: 'SaaS Companies',
       description: 'Track user experienceapplication performanceand business metrics.',
       icon: '💼',
-      benefits: ['User satisfaction'Revenue optimization'Competitive advantage'Customer retention']
+      benefits: ['User 'satisfaction', 'Revenue 'optimization', 'Competitive 'advantage', 'Customer retention']
     },
     {
       title: 'E-commerce',
       description: 'Monitor website performancepayment processingand inventory systems.',
       icon: '🛒',
-      benefits: ['Higher conversion'Faster checkout'Inventory optimization'Revenue growth']
+      benefits: ['Higher 'conversion', 'Faster 'checkout', 'Inventory 'optimization', 'Revenue growth']
     },
     {
       title: 'Financial Services',
       description: 'Ensure compliancesecurityand 24/7 availability of critical systems.',
       icon: '💰',
-      benefits: ['Regulatory compliance'Fraud detection'Risk management'Customer trust']
+      benefits: ['Regulatory 'compliance', 'Fraud 'detection', 'Risk 'management', 'Customer trust']
     }
   ];
 

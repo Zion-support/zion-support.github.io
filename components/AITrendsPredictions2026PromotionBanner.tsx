@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -33,19 +33,19 @@ const AITrendsPredictions2026PromotionBanner = () => {
   if (isDismissed) return null;
 
   const predictions = [
-    { icon: Brainlabel: 'Quantum AI'confidence: '95%' },
-    { icon: Zaplabel: 'Neural Interfaces'confidence: '88%' },
-    { icon: Shieldlabel: 'Autonomous Systems'confidence: '92%' },
-    { icon: Globelabel: 'AI Consciousness'confidence: '75%' }
+    { icon: Brainlabel: 'Quantum 'AI', 'confidence: '95%' },
+    { icon: Zaplabel: 'Neural 'Interfaces', 'confidence: '88%' },
+    { icon: Shieldlabel: 'Autonomous 'Systems', 'confidence: '92%' },
+    { icon: Globelabel: 'AI 'Consciousness', 'confidence: '75%' }
   ];
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white overflow-hidden"
         >
@@ -116,8 +116,8 @@ const AITrendsPredictions2026PromotionBanner = () => {
 
                 {/* Prediction Icons */}
                 <motion.div
-                  initial={{ opacity: 0y: 10 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: 0.5 }}
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
                 >

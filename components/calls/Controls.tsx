@@ -33,7 +33,7 @@ export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {
-      console.warn('Screen share failed'e);
+      console.warn('Screen share 'failed', 'e);
     }
   };
 

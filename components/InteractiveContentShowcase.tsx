@@ -87,7 +87,7 @@ export default function InteractiveContentShowcase() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [hoveredItemsetHoveredItem] = useState<string | null>(null);
 
-  const categories = ['All'Breakthrough'Case Study'Insights'Technology'Innovation'Platform'];
+  const categories = [', 'All', 'Breakthrough'Case 'Study', 'Insights', 'Technology', 'Innovation'Platform'];
   
   const filteredItems = selectedCategory === 'All' 
     ? contentItems 

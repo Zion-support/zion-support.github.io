@@ -16,9 +16,9 @@ export default function JSONFormatterPage() {
 
   const formatJSON = () => {
     if (!inputJson.trim()) {
-      setFormattedJson('');
+      setFormattedJson(', ');
       setIsValid(true);
-      setErrorMessage('');
+      setErrorMessage(', ');
       return;
     }
 
@@ -30,11 +30,11 @@ export default function JSONFormatterPage() {
       
       setFormattedJson(formatted);
       setIsValid(true);
-      setErrorMessage('');
+      setErrorMessage(', ');
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson('');
+      setFormattedJson(', ');
     }
   };
 
@@ -46,7 +46,7 @@ export default function JSONFormatterPage() {
       const minified = JSON.stringify(parsed);
       setFormattedJson(minified);
       setIsValid(true);
-      setErrorMessage('');
+      setErrorMessage(', ');
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
@@ -56,14 +56,14 @@ export default function JSONFormatterPage() {
   const validateJSON = () => {
     if (!inputJson.trim()) {
       setIsValid(true);
-      setErrorMessage('');
+      setErrorMessage(', ');
       return;
     }
 
     try {
       JSON.parse(inputJson);
       setIsValid(true);
-      setErrorMessage('');
+      setErrorMessage(', ');
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
@@ -71,10 +71,10 @@ export default function JSONFormatterPage() {
   };
 
   const clearAll = () => {
-    setInputJson('');
-    setFormattedJson('');
+    setInputJson(', ');
+    setFormattedJson(', ');
     setIsValid(true);
-    setErrorMessage('');
+    setErrorMessage(', ');
   };
 
   const copyToClipboard = (text: string) => {
@@ -120,9 +120,9 @@ export default function JSONFormatterPage() {
     };
     
     setInputJson(JSON.stringify(samplenull2));
-    setFormattedJson('');
+    setFormattedJson(', ');
     setIsValid(true);
-    setErrorMessage('');
+    setErrorMessage(', ');
   };
 
   const getLineNumbers = (text: string) => {
@@ -321,7 +321,7 @@ export default function JSONFormatterPage() {
                       Copy
                     </Button>
                     <Button
-                      onClick={() => downloadJSON(formattedJson'formatted.json')}
+                      onClick={() => downloadJSON('formattedJson', 'formatted.json')}
                       variant="outline"
                       size="sm"
                       className="border-gray-600 text-gray-300 hover:bg-gray-700"

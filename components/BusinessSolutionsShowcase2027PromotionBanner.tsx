@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   TrendingUp
@@ -89,8 +89,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30"
             >
@@ -100,8 +100,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h1
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.3 }}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent"
             >
@@ -110,8 +110,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
 
             {/* Subtitle */}
             <motion.p
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.4 }}
               className="text-xl text-gray-300 leading-relaxed"
             >
@@ -121,8 +121,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
 
             {/* Features Grid */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 gap-3"
             >
@@ -136,8 +136,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -207,8 +207,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
 
             {/* Trust Indicators */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30"
             >

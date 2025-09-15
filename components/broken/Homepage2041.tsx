@@ -51,7 +51,7 @@ const Homepage2041: React.FC = () => {
       name: "Dr. Sarah Chen",
       role: "Chief AI OfficerFutureTech Inc.",
       company: "FutureTech Inc.",
-      content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
+      content: "Zion Tech 'Group', 's AI consciousness evolution platform is revolutionary. 'We', 've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
       rating: 5,
       avatar: "👩‍💼"
     },
@@ -59,7 +59,7 @@ const Homepage2041: React.FC = () => {
       name: "Marcus Rodriguez",
       role: "VP Quantum ComputingQuantumCorp",
       company: "QuantumCorp",
-      content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
+      content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. 'We', 're now leading the industry in pharmaceutical innovation.",
       rating: 5,
       avatar: "👨‍💻"
     },
@@ -67,7 +67,7 @@ const Homepage2041: React.FC = () => {
       name: "Dr. Emily Watson",
       role: "Research DirectorSpaceLabs",
       company: "SpaceLabs",
-      content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
+      content: "The space mining automation platform opened new frontiers in resource extraction. 'We', 're now mining asteroids with unprecedented efficiency.",
       rating: 5,
       avatar: "👩‍🔬"
     }
@@ -123,8 +123,8 @@ const Homepage2041: React.FC = () => {
           {/* Hero Content */}
           <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0y: 50 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 
@@ -142,14 +142,14 @@ const Homepage2041: React.FC = () => {
               
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
                 Experience the revolution of technology with our cutting-edge 2041 services. 
-                From AI consciousness evolution to quantum space miningwe're redefining what's possible.
+                From AI consciousness evolution to quantum space 'miningwe', 're redefining 'what', 's possible.
               </p>
 
               {/* Search Bar */}
               <motion.div 
                 className="max-w-3xl mx-auto mb-12"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.2 }}
               >
                 <form onSubmit={handleSearch} className="relative">
@@ -172,8 +172,8 @@ const Homepage2041: React.FC = () => {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
               >
                 <Link
@@ -202,8 +202,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -211,8 +211,8 @@ const Homepage2041: React.FC = () => {
                 <motion.div
                   key={stat.label}
                   className="text-center"
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -232,8 +232,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -241,22 +241,22 @@ const Homepage2041: React.FC = () => {
                 Revolutionary 2041 Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
+                Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of 'what', 's possible.
               </p>
             </motion.div>
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
             >
               {featuredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -267,8 +267,8 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="text-center mt-12"
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.6 }}
               viewport={{ once: true }}
             >
@@ -289,8 +289,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -304,8 +304,8 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
             >
@@ -313,8 +313,8 @@ const Homepage2041: React.FC = () => {
                 <motion.div
                   key={testimonial.name}
                   className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -339,8 +339,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

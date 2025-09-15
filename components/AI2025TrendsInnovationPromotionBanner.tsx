@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   TrendingUp
@@ -136,7 +136,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 <motion.div
                   key={currentStat}
                   initial={{ scale: 0.8opacity: 0 }}
-                  animate={{ scale: 1opacity: 1 }}
+                  animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
@@ -186,8 +186,8 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -53,7 +53,7 @@ const AIInnovationShowcase2026 = () => {
         accuracy: '99.7%',
         speed: '10x faster'
       },
-      applications: ['Healthcare'Education'Gaming'Professional Training']
+      applications: [', 'Healthcare', 'Education', 'Gaming', 'Professional Training']
     },
     {
       id: 'quantum-ai',
@@ -74,7 +74,7 @@ const AIInnovationShowcase2026 = () => {
         complexity: 'Unlimited',
         security: 'Unbreakable'
       },
-      applications: ['Drug Discovery'Climate Modeling'Financial Analysis'Space Exploration']
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Analysis', 'Space Exploration']
     },
     {
       id: 'emotional-ai',
@@ -95,7 +95,7 @@ const AIInnovationShowcase2026 = () => {
         engagement: '400%',
         retention: '80%'
       },
-      applications: ['Customer Service'Mental Health'Education'Entertainment']
+      applications: ['Customer 'Service', 'Mental 'Health', 'Education'Entertainment']
     },
     {
       id: 'predictive-analytics',
@@ -116,7 +116,7 @@ const AIInnovationShowcase2026 = () => {
         roi: '500%',
         risk: '90% reduction'
       },
-      applications: ['Finance'Marketing'Supply Chain'Healthcare']
+      applications: [', 'Finance', 'Marketing'Supply 'Chain', 'Healthcare']
     }
   ];
 
@@ -183,8 +183,8 @@ const AIInnovationShowcase2026 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -206,8 +206,8 @@ const AIInnovationShowcase2026 = () => {
 
         {/* Innovation Grid */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
@@ -246,8 +246,8 @@ const AIInnovationShowcase2026 = () => {
             {/* Innovation Details */}
             <div>
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.1 }}
                 className="mb-8"
               >
@@ -271,8 +271,8 @@ const AIInnovationShowcase2026 = () => {
 
               {/* Features */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.2 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
               >
@@ -286,8 +286,8 @@ const AIInnovationShowcase2026 = () => {
 
               {/* Impact Metrics */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.3 }}
                 className="grid grid-cols-3 gap-6 mb-8"
               >
@@ -305,8 +305,8 @@ const AIInnovationShowcase2026 = () => {
 
               {/* Applications */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.4 }}
                 className="mb-8"
               >
@@ -325,8 +325,8 @@ const AIInnovationShowcase2026 = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.5 }}
                 className="flex flex-wrap gap-4"
               >
@@ -406,8 +406,8 @@ const AIInnovationShowcase2026 = () => {
 
         {/* Success Stories */}
         <motion.div
-          initial={{ opacity: 0y: 50 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-20"
         >
@@ -418,8 +418,8 @@ const AIInnovationShowcase2026 = () => {
             {successStories.map((storyindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 30 }}
-                animate={isVisible ? { opacity: 1y: 0 } : {}}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6delay: 0.7 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
@@ -453,8 +453,8 @@ const AIInnovationShowcase2026 = () => {
 
         {/* Final CTA */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >

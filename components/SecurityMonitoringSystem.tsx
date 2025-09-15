@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 ShieldAlertTriangleCheckCircleLockEyeZapGlobeDatabase
 
 const SecurityMonitoringSystem = () => {
@@ -24,10 +24,10 @@ const SecurityMonitoringSystem = () => {
         threatsBlocked: 1247,
         vulnerabilitiesFixed: 23,
         securityEvents: [
-          { type: 'success'message: 'SSL Certificate renewed'time: '2 hours ago' },
-          { type: 'info'message: 'Security scan completed'time: '4 hours ago' },
-          { type: 'success'message: 'Firewall rules updated'time: '6 hours ago' },
-          { type: 'warning'message: 'Unusual traffic pattern detected'time: '8 hours ago' }
+          { type: ''success', 'message: 'SSL Certificate 'renewed', 'time: '2 hours ago' },
+          { type: ''info', 'message: 'Security scan 'completed', 'time: '4 hours ago' },
+          { type: ''success', 'message: 'Firewall rules 'updated', 'time: '6 hours ago' },
+          { type: ''warning', 'message: 'Unusual traffic pattern 'detected', 'time: '8 hours ago' }
         ],
         complianceStatus: 'excellent',
         lastScan: new Date(),

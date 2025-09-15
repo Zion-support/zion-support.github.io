@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const SyntheticIntelligence2025UltimateBreakthroughBanner = () => {
@@ -25,7 +25,7 @@ const SyntheticIntelligence2025UltimateBreakthroughBanner = () => {
   }[]);
 
   const handleDismiss = () => {
-    localStorage.setItem('synthetic-intelligence-banner-dismissed'true');
+    localStorage.setItem('synthetic-intelligence-banner-'dismissed', 'true');
     setDismissed(true);
     setIsVisible(false);
   };

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 SmartphoneWifiBatteryTouchZapGlobeEyeUsers
 
 const MobileExperienceOptimizer = () => {
@@ -24,10 +24,10 @@ const MobileExperienceOptimizer = () => {
         touchTargets: 100,
         responsiveDesign: 98,
         mobileFeatures: [
-          { name: 'Touch Gestures'status: 'optimized'icon: Touch },
-          { name: 'Offline Support'status: 'enabled'icon: Wifi },
-          { name: 'Push Notifications'status: 'active'icon: Battery },
-          { name: 'Progressive Web App'status: 'installed'icon: Globe }
+          { name: 'Touch 'Gestures', 'status: ''optimized', 'icon: Touch },
+          { name: 'Offline 'Support', 'status: ''enabled', 'icon: Wifi },
+          { name: 'Push 'Notifications', 'status: ''active', 'icon: Battery },
+          { name: 'Progressive Web 'App', 'status: ''installed', 'icon: Globe }
         ]
       });
     };

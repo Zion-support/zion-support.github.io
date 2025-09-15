@@ -38,8 +38,8 @@ const Homepage2038: React.FC = () => {
           
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
@@ -89,8 +89,8 @@ const Homepage2038: React.FC = () => {
               
               {/* Trust Indicators */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
                 className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400"
               >
@@ -120,8 +120,8 @@ const Homepage2038: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -166,8 +166,8 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-20"
@@ -184,8 +184,8 @@ const Homepage2038: React.FC = () => {
               {featuredAI.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -215,8 +215,8 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-20"
@@ -233,8 +233,8 @@ const Homepage2038: React.FC = () => {
               {featuredMicroSaas.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -264,8 +264,8 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-20"
@@ -282,8 +282,8 @@ const Homepage2038: React.FC = () => {
               {featuredIT.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -313,8 +313,8 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-20"
@@ -323,7 +323,7 @@ const Homepage2038: React.FC = () => {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                We're not just building technology - we're shaping the future of human consciousness and computing
+                'We', 're not just building technology - 'we', 're shaping the future of human consciousness and computing
               </p>
             </motion.div>
             
@@ -350,7 +350,7 @@ const Homepage2038: React.FC = () => {
                 {
                   icon: <Rocket className="w-12 h-12" />,
                   title: "Innovation First",
-                  description: "Constantly pushing the boundaries of what's possible in technology",
+                  description: "Constantly pushing the boundaries of 'what', 's possible in technology",
                   color: "from-green-500 to-emerald-500"
                 },
                 {
@@ -368,8 +368,8 @@ const Homepage2038: React.FC = () => {
               ].map((featureindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 20 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
@@ -392,8 +392,8 @@ const Homepage2038: React.FC = () => {
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="space-y-8"
@@ -403,7 +403,7 @@ const Homepage2038: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Join the revolution in AI consciousnessquantum computingand next-generation technology. 
-                Let's build the future together.
+                'Let', 's build the future together.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">

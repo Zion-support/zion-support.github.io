@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -31,17 +31,17 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
   }[]);
 
   const features = [
-    { icon: Braintext: 'AI-Powered Automation'color: 'from-purple-500 to-pink-500' },
-    { icon: Cputext: 'Quantum Computing'color: 'from-blue-500 to-cyan-500' },
-    { icon: Zaptext: 'Neural Interfaces'color: 'from-green-500 to-emerald-500' },
-    { icon: Shieldtext: 'Advanced Security'color: 'from-red-500 to-orange-500' }
+    { icon: Braintext: 'AI-Powered 'Automation', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Cputext: 'Quantum 'Computing', 'color: 'from-blue-500 to-cyan-500' },
+    { icon: Zaptext: 'Neural 'Interfaces', 'color: 'from-green-500 to-emerald-500' },
+    { icon: Shieldtext: 'Advanced 'Security', 'color: 'from-red-500 to-orange-500' }
   ];
 
   const currentFeatureData = features[currentFeature];
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -50 }}
+      initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : -50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl border border-purple-500/20 shadow-2xl"
@@ -87,8 +87,8 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
             {/* Rotating Feature Display */}
             <motion.div
               key={currentFeature}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="mb-8"
             >
@@ -105,7 +105,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-wrap gap-6 mb-8"
@@ -126,7 +126,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"

@@ -5,12 +5,12 @@ const UltimateContentDiscovery2026 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: '🌟' },
-    { id: 'quantum'name: 'Quantum AI'icon: '⚡' },
-    { id: 'neural'name: 'Neural Interfaces'icon: '🧠' },
-    { id: 'autonomous'name: 'Autonomous Systems'icon: '🤖' },
-    { id: 'analytics'name: 'Analytics'icon: '📊' },
-    { id: 'edge'name: 'Edge Computing'icon: '💻' }
+    { id: ''all', 'name: 'All 'Content', 'icon: '🌟' },
+    { id: ''quantum', 'name: 'Quantum 'AI', 'icon: '⚡' },
+    { id: ''neural', 'name: 'Neural 'Interfaces', 'icon: '🧠' },
+    { id: ''autonomous', 'name: 'Autonomous 'Systems', 'icon: '🤖' },
+    { id: ''analytics', 'name: ''Analytics', 'icon: '📊' },
+    { id: ''edge', 'name: 'Edge 'Computing', 'icon: '💻' }
   ];
 
   const contentItems = [

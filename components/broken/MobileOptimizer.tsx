@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffectuseRef } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   SmartphoneTabletMonitorRotateCcw
   WifiOffSignalHigh
@@ -70,8 +70,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     };
 
     checkDevice();
-    window.addEventListener('resize'checkDevice);
-    return () => window.removeEventListener('resize'checkDevice);
+    window.addEventListener(', 'resize', 'checkDevice);
+    return () => window.removeEventListener(', 'resize', 'checkDevice);
   }[enableMobileLayoutenablePerformanceMode]);
 
   // Detect orientation changes
@@ -89,12 +89,12 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     };
 
     checkOrientation();
-    window.addEventListener('orientationchange'checkOrientation);
-    window.addEventListener('resize'checkOrientation);
+    window.addEventListener(', 'orientationchange', 'checkOrientation);
+    window.addEventListener(', 'resize', 'checkOrientation);
     
     return () => {
-      window.removeEventListener('orientationchange'checkOrientation);
-      window.removeEventListener('resize'checkOrientation);
+      window.removeEventListener(', 'orientationchange', 'checkOrientation);
+      window.removeEventListener(', 'resize', 'checkOrientation);
     };
   }[]);
 
@@ -145,7 +145,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize fonts for high DPI
     const fonts = document.querySelectorAll('link[rel="preload"][as="font"]');
     fonts.forEach(font => {
-      font.setAttribute('crossorigin'anonymous');
+      font.setAttribute(', 'crossorigin', 'anonymous');
     });
   }[]);
 
@@ -161,20 +161,20 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
       const clearLongPress = () => clearTimeout(longPressTimer);
       
-      e.target?.addEventListener('touchend'clearLongPress{ once: true });
-      e.target?.addEventListener('touchmove'clearLongPress{ once: true });
+      e.target?.addEventListener(', 'touchend', 'clearLongPress{ once: true });
+      e.target?.addEventListener(', 'touchmove', 'clearLongPress{ once: true });
     };
 
-    document.addEventListener('touchstart'handleTouchStart{ passive: true });
-    document.addEventListener('touchmove'handleTouchMove{ passive: true });
-    document.addEventListener('touchend'handleTouchEnd{ passive: true });
-    document.addEventListener('touchstart'handleLongPress{ passive: true });
+    document.addEventListener(', 'touchstart', 'handleTouchStart{ passive: true });
+    document.addEventListener(', 'touchmove', 'handleTouchMove{ passive: true });
+    document.addEventListener(', 'touchend', 'handleTouchEnd{ passive: true });
+    document.addEventListener(', 'touchstart', 'handleLongPress{ passive: true });
 
     return () => {
-      document.removeEventListener('touchstart'handleTouchStart);
-      document.removeEventListener('touchmove'handleTouchMove);
-      document.removeEventListener('touchend'handleTouchEnd);
-      document.removeEventListener('touchstart'handleLongPress);
+      document.removeEventListener(', 'touchstart', 'handleTouchStart);
+      document.removeEventListener(', 'touchmove', 'handleTouchMove);
+      document.removeEventListener(', 'touchend', 'handleTouchEnd);
+      document.removeEventListener(', 'touchstart', 'handleLongPress);
     };
   }[enableTouchGesturesisMobile]);
 
@@ -226,9 +226,9 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         };
         
         updateBatteryLevel();
-        battery.addEventListener('levelchange'updateBatteryLevel);
+        battery.addEventListener(', 'levelchange', 'updateBatteryLevel);
         
-        return () => battery.removeEventListener('levelchange'updateBatteryLevel);
+        return () => battery.removeEventListener(', 'levelchange', 'updateBatteryLevel);
       });
     }
 
@@ -250,9 +250,9 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       };
       
       updateNetworkSpeed();
-      connection.addEventListener('change'updateNetworkSpeed);
+      connection.addEventListener(', 'change', 'updateNetworkSpeed);
       
-      return () => connection.removeEventListener('change'updateNetworkSpeed);
+      return () => connection.removeEventListener(', 'change', 'updateNetworkSpeed);
     }
 
     return () => {
@@ -323,7 +323,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize viewport
     const viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
-      viewport.setAttribute('content'width=device-widthinitial-scale=1.0maximum-scale=1.0user-scalable=no');
+      viewport.setAttribute(', 'content', 'width=device-widthinitial-scale=1.0maximum-scale=1.0user-scalable=no');
     }
     
     // Add touch-action CSS
@@ -399,7 +399,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize fonts
     const fonts = document.querySelectorAll('link[rel="preload"][as="font"]');
     fonts.forEach(font => {
-      font.setAttribute('crossorigin'anonymous');
+      font.setAttribute(', 'crossorigin', 'anonymous');
     });
 
     // Add mobile-specific event listeners
@@ -415,8 +415,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     if (typeof window === 'undefined') return;
 
     // Set up event listeners
-    window.addEventListener('orientationchange'handleOrientationChange);
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'orientationchange', 'handleOrientationChange);
+    window.addEventListener(', 'resize', 'handleResize);
     
     // Set up orientation change detection
     const mediaQuery = window.matchMedia('(orientation: portrait)');
@@ -424,12 +424,12 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       setCurrentOrientation(e.matches ? 'portrait' : 'landscape');
     };
     
-    mediaQuery.addEventListener('change'handleMediaQueryChange);
+    mediaQuery.addEventListener(', 'change', 'handleMediaQueryChange);
     
     return () => {
-      window.removeEventListener('orientationchange'handleOrientationChange);
-      window.removeEventListener('resize'handleResize);
-      mediaQuery.removeEventListener('change'handleMediaQueryChange);
+      window.removeEventListener(', 'orientationchange', 'handleOrientationChange);
+      window.removeEventListener(', 'resize', 'handleResize);
+      mediaQuery.removeEventListener(', 'change', 'handleMediaQueryChange);
     };
   }[handleOrientationChangehandleResize]);
 

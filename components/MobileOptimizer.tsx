@@ -23,8 +23,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
     };
 
     checkDevice();
-    window.addEventListener('resize'checkDevice);
-    window.addEventListener('orientationchange'checkDevice);
+    window.addEventListener(', 'resize', 'checkDevice);
+    window.addEventListener(', 'orientationchange', 'checkDevice);
 
     // Add mobile-specific optimizations
     const optimizeForMobile = () => {
@@ -214,7 +214,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
           const toggle = document.createElement('button');
           toggle.className = 'mobile-menu-toggle';
           toggle.innerHTML = '☰';
-          toggle.setAttribute('aria-label'Toggle mobile menu');
+          toggle.setAttribute('aria-'label', 'Toggle mobile menu');
           toggle.style.cssText = `
             display: none;
             background: none;
@@ -246,8 +246,8 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
     optimizeForMobile();
 
     return () => {
-      window.removeEventListener('resize'checkDevice);
-      window.removeEventListener('orientationchange'checkDevice);
+      window.removeEventListener(', 'resize', 'checkDevice);
+      window.removeEventListener(', 'orientationchange', 'checkDevice);
     };
   }[isMobileisTabletorientation]);
 

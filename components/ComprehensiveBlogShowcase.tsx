@@ -183,7 +183,7 @@ const ComprehensiveBlogShowcase = () => {
                     <div className="flex items-center">
                       <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
                         <span className="text-purple-600 font-bold text-sm">
-                          {post.author.split(' ').map(n => n[0]).join('')}
+                          {post.author.split(' ').map(n => n[0]).join(', ')}
                         </span>
                       </div>
                       <div>
@@ -251,7 +251,7 @@ const ComprehensiveBlogShowcase = () => {
                     <div className="flex items-center">
                       <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-2">
                         <span className="text-blue-600 font-bold text-xs">
-                          {post.author.split(' ').map(n => n[0]).join('')}
+                          {post.author.split(' ').map(n => n[0]).join(', ')}
                         </span>
                       </div>
                       <span className="text-xs text-gray-600">{post.author}</span>

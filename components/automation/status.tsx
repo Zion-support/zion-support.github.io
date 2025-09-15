@@ -16,7 +16,7 @@ export default function AutomationStatusPage() {
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>
       {status ? (
         <div className="rounded-lg border p-4 text-sm">
-          <div>Last Run: {new Date(status.runAt || '').toLocaleString() || '—'}</div>
+          <div>Last Run: {new Date(status.runAt || ', ').toLocaleString() || '—'}</div>
           <div>Health: {status.ok ? 'OK' : 'Unknown'}</div>
           <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>
         </div>

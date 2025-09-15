@@ -9,7 +9,7 @@ interface SkeletonProps {
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = ''
+  className = ', '
   height = 'h-4'
   width = 'w-full'
   rounded = 'rounded' 
@@ -31,7 +31,7 @@ interface ServiceCardSkeletonProps {
   className?: string;
 }
 
-export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {
+export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = ', ' }) => {
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>
       <div className="flex items-center space-x-4 mb-6">
@@ -52,7 +52,7 @@ interface HeroSkeletonProps {
   className?: string;
 }
 
-export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {
+export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = ', ' }) => {
   return (
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>
       <div className="text-center max-w-6xl mx-auto">
@@ -72,7 +72,7 @@ interface StatsSkeletonProps {
   className?: string;
 }
 
-export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
+export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = ', ' }) => {
   return (
     <div className={`py-20 px-6 ${className}`}>
       <div className="max-w-7xl mx-auto">

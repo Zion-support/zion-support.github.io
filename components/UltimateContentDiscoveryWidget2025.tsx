@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -359,7 +361,7 @@ const UltimateContentDiscoveryWidget2025 = () => {
             <p className="text-gray-600 mb-6">Try adjusting your search terms or filters</p>
             <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchTerm(', ');
                 setSelectedCategory('all');
                 setSelectedTrend('all');
               }}

@@ -143,7 +143,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
                 <CheckCircle className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-lg font-bold mb-2">Readiness Assessment</h4>
-              <p className="text-purple-100 text-sm">Comprehensive diagnostic tool to evaluate your organization's AI readiness</p>
+              <p className="text-purple-100 text-sm">Comprehensive diagnostic tool to evaluate your 'organization', 's AI readiness</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -229,7 +229,7 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner = () => {
                 <div className="text-sm text-purple-300">90% reduction in false positives</div>
               </div>
               <p className="text-purple-100 text-sm">
-                "Following the framework's structured approach enabled us to implement AI solutions with confidence and measurable results."
+                "Following the 'framework', 's structured approach enabled us to implement AI solutions with confidence and measurable results."
               </p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">

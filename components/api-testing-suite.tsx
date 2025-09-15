@@ -41,22 +41,22 @@ export default function APITestingSuitePage() {
     {
       name: 'Functional Testing',
       description: 'Verify that your API endpoints work correctly and return expected responses.',
-      tests: ['Request/response validation'Status code verification'Data format checking'Error handling']
+      tests: ['Request/response 'validation', 'Status code 'verification', 'Data format 'checking', 'Error handling']
     },
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
-      tests: ['Load testing'Stress testing'Response time analysis'Throughput measurement']
+      tests: ['Load 'testing', 'Stress 'testing', 'Response time 'analysis', 'Throughput measurement']
     },
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
-      tests: ['Authentication testing'Authorization checks'Input validation'SQL injection testing']
+      tests: ['Authentication 'testing', 'Authorization 'checks', 'Input 'validation', 'SQL injection testing']
     },
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
-      tests: ['End-to-end workflows'Third-party integrations'Data flow validation'Error propagation']
+      tests: ['End-to-end 'workflows', 'Third-party 'integrations', 'Data flow 'validation', 'Error propagation']
     }
   ];
 
@@ -124,11 +124,11 @@ export default function APITestingSuitePage() {
         responseTime: '245ms',
         statusCode: 200,
         tests: [
-          { name: 'Response Time'status: 'pass'value: '245ms'threshold: '<500ms' },
-          { name: 'Status Code'status: 'pass'value: '200'threshold: '200' },
-          { name: 'Response Format'status: 'pass'value: 'JSON'threshold: 'Valid JSON' },
-          { name: 'Authentication'status: 'pass'value: 'Valid'threshold: 'Authenticated' },
-          { name: 'Rate Limiting'status: 'pass'value: 'Within limits'threshold: 'No throttling' }
+          { name: 'Response 'Time', 'status: ''pass', 'value: '245'ms', 'threshold: '<500ms' },
+          { name: 'Status 'Code', 'status: ''pass', 'value: '200'threshold: '200' },
+          { name: 'Response 'Format', 'status: ''pass', 'value: ''JSON', 'threshold: 'Valid JSON' },
+          { name: ''Authentication', 'status: ''pass', 'value: ''Valid', 'threshold: 'Authenticated' },
+          { name: 'Rate 'Limiting', 'status: ''pass', 'value: 'Within 'limits', 'threshold: 'No throttling' }
         ],
         recommendations: [
           'Consider implementing response caching for better performance',
@@ -313,7 +313,7 @@ export default function APITestingSuitePage() {
                 API Test Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                Here's a sample API test result. Get comprehensive insights for your own API endpoints.
+                'Here', 's a sample API test result. Get comprehensive insights for your own API endpoints.
               </p>
             </div>
             

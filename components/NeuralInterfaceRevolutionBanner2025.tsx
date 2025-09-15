@@ -1,8 +1,8 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 XBrainZapTrendingUpArrowRightPlayUsersAward
 
 interface NeuralInterfaceContent {
@@ -91,7 +91,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('neural-interface-banner-dismissed'true');
+    localStorage.setItem('neural-interface-banner-'dismissed', 'true');
   };
 
   const handleUndismiss = () => {
@@ -103,8 +103,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   if (isDismissed) {
     return (
       <motion.div
-        initial={{ opacity: 0y: -50 }}
-        animate={{ opacity: 1y: 0 }}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
         className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white p-4 text-center"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-center space-x-4">
@@ -127,9 +127,9 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           className="relative overflow-hidden"
         >
           {/* Animated Background */}

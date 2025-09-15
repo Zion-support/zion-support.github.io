@@ -60,7 +60,7 @@ export default function PerformanceOptimizer2026() {
         });
       });
       
-      observer.observe({ entryTypes: ['largest-contentful-paint'first-input'] });
+      observer.observe({ entryTypes: ['largest-contentful-'paint', 'first-input'] });
     }
 
     // Cleanup

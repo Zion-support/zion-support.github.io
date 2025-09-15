@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const featuredContent = [
@@ -23,7 +23,7 @@ const featuredContent = [
     gradient: 'from-indigo-900 via-purple-900 to-indigo-900',
     badge: 'QUANTUM BREAKTHROUGH',
     badgeColor: 'from-cyan-500 to-blue-500',
-    features: ['Unhackable Security'99.9% Accuracy'Exponential Speedup']
+    features: ['Unhackable Security'99.9% 'Accuracy', 'Exponential Speedup']
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const featuredContent = [
     gradient: 'from-rose-900 via-pink-900 to-rose-900',
     badge: 'FUTURE PREDICTIONS',
     badgeColor: 'from-rose-500 to-pink-500',
-    features: ['99.9% AGI'1Mx Faster'True Consciousness']
+    features: ['99.9% AGI'1Mx 'Faster', 'True Consciousness']
   }
 ];
 

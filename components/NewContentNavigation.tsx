@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
   Star
@@ -138,8 +138,8 @@ const NewContentNavigation = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 20 }}
-      animate={isVisible ? { opacity: 1y: 0 } : {}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
     >
@@ -169,8 +169,8 @@ const NewContentNavigation = () => {
           {featuredContent.map((itemindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
@@ -228,8 +228,8 @@ const NewContentNavigation = () => {
               {contentCategories.map((categoryindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                 >
@@ -267,8 +267,8 @@ const NewContentNavigation = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.3 }}
           className="text-center mt-12"
         >

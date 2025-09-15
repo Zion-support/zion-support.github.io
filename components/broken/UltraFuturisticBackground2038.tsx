@@ -36,7 +36,7 @@ export default function UltraFuturisticBackground2038({
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Enhanced theme-based color schemes for 2038
     const getThemeColors = () => {
@@ -277,7 +277,7 @@ export default function UltraFuturisticBackground2038({
     animate();
 
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
     };
   }[intensitytheme]);
 

@@ -242,7 +242,7 @@ export default function ApiToolsPage() {
     }
   ];
 
-  const categories = ['All'Development'Data'Location'Security'Integration'AI/ML'Analytics'];
+  const categories = [', 'All', 'Development', 'Data', 'Location', 'Security', 'Integration'AI/'ML', 'Analytics'];
   const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredTools = selectedCategory === 'All' 

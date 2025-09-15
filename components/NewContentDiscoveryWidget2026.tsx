@@ -100,10 +100,10 @@ const NewContentDiscoveryWidget2026 = () => {
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: <Globe className="h-4 w-4" /> },
-    { id: 'ai-breakthroughs'name: 'AI Breakthroughs'icon: <Brain className="h-4 w-4" /> },
-    { id: 'quantum-computing'name: 'Quantum Computing'icon: <Atom className="h-4 w-4" /> },
-    { id: 'automation'name: 'Automation'icon: <Bot className="h-4 w-4" /> }
+    { id: ''all', 'name: 'All 'Content', 'icon: <Globe className="h-4 w-4" /> },
+    { id: 'ai-'breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: <Brain className="h-4 w-4" /> },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: <Atom className="h-4 w-4" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <Bot className="h-4 w-4" /> }
   ];
 
   const filteredContent = contentItems.filter(item => {

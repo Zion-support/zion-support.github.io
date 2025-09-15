@@ -16,7 +16,7 @@ interface PerformanceOptimizerProps {
   className?: string;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = ', ' }) => {
   const [metricsetMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     firstContentfulPaint: 0,
@@ -132,8 +132,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     try {
       // Add resource hints for critical resources
       const preloadLinks = [
-        { rel: 'preload'href: '/fonts/inter-var.woff2'as: 'font'type: 'font/woff2'crossorigin: 'anonymous' },
-        { rel: 'preload'href: '/fonts/jetbrains-mono-var.woff2'as: 'font'type: 'font/woff2'crossorigin: 'anonymous' }
+        { rel: ''preload', 'href: '/fonts/inter-var.'woff2', 'as: ''font', 'type: 'font/'woff2', 'crossorigin: 'anonymous' },
+        { rel: ''preload', 'href: '/fonts/jetbrains-mono-var.'woff2', 'as: ''font', 'type: 'font/'woff2', 'crossorigin: 'anonymous' }
       ];
 
       preloadLinks.forEach(linkAttrs => {
@@ -189,7 +189,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Measure initial performance
-      window.addEventListener('load'measurePerformance);
+      window.addEventListener(', 'load', 'measurePerformance);
       
       // Monitor for performance issues
       const observer = new PerformanceObserver((list) => {
@@ -206,7 +206,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       
       return () => {
-        window.removeEventListener('load'measurePerformance);
+        window.removeEventListener(', 'load', 'measurePerformance);
         observer.disconnect();
       };
     }

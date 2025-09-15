@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket
   Brain
@@ -278,17 +278,17 @@ const FutureTechPredictions2025PromotionBanner = () => {
   const years = ['2025'2026'2027'2028'2029'2030'];
 
   const stats = [
-    { label: 'Predictions'value: '50+' },
-    { label: 'Accuracy'value: '85%' },
-    { label: 'Years Covered'value: '6' },
-    { label: 'Technologies'value: '25+' }
+    { label: ''Predictions', 'value: '50+' },
+    { label: ''Accuracy', 'value: '85%' },
+    { label: 'Years 'Covered', 'value: '6' },
+    { label: ''Technologies', 'value: '25+' }
   ];
 
   const technologies = [
-    { name: 'AI Consciousness'progress: 85color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum Computing'progress: 65color: 'from-blue-500 to-cyan-500' },
-    { name: 'Neural Interfaces'progress: 45color: 'from-green-500 to-emerald-500' },
-    { name: 'Digital Immortality'progress: 25color: 'from-pink-500 to-rose-500' }
+    { name: 'AI 'Consciousness', 'progress: 85color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-500 to-cyan-500' },
+    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-500 to-emerald-500' },
+    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-500 to-rose-500' }
   ];
 
   return (
@@ -312,7 +312,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
           >
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6"
@@ -323,7 +323,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h1
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.3 }}
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -336,7 +336,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 leading-relaxed"
@@ -346,7 +346,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* Rotating Predictions */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.8delay: 0.5 }}
               className="mb-8"
@@ -356,9 +356,9 @@ const FutureTechPredictions2025PromotionBanner = () => {
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={currentPrediction}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
-                    exit={{ opacity: 0y: -20 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
                     className="text-indigo-400 font-semibold"
                   >
@@ -370,7 +370,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
@@ -436,7 +436,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
         {/* Technology Progress Bars */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
@@ -470,20 +470,20 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
         {/* Bottom Stats Bar */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.4 }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: TrendingUplabel: 'Accuracy'value: '85%' },
-            { icon: Awardlabel: 'Predictions'value: '50+' },
-            { icon: Rocketlabel: 'Years'value: '6' },
-            { icon: Starlabel: 'Technologies'value: '25+' }
+            { icon: TrendingUplabel: ''Accuracy', 'value: '85%' },
+            { icon: Awardlabel: ''Predictions', 'value: '50+' },
+            { icon: Rocketlabel: ''Years', 'value: '6' },
+            { icon: Starlabel: ''Technologies', 'value: '25+' }
           ].map((itemindex) => (
             <motion.div
               key={item.label}
-              initial={{ opacity: 0y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6delay: 1.6 + index * 0.1 }}
               className="text-center"

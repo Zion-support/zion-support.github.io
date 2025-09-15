@@ -22,7 +22,7 @@ export default function SmartNudgeBanner({ roleuserIdmessage }: SmartNudgeBanner
   const dismiss = React.useCallback(() => {
     setHidden(true);
     try {
-      if (typeof window !== 'undefined') localStorage.setItem(storageKey'dismissed');
+      if (typeof window !== 'undefined') localStorage.setItem('storageKey', 'dismissed');
     } catch {}
   }[storageKey]);
 

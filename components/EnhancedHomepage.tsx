@@ -1,6 +1,6 @@
 "use client";
 import React{ useEffectuseState } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
   ArrowRight
@@ -60,12 +60,12 @@ const EnhancedHomepage: React.FC = () => {
       setShowPerformanceMonitor(true);
     }5000);
     
-    window.addEventListener('mousemove'handleMouseMove);
+    window.addEventListener(', 'mousemove', 'handleMouseMove);
     
     return () => {
       clearInterval(interval);
       clearTimeout(performanceTimer);
-      window.removeEventListener('mousemove'handleMouseMove);
+      window.removeEventListener(', 'mousemove', 'handleMouseMove);
     };
   }[]);
 
@@ -91,12 +91,12 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: Sparklescolor: 'from-purple-500 to-pink-500'scheme: 'holographic' as const },
-    { id: 'ai'name: 'AI & Consciousness'icon: Braincolor: 'from-cyan-500 to-blue-500'scheme: 'cyber' as const },
-    { id: 'quantum'name: 'Quantum Technology'icon: Atomcolor: 'from-blue-500 to-indigo-500'scheme: 'quantum' as const },
-    { id: 'cybersecurity'name: 'Cybersecurity'icon: Shieldcolor: 'from-red-500 to-orange-500'scheme: 'neon' as const },
-    { id: 'space'name: 'Space Technology'icon: Rocketcolor: 'from-indigo-500 to-purple-500'scheme: 'holographic' as const },
-    { id: 'enterprise'name: 'Enterprise Solutions'icon: Buildingcolor: 'from-green-500 to-teal-500'scheme: 'cyber' as const }
+    { id: ''all', 'name: 'All 'Services', 'icon: Sparklescolor: 'from-purple-500 to-pink-500'scheme: 'holographic' as const },
+    { id: ''ai', 'name: 'AI & 'Consciousness', 'icon: Braincolor: 'from-cyan-500 to-blue-500'scheme: 'cyber' as const },
+    { id: ''quantum', 'name: 'Quantum 'Technology', 'icon: Atomcolor: 'from-blue-500 to-indigo-500'scheme: 'quantum' as const },
+    { id: ''cybersecurity', 'name: ''Cybersecurity', 'icon: Shieldcolor: 'from-red-500 to-orange-500'scheme: 'neon' as const },
+    { id: ''space', 'name: 'Space 'Technology', 'icon: Rocketcolor: 'from-indigo-500 to-purple-500'scheme: 'holographic' as const },
+    { id: ''enterprise', 'name: 'Enterprise 'Solutions', 'icon: Buildingcolor: 'from-green-500 to-teal-500'scheme: 'cyber' as const }
   ];
 
   // Get featured services for rotation
@@ -115,7 +115,7 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -127,7 +127,7 @@ const EnhancedHomepage: React.FC = () => {
   };
 
   const heroVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -160,7 +160,7 @@ const EnhancedHomepage: React.FC = () => {
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousnessquantum computingand autonomous solutions. Transform your business with cutting-edge innovation." />
+        <meta name="description" content="Experience the future of technology with Zion Tech 'Group', 's revolutionary AI consciousnessquantum computingand autonomous solutions. Transform your business with cutting-edge innovation." />
         <meta name="keywords" content="AI consciousnessquantum computingautonomous solutionspace technologycybersecuritybusiness intelligenceZion Tech Group2045 technology" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
@@ -351,7 +351,7 @@ const EnhancedHomepage: React.FC = () => {
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks"
-                  technologies={['AI'Cloud'Security'Automation']}
+                  technologies={[', 'AI', 'Cloud', 'Security', 'Automation']}
                 />
               ))}
             </motion.div>
@@ -468,7 +468,7 @@ const EnhancedHomepage: React.FC = () => {
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
-              Join the future of technology with Zion Tech Group's revolutionary solutions. 
+              Join the future of technology with Zion Tech 'Group', 's revolutionary solutions. 
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
             

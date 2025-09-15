@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const GenerativeAIRevolutionBanner2025 = () => {
@@ -62,7 +62,7 @@ const GenerativeAIRevolutionBanner2025 = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('generative-ai-banner-dismissed'true');
+    localStorage.setItem('generative-ai-banner-'dismissed', 'true');
   };
 
   useEffect(() => {

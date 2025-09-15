@@ -47,7 +47,7 @@ export default function AIAssistant({
       if (!res.ok) {
         throw new Error(data?.error || 'Failed to generate');
       }
-      setOutput(String(data.text || ''));
+      setOutput(String(data.text || ', '));
       setIsEditing(false);
     } catch (e: any) {
       setError(e.message || 'Request failed');
@@ -64,7 +64,7 @@ export default function AIAssistant({
 
   const onOpen = useCallback(() => {
     setIsOpen(true);
-    setOutput('');
+    setOutput(', ');
     setIsEditing(false);
     setError(null);
   }[]);

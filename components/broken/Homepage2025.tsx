@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   innovative2035MicroSaasServices 
 } from '../data/innovative-2035-micro-saas-services';
@@ -74,14 +74,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(012);
 
   const navigationSections = [
-    { id: 'hero'label: 'Home'icon: '🏠' },
-    { id: 'services'label: 'Micro SAAS'icon: '🚀' },
-    { id: 'ai'label: 'AI Services'icon: '🧠' },
-    { id: 'automation'label: 'AI Automation'icon: '⚡' },
-    { id: 'quantum'label: 'Quantum Security'icon: '🔐' },
-    { id: 'it'label: 'IT Solutions'icon: '💻' },
-    { id: 'emerging'label: 'Emerging Tech'icon: '🌟' },
-    { id: 'contact'label: 'Contact'icon: '📞' }
+    { id: ''hero', 'label: ''Home', 'icon: '🏠' },
+    { id: ''services', 'label: 'Micro 'SAAS', 'icon: '🚀' },
+    { id: ''ai', 'label: 'AI 'Services', 'icon: '🧠' },
+    { id: ''automation', 'label: 'AI 'Automation', 'icon: '⚡' },
+    { id: ''quantum', 'label: 'Quantum 'Security', 'icon: '🔐' },
+    { id: ''it', 'label: 'IT 'Solutions', 'icon: '💻' },
+    { id: ''emerging', 'label: 'Emerging 'Tech', 'icon: '🌟' },
+    { id: ''contact', 'label: ''Contact', 'icon: '📞' }
   ];
 
   return (
@@ -100,16 +100,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Zion Tech Group
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.2 }}
               className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
               Pioneering the future of technology with revolutionary AIQuantum ComputingSpace Technologyand cutting-edge IT solutions that drive business transformation
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
             >
@@ -123,8 +123,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             
             {/* Contact Information */}
             <motion.div 
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
             >
@@ -148,8 +148,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
@@ -166,8 +166,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               {featuredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: index * 0.1 }}
                 >
                   <UltraFuturisticServiceCard2026
@@ -191,8 +191,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
             {/* Call to Action */}
             <motion.div 
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -210,8 +210,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
@@ -275,8 +275,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
           <motion.h1
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
           >
@@ -286,8 +286,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.h1>
           
           <motion.p
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
           >
@@ -295,8 +295,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
@@ -316,16 +316,16 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
           {/* Floating Service Cards */}
           <motion.div
-            initial={{ opacity: 0y: 50 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1delay: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
           >
             {featuredServices.slice(03).map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.8 + index * 0.2 }}
                 className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
               >
@@ -343,8 +343,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -362,8 +362,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {innovativeRealMicroSaasServices2025.slice(09).map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
@@ -382,8 +382,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="ai" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -401,8 +401,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {innovativeAIServicesEnhanced2025.slice(09).map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
@@ -421,8 +421,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="automation" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -440,8 +440,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {advancedAIAutomationServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
@@ -460,8 +460,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="quantum" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -479,8 +479,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {quantumCybersecurityServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
@@ -499,8 +499,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="it" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -518,8 +518,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {innovativeITServicesEnhanced2025.slice(09).map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
@@ -538,8 +538,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -557,8 +557,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {emergingTechServicesEnhanced2025.slice(09).map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 50 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
@@ -577,8 +577,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -682,8 +682,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
@@ -691,7 +691,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-                We're not just another technology company - we're pioneers shaping the future of business and technology
+                'We', 're not just another technology company - 'we', 're pioneers shaping the future of business and technology
               </p>
             </motion.div>
 
@@ -730,8 +730,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               ].map((featureindex) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   className="text-center p-8"
                 >

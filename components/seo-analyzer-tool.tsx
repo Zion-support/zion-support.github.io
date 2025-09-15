@@ -157,9 +157,9 @@ export default function SEOAnalyzerToolPage() {
         contentScore: 80,
         mobileScore: 85,
         issues: [
-          { type: 'error'message: 'Missing meta description'priority: 'high' },
-          { type: 'warning'message: 'Title tag too long (65 characters)'priority: 'medium' },
-          { type: 'info'message: 'Consider adding more internal links'priority: 'low' }
+          { type: ''error', 'message: 'Missing meta 'description', 'priority: 'high' },
+          { type: ''warning', 'message: 'Title tag too long (65 characters)'priority: 'medium' },
+          { type: ''info', 'message: 'Consider adding more internal 'links', 'priority: 'low' }
         ],
         recommendations: [
           'Optimize meta descriptions for better click-through rates',
@@ -168,9 +168,9 @@ export default function SEOAnalyzerToolPage() {
           'Implement schema markup for rich snippets'
         ],
         keywords: [
-          { keyword: 'website optimization'volume: '12K'difficulty: 'medium' },
-          { keyword: 'SEO tools'volume: '8K'difficulty: 'low' },
-          { keyword: 'search engine optimization'volume: '15K'difficulty: 'high' }
+          { keyword: 'website 'optimization', 'volume: '12'K', 'difficulty: 'medium' },
+          { keyword: 'SEO 'tools', 'volume: '8'K', 'difficulty: 'low' },
+          { keyword: 'search engine 'optimization', 'volume: '15'K', 'difficulty: 'high' }
         ]
       });
       setIsAnalyzing(false);
@@ -181,7 +181,7 @@ export default function SEOAnalyzerToolPage() {
     <>
       <Head>
         <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization</title>
-        <meta name="description" content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insightskeyword researchand optimization recommendations to improve search rankings." />
+        <meta name="description" content="Analyze your 'website', 's SEO performance with our comprehensive tool. Get detailed insightskeyword researchand optimization recommendations to improve search rankings." />
         <meta property="og:title" content="SEO Analyzer Tool - Zion Tech Group" />
         <meta property="og:description" content="Professional SEO analysis tool with comprehensive insights and optimization recommendations." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -202,7 +202,7 @@ export default function SEOAnalyzerToolPage() {
             SEO Analyzer Tool
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights
+            Analyze your 'website', 's SEO performance with our comprehensive tool. Get detailed insights
             keyword researchand optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
           
@@ -307,7 +307,7 @@ export default function SEOAnalyzerToolPage() {
               Comprehensive SEO Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              We analyze every aspect of your website's SEO to provide actionable insights and recommendations.
+              We analyze every aspect of your 'website', 's SEO to provide actionable insights and recommendations.
             </p>
           </div>
 
@@ -345,7 +345,7 @@ export default function SEOAnalyzerToolPage() {
                 SEO Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                Here's a sample analysis of a website. Get comprehensive insights for your own website.
+                'Here', 's a sample analysis of a website. Get comprehensive insights for your own website.
               </p>
             </div>
             

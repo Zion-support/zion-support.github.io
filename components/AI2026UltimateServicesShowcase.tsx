@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -118,7 +118,7 @@ const AI2026UltimateServicesShowcase = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -130,7 +130,7 @@ const AI2026UltimateServicesShowcase = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -223,9 +223,9 @@ const AI2026UltimateServicesShowcase = () => {
           <motion.div
             key={activeService}
             variants={itemVariants}
-            initial={{ opacity: 0y: 50 }}
-            animate={{ opacity: 1y: 0 }}
-            exit={{ opacity: 0y: -50 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
             className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

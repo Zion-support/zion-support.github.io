@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Code
@@ -132,9 +132,9 @@ const InteractiveTechShowcase2026 = () => {
   ];
 
   const platforms = [
-    { name: 'Web'icon: Laptopstatus: 'Available' },
-    { name: 'Mobile'icon: Smartphonestatus: 'Available' },
-    { name: 'Desktop'icon: Monitorstatus: 'Coming Soon' }
+    { name: ''Web', 'icon: Laptopstatus: 'Available' },
+    { name: ''Mobile', 'icon: Smartphonestatus: 'Available' },
+    { name: ''Desktop', 'icon: Monitorstatus: 'Coming Soon' }
   ];
 
   return (

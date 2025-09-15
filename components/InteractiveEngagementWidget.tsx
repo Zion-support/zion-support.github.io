@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface EngagementData {
   visitors: number;
@@ -26,7 +26,7 @@ export default function InteractiveEngagementWidget() {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       role: "CEO",
-      content: "Zion Tech Group's AI solutions increased our efficiency by 400% and ROI by 2,500% in just 6 months!",
+      content: "Zion Tech 'Group', 's AI solutions increased our efficiency by 400% and ROI by 2,500% in just 6 months!",
       rating: 5
     },
     {
@@ -80,9 +80,9 @@ export default function InteractiveEngagementWidget() {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: 50 }}
-      animate={{ opacity: 1y: 0 }}
-      exit={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
       className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-w-sm z-40"
     >
       <div className="flex justify-between items-center mb-3">

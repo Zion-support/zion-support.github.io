@@ -42,14 +42,14 @@ export default function InteractiveContentDiscovery2027() {
   const [searchQuerysetSearchQuery] = useState('');
 
   const contentCategories = [
-    { id: 'all'label: 'All Content'icon: '📚' },
+    { id: ''all', 'label: 'All 'Content', 'icon: '📚' },
     { id: 'ai-2026'label: 'AI 2026'icon: '🚀' },
     { id: 'ai-2027'label: 'AI 2027'icon: '🔮' },
-    { id: 'quantum'label: 'Quantum Computing'icon: '⚛️' },
-    { id: 'neural'label: 'Neural Interfaces'icon: '🧠' },
-    { id: 'automation'label: 'Automation'icon: '🤖' },
-    { id: 'case-studies'label: 'Case Studies'icon: '📊' },
-    { id: 'predictions'label: 'Predictions'icon: '🔮' }
+    { id: ''quantum', 'label: 'Quantum 'Computing', 'icon: '⚛️' },
+    { id: ''neural', 'label: 'Neural 'Interfaces', 'icon: '🧠' },
+    { id: ''automation', 'label: ''Automation', 'icon: '🤖' },
+    { id: 'case-'studies', 'label: 'Case 'Studies', 'icon: '📊' },
+    { id: ''predictions', 'label: ''Predictions', 'icon: '🔮' }
 >>>>>>> fec9b05adaefd885fbbec3057680e3a2cfdb68c7
   ];
 
@@ -69,7 +69,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'AI 2026 Quantum Neural Fusion Breakthrough',
       description: 'Revolutionary breakthrough combining quantum computing with neural networksachieving 15,000% ROI.',
       category: 'ai-2026',
-      tags: ['quantum'neural'breakthrough'],
+      tags: [', 'quantum', 'neural'breakthrough'],
       roi: '15,000%',
       accuracy: '99.7%',
       type: 'blog',
@@ -92,7 +92,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'AI 2027 Neural Synthesis Predictions',
       description: 'Comprehensive analysis of neural synthesis technology predictions for 2027.',
       category: 'ai-2027',
-      tags: ['neural'predictions'synthesis'],
+      tags: [', 'neural', 'predictions'synthesis'],
       roi: '8,000%',
       accuracy: '99.7%',
       type: 'blog',
@@ -115,7 +115,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'Quantum Computing Solutions 2026',
       description: 'Advanced quantum computing solutions achieving 10,000x faster processing speeds.',
       category: 'quantum',
-      tags: ['quantum'computing'breakthrough'],
+      tags: [', 'quantum', 'computing'breakthrough'],
       roi: '12,000%',
       accuracy: '99.9%',
       type: 'services',
@@ -138,7 +138,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'Neural Interface Healthcare Success',
       description: '95% patient recovery rates achieved through neural interface technology.',
       category: 'neural',
-      tags: ['neural'healthcare'success'],
+      tags: [', 'neural', 'healthcare'success'],
       roi: '3,000%',
       accuracy: '95%',
       type: 'case-study',
@@ -161,7 +161,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'Autonomous Manufacturing Revolution',
       description: 'Fully autonomous manufacturing systems achieving 8,500% ROI and 99.9% efficiency.',
       category: 'automation',
-      tags: ['automation'manufacturing'autonomous'],
+      tags: [', 'automation', 'manufacturing'autonomous'],
       roi: '8,500%',
       accuracy: '99.9%',
       type: 'case-study',
@@ -184,7 +184,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'AI 2027 Future Predictions Analysis',
       description: 'Comprehensive analysis of AI trends and breakthrough predictions for 2027.',
       category: 'predictions',
-      tags: ['predictions'future'analysis'],
+      tags: [', 'predictions', 'future'analysis'],
       roi: 'N/A',
       accuracy: '95%',
       type: 'blog',
@@ -284,9 +284,9 @@ export default function InteractiveContentDiscovery2027() {
               <label className="block text-sm font-medium text-gray-700 mb-3">Filter by Tags</label>
               <div className="flex flex-wrap gap-2">
                 <button
-                  onClick={() => setSelectedTag('')}
+                  onClick={() => setSelectedTag(', ')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    selectedTag === '' ? 'bg-purple-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    selectedTag === ', ' ? 'bg-purple-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
                   All Tags
@@ -314,9 +314,9 @@ export default function InteractiveContentDiscovery2027() {
                 {(searchTerm || selectedCategory !== 'all' || selectedTag) && (
                   <button
                     onClick={() => {
-                      setSearchTerm('');
+                      setSearchTerm(', ');
                       setSelectedCategory('all');
-                      setSelectedTag('');
+                      setSelectedTag(', ');
                     }}
                     className="text-sm text-purple-600 hover:text-purple-800 font-medium"
                   >
@@ -400,9 +400,9 @@ export default function InteractiveContentDiscovery2027() {
               <p className="text-gray-600 mb-4">Try adjusting your search criteria or filters</p>
               <button
                 onClick={() => {
-                  setSearchTerm('');
+                  setSearchTerm(', ');
                   setSelectedCategory('all');
-                  setSelectedTag('');
+                  setSelectedTag(', ');
                 }}
                 className="px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
               >
@@ -414,7 +414,7 @@ export default function InteractiveContentDiscovery2027() {
           {/* Call to Action */}
           <div className="mt-16 text-center">
             <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Can't Find What You're Looking For?</h3>
+              <h3 className="text-2xl font-bold mb-4">'Can', 't Find What 'You', 're Looking For?</h3>
               <p className="text-lg mb-6 opacity-90">
                 Our content library is constantly expanding. Request specific content or get personalized recommendations.
               </p>

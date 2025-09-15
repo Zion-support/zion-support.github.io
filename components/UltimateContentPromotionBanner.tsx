@@ -41,7 +41,7 @@ const UltimateContentPromotionBanner = () => {
     {
       id: 3,
       title: "Neural Interface Revolution: The Future of Human-AI Interaction",
-      description: "Learn about the latest developments in neural interfaces and how they're transforming the way humans interact with AI systems.",
+      description: "Learn about the latest developments in neural interfaces and how 'they', 're transforming the way humans interact with AI systems.",
       type: "Future Tech",
       readTime: "18 min read",
       category: "Neural Tech",

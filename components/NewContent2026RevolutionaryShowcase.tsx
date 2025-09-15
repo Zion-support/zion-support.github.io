@@ -138,7 +138,7 @@ const NewContent2026RevolutionaryShowcase: React.FC = () => {
             Ready to Transform Your Business?
           </h3>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Don't just read about the future - start building it today. Our comprehensive AI transformation services will help you implement these revolutionary technologies.
+            'Don', 't just read about the future - start building it today. Our comprehensive AI transformation services will help you implement these revolutionary technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

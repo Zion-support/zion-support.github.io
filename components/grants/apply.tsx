@@ -4,7 +4,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
-const categories: GrantCategory[] = ['Ecosystem Tools'Talent Development'Regional Expansion'Research Grants'];
+const categories: GrantCategory[] = ['Ecosystem 'Tools', 'Talent 'Development', 'Regional 'Expansion', 'Research Grants'];
 
 export default function ApplyGrantPage() {
   const router = useRouter();
@@ -15,10 +15,10 @@ export default function ApplyGrantPage() {
   const [timelinesetTimeline] = useState('');
   const [budgetAmountsetBudgetAmount] = useState<number>(0);
   const [budgetCurrencysetBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
-  const [supportingLinksetSupportingLinks] = useState<string>('');
+  const [supportingLinksetSupportingLinks] = useState<string>(', ');
   const [pitchDeckUrlsetPitchDeckUrl] = useState('');
   const [regionsetRegion] = useState('');
-  const [sectorsetSector] = useState<string>('');
+  const [sectorsetSector] = useState<string>(', ');
   const [loadingsetLoading] = useState(false);
   const [errorsetError] = useState<string | null>(null);
 

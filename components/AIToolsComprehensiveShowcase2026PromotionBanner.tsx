@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   ArrowRight
@@ -49,12 +49,12 @@ const AIToolsComprehensiveShowcase2026PromotionBanner = () => {
   ];
 
   const categories = [
-    { name: 'Quantum Computing'icon: Cpucount: '12 tools' },
-    { name: 'Autonomous Operations'icon: Rocketcount: '8 tools' },
-    { name: 'Neural Interfaces'icon: Braincount: '6 tools' },
-    { name: 'Predictive Analytics'icon: BarChart3count: '10 tools' },
-    { name: 'Process Automation'icon: Zapcount: '15 tools' },
-    { name: 'Cybersecurity'icon: Shieldcount: '9 tools' }
+    { name: 'Quantum 'Computing', 'icon: Cpucount: '12 tools' },
+    { name: 'Autonomous 'Operations', 'icon: Rocketcount: '8 tools' },
+    { name: 'Neural 'Interfaces', 'icon: Braincount: '6 tools' },
+    { name: 'Predictive 'Analytics', 'icon: BarChart3count: '10 tools' },
+    { name: 'Process 'Automation', 'icon: Zapcount: '15 tools' },
+    { name: ''Cybersecurity', 'icon: Shieldcount: '9 tools' }
   ];
 
   useEffect(() => {

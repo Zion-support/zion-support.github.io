@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateAI2025TransformationBanner = () => {
@@ -65,7 +65,7 @@ const UltimateAI2025TransformationBanner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ultimate-ai-2025-banner-dismissed'true');
+    localStorage.setItem('ultimate-ai-2025-banner-'dismissed', 'true');
   };
 
   useEffect(() => {

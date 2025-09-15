@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface DataSource {
   id: string;
@@ -343,10 +343,10 @@ const EnterpriseDataManagement: React.FC = () => {
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">
         {[
-          { id: 'overview'label: 'Overview'icon: '📊' },
-          { id: 'sources'label: 'Data Sources'icon: '🗄️' },
-          { id: 'pipelines'label: 'Pipelines'icon: '🔄' },
-          { id: 'quality'label: 'Data Quality'icon: '✅' }
+          { id: ''overview', 'label: ''Overview', 'icon: '📊' },
+          { id: ''sources', 'label: 'Data 'Sources', 'icon: '🗄️' },
+          { id: ''pipelines', 'label: ''Pipelines', 'icon: '🔄' },
+          { id: ''quality', 'label: 'Data 'Quality', 'icon: '✅' }
         ].map((tab) => (
           <button
             key={tab.id}

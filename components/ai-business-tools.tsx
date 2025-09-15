@@ -42,8 +42,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://chat.openai.com',
       useCase: 'Ideal for writersdevelopersresearchersand anyone who needs AI assistance with complex tasks.',
-      pros: ['Powerful capabilities'Easy to use'Regular updates'Good free tier'],
-      cons: ['Sometimes inaccurate'Limited context'Privacy concerns'],
+      pros: ['Powerful 'capabilities', 'Easy to 'use', 'Regular 'updates', 'Good free tier'],
+      cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'],
       bestFor: 'Content creatorsdevelopersresearchers'
     },
     {
@@ -65,8 +65,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://midjourney.com',
       useCase: 'Perfect for designersmarketerscontent creatorsand businesses needing custom visual content.',
-      pros: ['High-quality output'Creative control'Commercial rights'Active community'],
-      cons: ['Discord-only interface'Limited customization'Monthly subscription'],
+      pros: ['High-quality 'output', 'Creative 'control', 'Commercial 'rights', 'Active community'],
+      cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'],
       bestFor: 'Designersmarketerscontent creators'
     },
     {
@@ -88,8 +88,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://jasper.ai',
       useCase: 'Essential for marketing teamscontent creatorsand businesses that need high-quality written content at scale.',
-      pros: ['Specialized for marketing'Brand voice training'SEO optimization'Team features'],
-      cons: ['Expensive'Limited free trial'Can be repetitive'],
+      pros: ['Specialized for 'marketing', 'Brand voice 'training', 'SEO 'optimization', 'Team features'],
+      cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'],
       bestFor: 'Marketing teamscontent creatorsbusinesses'
     },
     {
@@ -111,8 +111,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://synthesia.io',
       useCase: 'Perfect for creating training videosmarketing contentand presentations without hiring actors or video crews.',
-      pros: ['Professional quality'Multiple languages'Custom avatars'Easy to use'],
-      cons: ['Limited avatar options'Expensive'Subscription required'],
+      pros: ['Professional 'quality', 'Multiple 'languages', 'Custom 'avatars', 'Easy to use'],
+      cons: ['Limited avatar 'options', 'Expensive'Subscription required'],
       bestFor: 'Training departmentsmarketerseducators'
     },
     {
@@ -134,8 +134,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://copy.ai',
       useCase: 'Great for small businessesentrepreneursand marketers who need quality copy without hiring writers.',
-      pros: ['Free tier'Easy to use'Good templates'Affordable'],
-      cons: ['Limited customization'Quality varies'Basic features'],
+      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
+      cons: ['Limited 'customization', 'Quality 'varies', 'Basic features'],
       bestFor: 'Small businessesentrepreneursmarketers'
     },
     {
@@ -157,8 +157,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://grammarly.com',
       useCase: 'Essential for anyone who writes professionallyincluding studentsprofessionalsand content creators.',
-      pros: ['Excellent accuracy'Multiple platforms'Free tier'User-friendly'],
-      cons: ['Limited free features'Privacy concerns'Can be overzealous'],
+      pros: ['Excellent 'accuracy', 'Multiple 'platforms', 'Free 'tier', 'User-friendly'],
+      cons: ['Limited free 'features', 'Privacy 'concerns', 'Can be overzealous'],
       bestFor: 'Studentsprofessionalscontent creators'
     },
     {
@@ -180,8 +180,8 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://lumen5.com',
       useCase: 'Perfect for marketersocial media managersand businesses that want to create video content from existing text.',
-      pros: ['Free tier'Easy to use'Good templates'Affordable'],
-      cons: ['Limited customization'Basic features'Watermark on free'],
+      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
+      cons: ['Limited 'customization', 'Basic 'features', 'Watermark on free'],
       bestFor: 'Marketersocial media managersmall businesses'
     },
     {
@@ -203,13 +203,13 @@ export default function AIBusinessToolsPage() {
       ],
       website: 'https://surferseo.com',
       useCase: 'Essential for content marketersSEO specialistsand businesses that want to improve their search rankings.',
-      pros: ['Data-driven insights'Content optimization'Competitor analysis'Good support'],
-      cons: ['Expensive'Complex interface'Steep learning curve'],
+      pros: ['Data-driven 'insights', 'Content 'optimization', 'Competitor 'analysis', 'Good support'],
+      cons: [', 'Expensive', 'Complex 'interface', 'Steep learning curve'],
       bestFor: 'SEO specialistscontent marketersbusinesses'
     }
   ];
 
-  const categories = ['All'AI Assistant'AI Art'AI Writing'AI Video'AI Copywriting'AI SEO'];
+  const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'AI 'Video', 'AI 'Copywriting', 'AI SEO'];
   const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredTools = selectedCategory === 'All' 

@@ -37,7 +37,7 @@ const QuantumAIContentShowcase2026 = () => {
             Quantum AI 2026 Content
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-            Explore the revolutionary world of quantum AI and discover how it's transforming business intelligencedecision-makingand optimization.
+            Explore the revolutionary world of quantum AI and discover how 'it', 's transforming business intelligencedecision-makingand optimization.
           </p>
         </div>
         

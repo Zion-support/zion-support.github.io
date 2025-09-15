@@ -55,8 +55,8 @@ const UltimateTechShowcase2026Banner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -80,16 +80,16 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* Technology Showcase */}
         <motion.div
-          initial={{ opacity: 0y: 40 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {technologies.map((techindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
             >
@@ -131,8 +131,8 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* Achievements */}
         <motion.div
-          initial={{ opacity: 0y: 40 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
@@ -144,8 +144,8 @@ const UltimateTechShowcase2026Banner = () => {
             {achievements.map((achievementindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
               >
@@ -163,8 +163,8 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 40 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >

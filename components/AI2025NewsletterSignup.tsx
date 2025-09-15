@@ -11,10 +11,10 @@ export default function AI2025NewsletterSignup() {
   const [selectedInterestsetSelectedInterests] = useState<string[]>([]);
 
   const interests = [
-    { id: 'ai-innovation'label: 'AI Innovation'icon: Star },
-    { id: 'ai-tools'label: 'AI Tools & Utilities'icon: Zap },
-    { id: 'future-tech'label: 'Future Technology'icon: TrendingUp },
-    { id: 'community'label: 'Community Updates'icon: Users }
+    { id: 'ai-'innovation', 'label: 'AI 'Innovation', 'icon: Star },
+    { id: 'ai-'tools', 'label: 'AI Tools & 'Utilities', 'icon: Zap },
+    { id: 'future-'tech', 'label: 'Future 'Technology', 'icon: TrendingUp },
+    { id: ''community', 'label: 'Community 'Updates', 'icon: Users }
   ];
 
   const handleInterestToggle = (interestId: string) => {
@@ -49,12 +49,12 @@ export default function AI2025NewsletterSignup() {
           Welcome to the Future!
         </h3>
         <p className="text-green-300 mb-6">
-          You've successfully subscribed to our AI newsletter. Get ready for exclusive content
+          'You', 've successfully subscribed to our AI newsletter. Get ready for exclusive content
           early access to new toolsand insights into the future of technology.
         </p>
         
         <div className="bg-white/10 rounded-lg p-4 mb-6">
-          <h4 className="text-white font-semibold mb-2">What's Next?</h4>
+          <h4 className="text-white font-semibold mb-2">'What', 's Next?</h4>
           <ul className="text-green-300 text-sm space-y-1">
             <li>• Weekly AI innovation updates</li>
             <li>• Early access to new tools and features</li>

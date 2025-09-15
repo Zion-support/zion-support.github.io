@@ -10,7 +10,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({
   children,
-  className = '',
+  className = ', ',
   style,
   onClick,
   hover = true}) => {

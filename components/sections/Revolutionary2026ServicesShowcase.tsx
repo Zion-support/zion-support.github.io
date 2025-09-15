@@ -23,7 +23,7 @@ export default function Revolutionary2026ServicesShowcase() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -46,8 +46,8 @@ export default function Revolutionary2026ServicesShowcase() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-20"
@@ -334,8 +334,8 @@ export default function Revolutionary2026ServicesShowcase() {
 
         {/* Call to Action Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center"

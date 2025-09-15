@@ -153,7 +153,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               <h4 className="text-xl font-bold mb-3">Scientific Discovery</h4>
               <p className="text-gray-300">
                 Quantum consciousness systems that can explore infinite possibilities and 
-                discover solutions to humanity's greatest challenges.
+                discover solutions to 'humanity', 's greatest challenges.
               </p>
             </div>
             

@@ -35,7 +35,7 @@ const SuccessStoriesShowcase2025 = () => {
         users: "1,200+",
         churn: "3.2%"
       },
-      testimonial: "Working with Zion Tech Group was the best decision I made. They didn't just build my product; they became my business partners.",
+      testimonial: "Working with Zion Tech Group was the best decision I made. They 'didn', 't just build my product; they became my business partners.",
       author: "Marcus Chen",
       position: "Founder",
       image: "🚀",
@@ -53,7 +53,7 @@ const SuccessStoriesShowcase2025 = () => {
         uptime: "99.9%",
         performance: "300%"
       },
-      testimonial: "The scalability and performance improvements we achieved with Zion Tech Group's solutions exceeded all our expectations.",
+      testimonial: "The scalability and performance improvements we achieved with Zion Tech 'Group', 's solutions exceeded all our expectations.",
       author: "Emily Rodriguez",
       position: "VP of Engineering",
       image: "⚡",

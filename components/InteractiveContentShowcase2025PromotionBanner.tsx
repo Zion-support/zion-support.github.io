@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Play
@@ -36,9 +36,9 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -50 }}
-      animate={{ opacity: 1y: 0 }}
-      exit={{ opacity: 0y: -50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -78,9 +78,9 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
                 <span className="text-lg opacity-90">Featuring:</span>
                 <motion.span
                   key={currentFeature}
-                  initial={{ opacity: 0y: 10 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -10 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="text-lg font-semibold bg-white/20 px-3 py-1 rounded-full"
                 >
                   {features[currentFeature]}

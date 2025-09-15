@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -27,12 +27,12 @@ const InteractiveCaseStudiesShowcase2025 = () => {
   const [isPlayingsetIsPlaying] = useState(false);
 
   const industries = [
-    { id: 'all'name: 'All Industries'count: 12 },
-    { id: 'finance'name: 'Finance'count: 3 },
-    { id: 'healthcare'name: 'Healthcare'count: 2 },
-    { id: 'retail'name: 'Retail'count: 2 },
-    { id: 'manufacturing'name: 'Manufacturing'count: 2 },
-    { id: 'technology'name: 'Technology'count: 3 }
+    { id: ''all', 'name: 'All 'Industries', 'count: 12 },
+    { id: ''finance', 'name: ''Finance', 'count: 3 },
+    { id: ''healthcare', 'name: ''Healthcare', 'count: 2 },
+    { id: ''retail', 'name: ''Retail', 'count: 2 },
+    { id: ''manufacturing', 'name: ''Manufacturing', 'count: 2 },
+    { id: ''technology', 'name: ''Technology', 'count: 3 }
   ];
 
   const caseStudies = [
@@ -50,12 +50,12 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         customerSatisfaction: '98%'
       },
       testimonial: {
-        text: "The AI transformation has been incredible. We've reduced processing time by 85% while improving accuracy significantly.",
+        text: "The AI transformation has been incredible. 'We', 've reduced processing time by 85% while improving accuracy significantly.",
         author: "Sarah Chen",
         position: "Chief Risk Officer",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['Machine Learning'Natural Language Processing'Predictive Analytics'],
+      technologies: ['Machine 'Learning', 'Natural Language 'Processing', 'Predictive Analytics'],
       duration: '6 months',
       teamSize: '12',
       image: '/api/placeholder/600/400',
@@ -81,7 +81,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         position: "Chief Medical Officer",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['AI/ML'IoT Integration'Real-time Analytics'],
+      technologies: ['AI/'ML', 'IoT 'Integration', 'Real-time Analytics'],
       duration: '8 months',
       teamSize: '15',
       image: '/api/placeholder/600/400',
@@ -102,12 +102,12 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         customerSatisfaction: '97%'
       },
       testimonial: {
-        text: "The AI system has revolutionized our inventory management. We've eliminated stockouts and reduced waste significantly.",
+        text: "The AI system has revolutionized our inventory management. 'We', 've eliminated stockouts and reduced waste significantly.",
         author: "Jennifer Park",
         position: "VP of Operations",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['Demand Forecasting'Supply Chain AI'Real-time Analytics'],
+      technologies: ['Demand 'Forecasting', 'Supply Chain 'AI', 'Real-time Analytics'],
       duration: '5 months',
       teamSize: '10',
       image: '/api/placeholder/600/400',
@@ -128,12 +128,12 @@ const InteractiveCaseStudiesShowcase2025 = () => {
         customerSatisfaction: '99%'
       },
       testimonial: {
-        text: "Predictive maintenance has been a game-changer. We've virtually eliminated unplanned downtime.",
+        text: "Predictive maintenance has been a game-changer. 'We', 've virtually eliminated unplanned downtime.",
         author: "Robert Kim",
         position: "Plant Manager",
         avatar: "/api/placeholder/60/60"
       },
-      technologies: ['IoT'Machine Learning'Predictive Analytics'],
+      technologies: [', 'IoT', 'Machine 'Learning', 'Predictive Analytics'],
       duration: '7 months',
       teamSize: '18',
       image: '/api/placeholder/600/400',
@@ -183,8 +183,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -206,8 +206,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* Industry Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -388,8 +388,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="flex items-center justify-center mt-12 space-x-4"
         >
@@ -424,8 +424,8 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-16"
         >
@@ -435,7 +435,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
             </h3>
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
               Join the companies already transforming their business with AI. 
-              Let's discuss how we can help you achieve similar results.
+              'Let', 's discuss how we can help you achieve similar results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">

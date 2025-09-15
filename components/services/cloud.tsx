@@ -94,10 +94,10 @@ export default function CloudServicesPage() {
   ];
 ;
   const stats = [;
-    { number: '99.99%'label: 'Uptime Guarantee'icon: Cloud },
-    { number: '50%'label: 'Cost Reduction'icon: TrendingUp },
-    { number: '24 / 7'label: 'Support Available'icon: Clock },
-    { number: '100+'label: 'Cloud Projects'icon: CheckCircle },
+    { number: '99.99%'label: 'Uptime 'Guarantee', 'icon: Cloud },
+    { number: '50%'label: 'Cost 'Reduction', 'icon: TrendingUp },
+    { number: '24 / 7'label: 'Support 'Available', 'icon: Clock },
+    { number: '100+'label: 'Cloud 'Projects', 'icon: CheckCircle },
   ];
 ;
   return (
@@ -110,8 +110,8 @@ export default function CloudServicesPage() {
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
 
 
           >
@@ -141,8 +141,8 @@ export default function CloudServicesPage() {
               digital transformation            </p>;
           </motion && motion.div>;
           <motion&& motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
@@ -205,12 +205,12 @@ export default function CloudServicesPage() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0y: 30 }  } catch (error) {
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1y: 0 }  } catch (error) {
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -262,8 +262,8 @@ export default function CloudServicesPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
@@ -292,12 +292,12 @@ export default function CloudServicesPage() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
-            initial={{ opacity: 0y: 30 }  } catch (error) {
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1y: 0 }  } catch (error) {
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:"error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -320,7 +320,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.
+              'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
@@ -350,7 +350,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?;
             </h2>;
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
-              Let's discuss how our cloud infrastructure solutions can modernize;
+              'Let', 's discuss how our cloud infrastructure solutions can modernize;
               your business and drive digital transformation.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
@@ -375,10 +375,10 @@ export default function CloudServicesPage() {
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0y: 30
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1y: 0
+  opacity: 1, y: 0
 }transition= {
   {
 
@@ -482,7 +482,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?;
             </h2>;
             <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
-              Let's discuss how our cloud infrastructure solutions can modernize;
+              'Let', 's discuss how our cloud infrastructure solutions can modernize;
               your business and drive digital transformation.;
             </p>;
             <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
@@ -491,7 +491,7 @@ export default function CloudServicesPage() {
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Case Studies;
   once: true
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
 }
 }
@@ -502,7 +502,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?;
             </h2>;
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.;
+              'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;

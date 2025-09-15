@@ -10,7 +10,7 @@ const testimonials = [
     company: "TechCorp Global",
     industry: "Technology",
     rating: 5,
-    content: "Zion Tech Group's AI solutions transformed our entire operation. We achieved 300% ROI within the first year. Their expertise in automation is unmatched.",
+    content: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 300% ROI within the first year. Their expertise in automation is unmatched.",
     results: "300% ROI in 12 months",
     image: "/images/testimonials/sarah-chen.jpg",
     featured: true
@@ -46,7 +46,7 @@ const testimonials = [
     company: "Financial Services Group",
     industry: "Finance",
     rating: 5,
-    content: "Zion Tech Group's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.",
+    content: "Zion Tech 'Group', 's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.",
     results: "99.7% fraud detection",
     image: "/images/testimonials/james-park.jpg",
     featured: false
@@ -90,8 +90,8 @@ export default function RevolutionaryTestimonialsShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -106,15 +106,15 @@ export default function RevolutionaryTestimonialsShowcase() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Hear from industry leaders who've transformed their businesses 
+            'Don', 't just take our word for it. Hear from industry leaders 'who', 've transformed their businesses 
             with our AI solutions and achieved extraordinary results.
           </p>
         </motion.div>
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.2 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -140,8 +140,8 @@ export default function RevolutionaryTestimonialsShowcase() {
           {testimonials.filter(testimonial => testimonial.featured).map((testimonialindex) => (
             <motion.div
               key={testimonial.id}
-              initial={{ opacity: 0y: 50 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 relative overflow-hidden"
@@ -170,7 +170,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>
@@ -184,8 +184,8 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* Additional Testimonials Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -193,8 +193,8 @@ export default function RevolutionaryTestimonialsShowcase() {
           {testimonials.filter(testimonial => !testimonial.featured).map((testimonialindex) => (
             <motion.div
               key={testimonial.id}
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group"
@@ -219,7 +219,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
@@ -233,8 +233,8 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
@@ -243,7 +243,7 @@ export default function RevolutionaryTestimonialsShowcase() {
             Ready to Join Our Success Stories?
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results. 
+            'Let', 's discuss how we can help you achieve similar results. 
             Our team is ready to transform your business with cutting-edge AI solutions.
           </p>
           

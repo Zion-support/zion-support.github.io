@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MenuXChevronDownSearchPhoneMailMapPin,
   BrainRocketDnaGlobeShieldWifiPackage,
@@ -19,8 +19,8 @@ const UltraAdvancedNavigation: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll'handleScroll);
-    return () => window.removeEventListener('scroll'handleScroll);
+    window.addEventListener(', 'scroll', 'handleScroll);
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
 
   const navigationItems = [
@@ -282,9 +282,9 @@ const UltraAdvancedNavigation: React.FC = () => {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0y: 10scale: 0.95 }}
-                        animate={{ opacity: 1y: 0scale: 1 }}
-                        exit={{ opacity: 0y: 10scale: 0.95 }}
+                        initial={{ opacity: 0, y: 10scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0scale: 1 }}
+                        exit={{ opacity: 0, y: 10scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                       >

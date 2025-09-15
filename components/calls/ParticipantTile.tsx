@@ -35,12 +35,12 @@ export default function ParticipantTile({ participantisLocaldisplayName }: Props
       if (track) handleTrackSubscribed(pubtrack);
     });
 
-    participant.on('trackSubscribed'handleTrackSubscribed);
-    participant.on('trackUnsubscribed'handleTrackUnsubscribed);
+    participant.on(', 'trackSubscribed', 'handleTrackSubscribed);
+    participant.on(', 'trackUnsubscribed', 'handleTrackUnsubscribed);
 
     return () => {
-      participant.off('trackSubscribed'handleTrackSubscribed);
-      participant.off('trackUnsubscribed'handleTrackUnsubscribed);
+      participant.off(', 'trackSubscribed', 'handleTrackSubscribed);
+      participant.off(', 'trackUnsubscribed', 'handleTrackUnsubscribed);
     };
   }[participant]);
 

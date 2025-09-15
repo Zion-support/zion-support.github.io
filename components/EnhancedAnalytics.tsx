@@ -36,8 +36,8 @@ export default function EnhancedAnalytics() {
       }
       window.gtag = gtag;
 
-      gtag('js'new Date());
-      gtag('config'process.env.NEXT_PUBLIC_GA_ID{
+      gtag(', 'js', 'new Date());
+      gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
         page_title: document.title,
         page_location: window.location.href,
       });
@@ -48,14 +48,14 @@ export default function EnhancedAnalytics() {
     // Track page views
     if (typeof window !== 'undefined' && window.gtag) {
       const handleRouteChange = (url: string) => {
-        window.gtag('config'process.env.NEXT_PUBLIC_GA_ID{
+        window.gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
           page_path: url,
         });
       };
 
-      router.events.on('routeChangeComplete'handleRouteChange);
+      router.events.on(', 'routeChangeComplete', 'handleRouteChange);
       return () => {
-        router.events.off('routeChangeComplete'handleRouteChange);
+        router.events.off(', 'routeChangeComplete', 'handleRouteChange);
       };
     }
   }[router.events]);
@@ -63,7 +63,7 @@ export default function EnhancedAnalytics() {
   // Track custom events
   const trackEvent = (event: AnalyticsEvent) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event'event.action{
+      window.gtag(', 'event', 'event.action{
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -113,8 +113,8 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    window.addEventListener('scroll'trackScrollDepth{ passive: true });
-    return () => window.removeEventListener('scroll'trackScrollDepth);
+    window.addEventListener(', 'scroll', 'trackScrollDepth{ passive: true });
+    return () => window.removeEventListener(', 'scroll', 'trackScrollDepth);
   }[]);
 
   // Track time on page
@@ -187,8 +187,8 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    document.addEventListener('click'trackClicks);
-    return () => document.removeEventListener('click'trackClicks);
+    document.addEventListener(', 'click', 'trackClicks);
+    return () => document.removeEventListener(', 'click', 'trackClicks);
   }[]);
 
   // Track form submissions
@@ -206,17 +206,17 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    document.addEventListener('submit'trackFormSubmissions);
-    return () => document.removeEventListener('submit'trackFormSubmissions);
+    document.addEventListener(', 'submit', 'trackFormSubmissions);
+    return () => document.removeEventListener(', 'submit', 'trackFormSubmissions);
   }[]);
 
-  return null; // This component doesn't render anything
+  return null; // This component 'doesn', 't render anything
 }
 
 // Export utility functions for manual event tracking
 export const trackCustomEvent = (event: AnalyticsEvent) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event'event.action{
+    window.gtag(', 'event', 'event.action{
       event_category: event.category,
       event_label: event.label,
       value: event.value,
@@ -226,7 +226,7 @@ export const trackCustomEvent = (event: AnalyticsEvent) => {
 
 export const trackPageView = (pagePath: stringpageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config'process.env.NEXT_PUBLIC_GA_ID{
+    window.gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
       page_path: pagePath,
       page_title: pageTitle,
     });

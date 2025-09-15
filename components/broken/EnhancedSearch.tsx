@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffectuseCallbackuseMemo } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 SearchXFilterTrendingUpClockStarZapBrainAtomShieldRocket
 
 interface SearchResult {
@@ -58,8 +58,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
-      features: ['Emotional Intelligence'Self-Awareness'Consciousness Evolution'],
-      pricing: { starter: '$999/month'enterprise: 'Contact Sales' }
+      features: ['Emotional 'Intelligence', 'Self-'Awareness', 'Consciousness Evolution'],
+      pricing: { starter: '$999/'month', 'enterprise: 'Contact Sales' }
     },
     {
       id: '2',
@@ -69,8 +69,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-ai-hybrid-computing',
       relevance: 92,
-      features: ['Quantum Supremacy'AI Integration'Hybrid Computing'],
-      pricing: { starter: '$1,499/month'enterprise: 'Contact Sales' }
+      features: ['Quantum 'Supremacy', 'AI 'Integration', 'Hybrid Computing'],
+      pricing: { starter: '$1,499/'month', 'enterprise: 'Contact Sales' }
     },
     {
       id: '3',
@@ -80,16 +80,16 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-cybersecurity-intelligence',
       relevance: 88,
-      features: ['Quantum Resistance'Threat Prediction'AI Security'],
-      pricing: { starter: '$799/month'enterprise: 'Contact Sales' }
+      features: ['Quantum 'Resistance', 'Threat 'Prediction', 'AI Security'],
+      pricing: { starter: '$799/'month', 'enterprise: 'Contact Sales' }
     }
   ];
 
   const categories = [
-    { id: 'ai'name: 'AI & ML'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: 'quantum'name: 'Quantum'icon: Atomcolor: 'from-blue-500 to-cyan-500' },
-    { id: 'security'name: 'Security'icon: Shieldcolor: 'from-red-500 to-orange-500' },
-    { id: 'business'name: 'Business'icon: Rocketcolor: 'from-emerald-500 to-teal-500' }
+    { id: ''ai', 'name: 'AI & 'ML', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: ''quantum', 'name: ''Quantum', 'icon: Atomcolor: 'from-blue-500 to-cyan-500' },
+    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-500 to-orange-500' },
+    { id: ''business', 'name: ''Business', 'icon: Rocketcolor: 'from-emerald-500 to-teal-500' }
   ];
 
   // Debounced search function
@@ -174,9 +174,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
 
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(05);
+    const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
     setSearchHistory(newHistory);
-    localStorage.setItem('zion-search-history'JSON.stringify(newHistory));
+    localStorage.setItem('zion-search-'history', 'JSON.stringify(newHistory));
   };
 
   // Load search history from localStorage
@@ -204,12 +204,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
     setShowResults(false);
-    setQuery('');
+    setQuery(', ');
   };
 
   // Clear search
   const clearSearch = () => {
-    setQuery('');
+    setQuery(', ');
     setShowResults(false);
     setResults([]);
   };
@@ -254,9 +254,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       <AnimatePresence>
         {showResults && (
           <motion.div
-            initial={{ opacity: 0y: -10scale: 0.95 }}
-            animate={{ opacity: 1y: 0scale: 1 }}
-            exit={{ opacity: 0y: -10scale: 0.95 }}
+            initial={{ opacity: 0, y: -10scale: 0.95 }}
+            animate={{ opacity: 1, y: 0scale: 1 }}
+            exit={{ opacity: 0, y: -10scale: 0.95 }}
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
           >
@@ -297,9 +297,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 <AnimatePresence>
                   {showSuggestions && suggestions.length > 0 && (
                     <motion.div
-                      initial={{ opacity: 0y: -10 }}
-                      animate={{ opacity: 1y: 0 }}
-                      exit={{ opacity: 0y: -10 }}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
                       className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"
                     >
                       {/* Quick Actions */}

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2
   TrendingUp
@@ -40,7 +40,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Workflow Automation',
           description: 'Streamline your business processes with intelligent automation.',
-          features: ['Process Optimization'Error Reduction'Time Savings'],
+          features: ['Process 'Optimization', 'Error 'Reduction', 'Time Savings'],
           roi: '300%',
           timeToValue: '30 days',
           image: '/api/placeholder/400/300'
@@ -48,7 +48,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Document Processing',
           description: 'Automate document handling and data extraction.',
-          features: ['OCR Technology'Smart Classification'Data Validation'],
+          features: ['OCR 'Technology', 'Smart 'Classification', 'Data Validation'],
           roi: '250%',
           timeToValue: '14 days',
           image: '/api/placeholder/400/300'
@@ -56,7 +56,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Customer Service AI',
           description: 'Enhance customer support with AI-powered chatbots.',
-          features: ['24/7 Support'Natural Language'Multi-language'],
+          features: ['24/7 'Support', 'Natural 'Language', 'Multi-language'],
           roi: '400%',
           timeToValue: '21 days',
           image: '/api/placeholder/400/300'
@@ -72,7 +72,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Predictive Analytics',
           description: 'Forecast trends and make data-driven decisions.',
-          features: ['Machine Learning'Real-time Insights'Custom Dashboards'],
+          features: ['Machine 'Learning', 'Real-time 'Insights', 'Custom Dashboards'],
           roi: '500%',
           timeToValue: '45 days',
           image: '/api/placeholder/400/300'
@@ -80,7 +80,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Business Intelligence',
           description: 'Transform data into actionable business insights.',
-          features: ['Data Visualization'KPI Tracking'Automated Reports'],
+          features: ['Data 'Visualization', 'KPI 'Tracking', 'Automated Reports'],
           roi: '350%',
           timeToValue: '28 days',
           image: '/api/placeholder/400/300'
@@ -88,7 +88,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Customer Analytics',
           description: 'Understand customer behavior and preferences.',
-          features: ['Segmentation'Churn Prediction'Personalization'],
+          features: [', 'Segmentation', 'Churn 'Prediction', 'Personalization'],
           roi: '450%',
           timeToValue: '35 days',
           image: '/api/placeholder/400/300'
@@ -104,7 +104,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Cybersecurity Suite',
           description: 'Protect your business from cyber threats.',
-          features: ['Threat Detection'Real-time Monitoring'Incident Response'],
+          features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Incident Response'],
           roi: '200%',
           timeToValue: '7 days',
           image: '/api/placeholder/400/300'
@@ -112,7 +112,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Compliance Management',
           description: 'Ensure regulatory compliance across all operations.',
-          features: ['GDPR Compliance'Audit Trails'Risk Assessment'],
+          features: ['GDPR 'Compliance', 'Audit 'Trails', 'Risk Assessment'],
           roi: '180%',
           timeToValue: '14 days',
           image: '/api/placeholder/400/300'
@@ -120,7 +120,7 @@ const BusinessSolutionsShowcase2025 = () => {
         {
           title: 'Data Protection',
           description: 'Secure sensitive data with advanced encryption.',
-          features: ['End-to-End Encryption'Access Control'Data Backup'],
+          features: ['End-to-End 'Encryption', 'Access 'Control', 'Data Backup'],
           roi: '220%',
           timeToValue: '10 days',
           image: '/api/placeholder/400/300'
@@ -130,7 +130,7 @@ const BusinessSolutionsShowcase2025 = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -142,7 +142,7 @@ const BusinessSolutionsShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,

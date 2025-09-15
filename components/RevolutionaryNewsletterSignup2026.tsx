@@ -24,11 +24,11 @@ export default function RevolutionaryNewsletterSignup2026() {
           <div className="text-6xl mb-6">🎉</div>
           <h2 className="text-4xl font-bold mb-6">Welcome to the AI Revolution!</h2>
           <p className="text-xl text-gray-300 mb-8">
-            You've successfully joined our exclusive community of AI revolutionaries. 
+            'You', 've successfully joined our exclusive community of AI revolutionaries. 
             Get ready for breakthrough content and 25,000% ROI opportunities.
           </p>
           <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
-            <h3 className="text-2xl font-bold mb-4">What's Next?</h3>
+            <h3 className="text-2xl font-bold mb-4">'What', 's Next?</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl mb-2">📧</div>
@@ -73,7 +73,7 @@ export default function RevolutionaryNewsletterSignup2026() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Benefits */}
             <div>
-              <h3 className="text-2xl font-bold mb-6">What You'll Get:</h3>
+              <h3 className="text-2xl font-bold mb-6">What 'You', 'll Get:</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="text-2xl">🚀</div>

@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
 const UltimateContentCarousel2025 = () => {
@@ -79,8 +79,8 @@ const UltimateContentCarousel2025 = () => {
 
   return (
     <motion.section
-      initial={{ opacity: 0y: 50 }}
-      animate={isVisible ? { opacity: 1y: 0 } : {}}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8 }}
       className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
     >
@@ -98,8 +98,8 @@ const UltimateContentCarousel2025 = () => {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0y: 20 }}
-            animate={isVisible ? { opacity: 1y: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
           >
@@ -111,8 +111,8 @@ const UltimateContentCarousel2025 = () => {
           </motion.h2>
           
           <motion.p
-            initial={{ opacity: 0y: 20 }}
-            animate={isVisible ? { opacity: 1y: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4duration: 0.6 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
@@ -146,8 +146,8 @@ const UltimateContentCarousel2025 = () => {
                   <div className="max-w-4xl px-8 md:px-12 text-white">
                     <motion.div
                       key={`badge-${currentSlide}`}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2duration: 0.5 }}
                       className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-lg text-sm font-medium mb-6"
                     >
@@ -157,8 +157,8 @@ const UltimateContentCarousel2025 = () => {
 
                     <motion.h3
                       key={`title-${currentSlide}`}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3duration: 0.5 }}
                       className="text-4xl md:text-6xl font-bold mb-6"
                     >
@@ -167,8 +167,8 @@ const UltimateContentCarousel2025 = () => {
 
                     <motion.p
                       key={`desc-${currentSlide}`}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4duration: 0.5 }}
                       className="text-xl text-gray-200 mb-8 max-w-2xl"
                     >
@@ -178,8 +178,8 @@ const UltimateContentCarousel2025 = () => {
                     {/* Features */}
                     <motion.div
                       key={`features-${currentSlide}`}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.5duration: 0.5 }}
                       className="flex flex-wrap gap-4 mb-8"
                     >
@@ -196,8 +196,8 @@ const UltimateContentCarousel2025 = () => {
                     {/* Stats and CTA */}
                     <motion.div
                       key={`cta-${currentSlide}`}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6duration: 0.5 }}
                       className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
                     >
@@ -257,8 +257,8 @@ const UltimateContentCarousel2025 = () => {
 
         {/* Additional Info */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8duration: 0.6 }}
           className="mt-16 text-center"
         >

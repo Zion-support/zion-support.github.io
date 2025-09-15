@@ -107,15 +107,15 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '25 min read',
       featured: false,
-      tags: ['Multimodal AI'Enterprise AI'ROI'Cross-Modal Intelligence']
+      tags: ['Multimodal 'AI', 'Enterprise 'AI', 'ROI'Cross-Modal Intelligence']
     }
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: contentItems.length },
-    { id: 'ai-revolution'name: 'AI Revolution'count: contentItems.filter(item => item.category === 'ai-revolution').length },
-    { id: 'success-stories'name: 'Success Stories'count: contentItems.filter(item => item.category === 'success-stories').length },
-    { id: 'implementation'name: 'Implementation'count: contentItems.filter(item => item.category === 'implementation').length }
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
+    { id: 'ai-'revolution', 'name: 'AI 'Revolution', 'count: contentItems.filter(item => item.category === 'ai-revolution').length },
+    { id: 'success-'stories', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'success-stories').length },
+    { id: ''implementation', 'name: ''Implementation', 'count: contentItems.filter(item => item.category === 'implementation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

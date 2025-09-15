@@ -14,7 +14,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
       category: 'Quantum AI & Neuroscience',
-      features: ['Quantum consciousness simulation'Neural pattern recognition'Emotional intelligence modeling'Real-time brain-computer interface'],
+      features: ['Quantum consciousness 'simulation', 'Neural pattern 'recognition', 'Emotional intelligence 'modeling', 'Real-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'
     },
@@ -27,7 +27,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
       category: 'Space Technology & AI',
-      features: ['Autonomous mining operations'Resource detection algorithms'Risk assessment AI'Mission planning automation'],
+      features: ['Autonomous mining 'operations', 'Resource detection 'algorithms', 'Risk assessment 'AI', 'Mission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'
     },
@@ -40,7 +40,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
       category: 'Biotechnology & Computing',
-      features: ['DNA-based computation'Molecular algorithm optimization'Real-time molecular analysis'Algorithm library (100+ algorithms)'],
+      features: ['DNA-based 'computation', 'Molecular algorithm 'optimization', 'Real-time molecular 'analysis', 'Algorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'
     },
@@ -53,7 +53,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
       category: 'Metaverse & Holographics',
-      features: ['3D holographic rendering'Real-time 3D modeling'Holographic projection systems'AI-powered content generation'],
+      features: ['3D holographic 'rendering', 'Real-time 3D 'modeling', 'Holographic projection 'systems', 'AI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'
     },
@@ -66,7 +66,7 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
       category: 'Healthcare & AI',
-      features: ['Autonomous diagnosis'Treatment recommendation AI'Continuous learning algorithms'Predictive health analytics'],
+      features: ['Autonomous 'diagnosis', 'Treatment recommendation 'AI', 'Continuous learning 'algorithms', 'Predictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'
     },
@@ -79,17 +79,17 @@ const Revolutionary2027ServicesShowcase = () => {
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
       category: 'Quantum Security',
-      features: ['Quantum key distribution'Unbreakable encryption'Real-time threat detection'Zero-trust architecture'],
+      features: ['Quantum key 'distribution', 'Unbreakable 'encryption', 'Real-time threat 'detection', 'Zero-trust architecture'],
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }
   ];
 
   const categories = [
-    { name: 'Quantum AI Services'count: '25+'icon: Atomcolor: 'from-purple-500 to-indigo-600' },
-    { name: 'Space Technology'count: '15+'icon: Satellitecolor: 'from-blue-500 to-cyan-600' },
-    { name: 'Biotechnology'count: '20+'icon: TestTubecolor: 'from-green-500 to-emerald-600' },
-    { name: 'Emerging Tech'count: '30+'icon: Sparklescolor: 'from-pink-500 to-rose-600' }
+    { name: 'Quantum AI 'Services', 'count: '25+'icon: Atomcolor: 'from-purple-500 to-indigo-600' },
+    { name: 'Space 'Technology', 'count: '15+'icon: Satellitecolor: 'from-blue-500 to-cyan-600' },
+    { name: ''Biotechnology', 'count: '20+'icon: TestTubecolor: 'from-green-500 to-emerald-600' },
+    { name: 'Emerging 'Tech', 'count: '30+'icon: Sparklescolor: 'from-pink-500 to-rose-600' }
   ];
 
   const containerVariants = {
@@ -103,7 +103,7 @@ const Revolutionary2027ServicesShowcase = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -124,8 +124,8 @@ const Revolutionary2027ServicesShowcase = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-20"
@@ -239,8 +239,8 @@ const Revolutionary2027ServicesShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center"

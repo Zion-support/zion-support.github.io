@@ -8,8 +8,8 @@ type Props = { items: Item[] };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd()'public'automation'innovation-digest.json');
-    const raw = fs.readFileSync(file'utf8');
+    const file = path.join(process.cwd()', 'public', 'automation'innovation-digest.json');
+    const raw = fs.readFileSync('file', 'utf8');
     const data = JSON.parse(raw);
     return { props: { items: data.items || [] }revalidate: 1800 };
   } catch {

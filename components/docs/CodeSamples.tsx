@@ -6,9 +6,9 @@ interface Props {
 }
 
 const tabs: Array<{ key: Props['samples'][number]['language']; label: string }> = [
-  { key: 'curl'label: 'cURL' },
-  { key: 'javascript'label: 'JavaScript' },
-  { key: 'python'label: 'Python' }];
+  { key: ''curl', 'label: 'cURL' },
+  { key: ''javascript', 'label: 'JavaScript' },
+  { key: ''python', 'label: 'Python' }];
 
 export default function CodeSamples({ samples }: Props) {
   const [activesetActive] = useState<typeof tabs[number]['key']>('curl');
@@ -28,7 +28,7 @@ export default function CodeSamples({ samples }: Props) {
         ))}
       </div>
       <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
-        <code>{sampleMap[active] || ''}</code>
+        <code>{sampleMap[active] || ', '}</code>
       </pre>
     </div>
   );

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -47,7 +47,7 @@ const innovations: Innovation[] = [
     category: 'AI Architecture',
     impact: 'High',
     status: 'released',
-    features: ['Distributed Learning'Consensus Algorithms'Real-time Adaptation'Scalable Architecture'],
+    features: ['Distributed 'Learning', 'Consensus 'Algorithms', 'Real-time 'Adaptation', 'Scalable Architecture'],
     icon: Brain,
     color: 'from-purple-500 to-pink-500',
     metrics: { efficiency: 95accuracy: 98adoption: 87 }
@@ -59,7 +59,7 @@ const innovations: Innovation[] = [
     category: 'Quantum Computing',
     impact: 'Revolutionary',
     status: 'beta',
-    features: ['Quantum Algorithms'AI Optimization'Parallel Processing'Error Correction'],
+    features: ['Quantum 'Algorithms', 'AI 'Optimization', 'Parallel 'Processing', 'Error Correction'],
     icon: Cpu,
     color: 'from-blue-500 to-cyan-500',
     metrics: { efficiency: 99accuracy: 99adoption: 45 }
@@ -71,7 +71,7 @@ const innovations: Innovation[] = [
     category: 'Automation',
     impact: 'High',
     status: 'released',
-    features: ['Self-Healing'Auto-Optimization'Predictive Maintenance'Adaptive Learning'],
+    features: ['Self-'Healing', 'Auto-'Optimization', 'Predictive 'Maintenance', 'Adaptive Learning'],
     icon: RefreshCw,
     color: 'from-green-500 to-emerald-500',
     metrics: { efficiency: 92accuracy: 94adoption: 78 }
@@ -83,7 +83,7 @@ const innovations: Innovation[] = [
     category: 'Human-AI Interaction',
     impact: 'Revolutionary',
     status: 'coming-soon',
-    features: ['Brain-Computer Interface'Thought Recognition'Neural Feedback'Cognitive Enhancement'],
+    features: ['Brain-Computer 'Interface', 'Thought 'Recognition', 'Neural 'Feedback', 'Cognitive Enhancement'],
     icon: Target,
     color: 'from-orange-500 to-red-500',
     metrics: { efficiency: 88accuracy: 91adoption: 23 }
@@ -95,7 +95,7 @@ const innovations: Innovation[] = [
     category: 'Security',
     impact: 'High',
     status: 'released',
-    features: ['Threat Detection'Real-time Response'Behavioral Analysis'Zero-day Protection'],
+    features: ['Threat 'Detection', 'Real-time 'Response', 'Behavioral 'Analysis', 'Zero-day Protection'],
     icon: Shield,
     color: 'from-red-500 to-pink-500',
     metrics: { efficiency: 97accuracy: 99adoption: 82 }
@@ -107,14 +107,14 @@ const innovations: Innovation[] = [
     category: 'Infrastructure',
     impact: 'High',
     status: 'released',
-    features: ['Global Coverage'Edge Computing'Low Latency'High Availability'],
+    features: ['Global 'Coverage', 'Edge 'Computing', 'Low 'Latency', 'High Availability'],
     icon: Globe,
     color: 'from-indigo-500 to-purple-500',
     metrics: { efficiency: 94accuracy: 96adoption: 91 }
   }
 ];
 
-const categories = ['All'AI Architecture'Quantum Computing'Automation'Human-AI Interaction'Security'Infrastructure'];
+const categories = [', 'All', 'AI 'Architecture', 'Quantum 'Computing', 'Automation'Human-AI 'Interaction', 'Security'Infrastructure'];
 
 export default function AIInnovationShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
@@ -158,8 +158,8 @@ export default function AIInnovationShowcase2025() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -200,8 +200,8 @@ export default function AIInnovationShowcase2025() {
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
@@ -230,9 +230,9 @@ export default function AIInnovationShowcase2025() {
               <motion.div
                 key={innovation.id}
                 layout
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -20 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className="group cursor-pointer"
                 onClick={() => handleInnovationClick(innovation)}
@@ -310,9 +310,9 @@ export default function AIInnovationShowcase2025() {
             onClick={() => setSelectedInnovation(null)}
           >
             <motion.div
-              initial={{ scale: 0.9opacity: 0 }}
-              animate={{ scale: 1opacity: 1 }}
-              exit={{ scale: 0.9opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20"
               onClick={(e) => e.stopPropagation()}
             >

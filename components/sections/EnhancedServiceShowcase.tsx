@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseMemo } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   StarUsersTrendingUpDollarSignClock
   CheckCircleArrowRightZapShieldRocket,
@@ -69,28 +69,28 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   const [sortBysetSortBy] = useState<string>('popular');
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: '🚀' },
-    { id: 'ai'name: 'AI & ML'icon: '🧠' },
-    { id: 'quantum'name: 'Quantum'icon: '⚛️' },
-    { id: 'blockchain'name: 'Blockchain'icon: '⛓️' },
-    { id: 'enterprise'name: 'Enterprise'icon: '🏢' },
-    { id: 'emerging'name: 'Emerging Tech'icon: '🌟' }
+    { id: ''all', 'name: 'All 'Services', 'icon: '🚀' },
+    { id: ''ai', 'name: 'AI & 'ML', 'icon: '🧠' },
+    { id: ''quantum', 'name: ''Quantum', 'icon: '⚛️' },
+    { id: ''blockchain', 'name: ''Blockchain', 'icon: '⛓️' },
+    { id: ''enterprise', 'name: ''Enterprise', 'icon: '🏢' },
+    { id: ''emerging', 'name: 'Emerging 'Tech', 'icon: '🌟' }
   ];
 
   const priceRanges = [
-    { id: 'all'name: 'All Prices' },
-    { id: 'low'name: 'Under $1K/month' },
-    { id: 'medium'name: '$1K - $5K/month' },
-    { id: 'high'name: '$5K - $20K/month' },
-    { id: 'premium'name: '$20K+/month' }
+    { id: ''all', 'name: 'All Prices' },
+    { id: ''low', 'name: 'Under $1K/month' },
+    { id: ''medium', 'name: '$1K - $5K/month' },
+    { id: ''high', 'name: '$5K - $20K/month' },
+    { id: ''premium', 'name: '$20K+/month' }
   ];
 
   const sortOptions = [
-    { id: 'popular'name: 'Most Popular' },
-    { id: 'rating'name: 'Highest Rated' },
-    { id: 'roi'name: 'Best ROI' },
-    { id: 'price-low'name: 'Price Low to High' },
-    { id: 'price-high'name: 'Price High to Low' }
+    { id: ''popular', 'name: 'Most Popular' },
+    { id: ''rating', 'name: 'Highest Rated' },
+    { id: ''roi', 'name: 'Best ROI' },
+    { id: 'price-'low', 'name: 'Price Low to High' },
+    { id: 'price-'high', 'name: 'Price High to Low' }
   ];
 
   const filteredServices = useMemo(() => {
@@ -103,10 +103,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                              (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech')));
 
       const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g'')) < 1000) ||
-                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g'')) >= 1000 && parseFloat(service.price.replace(/[$]/g'')) < 5000) ||
-                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g'')) >= 5000 && parseFloat(service.price.replace(/[$]/g'')) < 20000) ||
-                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g'')) >= 20000);
+                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g', ')) < 1000) ||
+                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g', ')) >= 1000 && parseFloat(service.price.replace(/[$]/g', ')) < 5000) ||
+                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g', ')) >= 5000 && parseFloat(service.price.replace(/[$]/g', ')) < 20000) ||
+                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g', ')) >= 20000);
 
       return matchesCategory && matchesPrice;
     });
@@ -127,10 +127,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         });
         break;
       case 'price-low':
-        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g'')) - parseFloat(b.price.replace(/[$]/g'')));
+        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g', ')) - parseFloat(b.price.replace(/[$]/g', ')));
         break;
       case 'price-high':
-        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g'')) - parseFloat(a.price.replace(/[$]/g'')));
+        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g', ')) - parseFloat(a.price.replace(/[$]/g', ')));
         break;
       default:
         break;
@@ -152,16 +152,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
             {title}
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
@@ -170,8 +170,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
@@ -190,8 +190,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         {/* Filters */}
         {showFilters && (
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.6 }}
             className="mb-12"
           >
@@ -251,8 +251,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -260,8 +260,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             {filteredServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0y: 30scale: 0.9 }}
-                whileInView={{ opacity: 1y: 0scale: 1 }}
+                initial={{ opacity: 0, y: 30scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0scale: 1 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 whileHover={{ y: -5scale: 1.02 }}
                 className="group"
@@ -368,8 +368,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="text-center mt-16"
         >

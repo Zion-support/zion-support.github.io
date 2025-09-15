@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   StarClockUsersTrendingUpCheckCircleExternalLink
   ChevronRightShieldZapGlobeRocketBrainAtom,
@@ -20,23 +20,23 @@ export default function ComprehensiveServicesShowcase() {
   const allServices = [...comprehensiveMicroSaasServices...specializedEmergingTechServices];
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
-    { id: 'AI & Machine Learning'name: 'AI & ML'icon: '🧠'count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
-    { id: 'Healthcare AI'name: 'Healthcare'icon: '🏥'count: allServices.filter(s => s.category === 'Healthcare AI').length },
-    { id: 'Fintech AI'name: 'Fintech'icon: '💰'count: allServices.filter(s => s.category === 'Fintech AI').length },
-    { id: 'Cybersecurity'name: 'Security'icon: '🛡️'count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Smart Cities'name: 'Smart Cities'icon: '🏙️'count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
-    { id: 'Blockchain & DeFi'name: 'Blockchain'icon: '🔗'count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
-    { id: 'Quantum Computing'name: 'Quantum'icon: '⚛️'count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Space Technology'name: 'Space Tech'icon: '🚀'count: allServices.filter(s => s.category === 'Space Technology').length },
-    { id: 'Autonomous Systems'name: 'Autonomous'icon: '🤖'count: allServices.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'AR/VR & Metaverse'name: 'AR/VR'icon: '🥽'count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
-    { id: '5G/6G Networks'name: '5G/6G'icon: '📡'count: allServices.filter(s => s.category === '5G/6G Networks').length },
-    { id: 'Biotechnology AI'name: 'Biotech'icon: '🧬'count: allServices.filter(s => s.category === 'Biotechnology AI').length },
-    { id: 'Renewable Energy'name: 'Energy'icon: '⚡'count: allServices.filter(s => s.category === 'Renewable Energy').length },
-    { id: 'Edge Computing'name: 'Edge'icon: '🌐'count: allServices.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Quantum Internet'name: 'Q-Internet'icon: '🌍'count: allServices.filter(s => s.category === 'Quantum Internet').length },
-    { id: 'Neuromorphic Computing'name: 'Neuro'icon: '🧠'count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+    { id: ''all', 'name: 'All 'Services', 'icon: '🚀'count: allServices.length },
+    { id: 'AI & Machine 'Learning', 'name: 'AI & 'ML', 'icon: '🧠'count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
+    { id: 'Healthcare 'AI', 'name: ''Healthcare', 'icon: '🏥'count: allServices.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Fintech 'AI', 'name: ''Fintech', 'icon: '💰'count: allServices.filter(s => s.category === 'Fintech AI').length },
+    { id: ''Cybersecurity', 'name: ''Security', 'icon: '🛡️'count: allServices.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'IoT & Smart 'Cities', 'name: 'Smart 'Cities', 'icon: '🏙️'count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
+    { id: 'Blockchain & 'DeFi', 'name: ''Blockchain', 'icon: '🔗'count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
+    { id: 'Quantum 'Computing', 'name: ''Quantum', 'icon: '⚛️'count: allServices.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Space 'Technology', 'name: 'Space 'Tech', 'icon: '🚀'count: allServices.filter(s => s.category === 'Space Technology').length },
+    { id: 'Autonomous 'Systems', 'name: ''Autonomous', 'icon: '🤖'count: allServices.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'AR/VR & 'Metaverse', 'name: 'AR/'VR', 'icon: '🥽'count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
+    { id: '5G/6G 'Networks', 'name: '5G/6'G', 'icon: '📡'count: allServices.filter(s => s.category === '5G/6G Networks').length },
+    { id: 'Biotechnology 'AI', 'name: ''Biotech', 'icon: '🧬'count: allServices.filter(s => s.category === 'Biotechnology AI').length },
+    { id: 'Renewable 'Energy', 'name: ''Energy', 'icon: '⚡'count: allServices.filter(s => s.category === 'Renewable Energy').length },
+    { id: 'Edge 'Computing', 'name: ''Edge', 'icon: '🌐'count: allServices.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Quantum 'Internet', 'name: 'Q-'Internet', 'icon: '🌍'count: allServices.filter(s => s.category === 'Quantum Internet').length },
+    { id: 'Neuromorphic 'Computing', 'name: ''Neuro', 'icon: '🧠'count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
   ];
 
   // Filter and sort services
@@ -53,7 +53,7 @@ export default function ComprehensiveServicesShowcase() {
         case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
-          return parseFloat(a.price.replace('$'').replace(','')) - parseFloat(b.price.replace('$'').replace(',''));
+          return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', '));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
@@ -69,7 +69,7 @@ export default function ComprehensiveServicesShowcase() {
   };
 
   const formatPrice = (price: string) => {
-    return price.replace('$'').replace(','');
+    return price.replace('$', ').replace(',', ');
   };
 
   return (
@@ -77,8 +77,8 @@ export default function ComprehensiveServicesShowcase() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -127,8 +127,8 @@ export default function ComprehensiveServicesShowcase() {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="mb-12"
@@ -183,8 +183,8 @@ export default function ComprehensiveServicesShowcase() {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="mb-12"
@@ -215,9 +215,9 @@ export default function ComprehensiveServicesShowcase() {
               {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0y: 30 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -30 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
@@ -389,8 +389,8 @@ export default function ComprehensiveServicesShowcase() {
 
         {/* Contact CTA */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-20 text-center"

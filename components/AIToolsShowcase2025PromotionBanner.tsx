@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -27,9 +27,9 @@ export default function AIToolsShowcase2025PromotionBanner() {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -50 }}
-      animate={isVisible ? { opacity: 1y: 0 } : {}}
-      exit={{ opacity: 0y: -50 }}
+      initial={{ opacity: 0, y: -50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.6ease: "easeOut" }}
       className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 border-b border-purple-500/20 overflow-hidden"
     >

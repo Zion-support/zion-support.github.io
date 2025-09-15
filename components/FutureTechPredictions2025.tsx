@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket
   Brain
@@ -378,21 +378,21 @@ const FutureTechPredictions2025 = () => {
   ];
 
   const technologies = [
-    { name: 'Artificial Intelligence'progress: 85color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum Computing'progress: 65color: 'from-blue-500 to-cyan-500' },
-    { name: 'Neural Interfaces'progress: 45color: 'from-green-500 to-emerald-500' },
-    { name: 'Autonomous Systems'progress: 70color: 'from-orange-500 to-red-500' },
-    { name: 'Digital Immortality'progress: 25color: 'from-pink-500 to-rose-500' },
-    { name: 'Singularity'progress: 15color: 'from-indigo-500 to-purple-500' }
+    { name: 'Artificial 'Intelligence', 'progress: 85color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-500 to-cyan-500' },
+    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-500 to-emerald-500' },
+    { name: 'Autonomous 'Systems', 'progress: 70color: 'from-orange-500 to-red-500' },
+    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-500 to-rose-500' },
+    { name: ''Singularity', 'progress: 15color: 'from-indigo-500 to-purple-500' }
   ];
 
   const milestones = [
-    { year: '2025'event: 'AI Consciousness'status: 'In Progress' },
-    { year: '2026'event: 'Quantum Breakthrough'status: 'Planned' },
-    { year: '2027'event: 'Neural Integration'status: 'Research' },
-    { year: '2028'event: 'Full Automation'status: 'Development' },
-    { year: '2029'event: 'Digital Life'status: 'Concept' },
-    { year: '2030'event: 'Singularity'status: 'Theoretical' }
+    { year: '2025'event: 'AI 'Consciousness', 'status: 'In Progress' },
+    { year: '2026'event: 'Quantum 'Breakthrough', 'status: 'Planned' },
+    { year: '2027'event: 'Neural 'Integration', 'status: 'Research' },
+    { year: '2028'event: 'Full 'Automation', 'status: 'Development' },
+    { year: '2029'event: 'Digital 'Life', 'status: 'Concept' },
+    { year: '2030'event: ''Singularity', 'status: 'Theoretical' }
   ];
 
   return (
@@ -404,7 +404,7 @@ const FutureTechPredictions2025 = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -424,7 +424,7 @@ const FutureTechPredictions2025 = () => {
 
         {/* Year Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className="mb-16"
@@ -516,7 +516,7 @@ const FutureTechPredictions2025 = () => {
 
         {/* Technology Progress */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-20"
@@ -554,7 +554,7 @@ const FutureTechPredictions2025 = () => {
 
         {/* Timeline */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-20"
@@ -604,7 +604,7 @@ const FutureTechPredictions2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 1.0 }}
           className="text-center bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl p-12 border border-indigo-500/30"
@@ -613,7 +613,7 @@ const FutureTechPredictions2025 = () => {
             Ready for the Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Stay ahead of the curve and prepare your business for the technological revolution that's coming.
+            Stay ahead of the curve and prepare your business for the technological revolution 'that', 's coming.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center">

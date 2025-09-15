@@ -31,7 +31,7 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
   ctaHref,
   variant = 'gradient',
   colorScheme = 'blue',
-  className = ''
+  className = ', '
 }) => {
   const getColorClasses = (scheme: string) => {
     switch (scheme) {

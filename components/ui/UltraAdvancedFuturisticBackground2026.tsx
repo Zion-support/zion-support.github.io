@@ -51,7 +51,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     };
 
     resizeCanvas();
-    window.addEventListener('resize'resizeCanvas);
+    window.addEventListener(', 'resize', 'resizeCanvas);
 
     // Particle class
     class Particle {
@@ -388,7 +388,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     animate();
 
     return () => {
-      window.removeEventListener('resize'resizeCanvas);
+      window.removeEventListener(', 'resize', 'resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }[intensitycolorSchemeparticleCountanimationSpeedenableHolographicenableQuantumEffectsenableNeuralNetworksenableMultidimensional]);

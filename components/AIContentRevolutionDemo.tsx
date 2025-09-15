@@ -75,7 +75,7 @@ Companies implementing ${input} solutions have achieved:
 - 150% improvement in customer satisfaction
 
 ## Conclusion
-${input} is not just a technology—it's a complete business transformation. Organizations that embrace this revolution today will dominate their markets tomorrow.
+${input} is not just a technology—'it', 's a complete business transformation. Organizations that embrace this revolution today will dominate their markets tomorrow.
 
 *Ready to transform your business? Contact Zion Tech Group for a free consultation.*`,
 
@@ -125,7 +125,7 @@ Limited Time: Free Consultation + Custom Strategy
 Call Now: (555) 123-4567
 Or Visit: zion.app/revolution
 
-Don't get left behind. The future is here.`,
+'Don', 't get left behind. The future is here.`,
 
       product: `Revolutionary ${input} Solution
 

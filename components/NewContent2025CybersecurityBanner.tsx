@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 XShieldZapTrendingUpCheckCircle
 
@@ -20,7 +20,7 @@ const NewContent2025CybersecurityBanner: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('cybersecurity-banner-dismissed'true');
+    localStorage.setItem('cybersecurity-banner-'dismissed', 'true');
   };
 
   if (!isVisible || isDismissed) return null;

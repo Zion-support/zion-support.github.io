@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
@@ -78,7 +78,7 @@ const AI2025_2026UltimateBusinessTransformationRevolutionBanner = () => {
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai-2025-2026-ultimate-business-transformation-banner-dismissed'true');
+    localStorage.setItem('ai-2025-2026-ultimate-business-transformation-banner-'dismissed', 'true');
   };
 
   const currentContent = contentShowcase[currentSlide];

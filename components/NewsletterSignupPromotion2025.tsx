@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 MailArrowRightCheckCircleStarZapTrendingUpUsersAward
 
@@ -55,7 +55,7 @@ const NewsletterSignupPromotion2025 = () => {
               Welcome to the Future!
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              You're now part of our exclusive community. Check your email for a special welcome gift.
+              'You', 're now part of our exclusive community. Check your email for a special welcome gift.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors">
@@ -127,8 +127,8 @@ const NewsletterSignupPromotion2025 = () => {
               {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={isVisible ? { opacity: 1y: 0 } : {}}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
                   className="text-center"
                 >

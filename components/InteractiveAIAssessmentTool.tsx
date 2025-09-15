@@ -196,7 +196,7 @@ const InteractiveAIAssessmentTool = () => {
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Your AI Transformation Roadmap</h2>
               <p className="text-lg text-gray-600">
-                Based on your responses, here's your personalized AI strategy and recommendations.
+                Based on your responses, 'here', 's your personalized AI strategy and recommendations.
               </p>
             </div>
 

@@ -18,8 +18,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
         window.dataLayer.push(args)
       };
       window.gtag = gtag,
-      gtag('js'new Date()),
-      gtag('config'trackingId{,
+      gtag(', 'js', 'new Date()),
+      gtag(', 'config', 'trackingId{,
         page_title: document.title,
         page_location: window.location.href
       }),
@@ -42,11 +42,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       };
 ,
       // Listen for popstate events (back/forward navigation),
-      window.addEventListener('popstate'handleRouteChange),
+      window.addEventListener(', 'popstate', 'handleRouteChange),
 ,
       // Cleanup,
       return () => {,
-        window.removeEventListener('popstate'handleRouteChange)
+        window.removeEventListener(', 'popstate', 'handleRouteChange)
       };
     };
   }[trackingId]),
@@ -54,7 +54,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   // Track custom events,
   const trackEvent = (eventName: stringparameters?: Record<stringany>) => {,
     if (typeof window !== 'undefined' && window.gtag) {,
-      window.gtag('event'eventNameparameters)
+      window.gtag(', 'event', 'eventNameparameters)
     };
   };
 ,
@@ -98,7 +98,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           __html: `,
             // Performance monitoring,
             if ('performance' in window) {,
-              window.addEventListener('load'function() {,
+              window.addEventListener(', 'load', 'function() {,
                 setTimeout(function() {,
                   const perfData = performance.getEntriesByType('navigation')[0],
                   if (perfData) {,

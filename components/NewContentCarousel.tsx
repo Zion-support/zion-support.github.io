@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function NewContentCarousel() {
@@ -28,7 +28,7 @@ export default function NewContentCarousel() {
       bgColor: 'from-indigo-50 to-purple-50',
       borderColor: 'border-indigo-200',
       icon: '⚛️',
-      features: ['Quantum Supremacy'Error-Corrected'Quantum-AI Fusion']
+      features: ['Quantum 'Supremacy', 'Error-'Corrected', 'Quantum-AI Fusion']
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export default function NewContentCarousel() {
       bgColor: 'from-emerald-50 to-teal-50',
       borderColor: 'border-emerald-200',
       icon: '🤖',
-      features: ['15,000% ROI'Autonomous AI'Smart Resources']
+      features: ['15,000% 'ROI', 'Autonomous 'AI', 'Smart Resources']
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ export default function NewContentCarousel() {
       bgColor: 'from-purple-50 to-pink-50',
       borderColor: 'border-purple-200',
       icon: '🧠',
-      features: ['Brain-Computer'Enhanced Cognition'Direct Interface']
+      features: ['Brain-'Computer', 'Enhanced 'Cognition', 'Direct Interface']
     },
     {
       id: 5,
@@ -64,7 +64,7 @@ export default function NewContentCarousel() {
       bgColor: 'from-cyan-50 to-blue-50',
       borderColor: 'border-cyan-200',
       icon: '🚀',
-      features: ['Interplanetary'Satellite AI'Space Exploration']
+      features: [', 'Interplanetary', 'Satellite 'AI', 'Space Exploration']
     }
   ];
 

@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles
   Zap
@@ -77,8 +77,8 @@ const RevolutionaryTechShowcase2026Banner = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div 
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -140,8 +140,8 @@ const RevolutionaryTechShowcase2026Banner = () => {
                   {currentSlideData.features.map((featureindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6delay: index * 0.1 }}
                       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
                     >
@@ -204,8 +204,8 @@ const RevolutionaryTechShowcase2026Banner = () => {
 
         {/* Bottom Stats */}
         <motion.div 
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mt-20"
         >
@@ -218,8 +218,8 @@ const RevolutionaryTechShowcase2026Banner = () => {
             ].map((statindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                 className="text-center"
               >

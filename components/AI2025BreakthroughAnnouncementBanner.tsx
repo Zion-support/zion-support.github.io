@@ -1,6 +1,6 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 BrainZapRocketStarArrowRightX
 import Link from 'next/link';
 
@@ -18,7 +18,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
     },
     {
       title: "Quantum-Neural Fusion",
-      description: "World's first quantum-neural hybrid achieves 10,000x processing speed increase",
+      description: "'World', 's first quantum-neural hybrid achieves 10,000x processing speed increase",
       icon: Zap,
       color: "from-blue-500 to-cyan-500",
       urgency: "REVOLUTIONARY"
@@ -45,9 +45,9 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0y: -100 }}
-        animate={{ opacity: 1y: 0 }}
-        exit={{ opacity: 0y: -100 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-500/20 shadow-2xl"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,9 +80,9 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             <div className="flex-1 text-center px-8">
               <motion.div
                 key={`content-${currentBreakthrough}`}
-                initial={{ opacity: 0y: 10 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -10 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
                 className="space-y-1"
               >
                 <h3 className="text-lg font-bold text-white">

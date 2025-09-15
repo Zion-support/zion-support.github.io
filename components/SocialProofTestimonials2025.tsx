@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 ArrowRightStarQuoteUsersAwardTrendingUpCheckCircleGlobeBuildingZap
 

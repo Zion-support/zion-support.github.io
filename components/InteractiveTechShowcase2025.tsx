@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Play
   Pause
@@ -61,10 +61,10 @@ const InteractiveTechShowcase2025 = () => {
         'Dynamic Performance Tuning'
       ],
       metrics: [
-        { label: 'Process Speed'value: '10x Faster'trend: '+850%' },
-        { label: 'Accuracy'value: '99.7%'trend: '+15%' },
-        { label: 'Cost Savings'value: '$2.3M'trend: '+340%' },
-        { label: 'Uptime'value: '99.9%'trend: '+25%' }
+        { label: 'Process 'Speed', 'value: '10x 'Faster', 'trend: '+850%' },
+        { label: ''Accuracy', 'value: '99.7%'trend: '+15%' },
+        { label: 'Cost 'Savings', 'value: '$2.3'M', 'trend: '+340%' },
+        { label: ''Uptime', 'value: '99.9%'trend: '+25%' }
       ],
       simulation: {
         steps: [
@@ -93,10 +93,10 @@ const InteractiveTechShowcase2025 = () => {
         'Incident Forensics'
       ],
       metrics: [
-        { label: 'Threats Blocked'value: '15,847'trend: '+95%' },
-        { label: 'Detection Time'value: '<2 seconds'trend: '-80%' },
-        { label: 'False Positives'value: '0.1%'trend: '-90%' },
-        { label: 'System Uptime'value: '99.99%'trend: '+12%' }
+        { label: 'Threats 'Blocked', 'value: '15,847'trend: '+95%' },
+        { label: 'Detection 'Time', 'value: '<2 'seconds', 'trend: '-80%' },
+        { label: 'False 'Positives', 'value: '0.1%'trend: '-90%' },
+        { label: 'System 'Uptime', 'value: '99.99%'trend: '+12%' }
       ],
       simulation: {
         steps: [
@@ -125,10 +125,10 @@ const InteractiveTechShowcase2025 = () => {
         'Disaster Recovery'
       ],
       metrics: [
-        { label: 'Performance Gain'value: '8x'trend: '+700%' },
-        { label: 'Cost Reduction'value: '45%'trend: '+60%' },
-        { label: 'Response Time'value: '50ms'trend: '-85%' },
-        { label: 'Availability'value: '99.99%'trend: '+18%' }
+        { label: 'Performance 'Gain', 'value: '8'x', 'trend: '+700%' },
+        { label: 'Cost 'Reduction', 'value: '45%'trend: '+60%' },
+        { label: 'Response 'Time', 'value: '50'ms', 'trend: '-85%' },
+        { label: ''Availability', 'value: '99.99%'trend: '+18%' }
       ],
       simulation: {
         steps: [
@@ -157,10 +157,10 @@ const InteractiveTechShowcase2025 = () => {
         'Business Intelligence'
       ],
       metrics: [
-        { label: 'Data Processed'value: '1.2M/sec'trend: '+500%' },
-        { label: 'Insight Accuracy'value: '98.5%'trend: '+22%' },
-        { label: 'Query Speed'value: '0.3s'trend: '-95%' },
-        { label: 'Storage Efficiency'value: '85%'trend: '+40%' }
+        { label: 'Data 'Processed', 'value: '1.2M/'sec', 'trend: '+500%' },
+        { label: 'Insight 'Accuracy', 'value: '98.5%'trend: '+22%' },
+        { label: 'Query 'Speed', 'value: '0.3's', 'trend: '-95%' },
+        { label: 'Storage 'Efficiency', 'value: '85%'trend: '+40%' }
       ],
       simulation: {
         steps: [
@@ -188,7 +188,7 @@ const InteractiveTechShowcase2025 = () => {
   }[isPlayingactiveDemodemos]);
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -200,7 +200,7 @@ const InteractiveTechShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -297,9 +297,9 @@ const InteractiveTechShowcase2025 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeDemo}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
-              exit={{ opacity: 0y: -20 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >

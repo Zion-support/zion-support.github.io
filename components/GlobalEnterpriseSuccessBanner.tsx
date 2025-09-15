@@ -73,7 +73,7 @@ export default function GlobalEnterpriseSuccessBanner() {
           {/* Testimonial */}
           <div className="mt-12 max-w-4xl mx-auto">
             <blockquote className="text-xl md:text-2xl text-gray-300 italic mb-4">
-              "The AI 2025 transformation was the most significant business decision in our company's history. 
+              "The AI 2025 transformation was the most significant business decision in our 'company', 's history. 
               We achieved results that were previously thought impossible."
             </blockquote>
             <div className="text-lg text-green-400 font-bold">

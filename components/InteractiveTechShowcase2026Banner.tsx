@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Play
@@ -35,7 +35,7 @@ const InteractiveTechShowcase2026Banner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -100 }}
+      initial={{ opacity: 0, y: -100 }}
       animate={{ 
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 

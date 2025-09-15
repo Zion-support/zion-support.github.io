@@ -15,8 +15,8 @@ import {
 // import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
 
 const fadeInUp = {
-  initial: { opacity: 0y: 20 },
-  animate: { opacity: 1y: 0 },
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
 };
 
@@ -99,8 +99,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             2025 V2 Comprehensive
@@ -109,8 +109,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.2 }}
           >
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS
@@ -118,8 +118,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8delay: 0.4 }}
           >
             <a 
@@ -143,8 +143,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-white mb-8"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -152,8 +152,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           <motion.div 
             className="grid md:grid-cols-3 gap-8"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6delay: 0.2 }}
           >
@@ -181,8 +181,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -267,8 +267,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -277,8 +277,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
           
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6delay: 0.2 }}
           >
@@ -307,8 +307,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -316,8 +316,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6delay: 0.2 }}
           >
@@ -325,8 +325,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6delay: 0.4 }}
           >

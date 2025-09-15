@@ -1,7 +1,7 @@
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   StarTrendingUpZapBrainRocketShield
   DollarSignUsersClockCheckCircleArrowRight,
@@ -48,21 +48,21 @@ export default function EnhancedServicesShowcase() {
   ];
 
   const categories = [
-    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
-    { id: 'next-gen-ai'name: 'ArrowRight-Gen AI'icon: '🧠'count: nextGenerationAIServices.length },
-    { id: 'cutting-edge-it'name: 'Cutting-Edge IT'icon: '⚡'count: cuttingEdgeITServices.length },
-    { id: 'innovative-saas'name: 'Innovative SaaS'icon: '💻'count: innovativeMicroSaasV2Services.length },
-    { id: 'quantum-space'name: 'Quantum & Space'icon: '⚛️'count: quantumSpaceServices.length },
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: enterpriseITServices.length }
+    { id: ''all', 'name: 'All 'Services', 'icon: '🚀'count: allServices.length },
+    { id: 'next-gen-'ai', 'name: 'ArrowRight-Gen 'AI', 'icon: '🧠'count: nextGenerationAIServices.length },
+    { id: 'cutting-edge-'it', 'name: 'Cutting-Edge 'IT', 'icon: '⚡'count: cuttingEdgeITServices.length },
+    { id: 'innovative-'saas', 'name: 'Innovative 'SaaS', 'icon: '💻'count: innovativeMicroSaasV2Services.length },
+    { id: 'quantum-'space', 'name: 'Quantum & 'Space', 'icon: '⚛️'count: quantumSpaceServices.length },
+    { id: ''enterprise', 'name: 'Enterprise 'IT', 'icon: '🏢'count: enterpriseITServices.length }
   ];
 
   const sortOptions = [
-    { id: 'name'name: 'Name A-Z' },
-    { id: 'price-low'name: 'Price Low to High' },
-    { id: 'price-high'name: 'Price High to Low' },
-    { id: 'rating'name: 'Rating' },
-    { id: 'customers'name: 'Customer Count' },
-    { id: 'popularity'name: 'Popularity' }
+    { id: ''name', 'name: 'Name A-Z' },
+    { id: 'price-'low', 'name: 'Price Low to High' },
+    { id: 'price-'high', 'name: 'Price High to Low' },
+    { id: ''rating', 'name: 'Rating' },
+    { id: ''customers', 'name: 'Customer Count' },
+    { id: ''popularity', 'name: 'Popularity' }
   ];
 
   // Filter and sort services
@@ -89,10 +89,10 @@ export default function EnhancedServicesShowcase() {
         filtered.sort((ab) => a.name.localeCompare(b.name));
         break;
       case 'price-low':
-        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g'')) - parseFloat(b.price.replace(/[$]/g'')));
+        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g', ')) - parseFloat(b.price.replace(/[$]/g', ')));
         break;
       case 'price-high':
-        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g'')) - parseFloat(a.price.replace(/[$]/g'')));
+        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g', ')) - parseFloat(a.price.replace(/[$]/g', ')));
         break;
       case 'rating':
         filtered.sort((ab) => (b.rating || 0) - (a.rating || 0));
@@ -122,7 +122,7 @@ export default function EnhancedServicesShowcase() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -172,8 +172,8 @@ export default function EnhancedServicesShowcase() {
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -208,8 +208,8 @@ export default function EnhancedServicesShowcase() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -226,8 +226,8 @@ export default function EnhancedServicesShowcase() {
               {featuredServices.map((categoryindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className="relative"
@@ -361,7 +361,7 @@ export default function EnhancedServicesShowcase() {
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
+                  className={viewMode === 'grid' ? ', ' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >
                   {viewMode === 'grid' ? (
                     <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors h-full">
@@ -495,7 +495,7 @@ export default function EnhancedServicesShowcase() {
                 <Button 
                   href="#"
                   onClick={() => {
-                    setSearchTerm('');
+                    setSearchTerm(', ');
                     setSelectedCategory('all');
                   }}
                   variant="primary"
@@ -511,8 +511,8 @@ export default function EnhancedServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -571,7 +571,7 @@ const Button = ({
   href
   variant = 'primary'
   size = 'md'
-  className = ''
+  className = ', '
   children
   onClick 
 }: {

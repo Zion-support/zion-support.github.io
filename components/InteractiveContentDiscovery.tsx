@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 SearchFilterArrowRightClockTrendingUpStarEye
 import Link from 'next/link';
 
@@ -37,7 +37,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '8 min',
       views: 15420,
       rating: 4.9,
-      tags: ['AI'Innovation'2025'Breakthrough'],
+      tags: ['AI', 'Innovation', '2025', 'Breakthrough'],
       link: '/ai-innovation-showcase-2025',
       featured: true,
       new: true
@@ -51,7 +51,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '12 min',
       views: 12850,
       rating: 4.8,
-      tags: ['ROI'Case Study'Success'Business'],
+      tags: [', 'ROI', 'Case 'Study', 'Success'Business'],
       link: '/success-stories-2025',
       featured: true,
       new: true
@@ -65,7 +65,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '15 min',
       views: 22100,
       rating: 4.7,
-      tags: ['Predictions'Future'Trends'Analysis'],
+      tags: [', 'Predictions', 'Future', 'Trends', 'Analysis'],
       link: '/ai-2025-2030-ultimate-predictions',
       featured: false,
       new: false
@@ -79,7 +79,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '20 min',
       views: 8750,
       rating: 4.6,
-      tags: ['Quantum'Computing'Tutorial'Guide'],
+      tags: [', 'Quantum', 'Computing', 'Tutorial', 'Guide'],
       link: '/quantum-computing-2025',
       featured: false,
       new: false
@@ -93,7 +93,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '10 min',
       views: 19600,
       rating: 4.8,
-      tags: ['Neural'Interface'Brain'Future'],
+      tags: [', 'Neural', 'Interface', 'Brain', 'Future'],
       link: '/neural-interface-revolution-2026',
       featured: false,
       new: false
@@ -107,20 +107,20 @@ const InteractiveContentDiscovery = () => {
       readTime: '14 min',
       views: 11200,
       rating: 4.5,
-      tags: ['Security'AI'Enterprise'Best Practices'],
+      tags: [', 'Security', 'AI', 'Enterprise', 'Best Practices'],
       link: '/ai-security-guide',
       featured: false,
       new: false
     }
   ];
 
-  const categories = ['all'Innovation'Success'Predictions'Technology'Security'];
-  const types = ['all'showcase'case-study'prediction'tutorial'news'];
+  const categories = [', 'all', 'Innovation', 'Success', 'Predictions', 'Technology', 'Security'];
+  const types = [', 'all', 'showcase'case-'study', 'prediction', 'tutorial', 'news'];
   const sortOptions = [
-    { value: 'trending'label: 'Trending' },
-    { value: 'newest'label: 'Newest' },
-    { value: 'popular'label: 'Most Popular' },
-    { value: 'rating'label: 'Highest Rated' }
+    { value: ''trending', 'label: 'Trending' },
+    { value: ''newest', 'label: 'Newest' },
+    { value: ''popular', 'label: 'Most Popular' },
+    { value: ''rating', 'label: 'Highest Rated' }
   ];
 
   const filteredContent = contentItems

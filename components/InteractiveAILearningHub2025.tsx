@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BookOpen
   Play
@@ -36,19 +36,19 @@ const InteractiveAILearningHub2025 = () => {
   const [bookmarkedCoursesetBookmarkedCourses] = useState(new Set());
 
   const categories = [
-    { id: 'all'name: 'All Topics'icon: Braincount: 48 },
-    { id: 'fundamentals'name: 'AI Fundamentals'icon: BookOpencount: 12 },
-    { id: 'machine-learning'name: 'Machine Learning'icon: Codecount: 10 },
-    { id: 'data-science'name: 'Data Science'icon: BarChart3count: 8 },
-    { id: 'automation'name: 'Automation'icon: Zapcount: 6 },
-    { id: 'applications'name: 'AI Applications'icon: Globecount: 12 }
+    { id: ''all', 'name: 'All 'Topics', 'icon: Braincount: 48 },
+    { id: ''fundamentals', 'name: 'AI 'Fundamentals', 'icon: BookOpencount: 12 },
+    { id: 'machine-'learning', 'name: 'Machine 'Learning', 'icon: Codecount: 10 },
+    { id: 'data-'science', 'name: 'Data 'Science', 'icon: BarChart3count: 8 },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 6 },
+    { id: ''applications', 'name: 'AI 'Applications', 'icon: Globecount: 12 }
   ];
 
   const levels = [
-    { id: 'all'name: 'All Levels'color: 'gray' },
-    { id: 'beginner'name: 'Beginner'color: 'green' },
-    { id: 'intermediate'name: 'Intermediate'color: 'blue' },
-    { id: 'advanced'name: 'Advanced'color: 'purple' }
+    { id: ''all', 'name: 'All 'Levels', 'color: 'gray' },
+    { id: ''beginner', 'name: ''Beginner', 'color: 'green' },
+    { id: ''intermediate', 'name: ''Intermediate', 'color: 'blue' },
+    { id: ''advanced', 'name: ''Advanced', 'color: 'purple' }
   ];
 
   const courses = [
@@ -68,7 +68,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 12,
       certificate: true,
       featured: true,
-      tags: ['AI Basics'Neural Networks'Machine Learning']
+      tags: ['AI 'Basics', 'Neural 'Networks', 'Machine Learning']
     },
     {
       id: 2,
@@ -86,7 +86,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 20,
       certificate: true,
       featured: true,
-      tags: ['Python'Scikit-learn'TensorFlow']
+      tags: [', 'Python', 'Scikit-'learn', 'TensorFlow']
     },
     {
       id: 3,
@@ -104,7 +104,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 16,
       certificate: true,
       featured: false,
-      tags: ['Data Analysis'Pandas'Visualization']
+      tags: ['Data 'Analysis', 'Pandas'Visualization']
     },
     {
       id: 4,
@@ -122,7 +122,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 14,
       certificate: true,
       featured: true,
-      tags: ['Workflow Automation'RPA'AI Integration']
+      tags: ['Workflow 'Automation', 'RPA'AI Integration']
     },
     {
       id: 5,
@@ -140,7 +140,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 8,
       certificate: true,
       featured: false,
-      tags: ['Healthcare AI'Medical Imaging'Diagnostics']
+      tags: ['Healthcare 'AI', 'Medical 'Imaging', 'Diagnostics']
     },
     {
       id: 6,
@@ -158,7 +158,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 18,
       certificate: true,
       featured: true,
-      tags: ['Mobile AI'React Native'TensorFlow Lite']
+      tags: ['Mobile 'AI', 'React 'Native', 'TensorFlow Lite']
     }
   ];
 
@@ -209,8 +209,8 @@ const InteractiveAILearningHub2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -232,8 +232,8 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
@@ -271,8 +271,8 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -443,8 +443,8 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* Learning Paths Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
           className="mt-20"
         >
@@ -521,8 +521,8 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-20"
         >

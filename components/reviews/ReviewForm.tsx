@@ -18,7 +18,7 @@ export type ReviewFormValues = {
 };
 
 type Props = {
-  initial: Pick<ReviewFormValues'projectId' | 'fromRole' | 'fromId'>;
+  initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>;
 };
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {

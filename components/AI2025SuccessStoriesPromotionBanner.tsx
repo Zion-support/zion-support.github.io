@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Award
@@ -41,7 +41,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {
       result: "99.8% accuracy rate"
     },
     {
-      quote: "AI helps us diagnose patients faster and more accurately. It's revolutionizing healthcare delivery.",
+      quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.",
       company: "HealthTech Partners",
       industry: "Healthcare",
       result: "300% faster analysis"
@@ -152,8 +152,8 @@ const AI2025SuccessStoriesPromotionBanner = () => {
                 <div className="flex-1">
                   <motion.p
                     key={currentTestimonial}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="text-gray-300 text-lg italic mb-4"
                   >
@@ -207,8 +207,8 @@ const AI2025SuccessStoriesPromotionBanner = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >

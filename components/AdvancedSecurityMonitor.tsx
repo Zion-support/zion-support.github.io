@@ -1,6 +1,6 @@
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface SecurityEvent {
   id: string;
@@ -65,7 +65,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 5 * 60 * 1000),
         source: 'Firewall',
         status: 'investigating',
-        affectedSystems: ['Web Server'Admin Portal']
+        affectedSystems: ['Web 'Server', 'Admin Portal']
       },
       {
         id: '2',
@@ -76,7 +76,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
         source: 'Certificate Monitor',
         status: 'active',
-        affectedSystems: ['API Gateway'Load Balancer']
+        affectedSystems: ['API 'Gateway', 'Load Balancer']
       },
       {
         id: '3',
@@ -87,7 +87,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000),
         source: 'Compliance System',
         status: 'resolved',
-        affectedSystems: ['Database'User Management']
+        affectedSystems: [', 'Database', 'User Management']
       },
       {
         id: '4',
@@ -98,7 +98,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 30 * 60 * 1000),
         source: 'Database Monitor',
         status: 'investigating',
-        affectedSystems: ['Primary Database'Backup System']
+        affectedSystems: ['Primary 'Database', 'Backup System']
       },
       {
         id: '5',
@@ -109,7 +109,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
         timestamp: new Date(Date.now() - 45 * 60 * 1000),
         source: 'Antivirus Scanner',
         status: 'resolved',
-        affectedSystems: ['File Storage'Upload Service']
+        affectedSystems: ['File 'Storage', 'Upload Service']
       }
     ];
 
@@ -208,8 +208,8 @@ const AdvancedSecurityMonitor: React.FC = () => {
   };
 
   const generateNewEvent = () => {
-    const eventTypes: SecurityEvent['type'][] = ['threat'vulnerability'breach'compliance'access'];
-    const severities: SecurityEvent['severity'][] = ['critical'high'medium'low'];
+    const eventTypes: SecurityEvent['type'][] = [', 'threat', 'vulnerability', 'breach', 'compliance'access'];
+    const severities: SecurityEvent['severity'][] = [', 'critical', 'high', 'medium', 'low'];
     
     const newEvent: SecurityEvent = {
       id: Date.now().toString(),
@@ -220,7 +220,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
       timestamp: new Date(),
       source: 'Security Scanner',
       status: 'active',
-      affectedSystems: ['System A'System B']
+      affectedSystems: ['System 'A', 'System B']
     };
 
     setEvents(prev => [newEvent...prev.slice(09)]);
@@ -361,7 +361,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-gray-900">🚨 Security Events</h3>
               <div className="flex space-x-2">
-                {(['all'critical'high'medium'low'] as const).map((level) => (
+                {([', 'all', 'critical', 'high', 'medium'low'] as const).map((level) => (
                   <button
                     key={level}
                     onClick={() => setFilter(level)}

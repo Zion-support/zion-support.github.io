@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Play
@@ -27,12 +27,12 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
 
   const tools = [
-    { name: 'Text Generator'icon: <FileText className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
-    { name: 'Image Creator'icon: <Image className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
-    { name: 'Code Assistant'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
-    { name: 'Data Analyzer'icon: <BarChart3 className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
-    { name: 'Video Creator'icon: <Video className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
-    { name: 'Music Composer'icon: <Music className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
+    { name: 'Text 'Generator', 'icon: <FileText className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Code 'Assistant', 'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Data 'Analyzer', 'icon: <BarChart3 className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'Video 'Creator', 'icon: <Video className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Music 'Composer', 'icon: <Music className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
   ];
 
   const benefits = [
@@ -60,7 +60,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   return (
     <motion.div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 py-20"
-      initial={{ opacity: 0y: 50 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
     >
@@ -88,8 +88,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
 
             {/* Main Headline */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.3 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -117,9 +117,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               </div>
               <motion.div
                 key={currentTool}
-                initial={{ opacity: 0y: 10 }}
-                animate={{ opacity: 1y: 0 }}
-                exit={{ opacity: 0y: -10 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
                 className="flex items-center"
               >
@@ -140,8 +140,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             {/* Benefits Grid */}
             <motion.div
               className="grid grid-cols-2 gap-4"
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.5 }}
             >
               {benefits.map((benefitindex) => (
@@ -155,8 +155,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: 0.6 }}
             >
               <button className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
@@ -301,8 +301,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
         {/* Bottom Stats */}
         <motion.div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-          initial={{ opacity: 0y: 20 }}
-          animate={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
         >
           {stats.map((statindex) => (

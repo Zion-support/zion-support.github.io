@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -113,19 +113,19 @@ const BusinessSuccessStories2025 = () => {
   ];
 
   const overallStats = [
-    { label: 'Projects Completed'value: '1,200+'icon: Target },
-    { label: 'Average ROI'value: '300%'icon: TrendingUp },
-    { label: 'Client Satisfaction'value: '99.8%'icon: Star },
-    { label: 'Cost Savings'value: '$50M+'icon: DollarSign }
+    { label: 'Projects 'Completed', 'value: '1,200+'icon: Target },
+    { label: 'Average 'ROI', 'value: '300%'icon: TrendingUp },
+    { label: 'Client 'Satisfaction', 'value: '99.8%'icon: Star },
+    { label: 'Cost 'Savings', 'value: '$50M+'icon: DollarSign }
   ];
 
   const industries = [
-    { name: 'Technology'count: 45icon: Brain },
-    { name: 'Finance'count: 32icon: DollarSign },
-    { name: 'Healthcare'count: 28icon: Shield },
-    { name: 'Manufacturing'count: 25icon: Building2 },
-    { name: 'Retail'count: 20icon: Globe },
-    { name: 'Education'count: 15icon: BookOpen }
+    { name: ''Technology', 'count: 45icon: Brain },
+    { name: ''Finance', 'count: 32icon: DollarSign },
+    { name: ''Healthcare', 'count: 28icon: Shield },
+    { name: ''Manufacturing', 'count: 25icon: Building2 },
+    { name: ''Retail', 'count: 20icon: Globe },
+    { name: ''Education', 'count: 15icon: BookOpen }
   ];
 
   return (
@@ -133,8 +133,8 @@ const BusinessSuccessStories2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -148,8 +148,8 @@ const BusinessSuccessStories2025 = () => {
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
@@ -169,8 +169,8 @@ const BusinessSuccessStories2025 = () => {
           {successStories.map((storyindex) => (
             <motion.div
               key={story.id}
-              initial={{ opacity: 0y: 20 }}
-              animate={isVisible ? { opacity: 1y: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300"
             >
@@ -236,8 +236,8 @@ const BusinessSuccessStories2025 = () => {
 
         {/* Industries Served */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 0.8 }}
           className="mb-16"
         >
@@ -266,8 +266,8 @@ const BusinessSuccessStories2025 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6delay: 1.0 }}
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
         >

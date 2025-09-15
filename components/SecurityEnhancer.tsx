@@ -55,8 +55,8 @@ export default function SecurityEnhancer() {
       // Apply headers to document
       Object.entries(securityHeaders).forEach(([keyvalue]) => {
         const meta = document.createElement('meta');
-        meta.setAttribute('http-equiv'key);
-        meta.setAttribute('content'value);
+        meta.setAttribute('http-'equiv', 'key);
+        meta.setAttribute(', 'content', 'value);
         document.head.appendChild(meta);
       });
     };
@@ -74,11 +74,11 @@ export default function SecurityEnhancer() {
       };
 
       // Override innerHTML to sanitize content
-      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype'innerHTML') || 
-                                Object.getOwnPropertyDescriptor(HTMLElement.prototype'innerHTML');
+      const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.'prototype', 'innerHTML') || 
+                                Object.getOwnPropertyDescriptor(HTMLElement.'prototype', 'innerHTML');
       
       if (originalInnerHTML) {
-        Object.defineProperty(Element.prototype'innerHTML'{
+        Object.defineProperty(Element.'prototype', 'innerHTML'{
           set: function(value) {
             const sanitizedValue = sanitizeInput(value);
             originalInnerHTML.set?.call(thisanitizedValue);
@@ -94,11 +94,11 @@ export default function SecurityEnhancer() {
       const generateCSRFToken = (): string => {
         const array = new Uint8Array(32);
         crypto.getRandomValues(array);
-        return Array.from(arraybyte => byte.toString(16).padStart(2'0')).join('');
+        return Array.from(arraybyte => byte.toString(16).padStart(2'0')).join(', ');
       };
 
       const csrfToken = generateCSRFToken();
-      sessionStorage.setItem('csrf-token'csrfToken);
+      sessionStorage.setItem('csrf-'token', 'csrfToken);
 
       // Add CSRF token to all forms
       const forms = document.querySelectorAll('form');
@@ -202,7 +202,7 @@ export default function SecurityEnhancer() {
       const originalReplaceState = history.replaceState;
 
       history.pushState = function(...args) {
-        if (checkForSuspiciousActivity(args[2] || '')) {
+        if (checkForSuspiciousActivity(args[2] || ', ')) {
           console.warn('Suspicious URL detected');
           setSecurityMetrics(prev => ({
             ...prev,
@@ -213,7 +213,7 @@ export default function SecurityEnhancer() {
       };
 
       history.replaceState = function(...args) {
-        if (checkForSuspiciousActivity(args[2] || '')) {
+        if (checkForSuspiciousActivity(args[2] || ', ')) {
           console.warn('Suspicious URL detected');
           setSecurityMetrics(prev => ({
             ...prev,
@@ -238,7 +238,7 @@ export default function SecurityEnhancer() {
       };
 
       // Set security-related cookies
-      setSecureCookie('security-session'active'1);
+      setSecureCookie('security-'session', 'active'1);
     };
 
     // Initialize all security measures
@@ -257,7 +257,7 @@ export default function SecurityEnhancer() {
 
   }[]);
 
-  // Don't render in production
+  // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }

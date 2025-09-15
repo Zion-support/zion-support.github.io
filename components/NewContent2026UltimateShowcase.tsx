@@ -5,7 +5,7 @@ const NewContent2026UltimateShowcase = () => {
   const ultimateContent = [
     {
       title: "Synthetic Intelligence Platform",
-      description: "The world's first fully synthetic intelligence system with human-level reasoning",
+      description: "The 'world', 's first fully synthetic intelligence system with human-level reasoning",
       image: "🤖",
       link: "/ai-2026/synthetic-intelligence",
       category: "Synthetic AI",
@@ -71,7 +71,7 @@ const NewContent2026UltimateShowcase = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
             Discover the most advanced AI content and technologies that will define the future. 
-            Experience breakthroughs that push the boundaries of what's possible.
+            Experience breakthroughs that push the boundaries of 'what', 's possible.
           </p>
         </div>
         

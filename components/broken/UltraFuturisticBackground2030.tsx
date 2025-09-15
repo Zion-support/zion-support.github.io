@@ -101,11 +101,11 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       initParticles();
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
     };
   }[]);
 

@@ -163,7 +163,7 @@ const UltimateSuccessMetricsShowcase2025 = () => {
             Proven Results Across Industries
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our track record speaks for itself. Discover the measurable impact we've delivered 
+            Our track record speaks for itself. Discover the measurable impact 'we', 've delivered 
             for businesses across various industries.
           </p>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Target
@@ -106,7 +106,7 @@ const BusinessTransformationRevolution2025 = () => {
   }[]);
 
   const containerVariants = {
-    hidden: { opacity: 0y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -118,7 +118,7 @@ const BusinessTransformationRevolution2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0y: 20 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -220,8 +220,8 @@ const BusinessTransformationRevolution2025 = () => {
           {/* Tab Content */}
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="grid lg:grid-cols-2 gap-12 items-center"
           >
@@ -306,7 +306,7 @@ const BusinessTransformationRevolution2025 = () => {
               Join the Revolution Today
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl">
-              Don't get left behind. Transform your business with our proven methodologies 
+              'Don', 't get left behind. Transform your business with our proven methodologies 
               and join thousands of successful companies already experiencing exponential growth.
             </p>
             <motion.button

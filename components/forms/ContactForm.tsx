@@ -90,8 +90,8 @@ const ContactForm: React.FC = () => {
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -153,8 +153,8 @@ const ContactForm: React.FC = () => {
 
             {/* Additional Info */}
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: 0.6 }}
               viewport={{ once: true }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6"
@@ -313,8 +313,8 @@ const ContactForm: React.FC = () => {
 
                 {submitStatus === 'error' && (
                   <motion.div
-                    initial={{ opacity: 0y: -10 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4"
                   >
                     <AlertCircle className="w-5 h-5" />

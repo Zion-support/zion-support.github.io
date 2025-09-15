@@ -1,5 +1,5 @@
 'use client';
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface APIEndpoint {
   id: string;
@@ -141,7 +141,7 @@ const APIManagementSystem: React.FC = () => {
         name: 'Mobile App Key',
         key: 'sk_live_...abc123',
         status: 'active',
-        permissions: ['read:users'read:products'write:orders'],
+        permissions: ['read:'users', 'read:'products', 'write:orders'],
         usage: 45678,
         limit: 100000,
         createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
@@ -164,7 +164,7 @@ const APIManagementSystem: React.FC = () => {
         name: 'Partner Integration',
         key: 'sk_live_...ghi789',
         status: 'active',
-        permissions: ['read:products'read:orders'],
+        permissions: ['read:'products', 'read:orders'],
         usage: 23456,
         limit: 50000,
         createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
@@ -308,7 +308,7 @@ const APIManagementSystem: React.FC = () => {
   const formatValue = (value: numberunit: string) => {
     if (unit === 'ms') return `${value}ms`;
     if (unit === '%') return `${value.toFixed(1)}%`;
-    if (unit === '') return value.toLocaleString();
+    if (unit === ', ') return value.toLocaleString();
     return `${value}${unit}`;
   };
 
@@ -356,10 +356,10 @@ const APIManagementSystem: React.FC = () => {
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">
         {[
-          { id: 'overview'label: 'Overview'icon: '📊' },
-          { id: 'endpoints'label: 'Endpoints'icon: '🔗' },
-          { id: 'keys'label: 'API Keys'icon: '🔑' },
-          { id: 'analytics'label: 'Analytics'icon: '📈' }
+          { id: ''overview', 'label: ''Overview', 'icon: '📊' },
+          { id: ''endpoints', 'label: ''Endpoints', 'icon: '🔗' },
+          { id: ''keys', 'label: 'API 'Keys', 'icon: '🔑' },
+          { id: ''analytics', 'label: ''Analytics', 'icon: '📈' }
         ].map((tab) => (
           <button
             key={tab.id}
@@ -570,7 +570,7 @@ const APIManagementSystem: React.FC = () => {
             <div className="space-y-4">
               {endpoints
                 .sort((ab) => b.requestsPerMinute - a.requestsPerMinute)
-                .slice(05)
+                .slice(0, 5)
                 .map((endpointindex) => (
                 <div key={endpoint.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <div className="flex items-center space-x-4">

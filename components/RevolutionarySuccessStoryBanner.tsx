@@ -49,8 +49,8 @@ export default function RevolutionarySuccessStoryBanner() {
       <div className="relative z-10">
         <div className="text-center mb-8">
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3duration: 0.6 }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -64,8 +64,8 @@ export default function RevolutionarySuccessStoryBanner() {
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
@@ -76,8 +76,8 @@ export default function RevolutionarySuccessStoryBanner() {
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
@@ -88,8 +88,8 @@ export default function RevolutionarySuccessStoryBanner() {
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
@@ -114,8 +114,8 @@ export default function RevolutionarySuccessStoryBanner() {
           </motion.div>
           
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3duration: 0.6 }}
             className="flex flex-wrap justify-center gap-4"
           >

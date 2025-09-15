@@ -87,11 +87,11 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
   ];
 
   const categories = [
-    { id: 'all'name: 'All Content'count: contentItems.length },
-    { id: 'breakthrough'name: 'Breakthroughs'count: contentItems.filter(item => item.category === 'breakthrough').length },
-    { id: 'quantum'name: 'Quantum AI'count: contentItems.filter(item => item.category === 'quantum').length },
-    { id: 'case-study'name: 'Success Stories'count: contentItems.filter(item => item.category === 'case-study').length },
-    { id: 'guide'name: 'Implementation Guides'count: contentItems.filter(item => item.category === 'guide').length }
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
+    { id: ''breakthrough', 'name: ''Breakthroughs', 'count: contentItems.filter(item => item.category === 'breakthrough').length },
+    { id: ''quantum', 'name: 'Quantum 'AI', 'count: contentItems.filter(item => item.category === 'quantum').length },
+    { id: 'case-'study', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: ''guide', 'name: 'Implementation 'Guides', 'count: contentItems.filter(item => item.category === 'guide').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

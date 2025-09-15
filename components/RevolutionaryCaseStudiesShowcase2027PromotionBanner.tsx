@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Award
@@ -21,10 +21,10 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
   const [currentStatsetCurrentStat] = useState(0);
 
   const stats = [
-    { value: '500+'label: 'Projects'icon: CheckCircle },
-    { value: '99.2%'label: 'Satisfaction'icon: Star },
-    { value: '340%'label: 'Average ROI'icon: TrendingUp },
-    { value: '15+'label: 'Years Experience'icon: Award }
+    { value: '500+'label: ''Projects', 'icon: CheckCircle },
+    { value: '99.2%'label: ''Satisfaction', 'icon: Star },
+    { value: '340%'label: 'Average 'ROI', 'icon: TrendingUp },
+    { value: '15+'label: 'Years 'Experience', 'icon: Award }
   ];
 
   useEffect(() => {
@@ -49,8 +49,8 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0y: -100 }}
-      animate={{ isVisible ? { opacity: 1y: 0 } : { opacity: 0y: -100 } }}
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 } }}
       transition={{ duration: 0.8ease: "easeOut" }}
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden"
     >

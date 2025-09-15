@@ -13,7 +13,7 @@ export default function MobileResponsivenessEnhancer() {
     };
 
     checkMobile();
-    window.addEventListener('resize'checkMobile);
+    window.addEventListener(', 'resize', 'checkMobile);
 
     // Apply mobile-specific optimizations
     if (isMobile) {
@@ -52,7 +52,7 @@ export default function MobileResponsivenessEnhancer() {
     }
 
     return () => {
-      window.removeEventListener('resize'checkMobile);
+      window.removeEventListener(', 'resize', 'checkMobile);
     };
   }[isMobile]);
 

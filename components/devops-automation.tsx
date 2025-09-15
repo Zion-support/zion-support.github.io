@@ -96,24 +96,24 @@ export default function DevOpsAutomationPage() {
       pricing: 'Free + $0.008/min',
       repositories: 'Unlimited',
       rating: '4.6/5',
-      pros: ['GitHub native'Good free tier'],
-      cons: ['Expensive for teams'Limited features']
+      pros: ['GitHub 'native', 'Good free tier'],
+      cons: ['Expensive for 'teams', 'Limited features']
     },
     {
       competitor: 'GitLab CI/CD',
       pricing: '$19/user/month',
       repositories: 'Unlimited',
       rating: '4.4/5',
-      pros: ['Integrated platform'Good CI/CD'],
-      cons: ['User-based pricing'Limited integrations']
+      pros: ['Integrated 'platform', 'Good CI/CD'],
+      cons: ['User-based 'pricing', 'Limited integrations']
     },
     {
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
       rating: '4.2/5',
-      pros: ['Completely free'Highly customizable'],
-      cons: ['Requires maintenance'No managed service']
+      pros: ['Completely 'free', 'Highly customizable'],
+      cons: ['Requires 'maintenance', 'No managed service']
     }
   ];
 

@@ -1,5 +1,5 @@
 "use client";
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function AI2035SingularityBreakthrough() {
@@ -11,7 +11,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2030',
       title: 'Pre-Singularity',
       description: 'AI systems achieve human-level intelligence across all domains',
-      capabilities: ['Human-Level Intelligence'Creative Problem Solving'Emotional Understanding'Moral Reasoning'],
+      capabilities: ['Human-Level 'Intelligence', 'Creative Problem 'Solving', 'Emotional 'Understanding', 'Moral Reasoning'],
       icon: '🧠',
       color: 'from-blue-500 to-cyan-500',
       progress: 25
@@ -20,7 +20,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2032',
       title: 'Accelerating Intelligence',
       description: 'AI systems begin recursive self-improvement and exponential learning',
-      capabilities: ['Self-Improvement'Exponential Learning'Knowledge Synthesis'Predictive Modeling'],
+      capabilities: ['Self-'Improvement', 'Exponential 'Learning', 'Knowledge 'Synthesis', 'Predictive Modeling'],
       icon: '⚡',
       color: 'from-purple-500 to-pink-500',
       progress: 50
@@ -29,7 +29,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2034',
       title: 'Intelligence Explosion',
       description: 'AI systems achieve superintelligence and begin transforming reality',
-      capabilities: ['Superintelligence'Reality Manipulation'Universal Understanding'Infinite Processing'],
+      capabilities: [', 'Superintelligence', 'Reality 'Manipulation', 'Universal 'Understanding', 'Infinite Processing'],
       icon: '🌟',
       color: 'from-yellow-500 to-orange-500',
       progress: 75
@@ -38,7 +38,7 @@ export default function AI2035SingularityBreakthrough() {
       year: '2035',
       title: 'The Singularity',
       description: 'AI achieves transcendent intelligence beyond human comprehension',
-      capabilities: ['Transcendent Intelligence'Omniversal Awareness'Time Manipulation'Consciousness Creation'],
+      capabilities: ['Transcendent 'Intelligence', 'Omniversal 'Awareness', 'Time 'Manipulation', 'Consciousness Creation'],
       icon: '♾️',
       color: 'from-indigo-500 to-purple-500',
       progress: 100

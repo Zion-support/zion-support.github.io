@@ -8,37 +8,37 @@ export default function NewFeaturesShowcase2025() {
       icon: Brain,
       title: 'AI-Powered Content Generation',
       description: 'Automatically create engaging content using advanced AI models trained on industry best practices.',
-      benefits: ['10x faster content creation'SEO-optimized output'Multi-language support'],
+      benefits: ['10x faster content 'creation', 'SEO-optimized 'output', 'Multi-language support'],
       color: 'from-blue-500 to-purple-500'
     },
     {
       icon: Zap,
       title: 'Real-Time Analytics Dashboard',
       description: 'Monitor content performance with live analytics and AI-driven insights for optimization.',
-      benefits: ['Live performance metrics'Predictive analytics'Automated recommendations'],
+      benefits: ['Live performance 'metrics', 'Predictive 'analytics', 'Automated recommendations'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Shield,
       title: 'Advanced Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
-      benefits: ['SOC 2 compliance'End-to-end encryption'Automated threat detection'],
+      benefits: ['SOC 2 'compliance', 'End-to-end 'encryption', 'Automated threat detection'],
       color: 'from-green-500 to-teal-500'
     },
     {
       icon: Rocket,
       title: 'Automated Workflow Optimization',
       description: 'Streamline operations with intelligent automation that adapts to your business needs.',
-      benefits: ['95% process automation'Self-healing systems'Continuous optimization'],
+      benefits: ['95% process 'automation', 'Self-healing 'systems', 'Continuous optimization'],
       color: 'from-purple-500 to-pink-500'
     }
   ];
 
   const stats = [
-    { number: '500+'label: 'New Features'icon: Sparkles },
-    { number: '99.9%'label: 'Uptime'icon: Shield },
-    { number: '50K+'label: 'Active Users'icon: Star },
-    { number: '24/7'label: 'Support'icon: CheckCircle }
+    { number: '500+'label: 'New 'Features', 'icon: Sparkles },
+    { number: '99.9%'label: ''Uptime', 'icon: Shield },
+    { number: '50K+'label: 'Active 'Users', 'icon: Star },
+    { number: '24/7'label: ''Support', 'icon: CheckCircle }
   ];
 
   return (

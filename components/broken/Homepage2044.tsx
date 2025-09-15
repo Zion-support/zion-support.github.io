@@ -79,12 +79,12 @@ const Homepage2044: React.FC = () => {
   }[selectedCategoryallRevolutionaryServices]);
 
   const categories = useMemo(() => [
-    { id: 'all'name: 'All Services'icon: SparklesIconcolor: 'from-purple-500 to-pink-500' },
-    { id: 'ai'name: 'AI & Consciousness'icon: BrainIconcolor: 'from-cyan-500 to-blue-500' },
-    { id: 'quantum'name: 'Quantum Technology'icon: AtomIconcolor: 'from-blue-500 to-indigo-500' },
-    { id: 'cybersecurity'name: 'Cybersecurity'icon: ShieldIconcolor: 'from-red-500 to-orange-500' },
-    { id: 'space'name: 'Space Technology'icon: RocketIconcolor: 'from-indigo-500 to-purple-500' },
-    { id: 'business'name: 'Business Solutions'icon: Targetcolor: 'from-emerald-500 to-teal-500' }
+    { id: ''all', 'name: 'All 'Services', 'icon: SparklesIconcolor: 'from-purple-500 to-pink-500' },
+    { id: ''ai', 'name: 'AI & 'Consciousness', 'icon: BrainIconcolor: 'from-cyan-500 to-blue-500' },
+    { id: ''quantum', 'name: 'Quantum 'Technology', 'icon: AtomIconcolor: 'from-blue-500 to-indigo-500' },
+    { id: ''cybersecurity', 'name: ''Cybersecurity', 'icon: ShieldIconcolor: 'from-red-500 to-orange-500' },
+    { id: ''space', 'name: 'Space 'Technology', 'icon: RocketIconcolor: 'from-indigo-500 to-purple-500' },
+    { id: ''business', 'name: 'Business 'Solutions', 'icon: Targetcolor: 'from-emerald-500 to-teal-500' }
   ][]);
 
   const features = useMemo(() => [
@@ -106,7 +106,7 @@ const Homepage2044: React.FC = () => {
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event'cta_click'{ cta_type: 'get_started' });
+      (window as any).gtag(', 'event', 'cta_click'{ cta_type: 'get_started' });
     }
     window.location.href = '/revolutionary-2044-pricing-showcase';
   }[]);
@@ -114,7 +114,7 @@ const Homepage2044: React.FC = () => {
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event'cta_click'{ cta_type: 'explore_services' });
+      (window as any).gtag(', 'event', 'cta_click'{ cta_type: 'explore_services' });
     }
     window.location.href = '/services';
   }[]);
@@ -122,7 +122,7 @@ const Homepage2044: React.FC = () => {
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event'service_click'{ service_name: service.name });
+      (window as any).gtag(', 'event', 'service_click'{ service_name: service.name });
     }
     window.location.href = service.slug;
   }[]);
@@ -131,7 +131,7 @@ const Homepage2044: React.FC = () => {
     setSelectedCategory(categoryId);
     // Add analytics tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event'category_filter'{ category: categoryId });
+      (window as any).gtag(', 'event', 'category_filter'{ category: categoryId });
     }
   }[]);
 
@@ -165,7 +165,7 @@ const Homepage2044: React.FC = () => {
       }
     };
     
-    window.addEventListener('mousemove'handleMouseMove{ passive: true });
+    window.addEventListener(', 'mousemove', 'handleMouseMove{ passive: true });
     
     // Track scroll progress for performance monitoring
     const handleScroll = () => {
@@ -175,12 +175,12 @@ const Homepage2044: React.FC = () => {
       setScrollProgress(scrollPercent);
     };
     
-    window.addEventListener('scroll'handleScroll{ passive: true });
+    window.addEventListener(', 'scroll', 'handleScroll{ passive: true });
     
     return () => {
       clearInterval(interval);
-      window.removeEventListener('mousemove'handleMouseMove);
-      window.removeEventListener('scroll'handleScroll);
+      window.removeEventListener(', 'mousemove', 'handleMouseMove);
+      window.removeEventListener(', 'scroll', 'handleScroll);
     };
   }[]);
 
@@ -346,7 +346,7 @@ const Homepage2044: React.FC = () => {
             <motion.h1
               id="hero-heading"
               className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8ease: "easeOut" }}
             >
@@ -357,7 +357,7 @@ const Homepage2044: React.FC = () => {
             
             <motion.p
               className="text-3xl md:text-4xl text-gray-300 mb-16 max-w-6xl mx-auto leading-relaxed font-light"
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.2ease: "easeOut" }}
             >
@@ -366,7 +366,7 @@ const Homepage2044: React.FC = () => {
 
             <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.4ease: "easeOut" }}
             >
@@ -396,7 +396,7 @@ const Homepage2044: React.FC = () => {
             {/* Enhanced Stats Section */}
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20"
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.6ease: "easeOut" }}
             >
@@ -406,7 +406,7 @@ const Homepage2044: React.FC = () => {
                   className="text-center group cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0y: 20 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
                   transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                 >
@@ -429,7 +429,7 @@ const Homepage2044: React.FC = () => {
             {/* Featured Service Showcase */}
             <motion.div
               className="max-w-6xl mx-auto"
-              initial={{ opacity: 0y: 30 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.6ease: "easeOut" }}
             >
@@ -470,8 +470,8 @@ const Homepage2044: React.FC = () => {
                     onClick={() => handleServiceClick(service)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0y: 20 }}
-                    animate={{ opacity: 1y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5delay: index * 0.1 }}
                   >
                     <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
@@ -502,8 +502,8 @@ const Homepage2044: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -520,8 +520,8 @@ const Homepage2044: React.FC = () => {
                 <motion.div
                   key={feature.title}
                   className="group relative"
-                  initial={{ opacity: 0y: 30 }}
-                  whileInView={{ opacity: 1y: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
@@ -561,8 +561,8 @@ const Homepage2044: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 30 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

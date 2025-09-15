@@ -1,8 +1,8 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -73,7 +73,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.9,
           views: 12500,
           likes: 892,
-          tags: ['AI'Neural Networks'Deep Learning'Tutorial'],
+          tags: [', 'AI', 'Neural 'Networks', 'Deep 'Learning', 'Tutorial'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Dr. Sarah Chen',
           publishedAt: '2024-01-15',
@@ -93,7 +93,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.8,
           views: 8900,
           likes: 654,
-          tags: ['Quantum Computing'Case Study'Business'ROI'],
+          tags: ['Quantum 'Computing', 'Case 'Study', 'Business'ROI'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Michael Rodriguez',
           publishedAt: '2024-01-12',
@@ -113,7 +113,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.7,
           views: 15600,
           likes: 1203,
-          tags: ['Automation'AI'Autonomous Systems'Tutorial'],
+          tags: [', 'Automation', 'AI'Autonomous 'Systems', 'Tutorial'],
           thumbnail: '/api/placeholder/400/250',
           author: 'AI Research Team',
           publishedAt: '2024-01-10',
@@ -133,7 +133,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.6,
           views: 9800,
           likes: 567,
-          tags: ['Machine Learning'Predictions'Future'AI'],
+          tags: ['Machine 'Learning', 'Predictions', 'Future', 'AI'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Dr. Emily Watson',
           publishedAt: '2024-01-08',
@@ -153,7 +153,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.5,
           views: 7200,
           likes: 423,
-          tags: ['Data Science'Best Practices'Tools'Business'],
+          tags: ['Data 'Science', 'Best 'Practices', 'Tools'Business'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Data Science Institute',
           publishedAt: '2024-01-05',
@@ -172,25 +172,25 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
   }[]);
 
   const categories = [
-    { id: 'all'name: 'All Content'icon: BookOpencolor: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-fundamentals'name: 'AI Fundamentals'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-computing'name: 'Quantum Computing'icon: Zapcolor: 'from-green-500 to-emerald-500' },
-    { id: 'automation'name: 'Automation'icon: Targetcolor: 'from-orange-500 to-red-500' },
-    { id: 'ai-predictions'name: 'AI Predictions'icon: TrendingUpcolor: 'from-indigo-500 to-purple-500' },
-    { id: 'data-science'name: 'Data Science'icon: BookOpencolor: 'from-teal-500 to-cyan-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: BookOpencolor: 'from-blue-500 to-cyan-500' },
+    { id: 'ai-'fundamentals', 'name: 'AI 'Fundamentals', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-green-500 to-emerald-500' },
+    { id: ''automation', 'name: ''Automation', 'icon: Targetcolor: 'from-orange-500 to-red-500' },
+    { id: 'ai-'predictions', 'name: 'AI 'Predictions', 'icon: TrendingUpcolor: 'from-indigo-500 to-purple-500' },
+    { id: 'data-'science', 'name: 'Data 'Science', 'icon: BookOpencolor: 'from-teal-500 to-cyan-500' }
   ];
 
   const difficulties = [
-    { id: 'all'name: 'All Levels' },
-    { id: 'beginner'name: 'Beginner' },
-    { id: 'intermediate'name: 'Intermediate' },
-    { id: 'advanced'name: 'Advanced' }
+    { id: ''all', 'name: 'All Levels' },
+    { id: ''beginner', 'name: 'Beginner' },
+    { id: ''intermediate', 'name: 'Intermediate' },
+    { id: ''advanced', 'name: 'Advanced' }
   ];
 
   const filteredContent = contentItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     const matchesDifficulty = selectedDifficulty === 'all' || item.difficulty === selectedDifficulty;
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === ', ' || 
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -314,9 +314,9 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           {sortedContent.map((itemindex) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
-              exit={{ opacity: 0y: -20 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group"
             >

@@ -1,9 +1,9 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motionAnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -64,9 +64,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
   ];
 
   const stats = [
-    { label: 'Predictions'value: '50+'icon: Target },
-    { label: 'Expert Analysts'value: '200+'icon: Users },
-    { label: 'Updated Weekly'value: '24/7'icon: Clock }
+    { label: ''Predictions', 'value: '50+'icon: Target },
+    { label: 'Expert 'Analysts', 'value: '200+'icon: Users },
+    { label: 'Updated 'Weekly', 'value: '24/7'icon: Clock }
   ];
 
   if (isDismissed) return null;
@@ -75,9 +75,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0y: -100 }}
-          animate={{ opacity: 1y: 0 }}
-          exit={{ opacity: 0y: -100 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 overflow-hidden"
         >
@@ -139,9 +139,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
                 {/* Rotating Predictions */}
                 <motion.div
                   key={currentPrediction}
-                  initial={{ opacity: 0y: 20 }}
-                  animate={{ opacity: 1y: 0 }}
-                  exit={{ opacity: 0y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
                   className="flex items-center justify-center lg:justify-start mb-6"
                 >
@@ -216,8 +216,8 @@ const AITrends2026PredictionsPromotionBanner = () => {
                   {predictions.map((predictionindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0y: 20 }}
-                      animate={{ opacity: 1y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                       className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover:border-white/40 transition-all duration-300 ${
                         currentPrediction === index ? 'ring-2 ring-indigo-400 ring-opacity-50' : ''

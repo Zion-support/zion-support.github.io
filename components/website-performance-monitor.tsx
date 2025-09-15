@@ -256,7 +256,7 @@ export default function WebsitePerformanceMonitorPage() {
               Comprehensive Performance Metrics
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Track all the metrics that matter for your website's performance and user experience.
+              Track all the metrics that matter for your 'website', 's performance and user experience.
             </p>
           </div>
 
@@ -285,7 +285,7 @@ export default function WebsitePerformanceMonitorPage() {
                 Performance Analysis Results
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-                Here's a sample analysis of a website. Get real-time insights for your own website.
+                'Here', 's a sample analysis of a website. Get real-time insights for your own website.
               </p>
             </div>
             

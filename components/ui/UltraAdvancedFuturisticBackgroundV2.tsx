@@ -9,7 +9,7 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
   children
-  className = '' 
+  className = ', ' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -162,12 +162,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       initParticles();
     };
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener(', 'resize', 'handleResize);
     initParticles();
     updateParticles();
 
     return () => {
-      window.removeEventListener('resize'handleResize);
+      window.removeEventListener(', 'resize', 'handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }

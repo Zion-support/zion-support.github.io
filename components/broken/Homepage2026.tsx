@@ -24,8 +24,8 @@ const Homepage2026: React.FC = () => {
           
           <div className="text-center max-w-4xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              animate={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
@@ -71,8 +71,8 @@ const Homepage2026: React.FC = () => {
               
               {/* Trust Indicators */}
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
@@ -98,8 +98,8 @@ const Homepage2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-6xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -111,8 +111,8 @@ const Homepage2026: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.1 }}
                 className="text-center"
               >
@@ -124,8 +124,8 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.2 }}
                 className="text-center"
               >
@@ -137,8 +137,8 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.3 }}
                 className="text-center"
               >
@@ -150,8 +150,8 @@ const Homepage2026: React.FC = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0y: 20 }}
-                whileInView={{ opacity: 1y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6delay: 0.4 }}
                 className="text-center"
               >
@@ -169,8 +169,8 @@ const Homepage2026: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -324,8 +324,8 @@ const Homepage2026: React.FC = () => {
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >

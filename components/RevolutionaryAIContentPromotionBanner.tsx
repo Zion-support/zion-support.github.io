@@ -6,8 +6,8 @@ ArrowRightSparklesZapTrendingUpStar
 export default function RevolutionaryAIContentPromotionBanner() {
   return (
     <motion.section
-      initial={{ opacity: 0y: 50 }}
-      animate={{ opacity: 1y: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       className="py-12 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden"
     >
@@ -33,8 +33,8 @@ export default function RevolutionaryAIContentPromotionBanner() {
 
           {/* Main heading */}
           <motion.h1
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
@@ -47,8 +47,8 @@ export default function RevolutionaryAIContentPromotionBanner() {
 
           {/* Subheading */}
           <motion.p
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
@@ -58,8 +58,8 @@ export default function RevolutionaryAIContentPromotionBanner() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
           >
@@ -83,8 +83,8 @@ export default function RevolutionaryAIContentPromotionBanner() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >

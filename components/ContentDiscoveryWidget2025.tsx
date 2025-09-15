@@ -30,7 +30,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/blog/ai-2025-generative-ai-business-transformation',
       excerpt: 'Explore how generative AI is revolutionizing business operations in 2025from content creation to customer service automation.',
-      tags: ['Generative AI'Business Transformation'AI 2025']
+      tags: ['Generative 'AI', 'Business 'Transformation', 'AI 2025']
     },
     {
       id: '2',
@@ -41,7 +41,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/blog/quantum-computing-2025-business-applications',
       excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025from optimization problems to advanced cryptography.',
-      tags: ['Quantum Computing'Business Applications'Optimization']
+      tags: ['Quantum 'Computing', 'Business 'Applications', 'Optimization']
     },
     {
       id: '3',
@@ -52,7 +52,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/case-studies/ai-automation-manufacturing-success-2025',
       excerpt: 'How a leading manufacturing company achieved 500% productivity increase through comprehensive AI automation.',
-      tags: ['AI Automation'Manufacturing'Productivity']
+      tags: ['AI 'Automation', 'Manufacturing'Productivity']
     },
     {
       id: '4',
@@ -63,7 +63,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/resources/ai-implementation-checklist-2025',
       excerpt: 'Comprehensive checklist for successful AI implementation in 2025covering strategytechnologyand change management.',
-      tags: ['AI Implementation'Checklist'Strategy']
+      tags: ['AI 'Implementation', 'Checklist'Strategy']
     },
     {
       id: '5',
@@ -74,7 +74,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/case-studies/enterprise-ai-transformation-success-story',
       excerpt: 'Discover how a Fortune 500 company achieved unprecedented success through comprehensive AI transformation.',
-      tags: ['AI Transformation'Enterprise Success'ROI']
+      tags: ['AI 'Transformation', 'Enterprise 'Success', 'ROI']
     },
     {
       id: '6',
@@ -85,12 +85,12 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: false,
       url: '/blog/ai-2025-autonomous-business-operations',
       excerpt: 'Discover how AI-powered autonomous operations are transforming businesses in 2025.',
-      tags: ['AI 2025'Autonomous Operations'Business Automation']
+      tags: ['AI 2025'Autonomous 'Operations', 'Business Automation']
     }
   ];
 
-  const categories = ['all'AI Innovation'Quantum Technology'Manufacturing'Enterprise'Implementation Guide'];
-  const types = ['all'blog'case-study'resource'webinar'];
+  const categories = [', 'all', 'AI 'Innovation', 'Quantum 'Technology', 'Manufacturing', 'Enterprise', 'Implementation Guide'];
+  const types = [', 'all', 'blog'case-'study', 'resource'webinar'];
 
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

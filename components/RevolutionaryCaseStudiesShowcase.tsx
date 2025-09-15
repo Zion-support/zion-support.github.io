@@ -72,8 +72,8 @@ export default function RevolutionaryCaseStudiesShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -89,7 +89,7 @@ export default function RevolutionaryCaseStudiesShowcase() {
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies are achieving extraordinary results with our AI solutions. 
-            These aren't just numbers—they're transformations that matter.
+            These 'aren', 't just numbers—'they', 're transformations that matter.
           </p>
         </motion.div>
 
@@ -98,8 +98,8 @@ export default function RevolutionaryCaseStudiesShowcase() {
           {caseStudies.filter(study => study.featured).map((studyindex) => (
             <motion.div
               key={study.id}
-              initial={{ opacity: 0y: 50 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group"
@@ -144,8 +144,8 @@ export default function RevolutionaryCaseStudiesShowcase() {
 
         {/* Additional Case Studies */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-6 mb-12"
@@ -198,8 +198,8 @@ export default function RevolutionaryCaseStudiesShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
@@ -209,7 +209,7 @@ export default function RevolutionaryCaseStudiesShowcase() {
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already transforming with our AI solutions. 
-            Let's discuss how we can help you achieve similar results.
+            'Let', 's discuss how we can help you achieve similar results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

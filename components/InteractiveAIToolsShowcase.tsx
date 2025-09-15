@@ -280,7 +280,7 @@ const InteractiveAIToolsShowcase = () => {
             <p className="text-gray-600 mb-6">Try adjusting your search terms or category filters.</p>
             <button
               onClick={() => {
-                setSearchTerm('');
+                setSearchTerm(', ');
                 setSelectedCategory('all');
               }}
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"

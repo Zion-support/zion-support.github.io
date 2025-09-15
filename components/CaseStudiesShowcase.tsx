@@ -17,7 +17,7 @@ const CaseStudiesShowcase = () => {
         customerSatisfaction: "95%"
       },
       image: "/images/case-studies/retail-automation.jpg",
-      testimonial: "The AI automation system transformed our operations completely. We've seen unprecedented efficiency gains and cost savings."
+      testimonial: "The AI automation system transformed our operations completely. 'We', 've seen unprecedented efficiency gains and cost savings."
     },
     {
       id: 2,

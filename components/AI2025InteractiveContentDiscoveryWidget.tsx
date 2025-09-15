@@ -77,7 +77,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
 
   const filteredContent = contentItems.filter(item => {
     const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
-    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%''));
+    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%', '));
     return categoryMatch && roiMatch;
   });
 
@@ -229,7 +229,7 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-purple-800 mb-4">Can't Find What You're Looking For?</h3>
+            <h3 className="text-2xl font-bold text-purple-800 mb-4">'Can', 't Find What 'You', 're Looking For?</h3>
             <p className="text-purple-700 mb-6">
               Our AI experts can help you find the perfect content for your specific needs and goals.
             </p>

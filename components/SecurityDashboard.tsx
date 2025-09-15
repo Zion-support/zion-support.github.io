@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 ShieldAlertTriangleCheckCircleEyeLockActivityUsersServer
 
 const SecurityDashboard = () => {
@@ -15,15 +15,15 @@ const SecurityDashboard = () => {
   });
 
   const [threatsetThreats] = useState([
-    { id: 1type: 'DDoS Attack'severity: 'Medium'status: 'Blocked'time: '5 min ago' },
-    { id: 2type: 'SQL Injection'severity: 'High'status: 'Blocked'time: '12 min ago' },
-    { id: 3type: 'Malware'severity: 'Low'status: 'Quarantined'time: '1 hour ago' },
+    { id: 1type: 'DDoS 'Attack', 'severity: ''Medium', 'status: ''Blocked', 'time: '5 min ago' },
+    { id: 2type: 'SQL 'Injection', 'severity: ''High', 'status: ''Blocked', 'time: '12 min ago' },
+    { id: 3type: ''Malware', 'severity: ''Low', 'status: ''Quarantined', 'time: '1 hour ago' },
   ]);
 
   const [logsetLogs] = useState([
-    { id: 1action: 'Login Attempt'user: 'admin@company.com'ip: '192.168.1.100'status: 'Success'time: '2 min ago' },
-    { id: 2action: 'File Access'user: 'user@company.com'ip: '192.168.1.101'status: 'Success'time: '5 min ago' },
-    { id: 3action: 'Failed Login'user: 'unknown@external.com'ip: '10.0.0.50'status: 'Blocked'time: '8 min ago' },
+    { id: 1action: 'Login 'Attempt', 'user: 'admin@company.'com', 'ip: '192.168.1.100'status: ''Success', 'time: '2 min ago' },
+    { id: 2action: 'File 'Access', 'user: 'user@company.'com', 'ip: '192.168.1.101'status: ''Success', 'time: '5 min ago' },
+    { id: 3action: 'Failed 'Login', 'user: 'unknown@external.'com', 'ip: '10.0.0.50'status: ''Blocked', 'time: '8 min ago' },
   ]);
 
   useEffect(() => {

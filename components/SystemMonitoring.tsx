@@ -85,11 +85,11 @@ const SystemMonitoring: React.FC = () => {
 
     // Check thresholds
     if (memoryUsage > 80) {
-      createAlert('performance'high'High Memory Usage'`Memory usage is ${memoryUsage}%`);
+      createAlert(', 'performance', 'high'High Memory Usage'`Memory usage is ${memoryUsage}%`);
     }
 
     if (responseTime > 2000) {
-      createAlert('performance'medium'Slow Response'`Response time is ${responseTime}ms`);
+      createAlert(', 'performance', 'medium'Slow Response'`Response time is ${responseTime}ms`);
     }
   }[alertscreateAlert]);
 
@@ -99,14 +99,14 @@ const SystemMonitoring: React.FC = () => {
 
     // Error tracking
     const handleError = (event: ErrorEvent) => {
-      createAlert('error'high'JavaScript Error'event.message);
+      createAlert(', 'error', 'high'JavaScript 'Error', 'event.message);
     };
 
-    window.addEventListener('error'handleError);
+    window.addEventListener(', 'error', 'handleError);
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('error'handleError);
+      window.removeEventListener(', 'error', 'handleError);
     };
   }[collectMetrics]);
 

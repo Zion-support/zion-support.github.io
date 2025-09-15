@@ -18,74 +18,74 @@ const serviceCategories = [
   {
     title: 'AI & Automation',
     services: [
-      { name: 'AI Autonomous Business Processor'href: '/ai-autonomous-business-processor' },
-      { name: 'AI Predictive Enterprise Analytics'href: '/ai-predictive-enterprise-analytics' },
-      { name: 'AI Autonomous Customer Success'href: '/ai-autonomous-customer-success' },
-      { name: 'AI Autonomous Marketing Orchestrator'href: '/ai-autonomous-marketing-orchestrator' },
-      { name: 'AI Autonomous Sales Intelligence'href: '/ai-autonomous-sales-intelligence' }
+      { name: 'AI Autonomous Business 'Processor', 'href: '/ai-autonomous-business-processor' },
+      { name: 'AI Predictive Enterprise 'Analytics', 'href: '/ai-predictive-enterprise-analytics' },
+      { name: 'AI Autonomous Customer 'Success', 'href: '/ai-autonomous-customer-success' },
+      { name: 'AI Autonomous Marketing 'Orchestrator', 'href: '/ai-autonomous-marketing-orchestrator' },
+      { name: 'AI Autonomous Sales 'Intelligence', 'href: '/ai-autonomous-sales-intelligence' }
     ]
   },
   {
     title: 'Cybersecurity & Quantum',
     services: [
-      { name: 'Quantum Encryption Platform'href: '/quantum-encryption-platform' },
-      { name: 'AI Autonomous Threat Hunter'href: '/ai-autonomous-threat-hunter' },
-      { name: 'Quantum Zero Trust Security'href: '/quantum-zero-trust-security' },
-      { name: 'AI Autonomous Vulnerability Scanner'href: '/ai-autonomous-vulnerability-scanner' },
-      { name: 'Quantum Secure Communication'href: '/quantum-secure-communication' }
+      { name: 'Quantum Encryption 'Platform', 'href: '/quantum-encryption-platform' },
+      { name: 'AI Autonomous Threat 'Hunter', 'href: '/ai-autonomous-threat-hunter' },
+      { name: 'Quantum Zero Trust 'Security', 'href: '/quantum-zero-trust-security' },
+      { name: 'AI Autonomous Vulnerability 'Scanner', 'href: '/ai-autonomous-vulnerability-scanner' },
+      { name: 'Quantum Secure 'Communication', 'href: '/quantum-secure-communication' }
     ]
   },
   {
     title: 'Fintech & Blockchain',
     services: [
-      { name: 'Quantum Financial Trading Platform'href: '/quantum-financial-trading-platform' },
-      { name: 'AI Autonomous Wealth Management'href: '/ai-autonomous-wealth-management' },
-      { name: 'Quantum Blockchain Finance'href: '/quantum-blockchain-finance' },
-      { name: 'AI Autonomous Insurance Platform'href: '/ai-autonomous-insurance-platform' },
-      { name: 'Quantum Payment Processing'href: '/quantum-payment-processing' }
+      { name: 'Quantum Financial Trading 'Platform', 'href: '/quantum-financial-trading-platform' },
+      { name: 'AI Autonomous Wealth 'Management', 'href: '/ai-autonomous-wealth-management' },
+      { name: 'Quantum Blockchain 'Finance', 'href: '/quantum-blockchain-finance' },
+      { name: 'AI Autonomous Insurance 'Platform', 'href: '/ai-autonomous-insurance-platform' },
+      { name: 'Quantum Payment 'Processing', 'href: '/quantum-payment-processing' }
     ]
   },
   {
     title: 'Healthcare & Biotech',
     services: [
-      { name: 'AI Autonomous Medical Diagnostics'href: '/ai-autonomous-medical-diagnostics' },
-      { name: 'Quantum Drug Discovery Platform'href: '/quantum-drug-discovery-platform' },
-      { name: 'AI Autonomous Patient Care'href: '/ai-autonomous-patient-care' },
-      { name: 'Quantum Genomic Analysis'href: '/quantum-genomic-analysis' },
-      { name: 'AI Autonomous Clinical Trials'href: '/ai-autonomous-clinical-trials' }
+      { name: 'AI Autonomous Medical 'Diagnostics', 'href: '/ai-autonomous-medical-diagnostics' },
+      { name: 'Quantum Drug Discovery 'Platform', 'href: '/quantum-drug-discovery-platform' },
+      { name: 'AI Autonomous Patient 'Care', 'href: '/ai-autonomous-patient-care' },
+      { name: 'Quantum Genomic 'Analysis', 'href: '/quantum-genomic-analysis' },
+      { name: 'AI Autonomous Clinical 'Trials', 'href: '/ai-autonomous-clinical-trials' }
     ]
   }
 ];
 
 const companyLinks = [
-  { name: 'About Us'href: '/about' },
-  { name: 'Leadership Team'href: '/leadership' },
-  { name: 'Careers'href: '/careers' },
-  { name: 'News & Press'href: '/news' },
-  { name: 'Partners'href: '/partners' },
-  { name: 'Investors'href: '/investors' },
-  { name: 'Contact Us'href: '/contact' },
-  { name: 'Locations'href: '/locations' }
+  { name: 'About 'Us', 'href: '/about' },
+  { name: 'Leadership 'Team', 'href: '/leadership' },
+  { name: ''Careers', 'href: '/careers' },
+  { name: 'News & 'Press', 'href: '/news' },
+  { name: ''Partners', 'href: '/partners' },
+  { name: ''Investors', 'href: '/investors' },
+  { name: 'Contact 'Us', 'href: '/contact' },
+  { name: ''Locations', 'href: '/locations' }
 ];
 
 const resourceLinks = [
-  { name: 'Documentation'href: '/docs' },
-  { name: 'API Reference'href: '/api-documentation' },
-  { name: 'Case Studies'href: '/case-studies' },
-  { name: 'Blog & News'href: '/blog' },
-  { name: 'Support Center'href: '/support' },
-  { name: 'Training & Certification'href: '/training' },
-  { name: 'Community Forum'href: '/community' },
-  { name: 'Developer Resources'href: '/developer-resources' }
+  { name: ''Documentation', 'href: '/docs' },
+  { name: 'API 'Reference', 'href: '/api-documentation' },
+  { name: 'Case 'Studies', 'href: '/case-studies' },
+  { name: 'Blog & 'News', 'href: '/blog' },
+  { name: 'Support 'Center', 'href: '/support' },
+  { name: 'Training & 'Certification', 'href: '/training' },
+  { name: 'Community 'Forum', 'href: '/community' },
+  { name: 'Developer 'Resources', 'href: '/developer-resources' }
 ];
 
 const socialLinks = [
-  { name: 'Facebook'href: '#'icon: Facebook },
-  { name: 'Twitter'href: '#'icon: Twitter },
-  { name: 'LinkedIn'href: '#'icon: Linkedin },
-  { name: 'Instagram'href: '#'icon: Instagram },
-  { name: 'YouTube'href: '#'icon: Youtube },
-  { name: 'GitHub'href: '#'icon: Github }
+  { name: ''Facebook', 'href: '#'icon: Facebook },
+  { name: ''Twitter', 'href: '#'icon: Twitter },
+  { name: ''LinkedIn', 'href: '#'icon: Linkedin },
+  { name: ''Instagram', 'href: '#'icon: Instagram },
+  { name: ''YouTube', 'href: '#'icon: Youtube },
+  { name: ''GitHub', 'href: '#'icon: Github }
 ];
 
 export default function UltraFuturisticFooter2026() {
@@ -103,8 +103,8 @@ export default function UltraFuturisticFooter2026() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <motion.div
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-6">
@@ -146,8 +146,8 @@ export default function UltraFuturisticFooter2026() {
           {serviceCategories.map((categoryindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0y: 20 }}
-              whileInView={{ opacity: 1y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
             >
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -178,8 +178,8 @@ export default function UltraFuturisticFooter2026() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.2 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -202,8 +202,8 @@ export default function UltraFuturisticFooter2026() {
 
           {/* Resources */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.3 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -226,8 +226,8 @@ export default function UltraFuturisticFooter2026() {
 
           {/* Social Media */}
           <motion.div
-            initial={{ opacity: 0y: 20 }}
-            whileInView={{ opacity: 1y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6delay: 0.4 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -250,8 +250,8 @@ export default function UltraFuturisticFooter2026() {
 
         {/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0y: 20 }}
-          whileInView={{ opacity: 1y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.5 }}
           className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12"
         >
