@@ -38,6 +38,10 @@ import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
 =======
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
+import RevolutionaryTech2026 from './src/pages/RevolutionaryTech2026';
+import NextGenInnovations2026 from './src/pages/NextGenInnovations2026';
+import FutureTechTrends2026 from './src/pages/FutureTechTrends2026';
+import TechTrendsBlog2026 from './src/pages/TechTrendsBlog2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
@@ -63,7 +67,7 @@ export default function App(): JSX.Element {
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
                       Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
+                      Quantum-Neural Fusion, Revolutionary Tech, Next-Gen Innovations, and Future Tech Trends
                     </p>
 <<<<<<< HEAD
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
@@ -526,6 +530,10 @@ export default function App(): JSX.Element {
 =======
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
+          <Route path="/pages/RevolutionaryTech2026" element={<RevolutionaryTech2026 />} />
+          <Route path="/pages/NextGenInnovations2026" element={<NextGenInnovations2026 />} />
+          <Route path="/pages/FutureTechTrends2026" element={<FutureTechTrends2026 />} />
+          <Route path="/pages/TechTrendsBlog2026" element={<TechTrendsBlog2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
