@@ -13,11 +13,20 @@ import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
+<<<<<<< HEAD
+import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
+import EnterpriseAISolutions2025 from './src/pages/EnterpriseAISolutions2025';
+import DigitalTransformationHub2025 from './src/pages/DigitalTransformationHub2025';
+import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
+import AutonomousSystemsShowcase2025 from './src/pages/AutonomousSystemsShowcase2025';
+import SpaceTechnologySolutions2025 from './src/pages/SpaceTechnologySolutions2025';
+=======
 import RevolutionaryTechSolutions2025 from './src/pages/RevolutionaryTechSolutions2025';
 import AIBusinessTransformation2025 from './src/pages/AIBusinessTransformation2025';
 import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+>>>>>>> origin/cursor/create-and-deploy-new-content-d749
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -31,6 +40,47 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+                {/* Enhanced Promotional Banner */}
+                <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-2 mb-3">
+                      <span className="text-3xl animate-bounce">🎉</span>
+                      <h3 className="text-2xl font-bold">NEW: Revolutionary Tech Suite 2025</h3>
+                      <span className="text-3xl animate-bounce">🚀</span>
+                    </div>
+                    <p className="text-xl opacity-90 mb-6">
+                      Experience the future with Quantum Computing, Autonomous Systems, Space Technology, Neural Interfaces, and more!
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      <a href="/pages/QuantumComputingRevolution2025" className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                        ⚛️ Quantum Computing →
+                      </a>
+                      <a href="/pages/AutonomousSystemsShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                        🤖 Autonomous Systems →
+                      </a>
+                      <a href="/pages/SpaceTechnologySolutions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                        🚀 Space Technology →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Secondary Promotional Banner */}
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 mb-8 text-white text-center">
+                  <div className="flex items-center justify-center space-x-2 mb-2">
+                    <span className="text-2xl">🔄</span>
+                    <h3 className="text-xl font-bold">Digital Transformation Hub 2025</h3>
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <p className="text-lg opacity-90 mb-4">
+                    Accelerate your digital transformation with our proven 5-step methodology
+                  </p>
+                  <a href="/pages/DigitalTransformationHub2025" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    Start Transformation →
+                  </a>
+=======
                 {/* Multiple Promotional Banners */}
                 <div className="space-y-4 mb-8">
                   {/* Banner 1 */}
@@ -77,6 +127,7 @@ export default function App(): JSX.Element {
                       Experience Quantum Power →
                     </a>
                   </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d749
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -91,6 +142,10 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
+                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                      ⚛️ Quantum Computing
+=======
                     <a href="/pages/RevolutionaryTechSolutions2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                       🚀 Revolutionary Solutions
                     </a>
@@ -102,6 +157,7 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                       🎯 All Services
+>>>>>>> origin/cursor/create-and-deploy-new-content-d749
                     </a>
                     <a href="/pages/AutonomousSystemsShowcase2025" className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       🤖 Autonomous Systems
@@ -109,8 +165,22 @@ export default function App(): JSX.Element {
                     <a href="/pages/SpaceTechnologySolutions2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       🚀 Space Technology
                     </a>
+<<<<<<< HEAD
+                    <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      🧠 Next-Gen Tech
+                    </a>
+                    <a href="/pages/EnterpriseAISolutions2025" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      🏢 Enterprise AI
+                    </a>
+                    <a href="/pages/DigitalTransformationHub2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      🔄 Digital Transformation
+                    </a>
+                    <a href="/pages/ComprehensiveServices2025" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                      📋 All Services
+=======
                     <a href="/pages/FutureTechTrends2025" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       🔮 Future Trends
+>>>>>>> origin/cursor/create-and-deploy-new-content-d749
                     </a>
                     <a href="/pages/BlogPost2025" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       📰 Latest Blog
@@ -121,8 +191,33 @@ export default function App(): JSX.Element {
                 {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
+<<<<<<< HEAD
+                    <h2 className="text-3xl font-bold mb-4">🌟 Featured: Revolutionary Technology 2025</h2>
+                    <p className="text-lg opacity-90">Discover our latest innovations that are reshaping industries</p>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
+                      <div className="text-3xl mb-3">⚛️</div>
+                      <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
+                      <p className="text-sm opacity-90 mb-4">Exponential computational power for impossible problems</p>
+                      <a href="/pages/QuantumComputingRevolution2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Quantum →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
+                      <div className="text-3xl mb-3">🤖</div>
+                      <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>
+                      <p className="text-sm opacity-90 mb-4">Self-learning systems that operate independently</p>
+                      <a href="/pages/AutonomousSystemsShowcase2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">View Autonomous →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
+                      <div className="text-3xl mb-3">🚀</div>
+                      <h3 className="text-xl font-semibold mb-2">Space Technology</h3>
+                      <p className="text-sm opacity-90 mb-4">Satellite networks and interplanetary solutions</p>
+                      <a href="/pages/SpaceTechnologySolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Reach for Stars →</a>
+                    </div>
+=======
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Featured: Revolutionary Technology 2025</h2>
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
+>>>>>>> origin/cursor/create-and-deploy-new-content-d749
                   </div>
                   <DynamicContentCarousel />
                 </div>
@@ -351,9 +446,18 @@ export default function App(): JSX.Element {
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
           <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
+<<<<<<< HEAD
+          <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+          <Route path="/pages/EnterpriseAISolutions2025" element={<EnterpriseAISolutions2025 />} />
+          <Route path="/pages/DigitalTransformationHub2025" element={<DigitalTransformationHub2025 />} />
+          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
+          <Route path="/pages/AutonomousSystemsShowcase2025" element={<AutonomousSystemsShowcase2025 />} />
+          <Route path="/pages/SpaceTechnologySolutions2025" element={<SpaceTechnologySolutions2025 />} />
+=======
           <Route path="/pages/RevolutionaryTechSolutions2025" element={<RevolutionaryTechSolutions2025 />} />
           <Route path="/pages/AIBusinessTransformation2025" element={<AIBusinessTransformation2025 />} />
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
+>>>>>>> origin/cursor/create-and-deploy-new-content-d749
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
