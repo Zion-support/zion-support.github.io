@@ -17,6 +17,22 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "production-safety-checklist-2026",
+    title: "AI 2026: Production Safety Checklist",
+    summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
+    href: "/blog/ai-2026-production-safety-checklist",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-slos-2026",
+    title: "AI 2026: Agent Platform SLOs That Matter",
+    summary: "Safety, quality, reliability, and economics SLOs for agent platforms.",
+    href: "/content/ai-2026-agent-platform-slos",
+    tag: "SLOs",
+    date: "2025-09-15",
+  },
+  {
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
