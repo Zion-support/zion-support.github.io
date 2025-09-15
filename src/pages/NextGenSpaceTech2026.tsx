@@ -1,231 +1,241 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const NextGenSpaceTech2026: React.FC = () => {
+  const [currentTech, setCurrentTech] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const spaceTechnologies = [
+    {
+      title: "Warp Drive Technology",
+      description: "Revolutionary faster-than-light travel using space-time manipulation, enabling instant travel across the galaxy.",
+      icon: "🌌",
+      capabilities: ["FTL Travel", "Space-Time Warping", "Instant Transportation", "Galactic Exploration"],
+      color: "from-blue-500 to-indigo-500",
+      status: "Operational"
+    },
+    {
+      title: "Dyson Sphere Construction",
+      description: "Massive megastructures that harness the entire energy output of stars, providing unlimited power for civilizations.",
+      icon: "☀️",
+      capabilities: ["Star Energy Harvesting", "Megastructure Engineering", "Unlimited Power", "Civilization Scaling"],
+      color: "from-yellow-500 to-orange-500",
+      status: "In Development"
+    },
+    {
+      title: "Quantum Teleportation",
+      description: "Instant matter and energy transfer across unlimited distances using quantum entanglement principles.",
+      icon: "⚡",
+      capabilities: ["Instant Matter Transfer", "Quantum Entanglement", "Unlimited Range", "Energy Conservation"],
+      color: "from-purple-500 to-pink-500",
+      status: "Testing Phase"
+    },
+    {
+      title: "Stellar Engineering",
+      description: "Direct manipulation and control of stars themselves, creating artificial solar systems and controlling stellar evolution.",
+      icon: "⭐",
+      capabilities: ["Star Manipulation", "Solar System Creation", "Stellar Evolution Control", "Artificial Worlds"],
+      color: "from-red-500 to-rose-500",
+      status: "Research Phase"
+    }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentTech((prev) => (prev + 1) % spaceTechnologies.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [spaceTechnologies.length]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      {/* Animated Starfield Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/30 to-indigo-900/50"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60 animate-pulse"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-6 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-black rounded-full text-lg font-bold mb-6 animate-pulse">
-            🚀 NEXT-GEN SPACE TECH • 2026
+        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 backdrop-blur-sm rounded-full text-lg font-bold mb-8 animate-pulse border border-white/20">
+            🚀 NEXT-GEN SPACE TECH 2026 • GALACTIC BREAKTHROUGH
           </div>
-          <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Next-Generation Space Technology
+          <h1 className="text-8xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+            Next-Generation
+            <br />
+            <span className="text-6xl">Space Technology</span>
           </h1>
-          <p className="text-3xl text-gray-200 max-w-6xl mx-auto mb-8">
-            Explore the universe with revolutionary space technologies that make interplanetary travel, space colonization, and cosmic exploration a reality. The future of humanity lies among the stars.
+          <p className="text-2xl max-w-4xl mx-auto opacity-90 leading-relaxed">
+            Explore the most advanced space technologies ever conceived. From warp drives to Dyson spheres, 
+            witness humanity's journey to become a galactic civilization.
           </p>
         </div>
 
-        {/* Revolutionary Space Technologies */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-cyan-300">Quantum Propulsion</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary propulsion systems that enable faster-than-light travel and interplanetary exploration
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Faster-than-light travel</li>
-              <li>• Zero-fuel propulsion</li>
-              <li>• Interstellar navigation</li>
-              <li>• Quantum drive systems</li>
-            </ul>
-          </div>
+        {/* Interactive Technology Showcase */}
+        <div className="max-w-7xl mx-auto mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Technology Display */}
+            <div className="relative">
+              <div className={`bg-gradient-to-br ${spaceTechnologies[currentTech].color}/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20 transition-all duration-700 transform hover:scale-105`}>
+                <div className="text-center mb-8">
+                  <div className="text-8xl mb-6 animate-bounce">{spaceTechnologies[currentTech].icon}</div>
+                  <div className="flex items-center justify-center space-x-4 mb-4">
+                    <h2 className="text-4xl font-bold">{spaceTechnologies[currentTech].title}</h2>
+                    <span className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                      spaceTechnologies[currentTech].status === 'Operational' ? 'bg-green-500/20 text-green-300' :
+                      spaceTechnologies[currentTech].status === 'In Development' ? 'bg-yellow-500/20 text-yellow-300' :
+                      spaceTechnologies[currentTech].status === 'Testing Phase' ? 'bg-blue-500/20 text-blue-300' :
+                      'bg-purple-500/20 text-purple-300'
+                    }`}>
+                      {spaceTechnologies[currentTech].status}
+                    </span>
+                  </div>
+                  <p className="text-xl opacity-90 leading-relaxed">
+                    {spaceTechnologies[currentTech].description}
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  {spaceTechnologies[currentTech].capabilities.map((capability, index) => (
+                    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all duration-300">
+                      <span className="text-sm font-semibold">{capability}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🏗️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-purple-300">Space Habitats</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Self-sustaining space colonies and habitats that support human life in the cosmos
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Self-sustaining ecosystems</li>
-              <li>• Artificial gravity systems</li>
-              <li>• Life support technology</li>
-              <li>• Space agriculture</li>
-            </ul>
-          </div>
-
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-emerald-300">AI Space Navigation</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Advanced AI systems that navigate spacecraft and manage complex space missions autonomously
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• Autonomous navigation</li>
-              <li>• Mission planning</li>
-              <li>• Real-time adaptation</li>
-              <li>• Cosmic data analysis</li>
-            </ul>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-orange-300">Cosmic Exploration</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Advanced exploration technologies that discover new worlds and alien civilizations
-            </p>
-            <ul className="text-orange-200 space-y-2 text-sm">
-              <li>• Exoplanet discovery</li>
-              <li>• Alien life detection</li>
-              <li>• Deep space probes</li>
-              <li>• Cosmic mapping</li>
-            </ul>
+            {/* Technology Navigation */}
+            <div className="space-y-6">
+              <h3 className="text-3xl font-bold mb-8">Revolutionary Space Technologies</h3>
+              {spaceTechnologies.map((tech, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTech(index)}
+                  className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${
+                    currentTech === index
+                      ? `bg-gradient-to-r ${tech.color}/20 border-white/40 scale-105`
+                      : 'bg-white/5 border-white/20 hover:bg-white/10'
+                  }`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <span className="text-3xl">{tech.icon}</span>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="text-xl font-bold">{tech.title}</h4>
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                          tech.status === 'Operational' ? 'bg-green-500/20 text-green-300' :
+                          tech.status === 'In Development' ? 'bg-yellow-500/20 text-yellow-300' :
+                          tech.status === 'Testing Phase' ? 'bg-blue-500/20 text-blue-300' :
+                          'bg-purple-500/20 text-purple-300'
+                        }`}>
+                          {tech.status}
+                        </span>
+                      </div>
+                      <p className="text-sm opacity-80 line-clamp-2">{tech.description}</p>
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Space Mission Capabilities */}
-        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
+        <div className="bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold mb-6">🌟 Revolutionary Space Missions</h2>
-            <p className="text-2xl text-gray-200">Discover the unprecedented space exploration capabilities of our next-generation technology</p>
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              Galactic Mission Capabilities
+            </h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Revolutionary technologies enabling unprecedented space exploration and colonization
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">🚀 Mars Colonization</h3>
-                <p className="text-gray-200 mb-4">Establish permanent human settlements on Mars with our advanced space technology</p>
-                <ul className="text-gray-300 space-y-1 text-sm">
-                  <li>• Terraforming capabilities</li>
-                  <li>• Atmospheric generation</li>
-                  <li>• Water extraction systems</li>
-                  <li>• Sustainable agriculture</li>
-                </ul>
-              </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">🌙 Lunar Bases</h3>
-                <p className="text-gray-200 mb-4">Build permanent lunar bases that serve as launch pads for deeper space exploration</p>
-                <ul className="text-gray-300 space-y-1 text-sm">
-                  <li>• Lunar habitat construction</li>
-                  <li>• Helium-3 mining</li>
-                  <li>• Space manufacturing</li>
-                  <li>• Launch facility development</li>
-                </ul>
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold mb-3">Planet Terraforming</h3>
+              <p className="text-sm opacity-90">
+                Transform any planet into a habitable world within days using advanced atmospheric engineering
+              </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-emerald-400">🪐 Outer Planet Exploration</h3>
-                <p className="text-gray-200 mb-4">Explore the outer planets and their moons with advanced robotic missions</p>
-                <ul className="text-gray-300 space-y-1 text-sm">
-                  <li>• Jupiter moon exploration</li>
-                  <li>• Saturn ring analysis</li>
-                  <li>• Neptune atmosphere study</li>
-                  <li>• Pluto surface mapping</li>
-                </ul>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-4">🛸</div>
+              <h3 className="text-xl font-bold mb-3">Interstellar Travel</h3>
+              <p className="text-sm opacity-90">
+                Travel between star systems in hours using revolutionary warp drive technology
+              </p>
+            </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4 text-yellow-400">⭐ Interstellar Travel</h3>
-                <p className="text-gray-200 mb-4">Journey to nearby star systems and explore exoplanets in our galactic neighborhood</p>
-                <ul className="text-gray-300 space-y-1 text-sm">
-                  <li>• Proxima Centauri missions</li>
-                  <li>• Exoplanet exploration</li>
-                  <li>• Alien life search</li>
-                  <li>• Galactic mapping</li>
-                </ul>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-4">🏗️</div>
+              <h3 className="text-xl font-bold mb-3">Space Construction</h3>
+              <p className="text-sm opacity-90">
+                Build massive space stations and megastructures using autonomous construction drones
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-5xl mb-4">🔬</div>
+              <h3 className="text-xl font-bold mb-3">Exoplanet Research</h3>
+              <p className="text-sm opacity-90">
+                Discover and analyze habitable worlds across the galaxy using advanced scanning technology
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Space Technology Applications */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold mb-6">🌍 Earth-Space Integration</h2>
-            <p className="text-2xl text-gray-200">How our space technology benefits life on Earth and enables cosmic expansion</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-              <h3 className="text-2xl font-bold mb-4 text-cyan-300">🌍 Earth Monitoring</h3>
-              <p className="text-gray-200 mb-6">Advanced satellite systems that monitor Earth's climate, resources, and environmental changes</p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Climate change tracking</li>
-                <li>• Natural disaster prediction</li>
-                <li>• Resource monitoring</li>
-                <li>• Environmental protection</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
-              <h3 className="text-2xl font-bold mb-4 text-purple-300">🛰️ Space Manufacturing</h3>
-              <p className="text-gray-200 mb-6">Manufacturing facilities in space that produce materials impossible to create on Earth</p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Zero-gravity manufacturing</li>
-                <li>• Advanced materials production</li>
-                <li>• Space-based research</li>
-                <li>• Clean energy generation</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
-              <h3 className="text-2xl font-bold mb-4 text-emerald-300">🌌 Cosmic Communication</h3>
-              <p className="text-gray-200 mb-6">Revolutionary communication systems that enable instant contact across vast cosmic distances</p>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Quantum communication</li>
-                <li>• Interplanetary internet</li>
-                <li>• Deep space communication</li>
-                <li>• Alien contact protocols</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Future Vision */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            The Future is Among the Stars
+        {/* Future Vision Section */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            The Future of Humanity in Space
           </h2>
-          <p className="text-2xl text-gray-200 max-w-5xl mx-auto mb-8">
-            Humanity's destiny lies in the cosmos. Our next-generation space technology makes it possible to explore, colonize, and thrive among the stars. The universe is our new frontier, and the possibilities are infinite.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Quantum Tech →
-            </a>
-            <a href="/pages/RevolutionaryAIBreakthrough2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Discover AI Revolution →
-            </a>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-6xl mb-4">🌌</div>
+              <h3 className="text-2xl font-bold mb-4">Galactic Empire</h3>
+              <p className="opacity-90">
+                Human civilization spreading across the galaxy, establishing colonies on thousands of worlds
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-6xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold mb-4">AI-Human Partnership</h3>
+              <p className="opacity-90">
+                Advanced AI systems working alongside humans to explore and colonize the universe
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-6xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold mb-4">Energy Abundance</h3>
+              <p className="opacity-90">
+                Unlimited clean energy from stellar engineering powering advanced civilizations
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-12 text-center border border-cyan-400/30">
-          <h3 className="text-4xl font-bold mb-6 text-cyan-300">Ready to Explore the Cosmos?</h3>
-          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Join us in the next chapter of human exploration. Our revolutionary space technology is ready to take you beyond Earth and into the infinite possibilities of the universe.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a href="/pages/UltimateTechShowcase2025" className="bg-white text-cyan-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
-              🚀 Ultimate Tech Showcase
-            </a>
-            <a href="/pages/RevolutionaryTechInsights2025" className="border-2 border-white text-white px-12 py-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-xl">
-              🔮 Tech Insights
-            </a>
-            <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
-              🧠 Synthetic AI
-            </a>
-          </div>
-        </motion.div>
-=======
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Explore the Cosmos?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join us in the greatest adventure in human history. The universe is waiting, 
-            and the future of space exploration starts with you.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Join Mission
-            </button>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Learn More
-            </button>
+          <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12">
+            <h2 className="text-4xl font-bold mb-6">Ready to Explore the Galaxy?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join the next generation of space exploration and colonization
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors">
+                Start Your Space Journey
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-indigo-600 transition-colors">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </div>
