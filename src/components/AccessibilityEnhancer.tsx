@@ -157,7 +157,16 @@ export function AccessibilityEnhancer() {
           (footer as HTMLElement).focus();
           announce('Moved to footer');
         }
-=======
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [announce]);
+
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
     focusIndicator: true,
     screenReader: false
   });
@@ -468,7 +477,7 @@ export function AccessibilityEnhancer() {
         ))}
       </div>
     </>
-=======
+    /*
     // Enhance focus management
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
@@ -485,6 +494,7 @@ export function AccessibilityEnhancer() {
       }
     });
   }, []);
+    */
 
   const enhanceFormAccessibility = useCallback(() => {
     const forms = document.querySelectorAll('form');
@@ -759,7 +769,6 @@ export function AccessibilityEnhancer() {
         </p>
       </div>
     </div>
->>>>>>> origin/performance-accessibility-improvements
   );
 }
 
