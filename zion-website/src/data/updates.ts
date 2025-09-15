@@ -7,7 +7,6 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-<<<<<<< HEAD
   // Added 2025-09-15 (new content)
   {
     title: 'Blueprint: Agent Budgeting & Cost Controls (2026)',
@@ -18,9 +17,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Blueprint'
   },
   // Added 2025-09-15 (brand new content)
-=======
-  // Added 2025-09-15 (latest content)
->>>>>>> 2cbdd8d6972697f454837b5bb7e85b831d603f91
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
@@ -29,7 +25,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
   // Newly added 2025-09-15 (to advertise on homepage)
   {
     title: 'Report: Enterprise Retrieval Observability (2026)',
@@ -44,26 +39,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-=======
-  // Added 2025-09-15 (new content created now)
-  {
-    title: 'Launch: Autonomous Security Copilot v1.0',
-    summary:
-      'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
-    href: '/updates/autonomous-security-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Production Guardrails for Tool Use (2026)',
-    summary:
-      'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
-    href: '/updates/production-guardrails-tool-use-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  // Added 2025-09-15 (brand new content)
->>>>>>> 2cbdd8d6972697f454837b5bb7e85b831d603f91
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
