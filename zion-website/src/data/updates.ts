@@ -16,6 +16,22 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Trustworthy Model Routing (2026 Preview)',
+    summary:
+      'Policy-aware routing with eval signals and budgets for safer, cheaper, faster generations.',
+    href: '/updates/trustworthy-model-routing-2026',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent SLO Dashboards',
+    summary:
+      'Define and track SLOs for quality, latency, and safety across agent fleets with live telemetry.',
+    href: '/updates/enterprise-agent-slo-dashboards',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Report: AI Lab Open Benchmarks Portal',
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
