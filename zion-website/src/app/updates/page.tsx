@@ -1,5 +1,8 @@
 "use client"
+<<<<<<< HEAD
 import React from 'react'
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9e3
 import { siteUpdates } from '../../data/updates'
 
 export default function UpdatesPage() {
@@ -19,15 +22,19 @@ export default function UpdatesPage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {siteUpdates
               .slice()
-              .sort((a, b) => (a.date < b.date ? 1 : -1))
+              .sort((a, b) => (a.date && b.date ? (a.date < b.date ? 1 : -1) : 0))
               .map((item) => (
               <article
                 key={item.href}
                 className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 text-xs text-gray-400">
-                  <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">{item.tag}</span>
-                  <time dateTime={item.date}>{new Date(item.date).toLocaleDateString()}</time>
+                  {item.tag && (
+                    <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">{item.tag}</span>
+                  )}
+                  {item.date && (
+                    <time dateTime={item.date}>{new Date(item.date).toLocaleDateString()}</time>
+                  )}
                 </div>
                 <h2 className="mt-3 text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">

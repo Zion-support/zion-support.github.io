@@ -104,11 +104,27 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-    title: 'Course: Web3 Fundamentals Track',
+    title: 'Launch: Mentor Office Hours',
     summary:
-      'Hands-on introduction to wallets, smart contracts, tokens, and decentralized applications.',
-    href: '/updates/web3-fundamentals-track',
+      'Weekly live sessions with expert mentors for Q&A, portfolio reviews, and roadmap guidance.',
+    href: '/updates/mentor-office-hours',
     date: '2025-09-15',
+    tag: 'Community'
+  },
+  {
+    title: 'Feature: Progress Streaks and Badges',
+    summary:
+      'Stay motivated with learning streaks and new achievement badges across courses and labs.',
+    href: '/updates/progress-streaks-badges',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
+    title: 'Course Update: AI Fundamentals v2.1',
+    summary:
+      'Refreshed modules on contrastive learning, retrieval patterns, and production evals with labs.',
+    href: '/updates/ai-fundamentals-v2-1',
+    date: '2025-09-14',
     tag: 'Course'
   },
   {
@@ -142,14 +158,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-production-patterns',
     date: '2025-09-15',
     tag: 'Guide'
-  },
-  {
-    title: 'Launch: Agentic Evals Blueprint (v1)',
-    summary:
-      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.',
-    href: '/updates/agentic-evals-blueprint',
-    date: '2025-09-15',
-    tag: 'Launch'
   },
   {
     title: 'Case Study: 38% Cost Reduction with Retrieval-Augmented Agents',
@@ -191,14 +199,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Community'
   }
   ,
-  {
-    title: 'Blueprint: Agentic Evals Blueprint (v1)',
-    summary:
-      'Evaluation-first framework with quality gates, task suites, and policy-as-code for agents.',
-    href: '/updates/agentic-evals-blueprint',
-    date: '2025-09-15',
-    tag: 'Blueprint'
-  },
   {
     title: 'Case Study: RAG Agents Reduce MTTR by 42%',
     summary:
