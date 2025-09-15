@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Production-safe logging utility
 =======
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 =======
 // Production logger utility
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -84,6 +87,7 @@ class ProductionLogger {
       console.warn('Failed to send log to remote endpoint:', error);
     }
   }
+<<<<<<< HEAD
 
   error(message: string, data?: any): void {
     if (!this.shouldLog('ERROR')) return;
@@ -348,3 +352,7 @@ export const exportLogs = (): string => {
 export default logger;
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
