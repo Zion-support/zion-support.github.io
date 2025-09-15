@@ -60,8 +60,6 @@ import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 <<<<<<< HEAD
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
@@ -196,16 +194,7 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 Synthetic AI →
-=======
->>>>>>> 6bf7e1754f2c9616f1197f535755746e28edc395
-                      </a>
-                      <a href="/pages/NextGenTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🚀 Next-Gen Showcase 2026 →
-                      </a>
 <<<<<<< HEAD
-                      <a href="/pages/EnhancedContentShowcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🌟 Enhanced Showcase →
->>>>>>> df1ae652825cf0aad03f4f2c81f7b3bd32b53561
 =======
                     </div>
                     <div className="mt-6">
@@ -663,7 +652,7 @@ export default function App(): JSX.Element {
                 {/* Enhanced Content Advertising */}
 >>>>>>> df1ae652825cf0aad03f4f2c81f7b3bd32b53561
                 <div className="mb-12">
-                  <EnhancedContentAdvertising />
+                  <RevolutionaryContentShowcase />
                 </div>
 
 <<<<<<< HEAD
@@ -1232,6 +1221,7 @@ export default function App(): JSX.Element {
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
