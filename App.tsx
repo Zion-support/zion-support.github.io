@@ -60,6 +60,9 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import UltimateTechInsights2026 from './src/pages/UltimateTechInsights2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import ContentDiscovery2026 from './src/components/ContentDiscovery2026';
+import FuturisticAdvertising2027 from './src/components/FuturisticAdvertising2027';
+import FutureTechInnovation2027 from './src/pages/FutureTechInnovation2027';
+import ConsciousnessComputing2027 from './src/pages/ConsciousnessComputing2027';
 
 export default function App(): JSX.Element {
   return (
@@ -124,6 +127,12 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Robotics →
+                      </a>
+                      <a href="/pages/FutureTechInnovation2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 Future Tech 2027 →
+                      </a>
+                      <a href="/pages/ConsciousnessComputing2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧠 Consciousness AI →
                       </a>
                     </div>
                   </div>
@@ -262,6 +271,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/FutureTechTrends2026" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Future Tech Trends 2026 →
+                    </a>
+                    <a href="/pages/FutureTechInnovation2027" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🚀 Future Tech Innovation 2027 →
+                    </a>
+                    <a href="/pages/ConsciousnessComputing2027" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 Consciousness Computing 2027 →
                     </a>
                   </div>
                 </div>
@@ -716,6 +731,11 @@ export default function App(): JSX.Element {
                   <ContentDiscovery2026 />
                 </div>
 
+                {/* Futuristic Advertising 2027 */}
+                <div className="mb-12">
+                  <FuturisticAdvertising2027 />
+                </div>
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -814,6 +834,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/UltimateTechInsights2026" element={<UltimateTechInsights2026 />} />
+          <Route path="/pages/FutureTechInnovation2027" element={<FutureTechInnovation2027 />} />
+          <Route path="/pages/ConsciousnessComputing2027" element={<ConsciousnessComputing2027 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
