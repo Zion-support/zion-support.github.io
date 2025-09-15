@@ -191,6 +191,24 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Promo: New Article - Autonomous Finance Agents 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Autonomous Finance Agents — From FP&A to Real-Time Treasury</h3>
+                <p className="text-gray-600 max-w-2xl">Autonomous agents are transforming finance with continuous close, real-time forecasting, and risk-aware treasury automation.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-autonomous-finance-agents" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                  Read Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* New Blog Highlights - September 2025 */}
         <section className="py-12 bg-white">
