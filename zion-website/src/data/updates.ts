@@ -18,6 +18,22 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (late night batch)
   {
+    title: 'Launch: AI Governance Dashboard v4',
+    summary:
+      'Cross‑env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails.',
+    href: '/updates/ai-governance-dashboard-v4',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Feature: Agent Evidence Bundles v1.1',
+    summary:
+      'Trace‑aligned guardrails and evals, SOC2/ISO export profiles, and tamper‑evident signed manifests.',
+    href: '/updates/agent-evidence-bundles-v1-1',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
     title: 'Launch: Autonomous Knowledge Ops Suite v1.0',
     summary:
       'Governed content lifecycle with eval-gated drafts, reviews, and audit-ready publishing.',
