@@ -1,6 +1,6 @@
 content_index:
-  last_updated: "2025-01-17"
-  total_content_pieces: 20
+  last_updated: "2025-09-15"
+  total_content_pieces: 23
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -398,52 +398,7 @@ content_index:
         phases: "3 phases"
         payback: "3.8 months"
 
-  new_resources:
-    - id: "ai-transformation-checklist-2025"
-      type: "resource"
-      title: "AI Transformation Checklist 2025 - Complete Implementation Guide"
-      file_path: "/content/resources/ai-transformation-checklist-2025.md"
-      url: "/resources/ai-transformation-checklist-2025"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Resource", "AI Transformation", "Checklist", "Implementation", "Guide"]
-      featured: true
-      is_new: true
-      metrics:
-        downloads: "1000+"
-        success_rate: "95%"
-        implementation_time: "6-12 months"
-        roi: "300-500%"
-
   newly_added_september_2025:
-    - id: "ai-2026-eval-driven-release-engineering"
-      type: "blog"
-      title: "AI 2026: Eval-Driven Release Engineering"
-      file_path: "/app/blog/ai-2026-eval-driven-release-engineering/page.tsx"
-      url: "/blog/ai-2026-eval-driven-release-engineering"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Reliability", "Evals", "Policy-as-Code", "Progressive Delivery", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        reliability: "99.9%"
-        gated_releases: true
-        rollback_time: "< 5 min"
-    - id: "ai-2026-fail-safe-architectures"
-      type: "architecture"
-      title: "AI 2026: Fail-Safe Architectures for Autonomous Agents"
-      file_path: "/app/content/ai-2026-fail-safe-architectures/page.tsx"
-      url: "/content/ai-2026-fail-safe-architectures"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Architecture", "Safety", "Zero-Trust", "Isolation", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        incident_prevention: "99.9%"
-        risk_reduction: "65%"
-        mttr: "< 10 min"
     - id: "ai-2026-autonomous-enterprise-blueprint"
       type: "blueprint"
       title: "AI 2026: Autonomous Enterprise Blueprint"
@@ -486,66 +441,48 @@ content_index:
         reliability: "99.9%"
         gated_releases: true
         audit_ready: true
-    - id: "ai-2026-production-safety-checklist"
-      type: "checklist"
-      title: "AI 2026: Production Safety Checklist"
-      file_path: "/app/content/ai-2026-production-safety-checklist/page.tsx"
-      url: "/content/ai-2026-production-safety-checklist"
+    - id: "ai-2026-agent-incident-response-playbook"
+      type: "playbook"
+      title: "AI 2026: Agent Incident Response Playbook"
+      file_path: "/content/blog/ai-2026-agent-incident-response-playbook.md"
+      url: "/content/ai-2026-agent-incident-response-playbook"
       status: "published"
       created: "2025-09-15"
-      tags: ["Safety", "Production", "Evals", "Policy-as-Code", "2026"]
+      tags: ["Operations", "Reliability", "Incident Response", "Agents", "2026"]
       featured: true
       is_new: true
       metrics:
-        reliability: "99.9%"
-        incidents_reduction: "40%"
+        mttr_reduction: "45%"
+        automation: "eval-gated"
         audit_ready: true
-    - id: "ai-2026-cost-optimization-blueprint"
-      type: "blueprint"
-      title: "AI 2026: Cost Optimization Blueprint"
-      file_path: "/app/content/ai-2026-cost-optimization-blueprint/page.tsx"
-      url: "/content/ai-2026-cost-optimization-blueprint"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Cost", "Optimization", "Production", "ROI", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        cost_reduction: "35-60%"
-        payback: "< 3 months"
-        uptime: "99.9%"
-
-    - id: "ai-2026-zero-trust-agent-architecture"
-      type: "architecture"
-      title: "AI 2026: Zero-Trust Agent Architecture"
-      file_path: "/app/content/ai-2026-zero-trust-agent-architecture/page.tsx"
-      url: "/content/ai-2026-zero-trust-agent-architecture"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Security", "Zero-Trust", "Policy-as-Code", "Isolation", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        incident_prevention: "99.9%"
-        risk_reduction: "65%"
-        approval_speed: "2x"
-        audit_coverage: "100%"
-
-    - id: "ai-2026-privacy-preserving-agents"
+    - id: "ai-2026-end-to-end-eval-pipelines"
       type: "blog"
-      title: "AI 2026: Privacy-Preserving Agents"
-      file_path: "/app/blog/ai-2026-privacy-preserving-agents/page.tsx"
-      url: "/blog/ai-2026-privacy-preserving-agents"
+      title: "AI 2026: End-to-End Evaluation Pipelines"
+      file_path: "/content/blog/ai-2026-end-to-end-eval-pipelines.md"
+      url: "/blog/ai-2026-end-to-end-eval-pipelines"
       status: "published"
       created: "2025-09-15"
-      tags: ["Privacy", "Confidential Computing", "Redaction", "Local-First", "2026"]
+      tags: ["Evaluation", "Pipelines", "Governance", "Reliability", "2026"]
       featured: true
       is_new: true
       metrics:
-        pii_reduction: "80%"
-        on_device_processing: "95%"
-        encrypted_in_transit: "100%"
-        audit_coverage: "99.9%"
+        release_speed: "2x"
+        rollback: "automatic"
+        risk_reduction: "60%"
+    - id: "ai-2026-secure-tooling-permissions-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Secure Tooling Permissions Blueprint"
+      file_path: "/content/pages/ai-2026-secure-tooling-permissions-blueprint.md"
+      url: "/content/ai-2026-secure-tooling-permissions-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Permissions", "Policy-as-Code", "Sandboxing", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents_reduction: "40%"
+        permissions: "time-boxed"
+        audits: "continuous"
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
@@ -612,22 +549,19 @@ content_index:
     component: "HomePage"
     file_path: "/app/page.tsx"
     changes:
-      - "Added NewContent2025UltimateBanner at top of homepage"
-      - "Added NewContentShowcase2025 in content promotion section"
-      - "Integrated new promotional components with existing banners"
-      - "Updated layout to prominently feature new content"
-      - "Added comprehensive content showcase with metrics"
-      - "Implemented interactive content discovery and filtering"
+      - "Added compact promos for Incident Response, Eval Pipelines, and Secure Tooling"
+      - "Integrated links to new blog and blueprint pages"
+      - "Updated last_updated and counts to reflect new content"
 
   metrics:
-    expected_roi_mentions: 45
+    expected_roi_mentions: 48
     success_stories: 8
     implementation_guides: 6
-    blog_posts: 10
-    total_word_count: "~85,000 words"
-    estimated_reading_time: "~340 minutes"
+    blog_posts: 12
+    total_word_count: "~86,000 words"
+    estimated_reading_time: "~345 minutes"
     new_content_roi_highlights: "600% ROI featured prominently across all content"
     promotional_components: 10
-    homepage_integration: "Complete with comprehensive showcase and advanced automation focus"
+    homepage_integration: "Complete with three new compact promos"
     new_2025_content_pieces: 3
     advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
