@@ -110,6 +110,19 @@ export default function HomePage() {
 
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
+        <div className="mb-8 rounded-2xl bg-blue-600/10 border border-blue-500/30 px-6 py-4 text-blue-200">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <p className="text-sm">
+              New: Explore our latest content, courses, and launches in Updates.
+            </p>
+            <a
+              href="/updates"
+              className="inline-flex items-center justify-center rounded-md bg-blue-600 px-3.5 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors duration-200"
+            >
+              View Updates
+            </a>
+          </div>
+        </div>
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
