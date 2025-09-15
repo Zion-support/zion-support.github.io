@@ -412,6 +412,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/production-guardrails-autonomous-agents-2026.jpg",
     slug: "ai-2026-production-guardrails-for-autonomous-agents"
   }
+  ,
+  {
+    id: 18,
+    title: "AI 2026: Real-Time Guardrails for Autonomous Agents",
+    excerpt: "Design action gating, safety envelopes, and rollback paths without slowing outcomes.",
+    content: "Enterprises need agent guardrails that keep outcomes safe without adding friction. This guide covers real-time policy checks, dynamic safety envelopes, red lines, responsiveness budgets, human-in-the-loop escalation, and rollback strategies integrated with CI/CD and runtime.",
+    author: "Morgan Reyes",
+    authorRole: "Head of Responsible AI Engineering",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Safety",
+    tags: ["Guardrails", "Policy-as-Code", "Safety", "Agents"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-guardrails-2026.jpg",
+    slug: "ai-2026-real-time-guardrails-for-agents"
+  },
+  {
+    id: 19,
+    title: "AI 2026: Agent FinOps – Cost Control for Autonomous Workflows",
+    excerpt: "Tame inference spend with budgets, rate limits, caching, and value-based routing.",
+    content: "As agents scale, cost control becomes strategic. We outline value-based routing across models, prompt and retrieval caching, token budgets, adaptive truncation, multi-tenant guardrails, and finance integration to deliver predictable unit economics for autonomous workflows.",
+    author: "Sophia Patel",
+    authorRole: "Director of AI Platform",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "FinOps",
+    tags: ["FinOps", "Cost Optimization", "Caching", "Routing"],
+    featured: true,
+    imageUrl: "/images/blog/agent-finops-2026.jpg",
+    slug: "ai-2026-agent-finops-cost-optimization"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
