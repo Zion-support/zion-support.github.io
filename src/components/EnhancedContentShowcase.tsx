@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentShowcase: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
 <<<<<<< HEAD
@@ -112,28 +112,25 @@ const EnhancedContentShowcase: React.FC = () => {
   const contentSlides = [
     {
       id: 1,
-      title: "Advanced Quantum Computing 2026",
-      description: "Experience exponential processing power with our revolutionary quantum computing platform",
-      image: "⚡",
-      gradient: "from-cyan-500 to-blue-500",
-      bgGradient: "from-cyan-600/30 to-blue-600/30",
-      borderColor: "border-cyan-400/30",
-      link: "/pages/AdvancedQuantumComputing2026",
-      features: ["1000+ Qubits", "Quantum Supremacy", "Molecular Simulation", "Quantum AI"]
+      title: "Next-Gen AI Solutions",
+      description: "Revolutionary AI technologies transforming industries with autonomous agents and predictive analytics",
+      image: "🤖",
+      gradient: "from-slate-600 to-gray-600",
+      link: "/pages/NextGenAISolutions2025",
+      features: ["Autonomous AI Agents", "Real-time Processing", "Predictive Analytics"]
     },
     {
       id: 2,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct brain-computer communication technology",
-      image: "🧬",
-      gradient: "from-emerald-500 to-cyan-500",
-      bgGradient: "from-emerald-600/30 to-teal-600/30",
-      borderColor: "border-emerald-400/30",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"]
+      title: "Quantum Computing Revolution",
+      description: "Experience exponential computing power with quantum technology solving impossible problems",
+      image: "⚡",
+      gradient: "from-blue-600 to-indigo-600",
+      link: "/pages/QuantumComputingRevolution2025",
+      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation"]
     },
     {
       id: 3,
+<<<<<<< HEAD
       title: "Synthetic Intelligence 2026",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities",
       image: "🤖",
@@ -143,12 +140,30 @@ const EnhancedContentShowcase: React.FC = () => {
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+      title: "Blockchain Innovation",
+      description: "Decentralized solutions enabling trust, transparency, and new economic opportunities",
+      image: "🔗",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/BlockchainInnovation2025",
+      features: ["Layer 2 Solutions", "Zero-Knowledge Proofs", "Cross-Chain Interoperability"]
+    },
+    {
+      id: 4,
+      title: "Enterprise Solutions",
+      description: "Comprehensive enterprise-grade solutions driving digital transformation and business growth",
+      image: "🏢",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/EnterpriseSolutions2025",
+      features: ["AI-Powered Automation", "Cloud Infrastructure", "Cybersecurity Suite"]
+>>>>>>> cursor/create-and-deploy-new-content-ee06
     }
   ];
 
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
 <<<<<<< HEAD
@@ -207,25 +222,33 @@ const EnhancedContentShowcase: React.FC = () => {
 =======
 =======
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+=======
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
+>>>>>>> cursor/create-and-deploy-new-content-ee06
       }, 5000);
       return () => clearInterval(interval);
     }
-  }, [isAutoPlaying, contentSlides.length]);
+  }, [isAutoPlaying, contentItems.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
   };
 
   const prevSlide = () => {
+<<<<<<< HEAD
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
+>>>>>>> cursor/create-and-deploy-new-content-ee06
   };
 
   const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+    setCurrentIndex(index);
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -254,19 +277,28 @@ const EnhancedContentShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm"></div>
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"></div>
         
+=======
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div className="relative z-10">
+>>>>>>> cursor/create-and-deploy-new-content-ee06
         {/* Header */}
-        <div className="relative z-10 text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            🚀 REVOLUTIONARY TECHNOLOGY SHOWCASE • JANUARY 2026
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
+            ✨ FEATURED CONTENT • 2025
           </div>
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Experience the Future of Technology
-          </h2>
+          <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Showcase</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our groundbreaking innovations in quantum computing, neural interfaces, and synthetic intelligence
+            Discover our latest breakthrough content covering cutting-edge technologies that are reshaping the future
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Carousel Container */}
         <div className="relative z-10">
           <div className="relative h-96 overflow-hidden rounded-xl">
@@ -408,11 +440,35 @@ const EnhancedContentShowcase: React.FC = () => {
                     </div>
 >>>>>>> cursor/create-and-deploy-new-content-634d
                   </div>
+=======
+        {/* Main Content Carousel */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="grid md:grid-cols-2 gap-8 items-center"
+            >
+              {/* Content */}
+              <div>
+                <div className="text-6xl mb-4">{contentItems[currentIndex].image}</div>
+                <h3 className="text-3xl font-bold mb-4">{contentItems[currentIndex].title}</h3>
+                <p className="text-lg text-gray-300 mb-6">{contentItems[currentIndex].description}</p>
+                
+                <div className="space-y-2 mb-8">
+                  {contentItems[currentIndex].features.map((feature, index) => (
+                    <div key={index} className="flex items-center text-blue-300">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      {feature}
+                    </div>
+                  ))}
+>>>>>>> cursor/create-and-deploy-new-content-ee06
                 </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
 
+<<<<<<< HEAD
           {/* Navigation Controls */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -703,6 +759,81 @@ const EnhancedContentShowcase: React.FC = () => {
           </motion.div>
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+                <a
+                  href={contentItems[currentIndex].link}
+                  className={`inline-block bg-gradient-to-r ${contentItems[currentIndex].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
+                >
+                  Explore {contentItems[currentIndex].title} →
+                </a>
+              </div>
+
+              {/* Visual Element */}
+              <div className="relative">
+                <div className={`bg-gradient-to-br ${contentItems[currentIndex].gradient} rounded-2xl p-8 text-center`}>
+                  <div className="text-8xl mb-4">{contentItems[currentIndex].image}</div>
+                  <div className="text-2xl font-bold mb-2">{contentItems[currentIndex].title}</div>
+                  <div className="text-lg opacity-90">2025 Innovation</div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-pulse"></div>
+                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-cyan-400 rounded-full animate-ping"></div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+            onMouseEnter={() => setIsAutoPlaying(false)}
+            onMouseLeave={() => setIsAutoPlaying(true)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+            onMouseEnter={() => setIsAutoPlaying(false)}
+            onMouseLeave={() => setIsAutoPlaying(true)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {contentItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-white' : 'bg-white/30'
+              }`}
+              onMouseEnter={() => setIsAutoPlaying(false)}
+              onMouseLeave={() => setIsAutoPlaying(true)}
+            />
+          ))}
+        </div>
+
+        {/* Auto-play Toggle */}
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-white transition-colors"
+          >
+            <div className={`w-3 h-3 rounded-full ${isAutoPlaying ? 'bg-green-400' : 'bg-gray-400'}`}></div>
+            <span>{isAutoPlaying ? 'Auto-playing' : 'Paused'}</span>
+          </button>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-ee06
       </div>
     </div>
   );

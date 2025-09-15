@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ee06
 'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -34,6 +39,10 @@ const navigation = [
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 ]
 
+<<<<<<< HEAD
+=======
+>>>>>>> 60aabff78405a73f1a20f7e802e2036f236d650f
+>>>>>>> cursor/create-and-deploy-new-content-ee06
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (

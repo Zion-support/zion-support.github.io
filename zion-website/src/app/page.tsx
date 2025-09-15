@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import {
   ChartBarIcon,
@@ -9,6 +10,9 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
+=======
+import { getLatestUpdates } from "../data/updates"
+>>>>>>> cursor/create-and-deploy-new-content-ee06
 
 const features = [
   {
@@ -110,12 +114,27 @@ import { getLatestUpdates } from '../data/updates'
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 pt-24">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Leading the Future of{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              AI & Technology
+            </span>
+          </h1>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ee06
     <div className="bg-black">
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -135,18 +154,25 @@ export default function HomePage() {
 =======
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
+=======
+              New: Real-Time Agent Cost Controller v1.0 —
+              <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
+>>>>>>> cursor/create-and-deploy-new-content-ee06
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8472
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-ee06
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -462,6 +488,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
+<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content and announcements. Visit Updates for more.</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
@@ -558,14 +585,32 @@ export default function HomePage() {
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by leading organizations worldwide
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Our track record speaks for itself
-            </p>
+=======
+>>>>>>> 60aabff78405a73f1a20f7e802e2036f236d650f
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
+            Join the revolution that is reshaping industries worldwide.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/contact"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+            >
+              Get Started
+            </a>
+            <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              Learn More <span aria-hidden="true">→</span>
+            </a>
           </div>
+        </div>
+        
+        <div className="mt-24">
+>>>>>>> cursor/create-and-deploy-new-content-ee06
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
+            <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
+          </div>
+<<<<<<< HEAD
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
@@ -647,10 +692,25 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
+=======
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
+            {latest.map((item) => (
+              <div key={item.title} className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="text-sm text-gray-300 mb-4">{item.summary}</p>
+                <a href={item.href} className="text-sm font-semibold text-blue-400 hover:text-blue-300">
+                  Read more <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            ))}
+>>>>>>> cursor/create-and-deploy-new-content-ee06
           </div>
         </div>
       </div>
     </div>
   )
 }
-
