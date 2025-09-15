@@ -3,6 +3,9 @@ import React from 'react';
 const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-633b
   const newContent = [
     {
       title: "Trustworthy Model Routing",
@@ -98,6 +101,7 @@ const NewContentShowcase: React.FC = () => {
         >
           View All Content
         </a>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
@@ -220,6 +224,8 @@ const NewContentShowcase: React.FC = () => {
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-633b
       </div>
     </div>
   );
@@ -227,9 +233,13 @@ const NewContentShowcase: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { NewContentShowcase };
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+export { NewContentShowcase };
+>>>>>>> cursor/create-and-deploy-new-content-633b
 export default NewContentShowcase;

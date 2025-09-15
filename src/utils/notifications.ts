@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,11 +35,15 @@ interface NotificationOptions {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-633b
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -50,6 +55,8 @@ interface NotificationOptions {
   data?: any;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-633b
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -79,6 +86,7 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
@@ -252,6 +260,9 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-633b
     }
 
     try {
@@ -260,6 +271,7 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,6 +312,9 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-633b
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -313,6 +328,7 @@ class NotificationManager {
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,11 +337,14 @@ class NotificationManager {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-633b
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
@@ -526,10 +545,13 @@ export type { NotificationOptions, ToastOptions };
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-633b
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -633,3 +655,6 @@ export default notificationManager;
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-633b
