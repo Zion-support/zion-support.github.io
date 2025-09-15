@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const featuredListings = [
@@ -50,6 +50,19 @@ const featuredListings = [
     reviews: 178,
     features: ["Edge processing", "Real-time analytics", "Device management"],
     link: "/services/iot-platform"
+  },
+  // New promotional tile advertising fresh blog content
+  {
+    id: 5,
+    title: "New: AI Ops & Sustainable Cloud Guides",
+    description: "Read our latest 2025 insights on AIOps and cutting cloud emissions.",
+    category: "Latest Content",
+    price: "Free",
+    image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=400",
+    rating: 5,
+    reviews: 42,
+    features: ["AIOps 2025", "Sustainable Cloud", "Practical steps"],
+    link: "/blog"
   }
 ];
 
