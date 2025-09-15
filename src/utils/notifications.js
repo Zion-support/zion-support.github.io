@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
 // Notifications utility
 export const notifications = {
   show: (message, type = 'info') => {
@@ -23,6 +27,11 @@ export const notifications = {
   info: (message) => {
     notifications.show(message, 'info');
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 // Notifications utility for handling browser notifications
 
 export const notifications = {
@@ -89,7 +98,14 @@ export const notifications = {
       body: message,
       icon: '/favicon.ico'
     });
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d952
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
   }
 };
 
