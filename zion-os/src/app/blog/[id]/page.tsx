@@ -11,6 +11,20 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-evaluation-playbook-2025': {
+    id: 'ai-safety-evaluation-playbook-2025',
+    title: 'AI Safety Evaluation Playbook 2025: Practical Red-Team & Eval Loops',
+    excerpt:
+      'A hands-on guide to building continuous evaluation pipelines with red teaming, model/agent risk probes, and rollback policies.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Operational AI safety requires continuous evaluation, not one-off audits. This playbook shows how to wire automated probes, capture evidence, and drive fixes.',
+      'We cover eval taxonomies (safety, security, bias), dataset curation, failure reproduction, and governance hooks for product release gates.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
