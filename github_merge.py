@@ -2,6 +2,7 @@
 
 import subprocess
 import json
+import requests
 import sys
 import os
 
@@ -13,79 +14,71 @@ def run_command(cmd, timeout=30):
     except subprocess.TimeoutExpired:
         return False, "", "Command timed out"
 
+def get_open_prs():
+    """Get open PRs from GitHub API"""
+    try:
+        url = "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open"
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            print(f"Error fetching PRs: {response.status_code}")
+            return []
+    except Exception as e:
+        print(f"Error fetching PRs: {e}")
+        return []
+
 def main():
-    print("🚀 Starting PR merge process...")
+    print("🚀 Starting GitHub PR merge process...")
     
     # Change to workspace directory
     os.chdir('/workspace')
     
-    # Check current status
-    print("📊 Checking current git status...")
-    success, stdout, stderr = run_command("git status --short")
-    if success:
-        print(f"Status: {stdout}")
-    else:
-        print(f"Error: {stderr}")
+    # Get open PRs
+    print("📋 Fetching open PRs from GitHub...")
+    prs = get_open_prs()
     
-    # Ensure we're on main
-    print("🔄 Switching to main branch...")
-    success, stdout, stderr = run_command("git checkout main")
-    if not success:
-        print(f"Error switching to main: {stderr}")
+    if not prs:
+        print("❌ No open PRs found or error fetching PRs")
         return
     
-    # Pull latest changes
-    print("📥 Pulling latest changes...")
-    success, stdout, stderr = run_command("git pull origin main")
-    if not success:
-        print(f"Error pulling changes: {stderr}")
-        return
+    print(f"📊 Found {len(prs)} open PRs")
     
-    # Fetch all branches
-    print("📋 Fetching all branches...")
-    success, stdout, stderr = run_command("git fetch --all")
-    if not success:
-        print(f"Error fetching branches: {stderr}")
-        return
-    
-    # Get cursor branches
-    print("🔍 Finding cursor branches...")
-    success, stdout, stderr = run_command("git branch -r | grep 'origin/cursor/' | sed 's/origin\\///' | sort")
-    if not success:
-        print(f"Error finding branches: {stderr}")
-        return
-    
-    branches = [b.strip() for b in stdout.split('\n') if b.strip()]
-    print(f"📊 Found {len(branches)} cursor branches")
-    
-    # Process each branch
-    for branch in branches:
-        print(f"\n🔄 Processing branch: {branch}")
+    # Process each PR
+    for pr in prs:
+        pr_number = pr['number']
+        pr_title = pr['title']
+        pr_branch = pr['head']['ref']
+        pr_mergeable = pr.get('mergeable', None)
         
-        # Check if branch exists
-        success, stdout, stderr = run_command(f"git ls-remote --heads origin {branch}")
+        print(f"\n🔄 Processing PR #{pr_number}: {pr_title}")
+        print(f"   Branch: {pr_branch}")
+        print(f"   Mergeable: {pr_mergeable}")
+        
+        # Check if branch exists locally
+        success, stdout, stderr = run_command(f"git ls-remote --heads origin {pr_branch}")
         if not success:
-            print(f"❌ Branch {branch} doesn't exist, skipping...")
+            print(f"❌ Branch {pr_branch} doesn't exist, skipping...")
             continue
         
         # Check if already merged
-        success, stdout, stderr = run_command(f"git branch --merged main | grep {branch}")
+        success, stdout, stderr = run_command(f"git branch --merged main | grep {pr_branch}")
         if success:
-            print(f"⏭️  Branch {branch} already merged, skipping...")
+            print(f"⏭️  Branch {pr_branch} already merged, skipping...")
             continue
         
         # Try to merge
-        print(f"✅ Attempting to merge {branch}...")
-        success, stdout, stderr = run_command(f"git merge --no-commit --no-ff origin/{branch}")
+        print(f"✅ Attempting to merge {pr_branch}...")
+        success, stdout, stderr = run_command(f"git merge --no-commit --no-ff origin/{pr_branch}")
         
         if success:
-            print(f"✅ Successfully merged {branch}")
+            print(f"✅ Successfully merged {pr_branch}")
             # Commit the merge
-            success, stdout, stderr = run_command(f"git commit -m 'Merge {branch} into main - $(date)'")
+            success, stdout, stderr = run_command(f"git commit -m 'Merge PR #{pr_number}: {pr_title}'")
             if not success:
                 print(f"❌ Error committing merge: {stderr}")
         else:
-            print(f"⚠️  Merge conflicts in {branch}, resolving...")
+            print(f"⚠️  Merge conflicts in {pr_branch}, resolving...")
             
             # Get conflicted files
             success, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
@@ -112,9 +105,9 @@ def main():
                 success, stdout, stderr = run_command("git add .")
                 if success:
                     # Commit the merge
-                    success, stdout, stderr = run_command(f"git commit -m 'Resolve merge conflicts for {branch} - $(date)'")
+                    success, stdout, stderr = run_command(f"git commit -m 'Resolve merge conflicts for PR #{pr_number}: {pr_title}'")
                     if success:
-                        print(f"✅ Successfully resolved conflicts and merged {branch}")
+                        print(f"✅ Successfully resolved conflicts and merged {pr_branch}")
                     else:
                         print(f"❌ Error committing resolved merge: {stderr}")
                 else:
@@ -131,7 +124,7 @@ def main():
     else:
         print(f"❌ Error pushing changes: {stderr}")
     
-    print("\n🎉 PR merge process completed!")
+    print("\n🎉 GitHub PR merge process completed!")
     
     # Final status
     success, stdout, stderr = run_command("git status --short")
