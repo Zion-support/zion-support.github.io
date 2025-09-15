@@ -10,6 +10,8 @@ import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
+import NewAIUseCases2025 from './src/pages/NewAIUseCases2025';
+import EdgeAIandIoT2025 from './src/pages/EdgeAIandIoT2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
@@ -90,6 +92,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AIInnovationPlaybook2025" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                       📘 AI Playbook
+                    </a>
+                    <a href="/pages/NewAIUseCases2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      📈 AI Use Cases 2025
+                    </a>
+                    <a href="/pages/EdgeAIandIoT2025" className="bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌐 Edge AI & IoT 2025
                     </a>
                   </div>
                 </div>
@@ -327,6 +335,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
           <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
+          <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
+          <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
