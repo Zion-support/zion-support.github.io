@@ -128,6 +128,32 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Promo: Agents vs Copilots and AI Governance */}
+        <section className="py-12 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 md:grid-cols-2">
+            <div className="bg-gray-50 rounded-xl shadow p-6 flex flex-col justify-between">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">Fresh insight</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Agents vs. Autonomous Copilots (2025)</h3>
+                <p className="text-gray-600">When to deploy each, with architecture patterns and ROI benchmarks.</p>
+              </div>
+              <div className="mt-6">
+                <Link href="/blog/ai-2025-enterprise-agents-vs-autonomous-copilots" className="inline-block bg-purple-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6 flex flex-col justify-between">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New guide</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Governance Operating Models</h3>
+                <p className="text-gray-600">Policy-as-code, risk tiers, and org design to scale autonomy safely.</p>
+              </div>
+              <div className="mt-6">
+                <Link href="/blog/ai-2026-ai-governance-operating-models" className="inline-block bg-purple-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
         {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
         <AI2026QuantumRevolutionUltimateBanner />
