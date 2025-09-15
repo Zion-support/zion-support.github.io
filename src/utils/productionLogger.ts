@@ -23,6 +23,7 @@
 >>>>>>> main
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -37,6 +38,9 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -393,6 +397,7 @@ export default logger;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -409,3 +414,6 @@ export default logger;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6

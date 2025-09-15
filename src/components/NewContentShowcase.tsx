@@ -4,6 +4,7 @@ const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ const NewContentShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b15f
+=======
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
   const newContent = [
     {
       title: "Trustworthy Model Routing",
@@ -115,6 +118,9 @@ const NewContentShowcase: React.FC = () => {
         </a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
 =======
 =======
 <<<<<<< HEAD
@@ -245,6 +251,7 @@ const NewContentShowcase: React.FC = () => {
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -259,6 +266,9 @@ const NewContentShowcase: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
       </div>
     </div>
   );
@@ -283,6 +293,7 @@ export { NewContentShowcase };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -299,4 +310,7 @@ export { NewContentShowcase };
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
 export default NewContentShowcase;

@@ -30,6 +30,7 @@
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -44,6 +45,9 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
 export interface CartItem {
   id: string;
   name: string;
@@ -94,6 +98,7 @@ export const cartUtils = {
 >>>>>>> main
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -108,6 +113,9 @@ export const cartUtils = {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
     
     if (existingItem) {
@@ -224,6 +232,7 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
   // Remove item from cart
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -240,6 +249,9 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
@@ -324,6 +336,7 @@ export function calculateCartTotals(cart: Cart): Cart {
   // Calculate totals
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -340,6 +353,9 @@ export function calculateCartTotals(cart: Cart): Cart {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
@@ -419,6 +435,7 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 
   // Clear cart
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -437,6 +454,9 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
     return cart.items.some(item => item.id === itemId);
   },
 
@@ -802,6 +822,7 @@ export default {
 =======
 export default cartUtils;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -817,3 +838,6 @@ export default cartUtils;
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6

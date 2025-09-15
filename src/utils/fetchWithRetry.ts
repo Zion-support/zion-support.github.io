@@ -43,6 +43,7 @@ interface FetchWithRetryOptions {
 >>>>>>> main
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -57,6 +58,9 @@ interface FetchWithRetryOptions {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
@@ -185,6 +189,7 @@ export async function fetchWithRetry(
 >>>>>>> main
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -199,6 +204,9 @@ export async function fetchWithRetry(
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
       return response;
     } catch (error) {
       lastError = error as Error;
@@ -373,6 +381,7 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 =======
 <<<<<<< HEAD
@@ -387,6 +396,9 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
 };
 
 export default fetchWithRetry;

@@ -6,6 +6,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -103,6 +104,8 @@ const ComprehensiveTechInsights2026: React.FC = () => {
 =======
 >>>>>>> origin/feature/revolutionary-2027-content
 =======
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -113,10 +116,13 @@ const ComprehensiveTechInsights2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-be96
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-fb46
 >>>>>>> cursor/create-and-deploy-new-content-b15f
 >>>>>>> origin/feature/revolutionary-2027-content
+=======
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
   return (
     <>
       <Helmet>
@@ -362,7 +368,6 @@ const ComprehensiveTechInsights2026: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
 =======
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -676,6 +681,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
 >>>>>>> cursor/create-and-deploy-new-content-afc8
@@ -693,6 +699,11 @@ const ComprehensiveTechInsights2026: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f4f2
 >>>>>>> origin/revolutionary-content-2026
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
   );
 };
 
