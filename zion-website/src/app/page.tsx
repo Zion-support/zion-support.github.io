@@ -1,10 +1,9 @@
-import React from 'react'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 
@@ -79,6 +78,14 @@ const solutions = [
 export default function HomePage() {
   return (
     <div className="bg-black">
+      {/* Promo banner for Updates */}
+      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-3 text-center text-sm text-white">
+          <a href="/updates" className="font-semibold hover:text-blue-300">
+            New: Explore our latest Updates — courses, challenges, and learning paths →
+          </a>
+        </div>
+      </div>
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
