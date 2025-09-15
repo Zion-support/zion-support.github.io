@@ -11,6 +11,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'autonomous-research-agents-2025': {
+    id: 'autonomous-research-agents-2025',
+    title: 'Autonomous Research Agents in 2025: From Insights to Publication',
+    excerpt:
+      'How enterprises deploy autonomous research agents to synthesize literature, run experiments, and ship peer‑grade reports safely.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Research cycles compress dramatically when autonomous agents scaffold questions, traverse literature, and draft syntheses aligned to your taxonomy.',
+      'We cover retrieval pipelines, experiment harnesses, evaluation rubrics, and safety rails that keep outputs factual, attributable, and publication‑ready.'
+    ]
+  },
+  'quantum-neural-network-platform': {
+    id: 'quantum-neural-network-platform',
+    title: 'Launching Our Quantum Neural Network Platform: Practical QML Today',
+    excerpt:
+      'A hands-on platform for building hybrid quantum‑classical models that deliver value on NISQ hardware now.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'Our platform abstracts circuit construction, parameter shifts, and batching so teams can iterate on QNNs like standard deep learning.',
+      'Use cases include portfolio optimization, anomaly detection, and structure discovery with reproducible benchmarks and clear ROI guidance.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',

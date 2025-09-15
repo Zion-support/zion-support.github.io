@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'autonomous-research-agents-2025',
+      title: 'Autonomous Research Agents in 2025: From Insights to Publication',
+      excerpt: 'Deploy agents that synthesize literature, run experiments, and draft peer‑grade reports with safety and attribution.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/autonomous-research-agents.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'quantum-neural-network-platform',
+      title: 'Launching Our Quantum Neural Network Platform: Practical QML Today',
+      excerpt: 'A hands-on platform for hybrid quantum‑classical models that deliver value on NISQ hardware now.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/quantum-nn-platform.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -213,24 +234,24 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-governance-blueprint-2025"
+            href="/blog/autonomous-research-agents-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy"
+            aria-label="Read: Autonomous Research Agents in 2025: From Insights to Publication"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AG
+                AR
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Governance</span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                  Autonomous Research Agents in 2025: From Insights to Publication
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
+                  Deploy agents that synthesize literature, run experiments, and draft peer‑grade reports with safety and attribution.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
