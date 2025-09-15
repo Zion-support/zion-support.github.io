@@ -90,6 +90,17 @@ import AI2026RevolutionBanner from './components/AI2026RevolutionBanner';
 // Import new content showcase components
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+
+// Import new cutting-edge components
+import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
+import QuantumNeuralRevolutionBanner from './components/QuantumNeuralRevolutionBanner';
+import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
+import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
+
+// Import new promotional components for 2026 content
+import RevolutionaryContent2026UltimateBanner from './components/RevolutionaryContent2026UltimateBanner';
+import NewContent2026BreakthroughShowcase from './components/NewContent2026BreakthroughShowcase';
+import UltimateContentPromotion2026Banner from './components/UltimateContentPromotion2026Banner';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -105,6 +116,28 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      
+      {/* ULTIMATE CONTENT PROMOTION 2026 - NEW FEATURED BANNER */}
+      <UltimateContentPromotion2026Banner />
+      
+      {/* REVOLUTIONARY CONTENT 2026 ULTIMATE BANNER - NEW FEATURED */}
+      <RevolutionaryContent2026UltimateBanner />
+      
+      {/* NEW CONTENT 2026 BREAKTHROUGH SHOWCASE - NEW FEATURED */}
+      <NewContent2026BreakthroughShowcase />
+      
+      {/* NEW CUTTING-EDGE CONTENT SHOWCASE */}
+      <AI2026NextGenContentShowcase />
+      
+      {/* QUANTUM NEURAL REVOLUTION BANNER */}
+      <QuantumNeuralRevolutionBanner />
+      
+      {/* INTERACTIVE CONTENT DISCOVERY */}
+      <InteractiveContentDiscovery2026 />
+      
+      {/* AUTONOMOUS BUSINESS OPERATIONS SHOWCASE */}
+      <AutonomousBusinessOperations2026Showcase />
+      
 <<<<<<< HEAD
       {/* NEW CONTENT HIGHLIGHT - AI 2026 REVOLUTION */}
       <section className="py-12 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
