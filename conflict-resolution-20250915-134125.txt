@@ -446,3 +446,6 @@
 2025-09-15 13:45:56 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch content-update-2
 2025-09-15 13:45:56 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch content-update-2
 2025-09-15 13:45:57 - Resolving conflicts in zion-os/src/app/page.tsx for branch content-update-2
+2025-09-15 13:46:01 - Merge conflicts detected in content/updates-2025-09-15
+2025-09-15 13:46:01 - Resolving conflicts in zion-website/src/app/page.tsx for branch content/updates-2025-09-15
+2025-09-15 13:46:02 - Resolving conflicts in zion-website/src/data/updates.ts for branch content/updates-2025-09-15
