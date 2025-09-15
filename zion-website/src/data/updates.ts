@@ -427,6 +427,23 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Blueprint'
   }
+  ,
+  {
+    title: 'Launch: Autonomous Compliance Copilot v1.0',
+    summary:
+      'Interactive copilot to draft policies, generate evidence, and enforce controls with policy-as-code.',
+    href: '/updates/autonomous-compliance-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: AI Procurement Playbook (2026 Preview)',
+    summary:
+      'Practical steps, templates, and guardrails to source, evaluate, and buy AI systems responsibly.',
+    href: '/updates/ai-procurement-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
 ]
 
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
