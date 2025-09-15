@@ -1,7 +1,8 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { PenTool, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import { 
+  PenTool, 
   FileText, 
   Image, 
   Video, 
@@ -17,9 +18,9 @@ import { PenTool,
   BarChart3,
   Users,
   Sparkles
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function AIContentGenerator(...args: any[]): any {
+export default function AIContentGenerator() {
   const features = [
     {
       icon: PenTool,
@@ -173,8 +174,8 @@ export default function AIContentGenerator(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -211,8 +212,8 @@ export default function AIContentGenerator(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -246,8 +247,8 @@ export default function AIContentGenerator(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {pricing.map((plan, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

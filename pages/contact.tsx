@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react.ts'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
 
 
-export default function Contact(...args: any[]): any {
+export default function Contact() {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
@@ -12,19 +12,19 @@ export default function Contact(...args: any[]): any {
 	})
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleSubmit = (e: anyReact.FormEvent)  => {
+	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
-		console.log('Form submitted: any', formData)
+		console.log('Form submitted:', formData)
 		setIsSubmitted(true)
 		// Reset form after submission
-		setTimeout(()  => {
+		setTimeout(() => {
 			setIsSubmitted(false)
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
 	}
 
-	const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
@@ -171,7 +171,7 @@ export default function Contact(...args: any[]): any {
 									Schedule a consultation to discuss your technology needs and explore how our solutions can drive your business forward.
 								</p>
 								<Link
-									to="/services"
+									href="/services"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									Explore Our Services →
@@ -192,13 +192,13 @@ export default function Contact(...args: any[]): any {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/services"
+								href="/services"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 							>
 								View Our Services
 							</Link>
 							<Link
-								to="/about"
+								href="/about"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
 							>
 								Learn More About Us →

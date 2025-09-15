@@ -1,10 +1,11 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Leaf, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Leaf,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
   Settings,
   Database,
   Cloud,
@@ -23,10 +24,10 @@ import { Leaf,
   Target,
   Award,
   BarChart3
- } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
+} from 'lucide-react';
+import SEO from '../../components/SEO';
 
-export default function GreenIT(...args: any[]): any {
+export default function GreenIT() {
   const features = [
     {
       icon: Leaf,
@@ -129,11 +130,11 @@ export default function GreenIT(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
@@ -153,7 +154,7 @@ export default function GreenIT(...args: any[]): any {
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure with sustainable, energy-efficient solutions. 
+              Transform your IT infrastructure with sustainable, energy-efficient solutions.
               Reduce carbon footprint, lower costs, and meet environmental compliance standards.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -181,8 +182,8 @@ export default function GreenIT(...args: any[]): any {
                 What is Green IT?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Green IT, or Green Information Technology, focuses on designing, manufacturing, 
-                using, and disposing of computers, servers, and associated subsystems efficiently 
+                Green IT, or Green Information Technology, focuses on designing, manufacturing,
+                using, and disposing of computers, servers, and associated subsystems efficiently
                 and effectively with minimal or no impact on the environment.
               </p>
               <div className="space-y-4">
@@ -209,7 +210,7 @@ export default function GreenIT(...args: any[]): any {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -264,13 +265,13 @@ export default function GreenIT(...args: any[]): any {
               Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Green IT platform provides comprehensive capabilities for sustainable 
+              Our Green IT platform provides comprehensive capabilities for sustainable
               technology implementation and environmental impact reduction.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,13 +303,13 @@ export default function GreenIT(...args: any[]): any {
               Core Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive Green IT solutions designed to transform your technology 
+              Comprehensive Green IT solutions designed to transform your technology
               infrastructure into a sustainable, energy-efficient ecosystem.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {solutions.map((solution, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -350,13 +351,13 @@ export default function GreenIT(...args: any[]): any {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Green IT solutions are transforming industries across the globe, 
+              Green IT solutions are transforming industries across the globe,
               enabling sustainable operations and environmental responsibility.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -398,13 +399,13 @@ export default function GreenIT(...args: any[]): any {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how Green IT solutions can transform your organization 
+              Discover how Green IT solutions can transform your organization
               and drive measurable business and environmental outcomes.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -440,7 +441,7 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -462,7 +463,7 @@ export default function GreenIT(...args: any[]): any {
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
               }
-            ].map((phase, index)  => (
+            ].map((phase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -493,7 +494,7 @@ export default function GreenIT(...args: any[]): any {
               Ready to Go Green with Your IT?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how Green IT solutions can transform your technology infrastructure, 
+              Discover how Green IT solutions can transform your technology infrastructure,
               reduce environmental impact, and drive cost savings.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

@@ -1,130 +1,45 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { DollarSign, 
-  TrendingDown, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  DollarSign, 
+  Play, 
+  Settings, 
+  Target, 
   CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt
- } from 'lucide-react.ts';
+  ArrowRight 
+} from 'lucide-react';
 
-const FinOpsAdvisor = () => {
+export default function FinOpsAdvisor() {
   const features = [
     {
-      icon: DollarSign,
+      icon: Target,
       title: 'Cost Optimization',
       description: 'Identify and eliminate unnecessary cloud spending'
     },
     {
-      icon: TrendingDown,
-      title: 'Budget Management',
-      description: 'Set and track budgets with automated alerts'
+      icon: CheckCircle,
+      title: 'Resource Management',
+      description: 'Optimize resource allocation and utilization'
     },
     {
-      icon: Calculator,
-      title: 'Cost Allocation',
-      description: 'Accurate cost allocation across teams and projects'
-    },
-    {
-      icon: PieChart,
-      title: 'Resource Analytics',
-      description: 'Deep insights into resource utilization patterns'
-    },
-    {
-      icon: LineChart,
-      title: 'Trend Analysis',
-      description: 'Predictive analytics for future cost planning'
-    },
-    {
-      icon: Target2,
-      title: 'ROI Optimization',
-      description: 'Maximize return on cloud infrastructure investment'
+      icon: Settings,
+      title: 'Automation',
+      description: 'Automate cost monitoring and optimization'
     }
   ];
 
   const benefits = [
     'Reduce cloud costs by 30-50%',
-    'Improve resource utilization by 40%',
-    'Achieve better budget predictability',
-    'Enable data-driven decision making',
-    'Streamline cost governance',
-    'Enhance team accountability'
-  ];
-
-  const services = [
-    {
-      icon: Wallet,
-      title: 'Cost Analysis',
-      description: 'Comprehensive analysis of current cloud spending patterns'
-    },
-    {
-      icon: PiggyBank,
-      title: 'Optimization Strategies',
-      description: 'Custom strategies for cost reduction and efficiency'
-    },
-    {
-      icon: CreditCard,
-      title: 'Budget Planning',
-      description: 'Strategic budget planning and forecasting'
-    },
-    {
-      icon: Receipt,
-      title: 'Reporting & Analytics',
-      description: 'Detailed reports and actionable insights'
-    }
+    'Improve resource utilization',
+    'Implement cost governance',
+    'Optimize pricing models'
   ];
 
   const useCases = [
-    {
-      industry: 'Startups',
-      description: 'Optimize costs while scaling infrastructure'
-    },
-    {
-      industry: 'Enterprise',
-      description: 'Manage complex multi-cloud environments'
-    },
-    {
-      industry: 'E-commerce',
-      description: 'Balance performance with cost efficiency'
-    },
-    {
-      industry: 'SaaS Companies',
-      description: 'Optimize costs for multi-tenant applications'
-    }
+    { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' },
+    { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' },
+    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' },
+    { industry: 'Finance', description: 'Implement cost controls for regulatory compliance' }
   ];
 
   return (
@@ -186,8 +101,8 @@ const FinOpsAdvisor = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -224,8 +139,8 @@ const FinOpsAdvisor = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -316,8 +231,8 @@ const FinOpsAdvisor = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,137 +1,183 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Mail,
+  MessageCircle,
+  Phone,
+  Star,
+  Users
+} from 'lucide-react';
+import React, { useState } from 'react';
 
-export function ITServiceRequestHero(...args: any[]): any {
+export const ITServiceRequestHero: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('contact');
+
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: 'Call Us',
+      description: 'Speak directly with our experts',
+      action: '+1 302 464 0950',
+      href: 'tel:+13024640950',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Mail,
+      title: 'Email Us',
+      description: 'Send us your requirements',
+      action: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Get instant support',
+      action: 'Start Chat',
+      href: '#chat',
+      color: 'from-green-500 to-emerald-500'
+    }
+  ];
+
+  const quickActions = [
+    {
+      title: 'Request Quote',
+      description: 'Get a customized quote for your project',
+      icon: CheckCircle,
+      href: '/request-quote'
+    },
+    {
+      title: 'Schedule Consultation',
+      description: 'Book a free 30-minute consultation',
+      icon: Calendar,
+      href: '/consultation'
+    },
+    {
+      title: 'View Services',
+      description: 'Explore our comprehensive service offerings',
+      icon: Star,
+      href: '/services'
+    }
+  ];
+
+  const stats = [
+    { value: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { value: '99%', label: 'Client Satisfaction', icon: Star },
+    { value: '24/7', label: 'Support Available', icon: Clock },
+    { value: '50+', label: 'Expert Team Members', icon: Users }
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            IT Service Request
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get expert IT support and solutions tailored to your business needs. 
+            Our team is ready to help you succeed.
+          </p>
+        </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Need IT Services?
-              <span className="block text-blue-400">We've Got You Covered</span>
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              From infrastructure setup to cybersecurity solutions, our expert team delivers 
-              comprehensive IT services that keep your business running smoothly and securely.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <span className="text-gray-200">24/7 Technical Support</span>
+        {/* Contact Methods */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+        >
+          {contactMethods.map((method, index) => (
+            <motion.div
+              key={method.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${method.color} rounded-lg mb-6`}>
+                {React.createElement(method.icon, { className: "w-8 h-8 text-white" })}
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <span className="text-gray-200">Certified IT Professionals</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <span className="text-gray-200">Custom Solutions for Your Business</span>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+              <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
+              <p className="text-gray-300 mb-4">{method.description}</p>
+              <a
+                href={method.href}
+                className="inline-flex items-center px-6 py-3 bg-zion-cyan hover:bg-zion-blue text-white font-semibold rounded-lg transition-colors"
               >
-                Request Quote
-              </Link>
-              
-              <Link
-                to="/it-services"
-                className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 hover:scale-105"
-              >
-                Learn More
-              </Link>
-            </div>
-          </motion.div>
+                {method.action}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </motion.div>
+          ))}
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              Contact Information
-            </h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl">📞</span>
+        {/* Quick Actions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+        >
+          {quickActions.map((action, index) => (
+            <motion.div
+              key={action.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
+                  {React.createElement(action.icon, { className: "w-6 h-6 text-zion-cyan" })}
                 </div>
-                <div>
-                  <p className="text-gray-300 text-sm">Phone</p>
-                  <p className="text-white font-semibold">+1 302 464 0950</p>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-1">{action.title}</h3>
+                  <p className="text-gray-300 text-sm">{action.description}</p>
                 </div>
+                <a
+                  href={action.href}
+                  className="text-zion-cyan hover:text-zion-blue transition-colors"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl">✉️</span>
-                </div>
-                <div>
-                  <p className="text-gray-300 text-sm">Email</p>
-                  <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl">📍</span>
-                </div>
-                <div>
-                  <p className="text-gray-300 text-sm">Address</p>
-                  <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl">🌐</span>
-                </div>
-                <div>
-                  <p className="text-gray-300 text-sm">Website</p>
-                  <p className="text-white font-semibold">ziontechgroup.com</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-            <div className="mt-8 text-center">
-              <p className="text-gray-400 text-sm mb-4">
-                Available 24/7 for emergency support
-              </p>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm font-semibold">Online Now</span>
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/20 rounded-lg mb-4">
+                {React.createElement(stat.icon, { className: "w-8 h-8 text-zion-cyan" })}
               </div>
-            </div>
-          </motion.div>
-        </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300 text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
-}
+};

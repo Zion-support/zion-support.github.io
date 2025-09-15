@@ -1,461 +1,568 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react.ts';
-import { SEO  } from '../components/SEO';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Calendar, 
+  Clock, 
+  Users, 
+  Video, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  CheckCircle,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Globe,
+  ArrowRight,
+  Play,
+  CalendarDays,
+  Clock3,
+  User,
+  Building,
+  MessageSquare,
+  PhoneCall,
+  Mail as MailIcon,
+  ExternalLink
+} from 'lucide-react';
 
-interface DemoFormData {
-
-  firstName: string;
-  lastName: string;
-  email: string;
-  company: string;
-  phone: string;
-  preferredDate: string;
-  preferredTime: string;
-  attendees: string;
-  services: string[];
-  message: string;
-
-}
-
-const ScheduleDemo: React.FC = (): JSX.Element => {
-  const [formData, setFormData] = useState<any>({
+export default function ScheduleDemo() {
+  const [selectedService, setSelectedService] = useState('');
+  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedTime, setSelectedTime] = useState('');
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     phone: '',
-    preferredDate: '',
-    preferredTime: '',
-    attendees: '1-5',
-    services: [],
+    attendees: 1,
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'
+  const demoServices = [
+    {
+      id: 'ai-platform',
+      name: 'AI Platform Demo',
+      description: 'Experience our comprehensive AI platform with real-time demonstrations',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      duration: '45 min',
+      features: ['AI Model Training', 'Real-time Analytics', 'Custom Workflows', 'Integration Examples'],
+      popular: true
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity Solutions',
+      description: 'See our advanced security platform in action with threat simulation',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      duration: '60 min',
+      features: ['Threat Detection', 'Incident Response', 'Compliance Dashboard', 'Security Analytics'],
+      popular: false
+    },
+    {
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure',
+      description: 'Explore our cloud-native solutions and DevOps automation',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      duration: '50 min',
+      features: ['Multi-cloud Management', 'DevOps Automation', 'Cost Optimization', 'Performance Monitoring'],
+      popular: true
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      description: 'Discover quantum algorithms and quantum-classical hybrid solutions',
+      icon: Cpu,
+      color: 'from-indigo-500 to-purple-500',
+      duration: '75 min',
+      features: ['Quantum Algorithms', 'Hybrid Solutions', 'Performance Benchmarks', 'Use Case Examples'],
+      popular: false
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data Analytics Platform',
+      description: 'Visualize and analyze your data with our advanced analytics tools',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500',
+      duration: '40 min',
+      features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Visualization', 'Custom Reports'],
+      popular: false
+    },
+    {
+      id: 'custom-solution',
+      name: 'Custom Solution Demo',
+      description: 'Tailored demonstration based on your specific business needs',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500',
+      duration: '60 min',
+      features: ['Custom Workflows', 'Integration Planning', 'ROI Analysis', 'Implementation Roadmap'],
+      popular: false
+    }
   ];
 
-  const availableServices = [
-    { id: 'ai-business-intelligence', name: 'AI Business Intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },
-    { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },
-    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },
-    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },
-    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },
-    { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' }
+  const availableTimes = [
+    '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+    '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM',
+    '4:00 PM', '4:30 PM', '5:00 PM'
   ];
 
-  const handleServiceToggle = (serviceId: anystring)  => {
+  const demoBenefits = [
+    {
+      title: 'Personalized Experience',
+      description: 'Tailored demonstrations based on your business needs and use cases',
+      icon: User,
+      color: 'text-blue-400'
+    },
+    {
+      title: 'Expert Guidance',
+      description: 'Learn from our certified professionals with deep industry expertise',
+      icon: Star,
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'Interactive Sessions',
+      description: 'Ask questions and explore features in real-time during the demo',
+      icon: MessageSquare,
+      color: 'text-green-400'
+    },
+    {
+      title: 'Follow-up Support',
+      description: 'Comprehensive follow-up materials and next steps after your demo',
+      icon: CheckCircle,
+      color: 'text-cyan-400'
+    }
+  ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Demo request submitted:', {
+      service: selectedService,
+      date: selectedDate,
+      time: selectedTime,
+      ...formData
+    });
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      services: anyprev.services.includes(serviceId)
-        ? prev.services.filter(id  => id !== serviceId)
-        : [...prev.services, serviceId]
+      [name]: value
     }));
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-        <SEO
-          title="Demo Scheduled - Zion Tech Group"
-          description="Your demo has been successfully scheduled. We'll be in touch soon to confirm the details."
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="max-w-2xl mx-auto text-center p-8"
-        >
-          <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl font-bold text-white mb-4">Demo Scheduled Successfully!</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Thank you for your interest in Zion Tech Group. We've received your demo request and will be in touch within 24 hours to confirm the details.
-          </p>
-          <div className="bg-slate-800/50 rounded-xl p-6 mb-8">
-            <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
-            <div className="space-y-3 text-left">
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
-                  <span className="text-xs text-white font-bold">1</span>
-                </div>
-                <span className="text-gray-300">We'll review your requirements and prepare a customized demo</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
-                  <span className="text-xs text-white font-bold">2</span>
-                </div>
-                <span className="text-gray-300">Our team will contact you to confirm the demo time and format</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center">
-                  <span className="text-xs text-white font-bold">3</span>
-                </div>
-                <span className="text-gray-300">You'll receive a calendar invitation and demo preparation materials</span>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/"
-              className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
-            >
-              Return to Home
-            </a>
-            <a
-              href="/contact"
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Schedule a Demo - Zion Tech Group"
-        description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business."
-        keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
+      <SEO 
+        title="Schedule Demo - Zion Tech Group"
+        description="Schedule a personalized demo of our AI, cybersecurity, cloud, and quantum computing solutions. Experience our technology firsthand with expert guidance."
       />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 overflow-hidden">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Schedule Your
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}Demo
-              </span>
+              Schedule Your Demo
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Experience the future of technology with a personalized demonstration of our cutting-edge AI, quantum computing, and innovative solutions.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Experience our cutting-edge technology solutions firsthand. Book a personalized 
+              demonstration with our experts and discover how Zion Tech Group can transform your business.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <Video className="w-4 h-4 text-cyan-400" />
-                <span>30-60 minute session</span>
+            
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400">500+</div>
+                <div className="text-sm text-gray-400">Demos Delivered</div>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-cyan-400" />
-                <span>Customized for your team</span>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">98%</div>
+                <div className="text-sm text-gray-400">Satisfaction Rate</div>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-cyan-400" />
-                <span>No commitment required</span>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">24/7</div>
+                <div className="text-sm text-gray-400">Availability</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">45min</div>
+                <div className="text-sm text-gray-400">Average Duration</div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Demo Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Form */}
-            <div className="lg:col-span-2">
+      {/* Demo Services */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Demo</h2>
+            <p className="text-gray-300 text-center max-w-2xl mx-auto">
+              Select from our range of specialized demonstrations or request a custom solution demo
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {demoServices.map((service, index) => (
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
+                  selectedService === service.id ? 'ring-2 ring-cyan-400/50' : ''
+                }`}
+                onClick={() => setSelectedService(service.id)}
               >
-                <h2 className="text-2xl font-bold text-white mb-6">Book Your Demo</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.firstName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter your first name"
-                      />
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${service.color}`}>
+                      <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.lastName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
+                        Popular
+                      </span>
+                    )}
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter company name"
-                      />
-                    </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                    <Clock className="w-4 h-4" />
+                    {service.duration}
                   </div>
 
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className={`w-full py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 ${
+                    selectedService === service.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
+                  }`}>
+                    {selectedService === service.id ? 'Selected' : 'Select Demo'}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Benefits */}
+      <section className="py-16 bg-slate-800/20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white text-center mb-4">Why Schedule a Demo?</h2>
+            <p className="text-gray-300 text-center max-w-2xl mx-auto">
+              Get the most out of your demo experience with our comprehensive approach
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {demoBenefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className={`p-4 rounded-xl bg-slate-700/30 mx-auto mb-4 w-16 h-16 flex items-center justify-center`}>
+                  <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Scheduling Form */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <h2 className="text-3xl font-bold text-white text-center mb-4">Schedule Your Demo</h2>
+              <p className="text-gray-300 text-center max-w-2xl mx-auto">
+                Fill out the form below to schedule your personalized demonstration
+              </p>
+            </motion.div>
+
+            <motion.form
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              onSubmit={handleSubmit}
+              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* Date and Time Selection */}
+                <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
+                      Preferred Date
                     </label>
                     <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter phone number"
+                      type="date"
+                      value={selectedDate}
+                      onChange={(e) => setSelectedDate(e.target.value)}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      required
                     />
                   </div>
-
-                  {/* Demo Preferences */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Preferred Date *
-                      </label>
-                      <input
-                        type="date"
-                        required
-                        value={formData.preferredDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, preferredDate: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        min={new Date().toISOString().split('T')[0]}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Preferred Time *
-                      </label>
-                      <select
-                        required
-                        value={formData.preferredTime}
-                        onChange={(e) => setFormData(prev => ({ ...prev, preferredTime: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      >
-                        <option value="">Select time</option>
-                        {timeSlots.map(time => (
-                          <option key={time} value={time}>{time}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Number of Attendees
+                      Preferred Time
                     </label>
                     <select
-                      value={formData.attendees}
-                      onChange={(e) => setFormData(prev => ({ ...prev, attendees: e.target.value }))}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={selectedTime}
+                      onChange={(e) => setSelectedTime(e.target.value)}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      required
                     >
-                      <option value="1-5">1-5 people</option>
-                      <option value="6-10">6-10 people</option>
-                      <option value="11-20">11-20 people</option>
-                      <option value="20+">20+ people</option>
+                      <option value="">Select a time</option>
+                      {availableTimes.map(time => (
+                        <option key={time} value={time}>{time}</option>
+                      ))}
                     </select>
                   </div>
+                </div>
 
-                  {/* Services of Interest */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Services of Interest
-                    </label>
-                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-3">
-                      {availableServices.map((service)  => (
-                        <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
-                          <input
-                            type="checkbox"
-                            checked={formData.services.includes(service.id)}
-                            onChange={() => handleServiceToggle(service.id)}
-                            className="w-4 h-4 text-cyan-500 bg-slate-600 border-slate-500 rounded focus:ring-cyan-500 focus:ring-2"
-                          />
-                          <div className="flex items-center gap-2">
-                            <service.icon className="w-4 h-4 text-cyan-400" />
-                            <span className="text-sm text-white">{service.name}</span>
-                          </div>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Additional Message
-                    </label>
-                    <textarea
-                      value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Tell us about your specific needs, challenges, or questions..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                {/* Service Selection */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Demo Service
+                  </label>
+                  <select
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
                   >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center gap-2">
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        Scheduling Demo...
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center gap-2">
-                        <Calendar className="w-5 h-5" />
-                        Schedule Demo
-                        <ArrowRight className="w-5 h-5" />
-                      </div>
-                    )}
-                  </button>
-                </form>
-              </motion.div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="space-y-6"
-              >
-                {/* What to Expect */}
-                <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                    <Video className="w-5 h-5 text-cyan-400" />
-                    What to Expect
-                  </h3>
-                  <ul className="space-y-3 text-sm text-gray-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span>Personalized demo based on your needs</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span>Live Q&A with our experts</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span>Real-time solution demonstrations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span>ROI analysis and implementation roadmap</span>
-                    </li>
-                  </ul>
+                    <option value="">Select a service</option>
+                    {demoServices.map(service => (
+                      <option key={service.id} value={service.id}>{service.name}</option>
+                    ))}
+                  </select>
                 </div>
+              </div>
 
-                {/* Contact Information */}
-                <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                    <MessageCircle className="w-5 h-5 text-cyan-400" />
-                    Need Help?
-                  </h3>
-                  <div className="space-y-3 text-sm">
-                    <a
-                      href="tel:+13024640950"
-                      className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                    >
-                      <Phone className="w-4 h-4" />
-                      +1 302 464 0950
-                    </a>
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                    >
-                      <Mail className="w-4 h-4" />
-                      kleber@ziontechgroup.com
-                    </a>
-                    <div className="flex items-start gap-2 text-gray-300">
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
-                    </div>
-                  </div>
+              {/* Personal Information */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
                 </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
 
-                {/* Demo Benefits */}
-                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                    <Star className="w-5 h-5 text-cyan-400" />
-                    Demo Benefits
-                  </h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• No cost or commitment</li>
-                    <li>• Customized to your industry</li>
-                    <li>• Expert consultation included</li>
-                    <li>• Implementation roadmap</li>
-                    <li>• ROI projections</li>
-                  </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
                 </div>
-              </motion.div>
-            </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Company *
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Number of Attendees
+                  </label>
+                  <select
+                    name="attendees"
+                    value={formData.attendees}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+                      <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Additional Information
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  placeholder="Tell us about your specific needs, questions, or any special requirements for the demo..."
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 mx-auto"
+                >
+                  <Calendar className="w-5 h-5" />
+                  Schedule Demo
+                </button>
+              </div>
+            </motion.form>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-8">Need Immediate Assistance?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <Phone className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-gray-300 mb-3">Speak with our experts directly</p>
+                <a
+                  href="tel:+13024640950"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                >
+                  +1 (302) 464-0950
+                </a>
+              </div>
+
+              <div className="text-center">
+                <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <Mail className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-gray-300 mb-3">Send us your questions</p>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                >
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+
+              <div className="text-center">
+                <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <MessageCircle className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
+                <p className="text-gray-300 mb-3">Get instant answers</p>
+                <button className="text-green-400 hover:text-green-300 transition-colors font-medium">
+                  Start Chat
+                </button>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default ScheduleDemo;
+}

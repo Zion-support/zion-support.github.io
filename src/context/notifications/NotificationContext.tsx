@@ -1,21 +1,17 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface Notification {
-
-  id: anystring;
+  id: string;
   message: string;
   type: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
-
 }
 
 interface NotificationContextType {
-
   notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>)  => void;
-  removeNotification: any(id: string)  => void;
-  clearNotifications: any()  => void;
-
+  addNotification: (notification: Omit<Notification, 'id'>) => void;
+  removeNotification: (id: string) => void;
+  clearNotifications: () => void;
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
@@ -28,16 +24,14 @@ export const useNotifications = () => {
   return context;
 };
 
-interface NotificationProviderProps extends React.PropsWithChildren<{}> {
-
+interface NotificationProviderProps {
   children: ReactNode;
-
 }
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-  const [notifications, setNotifications] = useState<any>([]);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (notification: anyOmit<Notification, 'id'>)  => {
+  const addNotification = (notification: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
     setNotifications(prev => [...prev, newNotification]);
@@ -49,7 +43,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     }
   };
 
-  const removeNotification = (id: anystring)  => {
+  const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 

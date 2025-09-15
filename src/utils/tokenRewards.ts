@@ -1,10 +1,6 @@
-import { apiClient  } from '@/services/api';
+import { apiClient } from '@/services/api';
 
-export async function earnTokensForAction(
-  userId: string,
-  action: string,
-  amount: number
-): Promise<any> {
+export async function rewardOnboarding(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSON.stringify({ userId, action, amount })
@@ -15,7 +11,7 @@ export async function earnTokensForPurchase(
   userId: string,
   purchaseAmount: number,
   purchaseType: string
-): Promise<any> {
+): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSON.stringify({ userId, action: 'purchase', amount: purchaseAmount, purchaseType })
@@ -25,7 +21,7 @@ export async function earnTokensForPurchase(
 export async function earnTokensForReferral(
   userId: string,
   referredUserId: string
-): Promise<any> {
+): Promise<void> {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })

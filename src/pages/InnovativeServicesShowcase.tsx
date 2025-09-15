@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices  } from '../data/innovativeServices2025';
+import React, { useState, useMemo } from 'react';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../data/innovativeServices2025';
 
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
+const InnovativeServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -79,9 +79,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
           <span className="text-xs text-gray-400">({service.reviews})</span>
         </div>
       </div>
-      
+
       <p className="text-gray-600 mb-4">{service.description}</p>
-      
+
       <div className="flex items-center justify-between mb-4">
         <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
@@ -129,7 +129,7 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
           <span>Delivery: {service.estimatedDelivery}</span>
           <span>Support: {service.supportLevel}</span>
         </div>
-        
+
         <div className="flex space-x-3">
           <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
             Get Quote
@@ -202,43 +202,43 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {categories.map(category  => (
+                {categories.map(category => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {priceRanges.map(range  => (
+                {priceRanges.map(range => (
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {sortOptions.map(option  => (
+                {sortOptions.map(option => (
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
               </select>
@@ -254,8 +254,8 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)  => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

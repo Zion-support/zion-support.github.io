@@ -1,630 +1,679 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams  } from 'react-router-dom';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, 
+import { Link, useSearchParams } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, 
   Filter, 
   X, 
-  ArrowRight, 
   Clock, 
-  TrendingUp, 
-  Star, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Building, 
-  Globe, 
-  Server, 
-  Database, 
-  Network, 
-  Lock, 
-  Heart, 
-  ShoppingCart, 
-  MessageCircle, 
-  FileText, 
-  Video, 
-  TestTube, 
-  Code, 
-  BookOpen, 
-  Briefcase, 
-  Newspaper, 
-  Target, 
-  DollarSign, 
-  Settings, 
-  Bell, 
-  Download, 
-  Edit, 
-  Trash2, 
-  Plus, 
-  Calendar, 
-  Truck, 
-  BarChart3, 
-  Atom, 
-  Leaf, 
-  Satellite, 
-  Cpu, 
-  Rocket, 
-  TrendingUp as TrendingUpIcon, 
-  Award, 
-  Activity, 
-  CheckCircle, 
-  AlertCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  HelpCircle, 
-  Lightbulb, 
-  Info, 
-  AlertTriangle, 
-  Tag,
-  Bookmark,
-  Share2,
+  Tag, 
+  User, 
+  Calendar,
+  ArrowRight,
+  FileText,
+  Code,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
+  Atom,
+  Building,
+  Globe,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  Star,
+  BookOpen,
+  MessageCircle,
+  Users,
+  Target,
+  BarChart3,
+  Cpu,
+  Database,
+  Network,
+  Lock,
   Eye,
-  Calendar as CalendarIcon,
-  User,
-  Tag as TagIcon
- } from 'lucide-react';
+  Heart,
+  DollarSign,
+  Factory,
+  ShoppingCart,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 interface SearchResult {
-
   id: string;
   title: string;
-  description: string;
+  excerpt: string;
+  content: string;
+  type: 'service' | 'page' | 'news' | 'document' | 'case-study';
   url: string;
-  type: 'service' | 'page' | 'blog' | 'documentation' | 'case-study';
   category: string;
   tags: string[];
+  author?: string;
+  date?: string;
+  readTime?: number;
   relevance: number;
-  lastUpdated: string;
-  icon: any;
   featured?: boolean;
-
 }
 
-export default function SearchPage(...args: any[]): any {
+const SearchPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [query, setQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);
-  const [searchResults, setSearchResults] = useState<any>([]);
-  const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
-  const [sortBy, setSortBy] = useState<any>('relevance');
-  const [showFilters, setShowFilters] = useState(false);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'title'>('relevance');
+
+  const searchTypes = [
+    { id: 'all', name: 'All Results', icon: Globe, count: 0 },
+    { id: 'service', name: 'Services', icon: Zap, count: 0 },
+    { id: 'page', name: 'Pages', icon: FileText, count: 0 },
+    { id: 'news', name: 'News', icon: BookOpen, count: 0 },
+    { id: 'document', name: 'Documents', icon: FileText, count: 0 },
+    { id: 'case-study', name: 'Case Studies', icon: Target, count: 0 }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: Globe, count: 0 },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 0 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 },
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
+    { id: 'innovation', name: 'Innovation', icon: Rocket, count: 0 },
+    { id: 'company', name: 'Company', icon: Building, count: 0 },
+    { id: 'technology', name: 'Technology', icon: Code, count: 0 },
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 0 },
+    { id: 'iot', name: 'IoT & Edge', icon: Network, count: 0 },
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, count: 0 },
+    { id: 'sustainability', name: 'Sustainability', icon: Leaf, count: 0 }
+  ];
 
   // Mock search results - in a real app, this would come from an API
   const mockSearchResults: SearchResult[] = [
-    // AI Services
     {
-      id: 'ai-bi',
-      title: 'AI Business Intelligence',
-      description: 'Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
-      url: '/services/ai-business-intelligence',
+      id: '1',
+      title: 'AI-Powered Quantum Computing Platform',
+      excerpt: 'Revolutionary platform combining artificial intelligence with quantum computing for unprecedented computational power.',
+      content: 'Full content would go here...',
       type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning', 'Predictive'],
-      relevance: 0.95,
-      lastUpdated: '2024-12-01',
-      icon: Brain,
+      url: '/services/ai-quantum-platform',
+      category: 'ai',
+      tags: ['AI', 'Quantum Computing', 'Platform', 'Innovation'],
+      author: 'Dr. Sarah Chen',
+      date: '2024-08-27',
+      readTime: 8,
+      relevance: 95,
       featured: true
     },
     {
-      id: 'ai-compliance',
-      title: 'AI Compliance Assistant',
-      description: 'Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
-      url: '/services/ai-compliance-assistant',
+      id: '2',
+      title: 'Micro SaaS Solutions for Small Business',
+      excerpt: 'Affordable, powerful software solutions designed specifically for small business needs and budgets.',
+      content: 'Full content would go here...',
       type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Compliance', 'Regulatory', 'Automation', 'Risk Management'],
-      relevance: 0.92,
-      lastUpdated: '2024-11-28',
-      icon: Shield
-    },
-    {
-      id: 'ai-sales',
-      title: 'AI Sales Copilot',
-      description: 'Intelligent sales optimization platform that enhances sales performance through AI-driven insights, lead scoring, and automated follow-up sequences.',
-      url: '/services/ai-sales-copilot',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Sales', 'CRM', 'Automation', 'Lead Generation'],
-      relevance: 0.89,
-      lastUpdated: '2024-11-25',
-      icon: Users
-    },
-
-    // Cloud Services
-    {
-      id: 'cloud-devops',
-      title: 'Cloud DevOps Platform',
-      description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
-      url: '/services/cloud-devops',
-      type: 'service',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure', 'AWS', 'Azure'],
-      relevance: 0.87,
-      lastUpdated: '2024-11-20',
-      icon: Cloud
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure Management',
-      description: 'Enterprise-grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',
-      url: '/services/it-infrastructure',
-      type: 'service',
-      category: 'Cloud & Infrastructure',
-      tags: ['Infrastructure', 'IT', 'Enterprise', 'Networking', 'Security'],
-      relevance: 0.84,
-      lastUpdated: '2024-11-18',
-      icon: Server
-    },
-
-    // Security Services
-    {
-      id: 'ai-cybersecurity',
-      title: 'AI Cybersecurity Platform',
-      description: 'Next-generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',
-      url: '/services/ai-cybersecurity-platform',
-      type: 'service',
-      category: 'Security & Compliance',
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security', 'Compliance'],
-      relevance: 0.91,
-      lastUpdated: '2024-11-22',
-      icon: Shield,
+      url: '/services/micro-saas-solutions',
+      category: 'innovation',
+      tags: ['Micro SaaS', 'Small Business', 'Software', 'Affordable'],
+      author: 'Michael Rodriguez',
+      date: '2024-08-25',
+      readTime: 6,
+      relevance: 88,
       featured: true
     },
     {
-      id: 'zero-trust',
-      title: 'Zero Trust Network Access',
-      description: 'Modern security architecture that implements zero-trust principles for enhanced network security and access control.',
-      url: '/services/zero-trust-network-access',
+      id: '3',
+      title: 'AI Cybersecurity Threat Detection',
+      excerpt: 'Advanced AI-powered cybersecurity platform achieving 99.9% accuracy in threat detection and prevention.',
+      content: 'Full content would go here...',
       type: 'service',
-      category: 'Security & Compliance',
-      tags: ['Zero Trust', 'Security', 'Network', 'Access Control', 'Compliance'],
-      relevance: 0.86,
-      lastUpdated: '2024-11-15',
-      icon: Lock
+      url: '/services/ai-cybersecurity',
+      category: 'security',
+      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security'],
+      author: 'Alex Thompson',
+      date: '2024-08-23',
+      readTime: 7,
+      relevance: 92,
+      featured: false
     },
-
-    // Quantum Computing
     {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Solutions',
-      description: 'Cutting-edge quantum computing services for optimization problems, cryptography, and scientific simulations.',
-      url: '/services/quantum-computing',
+      id: '4',
+      title: 'Cloud FinOps Optimization',
+      excerpt: 'AI-driven cloud cost optimization helping enterprises reduce cloud spending by up to 40%.',
+      content: 'Full content would go here...',
       type: 'service',
-      category: 'Quantum Computing',
-      tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'AI', 'Research'],
-      relevance: 0.88,
-      lastUpdated: '2024-11-10',
-      icon: Atom
-    },
-
-    // Blog Posts
-    {
-      id: 'ai-trends-2024',
-      title: 'AI Trends to Watch in 2024',
-      description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
-      url: '/blog/ai-trends-2024',
-      type: 'blog',
-      category: 'AI & Technology',
-      tags: ['AI', 'Trends', 'Technology', '2024', 'Innovation'],
-      relevance: 0.82,
-      lastUpdated: '2024-12-01',
-      icon: BookOpen
+      url: '/services/cloud-finops-optimizer',
+      category: 'cloud',
+      tags: ['Cloud Computing', 'FinOps', 'Cost Optimization', 'AI'],
+      author: 'Lisa Chang',
+      date: '2024-08-15',
+      readTime: 6,
+      relevance: 85,
+      featured: false
     },
     {
-      id: 'cloud-migration-guide',
-      title: 'Complete Guide to Cloud Migration',
-      description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
-      url: '/blog/cloud-migration-guide',
-      type: 'blog',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud Migration', 'Guide', 'Best Practices', 'Infrastructure'],
-      relevance: 0.79,
-      lastUpdated: '2024-11-28',
-      icon: Cloud
+      id: '5',
+      title: 'Digital Twin Technology Solutions',
+      excerpt: 'Virtual replicas of physical systems enabling predictive maintenance and operational optimization.',
+      content: 'Full content would go here...',
+      type: 'service',
+      url: '/services/digital-twin',
+      category: 'innovation',
+      tags: ['Digital Twin', 'Predictive Maintenance', 'IoT', 'Optimization'],
+      author: 'Robert Davis',
+      date: '2024-08-13',
+      readTime: 8,
+      relevance: 82,
+      featured: false
     },
-
-    // Case Studies
     {
-      id: 'healthcare-ai-case-study',
-      title: 'AI Transformation in Healthcare',
-      description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
-      url: '/case-studies/healthcare-ai-transformation',
-      type: 'case-study',
-      category: 'Healthcare',
-      tags: ['AI', 'Healthcare', 'Case Study', 'Transformation', 'Patient Care'],
-      relevance: 0.85,
-      lastUpdated: '2024-11-20',
-      icon: FileText
+      id: '6',
+      title: 'Quantum Machine Learning Applications',
+      excerpt: 'Exploring the intersection of quantum computing and machine learning for next-generation AI solutions.',
+      content: 'Full content would go here...',
+      type: 'news',
+      url: '/news/quantum-machine-learning',
+      category: 'quantum',
+      tags: ['Quantum Computing', 'Machine Learning', 'AI', 'Research'],
+      author: 'Dr. James Kim',
+      date: '2024-08-17',
+      readTime: 10,
+      relevance: 78,
+      featured: false
+    },
+    {
+      id: '7',
+      title: 'Edge Computing for Smart Cities',
+      excerpt: 'IoT and edge computing solutions revolutionizing urban infrastructure and sustainability.',
+      content: 'Full content would go here...',
+      type: 'news',
+      url: '/news/edge-computing-iot',
+      category: 'iot',
+      tags: ['Edge Computing', 'IoT', 'Smart Cities', 'Urban Technology'],
+      author: 'Dr. Emily Watson',
+      date: '2024-08-19',
+      readTime: 9,
+      relevance: 75,
+      featured: false
+    },
+    {
+      id: '8',
+      title: 'Blockchain Supply Chain Solutions',
+      excerpt: 'Transparent, secure supply chain management using blockchain technology for traceability and trust.',
+      content: 'Full content would go here...',
+      type: 'service',
+      url: '/services/blockchain-supply-chain',
+      category: 'blockchain',
+      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Security'],
+      author: 'Jennifer Lee',
+      date: '2024-08-11',
+      readTime: 7,
+      relevance: 72,
+      featured: false
     }
   ];
 
-  const filterOptions = [
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
-    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
-    { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
-  ];
-
-  useEffect(()  => {
-    if (searchQuery) {
+  useEffect(() => {
+    if (query.trim()) {
       performSearch();
+    } else {
+      setResults([]);
     }
-  }, [searchQuery, selectedFilters, sortBy]);
+  }, [query, selectedType, selectedCategory, sortBy]);
 
   const performSearch = async () => {
+    if (!query.trim()) return;
+
     setIsSearching(true);
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 800));
-    
-    let filtered = mockSearchResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Filter results based on search criteria
+    let filteredResults = mockSearchResults.filter(result => {
+      const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
+                          result.excerpt.toLowerCase().includes(query.toLowerCase()) ||
+                          result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
+      const matchesType = selectedType === 'all' || result.type === selectedType;
+      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory;
       
-      const matchesFilters = selectedFilters.size === 0 || 
-                           selectedFilters.has(result.category.toLowerCase().replace(/\s+/g, '-')) ||
-                           selectedFilters.has(result.type);
-      
-      return matchesQuery && matchesFilters;
+      return matchesQuery && matchesType && matchesCategory;
     });
 
     // Sort results
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'date':
-          return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
-        case 'popularity':
-          return b.relevance - a.relevance;
-        default:
-          return b.relevance - a.relevance;
+    filteredResults.sort((a, b) => {
+      if (sortBy === 'relevance') {
+        return b.relevance - a.relevance;
+      } else if (sortBy === 'date') {
+        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime();
+      } else if (sortBy === 'title') {
+        return a.title.localeCompare(b.title);
       }
+      return 0;
     });
 
-    setSearchResults(filtered);
+    setResults(filteredResults);
     setIsSearching(false);
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
+    if (query.trim()) {
+      setSearchParams({ q: query.trim() });
     }
-  };
-
-  const toggleFilter = (filterId: string) => {
-    const newFilters = new Set(selectedFilters);
-    if (newFilters.has(filterId)) {
-      newFilters.delete(filterId);
-    } else {
-      newFilters.add(filterId);
-    }
-    setSelectedFilters(newFilters);
   };
 
   const clearFilters = () => {
-    setSelectedFilters(new Set());
+    setSelectedType('all');
+    setSelectedCategory('all');
+    setSortBy('relevance');
   };
 
-  const getResultIcon = (type: string) => {
+  const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'service': return Zap;
-      case 'page': return FileText;
-      case 'blog': return BookOpen;
-      case 'case-study': return FileText;
-      case 'documentation': return Code;
-      default: return FileText;
+      case 'service': return <Zap className="w-4 h-4" />;
+      case 'page': return <FileText className="w-4 h-4" />;
+      case 'news': return <BookOpen className="w-4 h-4" />;
+      case 'document': return <FileText className="w-4 h-4" />;
+      case 'case-study': return <Target className="w-4 h-4" />;
+      default: return <Globe className="w-4 h-4" />;
     }
   };
 
-  const getResultColor = (type: string) => {
-    switch (type) {
-      case 'service': return 'from-blue-500 to-indigo-500';
-      case 'blog': return 'from-green-500 to-emerald-500';
-      case 'case-study': return 'from-purple-500 to-pink-500';
-      case 'documentation': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500';
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'ai': return <Brain className="w-4 h-4" />;
+      case 'quantum': return <Atom className="w-4 h-4" />;
+      case 'cloud': return <Cloud className="w-4 h-4" />;
+      case 'security': return <Shield className="w-4 h-4" />;
+      case 'innovation': return <Rocket className="w-4 h-4" />;
+      case 'company': return <Building className="w-4 h-4" />;
+      case 'technology': return <Code className="w-4 h-4" />;
+      case 'data': return <Database className="w-4 h-4" />;
+      case 'iot': return <Network className="w-4 h-4" />;
+      case 'blockchain': return <Lock className="w-4 h-4" />;
+      case 'sustainability': return <Leaf className="w-4 h-4" />;
+      default: return <Globe className="w-4 h-4" />;
     }
   };
 
-  // Calculate filter counts
-  filterOptions.forEach(filter  => {
-    filter.count = mockSearchResults.filter(result => 
-      result.category.toLowerCase().replace(/\s+/g, '-') === filter.id ||
-      result.type === filter.id
-    ).length;
-  });
+  // Update counts
+  useEffect(() => {
+    searchTypes.forEach(type => {
+      if (type.id === 'all') {
+        type.count = results.length;
+      } else {
+        type.count = results.filter(result => result.type === type.id).length;
+      }
+    });
+
+    categories.forEach(category => {
+      if (category.id === 'all') {
+        category.count = results.length;
+      } else {
+        category.count = results.filter(result => result.category === category.id).length;
+      }
+    });
+  }, [results]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Header */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO 
+        title="Search - Zion Tech Group"
+        description="Search through Zion Tech Group's comprehensive collection of services, news, and resources. Find exactly what you're looking for."
+        keywords="search, Zion Tech Group, AI services, quantum computing, technology solutions"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Zion Tech Group</h1>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Find services, documentation, case studies, and insights across our comprehensive technology portfolio.
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Search Zion Tech
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Group
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Find services, news, case studies, and resources across our comprehensive technology portfolio
             </p>
           </motion.div>
-        </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Search Form */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-8"
-        >
-          <form onSubmit={handleSearch} className="max-w-3xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
+          {/* Search Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            <form onSubmit={handleSearch} className="relative">
+              <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
               <input
                 type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search for services, solutions, documentation, or insights..."
-                className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Search for services, news, case studies, or any topic..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                className="w-full pl-16 pr-6 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300 text-lg"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Search
               </button>
-            </div>
-          </form>
-        </motion.div>
+            </form>
+          </motion.div>
+        </div>
 
-        {/* Filters and Results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Filters Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
-                <button
-                  onClick={clearFilters}
-                  className="text-sm text-blue-600 hover:text-blue-700"
-                >
-                  Clear All
-                </button>
-              </div>
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        </div>
+      </section>
 
-              {/* Sort Options */}
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="relevance">Relevance</option>
-                  <option value="date">Date</option>
-                  <option value="popularity">Popularity</option>
-                </select>
-              </div>
-
-              {/* Filter Options */}
-              <div className="space-y-3">
-                {filterOptions.map(filter => (
-                  <button
-                    key={filter.id}
-                    onClick={() => toggleFilter(filter.id)}
-                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-                      selectedFilters.has(filter.id)
-                        ? 'bg-blue-50 border border-blue-200'
-                        : 'hover:bg-gray-50'
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <filter.icon className="h-5 w-5 text-gray-600" />
-                      <span className="text-sm font-medium text-gray-700">{filter.name}</span>
-                    </div>
-                    <span className="text-sm text-gray-500">{filter.count}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Search Results */}
-          <div className="lg:col-span-3">
-            {/* Results Header */}
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900">
-                  {searchQuery ? `Search Results for "${searchQuery}"` : 'Recent Content'}
-                </h2>
-                <p className="text-gray-600">
-                  {isSearching ? 'Searching...' : `${searchResults.length} results found`}
-                </p>
-              </div>
-              
-              {/* Mobile Filter Toggle */}
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="lg:hidden flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
-              >
-                <Filter className="h-4 w-4" />
-                <span>Filters</span>
-              </button>
-            </div>
-
-            {/* Mobile Filters */}
-            <AnimatePresence>
-              {showFilters && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="lg:hidden mb-6 bg-white rounded-xl shadow-sm border border-gray-200 p-4"
-                >
-                  <div className="grid grid-cols-2 gap-3">
-                    {filterOptions.map(filter => (
+      {/* Filters and Results */}
+      {query.trim() && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Filters */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 mb-8"
+            >
+              <div className="flex flex-col lg:flex-row gap-6">
+                {/* Type Filter */}
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-cyan-400 mb-3">Content Type</label>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    {searchTypes.map((type) => (
                       <button
-                        key={filter.id}
-                        onClick={() => toggleFilter(filter.id)}
-                        className={`flex items-center justify-between p-3 rounded-lg transition-colors ${
-                          selectedFilters.has(filter.id)
-                            ? 'bg-blue-50 border border-blue-200'
-                            : 'hover:bg-gray-50'
+                        key={type.id}
+                        onClick={() => setSelectedType(type.id)}
+                        className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          selectedType === type.id
+                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
+                            : 'text-gray-300 hover:text-white hover:bg-white/5'
                         }`}
                       >
-                        <div className="flex items-center space-x-2">
-                          <filter.icon className="h-4 w-4 text-gray-600" />
-                          <span className="text-sm font-medium text-gray-700">{filter.name}</span>
-                        </div>
-                        <span className="text-sm text-gray-500">{filter.count}</span>
+                        <type.icon className="w-4 h-4" />
+                        <span>{type.name}</span>
+                        <span className="text-xs text-gray-400">({type.count})</span>
                       </button>
                     ))}
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Results List */}
-            <div className="space-y-4">
-              {isSearching ? (
-                <div className="text-center py-12">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                  <p className="text-gray-600">Searching for results...</p>
                 </div>
-              ) : searchResults.length > 0 ? (
-                searchResults.map((result, index) => (
-                  <motion.div
-                    key={result.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex items-start space-x-4">
-                                              {/* Icon */}
-                        <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${getResultColor(result.type)} rounded-xl flex items-center justify-center`}>
-                          {React.createElement(getResultIcon(result.type), { className: "h-6 w-6 text-white" })}
-                        </div>
 
-                      {/* Content */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors">
-                                <a href={result.url}>{result.title}</a>
-                              </h3>
+                {/* Category Filter */}
+                <div className="flex-1">
+                  <label className="block text-sm font-medium text-cyan-400 mb-3">Category</label>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    {categories.map((category) => (
+                      <button
+                        key={category.id}
+                        onClick={() => setSelectedCategory(category.id)}
+                        className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          selectedCategory === category.id
+                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40'
+                            : 'text-gray-300 hover:text-white hover:bg-white/5'
+                        }`}
+                      >
+                        <category.icon className="w-4 h-4" />
+                        <span>{category.name}</span>
+                        <span className="text-xs text-gray-400">({category.count})</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sort Options */}
+                <div className="lg:w-48">
+                  <label className="block text-sm font-medium text-cyan-400 mb-3">Sort By</label>
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value as 'relevance' | 'date' | 'title')}
+                    className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
+                  >
+                    <option value="relevance" className="bg-zion-slate-dark text-white">Relevance</option>
+                    <option value="date" className="bg-zion-slate-dark text-white">Date</option>
+                    <option value="title" className="bg-zion-slate-dark text-white">Title</option>
+                  </select>
+                </div>
+
+                {/* Clear Filters */}
+                <div className="lg:w-auto">
+                  <button
+                    onClick={clearFilters}
+                    className="flex items-center space-x-2 px-4 py-2 text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    <X className="w-4 h-4" />
+                    <span>Clear</span>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Search Results */}
+            <div className="space-y-6">
+              {isSearching ? (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-center py-20"
+                >
+                  <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mb-4"></div>
+                  <p className="text-gray-400">Searching...</p>
+                </motion.div>
+              ) : results.length === 0 ? (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-center py-20"
+                >
+                  <div className="text-6xl text-gray-400 mb-4">🔍</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>
+                  <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    <span className="text-sm text-gray-500">Suggestions:</span>
+                    <button
+                      onClick={() => setQuery('AI')}
+                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200"
+                    >
+                      AI
+                    </button>
+                    <button
+                      onClick={() => setQuery('quantum')}
+                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200"
+                    >
+                      Quantum
+                    </button>
+                    <button
+                      onClick={() => setQuery('cloud')}
+                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200"
+                    >
+                      Cloud
+                    </button>
+                  </div>
+                </motion.div>
+              ) : (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-center mb-8"
+                  >
+                    <p className="text-gray-400">
+                      Found <span className="text-cyan-400 font-semibold">{results.length}</span> results for "{query}"
+                    </p>
+                  </motion.div>
+
+                  <div className="space-y-6">
+                    {results.map((result, index) => (
+                      <motion.div
+                        key={result.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group"
+                      >
+                        <div className="flex items-start space-x-4">
+                          {/* Icon */}
+                          <div className="flex-shrink-0 p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30">
+                            {getTypeIcon(result.type)}
+                          </div>
+
+                          {/* Content */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center space-x-3 mb-2">
+                              <span className="inline-flex items-center px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20">
+                                {getTypeIcon(result.type)}
+                                <span className="ml-1 capitalize">{result.type.replace('-', ' ')}</span>
+                              </span>
+                              <span className="inline-flex items-center px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-400/20">
+                                {getCategoryIcon(result.category)}
+                                <span className="ml-1 capitalize">{result.category}</span>
+                              </span>
                               {result.featured && (
-                                <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full font-medium">
+                                <span className="inline-flex items-center px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full border border-yellow-400/20">
+                                  <Star className="w-3 h-3 mr-1" />
                                   Featured
                                 </span>
                               )}
                             </div>
-                            <p className="text-gray-600 mb-3 leading-relaxed">{result.description}</p>
-                            
-                            {/* Tags */}
-                            <div className="flex flex-wrap gap-2 mb-3">
-                              {result.tags.slice(0, 5).map(tag => (
-                                <span
-                                  key={tag}
-                                  className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                              <Link to={result.url} className="hover:text-cyan-400 transition-colors duration-300">
+                                {result.title}
+                              </Link>
+                            </h3>
+
+                            <p className="text-gray-300 mb-4 leading-relaxed">
+                              {result.excerpt}
+                            </p>
+
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                                {result.author && (
+                                  <span className="flex items-center">
+                                    <User className="w-4 h-4 mr-1" />
+                                    {result.author}
+                                  </span>
+                                )}
+                                {result.date && (
+                                  <span className="flex items-center">
+                                    <Calendar className="w-4 h-4 mr-1" />
+                                    {new Date(result.date).toLocaleDateString()}
+                                  </span>
+                                )}
+                                {result.readTime && (
+                                  <span className="flex items-center">
+                                    <Clock className="w-4 h-4 mr-1" />
+                                    {result.readTime} min read
+                                  </span>
+                                )}
+                              </div>
+
+                              <div className="flex items-center space-x-3">
+                                <div className="flex flex-wrap gap-1">
+                                  {result.tags.slice(0, 3).map((tag, tagIndex) => (
+                                    <span
+                                      key={tagIndex}
+                                      className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20"
+                                    >
+                                      {tag}
+                                    </span>
+                                  ))}
+                                </div>
+                                
+                                <Link
+                                  to={result.url}
+                                  className="flex items-center text-cyan-400 hover:text-white transition-colors duration-300 group"
                                 >
-                                  {tag}
-                                </span>
-                              ))}
+                                  View
+                                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                                </Link>
+                              </div>
                             </div>
-
-                            {/* Meta */}
-                            <div className="flex items-center space-x-4 text-sm text-gray-500">
-                              <span className="flex items-center">
-                                <TagIcon className="h-4 w-4 mr-1" />
-                                {result.category}
-                              </span>
-                              <span className="flex items-center">
-                                <CalendarIcon className="h-4 w-4 mr-1" />
-                                {new Date(result.lastUpdated).toLocaleDateString()}
-                              </span>
-                              <span className="flex items-center">
-                                <Eye className="h-4 w-4 mr-1" />
-                                {Math.round(result.relevance * 100)}% relevant
-                              </span>
-                            </div>
-                          </div>
-
-                          {/* Actions */}
-                          <div className="flex items-center space-x-2 ml-4">
-                            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                              <Bookmark className="h-4 w-4" />
-                            </button>
-                            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                              <Share2 className="h-4 w-4" />
-                            </button>
-                            <a
-                              href={result.url}
-                              className="p-2 text-blue-600 hover:text-blue-700 transition-colors"
-                            >
-                              <ArrowRight className="h-4 w-4" />
-                            </a>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))
-              ) : searchQuery ? (
-                <div className="text-center py-12">
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
-                  <p className="text-gray-600 mb-4">
-                    Try adjusting your search terms or filters to find what you're looking for.
-                  </p>
-                  <button
-                    onClick={clearFilters}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Clear Filters
-                  </button>
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">Start your search</h3>
-                  <p className="text-gray-600">
-                    Enter a search term above to find services, documentation, and insights.
-                  </p>
-                </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </>
               )}
             </div>
-
-            {/* Pagination */}
-            {searchResults.length > 0 && (
-              <div className="mt-8 flex justify-center">
-                <nav className="flex items-center space-x-2">
-                  <button className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
-                    Previous
-                  </button>
-                  <span className="px-3 py-2 text-gray-700">Page 1 of 1</span>
-                  <button className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
-                    Next
-                  </button>
-                </nav>
-              </div>
-            )}
           </div>
-        </div>
-      </div>
+        </section>
+      )}
+
+      {/* Popular Searches */}
+      {!query.trim() && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Popular Searches
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Discover our most sought-after services and solutions
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: 'AI Services', icon: Brain, description: 'Machine learning, automation, and AI solutions', query: 'AI services' },
+                { title: 'Quantum Computing', icon: Atom, description: 'Next-generation computational power', query: 'quantum computing' },
+                { title: 'Cloud Solutions', icon: Cloud, description: 'DevOps, infrastructure, and cloud optimization', query: 'cloud solutions' },
+                { title: 'Cybersecurity', icon: Shield, description: 'Advanced security and threat protection', query: 'cybersecurity' },
+                { title: 'Micro SaaS', icon: Zap, description: 'Affordable software solutions for businesses', query: 'micro SaaS' },
+                { title: 'Digital Transformation', icon: Rocket, description: 'Strategic technology consulting', query: 'digital transformation' }
+              ].map((item, index) => (
+                <motion.button
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  onClick={() => setQuery(item.query)}
+                  className="p-6 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl hover:border-cyan-400/40 transition-all duration-300 group text-left"
+                >
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30">
+                      <item.icon className="w-6 h-6 text-cyan-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
-}
+};
+
+export default SearchPage;

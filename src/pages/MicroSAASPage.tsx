@@ -1,12 +1,13 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Zap, 
-  Code, 
-  Database, 
-  Users, 
-  Shield, 
-  CheckCircle, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Zap,
+  Code,
+  Database,
+  Users,
+  Shield,
+  CheckCircle,
   ArrowRight,
   Clock,
   Star,
@@ -19,7 +20,7 @@ import { Zap,
   Rocket,
   Target,
   Globe
- } from 'lucide-react.ts';
+} from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -100,7 +101,7 @@ const MicroSAASPage = () => {
             </span> Solutions
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Build and scale your software-as-a-service business with our micro SAAS solutions. 
+            Build and scale your software-as-a-service business with our micro SAAS solutions.
             From custom applications to scalable architectures, we help you create successful SAAS products.
           </p>
           {/* Quick Stats */}
@@ -124,9 +125,9 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index)  => (
+          {saasServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -196,12 +197,12 @@ const MicroSAASPage = () => {
               Benefits of Micro SAAS
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Discover why micro SAAS solutions are the future of software delivery 
+              Discover why micro SAAS solutions are the future of software delivery
               and how they can transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index)  => (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {saasBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -267,7 +268,7 @@ const MicroSAASPage = () => {
             Ready to Build Your SAAS?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our SAAS experts help you create a successful software product 
+            Let our SAAS experts help you create a successful software product
             that scales with your business and delights your customers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

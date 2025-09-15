@@ -1,26 +1,24 @@
-import React from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { Logo  } from '@/components/header/Logo';
-import { PointsBadge  } from '@/components/loyalty/PointsBadge';
-import { UserMenu  } from '@/components/header/UserMenu';
-import { LanguageSelector  } from '@/components/header/LanguageSelector';
-import { ModeToggle  } from '@/components/ModeToggle';
-import { useAuth  } from '@/hooks/useAuth';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { useMessaging  } from '@/context/MessagingContext';
-import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions  } from '@/data/marketplaceData';
-import { slugify  } from '@/lib/slugify';
-import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu  } from '@/components/header/MobileMenu';
-import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart  } from 'lucide-react.ts';
-import { useTranslation  } from 'react-i18next.ts';
-import { useSelector  } from 'react-redux.ts';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Logo } from '@/components/header/Logo';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { UserMenu } from '@/components/header/UserMenu';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { slugify } from '@/lib/slugify';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Menu, X, ShoppingCart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { ModeToggle  } from '@/components/ModeToggle';
-
-export function PrimaryNav(...args: any[]): any {
+export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isLoggedIn = !!user;
@@ -38,11 +36,11 @@ export function PrimaryNav(...args: any[]): any {
     // context not available
   }
 
-  const cartCount = useSelector((s: anyRootState)  =>
+  const cartCount = useSelector((s: RootState) =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
   );
 
-  const handleSubmit = (e: anyReact.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
       console.log('PrimaryNav search submit:', query);
@@ -61,12 +59,12 @@ export function PrimaryNav(...args: any[]): any {
       >
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
-          
+
           {/* Navigation - hidden on mobile, shown on desktop */}
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
-          
+
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -91,7 +89,7 @@ export function PrimaryNav(...args: any[]): any {
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
                   }
                   setQuery('');
-                  
+
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
@@ -104,7 +102,7 @@ export function PrimaryNav(...args: any[]): any {
                 searchSuggestions={suggestions}
               />
             </form>
-            
+
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
               <PointsBadge />
@@ -128,13 +126,13 @@ export function PrimaryNav(...args: any[]): any {
                 </HoverCardContent>
               </HoverCard>
             </div>
-            
+
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-            
+
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
@@ -157,7 +155,7 @@ export function PrimaryNav(...args: any[]): any {
             {isLoggedIn && <UserMenu />}
             </div>
           </div>
-          
+
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"

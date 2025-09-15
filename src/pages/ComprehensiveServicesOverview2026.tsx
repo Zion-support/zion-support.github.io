@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Server,
+  Zap,
+  Globe,
+  Cpu,
   Database,
   Network,
   Lock,
@@ -80,23 +81,23 @@ import { Brain,
   Cpu as CpuIcon2,
   Network as NetworkIcon,
   Leaf as LeafIcon
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
+} from 'lucide-react';
+import SEO from "@/components/SEO";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
-export default function ComprehensiveServicesOverview2026(...args: any[]): any {
+export default function ComprehensiveServicesOverview2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedCategory, setExpandedCategory] = useState<any>(null);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const serviceCategories = [
     {
-      id: any'quantum-ai',
+      id: 'quantum-ai',
       name: 'Quantum AI & Computing',
       description: 'Revolutionary quantum computing solutions combined with artificial intelligence',
       icon: AtomIcon,
       color: 'from-purple-500 to-cyan-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Quantum AI'),
-      marketSize: any'$1.7 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Quantum AI'),
+      marketSize: '$1.7 billion by 2027',
       avgROI: '500-2000%',
       innovationLevel: 'Revolutionary'
     },
@@ -106,8 +107,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'Brain-inspired computing systems that mimic human neural networks',
       icon: BrainIcon2,
       color: 'from-pink-500 to-purple-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Neuromorphic AI'),
-      marketSize: any'$8.3 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Neuromorphic AI'),
+      marketSize: '$8.3 billion by 2027',
       avgROI: '300-800%',
       innovationLevel: 'Cutting-edge'
     },
@@ -117,8 +118,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'AI-powered design and engineering of biological systems',
       icon: DnaIcon,
       color: 'from-green-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Synthetic Biology'),
-      marketSize: any'$13.4 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Synthetic Biology'),
+      marketSize: '$13.4 billion by 2027',
       avgROI: '400-1200%',
       innovationLevel: 'Revolutionary'
     },
@@ -128,8 +129,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'Autonomous space operations and satellite management systems',
       icon: SatelliteIcon,
       color: 'from-blue-500 to-purple-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Space Technology'),
-      marketSize: any'$469.8 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Space Technology'),
+      marketSize: '$469.8 billion by 2027',
       avgROI: '600-2000%',
       innovationLevel: 'Revolutionary'
     },
@@ -139,8 +140,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'AI-powered discovery and design of next-generation materials',
       icon: LayersIcon,
       color: 'from-orange-500 to-red-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Advanced Materials'),
-      marketSize: any'$1.2 trillion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Advanced Materials'),
+      marketSize: '$1.2 trillion by 2027',
       avgROI: '500-1500%',
       innovationLevel: 'Cutting-edge'
     },
@@ -150,8 +151,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'Direct neural communication between human brain and computers',
       icon: MonitorIcon2,
       color: 'from-purple-500 to-pink-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Brain-Computer Interface'),
-      marketSize: any'$3.7 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Brain-Computer Interface'),
+      marketSize: '$3.7 billion by 2027',
       avgROI: '800-3000%',
       innovationLevel: 'Revolutionary'
     },
@@ -161,8 +162,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'Virtual replicas of physical systems with real-time monitoring',
       icon: GlobeIcon3,
       color: 'from-cyan-500 to-green-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Digital Twin'),
-      marketSize: any'$86.1 billion by 2028',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Digital Twin'),
+      marketSize: '$86.1 billion by 2028',
       avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
@@ -172,8 +173,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'Immersive VR, AR, and MR experiences powered by AI',
       icon: SmartphoneIcon2,
       color: 'from-orange-500 to-purple-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Extended Reality'),
-      marketSize: any'$125.2 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Extended Reality'),
+      marketSize: '$125.2 billion by 2027',
       avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
@@ -183,8 +184,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'AI processing at the edge of networks for real-time decision making',
       icon: CpuIcon2,
       color: 'from-green-500 to-cyan-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Edge AI'),
-      marketSize: any'$15.7 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Edge AI'),
+      marketSize: '$15.7 billion by 2027',
       avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
@@ -194,8 +195,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'Collaborative AI training across distributed data sources',
       icon: NetworkIcon,
       color: 'from-purple-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Federated Learning'),
-      marketSize: any'$2.3 billion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Federated Learning'),
+      marketSize: '$2.3 billion by 2027',
       avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
@@ -205,17 +206,18 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Sustainable Technology'),
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),
       marketSize: '$1.2 trillion by 2027',
       avgROI: '300-800%',
       innovationLevel: 'Advanced'
     }
   ];
 
-  const filteredCategories = selectedCategory === 'all' 
-    ? serviceCategories: anyserviceCategories.filter(cat  => cat.id === selectedCategory);
+  const filteredCategories = selectedCategory === 'all'
+    ? serviceCategories
+    : serviceCategories.filter(cat => cat.id === selectedCategory);
 
-  const toggleCategoryExpansion = (categoryId: anystring)  => {
+  const toggleCategoryExpansion = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
@@ -225,12 +227,12 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="Comprehensive Services Overview 2026 | Zion Tech Group"
         description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
         keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -247,10 +249,10 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-              Discover our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. 
+              Discover our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories.
               From Quantum AI to Sustainable Technology, we're shaping the future of innovation.
             </p>
-            
+
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div
@@ -286,19 +288,19 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">Explore by Category</h2>
             <p className="text-zion-slate-300">Filter our services by technology category</p>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg transition-all duration-200 ${
                 selectedCategory === 'all'
                   ? 'bg-zion-cyan text-white'
-                  : 'bg-white/10 text-zion-slate-300 hover: anybg-white/20'
+                  : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
               }`}
             >
               All Categories
             </button>
-            {serviceCategories.map(category  => (
+            {serviceCategories.map(category => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -359,7 +361,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                   {/* Innovation Level Badge */}
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                      category.innovationLevel === 'Revolutionary' 
+                      category.innovationLevel === 'Revolutionary'
                         ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                         : category.innovationLevel === 'Cutting-edge'
                         ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
@@ -373,8 +375,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                   </div>
 
                   {/* Services Preview */}
-                  <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                    {category.services.slice(0, 3).map((service, serviceIndex)  => (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                    {category.services.slice(0, 3).map((service, serviceIndex) => (
                       <div key={service.id} className="bg-zion-slate-800/50 rounded-lg p-4">
                         <h4 className="font-semibold text-white mb-2">{service.title}</h4>
                         <div className="text-zion-cyan font-bold text-lg mb-2">
@@ -425,8 +427,8 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
                       >
-                        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6">
-                          {category.services.map((service, serviceIndex)  => (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                          {category.services.map((service, serviceIndex) => (
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
                               <div className="flex items-start justify-between mb-4">
                                 <h4 className="text-lg font-semibold text-white">{service.title}</h4>
@@ -439,12 +441,12 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                                   </div>
                                 </div>
                               </div>
-                              
+
                               <p className="text-zion-slate-300 text-sm mb-4">{service.description}</p>
-                              
+
                               <div className="flex items-center gap-2 mb-4">
                                 <div className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                                  service.innovationLevel === 'Revolutionary' 
+                                  service.innovationLevel === 'Revolutionary'
                                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                                     : service.innovationLevel === 'Cutting-edge'
                                     ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
@@ -456,7 +458,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                                   ROI: {service.roi}
                                 </div>
                               </div>
-                              
+
                               <div className="flex flex-wrap gap-2 mb-4">
                                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
                                   <span
@@ -467,7 +469,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                                   </span>
                                 ))}
                               </div>
-                              
+
                               <Link
                                 to="/contact"
                                 className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
@@ -501,7 +503,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
               Ready to Explore the Future?
             </h2>
             <p className="text-xl text-zion-slate-300 mb-8">
-              Our comprehensive portfolio of revolutionary micro SAAS services is designed to transform your business. 
+              Our comprehensive portfolio of revolutionary micro SAAS services is designed to transform your business.
               Contact us today to discover how we can help you achieve breakthrough results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

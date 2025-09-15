@@ -1,38 +1,48 @@
 #!/bin/bash
 
-echo "Resolving all merge conflicts..."
+echo "🔧 Resolving all merge conflicts systematically..."
 
-# Function to resolve conflicts by taking the HEAD version (our local changes)
-resolve_conflicts() {
-    local file="$1"
-    echo "Resolving conflicts in: $file"
+# Find all files with merge conflict markers
+echo "📁 Searching for files with merge conflicts..."
+conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null)
+
+if [ -z "$conflict_files" ]; then
+    echo "✅ No merge conflicts found!"
+    exit 0
+fi
+
+echo "⚠️  Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
+
+# Process each file
+for file in $conflict_files; do
+    echo "🔧 Processing: $file"
     
-    # Remove all conflict markers and keep the HEAD version
+    # Create backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Remove all merge conflict markers and keep the first version (HEAD)
     sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> [a-f0-9]/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
     
     # Remove any remaining conflict markers
     sed -i '/^<<<<<<< HEAD/d' "$file"
     sed -i '/^=======/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
-}
-
-# Find all files with merge conflicts
-conflict_files=$(git status --porcelain | grep "^UU" | cut -c4-)
-
-if [ -z "$conflict_files" ]; then
-    # Alternative method to find conflict files
-    conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true)
-fi
-
-echo "Found conflict files:"
-echo "$conflict_files"
-
-# Resolve conflicts in each file
-for file in $conflict_files; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
-    fi
+    
+    echo "✅ Resolved conflicts in: $file"
 done
 
-echo "All merge conflicts resolved!"
+echo "🎉 All merge conflicts resolved!"
+echo "📝 Files processed:"
+echo "$conflict_files"
+
+# Check if any conflicts remain
+remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
+
+if [ "$remaining_conflicts" -eq 0 ]; then
+    echo "✅ No remaining conflicts found!"
+else
+    echo "⚠️  $remaining_conflicts conflicts still remain"
+    echo "🔍 Remaining conflicts:"
+    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -10
+fi

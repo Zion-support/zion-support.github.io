@@ -1,7 +1,7 @@
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function LandingPageGenerator(...args: any[]): any {
+export default function LandingPageGenerator() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

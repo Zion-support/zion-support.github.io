@@ -1,9 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react.ts'
+import React from 'react'
+import Link from 'next/link'
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap } from 'lucide-react'
 
 
-export default function CaseStudies(...args: any[]): any {
+export default function CaseStudies() {
 	const caseStudies = [
 		{
 			id: 1,
@@ -138,7 +138,7 @@ export default function CaseStudies(...args: any[]): any {
 									</div>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -169,8 +169,8 @@ export default function CaseStudies(...args: any[]): any {
 							Explore how we've helped businesses across different industries achieve their goals
 						</p>
 					</div>
-					<div className="grid gap-8 lg: anygrid-cols-2">
-						{caseStudies.slice(1).map((study)  => (
+					<div className="grid gap-8 lg:grid-cols-2">
+						{caseStudies.slice(1).map((study) => (
 							<div key={study.id} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
 								<div className="flex items-center justify-between mb-4">
 									<div className="flex items-center gap-2">
@@ -178,7 +178,7 @@ export default function CaseStudies(...args: any[]): any {
 										<span className="text-sm text-gray-500">{study.industry}</span>
 									</div>
 									<div className="flex items-center gap-1">
-										{Array.from({ length: anystudy.rating }).map((_, i)  => (
+										{Array.from({ length: study.rating }).map((_, i) => (
 											<Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
 										))}
 									</div>
@@ -196,7 +196,7 @@ export default function CaseStudies(...args: any[]): any {
 									</div>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									View Details <ArrowRight className="ml-2 h-4 w-4" />
@@ -211,7 +211,7 @@ export default function CaseStudies(...args: any[]): any {
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Track Record<string, any>
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Track Record</h2>
 						<p className="mt-6 text-lg text-gray-600">
 							Consistent results across all our client engagements
 						</p>
@@ -297,13 +297,13 @@ export default function CaseStudies(...args: any[]): any {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 							>
 								Get Started Today
 							</Link>
 							<Link
-								to="/services"
+								href="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
 							>
 								Explore Our Services →

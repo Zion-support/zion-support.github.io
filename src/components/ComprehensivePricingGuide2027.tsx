@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { DollarSign, 
-  TrendingUp, 
-  Clock, 
-  Users, 
-  Star, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  DollarSign,
+  TrendingUp,
+  Clock,
+  Users,
+  Star,
   CheckCircle,
   ArrowRight,
   ExternalLink,
@@ -21,15 +22,15 @@ import { DollarSign,
   Shield,
   Brain,
   Rocket
- } from 'lucide-react.ts';
-import { servicesCatalog  } from '../data/servicesCatalog';
-import { innovativeServices2027  } from '../data/innovativeServices2027';
+} from 'lucide-react';
+import { servicesCatalog } from '../data/servicesCatalog';
+import { innovativeServices2027 } from '../data/innovativeServices2027';
 
-export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
+export const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [priceRange, setPriceRange] = useState<any>('All');
-  const [sortBy, setSortBy] = useState<any>('name');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [priceRange, setPriceRange] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<string>('name');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -52,14 +53,14 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
 
   // Combine all services
   const allServices = [
-    ...servicesCatalog.flatMap(category => 
+    ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
         ...item,
-        source: any'catalog',
+        source: 'catalog',
         category: category.name
       }))
     ),
-    ...innovativeServices2027.map(service  => ({
+    ...innovativeServices2027.map(service => ({
       ...service,
       source: 'innovative',
       category: service.category,
@@ -74,10 +75,10 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    
+
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    
-    const matchesPrice = priceRange === 'All' || 
+
+    const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
@@ -108,14 +109,14 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  const getPriceRange = (price: anystring)  => {
+  const getPriceRange = (price: string) => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High';
   };
 
-  const getPriceColor = (price: anystring)  => {
+  const getPriceColor = (price: string) => {
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -125,7 +126,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -171,7 +172,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
             <Calculator className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Comprehensive
@@ -179,9 +180,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
             <br />
             <span className="text-white">Pricing & ROI Guide</span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our complete portfolio of innovative services with transparent pricing, 
+            Explore our complete portfolio of innovative services with transparent pricing,
             detailed ROI analysis, and market insights to help you make informed decisions.
           </p>
         </motion.div>
@@ -211,9 +212,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {categories.map(category  => (
+                {categories.map(category => (
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
                   </option>
@@ -224,9 +225,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {priceRanges.map(range  => (
+                {priceRanges.map(range => (
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
                   </option>
@@ -264,9 +265,9 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index)  => (
+          {sortedServices.map((service, index) => (
             <motion.div
               key={`${service.source}-${service.id}`}
               initial={{ opacity: 0, y: 20 }}
@@ -369,10 +370,10 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               Need Custom Pricing or Have Questions?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions 
+              Our team of experts is ready to provide personalized quotes and answer any questions
               about our services. Get in touch for a detailed consultation.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-5 h-5" />

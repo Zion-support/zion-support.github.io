@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Brain, 
-  Atom, 
-  Rocket, 
-  Shield, 
-  Dna, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Dna,
   Microscope,
   Cpu,
   Zap,
@@ -21,8 +22,8 @@ import { Brain,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from '../data/innovativeServices2027';
+} from 'lucide-react';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Consciousness': Brain,
@@ -54,9 +55,9 @@ const categoryColors: { [key: string]: string } = {
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
 
-export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [expandedService, setExpandedService] = useState<any>(null);
+export const InnovativeServicesShowcase2027: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -77,11 +78,11 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
     return () => observer.disconnect();
   }, []);
 
-  const filteredServices = selectedCategory === 'All' 
-    ? innovativeServices2027 
+  const filteredServices = selectedCategory === 'All'
+    ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: anystring)  => {
+  const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -112,7 +113,7 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
             <Star className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Revolutionary
@@ -120,9 +121,9 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
             <br />
             <span className="text-white">Technology Services</span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our cutting-edge 2027 services. 
+            Experience the future of technology with our cutting-edge 2027 services.
             From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.
           </p>
         </motion.div>
@@ -140,12 +141,12 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light/50 text-gray-300 hover: anybg-zion-slate-light/70 hover:text-white'
+                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
               }`}
             >
               All Categories
             </button>
-            {serviceCategories2027.map((category)  => {
+            {serviceCategories2027.map((category) => {
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -170,9 +171,9 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index)  => (
+          {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -315,10 +316,10 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our expert team is ready to help you implement these cutting-edge solutions. 
+              Our expert team is ready to help you implement these cutting-edge solutions.
               Get in touch to discuss your specific needs and discover how we can drive innovation in your organization.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-5 h-5" />

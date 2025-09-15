@@ -1,5 +1,14 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Globe,
+  MapPin,
+  Users,
+  Clock,
+  Star,
+  Award,
+  CheckCircle
+} from 'lucide-react';
 
 const globalOffices = [
   {
@@ -39,7 +48,7 @@ const globalStats = [
   { label: "24/7 Support", value: "Global", icon: "⏰" }
 ];
 
-export function GlobalPresenceSection(...args: any[]): any {
+export function GlobalPresenceSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -53,8 +62,9 @@ export function GlobalPresenceSection(...args: any[]): any {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Global Presence
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Serving clients worldwide with innovative technology solutions and local expertise
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Serving clients worldwide with local expertise and global reach.
+            Our distributed team ensures 24/7 support and cultural understanding.
           </p>
         </motion.div>
 
@@ -64,9 +74,9 @@ export function GlobalPresenceSection(...args: any[]): any {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: any0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {globalStats.map((stat, index)  => (
+          {globalStats.map((stat, index) => (
             <div key={stat.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{stat.icon}</span>
@@ -89,8 +99,8 @@ export function GlobalPresenceSection(...args: any[]): any {
             Strategic Global Locations
           </h3>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {globalOffices.map((office, index) => (
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
@@ -144,9 +154,24 @@ export function GlobalPresenceSection(...args: any[]): any {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to go global?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Go Global?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Whether you're expanding internationally or need local expertise,
+              our global presence ensures you get the support you need, when you need it.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Find Your Local Team
+                <MapPin className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                Global Services
+                <Globe className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

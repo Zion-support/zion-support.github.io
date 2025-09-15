@@ -25,7 +25,6 @@ export interface EnterpriseService2034 {
   contact: string;
   website: string;
 }
-
 export const enterprise2034Services: EnterpriseService2034[] = [
   {
     id: 'quantum-zero-trust-architecture',

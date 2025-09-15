@@ -1,11 +1,12 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { BarChart3, 
-  TrendingUp, 
-  Database, 
-  Zap, 
-  Shield, 
-  Globe, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  BarChart3,
+  TrendingUp,
+  Database,
+  Zap,
+  Shield,
+  Globe,
   Brain,
   Cloud,
   Lock,
@@ -26,10 +27,10 @@ import { BarChart3,
   Cpu,
   Network,
   FileText
- } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
 
-export default function DataAnalytics(...args: any[]): any {
+export default function DataAnalytics() {
   const features = [
     {
       icon: Database,
@@ -132,11 +133,11 @@ export default function DataAnalytics(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Data Analytics Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our comprehensive data analytics solutions. Real-time dashboards, predictive analytics, and automated reporting."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
@@ -156,7 +157,7 @@ export default function DataAnalytics(...args: any[]): any {
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Analytics</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable insights with our comprehensive 
+              Transform your business data into actionable insights with our comprehensive
               analytics solutions. Make data-driven decisions with confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -184,8 +185,8 @@ export default function DataAnalytics(...args: any[]): any {
                 What is Data Analytics?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Data Analytics is the process of examining, cleaning, transforming, and modeling data 
-                to discover useful information, draw conclusions, and support decision-making. 
+                Data Analytics is the process of examining, cleaning, transforming, and modeling data
+                to discover useful information, draw conclusions, and support decision-making.
                 It combines statistical analysis, machine learning, and business intelligence.
               </p>
               <div className="space-y-4">
@@ -212,7 +213,7 @@ export default function DataAnalytics(...args: any[]): any {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -267,13 +268,13 @@ export default function DataAnalytics(...args: any[]): any {
               Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Data Analytics platform provides comprehensive capabilities for 
+              Our Data Analytics platform provides comprehensive capabilities for
               data processing, analysis, and visualization.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -305,13 +306,13 @@ export default function DataAnalytics(...args: any[]): any {
               Core Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive data analytics solutions designed to transform your business 
+              Comprehensive data analytics solutions designed to transform your business
               data into actionable intelligence and insights.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {solutions.map((solution, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -353,13 +354,13 @@ export default function DataAnalytics(...args: any[]): any {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Data analytics is transforming industries across the globe, 
+              Data analytics is transforming industries across the globe,
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -401,13 +402,13 @@ export default function DataAnalytics(...args: any[]): any {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how data analytics can transform your organization 
+              Discover how data analytics can transform your organization
               and drive measurable business outcomes.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -443,7 +444,7 @@ export default function DataAnalytics(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -465,7 +466,7 @@ export default function DataAnalytics(...args: any[]): any {
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve analytics capabilities'
               }
-            ].map((phase, index)  => (
+            ].map((phase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -496,7 +497,7 @@ export default function DataAnalytics(...args: any[]): any {
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how data analytics can revolutionize your business intelligence, 
+              Discover how data analytics can revolutionize your business intelligence,
               improve decision-making, and drive unprecedented growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

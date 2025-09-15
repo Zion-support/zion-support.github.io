@@ -1,264 +1,135 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { MessageCircle, 
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  MessageCircle, 
   X, 
   Send, 
   Bot, 
   User, 
   Sparkles, 
-  Mic, 
-  MicOff, 
-  Paperclip, 
-  Image, 
-  FileText, 
-  Video, 
-  Smile,
+  Loader2,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
   Settings,
+  HelpCircle,
   Zap,
   Brain,
-  TrendingUp,
-  Lightbulb,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Loader2,
-  ChevronDown,
-  ChevronUp,
-  Minimize2,
-  Maximize2,
-  Volume2,
-  VolumeX
- } from 'lucide-react';
+  Shield,
+  Cloud,
+  Rocket,
+  FileText,
+  Image,
+  Link,
+  Download,
+  Share2,
+  RefreshCw,
+  Star,
+  ThumbsUp,
+  ThumbsDown
+} from 'lucide-react';
 
 interface Message {
-
   id: string;
   type: 'user' | 'assistant' | 'system';
   content: string;
   timestamp: Date;
-  isTyping?: boolean;
-attachments?: Array<any>;
+  isLoading?: boolean;
+  error?: string;
   metadata?: {
-    confidence?: number;
-    sources?: string[];
     suggestions?: string[];
+    links?: Array<{ url: string; title: string }>;
+    images?: Array<{ url: string; alt: string }>;
+    files?: Array<{ name: string; url: string; size: string }>;
   };
+  feedback?: 'positive' | 'negative' | null;
 }
 
-interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
-  enabled?: boolean;
+interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
-  language?: string;
-
+  theme?: 'dark' | 'light' | 'auto';
+  maxHeight?: string;
+  welcomeMessage?: string;
+  enableVoice?: boolean;
+  enableFileUpload?: boolean;
+  enableSuggestions?: boolean;
+  enableFeedback?: boolean;
+  autoExpand?: boolean;
 }
 
-export function ChatAssistant(...args: any[]): any {
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+  position = 'bottom-right',
+  theme = 'dark',
+  maxHeight = '600px',
+  welcomeMessage = "Hello! I'm Zion, your AI assistant. I can help you with:\n\n🚀 AI & Technology Solutions\n💼 Business Intelligence\n☁️ Cloud & DevOps Services\n🔒 Cybersecurity & Compliance\n\nHow can I assist you today?",
+  enableVoice = true,
+  enableFileUpload = true,
+  enableSuggestions = true,
+  enableFeedback = true,
+  autoExpand = false
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<any>([]);
-  const [inputValue, setInputValue] = useState('');
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: '1',
+      type: 'assistant',
+      content: welcomeMessage,
+      timestamp: new Date(),
+      metadata: {
+        suggestions: [
+          "Tell me about your AI services",
+          "How can you help with digital transformation?",
+          "What are your pricing options?",
+          "Show me case studies"
+        ]
+      }
+    }
+  ]);
+  const [inputValue, setIsInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [chatHistory, setChatHistory] = useState<any>([]);
-  const [suggestions, setSuggestions] = useState<any>([]);
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(autoExpand);
+  const [conversationHistory, setConversationHistory] = useState<string[]>([]);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<any>(null);
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
   // Initialize speech recognition
   useEffect(() => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (enableVoice && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = language;
+      recognitionRef.current.lang = 'en-US';
 
       recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
-        setInputValue(transcript);
+        setIsInputValue(transcript);
         setIsListening(false);
       };
 
       recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error: any', event.error);
+        console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
     }
-  }, [language]);
+  }, [enableVoice]);
 
-  // Initialize with welcome message
-  useEffect(()  => {
-    if (enabled && messages.length === 0) {
-      const welcomeMessage: Message = {
-        id: 'welcome',
-        type: 'assistant',
-        content: `Hello! I'm your AI assistant from Zion Tech Group. I can help you with:\n\n• AI and technology questions\n• Business solutions\n• Technical support\n• Product information\n\nHow can I assist you today?`,
-        timestamp: new Date(),
-        metadata: {
-          suggestions: [
-            'Tell me about your AI solutions',
-            'What quantum computing services do you offer?',
-            'How can I get started with your platform?',
-            'What are your pricing plans?'
-          ]
-        }
-      };
-      setMessages([welcomeMessage]);
-      setSuggestions(welcomeMessage.metadata?.suggestions || []);
-    }
-  }, [enabled, messages.length]);
-
-  // Auto-scroll to bottom
-  useEffect(()  => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  // Handle input change
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
-
-  // Handle send message
-  const handleSendMessage = useCallback(async () => {
-    if (!inputValue.trim() || isProcessing) return;
-
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
-      type: 'user',
-      content: inputValue.trim(),
-      timestamp: new Date()
-    };
-
-    setMessages(prev  => [...prev, userMessage]);
-    setChatHistory(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsTyping(true);
-    setIsProcessing(true);
-
-    // Simulate AI response
-    setTimeout(() => {
-      const aiResponse = generateAIResponse(inputValue.trim());
-      const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
-        type: 'assistant',
-        content: aiResponse.content,
-        timestamp: new Date(),
-        metadata: aiResponse.metadata
-      };
-
-      setMessages(prev  => [...prev, assistantMessage]);
-      setChatHistory(prev => [...prev, assistantMessage]);
-      setSuggestions(aiResponse.metadata?.suggestions || []);
-      setIsTyping(false);
-      setIsProcessing(false);
-    }, 1000 + Math.random() * 2000); // Random delay for realism
-  }, [inputValue, isProcessing]);
-
-  // Generate AI response
-  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
-    const input = userInput.toLowerCase();
-    
-    // AI response logic based on user input
-    if (input.includes('ai') || input.includes('artificial intelligence')) {
-      return {
-        content: `At Zion Tech Group, we offer cutting-edge AI solutions including:\n\n🤖 **AI Autonomous Research Assistant** - Automates research tasks\n📊 **AI Business Intelligence** - Data-driven insights\n🔄 **AI Process Automation** - Streamline operations\n🎯 **AI Predictive Analytics** - Future-proof decisions\n\nOur AI solutions are designed to transform your business operations and drive innovation. Would you like to learn more about any specific AI service?`,
-        metadata: {
-          confidence: 0.95,
-          sources: ['AI Solutions Catalog', 'Case Studies'],
-          suggestions: [
-            'Tell me about your AI pricing',
-            'Show me AI case studies',
-            'How do I implement AI in my business?',
-            'What industries do you serve?'
-          ]
-        }
-      };
-    } else if (input.includes('quantum') || input.includes('computing')) {
-      return {
-        content: `Our quantum computing services are at the forefront of innovation:\n\n⚛️ **Quantum Machine Learning** - Next-gen AI algorithms\n🔐 **Quantum Cryptography** - Unbreakable security\n🧮 **Quantum Optimization** - Solve complex problems\n🌐 **Quantum Cloud Platform** - Access quantum power\n\nWe're working with leading quantum hardware providers to bring these capabilities to businesses like yours.`,
-        metadata: {
-          confidence: 0.92,
-          sources: ['Quantum Computing Research', 'Partnerships'],
-          suggestions: [
-            'What quantum problems can you solve?',
-            'How much does quantum computing cost?',
-            'When will quantum be commercially available?',
-            'Show me quantum use cases'
-          ]
-        }
-      };
-    } else if (input.includes('saas') || input.includes('software')) {
-      return {
-        content: `Our micro SAAS solutions are designed for modern businesses:\n\n💼 **AI Sales Copilot** - Boost sales performance\n📈 **AI Marketing Automation** - Scale your marketing\n👥 **AI HR Platform** - Streamline HR processes\n📊 **AI Analytics Dashboard** - Real-time insights\n\nEach solution is modular, scalable, and designed to integrate seamlessly with your existing systems.`,
-        metadata: {
-          confidence: 0.88,
-          sources: ['SAAS Portfolio', 'Integration Guide'],
-          suggestions: [
-            'What are your SAAS pricing tiers?',
-            'Do you offer free trials?',
-            'How do integrations work?',
-            'Can I customize the solutions?'
-          ]
-        }
-      };
-    } else if (input.includes('pricing') || input.includes('cost') || input.includes('price')) {
-      return {
-        content: `We offer flexible pricing to meet your business needs:\n\n🚀 **Starter Plan** - $99/month\n   • Basic AI features\n   • Email support\n   • 5 user licenses\n\n💎 **Professional Plan** - $299/month\n   • Advanced AI capabilities\n   • Priority support\n   • Unlimited users\n   • Custom integrations\n\n🏢 **Enterprise Plan** - Custom pricing\n   • Full AI suite\n   • Dedicated support\n   • Custom development\n   • SLA guarantees\n\nWould you like me to connect you with our sales team for a personalized quote?`,
-        metadata: {
-          confidence: 0.90,
-          sources: ['Pricing Guide', 'Sales Team'],
-          suggestions: [
-            'Schedule a demo',
-            'Get a custom quote',
-            'Compare plans in detail',
-            'Talk to sales team'
-          ]
-        }
-      };
-    } else if (input.includes('demo') || input.includes('trial')) {
-      return {
-        content: `Great choice! Here's how to get started:\n\n📅 **Free Demo** - 30-minute personalized walkthrough\n🎯 **Free Trial** - 14 days with full features\n👨‍💼 **Consultation** - Free strategy session\n\nI can help you schedule any of these options. What would you prefer?`,
-        metadata: {
-          confidence: 0.85,
-          suggestions: [
-            'Schedule a demo',
-            'Start free trial',
-            'Book consultation',
-            'Download demo guide'
-          ]
-        }
-      };
-    } else {
-      return {
-        content: `I understand you're asking about "${userInput}". While I'm a specialized AI assistant for Zion Tech Group, I'd be happy to help you with:\n\n• Our AI and technology services\n• Business solutions and consulting\n• Product information and demos\n• Technical support and guidance\n\nCould you rephrase your question or ask about our specific services?`,
-        metadata: {
-          confidence: 0.75,
-          suggestions: [
-            'What services do you offer?',
-            'Tell me about Zion Tech Group',
-            'How can AI help my business?',
-            'Show me your solutions'
-          ]
-        }
-      };
-    }
-  };
-
-  // Handle suggestion click
-  const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void => {
-    setInputValue(suggestion);
-    inputRef.current?.focus();
-  };
-
-  // Toggle speech recognition
-  const toggleSpeechRecognition = () => {
+  // Handle speech recognition
+  const toggleListening = useCallback(() => {
     if (!recognitionRef.current) {
       alert('Speech recognition is not supported in your browser');
       return;
@@ -271,167 +142,292 @@ export function ChatAssistant(...args: any[]): any {
       recognitionRef.current.start();
       setIsListening(true);
     }
-  };
+  }, [isListening]);
 
-  // Toggle mute
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
+  // Handle file upload
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files || []);
+    if (files.length > 0) {
+      setSelectedFiles(prev => [...prev, ...files]);
+      
+      // Add file message to chat
+      const fileMessage: Message = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: `Uploaded ${files.length} file(s): ${files.map(f => f.name).join(', ')}`,
+        timestamp: new Date(),
+        metadata: {
+          files: files.map(file => ({
+            name: file.name,
+            url: URL.createObjectURL(file),
+            size: `${(file.size / 1024).toFixed(1)} KB`
+          }))
+        }
+      };
+      
+      setMessages(prev => [...prev, fileMessage]);
+    }
+  }, []);
 
-  // Handle key press
-  const handleKeyPress = (e: anyReact.KeyboardEvent)  => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
+  // Handle file removal
+  const removeFile = useCallback((index: number) => {
+    setSelectedFiles(prev => prev.filter((_, i) => i !== index));
+  }, []);
+
+  // Generate AI response
+  const generateAIResponse = useCallback(async (userMessage: string, context?: any) => {
+    setIsTyping(true);
+    
+    try {
+      // Simulate AI processing delay
+      await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+      
+      // Generate contextual response based on user input
+      let response = '';
+      let suggestions: string[] = [];
+      
+      const lowerMessage = userMessage.toLowerCase();
+      
+      if (lowerMessage.includes('ai') || lowerMessage.includes('artificial intelligence')) {
+        response = "Our AI services include:\n\n🤖 **Machine Learning Solutions**\n📊 **Predictive Analytics**\n🔄 **Process Automation**\n🧠 **Natural Language Processing**\n\nWe help businesses leverage AI to gain competitive advantages and improve operational efficiency.";
+        suggestions = ["Tell me more about ML", "What industries do you serve?", "Show me AI case studies"];
+      } else if (lowerMessage.includes('cloud') || lowerMessage.includes('devops')) {
+        response = "Our Cloud & DevOps expertise covers:\n\n☁️ **Multi-cloud Strategy**\n🐳 **Container Orchestration**\n🚀 **CI/CD Pipelines**\n📈 **Infrastructure as Code**\n\nWe help organizations modernize their infrastructure and accelerate software delivery.";
+        suggestions = ["What cloud providers?", "DevOps best practices", "Migration strategies"];
+      } else if (lowerMessage.includes('security') || lowerMessage.includes('cyber')) {
+        response = "Our cybersecurity services include:\n\n🔒 **Threat Detection & Response**\n🛡️ **Vulnerability Assessment**\n📋 **Compliance & Governance**\n🔐 **Identity & Access Management**\n\nWe protect your digital assets with enterprise-grade security solutions.";
+        suggestions = ["Security audit process", "Compliance frameworks", "Incident response"];
+      } else if (lowerMessage.includes('pricing') || lowerMessage.includes('cost')) {
+        response = "Our pricing is flexible and tailored to your needs:\n\n💼 **Consultation**: Free initial assessment\n🚀 **Implementation**: Project-based or subscription\n📊 **Support**: 24/7 monitoring and maintenance\n\nContact us for a personalized quote based on your requirements.";
+        suggestions = ["Request a quote", "Schedule a demo", "View pricing tiers"];
+      } else if (lowerMessage.includes('case study') || lowerMessage.includes('success')) {
+        response = "Here are some recent success stories:\n\n🏥 **Healthcare Provider**: 40% reduction in operational costs\n🏭 **Manufacturing**: 60% improvement in production efficiency\n🏦 **Financial Services**: 99.9% uptime achieved\n\nWould you like me to share detailed case studies?";
+        suggestions = ["Healthcare case study", "Manufacturing example", "Financial services success"];
+      } else {
+        response = "I'm here to help you with Zion Tech Group's comprehensive technology solutions. We specialize in:\n\n✨ **AI & Machine Learning**\n☁️ **Cloud & DevOps**\n🔒 **Cybersecurity**\n📊 **Data Analytics**\n💼 **Digital Transformation**\n\nWhat specific area would you like to explore?";
+        suggestions = ["AI services", "Cloud solutions", "Security offerings", "Contact sales"];
+      }
+      
+      const aiMessage: Message = {
+        id: Date.now().toString(),
+        type: 'assistant',
+        content: response,
+        timestamp: new Date(),
+        metadata: { suggestions }
+      };
+      
+      setMessages(prev => [...prev, aiMessage]);
+      
+      // Update conversation history
+      setConversationHistory(prev => [...prev, userMessage, response]);
+      
+    } catch (error) {
+      const errorMessage: Message = {
+        id: Date.now().toString(),
+        type: 'assistant',
+        content: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our support team.",
+        timestamp: new Date(),
+        error: 'AI response generation failed'
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsTyping(false);
+    }
+  }, []);
+
+  // Handle message submission
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!inputValue.trim() && selectedFiles.length === 0) return;
+    
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      type: 'user',
+      content: inputValue.trim() || `Uploaded ${selectedFiles.length} file(s)`,
+      timestamp: new Date()
+    };
+    
+    setMessages(prev => [...prev, userMessage]);
+    setIsInputValue('');
+    setSelectedFiles([]);
+    
+    // Generate AI response
+    await generateAIResponse(userMessage.content);
+  }, [inputValue, selectedFiles, generateAIResponse]);
+
+  // Handle suggestion click
+  const handleSuggestionClick = useCallback((suggestion: string) => {
+    setIsInputValue(suggestion);
+    inputRef.current?.focus();
+  }, []);
+
+  // Handle feedback
+  const handleFeedback = useCallback((messageId: string, feedback: 'positive' | 'negative') => {
+    setMessages(prev => prev.map(msg => 
+      msg.id === messageId ? { ...msg, feedback } : msg
+    ));
+    
+    // Send feedback to analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'chat_feedback', {
+        feedback_type: feedback,
+        message_id: messageId
+      });
+    }
+  }, []);
+
+  // Handle message actions
+  const handleMessageAction = useCallback((action: string, message: Message) => {
+    switch (action) {
+      case 'copy':
+        navigator.clipboard.writeText(message.content);
+        break;
+      case 'share':
+        if (navigator.share) {
+          navigator.share({
+            title: 'Zion Tech Group Chat',
+            text: message.content
+          });
+        }
+        break;
+      case 'download':
+        if (message.metadata?.files) {
+          message.metadata.files.forEach(file => {
+            const link = document.createElement('a');
+            link.href = file.url;
+            link.download = file.name;
+            link.click();
+          });
+        }
+        break;
+    }
+  }, []);
+
+  // Toggle chat state
+  const toggleChat = useCallback(() => {
+    setIsOpen(prev => !prev);
+    if (!isOpen) {
+      setIsMinimized(false);
+      setIsExpanded(false);
+    }
+  }, [isOpen]);
+
+  // Toggle minimize
+  const toggleMinimize = useCallback(() => {
+    setIsMinimized(prev => !prev);
+  }, []);
+
+  // Toggle expand
+  const toggleExpand = useCallback(() => {
+    setIsExpanded(prev => !prev);
+  }, []);
+
+  // Clear chat
+  const clearChat = useCallback(() => {
+    setMessages([{
+      id: '1',
+      type: 'assistant',
+      content: welcomeMessage,
+      timestamp: new Date(),
+      metadata: {
+        suggestions: [
+          "Tell me about your AI services",
+          "How can you help with digital transformation?",
+          "What are your pricing options?",
+          "Show me case studies"
+        ]
+      }
+    }]);
+    setConversationHistory([]);
+  }, [welcomeMessage]);
+
+  // Get position classes
+  const getPositionClasses = () => {
+    switch (position) {
+      case 'bottom-left':
+        return 'bottom-4 left-4';
+      case 'top-right':
+        return 'top-4 right-4';
+      case 'top-left':
+        return 'top-4 left-4';
+      default:
+        return 'bottom-4 right-4';
     }
   };
 
-  // Clear chat
-  const clearChat = () => {
-    setMessages([]);
-    setChatHistory([]);
-    setSuggestions([]);
+  // Get theme classes
+  const getThemeClasses = () => {
+    if (theme === 'auto') {
+      return 'dark:bg-gray-900 dark:text-white bg-white text-gray-900';
+    }
+    return theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900';
   };
 
-  // Export chat
-  const exportChat = () => {
-    const chatText = chatHistory.map(msg => 
-      `${msg.type === 'user' ? 'You' : 'AI Assistant'}: ${msg.content}`
-    ).join('\n\n');
-    
-    const blob = new Blob([chatText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `zion-tech-chat-${new Date().toISOString().split('T')[0]}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  if (!enabled) return null;
-
-  const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
-  };
-
-  if (!isOpen) {
+  if (isMinimized) {
     return (
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className={`fixed ${positionClasses[position]} z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group`}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        title="Chat with AI Assistant"
-        aria-label="Open AI chat assistant"
-      >
-        <MessageCircle className="w-6 h-6" />
-        <motion.div
-          className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
-      </motion.button>
+      <div className={`fixed ${getPositionClasses()} z-50`}>
+        <motion.button
+          onClick={toggleMinimize}
+          className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <MessageCircle className="w-6 h-6" />
+        </motion.button>
+      </div>
     );
   }
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.8, y: 20 }}
-        className={`fixed ${positionClasses[position]} z-50 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col`}
-      >
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-white">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+    <div className={`fixed ${getPositionClasses()} z-50`}>
+      {/* Chat Toggle Button */}
+      {!isOpen && (
+        <motion.button
+          onClick={toggleChat}
+          className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <MessageCircle className="w-6 h-6" />
+        </motion.button>
+      )}
+
+      {/* Chat Window */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            className={`w-80 ${isExpanded ? 'h-96' : 'h-96'} ${getThemeClasses()} rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden`}
+          >
+            {/* Chat Header */}
+            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 flex items-center justify-between">
+              <div className="flex items-center space-x-2">
                 <Bot className="w-5 h-5" />
+                <span className="font-semibold">Zion AI Assistant</span>
               </div>
-              <div>
-                <h3 className="font-semibold">AI Assistant</h3>
-                <p className="text-xs text-blue-100">Zion Tech Group</p>
+              <div className="flex items-center space-x-1">
+                <button
+                  onClick={toggleExpand}
+                  className="p-1 hover:bg-white/20 rounded transition-colors"
+                  title={isExpanded ? "Minimize" : "Expand"}
+                >
+                  <RefreshCw className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                </button>
+                <button
+                  onClick={toggleMinimize}
+                  className="p-1 hover:bg-white/20 rounded transition-colors"
+                  title="Minimize"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
             </div>
-            
-            <div className="flex items-center gap-2">
-              <button
-                onClick={toggleMute}
-                className="p-1.5 text-white/80 hover:text-white transition-colors"
-                title={isMuted ? 'Unmute' : 'Mute'}
-              >
-                {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-              </button>
-              
-              <button
-                onClick={() => setShowSettings(!showSettings)}
-                className="p-1.5 text-white/80 hover:text-white transition-colors"
-                title="Settings"
-              >
-                <Settings className="w-4 h-4" />
-              </button>
-              
-              <button
-                onClick={() => setIsMinimized(!isMinimized)}
-                className="p-1.5 text-white/80 hover:text-white transition-colors"
-                title={isMinimized ? 'Maximize' : 'Minimize'}
-              >
-                {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
-              </button>
-              
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-1.5 text-white/80 hover:text-white transition-colors"
-                title="Close"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        </div>
 
-        {/* Settings Panel */}
-        <AnimatePresence>
-          {showSettings && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="border-b border-gray-200 p-4 bg-gray-50"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-700">Clear chat history</span>
-                  <button
-                    onClick={clearChat}
-                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
-                  >
-                    Clear
-                  </button>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-700">Export chat</span>
-                  <button
-                    onClick={exportChat}
-                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
-                  >
-                    Export
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Messages */}
-        {!isMinimized && (
-          <>
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {/* Chat Messages */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-64">
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
@@ -439,60 +435,86 @@ export function ChatAssistant(...args: any[]): any {
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
-                    <div className={`p-3 rounded-2xl ${
-                      message.type === 'user' 
-                        ? 'bg-blue-500 text-white' 
-                        : 'bg-gray-100 text-gray-800'
-                    }`}>
-                      <div className="flex items-start gap-2">
-                        {message.type === 'assistant' && (
-                          <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Bot className="w-3 h-3 text-white" />
+                  <div className={`max-w-[80%] ${message.type === 'user' ? 'bg-zion-cyan text-white' : 'bg-gray-100 dark:bg-gray-800'} rounded-lg p-3`}>
+                    <div className="whitespace-pre-wrap text-sm">{message.content}</div>
+                    
+                    {/* Message Metadata */}
+                    {message.metadata && (
+                      <div className="mt-2 space-y-2">
+                        {/* Suggestions */}
+                        {message.metadata.suggestions && enableSuggestions && (
+                          <div className="flex flex-wrap gap-2">
+                            {message.metadata.suggestions.map((suggestion, index) => (
+                              <button
+                                key={index}
+                                onClick={() => handleSuggestionClick(suggestion)}
+                                className="px-2 py-1 bg-zion-purple/20 text-zion-purple dark:text-zion-purple-light text-xs rounded hover:bg-zion-purple/30 transition-colors"
+                              >
+                                {suggestion}
+                              </button>
+                            ))}
                           </div>
                         )}
-                        <div className="flex-1">
-                          <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                          {message.metadata?.sources && (
-                            <div className="mt-2 text-xs opacity-70">
-                              Sources: {message.metadata.sources.join(', ')}
-                            </div>
-                          )}
-                        </div>
-                        {message.type === 'user' && (
-                          <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <User className="w-3 h-3 text-white" />
+                        
+                        {/* Files */}
+                        {message.metadata.files && (
+                          <div className="space-y-1">
+                            {message.metadata.files.map((file, index) => (
+                              <div key={index} className="flex items-center justify-between bg-white/10 dark:bg-gray-700/50 rounded p-2">
+                                <span className="text-xs truncate">{file.name}</span>
+                                <button
+                                  onClick={() => handleMessageAction('download', message)}
+                                  className="p-1 hover:bg-white/20 rounded"
+                                >
+                                  <Download className="w-3 h-3" />
+                                </button>
+                              </div>
+                            ))}
                           </div>
                         )}
                       </div>
-                    </div>
-                    <div className={`text-xs text-gray-500 mt-1 ${
-                      message.type === 'user' ? 'text-right' : 'text-left'
-                    }`}>
-                      {message.timestamp.toLocaleTimeString()}
-                    </div>
+                    )}
+                    
+                    {/* Feedback */}
+                    {enableFeedback && message.type === 'assistant' && (
+                      <div className="flex items-center justify-end space-x-1 mt-2">
+                        <button
+                          onClick={() => handleFeedback(message.id, 'positive')}
+                          className={`p-1 rounded transition-colors ${
+                            message.feedback === 'positive' 
+                              ? 'text-green-500 bg-green-500/20' 
+                              : 'text-gray-400 hover:text-green-500'
+                          }`}
+                        >
+                          <ThumbsUp className="w-3 h-3" />
+                        </button>
+                        <button
+                          onClick={() => handleFeedback(message.id, 'negative')}
+                          className={`p-1 rounded transition-colors ${
+                            message.feedback === 'negative' 
+                              ? 'text-red-500 bg-red-500/20' 
+                              : 'text-gray-400 hover:text-red-500'
+                          }`}
+                        >
+                          <ThumbsDown className="w-3 h-3" />
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}
               
+              {/* Typing Indicator */}
               {isTyping && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   className="flex justify-start"
                 >
-                  <div className="max-w-[80%]">
-                    <div className="p-3 rounded-2xl bg-gray-100 text-gray-800">
-                      <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                          <Bot className="w-3 h-3 text-white" />
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-                        </div>
-                      </div>
+                  <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3">
+                    <div className="flex items-center space-x-1">
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span className="text-sm text-gray-500">Zion is typing...</span>
                     </div>
                   </div>
                 </motion.div>
@@ -501,69 +523,104 @@ export function ChatAssistant(...args: any[]): any {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Suggestions */}
-            {suggestions.length > 0 && (
-              <div className="p-4 border-t border-gray-200">
-                <div className="flex flex-wrap gap-2">
-                  {suggestions.map((suggestion, index) => (
-                    <motion.button
-                      key={index}
-                      onClick={() => handleSuggestionClick(suggestion)}
-                      className="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs rounded-full hover:bg-blue-100 transition-colors border border-blue-200"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      {suggestion}
-                    </motion.button>
+            {/* Chat Input */}
+            <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+              {/* File Preview */}
+              {selectedFiles.length > 0 && (
+                <div className="mb-3 space-y-2">
+                  {selectedFiles.map((file, index) => (
+                    <div key={index} className="flex items-center justify-between bg-gray-100 dark:bg-gray-800 rounded p-2">
+                      <span className="text-xs truncate flex-1">{file.name}</span>
+                      <button
+                        onClick={() => removeFile(index)}
+                        className="ml-2 p-1 hover:bg-red-500/20 text-red-500 rounded"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
                   ))}
                 </div>
-              </div>
-            )}
-
-            {/* Input */}
-            <div className="p-4 border-t border-gray-200">
-              <div className="flex items-center gap-2">
+              )}
+              
+              <form onSubmit={handleSubmit} className="flex items-center space-x-2">
+                {/* File Upload */}
+                {enableFileUpload && (
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="p-2 text-gray-500 hover:text-zion-cyan transition-colors"
+                    title="Attach file"
+                  >
+                    <FileText className="w-4 h-4" />
+                  </button>
+                )}
+                
+                {/* Voice Input */}
+                {enableVoice && (
+                  <button
+                    type="button"
+                    onClick={toggleListening}
+                    className={`p-2 transition-colors ${
+                      isListening 
+                        ? 'text-red-500 bg-red-500/20' 
+                        : 'text-gray-500 hover:text-zion-cyan'
+                    }`}
+                    title={isListening ? 'Stop recording' : 'Start voice input'}
+                  >
+                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                  </button>
+                )}
+                
+                {/* Text Input */}
                 <input
                   ref={inputRef}
                   type="text"
                   value={inputValue}
-                  onChange={handleInputChange}
-                  onKeyPress={handleKeyPress}
+                  onChange={(e) => setIsInputValue(e.target.value)}
                   placeholder="Type your message..."
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  disabled={isProcessing}
+                  className="flex-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 />
                 
+                {/* Send Button */}
                 <button
-                  onClick={toggleSpeechRecognition}
-                  className={`p-2 rounded-lg transition-colors ${
-                    isListening 
-                      ? 'bg-red-100 text-red-600' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                  title={isListening ? 'Stop listening' : 'Start voice input'}
-                  disabled={isProcessing}
-                >
-                  {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                </button>
-                
-                <button
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim() || isProcessing}
-                  className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  type="submit"
+                  disabled={!inputValue.trim() && selectedFiles.length === 0}
+                  className="p-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
                   title="Send message"
                 >
-                  {isProcessing ? (
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                  ) : (
-                    <Send className="w-4 h-4" />
-                  )}
+                  <Send className="w-4 h-4" />
                 </button>
-              </div>
+              </form>
+              
+              {/* Hidden File Input */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                multiple
+                onChange={handleFileUpload}
+                className="hidden"
+                accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.gif"
+              />
             </div>
-          </>
+
+            {/* Chat Footer */}
+            <div className="p-3 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+              <button
+                onClick={clearChat}
+                className="text-xs text-gray-500 hover:text-zion-cyan transition-colors"
+              >
+                Clear Chat
+              </button>
+              <button
+                onClick={() => setShowSettings(!showSettings)}
+                className="text-xs text-gray-500 hover:text-zion-cyan transition-colors"
+              >
+                Settings
+              </button>
+            </div>
+          </motion.div>
         )}
-      </motion.div>
-    </AnimatePresence>
+      </AnimatePresence>
+    </div>
   );
-}
+};

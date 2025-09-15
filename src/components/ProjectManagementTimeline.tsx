@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Calendar, 
-  Clock, 
-  CheckCircle, 
-  Circle, 
-  AlertCircle, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Calendar,
+  Clock,
+  CheckCircle,
+  Circle,
+  AlertCircle,
   Play,
   Pause,
   StopCircle,
@@ -23,10 +24,9 @@ import { Calendar,
   Trash2,
   Eye,
   Settings
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface Project {
-
   id: string;
   name: string;
   description: string;
@@ -40,11 +40,9 @@ interface Project {
   budget: number;
   tags: string[];
   milestones: Milestone[];
-
 }
 
 interface Milestone {
-
   id: string;
   title: string;
   description: string;
@@ -52,15 +50,12 @@ interface Milestone {
   status: 'pending' | 'in-progress' | 'completed' | 'overdue';
   assignee: string;
   priority: 'low' | 'medium' | 'high';
-
 }
 
-interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
-
+interface ProjectManagementTimelineProps {
   showFilters?: boolean;
   showStats?: boolean;
   maxProjects?: number;
-
 }
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
@@ -68,20 +63,20 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   showStats = true,
   maxProjects = 10
 }) => {
-  const [projects, setProjects] = useState<any>([]);
-  const [filteredProjects, setFilteredProjects] = useState<any>([]);
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
-  const [selectedPriority, setSelectedPriority] = useState<any>('all');
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('timeline');
+  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline');
   const [showProjectForm, setShowProjectForm] = useState(false);
-  const [editingProject, setEditingProject] = useState<any>(null);
+  const [editingProject, setEditingProject] = useState<Project | null>(null);
 
   // Sample project data
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -198,7 +193,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   }, []);
 
   // Filter projects
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
@@ -210,7 +205,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(p => 
+      filtered = filtered.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -223,16 +218,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Calculate project stats
   const projectStats = {
-    total: anyprojects.length,
-    active: projects.filter(p  => p.status === 'active').length,
-    completed: anyprojects.filter(p  => p.status === 'completed').length,
-    onHold: anyprojects.filter(p  => p.status === 'on-hold').length,
-    totalBudget: anyprojects.reduce((sum, p)  => sum + p.budget, 0),
-    averageProgress: anyprojects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
+    total: projects.length,
+    active: projects.filter(p => p.status === 'active').length,
+    completed: projects.filter(p => p.status === 'completed').length,
+    onHold: projects.filter(p => p.status === 'on-hold').length,
+    totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),
+    averageProgress: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)  => {
+  const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'planning':
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
@@ -250,7 +245,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -261,7 +256,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get milestone status color
-  const getMilestoneStatusColor = (status: anystring)  => {
+  const getMilestoneStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
       case 'in-progress': return 'text-blue-400 bg-blue-400/20';
@@ -272,7 +267,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Format currency
-  const formatCurrency = (amount: anynumber)  => {
+  const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -282,7 +277,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anystring)  => {
+  const getDaysRemaining = (endDate: string) => {
     const end = new Date(endDate);
     const today = new Date();
     const diffTime = end.getTime() - today.getTime();
@@ -298,7 +293,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <h1 className="text-4xl font-bold text-white mb-2">Project Management</h1>
           <p className="text-zinc-400 text-lg">Track and manage all your projects and milestones</p>
         </div>
-        
+
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -466,9 +461,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                     {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
                   </span>
                 </div>
-                
+
                 <p className="text-zinc-300 mb-3">{project.description}</p>
-                
+
                 <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />

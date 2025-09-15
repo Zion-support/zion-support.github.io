@@ -1,12 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Lock, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Cloud,
+  Server,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Lock,
   BarChart3,
   ArrowRight,
   CheckCircle,
@@ -14,9 +15,9 @@ import { Cloud,
   Code,
   Settings,
   Users
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function CloudSolutions(...args: any[]): any {
+export default function CloudSolutions() {
   const cloudServices = [
     {
       icon: Server,
@@ -103,7 +104,7 @@ export default function CloudSolutions(...args: any[]): any {
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -117,17 +118,17 @@ export default function CloudSolutions(...args: any[]): any {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with enterprise-grade cloud infrastructure, DevOps automation, 
+              Transform your business with enterprise-grade cloud infrastructure, DevOps automation,
               and scalable solutions that drive innovation and growth.
             </p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <motion.button 
+              <motion.button
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -135,7 +136,7 @@ export default function CloudSolutions(...args: any[]): any {
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-              <motion.button 
+              <motion.button
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -151,7 +152,7 @@ export default function CloudSolutions(...args: any[]): any {
       {/* Cloud Services Grid */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -162,20 +163,20 @@ export default function CloudSolutions(...args: any[]): any {
               Comprehensive Cloud Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              From migration to optimization, we provide end-to-end cloud solutions that 
+              From migration to optimization, we provide end-to-end cloud solutions that
               transform your infrastructure and accelerate your digital transformation.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {cloudServices.map((service, index)  => (
-              <motion.div 
+            {cloudServices.map((service, index) => (
+              <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -184,10 +185,10 @@ export default function CloudSolutions(...args: any[]): any {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
-                
+
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">
@@ -205,7 +206,7 @@ export default function CloudSolutions(...args: any[]): any {
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -216,20 +217,20 @@ export default function CloudSolutions(...args: any[]): any {
               Why Choose Our Cloud Solutions?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the benefits of enterprise-grade cloud infrastructure with 
+              Experience the benefits of enterprise-grade cloud infrastructure with
               expert guidance and proven methodologies.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {benefits.map((benefit, index)  => (
-              <motion.div 
+            {benefits.map((benefit, index) => (
+              <motion.div
                 key={index}
                 className="text-center"
                 variants={itemVariants}
@@ -248,7 +249,7 @@ export default function CloudSolutions(...args: any[]): any {
       {/* Technologies Section */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -259,20 +260,20 @@ export default function CloudSolutions(...args: any[]): any {
               Technologies We Master
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our expertise spans the leading cloud platforms and tools, ensuring 
+              Our expertise spans the leading cloud platforms and tools, ensuring
               you get the best solution for your specific needs.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {technologies.map((tech, index)  => (
-              <motion.div 
+            {technologies.map((tech, index) => (
+              <motion.div
                 key={index}
                 className="text-center group"
                 variants={itemVariants}
@@ -302,10 +303,10 @@ export default function CloudSolutions(...args: any[]): any {
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our cloud experts help you build a scalable, secure, and cost-effective 
+              Let our cloud experts help you build a scalable, secure, and cost-effective
               cloud infrastructure that drives your business forward.
             </p>
-            <motion.button 
+            <motion.button
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Bell, 
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Bell, 
   X, 
   CheckCircle, 
   AlertCircle, 
@@ -15,34 +16,30 @@ import { Bell,
   Zap,
   TrendingUp,
   Award
- } from 'lucide-react';
+} from 'lucide-react';
 
 interface Notification {
-
   id: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   title: string;
   message: string;
   timestamp: Date;
   read: boolean;
-action?: {
+  action?: {
     label: string;
-    onClick: ()  => void;
-  
-};
+    onClick: () => void;
+  };
   priority: 'low' | 'medium' | 'high';
   category: string;
   expiresAt?: Date;
 }
 
-interface Props extends React.PropsWithChildren<{}> {
-
+interface Props {
   enabled?: boolean;
-
 }
 
-export function SmartNotificationSystem(...args: any[]): any {
-  const [notifications, setNotifications] = useState<any>([]);
+export function SmartNotificationSystem({ enabled = true }: Props) {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -62,7 +59,7 @@ export function SmartNotificationSystem(...args: any[]): any {
         category: 'onboarding',
         action: {
           label: 'Get Started',
-          onClick: ()  => console.log('Get Started clicked')
+          onClick: () => console.log('Get Started clicked')
         }
       },
       {
@@ -76,7 +73,7 @@ export function SmartNotificationSystem(...args: any[]): any {
         category: 'performance',
         action: {
           label: 'View Details',
-          onClick: ()  => console.log('View Details clicked')
+          onClick: () => console.log('View Details clicked')
         }
       },
       {
@@ -100,7 +97,7 @@ export function SmartNotificationSystem(...args: any[]): any {
         category: 'security',
         action: {
           label: 'Update Now',
-          onClick: ()  => console.log('Update Now clicked')
+          onClick: () => console.log('Update Now clicked')
         }
       }
     ];
@@ -145,7 +142,7 @@ export function SmartNotificationSystem(...args: any[]): any {
       const updated = prev.map(n => 
         n.id === id ? { ...n, read: true } : n
       );
-      setUnreadCount(updated.filter(n  => !n.read).length);
+      setUnreadCount(updated.filter(n => !n.read).length);
       return updated;
     });
   }, []);
@@ -160,7 +157,7 @@ export function SmartNotificationSystem(...args: any[]): any {
   }, []);
 
   // Remove notification
-  const removeNotification = useCallback((id: anystring)  => {
+  const removeNotification = useCallback((id: string) => {
     setNotifications(prev => {
       const filtered = prev.filter(n => n.id !== id);
       setUnreadCount(filtered.filter(n => !n.read).length);
@@ -180,7 +177,7 @@ export function SmartNotificationSystem(...args: any[]): any {
   }, [isMuted]);
 
   // Get notification icon
-  const getNotificationIcon = (type: anyNotification['type'])  => {
+  const getNotificationIcon = (type: Notification['type']) => {
     switch (type) {
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -198,7 +195,7 @@ export function SmartNotificationSystem(...args: any[]): any {
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anyNotification['priority'])  => {
+  const getPriorityColor = (priority: Notification['priority']) => {
     switch (priority) {
       case 'high':
         return 'border-l-red-500';
@@ -212,7 +209,7 @@ export function SmartNotificationSystem(...args: any[]): any {
   };
 
   // Format timestamp
-  const formatTimestamp = (timestamp: anyDate)  => {
+  const formatTimestamp = (timestamp: Date) => {
     const now = new Date();
     const diff = now.getTime() - timestamp.getTime();
     const minutes = Math.floor(diff / (1000 * 60));

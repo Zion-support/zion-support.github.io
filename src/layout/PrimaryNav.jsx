@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -24,7 +24,7 @@ export function PrimaryNav() {
     const isLoggedIn = !!user;
     const isMobile = useIsMobile();
     const { t } = useTranslation();
-    const router = useNavigate();
+    const router = useRouter();
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
@@ -40,7 +40,7 @@ export function PrimaryNav() {
         e.preventDefault();
         if (query.trim()) {
             console.log('PrimaryNav search submit:', query);
-            navigate(`/search/${slugify(query)}`);
+            router.push(`/search/${slugify(query)}`);
             setQuery('');
         }
     };
@@ -53,7 +53,6 @@ export function PrimaryNav() {
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
-        </div>
           
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
@@ -64,19 +63,19 @@ export function PrimaryNav() {
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-                navigate(`/marketplace/listing/${sugg.id}`);
+                router.push(`/marketplace/listing/${sugg.id}`);
             }
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
-                navigate(sugg.slug);
+                router.push(sugg.slug);
             }
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
-                navigate(`/blog/${sugg.slug}`);
+                router.push(`/blog/${sugg.slug}`);
             }
             else {
                 // Default: search results page with slug
-                navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
+                router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
             }
             setQuery('');
             // Track analytics event
@@ -107,14 +106,12 @@ export function PrimaryNav() {
                 </HoverCardContent>
               </HoverCard>
             </div>
-        </div>
             
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-        </div>
             
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
@@ -128,7 +125,7 @@ export function PrimaryNav() {
                 </>)}
               {isLoggedIn && <UserMenu />}
             </div>
-        </div>
+          </div>
           
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
@@ -141,7 +138,6 @@ export function PrimaryNav() {
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>
           </div>
-        </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
     </>);

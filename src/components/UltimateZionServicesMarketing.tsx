@@ -1,8 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ultimateZionServices2025 } from '../data/ultimate-zion-services-2025';
 
-const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {
+const UltimateZionServicesMarketing: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -71,7 +71,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {
     }
   ];
 
-  const getServicesByCategory = (categoryId: anystring)  => {
+  const getServicesByCategory = (categoryId: string) => {
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId);
   };
@@ -183,9 +183,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {
             className="flex flex-wrap gap-4 justify-center" 
             initial={{ opacity: 0, y: 20 }} 
             whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: any0.6 }}
+            transition={{ duration: 0.6 }}
           >
-            {categories.map((category)  => (
+            {categories.map((category) => (
               <button 
                 key={category.id} 
                 onClick={() => setSelectedCategory(category.id)} 
@@ -270,9 +270,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {
             }} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {selectedServices.map((service, index)  => (
+            {selectedServices.map((service, index) => (
               <motion.div 
                 key={service.id} 
                 variants={{

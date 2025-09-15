@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
     switch (action) {

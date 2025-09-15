@@ -6,20 +6,28 @@ export const loginUser = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise((resolve) => {
+      const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve({
-            user: {
-              id: 1,
-              email: credentials.email,
-              name: 'John Doe',
-              role: 'user'
-            },
-            token: 'mock-jwt-token'
-          });
+          if (credentials.email && credentials.password) {
+            resolve({
+              user: {
+                id: 1,
+                email: credentials.email,
+                name: 'John Doe',
+                role: 'user'
+              },
+              token: 'mock-jwt-token'
+            });
+          } else {
+            reject(new Error('Invalid credentials'));
+          }
         }, 1000);
       });
-      
+
+      // Store token in localStorage
+      localStorage.setItem('token', response.token);
+      localStorage.setItem('user', JSON.stringify(response.user));
+
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -33,7 +41,7 @@ export const signupUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise((resolve) => {
+      const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (userData.email && userData.password && userData.name) {
             resolve({
@@ -46,15 +54,15 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            rejectWithValue(new Error('Invalid user data'));
+            reject(new Error('Invalid user data'));
           }
         }, 1000);
       });
-      
+
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-      
+
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -67,11 +75,9 @@ export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => {
-        setTimeout(resolve, 500);
-      });
-      
+      // Clear localStorage
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
       return null;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -86,7 +92,7 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-      
+
       if (token && user) {
         return {
           user: JSON.parse(user),
@@ -103,7 +109,7 @@ export const checkAuthStatus = createAsyncThunk(
 
 const initialState = {
   user: null,
-  token: null,
+  token: localStorage.getItem('token'),
   isAuthenticated: false,
   isLoading: false,
   error: null
@@ -133,16 +139,16 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.isLoading = false;
+        state.isAuthenticated = true;
         state.user = action.payload.user;
         state.token = action.payload.token;
-        state.isAuthenticated = true;
         state.error = null;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
-    
+
     // Signup
     builder
       .addCase(signupUser.pending, (state) => {
@@ -160,7 +166,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-    
+
     // Logout
     builder
       .addCase(logoutUser.pending, (state) => {
@@ -168,16 +174,16 @@ const authSlice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.isLoading = false;
+        state.isAuthenticated = false;
         state.user = null;
         state.token = null;
-        state.isAuthenticated = false;
         state.error = null;
       })
       .addCase(logoutUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
-    
+
     // Check auth status
     builder
       .addCase(checkAuthStatus.pending, (state) => {

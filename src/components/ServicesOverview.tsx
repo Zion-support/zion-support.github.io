@@ -1,14 +1,15 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Shield, 
-  Rocket, 
-  Lock, 
-  Cpu, 
-  Code, 
-  Users, 
-  Globe, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Shield,
+  Rocket,
+  Lock,
+  Cpu,
+  Code,
+  Users,
+  Globe,
   Heart,
   TrendingUp,
   Zap,
@@ -26,106 +27,106 @@ import { Brain,
   Star,
   CheckCircle,
   Clock
- } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from '@/data/innovativeMicroSaasServices2025';
 
-export function ServicesOverview(...args: any[]): any {
+export function ServicesOverview() {
   const serviceCategories = [
     {
-      id: any'ai-analytics',
+      id: 'ai-analytics',
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
       description: 'Cutting-edge artificial intelligence and advanced analytics solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('AI'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('AI'))
     },
     {
-      id: any'quantum-computing',
+      id: 'quantum-computing',
       name: 'Quantum Computing',
       icon: Rocket,
       color: 'from-zion-blue to-zion-cyan',
       description: 'Next-generation quantum computing and quantum machine learning',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Quantum'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Quantum'))
     },
     {
-      id: any'blockchain',
+      id: 'blockchain',
       name: 'Blockchain & Web3',
       icon: Lock,
       color: 'from-zion-purple to-zion-blue',
       description: 'Decentralized solutions and blockchain technology platforms',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Blockchain'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Blockchain'))
     },
     {
-      id: any'iot-edge',
+      id: 'iot-edge',
       name: 'IoT & Edge Computing',
       icon: Cpu,
       color: 'from-zion-green to-zion-cyan',
       description: 'Internet of Things and edge computing solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('IoT'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('IoT'))
     },
     {
-      id: any'cybersecurity',
+      id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
       color: 'from-zion-purple to-zion-red',
       description: 'Advanced security and threat protection solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Cybersecurity'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Cybersecurity'))
     },
     {
-      id: any'digital-twin',
+      id: 'digital-twin',
       name: 'Digital Twin',
       icon: Server,
       color: 'from-zion-blue to-zion-purple',
       description: 'Virtual replicas and simulation platforms',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Digital Twin'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Digital Twin'))
     },
     {
-      id: any'sustainability',
+      id: 'sustainability',
       name: 'Sustainability',
       icon: Globe,
       color: 'from-zion-green to-zion-blue',
       description: 'Environmental monitoring and sustainability solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Sustainability'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Sustainability'))
     },
     {
-      id: any'hr-talent',
+      id: 'hr-talent',
       name: 'HR & Talent',
       icon: Users,
       color: 'from-zion-pink to-zion-purple',
       description: 'Human resources and talent management platforms',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('HR'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('HR'))
     },
     {
-      id: any'content-creation',
+      id: 'content-creation',
       name: 'Content Creation',
       icon: Code,
       color: 'from-zion-orange to-zion-purple',
       description: 'AI-powered content generation and management',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Content'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Content'))
     },
     {
-      id: any'legal-tech',
+      id: 'legal-tech',
       name: 'Legal Tech',
       icon: FileText,
       color: 'from-zion-purple to-zion-cyan',
       description: 'Legal technology and compliance solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Legal'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Legal'))
     },
     {
-      id: any'fintech',
+      id: 'fintech',
       name: 'FinTech',
       icon: BarChart3,
       color: 'from-zion-green to-zion-blue',
       description: 'Financial technology and advisory platforms',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('FinTech'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('FinTech'))
     },
     {
-      id: any'healthcare-ai',
+      id: 'healthcare-ai',
       name: 'Healthcare AI',
       icon: Heart,
       color: 'from-zion-pink to-zion-purple',
       description: 'Healthcare artificial intelligence solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))
     }
   ];
 
@@ -135,10 +136,10 @@ export function ServicesOverview(...args: any[]): any {
       <div className="absolute inset-0 opacity-10">
         <div className="cyber-grid w-full h-full"></div>
       </div>
-      
+
       <div className="container-responsive relative z-10">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -150,15 +151,15 @@ export function ServicesOverview(...args: any[]): any {
             <span className="text-white">Services Portfolio</span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms. 
-            From cutting-edge quantum computing to practical business applications, we provide the technology 
+            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.
+            From cutting-edge quantum computing to practical business applications, we provide the technology
             solutions your business needs to thrive in the digital age.
           </p>
         </motion.div>
 
         {/* Service Categories Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {serviceCategories.map((category, index)  => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+          {serviceCategories.map((category, index) => (
             <motion.div
               key={category.id}
               className="group"
@@ -173,16 +174,16 @@ export function ServicesOverview(...args: any[]): any {
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   {/* Category Info */}
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300 text-center">
                     {category.name}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">
                     {category.description}
                   </p>
-                  
+
                   {/* Service Count */}
                   <div className="text-center">
                     <div className="text-2xl font-bold text-zion-cyan mb-1">
@@ -192,7 +193,7 @@ export function ServicesOverview(...args: any[]): any {
                       Services Available
                     </div>
                   </div>
-                  
+
                   {/* Hover Arrow */}
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-5 h-5 text-zion-cyan" />
@@ -204,7 +205,7 @@ export function ServicesOverview(...args: any[]): any {
         </div>
 
         {/* Featured Services */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -213,9 +214,9 @@ export function ServicesOverview(...args: any[]): any {
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
-          
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)  => (
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic group"
@@ -238,19 +239,19 @@ export function ServicesOverview(...args: any[]): any {
                     <div className="text-sm text-zion-slate-light">per month</div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-cyan font-medium">{service.category}</span>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      service.innovationLevel === 'Cutting-edge' 
-                        ? 'bg-zion-cyan/20 text-zion-cyan' 
+                      service.innovationLevel === 'Cutting-edge'
+                        ? 'bg-zion-cyan/20 text-zion-cyan'
                         : 'bg-zion-purple/20 text-zion-purple'
                     }`}>
                       {service.innovationLevel}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-1 text-zion-green">
                       <TrendingUp className="w-4 h-4" />
@@ -261,7 +262,7 @@ export function ServicesOverview(...args: any[]): any {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
                   <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
@@ -273,7 +274,7 @@ export function ServicesOverview(...args: any[]): any {
                       <span>{service.supportLevel}</span>
                     </div>
                   </div>
-                  
+
                   <Link
                     to={`/services/${service.id}`}
                     className="btn-futuristic px-4 py-2 text-sm"
@@ -288,7 +289,7 @@ export function ServicesOverview(...args: any[]): any {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -299,10 +300,10 @@ export function ServicesOverview(...args: any[]): any {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover 
+              Get in touch with our technology experts to discuss your specific needs and discover
               how our innovative solutions can drive your business forward.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 to="/contact"
@@ -311,7 +312,7 @@ export function ServicesOverview(...args: any[]): any {
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
-              
+
               <a
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
@@ -320,7 +321,7 @@ export function ServicesOverview(...args: any[]): any {
                 Call Now: +1 302 464 0950
               </a>
             </div>
-            
+
             {/* Contact Info Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">
@@ -329,7 +330,7 @@ export function ServicesOverview(...args: any[]): any {
                 <p className="text-sm text-zion-slate-light">364 E Main St STE 1008</p>
                 <p className="text-sm text-zion-slate-light">Middletown DE 19709</p>
               </div>
-              
+
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-purple/20">
                 <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Email</p>
@@ -337,7 +338,7 @@ export function ServicesOverview(...args: any[]): any {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              
+
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-blue/20">
                 <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2" />
                 <p className="font-medium text-white mb-1">Website</p>

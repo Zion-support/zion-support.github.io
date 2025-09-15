@@ -1,7 +1,8 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Workflow, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Workflow, 
   Brain, 
   Zap, 
   Shield, 
@@ -22,7 +23,7 @@ import { Workflow,
   Cpu,
   Server,
   ShoppingCart
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 const AIWorkflowOrchestrator = () => {
   const features = [
@@ -190,8 +191,8 @@ const AIWorkflowOrchestrator = () => {
                 Powerful Features for Modern Workflows
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index)  => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
                   <motion.div
                     key={feature.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -223,8 +224,8 @@ const AIWorkflowOrchestrator = () => {
                 Why Choose AI Workflow Orchestrator?
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
-                {benefits.map((benefit, index)  => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
@@ -253,8 +254,8 @@ const AIWorkflowOrchestrator = () => {
                 Industry Applications
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-                {useCases.map((useCase, index)  => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {useCases.map((useCase, index) => (
                   <motion.div
                     key={useCase.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -286,8 +287,8 @@ const AIWorkflowOrchestrator = () => {
                 Simple, Transparent Pricing
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-                {pricing.map((plan, index)  => (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {pricing.map((plan, index) => (
                   <motion.div
                     key={plan.name}
                     initial={{ opacity: 0, y: 20 }}

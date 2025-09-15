@@ -1,22 +1,23 @@
-import React, { useMemo, useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, 
-  ArrowRight, 
-  DollarSign, 
-  ExternalLink, 
-  GitFork, 
-  MessageSquare, 
-  Globe, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Zap, 
-  Rocket, 
-  Heart, 
-  Lock, 
-  Users, 
+import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Search,
+  ArrowRight,
+  DollarSign,
+  ExternalLink,
+  Workflow,
+  MessageSquare,
+  Globe,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Zap,
+  Rocket,
+  Heart,
+  Lock,
+  Users,
   BarChart3,
   Target,
   TrendingUp,
@@ -27,33 +28,33 @@ import { Search,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026  } from '../data/innovativeMicroSaasServices2026';
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 
-const Services2026: React.FC = (): JSX.Element => {
+const Services2026: React.FC = () => {
   const [query, setQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
-  
+
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026];
-  
+
   const categories = [
-    { id: any'all', name: 'All Services', icon: GitFork, count: allServices.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s  => s.category === 'AI & Analytics').length },
-    { id: any'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s  => s.category === 'Quantum Computing').length },
-    { id: any'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s  => s.category === 'Cybersecurity').length },
-    { id: any'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s  => s.category === 'IoT & Edge Computing').length },
-    { id: any'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s  => s.category === 'AI & Content').length },
-    { id: any'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s  => s.category === 'Digital Twin').length },
-    { id: any'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s  => s.category === 'AI & HR').length },
-    { id: any'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s  => s.category === 'Sustainability').length },
-    { id: any'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s  => s.category === 'AI & IoT').length }
+    { id: 'all', name: 'All Services', icon: GitFork, count: allServices.length },
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length },
+    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },
+    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },
+    { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length },
+    { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length },
+    { id: 'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category === 'AI & IoT').length }
   ];
 
   const filteredAndSorted = useMemo(() => {
     let filtered = allServices;
-    
+
     // Filter by search query
     if (query.trim()) {
       const q = query.trim().toLowerCase();
@@ -64,12 +65,12 @@ const Services2026: React.FC = (): JSX.Element => {
         s.tags?.some(t => t.toLowerCase().includes(q))
       );
     }
-    
+
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(s => s.category === selectedCategory);
     }
-    
+
     // Sort services
     switch (sortBy) {
       case 'price':
@@ -94,9 +95,9 @@ const Services2026: React.FC = (): JSX.Element => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="2026 Services - Zion Tech Group" 
-        description="Cutting-edge AI, Quantum Computing, Cybersecurity, IoT, and Micro SaaS solutions for 2026. Transform your business with revolutionary technology." 
+      <SEO
+        title="2026 Services - Zion Tech Group"
+        description="Cutting-edge AI, Quantum Computing, Cybersecurity, IoT, and Micro SaaS solutions for 2026. Transform your business with revolutionary technology."
       />
 
       {/* Hero Section */}
@@ -108,7 +109,7 @@ const Services2026: React.FC = (): JSX.Element => {
           <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-bounce"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -204,9 +205,9 @@ const Services2026: React.FC = (): JSX.Element => {
                 Our most innovative and cutting-edge solutions that are reshaping industries
               </p>
             </div>
-            
-            <div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
-              {featuredServices.map((service)  => (
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {featuredServices.map((service) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -223,15 +224,15 @@ const Services2026: React.FC = (): JSX.Element => {
                       <span className="text-xs font-medium">Revolutionary</span>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-slate-400">Market Price:</span>
@@ -246,7 +247,7 @@ const Services2026: React.FC = (): JSX.Element => {
                       <span className="text-blue-300 font-semibold">{service.estimatedDelivery}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/services/${service.id}`}
@@ -255,7 +256,7 @@ const Services2026: React.FC = (): JSX.Element => {
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
-                    
+
                     <div className="text-xs text-slate-500">
                       ID: {service.id}
                     </div>
@@ -278,9 +279,9 @@ const Services2026: React.FC = (): JSX.Element => {
               Explore our comprehensive portfolio of innovative solutions
             </p>
           </div>
-          
-          <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
-            {filteredAndSorted.map((service)  => (
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredAndSorted.map((service) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,7 +294,7 @@ const Services2026: React.FC = (): JSX.Element => {
                     {service.category}
                   </div>
                   <div className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    service.innovationLevel === 'Revolutionary' 
+                    service.innovationLevel === 'Revolutionary'
                       ? 'bg-red-500/20 text-red-300 border border-red-500/30'
                       : service.innovationLevel === 'Cutting-Edge'
                       ? 'bg-orange-500/20 text-orange-300 border border-orange-500/30'
@@ -302,15 +303,15 @@ const Services2026: React.FC = (): JSX.Element => {
                     {service.innovationLevel}
                   </div>
                 </div>
-                
+
                 <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors mb-2 line-clamp-2">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3">
                   {service.description}
                 </p>
-                
+
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-400">Price:</span>
@@ -321,7 +322,7 @@ const Services2026: React.FC = (): JSX.Element => {
                     <span className="text-green-400 font-semibold">{service.roi}</span>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <Link
                     to={`/services/${service.id}`}
@@ -330,7 +331,7 @@ const Services2026: React.FC = (): JSX.Element => {
                     View Details
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  
+
                   <div className="text-xs text-slate-500">
                     {service.id}
                   </div>
@@ -348,7 +349,7 @@ const Services2026: React.FC = (): JSX.Element => {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
               Ready to Transform Your Business?
             </h2>
-            
+
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
@@ -356,28 +357,28 @@ const Services2026: React.FC = (): JSX.Element => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300 text-sm mb-3">Speak directly with our experts</p>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"
                 >
                   +1 302 464 0950
                 </a>
               </div>
-              
+
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <Mail className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300 text-sm mb-3">Get detailed information and quotes</p>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-blue-400 hover:text-blue-300 font-medium text-sm"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              
+
               <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <MapPin className="w-6 h-6 text-purple-400" />
@@ -390,7 +391,7 @@ const Services2026: React.FC = (): JSX.Element => {
                 </p>
               </div>
             </div>
-            
+
             <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Pricing Overview</h3>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-left">
@@ -402,7 +403,7 @@ const Services2026: React.FC = (): JSX.Element => {
                     <li>• AI HR Platform: $4,999 - $15,000/month</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold text-blue-300 mb-3">Quantum & Advanced Tech</h4>
                   <ul className="text-sm text-slate-300 space-y-2">
@@ -411,7 +412,7 @@ const Services2026: React.FC = (): JSX.Element => {
                     <li>• Digital Twin: $12,999 - $45,000/month</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold text-purple-300 mb-3">Cybersecurity & IoT</h4>
                   <ul className="text-sm text-slate-300 space-y-2">
@@ -421,7 +422,7 @@ const Services2026: React.FC = (): JSX.Element => {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="mt-8 pt-6 border-t border-slate-700/50">
                 <p className="text-slate-300 text-sm mb-4">
                   All services include enterprise support, custom integrations, and dedicated implementation teams.
@@ -434,7 +435,7 @@ const Services2026: React.FC = (): JSX.Element => {
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
-                  
+
                   <Link
                     to="/request-quote"
                     className="inline-flex items-center px-6 py-3 border border-cyan-400/40 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-200"

@@ -1,8 +1,8 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users } from 'lucide-react';
 
-export default function AIAnalytics(...args: any[]): any {
+export default function AIAnalytics() {
   const features = [
     {
       icon: Brain,
@@ -65,17 +65,17 @@ export default function AIAnalytics(...args: any[]): any {
               <Brain className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-400 font-medium">AI & Analytics</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Intelligence Meets
               <span className="text-gradient"> Innovation</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Transform your business with cutting-edge AI and analytics solutions. 
+              Transform your business with cutting-edge AI and analytics solutions.
               Unlock insights, automate processes, and drive growth with intelligent technology.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start AI Project
@@ -107,8 +107,8 @@ export default function AIAnalytics(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -146,8 +146,8 @@ export default function AIAnalytics(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

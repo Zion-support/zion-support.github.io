@@ -1,13 +1,14 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
   Instagram,
   ArrowUp,
   Heart,
@@ -23,8 +24,8 @@ import { Phone,
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
- } from 'lucide-react.ts';
-export const FuturisticFooter: React.FC = (): JSX.Element => {
+} from 'lucide-react';
+export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -112,7 +113,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
                   <span className="text-2xl font-bold text-white">ZION TECH GROUP</span>
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms, 
+                  Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms,
                   and next-generation IT infrastructure that transforms businesses and drives innovation.
                 </p>
                 {/* Contact Information */}
@@ -233,7 +234,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
               {/* Copyright */}
               <div className="text-zion-slate-light text-sm">
-                © {currentYear} ZION TECH GROUP. All rights reserved. 
+                © {currentYear} ZION TECH GROUP. All rights reserved.
                 <span className="ml-2 flex items-center">
                   Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> for innovation
                 </span>

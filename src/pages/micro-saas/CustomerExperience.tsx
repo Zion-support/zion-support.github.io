@@ -1,8 +1,8 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap } from 'lucide-react';
 
-export default function CustomerExperience(...args: any[]): any {
+export default function CustomerExperience() {
   const features = [
     {
       icon: Heart,
@@ -65,17 +65,17 @@ export default function CustomerExperience(...args: any[]): any {
               <Heart className="w-5 h-5 text-pink-400" />
               <span className="text-pink-400 font-medium">Customer Experience</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Delight Your
               <span className="text-gradient"> Customers</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Create exceptional customer experiences that drive loyalty, satisfaction, 
+              Create exceptional customer experiences that drive loyalty, satisfaction,
               and business growth with our comprehensive CX platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial
@@ -107,8 +107,8 @@ export default function CustomerExperience(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -146,8 +146,8 @@ export default function CustomerExperience(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
               <motion.div
                 key={capability.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

@@ -1,9 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react.ts'
+import React from 'react'
+import Link from 'next/link'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock } from 'lucide-react'
 
 
-export default function Careers(...args: any[]): any {
+export default function Careers() {
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',
@@ -163,8 +163,8 @@ export default function Careers(...args: any[]): any {
 							Ready to join our mission? Check out our current openings.
 						</p>
 					</div>
-					<div className="grid gap-6 lg: anygrid-cols-2">
-						{openPositions.map((position)  => (
+					<div className="grid gap-6 lg:grid-cols-2">
+						{openPositions.map((position) => (
 							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
 								<div className="flex items-start justify-between mb-4">
 									<div>
@@ -183,7 +183,7 @@ export default function Careers(...args: any[]): any {
 								</div>
 								<p className="text-gray-600 mb-4">{position.description}</p>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									Apply Now <ArrowRight className="ml-2 h-4 w-4" />
@@ -204,7 +204,7 @@ export default function Careers(...args: any[]): any {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 							>
 								Send Resume

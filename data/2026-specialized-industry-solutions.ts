@@ -37,14 +37,12 @@ export interface SpecializedIndustrySolution {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -245,34 +243,25 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-
-    popular: true,
-    icon: '🚚',
-    color: 'from-teal-600 to-green-600',
-    textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/logistics-supply-chain-ai',
-    marketPosition: 'Leading logistics AI platform. Competes with Manhattan Associates ($100K+ setup), JDA Software ($150K+ setup). Our advantage: AI-powered optimization and cost-effective implementation.',
-    targetAudience: 'Logistics companies, Supply chain managers, E-commerce companies, Manufacturing firms, Retail chains',
-    trialDays: 30,
-    setupTime: '4-6 weeks',
-    category: 'Logistics Technology',
-    realService: true,
-    technology: ['Machine Learning', 'Python', 'React', 'Node.js', 'GPS tracking', 'IoT sensors'],
-    integrations: ['WMS systems', 'TMS systems', 'ERP systems', 'Carrier APIs', 'Tracking systems'],
-    useCases: ['Route optimization', 'Supply chain management', 'Inventory optimization', 'Cost reduction', 'Performance tracking'],
-    roi: 'Average 350% ROI through reduced costs and improved operational efficiency.',
-    competitors: ['Manhattan Associates', 'JDA Software', 'Oracle SCM', 'SAP SCM'],
-    marketSize: '$67.2B supply chain management market',
-    growthRate: '11.2% annual growth',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
-    launchDate: '2024-02-15',
-    customers: 38,
-    rating: 4.7,
-    reviews: 33
+    capabilities: [
+      'Production optimization',
+      'Predictive maintenance',
+      'Quality control',
+      'Supply chain optimization',
+      'Energy management',
+      'Performance analytics'
+    ],
+    marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
+    averageMarketPrice: '$500-2000/month',
+    featuresCapabilities: [
+      'AI production optimization',
+      'Predictive maintenance',
+      'Quality control',
+      'Supply chain optimization',
+      'Energy management',
+      'Performance analytics'
+    ]
   },
-
   {
     id: 'ai-powered-healthcare-diagnostics',
     name: 'AI-Powered Healthcare Diagnostics',
@@ -323,7 +312,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.9,
     reviews: 35
   },
-
   {
     id: 'smart-manufacturing-orchestrator',
     name: 'Smart Manufacturing Orchestrator',
@@ -374,7 +362,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.8,
     reviews: 48
   },
-
   {
     id: 'financial-ai-trading-platform',
     name: 'Financial AI Trading Platform',
@@ -425,7 +412,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.7,
     reviews: 32
   },
-
   {
     id: 'retail-ai-optimization-platform',
     name: 'Retail AI Optimization Platform',
@@ -451,13 +437,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Our advantage: Comprehensive AI-powered retail optimization with personalized customer experiences.',
-    targetAudience: [
-      'Retail chains',
-      'E-commerce companies',
-      'Department stores',
-      'Specialty retailers',
-      'Shopping centers'
-    ],
+    targetAudience: ['Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Retail AI & Customer Experience',
@@ -482,7 +462,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.6,
     reviews: 72
   },
-
   {
     id: 'logistics-ai-orchestrator',
     name: 'Logistics AI Orchestrator',
@@ -506,32 +485,21 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/logistics-ai-orchestrator',
-    marketPosition: 'Leading logistics AI platform. Our advantage: Comprehensive AI-powered logistics optimization with real-time tracking and cost optimization.',
-    targetAudience: [
-      'Logistics companies',
-      'Transportation companies',
-      'E-commerce companies',
-      'Manufacturing companies',
-      'Retail chains'
-    ],
+    link: 'https://ziontechgroup.com/logistics-supply-chain-ai',
+    marketPosition: 'Leading logistics AI platform. Competes with SAP Logistics ($30K+ setup), Oracle Transportation ($25K+ setup). Our advantage: AI-powered optimization and comprehensive features.',
+    targetAudience: 'Logistics companies, Supply chain managers, Transportation companies, E-commerce businesses, Manufacturing companies',
     trialDays: 30,
     setupTime: '3-4 weeks',
-    category: 'Logistics AI & Supply Chain Optimization',
+    category: 'Logistics Technology',
     realService: true,
-    technology: ['AI/ML', 'Route Optimization', 'Demand Forecasting', 'Real-time Tracking', 'Supply Chain Analytics', 'Fleet Management'],
-    integrations: ['TMS systems', 'WMS systems', 'GPS tracking', 'E-commerce platforms', 'Custom logistics systems'],
-    useCases: ['Route optimization', 'Warehouse management', 'Fleet optimization', 'Supply chain management', 'Cost optimization'],
-    roi: 'Logistics companies achieve 400% ROI with 90% improvement in delivery efficiency and 80% reduction in operational costs.',
-    competitors: ['Manhattan Associates', 'Oracle Transportation', 'SAP Transportation', 'Custom logistics platforms'],
-    marketSize: '$32.1B logistics AI market',
-    growthRate: '58% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
+    technology: ['AI/ML', 'Python', 'React', 'Node.js', 'IoT', 'Cloud platforms', 'GPS tracking'],
+    integrations: ['ERP systems', 'WMS systems', 'TMS systems', 'GPS platforms', 'E-commerce platforms'],
+    useCases: ['Route optimization', 'Supply chain visibility', 'Demand forecasting', 'Inventory management', 'Performance tracking'],
+    roi: 'Average 280% ROI through optimized logistics and reduced operational costs.',
+    competitors: ['SAP Logistics', 'Oracle Transportation', 'Manhattan Associates', 'JDA Software'],
+    marketSize: '$18.2B logistics AI market',
+    growthRate: '22.5% annual growth',
+    contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Advanced logistics AI platform with comprehensive logistics optimization and real-time tracking capabilities.',
     launchDate: '2024-08-25',
@@ -540,7 +508,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     reviews: 58
   }
 ];
-
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
   'FinTech Solutions',

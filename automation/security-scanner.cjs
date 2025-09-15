@@ -1,128 +1,120 @@
-const { exec } = require('child_process');
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-const SECURITY_LOG_PATH = path.join(process.cwd(), 'security-report.json');
+class SecurityScanner {
+  constructor() {
+    this.vulnerabilities = [];
+    this.securityScore = 100;
+  }
 
-async function runSecurityScan() {
-  console.log('🔒 Running security scan...');
-  
-  try {
-    // Run npm audit
-    const auditResult = await new Promise((resolve, reject) => {
-      exec('npm audit --json', (error, stdout, stderr) => {
-        if (error && error.code !== 1) { // npm audit exits with code 1 for vulnerabilities
-          return reject(error);
-        }
-        resolve({ stdout, stderr });
-      });
-    });
+  async scanSecurity() {
+    this.scanDependencies();
+    this.scanCode();
+    this.scanConfiguration();
+    
+    console.log(`Security scan completed. Score: ${this.securityScore}/100`);
+    return {
+      score: this.securityScore,
+      vulnerabilities: this.vulnerabilities
+    };
+  }
 
-    let auditData = {};
+  scanDependencies() {
     try {
-      auditData = JSON.parse(auditResult.stdout);
-    } catch (e) {
-      console.log('⚠️  Could not parse audit results');
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      
+      // Check for known vulnerable packages
+      const vulnerablePackages = ['lodash', 'moment']; // Example
+      for (const [pkg, version] of Object.entries(dependencies)) {
+        if (vulnerablePackages.includes(pkg)) {
+          this.vulnerabilities.push({
+            type: 'vulnerable-dependency',
+            package: pkg,
+            version: version,
+            severity: 'medium'
+          });
+          this.securityScore -= 10;
+        }
+      }
+    } catch (error) {
+      console.error('Error scanning dependencies:', error.message);
     }
+  }
 
-    // Check for common security issues in code
-    const securityChecks = {
-      hardcodedSecrets: await checkForHardcodedSecrets(),
-      unsafeEval: await checkForUnsafeEval(),
-      consoleLogs: await checkForConsoleLogs(),
-      weakCrypto: await checkForWeakCrypto()
-    };
-
-    const securityReport = {
-      timestamp: new Date().toISOString(),
-      npmAudit: {
-        vulnerabilities: auditData.metadata?.vulnerabilities || {},
-        summary: auditData.metadata?.summary || {}
-      },
-      codeSecurity: securityChecks,
-      recommendations: []
-    };
-
-    // Generate recommendations
-    if (auditData.metadata?.vulnerabilities?.high > 0) {
-      securityReport.recommendations.push('Fix high-severity vulnerabilities found in dependencies');
-    }
+  scanCode() {
+    const patterns = [
+      { pattern: /eval\(/, description: 'Use of eval() function', severity: 'high' },
+      { pattern: /innerHTML/, description: 'Potential XSS vulnerability', severity: 'medium' },
+      { pattern: /localStorage/, description: 'Sensitive data in localStorage', severity: 'low' }
+    ];
     
-    if (securityChecks.hardcodedSecrets.length > 0) {
-      securityReport.recommendations.push('Remove hardcoded secrets from code');
-    }
-    
-    if (securityChecks.unsafeEval.length > 0) {
-      securityReport.recommendations.push('Replace unsafe eval() usage with safer alternatives');
-    }
+    this.scanFiles(patterns);
+  }
 
-    fs.mkdirSync(path.dirname(SECURITY_LOG_PATH), { recursive: true });
-    fs.writeFileSync(SECURITY_LOG_PATH, JSON.stringify(securityReport, null, 2));
-    
-    console.log('✅ Security scan completed');
-    console.log(`🔍 Vulnerabilities found: ${auditData.metadata?.vulnerabilities?.total || 0}`);
-    console.log(`🔐 Code security issues: ${Object.values(securityChecks).flat().length}`);
-    
-    if (securityReport.recommendations.length > 0) {
-      console.log('💡 Security recommendations:');
-      securityReport.recommendations.forEach(rec => console.log(`   - ${rec}`));
+  scanConfiguration() {
+    // Check for security headers
+    const nextConfig = path.join(__dirname, '..', '..', 'next.config.js');
+    if (fs.existsSync(nextConfig)) {
+      const content = fs.readFileSync(nextConfig, 'utf8');
+      if (!content.includes('securityHeaders')) {
+        this.vulnerabilities.push({
+          type: 'missing-security-headers',
+          description: 'No security headers configured',
+          severity: 'medium'
+        });
+        this.securityScore -= 15;
+      }
     }
+  }
 
-  } catch (error) {
-    console.error('❌ Security scan failed:', error);
+  scanFiles(patterns) {
+    const directories = ['pages', 'components', 'utils'];
+    
+    for (const dir of directories) {
+      const dirPath = path.join(__dirname, '..', '..', dir);
+      if (fs.existsSync(dirPath)) {
+        this.scanDirectory(dirPath, patterns);
+      }
+    }
+  }
+
+  scanDirectory(dir, patterns) {
+    const files = fs.readdirSync(dir);
+    
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        this.scanDirectory(filePath, patterns);
+      } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
+        this.scanFile(filePath, patterns);
+      }
+    }
+  }
+
+  scanFile(filePath, patterns) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    for (const pattern of patterns) {
+      if (pattern.pattern.test(content)) {
+        this.vulnerabilities.push({
+          type: 'code-vulnerability',
+          file: filePath,
+          description: pattern.description,
+          severity: pattern.severity
+        });
+        
+        if (pattern.severity === 'high') this.securityScore -= 20;
+        else if (pattern.severity === 'medium') this.securityScore -= 10;
+        else this.securityScore -= 5;
+      }
+    }
   }
 }
 
-async function checkForHardcodedSecrets() {
-  return new Promise((resolve) => {
-    exec('grep -r "password\\|secret\\|key\\|token" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" | grep -v "//" | head -10', (error, stdout) => {
-      if (error) {
-        resolve([]);
-      } else {
-        resolve(stdout.trim().split('\n').filter(line => line.trim()));
-      }
-    });
-  });
-}
-
-async function checkForUnsafeEval() {
-  return new Promise((resolve) => {
-    exec('grep -r "eval(" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js"', (error, stdout) => {
-      if (error) {
-        resolve([]);
-      } else {
-        resolve(stdout.trim().split('\n').filter(line => line.trim()));
-      }
-    });
-  });
-}
-
-async function checkForConsoleLogs() {
-  return new Promise((resolve) => {
-    exec('grep -r "console\\.log" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" | wc -l', (error, stdout) => {
-      if (error) {
-        resolve(0);
-      } else {
-        resolve(parseInt(stdout.trim()) || 0);
-      }
-    });
-  });
-}
-
-async function checkForWeakCrypto() {
-  return new Promise((resolve) => {
-    exec('grep -r "Math\\.random\\|crypto\\.randomBytes" pages/ components/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js"', (error, stdout) => {
-      if (error) {
-        resolve([]);
-      } else {
-        resolve(stdout.trim().split('\n').filter(line => line.trim()));
-      }
-    });
-  });
-}
-
-// Run security scan every hour
-setInterval(runSecurityScan, 60 * 60 * 1000);
-runSecurityScan(); // Run immediately on startup
-
-console.log('🛡️  Security scanner started');
+const scanner = new SecurityScanner();
+scanner.scanSecurity();

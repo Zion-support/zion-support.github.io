@@ -1,95 +1,23 @@
 
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Shield, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  Users, 
-  BarChart3, 
-  Lock, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Clock, 
-  DollarSign, 
-  Target, 
-  Lightbulb, 
-  Award, 
-  ShieldCheck, 
-  Server, 
-  Smartphone, 
-  Monitor, 
-  Wifi, 
-  Beaker, 
-  Syringe, 
-  Stethoscope, 
-  Heart, 
-  Ear, 
-  Hand, 
-  Footprints, 
-  Bone, 
-  Tooth, 
-  Pill, 
-  Thermometer, 
-  Scale, 
-  Calculator, 
-  PieChart, 
-  TrendingDown, 
-  Minus, 
-  Plus, 
-  Equal, 
-  Divide, 
-  Percent, 
-  Euro, 
-  Bitcoin, 
-  CreditCard, 
-  Wallet, 
-  Banknote, 
-  Coins, 
-  PiggyBank, 
-  Key, 
-  Fingerprint, 
-  QrCode, 
-  Barcode, 
-  Scan, 
-  Camera, 
-  VideoOff, 
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Play, 
-  Pause, 
-  Rewind, 
-  FastForward, 
-  Shuffle, 
-  Repeat, 
-  Repeat1, 
-  PlayCircle, 
-  PauseCircle,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ShoppingCart,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Video,
-  Truck,
-  Briefcase
- } from 'lucide-react.ts';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+import SEO from '@/components/SEO';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import Input from '@/components/ui/Input';
+import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import { motion } from 'framer-motion';
+import {
+    ArrowRight,
+    BarChart3,
+    Briefcase,
+    Globe,
+    Grid,
+    List,
+    MessageCircle,
+    Search,
+    Star
+} from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
@@ -161,14 +89,14 @@ const pricingModels = [
   { id: 'usage-based', name: 'Usage-based' }
 ];
 
-export default function ComprehensiveServicesOverview2027(...args: any[]): any {
+export default function ComprehensiveServicesOverview2027() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState<any>('rating');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [expandedService, setExpandedService] = useState<any>(null);
+  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
@@ -204,7 +132,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
 
-  const ServiceCard = ({ service }: { service: anyany })  => (
+  const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -217,8 +145,8 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
         </div>
       )}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img 
-          src={service.images[0]} 
+        <img
+          src={service.images[0]}
           alt={service.title}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
         />
@@ -277,31 +205,37 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
       </div>
     </motion.div>
   );
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO
+        title="Comprehensive Services Overview 2027 - Zion Tech Group"
+        description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions."
+        keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
+      />
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Comprehensive Services Overview
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-              2027 Edition
-            </span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-          >
-            Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
-          </motion.p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Comprehensive Services Overview
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                2027 Edition
+              </span>
+            </h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-zion-slate-light max-w-3xl mx-auto"
+            >
+              Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
+            </motion.p>
+          </motion.div>
         </div>
 
         {/* Filters and Controls */}
@@ -348,45 +282,95 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
               </select>
             </div>
           </div>
-          <div className="flex flex-wrap gap-4">
-            {categories.map((category) => (
-              <Button
-                key={category.id}
-                variant={selectedCategory === category.id ? 'default' : 'outline'}
-                onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-              >
-                {category.icon}
-                <span className="ml-2">{category.name}</span>
-                <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
-                  {category.count}
-                </Badge>
-              </Button>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Filters and Search */}
+          <div className="mb-8 space-y-6">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                  <Input
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light"
+                  />
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant={viewMode === 'grid' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setViewMode('grid')}
+                    className="bg-zion-cyan hover:bg-zion-cyan-light"
+                  >
+                    <Grid className="w-4 h-4" />
+                  </Button>
+                  <Button
+                    variant={viewMode === 'list' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setViewMode('list')}
+                    className="bg-zion-cyan hover:bg-zion-cyan-light"
+                  >
+                    <List className="w-4 h-4" />
+                  </Button>
+                </div>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
+                >
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="aiScore">Sort by AI Score</option>
+                  <option value="newest">Sort by Newest</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  variant={selectedCategory === category.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
+                >
+                  {category.icon}
+                  <span className="ml-2">{category.name}</span>
+                  <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
+                    {category.count}
+                  </Badge>
+                </Button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {pricingModels.map((pricing) => (
+                <Button
+                  key={pricing.id}
+                  variant={selectedPricing === pricing.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedPricing(pricing.id)}
+                  className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
+                >
+                  {pricing.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+          {/* Services Grid */}
+          <div className={`grid gap-8 ${
+            viewMode === 'grid'
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+              : 'grid-cols-1'
+          }`}>
+            {filteredServices.map((service) => (
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
-          <div className="flex flex-wrap gap-4">
-            {pricingModels.map((pricing) => (
-              <Button
-                key={pricing.id}
-                variant={selectedPricing === pricing.id ? 'default' : 'outline'}
-                onClick={() => setSelectedPricing(pricing.id)}
-                className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
-              >
-                {pricing.name}
-              </Button>
-            ))}
-          </div>
-        </div>
-        {/* Services Grid */}
-        <div className={`grid gap-8 ${
-          viewMode === 'grid' 
-            ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
-            : 'grid-cols-1'
-        }`}>
-          {filteredServices.map((service)  => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
@@ -402,7 +386,8 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
             </Button>
           </div>
         )}
-      </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -410,7 +395,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8">
-            Our team of experts is ready to help you implement the perfect solution for your needs. 
+            Our team of experts is ready to help you implement the perfect solution for your needs.
             Get in touch today for a personalized consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

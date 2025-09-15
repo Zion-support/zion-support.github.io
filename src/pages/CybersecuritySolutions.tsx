@@ -1,11 +1,12 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  CheckCircle,
+  ArrowRight,
   Zap,
   Network,
   Database,
@@ -24,9 +25,9 @@ import { Shield,
   Clock,
   BarChart3,
   CreditCard
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function CybersecuritySolutions(...args: any[]): any {
+export default function CybersecuritySolutions() {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
@@ -200,8 +201,9 @@ export default function CybersecuritySolutions(...args: any[]): any {
     }
   };
 
-  const filteredThreats = selectedThreat === 'all' 
-    ? securityThreats: anysecurityThreats.filter(threat  => threat.type === selectedThreat);
+  const filteredThreats = selectedThreat === 'all'
+    ? securityThreats
+    : securityThreats.filter(threat => threat.type === selectedThreat);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -211,7 +213,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-red rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-orange rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -223,7 +225,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
                 <Shield className="w-12 h-12 text-white" />
               </div>
             </div>
-            
+
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cybersecurity{' '}
               <span className="bg-gradient-to-r from-zion-red to-zion-orange bg-clip-text text-transparent">
@@ -231,12 +233,12 @@ export default function CybersecuritySolutions(...args: any[]): any {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Protect your business with enterprise-grade cybersecurity solutions. 
+              Protect your business with enterprise-grade cybersecurity solutions.
               From threat detection to compliance management, we keep you secure in an evolving digital landscape.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -254,7 +256,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
       {/* Security Services Overview */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -265,20 +267,20 @@ export default function CybersecuritySolutions(...args: any[]): any {
               Comprehensive Security Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our cybersecurity solutions provide end-to-end protection for your digital assets, 
+              Our cybersecurity solutions provide end-to-end protection for your digital assets,
               ensuring business continuity and regulatory compliance.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {securityServices.map((service, index)  => (
-              <motion.div 
+            {securityServices.map((service, index) => (
+              <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -287,10 +289,10 @@ export default function CybersecuritySolutions(...args: any[]): any {
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
-                
+
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-zion-slate-light">
@@ -308,7 +310,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
       {/* Threat Landscape */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -319,20 +321,20 @@ export default function CybersecuritySolutions(...args: any[]): any {
               Understanding Cyber Threats
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Stay informed about the latest cybersecurity threats and learn how our solutions 
+              Stay informed about the latest cybersecurity threats and learn how our solutions
               protect against evolving attack vectors.
             </p>
           </motion.div>
 
           {/* Threat Filter */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {threatTypes.map((threat)  => {
+            {threatTypes.map((threat) => {
               const Icon = threat.icon;
               return (
                 <button
@@ -352,15 +354,15 @@ export default function CybersecuritySolutions(...args: any[]): any {
           </motion.div>
 
           {/* Threats Grid */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {filteredThreats.map((threat, index)  => (
-              <motion.div 
+            {filteredThreats.map((threat, index) => (
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
@@ -381,9 +383,9 @@ export default function CybersecuritySolutions(...args: any[]): any {
                     {threat.impact}
                   </span>
                 </div>
-                
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{threat.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Protection Solutions:</h4>
                   <ul className="space-y-1">
@@ -404,7 +406,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
       {/* Compliance & Standards */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -415,20 +417,20 @@ export default function CybersecuritySolutions(...args: any[]): any {
               Compliance & Standards
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Meet industry standards and regulatory requirements with our comprehensive 
+              Meet industry standards and regulatory requirements with our comprehensive
               compliance management solutions.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {complianceFrameworks.map((framework, index)  => (
-              <motion.div 
+            {complianceFrameworks.map((framework, index) => (
+              <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -437,10 +439,10 @@ export default function CybersecuritySolutions(...args: any[]): any {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{framework.name}</h3>
                 <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{framework.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Key Requirements:</h4>
                   <ul className="space-y-1">
@@ -461,7 +463,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
       {/* Security Metrics */}
       <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -472,20 +474,20 @@ export default function CybersecuritySolutions(...args: any[]): any {
               Security Performance Metrics
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our cybersecurity solutions deliver measurable results and provide 
+              Our cybersecurity solutions deliver measurable results and provide
               peace of mind through proven protection capabilities.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
-            {securityMetrics.map((metric, index)  => (
-              <motion.div 
+            {securityMetrics.map((metric, index) => (
+              <motion.div
                 key={index}
                 className="text-center"
                 variants={itemVariants}
@@ -504,7 +506,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
       {/* Security Process */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -515,17 +517,17 @@ export default function CybersecuritySolutions(...args: any[]): any {
               Our Security Implementation Process
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A systematic approach to implementing comprehensive cybersecurity solutions 
+              A systematic approach to implementing comprehensive cybersecurity solutions
               that protect your business from evolving threats.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {[
               {
@@ -552,8 +554,8 @@ export default function CybersecuritySolutions(...args: any[]): any {
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
               }
-            ].map((phase, index)  => (
-              <motion.div 
+            ].map((phase, index) => (
+              <motion.div
                 key={index}
                 className="relative"
                 variants={itemVariants}
@@ -566,7 +568,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
                   <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>
                 </div>
-                
+
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                     <ArrowRight className="w-8 h-8 text-zion-red" />
@@ -591,12 +593,12 @@ export default function CybersecuritySolutions(...args: any[]): any {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Don't wait for a security breach. Let's discuss how our cybersecurity solutions 
+              Don't wait for a security breach. Let's discuss how our cybersecurity solutions
               can protect your organization from evolving threats.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

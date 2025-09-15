@@ -1,440 +1,526 @@
-import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Card, CardContent, CardHeader, CardTitle  } from './ui/card';
-import { Button  } from './ui/button';
-import { Badge  } from './ui/badge';
-import { Alert, AlertDescription  } from './ui/alert';
-import { Progress  } from './ui/progress';
-import { Shield, 
-  Lock, 
-  AlertTriangle, 
-  CheckCircle, 
-  Eye, 
-  EyeOff,
-  RefreshCw,
-  Zap,
-  ShieldCheck,
-  Bug,
-  Network,
-  Database
- } from 'lucide-react.ts';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
-interface SecurityThreat {
-
+interface SecurityEvent {
   id: string;
-  type: 'xss' | 'csrf' | 'injection' | 'authentication' | 'authorization' | 'data-leak';
-  severity: 'critical' | 'high' | 'medium' | 'low';
+  type: 'xss_attempt' | 'injection_attempt' | 'suspicious_activity' | 'security_violation';
+  severity: 'low' | 'medium' | 'high' | 'critical';
   description: string;
-  location: string;
-  timestamp: Date;
-  status: 'active' | 'mitigated' | 'resolved';
-
+  timestamp: number;
+  userAgent: string;
+  ipAddress?: string;
+  payload?: string;
+  blocked: boolean;
 }
 
-interface SecurityMetrics {
-
-  overallScore: number;
-  vulnerabilities: number;
-  threatsBlocked: number;
-  lastScan: Date;
-  complianceScore: number;
-  encryptionStrength: number;
-
+interface SecurityConfig {
+  enableXSSProtection: boolean;
+  enableCSRFProtection: boolean;
+  enableInputValidation: boolean;
+  enableRateLimiting: boolean;
+  enableSecurityHeaders: boolean;
+  enableContentSecurityPolicy: boolean;
 }
 
-interface SecurityCheck {
-
-  id: string;
-  name: string;
-  status: 'pass' | 'fail' | 'warning';
-  description: string;
-  recommendation: string;
-  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
-
-}
-
-const SecurityEnhancer: React.FC = (): JSX.Element => {
-  const [metrics, setMetrics] = useState<any>({
-    overallScore: 85,
-    vulnerabilities: 3,
-    threatsBlocked: 127,
-    lastScan: new Date(),
-    complianceScore: 92,
-    encryptionStrength: 256
+export const SecurityEnhancer: React.FC = () => {
+  const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
+  const [config, setConfig] = useState<SecurityConfig>({
+    enableXSSProtection: true,
+    enableCSRFProtection: true,
+    enableInputValidation: true,
+    enableRateLimiting: true,
+    enableSecurityHeaders: true,
+    enableContentSecurityPolicy: true
   });
+  const [isActive, setIsActive] = useState(false);
+  const [threatLevel, setThreatLevel] = useState<'low' | 'medium' | 'high'>('low');
+  const [blockedRequests, setBlockedRequests] = useState(0);
+  const [allowedRequests, setAllowedRequests] = useState(0);
+  
+  const rateLimitMap = useRef<Map<string, { count: number; resetTime: number }>>(new Map());
+  const suspiciousPatterns = useRef<RegExp[]>([]);
+  const xssPatterns = useRef<RegExp[]>([]);
 
-  const [threats, setThreats] = useState<any>([]);
-  const [securityChecks, setSecurityChecks] = useState<any>([]);
-  const [isScanning, setIsScanning] = useState(false);
-  const [showThreats, setShowThreats] = useState(true);
-
-  // Generate sample security threats
+  // Initialize security patterns
   useEffect(() => {
-    const sampleThreats: SecurityThreat[] = [
-      {
-        id: any'1',
-        type: 'xss',
+    // XSS patterns
+    xssPatterns.current = [
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      /javascript:/gi,
+      /on\w+\s*=/gi,
+      /<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi,
+      /<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi,
+      /<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi,
+      /<form\b[^<]*(?:(?!<\/form>)<[^<]*)*<\/form>/gi,
+      /<input\b[^<]*(?:(?!<\/input>)<[^<]*)*<\/input>/gi,
+      /<textarea\b[^<]*(?:(?!<\/textarea>)<[^<]*)*<\/textarea>/gi,
+      /<select\b[^<]*(?:(?!<\/select>)<[^<]*)*<\/select>/gi
+    ];
+
+    // Suspicious patterns
+    suspiciousPatterns.current = [
+      /union\s+select/gi,
+      /drop\s+table/gi,
+      /insert\s+into/gi,
+      /update\s+set/gi,
+      /delete\s+from/gi,
+      /exec\s*\(/gi,
+      /eval\s*\(/gi,
+      /document\.cookie/gi,
+      /window\.location/gi,
+      /innerHTML\s*=/gi,
+      /outerHTML\s*=/gi,
+      /document\.write/gi,
+      /document\.writeln/gi
+    ];
+  }, []);
+
+  // Generate unique event ID
+  const generateEventId = useCallback(() => {
+    return 'security_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }, []);
+
+  // Log security event
+  const logSecurityEvent = useCallback((event: Omit<SecurityEvent, 'id' | 'timestamp'>) => {
+    const securityEvent: SecurityEvent = {
+      ...event,
+      id: generateEventId(),
+      timestamp: Date.now()
+    };
+
+    setSecurityEvents(prev => [...prev, securityEvent]);
+    
+    // Update threat level based on severity
+    if (event.severity === 'critical' || event.severity === 'high') {
+      setThreatLevel('high');
+    } else if (event.severity === 'medium') {
+      setThreatLevel('medium');
+    }
+
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.warn('Security Event:', securityEvent);
+    }
+
+    // Store security event locally instead of sending to non-existent API
+    try {
+      const storedEvents = localStorage.getItem('security-events') || '[]';
+      const events = JSON.parse(storedEvents);
+      events.push(securityEvent);
+      
+      // Keep only last 100 events
+      if (events.length > 100) {
+        events.splice(0, events.length - 100);
+      }
+      
+      localStorage.setItem('security-events', JSON.stringify(events));
+    } catch (error) {
+      console.warn('Error storing security event locally:', error);
+    }
+  }, [generateEventId]);
+
+  // Send event to security service
+  const sendToSecurityService = useCallback(async (event: SecurityEvent) => {
+    try {
+      // Store security event locally instead of sending to non-existent API
+      // TODO: Implement actual security service when available
+      const storedEvents = localStorage.getItem('security-events') || '[]';
+      const events = JSON.parse(storedEvents);
+      events.push(event);
+      
+      // Keep only last 100 events
+      if (events.length > 100) {
+        events.splice(0, events.length - 100);
+      }
+      
+      localStorage.setItem('security-events', JSON.stringify(events));
+      
+      // Log event for debugging (remove in production)
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('Security event stored locally:', event);
+      }
+    } catch (error) {
+      console.warn('Error storing security event locally:', error);
+    }
+  }, []);
+
+  // XSS Protection
+  const sanitizeInput = useCallback((input: string): string => {
+    if (!config.enableXSSProtection) return input;
+
+    let sanitized = input;
+    
+    // Remove dangerous HTML tags and attributes
+    xssPatterns.current.forEach(pattern => {
+      sanitized = sanitized.replace(pattern, '');
+    });
+
+    // Encode HTML entities
+    sanitized = sanitized
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;');
+
+    // Check if input was modified
+    if (sanitized !== input) {
+      logSecurityEvent({
+        type: 'xss_attempt',
         severity: 'high',
-        description: 'Potential XSS vulnerability in user input field',
-        location: '/src/components/ContactForm.tsx:45',
-        timestamp: new Date(Date.now() - 3600000),
-        status: 'active'
-      },
-      {
-        id: '2',
-        type: 'authentication',
-        severity: 'medium',
-        description: 'Weak password policy detected',
-        location: '/src/utils/auth.ts:23',
-        timestamp: new Date(Date.now() - 7200000),
-        status: 'mitigated'
-      },
-      {
-        id: '3',
-        type: 'data-leak',
-        severity: 'low',
-        description: 'Sensitive data in console logs',
-        location: '/src/components/Dashboard.tsx:67',
-        timestamp: new Date(Date.now() - 10800000),
-        status: 'resolved'
-      }
-    ];
+        description: 'XSS attempt detected and sanitized',
+        userAgent: navigator.userAgent,
+        payload: input,
+        blocked: true
+      });
+      setBlockedRequests(prev => prev + 1);
+    }
 
-    setThreats(sampleThreats);
-  }, []);
+    return sanitized;
+  }, [config.enableXSSProtection, logSecurityEvent]);
 
-  // Generate security checks
-  useEffect(()  => {
-    const checks: SecurityCheck[] = [
-      {
-        id: '1',
-        name: 'HTTPS Enforcement',
-        status: 'pass',
-        description: 'All traffic is properly encrypted with HTTPS',
-        recommendation: 'Continue monitoring SSL certificate expiration',
-        category: 'network-security'
-      },
-      {
-        id: '2',
-        name: 'Input Validation',
-        status: 'warning',
-        description: 'Some input fields lack proper validation',
-        recommendation: 'Implement comprehensive input sanitization',
-        category: 'data-protection'
-      },
-      {
-        id: '3',
-        name: 'Authentication Tokens',
-        status: 'pass',
-        description: 'JWT tokens are properly implemented with expiration',
-        recommendation: 'Consider implementing refresh token rotation',
-        category: 'authentication'
-      },
-      {
-        id: '4',
-        name: 'GDPR Compliance',
-        status: 'pass',
-        description: 'Data handling practices comply with GDPR requirements',
-        recommendation: 'Regular audit of data retention policies',
-        category: 'compliance'
-      },
-      {
-        id: '5',
-        name: 'SQL Injection Protection',
-        status: 'pass',
-        description: 'Database queries are properly parameterized',
-        recommendation: 'Continue using prepared statements',
-        category: 'data-protection'
-      }
-    ];
+  // Input validation
+  const validateInput = useCallback((input: string, type: 'text' | 'email' | 'url' | 'number'): boolean => {
+    if (!config.enableInputValidation) return true;
 
-    setSecurityChecks(checks);
-  }, []);
+    let isValid = true;
+    let validationPattern: RegExp;
 
-  const runSecurityScan = useCallback(async () => {
-    setIsScanning(true);
-    
-    // Simulate security scan
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    
-    // Update metrics with new scan results
-    setMetrics(prev => ({
-      ...prev,
-      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),
-      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),
-      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
-      lastScan: new Date()
-    }));
-
-    setIsScanning(false);
-  }, []);
-
-  const mitigateThreat = useCallback((threatId: anystring)  => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'mitigated' as const }
-        : threat
-    ));
-  }, []);
-
-  const resolveThreat = useCallback((threatId: anystring)  => {
-    setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'resolved' as const }
-        : threat
-    ));
-  }, []);
-
-  const getThreatIcon = (type: anySecurityThreat['type'])  => {
     switch (type) {
-      case 'xss': return <Bug className="h-4 w-4" />;
-      case 'csrf': return <Network className="h-4 w-4" />;
-      case 'injection': return <Database className="h-4 w-4" />;
-      case 'authentication': return <Lock className="h-4 w-4" />;
-      case 'authorization': return <Shield className="h-4 w-4" />;
-      case 'data-leak': return <Eye className="h-4 w-4" />;
-      default: return <AlertTriangle className="h-4 w-4" />;
+      case 'email':
+        validationPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        break;
+      case 'url':
+        validationPattern = /^https?:\/\/.+/;
+        break;
+      case 'number':
+        validationPattern = /^\d+(\.\d+)?$/;
+        break;
+      default:
+        validationPattern = /^[\w\s\-.,!?()]+$/;
     }
-  };
 
-  const getSeverityColor = (severity: anySecurityThreat['severity'])  => {
-    switch (severity) {
-      case 'critical': return 'bg-red-500';
-      case 'high': return 'bg-orange-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'low': return 'bg-blue-500';
-      default: return 'bg-gray-500';
+    if (!validationPattern.test(input)) {
+      isValid = false;
+      logSecurityEvent({
+        type: 'injection_attempt',
+        severity: 'medium',
+        description: `Invalid input format for type: ${type}`,
+        userAgent: navigator.userAgent,
+        payload: input,
+        blocked: true
+      });
+      setBlockedRequests(prev => prev + 1);
     }
-  };
 
-  const getStatusColor = (status: anySecurityThreat['status'])  => {
-    switch (status) {
-      case 'active': return 'bg-red-100 text-red-800';
-      case 'mitigated': return 'bg-yellow-100 text-yellow-800';
-      case 'resolved': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+    // Check for suspicious patterns
+    suspiciousPatterns.current.forEach(pattern => {
+      if (pattern.test(input)) {
+        isValid = false;
+        logSecurityEvent({
+          type: 'injection_attempt',
+          severity: 'critical',
+          description: 'Suspicious injection pattern detected',
+          userAgent: navigator.userAgent,
+          payload: input,
+          blocked: true
+        });
+        setBlockedRequests(prev => prev + 1);
+      }
+    });
+
+    if (isValid) {
+      setAllowedRequests(prev => prev + 1);
     }
-  };
 
-  const getCheckStatusIcon = (status: anySecurityCheck['status'])  => {
-    switch (status) {
-      case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
-      case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
-      case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
-      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
+    return isValid;
+  }, [config.enableInputValidation, logSecurityEvent]);
+
+  // Rate limiting
+  const checkRateLimit = useCallback((identifier: string, limit: number, windowMs: number): boolean => {
+    if (!config.enableRateLimiting) return true;
+
+    const now = Date.now();
+    const current = rateLimitMap.current.get(identifier);
+
+    if (!current || now > current.resetTime) {
+      rateLimitMap.current.set(identifier, {
+        count: 1,
+        resetTime: now + windowMs
+      });
+      return true;
     }
-  };
 
-  const getSecurityScoreColor = (score: anynumber)  => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    if (score >= 50) return 'text-orange-600';
-    return 'text-red-600';
-  };
+    if (current.count >= limit) {
+      logSecurityEvent({
+        type: 'suspicious_activity',
+        severity: 'medium',
+        description: `Rate limit exceeded for identifier: ${identifier}`,
+        userAgent: navigator.userAgent,
+        blocked: true
+      });
+      setBlockedRequests(prev => prev + 1);
+      return false;
+    }
+
+    current.count++;
+    return true;
+  }, [config.enableRateLimiting, logSecurityEvent]);
+
+  // CSRF Protection
+  const generateCSRFToken = useCallback((): string => {
+    if (!config.enableCSRFProtection) return '';
+
+    const token = Math.random().toString(36).substr(2, 15) + Date.now().toString(36);
+    sessionStorage.setItem('csrf_token', token);
+    return token;
+  }, [config.enableCSRFProtection]);
+
+  const validateCSRFToken = useCallback((token: string): boolean => {
+    if (!config.enableCSRFProtection) return true;
+
+    const storedToken = sessionStorage.getItem('csrf_token');
+    if (!storedToken || storedToken !== token) {
+      logSecurityEvent({
+        type: 'security_violation',
+        severity: 'high',
+        description: 'CSRF token validation failed',
+        userAgent: navigator.userAgent,
+        blocked: true
+      });
+      setBlockedRequests(prev => prev + 1);
+      return false;
+    }
+
+    return true;
+  }, [config.enableCSRFProtection, logSecurityEvent]);
+
+  // Set security headers
+  useEffect(() => {
+    if (!config.enableSecurityHeaders) return;
+
+    // Note: Security headers should be set via HTTP headers, not meta tags
+    // These are handled by the server configuration (netlify.toml and _headers)
+    
+    // Only add non-security related meta tags here
+    const meta = document.createElement('meta');
+    meta.name = 'security-version';
+    meta.content = 'v1.0.0';
+    document.head.appendChild(meta);
+  }, [config.enableSecurityHeaders]);
+
+  // Content Security Policy - handled by server headers
+  useEffect(() => {
+    if (!config.enableContentSecurityPolicy) return;
+    
+    // Note: CSP should be set via HTTP headers, not meta tags
+    // This is handled by the server configuration
+    
+    // Only add non-security related meta tags here
+    const cspMeta = document.createElement('meta');
+    cspMeta.name = 'csp-version';
+    cspMeta.content = 'v1.0.0';
+    document.head.appendChild(cspMeta);
+  }, [config.enableContentSecurityPolicy]);
+
+  // Monitor form submissions
+  useEffect(() => {
+    if (!isActive) return;
+
+    const handleFormSubmit = (event: Event) => {
+      const form = event.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      // Rate limiting for form submissions
+      const clientId = navigator.userAgent + window.location.hostname;
+      if (!checkRateLimit(clientId, 10, 60000)) { // 10 submissions per minute
+        event.preventDefault();
+        return;
+      }
+
+      // Validate all form inputs
+      let isValid = true;
+      formData.forEach((value, key) => {
+        if (typeof value === 'string') {
+          const sanitized = sanitizeInput(value);
+          if (sanitized !== value) {
+            isValid = false;
+          }
+          
+          // Determine input type for validation
+          const input = form.querySelector(`[name="${key}"]`) as HTMLInputElement;
+          if (input) {
+            const inputType = input.type || 'text';
+            if (!validateInput(value as string, inputType as any)) {
+              isValid = false;
+            }
+          }
+        }
+      });
+
+      if (!isValid) {
+        event.preventDefault();
+        logSecurityEvent({
+          type: 'security_violation',
+          severity: 'high',
+          description: 'Form submission blocked due to security violations',
+          userAgent: navigator.userAgent,
+          blocked: true
+        });
+      }
+    };
+
+    document.addEventListener('submit', handleFormSubmit);
+    return () => document.removeEventListener('submit', handleFormSubmit);
+  }, [isActive, checkRateLimit, sanitizeInput, validateInput, logSecurityEvent]);
+
+  // Monitor input changes
+  useEffect(() => {
+    if (!isActive) return;
+
+    const handleInput = (event: Event) => {
+      const input = event.target as HTMLInputElement;
+      const value = input.value;
+
+      // Real-time validation
+      if (value) {
+        const inputType = input.type || 'text';
+        validateInput(value, inputType as any);
+      }
+    };
+
+    document.addEventListener('input', handleInput);
+    return () => document.removeEventListener('input', handleInput);
+  }, [isActive, validateInput]);
+
+  // Start security monitoring
+  useEffect(() => {
+    setIsActive(true);
+    
+    // Log security system activation
+    logSecurityEvent({
+      type: 'security_violation',
+      severity: 'low',
+      description: 'Security system activated',
+      userAgent: navigator.userAgent,
+      blocked: false
+    });
+  }, [logSecurityEvent]);
+
+  // Toggle security features
+  const toggleFeature = useCallback((feature: keyof SecurityConfig) => {
+    setConfig(prev => ({
+      ...prev,
+      [feature]: !prev[feature]
+    }));
+  }, []);
+
+  // Clear security events
+  const clearEvents = useCallback(() => {
+    setSecurityEvents([]);
+    setBlockedRequests(0);
+    setAllowedRequests(0);
+    setThreatLevel('low');
+  }, []);
+
+  // Export security report
+  const exportReport = useCallback(() => {
+    const report = {
+      config,
+      events: securityEvents,
+      statistics: {
+        blockedRequests,
+        allowedRequests,
+        threatLevel,
+        totalEvents: securityEvents.length
+      },
+      timestamp: new Date().toISOString()
+    };
+
+    const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `security-report-${Date.now()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]);
 
   return (
-    <div className="space-y-6">
-      {/* Security Overview */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-                    <ShieldCheck className="h-5 w-5" />
-        Security Overview
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="text-center">
-              <div className={`text-3xl font-bold ${getSecurityScoreColor(metrics.overallScore)}`}>
-                {metrics.overallScore}
-              </div>
-              <div className="text-sm text-gray-600">Security Score</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-red-600">
-                {metrics.vulnerabilities}
-              </div>
-              <div className="text-sm text-gray-600">Vulnerabilities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">
-                {metrics.threatsBlocked}
-              </div>
-              <div className="text-sm text-gray-600">Threats Blocked</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">
-                {metrics.encryptionStrength}
-              </div>
-              <div className="text-sm text-gray-600">Encryption (bits)</div>
-            </div>
-          </div>
+    <div className="fixed top-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold text-gray-900">Security Monitor</h3>
+        <div className="flex gap-2">
+          <button
+            onClick={exportReport}
+            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
+            title="Export security report"
+          >
+            Export
+          </button>
+          <button
+            onClick={clearEvents}
+            className="px-2 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700"
+            title="Clear security events"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
 
-          <div className="space-y-4">
-            <div>
-              <div className="flex justify-between text-sm mb-2">
-                <span>Overall Security</span>
-                <span>{metrics.overallScore}%</span>
-              </div>
-              <Progress value={metrics.overallScore} className="w-full" />
+      {/* Threat Level Indicator */}
+      <div className={`mb-3 p-2 rounded text-center text-white text-xs font-medium ${
+        threatLevel === 'low' ? 'bg-green-500' :
+        threatLevel === 'medium' ? 'bg-yellow-500' :
+        'bg-red-500'
+      }`}>
+        Threat Level: {threatLevel.toUpperCase()}
+      </div>
+
+      {/* Security Statistics */}
+      <div className="bg-gray-50 p-2 rounded mb-3">
+        <h4 className="font-medium text-gray-700 mb-2 text-xs">Statistics</h4>
+        <div className="grid grid-cols-2 gap-2 text-xs">
+          <div>Blocked: {blockedRequests}</div>
+          <div>Allowed: {allowedRequests}</div>
+          <div>Events: {securityEvents.length}</div>
+          <div>Status: {isActive ? 'Active' : 'Inactive'}</div>
+        </div>
+      </div>
+
+      {/* Security Configuration */}
+      <div className="bg-gray-50 p-2 rounded mb-3">
+        <h4 className="font-medium text-gray-700 mb-2 text-xs">Configuration</h4>
+        <div className="space-y-1 text-xs">
+          {Object.entries(config).map(([key, value]) => (
+            <label key={key} className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={value}
+                onChange={() => toggleFeature(key as keyof SecurityConfig)}
+                className="w-3 h-3"
+              />
+              <span className="text-gray-600">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Recent Security Events */}
+      <div className="bg-gray-50 p-2 rounded">
+        <h4 className="font-medium text-gray-700 mb-2 text-xs">Recent Events</h4>
+        <div className="space-y-1 max-h-20 overflow-y-auto">
+          {securityEvents.slice(-5).map(event => (
+            <div key={event.id} className={`text-xs p-1 rounded ${
+              event.severity === 'critical' ? 'bg-red-100 text-red-800' :
+              event.severity === 'high' ? 'bg-orange-100 text-orange-800' :
+              event.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
+              'bg-green-100 text-green-800'
+            }`}>
+              {event.type}: {event.description.slice(0, 30)}...
             </div>
-            <div>
-              <div className="flex justify-between text-sm mb-2">
-                <span>Compliance Score</span>
-                <span>{metrics.complianceScore}%</span>
-              </div>
-              <Progress value={metrics.complianceScore} className="w-full" />
-            </div>
-          </div>
-
-          <div className="mt-4">
-            <Button 
-              onClick={runSecurityScan} 
-              disabled={isScanning}
-              className="w-full"
-            >
-              {isScanning ? (
-                <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
-                  Scanning...
-                </>
-              ) : (
-                <>
-                  <Zap className="h-4 w-4 mr-2" />
-                  Run Security Scan
-                </>
-              )}
-            </Button>
-            <div className="text-xs text-gray-500 mt-2 text-center">
-              Last scan: {metrics.lastScan.toLocaleString()}
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Security Checks */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5" />
-            Security Checks
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {securityChecks.map((check) => (
-              <div key={check.id} className="border rounded-lg p-4">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      {getCheckStatusIcon(check.status)}
-                      <h4 className="font-semibold">{check.name}</h4>
-                      <Badge variant="outline">{check.category}</Badge>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-2">
-                      {check.description}
-                    </p>
-                    <p className="text-sm text-blue-600">
-                      <strong>Recommendation:</strong> {check.recommendation}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Security Threats */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5" />
-            Security Threats
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowThreats(!showThreats)}
-            >
-              {showThreats ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-            </Button>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          {showThreats && (
-            <div className="space-y-4">
-              {threats.map((threat) => (
-                <div key={threat.id} className="border rounded-lg p-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        {getThreatIcon(threat.type)}
-                        <h4 className="font-semibold capitalize">{threat.type} Threat</h4>
-                        <Badge className={`${getSeverityColor(threat.severity)} text-white`}>
-                          {threat.severity}
-                        </Badge>
-                        <Badge className={getStatusColor(threat.status)}>
-                          {threat.status}
-                        </Badge>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">
-                        {threat.description}
-                      </p>
-                      <div className="text-xs text-gray-500 mb-2">
-                        <strong>Location:</strong> {threat.location}
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        <strong>Detected:</strong> {threat.timestamp.toLocaleString()}
-                      </div>
-                    </div>
-                    <div className="flex gap-2 ml-4">
-                      {threat.status === 'active' && (
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() => mitigateThreat(threat.id)}
-                        >
-                          Mitigate
-                        </Button>
-                      )}
-                      {threat.status === 'mitigated' && (
-                        <Button
-                          size="sm"
-                          onClick={() => resolveThreat(threat.id)}
-                        >
-                          Resolve
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </CardContent>
-      </Card>
-
-      {/* Security Alerts */}
-      {metrics.vulnerabilities > 0 && (
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-            <strong>Security Alert:</strong> {metrics.vulnerabilities} active vulnerability(ies) detected. 
-            Please review and address these security issues immediately.
-          </AlertDescription>
-        </Alert>
-      )}
-
-      {metrics.overallScore < 70 && (
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-            <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
-            Consider running a comprehensive security audit and implementing the suggested improvements.
-          </AlertDescription>
-        </Alert>
-      )}
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
-
-export default SecurityEnhancer;

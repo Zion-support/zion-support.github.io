@@ -1,33 +1,36 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Loader2, 
-  CheckCircle, 
-  AlertCircle, 
-  Zap, 
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Zap,
   Sparkles,
   TrendingUp,
   Cpu,
   Database,
   Network,
   Shield
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean;
-
 }
 
-export function LoadingSpinner(...args: any[]): any {
+export function LoadingSpinner({
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false
+}: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-16 h-16',
     lg: 'w-32 h-32'
   };
 
-  const containerClasses = fullScreen 
+  const containerClasses = fullScreen
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
     : 'flex items-center justify-center p-8';
 
@@ -37,11 +40,11 @@ export function LoadingSpinner(...args: any[]): any {
         {/* Animated Logo */}
         <motion.div
           className="relative mx-auto mb-4"
-          animate={{ 
+          animate={{
             rotate: 360,
             scale: [1, 1.1, 1]
           }}
-          transition={{ 
+          transition={{
             rotate: { duration: 2, repeat: Infinity, ease: "linear" },
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
@@ -60,7 +63,7 @@ export function LoadingSpinner(...args: any[]): any {
             />
             <span className="text-2xl font-bold text-white relative z-10">Z</span>
           </div>
-          
+
           {/* Glow Effect */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
@@ -101,13 +104,11 @@ export function LoadingSpinner(...args: any[]): any {
   );
 }
 
-interface PageLoaderProps extends React.PropsWithChildren<{}> {
-
+interface PageLoaderProps {
   pageName?: string;
-
 }
 
-export function PageLoader(...args: any[]): any {
+export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
       <div className="text-center">
@@ -183,17 +184,15 @@ export function PageLoader(...args: any[]): any {
   );
 }
 
-interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {
-
+interface SkeletonLoaderProps {
   lines?: number;
   className?: string;
-
 }
 
-export function SkeletonLoader(...args: any[]): any {
+export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anylines }).map((_, index)  => (
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

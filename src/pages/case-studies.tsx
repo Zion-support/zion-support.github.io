@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { CheckCircle,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  CheckCircle,
   TrendingUp,
   Users,
   DollarSign,
@@ -15,7 +16,7 @@ import { CheckCircle,
   Cloud,
   Brain,
   Globe
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 const caseStudies = [
   {
@@ -167,19 +168,19 @@ const caseStudies = [
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
-export default function CaseStudies(...args: any[]): any {
+export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesTechnology = selectedTechnology === 'All' || 
+    const matchesTechnology = selectedTechnology === 'All' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     return matchesIndustry && matchesTechnology && matchesSearch;
   });
 
@@ -202,8 +203,8 @@ export default function CaseStudies(...args: any[]): any {
               Real Results, Real Impact
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover how Zion Tech Group has transformed businesses across industries with 
-              cutting-edge technology solutions. Our case studies showcase measurable results 
+              Discover how Zion Tech Group has transformed businesses across industries with
+              cutting-edge technology solutions. Our case studies showcase measurable results
               and proven success stories.
             </p>
           </motion.div>
@@ -233,9 +234,9 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry  => (
+                  {industries.map(industry => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -246,9 +247,9 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {technologies.map(tech  => (
+                  {technologies.map(tech => (
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
                 </select>
@@ -261,8 +262,8 @@ export default function CaseStudies(...args: any[]): any {
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index)  => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -380,7 +381,7 @@ export default function CaseStudies(...args: any[]): any {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how Zion Tech Group can transform your business with 
+              Let's discuss how Zion Tech Group can transform your business with
               cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

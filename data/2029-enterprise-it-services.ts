@@ -1,7 +1,4 @@
-
 export interface EnterpriseItService2029 {
-export interface EnterpriseItService2029 {;
-
   id: string;
   name: string;
   tagline: string;
@@ -14,44 +11,11 @@ export interface EnterpriseItService2029 {;
   contactInfo: {
     mobile: string;
     email: string;
-
-export interface EnterpriseItService2029 {;
     address: string;
   };
-
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-  }
 }
-
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-
     id: "2029-enterprise-it",
     name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029",
@@ -70,11 +34,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-
-
-

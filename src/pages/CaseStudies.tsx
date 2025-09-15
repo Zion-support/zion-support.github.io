@@ -1,407 +1,577 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { FileText, 
-  Building, 
-  Users, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { 
+  Target, 
   TrendingUp, 
-  ArrowRight, 
-  Search, 
-  Filter, 
-  Calendar,
+  Users, 
+  DollarSign, 
+  Clock, 
+  ArrowRight,
   Star,
-  Eye,
-  Share2,
-  Bookmark,
-  Target,
-  Award,
-  Zap,
+  CheckCircle,
+  Building,
+  Heart,
+  Scale,
+  Rocket,
+  Globe,
+  Leaf,
+  Shield,
   Brain,
   Cloud,
-  Shield,
-  Atom,
+  Database,
   Network,
-  Heart,
-  DollarSign,
-  Clock,
-  MapPin,
-  Factory
- } from 'lucide-react';
+  Zap,
+  Award,
+  BarChart3,
+  Eye,
+  Lock,
+  Cpu,
+  Car
+} from 'lucide-react';
 
-export default function CaseStudies(...args: any[]): any {
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [selectedService, setSelectedService] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const industries = [
-    { id: 'all', name: 'All Industries', icon: Building, count: 0 },
-    { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },
-    { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },
-    { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },
-    { id: 'government', name: 'Government', icon: Building, count: 0 }
-  ];
-
-  const services = [
-    { id: 'all', name: 'All Services', icon: Zap, count: 0 },
-    { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 }
-  ];
-
+export default function CaseStudies() {
   const caseStudies = [
     {
-      id: 1,
-      title: 'AI-Powered Healthcare Analytics Platform',
-      company: 'MedTech Solutions Inc.',
-      industry: 'healthcare',
-      service: 'ai',
-      challenge: 'MedTech needed to analyze vast amounts of patient data to identify early disease patterns and improve treatment outcomes.',
-      solution: 'Implemented an AI-powered analytics platform that processes real-time patient data, identifies patterns, and provides predictive insights.',
+      id: 'techcorp-digital-transformation',
+      title: 'TechCorp Inc. - Digital Transformation Success',
+      subtitle: '50% Cost Reduction & 99.9% Uptime',
+      company: 'TechCorp Inc.',
+      industry: 'Manufacturing',
+      challenge: 'Legacy systems causing 40% downtime and $2M annual losses',
+      solution: 'Implemented comprehensive AI-powered automation and cloud infrastructure',
       results: [
-        '40% improvement in early disease detection',
-        '25% reduction in treatment costs',
-        '60% faster diagnosis times',
-        '95% accuracy in pattern recognition'
+        '50% reduction in operational costs',
+        '99.9% system uptime achieved',
+        '3x faster decision making',
+        '40% improvement in productivity'
       ],
+      technologies: ['AI Automation', 'Cloud Migration', 'IoT Integration', 'Predictive Analytics'],
       duration: '6 months',
-      teamSize: '8 developers',
-      technologies: ['AI/ML', 'Python', 'TensorFlow', 'AWS', 'Healthcare APIs'],
+      teamSize: '15 engineers',
       featured: true,
-      image: '/api/placeholder/600/400'
+      color: 'from-blue-500 to-cyan-500',
+      icon: Building,
+      roi: '400%'
     },
     {
-      id: 2,
-      title: 'Quantum Computing for Financial Risk Modeling',
-      company: 'Global Finance Corp.',
-      industry: 'finance',
-      service: 'quantum',
-      challenge: 'Global Finance needed to process complex risk calculations that would take traditional computers weeks to complete.',
-      solution: 'Developed a quantum computing solution that processes risk models in hours instead of weeks, enabling real-time risk assessment.',
+      id: 'healthplus-ai-revolution',
+      title: 'HealthPlus Systems - AI Healthcare Revolution',
+      subtitle: '30% Diagnostic Accuracy Improvement',
+      company: 'HealthPlus Systems',
+      industry: 'Healthcare',
+      challenge: 'Medical device failures and inefficient patient care processes',
+      solution: 'Developed AI-powered diagnostic tools and digital twin solutions',
       results: [
-        '1000x faster risk calculations',
-        'Real-time risk monitoring',
-        '30% improvement in risk accuracy',
-        '$50M annual cost savings'
+        '30% improvement in diagnostic accuracy',
+        'Zero critical device failures',
+        '25% improvement in patient outcomes',
+        '40% reduction in patient wait times'
       ],
-      duration: '12 months',
-      teamSize: '12 researchers',
-      technologies: ['Quantum Computing', 'Qiskit', 'Python', 'IBM Quantum', 'Risk Models'],
-      featured: true,
-      image: '/api/placeholder/600/400'
-    },
-    {
-      id: 3,
-      title: 'Zero-Trust Security Architecture',
-      company: 'SecureNet Bank',
-      industry: 'finance',
-      service: 'security',
-      challenge: 'SecureNet needed to protect customer data and prevent cyber attacks while maintaining seamless user experience.',
-      solution: 'Implemented a comprehensive zero-trust security architecture with AI-powered threat detection and automated response systems.',
-      results: [
-        '99.9% threat detection rate',
-        'Zero security breaches',
-        '50% reduction in false positives',
-        '24/7 automated monitoring'
-      ],
+      technologies: ['AI Diagnostics', 'Digital Twins', 'IoT Monitoring', 'Machine Learning'],
       duration: '8 months',
-      teamSize: '10 security engineers',
-      technologies: ['Zero Trust', 'AI Security', 'Kubernetes', 'Terraform', 'SIEM'],
-      featured: false,
-      image: '/api/placeholder/600/400'
+      teamSize: '12 engineers',
+      featured: true,
+      color: 'from-red-500 to-pink-500',
+      icon: Heart,
+      roi: '350%'
     },
     {
-      id: 4,
-      title: 'Cloud Migration & DevOps Transformation',
-      company: 'TechCorp Manufacturing',
-      industry: 'manufacturing',
-      service: 'cloud',
-      challenge: 'TechCorp needed to modernize their legacy systems and improve deployment efficiency for their manufacturing software.',
-      solution: 'Migrated to cloud infrastructure and implemented CI/CD pipelines with automated testing and deployment processes.',
+      id: 'startupxyz-growth',
+      title: 'StartupXYZ - Rapid Growth Acceleration',
+      subtitle: '10x Faster Market Validation',
+      company: 'StartupXYZ',
+      industry: 'SaaS',
+      challenge: 'Need for rapid scaling and market validation',
+      solution: 'Implemented AI-powered analytics and automated growth tools',
       results: [
-        '90% faster deployment times',
-        '99.9% uptime achieved',
-        '40% reduction in infrastructure costs',
-        'Automated scaling capabilities'
+        '10x faster market validation',
+        '3x increase in user engagement',
+        '50% reduction in customer acquisition costs',
+        'Secured Series A funding in 6 months'
       ],
-      duration: '10 months',
-      teamSize: '15 DevOps engineers',
-      technologies: ['AWS', 'Kubernetes', 'Docker', 'Jenkins', 'Terraform'],
-      featured: false,
-      image: '/api/placeholder/600/400'
+      technologies: ['AI Analytics', 'Growth Automation', 'Cloud Infrastructure', 'Data Analytics'],
+      duration: '4 months',
+      teamSize: '8 engineers',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500',
+      icon: Rocket,
+      roi: '500%'
     },
     {
-      id: 5,
-      title: 'IoT Edge Computing for Smart Cities',
-      company: 'CitySmart Solutions',
-      industry: 'government',
-      service: 'iot',
-      challenge: 'CitySmart needed to process data from thousands of IoT sensors in real-time for traffic management and public safety.',
-      solution: 'Deployed edge computing infrastructure that processes sensor data locally, reducing latency and improving response times.',
+      id: 'smartcity-metro',
+      title: 'SmartCity Metro - Urban Infrastructure Optimization',
+      subtitle: '30% Traffic Reduction',
+      company: 'SmartCity Metro',
+      industry: 'Municipal',
+      challenge: 'Traffic congestion and inefficient public services',
+      solution: 'Created city-wide digital twin integrating all infrastructure systems',
       results: [
-        'Real-time traffic optimization',
-        '30% reduction in response times',
-        'Scalable IoT infrastructure',
-        'Improved public safety'
+        '30% reduction in traffic congestion',
+        '20% improvement in transit efficiency',
+        '15% reduction in energy consumption',
+        'Improved citizen satisfaction by 40%'
       ],
-      duration: '14 months',
+      technologies: ['Digital Twins', 'IoT Sensors', 'AI Analytics', 'Smart Infrastructure'],
+      duration: '12 months',
       teamSize: '20 engineers',
-      technologies: ['IoT', 'Edge Computing', 'Kubernetes', 'MQTT', 'Time Series DB'],
       featured: false,
-      image: '/api/placeholder/600/400'
+      color: 'from-green-500 to-emerald-500',
+      icon: Building,
+      roi: '250%'
+    },
+    {
+      id: 'fintech-risk-management',
+      title: 'FinTech Solutions - AI-Powered Risk Management',
+      subtitle: '80% Fraud Reduction',
+      company: 'FinTech Solutions',
+      industry: 'Financial Services',
+      challenge: 'High fraud rates and manual risk assessment processes',
+      solution: 'Implemented AI-powered fraud detection and automated risk assessment',
+      results: [
+        '80% reduction in fraud losses',
+        '90% faster risk assessment',
+        'Improved compliance by 95%',
+        '25% reduction in operational costs'
+      ],
+      technologies: ['AI Fraud Detection', 'Machine Learning', 'Blockchain', 'Automation'],
+      duration: '7 months',
+      teamSize: '10 engineers',
+      featured: false,
+      color: 'from-emerald-500 to-green-500',
+      icon: TrendingUp,
+      roi: '300%'
+    },
+    {
+      id: 'manufacturing-industry4',
+      title: 'ManufacturingCorp - Industry 4.0 Transformation',
+      subtitle: '60% Quality Improvement',
+      company: 'ManufacturingCorp',
+      industry: 'Manufacturing',
+      challenge: 'Outdated manufacturing processes and quality control issues',
+      solution: 'Implemented comprehensive Industry 4.0 solution with IoT and AI',
+      results: [
+        '60% improvement in product quality',
+        '45% reduction in production time',
+        '30% reduction in waste',
+        '25% increase in production capacity'
+      ],
+      technologies: ['IoT Sensors', 'AI Quality Control', 'Predictive Maintenance', 'Automation'],
+      duration: '10 months',
+      teamSize: '18 engineers',
+      featured: false,
+      color: 'from-orange-500 to-red-500',
+      icon: Building,
+      roi: '280%'
     }
   ];
 
-  // Calculate counts
-  industries.forEach(industry  => {
-    if (industry.id === 'all') {
-      industry.count = caseStudies.length;
-    } else {
-      industry.count = caseStudies.filter(cs => cs.industry === industry.id).length;
-    }
-  });
+  const industries = [
+    { name: 'Manufacturing', icon: Building, count: 15, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Healthcare', icon: Heart, count: 12, color: 'from-red-500 to-pink-500' },
+    { name: 'Financial Services', icon: TrendingUp, count: 8, color: 'from-emerald-500 to-green-500' },
+    { name: 'Automotive', icon: Car, count: 6, color: 'from-purple-500 to-indigo-500' },
+    { name: 'Smart Cities', icon: Building, count: 5, color: 'from-green-500 to-emerald-500' },
+    { name: 'Energy', icon: Zap, count: 4, color: 'from-orange-500 to-red-500' }
+  ];
 
-  services.forEach(service => {
-    if (service.id === 'all') {
-      service.count = caseStudies.length;
-    } else {
-      service.count = caseStudies.filter(cs => cs.service === service.id).length;
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI-powered automation alone saved us $2M annually.',
+      rating: 5
+    },
+    {
+      name: 'Dr. Emily Rodriguez',
+      role: 'Medical Director',
+      company: 'HealthPlus Systems',
+      content: 'The AI diagnostic tools have improved our accuracy by 30% and reduced patient wait times significantly.',
+      rating: 5
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Founder & CEO',
+      company: 'StartupXYZ',
+      content: 'Their startup solutions helped us validate our product 10x faster and secure our Series A funding.',
+      rating: 5
     }
-  });
+  ];
 
-  const filteredCaseStudies = caseStudies.filter(cs => {
-    const matchesIndustry = selectedIndustry === 'all' || cs.industry === selectedIndustry;
-    const matchesService = selectedService === 'all' || cs.service === selectedService;
-    const matchesSearch = cs.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         cs.challenge.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesIndustry && matchesService && matchesSearch;
-  });
+  const metrics = [
+    { label: 'Success Stories', value: '50+', icon: Star },
+    { label: 'Industries Served', value: '15+', icon: Building },
+    { label: 'Average ROI', value: '300%', icon: TrendingUp },
+    { label: 'Client Satisfaction', value: '98%', icon: Users }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Header */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
-                <FileText className="h-10 w-10 text-white" />
-              </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Customer Success Stories</h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how organizations across industries are transforming their business with Zion Tech Group's innovative solutions.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Search and Filters */}
-        <div className="mb-8">
-          <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search case studies..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <select
-                value={selectedIndustry}
-                onChange={(e) => setSelectedIndustry(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Case Studies - Zion Tech Group"
+        description="Explore real-world success stories from our clients across industries. See how our technology solutions have transformed businesses and delivered measurable results."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10"></div>
+        <div className="container-responsive relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Success
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent"> Stories</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how our technology solutions have transformed businesses across industries, 
+              delivering measurable results and driving innovation.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
-                {industries.map(industry  => (
-                  <option key={industry.id} value={industry.id}>
-                    {industry.name} ({industry.count})
-                  </option>
-                ))}
-              </select>
-              <select
-                value={selectedService}
-                onChange={(e) => setSelectedService(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                Start Your Success Story
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
               >
-                {services.map(service  => (
-                  <option key={service.id} value={service.id}>
-                    {service.name} ({service.count})
-                  </option>
-                ))}
-              </select>
+                Schedule Consultation
+              </Link>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Featured Case Studies */}
-        {filteredCaseStudies.filter(cs => cs.featured).length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Success Stories</h2>
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {filteredCaseStudies.filter(cs  => cs.featured).map((cs, index) => (
-                <motion.article
-                  key={cs.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
-                        Featured
-                      </span>
-                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                        {industries.find(i => i.id === cs.industry)?.name}
-                      </span>
+      {/* Industry Overview */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industries We Transform
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From manufacturing to healthcare, we've successfully delivered solutions across diverse industries
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-20 h-20 mx-auto mb-4 bg-gradient-to-br ${industry.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <industry.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="font-semibold text-white text-sm mb-1">{industry.name}</h3>
+                <p className="text-xs text-cyan-400">{industry.count} case studies</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Case Studies */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Featured Case Studies
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our most impactful success stories showcasing the transformative power 
+              of AI and technology solutions.
+            </p>
+          </motion.div>
+
+          <div className="space-y-12">
+            {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
+              <motion.div
+                key={caseStudy.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/30 rounded-2xl border border-slate-700/50 overflow-hidden"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Left Side - Content */}
+                  <div className="p-8 lg:p-12">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`p-2 rounded-lg bg-gradient-to-br ${caseStudy.color}`}>
+                        <caseStudy.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-sm text-cyan-400 font-medium">{caseStudy.industry}</span>
+                      {caseStudy.featured && <Star className="w-5 h-5 text-cyan-400" />}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{cs.title}</h3>
-                    <p className="text-gray-600 mb-3 font-medium">{cs.company}</p>
-                    <p className="text-gray-600 mb-4">{cs.challenge}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <span className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {cs.duration}
-                      </span>
-                      <span className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
-                        {cs.teamSize}
-                      </span>
+                    
+                    <h3 className="text-3xl font-bold text-white mb-2">{caseStudy.title}</h3>
+                    <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.subtitle}</p>
+                    <p className="text-gray-300 mb-6">{caseStudy.company}</p>
+                    
+                    <div className="space-y-4 mb-6">
+                      <div>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4>
+                        <p className="text-gray-300 text-sm">{caseStudy.challenge}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4>
+                        <p className="text-gray-300 text-sm">{caseStudy.solution}</p>
+                      </div>
                     </div>
-                    <a
-                      href={`/case-studies/${cs.id}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                        <div className="text-2xl font-bold text-cyan-400">{caseStudy.duration}</div>
+                        <div className="text-xs text-gray-400">Duration</div>
+                      </div>
+                      <div className="text-center p-3 bg-slate-700/30 rounded-lg">
+                        <div className="text-2xl font-bold text-cyan-400">{caseStudy.roi}</div>
+                        <div className="text-xs text-gray-400">ROI</div>
+                      </div>
+                    </div>
+                    
+                    <Link
+                      to="/request-quote"
+                      className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
                     >
                       Read Full Case Study
-                      <ArrowRight className="ml-1 h-4 w-4" />
-                    </a>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* All Case Studies */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {filteredCaseStudies.length} Case Studies Found
-          </h2>
-          <div className="space-y-6">
-            {filteredCaseStudies.filter(cs => !cs.featured).map((cs, index) => (
-              <motion.article
-                key={cs.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-                        {industries.find(i => i.id === cs.industry)?.name}
-                      </span>
-                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-                        {services.find(s => s.id === cs.service)?.name}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{cs.title}</h3>
-                    <p className="text-gray-600 mb-2 font-medium">{cs.company}</p>
-                    <p className="text-gray-600 mb-3">{cs.challenge}</p>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                      <span className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {cs.duration}
-                      </span>
-                      <span className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
-                        {cs.teamSize}
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                        <Bookmark className="h-4 w-4" />
-                      </button>
-                      <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                        <Share2 className="h-4 w-4" />
-                      </button>
-                      <a
-                        href={`/case-studies/${cs.id}`}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                      >
-                        Read Full Case Study
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="lg:col-span-1">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Results</h4>
-                    <ul className="space-y-2">
-                      {cs.results.slice(0, 3).map((result, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-gray-600">
-                          <TrendingUp className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                          {result}
+                  
+                  {/* Right Side - Results & Technologies */}
+                  <div className="p-8 lg:p-12 bg-slate-700/20">
+                    <h4 className="text-lg font-semibold text-white mb-4">Key Results</h4>
+                    <ul className="space-y-3 mb-6">
+                      {caseStudy.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="flex items-center gap-3 text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                          <span className="text-sm">{result}</span>
                         </li>
                       ))}
                     </ul>
+                    
+                    <h4 className="text-lg font-semibold text-white mb-4">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudy.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-cyan-400/20"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </motion.article>
+              </motion.div>
             ))}
           </div>
-
-          {filteredCaseStudies.length === 0 && (
-            <div className="text-center py-12">
-              <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No case studies found</h3>
-              <p className="text-gray-600">Try adjusting your search terms or filters.</p>
-            </div>
-          )}
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">Ready to Start Your Success Story?</h2>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how Zion Tech Group can help transform your business with cutting-edge technology solutions.
+      {/* Industry Solutions */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Success Across Industries
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We've helped businesses in diverse industries achieve remarkable results 
+              through technology transformation.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 rounded-xl border border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className={`p-3 rounded-lg bg-gradient-to-br ${industry.color} w-fit mb-4`}>
+                  <industry.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
+                <p className="text-gray-400 text-sm mb-4">{industry.count} success stories</p>
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  View Stories
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All Case Studies Grid */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              All Case Studies
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Browse our complete collection of success stories and learn how we can 
+              help transform your business.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((caseStudy, index) => (
+              <motion.div
+                key={caseStudy.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/30 rounded-xl border border-slate-700/50 overflow-hidden hover:border-slate-600/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`p-2 rounded-lg bg-gradient-to-br ${caseStudy.color}`}>
+                      <caseStudy.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-sm text-cyan-400 font-medium">{caseStudy.industry}</span>
+                    {caseStudy.featured && <Star className="w-5 h-5 text-cyan-400" />}
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-2">{caseStudy.title}</h3>
+                  <p className="text-cyan-400 font-semibold mb-3">{caseStudy.subtitle}</p>
+                  <p className="text-gray-300 text-sm mb-4">{caseStudy.company}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Duration:</span>
+                      <span className="text-white">{caseStudy.duration}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Team:</span>
+                      <span className="text-white">{caseStudy.teamSize}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">ROI:</span>
+                      <span className="text-cyan-400 font-semibold">{caseStudy.roi}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {caseStudy.technologies.slice(0, 3).map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Client Testimonials
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hear directly from our clients about their transformation journey
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div className="border-t border-slate-700/50 pt-4">
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  <p className="text-sm text-cyan-400">{testimonial.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Create Your Success Story?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our AI-powered technology solutions can transform your business 
+              and deliver measurable results like the success stories you've seen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Schedule a Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
               >
-                Explore Our Services
-              </a>
+                Schedule Consultation
+              </Link>
             </div>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

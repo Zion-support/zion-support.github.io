@@ -1,5 +1,17 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Brain,
+  Zap,
+  Globe,
+  Server,
+  Cpu,
+  Network
+} from 'lucide-react';
 
 const technologyCategories = [
   {
@@ -57,7 +69,7 @@ const emergingTech = [
   { name: "AR/VR", icon: "🥽", status: "Research" }
 ];
 
-export function TechnologyStackSection(...args: any[]): any {
+export function TechnologyStackSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -71,14 +83,15 @@ export function TechnologyStackSection(...args: any[]): any {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Technology Stack
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Cutting-edge technologies and tools that power our innovative solutions
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Built with cutting-edge technologies and industry best practices.
+            Our comprehensive tech stack ensures scalability, security, and performance.
           </p>
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index)  => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {technologyCategories.map((category, index) => (
             <motion.div
               key={category.category}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
@@ -135,8 +148,8 @@ export function TechnologyStackSection(...args: any[]): any {
             Emerging Technologies
           </h3>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {emergingTech.map((tech, index) => (
               <motion.div
                 key={tech.name}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -212,9 +225,24 @@ export function TechnologyStackSection(...args: any[]): any {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to leverage cutting-edge tech?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Build with Modern Tech?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Our expert team is ready to help you leverage the latest technologies
+              to build scalable, secure, and innovative solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Start Your Project
+                <Code className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                View Tech Specs
+                <Server className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

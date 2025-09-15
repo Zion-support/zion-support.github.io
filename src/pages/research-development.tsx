@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { FlaskConical,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  FlaskConical,
   Brain,
   Shield,
   Cloud,
@@ -38,7 +39,7 @@ import { FlaskConical,
   Atom,
   Satellite,
   Telescope
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 const researchAreas = [
   {
@@ -368,7 +369,7 @@ const patents = [
   }
 ];
 
-export default function ResearchDevelopment(...args: any[]): any {
+export default function ResearchDevelopment() {
   const [selectedArea, setSelectedArea] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -381,21 +382,21 @@ export default function ResearchDevelopment(...args: any[]): any {
     const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     return matchesArea && matchesStatus && matchesSearch;
   });
 
-  const getAreaIcon = (areaName: anystring)  => {
+  const getAreaIcon = (areaName: string) => {
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.icon : FlaskConical;
   };
 
-  const getAreaColor = (areaName: anystring)  => {
+  const getAreaColor = (areaName: string) => {
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.color : 'from-gray-500 to-slate-600';
   };
 
-  const getStatusBadge = (status: anystring)  => {
+  const getStatusBadge = (status: string) => {
     if (status === 'Active') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
     } else if (status === 'Completed') {
@@ -424,7 +425,7 @@ export default function ResearchDevelopment(...args: any[]): any {
               Advancing Technology Frontiers
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects, 
+              Explore Zion Tech Group's cutting-edge research initiatives, innovative projects,
               and breakthrough technologies that are shaping the future of technology.
             </p>
           </motion.div>
@@ -455,9 +456,9 @@ export default function ResearchDevelopment(...args: any[]): any {
                 <select
                   value={selectedArea}
                   onChange={(e) => setSelectedArea(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {areas.map(area  => (
+                  {areas.map(area => (
                     <option key={area} value={area}>{area}</option>
                   ))}
                 </select>
@@ -468,9 +469,9 @@ export default function ResearchDevelopment(...args: any[]): any {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {statuses.map(status  => (
+                  {statuses.map(status => (
                     <option key={status} value={status}>{status}</option>
                   ))}
                 </select>
@@ -494,8 +495,8 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index)  => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {researchAreas.map((area, index) => {
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -511,7 +512,7 @@ export default function ResearchDevelopment(...args: any[]): any {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>
                   <p className="text-zion-slate-light mb-4">{area.description}</p>
-                  
+
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Focus</h4>
                     <div className="space-y-1">
@@ -559,8 +560,8 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {filteredProjects.map((project, index)  => {
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredProjects.map((project, index) => {
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -735,8 +736,8 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Our innovative technologies protected by intellectual property rights</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {patents.map((patent, index)  => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {patents.map((patent, index) => (
               <motion.div
                 key={patent.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -750,7 +751,7 @@ export default function ResearchDevelopment(...args: any[]): any {
                     <h3 className="text-xl font-bold text-white mb-2">{patent.title}</h3>
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`px-3 py-1 text-xs rounded-full border ${
-                        patent.status === 'Granted' 
+                        patent.status === 'Granted'
                           ? 'bg-green-500/20 text-green-400 border-green-500/30'
                           : 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
                       }`}>
@@ -810,7 +811,7 @@ export default function ResearchDevelopment(...args: any[]): any {
               Collaborate with Our Research Team
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group on cutting-edge research projects, 
+              Partner with Zion Tech Group on cutting-edge research projects,
               explore licensing opportunities, or join our research initiatives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

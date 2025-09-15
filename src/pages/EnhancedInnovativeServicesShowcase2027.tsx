@@ -1,13 +1,30 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Brain,
   Globe,
+  Zap,
+  Shield,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Code,
+  Lock,
+  Rocket,
+  Leaf,
+  Waves,
+  Factory,
+  Building2,
+  Cpu,
+  Network,
+  Eye,
+  Heart,
+  Lightbulb,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
   Phone,
   Mail,
   MapPin,
@@ -37,16 +54,16 @@ import { Search,
   Eye,
   X,
   Beaker
- } from 'lucide-react.ts';
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027  } from '../data/enhancedInnovativeServices2027';
+} from 'lucide-react';
+import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
 
-const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
-  const [services, setServices] = useState<any>(ENHANCED_INNOVATIVE_SERVICES_2027);
+const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
+  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
   const [sortBy, setSortBy] = useState('title');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
@@ -67,8 +84,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
       case 'price':
         return a.price - b.price;
       case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Innovative': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
+        const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
@@ -77,7 +94,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
@@ -93,7 +110,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {
+  const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -102,7 +119,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleServiceClick = (service: anyEnhancedInnovativeService2027)  => {
+  const handleServiceClick = (service: EnhancedInnovativeService2027) => {
     setSelectedService(service);
     setCurrentSlide(0);
   };
@@ -182,9 +199,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan"
+              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
             >
-              {categories.map(category  => (
+              {categories.map(category => (
                 <option key={category} value={category}>
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -195,9 +212,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
             <select
               value={selectedInnovationLevel}
               onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan"
+              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
             >
-              {innovationLevels.map(level  => (
+              {innovationLevels.map(level => (
                 <option key={level} value={level}>
                   {level === 'all' ? 'All Innovation Levels' : level}
                 </option>
@@ -221,8 +238,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {
 
       {/* Services Grid */}
       <div id="services-grid" className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

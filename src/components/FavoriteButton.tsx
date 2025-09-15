@@ -1,21 +1,19 @@
-import React, { useState } from 'react.ts';
-import { Heart  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { Heart } from 'lucide-react';
 
-interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
-
+interface FavoriteButtonProps {
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string;
-
 }
 
-export function FavoriteButton(...args: any[]): any {
+export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite = (e: anyReact.MouseEvent)  => {
+  const handleToggleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsFavorited(!isFavorited);
-    
+
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
@@ -30,16 +28,16 @@ export function FavoriteButton(...args: any[]): any {
     <button
       onClick={handleToggleFavorite}
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${
-        isFavorited 
-          ? 'bg-red-500 hover:bg-red-600 text-white' 
+        isFavorited
+          ? 'bg-red-500 hover:bg-red-600 text-white'
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'
       } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
-      <Heart 
+      <Heart
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''
-        }`} 
+        }`}
       />
     </button>
   );

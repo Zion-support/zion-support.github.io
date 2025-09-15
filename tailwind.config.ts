@@ -1,7 +1,7 @@
-import { Config  } from 'tailwindcss.ts';
-import { fontFamily  } from 'tailwindcss/defaultTheme.ts';
-import plugin from 'tailwindcss/plugin.ts';
-import animatePlugin from 'tailwindcss-animate.ts';
+import { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -10,7 +10,7 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  safelist: ['border-border'],
+  safelist: [],
   theme: {
     container: {
       center: true,

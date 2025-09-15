@@ -1,7 +1,8 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
-import { Brain, 
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
   GitFork, 
   Shield, 
   Users, 
@@ -114,9 +115,9 @@ import { Brain,
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function NewInnovativeServices2025(...args: any[]): any {
+export default function NewInnovativeServices2025() {
   const featuredServices = [
     {
       title: "AI Workflow Orchestrator",
@@ -302,8 +303,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-              {featuredServices.map((service, index)  => (
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -380,8 +381,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-              {serviceCategories.map((category, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {serviceCategories.map((category, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -432,8 +433,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

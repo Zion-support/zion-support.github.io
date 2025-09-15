@@ -1,15 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Loader2, Zap, Brain, Cloud, Atom  } from 'lucide-react.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Loader2, Zap, Brain, Cloud, Atom } from 'lucide-react';
 
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
   text?: string;
   showProgress?: boolean;
   progress?: number;
-
 }
 
 const iconVariants = {
@@ -35,7 +33,13 @@ const pulseVariants = {
   }
 };
 
-export function EnhancedLoadingSpinner(...args: any[]): any {
+export function EnhancedLoadingSpinner({ 
+  size = 'md', 
+  variant = 'default',
+  text = 'Loading...',
+  showProgress = false,
+  progress = 0
+}: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
@@ -98,7 +102,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
-                rotate: 360,
+                rotate: 360
               }}
               transition={{
                 duration: 3,
@@ -111,7 +115,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
             <motion.div
               className="absolute inset-0 w-full h-full"
               animate={{
-                rotate: -360,
+                rotate: -360
               }}
               transition={{
                 duration: 4,
@@ -119,35 +123,35 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
                 ease: "linear"
               }}
             >
-              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
+              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
             </motion.div>
           </>
         )}
       </div>
 
       {/* Loading Text */}
-      <motion.p
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
-        className={`${textSizes[size]} text-gray-600 dark:text-gray-300 font-medium text-center`}
+        className={`text-center ${textSizes[size]} text-gray-600 dark:text-gray-300`}
       >
         {text}
-      </motion.p>
+      </motion.div>
 
       {/* Progress Bar */}
       {showProgress && (
         <motion.div
           initial={{ opacity: 0, width: 0 }}
           animate={{ opacity: 1, width: '100%' }}
-          transition={{ delay: 0.8 }}
-          className="w-48 bg-gray-200 rounded-full h-2 overflow-hidden"
+          transition={{ delay: 0.8, duration: 0.5 }}
+          className="w-full max-w-xs bg-gray-200 rounded-full h-2 overflow-hidden"
         >
           <motion.div
-            className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
+            className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           />
         </motion.div>
       )}
@@ -164,14 +168,13 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
             key={i}
             className="w-2 h-2 bg-gray-400 rounded-full"
             animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 1, 0.5]
             }}
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              delay: i * 0.2,
-              ease: "easeInOut"
+              delay: i * 0.2
             }}
           />
         ))}
@@ -182,3 +185,5 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 
 // Export as ZionLoadingSpinner for backward compatibility
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;
+
+export default EnhancedLoadingSpinner;

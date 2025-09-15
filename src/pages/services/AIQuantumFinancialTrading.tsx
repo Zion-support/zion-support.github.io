@@ -1,6 +1,7 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
   TrendingUp, 
   Shield, 
   Zap, 
@@ -19,7 +20,7 @@ import { Brain,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 const AIQuantumFinancialTrading = () => {
   const features = [
@@ -193,8 +194,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -232,8 +233,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -269,8 +270,8 @@ const AIQuantumFinancialTrading = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

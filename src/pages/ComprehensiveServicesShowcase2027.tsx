@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Brain,
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Brain,
   Cloud,
   Shield,
   Server,
@@ -49,14 +50,13 @@ import { Brain,
   Gauge,
   ShieldCheck,
   X
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 // Import our existing service data
-import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '../data/ultimateInnovativeServices2026';
-import { comprehensiveServices  } from '../data/comprehensiveServices';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
+import { comprehensiveServices } from '../data/comprehensiveServices';
 
 interface Service {
-
   id: string;
   name: string;
   category: string;
@@ -84,18 +84,18 @@ interface Service {
   };
 }
 
-const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
+const ComprehensiveServicesShowcase2027: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [sortBy, setSortBy] = useState<any>('name');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-    
-    // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
-    ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
+
+    // Add services from ultimateInnovativeServices2026
+    ultimateInnovativeServices2026.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,
@@ -122,7 +122,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
     });
 
     // Add services from comprehensiveServices
-    comprehensiveServices.forEach(service  => {
+    comprehensiveServices.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,
@@ -184,7 +184,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -211,7 +211,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';
@@ -242,7 +242,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
               Comprehensive Services 2027
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
+              Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions.
               From quantum computing to autonomous business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -290,9 +290,9 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category  => (
+                {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -317,9 +317,9 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

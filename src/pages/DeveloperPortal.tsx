@@ -1,87 +1,133 @@
-import React from 'react.ts';
-import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock  } from 'lucide-react.ts';
+import React from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  Code, 
+  BookOpen, 
+  Zap, 
+  Shield, 
+  Database, 
+  Cloud, 
+  Brain, 
+  Lock,
+  Key,
+  Terminal,
+  Globe,
+  Server,
+  Cpu,
+  Network,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  Play,
+  Download,
+  Github,
+  Users,
+  Rocket,
+  Lightbulb,
+  Award,
+  Clock,
+  CheckCircle,
+  ExternalLink,
+  Bug,
+  Trophy
+} from 'lucide-react';
 
-const DeveloperPortal: React.FC = (): JSX.Element => {
-  const tools = [
+export default function DeveloperPortal() {
+  const developerTools = [
     {
-      icon: Code,
-      title: 'Code Examples',
-      description: 'Ready-to-use code snippets in multiple languages',
-      category: 'Development'
-    },
-    {
+      name: 'API Playground',
+      description: 'Interactive API testing environment with real-time responses',
       icon: Terminal,
-      title: 'API Playground',
-      description: 'Test APIs directly in your browser',
-      category: 'Testing'
+      color: 'from-green-500 to-emerald-600',
+      href: '/api-playground',
+      featured: true
     },
     {
-      icon: BookOpen,
-      title: 'Documentation',
-      description: 'Comprehensive guides and tutorials',
-      category: 'Learning'
-    },
-    {
+      name: 'SDK Downloads',
+      description: 'Official SDKs for multiple programming languages',
       icon: Download,
-      title: 'SDKs & Libraries',
-      description: 'Official client libraries for all platforms',
-      category: 'Integration'
+      color: 'from-blue-500 to-cyan-600',
+      href: '/api-docs',
+      featured: true
+    },
+    {
+      name: 'Code Examples',
+      description: 'Ready-to-use code snippets and integration examples',
+      icon: Code,
+      color: 'from-purple-500 to-pink-600',
+      href: '/code-examples',
+      featured: false
+    },
+    {
+      name: 'Testing Tools',
+      description: 'Comprehensive testing and debugging utilities',
+      icon: Bug,
+      color: 'from-orange-500 to-red-600',
+      href: '/testing-tools',
+      featured: false
     }
   ];
 
-  const resources = [
+  const learningResources = [
     {
       title: 'Getting Started Guide',
-      description: 'Quick start tutorial for new developers',
-      icon: '🚀',
-      difficulty: 'Beginner'
+      description: 'Step-by-step tutorial for new developers',
+      duration: '15 min read',
+      level: 'Beginner',
+      icon: Rocket,
+      color: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'API Reference',
-      description: 'Complete endpoint documentation',
-      icon: '📚',
-      difficulty: 'All Levels'
+      description: 'Complete API documentation with examples',
+      duration: 'Reference',
+      level: 'All Levels',
+      icon: BookOpen,
+      color: 'from-green-500 to-emerald-600'
     },
     {
       title: 'Best Practices',
-      description: 'Development guidelines and patterns',
-      icon: '⭐',
-      difficulty: 'Intermediate'
+      description: 'Development guidelines and optimization tips',
+      duration: '20 min read',
+      level: 'Intermediate',
+      icon: Lightbulb,
+      color: 'from-yellow-500 to-orange-600'
     },
     {
-      title: 'Code Samples',
-      description: 'Real-world implementation examples',
-      icon: '💻',
-      difficulty: 'All Levels'
+      title: 'Troubleshooting',
+      description: 'Common issues and their solutions',
+      duration: '10 min read',
+      level: 'All Levels',
+      icon: CheckCircle,
+      color: 'from-purple-500 to-pink-600'
     }
   ];
 
-  const community = [
+  const communityFeatures = [
     {
       name: 'Developer Forum',
-      description: 'Get help from our community',
-      members: '2.5K+',
-      icon: '💬'
+      description: 'Connect with other developers and share knowledge',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-600'
     },
     {
-      name: 'GitHub Discussions',
-      description: 'Open source collaboration',
-      members: '1.8K+',
-      icon: '🐙'
+      name: 'Code Reviews',
+      description: 'Get feedback on your implementations',
+      icon: Code,
+      color: 'from-green-500 to-emerald-600'
     },
     {
-      name: 'Discord Server',
-      description: 'Real-time developer chat',
-      members: '3.2K+',
-      icon: '🎮'
+      name: 'Hackathons',
+      description: 'Participate in coding challenges and win prizes',
+      icon: Trophy,
+      color: 'from-yellow-500 to-orange-600'
     },
     {
-      name: 'Stack Overflow',
-      description: 'Q&A platform integration',
-      members: '5K+',
-      icon: '📝'
+      name: 'Office Hours',
+      description: 'Live Q&A sessions with our engineering team',
+      icon: Clock,
+      color: 'from-purple-500 to-pink-600'
     }
   ];
 
@@ -89,128 +135,138 @@ const DeveloperPortal: React.FC = (): JSX.Element => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
-        description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
+        description="Access comprehensive developer resources, tools, and documentation for Zion Tech Group's AI-powered services. Join our developer community and build amazing applications."
       />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-32 pb-20">
+        <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
-              <Terminal className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">Developer Portal</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Code className="w-4 h-4" />
+              Developer Resources
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
-                Portal
-              </span>
+              Developer Portal
             </h1>
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Everything you need to build amazing applications with Zion Tech Group services. 
-              Access tools, documentation, SDKs, and join our developer community.
+              Everything you need to build, deploy, and scale applications with our AI-powered services. Access tools, documentation, and join our thriving developer community.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Get Started
-              </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
-                View Documentation
-              </button>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#tools"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <Rocket className="w-4 h-4" />
+                Explore Tools
+              </a>
+              <a
+                href="/api-docs"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 hover:bg-slate-600/50 text-white font-medium rounded-lg transition-all duration-300 border border-slate-600"
+              >
+                <BookOpen className="w-4 h-4" />
+                View API Docs
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Developer Tools Section */}
+      <section id="tools" className="py-20">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Developer Tools
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Developer Tools</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful tools to accelerate your development workflow
+              Powerful tools and utilities to accelerate your development workflow
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {tools.map((tool, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {developerTools.map((tool, index) => (
               <motion.div
-                key={tool.title}
+                key={tool.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 group hover:bg-slate-700/50 transition-all duration-300 ${
+                  tool.featured ? 'ring-2 ring-cyan-400/50' : ''
+                }`}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <tool.icon className="w-6 h-6 text-green-400" />
+                <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <tool.icon className="w-8 h-8 text-white" />
                 </div>
-                <span className="inline-block px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mb-3">
-                  {tool.category}
-                </span>
-                <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>
-                <p className="text-gray-300">{tool.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{tool.name}</h3>
+                <p className="text-gray-400 text-sm mb-4">{tool.description}</p>
+                {tool.featured && (
+                  <span className="inline-flex items-center gap-1 mb-4 text-xs text-cyan-400">
+                    <Award className="w-3 h-3" />
+                    Featured
+                  </span>
+                )}
+                <a
+                  href={tool.href}
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  Learn More
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Learning Resources Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Learning Resources
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Learning Resources</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive guides and tutorials for all skill levels
+              Comprehensive guides and tutorials to help you master our platform
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
-            {resources.map((resource, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {learningResources.map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 group hover:bg-slate-700/50 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{resource.icon}</div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-semibold text-white">{resource.title}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        resource.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                        resource.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-blue-500/20 text-blue-400'
-                      }`}>
-                        {resource.difficulty}
-                      </span>
-                    </div>
-                    <p className="text-gray-300">{resource.description}</p>
-                  </div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <resource.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{resource.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{resource.description}</p>
+                <div className="flex items-center justify-between text-xs text-gray-500">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    {resource.duration}
+                  </span>
+                  <span className="px-2 py-1 bg-slate-700/50 rounded-full">
+                    {resource.level}
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -219,129 +275,121 @@ const DeveloperPortal: React.FC = (): JSX.Element => {
       </section>
 
       {/* Community Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Developer Community
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Join Our Community</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Connect with fellow developers and get support
+              Connect with fellow developers, share knowledge, and grow together
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {community.map((platform, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {communityFeatures.map((feature, index) => (
               <motion.div
-                key={platform.name}
+                key={feature.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 text-center group hover:bg-slate-700/50 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{platform.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{platform.name}</h3>
-                <p className="text-gray-300 mb-4">{platform.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-green-400">{platform.members} members</span>
-                  <button className="px-4 py-2 bg-green-500/20 text-green-300 rounded-lg hover:bg-green-500/30 transition-colors text-sm">
-                    Join
-                  </button>
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.name}</h3>
+                <p className="text-gray-400 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Quick Start Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Quick Start
-            </h2>
-            <p className="text-xl text-gray-300">
-              Get up and running in minutes
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-          >
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Get Your API Key</h3>
-                  <p className="text-gray-300">Sign up and generate your API key from the dashboard</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Install SDK</h3>
-                  <p className="text-gray-300">Choose your preferred language and install the SDK</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Make Your First API Call</h3>
-                  <p className="text-gray-300">Test the API with our interactive playground</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-8 text-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Start Building Now
-              </button>
-            </div>
-          </motion.div>
+      {/* Stats Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-cyan-400 mb-2">10K+</div>
+              <div className="text-gray-400">Active Developers</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
+              <div className="text-gray-400">API Endpoints</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-gray-400">Uptime SLA</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-400">Developer Support</div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20">
+        <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-3xl p-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Build?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers building amazing applications
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Start Building?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of developers creating innovative applications with our platform
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Get Started Free
-              </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
-                Contact Sales
-              </button>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="/request-quote"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <Zap className="w-5 h-5" />
+                Get Started
+              </a>
+              <a
+                href="https://github.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white font-medium rounded-lg transition-all duration-300 border border-slate-600"
+              >
+                <Github className="w-5 h-5" />
+                View on GitHub
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default DeveloperPortal;
+}

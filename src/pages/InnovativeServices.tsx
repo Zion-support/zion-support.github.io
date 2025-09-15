@@ -1,12 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Atom, 
-  Lock, 
-  Wifi, 
-  Shield, 
-  Eye, 
-  Globe2, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Brain,
+  Atom,
+  Lock,
+  Wifi,
+  Shield,
+  Eye,
+  Globe2,
   Leaf,
   Zap,
   Rocket,
@@ -20,9 +21,9 @@ import { Brain,
   Lightbulb,
   Target,
   Award
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-const InnovativeServices: React.FC = (): JSX.Element => {
+const InnovativeServices: React.FC = () => {
   const innovations = [
     {
       id: 'ai-automation',
@@ -161,7 +162,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
               <span className="block text-zion-cyan">Innovations</span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Discover the future of technology with Zion Tech Group's revolutionary innovations. 
+              Discover the future of technology with Zion Tech Group's revolutionary innovations.
               From AI automation to quantum computing, we're building tomorrow's solutions today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -187,8 +188,8 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -220,13 +221,13 @@ const InnovativeServices: React.FC = (): JSX.Element => {
               Revolutionary Technologies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Explore our portfolio of cutting-edge innovations that are reshaping industries 
+              Explore our portfolio of cutting-edge innovations that are reshaping industries
               and creating new possibilities for the future.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {innovations.map((innovation, index) => (
               <motion.div
                 key={innovation.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -238,11 +239,11 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                   <div className={`w-16 h-16 bg-gradient-to-br ${innovation.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <innovation.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {innovation.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {innovation.description}
                   </p>

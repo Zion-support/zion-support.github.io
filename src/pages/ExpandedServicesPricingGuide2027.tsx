@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ChevronDown, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
   ChevronUp,
   Star,
   Users,
@@ -59,17 +60,18 @@ import { Search,
   Info,
   AlertTriangle,
   Zap
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { ALL_EXPANDED_SERVICES_PRICING,
-  type ExpandedServicePricing 
- } from '@/data/expandedServicesPricing2027';
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import {
+  ALL_EXPANDED_SERVICES_PRICING,
+  type ExpandedServicePricing
+} from '@/data/expandedServicesPricing2027';
 
-const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
+const ExpandedServicesPricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedService, setExpandedService] = useState<any>(null);
-  const [filteredPricing, setFilteredPricing] = useState<any>(ALL_EXPANDED_SERVICES_PRICING);
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING);
 
   const categories = ['All', 'Cybersecurity', 'Data Analytics', 'Cloud & DevOps', 'IoT & Edge Computing', 'Financial Technology', 'Healthcare Technology'];
 
@@ -79,7 +81,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
       pricing = pricing.filter(p => p.category === selectedCategory);
     }
     if (searchQuery) {
-      pricing = pricing.filter(p => 
+      pricing = pricing.filter(p =>
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
@@ -88,7 +90,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -107,7 +109,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -126,7 +128,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getMarketPositionColor = (position: anystring)  => {
+  const getMarketPositionColor = (position: string) => {
     switch (position) {
       case 'leader':
         return 'bg-green-100 text-green-800';
@@ -141,7 +143,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const renderPricingCard = (pricing: anyExpandedServicePricing)  => {
+  const renderPricingCard = (pricing: ExpandedServicePricing) => {
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
 
@@ -203,7 +205,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-starter' && (
                     <motion.div
@@ -256,7 +258,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-professional' && (
                     <motion.div
@@ -306,7 +308,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
                     </button>
                   )}
                 </div>
-                
+
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-enterprise' && (
                     <motion.div
@@ -366,8 +368,8 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
               <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">
                 <h6 className="font-semibold text-purple-800 dark:text-purple-200 mb-2">ROI Category</h6>
                 <p className="text-sm text-purple-600 dark:text-purple-300">
-                  {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' : 
-                   parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' : 
+                  {parseInt(pricing.roiAnalysis.annualROI) >= 500 ? 'Exceptional' :
+                   parseInt(pricing.roiAnalysis.annualROI) >= 300 ? 'Excellent' :
                    parseInt(pricing.roiAnalysis.annualROI) >= 200 ? 'Good' : 'Standard'}
                 </p>
               </div>
@@ -411,7 +413,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
                 <span>{pricing.contactInfo.phone}</span>
               </div>
             </div>
-            
+
             <div className="flex space-x-2">
               <a
                 href={`mailto:${pricing.contactInfo.email}`}
@@ -438,7 +440,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <SEO 
+      <SEO
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
@@ -465,10 +467,10 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services. 
+              Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services.
               Find the perfect pricing tier for your business needs.
             </motion.p>
-            
+
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -529,9 +531,9 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category)  => (
+                {categories.map((category) => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -550,8 +552,8 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredPricing.map((pricing) => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">
@@ -573,7 +575,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our pricing is designed to provide maximum value at competitive rates. 
+            Our pricing is designed to provide maximum value at competitive rates.
             Contact us today to discuss your specific needs and get a customized quote.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">

@@ -1,6 +1,5 @@
-import { Helmet  } from 'react-helmet-async.ts';
-import { motion  } from 'framer-motion.ts'
-import { Handshake, 
+import { motion } from 'framer-motion'
+import { 
   Shield, 
   Cloud, 
   Brain, 
@@ -11,10 +10,13 @@ import { Handshake,
   Cpu,
   Database,
   Lock,
-  Rocket
- } from 'lucide-react.ts'
+  Rocket,
+  Handshake
+} from 'lucide-react'
+import Head from 'next/head'
+import React from 'react'
 
-export default function Partners(...args: any[]): any {
+export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
@@ -135,7 +137,7 @@ export default function Partners(...args: any[]): any {
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
-              <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
+              <Shield className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -176,8 +178,8 @@ export default function Partners(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index)  => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -187,7 +189,7 @@ export default function Partners(...args: any[]): any {
                   className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                    {React.createElement(benefit.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -225,7 +227,7 @@ export default function Partners(...args: any[]): any {
                 >
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                      <category.icon className="w-8 h-8 text-white" />
+                      {React.createElement(category.icon, { className: "w-8 h-8 text-white" })}
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold">{category.title}</h3>
@@ -233,8 +235,8 @@ export default function Partners(...args: any[]): any {
                     </div>
                   </div>
                   
-                  <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-                    {category.partners.map((partner, partnerIndex)  => (
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.partners.map((partner, partnerIndex) => (
                       <motion.div
                         key={partner.name}
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -279,8 +281,8 @@ export default function Partners(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid md: anygrid-cols-3 gap-8">
-              {partnershipLevels.map((level, index)  => (
+            <div className="grid md:grid-cols-3 gap-8">
+              {partnershipLevels.map((level, index) => (
                 <motion.div
                   key={level.name}
                   initial={{ opacity: 0, y: 20 }}

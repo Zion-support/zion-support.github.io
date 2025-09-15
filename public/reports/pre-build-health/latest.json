@@ -5,45 +5,45 @@
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
-    "timestamp": "2025-08-19T21:22:22.237Z";
-},
+    "timestamp": "2025-08-19T21:22:22.237Z"
+  },
   "results": [
     {
       "name": "Page Structure Validation",
       "status": "PASS",
       "result": "All 22 pages are properly structured",
-      "critical": true;
-},
+      "critical": true
+    },
     {
       "name": "Dependencies Check",
       "status": "PASS",
       "result": "All dependencies are properly installed",
-      "critical": true;
-},
+      "critical": true
+    },
     {
       "name": "Next.js Configuration",
       "status": "PASS",
       "result": "Next.js configuration is valid",
-      "critical": true;
-},
+      "critical": true
+    },
     {
       "name": "Environment Variables",
       "status": "PASS",
       "result": "Environment variables check completed",
-      "critical": false;
-},
+      "critical": false
+    },
     {
       "name": "File Permissions",
       "status": "PASS",
       "result": "All critical directories have proper permissions",
-      "critical": false;
-},
+      "critical": false
+    },
     {
       "name": "Build Artifacts",
       "status": "PASS",
       "result": "Build artifacts can be properly managed",
-      "critical": false;
-}
+      "critical": false
+    }
   ],
-  "recommendations": [];
+  "recommendations": []
 }

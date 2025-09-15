@@ -1,9 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react.ts'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket } from 'lucide-react'
 
 
-export default function ResearchDevelopment(...args: any[]): any {
+export default function ResearchDevelopment() {
 	const researchAreas = [
 		{
 			title: 'AI & Machine Learning',
@@ -121,8 +121,8 @@ export default function ResearchDevelopment(...args: any[]): any {
 							We concentrate our efforts on technologies that will shape the future of business
 						</p>
 					</div>
-					<div className="grid gap-8 lg: anygrid-cols-3">
-						{researchAreas.map((area, index)  => {
+					<div className="grid gap-8 lg:grid-cols-3">
+						{researchAreas.map((area, index) => {
 							const IconComponent = area.icon
 							const colorClasses = {
 								blue: 'bg-blue-100 text-blue-600',

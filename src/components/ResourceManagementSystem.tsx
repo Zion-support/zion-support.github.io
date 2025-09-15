@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Users, 
-  Calendar, 
-  Clock, 
-  Target, 
-  TrendingUp, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Users,
+  Calendar,
+  Clock,
+  Target,
+  TrendingUp,
   AlertCircle,
   CheckCircle,
   XCircle,
@@ -39,10 +40,9 @@ import { Users,
   Database,
   Lock,
   Unlock
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface Resource {
-
   id: string;
   name: string;
   type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility';
@@ -59,11 +59,9 @@ interface Resource {
   description: string;
   manager: string;
   utilization: number;
-
 }
 
 interface ResourceStats {
-
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -71,16 +69,14 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-  topDepartments: Array<any>;
+  topDepartments: Array<{ name: string; count: number; percentage: number }>;
 }
 
-interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
-
+interface ResourceManagementSystemProps {
   showStats?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
   maxResources?: number;
-
 }
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
@@ -89,21 +85,21 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   showCharts = true,
   maxResources = 20
 }) => {
-  const [resources, setResources] = useState<any>([]);
-  const [filteredResources, setFilteredResources] = useState<any>([]);
-  const [selectedType, setSelectedType] = useState<any>('all');
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
-  const [selectedPriority, setSelectedPriority] = useState<any>('all');
+  const [resources, setResources] = useState<Resource[]>([]);
+  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid');
   const [showResourceForm, setShowResourceForm] = useState(false);
-  const [editingResource, setEditingResource] = useState<any>(null);
+  const [editingResource, setEditingResource] = useState<Resource | null>(null);
 
   // Sample resource data
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -199,7 +195,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   }, []);
 
   // Filter resources
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -215,7 +211,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(r => 
+      filtered = filtered.filter(r =>
         r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -228,32 +224,32 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Calculate resource stats
   const resourceStats = {
-    totalResources: anyresources.length,
-    availableResources: resources.filter(r  => r.status === 'available').length,
-    allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
-    maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
-    totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
-    currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: any(()  => {
+    totalResources: resources.length,
+    availableResources: resources.filter(r => r.status === 'available').length,
+    allocatedResources: resources.filter(r => r.status === 'allocated').length,
+    maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
+    totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
+    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: (() => {
       const deptCounts = resources.reduce((acc, r) => {
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
-      }, {} as Record<string, any>);
+      }, {} as Record<string, number>);
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
           name,
           count,
-          percentage: any(count / resources.length) * 100
+          percentage: (count / resources.length) * 100
         }))
-        .sort((a, b)  => b.count - a.count)
+        .sort((a, b) => b.count - a.count)
         .slice(0, 5);
     })()
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)  => {
+  const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'available':
         return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
@@ -269,7 +265,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get type icon
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string) => {
     switch (type) {
       case 'human': return <Users className="w-5 h-5" />;
       case 'infrastructure': return <Server className="w-5 h-5" />;
@@ -281,7 +277,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -292,7 +288,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Format currency
-  const formatCurrency = (amount: anynumber)  => {
+  const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -302,7 +298,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get utilization color
-  const getUtilizationColor = (utilization: anynumber)  => {
+  const getUtilizationColor = (utilization: number) => {
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';
@@ -317,7 +313,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
           <p className="text-zinc-400 text-lg">Monitor and manage all company resources efficiently</p>
         </div>
-        
+
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -438,8 +434,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
-            {resourceStats.topDepartments.map((dept, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {resourceStats.topDepartments.map((dept, index) => (
               <motion.div
                 key={dept.name}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -535,7 +531,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                     <p className="text-zinc-400 text-sm">{resource.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(resource.status).color}`}>
                     <div className="flex items-center gap-1">
@@ -571,17 +567,17 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <div className="text-sm text-zinc-400 mb-1">Location</div>
                 <div className="text-white font-medium">{resource.location}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Department</div>
                 <div className="text-white font-medium">{resource.department}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Manager</div>
                 <div className="text-white font-medium">{resource.manager}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Annual Cost</div>
                 <div className="text-white font-medium">{formatCurrency(resource.cost)}</div>
@@ -632,7 +628,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <Clock className="w-4 h-4" />
                 Last updated: {new Date(resource.lastUpdated).toLocaleDateString()}
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                   <Download className="w-4 h-4" />

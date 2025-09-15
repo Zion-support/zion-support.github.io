@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, 
-  Quote, 
-  ChevronLeft, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Star,
+  Quote,
+  ChevronLeft,
   ChevronRight,
   Globe,
   Building,
   Users,
   Award
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface Testimonial {
-
   id: string;
   name: string;
   position: string;
@@ -22,7 +22,6 @@ interface Testimonial {
   industry: string;
   results: string[];
   avatar: string;
-
 }
 
 const testimonials: Testimonial[] = [
@@ -88,7 +87,7 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-export default function EnhancedTestimonialsSection(...args: any[]): any {
+export default function EnhancedTestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -112,7 +111,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
     setIsAutoPlaying(false);
   };
 
-  const goToTestimonial = (index: anynumber)  => {
+  const goToTestimonial = (index: number) => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false);
   };
@@ -160,7 +159,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
               <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
-                
+
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
@@ -191,8 +190,8 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData.results.map((result, index)  => (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index) => (
                       <motion.div
                         key={result}
                         initial={{ opacity: 0, y: 20 }}
@@ -239,22 +238,22 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </motion.button>
-            
+
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
                 <motion.button
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentTestimonial 
-                      ? 'bg-zion-cyan w-8' 
+                    index === currentTestimonial
+                      ? 'bg-zion-cyan w-8'
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
                   whileHover={{ scale: 1.2 }}
                 />
               ))}
             </div>
-            
+
             <motion.button
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
@@ -278,13 +277,13 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index)  => (
+              ].map((indicator, index) => (
                 <motion.div
                   key={indicator.label}
                   initial={{ opacity: 0, y: 20 }}

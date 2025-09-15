@@ -1,5 +1,4 @@
 export interface EquipmentItem {
-
   id: string;
   name: string;
   description: string;
@@ -8,7 +7,6 @@ export interface EquipmentItem {
   image: string;
   specs: string[];
   availability: boolean;
-
 }
 
 export const EQUIPMENT_DETAILS: EquipmentItem[] = [

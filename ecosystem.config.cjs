@@ -1,151 +1,192 @@
 module.exports = {
   apps: [
+    // Main application
     {
-      name: 'error-monitor',
-      script: 'automation/error-monitor.cjs',
+      name: 'zion-app',
+      script: 'npm',
+      args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_SERVE_PATH: '.',
-        PM2_SERVE_PORT: 8080,
-        PM2_SERVE_SPA: 'true'
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       },
-      error_file: 'automation/logs/error-monitor-error.log',
-      out_file: 'automation/logs/error-monitor-out.log',
-      log_file: 'automation/logs/error-monitor-combined.log',
-      time: true,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      max_restarts: 10,
-      min_uptime: '10s'
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      }
     },
+    
+    // Backend server
     {
-      name: 'lint-automation',
-      script: 'automation/lint-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/lint-automation-error.log',
-      out_file: 'automation/logs/lint-automation-out.log',
-      log_file: 'automation/logs/lint-automation-combined.log',
-      time: true,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
-      max_restarts: 5,
-      min_uptime: '10s'
-    },
-    {
-      name: 'type-check-automation',
-      script: 'automation/type-check-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/type-check-automation-error.log',
-      out_file: 'automation/logs/type-check-automation-out.log',
-      log_file: 'automation/logs/type-check-automation-combined.log',
-      time: true,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
-      max_restarts: 5,
-      min_uptime: '10s'
-    },
-    {
-      name: 'git-sync-automation',
-      script: 'automation/git-sync-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/git-sync-automation-error.log',
-      out_file: 'automation/logs/git-sync-automation-out.log',
-      log_file: 'automation/logs/git-sync-automation-combined.log',
-      time: true,
-      cron_restart: '0 */1 * * *', // Restart every hour
-      max_restarts: 3,
-      min_uptime: '10s'
-    },
-    {
-      name: 'build-monitor',
-      script: 'automation/build-monitor.cjs',
+      name: 'zion-backend',
+      script: 'npm',
+      args: 'start',
+      cwd: './server',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/build-monitor-error.log',
-      out_file: 'automation/logs/build-monitor-out.log',
-      log_file: 'automation/logs/build-monitor-combined.log',
-      time: true,
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      max_restarts: 5,
-      min_uptime: '10s'
+      }
     },
+
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // Continuous link checker - runs every 30 minutes
+    {
+      name: 'link-checker',
+      script: './scripts/automation/link-checker.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // Continuous improvement - runs every 2 hours
+    {
+      name: 'continuous-improvement',
+      script: './scripts/automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous build and test - runs every hour
+    {
+      name: 'daily-build-test',
+      script: './scripts/automation/daily-build-test.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // Continuous security audit - runs every 4 hours
+    {
+      name: 'security-audit',
+      script: './scripts/automation/security-audit.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Continuous dependency updates - runs every 6 hours
+    {
+      name: 'dependency-updates',
+      script: './scripts/automation/dependency-updates.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Continuous performance monitoring - runs every 2 hours
     {
       name: 'performance-monitor',
-      script: 'automation/performance-monitor.cjs',
+      script: './scripts/automation/performance-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/performance-monitor-error.log',
-      out_file: 'automation/logs/performance-monitor-out.log',
-      log_file: 'automation/logs/performance-monitor-combined.log',
-      time: true,
-      cron_restart: '0 */1 * * *', // Restart every hour
-      max_restarts: 5,
-      min_uptime: '10s'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
+
+    // Continuous quality checks - runs every 3 hours
     {
-      name: 'security-scanner',
-      script: 'automation/security-scanner.cjs',
+      name: 'quality-checks',
+      script: './scripts/automation/quality-checks.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/security-scanner-error.log',
-      out_file: 'automation/logs/security-scanner-out.log',
-      log_file: 'automation/logs/security-scanner-combined.log',
-      time: true,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
-      max_restarts: 5,
-      min_uptime: '10s'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
+      }
     },
+
+    // Continuous link integrity checker - runs every 2 hours
     {
-      name: 'seo-optimizer',
-      script: 'automation/seo-optimizer.cjs',
+      name: 'link-integrity',
+      script: './scripts/automation/link-integrity.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
-      },
-      error_file: 'automation/logs/seo-optimizer-error.log',
-      out_file: 'automation/logs/seo-optimizer-out.log',
-      log_file: 'automation/logs/seo-optimizer-combined.log',
-      time: true,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      max_restarts: 5,
-      min_uptime: '10s'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous front maximizer - runs every 4 hours
+    {
+      name: 'front-maximizer',
+      script: './scripts/automation/front-maximizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Continuous sitemap runner - runs every 6 hours
+    {
+      name: 'sitemap-runner',
+      script: './scripts/automation/sitemap-runner.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
     }
   ]
 };

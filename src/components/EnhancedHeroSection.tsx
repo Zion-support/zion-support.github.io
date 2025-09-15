@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { ArrowRight, 
-  Play, 
-  Star, 
-  CheckCircle, 
-  ChevronLeft, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  ArrowRight,
+  Play,
+  Star,
+  CheckCircle,
+  ChevronLeft,
   ChevronRight,
   Zap,
   Shield,
@@ -14,10 +15,9 @@ import { ArrowRight,
   Rocket,
   Target,
   TrendingUp
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface HeroSlide {
-
   title: string;
   subtitle: string;
   description: string;
@@ -27,17 +27,16 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> 
-}[];
+  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
 }
 
-export default function EnhancedHeroSection(...args: any[]): any {
+export default function EnhancedHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const heroSlides: HeroSlide[] = [
     {
-      title: any"AI-Powered Business Solutions",
+      title: "AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -86,7 +85,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
     }
   ];
 
-  useEffect(()  => {
+  useEffect(() => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -106,7 +105,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: anynumber)  => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -118,33 +117,33 @@ export default function EnhancedHeroSection(...args: any[]): any {
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
-        <motion.div 
+        <motion.div
           className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{ duration: 4, repeat: Infinity }}
         ></motion.div>
-        <motion.div 
+        <motion.div
           className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.6, 0.3, 0.6]
           }}
           transition={{ duration: 4, repeat: Infinity, delay: 1 }}
         ></motion.div>
-        <motion.div 
+        <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             rotate: [0, 360],
             scale: [1, 1.1, 1]
           }}
-          transition={{ duration: any20, repeat: Infinity }}
+          transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
-        
+
         {/* Floating particles */}
-        {[...Array(6)].map((_, i)  => (
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -184,12 +183,12 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 transition={{ duration: 0.5 }}
               >
                 {/* Icon and category */}
-                <motion.div 
+                <motion.div
                   className="flex items-center justify-center lg:justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
-                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                    {React.createElement(currentSlideData.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>
                 </motion.div>
@@ -210,8 +209,8 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
-                  {currentSlideData.features.map((feature, index)  => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
+                  {currentSlideData.features.map((feature, index) => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
@@ -256,7 +255,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
           >
             {/* Main image */}
             <div className="relative">
-              <motion.div 
+              <motion.div
                 className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -264,12 +263,12 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <motion.div 
+                    <motion.div
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 20, repeat: Infinity }}
                     >
-                      <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />
+                      {React.createElement(currentSlideData.icon, { className: "w-12 h-12 text-zion-cyan" })}
                     </motion.div>
                     <p className="text-lg font-medium">Visual Representation</p>
                   </div>
@@ -289,7 +288,7 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 >
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-zion-cyan/20 rounded-xl">
-                      <stat.icon className="w-5 h-5 text-zion-cyan" />
+                      {React.createElement(stat.icon, { className: "w-5 h-5 text-zion-cyan" })}
                     </div>
                     <div>
                       <p className="text-xl font-bold text-white">{stat.value}</p>
@@ -330,22 +329,22 @@ export default function EnhancedHeroSection(...args: any[]): any {
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </motion.button>
-          
+
           <div className="flex space-x-2">
             {heroSlides.map((_, index) => (
               <motion.button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-zion-cyan w-8' 
+                  index === currentSlide
+                    ? 'bg-zion-cyan w-8'
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
                 whileHover={{ scale: 1.2 }}
               />
             ))}
           </div>
-          
+
           <motion.button
             onClick={nextSlide}
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"

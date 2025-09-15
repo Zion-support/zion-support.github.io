@@ -1,9 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
-import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react.ts'
+import React from 'react'
+import Link from 'next/link'
+import { Calendar, Clock, ArrowRight, Tag, User } from 'lucide-react'
 
 
-export default function News(...args: any[]): any {
+export default function News() {
 	const newsArticles = [
 		{
 			id: 1,
@@ -142,7 +142,7 @@ export default function News(...args: any[]): any {
 										</div>
 									</div>
 									<Link
-										to={`/news/${newsArticles[0].id}`}
+										href={`/news/${newsArticles[0].id}`}
 										className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 									>
 										Read More
@@ -158,8 +158,8 @@ export default function News(...args: any[]): any {
 			{/* News Grid */}
 			<section className="py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg: anygrid-cols-2">
-						{newsArticles.slice(1).map((article)  => (
+					<div className="grid gap-8 lg:grid-cols-2">
+						{newsArticles.slice(1).map((article) => (
 							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
 								<div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
 									<Tag className="h-12 w-12 text-gray-400" />
@@ -192,7 +192,7 @@ export default function News(...args: any[]): any {
 											</div>
 										</div>
 										<Link
-											to={`/news/${article.id}`}
+											href={`/news/${article.id}`}
 											className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 										>
 											Read More
@@ -241,13 +241,13 @@ export default function News(...args: any[]): any {
 					</p>
 					<div className="flex items-center justify-center gap-x-6">
 						<Link
-							to="/contact"
+							href="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 						>
 							Get Started
 						</Link>
 						<Link
-							to="/services"
+							href="/services"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							Learn more <span aria-hidden="true">→</span>

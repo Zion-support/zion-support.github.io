@@ -1,14 +1,16 @@
 #!/bin/bash
 
-echo "🔧 Renaming JavaScript files with JSX syntax to .jsx extension..."
+# Script to rename JSX files from .js to .jsx extensions
+
+echo "Renaming JSX files from .js to .jsx..."
 
 # Find all .js files that contain JSX syntax and rename them
-find src -name "*.js" -exec grep -l "JSX\|<div\|<span\|<button\|<Route\|<Link\|<React\|<Suspense\|<Fragment" {} \; | while read file; do
-    if [[ "$file" != *.jsx ]]; then
-        new_name="${file%.js}.jsx"
-        echo "Renaming: $file -> $new_name"
-        mv "$file" "$new_name"
+find src -name "*.js" -exec grep -l "JSX\|React\|<.*>" {} \; | while read file; do
+    if [[ "$file" != "src/main.js" ]]; then  # Skip main.js as it's not JSX
+        newfile="${file%.js}.jsx"
+        echo "Renaming: $file -> $newfile"
+        mv "$file" "$newfile"
     fi
 done
 
-echo "✅ JSX file renaming completed!"
+echo "JSX file renaming completed!"

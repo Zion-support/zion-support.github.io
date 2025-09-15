@@ -1,16 +1,17 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Rocket, 
-  Zap, 
-  Shield, 
-  Users, 
-  TrendingUp, 
-  Globe, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Cpu, 
-  Database, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Rocket,
+  Zap,
+  Shield,
+  Users,
+  TrendingUp,
+  Globe,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Cpu,
+  Database,
   Cloud,
   Target,
   Award,
@@ -24,9 +25,9 @@ import { Rocket,
   Lock,
   Eye,
   Heart
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
-const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+const DigitalTransformation = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
@@ -165,14 +166,14 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Rocket className="w-12 h-12 text-white" />
             </div>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Digital{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -180,10 +181,10 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business for the digital age with our comprehensive digital transformation services. 
+            Transform your business for the digital age with our comprehensive digital transformation services.
             We help organizations modernize, automate, and innovate to stay ahead of the competition.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Start Transformation
@@ -198,8 +199,8 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
       {/* Stats Section */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,13 +224,13 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
               Our Digital Transformation Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed to modernize your business operations, 
+              Comprehensive solutions designed to modernize your business operations,
               enhance customer experiences, and drive sustainable growth.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {transformationServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {transformationServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -240,10 +241,10 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{service.description}</p>
-                
+
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -266,14 +267,14 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
               Our Transformation Process
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful digital transformation 
+              A proven methodology that ensures successful digital transformation
               with measurable outcomes and sustainable change.
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {transformationPhases.map((phase, index)  => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {transformationPhases.map((phase, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -290,16 +291,16 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
                       {phase.phase}
                     </div>
                   </div>
-                  
+
                   <div className="mt-4">
                     <h3 className="text-lg font-bold text-white mb-3">{phase.title}</h3>
                     <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{phase.description}</p>
-                    
+
                     <div className="flex items-center gap-2 text-zion-cyan text-sm mb-4">
                       <Clock className="w-4 h-4" />
                       {phase.duration}
                     </div>
-                    
+
                     {/* Activities */}
                     {selectedPhase === index && (
                       <motion.div
@@ -308,8 +309,8 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
                       >
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
-                        {phase.activities.map((activity, activityIndex)  => (
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities:</div>
+                        {phase.activities.map((activity, activityIndex) => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {activity}
@@ -337,8 +338,8 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -351,9 +352,9 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
                     <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-zion-slate-light mb-6 leading-relaxed">"{testimonial.content}"</p>
-                
+
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
@@ -371,10 +372,10 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Let's discuss how digital transformation can revolutionize your operations, 
+            Let's discuss how digital transformation can revolutionize your operations,
             enhance customer experiences, and drive sustainable growth.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Start Your Journey

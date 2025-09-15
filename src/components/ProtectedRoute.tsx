@@ -1,16 +1,14 @@
-import React from 'react.ts';
-import { Navigate, useLocation  } from 'react-router-dom.ts';
-import { useAuth  } from '@/hooks/useAuth';
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 
-interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
-
+interface ProtectedRouteProps {
   children: React.ReactNode;
   requireAuth?: boolean;
   roles?: string[];
-
 }
 
-export function ProtectedRoute(...args: any[]): any {
+export function ProtectedRoute({ children, requireAuth = true, roles = [] }: ProtectedRouteProps) {
   const { user, isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
 

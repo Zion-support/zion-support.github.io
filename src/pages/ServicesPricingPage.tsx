@@ -1,18 +1,19 @@
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { Check, 
-  X, 
-  Star, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
-  Users, 
-  Building, 
-  Smartphone, 
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Check,
+  X,
+  Star,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
+  Users,
+  Building,
+  Smartphone,
   ShoppingCart,
   Heart,
   GraduationCap,
@@ -23,8 +24,8 @@ import { Check,
   ExternalLink,
   DollarSign,
   Clock
- } from 'lucide-react.ts';
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
+} from "lucide-react";
+import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {
@@ -44,13 +45,13 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-export default function ServicesPricingPage(...args: any[]): any {
+export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
-  const filteredServices = selectedCategory === 'all' 
-    ? EXPANDED_SERVICES 
+  const filteredServices = selectedCategory === 'all'
+    ? EXPANDED_SERVICES
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -125,8 +126,8 @@ export default function ServicesPricingPage(...args: any[]): any {
         {/* Pricing Tiers Overview */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Tiers Overview</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier])  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier]) => (
               <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan text-xl">{key.charAt(0).toUpperCase() + key.slice(1)}</CardTitle>
@@ -142,7 +143,7 @@ export default function ServicesPricingPage(...args: any[]): any {
                       </div>
                     ))}
                   </div>
-                  <Button 
+                  <Button
                     className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
                     onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
                   >
@@ -168,8 +169,8 @@ export default function ServicesPricingPage(...args: any[]): any {
               ))}
             </TabsList>
             <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service)  => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service) => (
                   <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start justify-between mb-3">
@@ -178,8 +179,8 @@ export default function ServicesPricingPage(...args: any[]): any {
                             {getCategoryIcon(service.category)}
                           </div>
                           <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                            {service.price && service.price <= 4999 ? 'Starter' : 
-                             service.price && service.price <= 9999 ? 'Professional' : 
+                            {service.price && service.price <= 4999 ? 'Starter' :
+                             service.price && service.price <= 9999 ? 'Professional' :
                              service.price && service.price <= 25000 ? 'Enterprise' : 'Custom'}
                           </Badge>
                         </div>
@@ -237,15 +238,15 @@ export default function ServicesPricingPage(...args: any[]): any {
                         </div>
                         {/* Action Buttons */}
                         <div className="flex gap-2">
-                          <Button 
+                          <Button
                             className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
                             onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
                           >
                             <Mail className="h-4 w-4 mr-2" />
                             Get Quote
                           </Button>
-                          <Button 
-                            variant="outline" 
+                          <Button
+                            variant="outline"
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                             onClick={() => window.open('https://ziontechgroup.com', '_blank')}
                           >
@@ -263,8 +264,8 @@ export default function ServicesPricingPage(...args: any[]): any {
         {/* Service Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose ZionTech Group?</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_BENEFITS).map(([key, benefit])  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(SERVICE_BENEFITS).map(([key, benefit]) => (
               <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/10 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -286,7 +287,7 @@ export default function ServicesPricingPage(...args: any[]): any {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  All our services include implementation, training, documentation, and 24/7 support. 
+                  All our services include implementation, training, documentation, and 24/7 support.
                   Custom integrations and additional features can be added based on your requirements.
                 </p>
               </CardContent>
@@ -297,7 +298,7 @@ export default function ServicesPricingPage(...args: any[]): any {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  Yes, we provide custom pricing for enterprise solutions and specialized requirements. 
+                  Yes, we provide custom pricing for enterprise solutions and specialized requirements.
                   Contact us for a personalized quote tailored to your business needs.
                 </p>
               </CardContent>
@@ -308,7 +309,7 @@ export default function ServicesPricingPage(...args: any[]): any {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments, 
+                  We offer flexible payment terms including upfront payment, milestone-based payments,
                   and monthly/annual subscription options for ongoing services.
                 </p>
               </CardContent>
@@ -319,7 +320,7 @@ export default function ServicesPricingPage(...args: any[]): any {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services 
+                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
                   within the first 30 days, we'll work to make it right or provide a refund.
                 </p>
               </CardContent>
@@ -333,7 +334,7 @@ export default function ServicesPricingPage(...args: any[]): any {
             Let's discuss your project requirements and find the perfect solution for your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan-light"
               onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
@@ -341,7 +342,7 @@ export default function ServicesPricingPage(...args: any[]): any {
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"

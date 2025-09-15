@@ -15,8 +15,8 @@
     "menu": "Menu",
     "saving": "Saving...",
     "open_main_menu": "Open main menu",
-    "toggle_mobile_menu": "Toggle mobile menu";
-},
+    "toggle_mobile_menu": "Toggle mobile menu"
+  },
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
@@ -39,8 +39,8 @@
     "help": "Help Center",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
-    "sitemap": "Sitemap";
-},
+    "sitemap": "Sitemap"
+  },
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -50,8 +50,8 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
-    "logout_success": "Logged out successfully";
-},
+    "logout_success": "Logged out successfully"
+  },
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
     "hero_subtitle": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
@@ -73,8 +73,8 @@
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
-    "tool_chat_desc": "Get instant assistance from our AI-powered chat";
-},
+    "tool_chat_desc": "Get instant assistance from our AI-powered chat"
+  },
   "marketplace": {
     "title": "AI & Tech Marketplace",
     "description": "Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers.",
@@ -82,8 +82,8 @@
     "results_count": "Showing {{count}} results",
     "no_results_title": "No Results Found",
     "no_results_description": "We couldn't find any listings matching your filters. Try adjusting your search criteria.",
-    "clear_filters": "Clear Filters";
-},
+    "clear_filters": "Clear Filters"
+  },
   "checkout": {
     "title": "Checkout",
     "name": "Name",
@@ -92,16 +92,16 @@
     "city": "City",
     "country": "Country",
     "subtotal": "Subtotal",
-    "pay": "Pay with Stripe (test)";
-},
+    "pay": "Pay with Stripe (test)"
+  },
   "language": {
     "en": "English",
     "es": "Español",
     "pt": "Português",
     "ar": "العربية",
     "language_changed": "Language changed to {{language}}",
-    "switch_to_detected": "Switch to {{language}}?";
-},
+    "switch_to_detected": "Switch to {{language}}?"
+  },
   "translation": {
     "auto_translate": "Auto-Translate",
     "translation_success": "Translation Successful",
@@ -121,10 +121,10 @@
     "missing_languages": "Missing in {{count}} languages",
     "edit": "Edit",
     "saved": "Saved",
-    "changes_saved": "Translation changes have been saved";
-},
+    "changes_saved": "Translation changes have been saved"
+  },
   "error_boundary": {
     "message": "Something went wrong.",
-    "retry": "Retry";
-}
+    "retry": "Retry"
+  }
 }

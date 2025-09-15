@@ -1,6 +1,6 @@
-import { useState, useEffect  } from 'react.ts';
+import { useState, useEffect } from 'react';
 
-export function useMobile(...args: any[]): any {
+export function useMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const pricingTiers = [
   {
@@ -55,7 +55,7 @@ const pricingTiers = [
   }
 ];
 
-export function PricingSection(...args: any[]): any {
+export function PricingSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -69,13 +69,14 @@ export function PricingSection(...args: any[]): any {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Transparent Pricing
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include our core features with no hidden fees.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Flexible pricing options designed to scale with your business.
+            Start small and grow with us.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index)  => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index) => (
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}

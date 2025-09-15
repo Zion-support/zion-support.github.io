@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Users, 
-  MessageCircle, 
-  FileText, 
-  Calendar, 
-  CheckCircle, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Users,
+  MessageCircle,
+  FileText,
+  Calendar,
+  CheckCircle,
   Clock,
   AlertCircle,
   Plus,
@@ -63,10 +64,9 @@ import { Users,
   Target,
   BarChart3,
   PieChart
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface TeamMember {
-
   id: string;
   name: string;
   role: string;
@@ -77,11 +77,9 @@ interface TeamMember {
   skills: string[];
   projects: string[];
   availability: 'available' | 'busy' | 'unavailable';
-
 }
 
 interface Project {
-
   id: string;
   name: string;
   description: string;
@@ -95,11 +93,9 @@ interface Project {
   budget: number;
   client: string;
   tags: string[];
-
 }
 
 interface Task {
-
   id: string;
   title: string;
   description: string;
@@ -112,35 +108,29 @@ interface Task {
   dependencies: string[];
   tags: string[];
   comments: Comment[];
-
 }
 
 interface Comment {
-
   id: string;
   author: string;
   content: string;
   timestamp: string;
   likes: number;
   replies: Comment[];
-
 }
 
 interface Message {
-
   id: string;
   sender: string;
   content: string;
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
-  reactions: { type: string; count: number 
-}[];
+  reactions: { type: string; count: number }[];
   isRead: boolean;
 }
 
 interface FileItem {
-
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -152,17 +142,14 @@ interface FileItem {
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
   version: string;
-
 }
 
-interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
-
+interface TeamCollaborationToolsProps {
   showTeamMembers?: boolean;
   showProjects?: boolean;
   showCommunication?: boolean;
   showFileSharing?: boolean;
   maxItems?: number;
-
 }
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
@@ -172,17 +159,17 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showFileSharing = true,
   maxItems = 20
 }) => {
-  const [activeTab, setActiveTab] = useState<any>('team');
-  const [teamMembers, setTeamMembers] = useState<any>([]);
-  const [projects, setProjects] = useState<any>([]);
-  const [messages, setMessages] = useState<any>([]);
-  const [files, setFiles] = useState<any>([]);
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [files, setFiles] = useState<FileItem[]>([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
 
   // Sample data
   useEffect(() => {
@@ -376,7 +363,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   }, []);
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)  => {
+  const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
@@ -387,7 +374,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get project status color
-  const getProjectStatusColor = (status: anystring)  => {
+  const getProjectStatusColor = (status: string) => {
     switch (status) {
       case 'planning': return 'text-blue-400 bg-blue-400/20';
       case 'active': return 'text-green-400 bg-green-400/20';
@@ -399,7 +386,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -410,7 +397,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get file type icon
-  const getFileTypeIcon = (type: anystring)  => {
+  const getFileTypeIcon = (type: string) => {
     switch (type) {
       case 'document': return <FileText className="w-5 h-5" />;
       case 'image': return <Image className="w-5 h-5" />;
@@ -422,19 +409,19 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Format file size
-  const formatFileSize = (size: anynumber)  => {
+  const formatFileSize = (size: number) => {
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`;
   };
 
   // Handle project selection
-  const handleProjectSelect = (project: anyProject)  => {
+  const handleProjectSelect = (project: Project) => {
     setSelectedProject(project);
   };
 
   // Handle message reactions
-  const handleMessageReaction = (messageId: anystring, reactionType: string)  => {
+  const handleMessageReaction = (messageId: string, reactionType: string) => {
     setMessages(prev => prev.map(msg => {
       if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType);
@@ -537,8 +524,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -703,7 +690,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>
                     <p className="text-zinc-400 mb-3">{project.description}</p>
-                    
+
                     <div className="flex flex-wrap items-center gap-3">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getProjectStatusColor(project.status)}`}>
                         {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
@@ -754,12 +741,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
                     </div>
                   </div>
-                  
+
                   <div className="p-3 bg-zinc-800/30 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-1">Budget</div>
                     <div className="text-white font-medium">${project.budget.toLocaleString()}</div>
                   </div>
-                  
+
                   <div className="p-3 bg-zinc-800/30 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-1">Team Size</div>
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>
@@ -853,7 +840,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">
                     {message.sender.split(' ').map(n => n[0]).join('')}
                   </div>
-                  
+
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <h4 className="font-semibold text-white">{message.sender}</h4>
@@ -864,9 +851,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                         </span>
                       )}
                     </div>
-                    
+
                     <p className="text-zinc-300 mb-3">{message.content}</p>
-                    
+
                     {/* Reactions */}
                     <div className="flex items-center gap-2">
                       {message.reactions.map((reaction, idx) => (
@@ -910,11 +897,11 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
-              
+
               <button className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 <Paperclip className="w-4 h-4" />
               </button>
-              
+
               <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">
                 <Send className="w-4 h-4" />
                 Send
@@ -993,7 +980,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">
                     {getFileTypeIcon(file.type)}
                   </div>
-                  
+
                   <div className="flex-1">
                     <h4 className="font-semibold text-white mb-1">{file.name}</h4>
                     <div className="flex items-center gap-4 text-sm text-zinc-400">
@@ -1002,7 +989,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       <span>Version: {file.version}</span>
                       <span>Modified: {new Date(file.lastModified).toLocaleDateString()}</span>
                     </div>
-                    
+
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-2">
                       {file.tags.map((tag) => (

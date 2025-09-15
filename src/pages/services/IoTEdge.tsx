@@ -1,8 +1,8 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone  } from 'lucide-react.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from 'lucide-react';
 
-export default function IoTEdge(...args: any[]): any {
+export default function IoTEdge() {
   const features = [
     {
       icon: Cpu,
@@ -65,17 +65,17 @@ export default function IoTEdge(...args: any[]): any {
               <Cpu className="w-5 h-5 text-blue-400" />
               <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Connect, Process,
               <span className="text-gradient"> Transform</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Harness the power of IoT and edge computing to create intelligent, 
+              Harness the power of IoT and edge computing to create intelligent,
               connected systems that process data faster and more efficiently.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start IoT Project
@@ -107,8 +107,8 @@ export default function IoTEdge(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -146,8 +146,8 @@ export default function IoTEdge(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

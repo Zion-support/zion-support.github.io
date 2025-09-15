@@ -1,33 +1,36 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { useNavigate  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
- } from 'lucide-react.ts';
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+    Atom,
+    Award,
+    BarChart3,
+    BookOpen,
+    Brain,
+    ChevronDown,
+    ChevronRight,
+    Eye,
+    Globe,
+    Heart,
+    HelpCircle,
+    Home,
+    Mail,
+    Phone,
+    Rocket,
+    Settings,
+    Shield,
+    Sparkles,
+    Target,
+    Users,
+    X,
+    Zap
+} from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-interface SidebarItem {
 
-  name: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  color?: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  isPremium?: boolean;
-  category?: string;
-
-}
 
 const sidebarSections = [
   {
-    title: any'Revolutionary Services',
+    title: 'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items: [
@@ -244,18 +247,27 @@ const sidebarSections = [
   }
 ];
 
-interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
-
+interface EnhancedSidebar2025Props {
   isOpen: boolean;
-  onClose: ()  => void;
-
+  onClose: () => void;
+  contactInfo?: {
+    mobile: string;
+    email: string;
+  };
 }
 
-export default function EnhancedSidebar2025(...args: any[]): any {
+export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: EnhancedSidebar2025Props) {
+  const defaultContactInfo = {
+    mobile: '+1 (555) 123-4567',
+    email: 'contact@ziontechgroup.com'
+  };
+  
+  const finalContactInfo = contactInfo || defaultContactInfo;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const toggleSection = (sectionTitle: anystring)  => {
+
+  const toggleSection = (sectionTitle: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
       newExpanded.delete(sectionTitle);
@@ -265,16 +277,9 @@ export default function EnhancedSidebar2025(...args: any[]): any {
     setExpandedSections(newExpanded);
   };
 
-  const filteredServices = sidebarSections.flatMap(section =>
-    section.items.flatMap(item =>
-      item.subItems?.filter(child =>
-        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-      ) || []
-    )
-  );
 
-  const toggleItem = (itemName: anystring)  => {
+
+  const toggleItem = (itemName: string) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
       newExpanded.delete(itemName);
@@ -296,7 +301,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
     };
   }, [isOpen]);
 
-  const isActive = (href: anystring)  => router.pathname === href;
+
 
   return (
     <>
@@ -350,11 +355,11 @@ export default function EnhancedSidebar2025(...args: any[]): any {
           <div className="space-y-3">
             <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
               <Phone className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-300">{contactInfo.mobile}</span>
+              <span className="text-sm text-gray-300">{finalContactInfo.mobile}</span>
             </div>
             <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
               <Mail className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-300">{contactInfo.email}</span>
+              <span className="text-sm text-gray-300">{finalContactInfo.email}</span>
             </div>
           </div>
         </div>
@@ -363,7 +368,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
         <div className="p-6 space-y-6">
           {/* Home Link */}
           <Link
-            href="/"
+            to="/"
             onClick={onClose}
             className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"
           >
@@ -380,7 +385,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
               >
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
-                    <section.icon className="w-4 h-4 text-white" />
+                    {React.createElement(section.icon, { className: "w-4 h-4 text-white" })}
                   </div>
                   <span className="text-white font-semibold">{section.title}</span>
                 </div>
@@ -407,7 +412,9 @@ export default function EnhancedSidebar2025(...args: any[]): any {
                           className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
                         >
                           <div className="flex items-center gap-3">
-                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                            {React.createElement(item.icon, { 
+                              className: "w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" 
+                            })}
                             <div>
                               <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
                                 {item.name}
@@ -438,7 +445,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
                                 {item.subItems.map((subItem, subIndex) => (
                                   <Link
                                     key={subIndex}
-                                    href={subItem.href}
+                                    to={subItem.href}
                                     onClick={onClose}
                                     className="flex items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group"
                                   >
@@ -483,7 +490,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
                 Get in touch to discuss your revolutionary technology needs.
               </p>
               <Link
-                href="/contact"
+                to="/contact"
                 onClick={onClose}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >

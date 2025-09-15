@@ -1,18 +1,14 @@
 interface SitemapUrl {
-
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-
 }
 
 interface SitemapConfig {
-
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
-
 }
 
 export class SitemapGenerator {
@@ -101,7 +97,7 @@ ${sitemapEntries}
    * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
-    const { baseUrl, urls } = this.config;
+    const { baseUrl } = this.config;
     
     const structuredData = {
       "@context": "https://schema.org",

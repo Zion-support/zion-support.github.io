@@ -1,22 +1,20 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react.ts';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Braille } from 'lucide-react';
 
 interface AccessibilityContextType {
-
-  highContrast: anyboolean;
-  toggleHighContrast: ()  => void;
-  reducedMotion: anyboolean;
-  toggleReducedMotion: ()  => void;
-  fontSize: anynumber;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: any()  => void;
-  resetFontSize: any()  => void;
-  showSkipLinks: anyboolean;
-  setShowSkipLinks: (show: boolean)  => void;
-  voiceNavigation: anyboolean;
-  toggleVoiceNavigation: ()  => void;
-
+  highContrast: boolean;
+  toggleHighContrast: () => void;
+  reducedMotion: boolean;
+  toggleReducedMotion: () => void;
+  fontSize: number;
+  increaseFontSize: () => void;
+  decreaseFontSize: () => void;
+  resetFontSize: () => void;
+  showSkipLinks: boolean;
+  setShowSkipLinks: (show: boolean) => void;
+  voiceNavigation: boolean;
+  toggleVoiceNavigation: () => void;
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -29,10 +27,8 @@ export const useAccessibility = () => {
   return context;
 };
 
-interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
-
+interface AccessibilityProviderProps {
   children: ReactNode;
-
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -58,7 +54,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Apply accessibility settings to document
   useEffect(() => {
     const root = document.documentElement;
-    
+
     // Apply high contrast
     if (highContrast) {
       root.classList.add('high-contrast');
@@ -79,7 +75,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
         event.preventDefault();
@@ -211,7 +207,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             >
               <Braille className="w-4 h-4" />
             </button>
-            
+
             <button
               onClick={toggleReducedMotion}
               className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
@@ -220,7 +216,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
             >
-              {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+              {reducedMotion ? 'RM' : 'M'}
             </button>
 
             <button
@@ -259,11 +255,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Focus trap component for modals
-export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({ 
-  children, 
-  isActive = true 
+export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
+  children,
+  isActive = true
 }) => {
-  const [focusedElement, setFocusedElement] = useState<any>(null);
+
 
   useEffect(() => {
     if (!isActive) return;
@@ -275,7 +271,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {

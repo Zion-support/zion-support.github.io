@@ -1,17 +1,15 @@
 export interface EnhancedService {
-
     id: string;
     name: string;
     tagline: string;
     description: string;
     category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech';
-pricing: {;
+    pricing: {
         monthly: string;
         yearly: string;
         enterprise: string;
         setup: string;
-    
-};
+    };
     features: string[];
     benefits: string[];
     roi: string;

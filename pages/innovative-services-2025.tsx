@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices  } from '../src/data/innovativeServices2025';
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
+import React, { useState, useMemo } from 'react';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../data/innovativeServices2025';
+const InnovativeServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -101,20 +101,10 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
           ))}
         </ul>
       </div>
-      <div className="mb-4">
-        <h4 className="font-semibold text-gray-900 mb-2">Technology Stack:</h4>
-        <div className="flex flex-wrap gap-2">
-          {service.technology.map((tech, index) => (
-            <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
       <div className="border-t pt-4">
         <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-          <span>Delivery: {service.estimatedDelivery}</span>
-          <span>Support: {service.supportLevel}</span>
+          <span>Category: {service.category}</span>
+          <span>Launch: {service.launchDate}</span>
         </div>
         
         <div className="flex space-x-3">
@@ -192,9 +182,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {categories.map(category  => (
+                {categories.map(category => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -207,9 +197,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {priceRanges.map(range  => (
+                {priceRanges.map(range => (
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
               </select>
@@ -220,9 +210,9 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {sortOptions.map(option  => (
+                {sortOptions.map(option => (
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
               </select>
@@ -236,8 +226,8 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
           </p>
         </div>
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)  => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

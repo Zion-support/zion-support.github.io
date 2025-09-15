@@ -1,24 +1,24 @@
-import React, { useState } from 'react.ts';
-import { Mail, Send, CheckCircle  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { Mail, Send, CheckCircle } from 'lucide-react';
 
-export const FooterNewsletter: React.FC = (): JSX.Element => {
+export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
 
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       setIsSubmitted(true);
       setEmail('');
-      
+
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
@@ -36,7 +36,7 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {
             <Mail className="w-6 h-6 text-white" />
           </div>
         </div>
-        
+
         <h3 className="text-xl font-bold text-white mb-2">
           Stay Updated
         </h3>

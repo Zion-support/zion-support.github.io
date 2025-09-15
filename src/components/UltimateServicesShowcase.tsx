@@ -1,13 +1,14 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Code, 
-  BarChart3, 
-  Users, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Code,
+  BarChart3,
+  Users,
   ShoppingCart,
   MessageSquare,
   FileText,
@@ -19,15 +20,14 @@ import { Brain,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 // Import the new services
-import { ultimateInnovativeServices2025  } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025  } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025  } from '../../data/2025-innovative-micro-saas-solutions';
+import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
+import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../../data/2025-innovative-micro-saas-solutions';
 
 interface Service {
-
   id: string;
   name: string;
   tagline: string;
@@ -53,13 +53,12 @@ interface Service {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
     website: string;
-  
-};
+  };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -85,8 +84,8 @@ const categories = [
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
-    color: any'from-purple-600 to-pink-700',
-    services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
+    color: 'from-purple-600 to-pink-700',
+    services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
   },
   {
     id: 'it-infrastructure',
@@ -120,9 +119,9 @@ const patentStatusColors = {
   'Open Source': 'from-purple-600 to-violet-700'
 };
 
-export function UltimateServicesShowcase(...args: any[]): any {
+export function UltimateServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const allServices = [
     ...ultimateInnovativeServices2025,
@@ -130,8 +129,9 @@ export function UltimateServicesShowcase(...args: any[]): any {
     ...innovativeMicroSaasSolutions2025
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices: anycategories.find(cat  => cat.id === selectedCategory)?.services || [];
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : categories.find(cat => cat.id === selectedCategory)?.services || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -160,7 +160,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -174,10 +174,10 @@ export function UltimateServicesShowcase(...args: any[]): any {
             <span className="text-white">Services Showcase</span>
           </h1>
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
-            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide. 
+            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.
             Each service is backed by cutting-edge technology and proven results.
           </p>
-          
+
           {/* Contact Information */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">
             <div className="flex items-center gap-2">
@@ -196,7 +196,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
         </motion.div>
 
         {/* Category Navigation */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -207,12 +207,12 @@ export function UltimateServicesShowcase(...args: any[]): any {
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                : 'bg-zion-slate-light text-zion-gray-light hover: anybg-zion-slate hover:text-white'
+                : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
             }`}
           >
             All Services ({allServices.length})
           </button>
-          {categories.map((category)  => (
+          {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
@@ -228,7 +228,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -342,7 +342,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

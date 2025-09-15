@@ -1,26 +1,24 @@
-import { GetStaticPaths, GetStaticProps  } from 'next.ts'
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
-import React from 'react.ts'
-import { innovativeRealMicroSaasServices2025  } from '../../data/2025-innovative-real-micro-saas-services'
-import { advancedITServices  } from '../../data/advanced-it-services'
-import { innovativeAIServices  } from '../../data/innovative-ai-services'
-import { addedMicroSaaS2025  } from '../../data/2025-added-micro-saas'
-import { addedITServices2025  } from '../../data/2025-added-it-services'
-import { addedAIServices2025  } from '../../data/2025-added-ai-services'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+import React from 'react'
+import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices } from '../../data/advanced-it-services'
+import { innovativeAIServices } from '../../data/innovative-ai-services'
+import { addedMicroSaaS2025 } from '../../data/2025-added-micro-saas'
+import { addedITServices2025 } from '../../data/2025-added-it-services'
+import { addedAIServices2025 } from '../../data/2025-added-ai-services'
 interface ServiceItem {
-
-id: string;
-name: string;
-tagline: string;
-price: string;
-period: string;
-description?: string;
-features: string[];
-icon?: string;
-color?: string;
-textColor?: string;
-
+	id: string
+	name: string
+	tagline: string
+	price: string
+	period: string
+	description?: string
+	features: string[]
+	icon?: string
+	color?: string
+	textColor?: string
 }
 function collectAllServices(): ServiceItem[] {
 	const arrays: any[] = [
@@ -66,7 +64,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	}
 	return { props: { service } }
 }
-export default function ServiceDetail(...args: any[]): any {
+export default function ServiceDetail({ service }: { service: ServiceItem }) {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (

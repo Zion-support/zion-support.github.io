@@ -1,4 +1,4 @@
-import { MarketplaceItem  } from '@/data/marketplaceData';
+import { MarketplaceItem } from '@/data/marketplaceData';
 
 const sampleTitles = [
   'AI-Powered Analytics Platform',
@@ -48,7 +48,7 @@ const sampleImages = [
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
 ];
 
-const categories: Array<any> = [
+const categories: Array<'products' | 'talent' | 'equipment' | 'services'> = [
   'products', 'talent', 'equipment', 'services'
 ];
 
@@ -73,18 +73,11 @@ const sellerNames = [
 
 export function generateRandomListing(): MarketplaceItem {
   const randomIndex = Math.floor(Math.random() * sampleTitles.length);
-  const categoryIndex = Math.floor(Math.random() * categories.length);
-  const priceIndex = Math.floor(Math.random() * priceRanges.length);
-  const locationIndex = Math.floor(Math.random() * locations.length);
-  const sellerNameIndex = Math.floor(Math.random() * sellerNames.length);
-  const imageIndex = Math.floor(Math.random() * sampleImages.length);
-  
-  const category = categories[categoryIndex];
-  const price = priceRanges[priceIndex];
-  const location = locations[locationIndex];
-  const sellerName = sellerNames[sellerNameIndex];
-  const image = sampleImages[imageIndex];
-  
+  const category = categories[Math.floor(Math.random() * categories.length)];
+  const price = priceRanges[Math.floor(Math.random() * priceRanges.length)];
+  const location = locations[Math.floor(Math.random() * locations.length)];
+  const sellerName = sellerNames[Math.floor(Math.random() * sellerNames.length)];
+
   return {
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     title: sampleTitles[randomIndex] || 'Default Title',

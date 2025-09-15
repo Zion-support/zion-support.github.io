@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { CheckCircle, 
-  AlertTriangle, 
-  Info, 
-  X, 
-  Bell, 
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  X,
+  Bell,
   Settings,
   Volume2,
   VolumeX,
@@ -13,49 +14,43 @@ import { CheckCircle,
   MessageSquare,
   Shield,
   Clock
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 
 export interface Notification {
-
-  id: anystring;
+  id: string;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
   timestamp: Date;
   read: boolean;
-action?: {;
+  action?: {
     label: string;
-    onClick: ()  => void;
-  
-};
+    onClick: () => void;
+  };
   priority: 'low' | 'medium' | 'high';
   category?: string;
   icon?: React.ReactNode;
 }
 
-interface NotificationSystemProps extends React.PropsWithChildren<{}> {
-
+interface NotificationSystemProps {
   maxNotifications?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   enableSound?: boolean;
   enableVibration?: boolean;
   autoDismiss?: boolean;
   defaultDuration?: number;
-
 }
 
 interface NotificationSettings {
-
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
   position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   maxNotifications: number;
   defaultDuration: number;
-
 }
 
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
@@ -66,8 +61,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   autoDismiss = true,
   defaultDuration = 5000
 }) => {
-  const [notifications, setNotifications] = useState<any>([]);
-  const [settings, setSettings] = useState<any>({
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [settings, setSettings] = useState<NotificationSettings>({
     sound: enableSound,
     vibration: enableVibration,
     autoDismiss: autoDismiss,
@@ -98,7 +93,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     if (!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
-    
+
     notifications.forEach(notification => {
       if (notification.duration !== 0) {
         const timeout = setTimeout(() => {
@@ -138,16 +133,16 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [settings.vibration]);
 
   // Add notification
-  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     const newNotification: Notification = {
       ...notification,
-      id: any`notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),
       read: false,
       duration: notification.duration ?? settings.defaultDuration
     };
 
-    setNotifications(prev  => {
+    setNotifications(prev => {
       const updated = [newNotification, ...prev];
       return updated.slice(0, settings.maxNotifications);
     });
@@ -158,13 +153,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
 
   // Dismiss notification
-  const dismissNotification = useCallback((id: anystring)  => {
+  const dismissNotification = useCallback((id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
   // Mark notification as read
-  const markAsRead = useCallback((id: anystring)  => {
-    setNotifications(prev => 
+  const markAsRead = useCallback((id: string) => {
+    setNotifications(prev =>
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
   }, []);
@@ -180,9 +175,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, []);
 
   // Get notification icon
-  const getNotificationIcon = (type: anyNotificationType, priority: string)  => {
+  const getNotificationIcon = (type: NotificationType, priority: string) => {
     const iconProps = { className: "w-5 h-5" };
-    
+
     switch (type) {
       case 'success':
         return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`} />;
@@ -200,9 +195,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Get notification styles
-  const getNotificationStyles = (type: anyNotificationType, priority: string)  => {
+  const getNotificationStyles = (type: NotificationType, priority: string) => {
     const baseStyles = "border-l-4 ";
-    
+
     switch (type) {
       case 'success':
         return baseStyles + (priority === 'high' ? 'border-green-600 bg-green-50' : 'border-green-500 bg-green-50/80');
@@ -236,7 +231,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Update settings
-  const updateSettings = useCallback((newSettings: anyPartial<NotificationSettings>)  => {
+  const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
 
@@ -258,7 +253,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           title="Notifications"
         >
           <Bell className="w-6 h-6 text-zion-slate-dark" />
-          
+
           {/* Unread count badge */}
           {unreadCount > 0 && (
             <motion.div
@@ -291,7 +286,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
           >
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Sound</span>
@@ -400,7 +395,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                         <div className="flex-shrink-0 mt-0.5">
                           {notification.icon || getNotificationIcon(notification.type, notification.priority)}
                         </div>
-                        
+
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
                             <h4 className={`text-sm font-medium ${
@@ -415,18 +410,18 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                               <X className="w-3 h-3 text-zion-slate/60" />
                             </button>
                           </div>
-                          
+
                           <p className={`text-sm mt-1 ${
                             notification.read ? 'text-zion-slate/60' : 'text-zion-slate'
                           }`}>
                             {notification.message}
                           </p>
-                          
+
                           <div className="flex items-center justify-between mt-3">
                             <span className="text-xs text-zion-slate/50">
                               {notification.timestamp.toLocaleTimeString()}
                             </span>
-                            
+
                             <div className="flex items-center space-x-2">
                               {notification.action && (
                                 <button
@@ -439,7 +434,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                                   {notification.action.label}
                                 </button>
                               )}
-                              
+
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}
@@ -466,7 +461,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 // Hook for using notifications in components
 export const useNotifications = () => {
-  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification(notification);
     }
@@ -477,10 +472,10 @@ export const useNotifications = () => {
 
 // Utility functions for common notification types
 export const notificationUtils = {
-  success: any(title: string, message: string, options?: Partial<Notification>)  => {
+  success: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: any'success',
+        type: 'success',
         title,
         message,
         priority: 'medium',
@@ -489,10 +484,10 @@ export const notificationUtils = {
     }
   },
 
-  warning: (title: string, message: string, options?: Partial<Notification>)  => {
+  warning: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: any'warning',
+        type: 'warning',
         title,
         message,
         priority: 'medium',
@@ -501,10 +496,10 @@ export const notificationUtils = {
     }
   },
 
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: any'error',
+        type: 'error',
         title,
         message,
         priority: 'high',
@@ -513,10 +508,10 @@ export const notificationUtils = {
     }
   },
 
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  info: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
-        type: any'info',
+        type: 'info',
         title,
         message,
         priority: 'low',
@@ -525,7 +520,7 @@ export const notificationUtils = {
     }
   },
 
-  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
+  achievement: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification({
         type: 'achievement',

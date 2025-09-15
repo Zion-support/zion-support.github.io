@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
   Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
@@ -13,7 +14,7 @@ import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 const itServices2028 = [
   {
@@ -198,7 +199,7 @@ const itServices2028 = [
   }
 ];
 
-const ITServices2028: React.FC = (): JSX.Element => {
+const ITServices2028: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -213,7 +214,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
   ];
 
   const filteredServices = itServices2028.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -226,7 +227,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -234,7 +235,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
           >
             IT Services 2028
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -242,7 +243,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
           >
             Cutting-edge IT solutions powered by quantum computing and artificial intelligence
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -303,8 +304,8 @@ const ITServices2028: React.FC = (): JSX.Element => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -396,7 +397,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -404,7 +405,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
           >
             Ready to Transform Your IT Infrastructure?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -412,7 +413,7 @@ const ITServices2028: React.FC = (): JSX.Element => {
           >
             Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

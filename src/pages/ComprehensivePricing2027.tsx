@@ -1,28 +1,29 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
- } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
+} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
 
-export default function ComprehensivePricing2027(...args: any[]): any {
+export default function ComprehensivePricing2027() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState<any>('price');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [expandedService, setExpandedService] = useState<any>(null);
+  const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating'>('price');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
-  
+
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-  
+
   const filteredServices = allServices
-    .filter(service => 
+    .filter(service =>
       (selectedCategory === 'All' || service.category === service.category) &&
-      (searchQuery === '' || 
+      (searchQuery === '' ||
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
@@ -75,13 +76,13 @@ export default function ComprehensivePricing2027(...args: any[]): any {
     }
   };
 
-  const getPriceColor = (price: anynumber)  => {
+  const getPriceColor = (price: number) => {
     if (price < 1000) return 'text-green-400';
     if (price < 2500) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getPriceTier = (price: anynumber)  => {
+  const getPriceTier = (price: number) => {
     if (price < 1000) return 'Starter';
     if (price < 2500) return 'Professional';
     return 'Enterprise';
@@ -109,14 +110,14 @@ export default function ComprehensivePricing2027(...args: any[]): any {
       </div>
 
       {/* Header Section */}
-      <motion.section 
+      <motion.section
         className="relative z-10 pt-20 pb-16 px-6"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -124,29 +125,29 @@ export default function ComprehensivePricing2027(...args: any[]): any {
           >
             Comprehensive Pricing 2027
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Transparent pricing for our cutting-edge technology services. 
+            Transparent pricing for our cutting-edge technology services.
             Choose the perfect solution for your business needs and budget.
           </motion.p>
-          
+
           {/* Pricing Stats */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: any0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: anyDollarSign, color: 'from-green-500 to-emerald-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyBrain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyStar, color: 'from-yellow-500 to-orange-600' }
-            ].map((stat, index)  => (
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
+            ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -160,7 +161,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
       </motion.section>
 
       {/* Search and Filters */}
-      <motion.section 
+      <motion.section
         className="relative z-10 px-6 pb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -188,9 +189,9 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
-                  {categories.map(category  => (
+                  {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -232,7 +233,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
       </motion.section>
 
       {/* Services Grid */}
-      <motion.section 
+      <motion.section
         className="relative z-10 px-6 pb-20"
         variants={containerVariants}
         initial="hidden"
@@ -241,15 +242,15 @@ export default function ComprehensivePricing2027(...args: any[]): any {
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
-              <motion.div 
+              <motion.div
                 className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
                 key={viewMode}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: any0.3 }}
+                transition={{ duration: 0.3 }}
               >
-                {filteredServices.map((service, index)  => (
+                {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : {}}
@@ -289,7 +290,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-4">
                           {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span 
+                            <span
                               key={tagIndex}
                               className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
                             >
@@ -366,7 +367,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                               </div>
 
                               {/* CTA Button */}
-                              <button 
+                              <button
                                 onClick={() => window.open(service.website, '_blank')}
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
                               >
@@ -380,8 +381,8 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                       <div className="flex gap-6">
                         {/* Service Image */}
                         <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
-                          <img 
-                            src={service.images[0]} 
+                          <img
+                            src={service.images[0]}
                             alt={service.title}
                             className="w-full h-full object-cover"
                           />
@@ -401,9 +402,9 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                               <div className="text-xs text-zion-slate-light">per {service.pricingModel}</div>
                             </div>
                           </div>
-                          
+
                           <p className="text-gray-300 text-sm">{service.description}</p>
-                          
+
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Brain className="w-4 h-4 text-zion-cyan" />
@@ -422,7 +423,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
                               {service.tags.slice(0, 4).map((tag, tagIndex) => (
-                                <span 
+                                <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
                                 >
@@ -430,8 +431,8 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                                 </span>
                               ))}
                             </div>
-                            
-                            <button 
+
+                            <button
                               onClick={() => window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
@@ -445,7 +446,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
                 ))}
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 className="text-center py-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -461,7 +462,7 @@ export default function ComprehensivePricing2027(...args: any[]): any {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         className="relative z-10 px-6 pb-20"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -476,14 +477,14 @@ export default function ComprehensivePricing2027(...args: any[]): any {
               Get in touch with our experts to discuss pricing, implementation, and how these innovative services can drive your success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
               >
                 Contact Our Team
               </Link>
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
               >
                 Call +1 302 464 0950

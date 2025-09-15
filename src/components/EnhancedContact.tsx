@@ -1,36 +1,33 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  CheckCircle, 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
   AlertCircle,
   Clock,
   MessageSquare,
   Building,
   Globe
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface ContactFormData {
-
   name: string;
   email: string;
   phone: string;
   company: string;
   service: string;
   message: string;
-
 }
 
 interface ContactFormErrors {
-
   [key: string]: string;
-
 }
 
-export function EnhancedContact(...args: any[]): any {
-  const [formData, setFormData] = useState<any>({
+export function EnhancedContact() {
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     phone: '',
@@ -39,7 +36,7 @@ export function EnhancedContact(...args: any[]): any {
     message: ''
   });
 
-  const [errors, setErrors] = useState<any>({});
+  const [errors, setErrors] = useState<ContactFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -77,18 +74,18 @@ export function EnhancedContact(...args: any[]): any {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {
+  const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' }));
     }
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -98,7 +95,7 @@ export function EnhancedContact(...args: any[]): any {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -158,7 +155,7 @@ export function EnhancedContact(...args: any[]): any {
           >
             <CheckCircle className="w-10 h-10 text-white" />
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -167,7 +164,7 @@ export function EnhancedContact(...args: any[]): any {
           >
             Message Sent Successfully!
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -176,7 +173,7 @@ export function EnhancedContact(...args: any[]): any {
           >
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
-          
+
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -204,7 +201,7 @@ export function EnhancedContact(...args: any[]): any {
             Get in Touch
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our AI-powered solutions 
+            Ready to transform your business? Let's discuss how our AI-powered solutions
             can help you achieve your goals.
           </p>
         </motion.div>
@@ -217,7 +214,7 @@ export function EnhancedContact(...args: any[]): any {
             transition={{ delay: 0.2 }}
           >
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
-            
+
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -276,7 +273,7 @@ export function EnhancedContact(...args: any[]): any {
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -289,8 +286,8 @@ export function EnhancedContact(...args: any[]): any {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                    errors.name 
-                      ? 'border-red-500 focus:ring-red-500' 
+                    errors.name
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Enter your full name"
@@ -321,8 +318,8 @@ export function EnhancedContact(...args: any[]): any {
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-                    errors.email 
-                      ? 'border-red-500 focus:ring-red-500' 
+                    errors.email
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Enter your email address"
@@ -381,9 +378,9 @@ export function EnhancedContact(...args: any[]): any {
                   id="service"
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
-                  {services.map(service  => (
+                  {services.map(service => (
                     <option key={service.value} value={service.value}>
                       {service.label}
                     </option>
@@ -402,8 +399,8 @@ export function EnhancedContact(...args: any[]): any {
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
-                    errors.message 
-                      ? 'border-red-500 focus:ring-red-500' 
+                    errors.message
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
                   placeholder="Tell us about your project or inquiry..."
