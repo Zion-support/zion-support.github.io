@@ -9,6 +9,33 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
+    id: 'ai-governance-bootcamp',
+    title: 'New Bootcamp: Enterprise AI Governance (Oct 2025)',
+    summary:
+      'Hands-on governance bootcamp covering risk management, policy, evals, and controls for enterprise AI.',
+    href: '/updates/ai-governance-bootcamp',
+    date: '2025-09-15',
+    tag: 'Course',
+  },
+  {
+    id: 'agent-research-insights-2025q3',
+    title: 'Research: Agent Observability Insights (Q3 2025)',
+    summary:
+      'Key findings on monitoring agent behaviors, failure modes, and safe interventions at scale.',
+    href: '/updates/agent-observability-q3-2025',
+    date: '2025-09-14',
+    tag: 'Research',
+  },
+  {
+    id: 'zion-website-refresh',
+    title: 'Announcement: Website UX Refresh and Accessibility Upgrades',
+    summary:
+      'Improved navigation, better performance, and WCAG-focused accessibility enhancements across the site.',
+    href: '/updates/website-ux-refresh-2025',
+    date: '2025-09-13',
+    tag: 'Announcement',
+  },
+  {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
