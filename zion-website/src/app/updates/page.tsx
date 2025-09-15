@@ -1,8 +1,5 @@
 "use client"
-<<<<<<< HEAD
 import React from 'react'
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9e3
 import { siteUpdates } from '../../data/updates'
 
 export default function UpdatesPage() {
