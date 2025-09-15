@@ -16,12 +16,36 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Autonomous Incident Response v1.0',
+    summary:
+      'End-to-end automated incident detection, triage, and remediation workflows for AI systems.',
+    href: '/updates/autonomous-incident-response-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Guide: Shipping Eval-Ready AI Pipelines',
     summary:
       'Practical steps and templates to bake evals, canaries, and guardrails into your CI/CD for AI.',
     href: '/updates/eval-ready-ai-pipelines-guide',
     date: '2025-09-15',
     tag: 'Guide'
+  },
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Research Portal',
+    summary:
+      'Central hub for publications, datasets, and live benchmarks from Zion AI Lab.',
+    href: '/updates/ai-lab-research-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
   },
   {
     title: 'Case Study: 27% Latency Reduction with Hybrid Retrieval',

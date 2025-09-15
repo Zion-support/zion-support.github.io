@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 24
+  total_content_pieces: 27
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -525,6 +525,49 @@ content_index:
         incidents_reduction: "40%"
         permissions: "time-boxed"
         audits: "continuous"
+    - id: "ai-2026-enterprise-agent-risk-metrics"
+      type: "blog"
+      title: "AI 2026: Enterprise Agent Risk Metrics — Measuring Safety, Reliability, and ROI"
+      file_path: "/content/blog/ai-2026-enterprise-agent-risk-metrics.md"
+      url: "/blog/ai-2026-enterprise-agent-risk-metrics"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Risk", "Safety", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        mttm: "< 10 min"
+        incident_rate: "-40%"
+        audit_ready: true
+    - id: "ai-2026-governed-tool-use-case-studies"
+      type: "blog"
+      title: "AI 2026: Governed Tool Use — Real-World Case Studies"
+      file_path: "/content/blog/ai-2026-governed-tool-use-case-studies.md"
+      url: "/blog/ai-2026-governed-tool-use-case-studies"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Tool Use", "Safety", "Policy-as-Code", "Case Study", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "72%"
+        rollback_speed: "auto"
+        velocity_improvement: "+22%"
+    - id: "ai-2026-agent-risk-metrics-starter-kit"
+      type: "resource"
+      title: "AI 2026: Agent Risk Metrics Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-risk-metrics-starter-kit.md"
+      url: "/resources/ai-2026-agent-risk-metrics-starter-kit"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Risk", "Metrics", "Policy-as-Code", "Evals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        adoption_time: "< 1 day"
+        templates: 4
+        audit_schema: true
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
