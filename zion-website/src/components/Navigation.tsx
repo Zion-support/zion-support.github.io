@@ -45,9 +45,6 @@ export default function Navigation() {
             >
               <span className="inline-flex items-center gap-2">
                 {item.name}
-                {item.tag ? (
-                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
-                ) : null}
               </span>
             </a>
           ))}
@@ -92,9 +89,6 @@ export default function Navigation() {
                   >
                     <span className="inline-flex items-center gap-2">
                       {item.name}
-                      {item.tag ? (
-                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
-                      ) : null}
                     </span>
                   </a>
                 ))}
