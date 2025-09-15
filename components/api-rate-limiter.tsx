@@ -1,68 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-ShieldZapBarChart3CodeArrowRightCopyRefreshCwCheckCircleAlertTriangle
-
-export default function APIRateLimiterPage() {
-  const [endpointsetEndpoint] = useState('');
-  const [rateLimitsetRateLimit] = useState('100');
-  const [timeWindowsetTimeWindow] = useState('1m');
-  const [testResultsetTestResults] = useState<any[]>([]);
-  const [isTestingsetIsTesting] = useState(false);
-  const [apiKeysetApiKey] = useState('');
-
-
-  const timeWindows = [
-    { value: '1's', 'label: '1 'Second', 'description: 'Per second rate limiting' },
-    { value: '1'm', 'label: '1 'Minute', 'description: 'Per minute rate limiting' },
-    { value: '1'h', 'label: '1 'Hour', 'description: 'Per hour rate limiting' },
-    { value: '1'd', 'label: '1 'Day', 'description: 'Per day rate limiting' }
-  ];
-
-  const rateLimits = [
-    { value: '10'label: '10 'requests', 'description: 'Very strict' },
-    { value: '100'label: '100 'requests', 'description: 'Standard' },
-    { value: '1000'label: '1000 'requests', 'description: 'High volume' },
-    { value: '10000'label: '10000 'requests', 'description: 'Enterprise' }
-  ];
-
-  const generateApiKey = () => {
-    const key = 'zt_' + Math.random().toString(36).substr(29) + '_' + Date.now().toString(36);
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
-export default function APIRateLimiterPage() {
-  const [endpoint, setEndpoint] = useState('');
-  const [rateLimit, setRateLimit] = useState('100');
-  const [timeWindow, setTimeWindow] = useState('1m');
-  const [testResults, setTestResults] = useState<any[]>([]);
-  const [isTesting, setIsTesting] = useState(false);
-  const [apiKey, setApiKey] = useState('');
-
-  const timeWindows = [
-    { value: '1s', label: '1 Second', description: 'Per second rate limiting' },
-    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },
-    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },
-    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
-  ];
-
-  const rateLimits = [
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-
-  const generateApiKey = () => {
-    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
->>>>>>> origin/auto/autonomy-17186719616
     setApiKey(key);
   };
 
@@ -77,11 +12,6 @@ export default function APIRateLimiterPage() {
     
     // Simulate API calls to test rate limiting
     for (let i = 1; i <= limit + 5; i++) {
-<<<<<<< HEAD
-      await new Promise(resolve => setTimeout(resolve100));
-=======
-      await new Promise(resolve => setTimeout(resolve, 100));
->>>>>>> origin/auto/autonomy-17186719616
       
       const isAllowed = i <= limit;
       const status = isAllowed ? 'success' : 'rate_limited';
@@ -95,11 +25,6 @@ export default function APIRateLimiterPage() {
         responseTime: Math.random() * 100 + 50,
         headers: {
           'X-RateLimit-Limit': limit,
-<<<<<<< HEAD
-          'X-RateLimit-Remaining': Math.max(0limit - i),
-=======
-          'X-RateLimit-Remaining': Math.max(0, limit - i),
->>>>>>> origin/auto/autonomy-17186719616
           'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString()
         }
       });
@@ -141,11 +66,6 @@ export default function APIRateLimiterPage() {
     <>
       <Head>
         <title>API Rate Limiter - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Protect your APIs with intelligent rate limiting. Prevent abusensure fair usageand maintain optimal performance for all users." />
-=======
-        <meta name="description" content="Protect your APIs with intelligent rate limiting. Prevent abuse, ensure fair usage, and maintain optimal performance for all users." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="API Rate Limiter - Zion Tech Group" />
         <meta property="og:description" content="Protect your APIs with intelligent rate limiting and prevent abuse." />
       </Head>
@@ -163,11 +83,6 @@ export default function APIRateLimiterPage() {
             API Rate Limiter
           </h1>
           <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usageprevent DDoS attacks
-=======
-            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, 
->>>>>>> origin/auto/autonomy-17186719616
             and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
           </p>
         </div>
@@ -203,11 +118,6 @@ export default function APIRateLimiterPage() {
                     type="text"
                     value={endpoint}
                     onChange={(e) => setEndpoint(e.target.value)}
-<<<<<<< HEAD
-                    placeholder="e.g./api/users/api/data/api/analytics"
-=======
-                    placeholder="e.g., /api/users, /api/data, /api/analytics"
->>>>>>> origin/auto/autonomy-17186719616
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
@@ -321,11 +231,6 @@ export default function APIRateLimiterPage() {
 
               {testResults.length > 0 ? (
                 <div className="space-y-3 max-h-96 overflow-y-auto">
-<<<<<<< HEAD
-                  {testResults.map((resultindex) => (
-=======
-                  {testResults.map((result, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
@@ -409,11 +314,6 @@ export default function APIRateLimiterPage() {
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-white mb-4">Flexible Rules</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                Configure different limits for different endpointsusersor IP addresses.
-=======
-                Configure different limits for different endpoints, users, or IP addresses.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
 
@@ -421,11 +321,6 @@ export default function APIRateLimiterPage() {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-4">Real-time Analytics</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                Monitor API usageidentify patternsand optimize your rate limiting strategy.
-=======
-                Monitor API usage, identify patterns, and optimize your rate limiting strategy.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
 
@@ -433,11 +328,6 @@ export default function APIRateLimiterPage() {
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                Simple REST API and SDKs for Node.jsPythonGoand other popular languages.
-=======
-                Simple REST API and SDKs for Node.js, Python, Go, and other popular languages.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
 
@@ -478,11 +368,6 @@ const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
 // Make API request with rate limiting
-<<<<<<< HEAD
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`{
-=======
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
->>>>>>> origin/auto/autonomy-17186719616
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
@@ -490,13 +375,6 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   }
 });
 
-<<<<<<< HEAD
-console.log('Response:'response.data);
-console.log('Rate Limit Info:'{
-=======
-console.log('Response:', response.data);
-console.log('Rate Limit Info:', {
->>>>>>> origin/auto/autonomy-17186719616
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
@@ -506,9 +384,6 @@ console.log('Rate Limit Info:', {
               <Button
                 onClick={() => copyToClipboard(`const axios = require('axios');
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 // Make API request with rate limiting
@@ -527,13 +402,6 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   }
 });
 
-<<<<<<< HEAD
-console.log('Response:'response.data);
-console.log('Rate Limit Info:'{
-=======
-console.log('Response:', response.data);
-console.log('Rate Limit Info:', {
->>>>>>> origin/auto/autonomy-17186719616
   limit: response.headers['x-ratelimit-limit'],
   remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']
@@ -561,31 +429,11 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
-<<<<<<< HEAD
-    'Authorization': 'f', 'Bearer {api_key}',
-=======
-    'Authorization': f'Bearer {api_key}',
->>>>>>> origin/auto/autonomy-17186719616
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 }
 
 response = requests.get(
-<<<<<<< HEAD
-    'f', 'https://api.zion.tech{endpoint}',
-    headers=headers
-)
-
-print('Response:'response.json())
-print('Rate Limit Info:'{
-=======
-    f'https://api.zion.tech{endpoint}',
-    headers=headers
-)
-
-print('Response:', response.json())
-print('Rate Limit Info:', {
->>>>>>> origin/auto/autonomy-17186719616
     'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')
@@ -600,31 +448,11 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
-<<<<<<< HEAD
-    'Authorization': 'f', 'Bearer {api_key}',
-=======
-    'Authorization': f'Bearer {api_key}',
->>>>>>> origin/auto/autonomy-17186719616
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 }
 
 response = requests.get(
-<<<<<<< HEAD
-    'f', 'https://api.zion.tech{endpoint}',
-    headers=headers
-)
-
-print('Response:'response.json())
-print('Rate Limit Info:'{
-=======
-    f'https://api.zion.tech{endpoint}',
-    headers=headers
-)
-
-print('Response:', response.json())
-print('Rate Limit Info:', {
->>>>>>> origin/auto/autonomy-17186719616
     'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')

@@ -11,28 +11,11 @@ export const useAnalytics = () => {
 };
 
 export const AnalyticsProvider = ({ children }) => {
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
-  const [events, setEvents] = useState([]);
-
-  const trackEvent = (eventName, properties = {}) => {
-    if (analyticsEnabled) {
-      const event = {
-        name: eventName,
-        properties,
-        timestamp: new Date().toISOString()
-      };
-      setEvents(prev => [...prev, event]);
-      
-      // Send to analytics service
-      console.log('Analytics Event:', event);
-    }
   };
 
   const value = {
-    analyticsEnabled,
-    setAnalyticsEnabled,
+    analytics,
     trackEvent,
-    events
   };
 
   return (

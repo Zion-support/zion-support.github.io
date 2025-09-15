@@ -6,12 +6,6 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -71,25 +65,12 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
-<<<<<<< HEAD
-        "Content-Type": "application/json"},
-=======
-        "Content-Type": "application/json",
-      },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
-<<<<<<< HEAD
-        temperature: 0.7})});
-=======
-        temperature: 0.7,
-      }),
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (!response.ok) {
       const errorData = await response.json();
@@ -121,21 +102,9 @@ serve(async (req) => {
 
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
-<<<<<<< HEAD
-      headers: { ...corsHeaders, "Content-Type": "application/json" }});
-=======
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Error in personalize-email function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
-<<<<<<< HEAD
-      headers: { ...corsHeaders, "Content-Type": "application/json" }});
-=======
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });

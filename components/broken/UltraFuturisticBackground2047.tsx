@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseRefuseState } from 'react';
-import { motion } from 'framer-motion';
-
-const UltraFuturisticBackground2047: React.FC = () => {
-  const [isClientsetIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }[]);
-=======
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-
-const UltraFuturisticBackground2047: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!isClient) {
     return (
@@ -38,14 +16,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 opacity-20"
           animate={{
-<<<<<<< HEAD
-            rotate: [0360],
-            scale: [1.21]}}
-=======
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 20,
             repeat: Infinity as any,
@@ -58,14 +28,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 opacity-15"
           animate={{
-<<<<<<< HEAD
-            rotate: [360],
-            scale: [10.81]}}
-=======
-            rotate: [360, 0],
-            scale: [1, 0.8, 1],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 15,
             repeat: Infinity as any,
@@ -79,14 +41,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute bottom-32 left-1/4 w-16 h-16 opacity-10"
           animate={{
-<<<<<<< HEAD
-            y: [0-30],
-            x: [020]}}
-=======
-            y: [0, -30, 0],
-            x: [0, 20, 0],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 8,
             repeat: Infinity as any,
@@ -99,14 +53,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
           animate={{
-<<<<<<< HEAD
-            y: [040],
-            x: [0-30]}}
-=======
-            y: [0, 40, 0],
-            x: [0, -30, 0],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 12,
             repeat: Infinity as any,
@@ -132,12 +78,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-0 left-0 w-full h-full opacity-20"
           animate={{
-<<<<<<< HEAD
-            y: [0-100]}}
-=======
-            y: [0, -100],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 30,
             repeat: Infinity as any,
@@ -145,23 +85,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
           }}
         >
           <div className="flex space-x-8 justify-center">
-<<<<<<< HEAD
-            {[...Array(20)].map((_i) => (
-=======
-            {[...Array(20)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={i}
                 className="w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent"
                 animate={{
-<<<<<<< HEAD
-                  height: [326432],
-                  opacity: [0.310.3]}}
-=======
-                  height: [32, 64, 32],
-                  opacity: [0.3, 1, 0.3],
-                }}
->>>>>>> origin/auto/autonomy-17186719616
                 transition={{
                   duration: 3,
                   repeat: Infinity as any,
@@ -186,12 +113,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
           animate={{
-<<<<<<< HEAD
-            y: [01000]}}
-=======
-            y: [0, 1000],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 8,
             repeat: Infinity as any,
@@ -203,14 +124,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-<<<<<<< HEAD
-            scale: [120],
-            opacity: [10]}}
-=======
-            scale: [1, 20],
-            opacity: [1, 0],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 4,
             repeat: Infinity as any,
@@ -223,14 +136,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-<<<<<<< HEAD
-            scale: [15],
-            opacity: [10]}}
-=======
-            scale: [1, 15],
-            opacity: [1, 0],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 4,
             repeat: Infinity as any,
@@ -244,14 +149,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-<<<<<<< HEAD
-            scale: [10],
-            opacity: [10]}}
-=======
-            scale: [1, 10],
-            opacity: [1, 0],
-          }}
->>>>>>> origin/auto/autonomy-17186719616
           transition={{
             duration: 4,
             repeat: Infinity as any,
@@ -266,11 +163,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
-<<<<<<< HEAD
-          clip-path: polygon(50% 0%100% 25%100% 75%50% 100% 75%0% 25%);
-=======
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
->>>>>>> origin/auto/autonomy-17186719616
         }
       `}</style>
     </>

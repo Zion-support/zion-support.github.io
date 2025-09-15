@@ -1,3 +1,4 @@
+=======
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -238,6 +239,7 @@ const QuantumConsciousness2027: React.FC = () => {
       </main>
       
       <Footer />
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     </div>
   );
 };

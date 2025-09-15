@@ -1,85 +1,26 @@
 
-<<<<<<< HEAD
-import { CardContent } from "@/components/ui/card";
-=======
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 
 export function AnalyticsSummary() {
-<<<<<<< HEAD
-  const { data: statsisLoading } = useQuery({
-    queryKey: ['analytics-summary'],
-    queryFn: async () => {
-      // Get total page views
-      const { data: pageViewsDataerror: pageViewsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_type'page_view')
-=======
-  const { data: stats, isLoading } = useQuery({
-    queryKey: ['analytics-summary'],
-    queryFn: async () => {
-      // Get total page views
-      const { data: pageViewsData, error: pageViewsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_type', 'page_view')
->>>>>>> origin/auto/autonomy-17186719616
         .single();
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
       
       // Get unique visitors (by counting distinct user IDs)
-<<<<<<< HEAD
-      const { data: uniqueVisitorsDataerror: uniqueVisitorsError } = await supabase
-        .from('analytics_events')
-        .select('user_id')
-        .eq('event_type'page_view')
-        .is('user_id'not.null');
-=======
-      const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
-        .from('analytics_events')
-        .select('user_id')
-        .eq('event_type', 'page_view')
-        .is('user_id', 'not.null');
->>>>>>> origin/auto/autonomy-17186719616
         
       if (uniqueVisitorsError) throw uniqueVisitorsError;
       
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []);
       
       // Get conversion count
-<<<<<<< HEAD
-      const { data: conversionsDataerror: conversionsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_type'conversion')
-=======
-      const { data: conversionsData, error: conversionsError } = await supabase
-        .from('analytics_events')
-        .select('count')
-        .eq('event_type', 'conversion')
->>>>>>> origin/auto/autonomy-17186719616
         .single();
         
       if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
       
       // Get most recent event to calculate "last updated"
-<<<<<<< HEAD
-      const { data: lastEventDataerror: lastEventError } = await supabase
-        .from('analytics_events')
-        .select('created_at')
-        .order('created_at'{ ascending: false })
-=======
-      const { data: lastEventData, error: lastEventError } = await supabase
-        .from('analytics_events')
-        .select('created_at')
-        .order('created_at', { ascending: false })
->>>>>>> origin/auto/autonomy-17186719616
         .limit(1)
         .single();
         
@@ -89,16 +30,6 @@ export function AnalyticsSummary() {
         totalPageViews: pageViewsData?.count || 0,
         uniqueVisitors: uniqueUserIds.size || 0,
         conversions: conversionsData?.count || 0,
-<<<<<<< HEAD
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null};
-    },
-    refetchInterval: 300000// Refetch every 5 minutes
-=======
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null,
-      };
-    },
-    refetchInterval: 300000, // Refetch every 5 minutes
->>>>>>> origin/auto/autonomy-17186719616
   });
   
   // Calculate conversion rate
@@ -135,11 +66,6 @@ export function AnalyticsSummary() {
           isLoading ? (
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />
           ) : stats?.lastUpdated ? (
-<<<<<<< HEAD
-            formatDistanceToNow(stats.lastUpdated{ addSuffix: true })
-=======
-            formatDistanceToNow(stats.lastUpdated, { addSuffix: true })
->>>>>>> origin/auto/autonomy-17186719616
           ) : 'Never'
         }
         icon={
@@ -156,11 +82,6 @@ interface StatCardProps {
   icon: React.ReactNode;
 }
 
-<<<<<<< HEAD
-function StatCard({ titlevalueicon }: StatCardProps) {
-=======
-function StatCard({ title, value, icon }: StatCardProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">

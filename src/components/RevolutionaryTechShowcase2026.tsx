@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -531,9 +529,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <p className="text-indigo-200 text-sm text-center">Quantum-enhanced neural networks</p>
             </div>
           </div>
-<<<<<<< HEAD
-        </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-f175
 =======
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
