@@ -34,43 +34,43 @@ CONFLICT_RESOLUTIONS=0
 SKIPPED_BRANCHES=0
 TOTAL_PROCESSED=0
 
-# Function to resolve conflicts in a file
+# Function to resolve conflicts in a file (safe, generic markers cleanup)
 resolve_conflicts() {
     local file="$1"
     local branch="$2"
-    
+
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/        else
-            log_message "📝 Regular file, attempting to merge both versions..."
-            sed -i '/        fi
-    if grep -q "        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
+
+    if grep -q "^<<<<<<< " "$file"; then
         cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Enhanced conflict resolution strategy
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            log_message "📦 Critical file detected, keeping main version and merging dependencies..."
-            sed -i '/            sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-            log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/            sed -i '/        elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
-            log_message "🎨 CSS file detected, merging styles..."
-            sed -i '/            sed -i '/        elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
-            log_message "💻 Code file detected, attempting intelligent merge..."
-            sed -i '/            sed -i '/        elif [[ "$file" == "*.yml" || "$file" == "*.yaml" ]]; then
-            log_message "📋 YAML file detected, keeping main version..."
-            sed -i '/            sed -i '/        elif [[ "$file" == "*.md" ]]; then
-            log_message "📝 Markdown file detected, merging content..."
-            sed -i '/            sed -i '/        elif [[ "$file" == "*.json" ]]; then
-            log_message "📊 JSON file detected, keeping main version..."
-            sed -i '/            sed -i '/        else
-            log_message "📝 Regular file, removing conflict markers..."
-            sed -i '/            sed -i '/        fi
-        
+
+        case "$file" in
+            package.json|package-lock.json)
+                log_message "📦 Package file: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            next.config.js|tsconfig.json|tailwind.config.js)
+                log_message "⚙️ Config file: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            *.yml|*.yaml)
+                log_message "📋 YAML: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            *.md)
+                log_message "📝 Markdown: keep incoming if ours empty"
+                # Fallback to ours to avoid broken docs
+                git checkout --ours -- "$file" || true
+                ;;
+            *)
+                log_message "🧩 Generic file: keep ours"
+                git checkout --ours -- "$file"
+                ;;
+        esac
+
+        # Remove conflict markers if any remain
+        sed -i '/^<<<<<<< /,/^>>>>>>> /d' "$file"
+
         log_message "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
