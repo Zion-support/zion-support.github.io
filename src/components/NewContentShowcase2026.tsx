@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-9b49
 
 const NewContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
