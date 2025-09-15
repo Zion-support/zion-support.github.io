@@ -87,6 +87,12 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Investors = React.lazy(() => import('./pages/Investors'));
 const Press = React.lazy(() => import('./pages/Press'));
 
+// Import new pages
+const NewBlogPost = React.lazy(() => import('./pages/NewBlogPost'));
+const NewCaseStudy = React.lazy(() => import('./pages/NewCaseStudy'));
+const EnhancedHomePage = React.lazy(() => import('./pages/EnhancedHomePage'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -124,11 +130,13 @@ function App() {
           <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<EnhancedHomePage />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<EnhancedContact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/blog/ai-revolution-2025" element={<NewBlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/docs" element={<Documentation />} />
                 <Route path="/careers" element={<Careers />} />
@@ -137,10 +145,12 @@ function App() {
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/pricing" element={<Pricing />} />
-                <Route path="/services" element={<Services />} />
+                <Route path="/services" element={<EnhancedServicesPage />} />
+                <Route path="/services/legacy" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/case-studies/manufacturing-ai-transformation" element={<NewCaseStudy />} />
                 <Route path="/white-papers" element={<WhitePapers />} />
                 <Route path="/webinars" element={<Webinars />} />
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
