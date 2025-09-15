@@ -15,11 +15,25 @@ const latest2025 = [
     color: "indigo",
   },
   {
+    date: "September 09, 2025",
+    category: "CLOUD",
+    title: "DevOps Flow adds zero-downtime multi-region blue/green deployments",
+    slug: "/news/devops-flow-multi-region-blue-green",
+    color: "emerald",
+  },
+  {
     date: "September 02, 2025",
     category: "QUANTUM",
     title: "Hybrid quantum-classical pipeline boosts optimization accuracy by 38%",
     slug: "/news/hybrid-quantum-classical-pipeline",
     color: "purple",
+  },
+  {
+    date: "August 28, 2025",
+    category: "SECURITY",
+    title: "SecureShield Audit introduces continuous attack surface monitoring",
+    slug: "/news/secureshield-continuous-asm",
+    color: "rose",
   },
   {
     date: "August 21, 2025",
