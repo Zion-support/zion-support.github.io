@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-agent-orchestration-enterprise-guide',
+    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
+    summary:
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+  },
+  {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
     title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
     summary:

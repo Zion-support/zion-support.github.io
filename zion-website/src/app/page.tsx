@@ -110,11 +110,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: AI Autonomous Testing Framework v1.0 —
-              <a href="/updates/ai-autonomous-testing-framework-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">testing framework</a>
+              New: Real-Time AI Analytics Dashboard v3.0 —
+              <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
-              Enterprise Retrieval Observability 2026 —
-              <a href="/updates/enterprise-retrieval-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read report</a>
+              AI Agent Orchestration Platform v2.0 —
+              <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>

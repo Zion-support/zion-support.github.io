@@ -9,6 +9,22 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
+    title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
+    summary:
+      'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
+    href: '/updates/real-time-ai-analytics-dashboard-v3-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Agent Orchestration Platform v2.0',
+    summary:
+      'Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.',
+    href: '/updates/ai-agent-orchestration-platform-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: AI Autonomous Testing Framework v1.0',
     summary:
       'Self-healing test automation with intelligent test generation, execution, and maintenance for enterprise applications.',

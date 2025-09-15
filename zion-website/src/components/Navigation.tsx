@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/ai-autonomous-testing-framework-1-0' },
+  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
   { name: 'Contact', href: '/contact' },
 ]
 
