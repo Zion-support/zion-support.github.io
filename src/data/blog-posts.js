@@ -89,6 +89,52 @@ export const blogPosts = [
     imageUrl: "/images/blog/integration-strategies.jpg",
     slug: "integration-strategies-it-asset-management-systems"
   }
+  ,
+  {
+    id: 7,
+    title: "Enterprise AI Security Blueprint (2025)",
+    excerpt: "Layered controls for model, data, runtime, and supply chain risk.",
+    content: "In 2025, enterprise AI systems require a holistic security blueprint across data pipelines, model lifecycle, runtime isolation, and vendor supply chains. This guide outlines practical guardrails, policy-as-code, and continuous compliance.",
+    author: "Priya Natarajan",
+    authorRole: "Head of AI Security",
+    publishDate: "2025-09-12",
+    readTime: "9 min read",
+    category: "Security",
+    tags: ["AI Security", "Model Risk", "Supply Chain", "Compliance"],
+    featured: true,
+    imageUrl: "/images/blog/enterprise-ai-security-blueprint.jpg",
+    slug: "ai-2025-enterprise-ai-security-blueprint"
+  },
+  {
+    id: 8,
+    title: "Multimodal Agents in the Enterprise (2025)",
+    excerpt: "Deploy agents that see, hear, and act for real outcomes.",
+    content: "Multimodal enterprise agents combine vision, speech, and action models with deterministic workflows. We cover reference architectures, RAG+tools design, evaluation, and safe rollout patterns across functions.",
+    author: "Daniel Martinez",
+    authorRole: "Principal AI Architect",
+    publishDate: "2025-09-10",
+    readTime: "11 min read",
+    category: "AI & Machine Learning",
+    tags: ["Agents", "Multimodal", "RAG", "Tool Use"],
+    featured: true,
+    imageUrl: "/images/blog/multimodal-enterprise-agents.jpg",
+    slug: "ai-2025-multimodal-agents-in-the-enterprise"
+  },
+  {
+    id: 9,
+    title: "AI 2026: Autonomous Finance Operating System",
+    excerpt: "Real-time cash, autonomous close, and policy-as-code guardrails.",
+    content: "Finance is shifting to continuous, autonomous operations. This primer covers event-driven ledgers, policy-as-code, automated close, and linking planning to execution with AI services.",
+    author: "Michael Zhao",
+    authorRole: "CFO-in-Residence",
+    publishDate: "2025-09-08",
+    readTime: "8 min read",
+    category: "Finance",
+    tags: ["FinOps", "Autonomous Close", "Policy-as-Code", "Realtime"],
+    featured: false,
+    imageUrl: "/images/blog/autonomous-finance-os.jpg",
+    slug: "ai-2026-autonomous-finance-operating-system"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
