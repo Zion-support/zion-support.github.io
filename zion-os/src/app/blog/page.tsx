@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-safety-governance-2025',
+      title: 'AI Safety & Governance 2025: Practical Controls for Enterprise Adoption',
+      excerpt: 'Pragmatic policy, evaluation, and approval workflows to deploy AI safely at scale.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/ai-safety-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -74,6 +85,26 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
+    },
+    {
+      id: 'agentic-rpa-automation',
+      title: 'From RPA to Agentic Automation: Building Reliable Autonomous Workflows',
+      excerpt: 'Design patterns that add tools, feedback, and verification for resilient automations.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-08',
+      readTime: '7 min read',
+      image: '/blog/agentic-rpa.jpg'
+    },
+    {
+      id: 'edge-ai-iot-2025',
+      title: 'Edge AI for IoT in 2025: Real‑Time Intelligence Under Constraints',
+      excerpt: 'Compact models, streaming inference, and OTA safety for factory and mobility use cases.',
+      category: 'Research & Development',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-03',
+      readTime: '9 min read',
+      image: '/blog/edge-ai-iot.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',
@@ -192,24 +223,24 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/sovereign-ai-commerce-2025"
+            href="/blog/ai-safety-governance-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+            aria-label="Read: AI Safety & Governance 2025: Practical Controls for Enterprise Adoption"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SA
+                SG
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Ethics</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
+                  AI Safety & Governance 2025: Practical Controls for Enterprise Adoption
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+                  Pragmatic evaluation and approval workflows to ship AI safely across the enterprise.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
