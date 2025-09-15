@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content)
+  {
+    title: 'Blueprint: Agent Budgeting & Cost Controls (2026)',
+    summary:
+      'Set budgets, enforce spend guardrails, and route by cost-quality tradeoffs with audit evidence.',
+    href: '/updates/agent-budgeting-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
