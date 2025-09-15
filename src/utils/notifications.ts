@@ -1,30 +1,9 @@
-<<<<<<< HEAD
->>>>>>> main
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
 // Notification utilities
 interface NotificationOptions {
-=======
-/**
- * Notification utility for handling browser notifications
- * with fallbacks and error handling
- */
-
-export interface NotificationOptions {
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 =======
 // Notification utilities
@@ -50,21 +29,7 @@ interface NotificationOptions {
   icon?: string;
   badge?: string;
   tag?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
   data?: any;
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
@@ -90,68 +55,12 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
-<<<<<<< HEAD
->>>>>>> main
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
         return null;
       }
-=======
-  requireInteraction?: boolean;
-  silent?: boolean;
-  vibrate?: number[];
-}
-
-export const notifications = {
-  /**
-   * Check if notifications are supported
-   */
-  isSupported: (): boolean => {
-    return typeof window !== 'undefined' && 'Notification' in window;
-  },
-
-  /**
-   * Check if notifications are permitted
-   */
-  getPermission: (): NotificationPermission => {
-    if (!notifications.isSupported()) return 'denied';
-    return Notification.permission;
-  },
-
-  /**
-   * Request notification permission
-   */
-  requestPermission: async (): Promise<NotificationPermission> => {
-    if (!notifications.isSupported()) return 'denied';
-    
-    try {
-      const permission = await Notification.requestPermission();
-      return permission;
-    } catch (error) {
-      console.warn('Failed to request notification permission:', error);
-      return 'denied';
-    }
-  },
-
-  /**
-   * Show a notification
-   */
-  show: (options: NotificationOptions): Notification | null => {
-    if (!notifications.isSupported()) {
-      console.warn('Notifications not supported');
-      return null;
-    }
-
-    if (Notification.permission !== 'granted') {
-      console.warn('Notification permission not granted');
-      return null;
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 =======
   data?: any;
@@ -165,22 +74,15 @@ export const notifications = {
   actions?: NotificationAction[];
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ToastOptions {
   message: string;
   type?: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'top-center' | 'bottom-center';
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 interface NotificationAction {
   action: string;
   title: string;
   icon?: string;
-<<<<<<< HEAD
->>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 }
@@ -188,8 +90,6 @@ interface NotificationAction {
 class NotificationManager {
   private permission: NotificationPermission = 'default';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   constructor() {
     this.checkPermission();
   }
@@ -223,16 +123,11 @@ class NotificationManager {
       console.error('Error requesting notification permission:', error);
       return false;
     }
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   async requestPermission(): Promise<NotificationPermission> {
     if ('Notification' in window) {
       this.permission = await Notification.requestPermission();
     }
     return this.permission;
-<<<<<<< HEAD
->>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   }
@@ -244,23 +139,16 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const hasPermission = await this.requestPermission();
       if (!hasPermission) {
         console.warn('Notification permission not granted');
         return null;
       }
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
         return null;
       }
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
@@ -282,44 +170,21 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
-<<<<<<< HEAD
->>>>>>> main
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions
-=======
-<<<<<<< HEAD
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
-<<<<<<< HEAD
 =======
-        requireInteraction: options.requireInteraction || false,
-        silent: options.silent || false,
-        vibrate: options.vibrate
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
@@ -344,20 +209,6 @@ class NotificationManager {
 
       return notification;
     } catch (error) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
@@ -368,11 +219,6 @@ class NotificationManager {
     }
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -385,31 +231,6 @@ class NotificationManager {
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
 =======
-      console.warn('Failed to show notification:', error);
-      return null;
-    }
-  },
-
-  /**
-   * Show a success notification
-   */
-  success: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/success.png',
-      tag: 'success'
-    });
-  },
-
-  /**
-   * Show an error notification
-   */
-  error: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
 =======
 >>>>>>> main
 =======
@@ -419,8 +240,6 @@ class NotificationManager {
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   showToast(options: ToastOptions): void {
     // Create toast element
     const toast = document.createElement('div');
@@ -551,9 +370,6 @@ const notifications = new NotificationManager();
 export default notifications;
 export { NotificationManager };
 export type { NotificationOptions, ToastOptions };
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -565,8 +381,6 @@ export type { NotificationOptions, ToastOptions };
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
@@ -581,17 +395,7 @@ export type { NotificationOptions, ToastOptions };
       body,
       icon: '/icons/error.png',
       tag: 'error',
-<<<<<<< HEAD
->>>>>>> main
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
       requireInteraction: true,
     });
   }
@@ -617,39 +421,6 @@ export type { NotificationOptions, ToastOptions };
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
-=======
-      requireInteraction: true
-    });
-  },
-
-  /**
-   * Show an info notification
-   */
-  info: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/info.png',
-      tag: 'info'
-    });
-  },
-
-  /**
-   * Show a warning notification
-   */
-  warning: (title: string, body?: string): Notification | null => {
-    return notifications.show({
-      title,
-      body,
-      icon: '/icons/warning.png',
-      tag: 'warning'
-    });
-  }
-};
-
-export default notifications;
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 =======
 =======
@@ -678,9 +449,7 @@ export default notifications;
 }
 
 export const notificationManager = new NotificationManager();
-<<<<<<< HEAD
 export default notificationManager;
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
 =======
 export default notificationManager;

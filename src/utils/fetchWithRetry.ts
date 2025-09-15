@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Fetch utility with retry logic and error handling
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Fetch with retry utility for handling network requests with automatic retries
 
 interface FetchWithRetryOptions {
@@ -25,15 +16,6 @@ const defaultOptions: Required<FetchWithRetryOptions> = {
 };
 
 =======
-// Fetch with retry utility for better error handling
-interface FetchWithRetryOptions {
-  retries?: number;
-  delay?: number;
-  timeout?: number;
-}
-
->>>>>>> main
-=======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
@@ -44,12 +26,6 @@ export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const { retries, delay, backoff, timeout, ...fetchOptions } = {
     ...defaultOptions,
     ...options
@@ -75,14 +51,6 @@ export const fetchWithRetry = async (
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
 
-=======
-  const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
-  
-=======
-/**
- * Fetch utility with retry logic and error handling
- */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 
 interface FetchWithRetryOptions {
   retries?: number;
@@ -106,30 +74,7 @@ export const fetchWithRetry = async (
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
-<<<<<<< HEAD
   const attemptFetch = async (attempt: number): Promise<Response> => {
-=======
-  try {
-    const response = await fetch(url, {
-      ...options,
-      signal: controller.signal,
-    });
-    clearTimeout(timeoutId);
-    return response;
-  } catch (error) {
-    clearTimeout(timeoutId);
-    throw error;
-  }
-}
-
-export async function fetchWithRetry(
-  url: string,
-  options: FetchOptions = {}
-): Promise<Response> {
-  const { retry = {}, timeout = 30000, ...fetchOptions } = options;
-  const retryOptions = { ...DEFAULT_RETRY_OPTIONS, ...retry };
-
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   let lastError: Error;
   let attempt = 0;
 
@@ -151,13 +96,9 @@ export async function fetchWithRetry(
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-<<<<<<< HEAD
 
       return response;
-=======
-<<<<<<< HEAD
       
->>>>>>> main
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -169,12 +110,6 @@ export async function fetchWithRetry(
     } catch (error) {
       lastError = error as Error;
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Don't retry on the last attempt
       if (attempt === retries) {
         break;
@@ -191,22 +126,13 @@ export async function fetchWithRetry(
   }
 
   throw lastError || new Error('Fetch failed after all retries');
-=======
-      if (attempt === retries) {
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
     } catch (error) {
       clearTimeout(timeoutId);
 
-<<<<<<< HEAD
       if (attempt < retries) {
         console.warn(`Fetch attempt ${attempt + 1} failed, retrying in ${retryDelay}ms:`, error);
         await new Promise(resolve => setTimeout(resolve, retryDelay * attempt));
         return attemptFetch(attempt + 1);
-=======
-      // Check if we should retry this error
-      if (attempt === retryOptions.maxRetries || !retryOptions.retryCondition(lastError, attempt)) {
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
         throw lastError;
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
       }
@@ -215,15 +141,7 @@ export async function fetchWithRetry(
     }
   };
 
-<<<<<<< HEAD
   return attemptFetch(0);
-=======
-    attempt++;
-  }
-
-  throw lastError!;
-<<<<<<< HEAD
->>>>>>> main
 =======
 }
 
@@ -338,4 +256,3 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 };
 
-export default fetchWithRetry;

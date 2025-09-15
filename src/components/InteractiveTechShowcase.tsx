@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
@@ -26,21 +17,10 @@ const InteractiveTechShowcase: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       link: "/pages/AdvancedAITransformation2026"
-<<<<<<< HEAD
     },
     {
       id: 1,
-<<<<<<< HEAD
-=======
-      link: "/pages/AIInnovationHub2026"
-    },
-    {
-      id: 1,
->>>>>>> cursor/create-and-deploy-new-content-f977
       name: "Quantum Computing 2026",
       description: "Exponential computational power with quantum algorithms and quantum supremacy",
       icon: "⚡",
@@ -257,10 +237,7 @@ const InteractiveTechShowcase: React.FC = () => {
       description: "Revolutionary AI technologies with consciousness and emotional intelligence",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
-<<<<<<< HEAD
       stats: { performance: "1000x", accuracy: "99.9%", speed: "Real-time" }
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
     },
     {
       id: 2,
@@ -352,9 +329,6 @@ const InteractiveTechShowcase: React.FC = () => {
     },
     {
       id: 1,
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       name: "Quantum Computing Revolution",
       description: "Breakthrough quantum processors with 1000+ qubits and quantum supremacy",
@@ -422,20 +396,14 @@ const InteractiveTechShowcase: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Cards */}
           <div className="space-y-6">
-<<<<<<< HEAD
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.id}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 onClick={() => handleTechClick(index)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -449,9 +417,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   <div className="text-4xl">{tech.icon}</div>
                   <div className="text-left">
                     <h4 className="text-xl font-bold">{tech.name}</h4>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -469,10 +434,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   <div className="text-4xl">{tech.icon}</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                     <p className="text-sm opacity-90">{tech.description}</p>
                   </div>
@@ -484,9 +445,6 @@ const InteractiveTechShowcase: React.FC = () => {
                     />
                   )}
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               </motion.button>
             ))}
           </div>
@@ -511,11 +469,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 {/* Features Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
-=======
-                    <p className="text-sm opacity-90">{tech.description}</p>
-                  </div>
-                  {activeTech === tech.id && (
->>>>>>> cursor/create-and-deploy-new-content-f977
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -523,7 +476,6 @@ const InteractiveTechShowcase: React.FC = () => {
                     />
                   )}
                 </div>
-<<<<<<< HEAD
 
                 {/* Performance Stats */}
                 <div className="grid grid-cols-3 gap-4">
@@ -584,9 +536,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 View Analytics
               </button>
             </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
           </div>
 =======
@@ -658,10 +607,6 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         {/* Technology Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-8">
           <motion.div
@@ -700,10 +645,6 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-4xl font-bold text-orange-400 mb-2">2026</div>
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
@@ -754,5 +695,6 @@ const InteractiveTechShowcase: React.FC = () => {
     </div>
   );
 };
+
 
 export default InteractiveTechShowcase;

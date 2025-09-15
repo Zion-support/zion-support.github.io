@@ -328,3 +328,5 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
           ))}
         </div>
 
+
+export default ContentShowcase;

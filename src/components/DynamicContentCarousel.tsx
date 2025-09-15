@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
-<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -49,70 +48,11 @@ const DynamicContentCarousel: React.FC = () => {
       link: "/pages/QuantumNeuralFusion2026",
       gradient: "from-blue-600 to-indigo-600",
       bgGradient: "from-blue-600/30 to-indigo-600/30"
-<<<<<<< HEAD
-=======
-=======
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "🧠 Synthetic Intelligence Revolution",
-      description: "Experience the next generation of AI that transcends traditional limitations and evolves autonomously.",
-      link: "/pages/SyntheticIntelligence2026",
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🧠"
-    },
-    {
-      id: 2,
-      title: "⚛️ Quantum-Neural Fusion",
-      description: "Discover the revolutionary convergence of quantum computing and neural networks for exponential processing power.",
-      link: "/pages/QuantumNeuralFusion2026",
-      gradient: "from-cyan-600 to-blue-600",
-      icon: "⚛️"
-    },
-    {
-      id: 3,
-      title: "🧬 Neural Interface Technology",
-      description: "Bridge the gap between mind and machine with direct neural interfaces and brain-computer communication.",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      gradient: "from-emerald-600 to-teal-600",
-      icon: "🧬"
-    },
-    {
-      id: 4,
-      title: "🚀 AI Revolution 2025",
-      description: "Transform your business with cutting-edge AI solutions that reshape industries and create new opportunities.",
-      link: "/pages/AIRevolution2025",
-      gradient: "from-orange-600 to-red-600",
-      icon: "🚀"
-    },
-    {
-      id: 5,
-      title: "⚡ Quantum Computing Breakthrough",
-      description: "Experience quantum computing that solves impossible problems and unlocks unprecedented computational power.",
-      link: "/pages/QuantumComputingBreakthrough2026",
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "⚡"
-    },
-    {
-      id: 6,
-      title: "🌟 Next-Gen Technology Showcase",
-      description: "Explore comprehensive showcase of next-generation technologies reshaping our world.",
-      link: "/pages/NextGenTechShowcase2025",
-      gradient: "from-pink-600 to-rose-600",
-      icon: "🌟"
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
@@ -252,7 +192,6 @@ const DynamicContentCarousel: React.FC = () => {
 
         {/* Navigation Arrows */}
         <button
-<<<<<<< HEAD
           onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
         >
@@ -282,81 +221,12 @@ const DynamicContentCarousel: React.FC = () => {
               <div className="text-3xl mb-2">{slide.image}</div>
               <div className="text-sm font-semibold text-white">{slide.title.split(' ')[0]}</div>
             </a>
-=======
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors z-20"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors z-20"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        {/* Auto-play Toggle */}
-        <button
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors z-20"
-        >
-          {isAutoPlaying ? (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* Dots Indicator */}
-      <div className="flex justify-center space-x-2 mt-6">
-        {contentItems.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Content Preview Grid */}
-      <div className="mt-8">
-        <h4 className="text-lg font-semibold text-gray-700 mb-4 text-center">Explore All Revolutionary Technologies</h4>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {contentItems.map((item, index) => (
-            <button
-              key={item.id}
-              onClick={() => goToSlide(index)}
-              className={`p-3 rounded-lg text-center transition-all duration-300 ${
-                index === currentIndex 
-                  ? `bg-gradient-to-r ${item.gradient} text-white shadow-lg scale-105` 
-                  : 'bg-white hover:bg-gray-50 border border-gray-200'
-              }`}
-            >
-              <div className="text-2xl mb-1">{item.icon}</div>
-              <div className="text-xs font-medium truncate">{item.title.split(' ')[0]}</div>
-            </button>
->>>>>>> cursor/create-and-deploy-new-content-f977
           ))}
         </div>
       </div>
     </div>
   );
 };
+
 
 export default DynamicContentCarousel;

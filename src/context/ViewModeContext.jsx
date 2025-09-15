@@ -2,7 +2,6 @@ import React, { createContext, useContext, useState } from 'react';
 
 const ViewModeContext = createContext();
 
-<<<<<<< HEAD
 export const ViewModeProvider = ({ children }) => {
   const [viewMode, setViewMode] = useState('desktop');
 
@@ -23,8 +22,6 @@ export const ViewModeProvider = ({ children }) => {
   );
 };
 
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 export const useViewMode = () => {
   const context = useContext(ViewModeContext);
   if (!context) {
@@ -49,4 +46,3 @@ export const ViewModeProvider = ({ children }) => {
       {children}
     </ViewModeContext.Provider>
   );
-};

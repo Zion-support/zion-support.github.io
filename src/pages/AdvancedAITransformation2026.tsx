@@ -54,7 +54,6 @@ const AdvancedAITransformation2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Advanced AI Transformation 2026 | Zion Tech Group</title>
@@ -106,10 +105,6 @@ const AdvancedAITransformation2026: React.FC = () => {
                 every aspect of business and human interaction
               </p>
             </div>
-=======
-        </div>
-      </section>
->>>>>>> cursor/create-and-deploy-new-content-f977
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiSolutions.map((solution) => (
@@ -149,7 +144,6 @@ const AdvancedAITransformation2026: React.FC = () => {
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl mb-4 text-center">🏥</div>
@@ -208,10 +202,8 @@ const AdvancedAITransformation2026: React.FC = () => {
         </div>
       </div>
     </>
-=======
-    </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
   );
 };
+
 
 export default AdvancedAITransformation2026;

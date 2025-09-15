@@ -2,7 +2,6 @@ import React, { createContext, useContext, useState } from 'react';
 
 const LanguageContext = createContext();
 
-<<<<<<< HEAD
 export const LanguageProvider = ({ children, authState }) => {
   const [language, setLanguage] = useState('en');
   const [isLanguageDetected, setIsLanguageDetected] = useState(false);
@@ -26,8 +25,6 @@ export const LanguageProvider = ({ children, authState }) => {
   );
 };
 
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
@@ -58,4 +55,3 @@ export const LanguageProvider = ({ children, authState }) => {
       {children}
     </LanguageContext.Provider>
   );
-};

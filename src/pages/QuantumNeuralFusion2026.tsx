@@ -81,12 +81,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,9 +105,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
       {/* Core Technology Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
@@ -133,12 +124,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
               Experience the convergence of quantum computing and neural interfaces, 
               creating unprecedented capabilities that transcend traditional computational limits.
             </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Quantum superposition</li>
               <li>• Quantum entanglement</li>
@@ -168,15 +153,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -256,25 +232,15 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </motion.div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Quantum Stats */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
-=======
-<<<<<<< HEAD
       {/* Applications Section */}
       <div className="bg-gradient-to-r from-cyan-800/50 to-blue-800/50 py-20">
-=======
-      {/* Quantum Stats */}
-      <div className="py-16 bg-white/5 backdrop-blur-sm">
->>>>>>> cursor/create-and-deploy-new-content-8735
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -282,9 +248,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
             <p className="text-xl opacity-80">See how Quantum-Neural Fusion is transforming industries</p>
           </div>
           
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -337,8 +300,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {quantumStats.map((stat, index) => (
               <motion.div
@@ -354,17 +315,11 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 <div className="text-sm text-green-400 font-semibold">+{stat.improvement}</div>
               </motion.div>
             ))}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* Performance Metrics */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -435,11 +390,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
@@ -461,7 +411,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
             </ul>
           </motion.div>
         </div>
-<<<<<<< HEAD
 
         {/* Breakthrough Applications */}
         <motion.div
@@ -607,8 +556,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       {/* Fusion Technologies Carousel */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -676,9 +623,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
             <button
               onClick={() => setActiveSection((prev) => (prev - 1 + fusionTechnologies.length) % fusionTechnologies.length)}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             >
               Start Quantum Journey →
@@ -690,16 +634,7 @@ const QuantumNeuralFusion2026: React.FC = () => {
               Explore Quantum Computing
             </a>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-=======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
@@ -722,7 +657,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f977
       </div>
 
-<<<<<<< HEAD
       {/* Use Cases */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -753,57 +687,10 @@ const QuantumNeuralFusion2026: React.FC = () => {
                 <p className="text-lg opacity-90 mb-6 text-center">{useCase.description}</p>
                 <div className="bg-green-500/20 text-green-400 px-4 py-2 rounded-lg text-center text-sm font-semibold">
                   {useCase.impact}
-=======
-        {/* Applications Section */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Drug Discovery",
-                description: "Accelerate pharmaceutical research with quantum-enhanced molecular simulation",
-                icon: "💊",
-                impact: "1000x faster"
-              },
-              {
-                title: "Climate Modeling",
-                description: "Predict climate patterns with unprecedented accuracy using quantum neural networks",
-                icon: "🌍",
-                impact: "99.9% accuracy"
-              },
-              {
-                title: "Financial Modeling",
-                description: "Revolutionize risk assessment and trading with quantum neural algorithms",
-                icon: "💰",
-                impact: "50% better returns"
-              },
-              {
-                title: "Space Exploration",
-                description: "Optimize space missions and planetary exploration with quantum computing",
-                icon: "🚀",
-                impact: "10x efficiency"
-              }
-            ].map((app, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-cyan-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-transform"
-              >
-                <div className="text-4xl mb-4 text-center">{app.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-center">{app.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 text-center">{app.description}</p>
-                <div className="text-center">
-                  <span className="inline-block bg-cyan-500 text-cyan-900 px-3 py-1 rounded-full text-xs font-bold">
-                    {app.impact}
-                  </span>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 </div>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </div>
 
@@ -831,81 +718,12 @@ const QuantumNeuralFusion2026: React.FC = () => {
           </motion.div>
         </div>
 =======
-        </div>
-
-        {/* Technical Specifications */}
-        <div className="bg-gradient-to-r from-slate-800/50 to-cyan-800/50 rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Technical Specifications</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-cyan-300">Quantum Capabilities</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  <span>1000+ qubit quantum processor</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  <span>99.9% quantum fidelity</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  <span>Microsecond coherence time</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  <span>Error correction algorithms</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-300">Neural Network Features</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  <span>1 trillion+ parameters</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  <span>Real-time learning</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  <span>Multi-modal processing</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  <span>Adaptive architecture</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the revolutionary potential of quantum-neural fusion. 
-            Be part of the next generation of computing.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Start Your Journey
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-cyan-900 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );
 };
+
 
 export default QuantumNeuralFusion2026;
