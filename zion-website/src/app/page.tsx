@@ -1,11 +1,20 @@
-import { getLatestUpdates } from "../data/updates"
+import { getLatestUpdates } from '../data/updates'
 
 export default function HomePage() {
   const latest = getLatestUpdates(6)
   return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 pt-24">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Leading the Future of{' '}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              AI & Technology
+            </span>
+          </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
-            Join the revolution that is reshaping industries worldwide.
+            Join the revolution that's reshaping industries worldwide.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
