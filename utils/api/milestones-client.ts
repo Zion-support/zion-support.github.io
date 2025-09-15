@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-export async /**
- * fetch_milestones - Function description
- */
-function fetch_milestones() {
-  const res = await fetch (`/api / projects/${project_id}/milestones`, {
-    headers: { 'Content - Type': 'application / json' },
-    credentials: 'include'}),
-  if (throw new Error ('Failed to load milestones'), ) {
-  $2
-}
-
-
-
-;
-export async function createMilestone(projectId: string, payload: any) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    method: 'POST',;
-    headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include',;
-    body: JSON.stringify(payload)}),;
-  if (!res.ok) throw new Error(await res.text()),;
-  return res.json();
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export async /**
  * create_milestone - Function description

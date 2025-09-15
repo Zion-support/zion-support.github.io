@@ -595,16 +595,6 @@ const QuantumConsciousnessRevolution2027: React.FC = () => {
                 <span className="text-white font-semibold text-xl">Diagnostic Accuracy</span>
                 <span className="text-green-400 font-bold text-3xl">+99.7%</span>
               </div>
-              <div className="flex items-center justify-between bg-white/10 rounded-xl p-6">
-                <span className="text-white font-semibold text-xl">Treatment Success</span>
-                <span className="text-green-400 font-bold text-3xl">+95%</span>
-              </div>
-              <div className="flex items-center justify-between bg-white/10 rounded-xl p-6">
-                <span className="text-white font-semibold text-xl">Drug Discovery</span>
-                <span className="text-green-400 font-bold text-3xl">+1000%</span>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-              </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
             </div>
           </div>
 <<<<<<< HEAD

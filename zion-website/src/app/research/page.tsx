@@ -33,8 +33,8 @@ export default function ResearchPage() {
 			</div>
 		</div>
 	)
-<<<<<<< HEAD
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 }
->>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> cursor/create-and-deploy-new-content-7857
