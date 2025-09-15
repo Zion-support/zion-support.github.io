@@ -34,8 +34,16 @@
     "types": ["vite/client", "node"]
   },
   "include": [
+<<<<<<< HEAD
     "src/**/*",
     "src/types/offline-shims.d.ts",
+=======
+<<<<<<< HEAD
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
@@ -45,6 +53,10 @@
     "node_modules",
     "dist",
     "build",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
@@ -53,6 +65,8 @@
 <<<<<<< HEAD
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-45eb
+    "coverage"
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
   ]
 }
