@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/autonomous-strategy-copilot-1-0' },
+  { name: 'New', href: '/updates/autonomous-it-ops-copilot-1-0' },
 ]
 
 export default function Navigation() {
