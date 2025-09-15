@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const DataScienceChat = () => {
   return (
@@ -21,14 +14,3 @@ const DataScienceChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default DataScienceChat,
-=======
-  );
-};
-
-export default DataScienceChat;
->>>>>>> origin/auto/autonomy-17186719616

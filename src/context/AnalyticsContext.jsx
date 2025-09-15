@@ -11,28 +11,41 @@ export const useAnalytics = () => {
 };
 
 export const AnalyticsProvider = ({ children }) => {
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
-  const [events, setEvents] = useState([]);
+<<<<<<< HEAD
+=======
+  const [analytics, setAnalytics] = useState({
+    pageViews: 0,
+    events: [],
+  });
 
   const trackEvent = (eventName, properties = {}) => {
-    if (analyticsEnabled) {
-      const event = {
-        name: eventName,
-        properties,
-        timestamp: new Date().toISOString()
-      };
-      setEvents(prev => [...prev, event]);
-      
-      // Send to analytics service
-      console.log('Analytics Event:', event);
-    }
+    const event = {
+      name: eventName,
+      properties,
+      timestamp: new Date().toISOString(),
+    };
+    
+    setAnalytics(prev => ({
+      ...prev,
+      events: [...prev.events, event],
+    }));
+  };
+
+  const trackPageView = (page) => {
+    setAnalytics(prev => ({
+      ...prev,
+      pageViews: prev.pageViews + 1,
+    }));
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   const value = {
-    analyticsEnabled,
-    setAnalyticsEnabled,
+    analytics,
     trackEvent,
-    events
+<<<<<<< HEAD
+=======
+    trackPageView,
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (
@@ -40,4 +53,3 @@ export const AnalyticsProvider = ({ children }) => {
       {children}
     </AnalyticsContext.Provider>
   );
-};

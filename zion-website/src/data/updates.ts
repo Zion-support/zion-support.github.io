@@ -10,46 +10,12 @@ export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-2def
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f13
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-c439
-<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-6f13
->>>>>>> cursor/create-and-deploy-new-content-c439
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -75,18 +41,6 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-2def
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f13
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-c439
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
@@ -98,26 +52,7 @@ export const siteUpdates: SiteUpdate[] = [
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-c439
-<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-6f13
->>>>>>> cursor/create-and-deploy-new-content-c439
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {

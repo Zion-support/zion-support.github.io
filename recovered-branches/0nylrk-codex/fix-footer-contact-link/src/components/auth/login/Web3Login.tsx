@@ -7,11 +7,6 @@ import { toast } from "sonner";
 
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth();
-<<<<<<< HEAD
-  const [isLoadingsetIsLoading] = useState(false);
-=======
-  const [isLoading, setIsLoading] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleWeb3Login = async () => {
     try {
@@ -20,30 +15,12 @@ export function Web3Login() {
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
-<<<<<<< HEAD
-        toast("Web3 wallet not found"{
-          description: "Please install MetaMask or another compatible wallet"});
-=======
-        toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet",
-        });
->>>>>>> origin/auto/autonomy-17186719616
         return;
       }
       
       await loginWithWeb3();
       
     } catch (error: any) {
-<<<<<<< HEAD
-      toast("Login failed"{
-        description: error.message || "Failed to connect wallet"});
-      console.error("Web3 login error:"error);
-=======
-      toast("Login failed", {
-        description: error.message || "Failed to connect wallet",
-      });
-      console.error("Web3 login error:", error);
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsLoading(false);
     }

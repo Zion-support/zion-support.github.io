@@ -1,45 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Shield, Eye, Lock, Database, Users, Globe,
-  CheckCircle, AlertTriangle, Info
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-
-export default function PrivacyPage() {
-  const lastUpdated = 'January 15, 2025',
-=======
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Eye, Lock, Database, Users, Globe,
-  CheckCircle, AlertTriangle, Info
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-
-export default function PrivacyPage() {
-  const lastUpdated = 'January 15, 2025';
->>>>>>> origin/auto/autonomy-17186719616
 
   const sections = [
     {
       title: 'Information We Collect',
       icon: <Database className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Personal information (name, email, phone number)Company information and business details',
-        'Usage data and analyticsTechnical information (IP address, browser type)',
-=======
-        'Personal information (name, email, phone number)',
-        'Company information and business details',
-        'Usage data and analytics',
-        'Technical information (IP address, browser type)',
->>>>>>> origin/auto/autonomy-17186719616
         'Communication records and support interactions'
       ]
     },
@@ -47,15 +11,6 @@ export default function PrivacyPage() {
       title: 'How We Use Your Information',
       icon: <Users className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Provide and improve our servicesCommunicate with you about our services',
-        'Process payments and transactionsSend marketing communications (with consent)',
-=======
-        'Provide and improve our services',
-        'Communicate with you about our services',
-        'Process payments and transactions',
-        'Send marketing communications (with consent)',
->>>>>>> origin/auto/autonomy-17186719616
         'Comply with legal obligations'
       ]
     },
@@ -63,15 +18,6 @@ export default function PrivacyPage() {
       title: 'Information Sharing',
       icon: <Globe className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'We do not sell your personal informationShare with service providers and partners',
-        'Comply with legal requirementsProtect our rights and safety',
-=======
-        'We do not sell your personal information',
-        'Share with service providers and partners',
-        'Comply with legal requirements',
-        'Protect our rights and safety',
->>>>>>> origin/auto/autonomy-17186719616
         'Business transfers (with notice)'
       ]
     },
@@ -79,15 +25,6 @@ export default function PrivacyPage() {
       title: 'Data Security',
       icon: <Lock className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Industry-standard encryption protocolsRegular security audits and assessments',
-        'Access controls and authenticationData backup and recovery procedures',
-=======
-        'Industry-standard encryption protocols',
-        'Regular security audits and assessments',
-        'Access controls and authentication',
-        'Data backup and recovery procedures',
->>>>>>> origin/auto/autonomy-17186719616
         'Employee training on data protection'
       ]
     },
@@ -95,15 +32,6 @@ export default function PrivacyPage() {
       title: 'Your Rights',
       icon: <CheckCircle className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Access your personal informationCorrect inaccurate data',
-        'Request deletion of your dataOpt-out of marketing communications',
-=======
-        'Access your personal information',
-        'Correct inaccurate data',
-        'Request deletion of your data',
-        'Opt-out of marketing communications',
->>>>>>> origin/auto/autonomy-17186719616
         'Data portability'
       ]
     },
@@ -111,23 +39,6 @@ export default function PrivacyPage() {
       title: 'Data Retention',
       icon: <Info className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Retain data as long as necessaryComply with legal requirements',
-        'Resolve disputes and enforce agreementsImprove our services',
-        'Regular data cleanup procedures'
-      ]
-    }
-  ],
-=======
-        'Retain data as long as necessary',
-        'Comply with legal requirements',
-        'Resolve disputes and enforce agreements',
-        'Improve our services',
-        'Regular data cleanup procedures'
-      ]
-    }
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -272,11 +183,6 @@ export default function PrivacyPage() {
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-green-400 mr-3" />
-<<<<<<< HEAD
-                Children's Privacy
-=======
-                Children&apos;s Privacy
->>>>>>> origin/auto/autonomy-17186719616
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from 
@@ -298,11 +204,6 @@ export default function PrivacyPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-              We're here to help. Contact our privacy team for any questions or concerns about your data.
-=======
-              We&apos;re here to help. Contact our privacy team for any questions or concerns about your data.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -332,9 +233,4 @@ export default function PrivacyPage() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  ),
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

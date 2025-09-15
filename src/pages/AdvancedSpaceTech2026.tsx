@@ -1,7 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedSpaceTech2026: React.FC = () => {
   return (
+<<<<<<< HEAD
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -193,11 +196,13 @@ const AdvancedSpaceTech2026: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 font-semibold text-lg">
               Download Mission Brief
             </button>
+>>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default AdvancedSpaceTech2026;
