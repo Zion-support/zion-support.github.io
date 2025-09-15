@@ -515,3 +515,26 @@ utils/data/latestContent.ts
 [2025-09-15 15:44:24] 🔧 Resolving conflicts in utils/data/latestContent.ts for branch backup-main-20250915-112748...
 [2025-09-15 15:44:24] 🧩 Generic file: prefer main version
 [2025-09-15 15:44:24] ✅ Resolved conflicts in utils/data/latestContent.ts
+[2025-09-15 15:44:25] ✅ Successfully resolved conflicts and merged backup-main-20250915-112748
+[2025-09-15 15:44:25] ✅ Branch backup-main-20250915-112748 processed successfully
+[2025-09-15 15:44:25] 📊 Batch progress: 25 successful, 0 failed
+[2025-09-15 15:44:25] 📊 Overall progress: 25 successful, 0 failed, 82 conflicts resolved
+[2025-09-15 15:44:25] 📋 Processing branch 26: backup-main-20250915-123110
+[2025-09-15 15:44:26] 🔄 Attempting to merge backup-main-20250915-123110...
+[2025-09-15 15:44:28] ✅ Successfully merged backup-main-20250915-123110
+[2025-09-15 15:44:28] ✅ Branch backup-main-20250915-123110 processed successfully
+[2025-09-15 15:44:28] 📊 Batch progress: 26 successful, 0 failed
+[2025-09-15 15:44:28] 📊 Overall progress: 26 successful, 0 failed, 82 conflicts resolved
+[2025-09-15 15:44:28] 📋 Processing branch 27: backup-main-20250915-130134
+[2025-09-15 15:44:29] 🔄 Attempting to merge backup-main-20250915-130134...
+[2025-09-15 15:44:32] ✅ Successfully merged backup-main-20250915-130134
+[2025-09-15 15:44:32] ✅ Branch backup-main-20250915-130134 processed successfully
+[2025-09-15 15:44:32] 📊 Batch progress: 27 successful, 0 failed
+[2025-09-15 15:44:32] 📊 Overall progress: 27 successful, 0 failed, 82 conflicts resolved
+[2025-09-15 15:44:32] 📋 Processing branch 28: backup-main-20250915-130420
+[2025-09-15 15:44:33] 🔄 Attempting to merge backup-main-20250915-130420...
+[2025-09-15 15:44:35] ⚠️  Merge conflicts detected in backup-main-20250915-130420, resolving...
+[2025-09-15 15:44:36] 📋 Conflicted files: _open_prs.json
+[2025-09-15 15:44:36] 🔧 Resolving conflicts in _open_prs.json for branch backup-main-20250915-130420...
+[2025-09-15 15:44:36] 🧩 Generic file: prefer main version
+[2025-09-15 15:44:36] ✅ Resolved conflicts in _open_prs.json
