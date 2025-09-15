@@ -1,10 +1,9 @@
-import React from 'react'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 
@@ -121,20 +120,20 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'Launch: ZionGPT 2.0 with Adaptive Reasoning',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                  'New release adds adaptive reasoning loops and on-device private inference for compliance-critical workloads.',
+                href: '/news/ziongpt-2-adaptive-reasoning'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
+                title: 'Research: Hybrid Quantum-Classical Pipeline +38%',
+                summary: 'A new workflow improves optimization accuracy by 38% on benchmark suites.',
+                href: '/news/hybrid-quantum-classical-pipeline'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
+                title: 'Company: VectorEdge Acquisition Expands Edge-AI',
+                summary: 'Zion adds low-latency edge inference and device orchestration capabilities.',
+                href: '/news/acquisition-vectoredge'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
