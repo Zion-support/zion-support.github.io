@@ -89,6 +89,16 @@ const DynamicContentCarousel: React.FC = () => {
       category: 'Operations',
       badge: 'FEATURED'
     }
+    ,
+    {
+      id: '9',
+      title: 'Autonomous Ops Blueprint 2026',
+      description: 'Eval-driven delivery, runtime gates, and policy-as-code for safe agent ops.',
+      link: '/pages/AutonomousOpsBlueprint2026',
+      image: '🧪',
+      category: 'Governance',
+      badge: 'NEW'
+    }
   ];
 
   useEffect(() => {

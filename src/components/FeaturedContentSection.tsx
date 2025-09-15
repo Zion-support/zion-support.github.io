@@ -37,6 +37,18 @@ const FeaturedContentSection: React.FC = () => {
       readTime: '12 min read',
       featured: true
     }
+    ,
+    {
+      id: 4,
+      type: 'Blueprint',
+      title: 'Autonomous Ops Blueprint 2026',
+      description: 'A pragmatic framework for reliable, observable, and governed agent operations at scale.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
+      category: 'AI Operations',
+      readTime: '10 min read',
+      featured: true,
+      stats: { efficiency: '99.9%', costSavings: '$1.2M', satisfaction: '97%' }
+    }
   ];
 
   const latestBlogs = [
