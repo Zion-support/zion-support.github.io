@@ -9,6 +9,33 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
+    id: 'ai-security-blueprint',
+    title: 'Guide: AI Security Blueprint 2025',
+    summary:
+      'Best practices for securing AI systems in production: model, data, and pipeline.',
+    href: '/updates/ai-security-blueprint-2025',
+    date: '2025-09-14',
+    tag: 'Announcement',
+  },
+  {
+    id: 'genai-engineering-course',
+    title: 'New Course: GenAI Engineering Masterclass',
+    summary:
+      'Hands-on masterclass on RAG, agents, evals, safety, and productionization.',
+    href: '/updates/genai-engineering-masterclass',
+    date: '2025-09-13',
+    tag: 'Course',
+  },
+  {
+    id: 'ai-lab-research-update',
+    title: 'Research: Long-horizon Planning with Tool-using Agents',
+    summary:
+      'Our latest results show scalable planning via hierarchical tool-use and memory.',
+    href: '/updates/long-horizon-tool-agents',
+    date: '2025-09-12',
+    tag: 'Research',
+  },
+  {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
