@@ -113,6 +113,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Governance Control Library + Safety Runbooks */}
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-pink-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-pink-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Governance Control Library + Safety Runbooks</h2>
+              <p className="text-gray-600 mt-2">Policy‑as‑code controls and standardized, eval‑gated safety runbooks.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-agent-governance-control-library" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Control Library</Link>
+              <Link href="/blog/ai-2026-agent-safety-runbooks" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Safety Runbooks</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
