@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Course: Web3 Fundamentals Track',
+    summary:
+      'Beginner-friendly curriculum covering wallets, NFTs, smart contracts, and L2 ecosystems with hands-on projects.',
+    href: '/updates/web3-fundamentals-track',
+    date: '2025-09-01',
+    tag: 'Course'
+  },
+  {
+    title: 'Launch: AI Research Assistant 2.0',
+    summary:
+      'Autonomous research platform with improved retrieval, citation quality, and benchmarked task suites.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Whitepaper: AI Agent Safety Framework (2025)',
     summary:
       'Operational guardrails, evals, and policy-as-code for autonomous agents in production.',
