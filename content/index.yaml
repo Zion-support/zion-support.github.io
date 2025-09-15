@@ -813,6 +813,21 @@ content_index:
         mttr: "< 15 min"
         permission_scope: "least-privilege"
 
+    - id: "ai-2026-real-time-agent-debugger"
+      type: "blog"
+      title: "AI 2026: Real-Time Agent Debugger — Live Traces, Diffs, and Evals"
+      file_path: "/app/blog/ai-2026-real-time-agent-debugger/page.tsx"
+      url: "/blog/ai-2026-real-time-agent-debugger"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Debugging", "Observability", "Evaluations", "Routing", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollback_time: "< 5 min"
+        reliability: "99.9%"
+        trace_coverage: "> 90%"
+
     - id: "ai-2026-agentic-sandbox-patterns"
       type: "blog"
       title: "AI 2026: Agentic Sandbox Patterns"
@@ -827,6 +842,21 @@ content_index:
         incidents_reduction: "40%"
         rollback: "automatic"
         audit_ready: true
+
+    - id: "ai-2026-operational-excellence-handbook"
+      type: "page"
+      title: "AI 2026: Operational Excellence Handbook"
+      file_path: "/app/content/ai-2026-operational-excellence-handbook/page.tsx"
+      url: "/content/ai-2026-operational-excellence-handbook"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "SLOs", "Runbooks", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        availability: "99.9%"
+        mttr: "< 10 min"
+        cost_optimization: "20-40%"
 
     - id: "ai-2026-safe-evaluation-hub"
       type: "blueprint"

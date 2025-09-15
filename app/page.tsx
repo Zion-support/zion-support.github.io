@@ -86,7 +86,6 @@ import UltimateContentPromotion2026 from '../src/components/UltimateContentPromo
 // Import new content showcase components
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
-import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -259,6 +258,22 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-eval-gated-autonomy" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Eval‑Gated Autonomy</Link>
               <Link href="/content/ai-2026-safe-evaluation-hub" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Hub</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Real-Time Agent Debugger (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Real-Time Agent Debugger</h2>
+              <p className="text-gray-600 mt-2">Live traces, diffs, and eval IDs to debug agents safely in prod.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-real-time-agent-debugger" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Article</Link>
+              <Link href="/content/ai-2026-safe-evaluation-hub" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Evaluation Hub</Link>
             </div>
           </div>
         </div>
