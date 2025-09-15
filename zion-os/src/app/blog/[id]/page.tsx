@@ -11,6 +11,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-supply-chains-2025': {
+    id: 'ai-supply-chains-2025',
+    title: 'AI-Native Supply Chains: Real-Time Autonomy from Factory to Port',
+    excerpt:
+      'How enterprises are deploying agentic planning, digital twins, and policy engines to cut lead times 20–40% in 2025.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'AI-native supply chains blend agent-based planning, simulation-backed decisions, and human-in-the-loop controls. Teams orchestrate materials, capacity, and logistics using shared policies rather than siloed spreadsheets.',
+      'With Zion OS, enterprises run continuous planning against live telemetry, stress-test scenarios via digital twins, and dispatch autonomous workflows for procurement, production, and routing.',
+      'Key capabilities include: multi-objective optimization (cost, service, risk), disruption playbooks, verifiable supplier identity, and cross-partner coordination with audit trails.',
+      'Results: shorter lead times, higher fill rates, and resilience to shocks—without sacrificing governance or safety.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

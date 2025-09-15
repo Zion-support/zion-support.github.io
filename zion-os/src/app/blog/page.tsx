@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-supply-chains-2025',
+      title: 'AI-Native Supply Chains: Real-Time Autonomy from Factory to Port',
+      excerpt: 'Agentic planning, digital twins, and policy engines that cut lead times 20–40%.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-supply-chains.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +76,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-supply-chains-2025',
+      title: 'AI-Native Supply Chains: Real-Time Autonomy from Factory to Port',
+      excerpt: 'Deploy continuous planning, digital twins, and autonomous orchestration with Zion OS.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-supply-chains.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
