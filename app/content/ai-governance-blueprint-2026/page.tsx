@@ -1,0 +1,31 @@
+import React from 'react';
+
+export const metadata = {
+	title: 'AI Governance Blueprint 2026',
+	description: 'Practical, risk-aware governance for enterprise AI systems with measurable controls.'
+};
+
+export default function AIGovernanceBlueprint2026() {
+	return (
+		<main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<h1 className="text-4xl font-bold text-gray-900 mb-4">AI Governance Blueprint 2026</h1>
+			<p className="text-gray-600 mb-8">
+				A pragmatic governance blueprint covering model risk management, evaluations, policy-as-code, and real-time monitoring
+				to safely scale AI across the enterprise.
+			</p>
+			<section className="prose max-w-none">
+				<h2>Core Pillars</h2>
+				<ul>
+					<li>Evaluation-first development with objective quality gates</li>
+					<li>Policy-as-code guardrails embedded in workflows</li>
+					<li>Continuous monitoring and incident response</li>
+				</ul>
+				<h2>Outcomes</h2>
+				<p>
+					Ship reliable AI faster with transparent controls, auditability, and measurable risk reduction.
+				</p>
+			</section>
+		</main>
+	);
+}
+
