@@ -68,6 +68,35 @@ export default function Index() {
 
 	return (
 		<>
+			{/* Latest from the Blog */}
+			<section className="bg-white py-16">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-12">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Latest from the Blog</h2>
+						<p className="mt-4 text-lg text-gray-600">New guides on agentic systems, AI safety, and cost efficiency.</p>
+					</div>
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+						{[
+							{ slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Blueprints for shipping agent workflows.' },
+							{ slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems.' },
+							{ slug: 'cloud-cost-optimization-2025', title: 'Cloud Cost Optimization 2025', excerpt: 'Modern FinOps for resilient platforms.' }
+						].map((p) => (
+							<div key={p.slug} className="p-6 bg-gray-50 border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+								<h3 className="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
+								<p className="text-gray-600 mb-4">{p.excerpt}</p>
+								<Link href={`/blog/${p.slug}`} className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium">
+									Read Article <ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						))}
+					</div>
+					<div className="text-center mt-8">
+						<Link href="/blog" className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500">
+							View all posts <ArrowRight className="ml-2 h-4 w-4" />
+						</Link>
+					</div>
+				</div>
+			</section>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
