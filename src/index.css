@@ -4,6 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accessibility Enhancements */
+.high-contrast {
+  filter: contrast(150%) brightness(120%);
+}
+
+.high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* Performance Optimizations */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
+/* Enhanced Focus States */
+.focus-enhanced:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth Animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Custom CSS Variables */
 :root {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);

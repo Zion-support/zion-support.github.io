@@ -121,19 +121,19 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -155,24 +155,30 @@ export default function HomePage() {
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
+<<<<<<< HEAD
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
