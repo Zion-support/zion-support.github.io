@@ -9,6 +9,25 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
+<<<<<<< HEAD
+    title: 'Launch: AI Governance Copilot v1.2',
+=======
+<<<<<<< HEAD
+    title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3743
+    summary:
+      'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
+    href: '/updates/real-time-ai-analytics-dashboard-v3-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Agent Orchestration Platform v2.0',
+    summary:
+<<<<<<< HEAD
+      'Budgets, routing policies, and eval-driven safeguards to control spend without hurting quality.',
+    href: '/updates/production-agent-cost-controls-2026',
+=======
       'Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.',
     href: '/updates/ai-agent-orchestration-platform-2-0',
     date: '2025-09-15',
@@ -26,6 +45,7 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
+>>>>>>> cursor/create-and-deploy-new-content-8472
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -403,6 +423,7 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Hands-on techniques to hit sub-second latency with hybrid retrieval, caching, and routing.',
     href: '/updates/production-rag-latency-tuning-2026',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3743
     date: '2025-09-15',
     tag: 'Guide'
   },

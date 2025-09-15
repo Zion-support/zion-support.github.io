@@ -50,6 +50,10 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+<<<<<<< HEAD
+    "coverage"
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-6f00
   ]
 }
