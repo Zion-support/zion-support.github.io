@@ -350,8 +350,7 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-agents-case-study',
     date: '2025-09-15',
     tag: 'Case Study'
-  }
-  ,
+  },
   {
     title: 'Launch: Autonomous Finance OS v1.1',
     summary:
