@@ -27,12 +27,17 @@ import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrou
 import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import BusinessAutomationGuide2025 from './src/pages/BusinessAutomationGuide2025';
 import AdvancedTechSolutions2026 from './src/pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
+import NextGenAISolutions2025 from './src/pages/NextGenAISolutions2025';
+import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
+import BlockchainInnovation2025 from './src/pages/BlockchainInnovation2025';
+import EnterpriseSolutions2025 from './src/pages/EnterpriseSolutions2025';
 
 export default function App(): JSX.Element {
   return (
@@ -76,6 +81,36 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AdvancedTechSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
                         🔮 Tech Solutions 2026 →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* NEW: Latest Content Showcase */}
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-3 mb-4">
+                      <span className="text-3xl animate-pulse">✨</span>
+                      <h3 className="text-2xl font-bold">BRAND NEW CONTENT • JANUARY 2025</h3>
+                      <span className="text-3xl animate-pulse">✨</span>
+                    </div>
+                    <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+                      Discover our latest breakthrough content covering Next-Gen AI Solutions, Quantum Computing Revolution, 
+                      Blockchain Innovation, and Enterprise Solutions
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                      <a href="/pages/NextGenAISolutions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🤖 Next-Gen AI →
+                      </a>
+                      <a href="/pages/QuantumComputingRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        ⚡ Quantum Revolution →
+                      </a>
+                      <a href="/pages/BlockchainInnovation2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🔗 Blockchain Innovation →
+                      </a>
+                      <a href="/pages/EnterpriseSolutions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🏢 Enterprise Solutions →
                       </a>
                     </div>
                   </div>
@@ -138,7 +173,24 @@ export default function App(): JSX.Element {
                     <a href="/pages/InnovationShowcase2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Innovation Showcase 2026
                     </a>
+                    <a href="/pages/NextGenAISolutions2025" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🤖 Next-Gen AI Solutions
+                    </a>
+                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚡ Quantum Revolution
+                    </a>
+                    <a href="/pages/BlockchainInnovation2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🔗 Blockchain Innovation
+                    </a>
+                    <a href="/pages/EnterpriseSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🏢 Enterprise Solutions
+                    </a>
                   </div>
+                </div>
+
+                {/* Enhanced Content Showcase */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase />
                 </div>
 
                 {/* Interactive Dynamic Content Carousel */}
@@ -489,6 +541,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/BusinessAutomationGuide2025" element={<BusinessAutomationGuide2025 />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
+          <Route path="/pages/NextGenAISolutions2025" element={<NextGenAISolutions2025 />} />
+          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
+          <Route path="/pages/BlockchainInnovation2025" element={<BlockchainInnovation2025 />} />
+          <Route path="/pages/EnterpriseSolutions2025" element={<EnterpriseSolutions2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
