@@ -7,6 +7,31 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (late night batch)
+  {
+    title: 'Launch: Autonomous Knowledge Ops Suite v1.0',
+    summary:
+      'Governed content lifecycle with eval-gated drafts, reviews, and audit-ready publishing.',
+    href: '/updates/autonomous-knowledge-ops-suite-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Postmortems That Drive Reliability (2026)',
+    summary:
+      'Structured incident reviews with evidence bundles, causal graphs, and playbook updates.',
+    href: '/updates/agent-postmortems-reliability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Real-Time Agent Telemetry 2026',
+    summary:
+      'Signals that matter: budgets, guardrail events, eval IDs, and user outcomes.',
+    href: '/updates/state-of-real-time-agent-telemetry-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   {
     title: 'Report: AI Governance Readiness 2026',
     summary:
@@ -30,6 +55,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-ops-slo-dashboards-v2',
     date: '2025-09-15',
     tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Marketing Copilot v1.0',
+    summary:
+      'Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evals.',
+    href: '/updates/autonomous-marketing-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production-Grade RAG Latency Budgets (2026)',
+    summary:
+      'Set, monitor, and enforce latency SLOs for RAG systems with streaming evals and rollbacks.',
+    href: '/updates/production-rag-latency-budgets-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Launch: Autonomous Marketing Copilot v1.0',
@@ -728,6 +769,32 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-benchmark-suite-v1',
     date: '2025-09-15',
     tag: 'Launch'
+  }
+  ,
+  // New updates added by background automation on 2025-09-15 (even later batch)
+  {
+    title: 'Launch: Autonomous Customer Insights Copilot v1.0',
+    summary:
+      'Automatic theme detection, sentiment analysis, and action recommendations across support, sales, and product feedback with policy-aware data handling.',
+    href: '/updates/autonomous-customer-insights-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise AI Change Management (2026)',
+    summary:
+      'Governance workflows, rollout strategies, and live eval gates to safely introduce AI changes across teams.',
+    href: '/updates/enterprise-ai-change-management-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of AI Evaluations 2026',
+    summary:
+      'Survey of eval practices, rubrics, and live telemetry adoption across industries with maturity benchmarks.',
+    href: '/updates/state-of-ai-evaluations-2026',
+    date: '2025-09-15',
+    tag: 'Report'
   }
   ,
   // Added 2025-09-15 (night batch)
