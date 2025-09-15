@@ -24,8 +24,12 @@ LOG_FILE="${1:-/workspace/merge_all.log}"
   if git ls-remote --exit-code --heads origin cursor/create-and-deploy-new-content-1345 >/dev/null 2>&1; then
     echo "[merge] origin/cursor/create-and-deploy-new-content-1345 -> main"
     if ! git merge --no-ff origin/cursor/create-and-deploy-new-content-1345 -m "Merge: content updates and fixes"; then
-      echo "[warn] conflict on content branch, aborting this merge and continuing";
+      echo "[warn] conflict on content branch; retrying with -X theirs";
       git merge --abort || true
+      if ! git merge --no-ff -X theirs origin/cursor/create-and-deploy-new-content-1345 -m "Merge (theirs): content updates and fixes"; then
+        echo "[fail] content branch still conflicts, aborting and continuing";
+        git merge --abort || true
+      fi
     fi
     git push origin main || true
   fi
@@ -50,9 +54,15 @@ LOG_FILE="${1:-/workspace/merge_all.log}"
       echo "[ok] merged $b"
       git push origin main || true
     else
-      echo "[conflict] $b -> aborting merge"
+      echo "[conflict] $b -> retrying with -X theirs"
       git merge --abort || true
-      # continue with next branch
+      if git merge --no-ff -X theirs "origin/$b" -m "Merge PR branch $b into main (theirs)"; then
+        echo "[ok] merged with -X theirs: $b"
+        git push origin main || true
+      else
+        echo "[fail] still conflicts on $b, aborting and continuing"
+        git merge --abort || true
+      fi
     fi
   done
 
