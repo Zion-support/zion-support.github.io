@@ -9,28 +9,28 @@ const NewContentPromotionalBanner: React.FC = () => {
 
   const promotionalContent = [
     {
-      title: "🤖 NEW: AI Business Automation 2025",
-      description: "Transform your operations with 75% time reduction and $180K savings - Read our latest blog post",
-      link: "/blog/AI-Business-Automation-2025",
+      title: "🧠 NEW: AI Agent Factory",
+      description: "Build, deploy, and manage intelligent agents that learn and adapt",
+      link: "/blog/ai-agent-factory-revolution",
       linkText: "Read Article",
-      gradient: "from-blue-500 to-purple-600",
-      bgGradient: "from-blue-500/10 to-purple-500/10"
+      gradient: "from-indigo-500 to-purple-600",
+      bgGradient: "from-indigo-500/10 to-purple-500/10"
     },
     {
-      title: "🚀 AI Business Automation Services",
-      description: "Reduce costs by 50% and improve accuracy to 99.5% with our AI automation solutions",
-      link: "/services/AI-Business-Automation",
-      linkText: "Explore Services",
-      gradient: "from-purple-500 to-cyan-600",
-      bgGradient: "from-purple-500/10 to-cyan-500/10"
+      title: "⚛️ Quantum Computing Breakthrough",
+      description: "Harness exponential power for optimization, simulation, and analytics",
+      link: "/blog/quantum-computing-breakthrough",
+      linkText: "Read Article",
+      gradient: "from-cyan-500 to-blue-600",
+      bgGradient: "from-cyan-500/10 to-blue-500/10"
     },
     {
-      title: "📈 Success Story: Fortune 500 Case Study",
-      description: "See how we helped achieve 75% processing time reduction and $180K annual savings",
-      link: "/case-study-ai-automation-success",
-      linkText: "View Case Study",
-      gradient: "from-green-500 to-blue-600",
-      bgGradient: "from-green-500/10 to-blue-500/10"
+      title: "🔗 Blockchain 3.0 Platform",
+      description: "Next-gen blockchain with cross-chain interoperability and enterprise security",
+      link: "/blog/blockchain-3-next-generation",
+      linkText: "Read Article",
+      gradient: "from-emerald-500 to-teal-600",
+      bgGradient: "from-emerald-500/10 to-teal-500/10"
     },
     {
       title: "⚛️ Quantum Computing Solutions",
