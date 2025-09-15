@@ -30,16 +30,17 @@ import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
-<<<<<<< HEAD
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
-=======
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+import RevolutionaryTechShowcase2025 from './src/components/RevolutionaryTechShowcase2025';
+import AIMetaVerseIntegration2025 from './src/pages/AIMetaVerseIntegration2025';
+import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
+import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
 
 export default function App(): JSX.Element {
   return (
@@ -62,24 +63,21 @@ export default function App(): JSX.Element {
                       <span className="text-3xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-                      Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
+                      Experience the future of technology with our groundbreaking new content on AI-MetaVerse Integration, 
+                      BioTech AI Revolution, SpaceTech AI, and cutting-edge neural interface technologies
                     </p>
-<<<<<<< HEAD
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
+                      <a href="/pages/AIMetaVerseIntegration2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌐 AI-MetaVerse →
+                      </a>
+                      <a href="/pages/BiotechAIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧬 BioTech AI →
+                      </a>
+                      <a href="/pages/SpaceTechAI2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 SpaceTech AI →
+                      </a>
                       <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 AI Revolution →
-=======
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 Synthetic Intelligence →
-                      </a>
-                      <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚛️ Quantum-Neural Fusion →
-                      </a>
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Revolution 2025 →
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
                       </a>
                       <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚡ Quantum Breakthrough →
@@ -159,8 +157,6 @@ export default function App(): JSX.Element {
                           Explore Next-Gen Tech →
                         </a>
                       </div>
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
                     </div>
                   </div>
                 </div>
@@ -235,6 +231,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Revolutionary Tech Showcase */}
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2025 />
                 </div>
 
                 {/* Featured New Services */}
@@ -518,16 +519,16 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
           <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
-<<<<<<< HEAD
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
-=======
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+          <Route path="/pages/AIMetaVerseIntegration2025" element={<AIMetaVerseIntegration2025 />} />
+          <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
+          <Route path="/pages/SpaceTechAI2025" element={<SpaceTechAI2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
