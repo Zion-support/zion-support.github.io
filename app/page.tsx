@@ -258,7 +258,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Ship safer agents and cut compute costs with eval‑gated controls.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/content/ai-2026-production-safety-checklist" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safety Checklist</Link>
+              <Link href="/blog/ai-2026-production-safety-checklist" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safety Checklist</Link>
               <Link href="/content/ai-2026-cost-optimization-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Cost Blueprint</Link>
             </div>
           </div>
