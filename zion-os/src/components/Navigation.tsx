@@ -414,10 +414,10 @@ export function Navigation() {
             </div>
 
             <a 
-              href="/docs" 
+              href="/blog" 
               className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
             >
-              Documentation
+              Blog
             </a>
 
             <a 

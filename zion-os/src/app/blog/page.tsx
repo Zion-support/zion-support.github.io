@@ -44,6 +44,36 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+      id: 'genai-productivity-boost',
+      title: 'How GenAI Boosts Team Productivity by 40%: Real-World Playbook',
+      excerpt: 'A practical framework we use with clients to safely roll out generative AI and capture measurable gains across marketing, sales, and engineering.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-10',
+      readTime: '7 min read',
+      image: '/blog/genai-productivity.jpg'
+    },
+    {
+      id: 'quantum-roadmap-2026',
+      title: 'Quantum Roadmap 2026: Architectures, Tooling, and Enterprise Readiness',
+      excerpt: 'We map the path from proof-of-concept to production-grade quantum workloads with actionable milestones for CTOs and heads of R&D.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-05',
+      readTime: '9 min read',
+      image: '/blog/quantum-roadmap-2026.jpg'
+    },
+    {
+      id: 'cyber-ai-threat-models',
+      title: 'AI-Native Threat Models: Defending LLMs and Autonomous Agents',
+      excerpt: 'A defender’s guide to prompt injection, model exfiltration, dataset poisoning, and how to harden AI supply chains.',
+      category: 'Cybersecurity',
+      author: 'Dr. James Wilson',
+      date: '2025-08-28',
+      readTime: '8 min read',
+      image: '/blog/ai-threat-models.jpg'
+    },
+    {
       id: 'cybersecurity-ai-trends',
       title: 'AI-Powered Cybersecurity: Trends and Best Practices for 2024',
       excerpt: 'Stay ahead of evolving cyber threats with the latest AI-powered security solutions and best practices.',
