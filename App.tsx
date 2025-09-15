@@ -84,6 +84,11 @@ import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation20
 import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import NewContentPromotionBanner from './src/components/NewContentPromotionBanner';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import MetaverseWeb3Revolution2026 from './src/pages/MetaverseWeb3Revolution2026';
+import EdgeComputingIoTRevolution2026 from './src/pages/EdgeComputingIoTRevolution2026';
+import GreenTechSustainabilityRevolution2026 from './src/pages/GreenTechSustainabilityRevolution2026';
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 
 export default function App(): JSX.Element {
@@ -363,6 +368,16 @@ export default function App(): JSX.Element {
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
                   </div>
+                </div>
+
+                {/* NEW: Content Promotion Banner */}
+                <div className="mb-12">
+                  <NewContentPromotionBanner />
+                </div>
+
+                {/* Interactive Technology Showcase */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2026 />
                 </div>
 
                 {/* Enhanced Content Showcase */}
@@ -802,6 +817,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
+          <Route path="/pages/MetaverseWeb3Revolution2026" element={<MetaverseWeb3Revolution2026 />} />
+          <Route path="/pages/EdgeComputingIoTRevolution2026" element={<EdgeComputingIoTRevolution2026 />} />
+          <Route path="/pages/GreenTechSustainabilityRevolution2026" element={<GreenTechSustainabilityRevolution2026 />} />
           
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           <Route path="/blog" element={
