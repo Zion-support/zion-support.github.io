@@ -80,6 +80,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Guide: Agent Red‑Teaming Field Guide (2026)',
+    summary:
+      'Scenario design, attack taxonomy, and evidence capture to proactively harden autonomous agents.',
+    href: '/blog/ai-2026-agent-red-teaming-field-guide',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Trustworthy Model Routing (2026 Preview)',
     summary:
       'Policy-aware routing with eval signals and budgets for safer, cheaper, faster generations.',
