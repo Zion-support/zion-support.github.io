@@ -51,6 +51,10 @@ import RevolutionaryContentShowcase from './src/components/RevolutionaryContentS
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryPromoBanner2026 from './src/components/RevolutionaryPromoBanner2026';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import NextGenTechRevolution2026 from './src/pages/NextGenTechRevolution2026';
+import RevolutionaryTechInsights2026 from './src/pages/RevolutionaryTechInsights2026';
+import FutureTechShowcase2026 from './src/pages/FutureTechShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -65,6 +69,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Promotional Banner 2026 */}
                 <RevolutionaryPromoBanner2026 />
+                
+                {/* Revolutionary Content Banner 2026 */}
+                <RevolutionaryContentBanner2026 />
                 
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -525,6 +532,9 @@ export default function App(): JSX.Element {
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
+          <Route path="/pages/NextGenTechRevolution2026" element={<NextGenTechRevolution2026 />} />
+          <Route path="/pages/RevolutionaryTechInsights2026" element={<RevolutionaryTechInsights2026 />} />
+          <Route path="/pages/FutureTechShowcase2026" element={<FutureTechShowcase2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
