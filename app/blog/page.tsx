@@ -14,6 +14,33 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: LLM Evals Maturity Model",
+      description: "An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+      slug: "ai-2026-llm-evals-maturity-model",
+      category: "Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evals-maturity-model-2026.jpg"
+    },
+    {
+      title: "AI 2026: Agent Safety Certification",
+      description: "Scenario-driven tests, quantitative safety metrics, and policy-gated releases for autonomous agents.",
+      slug: "ai-2026-agent-safety-certification",
+      category: "Safety",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agent-safety-certification-2026.jpg"
+    },
+    {
+      title: "AI 2026: Multimodal Agents Enterprise Blueprint",
+      description: "Design, deploy, and scale multimodal agents across your enterprise with measurable ROI.",
+      slug: "ai-2026-multimodal-agents-enterprise-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/multimodal-agents-blueprint-2026.jpg"
+    },
+    {
       title: "AI 2026: Agent Observability Blueprint",
       description: "Deep visibility into autonomous agents: traces, evaluations, and safety telemetry.",
       slug: "ai-2026-agent-observability-blueprint",

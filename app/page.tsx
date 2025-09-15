@@ -70,9 +70,9 @@ import NewContent2025AdvancedAutomationBanner from './components/NewContent2025A
 
 // Import new 2025 analytics promotional components
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
+import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
-import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -177,6 +177,22 @@ export default function HomePage() {
               </div>
               <div className="shrink-0">
                 <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Promo: Agent Safety Certification 2026 */}
+        <section className="py-12 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gray-50 rounded-xl shadow p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">Safety & Governance</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Agent Safety Certification</h3>
+                <p className="text-gray-600 max-w-2xl">Scenario-driven tests, quantitative safety metrics, and policy-gated releases for autonomous agents.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-agent-safety-certification" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               </div>
             </div>
           </div>
