@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Data Governance Suite (v3)',
+    summary:
+      'End-to-end governance with policy-as-code, lineage, and real-time audit trails for AI systems.',
+    href: '/updates/auto-data-governance-v3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Agent Observability (2025)',
+    summary:
+      'Benchmarks and best practices for tracing, metrics, and safety signals across autonomous agents.',
+    href: '/updates/agent-observability-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Cost-Aware Model Routing (2025)',
+    summary:
+      'Strategies to optimize quality, latency, and cost with dynamic model selection and guardrails.',
+    href: '/updates/cost-aware-model-routing',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Course: Web3 Fundamentals Track',
     summary:
       'Beginner-friendly curriculum covering wallets, NFTs, smart contracts, and L2 ecosystems with hands-on projects.',
