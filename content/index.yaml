@@ -399,6 +399,48 @@ content_index:
         payback: "3.8 months"
 
   newly_added_september_2025:
+    - id: "ai-2026-sovereign-ai-commerce"
+      type: "blog"
+      title: "AI 2026: Sovereign AI Commerce — Autonomous Marketplaces"
+      file_path: "/content/blog/ai-2026-sovereign-ai-commerce.md"
+      url: "/blog/ai-2026-sovereign-ai-commerce"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Autonomous Commerce", "Marketplaces", "Policy-as-Code", "Safety", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        settlement_speed: "3x"
+        incidents_reduction: "40%"
+        audit_ready: true
+    - id: "ai-2026-realtime-evals-at-scale"
+      type: "blog"
+      title: "AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates"
+      file_path: "/content/blog/ai-2026-realtime-evals-at-scale.md"
+      url: "/blog/ai-2026-realtime-evals-at-scale"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Reliability", "Progressive Delivery", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollback_time: "< 5 min"
+        reliability: "99.9%"
+        error_budget: "guarded"
+    - id: "ai-2026-enterprise-rag-observability"
+      type: "blog"
+      title: "AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry"
+      file_path: "/content/blog/ai-2026-enterprise-rag-observability.md"
+      url: "/blog/ai-2026-enterprise-rag-observability"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["RAG", "Observability", "Evals", "Safety", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        latency_p95: "< 250ms"
+        citation_density: "> 0.9"
+        audit_ready: true
     - id: "ai-2026-eval-driven-release-engineering"
       type: "blog"
       title: "AI 2026: Eval-Driven Release Engineering"
