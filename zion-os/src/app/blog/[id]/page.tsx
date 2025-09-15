@@ -100,6 +100,34 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'ai-ops-cost-optimization-2025': {
+    id: 'ai-ops-cost-optimization-2025',
+    title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
+    excerpt:
+      'How to deploy AI-driven observability, autoscaling, and rightsizing to cut cloud and ops spend without sacrificing reliability.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Most organizations run infrastructure well above required headroom. AI-assisted rightsizing and predictive autoscaling can reduce spend by 30–50% while improving SLOs.',
+      'This playbook covers telemetry baselining, anomaly-driven scaling, workload bin-packing, and negotiated purchasing strategies. We include a 6-week rollout with KPIs and rollback guards.'
+    ]
+  },
+  'agentic-sales-playbooks': {
+    id: 'agentic-sales-playbooks',
+    title: 'Agentic Sales Playbooks: Autonomous Pipelines from Lead to Close',
+    excerpt:
+      'Design autonomous sales pipelines that prospect, qualify, personalize outreach, and book meetings with built-in compliance and guardrails.',
+    category: 'AI Solutions',
+    author: 'Dr. David Kim',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Agentic sales combines retrieval-augmented generation, workflow orchestration, and CRM integration to operate always-on prospecting loops.',
+      'We outline data pipelines, policy and consent, multi-channel touch sequencing, and human-in-the-loop checkpoints for negotiation and closing.'
+    ]
+  },
 };
 
 export function generateStaticParams() {
