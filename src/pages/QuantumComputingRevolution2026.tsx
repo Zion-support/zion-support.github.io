@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-2def
+import { Helmet } from 'react-helmet-async';
 
 const QuantumComputingRevolution2026: React.FC = () => {
   const [activeQuantum, setActiveQuantum] = useState('supremacy');
@@ -127,8 +123,7 @@ const QuantumComputingRevolution2026: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <Helmet>
         <title>Quantum Computing Revolution 2026 | Zion Tech Group</title>
         <meta name="description" content="Experience the quantum computing revolution with exponential processing power, quantum cryptography, and breakthrough applications in 2026." />
@@ -333,10 +328,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-pink-600/10"></div>
         <div className="container mx-auto relative z-10">
@@ -683,7 +674,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-2def
   );
 };
 
