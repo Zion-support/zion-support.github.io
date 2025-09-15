@@ -106,10 +106,10 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/ai-content-studio-2-1"
+                href="/updates/agentic-ops-control-center-2-1"
                 className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
-                Launch: AI Content Studio 2.1
+                Launch: Ops Control Center v2.1
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -120,10 +120,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/state-of-ai-governance-2026-preview"
+                href="/updates/state-of-real-time-rag-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
-                Report: AI Governance 2026 Preview
+                Report: Real-Time RAG 2026 Preview
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -204,10 +204,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/real-time-evals-starter-kit"
+                href="/updates/secure-prompt-engineering-2025"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >
-                Guide: Real-Time Evals Starter Kit
+                Guide: Secure Prompt Engineering 2025
                 <span aria-hidden>→</span>
               </a>
               <a

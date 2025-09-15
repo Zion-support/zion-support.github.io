@@ -278,13 +278,30 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-03',
     tag: 'Community'
   },
+  // New updates added 2025-09-15
   {
-    title: 'Launch: AI Content Studio 2.1',
+    title: 'Launch: Agentic Ops Control Center v2.1',
     summary:
-      'Refinements to workflows, new templates, and 20% faster asset generation for teams.',
-    href: '/updates/ai-content-studio-2-1',
+      'New runbooks, real-time eval alerts, and SOC2-ready audit trails for agent operations.',
+    href: '/updates/agentic-ops-control-center-2-1',
     date: '2025-09-15',
-    tag: 'Product'
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Real-Time RAG 2026 (Preview)',
+    summary:
+      'Latency budgets, streaming architectures, and eval frameworks for production-grade real-time RAG.',
+    href: '/updates/state-of-real-time-rag-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025 Edition)',
+    summary:
+      'Threat modeling prompts, policy-as-code checks, and red-teaming patterns to harden LLM systems.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Case Study: RAG Agents Reduce MTTR by 42%',
