@@ -14,6 +14,33 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* New items added September 2025 */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Security</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
+              Secure Agentic Data Pipelines (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Zero-trust, policy-as-code data flows with lineage, ABAC, and continuous verification.
+          </p>
+          <Link href="/content/secure-agentic-data-pipelines-2026" className="text-emerald-600 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Reliability</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/responsible-ai-evaluation-ops-2026" className="hover:underline">
+              Responsible AI Evaluation Ops (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Metrics, scenario harnesses, and CI/CD gates for trustworthy AI delivery.
+          </p>
+          <Link href="/content/responsible-ai-evaluation-ops-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">

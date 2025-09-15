@@ -11,6 +11,27 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "secure-agentic-data-pipelines-2026",
+    title: "Secure Agentic Data Pipelines (2026)",
+    description:
+      "Zero-trust, policy-driven data flows with lineage and least-privilege for agents.",
+    ctaLabel: "Explore Guide",
+    href: "/content/secure-agentic-data-pipelines-2026",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "responsible-ai-evaluation-ops-2026",
+    title: "Responsible AI Evaluation Ops (2026)",
+    description:
+      "Metrics, scenario harnesses, and CI/CD promotion gates for trustworthy AI.",
+    ctaLabel: "Read Framework",
+    href: "/content/responsible-ai-evaluation-ops-2026",
+    emoji: "📏",
+    date: "2025-09-15",
+  },
+  {
     id: "ai-content-studio",
     title: "AI Content Studio v2",
     description:
