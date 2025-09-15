@@ -636,6 +636,24 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   }
   ,
+  // Added 2025-09-15 (new content)
+  {
+    title: 'Launch: Autonomous Knowledge Base Copilot v1.0',
+    summary:
+      'Self-updating KB copilot that drafts, reviews, and publishes articles with guardrails, evals, and audit trails.',
+    href: '/updates/autonomous-knowledge-base-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Agent Tooling 2026',
+    summary:
+      'Landscape, gaps, and maturity of agent debugging, evals, and governance tools across the enterprise.',
+    href: '/updates/state-of-agent-tooling-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  }
+  ,
   {
     title: 'Guide: Generative AI Risk Register (2026)',
     summary:
