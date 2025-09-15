@@ -7,30 +7,30 @@ const EnhancedHeroSection: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations.",
-      author: "Sarah Johnson",
+      quote: "The AI Agent Factory revolutionized our operations. We deployed 50 intelligent agents that increased efficiency by 300%.",
+      author: "Dr. Sarah Johnson",
       role: "CTO, TechCorp",
       rating: 5
     },
     {
-      quote: "Their AI solutions helped us reduce costs by 40% while improving efficiency dramatically.",
-      author: "Michael Chen",
-      role: "CEO, InnovateLab",
+      quote: "Their quantum computing solutions solved complex optimization problems we thought were impossible.",
+      author: "Prof. Michael Chen",
+      role: "CEO, Quantum Innovations",
       rating: 5
     },
     {
-      quote: "The team's expertise in blockchain technology is unmatched. Highly recommended!",
+      quote: "Blockchain 3.0 platform transformed our supply chain with 100% visibility and zero fraud.",
       author: "Emily Rodriguez",
-      role: "Founder, CryptoVault",
+      role: "Founder, Global Logistics",
       rating: 5
     }
   ];
 
   const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients", color: "text-blue-600" },
-    { icon: Award, value: "50+", label: "Awards Won", color: "text-purple-600" },
-    { icon: TrendingUp, value: "99%", label: "Success Rate", color: "text-green-600" },
-    { icon: Zap, value: "24/7", label: "Support", color: "text-orange-600" }
+    { icon: Users, value: "750+", label: "AI Agents Deployed", color: "text-blue-600" },
+    { icon: Award, value: "15+", label: "Quantum Breakthroughs", color: "text-purple-600" },
+    { icon: TrendingUp, value: "99.9%", label: "Success Rate", color: "text-green-600" },
+    { icon: Zap, value: "3.0", label: "Blockchain Platform", color: "text-orange-600" }
   ];
 
   useEffect(() => {
@@ -63,13 +63,13 @@ const EnhancedHeroSection: React.FC = () => {
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               Transform Your Business with
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {" "}Cutting-Edge Technology
+                {" "}Revolutionary AI & Quantum Tech
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
-              We deliver AI-powered solutions, blockchain innovations, and cloud infrastructure that drive real business results. Join the digital revolution.
+              Experience our breakthrough AI Agent Factory, Quantum Computing solutions, and Blockchain 3.0 platform. Discover how we're revolutionizing industries worldwide.
             </p>
 
             {/* CTA Buttons */}

@@ -8,6 +8,38 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Report: 2025 AI Trends Radar',
+    summary:
+      'Key enterprise AI trends for 2025: agent safety, real-time RAG, governance automation, and cost-aware routing.',
+    href: '/updates/ai-trends-radar-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Research Portal',
+    summary:
+      'Unified portal for research briefs, datasets, and evaluations with live benchmarks and citations.',
+    href: '/updates/ai-lab-research-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Real-Time Retrieval Evals',
+    summary:
+      'Practical guide to measuring latency, hit-rate, and answer quality in streaming RAG systems.',
+    href: '/updates/real-time-retrieval-evals',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: AI Agent Safety Certification (Beta)',
+    summary:
+      'New certification program validating safety practices for autonomous agents across design, evals, and operations.',
+    href: '/updates/ai-agent-safety-certification-beta',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
     summary:
       'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',

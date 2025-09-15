@@ -32,6 +32,15 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
+      title: "AI 2026: Autonomous Supply Chain Playbook",
+      description: "Forecast demand, optimize inventory, and route logistics autonomously with AI agents.",
+      slug: "ai-2026-autonomous-supply-chain-playbook",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-supply-chain-2026.jpg"
+    },
+    {
       title: "Enterprise Foundation Models: A Practical Guide (2025)",
       description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
       slug: "ai-2025-enterprise-foundation-models-practical-guide",
@@ -48,6 +57,15 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/enterprise-ai-agents-2025.jpg"
+    },
+    {
+      title: "AI 2026: LLM Evals Maturity Model",
+      description: "An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+      slug: "ai-2026-llm-evals-maturity-model",
+      category: "AI Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evals-2026.jpg"
     },
     {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",

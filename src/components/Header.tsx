@@ -48,6 +48,14 @@ export function Header() {
 
 	const quickActions = [
 		{
+			name: 'Latest Insights',
+			href: '/blog/latest',
+			icon: Sparkles,
+			description: 'Read our newest research',
+			featured: true,
+			color: 'from-amber-500 to-orange-600'
+		},
+		{
 			name: 'Comprehensive Services Showcase',
 			href: '/comprehensive-services-showcase-2030',
 			icon: Star,
@@ -140,6 +148,13 @@ export function Header() {
 
 					{/* Quick Actions */}
 					<div className="hidden lg:flex items-center space-x-4">
+						<Link
+							to="/blog/latest"
+							className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-sm font-medium rounded-lg hover:from-amber-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20"
+						>
+							<Sparkles className="w-4 h-4 inline mr-2" />
+							Latest Insights
+						</Link>
 						<Link
 							to="/comprehensive-services-showcase-2030"
 							className="px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm font-medium rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-200 hover:scale-105 shadow-lg shadow-yellow-500/20"

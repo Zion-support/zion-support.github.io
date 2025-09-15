@@ -1,25 +1,27 @@
 
-import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "@/pages/Home";
+import { SitemapPage } from "@/components/SitemapPage";
 import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Privacy from "@/pages/Privacy";
+import AccountSettings from "@/pages/AccountSettings";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
-import GreenIT from "@/pages/GreenIT";
 import Careers from "@/pages/Careers";
-import FAQ from "@/pages/FAQ";
+import Contact from "@/pages/Contact";
+import Cookies from "@/pages/Cookies";
 import Enterprise from "@/pages/Enterprise";
+import FAQ from "@/pages/FAQ";
+import GreenIT from "@/pages/GreenIT";
+import HelpCenterPage from "@/pages/HelpCenterPage";
+import Home from "@/pages/Home";
+import Privacy from "@/pages/Privacy";
+import ProjectRoom from "@/pages/ProjectRoom";
 import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
+import Services from "@/pages/Services";
 import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
-import Cookies from "@/pages/Cookies";
-import HelpCenterPage from "@/pages/HelpCenterPage";
-import AccountSettings from "@/pages/AccountSettings";
-import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-import Services from "@/pages/Services";
+import AIImplementationPlaybook2026 from "@/pages/resources/ai-implementation-playbook-2026";
+import { Navigate, Route, Routes } from "react-router-dom";
+import NewContentShowcase from "@/pages/NewContentShowcase";
 
 const ContentRoutes = () => {
   return (
@@ -68,6 +70,12 @@ const ContentRoutes = () => {
 
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />
+
+      {/* Resources */}
+      <Route path="/resources/ai-implementation-playbook-2026" element={<AIImplementationPlaybook2026 />} />
+
+      {/* New Content Showcase */}
+      <Route path="/new-content-showcase" element={<NewContentShowcase />} />
 
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />

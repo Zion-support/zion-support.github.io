@@ -759,6 +759,24 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo: Latest Article */}
+      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold">SA</div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                  <span className="text-xs text-gray-500">New</span>
+                </div>
+                <p className="text-sm md:text-base text-gray-900">Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025</p>
+              </div>
+              <div className="text-blue-600 text-sm font-medium whitespace-nowrap">Read →</div>
+            </div>
+          </a>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -791,6 +809,22 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
+          {/* What's New Teaser */}
+          <div className="mb-16">
+            <div className="glass-effect rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <p className="text-sm text-white/60 mb-1">What's New</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Agent Safety Eval Suite 2025</h3>
+                <p className="text-white/70 max-w-2xl">
+                  New evaluation framework for multi-agent safety with CI integration and policy gating.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <a href="/blog/agent-safety-eval-suite-2025" className="btn-primary hover-lift">Read Article</a>
+                <a href="/news" className="btn-secondary hover-lift">More Updates</a>
+              </div>
+            </div>
+          </div>
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Everything You Need to Build the Future</h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
@@ -811,6 +845,32 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Promo: New Blog Article */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/ai-safety-eval-suite-2025" className="block w-full bg-white/10 border border-white/15 rounded-xl p-5 md:p-6 hover:bg-white/15 transition-colors">
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                SE
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100/20 text-blue-200">AI Safety</span>
+                  <span className="text-xs text-white/70">New</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold text-white">
+                  AI Safety Eval Suite 2025: Practical Tests for Autonomous Agents
+                </h3>
+                <p className="text-white/70 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A reproducible evaluation battery for jailbreak resistance, prompt injection, and tool-use safety.
+                </p>
+              </div>
+              <div className="text-blue-300 font-medium whitespace-nowrap">Read now →</div>
+            </div>
+          </a>
         </div>
       </section>
 

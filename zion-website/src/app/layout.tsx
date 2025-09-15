@@ -1,8 +1,8 @@
+import Footer from '@/components/Footer'
+import Navigation from '@/components/Navigation'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,12 +30,7 @@ export const metadata: Metadata = {
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group',
-      },
+      { url: '/og-image.jpg', width: 1200, height: 630, alt: 'Zion Tech Group' },
     ],
     locale: 'en_US',
     type: 'website',
@@ -58,6 +53,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
+        {/* Promo banner */}
+        <div className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center text-sm sm:text-base py-2 px-4">
+          <a href="/news" className="font-semibold hover:underline">
+            New: 2025 AI Innovation Showcase is live — explore what’s new →
+          </a>
+        </div>
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
