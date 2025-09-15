@@ -11,11 +11,7 @@ const navigation = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' },
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+  { name: 'New', href: '/updates/autonomous-strategy-copilot-1-0' },
 ]
 
 export default function Navigation() {
