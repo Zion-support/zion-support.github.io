@@ -4,11 +4,37 @@ export interface UpdateItem {
   summary: string
   href: string
   date: string
-  tag: 'Product' | 'Guide' | 'Course' | 'Community' | 'Research' | 'Release'
+  tag:
+    | 'Product'
+    | 'Guide'
+    | 'Course'
+    | 'Community'
+    | 'Research'
+    | 'Release'
+    | 'Launch'
+    | 'Case Study'
 }
 
 // Canonical updates list powering homepage and updates index
 export const updates: UpdateItem[] = [
+  {
+    id: 'agentic-evals-blueprint',
+    title: 'Launch: Agentic Evals Blueprint (v1)',
+    summary:
+      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.',
+    href: '/updates/agentic-evals-blueprint',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    id: 'rag-agents-case-study',
+    title: 'Case Study: 38% Cost Reduction with Retrieval-Augmented Agents',
+    summary:
+      'How a Fortune 500 reduced support costs and MTTR with production-grade RAG agents.',
+    href: '/updates/rag-agents-case-study',
+    date: '2025-09-14',
+    tag: 'Case Study'
+  },
   {
     id: 'ai-content-studio-2',
     title: 'Launch: AI Content Studio 2.0',
@@ -74,7 +100,7 @@ export const updates: UpdateItem[] = [
   }
 ]
 
-export const getLatestUpdates = (limit = 6) => {
+export const getLatestUpdates = (limit = 6): UpdateItem[] => {
   return updates
     .slice()
     .sort((a, b) => (a.date < b.date ? 1 : -1))

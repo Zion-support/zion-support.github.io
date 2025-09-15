@@ -112,6 +112,15 @@ export default function HomePage() {
                 Learn More <span aria-hidden="true">→</span>
               </a>
             </div>
+            <div className="mt-6 flex items-center justify-center">
+              <a
+                href="/blog/ai-2026-agentic-evals-blueprint"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                New: Agentic Evals Blueprint
+                <span aria-hidden>→</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

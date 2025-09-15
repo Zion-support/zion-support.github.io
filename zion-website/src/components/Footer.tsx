@@ -1,4 +1,3 @@
-=======
 const navigation = {
 	main: [
 		{ name: 'About', href: '/about' },
