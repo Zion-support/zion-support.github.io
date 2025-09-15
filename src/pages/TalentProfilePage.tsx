@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-
-export default function TalentProfilePage() {
-  const router = useRouter(),
-  // Get id from Next.js router query params
-  const { id } = router.query as { id?: string },
-  const { profile, isLoading, error } = useTalentProfile(id),
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
-  const { userDetails } = useAuthStatus(),
-  const { isAuthenticated, user } = useAuth(),
-=======
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { TalentProfile } from "@/components/profile/TalentProfile";
@@ -54,7 +25,6 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
->>>>>>> origin/auto/autonomy-17186719616
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
@@ -79,11 +49,7 @@ export default function TalentProfilePage() {
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -91,18 +57,6 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-<<<<<<< HEAD
-        variant: "destructive"}),
-    }
-  }, [error]),
-
-  if (isLoading) {
-    return <ProfileLoadingState />,
-  }
-
-  if (error || !profile) {
-    return <ProfileErrorState error={error} />,
-=======
         variant: "destructive",
       });
     }
@@ -114,7 +68,6 @@ export default function TalentProfilePage() {
 
   if (error || !profile) {
     return <ProfileErrorState error={error} />;
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   const handleRequestHire = () => {
@@ -122,14 +75,6 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
-<<<<<<< HEAD
-        variant: "default"}),
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
-      return,
-    }
-    setIsHireModalOpen(true),
-  },
-=======
         variant: "default",
       });
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
@@ -137,21 +82,12 @@ export default function TalentProfilePage() {
     }
     setIsHireModalOpen(true);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please sign in to message this talent.",
-<<<<<<< HEAD
-        variant: "default"}),
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
-      return,
-    }
-    setIsMessageModalOpen(true),
-  },
-=======
         variant: "default",
       });
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
@@ -159,7 +95,6 @@ export default function TalentProfilePage() {
     }
     setIsMessageModalOpen(true);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -215,9 +150,5 @@ export default function TalentProfilePage() {
       />
     </div>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

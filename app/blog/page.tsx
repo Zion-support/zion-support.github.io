@@ -14,6 +14,24 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Autonomous Incident Response",
+      description: "Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.",
+      slug: "ai-2026-ai-ops-autonomous-incident-response",
+      category: "Operations",
+      date: "2025-09-14",
+      featured: true,
+      image: "/images/ai-ops-autonomous-incident-response-2026.jpg"
+    },
+    {
+      title: "AI 2025: LLM Evaluation Best Practices - Reliable, Fair, and Robust",
+      description: "A practical guide to evaluating large language models in 2025: metrics, human evaluation, bias audits, reliability, and production monitoring.",
+      slug: "ai-2025-llm-evaluation-best-practices",
+      category: "Best Practices",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evaluation-best-practices-2025.jpg"
+    },
+    {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
       description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
       slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
@@ -21,6 +39,15 @@ const BlogPage = () => {
       date: "2025-01-15",
       featured: true,
       image: "/images/generative-ai-enterprise-2025.jpg"
+    },
+    {
+      title: "Enterprise AI Governance Blueprint (2026)",
+      description: "Policy-as-code, risk tiers, and continuous evaluations for safe AI scale.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/ai-governance-blueprint-2026.jpg"
     },
     {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",

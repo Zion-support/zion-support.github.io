@@ -15,13 +15,49 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "incremental": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "types": ["vite/client", "node"]
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@layout/*": ["src/layout/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@data/*": ["src/data/*"],
+      "@services/*": ["src/services/*"],
+      "@context/*": ["src/context/*"],
+      "@constants/*": ["src/constants/*"],
+      "@/components/*": ["src/components/*"]
+    },
+    "types": ["vite/client", "node"],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "app/**/*",
+    "src/**/*",
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -29,6 +65,13 @@
     "node_modules",
     "dist",
     "build",
-    "coverage"
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ],
+  "references": [
+    { "path": "./tsconfig.node.json" }
   ]
 }
