@@ -115,6 +115,22 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
+      {/* New Content Promo: Production Safety + Cost Optimization (Sept 2025) */}
+      <section className="py-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow border border-gray-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Production Safety Checklist + Cost Optimization Blueprint</h2>
+              <p className="text-gray-600 mt-2">Ship safer agents and cut compute costs with eval‑gated controls.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-production-safety-checklist" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safety Checklist</Link>
+              <Link href="/content/ai-2026-cost-optimization-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Cost Blueprint</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />
