@@ -18,6 +18,9 @@ import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
 import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
 import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
 import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
+import NewContentShowcase from './src/components/NewContentShowcase';
+import ContentPromotionBanner from './src/components/ContentPromotionBanner';
+import LatestNewsSection from './src/components/LatestNewsSection';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -32,30 +35,7 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* Promotional Banner */}
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
-                  <div className="flex items-center justify-center space-x-2 mb-2">
-                    <span className="text-2xl">🎉</span>
-                    <h3 className="text-xl font-bold">NEW: Revolutionary Content 2025</h3>
-                    <span className="text-2xl">🎉</span>
-                  </div>
-                  <p className="text-lg opacity-90 mb-4">
-                    Explore our latest insights on AI Transformation, Quantum Computing, and Technology Trends
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-3">
-                    <a href="/pages/TechnologyInsights2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                      🔮 Tech Insights →
-                    </a>
-                    <a href="/pages/AITransformationGuide2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                      🤖 AI Guide →
-                    </a>
-                    <a href="/pages/QuantumComputingSolutions2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                      ⚡ Quantum →
-                    </a>
-                    <a href="/pages/ComprehensiveServices2025" className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                      🚀 All Services →
-                    </a>
-                  </div>
-                </div>
+                <ContentPromotionBanner />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -222,78 +202,10 @@ export default function App(): JSX.Element {
                 </div>
 
                 {/* Latest News Section */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">📰 Latest Technology Insights</h2>
-                    <p className="text-lg text-gray-600">Stay updated with the latest trends and innovations</p>
-                  </div>
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">NEW</span>
-                        <span className="text-sm text-gray-500">January 20, 2025</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Technology Trends 2025</h3>
-                      <p className="text-gray-600 mb-4">Discover the most significant trends shaping our digital future...</p>
-                      <a href="/pages/BlogPost2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Read Full Article →
-                      </a>
-                    </div>
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">FEATURED</span>
-                        <span className="text-sm text-gray-500">January 18, 2025</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Innovation Showcase 2025</h3>
-                      <p className="text-gray-600 mb-4">Explore our revolutionary services across cutting-edge technology domains...</p>
-                      <a href="/pages/InnovationLanding2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Innovations →
-                      </a>
-                    </div>
-                    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                      <div className="flex items-center space-x-2 mb-3">
-                        <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full">BREAKTHROUGH</span>
-                        <span className="text-sm text-gray-500">January 22, 2025</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Advanced Tech Solutions</h3>
-                      <p className="text-gray-600 mb-4">Cutting-edge AI, quantum computing, and neural interface technologies...</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-blue-600 hover:text-blue-700 font-semibold">
-                        Explore Solutions →
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <LatestNewsSection />
 
                 {/* NEW CONTENT SHOWCASE - Latest Additions */}
-                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
-                      🎉 JUST RELEASED • JANUARY 2025
-                    </div>
-                    <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary New Content</h2>
-                    <p className="text-xl opacity-90">Discover our latest insights on cutting-edge technologies</p>
-                  </div>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
-                      <div className="text-4xl mb-3">🔮</div>
-                      <h3 className="text-xl font-semibold mb-2">Technology Insights 2025</h3>
-                      <p className="text-sm opacity-90 mb-4">Key trends reshaping industries and business</p>
-                      <a href="/pages/TechnologyInsights2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Insights →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
-                      <div className="text-4xl mb-3">🤖</div>
-                      <h3 className="text-xl font-semibold mb-2">AI Transformation Guide</h3>
-                      <p className="text-sm opacity-90 mb-4">Complete roadmap to AI implementation</p>
-                      <a href="/pages/AITransformationGuide2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Start Journey →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
-                      <div className="text-4xl mb-3">⚡</div>
-                      <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
-                      <p className="text-sm opacity-90 mb-4">Next-generation quantum solutions</p>
-                      <a href="/pages/QuantumComputingSolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Go Quantum →</a>
-                    </div>
-                  </div>
-                </div>
+                <NewContentShowcase />
 
                 {/* Interactive Technology Showcase */}
                 <div className="mb-12">
