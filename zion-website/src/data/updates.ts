@@ -16,6 +16,15 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
+  // Added 2025-09-15 (featured)
+  {
+    title: 'Launch: Autonomous Strategy Copilot v1.0',
+    summary:
+      'Exec-ready strategy copilot that drafts roadmaps, OKRs, and investment memos grounded in telemetry and benchmarks.',
+    href: '/updates/autonomous-strategy-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (even later night batch - fresh content)
   {
     title: 'Launch: Realtime Agent Observatory 1.0',
