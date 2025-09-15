@@ -12,7 +12,6 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -41,27 +40,19 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
     ]
   },
-  'ai-governance-blueprint-2025': {
-    id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
-    excerpt:
-      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
-    category: 'AI Governance',
-=======
   'agent-safety-guardrails-2025': {
     id: 'agent-safety-guardrails-2025',
     title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
     excerpt:
       'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
     category: 'AI Solutions',
->>>>>>> cursor/create-and-deploy-new-content-4789
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '8 min read',
     content: [
-<<<<<<< HEAD
-      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
-      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
+      'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
+      'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
+      'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
     ]
   },
   'edge-ai-marketplaces': {
@@ -76,10 +67,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
       'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
-=======
-      'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
-      'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
-      'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
     ]
   },
   'edge-ai-agents-2025': {
@@ -95,7 +82,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
->>>>>>> cursor/create-and-deploy-new-content-4789
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -187,6 +173,34 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Organizations need consistent methods to measure the impact of GenAI on knowledge and operational work.',
       'We propose task archetypes, gold standards, evaluation rubrics, and cost models to compare tools apples-to-apples.',
       'The framework enables portfolio-level governance and investment decisions grounded in observable outcomes.'
+    ]
+  },
+  'autonomous-research-agents-2025': {
+    id: 'autonomous-research-agents-2025',
+    title: 'Autonomous Research Agents in 2025: From Insights to Publication',
+    excerpt:
+      'How enterprises deploy autonomous research agents to synthesize literature, run experiments, and ship peer‑grade reports safely.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Research cycles compress dramatically when autonomous agents scaffold questions, traverse literature, and draft syntheses aligned to your taxonomy.',
+      'We cover retrieval pipelines, experiment harnesses, evaluation rubrics, and safety rails that keep outputs factual, attributable, and publication‑ready.'
+    ]
+  },
+  'quantum-neural-network-platform': {
+    id: 'quantum-neural-network-platform',
+    title: 'Launching Our Quantum Neural Network Platform: Practical QML Today',
+    excerpt:
+      'A hands-on platform for building hybrid quantum‑classical models that deliver value on NISQ hardware now.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'Our platform abstracts circuit construction, parameter shifts, and batching so teams can iterate on QNNs like standard deep learning.',
+      'Use cases include portfolio optimization, anomaly detection, and structure discovery with reproducible benchmarks and clear ROI guidance.'
     ]
   },
 };
