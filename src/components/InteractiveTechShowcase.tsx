@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -20,12 +26,21 @@ const InteractiveTechShowcase: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       link: "/pages/AdvancedAITransformation2026"
 <<<<<<< HEAD
     },
     {
       id: 1,
 <<<<<<< HEAD
+=======
+      link: "/pages/AIInnovationHub2026"
+    },
+    {
+      id: 1,
+>>>>>>> cursor/create-and-deploy-new-content-f977
       name: "Quantum Computing 2026",
       description: "Exponential computational power with quantum algorithms and quantum supremacy",
       icon: "⚡",
@@ -228,28 +243,21 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const technologies = [
     {
-      id: 1,
-      name: "AI Revolution",
+      id: 0,
+      name: "AI Innovation Hub 2026",
+      description: "Revolutionary AI technologies with consciousness and emotional intelligence",
       icon: "🧠",
-      description: "Next-generation artificial intelligence with autonomous reasoning and quantum-enhanced processing",
-      features: [
-        "Autonomous Decision Making",
-        "Quantum Neural Networks", 
-        "Global Learning Systems",
-        "Real-time Adaptation"
-      ],
       color: "from-purple-600 to-pink-600",
+<<<<<<< HEAD
       stats: { performance: "1000x", accuracy: "99.9%", speed: "Real-time" }
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
@@ -336,6 +344,18 @@ const InteractiveTechShowcase: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-3xl font-bold mb-8">Choose Your Technology</h3>
 =======
+=======
+      features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
+      demo: "Try AI Consciousness Demo",
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+      link: "/pages/AdvancedAITransformation2026"
+    },
+    {
+      id: 1,
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       name: "Quantum Computing Revolution",
       description: "Breakthrough quantum processors with 1000+ qubits and quantum supremacy",
       icon: "⚛️",
@@ -402,10 +422,19 @@ const InteractiveTechShowcase: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Cards */}
           <div className="space-y-6">
->>>>>>> cursor/create-and-deploy-new-content-d3a3
+<<<<<<< HEAD
             {technologies.map((tech, index) => (
-              <motion.button
+              <motion.div
                 key={tech.id}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.id}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={() => handleTechClick(index)}
                 whileHover={{ scale: 1.02 }}
@@ -421,6 +450,9 @@ const InteractiveTechShowcase: React.FC = () => {
                   <div className="text-left">
                     <h4 className="text-xl font-bold">{tech.name}</h4>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -437,7 +469,11 @@ const InteractiveTechShowcase: React.FC = () => {
                   <div className="text-4xl">{tech.icon}</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                     <p className="text-sm opacity-90">{tech.description}</p>
                   </div>
                   {activeTech === tech.id && (
@@ -448,6 +484,8 @@ const InteractiveTechShowcase: React.FC = () => {
                     />
                   )}
                 </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               </motion.button>
             ))}
@@ -473,17 +511,19 @@ const InteractiveTechShowcase: React.FC = () => {
                 {/* Features Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
+=======
+                    <p className="text-sm opacity-90">{tech.description}</p>
+                  </div>
+                  {activeTech === tech.id && (
+>>>>>>> cursor/create-and-deploy-new-content-f977
                     <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center"
-                    >
-                      <span className="text-sm font-semibold">{feature}</span>
-                    </motion.div>
-                  ))}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      className="w-3 h-3 bg-white rounded-full"
+                    />
+                  )}
                 </div>
+<<<<<<< HEAD
 
                 {/* Performance Stats */}
                 <div className="grid grid-cols-3 gap-4">
@@ -550,6 +590,9 @@ const InteractiveTechShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
           </div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 
                 {hoveredCard === tech.id && (
                   <motion.div
@@ -615,6 +658,10 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         {/* Technology Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-8">
           <motion.div
@@ -654,9 +701,54 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+        {/* Interactive Demo Section */}
+        <div className="mt-20 text-center">
+          <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="text-4xl mb-4">🎮</div>
+              <h4 className="text-xl font-bold mb-3">Virtual Reality Demo</h4>
+              <p className="text-sm opacity-90 mb-4">Experience our technologies in immersive VR environments</p>
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Launch VR Demo
+              </button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="text-4xl mb-4">🧪</div>
+              <h4 className="text-xl font-bold mb-3">Live Simulation</h4>
+              <p className="text-sm opacity-90 mb-4">Watch real-time simulations of our technologies in action</p>
+              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Start Simulation
+              </button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="text-4xl mb-4">📊</div>
+              <h4 className="text-xl font-bold mb-3">Performance Analytics</h4>
+              <p className="text-sm opacity-90 mb-4">View detailed performance metrics and analytics</p>
+              <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                View Analytics
+              </button>
+            </motion.div>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         </div>
       </div>
     </div>
