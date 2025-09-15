@@ -2,6 +2,7 @@ import React from 'react';
 
 const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const newContent = [
     {
       title: "Trustworthy Model Routing",
@@ -98,6 +99,8 @@ const NewContentShowcase: React.FC = () => {
           View All Content
         </a>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
   return (
     <div className="w-full">
       {/* New Content Banner */}
@@ -213,14 +216,20 @@ const NewContentShowcase: React.FC = () => {
             <div className="text-emerald-100 text-sm">Autonomous Operation</div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
       </div>
     </div>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { NewContentShowcase };
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
 export default NewContentShowcase;
