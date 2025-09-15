@@ -21,6 +21,8 @@ import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
 import AIInnovation2027 from './src/pages/AIInnovation2027';
 import QuantumConsciousness2028 from './src/pages/QuantumConsciousness2028';
 import NeuralReality2027 from './src/pages/NeuralReality2027';
+import AdvancedTechBreakthrough2025 from './src/pages/AdvancedTechBreakthrough2025';
+import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
@@ -28,6 +30,8 @@ import UltimateContentShowcase2026 from './src/components/UltimateContentShowcas
 import UltimateContentShowcase2027 from './src/components/UltimateContentShowcase2027';
 import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 import TrendingContentSection from './src/components/TrendingContentSection';
+import AdvancedTechBreakthroughBanner from './src/components/AdvancedTechBreakthroughBanner';
+import InnovationShowcaseBanner from './src/components/InnovationShowcaseBanner';
 
 export default function App(): JSX.Element {
   return (
@@ -56,6 +60,13 @@ export default function App(): JSX.Element {
                       <a href="/pages/NeuralReality2027" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
                         🧬 NEW: Neural Reality 2027 →
                       </a>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6">
+                      <a href="/pages/AdvancedTechBreakthrough2025" className="inline-block bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
+                        🚀 BREAKTHROUGH: Advanced Tech 2025 →
+                      </a>
+                      <a href="/pages/InnovationShowcase2025" className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
+                        🌟 SHOWCASE: Innovation Revolution →
                       </a>
                     </div>
                   </div>
@@ -473,6 +484,16 @@ export default function App(): JSX.Element {
                   <TrendingContentSection />
                 </div>
 
+                {/* NEW: Advanced Tech Breakthrough Banner */}
+                <div className="mb-12">
+                  <AdvancedTechBreakthroughBanner />
+                </div>
+
+                {/* NEW: Innovation Showcase Banner */}
+                <div className="mb-12">
+                  <InnovationShowcaseBanner />
+                </div>
+
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -509,6 +530,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIInnovation2027" element={<AIInnovation2027 />} />
           <Route path="/pages/QuantumConsciousness2028" element={<QuantumConsciousness2028 />} />
           <Route path="/pages/NeuralReality2027" element={<NeuralReality2027 />} />
+          <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
+          <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
