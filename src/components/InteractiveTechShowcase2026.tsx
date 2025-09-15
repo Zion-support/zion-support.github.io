@@ -1,6 +1,53 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const technologies = [
+    {
+      id: 'ai-systems',
+      name: 'Advanced AI Systems',
+      icon: '🤖',
+      description: 'Revolutionary AI with autonomous learning and quantum processing',
+      features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
+      color: 'from-purple-600 to-pink-600',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      borderColor: 'border-purple-400/30'
+    },
+    {
+      id: 'space-tech',
+      name: 'Space Technology',
+      icon: '🚀',
+      description: 'Interplanetary travel and space colonization technology',
+      features: ['Advanced Propulsion', 'Space Habitats', 'Satellite Networks'],
+      color: 'from-cyan-600 to-blue-600',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      borderColor: 'border-cyan-400/30'
+    },
+    {
+      id: 'biotech',
+      name: 'Biotechnology',
+      icon: '🧬',
+      description: 'Gene editing and synthetic biology solutions',
+      features: ['Gene Editing', 'Synthetic Biology', 'Personalized Medicine'],
+      color: 'from-emerald-600 to-teal-600',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      borderColor: 'border-emerald-400/30'
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: '⚡',
+      description: 'Next-generation quantum processing with exponential power',
+      features: ['1000+ Qubits', 'Quantum Supremacy', 'Molecular Simulation'],
+      color: 'from-orange-600 to-red-600',
+      bgColor: 'from-orange-600/30 to-red-600/30',
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 

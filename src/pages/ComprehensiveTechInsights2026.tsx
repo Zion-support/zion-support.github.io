@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

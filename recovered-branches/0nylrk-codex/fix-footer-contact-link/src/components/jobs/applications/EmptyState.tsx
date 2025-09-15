@@ -1,10 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { CardContent } from "@/components/ui/card";
-=======
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Link } from "react-router-dom";
 
 export function EmptyState() {

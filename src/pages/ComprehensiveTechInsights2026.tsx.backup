@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-be96
   return (
     <>
       <Helmet>
@@ -249,7 +254,10 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -557,7 +565,11 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
   );
 };
 
