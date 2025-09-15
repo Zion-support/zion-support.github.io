@@ -73,6 +73,24 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           description: 'Emerging technologies and trends',
           href: '/pages/FutureTechTrends2025',
           icon: Database
+        },
+        {
+          name: 'Revolutionary Tech Showcase',
+          description: 'Cutting-edge AI, Quantum Computing, and Neural Interfaces',
+          href: '/pages/RevolutionaryTechShowcase2025',
+          icon: Zap
+        },
+        {
+          name: 'Advanced AI Intelligence',
+          description: 'Autonomous reasoning and emotional intelligence',
+          href: '/pages/AdvancedAIIntelligence2025',
+          icon: Brain
+        },
+        {
+          name: 'Quantum Computing Breakthrough',
+          description: 'Exponential computing power and impossible solutions',
+          href: '/pages/QuantumComputingBreakthrough2025',
+          icon: Shield
         }
       ]
     },
