@@ -41,6 +41,8 @@ import NewContent2025UltimateBanner from './components/NewContent2025UltimateBan
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
@@ -94,6 +96,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
         <NewMultimodalAgents2025Banner />
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
@@ -212,6 +216,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Latest Content Showcase 2025 - NEW FEATURED */}
+        <LatestContentShowcase2025 />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
