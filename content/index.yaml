@@ -797,6 +797,34 @@ content_index:
         cost_reduction: "20-40%"
         latency_p95: "stable"
         quality: "+/="
+    - id: "ai-2026-operationalizing-live-evals-in-production-deep-dive"
+      type: "blog"
+      title: "AI 2026: Operationalizing Live Evals in Production — Deep Dive"
+      file_path: "/app/blog/ai-2026-operationalizing-live-evals-in-production-deep-dive/page.tsx"
+      url: "/blog/ai-2026-operationalizing-live-evals-in-production-deep-dive"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Reliability", "Progressive Delivery", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        error_budget: "guarded"
+    - id: "ai-2026-agent-reliability-field-guide"
+      type: "blog"
+      title: "AI 2026: Agent Reliability Field Guide"
+      file_path: "/app/blog/ai-2026-agent-reliability-field-guide/page.tsx"
+      url: "/blog/ai-2026-agent-reliability-field-guide"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Reliability", "Governance", "SLOs", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        mttr: "< 10 min"
+        audit_ready: true
 
     - id: "ai-2026-secure-agent-routing-strategies"
       type: "blog"
