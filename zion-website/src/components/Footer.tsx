@@ -52,8 +52,12 @@ const navigation = {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">

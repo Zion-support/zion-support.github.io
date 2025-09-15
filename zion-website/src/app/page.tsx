@@ -52,6 +52,10 @@ export default function HomePage() {
   return (
 <<<<<<< HEAD
     <div className="bg-black min-h-screen">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f175
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -82,6 +86,33 @@ export default function HomePage() {
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
+<<<<<<< HEAD
+=======
+=======
+      <div className="mx-auto max-w-7xl px-6 pt-24">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Leading the Future of{' '}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              AI & Technology
+            </span>
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
+            Join the revolution that's reshaping industries worldwide.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/contact"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
+            >
+              Get Started
+            </a>
+            <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              Learn More <span aria-hidden="true">→</span>
+            </a>
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
           </div>
         </div>
       </div>
@@ -93,6 +124,10 @@ export default function HomePage() {
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f175
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">AI & Technology</span>
@@ -210,6 +245,15 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-4xl">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<<<<<<< HEAD
+=======
+=======
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
+            <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
             {latest.map((item) => (
               <article key={item.href} className="rounded-2xl bg-white/5 p-6">
                 <h3 className="text-white font-semibold"><a href={item.href}>{item.title}</a></h3>

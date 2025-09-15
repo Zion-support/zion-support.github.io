@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const QuantumComputingRevolution2025: React.FC = () => {
@@ -291,6 +292,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </div>
         </motion.div>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -527,7 +530,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
       </div>
     </div>
   );
