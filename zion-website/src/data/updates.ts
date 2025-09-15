@@ -8,6 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Agentic Ops Control Center v2.3',
+    summary:
+      'Faster incident drilldowns, automated runbooks, and cross-environment policy dashboards.',
+    href: '/updates/agentic-ops-control-center-2-3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: AI Incident Simulator v1.1',
     summary:
       'New scenarios, live eval gates, and evidence exports to harden agent systems.',
