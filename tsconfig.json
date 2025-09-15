@@ -49,6 +49,11 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
+<<<<<<< HEAD
     "**/*.spec.tsx"
+=======
+    "**/*.spec.tsx",
+    "coverage"
+>>>>>>> origin/cursor/create-and-deploy-new-content-42b7
   ]
 }
