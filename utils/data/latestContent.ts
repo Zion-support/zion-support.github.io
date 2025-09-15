@@ -9,6 +9,22 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "hyperautomation-blueprint-2026",
+    title: "Hyperautomation Blueprint 2026",
+    summary: "Platform patterns, policy-as-code, and ROI tracking to scale automation.",
+    href: "/content/hyperautomation-blueprint-2026",
+    tag: "Blueprint",
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-agents-roi-playbook-2026",
+    title: "AI Agents ROI Playbook 2026",
+    summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
+    href: "/content/ai-agents-roi-playbook-2026",
+    tag: "Playbook",
+    date: "2025-09-15",
+  },
+  {
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",
