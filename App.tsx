@@ -33,6 +33,10 @@ import NewShowcase2025 from './src/pages/NewShowcase2025';
 import BusinessAutomationGuide2025 from './src/pages/BusinessAutomationGuide2025';
 import AdvancedTechSolutions2026 from './src/pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
+import AIInnovationHub2026 from './src/pages/AIInnovationHub2026';
+import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
+import NeuralInterfaceTechnology2026 from './src/pages/NeuralInterfaceTechnology2026';
+import AdvancedAnalyticsDashboard2026 from './src/pages/AdvancedAnalyticsDashboard2026';
 
 export default function App(): JSX.Element {
   return (
@@ -58,7 +62,7 @@ export default function App(): JSX.Element {
                       Experience the future of technology with our groundbreaking new content on AI Revolution, 
                       Quantum Computing Breakthroughs, and Neural Interface Technology
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-10xl mx-auto">
                       <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
                         🧠 AI Revolution →
                       </a>
@@ -76,6 +80,18 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AdvancedTechSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
                         🔮 Tech Solutions 2026 →
+                      </a>
+                      <a href="/pages/AIInnovationHub2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🧠 AI Innovation Hub →
+                      </a>
+                      <a href="/pages/QuantumComputingSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        ⚡ Quantum Computing →
+                      </a>
+                      <a href="/pages/NeuralInterfaceTechnology2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🧬 Neural Interface Tech →
+                      </a>
+                      <a href="/pages/AdvancedAnalyticsDashboard2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        📊 Analytics Dashboard →
                       </a>
                     </div>
                   </div>
@@ -137,6 +153,18 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/InnovationShowcase2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Innovation Showcase 2026
+                    </a>
+                    <a href="/pages/AIInnovationHub2026" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 AI Innovation Hub 2026
+                    </a>
+                    <a href="/pages/QuantumComputingSolutions2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚡ Quantum Computing 2026
+                    </a>
+                    <a href="/pages/NeuralInterfaceTechnology2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧬 Neural Interface 2026
+                    </a>
+                    <a href="/pages/AdvancedAnalyticsDashboard2026" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      📊 Analytics Dashboard 2026
                     </a>
                   </div>
                 </div>
@@ -489,6 +517,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/BusinessAutomationGuide2025" element={<BusinessAutomationGuide2025 />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
+          <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
+          <Route path="/pages/QuantumComputingSolutions2026" element={<QuantumComputingSolutions2026 />} />
+          <Route path="/pages/NeuralInterfaceTechnology2026" element={<NeuralInterfaceTechnology2026 />} />
+          <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
