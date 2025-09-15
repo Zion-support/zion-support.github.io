@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-safety-governance-blueprint-2025',
+      title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
+      excerpt: 'Operationalize AI safety with policy, red‑teaming, guardrails, and monitoring at scale.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '11 min read',
+      image: '/blog/ai-safety-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -74,6 +85,16 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
+    },
+    {
+      id: 'edge-ai-inference-acceleration',
+      title: 'Accelerating Edge AI Inference: Patterns for Low-Latency, Low-Cost Deployment',
+      excerpt: 'Achieve sub‑100ms inference with quantization, batching, caching, and split inference.',
+      category: 'Infrastructure',
+      author: 'Michael Rodriguez',
+      date: '2025-09-13',
+      readTime: '8 min read',
+      image: '/blog/edge-ai-inference.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',
@@ -158,14 +179,14 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
-    { name: 'Infrastructure', count: 1, active: false },
+    { name: 'Infrastructure', count: 2, active: false },
     { name: 'Content Marketing', count: 1, active: false }
   ];
 
@@ -192,13 +213,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/sovereign-ai-commerce-2025"
+            href="/blog/ai-safety-governance-blueprint-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+            aria-label="Read: AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SA
+                AG
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -206,10 +227,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
+                  AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+                  How to implement policy, evals, guardrails, and monitoring without slowing delivery.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>

@@ -11,6 +11,38 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-governance-blueprint-2025': {
+    id: 'ai-safety-governance-blueprint-2025',
+    title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
+    excerpt:
+      'A step-by-step blueprint to operationalize AI safety with policy, controls, red-teaming, and monitoring that scales.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '11 min read',
+    content: [
+      'Enterprises are moving from AI experimentation to scaled deployment. This requires a pragmatic safety and governance stack that balances innovation with risk controls.',
+      'This blueprint outlines five pillars: policy and risk taxonomy, gated release process, red‑team and evals, guardrails and runtime policy, and post‑deployment monitoring with feedback loops.',
+      'We include templates for policy definitions, decision matrices for model selection, and reference architectures for integrating safety services into your MLOps/LLMOps pipelines.',
+      'Organizations adopting this approach report faster approvals, fewer incidents, and clearer accountability across legal, security, and product teams.'
+    ]
+  },
+  'edge-ai-inference-acceleration': {
+    id: 'edge-ai-inference-acceleration',
+    title: 'Accelerating Edge AI Inference: Patterns for Low-Latency, Low-Cost Deployment',
+    excerpt:
+      'Design patterns to deliver sub‑100ms inference at the edge using quantization, distillation, batching, and caching.',
+    category: 'Infrastructure',
+    author: 'Michael Rodriguez',
+    date: '2025-09-13',
+    readTime: '8 min read',
+    content: [
+      'As AI moves closer to users and devices, inference latency and cost become the dominant constraints. Edge strategies must optimize the full stack: model, runtime, and network.',
+      'We cover practical techniques: 8‑bit/4‑bit quantization, operator and KV cache optimizations, request batching, speculative decoding, and distillation to smaller student models.',
+      'Deployment patterns include split inference, regional sharding, and device‑side pre/post‑processing with WASM or CUDA. We provide a reference SLO playbook and cost model.',
+      'The result is consistent sub‑100ms responses and 30–60% cost reduction while preserving accuracy for common product tasks.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
