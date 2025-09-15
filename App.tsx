@@ -18,6 +18,12 @@ import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
 import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
 import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
 import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
+import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
+import DigitalTransformation2025 from './src/pages/DigitalTransformation2025';
+import AdvancedAnalytics2025 from './src/pages/AdvancedAnalytics2025';
+import CybersecurityFortress2025 from './src/pages/CybersecurityFortress2025';
+import DynamicContentCarousel from './src/components/DynamicContentCarousel';
+import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -337,6 +343,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
           <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
           <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
+          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
+          <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
+          <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
+          <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
