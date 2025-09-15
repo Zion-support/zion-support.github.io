@@ -28,6 +28,11 @@ import UltimateContentShowcase2026 from './src/components/UltimateContentShowcas
 import UltimateContentShowcase2027 from './src/components/UltimateContentShowcase2027';
 import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 import TrendingContentSection from './src/components/TrendingContentSection';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import AIRevolutionaryBreakthrough2025 from './src/pages/AIRevolutionaryBreakthrough2025';
 
 export default function App(): JSX.Element {
   return (
@@ -41,24 +46,11 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* ULTRA-PROMINENT NEW CONTENT BANNER */}
-                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-                  <div className="relative z-10">
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                      <a href="/pages/AIInnovation2027" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
-                        🧠 NEW: AI Innovation 2027 →
-                      </a>
-                      <a href="/pages/QuantumConsciousness2028" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
-                        🌌 NEW: Quantum Consciousness 2028 →
-                      </a>
-                      <a href="/pages/NeuralReality2027" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
-                        🧬 NEW: Neural Reality 2027 →
-                      </a>
-                      </a>
-                    </div>
-                  </div>
+                <RevolutionaryTechBanner2025 />
+
+                {/* NEW: Ultimate Content Showcase 2025 */}
+                <div className="mb-12">
+                  <UltimateContentShowcase2025 />
                 </div>
 
                 <div className="mb-12">
@@ -295,6 +287,11 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* NEW: Interactive Technology Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
                 {/* Interactive Technology Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -517,6 +514,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIInnovation2027" element={<AIInnovation2027 />} />
           <Route path="/pages/QuantumConsciousness2028" element={<QuantumConsciousness2028 />} />
           <Route path="/pages/NeuralReality2027" element={<NeuralReality2027 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/AIRevolutionaryBreakthrough2025" element={<AIRevolutionaryBreakthrough2025 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
