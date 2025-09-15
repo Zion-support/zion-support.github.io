@@ -1,30 +1,27 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+<<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 <<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-<<<<<<< HEAD
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+<<<<<<< HEAD
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
 import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const services = [
@@ -32,16 +29,13 @@ const services = [
   { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.', icon: CogIcon },
   { name: 'Enterprise Enablement', description: 'Training, governance, and change management.', icon: UserGroupIcon }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+<<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 =======
 import { 
@@ -197,16 +191,16 @@ const services = [
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 <<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-<<<<<<< HEAD
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+<<<<<<< HEAD
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
 ]
 
 export default function ServicesPage() {
@@ -223,22 +217,17 @@ export default function ServicesPage() {
               <div key={service.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
 <<<<<<< HEAD
-<<<<<<< HEAD
-                  <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {service.name}
-=======
 =======
 <<<<<<< HEAD
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+<<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
                   <s.icon className="h-5 w-5 text-blue-400" />
                   {s.name}
@@ -363,18 +352,19 @@ export default function ServicesPage() {
                   {service.name}
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 <<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
 <<<<<<< HEAD
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
 =======
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 >>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{service.description}</p>
@@ -385,24 +375,19 @@ export default function ServicesPage() {
         </div>
       </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-be96
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     </div>
   )
 }
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f175
+<<<<<<< HEAD
+    </div>
+  )
+}
 =======
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+<<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
@@ -460,16 +445,17 @@ export default function ServicesPage() {
 }
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 <<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
 <<<<<<< HEAD
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
 =======
     </div>
   )
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175

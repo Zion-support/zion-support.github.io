@@ -6,35 +6,14 @@ const posts = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-60ab
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-be96
-<<<<<<< HEAD
-<<<<<<< HEAD
-    slug: 'ai-2026-agent-orchestration-enterprise-guide',
-    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
-    summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-=======
-<<<<<<< HEAD
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-f175
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -57,79 +36,35 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  },
-  {
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-    slug: 'ai-2026-agent-orchestration-enterprise-guide',
-    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
-    summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-  },
-  {
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
-    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary:
-      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
-  },
-  {
-    slug: 'ai-2026-autonomous-workflow-architecture',
-    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
-    summary:
-      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
-  },
-  {
-    slug: 'ai-2026-production-agent-postmortems',
-    title: 'AI 2026: Production Agent Postmortems',
-    summary:
-      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
-  },
-  {
-    slug: 'ai-2026-real-time-model-routing-playbook',
-    title: 'AI 2026: Real-Time Model Routing — Playbook',
-    summary:
-      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8472
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-be96
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
 =======
+  },
+  {
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8472
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
-=======
+  },
+  {
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -152,14 +87,21 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
+    slug: 'ai-2026-agent-orchestration-enterprise-guide',
+    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
+    summary:
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
 >>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-60ab
->>>>>>> cursor/create-and-deploy-new-content-be96
+<<<<<<< HEAD
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
