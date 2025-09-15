@@ -227,6 +227,10 @@ import UltimateROICalculator2026 from '../components/UltimateROICalculator2026';
 import UltimateAIAchievementSummary2025 from '../components/UltimateAIAchievementSummary2025';
 import UltimateAIRevolutionTimeline2025 from '../components/UltimateAIRevolutionTimeline2025';
 import UltimateAIGlobalImpact2025 from '../components/UltimateAIGlobalImpact2025';
+import UltimateAIRevolutionDashboard2025 from '../components/UltimateAIRevolutionDashboard2025';
+import UltimateAIFutureVision2025 from '../components/UltimateAIFutureVision2025';
+import UltimateAITechnologyMatrix2025 from '../components/UltimateAITechnologyMatrix2025';
+import UltimateAIRevolutionFinale2025 from '../components/UltimateAIRevolutionFinale2025';
 
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
@@ -500,6 +504,21 @@ export default function HomePage() {
         
         {/* ULTIMATE AI REVOLUTION TIMELINE 2025 - NEWEST FEATURED */}
         <UltimateAIRevolutionTimeline2025 />
+        
+        {/* ULTIMATE AI GLOBAL IMPACT 2025 - NEWEST FEATURED */}
+        <UltimateAIGlobalImpact2025 />
+        
+        {/* ULTIMATE AI REVOLUTION DASHBOARD 2025 - NEWEST ANALYTICS */}
+        <UltimateAIRevolutionDashboard2025 />
+        
+        {/* ULTIMATE AI FUTURE VISION 2025 - NEWEST FEATURED */}
+        <UltimateAIFutureVision2025 />
+        
+        {/* ULTIMATE AI TECHNOLOGY MATRIX 2025 - NEWEST ANALYTICS */}
+        <UltimateAITechnologyMatrix2025 />
+        
+        {/* ULTIMATE AI REVOLUTION FINALE 2025 - FINAL ACHIEVEMENT */}
+        <UltimateAIRevolutionFinale2025 />
         
         {/* ULTIMATE AI GLOBAL IMPACT 2025 - NEWEST FEATURED */}
         <UltimateAIGlobalImpact2025 />
