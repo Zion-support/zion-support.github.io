@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Compliance Copilot',
+    summary:
+      'Automate AI policy checks, audit trails, and approval workflows directly in your SDLC.',
+    href: '/updates/ai-compliance-copilot',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Autonomous Agents (2026 Preview)',
+    summary:
+      'Market landscape, production patterns, and maturity model for enterprise autonomous agents.',
+    href: '/updates/state-of-autonomous-agents-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Cost-Aware Model Routing',
+    summary:
+      'Blueprint for selecting the optimal model per request balancing cost, latency, and quality.',
+    href: '/updates/cost-aware-model-routing',
+    date: '2025-09-14',
+    tag: 'Guide'
+  },
+  {
     title: 'Course: Web3 Fundamentals Track',
     summary:
       'Beginner-friendly curriculum covering wallets, NFTs, smart contracts, and L2 ecosystems with hands-on projects.',

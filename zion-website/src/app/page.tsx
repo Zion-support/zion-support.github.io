@@ -114,6 +114,13 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+                href="/updates/ai-compliance-copilot"
+                className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-500/10 px-4 py-2 text-sm font-semibold text-yellow-200 hover:bg-yellow-500/20 transition-colors duration-200"
+              >
+                New: AI Compliance Copilot
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/ai-agent-safety-certification-beta"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
