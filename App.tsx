@@ -54,6 +54,10 @@ import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing20
 import QuantumConsciousnessRevolution2029 from './src/pages/QuantumConsciousnessRevolution2029';
 import TranscendentAI2030 from './src/pages/TranscendentAI2030';
 import UniversalTechRevolution2030 from './src/pages/UniversalTechRevolution2030';
+// New 2031-2033 Pages
+import TranscendentAI2031 from './src/pages/TranscendentAI2031';
+import UniversalTechRevolution2032 from './src/pages/UniversalTechRevolution2032';
+import OmniversalAI2033 from './src/pages/OmniversalAI2033';
 // New 2028 Components
 import RevolutionaryTechShowcase2028 from './src/pages/RevolutionaryTechShowcase2028';
 import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
@@ -61,6 +65,10 @@ import TrendingContentSection2028 from './src/components/TrendingContentSection2
 import RevolutionaryContentBanner2028 from './src/components/RevolutionaryContentBanner2028';
 import RevolutionaryContentBanner2030 from './src/components/RevolutionaryContentBanner2030';
 import InteractiveTechShowcase2030 from './src/components/InteractiveTechShowcase2030';
+// New 2031-2033 Components
+import RevolutionaryContentBanner2031 from './src/components/RevolutionaryContentBanner2031';
+import InteractiveTechShowcase2031 from './src/components/InteractiveTechShowcase2031';
+import AnimatedTechShowcase from './src/components/AnimatedTechShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -96,6 +104,15 @@ export default function App(): JSX.Element {
                       <a href="/pages/UniversalTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
                         🌌 NEW: Universal Tech →
                       </a>
+                      <a href="/pages/TranscendentAI2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+                        🧠 NEW: Transcendent AI 2031 →
+                      </a>
+                      <a href="/pages/UniversalTechRevolution2032" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+                        🌌 NEW: Universal Tech 2032 →
+                      </a>
+                      <a href="/pages/OmniversalAI2033" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-fuchsia-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+                        🌟 NEW: Omniversal AI 2033 →
+                      </a>
                       <a href="/pages/UltimateTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-center">
                         🌟 Ultimate Tech Revolution →
                       </a>
@@ -129,9 +146,22 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Content Banner 2030 */}
                 <RevolutionaryContentBanner2030 />
                 
+                {/* NEW: Revolutionary Content Banner 2031 */}
+                <RevolutionaryContentBanner2031 />
+                
                 {/* NEW: Interactive Tech Showcase 2030 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2030 />
+                </div>
+                
+                {/* NEW: Interactive Tech Showcase 2031 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2031 />
+                </div>
+                
+                {/* NEW: Animated Tech Showcase */}
+                <div className="mb-12">
+                  <AnimatedTechShowcase />
                 </div>
                 {/* REVOLUTIONARY CONTENT SHOWCASE 2027 */}
                 <div className="mb-12">
@@ -512,6 +542,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumConsciousnessRevolution2029" element={<QuantumConsciousnessRevolution2029 />} />
           <Route path="/pages/TranscendentAI2030" element={<TranscendentAI2030 />} />
           <Route path="/pages/UniversalTechRevolution2030" element={<UniversalTechRevolution2030 />} />
+          <Route path="/pages/TranscendentAI2031" element={<TranscendentAI2031 />} />
+          <Route path="/pages/UniversalTechRevolution2032" element={<UniversalTechRevolution2032 />} />
+          <Route path="/pages/OmniversalAI2033" element={<OmniversalAI2033 />} />
           <Route path="/ultimate-showcase" element={<UltimateContentShowcase2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
