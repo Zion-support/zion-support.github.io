@@ -207,10 +207,8 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -439,12 +437,8 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           </div>
@@ -577,19 +571,15 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -653,10 +643,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8delay: 0.2 }}
-          className="mb-20"
-=======
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'>;
           <div className='flex items-center justify-center space-x-2 mb-4'>;
@@ -711,7 +697,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -756,17 +741,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           <motion&& motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
         {/* IT Infrastructure Section */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -778,7 +756,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
         >
@@ -813,18 +790,14 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -841,9 +814,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -868,7 +839,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             )}          </motion.div>        >
 
           transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           className="mb-20"
         >
 
@@ -891,11 +861,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8delay: 0.6 }}
-=======
           transition={{ duration: 0.8, delay: 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Zap className='w-6 h-6 text-pink-400' />
@@ -930,18 +896,11 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
         {/* CTA Section */}
         <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
-          className="text-center mt-16"
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Micro SAAS Section */}
         <motion&& motion.div
 
@@ -960,11 +919,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -978,7 +935,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1031,7 +987,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
@@ -1070,10 +1025,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

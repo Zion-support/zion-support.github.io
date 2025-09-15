@@ -10,20 +10,11 @@ export default function InteractiveContentDiscovery2027() {
     { id: ''all', 'label: 'All 'Content', 'icon: '📚' },
     { id: 'ai-2026'label: 'AI 2026'icon: '🚀' },
     { id: 'ai-2027'label: 'AI 2027'icon: '🔮' },
-<<<<<<< HEAD
-    { id: ''quantum', 'label: 'Quantum 'Computing', 'icon: '⚛️' },
-    { id: ''neural', 'label: 'Neural 'Interfaces', 'icon: '🧠' },
-    { id: ''automation', 'label: ''Automation', 'icon: '🤖' },
-    { id: 'case-'studies', 'label: 'Case 'Studies', 'icon: '📊' },
-    { id: ''predictions', 'label: ''Predictions', 'icon: '🔮' }
->>>>>>> fec9b05adaefd885fbbec3057680e3a2cfdb68c7
-=======
     { id: 'quantum'label: 'Quantum Computing'icon: '⚛️' },
     { id: 'neural'label: 'Neural Interfaces'icon: '🧠' },
     { id: 'automation'label: 'Automation'icon: '🤖' },
     { id: 'case-studies'label: 'Case Studies'icon: '📊' },
     { id: 'predictions'label: 'Predictions'icon: '🔮' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
   const contentItems = [

@@ -76,20 +76,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       reportMetric('CLS', metric.value);
     });
 
-<<<<<<< HEAD
-    // Observe different types of performance entries
-    try {
-      observer.observe({ entryTypes: [', 'paint', 'largest-contentful-'paint', 'first-'input', 'layout-shift'] });
-    } catch (e) {
-      // Fallback for browsers that 'don', 't support all entry types
-      observer.observe({ entryTypes: ['paint'] });
-    }
-=======
     getFID((metric) => {
       updateMetrics({ fid: metric.value });
       reportMetric('FID', metric.value);
     });
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     getFCP((metric) => {
       updateMetrics({ fcp: metric.value });
@@ -122,30 +112,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, [updateMetrics, reportMetric]);
 
-<<<<<<< HEAD
-  // Send metrics to analytics (if in production)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-      // Send to Google Analytics or other analytics service
-      if (typeof gtag !== 'undefined') {
-        Object.entries(metrics).forEach(([keyvalue]) => {
-          if (value !== null) {
-            gtag(', 'event', 'performance_metric'{
-              metric_name: key,
-              metric_value: Math.round(value),
-              event_category: 'Performance',
-            });
-          }
-        });
-      }
-    }
-  }[metrics]);
-
-  // 'Don', 't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
-=======
   const getPerformanceGrade = (value: number | null, thresholds: { good: number; poor: number }) => {
     if (value === null) return 'N/A';
     if (value <= thresholds.good) return 'Good';
@@ -159,7 +125,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   };
 
   if (!showMetrics) return null;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   return (
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-sm z-50">

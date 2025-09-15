@@ -197,11 +197,6 @@ const HeroSection: React.FC = () => {
       <div className="relative container mx-auto px-4 text-center z-10">;
 
         {/* Main Content */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -235,7 +230,6 @@ const HeroSection: React.FC = () => {
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           transition={{ duration: 0.8 }}
           className='max-w-6xl mx-auto'        >          className="max-w-6xl mx-auto"
         >
@@ -518,16 +512,11 @@ const HeroSection: React.FC = () => {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-=======
             transition={{ duration: 0.8, delay: 0.3 }}
 
 
 
             className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             Transform Your Business with
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -545,10 +534,6 @@ const HeroSection: React.FC = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
 
 
@@ -556,7 +541,6 @@ const HeroSection: React.FC = () => {
 
 
             className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
@@ -575,17 +559,12 @@ const HeroSection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-=======
             transition={{ duration: 0.8, delay: 0.5 }}
 
 
 
 
             className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-16&quot;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             <Link
               href="/contact"
@@ -668,10 +647,6 @@ const HeroSection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-=======
             transition={{ duration: 0.8, delay: 0.6 }}
 
 
@@ -681,7 +656,6 @@ const HeroSection: React.FC = () => {
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             {stats.map((stat, index) => (
               <motion.div

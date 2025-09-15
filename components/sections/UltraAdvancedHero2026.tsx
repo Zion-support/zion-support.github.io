@@ -24,7 +24,6 @@ import React from 'react';
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
@@ -67,9 +66,7 @@ import {
   Mail
   MapPin;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   ArrowRight,
   Star,
   TrendingUp,
@@ -126,11 +123,7 @@ function UltraAdvancedHero2026() {
 
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 30 },
-=======
     hidden: { opacity: 0, y: 30 }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     visible: {
       opacity: 1
       y: 0
@@ -214,12 +207,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Main Heading */}
@@ -252,12 +242,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Subheading */}
@@ -286,12 +273,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Service Statistics */}
@@ -522,7 +506,6 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -607,7 +590,6 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               href="/contact"
@@ -622,11 +604,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
               Get Started Today
@@ -637,13 +617,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Contact Information */}
@@ -765,12 +741,9 @@ export default function UltraAdvancedHero2026() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Trust Indicators */}
@@ -1273,7 +1246,6 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
     </section>));
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -1281,9 +1253,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

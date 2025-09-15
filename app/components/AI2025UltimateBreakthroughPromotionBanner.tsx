@@ -59,13 +59,9 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
-<<<<<<< HEAD
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/5 to-white/10 opacity-30"></div>
-=======
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
         <div className="w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between">

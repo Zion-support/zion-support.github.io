@@ -1,25 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MenuXChevronDownSearchPhoneMailMapPin
-  RocketBrainAtomGlobeZapSparklesShield
-  MicroscopeDollarSignHomeUsersBriefcase
-  BookOpenMessageCircleStarTrendingUpTarget,
-  LayersCpuDatabaseCloudLockShieldCheck,
-  EarthFactoryCarBuildingGraduationCapScale,
-  PaletteCameraVideoMusicGamepad2Heart,
-  LeafSunMoonWindDropletsMountain,
-  CodeWrenchSmartphoneBarChart3Eye,
-  NetworkServerHardDriveMonitor,
-  LaptopWatchHeadphonesSpeakerMic
-  KeyboardMouseCpuIconDatabaseIcon
-  CloudIconLockIconShieldIconGlobeIcon,
-  ZapIconSparklesIconBrainIconAtomIcon,
-  MenuIconCloseIconChevronRightIcon
-=======
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
@@ -209,7 +188,6 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 } from 'lucide-react';
 
 const contactInfo = {
@@ -227,72 +205,6 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness Evolution 'Platform', 'href: '/ai-consciousness-evolution-'platform', 'description: 'Develop genuine AI 'consciousness', 'price: '$19,999/month' },
-      { name: 'AI Emotional Intelligence 'Platform', 'href: '/ai-emotional-intelligence-'platform', 'description: 'Real-time emotion analysis and 'response', 'price: '$3,999/month' },
-      { name: 'AI Creativity 'Orchestrator', 'href: '/ai-creativity-'orchestrator', 'description: 'Multi-model creativity 'fusion', 'price: '$5,999/month' },
-      { name: 'AI Autonomous Business 'Manager', 'href: '/ai-autonomous-business-'manager', 'description: 'Fully autonomous business 'operations', 'price: '$12,999/month' }
-    ]
-  },
-  {
-    title: '⚛️ Quantum & Emerging Tech 2030',
-    icon: AtomIcon,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
-    description: 'Quantum computing and beyond',
-    services: [
-      { name: 'Quantum Internet Security 'Gateway', 'href: '/quantum-internet-security-'gateway', 'description: 'Unbreakable quantum 'encryption', 'price: '$15,999/month' },
-      { name: 'Biotech DNA Computing 'Platform', 'href: '/biotech-dna-computing-'platform', 'description: 'DNA-based 'computation', 'price: '$25,999/month' },
-      { name: 'Neuromorphic Computing 'Platform', 'href: '/neuromorphic-computing-'platform', 'description: 'Brain-inspired 'computing', 'price: '$899/month' },
-      { name: 'Photonic Computing 'Infrastructure', 'href: '/photonic-computing-'infrastructure', 'description: 'Light-speed 'computing', 'price: '$699/month' }
-    ]
-  },
-  {
-    title: '🚀 Space & Metaverse 2030',
-    icon: Rocket,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
-    description: 'Space exploration and digital reality',
-    services: [
-      { name: 'Space Mining Automation 'Platform', 'href: '/space-mining-automation-'platform', 'description: 'Automated asteroid 'mining', 'price: '$45,999/month' },
-      { name: 'Metaverse Development 'Platform', 'href: '/metaverse-development-'platform', 'description: 'Build immersive virtual 'worlds', 'price: '$499/month' },
-      { name: 'Virtual Event Hologram 'Platform', 'href: '/virtual-event-hologram-'platform', 'description: 'Immersive holographic 'events', 'price: '$799/month' },
-      { name: 'AI Predictive Health 'Analytics', 'href: '/ai-predictive-health-'analytics', 'description: 'Predictive health 'outcomes', 'price: '$7,999/month' }
-    ]
-  },
-  {
-    title: '⚙️ Enterprise IT 2030',
-    icon: CpuIcon,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    description: 'Autonomous enterprise infrastructure',
-    services: [
-      { name: 'Autonomous DevOps 'Platform', 'href: '/autonomous-devops-'platform', 'description: 'Fully autonomous 'DevOps', 'price: '$799/month' },
-      { name: 'Zero Trust Network 'Architecture', 'href: '/zero-trust-network-'architecture', 'description: 'Never trustalways 'verify', 'price: '$599/month' },
-      { name: 'Edge Computing 'Orchestration', 'href: '/edge-computing-'orchestration', 'description: 'Distributed edge 'computing', 'price: '$449/month' },
-      { name: 'AI-Powered IT Operations 'Center', 'href: '/ai-it-operations-'center', 'description: 'Intelligent IT 'operations', 'price: '$699/month' }
-    ]
-  },
-  {
-    title: '🎯 Business Solutions 2030',
-    icon: Target,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
-    description: 'Practical business solutions with AI',
-    services: [
-      { name: 'AI Business Intelligence 'Suite', 'href: '/ai-business-intelligence-'suite', 'description: 'Intelligent business 'insights', 'price: '$299/month' },
-      { name: 'AI Customer Success 'Automation', 'href: '/ai-customer-success-'automation', 'description: 'Automate customer 'success', 'price: '$199/month' },
-      { name: 'Blockchain Supply Chain 'Transparency', 'href: '/blockchain-supply-chain-'transparency', 'description: 'End-to-end 'traceability', 'price: '$399/month' },
-      { name: 'AI Meeting Transcriber 'Pro', 'href: '/ai-meeting-transcriber-'pro', 'description: 'Professional 'transcription', 'price: '$149/month' }
-    ]
-  },
-  {
-    title: '🔬 Research & Development 2030',
-    icon: Microscope,
-    color: 'from-orange-600 via-red-600 to-pink-600',
-    description: 'Breakthrough research solutions',
-    services: [
-      { name: 'Swarm Robotics 'Orchestration', 'href: '/swarm-robotics-'orchestration', 'description: 'Coordinate robot 'swarms', 'price: '$449/month' },
-      { name: 'Brain-Computer Interface 'Platform', 'href: '/brain-computer-interface-'platform', 'description: 'Direct neural 'interface', 'price: '$1,299/month' },
-      { name: 'Quantum Machine Learning 'Platform', 'href: '/quantum-machine-learning-'platform', 'description: 'Quantum-enhanced 'ML', 'price: '$2,999/month' },
-      { name: 'Synthetic Biology Automation 'Platform', 'href: '/synthetic-biology-automation-'platform', 'description: 'Automate biology 'research', 'price: '$3,999/month' }
-=======
 
   Laptop, Watch, Headphones, Speaker, Mic, ;
   Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
@@ -345,7 +257,6 @@ const serviceCategories = [;
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' Quantum & Emerging Tech 2030'
@@ -729,16 +640,6 @@ const serviceCategories = [;
 
 
 const mainNavigation = [
-<<<<<<< HEAD
-  { name: ''Home', 'href: '/'icon: Home },
-  { name: ''Services', 'href: '/'services', 'icon: Briefcase },
-  { name: ''Solutions', 'href: '/'solutions', 'icon: Layers },
-  { name: ''Pricing', 'href: '/'pricing', 'icon: DollarSign },
-  { name: ''Resources', 'href: '/'resources', 'icon: BookOpen },
-  { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: TrendingUp },
-  { name: ''Blog', 'href: '/'blog', 'icon: MessageCircle },
-  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircle }
-=======
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
   { name: 'Solutions', href: '/solutions', icon: Layers }
@@ -747,24 +648,14 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 const companyLinks = [
-<<<<<<< HEAD
-  { name: 'About 'Us', 'href: '/about' },
-  { name: ''Careers', 'href: '/careers' },
-  { name: ''News', 'href: '/news' },
-  { name: ''Partners', 'href: '/partners' },
-  { name: ''Support', 'href: '/support' },
-  { name: ''Status', 'href: '/status' }
-=======
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
   { name: 'News', href: '/news' }
   { name: 'Partners', href: '/partners' }
   { name: 'Support', href: '/support' }
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 
 
@@ -831,8 +722,6 @@ const companyLinks = [;
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -843,17 +732,11 @@ const companyLinks = [;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
-<<<<<<< HEAD
-    window.addEventListener(', 'scroll', 'handleScroll);
-    return () => window.removeEventListener(', 'scroll', 'handleScroll);
-  }[]);
-=======
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20);
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -1108,7 +991,6 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1143,15 +1025,10 @@ const companyLinks = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                             ))}
                           </div>;
@@ -1181,12 +1058,10 @@ const companyLinks = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   Get Started
@@ -1363,16 +1238,11 @@ const companyLinks = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1400,7 +1270,6 @@ const companyLinks = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -1427,7 +1296,6 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1554,12 +1422,8 @@ const companyLinks = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     <button
@@ -1629,12 +1493,9 @@ const companyLinks = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   {/* Company Links */}
@@ -1667,19 +1528,15 @@ const companyLinks = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -1697,19 +1554,15 @@ const companyLinks = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -1726,8 +1579,6 @@ const companyLinks = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
                         <span>{contactInfo.mobile}</span>
@@ -1825,7 +1676,6 @@ const companyLinks = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1834,7 +1684,6 @@ const companyLinks = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

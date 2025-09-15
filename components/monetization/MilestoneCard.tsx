@@ -9,12 +9,6 @@ type Props = {
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
-<<<<<<< HEAD
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | ', 'paid', 'milestoneId: string) => Promise<void> | void;
-};
-
-const statusSteps = [', 'Pending', 'In 'Progress', 'Submitted', 'Approved', 'Paid'] as const;
-=======
   onAction: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -165,7 +159,6 @@ export default function MilestoneCard({
 };
 
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 export default function MilestoneCard(): any ({ milestone, projectId, role, onAction }: Props) {;
   const [expanded, setExpanded] = useState(false);
@@ -250,7 +243,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -283,11 +275,9 @@ function MilestoneCard() {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -355,7 +345,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     </a>
@@ -397,9 +386,6 @@ function MilestoneCard() {
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
-<<<<<<< HEAD
-            onClick={() => onAction(', 'in_progress', 'milestone.id)}
-=======
 
 
 
@@ -409,7 +395,6 @@ function MilestoneCard() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -421,17 +406,12 @@ function MilestoneCard() {
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             Mark In Progress
           </button>
         )}
         {canTalentSubmit && (;
           <button
-<<<<<<< HEAD
-            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
-            onClick={() => onAction(', 'submitted', 'milestone.id)}
-=======
 
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
             onClick={() => onAction('submitted', milestone.id)}
@@ -443,25 +423,16 @@ function MilestoneCard() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
+
+
           >
             Submit Work
           </button>
         )}
         {canClientApprove && (
           <button
-<<<<<<< HEAD
-            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
-            onClick={() => onAction(', 'approved', 'milestone.id)}
-=======
 
             className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'            onClick={() => onAction('approved', milestone.id)}            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
             onClick={() => onAction('approved', milestone.id)}
@@ -475,25 +446,16 @@ function MilestoneCard() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
+
+
           >
             Approve
           </button>
         )}
         {canClientMarkPaid && (
           <button
-<<<<<<< HEAD
-            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
-            onClick={() => onAction(', 'paid', 'milestone.id)}
-=======
 
             className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'            onClick={() => onAction('paid', milestone.id)}            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
             onClick={() => onAction('paid', milestone.id)}
@@ -507,15 +469,10 @@ function MilestoneCard() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
+
+
           >
             Mark as Paid
           </button>

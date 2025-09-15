@@ -78,13 +78,6 @@ import {
 const ServicesSection: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'AI Development',
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning 'Models', 'Natural Language 'Processing', 'Computer 'Vision', 'Predictive Analytics'],
-      color: 'from-blue-500 to-cyan-500',
-=======
 
       icon: Brain
       title: 'AI Development'
@@ -98,40 +91,23 @@ const ServicesSection: React.FC = () => {
       ]
       color: 'from-blue-500 to-cyan-500'
       href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       href: '/services/ai-development'
 
     }
     {
-<<<<<<< HEAD
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['AWS/Azure/'GCP', 'Microservices'Serverless 'Architecture', 'DevOps Automation'],
-      color: 'from-purple-500 to-pink-500',
-=======
       icon: Cloud
       title: 'Cloud Architecture'
       description: 'Scalable cloud solutions and infrastructure design for modern applications.'
       features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation']
       color: 'from-purple-500 to-pink-500'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       href: '/services/cloud-architecture'
     }
     {
-<<<<<<< HEAD
-      icon: RefreshCw,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business.',
-      features: ['Process 'Automation', 'Legacy System 'Migration', 'Change 'Management', 'Digital Strategy'],
-      color: 'from-green-500 to-emerald-500',
-=======
       icon: RefreshCw
       title: 'Digital Transformation'
       description: 'End-to-end digital transformation services to modernize your business.'
       features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy']
       color: 'from-green-500 to-emerald-500'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       href: '/services/digital-transformation'
     }
     {
@@ -172,10 +148,6 @@ const ServicesSection: React.FC = () => {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-<<<<<<< HEAD
-      features: ['Sensor 'Networks', 'Real-time 'Monitoring', 'Data 'Analytics', 'Edge Computing'],
-      color: 'from-orange-500 to-red-500',
-=======
 
     };
       features: [;
@@ -201,33 +173,17 @@ const ServicesSection: React.FC = () => {
       ]
       color: 'from-orange-500 to-red-500'
       href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       href: '/services/iot-platforms'
     }
     {
-<<<<<<< HEAD
-      icon: Shield,
-      title: 'Blockchain Solutions',
-      description: 'Decentralized technology platforms and smart contract development.',
-      features: ['Smart 'Contracts', 'DeFi 'Applications', 'NFT 'Platforms', 'Supply Chain Solutions'],
-      color: 'from-indigo-500 to-purple-500',
-=======
       icon: Shield
       title: 'Blockchain Solutions'
       description: 'Decentralized technology platforms and smart contract development.'
       features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions']
       color: 'from-indigo-500 to-purple-500'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       href: '/services/blockchain-solutions'
     }
     {
-<<<<<<< HEAD
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence solutions.',
-      features: ['Big Data 'Processing', 'Real-time 'Dashboards', 'Predictive 'Modeling', 'Data Visualization'],
-      color: 'from-teal-500 to-blue-500',
-=======
       icon: Shield
       title: 'Blockchain Solutions'
       description:
@@ -259,7 +215,6 @@ const ServicesSection: React.FC = () => {
       href: '/services/data-analytics'
     },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization']
       color: 'from-teal-500 to-blue-500'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       href: '/services/data-analytics'
     }
   const containerVariants = {
@@ -298,8 +253,6 @@ const ServicesSection: React.FC = () => {
 
     hidden: { opacity: 0, y: 20 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
@@ -321,11 +274,6 @@ const ServicesSection: React.FC = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-    visible: { opacity: 1, y: 0 }
-  };
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
         {/* Section Header */}
 
@@ -333,11 +281,7 @@ const ServicesSection: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8 }}
-=======
           transition={{ duration: 0 && 0.8 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
@@ -347,9 +291,7 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
         >
@@ -430,12 +372,8 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             <Zap className='w-5 h-5 text-blue-400' />
@@ -498,18 +436,14 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -625,12 +559,8 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               </div>
@@ -650,26 +580,16 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Bottom CTA */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='text-center'
 
@@ -682,7 +602,6 @@ const ServicesSection: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -737,10 +656,8 @@ export default ServicesSection;  );
 
 
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

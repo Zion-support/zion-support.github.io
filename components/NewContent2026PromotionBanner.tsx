@@ -31,13 +31,9 @@ const NewContent2026PromotionBanner = () => {
     <div className={`relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Animated Background */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5"></div>
-=======
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-white/10 rounded-full w-2 h-2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20"></div>
       </div>
 

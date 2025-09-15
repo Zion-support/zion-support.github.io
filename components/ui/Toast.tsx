@@ -1,10 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-CheckCircleAlertCircleXInfo
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
@@ -31,7 +25,6 @@ interface ToastProps {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -62,7 +55,6 @@ export interface Toast {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   message?: string;
   duration?: number
 }
@@ -328,7 +320,6 @@ interface ToastContainerProps {;
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {;
   return (
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className="fixed top-4 right-4 z-50 space-y-3">;
       <AnimatePresence>;
         {toasts && toasts.map((toast) => (;
@@ -397,42 +388,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     </motion.div>);
 }
 
-<<<<<<< HEAD
-  const addToast = (toast: Omit<'Toast', 'id'>) => {
-    const id = Math.random().toString(36).substr(29);
-    const newToast = { ...toastid };
-    setToasts(prev => [...prevnewToast]);
-  };
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
-<<<<<<< HEAD
-  const showSuccess = (title: stringmessage?: string) => {
-    addToast({ type: ''success', 'titlemessage });
-  };
-
-  const showError = (title: stringmessage?: string) => {
-    addToast({ type: ''error', 'titlemessage });
-  };
-
-  const showInfo = (title: stringmessage?: string) => {
-    addToast({ type: ''info', 'titlemessage });
-  };
-
-  const showWarning = (title: stringmessage?: string) => {
-    addToast({ type: ''warning', 'titlemessage });
-  };
-
-  return {
-    toasts,
-    showSuccess,
-    showError,
-    showInfo,
-    showWarning,
-    removeToast};
-};
-=======
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e

@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-export default function EnhancedCard({ childrenclassName = ', ' }: { children: React.ReactNode; className?: string }) {
-=======
 import React from "react";
 
 
@@ -42,7 +39,6 @@ export default function EnhancedCard(): any ({;
 
   className?: string;
 }) {;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );

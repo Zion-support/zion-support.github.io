@@ -5,13 +5,6 @@ import React, { useState } from 'react';
 
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  ArrowRightStarTrendingUpZapBrainAtom
-  RocketShieldTargetCheckCircleExternalLink,
-  SearchFilterGridListChevronDown
-} from 'lucide-react';
-=======
 
 import {
 
@@ -31,7 +24,6 @@ import {
   Grid
   List
   ChevronDown;} from 'lucide-react';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
@@ -159,11 +151,6 @@ import { motion, AnimatePresence } from 'framer-motion';
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-<<<<<<< HEAD
-          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
-        case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g', ')) - parseFloat(b.roi.replace(/[^0-9.]/g', '));
-=======
 
 
           return (
@@ -175,7 +162,6 @@ import { motion, AnimatePresence } from 'framer-motion';
             parseFloat(a.roi.replace(/[^0-9.]/g, '')) -
             parseFloat(b.roi.replace(/[^0-9.]/g, ''))
           );
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         default:
           return 0;      }          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
 
@@ -236,16 +222,6 @@ import { motion, AnimatePresence } from 'framer-motion';
     <section className='py-20 bg-gray-900'>;
       <div className='container mx-auto px-4'>;
         {/* Header */}
-<<<<<<< HEAD
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-=======
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -290,7 +266,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
           <h2 className='text-5xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               2027 Revolutionary Services
             </span>
           </h2>
@@ -329,10 +304,6 @@ import { motion, AnimatePresence } from 'framer-motion';
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6delay: 0.2 }}
-        >
-=======
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
@@ -352,7 +323,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                 <div className="relative">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
               {/* Search */}
@@ -685,11 +655,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 </div>
@@ -932,7 +899,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             >
@@ -941,10 +907,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-                  className="group"
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
 
@@ -956,15 +918,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
+
+
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
@@ -1057,10 +1015,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
                         ))}
@@ -1071,7 +1026,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
                           </li>
                         ))}
@@ -1088,11 +1042,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1116,12 +1068,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                           {tag}
@@ -1137,16 +1087,12 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
@@ -1183,7 +1129,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1201,19 +1146,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -1234,11 +1175,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1317,7 +1255,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         </div>
                         <Link
@@ -1340,9 +1277,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1382,12 +1317,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* No Results */}
@@ -1405,13 +1337,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
             transition={{ duration: 0.6 }}
           >
-<<<<<<< HEAD
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
-            <p className="text-gray-400 mb-8">
-              Try adjusting your search terms or category filter to find what 'you', 're looking for.
-            </p>
-=======
             <div className='text-6xl mb-4'>🔍</div>
             <h3 className='text-2xl font-bold text-white mb-4'>
               No services found
@@ -1419,7 +1344,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <p className='text-gray-400 mb-8'>
               Try adjusting your search terms or category filter to find what
               you're looking for.            </p>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             <button
               onClick={() => {
                 setSearchTerm(', ');
@@ -1445,18 +1369,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         )}
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <motion.div 
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
-=======
         <motion.div
           className='mt-20 text-center'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
 
@@ -1580,13 +1496,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Our team of experts is ready to help you implement these revolutionary services 
-              and achieve unprecedented growth. 'Let', 's build the future together.
-=======
               Our team of experts is ready to help you implement these revolutionary services
               and achieve unprecedented growth. Let's build the future together.
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -1632,8 +1543,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1797,11 +1706,7 @@ export default Enhanced2027ServicesShowcase;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

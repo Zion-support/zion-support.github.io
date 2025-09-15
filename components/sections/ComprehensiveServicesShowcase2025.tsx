@@ -66,10 +66,8 @@ import {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
@@ -250,7 +248,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
@@ -270,10 +267,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -283,8 +278,6 @@ const ComprehensiveServicesShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
 
@@ -297,7 +290,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -313,7 +305,6 @@ const ComprehensiveServicesShowcase2025 = () => {
             services, IT solutions, and AI innovations designed to transform
             your business and drive success in the digital age.          </p>        >
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -479,12 +470,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                   </p>
                 </div>
               </div>
@@ -492,11 +479,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 {category.services.map((service, serviceIndex) => (
@@ -509,7 +493,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                   </p>;
                 </div>;
@@ -546,7 +529,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -573,7 +555,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </p>
                     </div>
 
@@ -594,7 +575,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -620,7 +600,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                         )}
                       </ul>
@@ -632,14 +611,10 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     {/* Pricing */}
@@ -768,7 +743,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                       </a>
@@ -781,15 +755,10 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 ))}
@@ -810,21 +779,12 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.5 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -840,7 +800,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -879,7 +838,6 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
           transition={{ duration: 0.8, delay: 0.5 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30">
@@ -1118,12 +1076,8 @@ export default ComprehensiveServicesShowcase2025;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

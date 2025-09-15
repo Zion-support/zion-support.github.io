@@ -102,13 +102,6 @@ const EnhancedContactForm: React.FC = () => {
 
     setErrors(newErrors);
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      showError('Validation 'Error', 'Please fix the errors in the form');
-=======
     return Object && Object.keys(newErrors).length === 0;
   };
   const handleSubmit = async (e: React && React.FormEvent) => {;
@@ -116,7 +109,6 @@ const EnhancedContactForm: React.FC = () => {
     if (!validateForm()) {;
 
       showError('Validation ErrorPlease fix the errors in the form');
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       return;
     }
     setIsSubmitting(true);
@@ -402,13 +394,8 @@ export default EnhancedContactForm;
       });
       set_errors ({});
     } catch (error) {
-<<<<<<< HEAD
-      console.error('Error submitting form:'error);
-      showError('Submission 'Failed', 'There was an error sending your message. Please try again.');
-=======
       console.error ('Error submitting form:', error);
       show_error ('Submission FailedThere was an error sending your message. Please try again.');
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     } finally {
       setIsSubmitting (false);
     }
@@ -512,27 +499,6 @@ if ( {) {
                   value={formData.name}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('name')}
-<<<<<<< HEAD
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-                    errors.name 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
-                  placeholder="Enter your full name"
-                />
-                {errors.name && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-2 text-sm text-red-400 flex items-center gap-2"
-                  >
-                    <AlertCircle className="w-4 h-4" />
-                    {errors.name}
-                  </motion.p>
-                )}
-              </div>
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
 
@@ -578,25 +544,6 @@ if ( {) {
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                     errors.email 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-<<<<<<< HEAD
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-                  } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
-                  placeholder="Enter your email address"
-                />
-                {errors.email && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-2 text-sm text-red-400 flex items-center gap-2"
-                  >
-                    <AlertCircle className="w-4 h-4" />
-                    {errors.email}
-                  </motion.p>
-                )}
-              </div>
-            </div>
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
@@ -688,19 +635,6 @@ if ( {) {
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
                 } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
-<<<<<<< HEAD
-                placeholder="Tell us about your project and requirements..."
-              />
-              {errors.message && (
-                <motion.p
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-2 text-sm text-red-400 flex items-center gap-2"
-                >
-                  <AlertCircle className="w-4 h-4" />
-                  {errors.message}
-                </motion.p>
-=======
                 placeholder="Tell us about your project and requirements...";
               />;
               {errors && errors.message && (;
@@ -711,7 +645,6 @@ if ( {) {
                   <AlertCircle className="w-4 h-4" />;
                   {errors && errors.message}
                 </motion && motion.p>;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               )}
 
             </div>;

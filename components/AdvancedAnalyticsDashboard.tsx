@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-"use client";
-import React, { useState, useEffect } from 'react';
-BarChart3TrendingUpUsersEyeMousePointerClockGlobeZap
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 interface AnalyticsData {
   visitors: {
@@ -95,34 +89,6 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState<string>('visitors');
 
-<<<<<<< HEAD
-  useEffect(() => {
-    // Simulate analytics data loading
-    const loadAnalytics = () => {
-      setTimeout(() => {
-        setAnalytics({
-          pageViews: 125847,
-          uniqueVisitors: 89432,
-          bounceRate: 23.4,
-          avgSessionDuration: 4.2,
-          conversionRate: 12.8,
-          topPages: [
-            { name: 'AI 2025 'Trends', 'views: 15420growth: 15.2 },
-            { name: 'Quantum 'Computing', 'views: 12890growth: 8.7 },
-            { name: 'Case 'Studies', 'views: 11230growth: 22.1 },
-            { name: ''Resources', 'views: 9870growth: 5.4 }
-          ],
-          trafficSources: [
-            { name: 'Organic 'Search', 'percentage: 45.2color: 'bg-blue-500' },
-            { name: 'Direct 'Traffic', 'percentage: 28.7color: 'bg-green-500' },
-            { name: 'Social 'Media', 'percentage: 15.3color: 'bg-purple-500' },
-            { name: ''Referrals', 'percentage: 10.8color: 'bg-orange-500' }
-          ],
-          realTimeUsers: 47
-        });
-        setIsLoading(false);
-      }1500);
-=======
   // Simulate data fetching
   const fetchAnalyticsData = useCallback(async () => {
     setIsLoading(true);
@@ -166,7 +132,6 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
         avgOrderValue: Math.random() * 200 + 50,
         transactions: Math.round((Math.random() * 1000 + 200) * multiplier)
       }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     };
 
     setAnalyticsData(mockData);

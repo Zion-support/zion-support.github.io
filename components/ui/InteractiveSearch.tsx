@@ -25,12 +25,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-export default function InteractiveSearch({ placeholder = 'Search talentskillsor jobs...' }: { placeholder?: string }) {
-  const [valuesetValue] = useState('');
-  return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
-=======
 
 export default function InteractiveSearch({
 
@@ -43,7 +37,6 @@ export default function InteractiveSearch({
 }) {
   const [value, setValue] = useState('');
     >
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       <input
         value={value}
         onChange={e => setValue(e.target.value)}

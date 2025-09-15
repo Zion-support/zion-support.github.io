@@ -1,16 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-const Header: React.FC = () => {
-  const navigation = [
-    { name: ''About', 'href: '/about' },
-    { name: ''Services', 'href: '/services' },
-    { name: ''Resources', 'href: '/resources' },
-    { name: 'Case 'Studies', 'href: '/case-studies' },
-    { name: ''Blog', 'href: '/blog' },
-    { name: ''Contact', 'href: '/contact' }];
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
@@ -215,14 +204,10 @@ export default Header;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
 
 

@@ -177,17 +177,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
   return (
-<<<<<<< HEAD
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-=======
     <motion&& motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       viewport={{ once: true }}
       className="group relative">;
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
@@ -200,7 +193,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
         {/* Popular Badge */}
         {service && service.popular && (;
@@ -329,7 +321,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -404,12 +395,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Enhanced Market Information */}
@@ -507,18 +494,13 @@ export default UltraFuturisticServiceCard2026;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default UltraFuturisticServiceCard2026;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

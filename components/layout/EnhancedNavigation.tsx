@@ -1,14 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MenuXChevronDownSearchUser
-  SettingsLogOutBellGlobeZap
-} from 'lucide-react';
-import Link from 'next/link';
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 
@@ -111,7 +101,6 @@ import {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -121,22 +110,6 @@ interface EnhancedNavigationProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = ', ' }) => {
-  const [isOpensetIsOpen] = useState(false);
-  const [isScrolledsetIsScrolled] = useState(false);
-  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener(', 'scroll', 'handleScroll);
-    return () => window.removeEventListener(', 'scroll', 'handleScroll);
-  }[]);
-
-=======
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
@@ -150,38 +123,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   const navigationItems = [
     {
       name: "Services"
       href: "/services"
       icon: <Brain className="w-4 h-4" />
       dropdown: [
-<<<<<<< HEAD
-        { name: 'AI & Machine 'Learning', 'href: '/services?category=ai-'ml', 'icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum 'Computing', 'href: '/services?category='quantum', 'icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Space 'Technology', 'href: '/services?category='space', 'icon: <Globe className="w-4 h-4" /> },
-        { name: 'Biotech & 'Healthcare', 'href: '/services?category='biotech', 'icon: <Dna className="w-4 h-4" /> },
-        { name: 'Financial 'Services', 'href: '/services?category='finance', 'icon: <DollarSign className="w-4 h-4" /> },
-        { name: ''Cybersecurity', 'href: '/services?category='security', 'icon: <Lock className="w-4 h-4" /> },
-        { name: 'IoT & Smart 'Devices', 'href: '/services?category='iot', 'icon: <Wifi className="w-4 h-4" /> },
-        { name: 'Logistics & Supply 'Chain', 'href: '/services?category='logistics', 'icon: <Truck className="w-4 h-4" /> },
-        { name: 'Metaverse & 'Gaming', 'href: '/services?category='metaverse', 'icon: <Gamepad2 className="w-4 h-4" /> },
-        { name: 'Robotics & 'Automation', 'href: '/services?category='robotics', 'icon: <Bot className="w-4 h-4" /> },
-        { name: ''Manufacturing', 'href: '/services?category='manufacturing', 'icon: <Factory className="w-4 h-4" /> },
-        { name: 'Autonomous 'Vehicles', 'href: '/services?category='vehicles', 'icon: <Car className="w-4 h-4" /> }
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI & Machine 'Learning', 'href: '/services?category=ai-ml' },
-        { name: 'Quantum 'Computing', 'href: '/services?category=quantum' },
-        { name: 'Space 'Technology', 'href: '/services?category=space' },
-        { name: 'Biotech & 'Healthcare', 'href: '/services?category=biotech' },
-        { name: 'Financial 'Services', 'href: '/services?category=finance' },
-        { name: ''Cybersecurity', 'href: '/services?category=security' },
-        { name: 'Edge 'Computing', 'href: '/services?category=edge' },
-        { name: ''Blockchain', 'href: '/services?category=blockchain' },
-        { name: 'View All 'Services', 'href: '/services' }
-=======
         {
           name: "AI & Machine Learning"
           href: "/services?category=ai-ml"
@@ -242,7 +189,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           href: "/services?category=vehicles"
           icon: <Car className="w-4 h-4" />
         }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       ]
       hasDropdown: true
       dropdownItems: [
@@ -275,19 +221,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       href: "/solutions"
       hasDropdown: true
       dropdownItems: [
-<<<<<<< HEAD
-        { name: 'Enterprise 'Solutions', 'href: '/solutions?type=enterprise' },
-        { name: 'Startup 'Solutions', 'href: '/solutions?type=startup' },
-        { name: 'Government 'Solutions', 'href: '/solutions?type=government' },
-        { name: 'Healthcare 'Solutions', 'href: '/solutions?type=healthcare' },
-        { name: 'Financial 'Solutions', 'href: '/solutions?type=financial' }
-      ]
-    },
-    { name: ''Pricing', 'href: '/pricing' },
-    { name: ''Resources', 'href: '/resources' },
-    { name: ''Blog', 'href: '/blog' },
-    { name: ''Contact', 'href: '/contact' }
-=======
         { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
         { name: "Startup Solutions", href: "/solutions?type=startup" }
         { name: "Government Solutions", href: "/solutions?type=government" }
@@ -299,7 +232,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Resources", href: "/resources" }
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
   const contactInfo = {
@@ -400,40 +332,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 </div>;
                 <div className="text - xs text - cyan - 400">;
 
-<<<<<<< HEAD
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((itemindex) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
-                className="relative"
-                onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                {item.hasDropdown ? (
-                  <div className="relative">
-                    <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">
-                      <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0scale: 1 }}
-                          exit={{ opacity: 0, y: 10scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
-                        >
-                          <div className="p-2">
-                            {item.dropdownItems?.map((dropdownItem) => (
-=======
                   Revolutionary Technology;
                 </div>;
               </div>;
@@ -452,7 +350,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden">;
                           <div className="p-2">;
                             {item && item.dropdownItems?.map((dropdownItem) => (;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                               <Link
                                 key={dropdownItem && dropdownItem.name}
                                 href={dropdownItem && dropdownItem.href}
@@ -562,12 +459,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* Notifications */}
@@ -604,12 +498,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* CTA Button */}
@@ -651,12 +542,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Mobile Navigation */}
@@ -884,12 +772,8 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

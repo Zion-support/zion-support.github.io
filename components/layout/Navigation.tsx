@@ -1,8 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -68,7 +64,6 @@ import Link from 'next/link';import { ;
 import Link from 'next/link';
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
@@ -97,21 +92,12 @@ import Link from 'next/link';
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-<<<<<<< HEAD
-    };
-
-    window.addEventListener(', 'scroll', 'handleScroll);
-    return () => window.removeEventListener(', 'scroll', 'handleScroll);
-  }[]);
-
-=======
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   const navigationItems = [
     {
       name: 'Home'
@@ -124,26 +110,6 @@ import Link from 'next/link';
       href: '/services'
       icon: Rocket
       dropdown: [
-<<<<<<< HEAD
-        { name: 'AI 'Services', 'href: '/ai-'services', 'icon: Braindescription: 'Revolutionary AI solutions' },
-        { name: 'IT 'Services', 'href: '/it-'services', 'icon: Cpudescription: 'Enterprise IT solutions' },
-        { name: 'Micro 'SaaS', 'href: '/micro-'saas', 'icon: Rocketdescription: 'Specialized software solutions' },
-        { name: 'Innovative 'Showcase', 'href: '/innovative-services-'showcase', 'icon: Globedescription: 'Cutting-edge technology' }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '/content-showcase',
-      icon: BookOpen,
-      dropdown: [
-        { name: 'Content 'Showcase', 'href: '/content-'showcase', 'icon: BookOpendescription: 'All our latest content' },
-        { name: 'Blog 'Posts', 'href: '/'blog', 'icon: FileTextdescription: 'Latest insights and trends' },
-        { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: TrendingUpdescription: 'Success stories and ROI' },
-        { name: ''Resources', 'href: '/'resources', 'icon: FileTextdescription: 'Guides and whitepapers' },
-        { name: ''Tools', 'href: '/'tools', 'icon: Cpudescription: 'Calculators and utilities' }
-      ]
-    },
-=======
         {
           name: 'AI Services'
           href: '/ai-services'
@@ -170,7 +136,6 @@ import Link from 'next/link';
         }
       ]
     }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     {
       name: 'Solutions'
       href: '/solutions'
@@ -343,26 +308,16 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
-<<<<<<< HEAD
-                            initial={{ opacity: 0, y: 10scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0scale: 1 }}
-                            exit={{ opacity: 0, y: 10scale: 0.95 }}
-=======
                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                             transition={{ duration: 0.2 }}
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
 
@@ -371,19 +326,15 @@ import Link from 'next/link';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -478,9 +429,7 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -521,7 +470,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                   )}
                 </div>
@@ -538,9 +486,7 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               <motion.a
                 href='/contact'
@@ -606,7 +552,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -645,7 +590,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -653,7 +597,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -676,7 +619,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -708,12 +650,8 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             {/* Mobile Menu */}
             <motion&& motion.div
@@ -728,9 +666,7 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1048,7 +984,6 @@ import Link from 'next/link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </div>;
                   ))}
@@ -1057,13 +992,10 @@ import Link from 'next/link';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1085,14 +1017,10 @@ import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1271,12 +1199,8 @@ export default Navigation;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

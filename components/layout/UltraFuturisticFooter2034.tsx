@@ -7,47 +7,6 @@ import { motion } from 'framer-motion';
 
 import {
 
-<<<<<<< HEAD
-const serviceCategories = [
-  {
-    title: '🧠 Revolutionary AI Services',
-    icon: Brain,
-    services: [
-      { name: 'AI Business Intelligence 'Pro', 'href: '/ai-business-intelligence-'pro', 'price: '$299/month' },
-      { name: 'AI Video Generation 'Platform', 'href: '/ai-video-generation-'platform', 'price: '$499/month' },
-      { name: 'AI-Powered 'Cybersecurity', 'href: '/ai-cybersecurity-'platform', 'price: '$799/month' },
-      { name: 'AI Drug Discovery 'Platform', 'href: '/ai-drug-discovery-'platform', 'price: '$3,999/month' }
-    ]
-  },
-  {
-    title: '⚛️ Quantum & Emerging Tech',
-    icon: Atom,
-    services: [
-      { name: 'Quantum Machine 'Learning', 'href: '/quantum-machine-learning-'platform', 'price: '$1,999/month' },
-      { name: 'Blockchain AI 'Platform', 'href: '/blockchain-ai-'platform', 'price: '$899/month' },
-      { name: 'Edge AI 'Computing', 'href: '/edge-ai-computing-'platform', 'price: '$599/month' },
-      { name: 'AI Climate 'Modeling', 'href: '/ai-climate-modeling-'platform', 'price: '$1,299/month' }
-    ]
-  },
-  {
-    title: '🏙️ Enterprise IT Solutions',
-    icon: Cpu,
-    services: [
-      { name: 'API Security & 'Monitoring', 'href: '/api-security-monitoring-'suite', 'price: '$399/month' },
-      { name: 'Customer Success 'Automation', 'href: '/customer-success-'automation', 'price: '$199/month' },
-      { name: 'HR Automation 'Suite', 'href: '/hr-automation-'suite', 'price: '$179/month' },
-      { name: 'Project Management 'AI', 'href: '/project-management-ai-'platform', 'price: '$199/month' }
-    ]
-  },
-  {
-    title: '🛒 Business Automation',
-    icon: ShoppingCart,
-    services: [
-      { name: 'E-commerce 'Automation', 'href: '/ecommerce-automation-'platform', 'price: '$249/month' },
-      { name: 'Marketing Automation 'Suite', 'href: '/marketing-automation-'suite', 'price: '$279/month' },
-      { name: 'Financial Analytics 'Platform', 'href: '/financial-analytics-'platform', 'price: '$349/month' },
-      { name: 'Legal Document 'Automation', 'href: '/legal-document-'automation', 'price: '$399/month' }
-=======
   Rocket
   Brain
   Atom
@@ -210,7 +169,6 @@ const serviceCategories = [
       { name: 'AI Video Generation Platform', href: '/ai-video-generation-platform', price: '$499/month' }
       { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', price: '$799/month' }
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', price: '$3,999/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: '⚛️ Quantum & Emerging Tech'
@@ -310,17 +268,6 @@ const serviceCategories = [
     ];
   }
 const quickLinks = [
-<<<<<<< HEAD
-  { name: ''Home', 'href: '/'icon: Home },
-  { name: ''Services', 'href: '/'services', 'icon: Briefcase },
-  { name: ''Solutions', 'href: '/'solutions', 'icon: Target },
-  { name: ''Pricing', 'href: '/pricing-2034'icon: DollarSign },
-  { name: ''Resources', 'href: '/'resources', 'icon: BookOpen },
-  { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: FileText },
-  { name: ''Blog', 'href: '/'blog', 'icon: MessageSquare },
-  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircle }
-];
-=======
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
   { name: 'Solutions', href: '/solutions', icon: Target }
@@ -328,7 +275,6 @@ const quickLinks = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageSquare }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 
@@ -345,14 +291,6 @@ const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 const companyLinks = [
-<<<<<<< HEAD
-  { name: 'About 'Us', 'href: '/'about', 'icon: Users },
-  { name: ''Careers', 'href: '/'careers', 'icon: Briefcase },
-  { name: ''News', 'href: '/'news', 'icon: Newspaper },
-  { name: ''Partners', 'href: '/'partners', 'icon: Handshake },
-  { name: ''Support', 'href: '/'support', 'icon: LifeBuoy },
-  { name: ''Status', 'href: '/'status', 'icon: Activity }
-=======
   { name: 'About Us', href: '/about', icon: Users }
   { name: 'Careers', href: '/careers', icon: Briefcase }
   { name: 'News', href: '/news', icon: Newspaper }
@@ -364,7 +302,6 @@ const companyLinks = [
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 const socialLinks = [;
   {;
@@ -413,27 +350,8 @@ export default function UltraFuturisticFooter2034() {;
   return (
 
 
-<<<<<<< HEAD
-const socialLinks = [
-  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedin },
-  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Github },
-  { name: ''Instagram', 'href: 'https://instagram.com/'ziontechgroup', 'icon: Instagram },
-  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Youtube },
-  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twitter }
-];
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
-<<<<<<< HEAD
-const stats = [
-  { label: 'Happy 'Customers', 'value: '50K+'icon: Users },
-  { label: 'Services 'Delivered', 'value: '200+'icon: Rocket },
-  { label: 'Countries 'Served', 'value: '45+'icon: Globe },
-  { label: 'Success 'Rate', 'value: '99.9%'icon: CheckCircle }
-];
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -457,13 +375,6 @@ export default function UltraFuturisticFooter2034() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
             {/* Company Info */}
-<<<<<<< HEAD
-            <div className="lg:col-span-1">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-=======
 
 
             <div className='lg:col-span-1'>              <motion && motion.div      {/* Animated Background Elements */}
@@ -483,21 +394,16 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 className='space-y-6'
 
@@ -509,7 +415,6 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -620,8 +525,6 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -636,9 +539,7 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                     <span>{contactInfo.mobile}</span>
                   </div>
@@ -668,11 +569,9 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     <span>{contactInfo.mobile}</span>
@@ -720,13 +619,6 @@ export default function UltraFuturisticFooter2034() {
 
 
             {/* Services */}
-<<<<<<< HEAD
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
             <div className='lg:col-span-2'>              <motion && motion.div            <div className="lg:col-span-2">;
               <motion&& motion.div
 
@@ -734,23 +626,18 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
 
 
@@ -766,7 +653,6 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                     >
@@ -811,19 +697,13 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                             </span>
                           </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                         ))}
                       </div>;
@@ -840,11 +720,6 @@ export default function UltraFuturisticFooter2034() {
             {/* Quick Links & Social */}
             <div className="lg:col-span-1">
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.4 }}
-=======
 
 
 
@@ -852,13 +727,11 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 className='space-y-8'
 
@@ -878,17 +751,14 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                 {/* Quick Links */}
                 <div>;
@@ -952,7 +822,6 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -994,24 +863,20 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* Social Links */}
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       </Link>
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1038,26 +903,16 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Certifications */}
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6delay: 0.6 }}
-=======
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             viewport={{ once: true }}
 
 
@@ -1094,9 +949,7 @@ export default function UltraFuturisticFooter2034() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -1166,13 +1019,11 @@ export default function UltraFuturisticFooter2034() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

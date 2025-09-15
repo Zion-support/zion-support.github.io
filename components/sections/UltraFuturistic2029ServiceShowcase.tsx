@@ -63,7 +63,6 @@ import {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -300,16 +299,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
-<<<<<<< HEAD
-          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', '));
-=======
           );
         case 'price':
 
           return (
             (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
           );
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         case 'rating':
           return b.rating - a.rating;
         default:
@@ -333,11 +328,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       transition: {
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20 },
-=======
     hidden: { opacity: 0, y: 20 }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     visible: {
       opacity: 1
       y: 0
@@ -392,10 +383,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -418,7 +407,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -429,11 +417,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.1 }}
-=======
             transition={{ duration: 0.8, delay: 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
 
@@ -445,26 +429,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
             {title}
-<<<<<<< HEAD
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-=======
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -472,7 +444,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             transition={{ duration: 0.8, delay: 0.2 }}
 
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             {subtitle}
           </motion.p>
@@ -490,28 +461,18 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Filters and Controls */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           {/* Category Filter */}
           <div className='flex items-center space-x-2'>
@@ -533,12 +494,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   key={category}
@@ -627,12 +586,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Services Grid */}
@@ -675,22 +632,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
-          className="text-center mt-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -706,14 +654,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -769,18 +715,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
         {/* Innovation Stats */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.5 }}
-          className="mt-20"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -790,7 +727,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
 
 
@@ -932,14 +868,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               <motion.div
@@ -993,7 +924,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1023,7 +953,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1044,12 +973,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -30,7 +30,6 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
@@ -93,11 +92,7 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20 },
-=======
     hidden: { opacity: 0, y: 20 }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     visible: {
       opacity: 1
       y: 0
@@ -182,8 +177,6 @@ export default function Revolutionary2026ServicesShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-20'
@@ -196,7 +189,6 @@ export default function Revolutionary2026ServicesShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-20'
@@ -206,10 +198,8 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -454,16 +444,11 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -482,7 +467,6 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -735,7 +719,6 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -759,7 +742,6 @@ export default function Revolutionary2026ServicesShowcase() {
               <motion.div
                 key={service.id}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1216,18 +1198,14 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -1242,9 +1220,7 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
           viewport={{ once: true }}
 
@@ -1309,7 +1285,6 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           viewport={{ once: true }}
@@ -1592,22 +1567,13 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
         {/* Call to Action Section */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='text-center'
 
@@ -1622,7 +1588,6 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
@@ -1715,7 +1680,6 @@ export default function Revolutionary2026ServicesShowcase() {
 }
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
                       </span>;
@@ -1820,11 +1784,7 @@ export default function Revolutionary2026ServicesShowcase() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

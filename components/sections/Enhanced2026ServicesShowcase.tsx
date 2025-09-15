@@ -71,9 +71,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Brain,
       color: 'from - purple - 500 to - pink - 500',
       category: 'AI & Analytics',
-<<<<<<< HEAD
-      features: ['Predictive 'Analytics', 'Real-time 'Insights', 'Custom 'Dashboards', 'AI-powered Reports']
-=======
 
       features: [;
         'Predictive Analytics',
@@ -81,7 +78,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
         'Custom Dashboards',
         'AI - powered Reports',
       ],
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     },
 
     {
@@ -95,9 +91,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Zap,
       color: 'from - blue - 500 to - cyan - 500',
       category: 'AI & Automation',
-<<<<<<< HEAD
-      features: ['Task 'Automation', 'Process Optimization'24/7 'Operation', 'Scalable Architecture']
-=======
 
       features: [;
         'Task Automation',
@@ -105,7 +98,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
         '24 / 7 Operation',
         'Scalable Architecture',
       ],
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     },
     {
       id: 'quantum - cybersecurity - suite - 2026',
@@ -124,9 +116,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Shield,
       color: 'from - red - 500 to - orange - 500',
       category: 'Security',
-<<<<<<< HEAD
-      features: ['Quantum 'Encryption', 'Threat 'Detection', 'Zero 'Trust', 'Compliance Ready']
-=======
 
       features: [;
         'Quantum Encryption',
@@ -134,7 +123,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
         'Zero Trust',
         'Compliance Ready',
       ],
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     },
     {
       id: 'neuromorphic-computing-platform-2026',
@@ -145,13 +133,8 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Cpu,
       color: 'from - green - 500 to - emerald - 500',
       category: 'Emerging Tech',
-<<<<<<< HEAD
-      features: ['Brain-like 'Processing', 'Low 'Power', 'Real-time 'Learning', 'Cognitive Computing']
-    },
-=======
       features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']
     }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     {
       id: 'dna-computing-platform-2026'
       name: 'DNA Computing Platform 2026'
@@ -174,13 +157,7 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Cpu,
       color: 'from - green - 500 to - emerald - 500',
       category: 'Emerging Tech',
-<<<<<<< HEAD
-      features: ['Molecular 'Processing', 'Exponential 'Speed', 'Complex 'Algorithms', 'Research Ready']
-    },
-    {
-=======
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       id: 'space-debris-tracking-system',
       name: 'Space Debris Tracking System 2026',
       description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
@@ -219,17 +196,6 @@ const Enhanced2026ServicesShowcase = () =>: any {
       icon: Rocket,
       color: 'from - yellow - 500 to - orange - 500',
       category: 'Space Tech',
-<<<<<<< HEAD
-      features: ['Real-time 'Tracking', 'Collision 'Prediction', 'Satellite 'Safety', 'Space Traffic Management']
-    }
-  ];
-
-  const categories = [
-    { name: 'AI 'Services', 'count: '150+'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum 'Tech', 'count: '75+'icon: Sparklescolor: 'from-blue-500 to-cyan-500' },
-    { name: 'Emerging 'Tech', 'count: '100+'icon: Rocketcolor: 'from-green-500 to-emerald-500' },
-    { name: 'IT 'Solutions', 'count: '200+'icon: Cloudcolor: 'from-yellow-500 to-orange-500' }
-=======
 
 
 import {;
@@ -410,7 +376,6 @@ const Enhanced2026ServicesShowcase = () => {;
       icon: Cloud,;
       color: 'from-yellow-500 to-orange-500',;
     },;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
 
@@ -441,17 +406,10 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
         {/* Section Header */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='text-center mb-16'
 
@@ -464,7 +422,6 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -498,17 +455,10 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
         {/* Category Overview */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.1 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
 
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -522,7 +472,6 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -637,12 +586,10 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
               <div
 
@@ -711,7 +658,6 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -800,11 +746,9 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                       </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                     ))}
 
@@ -816,10 +760,8 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
@@ -829,9 +771,7 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -893,26 +833,16 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.3 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='text-center'
 
@@ -925,7 +855,6 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

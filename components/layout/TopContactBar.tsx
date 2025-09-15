@@ -1,14 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  PhoneMailMapPinGlobe
-  ClockChevronDownChevronUp,
-  MessageCircleCalendarStar
-} from 'lucide-react';
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -60,7 +50,6 @@ import {;
   Star,;} from 'lucide-react';import { ;
   Phone, Mail, MapPin, Globe, ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -75,12 +64,6 @@ const contactInfo = {
   rating: '4.9/5 (200+ Reviews)'
 }
 const quickActions = [
-<<<<<<< HEAD
-  { name: 'Get 'Quote', 'href: '/'quote', 'icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Book 'Demo', 'href: '/'demo', 'icon: <Calendar className="w-4 h-4" /> },
-  { name: 'Live 'Chat', 'href: '/'chat', 'icon: <MessageCircle className="w-4 h-4" /> }
-];
-=======
   {
     name: 'Get Quote'
     href: '/quote'
@@ -96,13 +79,11 @@ const quickActions = [
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> }
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 export default function TopContactBar() {
 
@@ -110,13 +91,10 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -149,11 +127,7 @@ export default function TopContactBar() {;
 
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
-<<<<<<< HEAD
-                  {contactInfo.website.replace('https://', ')}
-=======
                   {contactInfo.website.replace('https://', '')}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 </a>
               </div>
             </div>
@@ -252,12 +226,9 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {action.icon}
 
               </div>;
@@ -295,8 +266,6 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -322,12 +291,10 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               </button>
@@ -340,11 +307,9 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -367,7 +332,6 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -695,7 +659,6 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                 {/* Company Highlights */}
@@ -714,13 +677,10 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -990,11 +950,7 @@ export default function TopContactBar() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

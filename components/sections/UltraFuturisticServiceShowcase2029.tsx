@@ -111,15 +111,9 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
-<<<<<<< HEAD
-    <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-=======
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <motion&& motion.div
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -159,11 +153,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
             <motion.div
               key={service.id}
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
-=======
 
 
 
@@ -259,7 +248,6 @@ function UltraFuturisticServiceShowcase2029() {
 
 
               transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
             >
               <div className="flex items-center justify-between mb-4">
@@ -411,10 +399,6 @@ function UltraFuturisticServiceShowcase2029() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6delay: 0.6 }}
-          className="text-center mt-12"
-=======
           transition={{ duration: 0.6, delay: 0.6 }}
 
 
@@ -425,7 +409,6 @@ function UltraFuturisticServiceShowcase2029() {
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <Link
             href="/services"

@@ -40,29 +40,6 @@ import {
   Zap
 
 
-<<<<<<< HEAD
-  const footerSections = [
-    {
-      title: 'Company',
-      links: [
-        { name: ''About', 'href: '/about' },
-        { name: ''Services', 'href: '/services' },
-        { name: 'Case 'Studies', 'href: '/case-studies' },
-        { name: ''Contact', 'href: '/contact' }]},
-    {
-      title: 'Resources',
-      links: [
-        { name: ''Blog', 'href: '/blog' },
-        { name: ''Resources', 'href: '/resources' },
-        { name: ''Documentation', 'href: '/docs' },
-        { name: ''Support', 'href: '/support' }]},
-    {
-      title: 'Legal',
-      links: [
-        { name: 'Privacy 'Policy', 'href: '/privacy' },
-        { name: 'Terms of 'Service', 'href: '/terms' },
-        { name: 'Cookie 'Policy', 'href: '/cookies' }]}];
-=======
 import { 
   Phone, 
   Mail, 
@@ -77,7 +54,6 @@ import {
   Database,
   Shield,
   Zap;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 
@@ -573,11 +549,7 @@ export default Footer;import React from 'react'; import Link from 'next/link'; i
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

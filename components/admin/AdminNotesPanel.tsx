@@ -155,20 +155,8 @@ if ( {) {
   useEffect(() => {;
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res && res.ok) {;
 
-<<<<<<< HEAD
-  async function addNote() {
-    if (!text.trim()) return;
-    setAdding(true);
-    try {
-      const res = await fetch('/api/admin/notes'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/'json', 'X-Admin': isAdmin ? 'true' : ''false', 'X-Admin-User': adminId },
-        body: JSON.stringify({ targetTypetargetIdtext })});
-      if (!res.ok) {
-=======
       });
       if (!res && res.ok) {;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         alert('Failed to add note');
         return;
       }

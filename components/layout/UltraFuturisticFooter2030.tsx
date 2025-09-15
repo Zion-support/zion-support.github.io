@@ -80,12 +80,6 @@ const serviceCategories = [
   {
     title: ' AI & Consciousness'
     services: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-platform' },
-      { name: 'AI Emotional 'Intelligence', 'href: '/ai-emotion-intelligence-platform' },
-      { name: 'AI Creativity 'Orchestrator', 'href: '/ai-creativity-orchestrator' },
-      { name: 'AI Autonomous Business 'Manager', 'href: '/ai-autonomous-business-manager' }
-=======
       {
         name: 'AI Consciousness Evolution'
         href: '/ai-consciousness-evolution-platform'
@@ -102,17 +96,10 @@ const serviceCategories = [
         name: 'AI Autonomous Business Manager'
         href: '/ai-autonomous-business-manager'
       }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' Quantum & Emerging Tech'
     services: [
-<<<<<<< HEAD
-      { name: 'Quantum Internet 'Security', 'href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Learning 'Accelerator', 'href: '/quantum-learning-accelerator' },
-      { name: 'Quantum Financial 'Trading', 'href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Cloud 'Infrastructure', 'href: '/quantum-cloud-infrastructure' }
-=======
       {
         name: 'Quantum Internet Security'
         href: '/quantum-internet-security-gateway'
@@ -129,18 +116,11 @@ const serviceCategories = [
         name: 'Quantum Cloud Infrastructure'
         href: '/quantum-cloud-infrastructure'
       }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
   {
     title: ' Biotech & DNA Computing'
     services: [
-<<<<<<< HEAD
-      { name: 'DNA Computing 'Platform', 'href: '/biotech-dna-computing-platform' },
-      { name: 'Personalized 'Nutrition', 'href: '/biotech-personalized-nutrition' },
-      { name: 'Predictive Health 'Analytics', 'href: '/ai-predictive-health-analytics' },
-      { name: 'Research 'Automation', 'href: '/advanced-research-automation' }
-=======
       {
         name: 'DNA Computing Platform'
         href: '/biotech-dna-computing-platform'
@@ -154,32 +134,18 @@ const serviceCategories = [
         href: '/ai-predictive-health-analytics'
       }
       { name: 'Research Automation', href: '/advanced-research-automation' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   },  {
     title: ' Enterprise IT Solutions'
     services: [
-<<<<<<< HEAD
-      { name: 'Autonomous 'DevOps', 'href: '/autonomous-devops-platform' },
-      { name: 'Autonomous IT 'Operations', 'href: '/autonomous-it-operations-center' },
-      { name: 'AI Enterprise 'Security', 'href: '/ai-powered-enterprise-security' },
-      { name: 'Intelligent Data 'Governance', 'href: '/intelligent-data-governance' }
-=======
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' }
       { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' }
       { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' }
       { name: 'Research Automation', href: '/advanced-research-automation' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' Enterprise IT Solutions'
     services: [
-<<<<<<< HEAD
-      { name: 'Space Mining 'Automation', 'href: '/space-mining-automation-platform' },
-      { name: 'Metaverse Digital 'Reality', 'href: '/metaverse-digital-reality-platform' },
-      { name: 'Quantum Research 'Platform', 'href: '/quantum-research-platform' },
-      { name: 'AI Research 'Assistant', 'href: '/ai-research-assistant' }
-=======
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
       {
         name: 'Autonomous IT Operations'
@@ -193,7 +159,6 @@ const serviceCategories = [
         name: 'Intelligent Data Governance'
         href: '/intelligent-data-governance'
       }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' Space & Metaverse Tech'
@@ -238,27 +203,6 @@ const serviceCategories = [
   }
 ];
 
-<<<<<<< HEAD
-const quickLinks = [
-  { name: ''Home', 'href: '/' },
-  { name: ''Services', 'href: '/services' },
-  { name: ''Solutions', 'href: '/solutions' },
-  { name: ''Pricing', 'href: '/pricing' },
-  { name: ''Resources', 'href: '/resources' },
-  { name: 'Case 'Studies', 'href: '/case-studies' },
-  { name: ''Blog', 'href: '/blog' },
-  { name: ''Contact', 'href: '/contact' }
-];
-
-const companyInfo = [
-  { name: 'About 'Us', 'href: '/about' },
-  { name: ''Careers', 'href: '/careers' },
-  { name: ''Press', 'href: '/press' },
-  { name: ''Partners', 'href: '/partners' },
-  { name: ''Support', 'href: '/support' },
-  { name: ''Status', 'href: '/status' }
-];
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -320,7 +264,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 const serviceCategories = [;
   {;
@@ -635,14 +578,6 @@ const company_info = [;
   { name: 'Status', href: '/status' }
 ];
 const socialLinks = [
-<<<<<<< HEAD
-  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedin },
-  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twitter },
-  { name: ''Facebook', 'href: 'https://facebook.com/'ziontechgroup', 'icon: Facebook },
-  { name: ''Instagram', 'href: 'https://instagram.com/'ziontechgroup', 'icon: Instagram },
-  { name: ''YouTube', 'href: 'https://youtube.com/'ziontechgroup', 'icon: Youtube },
-  { name: ''GitHub', 'href: 'https://github.com/'ziontechgroup', 'icon: Github }
-=======
   {
     name: 'LinkedIn'
     href: 'https://linkedin.com/company/ziontechgroup'
@@ -661,7 +596,6 @@ const socialLinks = [
   }
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 
 const certifications = [
@@ -842,7 +776,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       {/* Animated Background */}
 
@@ -912,9 +845,6 @@ export default function UltraFuturisticFooter2030() {
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
                   <Globe className="w-4 h-4 text-purple-400" />
                   <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
-<<<<<<< HEAD
-                    {contactInfo.website.replace('https://', ')}
-=======
                     {contactInfo.website.replace('https://', '')}
 
 
@@ -927,13 +857,9 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
+
                   </a>
                 </div>
               </div>
@@ -1082,7 +1008,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1095,7 +1020,6 @@ export default function UltraFuturisticFooter2030() {
                       {category.title}
                     </h5>
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
                         <Link
                           key={serviceIndex}
@@ -1161,12 +1085,9 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             {/* Quick Links */}
 
@@ -1216,9 +1137,7 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             {/* Social & Certifications */}
             <div className='space-y-6'>
@@ -1229,7 +1148,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>Connect & Trust</span>
               </h4>
 
@@ -1254,7 +1172,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1412,7 +1329,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1440,7 +1356,6 @@ export default function UltraFuturisticFooter2030() {
                       <social.icon className="w-5 h-5" />
                     </a>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                   ))}
 
@@ -1465,7 +1380,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   <span>Certifications</span>
                 </h5>
@@ -1509,7 +1423,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1672,13 +1585,9 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

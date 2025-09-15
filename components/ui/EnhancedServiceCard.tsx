@@ -120,13 +120,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
   service
 }) => {
   const cardVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20scale: 0.95 },
-    visible: { 
-=======
     hidden: { opacity: 0, y: 20, scale: 0.95 }
     visible: {      opacity: 1,    visible: {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       opacity: 1
       y: 0
       scale: 1
@@ -271,7 +266,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
     >
@@ -279,11 +273,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       <div 
         className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
         style={{
-<<<<<<< HEAD
-          background: `linear-gradient(135deg${service.color.replace('from-', ').replace('to-', ').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(')})`
-=======
           background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         }}
       />;
       {/* Popular Badge */}
@@ -320,14 +310,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
             variants={iconVariants}
             initial='hidden'
@@ -377,7 +365,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           <div className="text-right">
@@ -427,12 +414,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           </div>
@@ -539,15 +522,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 {feature}
@@ -570,19 +549,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -599,19 +574,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -658,7 +629,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -721,7 +691,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -740,8 +709,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -787,7 +754,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -841,19 +807,14 @@ export default EnhancedServiceCard;
 
 export default EnhancedServiceCard;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           </div>
         </div>
       </div>
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

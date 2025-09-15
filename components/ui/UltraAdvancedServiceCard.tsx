@@ -1,14 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React{ useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRightExternalLinkStarTrendingUp
-  UsersZapShieldClockCheckBrain,
-  RocketDnaDollarSignLockGlobe
-} from 'lucide-react';
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -347,18 +337,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category && category.includes('Security') || category && category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
     if (category && category.includes('Internet') || category && category.includes('Network')) return <Globe className="w-4 h-4" />,;
     return <Zap className="w-4 h-4" />;
-<<<<<<< HEAD
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-=======
   const containerVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {    visible: { ;
@@ -369,7 +347,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: 'easeOut' as const,;
       },;
     },        ease: "easeOut" as const;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       }
 
 
@@ -533,7 +510,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           background: `linear-gradient(135deg, ${service && service.color})`;
           transform: isHovered ? 'scale(1 && 1.05)' : 'scale(1)'}}
       />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       {/* Main Card */}
@@ -580,7 +556,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -633,12 +608,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             </div>
@@ -786,33 +759,24 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* Features */}
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                     ))}
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -826,19 +790,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -954,13 +914,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1 && 1.02 }}          <div className="flex space-x-3 mt-6">;
             <motion&& motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-<<<<<<< HEAD
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => window.open(service.'link', '_blank')}
-            >
-              <span>Learn More</span>
-=======
 
                 <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3">
                   <h4 className="text-white font-semibold mb-2">ROI Promise</h4>
@@ -1127,7 +1080,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </AnimatePresence>;
           {/* Action Buttons */}
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               <ExternalLink className="w-4 h-4" />
             </motion.button>
             
@@ -1144,7 +1096,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1155,7 +1106,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1176,7 +1126,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           {/* Expand/Collapse Indicator */}
@@ -1199,7 +1148,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Expand/Collapse Indicator */}
 
 
@@ -1207,7 +1155,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;
@@ -1222,8 +1169,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default UltraAdvancedServiceCard;  );
 };
@@ -1235,7 +1180,6 @@ export default UltraAdvancedServiceCard;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -1,18 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MenuChevronDownXPhoneMailArrowRight,
-  BrainRocketTargetAtomShield,
-  DollarSignBarChart3GlobeGridHeartDatabase,
-  CpuPaletteCloudNetworkTrendingUpShoppingCartSettingsBuildingMonitor,
-  ZapEyeInfinitySparklesUsersLockCodeServerLayersGlobe2,
-  StarAwardClockCheckCircleZap as ZapIconPhone as PhoneIcon,
-  SearchUserBellCogLogOutHomeInfoFileTextUsers as UsersIcon,
-  BotMessageCircleLinkedinTwitterGithubYoutubeMapPin
-=======
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
@@ -150,7 +136,6 @@ import {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -214,7 +199,6 @@ import {
   Github,
   Youtube,;
   MapPin,;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -253,7 +237,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -274,7 +257,6 @@ interface NavigationItem {
   href: string,
   icon?: React.ReactNode;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   description?: string;
   children?: NavigationItem[];
@@ -313,7 +295,6 @@ const navigationItems: NavigationItem[] = [
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -384,26 +365,6 @@ const navigationItems: NavigationItem[] = [
   }
 
 
-<<<<<<< HEAD
-const socialLinks = [
-  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedincolor: 'hover:text-blue-400' },
-  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twittercolor: 'hover:text-sky-400' },
-  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Githubcolor: 'hover:text-gray-400' },
-  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Youtubecolor: 'hover:text-red-500' }
-];
-
-const UltraFuturisticNavigation2047 = () => {
-  const [isOpensetIsOpen] = useState(false);
-  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
-  const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   useEffect(() => {
     const handleResize = () => {
@@ -423,11 +384,6 @@ const UltraFuturisticNavigation2047 = () => {
         setActiveDropdown(null);      }
     };
 
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'handleResize);
-    return () => window.removeEventListener(', 'resize', 'handleResize);
-  }[]);
-=======
     window && window.addEventListener('resize', handleResize);
     return () => window && window.removeEventListener('resize', handleResize);        setActiveDropdown(null);
       }
@@ -455,7 +411,6 @@ const UltraFuturisticNavigation2047 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">;
           {/* Logo */}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   return (
 
@@ -507,14 +462,6 @@ const UltraFuturisticNavigation2047 = () => {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
 
-<<<<<<< HEAD
-                <AnimatePresence>
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-=======
 
 
 
@@ -542,7 +489,6 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -627,7 +573,6 @@ const UltraFuturisticNavigation2047 = () => {
                               </p>                            </div>                    >;
                       <div className="space-y-4">;
                         {item && item.children?.map((child) => (;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                       transition={{ duration: 0.2 }}
                       className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
                     >
@@ -704,12 +649,9 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Contact Info & CTA */}
@@ -735,7 +677,6 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -783,9 +724,7 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             </button>
           </div>
@@ -810,9 +749,7 @@ const UltraFuturisticNavigation2047 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
           >
@@ -981,12 +918,10 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                           >
                             {child.name}
                           </Link>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                         ))}
                       </motion && motion.div>;
@@ -1092,7 +1027,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1321,12 +1255,8 @@ export default UltraFuturisticNavigation2047;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

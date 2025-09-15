@@ -1,13 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MenuXChevronDownSearchPhoneMailMapPin,
-  BrainRocketDnaGlobeShieldWifiPackage,
-  BotCarBuilding2DollarSignMonitorUsers,
-  CpuZapAtomDatabaseCloudLockCode
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -63,7 +54,6 @@ import {
   Cloud
   Lock
   Code;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 } from 'lucide-react';
 import Link from 'next/link';import {
 
@@ -104,7 +94,6 @@ import Link from 'next/link';import { ;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
@@ -126,15 +115,9 @@ import Link from 'next/link';
       setIsScrolled(window.scrollY > 50)
     };
 
-<<<<<<< HEAD
-    window.addEventListener(', 'scroll', 'handleScroll);
-    return () => window.removeEventListener(', 'scroll', 'handleScroll);
-  }[]);
-=======
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   const navigationItems = [
     {
@@ -512,9 +495,7 @@ import Link from 'next / link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -683,15 +664,6 @@ import Link from 'next / link';
                 )}
 
                 {/* Dropdown Menu */}
-<<<<<<< HEAD
-                {item.dropdown && (
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0scale: 1 }}
-                        exit={{ opacity: 0, y: 10scale: 0.95 }}
-=======
                 {item && item.dropdown && (;
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -699,7 +671,6 @@ import Link from 'next / link';
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
@@ -709,9 +680,7 @@ import Link from 'next / link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
                       >
@@ -798,7 +767,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                 </div>
                               </Link>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                             ))}
                           </div>;
@@ -823,12 +791,9 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Contact Info & CTA */}
@@ -849,7 +814,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -949,7 +913,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1003,7 +966,6 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1094,7 +1056,6 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1186,10 +1147,8 @@ export default UltraAdvancedNavigation;  );
 
 
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

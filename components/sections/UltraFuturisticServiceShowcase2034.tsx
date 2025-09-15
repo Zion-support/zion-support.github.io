@@ -324,7 +324,6 @@ const service_categories = [;
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       <div className='absolute inset-0 overflow-hidden'>;
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
@@ -341,7 +340,6 @@ const service_categories = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -351,8 +349,6 @@ const service_categories = [;
 
     hidden: { opacity: 0, y: 20 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
@@ -375,9 +371,6 @@ const service_categories = [;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-    visible: { opacity: 1, y: 0 }
-=======
 
         {/* Header */}
 
@@ -394,9 +387,7 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
         >
@@ -419,7 +410,6 @@ const service_categories = [;
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   };
 
 
@@ -432,11 +422,6 @@ const service_categories = [;
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
         {/* Header */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-=======
 
 
   return (
@@ -455,7 +440,6 @@ const service_categories = [;
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text - center mb - 16';
@@ -495,7 +479,6 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -530,13 +513,6 @@ const service_categories = [;
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {[
-<<<<<<< HEAD
-              { label: 'Total 'Services', 'value: allServices.length.toString()icon: Rocket },
-              { label: 'Happy 'Customers', 'value: '50K+'icon: Users },
-              { label: 'Success 'Rate', 'value: '99.9%'icon: CheckCircle },
-              { label: 'Global 'Reach', 'value: '45+ 'Countries', 'icon: Globe }
-            ].map((statindex) => (
-=======
 
 
           className='text-center mb-16'>;
@@ -595,7 +571,6 @@ const service_categories = [;
 
 
             ].map((stat, index) => (
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               <motion.div
 
                 key={stat.label}
@@ -624,7 +599,6 @@ const service_categories = [;
 
               </motion.div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
 
 
@@ -636,27 +610,17 @@ const service_categories = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Search and Filter */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='mb-12'
 
@@ -669,7 +633,6 @@ const service_categories = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -711,12 +674,10 @@ const service_categories = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* Category Filter */}
@@ -743,31 +704,12 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Service Categories */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategories.map((categoryindex) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -778,7 +720,6 @@ const service_categories = [;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
 
@@ -791,7 +732,6 @@ const service_categories = [;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
         {/* Services Grid */}
@@ -831,9 +771,7 @@ const service_categories = [;
           variants={containerVariants}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
 
 
@@ -846,13 +784,11 @@ const service_categories = [;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                 </div>
               )}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -860,7 +796,6 @@ const service_categories = [;
 
 
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
               {/* Service Icon */}
 
@@ -1125,8 +1060,6 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                   </div>
@@ -1154,12 +1087,8 @@ const service_categories = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
@@ -1200,7 +1129,6 @@ const service_categories = [;
                   <span>{service.setupTime}</span>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1311,9 +1239,7 @@ const service_categories = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                 <a
 
@@ -1323,7 +1249,6 @@ const service_categories = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 <a
@@ -1383,26 +1308,16 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           viewport={{ once: true }}
           className='text-center mt-20'
 
@@ -1415,7 +1330,6 @@ const service_categories = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1675,11 +1589,7 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

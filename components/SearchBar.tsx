@@ -152,25 +152,6 @@ const SearchBar: React.FC = () => {
     const value = e.target.value;
     setQuery(value);
     handleSearch(value)
-<<<<<<< HEAD
-  };
-,
-  const handleResultClick = () => {,
-    setIsOpen(false),
-    setQuery(', ')
-  };
-,
-  const handleKeyDown = (e: React.KeyboardEvent) => {,
-    if (e.key === 'Escape') {,
-      setIsOpen(false),
-      inputRef.current?.blur()
-    };
-  };
-,
-  useEffect(() => {,
-    const handleClickOutside = (event: MouseEvent) => {,
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {,
-=======
   }
   const handleResultClick = () => {
     setIsOpen(false)
@@ -185,7 +166,6 @@ const SearchBar: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         setIsOpen(false)
       }
     }

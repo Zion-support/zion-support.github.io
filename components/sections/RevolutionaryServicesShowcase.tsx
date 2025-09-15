@@ -29,14 +29,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
   const categories = [
-<<<<<<< HEAD
-    { id: ''all', 'name: 'All 'Services', 'count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
-    { id: ''ai', 'name: 'AI & 'ML', 'count: [...revolutionary2025MicroSaasServices...emergingTech2025Services...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },
-    { id: ''quantum', 'name: 'Quantum 'Tech', 'count: [...revolutionary2025MicroSaasServices...emergingTech2025Services...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },
-    { id: ''emerging', 'name: 'Emerging 'Tech', 'count: emergingTech2025Services.length },
-    { id: ''enterprise', 'name: 'Enterprise 'IT', 'count: enterpriseIT2025Services.length },
-    { id: ''revolutionary', 'name: ''Revolutionary', 'count: revolutionary2025MicroSaasServices.length }
-=======
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
@@ -50,7 +42,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
     { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
   const categories = [;
@@ -105,11 +96,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20 },
-=======
     hidden: { opacity: 0, y: 20 }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     visible: {
       opacity: 1
       y: 0
@@ -144,17 +131,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
-<<<<<<< HEAD
-        <motion.div 
-          className="text-center mb-16"
-=======
 
 
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         <motion&& motion.div
@@ -172,7 +154,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -217,17 +198,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           </p>
         </motion.div>
         {/* Category Filter */}
-<<<<<<< HEAD
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -243,12 +219,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         {/* Category Filter */}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -261,7 +235,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 setActiveCategory(category.id);
                 setVisibleServices(12)
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
@@ -285,7 +258,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -309,12 +281,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Services Grid */}
@@ -524,7 +493,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 
@@ -542,11 +510,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -848,7 +814,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             initial={{ opacity: 0 }}
@@ -865,14 +830,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             >
@@ -885,15 +846,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Experience the Future?
-=======
 
 
         {/* Call to Action */}
@@ -927,7 +879,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               href='/pricing'
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services.
@@ -985,7 +936,6 @@ export default RevolutionaryServicesShowcase;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 export default RevolutionaryServicesShowcase;  )
@@ -994,12 +944,7 @@ export default RevolutionaryServicesShowcase;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

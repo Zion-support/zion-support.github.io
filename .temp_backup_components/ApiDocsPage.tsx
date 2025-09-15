@@ -58,18 +58,6 @@ function ChangelogWidget() {
   const [message, setMessage] = useState(''),
 
   async function load() {
-<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
-    setMessage(', ');
-    const res = await fetch('/api/docs/changelog');
-    const data = await res.json();
-    setContent(data.content || ', ');
-  }
-
-  async function save() {
-    setMessage(', ');
-    await fetch('/api/docs/changelog'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content }) });
-    setMessage('Saved');
-=======
     setMessage(''),
     const res = await fetch('/api/docs/changelog'),
     const data = await res.json(),
@@ -80,7 +68,6 @@ function ChangelogWidget() {
     setMessage(''),
     await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) }),
     setMessage('Saved'),
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:.temp_backup_components/ApiDocsPage.tsx
   }
 
   return (

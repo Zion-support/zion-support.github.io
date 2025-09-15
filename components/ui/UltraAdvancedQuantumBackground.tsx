@@ -87,14 +87,9 @@ interface UltraAdvancedQuantumBackgroundProps {
   className?: string
 }
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-<<<<<<< HEAD
-  children
-  className = ', ' 
-=======
 
   children;
   className = ''
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 }) => {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -512,7 +507,6 @@ if (return) {
       ctx && ctx.restore();
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -535,15 +529,6 @@ if (return) {
 
     };
 
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'handleResize);
-
-    return () => {
-      window.removeEventListener(', 'resize', 'handleResize);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }[]);
-=======
     window && window.addEventListener('resize', handleResize);
 
 
@@ -557,7 +542,6 @@ if (return) {
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
     }
@@ -854,7 +838,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -957,15 +940,10 @@ export default UltraAdvancedQuantumBackground;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

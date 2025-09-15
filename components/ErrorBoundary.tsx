@@ -6,11 +6,9 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -81,20 +79,17 @@ origin/automation-improvements-final
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     super(props);
     this && this.state = { hasError: false };
   }
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
     return { hasError: true, error };
     return { hasError: true, error }
@@ -193,16 +188,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">'We', 're sorry, but something unexpected happened.</p>
-=======
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
               <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -616,7 +605,6 @@ if ( {) {
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             <button
               onClick={() => window.location.reload()  } catch (error) {
     console.error("Error:", error);
@@ -643,7 +631,6 @@ if ( {) {
     // Log the error to an error reporting service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   handle_reload = () => {
     window.location.reload ();
@@ -890,7 +877,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     super(props);

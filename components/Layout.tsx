@@ -13,9 +13,6 @@ interface LayoutProps {
   noIndex?: boolean;
 }
 
-<<<<<<< HEAD
-export default function Layout({ childrentitle = 'Zion Tech 'Group', 'description = 'Autonomouscloud-native app with self-running automations' }: LayoutProps) {
-=======
 export default function Layout({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions',
@@ -24,7 +21,6 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   return (
     <>
       <Head>

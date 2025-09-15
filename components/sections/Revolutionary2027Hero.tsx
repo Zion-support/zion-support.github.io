@@ -134,14 +134,6 @@ const Revolutionary2027Hero = () => {;
     }
   };
 
-<<<<<<< HEAD
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-=======
   const itemVariants = {;
     hidden: { opacity: 0, y: 30 },;
     visible: {;
@@ -162,7 +154,6 @@ const Revolutionary2027Hero = () => {;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]'></div>;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         duration: 0.8,
         ease: "easeOut" as const
       }
@@ -174,7 +165,6 @@ const Revolutionary2027Hero = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       <div className='absolute inset-0 opacity-20'>;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
@@ -195,7 +185,6 @@ const Revolutionary2027Hero = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -338,7 +327,6 @@ const Revolutionary2027Hero = () => {;
             </div>
           </motion.div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -540,7 +528,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
         </motion && motion.div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
       {/* Scroll Indicator */}
 
@@ -854,14 +841,11 @@ export default Revolutionary2027Hero;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     </section>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

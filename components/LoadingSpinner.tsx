@@ -6,13 +6,11 @@
 
 interface LoadingSpinnerProps {
 interface LoadingSpinnerProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
@@ -21,19 +19,6 @@ interface LoadingSpinnerProps {;
   class_name?: string;
 }
 
-<<<<<<< HEAD
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  text = 'Loading...',
-  className = ', '
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md',;
@@ -159,7 +144,6 @@ export default function LoadingSpinner() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -177,11 +161,7 @@ export default function LoadingSpinner() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

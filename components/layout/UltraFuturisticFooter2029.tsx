@@ -60,7 +60,6 @@ import {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -91,79 +90,38 @@ const serviceCategories = [
     title: 'AI & Machine Learning'
     icon: Brain
     services: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum Neural 'Networks', 'href: '/quantum-neural-network-platform' },
-      { name: 'Autonomous Business 'Operations', 'href: '/autonomous-business-operations-platform' },
-      { name: 'AI-Powered IT Asset 'Management', 'href: '/ai-powered-it-asset-management' }
-=======
 
 
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
       { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   };
   {
     title: '🧠 AI & Technology',
     services: [
-<<<<<<< HEAD
-      { name: 'AI 'Services', 'href: '/ai-services' },
-      { name: 'Machine 'Learning', 'href: '/machine-learning' },
-      { name: 'Natural Language 'Processing', 'href: '/nlp-services' },
-      { name: 'Computer 'Vision', 'href: '/computer-vision' }
-=======
       { name: 'AI Services', href: '/ai-services' },
       { name: 'Machine Learning', href: '/machine-learning' },
       { name: 'Natural Language Processing', href: '/nlp-services' },
       { name: 'Computer Vision', href: '/computer-vision' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   };
 
   {
     title: '⚛️ Quantum & Emerging Tech'
     services: [
-<<<<<<< HEAD
-      { name: 'Quantum 'Computing', 'href: '/quantum-computing' },
-      { name: 'Blockchain 'Solutions', 'href: '/blockchain-solutions' },
-      { name: 'IoT 'Platforms', 'href: '/iot-platforms' },
-      { name: 'Space 'Technology', 'href: '/space-tech' }
-=======
 
       { name: 'Quantum Computing', href: '/quantum-computing' },
       { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
       { name: 'IoT Platforms', href: '/iot-platforms' },
       { name: 'Space Technology', href: '/space-tech' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   };
 
   {
     title: '🏙️ Enterprise Solutions'
     services: [
-<<<<<<< HEAD
-      { name: 'Enterprise 'IT', 'href: '/enterprise-it' },
-      { name: 'Cloud 'Solutions', 'href: '/cloud-solutions' },
-      { name: ''Cybersecurity', 'href: '/cybersecurity' },
-      { name: 'DevOps 'Automation', 'href: '/devops-automation' }
-    ]
-  }
-];
-
-const quickLinks = [
-  { name: ''Home', 'href: '/'icon: Home },
-  { name: ''Services', 'href: '/'services', 'icon: Briefcase },
-  { name: ''Solutions', 'href: '/'solutions', 'icon: Rocket },
-  { name: ''About', 'href: '/'about', 'icon: Users },
-  { name: ''Blog', 'href: '/'blog', 'icon: BookOpen },
-  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircle },
-  { name: ''Support', 'href: '/'support', 'icon: MessageCircle },
-  { name: ''Privacy', 'href: '/'privacy', 'icon: Shield }
-];
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -289,7 +247,6 @@ const serviceCategories = [;
       { name: 'Cybersecurity', href: '/cybersecurity' },
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   Phone,
   Mail,
@@ -316,14 +273,6 @@ const serviceCategories = [;
   { name: 'Privacy', href: '/privacy', icon: Shield }
 ];
 const socialLinks = [
-<<<<<<< HEAD
-  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedincolor: 'hover:text-blue-400' },
-  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twittercolor: 'hover:text-sky-400' },
-  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Githubcolor: 'hover:text-gray-400' },
-  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Youtubecolor: 'hover:text-red-500' }
-];
-
-=======
   {
     name: 'LinkedIn'
     href: 'https://linkedin.com/company/ziontechgroup'
@@ -351,7 +300,6 @@ const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 const footerSections = [
   {
     title: 'Company'
@@ -414,15 +362,6 @@ const social_links = [;
 const footer_sections = [;
   {
     title: 'Company',
-<<<<<<< HEAD
-    links: [
-      { name: 'About 'Us', 'href: '/about' },
-      { name: 'Our 'Mission', 'href: '/mission' },
-      { name: 'Leadership 'Team', 'href: '/team' },
-      { name: ''Careers', 'href: '/careers' },
-      { name: 'Press & 'Media', 'href: '/press' },
-      { name: ''Partnerships', 'href: '/partnerships' }
-=======
     links: [;
 
       { name: 'About Us', href: '/about' },
@@ -435,31 +374,11 @@ const footer_sections = [;
     ],
 
   },  {      { name: 'Partnerships', href: '/partnerships' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
   {
     title: 'Solutions'
     links: [
-<<<<<<< HEAD
-      { name: 'AI 'Services', 'href: '/ai-services' },
-      { name: 'Quantum 'Technology', 'href: '/quantum-technology' },
-      { name: 'IT 'Infrastructure', 'href: '/it-infrastructure' },
-      { name: ''Cybersecurity', 'href: '/cybersecurity' },
-      { name: 'Cloud 'Solutions', 'href: '/cloud-solutions' },
-      { name: ''Blockchain', 'href: '/blockchain-solutions' }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: ''Blog', 'href: '/blog' },
-      { name: 'Case 'Studies', 'href: '/case-studies' },
-      { name: 'White 'Papers', 'href: '/white-papers' },
-      { name: ''Documentation', 'href: '/docs' },
-      { name: 'API 'Reference', 'href: '/api' },
-      { name: 'Support 'Center', 'href: '/support' }
-=======
       { name: 'AI Services', href: '/ai-services' }
       { name: 'Quantum Technology', href: '/quantum-technology' }
       { name: 'IT Infrastructure', href: '/it-infrastructure' }
@@ -468,20 +387,11 @@ const footer_sections = [;
       { name: 'Blockchain', href: '/blockchain-solutions' }
     ]
   },  {      { name: 'Blockchain', href: '/blockchain-solutions' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
   {
     title: 'Resources'
     links: [
-<<<<<<< HEAD
-      { name: 'Privacy 'Policy', 'href: '/privacy' },
-      { name: 'Terms of 'Service', 'href: '/terms' },
-      { name: 'Cookie 'Policy', 'href: '/cookies' },
-      { name: 'Data 'Protection', 'href: '/data-protection' },
-      { name: ''Accessibility', 'href: '/accessibility' },
-      { name: ''Compliance', 'href: '/compliance' }
-=======
       { name: 'Blog', href: '/blog' }
       { name: 'Case Studies', href: '/case-studies' }
       { name: 'White Papers', href: '/white-papers' }
@@ -506,7 +416,6 @@ const footer_sections = [;
 const UltraFuturisticFooter2029 = () => {
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>      { name: 'Compliance', href: '/compliance' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
 ];
@@ -623,13 +532,11 @@ const UltraFuturisticFooter2029 = () => {
               ))}
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 
               ))}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>;
           </div>;
 
@@ -638,8 +545,6 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -656,9 +561,7 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -736,7 +639,6 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -765,14 +667,11 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
               ))}
 
@@ -808,7 +707,6 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -851,7 +749,6 @@ const UltraFuturisticFooter2029 = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div key={section.title}>
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section.title}</h5>
                   <ul className="space-y-2">
@@ -1039,9 +936,7 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Bottom Footer */}
       <div className='border-t border-slate-700/50'>
@@ -1053,9 +948,7 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
               © 2025 Zion Tech Group. All rights reserved.
             </div>
             <div className='flex items-center space-x-6 text-sm text-gray-400'>
@@ -1294,14 +1187,8 @@ export default UltraFuturisticFooter2029;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

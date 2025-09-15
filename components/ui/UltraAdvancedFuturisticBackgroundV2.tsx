@@ -1,15 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-interface UltraAdvancedFuturisticBackgroundV2Props {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children
-  className = ', ' 
-=======
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -19,7 +9,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 > = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({
   children;
   className = ''
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 }) => {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -61,7 +50,6 @@ let particles: Array< {;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let animationFrameId: number;
     let particles: Array<{;
       x: number;
@@ -324,20 +312,12 @@ let particles: Array< {;
       initParticles()
     };
 
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'handleResize);
-=======
 
     window.addEventListener('resize', handleResize);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     initParticles();
     updateParticles();
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'handleResize);
-=======
       window.removeEventListener('resize', handleResize);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       if (animationFrameId) {
 
         });
@@ -645,7 +625,6 @@ let particles: Array< {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         {[...Array(20)].map((_, i) => (
@@ -742,7 +721,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -757,11 +735,8 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -908,7 +883,6 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       {/* Content */}
@@ -933,17 +907,14 @@ export default UltraAdvancedFuturisticBackgroundV2;
 
 
       {/* Content */}
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

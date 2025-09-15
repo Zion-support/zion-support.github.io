@@ -1,10 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-MenuXChevronDownSearchPhoneMailMapPinZapBrainAtomMicroscopeGamepad2ShieldRocketDatabaseTestTubeCarGlobeCodePaletteCloudServerNetworkCpu
-=======
 
 
 
@@ -29,7 +23,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -70,17 +63,11 @@ export default function UltraAdvancedNavigation2026V2() {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
-<<<<<<< HEAD
-    window.addEventListener(', 'scroll', 'handleScroll);
-    return () => window.removeEventListener(', 'scroll', 'handleScroll);
-  }[]);
-=======
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20);
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   const navigationItems = [;
     {;
@@ -221,28 +208,6 @@ export default function UltraAdvancedNavigation2026V2() {;
     {
       name: 'Services',
       href: '/services',
-<<<<<<< HEAD
-      icon: <Brain className="w-4 h-4" />,
-      dropdown: [
-        { name: 'AI & Machine 'Learning', 'href: '/services?category='ai', 'icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum & Space 'Tech', 'href: '/services?category='quantum', 'icon: <Atom className="w-4 h-4" /> },
-        { name: 'Emerging 'Technologies', 'href: '/services?category='emerging', 'icon: <Microscope className="w-4 h-4" /> },
-        { name: 'Micro 'SaaS', 'href: '/services?category=micro-'saas', 'icon: <Code className="w-4 h-4" /> },
-        { name: 'Metaverse & 'VR', 'href: '/services?category='metaverse', 'icon: <Gamepad2 className="w-4 h-4" /> },
-        { name: ''Cybersecurity', 'href: '/services?category='cybersecurity', 'icon: <Shield className="w-4 h-4" /> },
-        { name: 'Space 'Technology', 'href: '/services?category='space', 'icon: <Rocket className="w-4 h-4" /> },
-        { name: 'Biotech & 'Healthcare', 'href: '/services?category='biotech', 'icon: <TestTube className="w-4 h-4" /> },
-        { name: 'Blockchain & 'Web3', 'href: '/services?category='blockchain', 'icon: <Database className="w-4 h-4" /> },
-        { name: 'Autonomous 'Vehicles', 'href: '/services?category='transportation', 'icon: <Car className="w-4 h-4" /> },
-        { name: 'Cloud & 'Infrastructure', 'href: '/services?category='cloud', 'icon: <Cloud className="w-4 h-4" /> },
-        { name: 'Edge 'Computing', 'href: '/services?category='edge', 'icon: <Server className="w-4 h-4" /> },
-        { name: 'IoT & 'Connectivity', 'href: '/services?category='iot', 'icon: <Network className="w-4 h-4" /> },
-        { name: 'Semiconductor 'Tech', 'href: '/services?category='semiconductor', 'icon: <Cpu className="w-4 h-4" /> },
-        { name: 'Creative & 'Design', 'href: '/services?category='creative', 'icon: <Palette className="w-4 h-4" /> },
-        { name: 'Global 'Solutions', 'href: '/services?category='global', 'icon: <Globe className="w-4 h-4" /> }
-      ]
-    },
-=======
       icon: <Brain className='w - 4 h - 4' />,
       dropdown: [;
         {
@@ -332,7 +297,6 @@ export default function UltraAdvancedNavigation2026V2() {;
       href: '/enhanced-services-showcase-2026-v2'
       icon: <Rocket className='w-4 h-4' />
     }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     {
       name: 'Pricing'
       href: '/pricing-enhanced-2026'
@@ -394,7 +358,6 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -552,7 +515,6 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                     >
@@ -587,19 +549,13 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                             </span>
                           </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                         ))}
                       </div>;
@@ -623,12 +579,8 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   Get Started
@@ -642,13 +594,11 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -683,9 +633,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Mobile Navigation */}
       <AnimatePresence>;
@@ -897,7 +845,6 @@ className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transiti
                         <span>{item.name}</span>
                       </Link>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                     )}
                   </div>;
@@ -998,7 +945,6 @@ className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transiti
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1014,13 +960,9 @@ className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transiti
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

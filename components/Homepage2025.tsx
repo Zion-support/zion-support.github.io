@@ -1,9 +1,5 @@
 "use client";
-<<<<<<< HEAD
-import React{ useStateuseEffectSuspense } from 'react';
-=======
 import React, { useState, useEffect, Suspense } from 'react';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   innovativeRealMicroSaasServices2025 
@@ -71,16 +67,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const navigationSections = [
-<<<<<<< HEAD
-    { id: ''hero', 'label: ''Home', 'icon: '🏠' },
-    { id: ''services', 'label: 'Micro 'SAAS', 'icon: '🚀' },
-    { id: ''ai', 'label: 'AI 'Services', 'icon: '🧠' },
-    { id: ''automation', 'label: 'AI 'Automation', 'icon: '⚡' },
-    { id: ''quantum', 'label: 'Quantum 'Security', 'icon: '🔐' },
-    { id: ''it', 'label: 'IT 'Solutions', 'icon: '💻' },
-    { id: ''emerging', 'label: 'Emerging 'Tech', 'icon: '🌟' },
-    { id: ''contact', 'label: ''Contact', 'icon: '📞' }
-=======
     { id: 'hero', label: 'Home', icon: '🏠' },
     { id: 'services', label: 'Micro SAAS', icon: '🚀' },
     { id: 'ai', label: 'AI Services', icon: '🧠' },
@@ -89,7 +75,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'it', label: 'IT Solutions', icon: '💻' },
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
   const features = [
@@ -305,11 +290,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
@@ -355,11 +336,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
@@ -391,11 +368,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Our Revolutionary 2026 Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              From AI-powered business intelligence to quantum computing and emerging 'technologieswe', 're building the future today
-=======
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             </p>
           </motion.div>
 
@@ -413,13 +386,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                whileHover={{ y: -10scale: 1.02 }}
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 onClick={() => window.location.href = service.link}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -443,11 +411,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             className="text-center mt-16"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6delay: 0.3 }}
-=======
             transition={{ duration: 0.6, delay: 0.3 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             viewport={{ once: true }}
           >
             <a
@@ -522,11 +486,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6delay: 0.2 }}
-=======
             transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             viewport={{ once: true }}
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

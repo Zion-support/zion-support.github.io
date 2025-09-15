@@ -137,14 +137,10 @@ const RevolutionaryContent2025UltimateBanner: React.FC = () => {
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-20"></div>
-=======
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-bounce"></div>
         <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce delay-1000"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-bounce delay-2000"></div>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

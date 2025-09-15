@@ -85,13 +85,6 @@ export default function UltraFuturisticHero2028() {
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
   const features = [
-<<<<<<< HEAD
-    { icon: Braintext: 'AI Consciousness 'Evolution', 'color: 'from-emerald-500 to-teal-500' },
-    { icon: Atomtext: 'Quantum Time 'Manipulation', 'color: 'from-violet-500 to-purple-500' },
-    { icon: Rocketext: 'Space Debris 'Management', 'color: 'from-blue-500 to-cyan-500' },
-    { icon: Shieldtext: 'Quantum Internet 'Security', 'color: 'from-red-500 to-orange-500' }
-  ];
-=======
     {
       icon: Brain
       text: 'AI Consciousness Evolution'
@@ -108,7 +101,6 @@ export default function UltraFuturisticHero2028() {
       color: 'from-blue-500 to-cyan-500'
     }
     {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
       icon: Shield
       text: 'Quantum Internet Security'
@@ -134,18 +126,10 @@ export default function UltraFuturisticHero2028() {
 
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
   const stats = [
-<<<<<<< HEAD
-    { value: '50+'label: 'Cutting-Edge 'Services', 'icon: Rocket },
-    { value: '25+'label: 'AI 'Solutions', 'icon: Brain },
-    { value: '15+'label: 'Quantum 'Technologies', 'icon: Atom },
-    { value: '1000+'label: 'Happy 'Clients', 'icon: Users }
-  ];
-=======
     { value: '50+', label: 'Cutting-Edge Services', icon: Rocket }
     { value: '25+', label: 'AI Solutions', icon: Brain }
     { value: '15+', label: 'Quantum Technologies', icon: Atom }
     { value: '1000+', label: 'Happy Clients', icon: Users }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 export default function UltraFuturisticHero2028() {;
@@ -259,11 +243,7 @@ export default function UltraFuturisticHero2028() {;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
 
         {/* Badge */}
-<<<<<<< HEAD
-        <motion.div
-=======
         <motion&& motion.div
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -289,7 +269,6 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -298,13 +277,6 @@ export default function UltraFuturisticHero2028() {;
 
 
         {/* Main Heading */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
-          className="mb-8"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -320,14 +292,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight'>
             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
@@ -336,17 +306,6 @@ export default function UltraFuturisticHero2028() {;
             <br />
             <span className='text-white'>
               Technology is{' '}
-<<<<<<< HEAD
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-                Here
-              </span>
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-            Experience revolutionary 2028 technology with AI Consciousness EvolutionQuantum Time Manipulation
-            and Autonomous AI Civilization. 'We', 're building 'tomorrow', 's solutions today.
-=======
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                Here;
               </span>;
             </span>;
@@ -359,7 +318,6 @@ export default function UltraFuturisticHero2028() {;
             <span className="text-white">;
               Technology is{' '}
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           </p>
         </motion.div>
 
@@ -378,22 +336,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* CTA Buttons */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -410,17 +358,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
+
+
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -477,33 +420,20 @@ export default function UltraFuturisticHero2028() {;
         </motion && motion.div>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
         {/* Features Grid */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
-          className="mb-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -511,7 +441,6 @@ export default function UltraFuturisticHero2028() {;
           className='mb-16'
         >
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto'>            {features.map((feature, index) => (          className="mb-16"
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {features.map((feature, index) => (
@@ -528,7 +457,6 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
               >
@@ -553,20 +481,14 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                   </h3>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             ))}
           </div>
@@ -585,22 +507,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Stats */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.0 }}
-          className="mb-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -608,7 +520,6 @@ export default function UltraFuturisticHero2028() {;
           className='mb-16'
         >
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>            {stats.map((stat, index) => (          className="mb-16"
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
@@ -625,7 +536,6 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
               >
@@ -652,19 +562,13 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             ))}
           </div>
@@ -683,25 +587,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Trust Indicators */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.4 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-white mb-6">
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -713,14 +604,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-2xl font-bold text-white mb-6'>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               Trusted by Industry Leaders
             </h3>
             <div className='flex flex-wrap justify-center items-center gap-8 opacity-70'>
@@ -776,21 +665,12 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Bottom CTA */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.6 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -806,7 +686,6 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -832,7 +711,6 @@ export default function UltraFuturisticHero2028() {;
 
 
           transition={{ duration: 0.8, delay: 1.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           className="text-center"
         >
           <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm">
@@ -863,7 +741,6 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -876,9 +753,7 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
       >
@@ -919,7 +794,6 @@ export default function UltraFuturisticHero2028() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 

@@ -159,11 +159,6 @@ import { motion } from 'framer-motion';
       canvas.height = window.innerHeight
     };
 
-<<<<<<< HEAD
-    resizeCanvas();
-    window.addEventListener(', 'resize', 'resizeCanvas);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -281,11 +276,7 @@ import { motion } from 'framer-motion';
 
     animate();
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-=======
       window.removeEventListener('resize', resizeCanvas);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       if (animationRef.current) {
 
 
@@ -947,9 +938,7 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             />
 
@@ -1028,12 +1017,8 @@ export default UltraFuturisticBackground2035;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

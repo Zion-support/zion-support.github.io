@@ -148,47 +148,22 @@ import {
   }
   {
 
-<<<<<<< HEAD
-const mainNavigationRoutes = [
-  { name: ''Home', 'href: '/'icon: Homedescription: 'Welcome to Zion Tech Group' },
-  { name: ''Services', 'href: '/'services', 'icon: Briefcasedescription: 'Our comprehensive service portfolio' },
-  { name: ''Solutions', 'href: '/'solutions', 'icon: Targetdescription: 'Tailored solutions for your business' },
-  { name: ''Pricing', 'href: '/'pricing', 'icon: DollarSigndescription: 'Transparent pricing and packages' },
-  { name: ''Resources', 'href: '/'resources', 'icon: BookOpendescription: 'Knowledge base and documentation' },
-  { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: Usersdescription: 'Success stories and implementations' },
-  { name: ''Blog', 'href: '/'blog', 'icon: MessageCircledescription: 'Latest insights and updates' },
-  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircledescription: 'Get in touch with our team' }
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 
 const serviceCategories = [
   {
     title: ' 2032 Revolutionary AI Services'
     services: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-platform' },
-      { name: 'AI Emotional 'Intelligence', 'href: '/ai-emotional-intelligence-platform' },
-      { name: 'AI Creativity 'Orchestrator', 'href: '/ai-creativity-orchestrator' },
-      { name: 'AI Autonomous Business 'Manager', 'href: '/ai-autonomous-business-manager' }
-=======
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' }
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
   {
     title: ' 2032 Quantum & Emerging Tech'
     services: [
-<<<<<<< HEAD
-      { name: 'Quantum DNA 'Computing', 'href: '/quantum-dna-computing-platform' },
-      { name: 'Quantum Internet 'Security', 'href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Financial 'Trading', 'href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Creativity 'Studio', 'href: '/quantum-creativity-studio' }
-=======
       {
         name: 'Quantum DNA Computing'
         href: '/quantum-dna-computing-platform'
@@ -202,35 +177,21 @@ const serviceCategories = [
         href: '/quantum-financial-trading-platform'
       }
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
 
   };
   {
     title: '🏙️ 2032 Enterprise IT Solutions',
     services: [
-<<<<<<< HEAD
-      { name: 'Autonomous 'DevOps', 'href: '/autonomous-devops-platform' },
-      { name: 'Zero Trust 'Architecture', 'href: '/zero-trust-network-architecture' },
-      { name: 'Edge Computing 'Orchestration', 'href: '/edge-computing-orchestration' },
-      { name: 'AI IT Operations 'Center', 'href: '/ai-powered-it-operations-center' }
-=======
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
       { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
       { name: 'AI IT Operations Center', href: '/ai-powered-it-operations-center' }
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' 2032 Enterprise IT Solutions'
     services: [
-<<<<<<< HEAD
-      { name: 'Space Mining 'Automation', 'href: '/space-mining-automation-platform' },
-      { name: 'Metaverse 'Development', 'href: '/metaverse-development-platform' },
-      { name: 'AI Predictive 'Health', 'href: '/ai-predictive-health-analytics' },
-      { name: 'AI Autonomous 'Business', 'href: '/ai-autonomous-business-manager' }
-=======
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
       {
         name: 'Zero Trust Architecture'
@@ -244,17 +205,10 @@ const serviceCategories = [
         name: 'AI IT Operations Center'
         href: '/ai-powered-it-operations-center'
       }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' 2032 Space & Metaverse Tech'
     services: [
-<<<<<<< HEAD
-      { name: 'AI Business 'Intelligence', 'href: '/ai-business-intelligence-suite' },
-      { name: 'Quantum-Secure 'Communication', 'href: '/quantum-secure-communication-platform' },
-      { name: 'AI Customer 'Success', 'href: '/ai-customer-success-automation' },
-      { name: 'Blockchain Supply 'Chain', 'href: '/blockchain-supply-chain-transparency' }
-=======
       {
         name: 'Space Mining Automation'
         href: '/space-mining-automation-platform'
@@ -268,18 +222,11 @@ const serviceCategories = [
         name: 'AI Autonomous Business'
         href: '/ai-autonomous-business-manager'
       }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
   {
     title: ' 2032 Innovative Micro SAAS'
     services: [
-<<<<<<< HEAD
-      { name: 'Neuromorphic 'Computing', 'href: '/neuromorphic-computing-platform' },
-      { name: 'DNA Computing 'Platform', 'href: '/dna-computing-platform' },
-      { name: 'Photonic 'Computing', 'href: '/photonic-computing-infrastructure' },
-      { name: 'Swarm 'Robotics', 'href: '/swarm-robotics-orchestration' }
-=======
       {
         name: 'AI Business Intelligence'
         href: '/ai-business-intelligence-suite'
@@ -308,21 +255,10 @@ const serviceCategories = [
         href: '/photonic-computing-infrastructure'
       }
       { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
 ];
 const quickLinks = [
-<<<<<<< HEAD
-  { name: '2032 'Services', 'href: '/2032-futuristic-services-'showcase', 'icon: Stardescription: 'Revolutionary 2032 services' },
-  { name: 'Enhanced 'Pricing', 'href: '/enhanced-market-pricing-2032'icon: DollarSigndescription: 'Comprehensive pricing analysis' },
-  { name: 'Market 'Pricing', 'href: '/market-'pricing', 'icon: DollarSigndescription: 'Competitive pricing references' },
-  { name: 'Enhanced 'Services', 'href: '/enhanced-services-'showcase', 'icon: Stardescription: 'Premium service showcase' },
-  { name: 'Revolutionary 2026'href: '/revolutionary-2026-'services', 'icon: TrendingUpdescription: '2026 breakthrough services' },
-  { name: 'Ultimate 2026'href: '/ultimate-2026-services-'showcase', 'icon: Targetdescription: 'Ultimate service portfolio' },
-  { name: 'News & 'Updates', 'href: '/'news', 'icon: MessageCircledescription: 'Latest company news' },
-  { name: ''Support', 'href: '/'support', 'icon: Usersdescription: 'Technical support and help' }
-=======
   {
     name: '2032 Services'
     href: '/2032-futuristic-services-showcase'
@@ -486,7 +422,6 @@ const service_categories = [;
       { name: 'Swarm Robotics', href: '/swarm - robotics - orchestration' },
     ],
   },
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 ;
 const quick_links = [;
@@ -536,31 +471,6 @@ const quick_links = [;
 
 ];
 const companyInfo = [
-<<<<<<< HEAD
-  { name: 'About 'Us', 'href: '/about' },
-  { name: ''Careers', 'href: '/careers' },
-  { name: ''Press', 'href: '/press' },
-  { name: ''Partners', 'href: '/partners' },
-  { name: ''Support', 'href: '/support' },
-  { name: ''Status', 'href: '/status' }
-];
-
-const socialLinks = [
-  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Linkedin },
-  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: Twitter },
-  { name: ''Facebook', 'href: 'https://facebook.com/'ziontechgroup', 'icon: Facebook },
-  { name: ''Instagram', 'href: 'https://instagram.com/'ziontechgroup', 'icon: Instagram },
-  { name: ''YouTube', 'href: 'https://youtube.com/'ziontechgroup', 'icon: Youtube },
-  { name: ''GitHub', 'href: 'https://github.com/Zion-'Holdings', 'icon: Github }
-];
-
-const footerVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-=======
     name: 'Support',
     href: '/support',
     icon: Users,
@@ -588,7 +498,6 @@ const contactInfo = {;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       duration: 0.8,
       staggerChildren: 0.1
     }
@@ -600,16 +509,11 @@ const itemVariants = {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
-<<<<<<< HEAD
-};
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 };
 const mainNavigationRoutes = [;
@@ -1089,13 +993,8 @@ function UltraFuturisticFooter2032() {
                 </div>
               </div>
               <p className="text-slate-300 mb-6 leading-relaxed">
-<<<<<<< HEAD
-                Leading the future of technology with revolutionary AIquantum computingspace technologyand autonomous systems. 
-                Empowering businesses with cutting-edge solutions for 'tomorrow', 's challenges.
-=======
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems.
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               </p>
               {/* Contact Information */}
               <div className="space-y-3">
@@ -1234,7 +1133,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1248,7 +1146,6 @@ export default function UltraFuturisticFooter2032() {
                     </h4>
                     <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
                         <li key={serviceIndex}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
                           <Link
                             href={service && service.href}
@@ -1502,8 +1399,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1526,7 +1421,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -1584,7 +1478,6 @@ export default function UltraFuturisticFooter2032() {
                 <ul className="space-y-2">
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
                   {companyInfo.map((item, index) => (
                     <li key={index}>
@@ -1602,16 +1495,12 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
@@ -1668,7 +1557,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   ))}
@@ -1690,9 +1578,7 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Newsletter Signup */}
@@ -1731,7 +1617,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
                   ))}
@@ -1744,7 +1629,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
           {/* Newsletter Signup */}
@@ -1759,11 +1643,9 @@ export default function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 Stay Ahead with Future Technology

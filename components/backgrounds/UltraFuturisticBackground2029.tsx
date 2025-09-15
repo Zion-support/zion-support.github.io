@@ -38,11 +38,6 @@ export default function UltraFuturisticBackground2029() {;
       canvas.height = window.innerHeight
     };
 
-<<<<<<< HEAD
-    resizeCanvas();
-    window.addEventListener(', 'resize', 'resizeCanvas);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -51,14 +46,9 @@ export default function UltraFuturisticBackground2029() {;
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 
-<<<<<<< HEAD
-      for (let i = 0; i < particleCount; i++) {
-        const type = [', 'quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'];
-=======
 
       for (let i = 0, i < particleCount, i++) {
         const type = ['quantumholographicneuralcyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'];
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         const colors = {
           quantum: ['#00ffff#0080ff#0040ff'],
           holographic: ['#8b5cf6#a855f7#c084fc'],
@@ -520,16 +510,6 @@ if (return) {
 
     animate();
 
-<<<<<<< HEAD
-    return () => {
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }[]);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
       }
@@ -867,11 +847,8 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Canvas for particle effects */}
       <canvas
@@ -1101,8 +1078,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             transition={{
 
@@ -1128,7 +1103,6 @@ if (return) {
     </div>));
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -1136,9 +1110,7 @@ if (return) {
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

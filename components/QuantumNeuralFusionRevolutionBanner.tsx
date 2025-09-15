@@ -96,23 +96,12 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {
               Watch Live Demo
             </Link>
           </div>
-<<<<<<< HEAD
-          
-          <div className="text-sm opacity-80 max-w-2xl mx-auto">
-            <p className="mb-2">
-              <strong>The quantum-neural revolution is here.</strong> Organizations that invest in this revolutionary 
-              technology today will gain unprecedented competitive advantages and position themselves as leaders in the quantum era.
-            </p>
-            <p>
-              Join the pioneers of the quantum-neural fusion revolution. The future is not just coming—'it', 's already here.
-=======
 
           {/* Warning Notice */}
           <div className="mt-12 p-6 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl border border-yellow-400/30">
             <p className="text-lg font-semibold text-yellow-300">
               ⚠️ Revolutionary Technology: This breakthrough represents the most advanced AI system ever created. 
               Limited access available to qualified enterprises.
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             </p>
           </div>
         </div>

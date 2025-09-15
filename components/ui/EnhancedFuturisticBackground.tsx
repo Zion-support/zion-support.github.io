@@ -77,11 +77,7 @@ const EnhancedFuturisticBackground: React.FC<;
   EnhancedFuturisticBackgroundProps;
 > = ({
   children,
-<<<<<<< HEAD
-  className = ', ',
-=======
   class_name = '',
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   intensity = 'medium',
   color_scheme = 'quantum',
   particle_count = 100,
@@ -95,11 +91,7 @@ const EnhancedFuturisticBackground: React.FC<;
     };
 
     resizeCanvas();
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'resizeCanvas);
-=======
     window && window.addEventListener('resize', resizeCanvas);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
@@ -253,7 +245,6 @@ if (return) {
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
       }
@@ -269,11 +260,9 @@ if (return) {
 
         ctx.restore()
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -909,11 +898,6 @@ if (< 0.5) {) {
 
         cancelAnimationFrame(animationRef.current)
       }
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-    };
-  }[colorSchemeintensityparticleCountanimationSpeed]);
-=======
       window.removeEventListener('resize', resizeCanvas)
     }
   }, [colorScheme, intensity, particleCount, animationSpeed]);
@@ -928,7 +912,6 @@ if (< 0.5) {) {
       }
       window && window.removeEventListener('resize', resizeCanvas);
     }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   return (
     <div className={`relative min-h-screen ${className}`}>;
@@ -946,7 +929,6 @@ if (< 0.5) {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

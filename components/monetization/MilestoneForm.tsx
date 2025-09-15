@@ -32,21 +32,9 @@ import React, { useState } from 'react';
 
 };
 
-<<<<<<< HEAD
-export default function MilestoneForm({ onSubmit }: Props) {
-  const [titlesetTitle] = useState('');
-  const [descriptionsetDescription] = useState('');
-  const [dueDatesetDueDate] = useState('');
-  const [amountUsdsetAmountUsd] = useState<string>(', ');
-  const [errorsetError] = useState<string | null>(null);
-  const [loadingsetLoading] = useState(false);
-=======
 export default function MilestoneForm({ onSubmit }: Props) {;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -68,14 +56,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
 
     setLoading(true);
-<<<<<<< HEAD
-    try {
-      await onSubmit({ titledescription: description || undefinedueDateamountUsd: parsedAmount });
-      setTitle(', ');
-      setDescription(', ');
-      setDueDate(', ');
-      setAmountUsd(', ');
-=======
 
     try {;
       await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount }),;
@@ -83,7 +63,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       setDescription('');
       setDueDate('');
       setAmountUsd('');
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     } catch (err: any) {
       setError(err?.message |'Failed to create milestone');
     } finally {
@@ -256,9 +235,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     </form>);
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

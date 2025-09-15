@@ -128,17 +128,6 @@ const hero_stats = [;
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from - green - 400 to - emerald - 400' }
 const featured_services = [;
 
-<<<<<<< HEAD
-const heroStats = [
-  { number: '1000+'label: 'Innovative 'Services', 'icon: Sparklescolor: 'from-cyan-400 to-blue-400' },
-  { number: '24/7'label: 'Expert 'Support', 'icon: Shieldcolor: 'from-purple-400 to-pink-400' },
-  { number: '1000%'label: 'Average 'ROI', 'icon: Starcolor: 'from-yellow-400 to-orange-400' },
-  { number: '99.9%'label: 'Uptime 'Guarantee', 'icon: CheckCirclecolor: 'from-green-400 to-emerald-400' }
-];
-
-const featuredServices = [
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   {
     name: 'AI Consciousness Evolution',
     description: 'Develop genuine AI consciousness',
@@ -330,9 +319,7 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -392,22 +379,13 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Main Heading */}
-<<<<<<< HEAD
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-=======
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -423,14 +401,12 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -452,10 +428,8 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -464,17 +438,6 @@ function UltraFuturisticHero2032() {
 
 
         {/* Subheading */}
-<<<<<<< HEAD
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
-        >
-          Experience the revolution with our cutting-edge AI consciousnessquantum computing
-          space technologyand emerging tech solutions. Transform your business with 
-          technologies that were once science fiction.
-=======
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -484,35 +447,23 @@ function UltraFuturisticHero2032() {
 
 
         </motion.p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         </motion.p>
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
         {/* CTA Buttons */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -528,14 +479,12 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <Link
             href='/services'
@@ -573,22 +522,11 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Stats Grid */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -605,14 +543,12 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -684,7 +620,6 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -722,22 +657,13 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Featured Services */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.2 }}
-          className="mb-16"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -753,14 +679,12 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -775,9 +699,6 @@ function UltraFuturisticHero2032() {
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 1.4 + index * 0.1 }}
-=======
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
 
@@ -790,8 +711,6 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -822,7 +741,6 @@ function UltraFuturisticHero2032() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 className="group"
               >
                 <Link
@@ -864,7 +782,6 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -873,12 +790,6 @@ function UltraFuturisticHero2032() {
 
 
         {/* Contact Information */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.6 }}
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -894,7 +805,6 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -933,7 +843,6 @@ function UltraFuturisticHero2032() {
               <a
 
           transition={{ duration: 0.8, delay: 1.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto"
         >
 
@@ -1029,16 +938,11 @@ function UltraFuturisticHero2032() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

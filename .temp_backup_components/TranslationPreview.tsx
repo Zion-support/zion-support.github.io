@@ -1,11 +1,7 @@
 import React, { useState } from 'react',
 import { useAutoTranslate } from '../../hooks/useAutoTranslate',
 
-<<<<<<< HEAD:components/admin/TranslationPreview.tsx
-const defaultTargets = [', 'en', 'pt', 'es', 'ar'];
-=======
 const defaultTargets = ['enpt', 'esar'],
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:.temp_backup_components/TranslationPreview.tsx
 
 export default function TranslationPreview() {
   const [text, setText] = useState(''),

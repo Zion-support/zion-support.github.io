@@ -108,32 +108,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 
     setIsOptimizing(false);
     
-<<<<<<< HEAD
-    const timer = setTimeout(() => {
-      const endTime = performance.now();
-      const loadTime = endTime - startTime;
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(loadTime * 0.3),
-        memoryUsage: Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0),
-        bundleSize: 162 // Current bundle size in KB
-      });
-
-      // Check if performance is optimized
-      if (loadTime < 1000 && metrics.memoryUsage < 50) {
-        setIsOptimized(true);
-      }
-    }100);
-
-    return () => clearTimeout(timer);
-  }[]);
-
-  const getPerformanceStatus = () => {
-    if (metrics.loadTime < 500) return { status: ''Excellent', 'color: 'text-green-500' };
-    if (metrics.loadTime < 1000) return { status: ''Good', 'color: 'text-yellow-500' };
-    return { status: 'Needs 'Improvement', 'color: 'text-red-500' };
-=======
     // Update metrics after optimization
     setTimeout(() => {
       setMetrics(prev => ({
@@ -148,7 +122,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
         errorRate: prev.errorRate * 0.3
       }));
     }, 1000);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   };
 
   const getPerformanceGrade = (value: number, thresholds: { good: number; poor: number }) => {

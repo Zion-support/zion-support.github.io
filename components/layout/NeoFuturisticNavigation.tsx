@@ -1,10 +1,6 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -873,12 +869,9 @@ import Button from '../ui/Button';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               {/* Company Section */}
@@ -1411,17 +1404,9 @@ export default function NeoFuturisticNavigation() {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20)
 		};
-<<<<<<< HEAD
-
-		window.addEventListener(', 'scroll', 'handleScroll);
-		return () => window.removeEventListener(', 'scroll', 'handleScroll);
-	}[]);
-
-=======
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, []);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 	const toggleDropdown = (dropdown: string) => {
 		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
 	};
@@ -1453,15 +1438,9 @@ export default function NeoFuturisticNavigation() {
 icon: <Atom className="w-5 h-5" />,
 			color: 'from-purple-500 to-pink-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum AI 'Platform', 'description: 'AI-powered quantum 'computing', 'price: '$299/month' },
-				{ name: 'Quantum 'Optimization', 'description: 'Quantum algorithms for complex 'problems', 'price: '$199/month' },
-				{ name: 'Quantum 'Simulation', 'description: 'Advanced quantum 'simulations', 'price: '$399/month' }
-=======
 				{ name: 'Quantum AI Platform', description: 'AI-powered quantum computing', price: '$299/month' },
 				{ name: 'Quantum Optimization', description: 'Quantum algorithms for complex problems', price: '$199/month' },
 				{ name: 'Quantum Simulation', description: 'Advanced quantum simulations', price: '$399/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1470,15 +1449,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <Brain className="w-5 h-5" />,
 			color: 'from-blue-500 to-cyan-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'AI Content 'Generator', 'description: 'Professional AI content 'creation', 'price: '$49/month' },
-				{ name: 'AI Analytics 'Platform', 'description: 'Advanced business 'intelligence', 'price: '$99/month' },
-				{ name: 'AI Automation 'Suite', 'description: 'Complete business 'automation', 'price: '$149/month' }
-=======
 				{ name: 'AI Content Generator', description: 'Professional AI content creation', price: '$49/month' },
 				{ name: 'AI Analytics Platform', description: 'Advanced business intelligence', price: '$99/month' },
 				{ name: 'AI Automation Suite', description: 'Complete business automation', price: '$149/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1487,15 +1460,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <Shield className="w-5 h-5" />,
 			color: 'from-red-500 to-orange-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum 'Cybersecurity', 'description: 'Post-quantum era 'security', 'price: '$159/month' },
-				{ name: 'AI Threat 'Detection', 'description: 'Intelligent security 'monitoring', 'price: '$89/month' },
-				{ name: 'Zero-Trust 'Platform', 'description: 'Advanced access 'control', 'price: '$129/month' }
-=======
 				{ name: 'Quantum Cybersecurity', description: 'Post-quantum era security', price: '$159/month' },
 				{ name: 'AI Threat Detection', description: 'Intelligent security monitoring', price: '$89/month' },
 				{ name: 'Zero-Trust Platform', description: 'Advanced access control', price: '$129/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1504,15 +1471,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <LinkIcon className="w-5 h-5" />,
 			color: 'from-indigo-500 to-purple-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum 'Blockchain', 'description: 'Post-quantum blockchain 'platform', 'price: '$349/month' },
-				{ name: 'DeFi Protocol 'Suite', 'description: 'Complete DeFi 'solutions', 'price: '$199/month' },
-				{ name: 'NFT 'Marketplace', 'description: 'AI-curated NFT 'platform', 'price: '$99/month' }
-=======
 				{ name: 'Quantum Blockchain', description: 'Post-quantum blockchain platform', price: '$349/month' },
 				{ name: 'DeFi Protocol Suite', description: 'Complete DeFi solutions', price: '$199/month' },
 				{ name: 'NFT Marketplace', description: 'AI-curated NFT platform', price: '$99/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1521,15 +1482,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <Globe className="w-5 h-5" />,
 			color: 'from-teal-500 to-green-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum IoT 'Platform', 'description: 'Quantum-secured IoT 'solutions', 'price: '$199/month' },
-				{ name: 'Smart City 'Suite', 'description: 'Complete urban 'intelligence', 'price: '$299/month' },
-				{ name: 'Industrial 'IoT', 'description: 'Manufacturing 'automation', 'price: '$249/month' }
-=======
 				{ name: 'Quantum IoT Platform', description: 'Quantum-secured IoT solutions', price: '$199/month' },
 				{ name: 'Smart City Suite', description: 'Complete urban intelligence', price: '$299/month' },
 				{ name: 'Industrial IoT', description: 'Manufacturing automation', price: '$249/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1538,15 +1493,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <Eye className="w-5 h-5" />,
 			color: 'from-pink-500 to-rose-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum 'Metaverse', 'description: 'Quantum-enhanced virtual 'reality', 'price: '$499/month' },
-				{ name: 'VR 'Development', 'description: 'Complete VR 'platform', 'price: '$299/month' },
-				{ name: 'AR 'Solutions', 'description: 'Augmented reality 'platform', 'price: '$199/month' }
-=======
 				{ name: 'Quantum Metaverse', description: 'Quantum-enhanced virtual reality', price: '$499/month' },
 				{ name: 'VR Development', description: 'Complete VR platform', price: '$299/month' },
 				{ name: 'AR Solutions', description: 'Augmented reality platform', price: '$199/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1555,15 +1504,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <Cpu className="w-5 h-5" />,
 			color: 'from-orange-500 to-red-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum 'Robotics', 'description: 'AI-powered robotics 'platform', 'price: '$799/month' },
-				{ name: 'Manufacturing 'AI', 'description: 'Autonomous 'manufacturing', 'price: '$199/month' },
-				{ name: 'Service 'Robotics', 'description: 'Intelligent service 'automation', 'price: '$349/month' }
-=======
 				{ name: 'Quantum Robotics', description: 'AI-powered robotics platform', price: '$799/month' },
 				{ name: 'Manufacturing AI', description: 'Autonomous manufacturing', price: '$199/month' },
 				{ name: 'Service Robotics', description: 'Intelligent service automation', price: '$349/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1572,15 +1515,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <Zap className="w-5 h-5" />,
 			color: 'from-yellow-500 to-orange-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum 'Energy', 'description: 'AI-optimized energy 'management', 'price: '$299/month' },
-				{ name: 'Smart 'Grid', 'description: 'Intelligent energy 'distribution', 'price: '$199/month' },
-				{ name: 'Sustainability 'AI', 'description: 'Environmental impact 'optimization', 'price: '$149/month' }
-=======
 				{ name: 'Quantum Energy', description: 'AI-optimized energy management', price: '$299/month' },
 				{ name: 'Smart Grid', description: 'Intelligent energy distribution', price: '$199/month' },
 				{ name: 'Sustainability AI', description: 'Environmental impact optimization', price: '$149/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1589,15 +1526,9 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <DollarSign className="w-5 h-5" />,
 			color: 'from-violet-500 to-purple-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Quantum 'Trading', 'description: 'Quantum-enhanced algorithmic 'trading', 'price: '$899/month' },
-				{ name: 'AI Risk 'Management', 'description: 'Intelligent financial risk 'analysis', 'price: '$399/month' },
-				{ name: 'Blockchain 'Finance', 'description: 'DeFi and blockchain 'solutions', 'price: '$199/month' }
-=======
 				{ name: 'Quantum Trading', description: 'Quantum-enhanced algorithmic trading', price: '$899/month' },
 				{ name: 'AI Risk Management', description: 'Intelligent financial risk analysis', price: '$399/month' },
 				{ name: 'Blockchain Finance', description: 'DeFi and blockchain solutions', price: '$199/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 };
 		{
@@ -1606,72 +1537,28 @@ icon: <Atom className="w-5 h-5" />,
 			icon: <FlaskConical className="w-5 h-5" />,
 			color: 'from-emerald-500 to-teal-500',
 			services: [
-<<<<<<< HEAD
-				{ name: 'Biotech 'AI', 'description: 'AI-powered drug 'discovery', 'price: '$599/month' },
-				{ name: 'Healthcare 'Analytics', 'description: 'Medical data 'intelligence', 'price: '$299/month' },
-				{ name: 'Genomic 'AI', 'description: 'Advanced genetic 'analysis', 'price: '$399/month' }
-=======
 				{ name: 'Biotech AI', description: 'AI-powered drug discovery', price: '$599/month' },
 				{ name: 'Healthcare Analytics', description: 'Medical data intelligence', price: '$299/month' },
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 			]
 		}
 ];
 	const companyInfo = [
-<<<<<<< HEAD
-		{ name: 'About Zion Tech 'Group', 'description: 'Leading the global micro SaaS 'revolution', 'icon: <Rocket className="w-5 h-5" />link: '/about' },
-		{ name: ''Careers', 'description: 'Join our revolutionary 'team', 'icon: <Star className="w-5 h-5" />link: '/careers' },
-		{ name: 'News & 'Updates', 'description: 'Latest announcements and 'releases', 'icon: <TrendingUp className="w-5 h-5" />link: '/news' },
-		{ name: ''Contact', 'description: 'Talk to our team 24/7'icon: <Phone className="w-5 h-5" />link: '/contact' }
-=======
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 	];
 	const resources = [
-<<<<<<< HEAD
-		{ name: ''Documentation', 'description: 'Comprehensive service 'guides', 'icon: <BookOpen className="w-5 h-5" />link: '/docs' },
-		{ name: 'Blog & 'Insights', 'description: 'Latest technology 'trends', 'icon: <FileText className="w-5 h-5" />link: '/blog' },
-		{ name: 'Case 'Studies', 'description: 'Real-world success 'stories', 'icon: <BarChart3 className="w-5 h-5" />link: '/case-studies' },
-		{ name: ''Pricing', 'description: 'Transparent and flexible 'plans', 'icon: <CreditCard className="w-5 h-5" />link: '/pricing' },
-		{ name: ''Reports', 'description: 'Live performance and 'audits', 'icon: <Activity className="w-5 h-5" />link: '/reports' }
-=======
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
 		{ name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' },
 		{ name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' },
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 	];
 
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
-<<<<<<< HEAD
-		{ name: 'AI Content 'Generator', 'href: '/ai-content-generator' },
-		{ name: 'AI Blockchain 'Analytics', 'href: '/ai-blockchain-analytics' },
-		{ name: 'AI Legal Contract 'Analyzer', 'href: '/ai-legal-contract-analyzer' },
-		{ name: 'AI HR 'Recruitment', 'href: '/ai-hr-recruitment' },
-		{ name: 'AI Video 'Editing', 'href: '/ai-video-editing' },
-		{ name: 'AI SEO 'Optimization', 'href: '/ai-seo-optimization' },
-		{ name: 'AI IoT 'Platform', 'href: '/ai-iot-platform' },
-		{ name: 'AI Sales 'Automation', 'href: '/ai-sales-automation' },
-		{ name: 'AI Market 'Research', 'href: '/ai-market-research' }
-	];
-
-	// Newly added real services quick links
-	const newServiceLinks = [
-		{ name: 'Email Deliverability 'Monitor', 'href: '/services/email-deliverability-monitor' },
-		{ name: 'Landing Page 'Experimentation', 'href: '/services/landing-page-experimentation' },
-		{ name: 'Invoice Reconciliation 'Automation', 'href: '/services/invoice-reconciliation-automation' },
-		{ name: 'GitHub Ops Health 'Dashboard', 'href: '/services/github-ops-health-dashboard' },
-		{ name: 'Error Budget 'Automation', 'href: '/services/error-budget-automation' },
-		{ name: 'LLM Usage 'Governance', 'href: '/services/llm-usage-governance' }
-	];
-
-=======
 		{ name: 'AI Content Generator', href: '/ai-content-generator' },
 		{ name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' },
 		{ name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' },
@@ -1691,7 +1578,6 @@ icon: <Atom className="w-5 h-5" />,
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
 ];
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'

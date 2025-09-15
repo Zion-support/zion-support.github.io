@@ -28,10 +28,6 @@ const Button: React.FC<ButtonProps> = ({
   size = 'md',
 className = '',
   onClick,
-<<<<<<< HEAD
-  className = ', ',
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   disabled = false,
   type = 'button'
 }) => {
@@ -86,7 +82,6 @@ const Button: React.FC<ButtonProps> = ({;
   };
 
 
-=======
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (asChild) {;

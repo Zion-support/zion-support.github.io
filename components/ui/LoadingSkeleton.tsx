@@ -29,16 +29,7 @@ interface SkeletonProps {
   height?: string;
   width?: string;
 
-<<<<<<< HEAD
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = ', '
-  height = 'h-4'
-  width = 'w-full'
-  rounded = 'rounded' 
-}) => {
-=======
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   return (
 
     <motion.div;
@@ -56,11 +47,7 @@ interface ServiceCardSkeletonProps {
   class_name?: string;
 }
 
-<<<<<<< HEAD
-export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = ', ' }) => {
-=======
 export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ class_name = '' }) => {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   return (
 
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>
@@ -90,11 +77,7 @@ interface HeroSkeletonProps {
   class_name?: string;
 }
 
-<<<<<<< HEAD
-export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = ', ' }) => {
-=======
 export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' }) => {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   return (
 
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>
@@ -123,19 +106,6 @@ interface StatsSkeletonProps {
   class_name?: string;
 }
 
-<<<<<<< HEAD
-export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = ', ' }) => {
-  return (
-    <div className={`py-20 px-6 ${className}`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[...Array(4)].map((_index) => (
-            <div key={index} className="text-center">
-              <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
-              <Skeleton className="h-10 w-20 mx-auto mb-2" />
-              <Skeleton className="h-5 w-24 mx-auto" />
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             </div>
 
           ))}
@@ -182,11 +152,9 @@ interface SkeletonProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

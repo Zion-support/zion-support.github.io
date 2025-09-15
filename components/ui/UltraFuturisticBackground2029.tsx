@@ -164,38 +164,19 @@ interface EnergyField {
 
 
     resizeCanvas();
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'resizeCanvas);
-
-=======
     window.addEventListener('resize', resizeCanvas);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
 
       setMousePosition({ x: e.clientX, y: e.clientY })
     };
 
-<<<<<<< HEAD
-    window.addEventListener(', 'mousemove', 'handleMouseMove);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
-<<<<<<< HEAD
-        energy: ['#00ffff'#ff00ff'#ffff00'#00ff00'],
-        data: ['#0080ff'#8000ff'#ff0080'#80ff00'],
-        quantum: ['#ff8000'#8000ff'#00ffff'#ff0080'],
-        neon: ['#ff0066'#00ffff'#ffff00'#ff00ff']
-      };
-      
-      for (let i = 0; i < 150; i++) {
-        const type = [', 'energy', 'data', 'quantum', 'neon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
-=======
 
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
         data: ['#0080ff#8000ff#ff0080#80ff00'],
@@ -206,7 +187,6 @@ interface EnergyField {
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -1026,14 +1006,6 @@ if ( {) {
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
 
-<<<<<<< HEAD
-    return () => {
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-      window.removeEventListener(', 'mousemove', 'handleMouseMove);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       }
     }
   }, [mousePosition]);

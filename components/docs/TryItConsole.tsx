@@ -54,23 +54,9 @@ export default function TryItConsole(): any ({;
   requiresAuth: boolean;
 }
 
-<<<<<<< HEAD
-export default function TryItConsole({ methodpathrequiresAuth }: TryItProps) {
-  const [baseUrlsetBaseUrl] = useState('https://api.zion.os');
-  const [tokensetToken] = useState('');
-  const [bodysetBody] = useState('');
-  const [responsetResponse] = useState<string>(', ');
-  const [loadingsetLoading] = useState(false);
-
-  const url = useMemo(() => {
-    if (path.startsWith('http')) return path;
-    return baseUrl.replace(/\/$/', ') + path;
-  }[baseUrlpath]);
-=======
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 

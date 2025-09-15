@@ -58,14 +58,11 @@ function useCounter(target: number, durationMs: number) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 export default function InteractiveStats() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const hires = useCounter(1200, 1200);
@@ -139,12 +136,8 @@ function InteractiveStats() {
     </div>
   )
 
-<<<<<<< HEAD
-function Stat({ labelvaluesuffix = ', ' }: { label: string; value: number; suffix?: string }) {
-=======
 }
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   return (
     <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
       <div className="text-3xl font-bold">{value}{suffix}</div>
@@ -159,12 +152,8 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 function Stat({

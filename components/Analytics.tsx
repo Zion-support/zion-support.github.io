@@ -1,27 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-};
-,
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {,
-  useEffect(() => {,
-    // Google Analytics 4,
-    if (typeof window !== 'undefined' && trackingId) {,
-      // Load gtag script,
-      const script = document.createElement('script'),
-      script.async = true,
-      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`,
-      document.head.appendChild(script),
-,
-      // Initialize gtag,
-      window.dataLayer = window.dataLayer || [],
-      function gtag(...args: any[]) {,
-        window.dataLayer.push(args)
-      };
-      window.gtag = gtag,
-      gtag(', 'js', 'new Date()),
-      gtag(', 'config', 'trackingId{,
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -157,7 +135,6 @@ function gtag() {
       window.gtag = gtag;
       gtag ('js', new Date ());
       gtag ('config', tracking_id, {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         page_title: document.title,
         page_location: window.location.href,
       });
@@ -167,84 +144,6 @@ function gtag() {
         gtag ('event', 'page_view', {
           page_title: document.title,
           page_location: window.location.href,
-<<<<<<< HEAD
-          page_path: window.location.pathname
-        })
-      };
-,
-      // Track page view on load,
-      trackPageView(),
-,
-      // Track page view on route change (for SPA behavior),
-      const handleRouteChange = () => {,
-        trackPageView()
-      };
-,
-      // Listen for popstate events (back/forward navigation),
-      window.addEventListener(', 'popstate', 'handleRouteChange),
-,
-      // Cleanup,
-      return () => {,
-        window.removeEventListener(', 'popstate', 'handleRouteChange)
-      };
-    };
-  }[trackingId]),
-,
-  // Track custom events,
-  const trackEvent = (eventName: stringparameters?: Record<stringany>) => {,
-    if (typeof window !== 'undefined' && window.gtag) {,
-      window.gtag(', 'event', 'eventNameparameters)
-    };
-  };
-,
-  // Track button clicks,
-  const trackButtonClick = (buttonName: stringlocation?: string) => {,
-    trackEvent('button_click'{,
-      button_name: buttonName,
-      location: location || window.location.pathname
-    })
-  };
-,
-  // Track form submissions,
-  const trackFormSubmission = (formName: string) => {,
-    trackEvent('form_submit'{,
-      form_name: formName,
-      page_location: window.location.href
-    })
-  };
-,
-  // Track external link clicks,
-  const trackExternalLink = (url: stringlinkText: string) => {,
-    trackEvent('external_link_click'{,
-      link_url: url,
-      link_text: linkText,
-      page_location: window.location.href
-    })
-  };
-,
-  // Expose tracking functions globally for use in other components,
-  if (typeof window !== 'undefined') {,
-    (window as any).trackEvent = trackEvent,
-    (window as any).trackButtonClick = trackButtonClick,
-    (window as any).trackFormSubmission = trackFormSubmission,
-    (window as any).trackExternalLink = trackExternalLink
-  };
-,
-  return (,
-    <Head>,
-      <script,
-        dangerouslySetInnerHTML={{,
-          __html: `,
-            // Performance monitoring,
-            if ('performance' in window) {,
-              window.addEventListener(', 'load', 'function() {,
-                setTimeout(function() {,
-                  const perfData = performance.getEntriesByType('navigation')[0],
-                  if (perfData) {,
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
-                    if (window.gtag) {,
-                      window.gtag('eventtiming_complete'{,
-=======
           page_path: window.location.pathname,
         });
       }
@@ -318,7 +217,6 @@ if ( {) {
       <script;
         dangerouslySetInnerHTML={{
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                         name: 'load',
                         value: Math.round(loadTime),
                       });

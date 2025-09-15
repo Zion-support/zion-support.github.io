@@ -1,13 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React{ useStateuseMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  StarUsersTrendingUpDollarSignClock
-  CheckCircleArrowRightZapShieldRocket,
-  BrainGlobeLockCodeDatabaseCloud
-} from 'lucide-react';
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -70,7 +61,6 @@ import {
   Database,;
   Cloud,;
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 import Button from '../ui/Button';
 
 interface Service {;
@@ -221,24 +211,6 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
 
-<<<<<<< HEAD
-  const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: '🚀' },
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: '🧠' },
-    { id: ''quantum', 'name: ''Quantum', 'icon: '⚛️' },
-    { id: ''blockchain', 'name: ''Blockchain', 'icon: '⛓️' },
-    { id: ''enterprise', 'name: ''Enterprise', 'icon: '🏢' },
-    { id: ''emerging', 'name: 'Emerging 'Tech', 'icon: '🌟' }
-  ];
-
-  const priceRanges = [
-    { id: ''all', 'name: 'All Prices' },
-    { id: ''low', 'name: 'Under $1K/month' },
-    { id: ''medium', 'name: '$1K - $5K/month' },
-    { id: ''high', 'name: '$5K - $20K/month' },
-    { id: ''premium', 'name: '$20K+/month' }
-  ];
-=======
   ];
 
     { id: 'all', name: 'All Prices' },
@@ -246,24 +218,15 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   ];
   const sortOptions = [
-<<<<<<< HEAD
-    { id: ''popular', 'name: 'Most Popular' },
-    { id: ''rating', 'name: 'Highest Rated' },
-    { id: ''roi', 'name: 'Best ROI' },
-    { id: 'price-'low', 'name: 'Price Low to High' },
-    { id: 'price-'high', 'name: 'Price High to Low' }
-=======
 
     { id: 'popular', name: 'Most Popular' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'roi', name: 'Best ROI' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
 
@@ -293,13 +256,6 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
       case 'roi':
         filtered.sort((a, b) => {
 
-<<<<<<< HEAD
-      const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g', ')) < 1000) ||
-                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g', ')) >= 1000 && parseFloat(service.price.replace(/[$]/g', ')) < 5000) ||
-                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g', ')) >= 5000 && parseFloat(service.price.replace(/[$]/g', ')) < 20000) ||
-                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g', ')) >= 20000);
-=======
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   title,;
   subtitle,;
@@ -392,7 +348,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                           (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
                           (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 20000) ||;
                           (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 20000);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
       return matchesCategory && matchesPrice;
     });
@@ -412,13 +367,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           return bROI - aROI;
         });
         break;
-<<<<<<< HEAD
-      case 'price-low':
-        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g', ')) - parseFloat(b.price.replace(/[$]/g', ')));
-        break;
-      case 'price-high':
-        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g', ')) - parseFloat(a.price.replace(/[$]/g', ')));
-=======
       case 'price-low':;
         filtered && filtered.sort(;
           (a, b) =>;
@@ -509,7 +457,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
     switch (sort_by) {
       case 'popular':;
         filtered.sort ((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         break;
       case 'rating':;
         filtered.sort ((a, b) => (b.rating || 0) - (a.rating || 0));
@@ -674,22 +621,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
             {title}
-<<<<<<< HEAD
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-=======
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -697,7 +634,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             transition={{ duration: 0.8, delay: 0.2 }}
 
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             {subtitle}
           </motion.p>
@@ -712,7 +648,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -725,11 +660,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -755,7 +687,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -763,10 +694,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 
@@ -775,11 +702,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             {stats.map((stat, index) => (
               <div key={index} className='text-center'>
@@ -813,23 +738,13 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Filters */}
-<<<<<<< HEAD
-        {showFilters && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.6 }}
-            className="mb-12"
-=======
         {showFilters && (;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -846,14 +761,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -893,7 +806,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -901,7 +813,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                         {category.icon} {category.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                     ))}
                   </select>
@@ -920,12 +831,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 {/* Price Range Filter */}
@@ -953,12 +861,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                         {range.name}
@@ -980,12 +884,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 {/* Sort Options */}
@@ -1017,7 +918,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1025,7 +925,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
                         {option.name}
                       </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                     ))}
 
@@ -1065,13 +964,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         )}
 
         {/* Services Grid */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1088,14 +980,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -1112,13 +1002,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             {filtered_services.map ((service, index) => (
               <motion.div;
                 key={service.id}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0scale: 1 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-                whileHover={{ y: -5scale: 1.02 }}
-                className="group"
-=======
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1133,12 +1016,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
@@ -1165,7 +1046,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1266,7 +1146,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1293,7 +1172,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     </p>
@@ -1307,7 +1185,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       Key Features
@@ -1334,7 +1211,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
                     </p>
@@ -1348,11 +1224,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                       Key Features
@@ -1380,12 +1254,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     <div>
@@ -1438,12 +1308,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                     </div>
@@ -1547,11 +1415,9 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1624,25 +1490,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.0 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-=======
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1655,12 +1508,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               Ready to Transform Your Business?
             </h3>
             <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
@@ -1729,12 +1580,8 @@ export default EnhancedServiceShowcase;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

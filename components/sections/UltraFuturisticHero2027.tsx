@@ -76,19 +76,6 @@ export default function UltraFuturisticHero2027() {
   Star, TrendingUp, Users, CheckCircle
 export default function UltraFuturisticHero2027() {
   const features = [
-<<<<<<< HEAD
-    { icon: Braintext: 'AI Consciousness 'Evolution', 'color: 'from-purple-400 to-pink-400' },
-    { icon: Atomtext: 'Quantum 'Computing', 'color: 'from-blue-400 to-cyan-400' },
-    { icon: Globetext: 'Digital 'Reality', 'color: 'from-green-400 to-emerald-400' },
-    { icon: Shieldtext: 'Enterprise 'Security', 'color: 'from-red-400 to-orange-400' }
-  ];
-
-  const stats = [
-    { number: '1000+'label: 'Happy 'Customers', 'icon: Userscolor: 'text-cyan-400' },
-    { number: '4.9★'label: 'Average 'Rating', 'icon: Starcolor: 'text-purple-400' },
-    { number: '99.9%'label: 'Uptime 'SLA', 'icon: CheckCirclecolor: 'text-green-400' },
-    { number: '24/7'label: ''Support', 'icon: Zapcolor: 'text-pink-400' }
-=======
 
     {
       icon: Brain
@@ -110,7 +97,6 @@ import { motion } from 'framer-motion';
 
       color: 'from-red-400 to-orange-400',;
     },;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
 
 
@@ -150,7 +136,6 @@ export default /**
  */
 function UltraFuturisticHero2027() {
   const features = [;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     {
@@ -222,7 +207,6 @@ function UltraFuturisticHero2027() {
             ease: 'easeInOut',  ];
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -372,7 +356,6 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           {/* Main Heading */}
 
@@ -380,7 +363,6 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -395,19 +377,15 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -456,13 +434,8 @@ function UltraFuturisticHero2027() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.2 }}
-            className="text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed"
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             Experience revolutionary AI consciousness evolution, quantum
             computing breakthroughs, and practical micro SAAS solutions that
@@ -476,7 +449,6 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -484,10 +456,6 @@ function UltraFuturisticHero2027() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
             className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
 
@@ -496,11 +464,9 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             <Link
               href='/2027-services-showcase'
@@ -537,14 +503,7 @@ function UltraFuturisticHero2027() {
 
           {/* Features Grid */}
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
@@ -595,18 +554,15 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto leading-relaxed'
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             Experience revolutionary AI consciousness evolution, quantum
             computing breakthroughs, and practical micro SAAS solutions that
@@ -668,9 +624,7 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           {/* Features Grid */}
           <motion&& motion.div
@@ -678,7 +632,6 @@ function UltraFuturisticHero2027() {
             animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -736,7 +689,6 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                 className='group'
 
@@ -745,7 +697,6 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -773,17 +724,14 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                   </h3>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </motion.div>
 
@@ -798,22 +746,12 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Stats */}
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 1.0 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-=======
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -830,14 +768,12 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -964,22 +900,13 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Trust Indicators */}
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 1.4 }}
-            className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto"
-=======
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -995,14 +922,12 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -1018,11 +943,7 @@ function UltraFuturisticHero2027() {
               Trusted by Industry Leaders
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-<<<<<<< HEAD
-              {['Fortune 500'Tech 'Giants', 'Research 'Labs', 'Government'].map((trustindex) => (
-=======
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 <motion.div
 
 
@@ -1049,7 +970,6 @@ function UltraFuturisticHero2027() {
                 <motion&& motion.div
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                   key={trust}
@@ -1071,12 +991,9 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1098,13 +1015,9 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
               ))}
 
@@ -1203,12 +1116,9 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1222,9 +1132,6 @@ function UltraFuturisticHero2027() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

@@ -40,7 +40,6 @@ import {
   Network,;
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
@@ -111,11 +110,6 @@ interface PerformanceOptimizerProps {
   class_name?: string;
 }
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = ', ' }) => {
-  const [metricsetMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-=======
 //Optimize images for (const img of Array && Array.from (images) ) {;
   if (img && img.complete && img && img.naturalWidth > 0) {;
   //Add lazy loading img && img.loading = 'lazy';
@@ -144,7 +138,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     firstInputDelay: 0,;
     timeToInteractive: 0,  });    timeToInteractive: 0;
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
@@ -405,10 +398,6 @@ if ( {) {
     try {
       // Add resource hints for critical resources
       const preloadLinks = [
-<<<<<<< HEAD
-        { rel: ''preload', 'href: '/fonts/inter-var.'woff2', 'as: ''font', 'type: 'font/'woff2', 'crossorigin: 'anonymous' },
-        { rel: ''preload', 'href: '/fonts/jetbrains-mono-var.'woff2', 'as: ''font', 'type: 'font/'woff2', 'crossorigin: 'anonymous' }
-=======
         {
           rel: 'preload'
           href: '/fonts/inter-var.woff2'
@@ -427,7 +416,6 @@ if ( {) {
 
       ];
       preloadLinks.forEach(linkAttrs => {
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       ];
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
@@ -600,12 +588,7 @@ if ( {) {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Measure initial performance
-<<<<<<< HEAD
-      window.addEventListener(', 'load', 'measurePerformance);
-      
-=======
       window.addEventListener('load', measurePerformance);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       // Monitor for performance issues
       const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
@@ -718,11 +701,7 @@ if ( { // LCP should be under 2.5s) {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       return () => {
-<<<<<<< HEAD
-        window.removeEventListener(', 'load', 'measurePerformance);
-=======
         window.removeEventListener('load', measurePerformance);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         observer.disconnect();
       };    }
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -864,7 +843,6 @@ if ( { // LCP should be under 2.5s) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -881,7 +859,6 @@ if ( { // LCP should be under 2.5s) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1099,7 +1076,6 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
       {/* Performance Tips */}
@@ -1137,12 +1113,10 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           <li>• Use WebP images for better compression</li>
@@ -1357,7 +1331,6 @@ if (return 'D') {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 {/* Preload critical resources */}
@@ -1497,13 +1470,9 @@ export default PerformanceOptimizer;
 export default PerformanceOptimizer;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

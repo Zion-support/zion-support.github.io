@@ -58,7 +58,6 @@ export default function NeoFuturisticFooter() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -67,14 +66,11 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',}
 export default function NeoFuturisticFooter() {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 export default function NeoFuturisticFooter() {;
@@ -142,15 +138,6 @@ export default function NeoFuturisticFooter() {;
               Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
             </p>
 
-<<<<<<< HEAD
-          <div className="space-y-2 text-sm">
-            <div className="font-semibold text-slate-100 mb-2">Contact</div>
-            <div className="flex items-center gap-2 text-cyan-300"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`} className="hover:underline">{contactInfo.mobile}</a></div>
-            <div className="flex items-center gap-2 text-purple-300"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
-            <div className="flex items-center gap-2 text-emerald-300"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{contactInfo.address}</a></div>
-            <div className="flex items-center gap-2 text-sky-300"><Globe className="w-4 h-4" /><a href={contactInfo.website} className="hover:underline">ziontechgroup.com</a></div>
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           </div>
         </div>
           <div className="space-y-2 text-sm">

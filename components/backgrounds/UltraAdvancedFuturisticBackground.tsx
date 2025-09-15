@@ -38,10 +38,8 @@ for (let i = 0, i < count, i++) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -156,11 +154,7 @@ if (return) {
           size: Math.random() * 6 + 2,
           opacity: Math.random() * 0.9 + 0.1,
           color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
-<<<<<<< HEAD
-          type: [', 'quantum', 'neon', 'holographic', 'cyberpunk'][Math.floor(Math.random() * 4)] as any,
-=======
           type: ['quantumneonholographiccyberpunk'][Math.floor(Math.random() * 4)] as any,
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
           life: Math.random() * 100,
           maxLife: 100 + Math.random() * 100,
           rotation: Math.random() * Math.PI * 2,
@@ -347,8 +341,6 @@ if (return) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           }
         }
@@ -584,20 +576,12 @@ if (return) {
       canvas.height = window.innerHeight
     };
 
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'handleResize);
-=======
 
     window.addEventListener('resize', handleResize);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     initParticles();
     animate();
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'handleResize);
-=======
       window.removeEventListener('resize', handleResize);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       if (animationRef.current) {
 
 
@@ -685,8 +669,6 @@ if (return) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -704,7 +686,6 @@ if (return) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -860,10 +841,8 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

@@ -57,9 +57,7 @@ import {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   Phone, Mail, MapPin, Star, ArrowRight;
@@ -81,37 +79,6 @@ const serviceCategories = [
     title: 'AI & Consciousness'
     icon: Brain
     services: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-2029' },
-      { name: 'Quantum AI 'Fusion', 'href: '/quantum-ai-fusion' },
-      { name: 'Multimodal AI 'Orchestrator', 'href: '/multimodal-ai-orchestrator' },
-      { name: 'AI Autonomous 'Ecosystem', 'href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & 'Governance', 'href: '/ai-ethics-governance' }
-    ]
-  },
-  {
-    title: 'Quantum & Emerging Tech',
-    icon: Atom,
-    services: [
-      { name: 'Space Mining 'Platform', 'href: '/space-mining-platform' },
-      { name: 'Quantum Bio-'Computing', 'href: '/quantum-bio-computing' },
-      { name: 'Brain-Computer 'Interface', 'href: '/brain-computer-interface' },
-      { name: 'Quantum Energy 'Platform', 'href: '/quantum-energy-platform' },
-      { name: 'Autonomous Vehicle 'AI', 'href: '/autonomous-vehicle-ai' }
-    ]
-  },
-  {
-    title: 'Enterprise IT',
-    icon: Shield,
-    services: [
-      { name: 'Quantum Cloud 'Infrastructure', 'href: '/quantum-cloud-infrastructure' },
-      { name: 'Edge Computing 'Orchestrator', 'href: '/edge-computing-orchestrator' },
-      { name: 'Zero Trust Security 'Platform', 'href: '/zero-trust-security-platform' },
-      { name: 'Blockchain Enterprise 'Platform', 'href: '/blockchain-enterprise-platform' },
-      { name: 'AI-Powered 'DevOps', 'href: '/ai-powered-devops' }
-    ]
-  },
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -238,24 +205,15 @@ const serviceCategories = [;
     ]
   };
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   {
     title: 'Micro SAAS',
     icon: Target,
     services: [
-<<<<<<< HEAD
-      { name: 'AI Content Factory 'Pro', 'href: '/ai-content-factory' },
-      { name: 'Quantum CRM 'Suite', 'href: '/quantum-crm' },
-      { name: 'CyberShield 'Pro', 'href: '/cyber-shield-pro' },
-      { name: 'DataVault 'Hub', 'href: '/data-vault-hub' },
-      { name: 'DevOps Automation 'Studio', 'href: '/devops-automation-studio' }
-=======
       { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
       { name: 'Quantum CRM Suite', href: '/quantum-crm' },
       { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
       { name: 'DataVault Hub', href: '/data-vault-hub' },
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
 
   Phone,
@@ -280,43 +238,20 @@ const serviceCategories = [;
   Github,
 
 const companyLinks = [
-<<<<<<< HEAD
-  { name: 'About 'Us', 'href: '/about' },
-  { name: ''Careers', 'href: '/careers' },
-  { name: ''News', 'href: '/news' },
-  { name: 'Case 'Studies', 'href: '/case-studies' },
-  { name: ''Blog', 'href: '/blog' },
-  { name: ''Resources', 'href: '/resources' }
-=======
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
   { name: 'News', href: '/news' }
   { name: 'Case Studies', href: '/case-studies' }
   { name: 'Blog', href: '/blog' }
   { name: 'Resources', href: '/resources' },];  { name: 'Resources', href: '/resources' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 const legalLinks = [
-<<<<<<< HEAD
-  { name: 'Privacy 'Policy', 'href: '/privacy' },
-  { name: 'Terms of 'Service', 'href: '/terms' },
-  { name: 'Cookie 'Policy', 'href: '/cookies' },
-  { name: 'GDPR 'Compliance', 'href: '/gdpr' }
-=======
   { name: 'Privacy Policy', href: '/privacy' }
   { name: 'Terms of Service', href: '/terms' }
   { name: 'Cookie Policy', href: '/cookies' }
   { name: 'GDPR Compliance', href: '/gdpr' },];  { name: 'GDPR Compliance', href: '/gdpr' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 const socialLinks = [
-<<<<<<< HEAD
-  { name: ''Twitter', 'href: '#'icon: Twittercolor: 'hover:text-blue-400' },
-  { name: ''LinkedIn', 'href: '#'icon: Linkedincolor: 'hover:text-blue-600' },
-  { name: ''GitHub', 'href: '#'icon: Githubcolor: 'hover:text-gray-400' },
-  { name: ''YouTube', 'href: '#'icon: Youtubecolor: 'hover:text-red-400' },
-  { name: ''Instagram', 'href: '#'icon: Instagramcolor: 'hover:text-pink-400' }
-=======
   { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' }
   { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' }
   { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
@@ -327,7 +262,6 @@ const socialLinks = [
     icon: Instagram
     color: 'hover:text-pink-400'
   },];  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 
 const EnhancedFooter2025: React.FC = () => {
@@ -429,21 +363,12 @@ const EnhancedFooter2025: React.FC = () => {
 
 
             {/* Service Categories */}
-<<<<<<< HEAD
-            {serviceCategories.map((categoryindex) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
-=======
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
                 key={category && category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 className='space-y-4'
 
@@ -456,7 +381,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -600,7 +524,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                       {service.name}
@@ -614,16 +537,13 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.name}
 
           </div>;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
@@ -634,12 +554,8 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* Company Links */}
@@ -693,12 +609,9 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {link.name}
 
               </div>;
@@ -733,16 +646,11 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
                     {link.name}
                   </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                 ))}
               </div>
@@ -755,8 +663,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             {/* Social Links */}
@@ -774,14 +680,11 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
             {/* Social Links */}
 
 
@@ -808,14 +711,10 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -832,11 +731,9 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -847,11 +744,6 @@ const EnhancedFooter2025: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
               <motion.h3
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-=======
 
 
 
@@ -862,7 +754,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -873,7 +764,6 @@ const EnhancedFooter2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
 
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
@@ -887,7 +777,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -898,18 +787,11 @@ const EnhancedFooter2025: React.FC = () => {
                 Stay Ahead of the Future
               </motion.h3>
               <motion.p
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.1 }}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
@@ -922,7 +804,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -936,11 +817,6 @@ const EnhancedFooter2025: React.FC = () => {
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
 
 
 
@@ -959,7 +835,6 @@ const EnhancedFooter2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 viewport={{ once: true }}
                 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 
@@ -972,7 +847,6 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1047,17 +921,12 @@ export default EnhancedFooter2025;
 export default EnhancedFooter2025;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default EnhancedFooter2025;
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

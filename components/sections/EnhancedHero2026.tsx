@@ -365,7 +365,6 @@ export default function EnhancedHero2026(): any ({;
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
@@ -377,7 +376,6 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -437,17 +435,6 @@ export default function EnhancedHero2026(): any ({;
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
           >
             {[
-<<<<<<< HEAD
-              { label: 'Total 'Services', 'value: serviceStats.totalServicesicon: Rocketcolor: 'from-blue-500 to-cyan-500' },
-              { label: 'AI 'Solutions', 'value: serviceStats.aiServicesicon: Braincolor: 'from-purple-500 to-pink-500' },
-              { label: 'Emerging 'Tech', 'value: serviceStats.emergingTechicon: TrendingUpcolor: 'from-green-500 to-emerald-500' },
-              { label: 'IT 'Infrastructure', 'value: serviceStats.itSolutionsicon: Globecolor: 'from-orange-500 to-red-500' },
-              { label: 'Micro 'SaaS', 'value: serviceStats.microSaasicon: Zapcolor: 'from-yellow-500 to-orange-500' },
-              { label: ''Revolutionary', 'value: serviceStats.revolutionaryServicesicon: Starcolor: 'from-pink-500 to-purple-500' }
-            ].map((statindex) => (
-              <motion.div
-                key={stat.label}
-=======
               {
                 label: 'Total Services'
                 value: serviceStats.totalServices
@@ -598,7 +585,6 @@ export default function EnhancedHero2026(): any ({;
               <motion&& motion.div
                 key={stat && stat.label}
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 variants={statsVariants}
                 whileHover={{ scale: 1 && 1.05, y: -5 }}
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'>;
@@ -607,7 +593,6 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -622,7 +607,6 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -648,7 +632,6 @@ export default function EnhancedHero2026(): any ({;
               <Button
                 href="/contact"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Enhanced CTA Section */}
 
               
@@ -661,11 +644,9 @@ export default function EnhancedHero2026(): any ({;
                 href="/contact" 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -773,12 +754,9 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* Contact Information */}

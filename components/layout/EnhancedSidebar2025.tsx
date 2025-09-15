@@ -1,10 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-=======
 
 
 
@@ -12,12 +6,8 @@ import {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
@@ -767,9 +757,7 @@ const supportLinks = [;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
             <AnimatePresence>
               {expandedSections.has(section.title) && (
@@ -1253,9 +1241,7 @@ const supportLinks = [
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1365,7 +1351,6 @@ const supportLinks = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">;
@@ -1463,7 +1448,6 @@ const supportLinks = [
                   <motion.div;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1596,9 +1580,7 @@ const supportLinks = [
 
                     
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -1654,7 +1636,6 @@ const supportLinks = [
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -1683,7 +1664,6 @@ const supportLinks = [
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <ChevronRight
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           expandedCategory === item && item.name ? 'rotate-90' : ''
@@ -1730,7 +1710,6 @@ const supportLinks = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
             {/* Quick Links */}
@@ -1811,7 +1790,6 @@ const supportLinks = [
               </div>;
             </div>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
@@ -3501,4 +3479,3 @@ export default EnhancedSidebar2025,";
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e

@@ -28,7 +28,6 @@ coordinate_y: number;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 vx: number;
@@ -77,19 +76,11 @@ break;
   colorScheme = 'quantum',
   particleCount = 300,
   animationSpeed = 1.5,
-<<<<<<< HEAD
-  className = ', '
-}: UltraQuantumHolographicBackgroundProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [dimensionsetDimensions] = useState({ width: 0height: 0 });
-  const [isVisiblesetIsVisible] = useState(false);
-=======
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
@@ -115,7 +106,6 @@ export default function UltraQuantumHolographicBackground(): any ({;
 }: UltraQuantumHolographicBackgroundProps) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     quantum: {
 
@@ -131,17 +121,9 @@ export default function UltraQuantumHolographicBackground(): any ({;
     };
 
     updateDimensions();
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'updateDimensions);
-    setIsVisible(true);
-
-    return () => window.removeEventListener(', 'resize', 'updateDimensions);
-  }[]);
-=======
     window && window.addEventListener('resize', updateDimensions);
     setIsVisible(true);
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
       x: number;
@@ -204,23 +186,9 @@ if (return) {
       color: string;
       life: number;
 
-<<<<<<< HEAD
-      constructor() {
-        this.x = Math.random() * dimensions.width;
-        this.y = Math.random() * dimensions.height;
-        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
-        this.size = Math.random() * 3 * intensityMultiplier + 1;
-        this.color = [colors.primarycolors.secondarycolors.tertiarycolors.accent][Math.floor(Math.random() * 4)];
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
-        this.type = [', 'quantum', 'holographic', 'energy', 'matrix'][Math.floor(Math.random() * 4)] as any;
-      }
-=======
       x: number,
       y: number,
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 
@@ -235,7 +203,6 @@ if (return) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           }
         }
@@ -473,7 +440,6 @@ if (return) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           particles[index] = new Particle()
 
@@ -500,7 +466,6 @@ if (return) {
 
             ctx.stroke()
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -702,9 +667,7 @@ if (return) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
@@ -733,12 +696,9 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -789,15 +749,11 @@ if (return) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+
 
 

@@ -58,11 +58,6 @@ export type EnhancedLayoutProps = {
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {;
     const lng = i18n.resolvedLanguage || i18n.language;
-<<<<<<< HEAD
-    document.documentElement.setAttribute(', 'dir', 'isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute(', 'lang', 'lng);
-  }[]);
-=======
 
 
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
@@ -70,7 +65,6 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 
 
   }, []);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   return (
     <div className='min-h-screen flex flex-col'>      <header>;
@@ -122,7 +116,6 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
   }, []);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
@@ -134,7 +127,6 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 }
@@ -145,13 +137,9 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

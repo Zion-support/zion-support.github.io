@@ -165,10 +165,6 @@ if (return) {
       }
     }
     resizeCanvas();
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'resizeCanvas);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     // Set canvas size;
@@ -695,11 +691,7 @@ if ( {) {
     initParticles();
     animate();
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-=======
       window.removeEventListener('resize', resizeCanvas);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       cancelAnimationFrame(animationFrameId);
     }
   }, [
@@ -774,8 +766,6 @@ if ( {) {
   );
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default UltraAdvancedFuturisticBackground;
@@ -850,23 +840,12 @@ export default UltraAdvancedFuturisticBackground;
             <div className="absolute bottom - 1/4 right - 1/3 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate - ping delay - 700"></div>;
           </>)}
         {/* Holographic elements */}
-<<<<<<< HEAD
-        {enableHolographic && (
-          <>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15's', 'animationDirection: 'reverse' }}></div>
-          </>
-        )}
-      </div>
-      
-=======
         {enable_holographic && (
           <>;
             <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - pink - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '20s' }}></div>;
             <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 48 h - 48 border border - cyan - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '15s', animation_direction: 'reverse' }}></div>;
           </>)}
       </div>;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       {children}
     </div>);
 }
@@ -876,12 +855,10 @@ export default UltraAdvancedFuturisticBackground;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

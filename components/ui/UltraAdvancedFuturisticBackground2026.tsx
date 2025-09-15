@@ -106,10 +106,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
       }
     }
     resizeCanvas();
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'resizeCanvas);
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     window && window.addEventListener('resize', resizeCanvas);
     // Particle class;
@@ -372,7 +368,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -451,7 +446,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     }
 
@@ -717,11 +711,9 @@ if ( {) {
     }
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1422,11 +1414,7 @@ if ( {) {
 
     animate();
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-=======
       window.removeEventListener('resize', resizeCanvas);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       cancelAnimationFrame(animationFrameId);
     }
   }, [
@@ -1459,12 +1447,9 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Additional visual effects */}
@@ -1591,14 +1576,10 @@ export default UltraAdvancedFuturisticBackground2026;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

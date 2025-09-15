@@ -2,22 +2,6 @@
 
 'use client';
 
-<<<<<<< HEAD
-import { useStateuseEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MenuChevronDown,
-  BrainRocketShield
-  Zap,
-  TargetAtom,
-  BookOpen,
-  TruckDollarSignBarChart3GlobeUsersXPhoneMailMapPinArrowRight,
-  StarSparklesCpuLockCloudBarChart3 as BarChart3IconSettingsEyeAwardClockHeartLightbulb,
-  PaletteCodeDatabaseShield as ShieldIconGlobe as GlobeIconZap as ZapIconTarget as Target
-} from 'lucide-react';
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
@@ -494,12 +478,9 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   {/* Submenu */}
@@ -617,12 +598,9 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
             {/* Mobile Menu Button */}
@@ -642,11 +620,9 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -674,19 +650,15 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -738,8 +710,6 @@ export default function EnhancedNavigation2025() {
             
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
             {/* Menu Panel */}
@@ -774,7 +744,6 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -811,7 +780,6 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -844,7 +812,6 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
@@ -1057,7 +1024,6 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
@@ -1141,11 +1107,9 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1156,6 +1120,5 @@ export default function EnhancedNavigation2025() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 

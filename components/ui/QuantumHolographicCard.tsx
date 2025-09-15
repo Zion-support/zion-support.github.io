@@ -56,7 +56,6 @@ interface QuantumHolographicCardProps {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -113,14 +112,6 @@ interface QuantumHolographicCardProps {
   };
   className?: string;
 
-<<<<<<< HEAD
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ serviceclassName = ', ' }) => {
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50scale: 0.9 },
-    visible: { 
-      opacity: 1
-      y: 0
-=======
 
 
 
@@ -173,7 +164,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
       opacity: 1,
       coordinate_y: 0,
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       scale: 1,
       transition: {
         duration: 0.6,
@@ -267,7 +257,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
     >;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
@@ -384,10 +373,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <motion&& motion.div
@@ -455,7 +441,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -702,17 +687,14 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
               ))}
             </div>
@@ -723,19 +705,15 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -794,7 +772,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -883,7 +860,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
@@ -899,12 +875,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
           {/* CTA Button */}
@@ -917,19 +891,15 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -944,8 +914,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
           {/* CTA Button */}
@@ -968,8 +936,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
             whileHover={{ scale: 1.02 }}
@@ -1018,12 +984,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

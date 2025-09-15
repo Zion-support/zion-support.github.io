@@ -1,20 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MenuXChevronDownPhoneMailMapPin
-  RocketBrainAtomGlobeZapSparklesShield
-  MicroscopeDollarSignHomeBriefcase
-  BookOpenMessageCircleStarTrendingUpTarget,
-  LayersCpuDatabaseCloudLockShieldCheck,
-  EarthFactoryCarBuildingGraduationCapScale,
-  PaletteCameraVideoMusicGamepad2Heart,
-  LeafSunMoonWindDropletsMountain,
-  CodeWrenchSmartphoneBarChart3EyeTimer
-} from 'lucide-react';
-=======
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
@@ -151,124 +135,12 @@ import {
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
-<<<<<<< HEAD
-const serviceCategories = [
-  {
-    title: '🧠 2029 AI Consciousness & Innovation',
-    icon: Brain,
-    color: 'from-purple-600 to-pink-600',
-    description: 'Beyond human consciousness simulation',
-    services: [
-      { name: 'AI Consciousness Simulation 'Platform', 'href: '/ai-consciousness-simulation-'platform', 'description: 'Simulate human consciousness in AI 'systems', 'price: '$12,999/month' },
-      { name: 'Autonomous AI Corporation 'Platform', 'href: '/autonomous-ai-corporation-'platform', 'description: 'AI systems that run entire 'corporations', 'price: '$45,999/month' },
-      { name: 'AI Reality Augmentation 'Platform', 'href: '/ai-reality-augmentation-'platform', 'description: 'Real-time AI reality 'enhancement', 'price: '$18,999/month' }
-    ]
-  },
-  {
-    title: '⚛️ 2029 Quantum & Neuroscience',
-    icon: Atom,
-    color: 'from-indigo-600 to-purple-600',
-    description: 'Quantum brain-computer interfaces',
-    services: [
-      { name: 'Quantum Brain-Computer 'Interface', 'href: '/quantum-brain-computer-'interface', 'description: 'Direct quantum communication with 'brain', 'price: '$25,999/month' },
-      { name: 'Quantum Time Manipulation 'Platform', 'href: '/quantum-time-manipulation-'platform', 'description: 'Manipulate time 'perception', 'price: '$35,999/month' }
-    ]
-  },
-  {
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     title: '🚀 2029 Space Colonization & Mining',
     icon: Rocket,
     color: 'from - red - 600 to - orange - 600',
     description: 'Interplanetary expansion and resource extraction',
-<<<<<<< HEAD
-    services: [
-      { name: 'Mars Colonization Automation 'Platform', 'href: '/mars-colonization-automation-'platform', 'description: 'Automate Mars colonization 'process', 'price: '$99,999/month' },
-      { name: 'Interplanetary Communication 'Network', 'href: '/interplanetary-communication-'network', 'description: 'Real-time solar system 'communication', 'price: '$75,999/month' },
-      { name: 'Space Mining Automation 'Platform', 'href: '/space-mining-automation-'platform', 'description: 'Automate asteroid and lunar 'mining', 'price: '$65,999/month' }
-    ]
-  },
-  {
-    title: '🏠 2029 Space Architecture & Energy',
-    icon: Building,
-    color: 'from-green-600 to-teal-600',
-    description: 'Habitat design and space energy harvesting',
-    services: [
-      { name: 'Space Habitat Design 'Platform', 'href: '/space-habitat-design-'platform', 'description: 'Design space habitats for any 'planet', 'price: '$45,999/month' },
-      { name: 'Space Energy Harvesting 'Platform', 'href: '/space-energy-harvesting-'platform', 'description: 'Harvest energy from space 'sources', 'price: '$55,999/month' }
-    ]
-  },
-  {
-    title: '🤖 Advanced AI & Machine Learning',
-    icon: Brain,
-    color: 'from-emerald-600 to-teal-600',
-    description: 'Next-generation AI solutions',
-    services: [
-      { name: 'AI Emotional Intelligence 'Platform', 'href: '/ai-emotional-intelligence-'platform', 'description: 'AI that understands human 'emotions', 'price: '$2,999/month' },
-      { name: 'AI Multimodal Fusion 'Platform', 'href: '/ai-multimodal-fusion-'platform', 'description: 'Unified textimageaudiovideo 'AI', 'price: '$4,999/month' },
-      { name: 'AI Customer Service 'Automation', 'href: '/ai-customer-service-'automation', 'description: 'Intelligent customer 'support', 'price: '$899/month' },
-      { name: 'AI Education 'Platform', 'href: '/ai-education-'platform', 'description: 'Personalized learning with 'AI', 'price: '$1,499/month' },
-      { name: 'AI Content Creation 'Suite', 'href: '/ai-content-creation-'suite', 'description: 'Unlimited AI content 'creation', 'price: '$1,299/month' }
-    ]
-  },
-  {
-    title: '⛓️ Blockchain & Web3 Solutions',
-    icon: Layers,
-    color: 'from-orange-600 to-red-600',
-    description: 'Decentralized and blockchain solutions',
-    services: [
-      { name: 'Quantum Blockchain 'Platform', 'href: '/quantum-blockchain-'platform', 'description: 'Quantum-resistant blockchain 'security', 'price: '$6,999/month' },
-      { name: 'Blockchain Supply Chain 'Transparency', 'href: '/blockchain-supply-chain-'transparency', 'description: 'End-to-end supply chain 'visibility', 'price: '$2,499/month' },
-      { name: 'Smart Contract Automation 'Platform', 'href: '/smart-contract-'automation', 'description: 'Automated blockchain 'contracts', 'price: '$1,999/month' },
-      { name: 'DeFi Yield 'Optimization', 'href: '/defi-yield-'optimization', 'description: 'Maximize DeFi 'returns', 'price: '$3,999/month' }
-    ]
-  },
-  {
-    title: '🏥 Healthcare & Biotech Innovation',
-    icon: Heart,
-    color: 'from-pink-600 to-rose-600',
-    description: 'Advanced healthcare solutions',
-    services: [
-      { name: 'AI Personalized Medicine 'Platform', 'href: '/ai-personalized-medicine-'platform', 'description: 'AI-powered personalized 'treatment', 'price: '$8,999/month' },
-      { name: 'AI Healthcare Diagnosis 'Platform', 'href: '/ai-healthcare-diagnosis-'platform', 'description: 'Revolutionary medical 'diagnosis', 'price: '$3,999/month' },
-      { name: 'Biotech Research 'Automation', 'href: '/biotech-research-'automation', 'description: 'Automated biotechnology 'research', 'price: '$4,999/month' }
-    ]
-  },
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    icon: Building,
-    color: 'from-slate-600 to-gray-600',
-    description: 'Intelligent urban management',
-    services: [
-      { name: 'AI Smart City 'Orchestrator', 'href: '/ai-smart-city-'orchestrator', 'description: 'Comprehensive city infrastructure 'AI', 'price: '$12,999/month' },
-      { name: 'Smart Traffic 'Management', 'href: '/smart-traffic-'management', 'description: 'AI-powered traffic 'optimization', 'price: '$3,999/month' },
-      { name: 'Energy Grid 'Optimization', 'href: '/energy-grid-'optimization', 'description: 'Smart energy 'management', 'price: '$5,999/month' }
-    ]
-  },
-  {
-    title: '🔬 Research & Development',
-    icon: Microscope,
-    color: 'from-blue-600 to-indigo-600',
-    description: 'Advanced research tools and platforms',
-    services: [
-      { name: 'AI Research 'Assistant', 'href: '/ai-research-'assistant', 'description: 'AI-powered research 'acceleration', 'price: '$1,999/month' },
-      { name: 'Data Analysis 'Platform', 'href: '/data-analysis-'platform', 'description: 'Advanced data 'analytics', 'price: '$2,499/month' },
-      { name: 'Research Collaboration 'Hub', 'href: '/research-collaboration-'hub', 'description: 'Global research 'collaboration', 'price: '$1,799/month' }
-    ]
-  },
-  {
-    title: '💼 Enterprise & Business Solutions',
-    icon: Briefcase,
-    color: 'from-emerald-600 to-blue-600',
-    description: 'Corporate and business automation',
-    services: [
-      { name: 'Enterprise AI Operations 'Center', 'href: '/enterprise-ai-operations-'center', 'description: 'Centralized AI 'operations', 'price: '$15,999/month' },
-      { name: 'Business Process 'Automation', 'href: '/business-process-'automation', 'description: 'End-to-end process 'automation', 'price: '$4,999/month' },
-      { name: 'Corporate Intelligence 'Platform', 'href: '/corporate-intelligence-'platform', 'description: 'AI-powered business 'intelligence', 'price: '$7,999/month' }
-=======
 
     services: [;
       {
@@ -293,7 +165,6 @@ const serviceCategories = [
   },  {      { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness in AI systems', price: '$12,999/month' }
       { name: 'Autonomous AI Corporation Platform', href: '/autonomous-ai-corporation-platform', description: 'AI systems that run entire corporations', price: '$45,999/month' }
       { name: 'AI Reality Augmentation Platform', href: '/ai-reality-augmentation-platform', description: 'Real-time AI reality enhancement', price: '$18,999/month' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   }
     title: ' 2029 Quantum & Neuroscience'
@@ -657,16 +528,6 @@ const serviceCategories = [
 
 
 const mainNavItems = [
-<<<<<<< HEAD
-  { name: ''Home', 'href: '/'icon: Home },
-  { name: ''Services', 'href: '/'services', 'icon: Briefcase },
-  { name: ''Solutions', 'href: '/'solutions', 'icon: Target },
-  { name: ''Pricing', 'href: '/'pricing', 'icon: DollarSign },
-  { name: ''Resources', 'href: '/'resources', 'icon: BookOpen },
-  { name: ''News', 'href: '/'news', 'icon: TrendingUp },
-  { name: ''Support', 'href: '/'support', 'icon: MessageCircle },
-  { name: ''Contact', 'href: '/'contact', 'icon: Phone }
-=======
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
   { name: 'Solutions', href: '/solutions', icon: Target }
@@ -679,7 +540,6 @@ const mainNavItems = [
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 ];
 
 
@@ -724,17 +584,11 @@ export default function UltraFuturisticNavigation2029() {;
     const handleScroll = () => {;
       setScrolled(window && window.scrollY > 50);
     };
-<<<<<<< HEAD
-    window.addEventListener(', 'scroll', 'handleScroll);
-    return () => window.removeEventListener(', 'scroll', 'handleScroll);
-  }[]);
-=======
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50);
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -788,14 +642,8 @@ export default function UltraFuturisticNavigation2029() {;
               <span>{contactInfo.address}</span>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="flex items-center space-x-4">
-            <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
-              {contactInfo.website.replace('https://', ')}
-=======
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
             </a>
           </div>
         </div>
@@ -980,12 +828,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1007,8 +853,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -1082,18 +926,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceCategories.map((category, index) => (
                       <motion.div
-<<<<<<< HEAD
-                        key={category.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="group"
-                      >
-                        <div className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
-                          <div className="flex items-center space-x-3 mb-3">
-                            <category.icon size={20} className="text-cyan-400" />
-                            <h3 className="font-semibold text-white group-hover:text-cyan-300 transition-colors">
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -1205,7 +1037,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                               className='text - cyan - 400';
                             />;
                             <h3 className='font - semibold text - white group - hover:text - cyan - 300 transition - colors'>;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                               {category.title}
                             </h3>;
                           </div>;
@@ -1257,19 +1088,15 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -1286,12 +1113,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               >
@@ -1329,7 +1154,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -1344,16 +1168,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1375,7 +1195,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1522,14 +1341,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                           ))}
                         </div>;
@@ -1549,10 +1366,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1579,13 +1394,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 {/* Mobile CTA */}
@@ -1624,11 +1436,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

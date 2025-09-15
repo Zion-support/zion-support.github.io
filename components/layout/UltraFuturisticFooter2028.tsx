@@ -70,7 +70,6 @@ import {;
   Code;
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   GraduationCap, Scale, Building, Factory, Camera;
@@ -89,17 +88,10 @@ const serviceCategories = [
   {
     title: ' 2028 Futuristic Innovations',
     services: [
-<<<<<<< HEAD
-      { name: 'AI Climate Prediction 'Platform', 'href: '/ai-climate-prediction-platform' },
-      { name: 'Quantum Cybersecurity 'Firewall', 'href: '/quantum-cybersecurity-firewall' },
-      { name: 'Autonomous Drone Delivery 'Network', 'href: '/autonomous-drone-delivery-network' },
-      { name: 'AI Healthcare Diagnosis 'Platform', 'href: '/ai-healthcare-diagnosis-platform' }
-=======
       { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },
       { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' },
       { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     ]
   };
   {
@@ -230,60 +222,6 @@ const service_categories = [;
     ],
   },
   {
-<<<<<<< HEAD
-    title: '🏙️ Smart City & Infrastructure',
-    services: [
-      { name: 'Smart City Infrastructure 'Management', 'href: '/smart-city-infrastructure-management' },
-      { name: 'IoT Energy Management 'System', 'href: '/iot-energy-management-system' },
-      { name: 'Digital Twin Manufacturing 'Platform', 'href: '/digital-twin-manufacturing-platform' },
-      { name: 'Autonomous Manufacturing 'AI', 'href: '/autonomous-manufacturing-ai' }
-    ]
-  },
-  {
-    title: '⚛️ Quantum & Advanced Tech',
-    services: [
-      { name: 'Quantum Financial Trading 'Platform', 'href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Machine Learning 'Platform', 'href: '/quantum-machine-learning-platform' },
-      { name: 'Quantum Internet Security 'Gateway', 'href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Internet 'Protocol', 'href: '/quantum-internet-protocol' }
-    ]
-  },
-  {
-    title: '🤖 AI & Machine Learning',
-    services: [
-      { name: 'AI Customer Service 'Automation', 'href: '/ai-customer-service-automation' },
-      { name: 'AI Education 'Platform', 'href: '/ai-education-platform' },
-      { name: 'AI Content Creation 'Suite', 'href: '/ai-content-creation-suite' },
-      { name: 'AI Legal Research 'Platform', 'href: '/ai-legal-research-platform' }
-    ]
-  }
-];
-
-const companyLinks = [
-  { name: 'About 'Us', 'href: '/'about', 'icon: Users },
-  { name: 'Case 'Studies', 'href: '/case-'studies', 'icon: Briefcase },
-  { name: 'Blog & 'Resources', 'href: '/'blog', 'icon: BookOpen },
-  { name: ''Careers', 'href: '/'careers', 'icon: TrendingUp },
-  { name: ''Contact', 'href: '/'contact', 'icon: MessageCircle },
-  { name: ''Support', 'href: '/'support', 'icon: ShieldCheck }
-];
-
-const resourceLinks = [
-  { name: ''Documentation', 'href: '/'docs', 'icon: BookOpen },
-  { name: 'API 'Reference', 'href: '/'api', 'icon: Cpu },
-  { name: 'Developer 'Tools', 'href: '/dev-'tools', 'icon: Database },
-  { name: 'Mobile 'Apps', 'href: '/'mobile', 'icon: Globe },
-  { name: 'Cloud 'Services', 'href: '/'cloud', 'icon: Cloud },
-  { name: 'Security 'Center', 'href: '/'security', 'icon: Shield }
-];
-
-const socialLinks = [
-  { name: ''LinkedIn', 'href: 'https://linkedin.com/company/'ziontechgroup', 'icon: Users },
-  { name: ''Twitter', 'href: 'https://twitter.com/'ziontechgroup', 'icon: MessageCircle },
-  { name: ''YouTube', 'href: 'https://youtube.com/@'ziontechgroup', 'icon: Video },
-  { name: ''GitHub', 'href: 'https://github.com/'ziontechgroup', 'icon: Code }
-];
-=======
     title: ' Smart City & Infrastructure',
     services: [;
       {
@@ -395,7 +333,6 @@ const resource_links = [;
 
 
 
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 export default function UltraFuturisticFooter2028() {
   return (
@@ -572,8 +509,6 @@ export default function UltraFuturisticFooter2028() {;
                   {contactInfo.website}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
                 </a>
@@ -585,8 +520,6 @@ export default function UltraFuturisticFooter2028() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <a
                   key={social && social.name}
                   href={social && social.href}
@@ -632,7 +565,6 @@ target="_blank"
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -651,7 +583,6 @@ target="_blank"
                   key={social.name}
                   href={social.href}
                   target="_blank"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   rel="noopener noreferrer"
 
                   className="w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
@@ -958,7 +889,6 @@ target="_blank"
                     </Link>
                   </li>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
                 ))}
               </ul>
@@ -1009,7 +939,6 @@ target="_blank"
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
                   <li key={link.name}>
@@ -1034,10 +963,8 @@ target="_blank"
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
               </ul>;
             </div>;
@@ -1061,8 +988,6 @@ target="_blank"
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

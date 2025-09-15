@@ -1,25 +1,4 @@
 "use client";
-<<<<<<< HEAD
-import React{ useEffectuseState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { 
-  ArrowRight
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Atom
-  Sparkles,
-  Building
-  Phone
-  Mail
-  MapPin,
-  ArrowUpRight
-} from 'lucide-react';
-import Head from 'next/head';
-=======
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
 
 
@@ -67,7 +46,6 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -151,19 +129,6 @@ const EnhancedHomepage: React.FC = () => {
     }
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
-<<<<<<< HEAD
-      setShowPerformanceMonitor(true);
-    }5000);
-    
-    window.addEventListener(', 'mousemove', 'handleMouseMove);
-    
-    return () => {
-      clearInterval(interval);
-      clearTimeout(performanceTimer);
-      window.removeEventListener(', 'mousemove', 'handleMouseMove);
-    };
-  }[]);
-=======
       setShowPerformanceMonitor(true)
     }, 5000);
     window.addEventListener('mousemove', handleMouseMove);
@@ -250,7 +215,6 @@ const EnhancedHomepage: React.FC = () => {
     ...revolutionary2044AIServices;
     ...realEnterpriseMicroSaas2025;
     ...innovativeITServicesExpansion2025V3;
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
 
     ...innovativeAIServicesExpansion2025V3
     ...innovative2025ITInfrastructureServices;
@@ -266,21 +230,12 @@ const EnhancedHomepage: React.FC = () => {
 
   }
   const categories = [
-<<<<<<< HEAD
-    { id: ''all', 'name: 'All 'Services', 'icon: Sparklescolor: 'from-purple-500 to-pink-500'scheme: 'holographic' as const },
-    { id: ''ai', 'name: 'AI & 'Consciousness', 'icon: Braincolor: 'from-cyan-500 to-blue-500'scheme: 'cyber' as const },
-    { id: ''quantum', 'name: 'Quantum 'Technology', 'icon: Atomcolor: 'from-blue-500 to-indigo-500'scheme: 'quantum' as const },
-    { id: ''cybersecurity', 'name: ''Cybersecurity', 'icon: Shieldcolor: 'from-red-500 to-orange-500'scheme: 'neon' as const },
-    { id: ''space', 'name: 'Space 'Technology', 'icon: Rocketcolor: 'from-indigo-500 to-purple-500'scheme: 'holographic' as const },
-    { id: ''enterprise', 'name: 'Enterprise 'Solutions', 'icon: Buildingcolor: 'from-green-500 to-teal-500'scheme: 'cyber' as const }
-=======
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const }
     { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const }
     { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const }
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const }
     { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const }
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
   ];
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
@@ -296,9 +251,6 @@ const EnhancedHomepage: React.FC = () => {
     }
 
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20 },
-=======
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
@@ -330,7 +282,6 @@ const EnhancedHomepage: React.FC = () => {
 ;
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -339,17 +290,10 @@ const EnhancedHomepage: React.FC = () => {
         ease: "ease_out" as const;
       }
     }
-<<<<<<< HEAD
-  };
-
-  const heroVariants = {
-    hidden: { opacity: 0, y: 50 },
-=======
   }
 ;
   const hero_variants = {
     hidden: { opacity: 0, coordinate_y: 50 },
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -453,13 +397,8 @@ const EnhancedHomepage: React.FC = () => {
     <>
       <Head>
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-<<<<<<< HEAD
-        <meta name="description" content="Experience the future of technology with Zion Tech 'Group', 's revolutionary AI consciousnessquantum computingand autonomous solutions. Transform your business with cutting-edge innovation." />
-        <meta name="keywords" content="AI consciousnessquantum computingautonomous solutionspace technologycybersecuritybusiness intelligenceZion Tech Group2045 technology" />
-=======
         <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />
         <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -984,11 +923,7 @@ if ( {) {
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks"
-<<<<<<< HEAD
-                  technologies={[', 'AI', 'Cloud', 'Security', 'Automation']}
-=======
                   technologies={['AICloudSecurityAutomation']}
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
                 />
               ))}
             </motion.div>
@@ -1112,11 +1047,7 @@ if ( {) {
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
-<<<<<<< HEAD
-              Join the future of technology with Zion Tech 'Group', 's revolutionary solutions. 
-=======
               Join the future of technology with Zion Tech Group's revolutionary solutions.
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
 
@@ -1184,9 +1115,7 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -1221,13 +1150,11 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

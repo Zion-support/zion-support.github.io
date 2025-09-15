@@ -418,15 +418,6 @@ if ( {) {
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
       }
-<<<<<<< HEAD
-      initParticles();
-    };
-
-    window.addEventListener(', 'resize', 'handleResize);
-
-    return () => {
-      window.removeEventListener(', 'resize', 'handleResize);
-=======
       initParticles();    };        ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1)
       }
       initParticles()
@@ -434,7 +425,6 @@ if ( {) {
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
@@ -1224,7 +1214,6 @@ rotate: [0, 360],            }}            style={{
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1248,7 +1237,6 @@ rotate: [0, 360],            }}            style={{
     </>));
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -1256,9 +1244,7 @@ rotate: [0, 360],            }}            style={{
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
