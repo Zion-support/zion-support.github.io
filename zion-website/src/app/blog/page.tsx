@@ -20,6 +20,18 @@ const posts = [
       'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.'
   },
   {
+    slug: 'ai-2026-secure-agent-operations',
+    title: 'AI 2026: Secure Agent Operations',
+    summary:
+      'Permissions, observability, and incident response patterns for autonomous agents.'
+  },
+  {
+    slug: 'ai-2026-real-time-rag-blueprint',
+    title: 'AI 2026: Real-Time RAG Blueprint',
+    summary:
+      'Architectures and evals for sub-second retrieval-augmented generation at scale.'
+  },
+  {
     slug: 'ai-2025-enterprise-ai-security-blueprint',
     title: 'Enterprise AI Security Blueprint (2025)',
     summary:

@@ -55,8 +55,8 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {/* Promo banner */}
         <div className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center text-sm sm:text-base py-2 px-4">
-          <a href="/news" className="font-semibold hover:underline">
-            New: 2025 AI Innovation Showcase is live — explore what’s new →
+          <a href="/updates/agent-safety-whitepaper" className="font-semibold hover:underline">
+            New whitepaper: AI Agent Safety Framework (2025) — read now →
           </a>
         </div>
         <Navigation />
