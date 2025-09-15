@@ -96,12 +96,12 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Autonomous Support + Eval Harness</h2>
-              <p className="text-gray-600 mt-2">Deploy guardrailed support agents and adopt an evaluation harness to gate releases.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Policy-as-Code Templates + Agent SLOs</h2>
+              <p className="text-gray-600 mt-2">Codify guardrails and run with clear SLOs and eval-gated releases.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-autonomous-customer-support-agents" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Support Agents</Link>
-              <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Harness</Link>
+              <Link href="/content/ai-2026-policy-as-code-templates" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Policy Templates</Link>
+              <Link href="/content/ai-2026-agent-slo-handbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">SLO Handbook</Link>
             </div>
           </div>
         </div>

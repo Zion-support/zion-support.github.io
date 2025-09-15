@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "policy-as-code-templates-2026",
+    title: "AI 2026: Policy-as-Code Templates for Agent Governance",
+    description:
+      "Ready-to-use templates to codify guardrails, approvals, and eval-gated releases.",
+    ctaLabel: "Get Templates",
+    href: "/content/ai-2026-policy-as-code-templates",
+    emoji: "📜",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-slo-handbook-2026",
+    title: "AI 2026: Agent SLO & SLI Handbook",
+    description:
+      "Define reliability targets with SLIs, SLOs, and error budgets wired to guardrails.",
+    ctaLabel: "Read Handbook",
+    href: "/content/ai-2026-agent-slo-handbook",
+    emoji: "📈",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-evals-blueprint-2026",
     title: "AI 2026: Autonomous Evals Blueprint",
     description:
