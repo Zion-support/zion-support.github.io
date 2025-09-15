@@ -3,22 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
-  Shield, Mail, Brain, Atom, 
-  Cloud, 
-  Award, 
-  Server, Network, Shield as SecurityIcon,
-  Wifi, Building
-=======
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
-  Wifi, Building, Cpu as CpuIcon
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
@@ -179,11 +163,6 @@ export default function AdvancedITInfrastructureServices() {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-=======
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
->>>>>>> origin/auto/autonomy-17186719616
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -227,11 +206,6 @@ export default function AdvancedITInfrastructureServices() {
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
                     <div className="text-center">
-<<<<<<< HEAD
-                      <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-=======
-                      <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
->>>>>>> origin/auto/autonomy-17186719616
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -291,19 +265,6 @@ export default function AdvancedITInfrastructureServices() {
                       viewport={{ once: true }}
                       className="relative group"
                     >
-<<<<<<< HEAD
-                      <div className={`${'color' in service ? service.color : 'from-blue-500 to-purple-600'} p-1 rounded-xl`}>
-                        <div className="bg-gray-900 rounded-xl p-6 h-full">
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-3xl">{'icon' in service ? (service.icon as React.ReactNode) : '🚀'}</span>
-                            {'popular' in service && service.popular && (
-=======
-                      <div className={`${service.color} p-1 rounded-xl`}>
-                        <div className="bg-gray-900 rounded-xl p-6 h-full">
-                          <div className="flex items-center justify-between mb-4">
-                            <span className="text-3xl">{service.icon}</span>
-                            {service.popular && (
->>>>>>> origin/auto/autonomy-17186719616
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Popular
                               </span>
@@ -312,13 +273,6 @@ export default function AdvancedITInfrastructureServices() {
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
-                            <span className="text-2xl font-bold text-white">${'price' in service && typeof service.price === 'string' ? service.price : ('pricing' in service && service.pricing?.starter ? service.pricing.starter : 'Custom')}</span>
-                            <span className="text-gray-400">/month</span>
-=======
-                            <span className="text-2xl font-bold text-white">{service.price}</span>
-                            <span className="text-gray-400">{service.period}</span>
->>>>>>> origin/auto/autonomy-17186719616
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
@@ -331,11 +285,6 @@ export default function AdvancedITInfrastructureServices() {
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
-<<<<<<< HEAD
-                              href={'link' in service ? service.link : service.slug}
-=======
-                              href={service.link}
->>>>>>> origin/auto/autonomy-17186719616
                               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                             >
                               Learn More
@@ -427,11 +376,6 @@ export default function AdvancedITInfrastructureServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-=======
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now: {contactInfo.mobile}

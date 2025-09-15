@@ -27,10 +27,6 @@ import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard20
 import BiotechRevolution2026 from './pages/BiotechRevolution2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
-import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
-import NextGenTechRevolution2026 from './pages/NextGenTechRevolution2026';
-import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
-import FutureTechShowcase2026 from './pages/FutureTechShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -74,7 +70,7 @@ export default function App(): JSX.Element {
                       Experience the future of technology with our groundbreaking new content on Advanced Quantum Computing, 
                       Neural Interface Revolution, Advanced AI Systems, and cutting-edge 2026 technologies
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-7xl mx-auto">
                       <a href="/pages/AdvancedQuantumComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚛️ Quantum 2026 →
                       </a>
@@ -410,9 +406,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
-          <Route path="/pages/NextGenTechRevolution2026" element={<NextGenTechRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechInsights2026" element={<RevolutionaryTechInsights2026 />} />
-          <Route path="/pages/FutureTechShowcase2026" element={<FutureTechShowcase2026 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">

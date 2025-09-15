@@ -2,11 +2,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
-<<<<<<< HEAD
-import { BellUsersSettings } from "lucide-react";
-=======
-import { Bell, Users, Settings } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface WorkspaceHeaderProps {
   company: Company;

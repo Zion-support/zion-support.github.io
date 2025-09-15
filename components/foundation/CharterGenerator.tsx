@@ -1,61 +1,13 @@
-<<<<<<< HEAD
-"use client";
-import React{ useMemouseState } from 'react';
-=======
-import React, { useMemo, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6)' | 'DAO-native Wrapper';
 
 export default function CharterGenerator() {
-<<<<<<< HEAD
-  const [legalStructuresetLegalStructure] = useState<LegalStructure>('Cayman Foundation');
-  const [protocolNamesetProtocolName] = useState('Zion');
-  const [tokenSymbolsetTokenSymbol] = useState('ZION$');
-  const [includeContributorRulesetIncludeContributorRules] = useState(true);
-  const [includeGrantsetIncludeGrants] = useState(true);
-  const [includeDAOIntegrationsetIncludeDAOIntegration] = useState(true);
-=======
-  const [legalStructure, setLegalStructure] = useState<LegalStructure>('Cayman Foundation');
-  const [protocolName, setProtocolName] = useState('Zion');
-  const [tokenSymbol, setTokenSymbol] = useState('ZION$');
-  const [includeContributorRules, setIncludeContributorRules] = useState(true);
-  const [includeGrants, setIncludeGrants] = useState(true);
-  const [includeDAOIntegration, setIncludeDAOIntegration] = useState(true);
->>>>>>> origin/auto/autonomy-17186719616
 
   const charterText = useMemo(() => {
     const name = protocolName.trim() || 'Zion';
     const symbol = tokenSymbol.trim() || 'ZION$';
 
     const header = `${name} Foundation Charter`;
-<<<<<<< HEAD
-    const preamble = `This Charter establishes a legally-neutral foundation (the "Foundation") to steward the ${name} Protocolan opendecentralized AI protocol dedicated to sovereigntyopen knowledgeand verifiable trust.`;
-
-    const registry = `1. Legal Neutrality and Registry\n- Structure: ${legalStructure}.\n- Purpose: Maintain global neutralityoperate outside the control of any single jurisdictionand coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversightstandard-settingand community enablement.`;
-
-    const mission = `2. Mission and Scope\n- Protectevolveand safeguard the ${name} Protocol as a public good.\n- Champion open knowledgereproducible researchand transparent governance.\n- Promote sovereignty for usersdevelopersand nation/community DAOs.`;
-
-    const neutrality = `3. Political and Jurisdictional Neutrality\n- The Foundation is non-partisan and non-sovereign.\n- No nation-statecorporationor private actor may control governance outcomes.\n- All critical processes are transparentdocumentedand reproducible.`;
-
-    const treasury = `4. Treasury and Token Oversight\n- The Foundation monitors the on-chain treasury associated with ${symbol} for policy compliance and program execution.\n- The Foundation does not custody private keys for third parties and does not provide financial advice.\n- Treasury actions (grantsbountiesRFPs) are executed via on-chain governance with public reporting.`;
-
-    const contributors = includeContributorRules
-      ? `5. Contributor Program\n- Clear rules of engagementIP posture: permissiveopen-source first (e.g.Apache-2.0/MIT) unless otherwise required.\n- Conflict-of-interest and disclosures required for core stewards and grantees.\n- Security-first normsresponsible disclosureand reproducible builds.`
-=======
-    const preamble = `This Charter establishes a legally-neutral foundation (the "Foundation") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
-
-    const registry = `1. Legal Neutrality and Registry\n- Structure: ${legalStructure}.\n- Purpose: Maintain global neutrality, operate outside the control of any single jurisdiction, and coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversight, standard-setting, and community enablement.`;
-
-    const mission = `2. Mission and Scope\n- Protect, evolve, and safeguard the ${name} Protocol as a public good.\n- Champion open knowledge, reproducible research, and transparent governance.\n- Promote sovereignty for users, developers, and nation/community DAOs.`;
-
-    const neutrality = `3. Political and Jurisdictional Neutrality\n- The Foundation is non-partisan and non-sovereign.\n- No nation-state, corporation, or private actor may control governance outcomes.\n- All critical processes are transparent, documented, and reproducible.`;
-
-    const treasury = `4. Treasury and Token Oversight\n- The Foundation monitors the on-chain treasury associated with ${symbol} for policy compliance and program execution.\n- The Foundation does not custody private keys for third parties and does not provide financial advice.\n- Treasury actions (grants, bounties, RFPs) are executed via on-chain governance with public reporting.`;
-
-    const contributors = includeContributorRules
-      ? `5. Contributor Program\n- Clear rules of engagement, IP posture: permissive, open-source first (e.g., Apache-2.0/MIT) unless otherwise required.\n- Conflict-of-interest and disclosures required for core stewards and grantees.\n- Security-first norms, responsible disclosure, and reproducible builds.`
->>>>>>> origin/auto/autonomy-17186719616
       : '';
 
     const dao = includeDAOIntegration
@@ -63,37 +15,11 @@ export default function CharterGenerator() {
       : '';
 
     const grants = includeGrants
-<<<<<<< HEAD
-      ? `7. Multiverse Grants and R&D\n- The Foundation may issue cross-multiverse grants across chainsrollupsand alternate compute realms.\n- Priority to public goods: safety toolingevaluationsdatasetscompute schedulersagentsand interoperability.\n- Quarterly open calls with transparent selection criteria and milestone-based vesting.`
-      : '';
-
-    const governance = `8. Governance and Stewardship\n- Core Stewards: responsible for roadmap curationrisk managementand standards incubation.\n- Open Working Groups: domain-specific forums (safetyevalsinfradevrel).\n- Accountability: proposalsdeliberation notesand decisions published within 7 days.`;
-
-    const transparency = `9. Transparency and Reporting\n- Quarterly reports: financesgrantsimpact metricsand roadmap updates.\n- On-chain dashboards: treasury flowsvote participationand execution status.\n- Public archive: MOUsauditslegal opinions (where permissible).`;
-=======
-      ? `7. Multiverse Grants and R&D\n- The Foundation may issue cross-multiverse grants across chains, rollups, and alternate compute realms.\n- Priority to public goods: safety tooling, evaluations, datasets, compute schedulers, agents, and interoperability.\n- Quarterly open calls with transparent selection criteria and milestone-based vesting.`
-      : '';
-
-    const governance = `8. Governance and Stewardship\n- Core Stewards: responsible for roadmap curation, risk management, and standards incubation.\n- Open Working Groups: domain-specific forums (safety, evals, infra, devrel).\n- Accountability: proposals, deliberation notes, and decisions published within 7 days.`;
-
-    const transparency = `9. Transparency and Reporting\n- Quarterly reports: finances, grants, impact metrics, and roadmap updates.\n- On-chain dashboards: treasury flows, vote participation, and execution status.\n- Public archive: MOUs, audits, legal opinions (where permissible).`;
->>>>>>> origin/auto/autonomy-17186719616
 
     const amendments = `10. Amendments\n- Amendable via DAO supermajority or Foundation supermajority plus DAO simple majority.\n- All amendments versioned and time-stamped on IPFS and Git repositories.`;
 
     const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;
 
-<<<<<<< HEAD
-    return [header', 'preamble', 'registry', 'mission', 'neutrality', 'treasury', 'contributors', 'dao', 'grants', 'governance', 'transparency', 'amendments', 'liability]
-      .filter(Boolean)
-      .join('\n');
-  }[legalStructureprotocolNametokenSymbolincludeContributorRulesincludeGrantsincludeDAOIntegration]);
-=======
-    return [header, '', preamble, '', registry, '', mission, '', neutrality, '', treasury, '', contributors, '', dao, '', grants, '', governance, '', transparency, '', amendments, '', liability]
-      .filter(Boolean)
-      .join('\n');
-  }, [legalStructure, protocolName, tokenSymbol, includeContributorRules, includeGrants, includeDAOIntegration]);
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -111,11 +37,6 @@ export default function CharterGenerator() {
               <option value="Cayman Foundation">Cayman Foundation</option>
               <option value="Swiss Verein">Swiss Verein</option>
               <option value="US 501(c)(6)">US 501(c)(6)</option>
-<<<<<<< HEAD
-              <option value="DAO-native Wrapper">DAO-native legal wrapper (e.g.Otoco)</option>
-=======
-              <option value="DAO-native Wrapper">DAO-native legal wrapper (e.g., Otoco)</option>
->>>>>>> origin/auto/autonomy-17186719616
             </select>
           </label>
           <div className="flex items-center gap-3">
@@ -137,11 +58,6 @@ export default function CharterGenerator() {
             <button
               className="px-3 py-2 rounded bg-cyan-600 text-white hover:bg-cyan-700"
               onClick={() => {
-<<<<<<< HEAD
-                const blob = new Blob([charterText]{ type: 'text/markdown;charset=utf-8' });
-=======
-                const blob = new Blob([charterText], { type: 'text/markdown;charset=utf-8' });
->>>>>>> origin/auto/autonomy-17186719616
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
