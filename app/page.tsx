@@ -366,31 +366,8 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Featured Content Grid */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Content</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Hyperautomation Blueprint 2026</h3>
-                <p className="text-gray-600 mb-4">A hands-on blueprint for scaling AI-driven automation across the enterprise.</p>
-                <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read Guide →</Link>
-              </article>
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
-                <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
-                <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
-              </article>
-            </div>
-          </div>
-        </section>
-=======
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
@@ -470,6 +447,23 @@ export default function HomePage() {
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
+
+        {/* New: Promote Governance Blueprint content */}
+        <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-indigo-700">New Blueprint</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Enterprise AI Governance (2026)</h2>
+                <p className="text-gray-600 mt-2">Practical controls: policy-as-code, risk tiers, continuous evaluation.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/blog/ai-2026-enterprise-ai-governance-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Article</Link>
+                <Link href="/content/ai-2026-governance-blueprint" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Get the Guide</Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
