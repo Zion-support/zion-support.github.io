@@ -9,6 +9,7 @@ import CaseStudyPage from './src/CaseStudyPage';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
+import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -22,6 +23,21 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Promotional Banner */}
+                <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
+                  <div className="flex items-center justify-center space-x-2 mb-2">
+                    <span className="text-2xl">🎉</span>
+                    <h3 className="text-xl font-bold">NEW: Comprehensive Services 2025</h3>
+                    <span className="text-2xl">🎉</span>
+                  </div>
+                  <p className="text-lg opacity-90 mb-4">
+                    Discover our complete suite of cutting-edge technology solutions
+                  </p>
+                  <a href="/pages/ComprehensiveServices2025" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    Explore Now →
+                  </a>
+                </div>
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -34,11 +50,11 @@ export default function App(): JSX.Element {
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center space-x-4 space-y-4 sm:space-y-0">
-                    <a href="/pages/InnovationLanding2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Explore Innovation 2025
+                    <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                      🚀 View All Services
                     </a>
-                    <a href="/pages/InnovativeServicesShowcase2025" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                      View New Services
+                    <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                      Explore Innovation 2025
                     </a>
                     <a href="/pages/BlogPost2025" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       Read Latest Blog
@@ -46,7 +62,6 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 {/* Featured Content Section */}
                 <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
                   <div className="text-center mb-8">
@@ -74,64 +89,37 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
-=======
-        {/* Featured New Services */}
-        <section className="mb-12">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-gray-900">Newest Services</h2>
-            <p className="text-gray-600">Explore our latest offerings designed to drive measurable outcomes.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">🧭</div>
-              <h3 className="text-xl font-semibold mb-2">AI Sales Copilot</h3>
-              <p className="text-gray-600 mb-4">Automate prospecting, personalize outreach, and accelerate pipeline with conversational AI.</p>
-              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">💸</div>
-              <h3 className="text-xl font-semibold mb-2">Cloud Cost Optimizer</h3>
-              <p className="text-gray-600 mb-4">Cut multi-cloud spend with automated rightsizing, scheduling, and anomaly detection.</p>
-              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold mb-2">Cyber Threat Intelligence Hub</h3>
-              <p className="text-gray-600 mb-4">Unify threat feeds and correlate signals with AI to reduce alert fatigue.</p>
-              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
-            </div>
-          </div>
-          <div className="text-center mt-6">
-            <a href="/services" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">View all services</a>
-          </div>
-        </section>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-xl font-semibold mb-2">AI Solutions</h3>
-            <p className="text-gray-600">
-              Cutting-edge artificial intelligence solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-4xl mb-4">🔗</div>
-            <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
-            <p className="text-gray-600">
-              Secure, decentralized solutions powered by blockchain technology.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-4xl mb-4">☁️</div>
-            <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>
-            <p className="text-gray-600">
-              Scalable cloud infrastructure and deployment solutions.
-            </p>
-          </div>
-        </div>
->>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
+                {/* Featured New Services */}
+                <section className="mb-12">
+                  <div className="text-center mb-6">
+                    <h2 className="text-3xl font-bold text-gray-900">🚀 Newest Services</h2>
+                    <p className="text-gray-600">Explore our latest offerings designed to drive measurable outcomes.</p>
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="text-4xl mb-4">🧭</div>
+                      <h3 className="text-xl font-semibold mb-2">AI Sales Copilot</h3>
+                      <p className="text-gray-600 mb-4">Automate prospecting, personalize outreach, and accelerate pipeline with conversational AI.</p>
+                      <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">Learn more →</a>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="text-4xl mb-4">💸</div>
+                      <h3 className="text-xl font-semibold mb-2">Cloud Cost Optimizer</h3>
+                      <p className="text-gray-600 mb-4">Cut multi-cloud spend with automated rightsizing, scheduling, and anomaly detection.</p>
+                      <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">Learn more →</a>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="text-4xl mb-4">🛡️</div>
+                      <h3 className="text-xl font-semibold mb-2">Cyber Threat Intelligence Hub</h3>
+                      <p className="text-gray-600 mb-4">Unify threat feeds and correlate signals with AI to reduce alert fatigue.</p>
+                      <a href="/pages/InnovativeServicesShowcase2025" className="text-blue-600 hover:text-blue-700 font-semibold">Learn more →</a>
+                    </div>
+                  </div>
+                  <div className="text-center mt-6">
+                    <a href="/pages/InnovativeServicesShowcase2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">View all services</a>
+                  </div>
+                </section>
 
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -169,6 +157,49 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* Success Stories Section */}
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-12">
+                  <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">🏆 Client Success Stories</h2>
+                    <p className="text-lg text-gray-600">See how we've transformed businesses with cutting-edge technology</p>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">+300%</span>
+                        <span className="text-sm text-gray-500">Efficiency Gain</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Fortune 500 AI Transformation</h3>
+                      <p className="text-gray-600 mb-4">Implemented autonomous AI agents that reduced operational costs by 40% and increased productivity by 300%.</p>
+                      <a href="/case-studies/ai-transformation" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Read Case Study →
+                      </a>
+                    </div>
+                    <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">$2M</span>
+                        <span className="text-sm text-gray-500">Cost Savings</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Global Blockchain Implementation</h3>
+                      <p className="text-gray-600 mb-4">Deployed enterprise blockchain solution that streamlined supply chain operations and saved $2M annually.</p>
+                      <a href="/case-studies/blockchain-implementation" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        Learn More →
+                      </a>
+                    </div>
+                    <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">99.9%</span>
+                        <span className="text-sm text-gray-500">Uptime</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">Cloud Migration Success</h3>
+                      <p className="text-gray-600 mb-4">Migrated legacy systems to cloud infrastructure achieving 99.9% uptime and 60% faster performance.</p>
+                      <a href="/case-studies/cloud-migration" className="text-blue-600 hover:text-blue-700 font-semibold">
+                        View Results →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Latest News Section */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
                   <div className="text-center mb-8">
@@ -201,6 +232,36 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* Technology Showcase Section */}
+                <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 mb-12 text-white">
+                  <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold mb-4">🚀 Cutting-Edge Technology Stack</h2>
+                    <p className="text-lg opacity-90">Powered by the latest innovations in AI, blockchain, and cloud computing</p>
+                  </div>
+                  <div className="grid md:grid-cols-4 gap-6">
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">🤖</div>
+                      <h3 className="text-lg font-semibold mb-2">AI & Machine Learning</h3>
+                      <p className="text-sm opacity-80">GPT-4, TensorFlow, PyTorch</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">⛓️</div>
+                      <h3 className="text-lg font-semibold mb-2">Blockchain & Web3</h3>
+                      <p className="text-sm opacity-80">Ethereum, Solana, IPFS</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">☁️</div>
+                      <h3 className="text-lg font-semibold mb-2">Cloud Infrastructure</h3>
+                      <p className="text-sm opacity-80">AWS, Azure, GCP</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">🔒</div>
+                      <h3 className="text-lg font-semibold mb-2">Cybersecurity</h3>
+                      <p className="text-sm opacity-80">Zero Trust, SIEM, SOC</p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -225,6 +286,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
+          <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
@@ -254,8 +316,4 @@ export default function App(): JSX.Element {
       </div>
     </Router>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
