@@ -11,6 +11,20 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-autonomous-research-lab-2025': {
+    id: 'ai-autonomous-research-lab-2025',
+    title: 'Autonomous Research Labs: Accelerating Breakthroughs with Agentic R&D',
+    excerpt:
+      'How autonomous agents, verifiable experiments, and closed-loop discovery cut research cycles from months to days.',
+    category: 'Research & Development',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Autonomous research labs orchestrate AI agents across literature mining, hypothesis generation, experiment planning, data collection, and analysis. With verifiable workflows and provenance, organizations can scale R&D while preserving rigor.',
+      'This article describes the architecture for agentic R&D: knowledge graphs for context grounding, toolformer agents for lab control, and policy engines for safety and compliance. We include reference pipelines and metrics to track discovery velocity and reliability.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
