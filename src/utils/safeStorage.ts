@@ -145,7 +145,7 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
     }
   }
 };

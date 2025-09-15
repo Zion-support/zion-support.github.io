@@ -8,7 +8,7 @@ interface NotificationOptions {
  */
 
 export interface NotificationOptions {
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
   title: string;
   body?: string;
   icon?: string;
@@ -99,7 +99,7 @@ export const notifications = {
     if (Notification.permission !== 'granted') {
       console.warn('Notification permission not granted');
       return null;
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
     }
 
     try {
@@ -118,7 +118,7 @@ export const notifications = {
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -170,7 +170,7 @@ export const notifications = {
    */
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
       title,
       body,
       icon: '/icons/error.png',
@@ -232,4 +232,4 @@ export default notificationManager;
 };
 
 export default notifications;
->>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-b0b6

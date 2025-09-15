@@ -96,6 +96,7 @@ const EnhancedContentShowcase: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -130,6 +131,26 @@ const EnhancedContentShowcase: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           {/* Main Showcase Display */}
           <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
+=======
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ENHANCED CONTENT SHOWCASE • 2026
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology Content
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Explore our comprehensive collection of cutting-edge technology content featuring 
+            AI transformation, quantum computing, neural interfaces, and synthetic intelligence.
+          </p>
+        </div>
+
+        {/* Main Showcase Carousel */}
+        <div className="relative max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl">
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -137,6 +158,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
                 transition={{ duration: 0.5 }}
+<<<<<<< HEAD
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
               >
                 <div className="flex-1 text-white">
@@ -171,6 +193,69 @@ const EnhancedContentShowcase: React.FC = () => {
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <div className="text-9xl">{showcaseItems[currentSlide].image}</div>
+=======
+                className="relative"
+              >
+                <div className={`bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 rounded-2xl`}>
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <div className="flex items-center space-x-3 mb-4">
+                        <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                          {showcaseItems[currentSlide].category}
+                        </span>
+                        <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                          {showcaseItems[currentSlide].year}
+                        </span>
+                      </div>
+                      <div className="text-8xl mb-6">{showcaseItems[currentSlide].image}</div>
+                      <h3 className="text-4xl font-bold mb-6">{showcaseItems[currentSlide].title}</h3>
+                      <p className="text-xl opacity-90 mb-8">{showcaseItems[currentSlide].description}</p>
+                      
+                      <div className="grid grid-cols-2 gap-4 mb-8">
+                        {showcaseItems[currentSlide].features.map((feature, index) => (
+                          <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                            <span className="text-sm font-semibold">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <div className="flex gap-4">
+                        <a
+                          href={showcaseItems[currentSlide].link}
+                          className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                        >
+                          Explore Now →
+                        </a>
+                        <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div className="relative">
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                        <h4 className="text-2xl font-bold mb-4">Key Highlights</h4>
+                        <ul className="space-y-3">
+                          <li className="flex items-center space-x-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                            <span>Revolutionary breakthrough technology</span>
+                          </li>
+                          <li className="flex items-center space-x-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                            <span>Industry-leading performance</span>
+                          </li>
+                          <li className="flex items-center space-x-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                            <span>Proven real-world applications</span>
+                          </li>
+                          <li className="flex items-center space-x-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                            <span>Expert-backed research</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
                   </div>
                 </div>
               </motion.div>
@@ -234,6 +319,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
           </div>
 
           {/* Quick Access Grid */}
@@ -310,6 +396,43 @@ const EnhancedContentShowcase: React.FC = () => {
             <a href="/pages/NextGenTechShowcase2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
               View All Innovations
             </a>
+=======
+          </div>
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Content</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {showcaseItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => goToSlide(index)}
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
+                    {item.category}
+                  </span>
+                  <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
+                    {item.year}
+                  </span>
+                </div>
+                <div className="text-4xl mb-4 text-center">{item.image}</div>
+                <h4 className="text-xl font-bold mb-3 text-center">{item.title}</h4>
+                <p className="text-sm opacity-90 text-center mb-4">{item.description}</p>
+                <a
+                  href={item.link}
+                  className="block w-full bg-white/20 text-white text-center py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+                >
+                  Explore →
+                </a>
+              </motion.div>
+            ))}
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
           </div>
         </div>
       </div>
