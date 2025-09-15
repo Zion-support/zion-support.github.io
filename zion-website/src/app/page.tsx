@@ -100,8 +100,8 @@ export default function HomePage() {
               >
                 Get Started
               </a>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                Learn More <span aria-hidden="true">→</span>
+              <a href="/news/ai-governance-blueprint-2025" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                New: AI Governance Blueprint 2025 <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
