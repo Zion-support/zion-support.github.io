@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import { UserGroupIcon, LightBulbIcon, CogIcon, ShieldCheckIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+
+const professionalServices = [
+  { name: 'AI Strategy & Consulting', description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.', icon: LightBulbIcon, features: ['Technology Assessment','ROI Analysis','Implementation Roadmap','Change Management Planning'], duration: '4-8 weeks' },
+  { name: 'Custom AI Development', description: 'Tailored AI solutions built specifically for your business needs and objectives.', icon: CogIcon, features: ['Custom Algorithm Development','Integration Services','Testing & Validation','Documentation & Training'], duration: '8-24 weeks' },
+  { name: 'AI Integration & Deployment', description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.', icon: RocketLaunchIcon, features: ['System Integration','API Development','Performance Optimization','Go-live Support'], duration: '4-12 weeks' },
+  { name: 'AI Training & Education', description: 'Comprehensive training programs to ensure your team maximizes AI solution value.', icon: AcademicCapIcon, features: ['Technical Training','Best Practices','Ongoing Support','Certification Programs'], duration: '2-4 weeks' },
+  { name: 'AI Maintenance & Support', description: 'Continuous monitoring, optimization, and support for your AI solutions.', icon: ShieldCheckIcon, features: ['24/7 Monitoring','Performance Optimization','Security Updates','Technical Support'], duration: 'Ongoing' },
+  { name: 'AI Audit & Compliance', description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.', icon: ChartBarIcon, features: ['Compliance Assessment','Ethical AI Review','Security Audits','Risk Mitigation'], duration: '2-6 weeks' },
+=======
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, CogIcon, ShieldCheckIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
@@ -8,6 +19,7 @@ const professionalServices = [
   { name: 'AI Training & Education', description: 'Comprehensive training programs to ensure your team maximizes AI solution value.', icon: AcademicCapIcon, features: ['Technical Training', 'Best Practices', 'Ongoing Support', 'Certification Programs'], duration: '2-4 weeks' },
   { name: 'AI Maintenance & Support', description: 'Continuous monitoring, optimization, and support for your AI solutions.', icon: ShieldCheckIcon, features: ['24/7 Monitoring', 'Performance Optimization', 'Security Updates', 'Technical Support'], duration: 'Ongoing' },
   { name: 'AI Audit & Compliance', description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.', icon: ChartBarIcon, features: ['Compliance Assessment', 'Ethical AI Review', 'Security Audits', 'Risk Mitigation'], duration: '2-6 weeks' },
+>>>>>>> origin/cursor/create-and-deploy-new-content-a279
 ]
 
 const serviceProcess = [
@@ -31,9 +43,13 @@ export default function ServicesPage() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
+<<<<<<< HEAD
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Professional <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">AI Services</span></h1>
+=======
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Professional <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">AI Services</span>
             </h1>
+>>>>>>> origin/cursor/create-and-deploy-new-content-a279
             <p className="mt-6 text-lg leading-8 text-gray-300">From strategy to implementation, our comprehensive AI services help you navigate the complexities of artificial intelligence and achieve transformative results.</p>
           </div>
         </div>

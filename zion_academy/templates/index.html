@@ -1,5 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
+<<<<<<< HEAD
+    <h1>Welcome to Zion Academy</h1>
+    <p>Your journey to upskilling starts here!</p>
+    <a href="{{ url_for("course_list") }}">Browse Courses</a>
+
+    {% if latest_updates %}
+    <hr>
+    <section>
+        <h2>Latest Updates</h2>
+        <ul>
+            {% for u in latest_updates %}
+            <li>
+                <a href="{{ url_for('update_detail', update_id=u.id) }}">{{ u.title }}</a>
+                <span> · {{ u.created_at.strftime('%b %d, %Y') }}</span>
+                {% if u.summary %}
+                    <div>{{ u.summary }}</div>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        <p><a href="{{ url_for('updates_list') }}">See all updates</a></p>
+    </section>
+    {% endif %}
+=======
     <div class="container mx-auto px-4 py-10">
         <div class="bg-white rounded-xl shadow p-8 mb-10">
             <h1 class="text-4xl font-extrabold text-gray-900 mb-3">Welcome to Zion Academy</h1>
@@ -44,4 +68,5 @@
             {% endif %}
         </section>
     </div>
+>>>>>>> ae78a241413f04b853a8cb652af3c863231dcf08
 {% endblock %}
