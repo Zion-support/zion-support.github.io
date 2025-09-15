@@ -42,6 +42,22 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Deep Dive: Production Agent Telemetry (2025)',
+    summary:
+      'Unified tracing, eval signals, and guardrail events to operate agent fleets reliably.',
+    href: '/blog/ai-2025-production-agent-telemetry-deep-dive',
+    date: '2025-09-15',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Guide: AI Governance Maturity Model (2025)',
+    summary:
+      'A staged model to level up governance across policy, controls, telemetry, and auditability.',
+    href: '/blog/ai-2025-ai-governance-maturity-model',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Guide: Vendor Risk Management for AI (2026 Preview)',
     summary:
       'Templates, control mapping, and evidence bundles to assess AI vendors responsibly.',
