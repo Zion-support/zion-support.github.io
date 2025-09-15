@@ -11,6 +11,27 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "ai-governance-dashboard-v3",
+    title: "AI Governance Dashboard v3",
+    description:
+      "Unified governance KPIs, eval gates, and exception workflows with audit-ready exports.",
+    ctaLabel: "Read Update",
+    href: "/updates/ai-governance-dashboard-v3",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-driven-finops",
+    title: "Evaluation-Driven FinOps for AI",
+    description:
+      "Balance cost, quality, and latency with offline + live evals and dynamic routing.",
+    ctaLabel: "Read Blueprint",
+    href: "/updates/evaluation-driven-finops",
+    emoji: "💸",
+    date: "2025-09-15",
+  },
+  {
     id: "agent-platform-slos-2026",
     title: "AI 2026: Agent Platform SLOs That Matter",
     description:
