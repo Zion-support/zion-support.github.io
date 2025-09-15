@@ -3,7 +3,6 @@ import React from 'react';
 const SyntheticIntelligence2026 = () => {
   return (
 <<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -37,7 +36,8 @@ const SyntheticIntelligence2026 = () => {
               AI systems capable of creative thinking and artistic expression.
             </p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
         </div>
       </div>
     </div>

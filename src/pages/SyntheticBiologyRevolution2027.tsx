@@ -5,6 +5,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
+<<<<<<< HEAD
         <div className="text-center mb-20">
           <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-xl font-bold mb-10 animate-pulse">
             🧬 SYNTHETIC BIOLOGY REVOLUTION • 2027
@@ -94,6 +95,13 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
               Start Bio-Manufacturing →
             </button>
+=======
+            </div>
+          </div>
+        </div>
+
+        {/* Success Stories */}
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
           </div>
         </div>
 
@@ -456,6 +464,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -470,20 +479,8 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
             </button>
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Join the Biological Revolution</h2>
-            <p className="text-xl text-green-100 mb-6">
-              Be part of the most significant transformation in human history
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                Explore Applications
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Start Your Journey
-              </button>
-            </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
           </div>
         </div>
       </div>
