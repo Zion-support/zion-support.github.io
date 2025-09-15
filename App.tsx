@@ -30,6 +30,9 @@ import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
+import BusinessAutomationGuide2025 from './src/pages/BusinessAutomationGuide2025';
+import AdvancedTechSolutions2026 from './src/pages/AdvancedTechSolutions2026';
+import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -55,18 +58,24 @@ export default function App(): JSX.Element {
                       Experience the future of technology with our groundbreaking new content on AI Revolution, 
                       Quantum Computing Breakthroughs, and Neural Interface Technology
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 AI Revolution 2025 →
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
+                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🧠 AI Revolution →
                       </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
                         ⚡ Quantum Breakthrough →
                       </a>
-                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
                         🧬 Neural Interface →
                       </a>
-                      <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧭 AI Enterprise Copilot →
+                      <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🧭 Enterprise Copilot →
+                      </a>
+                      <a href="/pages/BusinessAutomationGuide2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🤖 Automation Guide →
+                      </a>
+                      <a href="/pages/AdvancedTechSolutions2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🔮 Tech Solutions 2026 →
                       </a>
                     </div>
                   </div>
@@ -119,6 +128,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/BusinessAutomationGuide2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🤖 Business Automation Guide
+                    </a>
+                    <a href="/pages/AdvancedTechSolutions2026" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🔮 Advanced Tech Solutions 2026
+                    </a>
+                    <a href="/pages/InnovationShowcase2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Innovation Showcase 2026
                     </a>
                   </div>
                 </div>
@@ -351,6 +369,72 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* NEW: Latest Content Promotion */}
+                <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+                  <div className="relative z-10">
+                    <div className="text-center mb-12">
+                      <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+                        🌟 BRAND NEW CONTENT • JANUARY 2025
+                      </div>
+                      <h2 className="text-5xl font-bold mb-6">🚀 Latest Innovation Content</h2>
+                      <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+                        Discover our newest breakthrough content on business automation, advanced tech solutions, and innovation showcases
+                      </p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-3 gap-8">
+                      <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+                        <div className="text-6xl mb-4 text-center">🤖</div>
+                        <h3 className="text-2xl font-bold mb-4 text-center">Business Automation Guide</h3>
+                        <p className="text-green-100 mb-6 text-center">
+                          Complete roadmap to automate 80% of your business operations and achieve 300% productivity gains
+                        </p>
+                        <ul className="text-green-200 space-y-2 mb-6 text-sm">
+                          <li>• 90-Day Implementation Plan</li>
+                          <li>• Proven ROI Strategies</li>
+                          <li>• Success Case Studies</li>
+                        </ul>
+                        <a href="/pages/BusinessAutomationGuide2025" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
+                          Start Automation Journey →
+                        </a>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+                        <div className="text-6xl mb-4 text-center">🔮</div>
+                        <h3 className="text-2xl font-bold mb-4 text-center">Advanced Tech Solutions 2026</h3>
+                        <p className="text-purple-100 mb-6 text-center">
+                          Next-generation technologies that will define the next decade of business innovation
+                        </p>
+                        <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+                          <li>• Neural Networks 3.0</li>
+                          <li>• Quantum Computing</li>
+                          <li>• Bio-Integration</li>
+                        </ul>
+                        <a href="/pages/AdvancedTechSolutions2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+                          Explore Future Tech →
+                        </a>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+                        <div className="text-6xl mb-4 text-center">🌟</div>
+                        <h3 className="text-2xl font-bold mb-4 text-center">Innovation Showcase 2026</h3>
+                        <p className="text-rose-100 mb-6 text-center">
+                          Revolutionary innovations that are reshaping the future of business and society
+                        </p>
+                        <ul className="text-rose-200 space-y-2 mb-6 text-sm">
+                          <li>• Consciousness AI</li>
+                          <li>• Quantum Internet</li>
+                          <li>• Genetic Optimization</li>
+                        </ul>
+                        <a href="/pages/InnovationShowcase2026" className="block w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold text-center">
+                          Join Innovation Revolution →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Interactive Technology Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -402,6 +486,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
           <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
+          <Route path="/pages/BusinessAutomationGuide2025" element={<BusinessAutomationGuide2025 />} />
+          <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
+          <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
