@@ -17,12 +17,12 @@ export default function LatestContentShowcase2025() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Enterprise AI Governance 2026</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Risk-Aware Agents Blueprint</h3>
             <p className="text-gray-600 mb-4">
-              Practical blueprint for policy-as-code, risk tiers, and continuous evaluations to scale AI safely.
+              Policy-constrained, risk-scored agent workflows with evals and guardrails.
             </p>
             <Link 
-              href="/content/enterprise-ai-governance-2026"
+              href="/content/ai-2026-risk-aware-agents-blueprint"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Full Guide →
@@ -31,15 +31,15 @@ export default function LatestContentShowcase2025() {
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Ops Incident Response 2026</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Evaluations in Production</h3>
             <p className="text-gray-600 mb-4">
-              Event-driven observability and agentic playbooks to cut MTTR and eliminate toil.
+              Operationalize LLM and agent evals with live metrics and rollbacks.
             </p>
             <Link 
-              href="/content/ai-ops-autonomous-incident-response-2026"
+              href="/blog/ai-2026-evaluations-in-production"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Explore Architecture →
+              Read Article →
             </Link>
           </div>
 
