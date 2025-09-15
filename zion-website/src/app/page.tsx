@@ -1,12 +1,13 @@
+import React from 'react'
+import { getLatestUpdates } from '../data/updates'
 import {
-  ChartBarIcon,
+  LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
-  LightBulbIcon,
   ShieldCheckIcon,
+  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
-import { getLatestUpdates } from '../data/updates'
 
 const features = [
   {
@@ -83,14 +84,6 @@ export default function HomePage() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-            <a
-              href="/updates/ai-content-studio-2"
-              className="inline-flex items-center rounded-full bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-blue-600/20 hover:bg-blue-600/20 transition-colors"
-            >
-              New: AI Content Studio 2.0 <span className="ml-2" aria-hidden>
-                →
-              </span>
-            </a>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -114,59 +107,17 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/agentic-ops-control-center-1-0"
-                className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
-              >
-                New Launch: Agentic Ops Control Center
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/autonomous-sales-copilot-1-0"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
-              >
-                Launch: Sales Copilot v1.0
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/autonomous-finance-os-1-0"
-                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
-              >
-                Launch: Autonomous Finance OS v1.0
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/auto-data-governance-v3"
-                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
-              >
-                Launch: Data Governance v3
-                <span aria-hidden>→</span>
-              </a>
-              <a
                 href="/updates/ai-research-assistant-2-0"
-                className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 hover:bg-teal-500/20 transition-colors duration-200"
-              >
-                Launch: AI Research Assistant 2.0
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/ai-agent-safety-certification-beta"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
-                New: Agent Safety Certification (Beta)
+                New: AI Research Assistant 2.0
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/ai-trends-radar-2025"
+                href="/updates/ai-governance-toolkit"
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
-                New: 2025 AI Trends Radar
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/evaluating-real-world-rag-latency"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
-              >
-                Guide: Real-World RAG Latency
+                New: AI Governance Toolkit v2
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -183,20 +134,6 @@ export default function HomePage() {
                 Guide: RAG Production Patterns
                 <span aria-hidden>→</span>
               </a>
-              <a
-                href="/updates/enterprise-retrieval-observability-2026"
-                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
-              >
-                Guide: Retrieval Observability 2026
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/agentic-ops-mttr-case-study"
-                className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-500/10 px-4 py-2 text-sm font-semibold text-sky-200 hover:bg-sky-500/20 transition-colors duration-200"
-              >
-                Case Study: Agentic Ops MTTR
-                <span aria-hidden>→</span>
-              </a>
             </div>
           </div>
         </div>
@@ -204,19 +141,6 @@ export default function HomePage() {
 
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
-        <div className="mb-8 rounded-2xl bg-blue-600/10 border border-blue-500/30 px-6 py-4 text-blue-200">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <p className="text-sm">
-              New: Explore our latest content, courses, and launches in Updates.
-            </p>
-            <a
-              href="/updates"
-              className="inline-flex items-center justify-center rounded-md bg-blue-600 px-3.5 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors duration-200"
-            >
-              View Updates
-            </a>
-          </div>
-        </div>
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
@@ -226,7 +150,7 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {getLatestUpdates(6).map((item) => (
+            {getLatestUpdates(3).map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
@@ -267,9 +191,9 @@ export default function HomePage() {
                 href: '/blog/ai-2026-llm-evals-maturity-model'
               },
               {
-                title: 'AI 2026: Enterprise Retrieval Observability',
-                summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.',
-                href: '/blog/ai-2026-enterprise-retrieval-observability'
+                title: 'Enterprise AI Security Blueprint (2025)',
+                summary: 'Layered controls across model, data, runtime, and supply chain.',
+                href: '/blog/ai-2025-enterprise-ai-security-blueprint'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">

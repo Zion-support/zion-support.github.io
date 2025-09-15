@@ -1,24 +1,61 @@
-export interface UpdateItem {
-  id: string
+export type SiteUpdate = {
   title: string
   summary: string
   href: string
-  date: string
-  tag:
-    | 'Product'
-    | 'Guide'
-    | 'Course'
-    | 'Community'
-    | 'Research'
-    | 'Release'
-    | 'Launch'
-    | 'Case Study'
+  date?: string
+  tag?: string
 }
 
-// Canonical updates list powering homepage and updates index
-export const updates: UpdateItem[] = [
+export const siteUpdates: SiteUpdate[] = [
   {
-    id: 'agentic-evals-blueprint',
+    title: 'Launch: AI Research Assistant 2.0',
+    summary:
+      'Major upgrade with better sources, multimodal inputs, and faster research pipelines.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Course: Web3 Fundamentals Track',
+    summary:
+      'Hands-on introduction to wallets, smart contracts, tokens, and decentralized applications.',
+    href: '/updates/web3-fundamentals-track',
+    date: '2025-09-15',
+    tag: 'Course'
+  },
+  {
+    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
+    summary:
+      'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',
+    href: '/updates/autonomous-ops-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary:
+      'Design patterns for low-latency hybrid retrieval powering agentic systems and copilots.',
+    href: '/updates/real-time-retrieval-architectures-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: AI Governance Toolkit (v2)',
+    summary:
+      'Policy-as-code templates, audit trails, and automated guardrails for enterprise AI programs.',
+    href: '/updates/ai-governance-toolkit',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: RAG Production Patterns (2025 Edition)',
+    summary:
+      'Battle-tested architectures for retrieval-augmented generation with observability and SLIs.',
+    href: '/updates/rag-production-patterns',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Agentic Evals Blueprint (v1)',
     summary:
       'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.',
@@ -27,7 +64,6 @@ export const updates: UpdateItem[] = [
     tag: 'Launch'
   },
   {
-    id: 'rag-agents-case-study',
     title: 'Case Study: 38% Cost Reduction with Retrieval-Augmented Agents',
     summary:
       'How a Fortune 500 reduced support costs and MTTR with production-grade RAG agents.',
@@ -36,7 +72,6 @@ export const updates: UpdateItem[] = [
     tag: 'Case Study'
   },
   {
-    id: 'ai-content-studio-2',
     title: 'Launch: AI Content Studio 2.0',
     summary:
       'Create high-quality AI articles, videos, and social assets with one click. New templates, workflows, and team collaboration.',
@@ -45,7 +80,6 @@ export const updates: UpdateItem[] = [
     tag: 'Product'
   },
   {
-    id: 'enterprise-ai-playbook',
     title: 'Guide: Enterprise AI Adoption Playbook',
     summary:
       'A practical playbook covering strategy, data readiness, security, and ROI measurement to scale AI across the enterprise.',
@@ -54,7 +88,6 @@ export const updates: UpdateItem[] = [
     tag: 'Guide'
   },
   {
-    id: 'advanced-blockchain-course',
     title: 'Course: Advanced Blockchain Development',
     summary:
       'Smart contracts, DeFi primitives, L2 scaling, security audits, and production-grade tooling hands-on.',
@@ -63,47 +96,18 @@ export const updates: UpdateItem[] = [
     tag: 'Course'
   },
   {
-    id: 'web3-dapp-challenge',
     title: 'Community: Web3 DApp Challenge',
     summary: 'Build a DApp and win prizes up to $1000 in ZION tokens.',
     href: '/updates/web3-dapp-challenge',
     date: '2025-09-03',
     tag: 'Community'
-  },
-  // Existing content in repo
-  {
-    id: 'ai-research-assistant-2-0',
-    title: 'AI Research Assistant 2.0',
-    summary:
-      'Multi-agent orchestration, faster retrieval, and improved research planning for enterprise research teams.',
-    href: '/updates/ai-research-assistant-2-0',
-    date: '2025-09-15',
-    tag: 'Release'
-  },
-  {
-    id: 'rag-production-patterns',
-    title: 'Guide: RAG Production Patterns',
-    summary:
-      'Architectural patterns for robust retrieval-augmented generation in production workloads.',
-    href: '/updates/rag-production-patterns',
-    date: '2025-09-07',
-    tag: 'Guide'
-  },
-  {
-    id: 'web3-fundamentals-track',
-    title: 'Learning Path: Web3 Fundamentals Track',
-    summary:
-      'Blockchain basics, wallets, NFTs, and Web3 security essentials for beginners.',
-    href: '/updates/web3-fundamentals-track',
-    date: '2025-09-06',
-    tag: 'Course'
   }
 ]
 
-export const getLatestUpdates = (limit = 6): UpdateItem[] => {
-  return updates
-    .slice()
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
+export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
+  const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
+  return [...siteUpdates]
+    .sort((a, b) => safeDate(b.date) - safeDate(a.date))
     .slice(0, limit)
 }
 
