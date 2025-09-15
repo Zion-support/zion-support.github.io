@@ -481,6 +481,24 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   }
   ,
+  // Fresh content added 2025-09-15 (new)
+  {
+    title: 'Launch: Autonomous Procurement Copilot v1.0',
+    summary:
+      'Automates vendor sourcing, RFPs, contract analysis, and approvals with policy-as-code and live cost benchmarks.',
+    href: '/updates/autonomous-procurement-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production RAG Observability (2026 Preview)',
+    summary:
+      'Practical telemetry for retrieval systems: coverage, freshness, drift, and grounding quality with per-step spans.',
+    href: '/updates/production-rag-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
   {
     title: 'Guide: Generative AI Risk Register (2026)',
     summary:
