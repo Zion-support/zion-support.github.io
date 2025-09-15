@@ -99,7 +99,7 @@ export default function HomePage() {
             </div>
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
-              <Link href="/content/ai-2026-autonomous-ops-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</Link>
+              <Link href="/blog/ai-2026-autonomous-ops-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</Link>
             </div>
           </div>
         </div>
