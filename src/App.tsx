@@ -40,6 +40,7 @@ import UltimateContentShowcase2027 from './components/UltimateContentShowcase202
 import AIInnovation2027 from './pages/AIInnovation2027';
 import QuantumConsciousness2028 from './pages/QuantumConsciousness2028';
 import NeuralReality2027 from './pages/NeuralReality2027';
+import NeuralRealityInterface2026 from './pages/NeuralRealityInterface2026';
 import NewsletterSignup from './components/NewsletterSignup';
 =======
 import RevolutionaryAdvertisingBanner2026 from './components/RevolutionaryAdvertisingBanner2026';
@@ -206,6 +207,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIInnovation2027" element={<AIInnovation2027 />} />
           <Route path="/pages/QuantumConsciousness2028" element={<QuantumConsciousness2028 />} />
           <Route path="/pages/NeuralReality2027" element={<NeuralReality2027 />} />
+          <Route path="/pages/NeuralRealityInterface2026" element={<NeuralRealityInterface2026 />} />
           
           {/* Existing Routes */}
 =======

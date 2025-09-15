@@ -4,6 +4,12 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+<<<<<<< HEAD
+=======
+            </button>
+          </div>
+        </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-c963
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -401,11 +407,20 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Innovating
             </button>
+<<<<<<< HEAD
 =======
             <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Explore Solutions
 >>>>>>> cursor/create-and-deploy-new-content-8735
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Explore Solutions
+=======
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-800 transition-all duration-300">
+              Explore Projects
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cursor/create-and-deploy-new-content-c963
             </button>
           </div>
         </motion.div>
@@ -433,5 +448,6 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryInnovationHub2026;
