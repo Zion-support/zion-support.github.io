@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,6 +12,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-foundation-models-2025': {
+    id: 'ai-foundation-models-2025',
+    title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
+    excerpt:
+      'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
+    category: 'AI Solutions',
+    author: 'Dr. David Kim',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Foundation models are moving from experimentation to production impact. The winners standardize adaptation recipes, evaluation harnesses, and policy guardrails across teams.',
+      'This guide covers reference patterns: retrieval-augmented generation for knowledge workflows, constrained generation for operations, and tool-use orchestration for complex tasks.',
+      'We include governance checklists: model cards, test sets, bias audits, safety red-teaming, and continuous telemetry to ensure reliable performance at scale.'
+    ]
+  },
+  'enterprise-agent-guardrails': {
+    id: 'enterprise-agent-guardrails',
+    title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
+    excerpt:
+      'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
+    category: 'Cybersecurity',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
+      'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
+      'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

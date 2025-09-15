@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -7,6 +8,17 @@ export const metadata = {
 
 export default function BlogPage() {
   const featuredPosts = [
+    {
+      id: 'ai-foundation-models-2025',
+      title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
+      excerpt: 'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
+      category: 'AI Solutions',
+      author: 'Dr. David Kim',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/foundation-models-2025.jpg',
+      featured: true
+    },
     {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
@@ -65,6 +77,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'enterprise-agent-guardrails',
+      title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
+      excerpt: 'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/enterprise-agent-guardrails.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
@@ -192,13 +214,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/sovereign-ai-commerce-2025"
+            href="/blog/ai-foundation-models-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+            aria-label="Read: Foundation Models in 2025: Practical Enterprise Patterns That Work"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SA
+                FM
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -206,10 +228,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
+                  Foundation Models in 2025: Practical Enterprise Patterns That Work
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+                  Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
