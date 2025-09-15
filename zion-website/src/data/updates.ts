@@ -8,6 +8,31 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-15
+  // New content added 2025-09-15 (afternoon batch)
+  {
+    title: 'Launch: AI Content Studio 2.2',
+    summary:
+      'Faster renders, new brand kits, calendar scheduling, and bulk publish with guardrails.',
+    href: '/updates/ai-content-studio-2-2',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Evaluation-Driven Release Management',
+    summary:
+      'Ship safer with canary evals, rollback rules, and quality budgets wired into CI/CD.',
+    href: '/updates/eval-driven-release-management',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: MTTR Reduction with Real-Time RAG',
+    summary:
+      'How live evals and retrieval telemetry cut incident MTTR by 37% at scale.',
+    href: '/updates/mttr-reduction-real-time-rag',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
   {
     title: 'Launch: Autonomous Sales Copilot v1.0',
     summary:
