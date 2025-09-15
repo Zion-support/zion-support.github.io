@@ -2,8 +2,6 @@
 import React from 'react';
 
 export function ProfileLoadingState() {
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> origin/auto/autonomy-17186719616

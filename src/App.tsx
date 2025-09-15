@@ -34,7 +34,6 @@ import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
-import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 
 export default function App(): JSX.Element {
@@ -97,6 +96,9 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🌟 Ultimate Showcase →
+                      </a>
+                      <a href="/pages/EnhancedContentShowcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Enhanced Showcase →
                       </a>
                     </div>
                   </div>
@@ -430,7 +432,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
