@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Agent Observability Blueprint",
+      description: "Deep visibility into autonomous agents: traces, evaluations, and safety telemetry.",
+      slug: "ai-2026-agent-observability-blueprint",
+      category: "Operations",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agent-observability-blueprint-2026.jpg"
+    },
+    {
       title: "AI 2026: Autonomous Incident Response",
       description: "Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.",
       slug: "ai-2026-ai-ops-autonomous-incident-response",
