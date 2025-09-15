@@ -114,8 +114,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
-              <a href="/news" className="btn-secondary hover-lift">
-                📰 See what's new in 2025
+              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
+                📰 New: Agent Safety Red Teaming 2025
               </a>
             </div>
           </div>

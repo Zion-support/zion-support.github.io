@@ -119,6 +119,19 @@ export default function BlogPage() {
     }
   ];
 
+  // Inject new featured post
+  featuredPosts.unshift({
+    id: 'agent-safety-red-teaming-2025',
+    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
+    excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    image: '/blog/agent-safety-red-teaming.jpg',
+    featured: true
+  });
+
   const recentPosts = [
     {
 <<<<<<< HEAD
@@ -268,6 +281,30 @@ export default function BlogPage() {
       image: '/blog/ai-marketing.jpg'
     }
   ];
+
+  // Add new recent posts
+  recentPosts.unshift(
+    {
+      id: 'agent-safety-red-teaming-2025',
+      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
+      excerpt: 'Playbooks to systematically evaluate and improve multi‑agent safety.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '11 min read',
+      image: '/blog/agent-safety-red-teaming.jpg'
+    },
+    {
+      id: 'ai-automation-case-studies-2025',
+      title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
+      excerpt: 'Five deployments with measurable KPIs and lessons learned.',
+      category: 'Case Studies',
+      author: 'Michael Rodriguez',
+      date: '2025-09-12',
+      readTime: '9 min read',
+      image: '/blog/ai-automation-case-studies.jpg'
+    }
+  );
 
   const categories = [
     { name: 'All Posts', count: 14, active: true },

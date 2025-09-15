@@ -173,6 +173,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+<<<<<<< HEAD
   'agentic-supply-chains-2025': {
     id: 'agentic-supply-chains-2025',
     title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
@@ -201,6 +202,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Organizations need consistent methods to measure the impact of GenAI on knowledge and operational work.',
       'We propose task archetypes, gold standards, evaluation rubrics, and cost models to compare tools apples-to-apples.',
       'The framework enables portfolio-level governance and investment decisions grounded in observable outcomes.'
+=======
+  'agent-safety-red-teaming-2025': {
+    id: 'agent-safety-red-teaming-2025',
+    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
+    excerpt:
+      'Hands-on techniques, scenarios, and metrics to systematically probe, stress, and harden multi-agent systems.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'As autonomous agents proliferate across critical workflows, safety evaluation must evolve from ad hoc tests to continuous red teaming. This article presents practical playbooks to uncover prompt injection, tool abuse, data exfiltration, and collusion risks in multi-agent systems.',
+      'We define attack surfaces for planner/executor loops, retrieval chains, and tool-using agents. For each, we provide reproducible scenarios, success criteria, and mitigation patterns like policy sandboxes, capability gating, and adjudicator agents.',
+      'Adopting these playbooks enables measurable safety posture improvements and clearer executive reporting via leading and lagging indicators.'
+    ]
+  },
+  'ai-automation-case-studies-2025': {
+    id: 'ai-automation-case-studies-2025',
+    title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
+    excerpt:
+      'Five deployments across IT ops, finance, and e‑commerce showing tangible KPIs from autonomous workflows.',
+    category: 'Case Studies',
+    author: 'Michael Rodriguez',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'This compilation covers five real-world automation rollouts: self-healing incident response, credit adjudication assistance, catalog enrichment, claims triage, and sales ops copilots.',
+      'For each case, we outline context, baseline, intervention, controls, and outcomes. Reported results include 42–61% MTTR reduction, 8–14% margin uplift, and improved satisfaction scores. We also include failure modes and lessons learned to accelerate safe adoption.',
+      'A closing section provides a checklist to move from proof-of-concept to production with guardrails.'
+>>>>>>> 694b87f19a78 (content: add two new blog articles for zion-os and promote on homepages; fix zion-website layout conflict; update promos)
     ]
   },
 };
