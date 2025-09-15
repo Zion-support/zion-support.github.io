@@ -30,6 +30,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
+      excerpt: 'How to deploy policy engines, observability, and reversible rollouts as autonomy grows.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '11 min read',
+      image: '/blog/ai-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -126,6 +137,16 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
+    },
+    {
+      id: 'agent-safety-tooling',
+      title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
+      excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
+      category: 'Cybersecurity',
+      author: 'Dr. James Wilson',
+      date: '2025-09-12',
+      readTime: '9 min read',
+      image: '/blog/agent-safety.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',

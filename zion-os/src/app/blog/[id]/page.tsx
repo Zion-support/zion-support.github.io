@@ -13,30 +13,32 @@ interface BlogPostMeta {
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+    title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
     excerpt:
-      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
-    category: 'AI Governance',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '8 min read',
-    content: [
-      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
-      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
-    ]
-  },
-  'edge-ai-marketplaces': {
-    id: 'edge-ai-marketplaces',
-    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
-    excerpt:
-      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
+      'A field guide for standing up measurable AI governance with policy engines, audit trails, and human-in-the-loop controls.',
     category: 'AI Solutions',
-    author: 'Michael Rodriguez',
+    author: 'Dr. Emily Watson',
     date: '2025-09-14',
-    readTime: '7 min read',
+    readTime: '11 min read',
     content: [
-      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
-      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
+      'Organizations are accelerating autonomous workflows, but governance is often bolted on late. This blueprint sequences controls alongside capability unlocks so that safety scales with autonomy.',
+      'We cover policy modeling, graded permissions, exception handling, observability for decisions, and immutable audit trails. We include reference policies and rollout templates for regulated industries.',
+      'The goal is measurable, reversible progress: every new autonomous action ships with a policy, a fallback, and a KPI tied to risk reduction and business value.'
+    ],
+  },
+  'agent-safety-tooling': {
+    id: 'agent-safety-tooling',
+    title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
+    excerpt:
+      'Techniques and tools to harden autonomous agent ecosystems: policy guards, reputation, red-teaming, and runtime monitors.',
+    category: 'Cybersecurity',
+    author: 'Dr. James Wilson',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'As multi-agent ecosystems proliferate, safety must be enforced at design-time and runtime. We outline a layered approach spanning policy checks, capability scoping, and behavioral reputation.',
+      'We demonstrate runtime monitors that catch emergent misbehavior, plus continuous red-teaming pipelines that probe for policy gaps without impacting customers.',
+      'Finally, we show how to wire telemetry into SIEM and incident response workflows so agent incidents are handled as first-class security events.'
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -98,34 +100,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'As AI agents transact and collaborate, marketplaces must enforce identity, reputation, and policy to mitigate fraud and abuse.',
       'This guide covers DID-backed identity, attestations, dispute resolution, and graded trust. We include reference architectures and rollout strategies for enterprise environments.',
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
-    ]
-  },
-  'ai-ops-cost-optimization-2025': {
-    id: 'ai-ops-cost-optimization-2025',
-    title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
-    excerpt:
-      'How to deploy AI-driven observability, autoscaling, and rightsizing to cut cloud and ops spend without sacrificing reliability.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'Most organizations run infrastructure well above required headroom. AI-assisted rightsizing and predictive autoscaling can reduce spend by 30–50% while improving SLOs.',
-      'This playbook covers telemetry baselining, anomaly-driven scaling, workload bin-packing, and negotiated purchasing strategies. We include a 6-week rollout with KPIs and rollback guards.'
-    ]
-  },
-  'agentic-sales-playbooks': {
-    id: 'agentic-sales-playbooks',
-    title: 'Agentic Sales Playbooks: Autonomous Pipelines from Lead to Close',
-    excerpt:
-      'Design autonomous sales pipelines that prospect, qualify, personalize outreach, and book meetings with built-in compliance and guardrails.',
-    category: 'AI Solutions',
-    author: 'Dr. David Kim',
-    date: '2025-09-12',
-    readTime: '8 min read',
-    content: [
-      'Agentic sales combines retrieval-augmented generation, workflow orchestration, and CRM integration to operate always-on prospecting loops.',
-      'We outline data pipelines, policy and consent, multi-channel touch sequencing, and human-in-the-loop checkpoints for negotiation and closing.'
     ]
   },
 };

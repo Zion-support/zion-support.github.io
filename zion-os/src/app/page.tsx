@@ -147,8 +147,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-              <a href="/blog/ai-ops-cost-optimization-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Ops Cost Optimization 2025
+              <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Blueprint 2025
               </a>
             </div>
           </div>
