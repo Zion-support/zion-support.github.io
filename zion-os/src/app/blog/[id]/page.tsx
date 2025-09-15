@@ -11,6 +11,38 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-enterprise-agents-2025': {
+    id: 'ai-enterprise-agents-2025',
+    title: 'Enterprise AI Agents: From Pilots to Production in 2025',
+    excerpt:
+      'A step-by-step playbook to deploy reliable, governed AI agents across enterprise workflows using Zion OS.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Enterprises are moving beyond chat assistants to task-capable AI agents that integrate with systems, follow policy, and deliver measurable outcomes.',
+      'This guide details a production path: define outcomes and risks, design guardrails and approvals, integrate with identity and audit, and iterate with A/B evaluation.',
+      'With Zion OS, you get event-driven orchestration, secure connectors, and a safety layer that enforces policy while enabling rapid iteration.',
+      'Results include lower cycle times, higher SLA reliability, and scalable automation without sacrificing control.'
+    ]
+  },
+  'quantum-supply-chains-2025': {
+    id: 'quantum-supply-chains-2025',
+    title: 'Quantum-Ready Supply Chains: Practical Wins You Can Ship This Year',
+    excerpt:
+      'How hybrid quantum methods improve routing, inventory, and risk buffers today—no sci‑fi required.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'Hybrid quantum-classical optimization already yields incremental wins in routing, warehouse slotting, and inventory buffers under uncertainty.',
+      'We outline vendor-neutral pilots with clear KPIs, sandbox data governance, and rollback strategies to keep risk low and learning high.',
+      'Teams should start with shadow inference and backtesting, then graduate to canary deployments tied to business guardrails.',
+      'The payoff is resilient fulfillment and reduced costs—while building internal quantum literacy.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

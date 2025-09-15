@@ -8,6 +8,28 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-enterprise-agents-2025',
+      title: 'Enterprise AI Agents: From Pilots to Production in 2025',
+      excerpt: 'A playbook to deploy governed AI agents across enterprise workflows with Zion OS.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/enterprise-agents.jpg',
+      featured: true
+    },
+    {
+      id: 'quantum-supply-chains-2025',
+      title: 'Quantum-Ready Supply Chains: Practical Wins You Can Ship This Year',
+      excerpt: 'Hybrid quantum methods that improve routing, inventory, and buffers today.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/quantum-supply-chains.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +87,26 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-enterprise-agents-2025',
+      title: 'Enterprise AI Agents: From Pilots to Production in 2025',
+      excerpt: 'From assistants to outcome-driven agents with policy, audit, and SLAs.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/enterprise-agents.jpg'
+    },
+    {
+      id: 'quantum-supply-chains-2025',
+      title: 'Quantum-Ready Supply Chains: Practical Wins You Can Ship This Year',
+      excerpt: 'Vendor-neutral pilots with KPIs, sandbox governance, and canary rollout.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/quantum-supply-chains.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
@@ -158,7 +200,7 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 2, active: false },
     { name: 'Quantum Computing', count: 2, active: false },

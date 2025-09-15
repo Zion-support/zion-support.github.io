@@ -121,20 +121,20 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'Enterprise AI Agents: From Pilots to Production in 2025',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                  'Practical blueprint for deploying governed AI agents with policy, audit, and SLAs.',
+                href: '/blog/ai-enterprise-agents-2025'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
+                title: 'Quantum-Ready Supply Chains: Practical Wins This Year',
+                summary: 'Hybrid quantum methods improving routing, inventory, and buffers—today.',
+                href: '/blog/quantum-supply-chains-2025'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
+                title: "Sovereign AI Commerce: Launching Autonomous Marketplaces in 2025",
+                summary: 'A blueprint for self-orchestrating marketplaces with identity and governance.',
+                href: '/blog/sovereign-ai-commerce-2025'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
