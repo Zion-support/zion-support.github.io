@@ -1,175 +1,129 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 const NewContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const contentTabs = [
+  const newContent2026 = [
     {
-      id: 'ai-trends',
-      title: 'AI Trends 2026',
-      icon: '🤖',
-      color: 'from-blue-500 to-indigo-600',
-      content: {
-        title: 'Revolutionary AI Trends Shaping 2026',
-        description: 'Discover the cutting-edge AI technologies that are transforming industries and reshaping our world.',
-        features: [
-          'Hyper-Personalized AI Systems',
-          'Edge AI Dominance',
-          'Explainable AI Evolution',
-          'AI-Powered Generative Design',
-          'Quantum-AI Hybrid Systems'
-        ],
-        link: '/pages/AITrends2026Blog'
-      }
+      id: 1,
+      title: "Ultimate Tech Showcase 2026",
+      subtitle: "Interactive Technology Experience",
+      description: "Experience the most comprehensive and interactive technology showcase featuring cutting-edge AI, quantum computing, and neural interfaces.",
+      features: [
+        "Live interactive demonstrations",
+        "Real-time technology simulations", 
+        "Hands-on experimentation",
+        "Expert-guided experiences"
+      ],
+      link: "/pages/UltimateTechShowcase2026",
+      gradient: "from-purple-600 to-pink-600",
+      icon: "🌟",
+      badge: "HOT"
     },
     {
-      id: 'quantum-breakthroughs',
-      title: 'Quantum Breakthroughs',
-      icon: '⚛️',
-      color: 'from-purple-500 to-pink-600',
-      content: {
-        title: 'Quantum Computing Breakthroughs 2026',
-        description: 'Explore the revolutionary advances in quantum computing that are making practical applications a reality.',
-        features: [
-          'Enhanced Qubit Stability',
-          'Scalable Quantum Architectures',
-          'Practical Quantum Algorithms',
-          'Hybrid Quantum-Classical Computing',
-          'Advanced Quantum Software'
-        ],
-        link: '/pages/QuantumBreakthroughs2026Blog'
-      }
+      id: 2,
+      title: "AI Innovation Showcase 2026",
+      subtitle: "Revolutionary AI Technologies",
+      description: "Discover the latest AI innovations including autonomous agents, quantum processing, and neural interface technology.",
+      features: [
+        "Autonomous AI agents",
+        "Quantum-enhanced processing",
+        "Neural interface technology",
+        "Synthetic intelligence"
+      ],
+      link: "/pages/AIInnovationShowcase2026",
+      gradient: "from-cyan-600 to-blue-600",
+      icon: "🧠",
+      badge: "NEW"
     },
     {
-      id: 'ai-consulting',
-      title: 'AI Consulting Services',
-      icon: '🛠️',
-      color: 'from-green-500 to-emerald-600',
-      content: {
-        title: 'AI Consulting Services 2026',
-        description: 'Transform your business with strategic AI integration and cutting-edge solutions.',
-        features: [
-          'AI Strategy & Roadmap Development',
-          'AI Solution Design & Architecture',
-          'AI Implementation & Deployment',
-          'AI Governance & Ethics'
-        ],
-        link: '/pages/AIConsultingServices2026'
-      }
+      id: 3,
+      title: "Quantum Computing Revolution 2026",
+      subtitle: "Advanced Quantum Solutions",
+      description: "Experience exponential processing power with 1000+ qubit quantum processors and quantum supremacy technology.",
+      features: [
+        "1000+ logical qubits",
+        "Quantum supremacy achieved",
+        "Molecular simulation",
+        "Quantum AI integration"
+      ],
+      link: "/pages/AdvancedQuantumComputing2026",
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "⚛️",
+      badge: "BREAKTHROUGH"
+    },
+    {
+      id: 4,
+      title: "Neural Interface Revolution 2026",
+      subtitle: "Direct Brain-Computer Communication",
+      description: "Bridge mind and machine with revolutionary neural interface technology enabling thought-controlled devices.",
+      features: [
+        "Non-invasive BCI technology",
+        "Thought-controlled devices",
+        "Neural feedback systems",
+        "Medical applications"
+      ],
+      link: "/pages/NeuralInterfaceRevolution2026",
+      gradient: "from-orange-600 to-red-600",
+      icon: "🧬",
+      badge: "REVOLUTIONARY"
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12">
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-white text-sm font-bold mb-6">
-          🚀 NEW CONTENT 2026
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 BREAKTHROUGH 2026 • JANUARY 2026
+          </div>
+          <h2 className="text-5xl font-bold mb-6">🌟 Next-Generation Technology Showcase</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience the future with our revolutionary 2026 technology innovations in quantum computing, 
+            neural interfaces, and synthetic intelligence
+          </p>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Latest Content & Services
-        </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Explore our newest blog posts, services, and interactive content designed to keep you at the forefront of technology
-        </p>
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {contentTabs.map((tab, index) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(index)}
-            className={`px-6 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
-              activeTab === index
-                ? `bg-gradient-to-r ${tab.color} text-white shadow-lg transform scale-105`
-                : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md'
-            }`}
-          >
-            {tab.icon} {tab.title}
-          </button>
-        ))}
-      </div>
-
-      {/* Content Display */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Content */}
-            <div>
-              <div className="flex items-center space-x-4 mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-r ${contentTabs[activeTab].color} rounded-xl flex items-center justify-center text-3xl`}>
-                  {contentTabs[activeTab].icon}
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">
-                    {contentTabs[activeTab].content.title}
-                  </h3>
-                  <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-semibold text-white">
-                    NEW
-                  </div>
-                </div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          {newContent2026.map((content) => (
+            <div
+              key={content.id}
+              className={`bg-gradient-to-br ${content.gradient}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300`}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-6xl">{content.icon}</div>
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                  content.badge === 'HOT' ? 'bg-red-500 text-white' :
+                  content.badge === 'NEW' ? 'bg-green-500 text-white' :
+                  content.badge === 'BREAKTHROUGH' ? 'bg-blue-500 text-white' :
+                  'bg-purple-500 text-white'
+                }`}>
+                  {content.badge}
+                </span>
               </div>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {contentTabs[activeTab].content.description}
-              </p>
-
-              <div className="space-y-3 mb-8">
-                {contentTabs[activeTab].content.features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <span className="text-green-500 text-xl">✓</span>
-                    <span className="text-gray-700 font-medium">{feature}</span>
-                  </div>
-                ))}
+              <h3 className="text-2xl font-bold mb-4">{content.title}</h3>
+              <p className="text-lg opacity-90 mb-4">{content.subtitle}</p>
+              <p className="text-sm opacity-80 mb-6">{content.description}</p>
+              
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold mb-3">Key Features:</h4>
+                <ul className="space-y-2 text-sm">
+                  {content.features.map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <span className="text-green-400">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
+              
               <a
-                href={contentTabs[activeTab].content.link}
-                className={`inline-block bg-gradient-to-r ${contentTabs[activeTab].color} text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform`}
+                href={content.link}
+                className="block w-full bg-white text-gray-900 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
               >
-                Explore Now →
+                Explore {content.title} →
               </a>
             </div>
-
-            {/* Visual Element */}
-            <div className="flex justify-center">
-              <div className={`w-80 h-80 bg-gradient-to-br ${contentTabs[activeTab].color} rounded-2xl flex items-center justify-center text-8xl shadow-2xl`}>
-                {contentTabs[activeTab].icon}
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Quick Access Grid */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Quick Access</h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          {contentTabs.map((tab, index) => (
-            <a
-              key={tab.id}
-              href={tab.content.link}
-              className={`bg-gradient-to-br ${tab.color} rounded-xl p-6 hover:scale-105 transition-all duration-300 ${
-                index === activeTab ? 'ring-2 ring-blue-400' : ''
-              }`}
-            >
-              <div className="text-center text-white">
-                <div className="text-4xl mb-3">{tab.icon}</div>
-                <h4 className="text-lg font-bold mb-2">{tab.title}</h4>
-                <p className="text-white/80 text-sm mb-3">{tab.content.description}</p>
-                <div className="inline-flex items-center px-3 py-1 bg-white/20 rounded-full text-xs font-semibold">
-                  NEW
-                </div>
-              </div>
-            </a>
           ))}
         </div>
       </div>
