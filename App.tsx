@@ -18,9 +18,16 @@ import MetaIntelligence2026 from './src/pages/MetaIntelligence2026';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import RevolutionaryAIBreakthrough2026 from './src/pages/RevolutionaryAIBreakthrough2026';
 import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
+import AIInnovation2027 from './src/pages/AIInnovation2027';
+import QuantumConsciousness2028 from './src/pages/QuantumConsciousness2028';
+import NeuralReality2027 from './src/pages/NeuralReality2027';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import UltimateContentShowcase2027 from './src/components/UltimateContentShowcase2027';
+import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
+import TrendingContentSection from './src/components/TrendingContentSection';
 
 export default function App(): JSX.Element {
   return (
@@ -461,53 +468,9 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
-                {/* NEW: Trending Content Section */}
-                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-10 mb-12">
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-4">
-                      🔥 TRENDING NOW • JANUARY 2025
-                    </div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Most Popular Technology Content</h2>
-                    <p className="text-lg text-gray-600">Discover what's capturing the world's attention</p>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-purple-500">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-semibold">#1 TRENDING</span>
-                        <span className="text-sm text-gray-500">2.3M views</span>
-                      </div>
-                      <h3 className="text-lg font-bold mb-2">Synthetic Intelligence: The Future is Here</h3>
-                      <p className="text-gray-600 mb-4">Exploring how synthetic AI will revolutionize every aspect of human life...</p>
-                      <a href="/pages/SyntheticIntelligence2026" className="text-purple-600 hover:text-purple-700 font-semibold">
-                        Read Full Article →
-                      </a>
-                    </div>
-                    
-                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-cyan-500">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <span className="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full font-semibold">#2 TRENDING</span>
-                        <span className="text-sm text-gray-500">1.8M views</span>
-                      </div>
-                      <h3 className="text-lg font-bold mb-2">Quantum-Neural Fusion Breakthrough</h3>
-                      <p className="text-gray-600 mb-4">The revolutionary convergence of quantum computing and neural networks...</p>
-                      <a href="/pages/QuantumNeuralFusion2026" className="text-cyan-600 hover:text-cyan-700 font-semibold">
-                        Explore Technology →
-                      </a>
-                    </div>
-                    
-                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-emerald-500">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full font-semibold">#3 TRENDING</span>
-                        <span className="text-sm text-gray-500">1.5M views</span>
-                      </div>
-                      <h3 className="text-lg font-bold mb-2">AI Revolution: Industry Transformation</h3>
-                      <p className="text-gray-600 mb-4">How AI is reshaping industries and creating new opportunities...</p>
-                      <a href="/pages/AIRevolution2025" className="text-emerald-600 hover:text-emerald-700 font-semibold">
-                        Learn More →
-                      </a>
-                    </div>
-                  </div>
+                {/* Enhanced Trending Content Section */}
+                <div className="mb-12">
+                  <TrendingContentSection />
                 </div>
 
                 <div className="text-center">
@@ -543,6 +506,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/RevolutionaryAIBreakthrough2026" element={<RevolutionaryAIBreakthrough2026 />} />
           <Route path="/pages/NextGenSpaceTech2026" element={<NextGenSpaceTech2026 />} />
+          <Route path="/pages/AIInnovation2027" element={<AIInnovation2027 />} />
+          <Route path="/pages/QuantumConsciousness2028" element={<QuantumConsciousness2028 />} />
+          <Route path="/pages/NeuralReality2027" element={<NeuralReality2027 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
