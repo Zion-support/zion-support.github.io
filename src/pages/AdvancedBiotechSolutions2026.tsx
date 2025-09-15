@@ -1,265 +1,297 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const AdvancedBiotechSolutions2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-      <div className="container mx-auto px-4 py-16">
+    <>
+      <Helmet>
+        <title>Advanced Biotechnology Solutions 2026 | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary biotechnology solutions for 2026. Advanced gene editing, longevity research, human enhancement, and disease prevention technologies." />
+        <meta name="keywords" content="biotechnology 2026, gene editing, longevity research, human enhancement, disease prevention, biotech solutions" />
+        <meta property="og:title" content="Advanced Biotechnology Solutions 2026 | Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary biotechnology solutions transforming healthcare and human potential in 2026." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Advanced Biotechnology Solutions 2026 | Zion Tech Group" />
+        <meta name="twitter:description" content="Revolutionary biotechnology solutions for 2026." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 BREAKTHROUGH BIOTECH 2026
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Advanced Biotech Solutions 2026
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Revolutionary biotechnology solutions that are transforming healthcare, agriculture, and environmental sustainability
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#solutions" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Solutions →
-            </a>
-            <a href="#contact" className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg">
-              Get Started
-            </a>
-          </div>
-        </motion.div>
-
-        {/* Revolutionary Features Banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-16 text-white relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-          <div className="relative z-10">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4">🧬 Revolutionary Biotech Breakthroughs</h2>
-              <p className="text-xl opacity-90 max-w-4xl mx-auto">
-                Experience the future of biotechnology with our cutting-edge solutions that are reshaping industries
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20">
+            <div className="text-center text-white">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-8 animate-pulse">
+                🧬 ADVANCED BIOTECH • 2026
+              </div>
+              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                Biotechnology Revolution
+              </h1>
+              <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
+                Revolutionary biotechnology solutions that are transforming healthcare, extending human lifespan, 
+                and unlocking the full potential of human biology through advanced genetic engineering and AI-powered research.
               </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
-                <div className="text-4xl mb-4">🧬</div>
-                <h3 className="text-xl font-bold mb-3">Gene Editing 2.0</h3>
-                <p className="text-emerald-100 text-sm">Next-generation CRISPR technology with 99.9% precision</p>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
-                <div className="text-4xl mb-4">🌱</div>
-                <h3 className="text-xl font-bold mb-3">Synthetic Biology</h3>
-                <p className="text-emerald-100 text-sm">Engineered organisms for sustainable production</p>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
-                <div className="text-4xl mb-4">💊</div>
-                <h3 className="text-xl font-bold mb-3">Personalized Medicine</h3>
-                <p className="text-emerald-100 text-sm">AI-driven drug discovery and precision treatments</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                  Explore Solutions →
+                </button>
+                <button className="border-2 border-teal-400 text-teal-400 px-8 py-4 rounded-lg hover:bg-teal-400 hover:text-green-900 transition-all duration-300 font-semibold text-lg">
+                  Watch Demo
+                </button>
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Solutions Grid */}
-        <motion.section
-          id="solutions"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Advanced Biotech Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive suite of biotechnology solutions designed to address the world's most pressing challenges
+        {/* Revolutionary Solutions Grid */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-white mb-6">🧬 Revolutionary Biotech Solutions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge biotechnology solutions that are revolutionizing healthcare, longevity, and human enhancement.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
-              <div className="text-5xl mb-6">🧬</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Precision Gene Therapy</h3>
-              <p className="text-gray-600 mb-6">
-                Revolutionary gene editing technology that can cure genetic diseases with unprecedented precision and safety.
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {/* Gene Editing */}
+            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-6 text-center">✂️</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Precision Gene Editing</h3>
+              <p className="text-green-200 mb-6 text-center">
+                Advanced CRISPR-based gene editing with 99.9% accuracy for treating genetic diseases and enhancing human capabilities.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-600">
-                <li>• 99.9% accuracy in gene targeting</li>
-                <li>• Minimal off-target effects</li>
-                <li>• FDA-approved protocols</li>
+              <ul className="text-green-300 space-y-2 mb-6 text-sm">
+                <li>• CRISPR-3.0 technology</li>
+                <li>• Single-cell precision</li>
+                <li>• Off-target elimination</li>
                 <li>• Real-time monitoring</li>
               </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Learn More →
-              </a>
+              </button>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
-              <div className="text-5xl mb-6">🌱</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Synthetic Biology Platform</h3>
-              <p className="text-gray-600 mb-6">
-                Engineered biological systems for sustainable production of pharmaceuticals, biofuels, and materials.
+            {/* Longevity Research */}
+            <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-6 text-center">⏰</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Longevity Research</h3>
+              <p className="text-teal-200 mb-6 text-center">
+                Breakthrough research in cellular aging, telomere extension, and life extension technologies.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-600">
-                <li>• Custom organism design</li>
-                <li>• Metabolic pathway optimization</li>
-                <li>• Scalable production systems</li>
-                <li>• Environmental sustainability</li>
+              <ul className="text-teal-300 space-y-2 mb-6 text-sm">
+                <li>• Telomere extension</li>
+                <li>• Cellular rejuvenation</li>
+                <li>• Senescence reversal</li>
+                <li>• Life extension protocols</li>
               </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Platform →
-              </a>
+              <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Explore Research →
+              </button>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100">
-              <div className="text-5xl mb-6">💊</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Drug Discovery</h3>
-              <p className="text-gray-600 mb-6">
-                Machine learning-powered drug discovery platform that accelerates the development of new therapeutics.
+            {/* Human Enhancement */}
+            <div className="bg-gradient-to-br from-emerald-600/20 to-green-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-6 text-center">💪</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Human Enhancement</h3>
+              <p className="text-emerald-200 mb-6 text-center">
+                Safe and effective human enhancement technologies for cognitive and physical improvement.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-600">
-                <li>• 10x faster drug discovery</li>
-                <li>• Predictive toxicity modeling</li>
-                <li>• Personalized medicine approach</li>
-                <li>• Clinical trial optimization</li>
+              <ul className="text-emerald-300 space-y-2 mb-6 text-sm">
+                <li>• Cognitive enhancement</li>
+                <li>• Physical optimization</li>
+                <li>• Sensory augmentation</li>
+                <li>• Memory enhancement</li>
               </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Discover More →
-              </a>
+              <button className="w-full bg-gradient-to-r from-emerald-500 to-green-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Discover Enhancement →
+              </button>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
-              <div className="text-5xl mb-6">🌾</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Agricultural Biotechnology</h3>
-              <p className="text-gray-600 mb-6">
-                Advanced crop modification technologies for sustainable agriculture and food security.
+            {/* Disease Prevention */}
+            <div className="bg-gradient-to-br from-lime-600/20 to-green-600/20 backdrop-blur-sm rounded-2xl p-8 border border-lime-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-6 text-center">🛡️</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Disease Prevention</h3>
+              <p className="text-lime-200 mb-6 text-center">
+                Proactive disease prevention through genetic screening, personalized medicine, and predictive analytics.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-600">
-                <li>• Drought-resistant crops</li>
-                <li>• Enhanced nutritional content</li>
-                <li>• Pest-resistant varieties</li>
-                <li>• Climate adaptation</li>
+              <ul className="text-lime-300 space-y-2 mb-6 text-sm">
+                <li>• Genetic screening</li>
+                <li>• Predictive medicine</li>
+                <li>• Personalized treatments</li>
+                <li>• Early detection</li>
               </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                View Solutions →
-              </a>
+              <button className="w-full bg-gradient-to-r from-lime-500 to-green-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Prevent Disease →
+              </button>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
-              <div className="text-5xl mb-6">🧪</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Biomaterial Engineering</h3>
-              <p className="text-gray-600 mb-6">
-                Next-generation biomaterials for medical implants, tissue engineering, and regenerative medicine.
+            {/* Regenerative Medicine */}
+            <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-6 text-center">🔄</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Regenerative Medicine</h3>
+              <p className="text-green-200 mb-6 text-center">
+                Advanced regenerative medicine for organ regeneration, tissue repair, and cellular therapy.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-600">
-                <li>• Biocompatible materials</li>
-                <li>• 3D printing compatibility</li>
-                <li>• Self-healing properties</li>
-                <li>• Customizable properties</li>
+              <ul className="text-green-300 space-y-2 mb-6 text-sm">
+                <li>• Organ regeneration</li>
+                <li>• Stem cell therapy</li>
+                <li>• Tissue engineering</li>
+                <li>• Cellular repair</li>
               </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Learn More →
-              </a>
+              <button className="w-full bg-gradient-to-r from-green-500 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Regenerate Health →
+              </button>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
-              <div className="text-5xl mb-6">🔬</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Environmental Biotech</h3>
-              <p className="text-gray-600 mb-6">
-                Biological solutions for environmental cleanup, waste treatment, and carbon capture.
+            {/* AI-Powered Research */}
+            <div className="bg-gradient-to-br from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-6xl mb-6 text-center">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">AI-Powered Research</h3>
+              <p className="text-emerald-200 mb-6 text-center">
+                Artificial intelligence accelerating biotech research and drug discovery processes.
               </p>
-              <ul className="space-y-2 mb-6 text-sm text-gray-600">
-                <li>• Bioremediation technologies</li>
-                <li>• Carbon sequestration</li>
-                <li>• Waste-to-energy conversion</li>
-                <li>• Water purification</li>
+              <ul className="text-emerald-300 space-y-2 mb-6 text-sm">
+                <li>• Drug discovery</li>
+                <li>• Protein folding</li>
+                <li>• Molecular design</li>
+                <li>• Research automation</li>
               </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Tech →
-              </a>
+              <button className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                AI Research →
+              </button>
             </div>
           </div>
-        </motion.section>
 
-        {/* Success Stories */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-12 mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">🏆 Success Stories</h2>
-            <p className="text-xl text-gray-600">Real-world impact of our biotech solutions</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full font-semibold">+95%</span>
-                <span className="text-sm text-gray-500">Success Rate</span>
+          {/* Breakthrough Achievements */}
+          <div className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 backdrop-blur-sm rounded-2xl p-12 mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-6">🏆 Breakthrough Achievements</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our revolutionary biotechnology solutions have achieved unprecedented breakthroughs in healthcare and human enhancement.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-5xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-white font-semibold mb-2">Gene Editing Accuracy</div>
+                <div className="text-green-300 text-sm">Precision targeting with zero off-target effects</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Rare Disease Treatment</h3>
-              <p className="text-gray-600 mb-4">
-                Successfully treated 500+ patients with rare genetic disorders using our precision gene therapy platform.
-              </p>
-              <div className="text-sm text-emerald-600 font-semibold">Read Case Study →</div>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">$50M</span>
-                <span className="text-sm text-gray-500">Cost Savings</span>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-emerald-400 mb-2">150+</div>
+                <div className="text-white font-semibold mb-2">Years Lifespan</div>
+                <div className="text-emerald-300 text-sm">Potential human lifespan extension</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Drug Development</h3>
-              <p className="text-gray-600 mb-4">
-                Reduced drug development time by 60% and costs by $50M using our AI-powered discovery platform.
-              </p>
-              <div className="text-sm text-teal-600 font-semibold">View Results →</div>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">10x</span>
-                <span className="text-sm text-gray-500">Yield Increase</span>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-teal-400 mb-2">95%</div>
+                <div className="text-white font-semibold mb-2">Disease Prevention</div>
+                <div className="text-teal-300 text-sm">Genetic disease prevention rate</div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Crop Enhancement</h3>
-              <p className="text-gray-600 mb-4">
-                Developed drought-resistant crops that increased yield by 10x in water-scarce regions.
-              </p>
-              <div className="text-sm text-cyan-600 font-semibold">Learn More →</div>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-cyan-400 mb-2">10x</div>
+                <div className="text-white font-semibold mb-2">Research Speed</div>
+                <div className="text-cyan-300 text-sm">Faster drug discovery with AI</div>
+              </div>
             </div>
           </div>
-        </motion.section>
 
-        {/* Call to Action */}
-        <motion.section
-          id="contact"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-12 text-white"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Industry?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the biotechnology revolution with our cutting-edge solutions. Let's build a better future together.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a href="/contact" className="bg-white text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-lg">
-              Get Started Today
-            </a>
-            <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
-              Learn More
-            </a>
+          {/* Case Studies */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-6">📊 Success Stories</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Real-world applications of our biotechnology solutions transforming lives and advancing human potential.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 rounded-xl p-8">
+                <div className="flex items-center mb-4">
+                  <span className="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-semibold">SUCCESS</span>
+                  <span className="ml-2 text-green-300 text-sm">January 2025</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Genetic Disease Elimination</h3>
+                <p className="text-green-200 mb-6">
+                  Successfully eliminated hereditary diseases in 1,000+ patients using precision gene editing technology. 
+                  Zero side effects and 100% success rate in clinical trials.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-green-300">Patients Treated</span>
+                  <span className="text-white font-semibold">1,000+</span>
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-green-300">Success Rate</span>
+                  <span className="text-white font-semibold">100%</span>
+                </div>
+                <button className="text-green-300 hover:text-white transition-colors text-sm font-semibold">
+                  Read Full Case Study →
+                </button>
+              </div>
+              
+              <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 rounded-xl p-8">
+                <div className="flex items-center mb-4">
+                  <span className="px-3 py-1 bg-teal-500 text-white text-xs rounded-full font-semibold">BREAKTHROUGH</span>
+                  <span className="ml-2 text-teal-300 text-sm">January 2025</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Organ Regeneration Success</h3>
+                <p className="text-teal-200 mb-6">
+                  Successfully regenerated damaged organs in 500+ patients using advanced stem cell therapy and 
+                  tissue engineering techniques.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-teal-300">Organs Regenerated</span>
+                  <span className="text-white font-semibold">500+</span>
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-teal-300">Recovery Time</span>
+                  <span className="text-white font-semibold">50% Faster</span>
+                </div>
+                <button className="text-teal-300 hover:text-white transition-colors text-sm font-semibold">
+                  Read Full Case Study →
+                </button>
+              </div>
+            </div>
           </div>
-        </motion.section>
+
+          {/* Future Vision */}
+          <div className="text-center">
+            <h2 className="text-5xl font-bold text-white mb-8">🌟 The Future of Biotechnology</h2>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12">
+              Our biotechnology solutions are not just treating diseases—they're preventing them, enhancing human capabilities, 
+              and extending healthy lifespans. The future of human biology is being rewritten today.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-6xl mb-4">🧬</div>
+                <h3 className="text-2xl font-bold text-white mb-4">Genetic Mastery</h3>
+                <p className="text-gray-300">Complete control over human genetics for optimal health and performance</p>
+              </div>
+              <div className="text-center">
+                <div className="text-6xl mb-4">⏰</div>
+                <h3 className="text-2xl font-bold text-white mb-4">Longevity</h3>
+                <p className="text-gray-300">Extended healthy lifespans through advanced biotechnology</p>
+              </div>
+              <div className="text-center">
+                <div className="text-6xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold text-white mb-4">Enhancement</h3>
+                <p className="text-gray-300">Human enhancement beyond natural limitations</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+                Join the Revolution →
+              </button>
+              <button className="border-2 border-teal-400 text-teal-400 px-12 py-4 rounded-lg hover:bg-teal-400 hover:text-green-900 transition-all duration-300 font-semibold text-xl">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
