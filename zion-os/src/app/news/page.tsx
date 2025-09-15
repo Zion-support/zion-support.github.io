@@ -28,6 +28,20 @@ const latest2025 = [
     slug: "/news/acquisition-vectoredge",
     color: "blue",
   },
+  {
+    date: "September 13, 2025",
+    category: "SAFETY",
+    title: "Agent Safety Scorecards now available across Zion OS deployments",
+    slug: "/news/agent-safety-scorecards",
+    color: "emerald",
+  },
+  {
+    date: "September 11, 2025",
+    category: "OPERATIONS",
+    title: "Governed Autonomy Runbooks shipped for change management & approvals",
+    slug: "/news/governed-autonomy-runbooks",
+    color: "orange",
+  },
 ];
 
 export default function NewsPage() {

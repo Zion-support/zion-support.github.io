@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useRouter } from "next/router",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  const router = useRouter(),
-=======
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -25,7 +11,6 @@ export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <>
@@ -85,9 +70,5 @@ export function SupportWidget() {
         </div>
       )}
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

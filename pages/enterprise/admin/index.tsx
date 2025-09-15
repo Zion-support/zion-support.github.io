@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react',
-import Link from 'next/link',
-
-type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
-
-type Usage = { monthlyJobPosts: number, budgetCapUsd: number },
-
-type Invoice = { id: string, number: string, amountUsd: number, periodStartIso: string, periodEndIso: string, status: string },
-
-const COMPANY_ID = 'cmp_acme',
-
-export default function CompanyAdmin() {
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members'),
-  const [members, setMembers] = useState<Member[]>([]),
-  const [usage, setUsage] = useState<Usage | null>(null),
-  const [activity, setActivity] = useState<any[]>([]),
-  const [invoices, setInvoices] = useState<Invoice[]>([]),
-
-  useEffect(() => {
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/members`).then(r => r.json()).then(setMembers),
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`).then(r => r.json()).then(setUsage),
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`).then(r => r.json()).then(setActivity),
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`).then(r => r.json()).then(setInvoices),
-  }, []),
-
-  const seatsUsed = members.length,
-=======
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 
@@ -52,7 +24,6 @@ export default function CompanyAdmin() {
   }, []);
 
   const seatsUsed = members.length;
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -64,11 +35,7 @@ export default function CompanyAdmin() {
       </header>
 
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-<<<<<<< HEAD
-        {(['membersusage','activitybilling'] as const).map(t => (
-=======
         {(['members','usage','activity','billing'] as const).map(t => (
->>>>>>> origin/auto/autonomy-17186719616
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))}
       </nav>
@@ -89,32 +56,6 @@ export default function CompanyAdmin() {
         <BillingTab invoices={invoices} />
       )}
     </main>
-<<<<<<< HEAD
-  ),
-}
-
-function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
-  const [name, setName] = useState(''),
-  const [email, setEmail] = useState(''),
-  const [role, setRole] = useState<Member['role']>('viewer'),
-
-  const add = async () => {
-    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) }),
-    const created = await r.json(),
-    setMembers([created, ...members]),
-    setName(''), setEmail(''), setRole('viewer'),
-  },
-
-  const remove = async (id: string) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
-    setMembers(members.filter(m => m.id !== id)),
-  },
-
-  const changeRole = async (id: string, newRole: Member['role']) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
-    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m)),
-  },
-=======
   );
 }
 
@@ -139,7 +80,6 @@ function MembersTab({ members, setMembers }: { members: Member[]; setMembers: (m
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) });
     setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m));
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section>
@@ -186,19 +126,6 @@ function MembersTab({ members, setMembers }: { members: Member[]; setMembers: (m
         </tbody>
       </table>
     </section>
-<<<<<<< HEAD
-  ),
-}
-
-function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts),
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd),
-
-  const save = async () => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
-    setUsage({ monthlyJobPosts, budgetCapUsd }),
-  },
-=======
   );
 }
 
@@ -210,7 +137,6 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage; setUsage: (u: 
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section>
@@ -230,11 +156,7 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage; setUsage: (u: 
         <span>Seats used: {seatsUsed}</span>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 function ActivityTab({ events }: { events: any[] }) {
@@ -250,11 +172,7 @@ function ActivityTab({ events }: { events: any[] }) {
         ))}
       </ul>
     </section>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
@@ -286,9 +204,5 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
         </tbody>
       </table>
     </section>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
