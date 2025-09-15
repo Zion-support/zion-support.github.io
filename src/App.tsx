@@ -201,8 +201,8 @@ function App() {
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
 
                 {/* New AI-powered service routes */}
-                <Route path="/services/ai-powered-customer-success-platform" element={<React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'))} />} />
-                <Route path="/services/ai-powered-marketing-automation" element={<React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'))} />} />
+                <Route path="/services/ai-powered-customer-success-platform" element={<div />} />
+                <Route path="/services/ai-powered-marketing-automation" element={<div />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={

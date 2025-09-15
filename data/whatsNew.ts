@@ -157,5 +157,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     emoji: "📱",
     date: "2025-09-15",
   },
+  ,
+  {
+    id: "real-time-guardrails-2026",
+    title: "AI 2026: Real-Time Guardrails for Autonomous Agents",
+    description:
+      "Action gating, dynamic safety envelopes, and rapid rollback integrated with CI/CD.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-real-time-guardrails-for-agents",
+    emoji: "🧩",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-finops-2026",
+    title: "AI 2026: Agent FinOps – Cost Control",
+    description:
+      "Budgets, caching, and value-based routing to control inference spend at scale.",
+    ctaLabel: "Optimize Costs",
+    href: "/blog/ai-2026-agent-finops-cost-optimization",
+    emoji: "💰",
+    date: "2025-09-15",
+  }
 ];
 
