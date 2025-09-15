@@ -45,6 +45,19 @@ interface EnhancedNavigationProps {
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { 
+    label: 'Featured Content', 
+    href: '/enhanced-content-showcase',
+    icon: <Star className="w-4 h-4" />,
+    featured: true,
+    children: [
+      { label: 'Enhanced Content Showcase', href: '/enhanced-content-showcase' },
+      { label: 'Comprehensive Services Landing', href: '/comprehensive-services-landing' },
+      { label: 'AI Solutions', href: '/ai-services' },
+      { label: 'Quantum Computing', href: '/quantum-computing' },
+      { label: 'Emerging Technologies', href: '/emerging-tech' }
+    ]
+  },
+  { 
     label: 'AI & Machine Learning', 
     href: '/ai-services',
     icon: <Brain className="w-4 h-4" />,
