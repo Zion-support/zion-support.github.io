@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 
 export default function ContactPage() {
@@ -66,9 +67,36 @@ export default function ContactPage() {
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Our team is ready to help you explore the possibilities of AI and transform your business.</p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a href="/solutions" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Explore Solutions</a>
+=======
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline'
+
+export default function ContactPage() {
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-20">
+        <h1 className="text-4xl font-bold tracking-tight text-white">Contact Us</h1>
+        <p className="mt-3 text-lg text-gray-300">We'd love to hear from you. Reach out for sales, support, or partnerships.</p>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="rounded-2xl bg-white/5 p-6">
+            <div className="flex items-center gap-3 text-white"><EnvelopeIcon className="h-5 w-5 text-blue-400"/> Email</div>
+            <p className="mt-2 text-sm text-gray-300">contact@ziontechgroup.com</p>
+          </div>
+          <div className="rounded-2xl bg-white/5 p-6">
+            <div className="flex items-center gap-3 text-white"><PhoneIcon className="h-5 w-5 text-blue-400"/> Phone</div>
+            <p className="mt-2 text-sm text-gray-300">+1 (555) 123-4567</p>
+          </div>
+          <div className="rounded-2xl bg-white/5 p-6">
+            <div className="flex items-center gap-3 text-white"><MapPinIcon className="h-5 w-5 text-blue-400"/> Address</div>
+            <p className="mt-2 text-sm text-gray-300">1234 Innovation Drive, Silicon Valley, CA</p>
+>>>>>>> 230e5e007f55 (Checkpoint before follow-up message)
           </div>
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 230e5e007f55 (Checkpoint before follow-up message)

@@ -162,6 +162,13 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+                href="/updates/ai-lab-research-portal-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: AI Lab Research Portal 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/production-rag-evals-starter-pack"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
               >

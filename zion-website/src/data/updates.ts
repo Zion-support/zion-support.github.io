@@ -64,6 +64,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: AI Lab Research Portal 2.0',
+    summary:
+      'Revamped portal with live benchmarks, datasets, and research pipelines for teams.',
+    href: '/updates/ai-lab-research-portal-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Report: Enterprise Retrieval Observability (2026)',
     summary:
       'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
