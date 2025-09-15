@@ -58,77 +58,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New blog posts
+    // New 2026 content
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/ai-2025-ultimate-business-transformation-revolution`,
-=======
-      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
->>>>>>> origin/new-content-and-promotional-components
+      url: `${baseUrl}/blog/ai-2026-ultimate-business-transformation`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    // New resources
-    {
-      url: `${baseUrl}/resources/ai-2025-implementation-ultimate-roadmap`,
+      url: `${baseUrl}/blog/ai-automation-success-stories-2026`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/global-manufacturing-ai-transformation`,
+      url: `${baseUrl}/services/ai-automation-2026`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/financial-services-ai-revolution`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/resources/ai-implementation-guide-2025`,
+      url: `${baseUrl}/blog/ai-2026-hyperautomation-business-playbook`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    // New 2026 revolutionary content pages
     {
-      url: `${baseUrl}/ai-2026-revolution`,
+      url: `${baseUrl}/blog/quantum-ai-2026-business-transformation-ultimate-guide`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/quantum-ai-2026`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    // New 2025 content pages
-    {
-      url: `${baseUrl}/blog/ai-trends-2025-ultimate-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/case-studies/fortune-500-ai-transformation`,
-=======
-      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
->>>>>>> origin/new-content-and-promotional-components
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.8,
     }
   ]
 }
