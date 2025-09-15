@@ -1,3 +1,83 @@
+import React from 'react';
+import SEO from '../../components/SEO';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group',
+  description:
+    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.',
+  keywords: [
+    'go-to-market agents',
+    'GTM agents',
+    'sales automation',
+    'marketing automation',
+    'policy-as-code',
+    'evals',
+    'governance',
+  ],
+};
+
+export default function GoToMarketAgentsBlueprintPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="AI 2026: Go-To-Market Agents Blueprint"
+        description="Pipeline generation, deal acceleration, and expansion with policy-as-code guardrails."
+        keywords="GTM agents, go-to-market, sales automation, marketing automation, policy-as-code, evals"
+        url="/content/ai-2026-go-to-market-agents-blueprint"
+      />
+
+      <header className="bg-gradient-to-r from-purple-700 via-blue-700 to-indigo-700 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold opacity-90">Blueprint • 2025-09-15</p>
+          <h1 className="text-3xl md:text-5xl font-bold mt-2">Go-To-Market Agents Blueprint</h1>
+          <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Design production-grade GTM agents with eval-gated delivery and brand-safe controls.</p>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <article className="prose prose-lg max-w-none">
+          <h2>Core Capabilities</h2>
+          <ul>
+            <li>Prospecting and enrichment with privacy and consent safeguards</li>
+            <li>Sequencing and channel orchestration with tone/style governance</li>
+            <li>Lead qualification and routing with human-in-the-loop approvals</li>
+            <li>Expansion plays driven by telemetry and win-loss insights</li>
+          </ul>
+
+          <h3>Safety and Governance</h3>
+          <ul>
+            <li>Policy-as-code for brand, legal, and compliance requirements</li>
+            <li>Eval gates on intent, phrasing, and outcome safety</li>
+            <li>Sandboxed tool use with scoped, time-boxed permissions</li>
+          </ul>
+
+          <h3>Operations</h3>
+          <ul>
+            <li>KPIs: pipeline created, velocity, win rate, CAC payback</li>
+            <li>Observability: traces, evals, error budgets, cost per touch</li>
+            <li>Change management with progressive delivery and fast rollback</li>
+          </ul>
+
+          <div className="mt-8 p-6 bg-purple-50 rounded-xl">
+            <h3 className="text-purple-800 font-semibold">Getting Started</h3>
+            <ol className="list-decimal pl-6 text-purple-900">
+              <li>Define policy bundles for tone, claims, and data boundaries</li>
+              <li>Stand up eval harness with representative scenarios</li>
+              <li>Pilot in a constrained segment; expand via progressive gates</li>
+            </ol>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link href="/blog/ai-2026-go-to-market-agents-blueprint" className="text-purple-600 font-semibold">Read Blog Overview →</Link>
+            <Link href="/contact" className="text-white bg-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss GTM Agents</Link>
+          </div>
+        </article>
+      </main>
+    </div>
+  );
+}
+
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
