@@ -70,6 +70,9 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const AIPoweredLegalDocumentGenerator = React.lazy(() => import('./pages/services/AI-Powered-Legal-Document-Generator'));
 const AIHealthcareDiagnosticsPlatform = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics-Platform'));
 const BlockchainSupplyChainTransparency = React.lazy(() => import('./pages/services/Blockchain-Supply-Chain-Transparency'));
+// Define lazy components for AI-powered routes (JSX cannot inline React.lazy inside element prop)
+const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
+const AIPoweredMarketingAutomation = React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'));
 
 // Additional pages from remote
 const Legal = React.lazy(() => import('./pages/Legal'));
@@ -201,8 +204,8 @@ function App() {
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
 
                 {/* New AI-powered service routes */}
-                <Route path="/services/ai-powered-customer-success-platform" element={<React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'))} />} />
-                <Route path="/services/ai-powered-marketing-automation" element={<React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'))} />} />
+                <Route path="/services/ai-powered-customer-success-platform" element={<AIPoweredCustomerSuccessPlatform />} />
+                <Route path="/services/ai-powered-marketing-automation" element={<AIPoweredMarketingAutomation />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={

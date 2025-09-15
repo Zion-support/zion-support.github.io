@@ -74,6 +74,7 @@ import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
+import WhatsNew from './components/WhatsNew';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -95,16 +96,18 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Agent Posture + Eval Checklists</h2>
-              <p className="text-gray-600 mt-2">Continuously harden agents with posture baselines and use checklists to gate releases.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Autonomous Evals Blueprint + Checklists</h2>
+              <p className="text-gray-600 mt-2">Ship reliable agents with eval-first gates and practical release checklists.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-agent-posture-management" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Agent Posture</Link>
+              <Link href="/content/ai-2026-autonomous-evals-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evals Blueprint</Link>
               <Link href="/content/ai-2026-agentic-evaluation-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Checklists</Link>
             </div>
           </div>
         </div>
       </section>
+      {/* What's New dynamic section */}
+      <WhatsNew highlightOnly limit={6} />
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />
