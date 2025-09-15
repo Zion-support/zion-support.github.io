@@ -116,11 +116,11 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Now featuring GenAI Governance 2026 and Agent Observability 2026.</p>
+                <p className="text-gray-600 mt-2">Now featuring Operational Excellence 2026 and Agent Risk Management 2026.</p>
               </div>
               <div className="flex gap-3">
-                <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">GenAI Governance</Link>
-                <Link href="/content/agent-observability-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
+                <Link href="/content/ai-2026-operational-excellence-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Operational Excellence</Link>
+                <Link href="/content/ai-2026-agent-risk-management-framework" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Risk Management</Link>
               </div>
             </div>
           </div>

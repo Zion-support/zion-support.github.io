@@ -28,6 +28,19 @@ export default function ContentIndexPage() {
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-operational-excellence-blueprint" className="hover:underline">
+              AI 2026: Operational Excellence Blueprint
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Align reliability, quality, cost, and speed with AI-driven automation and observability.
+          </p>
+          <Link href="/content/ai-2026-operational-excellence-blueprint" className="text-purple-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/edge-ai-agents-2026" className="hover:underline">
@@ -51,6 +64,19 @@ export default function ContentIndexPage() {
             Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
           </p>
           <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-risk-management-framework" className="hover:underline">
+              AI 2026: Agent Risk Management Framework
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Threat models, layered controls, and runtime guardrails for enterprise agents.
+          </p>
+          <Link href="/content/ai-2026-agent-risk-management-framework" className="text-emerald-700 font-semibold">Read Framework →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
