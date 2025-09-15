@@ -34,7 +34,10 @@ import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
-<<<<<<< HEAD
+import UltimateContentBanner from './src/components/UltimateContentBanner';
+import RevolutionaryContentPromo from './src/components/RevolutionaryContentPromo';
+import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
+import FutureTechTrends2026 from './src/pages/FutureTechTrends2026';
 import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
@@ -46,12 +49,10 @@ import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import BiotechRevolution2026 from './src/pages/BiotechRevolution2026';
 import AdvancedTechSolutions2026 from './src/pages/AdvancedTechSolutions2026';
 import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
-=======
 import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
 import AdvancedAIIntelligence2025 from './src/pages/AdvancedAIIntelligence2025';
 import QuantumComputingBreakthrough2025 from './src/pages/QuantumComputingBreakthrough2025';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
 
 export default function App(): JSX.Element {
   return (
@@ -64,6 +65,12 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* NEW: Ultimate Content Banner */}
+                <UltimateContentBanner />
+                
+                {/* NEW: Revolutionary Content Promo */}
+                <RevolutionaryContentPromo />
+                
 <<<<<<< HEAD
                 {/* BRAND NEW: Revolutionary AI Content Banner */}
                 <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -768,7 +775,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAIIntelligence2025" element={<AdvancedAIIntelligence2025 />} />
           <Route path="/pages/QuantumComputingBreakthrough2025" element={<QuantumComputingBreakthrough2025 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
-<<<<<<< HEAD
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/FutureTechTrends2026" element={<FutureTechTrends2026 />} />
           <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
@@ -779,8 +787,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
-=======
->>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
