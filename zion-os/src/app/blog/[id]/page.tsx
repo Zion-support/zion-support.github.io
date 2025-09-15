@@ -11,6 +11,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Practical Policies for Safe Autonomy',
+    excerpt:
+      'A field guide to implementing practical AI governance: identity, auditability, red-teaming, and graded autonomy for real systems.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As enterprises adopt autonomous AI systems, governance must move from principles to practice. This blueprint outlines implementable controls that increase safety while preserving innovation velocity.',
+      'We recommend a graded autonomy model: define action tiers, attach safeguards to each tier, and require verifiable identity, logging, and approvals for high‑impact operations.',
+      'Core practices include: DID-based identity for agents and users; signed prompts and outputs; red-team sandboxes; policy-as-code; and continuous evaluation informed by real incidents.',
+      'With these controls in place, organizations report faster iteration cycles, fewer incidents, and clearer accountability across engineering, security, and compliance.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

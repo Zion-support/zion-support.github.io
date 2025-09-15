@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Practical Policies for Safe Autonomy',
+      excerpt: 'Implement graded autonomy, verifiable identity, and policy-as-code for safe AI.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance-blueprint.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +76,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Practical Policies for Safe Autonomy',
+      excerpt: 'From principles to practice: identity, auditability, red‑teaming, and policy-as-code.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance-blueprint.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
