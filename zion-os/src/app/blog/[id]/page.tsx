@@ -11,6 +11,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'agentic-safety-patterns-2025': {
+    id: 'agentic-safety-patterns-2025',
+    title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+    excerpt:
+      'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
+      'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
+    ]
+  },
+  'multi-agent-supply-chains': {
+    id: 'multi-agent-supply-chains',
+    title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+    excerpt:
+      'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+    category: 'AI Solutions',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
+      'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
@@ -98,6 +126,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'As AI agents transact and collaborate, marketplaces must enforce identity, reputation, and policy to mitigate fraud and abuse.',
       'This guide covers DID-backed identity, attestations, dispute resolution, and graded trust. We include reference architectures and rollout strategies for enterprise environments.',
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
+    ]
+  },
+  'agentic-supply-chains-2025': {
+    id: 'agentic-supply-chains-2025',
+    title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+    excerpt:
+      'How autonomous agents coordinate forecasting, procurement, and fulfillment across complex supply networks with measurable SLAs.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Agentic supply chains use autonomous services to continuously sense, decide, and act across planning, sourcing, and delivery.',
+      'This article outlines a reference architecture with policy-guarded agents for demand sensing, supplier negotiation, and dynamic routing.',
+      'We discuss safety rails, exception paths, and how to phase adoption starting with constrained pilots and expanding by maturity.'
+    ]
+  },
+  'genai-productivity-benchmarks-2025': {
+    id: 'genai-productivity-benchmarks-2025',
+    title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
+    excerpt:
+      'A practical benchmarking framework to quantify time savings, quality lift, and ROI from GenAI-assisted workflows.',
+    category: 'Research & Development',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-13',
+    readTime: '8 min read',
+    content: [
+      'Organizations need consistent methods to measure the impact of GenAI on knowledge and operational work.',
+      'We propose task archetypes, gold standards, evaluation rubrics, and cost models to compare tools apples-to-apples.',
+      'The framework enables portfolio-level governance and investment decisions grounded in observable outcomes.'
     ]
   },
 };
