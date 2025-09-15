@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -6,6 +7,12 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +21,7 @@
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -22,6 +30,11 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const solutions = [
@@ -30,6 +43,7 @@ const solutions = [
   { name: 'Autonomous Business Operations', description: 'Self-optimizing processes with predictive intelligence.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization.', icon: ShieldCheckIcon, href: '/solutions/it-asset-management' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -37,6 +51,12 @@ const solutions = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
 import { 
@@ -174,6 +194,7 @@ const solutions = [
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -182,12 +203,18 @@ const solutions = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 ]
 
 export default function SolutionsPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -196,6 +223,12 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
     <div className="bg-black">
@@ -225,6 +258,7 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -233,6 +267,11 @@ export default function SolutionsPage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
           <p className="mt-4 text-lg leading-8 text-gray-300">Cutting-edge AI solutions for enterprise challenges.</p>
@@ -256,6 +295,7 @@ export default function SolutionsPage() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -265,6 +305,13 @@ export default function SolutionsPage() {
 }
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 }
 =======
@@ -293,6 +340,7 @@ export default function SolutionsPage() {
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
@@ -304,3 +352,11 @@ export default function SolutionsPage() {
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
