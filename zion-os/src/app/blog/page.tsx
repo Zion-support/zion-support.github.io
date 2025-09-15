@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'sovereign-economies-2025',
+      title: 'Sovereign Digital Economies: 2025 Playbook for Founders',
+      excerpt: 'A practical guide to launching AI-powered, community-owned economies with Zion OS.',
+      category: 'Strategy',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-10',
+      readTime: '7 min read',
+      image: '/blog/sovereign-economies-2025.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-computing-finance',
       title: 'Quantum Computing Revolutionizing Financial Trading: A Deep Dive',
       excerpt: 'Discover how our quantum algorithms are transforming financial markets and creating new opportunities for investors and institutions.',
@@ -103,18 +114,52 @@ export default function BlogPage() {
       readTime: '6 min read',
       image: '/blog/ai-marketing.jpg'
     }
+    ,
+    {
+      id: 'multi-agent-orchestration',
+      title: 'From Single Models to Multi‑Agent Orchestration',
+      excerpt: 'Design patterns for scaling from one LLM to reliable fleets of specialized agents.',
+      category: 'AI Systems',
+      author: 'Dr. Sarah Chen',
+      date: '2025-08-28',
+      readTime: '9 min read',
+      image: '/blog/multi-agent-orchestration.jpg'
+    },
+    {
+      id: 'gov-guardrails',
+      title: 'Governance Guardrails for Autonomous Economies',
+      excerpt: 'How to combine constitutional AI, programmatic policy, and human-in-the-loop.',
+      category: 'Governance',
+      author: 'Michael Rodriguez',
+      date: '2025-08-18',
+      readTime: '8 min read',
+      image: '/blog/governance-guardrails.jpg'
+    },
+    {
+      id: 'edge-ai-marketplaces',
+      title: 'Edge AI for Real‑Time Marketplaces',
+      excerpt: 'Reducing latency and cost with on-device inference and smart routing.',
+      category: 'Infrastructure',
+      author: 'Dr. Lisa Park',
+      date: '2025-08-05',
+      readTime: '6 min read',
+      image: '/blog/edge-ai-marketplaces.jpg'
+    }
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 16, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 2, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
-    { name: 'Infrastructure', count: 1, active: false },
-    { name: 'Content Marketing', count: 1, active: false }
+    { name: 'Infrastructure', count: 2, active: false },
+    { name: 'Content Marketing', count: 1, active: false },
+    { name: 'AI Systems', count: 1, active: false },
+    { name: 'Governance', count: 1, active: false },
+    { name: 'Strategy', count: 1, active: false }
   ];
 
   const tags = [

@@ -78,6 +78,22 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Announcement Banner */}
+      <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span className="text-sm md:text-base font-medium">
+            New: Sovereign Digital Economies 2025 + Multi‑Agent Orchestration guides
+          </span>
+          <div className="flex items-center gap-2">
+            <a href="/blog/sovereign-economies-2025" className="bg-white/10 hover:bg-white/20 transition-colors rounded-md px-3 py-1 text-sm">
+              Read Playbook
+            </a>
+            <a href="/blog/multi-agent-orchestration" className="bg-white text-indigo-700 hover:bg-gray-100 transition-colors rounded-md px-3 py-1 text-sm font-semibold">
+              Explore Orchestration →
+            </a>
+          </div>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -99,7 +115,7 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
-              <a href="/news" className="btn-secondary hover-lift">
+              <a href="/blog" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
               </a>
             </div>
