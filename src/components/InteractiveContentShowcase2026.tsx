@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -288,7 +285,6 @@ const InteractiveContentShowcase2026 = () => {
             </div>
           </div>
         </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );

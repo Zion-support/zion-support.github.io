@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 import React from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -29,7 +22,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI Systems</h3>
             <p className="text-purple-100 mb-6 text-center">
               Revolutionary AI systems with autonomous learning, quantum processing, and distributed intelligence
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Self-aware AI systems</li>
@@ -106,9 +98,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -420,7 +409,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );

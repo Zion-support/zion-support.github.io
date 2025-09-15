@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50">
-      {/* Hero Section */}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-=======
 import React from 'react';
 
 const AIInnovationHub2026: React.FC = () => {
@@ -235,7 +217,6 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

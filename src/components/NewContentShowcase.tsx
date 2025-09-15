@@ -1,18 +1,6 @@
 import React from 'react';
 
 const NewContentShowcase: React.FC = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
   const newContent = [
     {
       title: "Trustworthy Model Routing",
@@ -108,10 +96,6 @@ const NewContentShowcase: React.FC = () => {
         >
           View All Content
         </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   return (
     <div className="w-full">
       {/* New Content Banner */}
@@ -227,36 +211,12 @@ const NewContentShowcase: React.FC = () => {
             <div className="text-emerald-100 text-sm">Autonomous Operation</div>
           </div>
         </div>
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export { NewContentShowcase };
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-=======
 export { NewContentShowcase };
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
 export { NewContentShowcase };
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
-export { NewContentShowcase };
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 export default NewContentShowcase;

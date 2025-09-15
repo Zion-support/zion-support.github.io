@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -508,7 +510,8 @@ const QuantumConsciousness2027: React.FC = () => {
           </motion.div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-aa0d
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

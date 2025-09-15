@@ -1,32 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const AdvancedQuantumComputing2026: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl"></div>
-          <div className="relative z-10 p-12">
-            <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-8">
-              <span className="text-cyan-400 text-2xl">⚛️</span>
-              <span className="text-cyan-300 font-bold text-lg">ADVANCED QUANTUM COMPUTING 2026</span>
-            </div>
-            <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Quantum Computing Revolution
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-f977
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -218,7 +191,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Advanced Quantum Computing 2026
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </h1>
             <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the next generation of quantum computing with our breakthrough technologies that solve impossible problems and unlock unlimited computational power
@@ -231,16 +203,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 🧪 Try Quantum Simulator
               </button>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-
-        {/* Revolutionary Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Exponential Speed</h3>
-=======
           </motion.div>
         </div>
       </div>
@@ -261,7 +223,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           >
             <div className="text-5xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             <p className="text-cyan-100 mb-6 text-center">
               Quantum algorithms that process millions of calculations simultaneously, delivering unprecedented computational speed
             </p>
@@ -356,21 +317,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold mb-6">Ready to Experience Quantum Computing?</h2>
-            <p className="text-xl mb-8 opacity-95">
-              Join the quantum revolution and unlock unlimited computational possibilities
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
-                🚀 Start Quantum Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
-                📚 Learn More
-              </button>
-            </div>
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Experience Quantum Computing?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the quantum revolution and unlock unprecedented computational power for your organization. 
@@ -383,7 +329,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Contact Quantum Experts
             </button>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </div>
       </div>

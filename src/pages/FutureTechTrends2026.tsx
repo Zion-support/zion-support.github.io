@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 
 const FutureTechTrends2026: React.FC = () => {
   const [selectedTrend, setSelectedTrend] = useState(0);
@@ -119,15 +110,6 @@ const FutureTechTrends2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
-              <span className="text-cyan-400">✨</span>
-              <span className="text-cyan-300 font-semibold">FUTURE TECH TRENDS 2026</span>
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
@@ -139,7 +121,6 @@ const FutureTechTrends2026: React.FC = () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🔮 FUTURE TECH TRENDS • JANUARY 2026
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </div>
             <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Tomorrow's Technology Today
@@ -236,22 +217,6 @@ const FutureTechTrends2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Technology Evolution Timeline</h2>
           <p className="text-xl text-gray-300">The roadmap to tomorrow's technology</p>
         </div>
-<<<<<<< HEAD
-        
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-500 rounded-full"></div>
-          
-          {futureTrends.map((trend, index) => (
-            <div key={trend.id} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-              <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                <div className={`bg-gradient-to-r ${trend.gradient} rounded-2xl p-6 shadow-2xl`}>
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-4">{trend.icon}</span>
-                    <div>
-                      <h3 className="text-2xl font-bold">{trend.title}</h3>
-                      <div className="text-sm opacity-90">{trend.timeline}</div>
-                    </div>
-=======
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <motion.div
@@ -443,19 +408,10 @@ const FutureTechTrends2026: React.FC = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-violet-300">Neural Interfaces</span>
                     <span className="text-white font-bold">$12B by 2026</span>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                   </div>
                   <p className="text-white/90">{trend.description}</p>
                 </div>
               </div>
-<<<<<<< HEAD
-              
-              <div className="w-8 h-8 bg-white rounded-full border-4 border-cyan-500 flex items-center justify-center relative z-10">
-                <div className="w-4 h-4 bg-cyan-500 rounded-full"></div>
-              </div>
-              
-              <div className="w-1/2"></div>
-=======
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-bold mb-3 text-fuchsia-400">🎯 Adoption Rates</h3>
@@ -477,41 +433,10 @@ const FutureTechTrends2026: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 text-center border border-cyan-400/30">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Shape the Future
-          </h2>
-          <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Be part of the technological revolution that's reshaping our world. 
-            Explore our solutions and join the journey into tomorrow.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="/pages/AdvancedTechInsights2026" 
-              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-10 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
-            >
-              Explore Insights →
-            </a>
-            <a 
-              href="/pages/InnovationShowcase2026" 
-              className="inline-block border-2 border-cyan-400 text-cyan-300 px-10 py-4 rounded-xl hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-            >
-              View Showcase
-            </a>
-          </div>
-        </div>
-      </div>
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

@@ -114,9 +114,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         'Enhanced situational awareness',
         'Reduced cognitive load'
       ],
-<<<<<<< HEAD
-      description: "Enhanced productivity and efficiency in professional environments"
-=======
       image: '🛡️',
       testimonial: 'This technology gives us a significant tactical advantage in the field.'
     }
@@ -233,7 +230,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         'Custom development'
       ],
       popular: false
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   ];
 

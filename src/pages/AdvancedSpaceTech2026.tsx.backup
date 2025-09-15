@@ -167,7 +167,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
               <li>• Closed-loop ecosystems</li>
               <li>• Genetic modifications for space</li>
               <li>• Terraforming technologies</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </ul>
           </div>
         </div>
@@ -227,7 +227,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-lg font-semibold mb-2">Antimatter Propulsion</h4>
                   <p className="text-sm opacity-90">Theoretical propulsion system using matter-antimatter annihilation</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 </div>
               </div>
             </div>
@@ -318,7 +318,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <h4 className="text-lg font-semibold mb-2">Asteroid Mining</h4>
                   <p className="text-sm opacity-90">Extracting precious resources from near-Earth asteroids</p>
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 </div>
               </div>
             </div>
@@ -356,7 +356,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
             <a href="/pages/AdvancedAITransformation2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Learn About AI →
             </a>
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </div>
       </div>

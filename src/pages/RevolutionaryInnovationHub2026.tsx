@@ -3,16 +3,6 @@ import { motion } from 'framer-motion';
 
 const RevolutionaryInnovationHub2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-            </button>
-          </div>
-        </motion.div>
-<<<<<<< HEAD
-=======
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
@@ -307,10 +297,7 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
             </button>
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-10 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Submit Innovation
-=======
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-f977
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -476,18 +463,11 @@ const RevolutionaryInnovationHub2026: React.FC = () => {
             <button className="bg-white text-purple-800 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300">
               Start Innovating
             </button>
-<<<<<<< HEAD
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-              Explore Solutions
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-800 transition-all duration-300">
               Explore Projects
->>>>>>> cursor/create-and-deploy-new-content-f977
             </button>
           </div>
         </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );

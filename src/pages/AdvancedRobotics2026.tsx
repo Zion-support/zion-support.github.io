@@ -82,48 +82,6 @@ const AdvancedRobotics2026: React.FC = () => {
   const currentRobot = robotTypes.find(robot => robot.id === activeRobot) || robotTypes[0];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/robot-pattern.svg')] bg-repeat opacity-10"></div>
-        <div className="container mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-=======
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-600/10 to-zinc-600/10"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-<<<<<<< HEAD
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-white text-sm font-bold mb-6">
-              🤖 ADVANCED ROBOTICS • 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Advanced Robotics 2026
-            </h1>
-            <p className="text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-              Revolutionary robotics technology with AI-powered autonomous systems, humanoid robots, and advanced industrial automation
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Robotics →
-              </button>
-              <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-gray-900 transition-colors font-semibold">
-                View Applications
-              </button>
-            </div>
-          </motion.div>
-=======
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-600 to-zinc-600 rounded-full text-sm font-bold mb-6 text-white">
               🤖 ADVANCED ROBOTICS • 2026
             </div>
@@ -197,7 +155,6 @@ const AdvancedRobotics2026: React.FC = () => {
             </ul>
           </div>
         </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -212,7 +169,6 @@ const AdvancedRobotics2026: React.FC = () => {
             Transforming industries with autonomous robots, humanoid assistants, 
             and intelligent automation systems that work alongside humans
           </p>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         </div>
       </section>
 
@@ -395,9 +351,6 @@ const AdvancedRobotics2026: React.FC = () => {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-      </section>
-=======
 
         {/* Call to Action */}
         <div className="text-center">
@@ -417,9 +370,7 @@ const AdvancedRobotics2026: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
       </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

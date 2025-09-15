@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 
 const ContentNavigation2026: React.FC = () => {
@@ -90,8 +87,6 @@ const ContentNavigation2026: React.FC = () => {
             </button>
           ))}
         </div>
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 import React, { useState } from 'react';
 
 const ContentNavigation2026: React.FC = () => {
@@ -269,8 +264,6 @@ const ContentNavigation2026: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 
 const ContentNavigation2026: React.FC = () => {
@@ -360,10 +353,6 @@ const ContentNavigation2026: React.FC = () => {
             </button>
           ))}
         </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-fb46
-=======
->>>>>>> origin/revolutionary-content-2026
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );

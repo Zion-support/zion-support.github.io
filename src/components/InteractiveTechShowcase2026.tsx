@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -91,13 +89,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
       features: ['AI Revolution', 'Quantum Computing', 'Neural Interfaces'],
       color: 'from-orange-600 to-red-600',
       bgColor: 'from-orange-600/20 to-red-600/20',
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       borderColor: 'border-orange-400/30'
     }
   ];
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -226,7 +221,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
         <div className="text-center">
           <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
           <div className="text-gray-300 text-sm">Possibilities</div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         </div>
       </div>
     </div>
