@@ -84,6 +84,14 @@ import UltimateTechRevolution2029 from './src/pages/UltimateTechRevolution2029';
 import ConsciousnessTransfer2029 from './src/pages/ConsciousnessTransfer2029';
 import QuantumRealityManipulation2029 from './src/pages/QuantumRealityManipulation2029';
 import SyntheticBiologyRevolution2029 from './src/pages/SyntheticBiologyRevolution2029';
+// New 2032 Pages
+import UltimateTechRevolution2032 from './src/pages/UltimateTechRevolution2032';
+import RevolutionaryAIBreakthrough2032 from './src/pages/RevolutionaryAIBreakthrough2032';
+import NextGenSpaceTech2032 from './src/pages/NextGenSpaceTech2032';
+// New 2032 Components
+import RevolutionaryContentBanner2032 from './src/components/RevolutionaryContentBanner2032';
+import InteractiveTechShowcase2032 from './src/components/InteractiveTechShowcase2032';
+import TrendingContentSection2032 from './src/components/TrendingContentSection2032';
 
 export default function App(): JSX.Element {
   return (
@@ -118,14 +126,14 @@ export default function App(): JSX.Element {
                       Experience the most advanced technological breakthrough in human history. Discover revolutionary content on Ultimate Tech Revolution, AI Breakthrough, Space Technology, and Next-Generation Innovation
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
-                      <a href="/pages/UltimateTechRevolution2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
-                        🌟 NEW: Ultimate Tech 2031 →
+                      <a href="/pages/UltimateTechRevolution2032" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+                        🌟 NEW: Ultimate Tech 2032 →
                       </a>
-                      <a href="/pages/RevolutionaryAIBreakthrough2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
-                        🧠 NEW: AI Breakthrough 2031 →
+                      <a href="/pages/RevolutionaryAIBreakthrough2032" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+                        🧠 NEW: AI Breakthrough 2032 →
                       </a>
-                      <a href="/pages/NextGenSpaceTech2031" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
-                        🚀 NEW: Space Tech 2031 →
+                      <a href="/pages/NextGenSpaceTech2032" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
+                        🚀 NEW: Space Tech 2032 →
                       </a>
                       <a href="/pages/ConsciousnessComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
                         🧠 NEW: Consciousness Computing →
@@ -174,8 +182,8 @@ export default function App(): JSX.Element {
                       </a>
                     </div>
                     <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                      <a href="/pages/UltimateTechRevolution2031" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105">
-                        🌟 NEW: 2031 Tech Showcase →
+                      <a href="/pages/UltimateTechRevolution2032" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105">
+                        🌟 NEW: 2032 Tech Showcase →
                       </a>
                       <a href="/ultimate-showcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30 hover:scale-105">
                         🚀 Explore All Content →
@@ -203,6 +211,9 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Revolutionary Content Banner 2031 */}
                 <RevolutionaryContentBanner2031 />
+                
+                {/* NEW: Revolutionary Content Banner 2032 */}
+                <RevolutionaryContentBanner2032 />
                 
                 {/* NEW: Ultimate Content Banner 2029 */}
                 <div className="mb-12">
@@ -338,9 +349,19 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2031 />
                 </div>
 
+                {/* NEW: Interactive Tech Showcase 2032 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2032 />
+                </div>
+
                 {/* NEW: Trending Content Section 2028 */}
                 <div className="mb-12">
                   <TrendingContentSection2028 />
+                </div>
+
+                {/* NEW: Trending Content Section 2032 */}
+                <div className="mb-12">
+                  <TrendingContentSection2032 />
                 </div>
 
                 {/* NEW: Revolutionary Tech Showcase 2029 */}
@@ -615,6 +636,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/ConsciousnessTransfer2029" element={<ConsciousnessTransfer2029 />} />
           <Route path="/pages/QuantumRealityManipulation2029" element={<QuantumRealityManipulation2029 />} />
           <Route path="/pages/SyntheticBiologyRevolution2029" element={<SyntheticBiologyRevolution2029 />} />
+          {/* New 2032 Routes */}
+          <Route path="/pages/UltimateTechRevolution2032" element={<UltimateTechRevolution2032 />} />
+          <Route path="/pages/RevolutionaryAIBreakthrough2032" element={<RevolutionaryAIBreakthrough2032 />} />
+          <Route path="/pages/NextGenSpaceTech2032" element={<NextGenSpaceTech2032 />} />
           <Route path="/ultimate-showcase" element={<UltimateContentShowcase2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
