@@ -11,6 +11,39 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "evidence-driven-ai-operations-2026",
+    title: "AI 2026: Evidence-Driven AI Operations",
+    description:
+      "Evaluation-first operations with policy gates, observability, and SLOs for safe scale.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-evidence-driven-operations",
+    emoji: "📈",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-benchmark-suite-2026",
+    title: "AI 2026: Agent Benchmark Suite",
+    description:
+      "Scenario-driven benchmarks to measure safety, quality, reliability, and efficiency.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-benchmark-suite",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "trustworthy-model-routing-starter-kit-2026",
+    title: "AI 2026: Trustworthy Model Routing Starter Kit",
+    description:
+      "Templates and PaC snippets for eval-gated, cost-aware model routing in production.",
+    ctaLabel: "Get the Kit",
+    href: "/resources/ai-2026-trustworthy-model-routing-starter-kit",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "evaluation-harness-starter-kit-2026",
     title: "AI 2026: Evaluation Harness Starter Kit",
     description:

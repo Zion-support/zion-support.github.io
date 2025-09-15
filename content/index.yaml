@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 33
+  total_content_pieces: 36
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -399,6 +399,48 @@ content_index:
         payback: "3.8 months"
 
   newly_added_september_2025:
+    - id: "ai-2026-evidence-driven-operations"
+      type: "blog"
+      title: "AI 2026: Evidence-Driven AI Operations"
+      file_path: "/content/blog/ai-2026-evidence-driven-operations.md"
+      url: "/content/ai-2026-evidence-driven-operations"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "Evaluations", "Policy-as-Code", "SLOs", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents_reduction: "40%"
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+    - id: "ai-2026-agent-benchmark-suite"
+      type: "blog"
+      title: "AI 2026: Agent Benchmark Suite"
+      file_path: "/content/blog/ai-2026-agent-benchmark-suite.md"
+      url: "/blog/ai-2026-agent-benchmark-suite"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Benchmarks", "Safety", "Quality", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        task_success: ">= 0.98"
+        latency_p95: "<= 2.5s"
+        cost_reduction: "20-40%"
+    - id: "ai-2026-trustworthy-model-routing-starter-kit"
+      type: "resource"
+      title: "AI 2026: Trustworthy Model Routing Starter Kit"
+      file_path: "/content/resources/ai-2026-trustworthy-model-routing-starter-kit.md"
+      url: "/resources/ai-2026-trustworthy-model-routing-starter-kit"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Policy-as-Code", "Evaluations", "Reliability", "Cost Optimization", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        groundedness: ">= 0.9"
+        citation_density: ">= 0.9"
+        jailbreak_rate: "<= 0.2"
     - id: "ai-2026-agent-red-teaming-field-guide"
       type: "blog"
       title: "AI 2026: Agent Red‑Teaming Field Guide"
