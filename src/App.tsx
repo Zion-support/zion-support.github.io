@@ -8,9 +8,12 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PromotionalBanner } from './components/PromotionalBanner';
+import { ContentShowcase } from './components/ContentShowcase';
+import { ServicesHighlight } from './components/ServicesHighlight';
 
 // Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/EnhancedHome'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const EnhancedContact = React.lazy(() => import('./pages/EnhancedContact'));
@@ -83,6 +86,7 @@ const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
+const NewBlogPost = React.lazy(() => import('./pages/NewBlogPost'));
 
 const Investors = React.lazy(() => import('./pages/Investors'));
 const Press = React.lazy(() => import('./pages/Press'));
@@ -120,6 +124,7 @@ function App() {
       <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
+          <PromotionalBanner />
           
           <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
@@ -176,6 +181,7 @@ function App() {
                 <Route path="/investors" element={<Investors />} />
                 <Route path="/legal" element={<Legal />} />
                 <Route path="/press" element={<Press />} />
+                <Route path="/blog/ai-business-trends-2025" element={<NewBlogPost />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
