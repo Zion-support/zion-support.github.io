@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
+/* Fonts loaded via HTML/Head to avoid PostCSS import issues */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import './styles/enhanced-futuristic.css';
+/* External font import removed for build compatibility; load via HTML or Next Head if needed */
+@import './styles/accessibility.css';
+@import './components/animations.css';
 
 /* Custom CSS Variables */
 :root {
