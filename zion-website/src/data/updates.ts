@@ -43,7 +43,8 @@ export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
-    summary:
+    summary: 'Advanced security automation with real-time threat detection and response capabilities.',
+    href: '/updates/autonomous-security-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -75,7 +76,8 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
-    summary:
+    summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -87,7 +89,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/autonomous-strategy-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-  },
   },
   // Added 2025-09-15 (even later night batch - fresh content)
   {
