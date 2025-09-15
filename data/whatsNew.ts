@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "autonomous-evals-blueprint-2026",
+    title: "AI 2026: Autonomous Evals Blueprint",
+    description:
+      "Eval-first, guardrail-driven blueprint to ship reliable autonomous agents at scale.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-autonomous-evals-blueprint",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agentic-risk-and-safety-playbook-2026",
     title: "AI 2026: Agentic Risk and Safety Playbook",
     description:
