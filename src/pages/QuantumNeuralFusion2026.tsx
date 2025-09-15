@@ -5,6 +5,12 @@ const QuantumNeuralFusion2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -59,6 +65,11 @@ const QuantumNeuralFusion2026: React.FC = () => {
               <li>• Parallel universe calculations</li>
               <li>• Quantum entanglement networks</li>
               <li>• Instantaneous state transitions</li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -100,12 +111,22 @@ const QuantumNeuralFusion2026: React.FC = () => {
               <li>• Quantum interference</li>
               <li>• Quantum tunneling</li>
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
             </ul>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -119,6 +140,11 @@ const QuantumNeuralFusion2026: React.FC = () => {
               <li>• Quantum learning algorithms</li>
               <li>• Superposition-based memory</li>
               <li>• Quantum pattern recognition</li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -135,12 +161,22 @@ const QuantumNeuralFusion2026: React.FC = () => {
               <li>• Attention mechanisms</li>
               <li>• Transfer learning</li>
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
             </ul>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
@@ -347,6 +383,11 @@ const QuantumNeuralFusion2026: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -522,6 +563,10 @@ const QuantumNeuralFusion2026: React.FC = () => {
           </div>
         </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
       </div>
     </div>
   );

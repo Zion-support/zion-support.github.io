@@ -1,31 +1,16 @@
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
 import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const services = [
   { name: 'AI Consulting', description: 'Strategy, readiness, and roadmap for AI adoption.', icon: LightBulbIcon },
   { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.', icon: CogIcon },
   { name: 'Enterprise Enablement', description: 'Training, governance, and change management.', icon: UserGroupIcon }
-<<<<<<< HEAD
-<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
 =======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 =======
 import { 
   UserGroupIcon, 
@@ -177,14 +162,7 @@ const services = [
   { title: 'Platform Engineering', desc: 'Reliable infrastructure and DevOps at scale.', icon: Cog6ToothIcon },
   { title: 'Security & Compliance', desc: 'Protect data and meet regulatory standards.', icon: ShieldCheckIcon },
 >>>>>>> origin/backup-main-20250915-074228
-=======
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
 ]
 
 export default function ServicesPage() {
@@ -200,14 +178,10 @@ export default function ServicesPage() {
             {services.map((service) => (
               <div key={service.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 =======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
                   <s.icon className="h-5 w-5 text-blue-400" />
                   {s.name}
 =======
@@ -326,18 +300,7 @@ export default function ServicesPage() {
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {reason.name}
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
-=======
-                  <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {service.name}
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
-<<<<<<< HEAD
-=======
-                  <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {service.name}
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{service.description}</p>
@@ -347,15 +310,11 @@ export default function ServicesPage() {
           </dl>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
     </div>
   )
 }
 =======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-<<<<<<< HEAD:zion-website/src/app/services/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
 
@@ -406,17 +365,4 @@ export default function ServicesPage() {
 =======
 }
 >>>>>>> origin/backup-main-20250915-074228
-=======
-    </div>
-  )
-}
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
-<<<<<<< HEAD
-=======
-    </div>
-  )
-}
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
+=======
+// Safe storage utilities for browser compatibility
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 export const safeStorage = {
   // Safe localStorage operations
   localStorage: {
@@ -56,6 +60,7 @@ export const safeStorage = {
       }
     }
   },
+<<<<<<< HEAD
 
   // Safe sessionStorage operations
   sessionStorage: {
@@ -234,6 +239,8 @@ export const safeStorage = {
       return null;
     }
   },
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   
   setItem: (key: string, value: string): void => {
     try {
@@ -256,8 +263,11 @@ export const safeStorage = {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
     }
   }
 };
