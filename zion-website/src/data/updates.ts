@@ -8,10 +8,18 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
-    title: 'Guide: Production RAG Observability (2026 Preview)',
+    title: 'Launch: AI Governance Copilot v1.2',
     summary:
-      'Telemetry for retrieval systems: coverage, freshness, drift, groundedness with per‑step spans.',
-    href: '/updates/production-rag-observability-2026',
+      'Smarter policy drafting, fine-grained controls, and signed evidence bundles integrated with CI/CD.',
+    href: '/updates/ai-governance-copilot-1-2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Cost Controls (2026)',
+    summary:
+      'Budgets, routing policies, and eval-driven safeguards to control spend without hurting quality.',
+    href: '/updates/production-agent-cost-controls-2026',
     date: '2025-09-15',
     tag: 'Guide'
   },
