@@ -8,6 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Agent Safety Certification (Beta)',
+    summary:
+      'New certification program validating safety practices for autonomous agents across design, evals, and operations.',
+    href: '/updates/ai-agent-safety-certification-beta',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
     summary:
       'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',
