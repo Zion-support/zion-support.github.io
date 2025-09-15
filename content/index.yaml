@@ -617,3 +617,35 @@ content_index:
         latency: "2.4x faster"
         quality: "stable via evals"
       reading_time: "14 min read"
+
+    - id: "ai-2026-autonomous-operations-framework"
+      type: "blog"
+      title: "AI 2026: Autonomous Operations Framework"
+      file_path: "/app/blog/ai-2026-autonomous-operations-framework/page.tsx"
+      url: "/blog/ai-2026-autonomous-operations-framework"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Autonomous Operations", "Self-Healing", "Automation", "Framework", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        manual_intervention: "90% reduction"
+        uptime: "99.9%"
+        incident_resolution: "75% faster"
+      reading_time: "16 min read"
+
+    - id: "ai-2026-predictive-maintenance-revolution"
+      type: "blog"
+      title: "AI 2026: Predictive Maintenance Revolution"
+      file_path: "/app/blog/ai-2026-predictive-maintenance-revolution/page.tsx"
+      url: "/blog/ai-2026-predictive-maintenance-revolution"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Predictive Maintenance", "AI Analytics", "IoT", "Machine Learning", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        downtime_reduction: "85%"
+        cost_savings: "60%"
+        prediction_accuracy: "95%"
+      reading_time: "18 min read"

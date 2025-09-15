@@ -47,6 +47,7 @@ import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner202
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
+import NewContent2026AdvancedBanner from './components/NewContent2026AdvancedBanner';
 
 // Import new AI 2026 promotional components
 import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
@@ -101,6 +102,9 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      {/* New Advanced Content 2026 Banner */}
+      <NewContent2026AdvancedBanner />
+      
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       {/* New Promo: Agent Evaluation Playground (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-cyan-50">

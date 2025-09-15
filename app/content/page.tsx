@@ -210,6 +210,32 @@ export default function ContentIndexPage() {
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-autonomous-operations-framework" className="hover:underline">
+              AI 2026: Autonomous Operations Framework
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Build self-healing, self-optimizing systems that reduce manual intervention by 90% and achieve 99.9% uptime.
+          </p>
+          <Link href="/blog/ai-2026-autonomous-operations-framework" className="text-indigo-700 font-semibold">Read Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Revolution</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-predictive-maintenance-revolution" className="hover:underline">
+              AI 2026: Predictive Maintenance Revolution
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Revolutionize maintenance operations with AI-powered analytics that reduce downtime by 85% and costs by 60%.
+          </p>
+          <Link href="/blog/ai-2026-predictive-maintenance-revolution" className="text-emerald-700 font-semibold">Read Revolution →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
 <<<<<<< HEAD
           <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
