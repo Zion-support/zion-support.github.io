@@ -296,11 +296,25 @@ export default function App(): JSX.Element {
                   <DynamicContentCarousel />
                 </div>
 
+                {/* Revolutionary Content Showcase */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase />
+                </div>
+
+                {/* NEW: Brand New Content Showcase 2026 */}
+                <div className="mb-12">
+                  <NewContentShowcase2026 />
+                </div>
+
+                {/* Ultimate Content Showcase 2026 */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2026 />
+                </div>
+
+                {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <UltimateContentShowcase2026 />
                 </div>
-
->>>>>>> origin/cursor/create-and-deploy-new-content-e453
                 {/* Featured New Services */}
                 <section className="mb-12">
                   <div className="text-center mb-6">
@@ -686,6 +700,19 @@ export default function App(): JSX.Element {
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
+          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
+          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
+          <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
+          <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
+          <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
+          <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
+          <Route path="/pages/AdvancedRoboticsRevolution2026" element={<AdvancedRoboticsRevolution2026 />} />
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
@@ -695,9 +722,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedMetaverseSolutions2026" element={<AdvancedMetaverseSolutions2026 />} />
           <Route path="/pages/AdvancedBlockchainSolutions2026" element={<AdvancedBlockchainSolutions2026 />} />
           <Route path="/pages/AdvancedIoTandEdgeComputing2026" element={<AdvancedIoTandEdgeComputing2026 />} />
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> cursor/create-and-deploy-new-content-f1b8
->>>>>>> origin/cursor/create-and-deploy-new-content-e453
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
