@@ -391,6 +391,44 @@ export const enhancedServices2025: EnhancedService[] = [
         color: 'from-lime-600 to-green-700',
         link: '/services/edge-iot-observability',
         contactInfo: CONTACT
+    },
+    {
+        id: 'digital-twins-platform',
+        name: 'Digital Twins Platform',
+        tagline: 'Simulate assets and processes with live telemetry',
+        description: 'Create digital twins for factories, fleets, and facilities. Ingest IoT telemetry, run what‑if scenarios, and optimize operations with rules and ML.',
+        category: 'emerging-tech',
+        pricing: { monthly: '$1,999/month', yearly: '$19,990/year', enterprise: 'Custom', setup: '$5,000 one-time' },
+        features: ['Real-time twins', 'Scenario modeling', 'Rules engine', 'Edge sync', '3D/Graph views'],
+        benefits: ['Downtime ↓', 'Throughput ↑', 'Safer operations'],
+        roi: 'Operational efficiency and predictive maintenance savings',
+        trialDays: 0,
+        setupTime: '3–6 weeks',
+        icon: '🧪',
+        color: 'from-teal-600 to-green-700',
+        link: '/services/digital-twins-platform',
+        technology: ['IoT', 'Time-series', 'LLM', 'Graph'],
+        integrations: ['Azure Digital Twins', 'AWS IoT', 'GCP IoT'],
+        contactInfo: CONTACT
+    },
+    {
+        id: 'ai-customer-support-agent',
+        name: 'AI Customer Support Agent',
+        tagline: 'RAG-powered omnichannel support and agent assist',
+        description: 'Deflect tickets with grounded answers, escalate with context, and provide assistive workflows inside your helpdesk.',
+        category: 'ai-services',
+        pricing: { monthly: '$899/month', yearly: '$8,990/year', enterprise: 'Custom', setup: '$2,000 one-time' },
+        features: ['Secure RAG', 'Omnichannel', 'Guardrails', 'CRM/ticketing sync', 'Analytics'],
+        benefits: ['Deflection ↑', 'CSAT ↑', 'Handle time ↓'],
+        roi: 'Lower cost per contact and faster resolution',
+        trialDays: 7,
+        setupTime: '2–4 weeks',
+        icon: '💬',
+        color: 'from-sky-600 to-indigo-700',
+        link: '/services/ai-customer-support-agent',
+        technology: ['Vector DB', 'LLM', 'Connectors'],
+        integrations: ['Zendesk', 'Intercom', 'Salesforce', 'HubSpot'],
+        contactInfo: CONTACT
     }
 ];
 
