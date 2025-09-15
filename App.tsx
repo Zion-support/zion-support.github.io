@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import { WHATS_NEW_ITEMS } from './data/whatsNew';
+=======
+import React from 'react';
+import ScrollToTop from './components/ScrollToTop';
+import { Header } from './src/components/Header';
+import { Footer } from './src/Footer';
+
+>>>>>>> 6c100210fc71 (feat: add Latest Insights section to homepage and fix ScrollToTop; align esbuild versions)
 export default function App(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -50,6 +58,7 @@ export default function App(): JSX.Element {
         </div>
 
         <section className="mb-12">
+<<<<<<< HEAD
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-3xl font-bold text-gray-900">What's New</h2>
             <a href="/news" className="text-blue-600 hover:underline">View all updates</a>
@@ -81,6 +90,28 @@ export default function App(): JSX.Element {
                 </div>
               </a>
             ))}
+=======
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Latest Insights</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
+            Explore our newest articles and deep-dives on AI, blockchain, and cloud transformation.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/About" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">📘</div>
+              <h3 className="text-xl font-semibold mb-2">About Zion Tech Group</h3>
+              <p className="text-gray-600">Learn our mission, values, and how we deliver impact.</p>
+            </a>
+            <a href="/AIContentCreation" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-semibold mb-2">AI Content Creation</h3>
+              <p className="text-gray-600">See how we scale content with responsible generative AI.</p>
+            </a>
+            <a href="/blockchain-solutions" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold mb-2">Enterprise Blockchain</h3>
+              <p className="text-gray-600">Modernize trust and traceability with production-grade ledgers.</p>
+            </a>
+>>>>>>> 6c100210fc71 (feat: add Latest Insights section to homepage and fix ScrollToTop; align esbuild versions)
           </div>
         </section>
 
@@ -99,3 +130,4 @@ export default function App(): JSX.Element {
       <Footer />
     </div>
   );
+}
