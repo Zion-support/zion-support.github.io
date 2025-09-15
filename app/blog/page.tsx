@@ -14,6 +14,24 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: LLM Evals Maturity Model",
+      description: "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI systems.",
+      slug: "ai-2026-llm-evals-maturity-model",
+      category: "Quality",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evals-maturity-model-2026.jpg"
+    },
+    {
+      title: "AI 2026: Multimodal Agents Enterprise Blueprint",
+      description: "Design patterns, reference architectures, and an adoption roadmap for enterprise multimodal agents.",
+      slug: "ai-2026-multimodal-agents-enterprise-blueprint",
+      category: "Architecture",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/multimodal-agents-enterprise-blueprint-2026.jpg"
+    },
+    {
       title: "AI 2026: Agent Observability Blueprint",
       description: "Deep visibility into autonomous agents: traces, evaluations, and safety telemetry.",
       slug: "ai-2026-agent-observability-blueprint",
@@ -75,6 +93,15 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/ai-finops-2026.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Compliance Operating Model",
+      description: "Automate controls, evidence, and tests for audit-ready AI operations with policy-as-code.",
+      slug: "ai-2026-autonomous-compliance",
+      category: "Governance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-compliance-2026.jpg"
     },
     {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
