@@ -1,22 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
-const nextConfig = {
-	reactStrictMode: true,
-	trailingSlash: true,
-	output: 'export',
-	images: {
-		unoptimized: true
-	},
-	eslint: {
-		ignoreDuringBuilds: true
-	},
-	typescript: {
-		ignoreBuildErrors: true,
-	}
-};
-
-export default nextConfig;
-=======
 const path = require('path');
 
 module.exports = {
@@ -43,4 +25,3 @@ module.exports = {
     return config;
   },
 };
->>>>>>> origin/auto/autonomy-17186719616

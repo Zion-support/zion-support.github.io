@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-
-export default function CaseStudyPage() {
-  const router = useRouter(),
-  const { id } = router.query,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,7 +6,6 @@ import { useRouter } from 'next/router';
 export default function CaseStudyPage() {
   const router = useRouter();
   const { id } = router.query;
->>>>>>> origin/auto/autonomy-17186719616
 
   // Case studies data - this should match the data in case-studies.tsx
   const caseStudies = [
@@ -27,11 +16,7 @@ export default function CaseStudyPage() {
       industry: 'Manufacturing',
       challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
       solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.',
-<<<<<<< HEAD
-      results: ['40% increase in production efficiency60% reduction in downtime', '25% improvement in quality control'],
-=======
       results: ['40% increase in production efficiency', '60% reduction in downtime', '25% improvement in quality control'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullContent: `
@@ -73,11 +58,7 @@ export default function CaseStudyPage() {
       industry: 'Marketing',
       challenge: 'Manual content creation was limiting growth and unable to meet client demands.',
       solution: 'Deployed autonomous AI content generation systems with human oversight.',
-<<<<<<< HEAD
-      results: ['10x increase in content output85% improvement in engagement', '70% reduction in production time'],
-=======
       results: ['10x increase in content output', '85% improvement in engagement', '70% reduction in production time'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '4 months',
       description: 'Transforming content creation through autonomous AI systems.',
       fullContent: `
@@ -119,11 +100,7 @@ export default function CaseStudyPage() {
       industry: 'Technology',
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
       solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
-<<<<<<< HEAD
-      results: ['50% reduction in cloud costs99.9% uptime achieved', '3x improvement in performance'],
-=======
       results: ['50% reduction in cloud costs', '99.9% uptime achieved', '3x improvement in performance'],
->>>>>>> origin/auto/autonomy-17186719616
       duration: '8 months',
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullContent: `
@@ -157,15 +134,9 @@ export default function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
-<<<<<<< HEAD
-  ],
-
-  const caseStudy = caseStudies.find(study => study.id === id),
-=======
   ];
 
   const caseStudy = caseStudies.find(study => study.id === id);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!caseStudy) {
     return (
@@ -182,11 +153,7 @@ export default function CaseStudyPage() {
               </p>
               <Link 
                 href="/case-studies"
-<<<<<<< HEAD
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 ← Back to Case Studies
               </Link>
@@ -194,11 +161,7 @@ export default function CaseStudyPage() {
           </main>
         </div>
       </>
-<<<<<<< HEAD
-    )
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -286,11 +249,7 @@ export default function CaseStudyPage() {
             <div className="text-center">
               <Link 
                 href="/contact"
-<<<<<<< HEAD
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Get Started with Your Project
               </Link>
@@ -299,9 +258,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

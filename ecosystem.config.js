@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 module.exports = {
   apps: [
     {
@@ -106,5 +104,4 @@ module.exports = {
       'pre-setup': ''
     }
   }
->>>>>>> origin/auto/autonomy-17186719616
 };

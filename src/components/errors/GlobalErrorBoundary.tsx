@@ -7,11 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/auto/autonomy-17186719616
 
 
 interface ErrorBoundaryState {
@@ -34,11 +30,7 @@ interface ErrorBoundaryProps {
   context?: string
 }
 
-<<<<<<< HEAD
-export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {
-=======
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
->>>>>>> origin/auto/autonomy-17186719616
   private retryTimeouts: NodeJS.Timeout[] = []
 
   constructor(props: ErrorBoundaryProps) {
@@ -57,13 +49,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
-<<<<<<< HEAD
-
       hasError: true,
-
-=======
-      hasError: true,
->>>>>>> origin/auto/autonomy-17186719616
       error
     }
   }
@@ -246,13 +232,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             stack: this.state.error.stack,
             name: this.state.error.name
           },
-<<<<<<< HEAD
-          error_info: this.state.error_info,
-          user_feedback: this.state.user_feedback,
-=======
           errorInfo: this.state.errorInfo,
           userFeedback: this.state.userFeedback,
->>>>>>> origin/auto/autonomy-17186719616
           context: this.props.context,
           timestamp: new Date().toISOString()
         })
@@ -266,14 +247,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
 
-<<<<<<< HEAD
-
-
-=======
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
->>>>>>> origin/auto/autonomy-17186719616
     }
   }
 
@@ -296,13 +272,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
           >
-<<<<<<< HEAD
-            transition={{ duration: 0.3 }}
-          >
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
@@ -323,24 +292,14 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                     </Badge>
                   )}
                 </div>
-<<<<<<< HEAD
-
               </CardHeader>
 
-
-=======
-              </CardHeader>
-
->>>>>>> origin/auto/autonomy-17186719616
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
                   </p>
-<<<<<<< HEAD
-=======
                   
->>>>>>> origin/auto/autonomy-17186719616
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
@@ -355,26 +314,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                       <RefreshCw className="h-4 w-4" />
                       Try Again
                     </Button>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                   )}
                   
                   <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
                     <Home className="h-4 w-4" />
                     Go Home
                   </Button>
-<<<<<<< HEAD
-                  <Button 
-                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
-                    variant="ghost" 
-                    size="sm"
-                    className="flex items-center gap-2"
-                  >
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
@@ -394,10 +339,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-                      className='border-t pt-4'
-=======
->>>>>>> origin/auto/autonomy-17186719616
                       className="border-t pt-4"
                     >
                       <div className="space-y-4">
@@ -417,47 +358,17 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                           </div>
                         )}
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
                             Copy Details
                           </Button>
-<<<<<<< HEAD
-=======
                           
->>>>>>> origin/auto/autonomy-17186719616
                           {this.props.showReportButton !== false && (
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
-<<<<<<< HEAD
-                              size='sm'>;
-                              <Send className='h-4 w-4 mr-2' />                              Report Issue;
-                        <div className="flex gap-2">;
-                          <Button onClick={this && this.copyErrorDetails} variant="outline" size="sm">;
-                            <Clipboard className="h-4 w-4 mr-2" />;
-                            Copy Details;
-                          </Button>;
-
-                          {this && this.props.showReportButton !== false && (;
-                            <Button onClick={this && this.reportError} variant="outline" size="sm">;
-                              <Send className="h-4 w-4 mr-2" />;
-                              Report Issue;
-                            </Button>;
-
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                           )}
                         </div>
                       </div>
@@ -495,11 +406,7 @@ export const useErrorBoundary = () => {
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
-<<<<<<< HEAD
-  errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
-=======
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
->>>>>>> origin/auto/autonomy-17186719616
 ) => {
   const WrappedComponent = (props: P) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>
@@ -512,8 +419,4 @@ export const withErrorBoundary = <P extends object>(
   return WrappedComponent
 }
 
-<<<<<<< HEAD
 export default GlobalErrorBoundary 
-=======
-export default GlobalErrorBoundary 
->>>>>>> origin/auto/autonomy-17186719616
