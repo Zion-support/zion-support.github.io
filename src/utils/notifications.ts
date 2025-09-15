@@ -1,125 +1,130 @@
-/**
- * Notification utilities for managing user notifications
- */
+// Notifications utility for handling user notifications
 
-export interface NotificationOptions {
+export interface Notification {
+  id: string;
+  type: 'success' | 'error' | 'warning' | 'info';
   title: string;
   message: string;
-  type?: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
   persistent?: boolean;
+  actions?: NotificationAction[];
+  timestamp: Date;
 }
 
-export interface Notification extends NotificationOptions {
-  id: string;
-  timestamp: number;
-  dismissed?: boolean;
+export interface NotificationAction {
+  label: string;
+  action: () => void;
+  style?: 'primary' | 'secondary' | 'danger';
 }
 
 class NotificationManager {
   private notifications: Notification[] = [];
   private listeners: ((notifications: Notification[]) => void)[] = [];
 
-  addNotification(options: NotificationOptions): string {
-    const notification: Notification = {
-      id: this.generateId(),
-      timestamp: Date.now(),
-      ...options,
+  // Generate unique ID for notifications
+  private generateId(): string {
+    return `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  // Add a notification
+  add(notification: Omit<Notification, 'id' | 'timestamp'>): string {
+    const id = this.generateId();
+    const newNotification: Notification = {
+      ...notification,
+      id,
+      timestamp: new Date(),
+      duration: notification.duration || 5000,
+      persistent: notification.persistent || false,
     };
 
-    this.notifications.unshift(notification);
+    this.notifications.push(newNotification);
     this.notifyListeners();
 
-    // Auto-dismiss after duration if not persistent
-    if (!notification.persistent && notification.duration) {
+    // Auto-remove notification after duration (unless persistent)
+    if (!newNotification.persistent && newNotification.duration) {
       setTimeout(() => {
-        this.dismissNotification(notification.id);
-      }, notification.duration);
+        this.remove(id);
+      }, newNotification.duration);
     }
 
-    return notification.id;
+    return id;
   }
 
-  dismissNotification(id: string): void {
-    const index = this.notifications.findIndex(n => n.id === id);
-    if (index !== -1) {
-      this.notifications[index].dismissed = true;
-      this.notifyListeners();
-    }
-  }
-
-  removeNotification(id: string): void {
+  // Remove a notification by ID
+  remove(id: string): void {
     this.notifications = this.notifications.filter(n => n.id !== id);
     this.notifyListeners();
   }
 
-  clearAll(): void {
+  // Clear all notifications
+  clear(): void {
     this.notifications = [];
     this.notifyListeners();
   }
 
-  getNotifications(): Notification[] {
-    return this.notifications.filter(n => !n.dismissed);
+  // Get all notifications
+  getAll(): Notification[] {
+    return [...this.notifications];
   }
 
+  // Subscribe to notification changes
   subscribe(listener: (notifications: Notification[]) => void): () => void {
     this.listeners.push(listener);
+    
+    // Return unsubscribe function
     return () => {
       this.listeners = this.listeners.filter(l => l !== listener);
     };
   }
 
+  // Notify all listeners
   private notifyListeners(): void {
-    this.listeners.forEach(listener => listener(this.getNotifications()));
+    this.listeners.forEach(listener => listener([...this.notifications]));
   }
 
-  private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
+  // Convenience methods for different notification types
+  success(title: string, message: string, options?: Partial<Notification>): string {
+    return this.add({
+      type: 'success',
+      title,
+      message,
+      ...options,
+    });
+  }
+
+  error(title: string, message: string, options?: Partial<Notification>): string {
+    return this.add({
+      type: 'error',
+      title,
+      message,
+      persistent: true, // Errors are persistent by default
+      ...options,
+    });
+  }
+
+  warning(title: string, message: string, options?: Partial<Notification>): string {
+    return this.add({
+      type: 'warning',
+      title,
+      message,
+      ...options,
+    });
+  }
+
+  info(title: string, message: string, options?: Partial<Notification>): string {
+    return this.add({
+      type: 'info',
+      title,
+      message,
+      ...options,
+    });
   }
 }
 
-// Create singleton instance
-export const notificationManager = new NotificationManager();
-
-// Convenience functions
-export const showNotification = (options: NotificationOptions): string => {
-  return notificationManager.addNotification(options);
-};
-
-export const showSuccess = (title: string, message: string, duration = 3000): string => {
-  return showNotification({ title, message, type: 'success', duration });
-};
-
-export const showError = (title: string, message: string, persistent = false): string => {
-  return showNotification({ title, message, type: 'error', persistent });
-};
-
-export const showWarning = (title: string, message: string, duration = 5000): string => {
-  return showNotification({ title, message, type: 'warning', duration });
-};
-
-export const showInfo = (title: string, message: string, duration = 4000): string => {
-  return showNotification({ title, message, type: 'info', duration });
-};
-
-export const dismissNotification = (id: string): void => {
-  notificationManager.dismissNotification(id);
-};
-
-export const removeNotification = (id: string): void => {
-  notificationManager.removeNotification(id);
-};
-
-export const clearAllNotifications = (): void => {
-  notificationManager.clearAll();
-};
-
-export const getNotifications = (): Notification[] => {
-  return notificationManager.getNotifications();
-};
-
-export const subscribeToNotifications = (listener: (notifications: Notification[]) => void): () => void => {
-  return notificationManager.subscribe(listener);
-};
+// Create and export a singleton instance
+const notificationManager = new NotificationManager();
 
 export default notificationManager;
+
+// Export the class for testing purposes
+export { NotificationManager };

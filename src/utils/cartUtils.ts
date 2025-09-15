@@ -1,14 +1,12 @@
-/**
- * Cart utility functions for managing shopping cart operations
- */
+// Cart utilities for handling shopping cart operations
 
 export interface CartItem {
   id: string;
   name: string;
   price: number;
   quantity: number;
-  description?: string;
   image?: string;
+  description?: string;
   category?: string;
   sku?: string;
 }
@@ -17,258 +15,172 @@ export interface Cart {
   items: CartItem[];
   total: number;
   itemCount: number;
+  lastUpdated: Date;
+}
+
+export interface CartSummary {
   subtotal: number;
   tax: number;
   shipping: number;
-  discount: number;
+  total: number;
+  itemCount: number;
 }
 
-export interface Discount {
-  code: string;
-  type: 'percentage' | 'fixed';
-  value: number;
-  minimumAmount?: number;
-  expiresAt?: Date;
-}
+class CartUtils {
+  // Calculate cart totals
+  calculateTotals(items: CartItem[]): CartSummary {
+    const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const tax = subtotal * 0.08; // 8% tax rate
+    const shipping = subtotal > 100 ? 0 : 10; // Free shipping over $100
+    const total = subtotal + tax + shipping;
+    const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
-const TAX_RATE = 0.08; // 8% tax rate
-const FREE_SHIPPING_THRESHOLD = 100;
-const SHIPPING_COST = 9.99;
-
-export function createEmptyCart(): Cart {
-  return {
-    items: [],
-    total: 0,
-    itemCount: 0,
-    subtotal: 0,
-    tax: 0,
-    shipping: 0,
-    discount: 0,
-  };
-}
-
-export function addItemToCart(cart: Cart, item: Omit<CartItem, 'quantity'>, quantity: number = 1): Cart {
-  const existingItemIndex = cart.items.findIndex(cartItem => cartItem.id === item.id);
-
-  let newItems: CartItem[];
-  if (existingItemIndex >= 0) {
-    // Update existing item quantity
-    newItems = cart.items.map((cartItem, index) => {
-      if (index === existingItemIndex) {
-        return {
-          ...cartItem,
-          quantity: cartItem.quantity + quantity,
-        };
-      }
-      return cartItem;
-    });
-  } else {
-    // Add new item
-    newItems = [...cart.items, { ...item, quantity }];
-  }
-
-  return calculateCartTotals({ ...cart, items: newItems });
-}
-
-export function removeItemFromCart(cart: Cart, itemId: string): Cart {
-  const newItems = cart.items.filter(item => item.id !== itemId);
-  return calculateCartTotals({ ...cart, items: newItems });
-}
-
-export function updateItemQuantity(cart: Cart, itemId: string, quantity: number): Cart {
-  if (quantity <= 0) {
-    return removeItemFromCart(cart, itemId);
-  }
-
-  const newItems = cart.items.map(item => {
-    if (item.id === itemId) {
-      return { ...item, quantity };
-    }
-    return item;
-  });
-
-  return calculateCartTotals({ ...cart, items: newItems });
-}
-
-export function clearCart(): Cart {
-  return createEmptyCart();
-}
-
-export function calculateCartTotals(cart: Cart): Cart {
-  const subtotal = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
-  
-  // Calculate shipping
-  const shipping = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
-  
-  // Calculate tax (on subtotal + shipping - discount)
-  const taxableAmount = subtotal + shipping - cart.discount;
-  const tax = taxableAmount * TAX_RATE;
-  
-  // Calculate total
-  const total = subtotal + shipping + tax - cart.discount;
-
-  return {
-    ...cart,
-    subtotal: Math.round(subtotal * 100) / 100,
-    tax: Math.round(tax * 100) / 100,
-    shipping: Math.round(shipping * 100) / 100,
-    total: Math.round(total * 100) / 100,
-    itemCount,
-  };
-}
-
-export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isValid: boolean; message: string } {
-  const now = new Date();
-  
-  // Check if discount is expired
-  if (discount.expiresAt && discount.expiresAt < now) {
     return {
-      cart,
-      isValid: false,
-      message: 'Discount code has expired',
+      subtotal,
+      tax,
+      shipping,
+      total,
+      itemCount,
     };
   }
 
-  // Check minimum amount
-  if (discount.minimumAmount && cart.subtotal < discount.minimumAmount) {
-    return {
-      cart,
-      isValid: false,
-      message: `Minimum order amount of $${discount.minimumAmount} required`,
-    };
-  }
-
-  // Calculate discount amount
-  let discountAmount = 0;
-  if (discount.type === 'percentage') {
-    discountAmount = cart.subtotal * (discount.value / 100);
-  } else {
-    discountAmount = discount.value;
-  }
-
-  // Don't allow discount to exceed subtotal
-  discountAmount = Math.min(discountAmount, cart.subtotal);
-
-  const newCart = calculateCartTotals({
-    ...cart,
-    discount: Math.round(discountAmount * 100) / 100,
-  });
-
-  return {
-    cart: newCart,
-    isValid: true,
-    message: 'Discount applied successfully',
-  };
-}
-
-export function removeDiscount(cart: Cart): Cart {
-  return calculateCartTotals({
-    ...cart,
-    discount: 0,
-  });
-}
-
-export function getCartSummary(cart: Cart): string {
-  if (cart.itemCount === 0) {
-    return 'Your cart is empty';
-  }
-
-  const itemText = cart.itemCount === 1 ? 'item' : 'items';
-  return `${cart.itemCount} ${itemText} - $${cart.total.toFixed(2)}`;
-}
-
-export function getCartItemById(cart: Cart, itemId: string): CartItem | undefined {
-  return cart.items.find(item => item.id === itemId);
-}
-
-export function isItemInCart(cart: Cart, itemId: string): boolean {
-  return cart.items.some(item => item.id === itemId);
-}
-
-export function getCartItemsByCategory(cart: Cart, category: string): CartItem[] {
-  return cart.items.filter(item => item.category === category);
-}
-
-export function getCartTotalByCategory(cart: Cart, category: string): number {
-  return getCartItemsByCategory(cart, category).reduce(
-    (sum, item) => sum + (item.price * item.quantity),
-    0
-  );
-}
-
-export function validateCartItem(item: Partial<CartItem>): { isValid: boolean; errors: string[] } {
-  const errors: string[] = [];
-
-  if (!item.id) {
-    errors.push('Item ID is required');
-  }
-
-  if (!item.name) {
-    errors.push('Item name is required');
-  }
-
-  if (!item.price || item.price <= 0) {
-    errors.push('Valid price is required');
-  }
-
-  if (!item.quantity || item.quantity <= 0) {
-    errors.push('Valid quantity is required');
-  }
-
-  return {
-    isValid: errors.length === 0,
-    errors,
-  };
-}
-
-export function exportCart(cart: Cart): string {
-  return JSON.stringify(cart, null, 2);
-}
-
-export function importCart(cartData: string): { cart: Cart; isValid: boolean; errors: string[] } {
-  try {
-    const parsed = JSON.parse(cartData);
-    const cart = calculateCartTotals(parsed);
+  // Add item to cart
+  addItem(cart: Cart, item: Omit<CartItem, 'quantity'>, quantity: number = 1): Cart {
+    const existingItemIndex = cart.items.findIndex(cartItem => cartItem.id === item.id);
     
-    // Validate all items
+    let newItems: CartItem[];
+    if (existingItemIndex >= 0) {
+      // Update existing item quantity
+      newItems = [...cart.items];
+      newItems[existingItemIndex] = {
+        ...newItems[existingItemIndex],
+        quantity: newItems[existingItemIndex].quantity + quantity,
+      };
+    } else {
+      // Add new item
+      newItems = [...cart.items, { ...item, quantity }];
+    }
+
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Remove item from cart
+  removeItem(cart: Cart, itemId: string): Cart {
+    const newItems = cart.items.filter(item => item.id !== itemId);
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Update item quantity
+  updateQuantity(cart: Cart, itemId: string, quantity: number): Cart {
+    if (quantity <= 0) {
+      return this.removeItem(cart, itemId);
+    }
+
+    const newItems = cart.items.map(item =>
+      item.id === itemId ? { ...item, quantity } : item
+    );
+    
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Clear cart
+  clearCart(): Cart {
+    return {
+      items: [],
+      total: 0,
+      itemCount: 0,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Get item by ID
+  getItem(cart: Cart, itemId: string): CartItem | undefined {
+    return cart.items.find(item => item.id === itemId);
+  }
+
+  // Check if item exists in cart
+  hasItem(cart: Cart, itemId: string): boolean {
+    return cart.items.some(item => item.id === itemId);
+  }
+
+  // Get cart summary
+  getSummary(cart: Cart): CartSummary {
+    return this.calculateTotals(cart.items);
+  }
+
+  // Validate cart
+  validateCart(cart: Cart): { isValid: boolean; errors: string[] } {
     const errors: string[] = [];
+
+    if (cart.items.length === 0) {
+      errors.push('Cart is empty');
+    }
+
     cart.items.forEach((item, index) => {
-      const validation = validateCartItem(item);
-      if (!validation.isValid) {
-        errors.push(`Item ${index + 1}: ${validation.errors.join(', ')}`);
+      if (!item.id) {
+        errors.push(`Item at index ${index} has no ID`);
+      }
+      if (!item.name) {
+        errors.push(`Item at index ${index} has no name`);
+      }
+      if (item.price < 0) {
+        errors.push(`Item at index ${index} has negative price`);
+      }
+      if (item.quantity <= 0) {
+        errors.push(`Item at index ${index} has invalid quantity`);
       }
     });
 
     return {
-      cart,
       isValid: errors.length === 0,
       errors,
     };
-  } catch (error) {
-    return {
-      cart: createEmptyCart(),
-      isValid: false,
-      errors: ['Invalid cart data format'],
-    };
+  }
+
+  // Format price for display
+  formatPrice(price: number): string {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(price);
+  }
+
+  // Get cart size (number of unique items)
+  getCartSize(cart: Cart): number {
+    return cart.items.length;
+  }
+
+  // Check if cart is empty
+  isEmpty(cart: Cart): boolean {
+    return cart.items.length === 0;
   }
 }
 
-export default {
-  createEmptyCart,
-  addItemToCart,
-  removeItemFromCart,
-  updateItemQuantity,
-  clearCart,
-  calculateCartTotals,
-  applyDiscount,
-  removeDiscount,
-  getCartSummary,
-  getCartItemById,
-  isItemInCart,
-  getCartItemsByCategory,
-  getCartTotalByCategory,
-  validateCartItem,
-  exportCart,
-  importCart,
-};
+// Create and export a singleton instance
+const cartUtils = new CartUtils();
+
+export default cartUtils;
+
+// Export the class for testing purposes
+export { CartUtils };
