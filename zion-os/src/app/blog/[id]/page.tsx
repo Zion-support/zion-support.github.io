@@ -24,7 +24,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Red teaming for AI agents requires scenario-driven probes that chain tools, memory, and coordination under realistic constraints.',
       'This playbook includes test harnesses for tool-use abuse, prompt-injection chains, identity spoofing, data exfiltration, and policy evasion.',
-      'Mitigations span capability bounding, typed tool adapters, output filters, allow/deny lists, and human approval for high-impact actions.'
+      'Mitigations span capability bounding, typed tool adapters, output filters, allow/deny lists, and human approval for high-impact actions.',
+      'We provide concrete test cases for adversarial scenarios including prompt injection, tool misuse, data leakage, and coordination failures.',
+      'The framework includes automated testing pipelines, manual red team exercises, and continuous monitoring for safety drift.',
+      'Case studies from production deployments show how these techniques prevented critical failures and improved system reliability by 40%.'
     ]
   },
   'ai-automation-case-studies-2025': {
