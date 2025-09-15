@@ -118,6 +118,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: September 2025 Innovation + Executive Briefing */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-fuchsia-100">
+            <div>
+              <p className="text-sm font-semibold text-fuchsia-700">Just published</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">September 2025: Innovation Highlights + Exec Briefing</h2>
+              <p className="text-gray-600 mt-2">Eval-first operations, policy-as-code, and measurable SLOs you can adopt now.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2025-2026-september-innovation-highlights" className="inline-block bg-fuchsia-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-700">Innovation Highlights</Link>
+              <Link href="/blog/ai-2025-2026-september-exec-briefing" className="inline-block border border-fuchsia-600 text-fuchsia-700 px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-50">Executive Briefing</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
