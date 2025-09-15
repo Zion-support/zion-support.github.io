@@ -2,21 +2,6 @@ module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-unused-vars': [
@@ -54,12 +39,6 @@ module.exports = {
     '*.log',
     '*.txt',
     '*.md'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   ]
 =======
     'react/no-unescaped-entities': 'off',
@@ -67,18 +46,4 @@ module.exports = {
     '@next/next/no-img-element': 'warn'
   }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
-  ]};
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  ]};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  ]};
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

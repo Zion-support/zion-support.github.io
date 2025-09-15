@@ -1,657 +1,355 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-=======
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import JsonLd from '@/components/JsonLd'
-import { Button } from '@/components/ui/button'
-import ImageWithRetry from '@/components/ui/ImageWithRetry'
-import {
-  ArrowLeft
-  Calendar
-  Clock
-  ChevronLeft
-  ChevronRight
-  Share2
-  Facebook
-  Twitter
-  Linkedin
-} from 'lucide-react'
-import type { BlogPost as BlogPostType } from '@/types/blog'
-import { Separator } from '@/components/ui/separator'
-import ReactMarkdown from 'react-markdown'
-import { logErrorToProduction } from '@/utils/productionLogger'
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from '@/data/blog-posts'
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
-import { fetchWithRetry } from '@/utils/fetchWithRetry'
-export default function BlogPost() {
-  const router = useRouter()
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect(() => {import { useRouter } from 'next/router'
-import { SEO } from "@/components/SEO"
-import JsonLd from "@/components/JsonLd"
-import { Button } from "@/components/ui/button"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction } from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
-export default function BlogPost() {
-<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link, useParams } from 'react-router-dom';
+import { 
+  Calendar, 
+  User, 
+  Clock, 
+  ArrowLeft, 
+  Share2, 
+  Heart, 
+  MessageCircle,
+  Tag,
+  BookOpen,
+  TrendingUp,
+  Brain,
+  Zap,
+  Target,
+  Users,
+  BarChart3
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-  const router = null;
-=======
-  const router = useRouter()
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect((,) => {
-    const fetchPost = async () => {
-      setIsLoading(true)
-      setError(null)
-      try {
-        const data = await fetchWithRetry(`/api/blog/${slug}`)
-        setPost(data)
-        const related = BLOG_POSTS.filter(
-          p =>
-            p.id !== data.id &&
-            (p.category === data.category |
-              p.tags.some(tag => data.tags.includes(tag)))
-        ).slice(0, 3)
-        setRelatedPosts(related)
-        setIsLoading(false)
-        return } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err })
-        setError('Failed to load article')
-      }
-      const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
-        setPost(currentPost)
-        const related = BLOG_POSTS.filter(
-          p =>
-            p.id !== currentPost.id &&
-            (p.category === currentPost.category |
-              p.tags.some(tag => currentPost.tags.includes(tag)))
-        ).slice(0, 3)
-        setRelatedPosts(related) } else {
-        router.replace('/blog')
-      }
-      setIsLoading(false)
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishDate: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  featured: boolean;
+  image: string;
+  likes: number;
+  comments: number;
+}
+
+const BlogPost: React.FC = () => {
+  const { slug } = useParams();
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
+  const [isLiked, setIsLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
+
+  // Mock blog posts data
+  const blogPosts: BlogPost[] = [
+    {
+      id: 'ai-revolution-2025',
+      title: 'The AI Revolution: Transforming Business Operations in 2025',
+      excerpt: 'Discover how artificial intelligence is reshaping industries and creating new opportunities for growth and innovation.',
+      content: `
+        <div class="prose prose-invert max-w-none">
+          <h2>The Dawn of AI-Powered Business Transformation</h2>
+          <p>As we navigate through 2025, artificial intelligence has emerged as the cornerstone of digital transformation, fundamentally altering how businesses operate, compete, and deliver value to their customers. The convergence of advanced machine learning algorithms, massive data processing capabilities, and cloud computing has created unprecedented opportunities for organizations across all sectors.</p>
+
+          <h3>Key Trends Shaping the AI Landscape</h3>
+          <p>The current AI revolution is characterized by several transformative trends that are reshaping the business landscape:</p>
+
+          <h4>1. Autonomous Business Operations</h4>
+          <p>Companies are increasingly adopting AI systems that can operate independently, making decisions and executing tasks without human intervention. From automated customer service to intelligent supply chain management, autonomous operations are becoming the new standard.</p>
+
+          <h4>2. Predictive Analytics at Scale</h4>
+          <p>Advanced predictive models are now capable of forecasting market trends, customer behavior, and operational challenges with remarkable accuracy. This enables businesses to make proactive decisions and stay ahead of the competition.</p>
+
+          <h4>3. Personalization at Scale</h4>
+          <p>AI-powered personalization engines are delivering tailored experiences to millions of users simultaneously, creating deeper customer engagement and driving higher conversion rates.</p>
+
+          <h3>Industry Applications and Success Stories</h3>
+          <p>Across industries, we're witnessing remarkable transformations:</p>
+
+          <ul>
+            <li><strong>Healthcare:</strong> AI diagnostics are achieving accuracy rates exceeding 95%, enabling early disease detection and personalized treatment plans.</li>
+            <li><strong>Finance:</strong> Automated trading systems and risk assessment tools are processing billions of transactions in real-time.</li>
+            <li><strong>Manufacturing:</strong> Predictive maintenance and quality control systems are reducing downtime by up to 40%.</li>
+            <li><strong>Retail:</strong> Dynamic pricing and inventory optimization are maximizing profitability while improving customer satisfaction.</li>
+          </ul>
+
+          <h3>The Future of AI in Business</h3>
+          <p>Looking ahead, we can expect even more profound changes as AI continues to evolve. The integration of quantum computing, edge AI, and advanced neural networks will unlock new possibilities that we can only begin to imagine today.</p>
+
+          <p>Organizations that embrace AI transformation now will be the ones that thrive in the coming decade. The question isn't whether to adopt AI, but how quickly and effectively you can integrate it into your business operations.</p>
+        </div>
+      `,
+      author: 'Dr. Sarah Chen',
+      publishDate: '2025-01-15',
+      readTime: '8 min read',
+      category: 'AI & Technology',
+      tags: ['Artificial Intelligence', 'Business Transformation', 'Machine Learning', 'Innovation'],
+      featured: true,
+      image: '/api/placeholder/800/400',
+      likes: 1247,
+      comments: 89
+    },
+    {
+      id: 'customer-success-ai',
+      title: 'Revolutionizing Customer Success with AI: A Complete Guide',
+      excerpt: 'Learn how AI-powered customer success platforms are transforming customer retention and satisfaction.',
+      content: `
+        <div class="prose prose-invert max-w-none">
+          <h2>The AI Revolution in Customer Success</h2>
+          <p>Customer success has evolved from a reactive support function to a proactive, data-driven discipline that drives business growth. With the integration of artificial intelligence, customer success teams can now predict churn, personalize experiences, and optimize customer journeys at scale.</p>
+
+          <h3>Key AI Technologies Transforming Customer Success</h3>
+          <p>Several AI technologies are revolutionizing how we approach customer success:</p>
+
+          <h4>Predictive Analytics</h4>
+          <p>AI-powered predictive models analyze customer behavior patterns to identify at-risk accounts before they churn. These systems can predict churn with up to 95% accuracy, enabling proactive intervention strategies.</p>
+
+          <h4>Natural Language Processing</h4>
+          <p>NLP technologies analyze customer communications to understand sentiment, identify issues, and provide insights into customer satisfaction levels.</p>
+
+          <h4>Automated Personalization</h4>
+          <p>AI systems create personalized customer experiences by analyzing individual preferences, usage patterns, and engagement history.</p>
+
+          <h3>Implementation Strategies</h3>
+          <p>Successfully implementing AI in customer success requires a strategic approach:</p>
+
+          <ol>
+            <li><strong>Data Foundation:</strong> Establish robust data collection and management systems</li>
+            <li><strong>Technology Integration:</strong> Select and integrate appropriate AI tools and platforms</li>
+            <li><strong>Team Training:</strong> Upskill customer success teams to work effectively with AI systems</li>
+            <li><strong>Continuous Optimization:</strong> Regularly refine AI models based on performance data</li>
+          </ol>
+        </div>
+      `,
+      author: 'Michael Rodriguez',
+      publishDate: '2025-01-12',
+      readTime: '6 min read',
+      category: 'Customer Success',
+      tags: ['Customer Success', 'AI', 'Retention', 'Analytics'],
+      featured: false,
+      image: '/api/placeholder/800/400',
+      likes: 892,
+      comments: 45
     }
-    fetchPost()
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [slug, router])
-  if (isLoading && !timedOut) {
-    return (
-      <div className='min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center'>
-        <div className='animate-pulse'>Loading article...</div>
-      </div>
-    )
-  }
-  if (!post && (error |timedOut)) {
-    return (
-      <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
-        <p>Failed to load article.</p>
-        <Button onClick={(,) => router.reload()}>Retry</Button>
-      </div>
-    )
-  }
-  // If post is still null after loading, show not found
+  ];
+
+  useEffect(() => {
+    const currentPost = blogPosts.find(p => p.id === slug) || blogPosts[0];
+    setPost(currentPost);
+    setLikeCount(currentPost.likes);
+    
+    // Get related posts (excluding current post)
+    const related = blogPosts.filter(p => p.id !== currentPost.id).slice(0, 3);
+    setRelatedPosts(related);
+  }, [slug]);
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+    setLikeCount(prev => isLiked ? prev - 1 : prev + 1);
+  };
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: post?.title,
+          text: post?.excerpt,
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.log('Error sharing:', err);
+      }
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(window.location.href);
+    }
+  };
+
   if (!post) {
     return (
-      <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
-        <p>Article not found.</p>
-        <Button onClick={(,) => router.push('/blog')}>Back to Blog</Button>
+      <div className="min-h-screen bg-futuristic flex items-center justify-center">
+        <div className="text-center text-white">
+          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <p className="text-xl text-gray-300 mb-8">The blog post you're looking for doesn't exist.</p>
+          <Link to="/blog" className="btn-futuristic">
+            Back to Blog
+          </Link>
+        </div>
       </div>
-    )
+    );
   }
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    if (!post) return ''
-    const url = encodeURIComponent(window.location.href)
-    const title = encodeURIComponent(post.title)
-    switch (platform) {
-      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
-    switch (platform) {
-      case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
-      case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`
-      case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
-      default:
-        return '#'
-  }
-  const articleLd = {
-    '@context': 'https://schema.org'
-    '@type': 'BlogPosting'
-    headline: post.title
-    description: post.excerpt
-    image: post.featuredImage
-    datePublished: post.publishedDate
-    author: {
-      '@type': 'Person'
-      name: post.author.name
-    }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
-      <SEO
-        title={post.title}
+      <SEO 
+        title={`${post.title} - Zion Tech Group Blog`}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />
-      <JsonLd data={articleLd} />
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
-        <div className='container mx-auto'>
-          {/* Back to blog button */}
-          <div className='mb-8'>
-            <Button
-              variant='outline'
-              className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-              asChild
+      
+      <div className="min-h-screen bg-futuristic">
+        {/* Navigation */}
+        <div className="pt-20 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Link
+              to="/blog"
+              className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200 mb-8"
             >
-              <Link href='/blog'>
-                <ArrowLeft className='mr-2 h-4 w-4' />
-                Back to all articles
-              </Link>
-            </Button>
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
+            </Link>
           </div>
-          {/* Article header */}
-          <div className='mb-8 max-w-4xl mx-auto'>
-            <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4'>
-              {post.category}
-            </span>
-            <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+        </div>
+
+        {/* Article Header */}
+        <motion.article 
+          className="px-4 sm:px-6 lg:px-8 pb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="max-w-4xl mx-auto">
+            {/* Featured Badge */}
+            {post.featured && (
+              <div className="mb-6">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-zion-cyan to-zion-blue text-white">
+                  <Star className="w-4 h-4 mr-2" />
+                  Featured Article
+                </span>
+              </div>
+            )}
+
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {post.title}
             </h1>
-            <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
-            {/* Author and metadata */}
-            <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
-              <div className='flex items-center mb-4 sm:mb-0'>
-                <ImageWithRetry
-                  src={post.author.avatarUrl}
-                  alt={post.author.name}
-                  className='w-12 h-12 rounded-full mr-3'
-                  fallbackSrc='/images/blog-placeholder.svg'                />
-                <div>
-                  <p className='text-white font-medium'>{post.author.name}</p>
-                  <p className='text-sm text-zion-slate-light'>
-                    {post.author.title}
-                  </p>
-                </div>
+
+            {/* Meta Information */}
+            <div className="flex flex-wrap items-center gap-6 text-gray-300 mb-8">
+              <div className="flex items-center">
+                <User className="w-5 h-5 mr-2" />
+                <span>{post.author}</span>
               </div>
-              <div className='flex items-center space-x-4'>
-                <div className='flex items-center text-zion-slate-light'>
-                  <Calendar className='h-4 w-4 mr-1' />
-                  <span className='text-sm'>{post.publishedDate}</span>
-                </div>
-                <div className='flex items-center text-zion-slate-light'>
-                  <Clock className='h-4 w-4 mr-1' />
-                  <span className='text-sm'>{post.readTime}</span>
-                </div>
-                <div className='relative'>
-                  <Button
-                    variant='ghost'
-                    size='sm'
-                    className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
-                    onClick={() => setShowShareMenu(!showShareMenu)}                  >
-                    <Share2 className='h-4 w-4 mr-1' />
-                    <span className='text-sm'>Share</span>
-                  </Button>
-                  {showShareMenu && (
-                    <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
-                      <a
-                        href={getShareUrl('facebook')}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
-                        aria-label='Share on Facebook'
-                        title='Share on Facebook'                      >
-                        <Facebook className='h-4 w-4 mr-2' />
-                        <span>Facebook</span>
-                      </a>
-                      <a
-                        href={getShareUrl('twitter')}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
-                        aria-label='Share on Twitter'
-                        title='Share on Twitter'                      >
-                        <Twitter className='h-4 w-4 mr-2' />
-                        <span>Twitter</span>
-                      </a>
-                      <a
-                        href={getShareUrl('linkedin')}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
-                        aria-label='Share on LinkedIn'
-                        title='Share on LinkedIn'                      >
-                        <Linkedin className='h-4 w-4 mr-2' />
-                        <span>LinkedIn</span>
-                      </a>
-                    </div>
-                  )}
-                </div>
+              <div className="flex items-center">
+                <Calendar className="w-5 h-5 mr-2" />
+                <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-2" />
+                <span>{post.readTime}</span>
+              </div>
+              <div className="flex items-center">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                <span>{post.comments} comments</span>
               </div>
             </div>
-          </div>
-          {/* Featured image */}
-          <div className='mb-12 max-w-5xl mx-auto'>
-            <div className='aspect-[21/9] rounded-lg overflow-hidden'>
-              <ImageWithRetry
-                src={post.featuredImage}
-                alt={post.featuredImageAlt |post.title}
-                className='object-cover w-full h-full'
-                fallbackSrc='/images/blog-placeholder.svg'              />
+
+            {/* Category and Tags */}
+            <div className="mb-8">
+              <div className="flex items-center mb-4">
+                <Tag className="w-5 h-5 mr-2 text-zion-cyan" />
+                <span className="text-zion-cyan font-semibold">{post.category}</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm border border-slate-700/50"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          {/* Article content */}
-          <div className='max-w-4xl mx-auto'>
-            <div className='prose prose-lg prose-invert max-w-none'>
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+
+            {/* Featured Image */}
+            <div className="mb-8">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-64 md:h-80 object-cover rounded-xl border border-slate-700/50"
+              />
             </div>
-            {/* Tags */}
-            <div className='flex flex-wrap gap-2 mt-12'>
-              {post.tags.map(tag => (
-                <span
-                  key={tag}
-                  className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
-                  #{tag}
-                </span>
-              ))}
+
+            {/* Article Content */}
+            <div 
+              className="prose prose-lg prose-invert max-w-none mb-12"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+
+            {/* Article Actions */}
+            <div className="flex items-center justify-between py-8 border-t border-slate-700/50">
+              <div className="flex items-center space-x-6">
+                <button
+                  onClick={handleLike}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                    isLiked 
+                      ? 'bg-red-500/20 text-red-400 border border-red-500/30' 
+                      : 'bg-slate-800/50 text-gray-300 border border-slate-700/50 hover:border-zion-cyan/50'
+                  }`}
+                >
+                  <Heart className={`w-5 h-5 ${isLiked ? 'fill-current' : ''}`} />
+                  <span>{likeCount}</span>
+                </button>
+                
+                <button
+                  onClick={handleShare}
+                  className="flex items-center space-x-2 px-4 py-2 bg-slate-800/50 text-gray-300 border border-slate-700/50 rounded-lg hover:border-zion-cyan/50 transition-all duration-200"
+                >
+                  <Share2 className="w-5 h-5" />
+                  <span>Share</span>
+                </button>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <Link
+                  to="/services"
+                  className="btn-futuristic"
+                >
+                  Explore Our Services
+                </Link>
+              </div>
             </div>
-            <Separator className='my-12 bg-zion-blue-light' />
-            {/* Related articles */}
+
+            {/* Related Posts */}
             {relatedPosts.length > 0 && (
-              <div className='mt-12'>
-                <h3 className='text-2xl font-bold text-white mb-6'>
-                  Related Articles
-                </h3>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-                  {relatedPosts.map(relatedPost => (
+              <div className="mt-16">
+                <h2 className="text-3xl font-bold text-white mb-8">Related Articles</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {relatedPosts.map((relatedPost) => (
                     <Link
-                      key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
-                      className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
+                      key={relatedPost.id}
+                      to={`/blog/${relatedPost.id}`}
+                      className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
                     >
-                      <div className='aspect-[16/9] relative'>
-                        <ImageWithRetry
-                          src={relatedPost.featuredImage}
-                          alt={
-                            relatedPost.featuredImageAlt |relatedPost.title
-                          }
-                          className='object-cover w-full h-full'
-                          fallbackSrc='/images/blog-placeholder.svg'                        />
-                      </div>
-                      <div className='p-4'>
-                        <span className='text-xs text-zion-cyan'>
-                          {relatedPost.category}
-                        </span>
-                        <h4 className='text-white font-bold mt-1 line-clamp-2'>
-                          {relatedPost.title}
-                        </h4>
+                      <img
+                        src={relatedPost.image}
+                        alt={relatedPost.title}
+                        className="w-full h-40 object-cover rounded-lg mb-4"
+                      />
+                      <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
+                        {relatedPost.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                        {relatedPost.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between text-sm text-gray-400">
+                        <span>{relatedPost.readTime}</span>
+                        <span>{relatedPost.publishDate}</span>
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
-            <div className='mt-12 text-center'>
-              <p className='text-zion-slate-light'>
-                Ready to put these ideas into action? Explore our{' '}
-                <Link href='/services' className='text-zion-cyan underline'>
-                  AI services
-                </Link>{' '}
-                or browse expert{' '}
-                <Link href='/talent' className='text-zion-cyan underline'>
-                  talent
-                </Link>{' '}
-                to accelerate your projects.
-              </p>
-            </div>
-            {/* Navigation */}
-            <div className='flex justify-between items-center mt-12'>
-              <Button
-                variant='outline'
-                className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-                asChild
-              >
-                <Link href='/blog'>
-                  <ChevronLeft className='mr-2 h-4 w-4' />
-                  All Articles
-                </Link>
-              </Button>
-            </div>
           </div>
-        </div>
+        </motion.article>
       </div>
     </>
-  )
-}
-outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
-  getShareUrl ('facebook') "
-}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
-}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content
-}</ReactMarkdown> </div> <span key= {
-  tag "
-}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag
-}</span>) ) "
-}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
-}</div> </div>) "
-}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
-}'"import React from 'react'
-import { SEO } from '@/components / SEO'
-export default function Page() {
-    ],
-}
-  const formatDate = (dateString: string) => {
-    return new Date(dateString) .toLocaleDateString('en - US', {
-      year: 'numeric'
-      month: 'long'
-      day: 'numeric',
-})
-}
-  const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
-      ai: Brain
-      quantum: Cpu
-      security: Shield
-      cloud: Cloud
-      business: TrendingUp
-      iot: Network
-      emerging: Zap,
-}
-    return categoryIcons[category] |BookOpen
-}
-  const getCategoryName = (category: string) => {
-    const categoryNames: { [key: string]: string } = {
-      ai: 'Artificial Intelligence'
-      quantum: 'Quantum Computing'
-      security: 'Cybersecurity'
-      cloud: 'Cloud & DevOps'
-      business: 'Business Insights'
-      iot: 'IoT & Edge'
-      emerging: 'Emerging Tech',
-}
-    return categoryNames[category] |'Uncategorized'
-}
-  return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <SEO
-        title={`${blogPost.title} - Zion Tech Group Blog`}
-        description={blogPost.excerpt}
-      />
-      {/* Navigation */}
-      <section className="py-6 bg-slate -800 / 50">
-        <div className="container mx - auto px-4">
-          <Link
-            to="/blog"
-            className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200">
-            <ArrowLeft className="w-4 h-4" />
-            <span > Back to Blog</span>
-          </Link>
-        </div>
-      </section>
-      {/* Article Header */}
-      <section className="py-12">
-        <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max - w-4xl mx -auto">
-            {/* Category and Featured Badge */}
-            <div className="flex items - center space - x-3 mb-6">
-              <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
-                {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
-}) }
-                <span>{getCategoryName(blogPost.category) }</span>
-              </span>
-              {blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">
-                  Featured Article
-                </span>) }
-            </div>
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">
-              {blogPost.title}
-            </h1>
-            {/* Excerpt */}
-            <p className="text-xl text-gray - 300 mb-8 leading -relaxed">
-              {blogPost.excerpt}
-            </p>
-            {/* Article Meta */}
-            <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">
-              <div className="flex items - center space - x-6">
-                <div className="flex items - center space - x-2">
-                  <User className="w-5 h-5 text-cyan -400" />
-                  <div>
-                    <span className="text-white font -medium">
-                      {blogPost.author}
-                    </span>
-                    <span className="text-gray - 400 text-sm block">
-                      {blogPost.authorRole}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items - center space - x-2">
-                  <Calendar className="w-5 h-5 text-cyan -400" />
-                  <span className="text-gray -300">
-                    {formatDate(blogPost.date) }
-                  </span>
-                </div>
-                <div className="flex items - center space - x-2">
-                  <Clock className="w-5 h-5 text-cyan -400" />
-                  <span className="text-gray -300">{blogPost.readTime}</span>
-                </div>
-              </div>
-              <div className="flex items - center space - x-4">
-                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Heart className="w-5 h-5" />
-                  <span>{blogPost.likes}</span>
-                </button>
-                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Bookmark className="w-5 h-5" />
-                </button>
-                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Share2 className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Article Content */}
-      <section className="py-12">
-        <div className="container mx - auto px-4">
-          <div className="max - w-4xl mx -auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="prose prose - invert prose - lg max - w-none">
-              {/* Featured Image */}
-              <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">
-                <div className="text-center">
-                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4" />
-                  <p className="text-gray -300">Featured Article Image</p>
-                </div>
-              </div>
-              {/* Article Content */}
-              <div
-                className="text-gray - 300 leading -relaxed"
-                // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      {/* Tags */}
-      <section className="py-8 bg-slate -800 / 50">
-        <div className="container mx - auto px-4">
-          <div className="max - w-4xl mx -auto">
-            <div className="flex items - center space - x-3">
-              <Tag className="w-5 h-5 text-cyan -400" />
-              <span className="text-white font -medium">Tags:</span>
-              <div className="flex flex - wrap gap-2">
-                {blogPost.tags.map(tag => (<span
-                    key={tag}
-                    className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
-                    {tag}
-                  </span>) ) }
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Author Bio */}
-      <section className="py-12">
-        <div className="container mx - auto px-4">
-          <div className="max - w-4xl mx -auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
-              <h3 className="text-2xl font - bold text-white mb-4">
-                About the Author
-              </h3>
-              <div className="flex items - start space - x-4">
-                <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center flex - shrink -0">
-                  <User className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-xl font - semibold text-white mb-2">
-                    {blogPost.author}
-                  </h4>
-                  <p className="text-cyan - 400 mb-2">{blogPost.authorRole}</p>
-                  <p className="text-gray -300">{blogPost.authorBio}</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      {/* Related Posts */}
-      <section className="py-20 bg-slate -800 / 50">
-        <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16">
-            <h2 className="text-4xl font - bold text-white mb-4">
-              Related Articles
-            </h2>
-            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
-              Continue exploring insights and analysis on related topics
-            </p>
-          </motion.div>
-          <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
-            {blogPost.relatedPosts.map((post, index) => (<motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">
-                <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
-                  <BookOpen className="w-16 h-16 text-cyan -400" />
-                </div>
-                <div className="p -6">
-                  <div className="flex items - center space - x-2 mb-3">
-                    <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">
-                      {getCategoryName(post.category) }
-                    </span>
-                  </div>
-                  <h3 className="text-lg font - bold text-white mb-3 group - hover:text-cyan - 400 transition - colors duration -200">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray - 300 mb-4 line - clamp -3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items - center justify - between text-sm text-gray -400">
-                    <div className="flex items - center space - x-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{formatDate(post.date) }</span>
-                    </div>
-                    <div className="flex items - center space - x-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.article>) ) }
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max - w-4xl mx -auto">
-            <h2 className="text-4xl font - bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray - 300 mb-8">
-              Let's discuss how our AI - powered solutions can drive innovation
-              and growth for your organization.</p>
-            <div className="flex flex - wrap justify - center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">
-                Get Started Today
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">
-                Explore Our Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>)
-}
-export default function BlogPost() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">BlogPost</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional BlogPost services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}
-}
+  );
+};
+
+export default BlogPost;

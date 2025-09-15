@@ -1,11 +1,13 @@
 
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
+import { Fragment } from "react";
+<<<<<<< HEAD
+import { Routes } from "react-router-dom";
+=======
+import { Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
-<<<<<<< HEAD
-const ErrorRoutes = null;
-=======
+
 const ErrorRoutes = () => {
   return (
     <Routes>
@@ -13,7 +15,7 @@ const ErrorRoutes = () => {
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  )
-}
+  );
+};
+
 export default ErrorRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,84 +1,96 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Education  } from '@/types/resume';
-import { useResume  } from '@/hooks/useResume';
-import { format  } from 'date-fns';
-import { EducationFormProps  } from './types';
-import { EducationList  } from './EducationList';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Education } from '@/types/resume';
+import { useResume } from '@/hooks/useResume';
+import { format } from 'date-fns';
+import { EducationFormProps } from './types';
+import { EducationList } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
+
 export function EducationForm({ 
-  resumeId;
-  educationEntries;
-  onComplete;
+<<<<<<< HEAD
+  resumeId
+  educationEntries
+  onComplete
+  onBack 
+}: EducationFormProps) {
+  const { addEducationupdateEducationdeleteEducationisLoading } = useResume();
+  const [editingIdsetEditingId] = useState<string | null>(null);
+=======
+  resumeId, 
+  educationEntries, 
+  onComplete, 
   onBack 
 }: EducationFormProps) {
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null),
-  
-  // Helper function to format dates to string
-  const formatDateValue = null;
-=======
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Education} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';
-import {format} from 'date-fns';
-import {EducationFormProps} from './types';
-import {EducationList} from './EducationList';
-import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({
-  resumeId;
-  educationEntries
-  onComplete
-  onBack
-}: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
+  
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue
-    return format(dateValue, 'yyyy-MM-dd')
-  }
+    if (typeof dateValue === 'string') return dateValue;
+<<<<<<< HEAD
+    return format(dateValue'yyyy-MM-dd');
+=======
+    return format(dateValue, 'yyyy-MM-dd');
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   const handleAddOrUpdate = async (data: any) => {
     const educationData: Education = {
-      institution: data.institution
-      degree: data.degree
-      field_of_study: data.field_of_study
-      start_date: data.start_date
-      end_date: data.is_current ? undefined : (data.end_date |undefined)
-      is_current: data.is_current
-      description: data.description
-      location: data.location}
+      institution: data.institution,
+      degree: data.degree,
+      field_of_study: data.field_of_study,
+      start_date: data.start_date,
+      end_date: data.is_current ? undefined : (data.end_date || undefined),
+      is_current: data.is_current,
+      description: data.description,
+<<<<<<< HEAD
+      location: data.location};
+
     let success;
     if (editingId) {
-      success = await updateEducation(editingId, educationData)
+      success = await updateEducation(editingIdeducationData);
     } else {
-      success = await addEducation(resumeId, educationData)
+      success = await addEducation(resumeIdeducationData);
+=======
+      location: data.location,
+    };
+
+    let success;
+    if (editingId) {
+      success = await updateEducation(editingId, educationData);
+    } else {
+      success = await addEducation(resumeId, educationData);
+>>>>>>> origin/auto/autonomy-17186719616
     }
+
     if (success) {
-      setEditingId(null)
+      setEditingId(null);
     }
-  }
+  };
+
   const handleEdit = (edu: Education) => {
-    setEditingId(edu.id!)
+    setEditingId(edu.id!);
     // Form reset happens in the child component
-  }
+  };
+
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this education entry?')) {
-      await deleteEducation(id)
+      await deleteEducation(id);
     }
-  }
+  };
+
   const handleCancel = () => {
     if (editingId) {
-      setEditingId(null)
+      setEditingId(null);
     } else {
-      onBack()
+      onBack();
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+
   return (
     <div className="space-y-6">
       <div>
@@ -87,21 +99,29 @@ export function EducationForm({
           Add your educational background and academic achievements.
         </p>
       </div>
-      <EducationList
-        educationEntries={educationEntries}
+
+      <EducationList 
+        educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
+
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
         />
       </div>
+
       {!editingId && educationEntries.length > 0 && (
         <div className="flex justify-end">
           <Button type="button" onClick={onComplete}>
@@ -110,5 +130,5 @@ export function EducationForm({
         </div>
       )}
     </div>
-  )
+  );
 }

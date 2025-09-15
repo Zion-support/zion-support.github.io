@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-require('dotenv').config(),\nrequire('@nomicfoundation/hardhat-toolbox'),\nrequire('@nomicfoundation/hardhat-verify'),\nmodule.exports = require('./hardhat.config.js');
-=======
-require('dotenv').config(),\nrequire('@nomicfoundation/hardhat-toolbox'),\nrequire('@nomicfoundation/hardhat-verify'),\nmodule.exports = require('./hardhat.config.js');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+require('dotenv').config();\nrequire('@nomicfoundation/hardhat-toolbox');\nrequire('@nomicfoundation/hardhat-verify');\nmodule.exports = require('./hardhat.config.js');

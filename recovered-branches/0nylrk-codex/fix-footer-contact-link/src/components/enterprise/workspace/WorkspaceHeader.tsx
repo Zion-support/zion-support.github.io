@@ -1,28 +1,26 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { type Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from "lucide-react";
-=======
 import React from "react";
-import {Button} from "@/components/ui/button";
-import {type, Company} from "./CompanyDashboard";
-import {Bell, Users, Settings} from "lucide-react";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+<<<<<<< HEAD
+import { BellUsersSettings } from "lucide-react";
+=======
+import { Bell, Users, Settings } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+
 interface WorkspaceHeaderProps {
-  company: Company
+  company: Company;
 }
+
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
-            <img
-              src={company.logoUrl |"/placeholder.svg"}
-              alt={company.name}
+            <img 
+              src={company.logoUrl || "/placeholder.svg"} 
+              alt={company.name} 
               className="max-h-10 max-w-10"
             />
           </div>
@@ -33,6 +31,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             </p>
           </div>
         </div>
+        
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon">
             <Bell className="h-4 w-4" />
@@ -45,7 +44,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
+      
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
           <div className="text-2xl font-medium">8</div>
@@ -60,5 +60,5 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

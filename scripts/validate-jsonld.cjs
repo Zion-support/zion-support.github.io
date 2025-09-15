@@ -3,16 +3,16 @@ const fetch = global.fetch || ((...args) => import('node-fetch').then(({default:
 
 const SITE_URL = process.env.SITE_URL || 'https://ziontechgroup.netlify.app';
 const REQUIRED = [
-  { path: '/jobs', anyOf: ['JobPosting'] };
-  { path: '/products', anyOf: ['Product'] };
-  { path: '/services/ai-seo-auditor', anyOf: ['FAQPage'] };
+  { path: '/jobs', anyOf: ['JobPosting'] },
+  { path: '/products', anyOf: ['Product'] },
+  { path: '/services/ai-seo-auditor', anyOf: ['FAQPage'] },
   { path: '/talent/ava-chen', anyOf: ['Person','Organization','SocialProfile'] }
 ];
 
 async function getJsonLd(url) {
   const res = await fetch(url);
   const html = await res.text();
-  const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^></script>]*>([\s\S]*?)<\/script>/gi)];
+  const matches = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   const payloads = [];
   for (const m of matches) {
     try {

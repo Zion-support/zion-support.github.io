@@ -11,60 +11,33 @@ export interface Revolutionary2026AiService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string
-  }
+    address: string;
+  };
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
   {
-    id: "2026-revolutionary-ai";
-    name: "2026 Revolutionary AI Platform";
-    tagline: "Revolutionary AI for 2026";
-    price: "$249/month";
-    description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.";
+    id: "2026-revolutionary-ai",
+    name: "2026 Revolutionary AI Platform",
+    tagline: "Revolutionary AI for 2026",
+    price: "$249/month",
+    description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
     features: [
-      "Revolutionary AI";
-      "Transformative capabilities";
-      "Advanced algorithms";
+      "Revolutionary AI",
+      "Transformative capabilities",
+      "Advanced algorithms",
       "Innovation platform",
       "Future-ready AI"
     ],
-    link: "/services/2026-revolutionary-ai";
-    category: "Revolutionary 2026 AI";
-    realImplementation: true;
+    link: "/services/2026-revolutionary-ai",
+    category: "Revolutionary 2026 AI",
+    realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950";
-=======
-    address: string;
-  }
-export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
-  {
-    id: '2026-revolutionary-ai'
-    name: '2026 Revolutionary AI Platform'
-    tagline: 'Revolutionary AI for 2026'
-    price: '$249/month'
-    description:
-      'Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.'
-    features: [
-      'Revolutionary AI'
-      'Transformative capabilities'
-      'Advanced algorithms'
-      'Innovation platform'
-      'Future-ready AI'
-    ]
-    link: '/services/2026-revolutionary-ai'
-    category: 'Revolutionary 2026 AI'
-    realImplementation: true
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];      mobile: "+1 302 464 0950";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

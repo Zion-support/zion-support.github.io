@@ -1,11 +1,9 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
+
 export default function AIAutonomousResearchAssistant() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
 			title="AI Autonomous Research Assistant"
 			slug="ai-autonomous-research-assistant"
 			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
@@ -14,12 +12,11 @@ export default function AIAutonomousResearchAssistant() {
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
-				"Automated web and document monitoring with source citations"
-				"Daily/weekly executive briefs and dashboards"
-				"Regulatory watchlists and impact analysis"
-				"RFP/RFI opportunity discovery and alerts"
-				"Export to Slides/Docs/Notion"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+				"Automated web and document monitoring with source citations",
+				"Daily/weekly executive briefs and dashboards",
+				"Regulatory watchlists and impact analysis",
+				"RFP/RFI opportunity discovery and alerts",
+				"Export to Slides/Docs/Notion",
 				"Compliance-friendly data handling, audit logs"
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}

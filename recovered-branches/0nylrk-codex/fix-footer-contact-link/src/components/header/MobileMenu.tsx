@@ -1,68 +1,77 @@
 
-import { Link } from "react-router-dom",
-import { useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
-import { cn } from "@/lib/utils",
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+<<<<<<< HEAD
+import { HomeSearchBriefcaseIconMessageSquareUserXMessageCircle } from "lucide-react";
+=======
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
+
 export interface MobileMenuProps {
   unreadCount?: number;
-  onClose: () => void
+  onClose: () => void;
 }
-<<<<<<< HEAD
 
-export function MobileMenu({ unreadCount;
+<<<<<<< HEAD
+export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
 =======
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+  
   const navItems = [
     {
-      name: "Home"
-      href: "/"
-      icon: Home
+      name: "Home",
+      href: "/",
+      icon: Home,
       matches: (path: string) => path === "/"
-    }
+    },
     {
-      name: "Browse"
-      href: "/talent"
-      icon: Search
-      matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
-    }
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+    },
     {
-      name: "Community"
-      href: "/community"
-      icon: MessageCircle
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+    },
     {
-      name: "Post Job"
-      href: "/post-job"
-      icon: BriefcaseIcon
-      matches: (path: string) => path.startsWith("/post-job")
+      name: "Post Job",
+      href: "/post-job",
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith("/post-job"),
       authRequired: true
-    }
+    },
     {
-      name: "Messages"
-      href: "/messages"
-      icon: MessageSquare
-      matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
-      badge: unreadCount
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      badge: unreadCount,
       authRequired: true
-    }
+    },
     {
-      name: "Dashboard"
-      href: "/dashboard"
-      icon: User
-      matches: (path: string) => path.startsWith("/dashboard")
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true
     }
   ];
+
   // Filter items based on auth status
-  const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
+  const visibleItems = navItems.filter(item => 
+    !item.authRequired || (item.authRequired && isAuthenticated)
   );
+
   return (
     <div className="py-6">
       <div className="flex justify-between items-center px-6 mb-6">
@@ -71,14 +80,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
           <X className="h-5 w-5" />
         </Button>
       </div>
+      
       <nav className="space-y-1">
         {visibleItems.map(item => (
           <Link
             key={item.name}
             to={item.href}
             className={cn(
-              "flex items-center px-6 py-3 text-base font-medium";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+              "flex items-center px-6 py-3 text-base font-medium",
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -98,5 +107,5 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
         ))}
       </nav>
     </div>
-  )
+  );
 }

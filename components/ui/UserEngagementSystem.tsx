@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 import React from 'react';
-export type EmptyStateProps = any;
-export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
-=======
-import React from "react";
+
 export type EmptyStateProps = {
   emoji?: string;
   title: string;
   message: string;
   action?: React.ReactNode;
-}
-export default function EmptyState({
-  emoji = "✨"
-  title
-  message
-  action
-}: EmptyStateProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+};
+
+<<<<<<< HEAD
+export default function EmptyState({ emoji = '✨'titlemessageaction }: EmptyStateProps) {
+=======
+export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="text-center py-12">
       <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 flex items-center justify-center">

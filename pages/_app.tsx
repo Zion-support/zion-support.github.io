@@ -1,8 +1,11 @@
 import type { AppProps } from 'next/app';
-import '../src/styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
-return <Component {...pageProps} />;
 import '../styles/globals.css';
+import ModernLayout from '../components/layout/ModernLayout';
+
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ModernLayout>
+      <Component {...pageProps} />
+    </ModernLayout>
+  );
 }

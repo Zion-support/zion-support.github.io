@@ -3,21 +3,6 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -41,12 +26,6 @@ a {
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 /* Enhanced scrollbar */
 =======
 /* Import Inter font for modern typography */
@@ -95,41 +74,12 @@ a {
 
 /* Enhanced Scrollbar */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ::-webkit-scrollbar {
-/* Enhanced scrollbar */::-webkit-scrollbar {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-/* Enhanced scrollbar */::-webkit-scrollbar {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-/* Enhanced scrollbar */::-webkit-scrollbar {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -267,12 +217,6 @@ a {
 }
 
 /* Quantum Field Effects */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 .quantum-field-2029 {
 =======
   background: rgba(0, 0, 0, 0.4);
@@ -765,35 +709,271 @@ body::after {
 
 .quantum-field {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: relative;
   overflow: hidden;
 }
 
+<<<<<<< HEAD
+.quantum-field-2029::before {
+=======
+.quantum-field::before {
   content: '';
-.quantum-field-2029 {  position: relative;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
+    transparent,
+    rgba(147, 51, 234, 0.3),
+    transparent
+  );
+  animation: quantumSpin 8s linear infinite;
+}
+
+@keyframes quantumSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.biomedical-pulse {
+  animation: biomedicalPulse 2s ease-in-out infinite;
+}
+
+@keyframes biomedicalPulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+.autonomous-flow {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.1) 25%, 
+    rgba(147, 51, 234, 0.1) 50%, 
+    rgba(16, 185, 129, 0.1) 75%, 
+    transparent 100%);
+  background-size: 200% 100%;
+  animation: autonomousFlow 3s ease-in-out infinite;
+}
+
+@keyframes autonomousFlow {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.climate-waves {
+  background: linear-gradient(45deg,
+    rgba(16, 185, 129, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 25%,
+    rgba(147, 51, 234, 0.1) 50%,
+    rgba(16, 185, 129, 0.1) 75%,
+    rgba(59, 130, 246, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: climateWaves 15s ease-in-out infinite;
+}
+
+@keyframes climateWaves {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.energy-surge {
+  position: relative;
   overflow: hidden;
 }
 
-.quantum-field-2029::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-.quantum-field-2029 {  position: relative;
+.energy-surge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 0, 0.4), 
+    transparent);
+  animation: energySurge 2s ease-in-out infinite;
+}
+
+@keyframes energySurge {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.manufacturing-pulse {
+  animation: manufacturingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes manufacturingPulse {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    transform: scale(1.02) rotate(1deg);
+    filter: hue-rotate(10deg);
+  }
+}
+
+.futuristic-text-gradient {
+  background: linear-gradient(
+    45deg,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #f59e0b,
+    #10b981,
+    #3b82f6
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: futuristicTextGradient 4s ease-in-out infinite;
+}
+
+@keyframes futuristicTextGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.quantum-matrix {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 49%, rgba(147, 51, 234, 0.1) 50%, transparent 51%);
+  background-size: 100px 100px, 100px 100px, 20px 20px;
+  animation: quantumMatrix 10s linear infinite;
+}
+
+@keyframes quantumMatrix {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(100px, 100px) rotate(360deg); }
+}
+
+/* New futuristic effects */
+.quantum-glow {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(147, 51, 234, 0.2),
+    0 0 60px rgba(16, 185, 129, 0.1);
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
+@keyframes quantumPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(147, 51, 234, 0.2),
+      0 0 60px rgba(16, 185, 129, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(59, 130, 246, 0.5),
+      0 0 60px rgba(147, 51, 234, 0.3),
+      0 0 90px rgba(16, 185, 129, 0.2);
+  }
+}
+
+.holographic-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  background-clip: padding-box;
+  border-radius: 1rem;
+}
+
+.holographic-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  border-radius: 1rem;
+  z-index: -1;
+  animation: holographicRotate 8s linear infinite;
+}
+
+@keyframes holographicRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.neural-network-bg {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(239, 68, 68, 0.1) 0%, transparent 50%);
+  background-size: 200px 200px;
+  animation: neuralFlow 20s ease-in-out infinite;
+}
+
+@keyframes neuralFlow {
+  0%, 100% { 
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+  }
+  25% { 
+    background-position: 100% 0%, 0% 0%, 100% 100%, 0% 100%;
+  }
+  50% { 
+    background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%;
+  }
+  75% { 
+    background-position: 0% 100%, 100% 100%, 0% 0%, 100% 0%;
+  }
+}
+
+.cyberpunk-glow {
+  box-shadow: 
+    0 0 10px rgba(239, 68, 68, 0.5),
+    0 0 20px rgba(239, 68, 68, 0.3),
+    0 0 30px rgba(239, 68, 68, 0.1);
+  animation: cyberpunkFlicker 3s ease-in-out infinite;
+}
+
+@keyframes cyberpunkFlicker {
+  0%, 100% { 
+    box-shadow: 
+      0 0 10px rgba(239, 68, 68, 0.5),
+      0 0 20px rgba(239, 68, 68, 0.3),
+      0 0 30px rgba(239, 68, 68, 0.1);
+  }
+  50% { 
+    box-shadow: 
+      0 0 15px rgba(239, 68, 68, 0.7),
+      0 0 30px rgba(239, 68, 68, 0.5),
+      0 0 45px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.quantum-holographic {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(147, 51, 234, 0.1) 25%, 
+    rgba(16, 185, 129, 0.1) 50%, 
+    rgba(239, 68, 68, 0.1) 75%, 
+    rgba(59, 130, 246, 0.1) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  position: relative;
   overflow: hidden;
 }
 
-.quantum-field-2029::before {  content: '';
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+.quantum-holographic::before {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+  content: '';
   position: absolute;
   top: -50%;
   left: -50%;
@@ -803,21 +983,6 @@ body::after {
     from 0deg,
     transparent,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     rgba(0, 255, 255, 0.1),
     transparent,
     rgba(139, 92, 246, 0.1),
@@ -1022,12 +1187,6 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 /* Hover effects */
 =======
     rgba(59, 130, 246, 0.1),
@@ -1049,41 +1208,12 @@ body::after {
 
 /* Enhanced hover effects */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .hover-lift {
-/* Hover effects */.hover-lift {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-/* Hover effects */.hover-lift {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-/* Hover effects */.hover-lift {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -1138,17 +1268,13 @@ body::after {
 
 .card-hover {
   @apply card hover:bg-white/20 hover:transform hover:scale-105 hover:shadow-xl;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+=======
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.2);
 }
-<<<<<<< HEAD
 
 .hover-glow:hover {
   box-shadow: 
@@ -1322,14 +1448,3 @@ body::after {
   }
 }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

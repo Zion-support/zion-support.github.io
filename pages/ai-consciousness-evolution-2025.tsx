@@ -1,29 +1,19 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIConsciousnessEvolution2025() {
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
+export default function AIConsciousnessEvolution2025Page() {
 	return (
-		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
-			title="AI Consciousness Evolution 2025"
-			slug="ai-consciousness-evolution-2025"
-			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
-			subtitle="From narrow tasks to contextual understanding with emotional intelligence."
-			pricePerMonthUSD={4999}
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Strategic R&D with demonstrable prototypes and IP"
-			features={[
-				"Affective signals and sentiment grounding"
-				"Self-reflection loops and memory consolidation"
-				"Safety layers for alignment and guardrails"
-				"Evaluation harness for subjective tasks"
-				"Multi-modal context fusion (text, voice, UI)"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-				"Partnered research roadmap and governance"
-			]}
-			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-		/>
-	)
+		<UltraFuturisticBackground variant="quantum" intensity="high">
+			<Head>
+				<title>AI Consciousness Evolution 2025 | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/ai-consciousness-evolution-2025/" />
+				<meta name="description" content="Exploring emergent properties of AI consciousness, emotional intelligence, and self-awareness for human-AI collaboration." />
+			</Head>
+			<div className="container mx-auto px-4 py-24 text-white">
+				<h1 className="text-4xl md:text-6xl font-bold mb-4">AI Consciousness Evolution 2025</h1>
+				<p className="text-gray-300 max-w-3xl">Research-driven frameworks and training to align AI systems with human values, emotional context, and safe autonomy. Contact: +1 302 464 0950 • kleber@ziontechgroup.com.</p>
+			</div>
+		</UltraFuturisticBackground>
+	);
 }

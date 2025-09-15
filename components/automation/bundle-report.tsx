@@ -1,3 +1,4 @@
+export default function BundleReportPage() {
   return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Bundle Size Report</h1>

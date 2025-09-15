@@ -189,13 +189,13 @@ class BranchMerger {
 
     fs.writeFileSync('merge-report.json', JSON.stringify(report, null, 2));
 
-    this.log('\n📊 MERGE SUMMARY: '),
+    this.log('\n📊 MERGE SUMMARY:');
     this.log(`✅ Successfully merged: ${this.mergedBranches.length} branches`);
     this.log(`❌ Failed to merge: ${this.failedBranches.length} branches`);
     this.log(`📈 Success rate: ${report.summary.successRate}`);
 
     if (this.failedBranches.length > 0) {
-      this.log('\n❌ Failed branches: '),
+      this.log('\n❌ Failed branches:');
       this.failedBranches.forEach(branch => this.log(`  - ${branch}`));
     }
   }

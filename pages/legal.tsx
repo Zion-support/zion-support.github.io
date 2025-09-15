@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import SEO from '../components/SEO';
-import Link from 'next/link';
+import SEO from '../components/SEO',
+import Link from 'next/link',
+
 export default function LegalPage() {
 	return (
 		<>
@@ -18,5 +15,5 @@ export default function LegalPage() {
 				</ul>
 			</div>
 		</>
-	)
+	),
 }

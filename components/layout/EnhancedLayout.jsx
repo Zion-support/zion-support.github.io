@@ -1,6 +1,8 @@
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
+
+const EnhancedLayout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <EnhancedNavigation />
@@ -9,12 +11,7 @@ import EnhancedFooter from './EnhancedFooter';
       </main>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  )
-};
-export default EnhancedLayout;
-=======
   );
-}
+};
+
 export default EnhancedLayout;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

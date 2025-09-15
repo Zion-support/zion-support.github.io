@@ -2,16 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
 =======
@@ -33,7 +23,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
@@ -177,83 +166,6 @@
   </url>
   <url>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
-    <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/404</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/api-documentation</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/automation</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/automation-health</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/blog/ai-automation-trends-2025</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/changelog</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/component-library</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/components/form-demo</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/components/modal-demo</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/components/pagination-demo</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/real-time-analytics/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -409,12 +321,6 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/services/2030-futuristic-services/</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     <lastmod>2025-08-16T02:29:22.350Z</lastmod>
 =======
 =======
@@ -49012,51 +48918,17 @@
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-f374
     <changefreq>weekly</changefreq>
-<<<<<<< HEAD
-=======
-=======
-    <lastmod>2025-08-16T02:29:22.350Z</lastmod>    <changefreq>weekly</changefreq>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    <changefreq>weekly</changefreq>
-    <lastmod>2025-08-16T02:29:22.350Z</lastmod>    <changefreq>weekly</changefreq>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <priority>0.6</priority>
   </url>
   <url>
 <<<<<<< HEAD
     <loc>https://ziontechgroup.com/user-management</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
 =======
     <loc>https://zion.app/site-health</loc>
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-f374
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <changefreq>weekly</changefreq>
-    <lastmod>2025-08-16T02:29:22.350Z</lastmod>    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/user-management</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>    <changefreq>weekly</changefreq>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <priority>0.6</priority>
   </url>
 </urlset>

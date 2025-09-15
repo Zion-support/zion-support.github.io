@@ -15,36 +15,16 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h1>Pre-Build Health Check Report</h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <p>Generated 8/19/2025, 11:52:13 PM</p>
 =======
 <p>Generated 8/19/2025, 8:27:47 PM</p>
 >>>>>>> origin/cursor/build-and-fix-errors-6ada
 =======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <p>Generated 8/19/2025, 8:31:15 PM</p>
-<p>Generated 8/19/2025, 8:30:33 PM</p>
-<p>Generated 8/19/2025, 11:52:13 PM</p><p>Generated 8/19/2025, 8:31:15 PM</p>
-<p>Generated 8/19/2025, 8:30:33 PM</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-<p>Generated 8/19/2025, 11:52:13 PM</p><p>Generated 8/19/2025, 8:31:15 PM</p>
 <p>Generated 8/19/2025, 8:30:33 PM</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-<p>Generated 8/19/2025, 11:52:13 PM</p><p>Generated 8/19/2025, 8:31:15 PM</p>
-<p>Generated 8/19/2025, 8:30:33 PM</p>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/cursor/build-and-fix-errors-cfbd
+>>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card">
 <h2>Summary</h2>

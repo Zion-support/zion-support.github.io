@@ -1,21 +1,20 @@
 
-import { createNotification  } from './createNotification';
+import { createNotification } from './createNotification';
 import { OnboardingNotificationParams } from './types';
+
 /**
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
-  userId;
-  missingMilestone;
+  userId,
+  missingMilestone,
   userRole
 }: OnboardingNotificationParams) {
-<<<<<<< HEAD
-  let title = null;
-=======
   let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
+  
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
@@ -35,7 +34,7 @@ export async function createOnboardingNotification({
         message = 'Set your availability to help clients know when you can work';
         actionUrl = '/profile/settings';
         actionText = 'Set Availability';
-        break
+        break;
     }
   } else {
     switch (missingMilestone) {
@@ -56,17 +55,17 @@ export async function createOnboardingNotification({
         message = 'Invite talent to speed up your hiring process';
         actionUrl = '/talent';
         actionText = 'Find Talent';
-        break
+        break;
     }
   }
+  
   return createNotification({
-    userId;
-    title;
-    message;
-    type: 'onboarding';
-    sendEmail: false;
-    actionUrl
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    userId,
+    title,
+    message,
+    type: 'onboarding',
+    sendEmail: false,
+    actionUrl,
     actionText
-  })
+  });
 }

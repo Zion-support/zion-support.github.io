@@ -3,8 +3,8 @@ const { execSync } = require('child_process');
 
 class AllAutomationsRunner {
   constructor() {
-    this.results = [],
-    this.startTime = Date.now()
+    this.results = [];
+    this.startTime = Date.now();
   }
 
   log(message) {

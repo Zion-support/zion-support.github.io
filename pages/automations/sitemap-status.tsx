@@ -1,10 +1,9 @@
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-type Props = any;
-=======
-type Props = { urlCount: number }
+
+type Props = { urlCount: number };
+
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
@@ -14,16 +13,17 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
         <div className="text-lg">Indexed URLs: {urlCount}</div>
       </div>
     </main>
-  )
-}
+  );
+};
+
 export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'publicsitemap.xml')
-  let urlCount = 0
+  const p = path.join(process.cwd(), 'public', 'sitemap.xml');
+  let urlCount = 0;
   try {
-    const raw = fs.readFileSync(p, 'utf8')
-    urlCount = (raw.match(/<url>/g) |[]).length
+    const raw = fs.readFileSync(p, 'utf8');
+    urlCount = (raw.match(/<url>/g) || []).length;
   } catch {}
-  return { props: { urlCount } }
-}
+  return { props: { urlCount } };
+};
+
 export default SitemapStatus;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

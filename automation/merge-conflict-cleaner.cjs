@@ -113,7 +113,8 @@ class MergeConflictCleaner {
           if (extensions.includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('') || content.includes('') || content.includes('                files.push(fullPath);
+              if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+                files.push(fullPath);
               }
             } catch (error) {
               // Skip files that can't be read
@@ -135,13 +136,15 @@ class MergeConflictCleaner {
     
     // Remove merge conflict markers and keep HEAD version
     content = content.replace(
-      /\n(.*?)\n\n(.*?)\n      '$1'
+      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n/g,
+      '$1'
     );
     
     // Clean up any remaining markers
-    content = content.replace(/\n/g, '');
-    content = content.replace(/\n/g, '');
-    content = content.replace(/    
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       this.log(`✅ Cleaned conflicts in ${filePath}`);
@@ -239,12 +242,12 @@ class MergeConflictCleaner {
     this.log('📊 Generating cleanup report...');
     
     const report = {
-      timestamp: new Date().toISOString();
-      cleanedFiles: this.cleanedFiles;
-      errors: this.errors;
+      timestamp: new Date().toISOString(),
+      cleanedFiles: this.cleanedFiles,
+      errors: this.errors,
       summary: {
-        totalFilesCleaned: this.cleanedFiles.length;
-        totalErrors: this.errors.length;
+        totalFilesCleaned: this.cleanedFiles.length,
+        totalErrors: this.errors.length,
         successRate: this.cleanedFiles.length / (this.cleanedFiles.length + this.errors.length) * 100
       }
     };

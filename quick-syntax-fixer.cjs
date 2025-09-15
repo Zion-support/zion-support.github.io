@@ -14,14 +14,15 @@ class QuickSyntaxFixer {
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not: found: ${filePath}`);
+        this.log(`File not found: ${filePath}`);
         return false;
       }
 
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-        .replace(/[\s\S]*?
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
+        .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -41,7 +42,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: ${filePath}`);
+        this.log(`Fixed: ${filePath}`);
         return true;
       }
 
@@ -57,14 +58,14 @@ class QuickSyntaxFixer {
 
     // Fix critical files first
     const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx';
-      '.eslintrc.js';
-      'ecosystem.config.cjs';
-      'run-automation-suite.cjs';
-      'scripts/fix-syntax-errors.cjs';
-      'scripts/performance-monitor.cjs';
-      'scripts/security-audit.cjs';
-      'scripts/health-check.cjs';
+      'components/AccessibilityEnhancer.tsx',
+      '.eslintrc.js',
+      'ecosystem.config.cjs',
+      'run-automation-suite.cjs',
+      'scripts/fix-syntax-errors.cjs',
+      'scripts/performance-monitor.cjs',
+      'scripts/security-audit.cjs',
+      'scripts/health-check.cjs',
     ];
 
     let fixedCount = 0;
@@ -75,21 +76,14 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: this.fixedFiles };
+    return { fixedFiles: this.fixedFiles };
   }
 }
 
 // Run the fixer
 if (require.main === module) {
-    const fixer = new QuickSyntaxFixer(),
-    fixer.run().catch(console.error)
-  }
+  const fixer = new QuickSyntaxFixer();
+  fixer.run().catch(console.error);
+}
 
 module.exports = QuickSyntaxFixer;
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-      let content = fs.readFileSync(filePath, 'utf8')
-        .replace(/(\w+):\s*([^,]+),/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"

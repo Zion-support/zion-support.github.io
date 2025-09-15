@@ -48,21 +48,6 @@
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   
   /* Revolutionary new effects */
   --quantum-holographic: 0 0 150px rgba(0, 255, 255, 0.2);
@@ -72,17 +57,9 @@
   --ai-futuristic: 0 0 160px rgba(139, 92, 246, 0.2);
   --quantum-entanglement-advanced: 0 0 250px rgba(139, 92, 246, 0.1);
   --holographic-matrix-advanced: 0 0 300px rgba(139, 92, 246, 0.08);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 
 /* Base styles */
@@ -239,28 +216,10 @@ body::after {
   content: '';
   position: fixed;
   top: 0;
-  --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   left: 0;
   width: 100%;
   height: 100%;
   background-image: 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
     linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
@@ -296,24 +255,12 @@ body::after {
 .quantum-grid {
   position: fixed;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
     radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
     radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
@@ -322,12 +269,6 @@ body::after {
   background-repeat: repeat;
   background-size: 200px 100px;
   animation: particle-float 20s linear infinite;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   opacity: 0.3;
 =======
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -440,29 +381,11 @@ body::after {
   z-index: -1;
   animation: cyberpunkPulse 16s ease-in-out infinite;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 
 /* Enhanced Animations */
 @keyframes backgroundFloat {
-  opacity: 0.3;}
-
-/* Enhanced Animations */
-@keyframes backgroundFloat {
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  opacity: 0.3;}
-
-/* Enhanced Animations */
-@keyframes backgroundFloat {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -810,12 +733,6 @@ h3 {
 /* Dark Mode Enhancements */
 @media (prefers-color-scheme: dark) {
   .futuristic-card {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.3);
 =======
   0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -1181,21 +1098,20 @@ h3 {
 @media (max-width: 768px) {
   .quantum-grid {
     background-size: 25px 25px;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
-    background: rgba(0, 0, 0, 0.3);  }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    background: rgba(0, 0, 0, 0.3);  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    background: rgba(0, 0, 0, 0.3);  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  
+  .holographic-matrix {
+    background-size: 50px 50px;
+  }
+  
+  .neural-network {
+    background-size: 75px 75px;
+  }
+  
+  .cyberpunk-elements {
+    background-size: 100px 100px;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
+  }
 }
 
 /* High Contrast Mode */
@@ -1218,22 +1134,7 @@ h3 {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 /* Enhanced Focus States */
 .quantum-button:focus,
@@ -1267,19 +1168,4 @@ h3 {
     color: black;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -1,20 +1,5 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "generatedAt": "2025-08-14T09:38:10.512Z",
   "files": [
     "update-2025-08-14-0638.tsx",
@@ -122,12 +107,6 @@
     "diversityScore": 100,
     "avgLen": 1839,
     "duplicateCount": 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     "seoScore": 26
 =======
   "generatedAt": "2025-08-19T03:44:34.226Z",
@@ -239,21 +218,7 @@
     "duplicateCount": 0,
     "seoScore": 5
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
-    "seoScore": 26  },
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "seoScore": 26  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "seoScore": 26  },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "guidance": [
     "Aim for varied intros, highlights, and CTAs across updates.",
     "Keep meta description and keywords present for each page.",

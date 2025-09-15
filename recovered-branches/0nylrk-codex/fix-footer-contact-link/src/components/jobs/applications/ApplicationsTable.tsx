@@ -1,70 +1,74 @@
 
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar } from "@/components/ui/avatar",
+import { format } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
   TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from "lucide-react",
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
+} from "@/components/ui/table";
+import { ApplicationActions } from "./ApplicationActions";
+import { StatusBadge } from "./StatusBadge";
+<<<<<<< HEAD
+import { BriefcaseUser } from "lucide-react";
+=======
+import { Briefcase, User } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+
 interface ApplicationsTableProps {
-<<<<<<< HEAD
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+<<<<<<< HEAD
+  onStatusChange: (applicationId: stringnewStatus: string) => Promise<void>;
+=======
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
-  onViewScore: (application: JobApplication) => void
+>>>>>>> origin/auto/autonomy-17186719616
+  onViewScore: (application: JobApplication) => void;
 }
 
 export function ApplicationsTable({ 
-  applications;
-  processingId;
-  onViewApplication;
-=======
-  applications: JobApplication[]
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
-  onViewScore: (application: JobApplication) => void
-}
-export function ApplicationsTable({
+<<<<<<< HEAD
   applications
   processingId
   onViewApplication
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onStatusChange;
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+  const [hireModalOpensetHireModalOpen] = useState(false);
+  const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null);
+=======
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false);
-<<<<<<< HEAD
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  
-  const handleHireClick = null;
-=======
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
+  
   const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application)
-    setHireModalOpen(true)
-  }
+    setSelectedApplication(application);
+    setHireModalOpen(true);
+  };
+  
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
-      title: "Hiring process initiated"
+      title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
-    })
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    });
+  };
+  
   return (
     <>
       <div className="rounded-md border">
@@ -85,9 +89,9 @@ export function ApplicationsTable({
                   <div className="flex items-center gap-3">
                     <Avatar className="h-8 w-8">
                       {application.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={application.talent_profile.profile_picture_url}
-                          alt={application.talent_profile.full_name |"Candidate"}
+                        <img 
+                          src={application.talent_profile.profile_picture_url} 
+                          alt={application.talent_profile.full_name || "Candidate"} 
                         />
                       ) : (
                         <User className="h-4 w-4" />
@@ -95,23 +99,27 @@ export function ApplicationsTable({
                     </Avatar>
                     <div>
                       <div className="font-medium">
-                        {application.talent_profile?.full_name |"Candidate"}
+                        {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
-                        {application.talent_profile?.professional_title |"Applicant"}
+                        {application.talent_profile?.professional_title || "Applicant"}
                       </div>
                     </div>
                   </div>
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
+<<<<<<< HEAD
+                  {format(new Date(application.created_at)"PP")}
+=======
                   {format(new Date(application.created_at), "PP")}
+>>>>>>> origin/auto/autonomy-17186719616
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
-                    <ClickableBadge
+                    <ClickableBadge 
                       variant="outline"
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
@@ -124,8 +132,8 @@ export function ApplicationsTable({
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-2">
-                    <ClickableBadge
-                      variant="outline"
+                    <ClickableBadge 
+                      variant="outline" 
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >
@@ -144,13 +152,14 @@ export function ApplicationsTable({
           </TableBody>
         </Table>
       </div>
+      
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
-        application={selectedApplication |undefined}
+        application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
       />
     </>
-  )
+  );
 }

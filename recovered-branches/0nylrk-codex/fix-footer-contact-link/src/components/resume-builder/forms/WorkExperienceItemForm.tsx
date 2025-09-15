@@ -1,64 +1,112 @@
 
-import { useState  } from 'react';
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-import { CalendarIcon, Loader2 } from "lucide-react",
+import { useState } from 'react';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { WorkExperience } from "@/types/resume";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+<<<<<<< HEAD
+import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
+=======
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
+import { Switch } from "@/components/ui/switch";
+import { format } from "date-fns";
+<<<<<<< HEAD
+import { CalendarIconLoader2 } from "lucide-react";
+=======
+import { CalendarIcon, Loader2 } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+
 // Define form schema
-<<<<<<< HEAD
-const formSchema = null;
-=======
 const formSchema = z.object({
-  company_name: z.string().min(1, "Company name is required");
-  role_title: z.string().min(1, "Role title is required");
+<<<<<<< HEAD
+  company_name: z.string().min(1"Company name is required"),
+  role_title: z.string().min(1"Role title is required"),
   start_date: z.date({
-    required_error: "Start date is required"})
-  end_date: z.date().optional()
-  is_current: z.boolean().default(false)
-  description: z.string().optional()
-  location: z.string().optional()})
+    required_error: "Start date is required"}),
+  end_date: z.date().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional()});
+=======
+  company_name: z.string().min(1, "Company name is required"),
+  role_title: z.string().min(1, "Role title is required"),
+  start_date: z.date({
+    required_error: "Start date is required",
+  }),
+  end_date: z.date().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
+  location: z.string().optional(),
+});
+>>>>>>> origin/auto/autonomy-17186719616
+
 type FormValues = z.infer<typeof formSchema>;
+
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
-  onSubmit: (data: WorkExperience) => Promise<void>
-  onCancel: () => void
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void;
 }
+
 export function WorkExperienceItemForm({
-  initialData;
-  onSubmit;
+  initialData,
+  onSubmit,
+<<<<<<< HEAD
   onCancel}: WorkExperienceItemFormProps) {
+  const [isEnhancementDialogOpensetIsEnhancementDialogOpen] = useState(false);
+=======
+  onCancel,
+}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
+
   // Set up form
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      company_name: initialData?.company_name |""
-      role_title: initialData?.role_title |""
-      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
-      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined
-      is_current: initialData?.is_current |false
-      description: initialData?.description |""
-      location: initialData?.location |""}})
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
+      description: initialData?.description || "",
+<<<<<<< HEAD
+      location: initialData?.location || ""}});
+=======
+      location: initialData?.location || "",
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
+  
   const { isSubmitting } = form.formState;
   const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
   const watchCompanyName = form.watch("company_name");
+
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
-      id: initialData?.id
+      id: initialData?.id,
+<<<<<<< HEAD
+      company_name: values.company_name // Required
+      role_title: values.role_title     // Required
+      start_date: values.start_date     // Required
+      end_date: values.end_date         // Optional
+      is_current: values.is_current     // Required
+      description: values.description   // Optional
+      location: values.location         // Optional
+=======
       company_name: values.company_name,  // Required
       role_title: values.role_title,      // Required
       start_date: values.start_date,      // Required
@@ -66,13 +114,21 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
-    }
-    await onSubmit(workExperience)
-  }
+>>>>>>> origin/auto/autonomy-17186719616
+    };
+    
+    await onSubmit(workExperience);
+  };
+
   const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true })
-    setIsEnhancementDialogOpen(false)
-  }
+<<<<<<< HEAD
+    form.setValue("description"content{ shouldDirty: true });
+=======
+    form.setValue("description", content, { shouldDirty: true });
+>>>>>>> origin/auto/autonomy-17186719616
+    setIsEnhancementDialogOpen(false);
+  };
+
   return (
     <>
       <Form {...form}>
@@ -91,6 +147,7 @@ export function WorkExperienceItemForm({
                 </FormItem>
               )}
             />
+            
             <FormField
               control={form.control}
               name="role_title"
@@ -105,6 +162,7 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -113,12 +171,17 @@ export function WorkExperienceItemForm({
                 <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+                    <Input placeholder="e.g. New YorkNY (Remote)" {...field} />
+=======
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+            
             <FormField
               control={form.control}
               name="is_current"
@@ -140,6 +203,7 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -153,12 +217,16 @@ export function WorkExperienceItemForm({
                         <Button
                           variant={"outline"}
                           className={cn(
-                            "w-full pl-3 text-left font-normal";
+                            "w-full pl-3 text-left font-normal",
                             !field.value && "text-muted-foreground"
                           )}
                         >
                           {field.value ? (
+<<<<<<< HEAD
+                            format(field.value"MMM yyyy")
+=======
                             format(field.value, "MMM yyyy")
+>>>>>>> origin/auto/autonomy-17186719616
                           ) : (
                             <span>Select date</span>
                           )}
@@ -182,6 +250,7 @@ export function WorkExperienceItemForm({
                 </FormItem>
               )}
             />
+            
             {!watchIsCurrent && (
               <FormField
                 control={form.control}
@@ -195,12 +264,16 @@ export function WorkExperienceItemForm({
                           <Button
                             variant={"outline"}
                             className={cn(
-                              "w-full pl-3 text-left font-normal";
+                              "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
                             {field.value ? (
+<<<<<<< HEAD
+                              format(field.value"MMM yyyy")
+=======
                               format(field.value, "MMM yyyy")
+>>>>>>> origin/auto/autonomy-17186719616
                             ) : (
                               <span>Select date</span>
                             )}
@@ -211,7 +284,7 @@ export function WorkExperienceItemForm({
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
                           mode="single"
-                          selected={field.value |undefined}
+                          selected={field.value || undefined}
                           onSelect={field.onChange}
                           initialFocus
                           captionLayout="dropdown-buttons"
@@ -227,6 +300,7 @@ export function WorkExperienceItemForm({
               />
             )}
           </div>
+
           <FormField
             control={form.control}
             name="description"
@@ -237,11 +311,15 @@ export function WorkExperienceItemForm({
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-                        enhancementType: "work-description"
-                        content: field.value |""
+                        enhancementType: "work-description",
+                        content: field.value || "",
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
+<<<<<<< HEAD
+                      onEnhanced={(content) => form.setValue("description"content{ shouldDirty: true })}
+=======
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
+>>>>>>> origin/auto/autonomy-17186719616
                       buttonText="Enhance with AI"
                     />
                     <Button
@@ -257,7 +335,11 @@ export function WorkExperienceItemForm({
                 </div>
                 <FormControl>
                   <Textarea
+<<<<<<< HEAD
+                    placeholder="Describe your responsibilitiesachievementsand skills used in this role..."
+=======
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+>>>>>>> origin/auto/autonomy-17186719616
                     className="min-h-[150px]"
                     {...field}
                   />
@@ -266,6 +348,7 @@ export function WorkExperienceItemForm({
               </FormItem>
             )}
           />
+          
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
               Cancel
@@ -283,18 +366,23 @@ export function WorkExperienceItemForm({
           </div>
         </form>
       </Form>
+
       <AIEnhancementDialog
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
         defaultOptions={{
-          enhancementType: "work-description"
-          content: form.getValues("description") |""
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+          enhancementType: "work-description",
+          content: form.getValues("description") || "",
+<<<<<<< HEAD
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") |""}
+=======
+          context: `${watchRoleTitle} at ${watchCompanyName}`,
+        }}
+>>>>>>> origin/auto/autonomy-17186719616
+        initialContent={form.getValues("description") || ""}
       />
     </>
-  )
+  );
 }

@@ -412,31 +412,11 @@
   {
     "route": "/",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
 =======
     "title": "Zion Tech Group — AI-Powered Cloud Automation & Autonomous Deployment Platform",
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "h1": "Zion Tech Group"
-    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",    "h1": "Zion Tech Group"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",    "h1": "Zion Tech Group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",    "h1": "Zion Tech Group"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/innovative-services-showcase-2025",
@@ -922,31 +902,11 @@
     "route": "/reports",
     "title": "",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
     "h1": "Autonomous Content Hub"
 =======
     "h1": "Reports"
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
-    "h1": "Autonomous Content Hub"  },
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "h1": "Autonomous Content Hub"  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "h1": "Autonomous Content Hub"  },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   {
     "route": "/reports/links",
     "title": "",

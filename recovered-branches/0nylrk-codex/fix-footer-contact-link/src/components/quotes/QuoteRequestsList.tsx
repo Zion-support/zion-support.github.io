@@ -1,25 +1,28 @@
 
-import React from "react",
-import { QuoteRequestCard } from "./QuoteRequestCard",
+import React from "react";
+import { QuoteRequestCard } from "./QuoteRequestCard";
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
-type QuoteRequestsListProps = any;
-=======
+
 type QuoteRequestsListProps = {
-  quotes: QuoteRequest[]
-  isLoading: boolean
-  isArchived: boolean
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded: (id: string) => void
-  onToggleArchive: (id: string, isArchived: boolean) => void
-}
+  quotes: QuoteRequest[];
+  isLoading: boolean;
+  isArchived: boolean;
+  onViewDetails: (quote: QuoteRequest) => void;
+  onMarkAsResponded: (id: string) => void;
+<<<<<<< HEAD
+  onToggleArchive: (id: stringisArchived: boolean) => void;
+=======
+  onToggleArchive: (id: string, isArchived: boolean) => void;
+>>>>>>> origin/auto/autonomy-17186719616
+};
+
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-  quotes;
-  isLoading;
-  isArchived;
-  onViewDetails;
-  onMarkAsResponded
+  quotes,
+  isLoading,
+  isArchived,
+  onViewDetails,
+  onMarkAsResponded,
   onToggleArchive
 }) => {
   if (isLoading) {
@@ -27,11 +30,13 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
       <div className="text-center py-20">
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
-    )
+    );
   }
+  
   if (quotes.length === 0) {
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
+    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {quotes.map(quote => (
@@ -44,6 +49,5 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
         />
       ))}
     </div>
-  )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};

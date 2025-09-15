@@ -1,15 +1,20 @@
 
-import React from "react",
+import React from "react";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+import { MessageSquareArchiveIcon } from "lucide-react";
+=======
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
-<<<<<<< HEAD
-type EmptyStateCardProps = any;
-=======
+>>>>>>> origin/auto/autonomy-17186719616
+
 type EmptyStateCardProps = {
-  type: "active" | "archived";
-}
+  type: 'active' | 'archived';
+};
+
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
-  const isActive = type === "active";
+  const isActive = type === 'active';
+  
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -21,15 +26,15 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           )}
         </div>
         <h3 className="text-xl font-medium text-white mb-2">
-          {isActive ? "No hire requests yet" : "No archived requests"}
+          {isActive ? 'No hire requests yet' : 'No archived requests'}
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
-          {isActive
+          {isActive 
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+          }
         </p>
       </CardContent>
     </Card>
   );
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+};

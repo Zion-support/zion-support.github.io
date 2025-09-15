@@ -1,43 +1,49 @@
 
 // Content analysis functionality
-import { suspiciousPhrases  } from './constants';
+import { suspiciousPhrases } from './constants';
 import { AnalysisResult } from './types';
+
 /**
  * Analyzes text content for suspicious patterns
  */
-<<<<<<< HEAD
-export const analyzeContent = null;
-=======
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
-  const reasons: string[] = []
+  const reasons: string[] = [];
+  
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
-      reasons.push(`Contains suspicious phrase: "${phrase}"`)
+      reasons.push(`Contains suspicious phrase: "${phrase}"`);
     }
   }
+  
   // Check for links (simplified check)
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
   if (hasExternalLinks && (
-    contentLower.includes('payment') |
-    contentLower.includes('money') |
+    contentLower.includes('payment') || 
+    contentLower.includes('money') || 
     contentLower.includes('deal')
   )) {
-    reasons.push('Contains external payment links')
+    reasons.push('Contains external payment links');
   }
+  
   // Check for excessive capitalization (potential scam)
-  const capitalRatio = (content.match(/[A-Z]/g) |[]).length / content.length;
+  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length;
   if (capitalRatio > 0.3 && content.length > 20) {
-    reasons.push('Excessive capitalization')
+    reasons.push('Excessive capitalization');
   }
+  
   // Check for poor grammar with repetitive punctuation
+<<<<<<< HEAD
   if (/[!?]{3}/.test(content)) {
-    reasons.push('Suspicious punctuation pattern')
+=======
+  if (/[!?]{3,}/.test(content)) {
+>>>>>>> origin/auto/autonomy-17186719616
+    reasons.push('Suspicious punctuation pattern');
   }
+  
   return {
-    isSuspicious: reasons.length > 0
+    isSuspicious: reasons.length > 0,
     reasons
-  }
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+};

@@ -1,11 +1,9 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
+
 export default function AIAutonomousBusinessOperations() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
 			title="AI‑Powered Autonomous Business Operations"
 			slug="ai-autonomous-business-operations"
 			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
@@ -14,12 +12,11 @@ export default function AIAutonomousBusinessOperations() {
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
-				"Autonomous KPI monitoring and anomaly detection"
-				"Agentic workflows for ticket triage, billing, collections, and renewals"
-				"Human-in-the-loop approvals and audit trails"
-				"Playbooks for incident response and customer recovery"
-				"Compliance logging and role-based access"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+				"Autonomous KPI monitoring and anomaly detection",
+				"Agentic workflows for ticket triage, billing, collections, and renewals",
+				"Human-in-the-loop approvals and audit trails",
+				"Playbooks for incident response and customer recovery",
+				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}

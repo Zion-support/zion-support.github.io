@@ -1,47 +1,55 @@
 
-<<<<<<< HEAD
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
 import { MilestoneActivity } from './types';
-export const useRecordActivity = null;
-=======
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {MilestoneActivity} from './types';
+
 export const useRecordActivity = () => {
   const { user } = useAuth();
+  
   const recordMilestoneActivity = async (
-    milestoneId: string
-    action: string
-    previousStatus: string | null
-    newStatus: string;
+    milestoneId: string, 
+    action: string, 
+    previousStatus: string | null, 
+    newStatus: string,
     comment?: string
   ) => {
-    if (!user) return null
+    if (!user) return null;
+    
     try {
       const { data, error } = await supabase
         .from('milestone_activities')
         .insert({
-          milestone_id: milestoneId;
-          user_id: user.id;
-          action;
-          previous_status: previousStatus;
-          new_status: newStatus
+          milestone_id: milestoneId,
+          user_id: user.id,
+          action,
+          previous_status: previousStatus,
+          new_status: newStatus,
+<<<<<<< HEAD
           comment})
+=======
+          comment,
+        })
+>>>>>>> origin/auto/autonomy-17186719616
         .select(`
-          *;
+          *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .single();
+      
       if (error) throw error;
-      return data
+      
+      return data;
     } catch (err: any) {
       console.error("Error recording activity:", err);
-      return null
+      return null;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     }
-  }
+  };
+  
   return {
     recordMilestoneActivity
-  }
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+};

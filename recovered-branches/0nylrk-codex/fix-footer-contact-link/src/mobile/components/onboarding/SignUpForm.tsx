@@ -1,71 +1,114 @@
 
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { useNavigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
-import { AlertCircle } from "lucide-react";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-export function SignUpForm() {
 <<<<<<< HEAD
-  const navigate = null;
+import React{ useState } from "react";
 =======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { AlertCircle } from "lucide-react";
+<<<<<<< HEAD
+import { AlertDescription } from "@/components/ui/alert";
+
+export function SignUpForm() {
+  const navigate = useNavigate();
+  const { signuploginWithGoogle } = useAuth();
+  
+  const [formDatasetFormData] = useState({
+    email: "",
+    password: "",
+    name: ""});
+  const [isLoadingsetIsLoading] = useState(false);
+  const [signupModesetSignupMode] = useState(true);
+  const [errorsetError] = useState("");
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { namevalue } = e.target;
+    setFormData(prev => ({ ...prev[name]: value }));
+=======
+import { Alert, AlertDescription } from "@/components/ui/alert";
+
+export function SignUpForm() {
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
+  
   const [formData, setFormData] = useState({
-    email: ""
-    password: ""
-    name: ""})
+    email: "",
+    password: "",
+    name: "",
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    setError("")
-  }
+>>>>>>> origin/auto/autonomy-17186719616
+    setError("");
+  };
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    setIsLoading(true)
+    setIsLoading(true);
+    
     try {
       if (signupMode) {
+<<<<<<< HEAD
+        const { error } = await signup(formData.emailformData.password{
+          name: formData.name});
+=======
         const { error } = await signup(formData.email, formData.password, {
-          name: formData.name})
+          name: formData.name,
+        });
+>>>>>>> origin/auto/autonomy-17186719616
+        
         if (error) {
-          throw new Error(error)
+          throw new Error(error);
         }
-        navigate("/mobile")
+        
+        navigate("/mobile");
       } else {
+<<<<<<< HEAD
+        const { error } = await login(formData.emailformData.password);
+=======
         const { error } = await login(formData.email, formData.password);
+>>>>>>> origin/auto/autonomy-17186719616
+        
         if (error) {
-          throw new Error(error)
+          throw new Error(error);
         }
-        navigate("/mobile")
+        
+        navigate("/mobile");
       }
     } catch (err: any) {
-      setError(err.message)
+      setError(err.message);
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
+  
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle()
+      await loginWithGoogle();
     } catch (err: any) {
-      setError(err.message)
+      setError(err.message);
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+  
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
+      
       <div className="space-y-2">
-        <Button
-          variant="outline"
+        <Button 
+          variant="outline" 
           className="w-full py-6 relative"
           onClick={handleGoogleLogin}
         >
@@ -77,8 +120,9 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-        <Button
-          variant="outline"
+
+        <Button 
+          variant="outline" 
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -87,17 +131,20 @@ export function SignUpForm() {
           Continue with Facebook
         </Button>
       </div>
+
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
+      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+      
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -112,6 +159,7 @@ export function SignUpForm() {
             />
           </div>
         )}
+        
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
           <Input
@@ -124,6 +172,7 @@ export function SignUpForm() {
             placeholder="Enter your email"
           />
         </div>
+        
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <Input
@@ -136,19 +185,21 @@ export function SignUpForm() {
             placeholder="Create a password"
           />
         </div>
-        <Button
-          type="submit"
+        
+        <Button 
+          type="submit" 
           className="w-full py-6"
           disabled={isLoading}
         >
-          {isLoading
-            ? "Please wait..."
-            : signupMode
-              ? "Create Account"
+          {isLoading 
+            ? "Please wait..." 
+            : signupMode 
+              ? "Create Account" 
               : "Sign In"
           }
         </Button>
       </form>
+      
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -163,5 +214,5 @@ export function SignUpForm() {
         </Button>
       </p>
     </div>
-  )
+  );
 }

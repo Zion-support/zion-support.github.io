@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+
 export default function ApiLatencySloTrackerPage() {
   return (
     <Layout>
@@ -18,7 +15,7 @@ export default function ApiLatencySloTrackerPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">API Latency SLO Tracker</h1>
           <p className="text-slate-300">SLO-first observability for APIs: budgets, alerts, synthetic/RUM, per-endpoint dashboards, and public pages.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'SLO budgets with alertsSynthetic + RUM coveragePer-endpoint latency dashboardsPublic status page (optional)' ].map((f) => (
+            {[ 'SLO budgets with alertsSynthetic + RUM coverage', 'Per-endpoint latency dashboardsPublic status page (optional)' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-rose-500/30 text-slate-200">{f}</div>
             ))}
           </div>
@@ -29,5 +26,6 @@ export default function ApiLatencySloTrackerPage() {
         </div>
       </div>
     </Layout>
-  )
+  ),
 }
+

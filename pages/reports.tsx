@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Link from 'next/link',
+
 export default function Reports() {
   return (
     <div className="space-y-6">
@@ -8,7 +9,7 @@ export default function Reports() {
         <div className="border rounded p-5">
           <h3 className="font-semibold">Performance (Lighthouse)</h3>
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>
-          <Link href="/metrics/performance.json"><a className="text-blue-600">Open JSON →</a></Link>
+          <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>

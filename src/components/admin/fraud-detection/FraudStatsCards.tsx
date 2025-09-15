@@ -1,16 +1,15 @@
 
-import React from "react",
+import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
 import { FraudStats } from "@/types/fraud";
+
 interface FraudStatsCardsProps {
-  stats: FraudStats
+  stats: FraudStats;
 }
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
+
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -18,6 +17,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
+      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -27,6 +27,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
+      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -36,6 +37,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
+      
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -45,12 +47,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+      
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+      
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -58,7 +62,5 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
         </CardHeader>
       </Card>
     </div>
-  )
-}
-"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};

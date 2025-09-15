@@ -1,81 +1,98 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+import { Button } from "@/components/ui/button";
+import { 
+  getTalentRateSuggestion
+=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { 
-  getTalentRateSuggestion;
-  PricingSuggestion;
-  TalentRateParams;
+  getTalentRateSuggestion, 
+>>>>>>> origin/auto/autonomy-17186719616
+  PricingSuggestion,
+  TalentRateParams,
   trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
+} from "@/services/pricingSuggestionService";
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
+
 interface TalentRateRecommenderProps {
-<<<<<<< HEAD
   skills: string[];
   yearsExperience: number;
   location?: string;
   onSuggestionApplied: (value: number) => void;
-=======
-  skills: string[]
-  yearsExperience: number
-  location?: string;
-  onSuggestionApplied: (value: number) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  rateType: "hourly" | "fixed"
+  rateType: "hourly" | "fixed";
 }
+
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills;
-  yearsExperience;
-  location;
+  skills,
+  yearsExperience,
+  location,
+  onSuggestionApplied,
 <<<<<<< HEAD
-  onSuggestionApplied;
-=======
-  onSuggestionApplied
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   rateType}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth();
-<<<<<<< HEAD
-  const generateSuggestion = null;
+  const [isLoadingsetIsLoading] = useState(false);
+  const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null);
 =======
+  rateType,
+}) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
+  const { user } = useAuth();
+
   const generateSuggestion = async () => {
-    if (skills.length === 0 |yearsExperience <= 0) {
-      return
+    if (skills.length === 0 || yearsExperience <= 0) {
+      return;
     }
+
     setIsLoading(true);
     try {
       const params: TalentRateParams = {
-        skills;
-        yearsExperience
-        location}
+        skills,
+        yearsExperience,
+<<<<<<< HEAD
+        location};
+=======
+        location,
+      };
+>>>>>>> origin/auto/autonomy-17186719616
+
       const result = await getTalentRateSuggestion(params);
-      setSuggestion(result)
+      setSuggestion(result);
     } catch (error) {
-      console.error("Error generating rate suggestion:", error)
+<<<<<<< HEAD
+      console.error("Error generating rate suggestion:"error);
+=======
+      console.error("Error generating rate suggestion:", error);
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
+
   const handleApplySuggestion = () => {
     if (suggestion) {
       // We'll use the middle of the range as the suggested rate
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
+      
       // Track this suggestion application
       if (user) {
         trackPricingSuggestion({
-          userId: user.id
-          suggestionType: 'talent'
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
-          actualValue: suggestedRate
+          userId: user.id,
+          suggestionType: 'talent',
+          suggestedMin: suggestion.minRate,
+          suggestedMax: suggestion.maxRate,
+          actualValue: suggestedRate,
           accepted: true
-        })
+        });
       }
     }
-  }
+  };
+
   return (
     <div className="space-y-4">
       <div>
@@ -84,7 +101,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-            disabled={skills.length === 0 |yearsExperience <= 0}
+            disabled={skills.length === 0 || yearsExperience <= 0}
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
@@ -99,6 +116,5 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         )}
       </div>
     </div>
-  )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};

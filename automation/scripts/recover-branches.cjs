@@ -42,7 +42,7 @@ function currentBranch() {
 
 function isMergedIntoMain(remoteBranch) {
   const res = spawnSync('bash', ['-lc', `git merge-base --is-ancestor "origin/${remoteBranch}" origin/main`], { encoding: 'utf8' });
-  // exitCode 0 =></branch> ancestor; 1 => not ancestor; >1 => error
+  // exitCode 0 => ancestor; 1 => not ancestor; >1 => error
   return res.status === 0;
 }
 
@@ -164,11 +164,11 @@ function main() {
 
     // write metadata per branch
     const metaTxt = [
-      `branch: ${branch}`;
-      `commit: ${meta.short}`;
-      `date: ${meta.date}`;
-      `author: ${meta.author}`;
-      `subject: ${meta.subject}`;
+      `branch: ${branch}`,
+      `commit: ${meta.short}`,
+      `date: ${meta.date}`,
+      `author: ${meta.author}`,
+      `subject: ${meta.subject}`,
       ''
     ].join('\n');
     writeFileSafely(path.join(snapRoot, 'META.txt'), metaTxt);

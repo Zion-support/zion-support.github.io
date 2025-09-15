@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 import React from 'react',
-import Head from 'next/head';
-import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import Head from 'next/head',
+import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react',
+import Layout from '../components/layout/Layout',
+
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+
 export default function EmailDeliverabilityMonitorPage() {
-  const service = null;
-=======
-import React from 'react';
-import Head from 'next/head';
-import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function EmailDeliverabilityMonitorPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'))
-  if (!service) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor')),
+  if (!service) return null,
+
   return (
     <Layout>
       <Head>
@@ -58,5 +51,6 @@ export default function EmailDeliverabilityMonitorPage() {
         </div>
       </div>
     </Layout>
-  )
+  ),
 }
+

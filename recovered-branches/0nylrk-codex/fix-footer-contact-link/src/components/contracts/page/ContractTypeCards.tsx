@@ -1,27 +1,23 @@
-<<<<<<< HEAD
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { FileTextShieldCheck } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
-  onSmartClick: () => void
+  onSmartClick: () => void;
 }
-export function ContractTypeCards({
-  onStandardClick
-  onSmartClick
-}: ContractTypeCardsProps) {
+
+<<<<<<< HEAD
+export function ContractTypeCards({ onStandardClickonSmartClick }: ContractTypeCardsProps) {
+=======
+export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -48,6 +44,7 @@ export function ContractTypeCards({
           </Button>
         </CardFooter>
       </Card>
+      
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -73,8 +70,8 @@ export function ContractTypeCards({
           </ul>
         </CardContent>
         <CardFooter>
-          <Button
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
+          <Button 
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
             onClick={onSmartClick}
           >
             Create Smart Contract

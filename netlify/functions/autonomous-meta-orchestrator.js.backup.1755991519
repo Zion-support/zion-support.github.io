@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 exports.config = { schedule: '*/1 * * * *' };
 
 exports.handler = async function () {
@@ -159,12 +144,6 @@ exports.handler = async function () {
   const plan = prioritize(all);
   const results = await runConcurrent(plan, maxConcurrent);
   const commitResult = await commitStatusArtifact(results);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
 const path = require('path');
 const fs = require('fs');
@@ -254,36 +233,11 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-acae
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   return {
     statusCode: 200,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       runAt: nowIso,
       baseUrl,
       planned: plan,
@@ -295,26 +249,19 @@ exports.handler = async () => {
       commitResult
     })
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
+=======
+      ok: true,
+      triggeredAt: new Date().toISOString(),
+      baseUrl,
+      totals: {
+        attempted: summary.triggers.length,
+        ok: summary.triggers.filter((r) => r.ok).length,
+        failed: summary.triggers.filter((r) => !r.ok).length,
+      },
+      summary,
+      logs: logs.slice(-2000),
+    }),
+  };
 };
-<<<<<<< HEAD
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-acae
-=======
-};
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

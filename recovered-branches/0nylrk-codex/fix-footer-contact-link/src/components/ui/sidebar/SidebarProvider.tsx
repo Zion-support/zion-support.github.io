@@ -1,40 +1,59 @@
 
+<<<<<<< HEAD
+import React{ createContextuseContextuseState } from "react";
+=======
 import React, { createContext, useContext, useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
+
 interface SidebarContextType {
   isOpen: boolean;
   toggle: () => void;
   open: () => void;
-  close: () => void
+  close: () => void;
 }
-<<<<<<< HEAD
 
-const SidebarContext = null;
-=======
 const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true
-  toggle: () => {}
-  open: () => {}
-  close: () => {}
+  isOpen: true,
+  toggle: () => {},
+  open: () => {},
+<<<<<<< HEAD
+  close: () => {}});
+=======
+  close: () => {},
 });
+>>>>>>> origin/auto/autonomy-17186719616
+
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
+
 interface SidebarProviderProps {
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
-export function SidebarProvider({
+
+export function SidebarProvider({ 
+<<<<<<< HEAD
   children
-  defaultOpen = true
+  defaultOpen = true 
+}: SidebarProviderProps) {
+  const [isOpensetIsOpen] = useState(defaultOpen);
+=======
+  children, 
+  defaultOpen = true 
 }: SidebarProviderProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+>>>>>>> origin/auto/autonomy-17186719616
+
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
+<<<<<<< HEAD
+    <SidebarContext.Provider value={{ isOpentoggleopenclose }}>
+=======
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-      <div
-        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
-      >
+>>>>>>> origin/auto/autonomy-17186719616
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
         {children}
       </div>
     </SidebarContext.Provider>

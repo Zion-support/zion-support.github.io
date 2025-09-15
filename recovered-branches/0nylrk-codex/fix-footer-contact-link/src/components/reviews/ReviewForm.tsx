@@ -1,21 +1,31 @@
 
-import { useState } from "react",
-import { Star } from "lucide-react",
-import { useForm } from "react-hook-form",
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+<<<<<<< HEAD
+  FormMessage} from "@/components/ui/form";
 import {
-  RadioGroup;
-  RadioGroupItem} from "@/components/ui/radio-group",
+  RadioGroup,
+  RadioGroupItem} from "@/components/ui/radio-group";
+=======
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/components/ui/radio-group";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
+
 interface ReviewFormValues {
   rating?: number;
   review_text?: string;
@@ -23,63 +33,84 @@ interface ReviewFormValues {
   quality_rating?: number;
   timeliness_rating?: number;
   would_work_again?: boolean;
-  is_anonymous?: boolean
+  is_anonymous?: boolean;
 }
+
 interface ReviewFormProps {
-<<<<<<< HEAD
   projectId: string;
   revieweeId: string;
   revieweeName: string;
-  onSubmit: (data: any) => Promise<boolean>;
-=======
-  projectId: string
-  revieweeId: string
-  revieweeName: string
-  onSubmit: (data: any) => Promise<boolean>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  onSubmit: (data: any) => Promise<boolean>; 
   defaultValues?: Review;
-  isSubmitting: boolean
+  isSubmitting: boolean;
 }
-export function ReviewForm({
-  projectId;
-  revieweeId;
-  revieweeName;
-  onSubmit;
-  defaultValues;
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
+
 <<<<<<< HEAD
-  
-  const form = null;
+
 =======
+>>>>>>> origin/auto/autonomy-17186719616
+export function ReviewForm({
+  projectId,
+  revieweeId,
+  revieweeName,
+  onSubmit,
+  defaultValues,
+<<<<<<< HEAD
+  isSubmitting}: ReviewFormProps) {
+  const [hoveredStarsetHoveredStar] = useState<number>(0);
+=======
+  isSubmitting,
+}: ReviewFormProps) {
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
+>>>>>>> origin/auto/autonomy-17186719616
+  
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
-      rating: defaultValues.rating
-      review_text: defaultValues.review_text
-      communication_rating: defaultValues.communication_rating
-      quality_rating: defaultValues.quality_rating
-      timeliness_rating: defaultValues.timeliness_rating
-      would_work_again: defaultValues.would_work_again
+      rating: defaultValues.rating,
+      review_text: defaultValues.review_text,
+      communication_rating: defaultValues.communication_rating,
+      quality_rating: defaultValues.quality_rating,
+      timeliness_rating: defaultValues.timeliness_rating,
+      would_work_again: defaultValues.would_work_again,
+<<<<<<< HEAD
       is_anonymous: defaultValues.is_anonymous} : {
-      rating: 0
-      review_text: ""
-      communication_rating: undefined
-      quality_rating: undefined
-      timeliness_rating: undefined
-      would_work_again: undefined
+=======
+      is_anonymous: defaultValues.is_anonymous,
+    } : {
+>>>>>>> origin/auto/autonomy-17186719616
+      rating: 0,
+      review_text: "",
+      communication_rating: undefined,
+      quality_rating: undefined,
+      timeliness_rating: undefined,
+      would_work_again: undefined,
+<<<<<<< HEAD
       is_anonymous: false}
+=======
+      is_anonymous: false,
+    }
+>>>>>>> origin/auto/autonomy-17186719616
   });
+  
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
-      ...values
-      project_id: projectId
-      reviewee_id: revieweeId}
+      ...values,
+      project_id: projectId,
+<<<<<<< HEAD
+      reviewee_id: revieweeId};
+=======
+      reviewee_id: revieweeId,
+    };
+>>>>>>> origin/auto/autonomy-17186719616
+    
     const success = await onSubmit(formattedData);
     if (success) {
-      form.reset()
+      form.reset();
     }
-  }
+  };
+  
   const watchRating = form.watch("rating");
+  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
@@ -95,7 +126,11 @@ export function ReviewForm({
               </FormLabel>
               <FormControl>
                 <div className="flex justify-center gap-1">
+<<<<<<< HEAD
+                  {[12345].map((star) => (
+=======
                   {[1, 2, 3, 4, 5].map((star) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <button
                       key={star}
                       type="button"
@@ -106,7 +141,7 @@ export function ReviewForm({
                     >
                       <Star
                         className={`h-10 w-10 ${
-                          star <= (hoveredStar |field.value |0)
+                          star <= (hoveredStar || field.value || 0)
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         } transition-colors`}
@@ -121,16 +156,22 @@ export function ReviewForm({
             </FormItem>
           )}
         />
+        
         {/* Review Text */}
         <FormField
           control={form.control}
           name="review_text"
           rules={{
-            required: "Please provide feedback"
+            required: "Please provide feedback",
             minLength: {
-              value: 20
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+              value: 20,
+<<<<<<< HEAD
               message: "Review must be at least 20 characters"}}}
+=======
+              message: "Review must be at least 20 characters",
+            },
+          }}
+>>>>>>> origin/auto/autonomy-17186719616
           render={({ field }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
@@ -145,10 +186,12 @@ export function ReviewForm({
             </FormItem>
           )}
         />
+        
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+            
             {/* Communication */}
             <FormField
               control={form.control}
@@ -162,7 +205,11 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
+<<<<<<< HEAD
+                      {[12345].map((value) => (
+=======
                       {[1, 2, 3, 4, 5].map((value) => (
+>>>>>>> origin/auto/autonomy-17186719616
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -181,6 +228,7 @@ export function ReviewForm({
                 </FormItem>
               )}
             />
+            
             {/* Quality */}
             <FormField
               control={form.control}
@@ -194,7 +242,11 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
+<<<<<<< HEAD
+                      {[12345].map((value) => (
+=======
                       {[1, 2, 3, 4, 5].map((value) => (
+>>>>>>> origin/auto/autonomy-17186719616
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -213,6 +265,7 @@ export function ReviewForm({
                 </FormItem>
               )}
             />
+            
             {/* Timeliness */}
             <FormField
               control={form.control}
@@ -226,7 +279,11 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
+<<<<<<< HEAD
+                      {[12345].map((value) => (
+=======
                       {[1, 2, 3, 4, 5].map((value) => (
+>>>>>>> origin/auto/autonomy-17186719616
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -245,6 +302,7 @@ export function ReviewForm({
                 </FormItem>
               )}
             />
+            
             {/* Would Work Again */}
             <FormField
               control={form.control}
@@ -271,6 +329,7 @@ export function ReviewForm({
             />
           </div>
         )}
+        
         {/* Anonymous Review */}
         <FormField
           control={form.control}
@@ -295,14 +354,15 @@ export function ReviewForm({
             </FormItem>
           )}
         />
+        
         <Button
           type="submit"
           className="w-full"
-          disabled={isSubmitting |!form.formState.isValid}
+          disabled={isSubmitting || !form.formState.isValid}
         >
           {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
         </Button>
       </form>
     </Form>
-  )
+  );
 }

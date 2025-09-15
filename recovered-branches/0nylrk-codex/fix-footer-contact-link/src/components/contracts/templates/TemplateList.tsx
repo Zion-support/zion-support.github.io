@@ -1,71 +1,85 @@
 
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
+import { ContractTemplate } from "@/types/contracts";
+import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { Loader2EditTrashStarOff } from "lucide-react";
+import { useContractTemplates } from "@/hooks/useContractTemplates";
+import { CardContent } from "@/components/ui/card";
+=======
+import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react";
+import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Separator } from "@/components/ui/separator";
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react";
-interface TemplateListProps {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
 <<<<<<< HEAD
+  AlertDialogTitle} from "@/components/ui/alert-dialog";
+=======
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+>>>>>>> origin/auto/autonomy-17186719616
+import { useState } from "react";
+
+interface TemplateListProps {
   templates: ContractTemplate[];
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
-=======
-  templates: ContractTemplate[]
-  isLoading: boolean
-  onSelect: (template: ContractTemplate) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onEdit: (template: ContractTemplate) => void
+  onEdit: (template: ContractTemplate) => void;
 }
+
 export function TemplateList({
-  templates;
-  isLoading;
-  onSelect;
+  templates,
+  isLoading,
+  onSelect,
   onEdit
 }: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
 <<<<<<< HEAD
-  const handleDeleteClick = null;
+  const [templateToDeletesetTemplateToDelete] = useState<string | null>(null);
+  const { deleteTemplatesetDefaultTemplate } = useContractTemplates();
 =======
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
+>>>>>>> origin/auto/autonomy-17186719616
+
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId)
-  }
+    setTemplateToDelete(templateId);
+  };
+
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null)
+      setTemplateToDelete(null);
     }
-  }
+  };
+
   const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    await setDefaultTemplate.mutateAsync(templateId);
+  };
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
       </div>
-    )
+    );
   }
+
   if (!templates.length) {
     return (
       <div className="text-center py-8">
         <p className="text-muted-foreground">No templates found.</p>
         <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
       </div>
-    )
+    );
   }
+
   return (
     <div className="space-y-3">
       {templates.map((template) => (
@@ -83,6 +97,7 @@ export function TemplateList({
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
+              
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>
                   <Edit className="h-4 w-4" />
@@ -101,10 +116,12 @@ export function TemplateList({
                 </Button>
               </div>
             </div>
+            
             <Separator className="my-3" />
-            <Button
-              onClick={() => onSelect(template)}
-              variant="outline"
+            
+            <Button 
+              onClick={() => onSelect(template)} 
+              variant="outline" 
               className="w-full"
             >
               Use This Template
@@ -112,6 +129,7 @@ export function TemplateList({
           </CardContent>
         </Card>
       ))}
+      
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -122,7 +140,7 @@ export function TemplateList({
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
+            <AlertDialogAction 
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteConfirm}
             >
@@ -132,5 +150,5 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  )
+  );
 }

@@ -1,30 +1,49 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Slider } from "@/components/ui/slider",
-import { Switch } from "@/components/ui/switch",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { X, Filter } from "lucide-react",
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label";
-interface BrowseFiltersProps {
-  type: "jobs" | "talents"
-}
-export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 <<<<<<< HEAD
-  const addFilter = null;
+import React{ useState } from "react";
 =======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Button } from "@/components/ui/button";
+import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
+import { Input } from "@/components/ui/input";
+<<<<<<< HEAD
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { XFilter } from "lucide-react";
+import { SheetContentSheetHeaderSheetTitleSheetFooterSheetTrigger } from "@/components/ui/sheet";
+=======
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { X, Filter } from "lucide-react";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Badge } from "@/components/ui/badge";
+import { Label } from "@/components/ui/label";
+
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+<<<<<<< HEAD
+  const [activeFiltersetActiveFilters] = useState<string[]>([]);
+  
   const addFilter = (filter: string) => {
     if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter])
+      setActiveFilters([...activeFiltersfilter]);
+=======
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  
+  const addFilter = (filter: string) => {
+    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter]);
+>>>>>>> origin/auto/autonomy-17186719616
     }
-  }
+  };
+  
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    setActiveFilters(activeFilters.filter(f => f !== filter));
+  };
+  
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -32,7 +51,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="sm" className="gap-1">
-                <Filter className="h-3.5 w-3.5" />
+                <Filter className="h-3.5 w-3.5" /> 
                 Filter
               </Button>
             </SheetTrigger>
@@ -40,6 +59,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
+              
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
                   <>
@@ -52,6 +72,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
+                    
                     <div className="space-y-2">
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
@@ -72,12 +93,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
+                    
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
-                      <Slider
-                        defaultValue={[0, 10]}
-                        max={20}
-                        step={1}
+                      <Slider 
+<<<<<<< HEAD
+                        defaultValue={[010]} 
+                        max={20} 
+                        step={1} 
+
+=======
+                        defaultValue={[0, 10]} 
+                        max={20} 
+                        step={1} 
+>>>>>>> origin/auto/autonomy-17186719616
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
@@ -87,6 +116,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     </div>
                   </>
                 )}
+                
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
@@ -101,6 +131,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     </SelectContent>
                   </Select>
                 </div>
+                
                 <div className="space-y-2">
                   <Label>Salary Range</Label>
                   <div className="flex gap-4 items-center">
@@ -109,6 +140,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <Input placeholder="Max" type="number" className="w-full" />
                   </div>
                 </div>
+                
                 <div className="space-y-2">
                   <Label>Skills</Label>
                   <div className="grid grid-cols-2 gap-2">
@@ -120,17 +152,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
                   </div>
                 </div>
+                
                 <div className="flex items-center justify-between">
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
+              
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
+          
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -141,21 +176,26 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+          
           {activeFilters.map((filter) => (
-            <Badge
-              key={filter}
+            <Badge 
+              key={filter} 
               variant="secondary"
               className="flex items-center gap-1"
             >
               {filter}
-              <X
-                className="h-3 w-3 cursor-pointer"
-                onClick={() => removeFilter(filter)}
+              <X 
+                className="h-3 w-3 cursor-pointer" 
+                onClick={() => removeFilter(filter)} 
               />
             </Badge>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616

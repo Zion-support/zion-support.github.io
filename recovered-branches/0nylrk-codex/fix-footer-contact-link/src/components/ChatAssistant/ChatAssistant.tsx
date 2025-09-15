@@ -1,88 +1,108 @@
+<<<<<<< HEAD
+import React{ useStateuseEffectuseRefReactNode } from 'react';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-import { ChatMessage  } from './ChatMessage';
-import { ChatInput  } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+
 export interface Message {
-<<<<<<< HEAD
   id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-=======
-  id: string
-  role: 'user' | 'assistant'
-  message: string
-  timestamp: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  read?: boolean
+  read?: boolean;
 }
+
 export interface ChatAssistantProps {
-<<<<<<< HEAD
   isOpen: boolean;
   onClose: () => void;
   recipient: {
     id: string;
     name: string;
     avatarUrl?: string;
-    role?: string
-  },
-=======
-  isOpen: boolean
-  onClose: () => void
-  recipient: {
-    id: string
-    name: string
-    avatarUrl?: string;
-    role?: string
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    role?: string;
+  };
   conversationId?: string;
-  initialMessages?: Message[],
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
-  contextHeader?: ReactNode
-}
-export function ChatAssistant({
-  isOpen;
-  onClose;
-  recipient;
-  conversationId;
+  initialMessages?: Message[];
 <<<<<<< HEAD
-  initialMessages;
+  onSendMessage: (message: stringconversationId?: string) => Promise<void>;
 =======
-  initialMessages = [];
-  onSendMessage;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
+>>>>>>> origin/auto/autonomy-17186719616
+  contextHeader?: ReactNode;
+}
+
+export function ChatAssistant({
+  isOpen,
+  onClose,
+  recipient,
+  conversationId,
+  initialMessages = [],
+  onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
+<<<<<<< HEAD
+  const [messagesetMessages] = useState<Message[]>(initialMessages);
+=======
   const [messages, setMessages] = useState<Message[]>(initialMessages);
+>>>>>>> origin/auto/autonomy-17186719616
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  
   useEffect(() => {
     if (initialMessages.length > 0) {
-      setMessages(initialMessages)
+      setMessages(initialMessages);
     }
-  }, [initialMessages]);
+<<<<<<< HEAD
+  }[initialMessages]);
+
   useEffect(() => {
-    scrollToBottom()
+    scrollToBottom();
+  }[messages]);
+=======
+  }, [initialMessages]);
+
+  useEffect(() => {
+    scrollToBottom();
   }, [messages]);
+>>>>>>> origin/auto/autonomy-17186719616
+
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
   const handleSendMessage = async (message: string) => {
-    if (!message.trim()) return
+    if (!message.trim()) return;
+    
     // Add user message to the chat
     const newMessage: Message = {
-      id: Date.now().toString()
-      role: 'user'
-      message;
+      id: Date.now().toString(),
+      role: 'user',
+      message,
       timestamp: new Date()
-    }
-    setMessages((prev: Message[]) => [...prev, newMessage]);
+    };
+    
+<<<<<<< HEAD
+    setMessages((prev: Message[]) => [...prevnewMessage]);
+    
     // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId)
-  }
+    await onSendMessage(messageconversationId);
+=======
+    setMessages((prev: Message[]) => [...prev, newMessage]);
+    
+    // Send message to recipient via the provided handler
+    await onSendMessage(message, conversationId);
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   if (!isOpen) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
@@ -102,8 +122,8 @@ export function ChatAssistant({
               )}
             </div>
           </div>
-          <Button
-            variant="ghost"
+          <Button 
+            variant="ghost" 
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick={onClose}
@@ -111,12 +131,14 @@ export function ChatAssistant({
             <X className="h-5 w-5" />
           </Button>
         </div>
+        
         {/* Context Header (Optional) */}
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>
         )}
+        
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.length === 0 ? (
@@ -126,7 +148,7 @@ export function ChatAssistant({
           ) : (
             messages.map((msg) => (
               <ChatMessage
-                key={msg.id}
+                key={msg.id} 
                 role={msg.role}
                 message={msg.message}
               />
@@ -134,11 +156,12 @@ export function ChatAssistant({
           )}
           <div ref={messagesEndRef} />
         </div>
+        
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
     </div>
-  )
+  );
 }

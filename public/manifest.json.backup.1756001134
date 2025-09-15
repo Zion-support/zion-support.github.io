@@ -1,32 +1,11 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "name": "Zion OS - Sovereign AI-Powered Digital Economies",
   "short_name": "Zion OS",
   "description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   "theme_color": "#3b82f6",
 =======
   "name": "Zion Tech Group",
@@ -37,21 +16,7 @@
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "orientation": "portrait-primary",
-  "theme_color": "#3b82f6",  "orientation": "portrait-primary",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  "theme_color": "#3b82f6",  "orientation": "portrait-primary",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  "theme_color": "#3b82f6",  "orientation": "portrait-primary",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
@@ -91,31 +56,11 @@
       "name": "Services",
       "short_name": "Services",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "description": "View our services and solutions",
 =======
       "description": "View our technology services",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "url": "/services",
-      "description": "View our services and solutions",      "url": "/services",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "description": "View our services and solutions",      "url": "/services",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "description": "View our services and solutions",      "url": "/services",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "icons": [
         {
           "src": "/icon-192x192.png",
@@ -142,55 +87,17 @@
       "sizes": "1280x720",
       "type": "image/png",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "form_factor": "wide",
       "label": "Zion OS Dashboard"
 =======
       "form_factor": "wide"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
-      "form_factor": "wide",
-      "label": "Zion OS Dashboard"    },
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "form_factor": "wide",
-      "label": "Zion OS Dashboard"    },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "form_factor": "wide",
-      "label": "Zion OS Dashboard"    },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     {
       "src": "/screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "form_factor": "narrow",
       "label": "Zion OS Mobile View"
     }
@@ -207,30 +114,10 @@
   },
   "launch_handler": {
     "client_mode": "navigate-existing"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   }
 =======
       "form_factor": "narrow"
     }
   ]
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  }}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  }}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  }}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
-const AutomationsIndex: NextPage;
-=======
+
 const AutomationsIndex: NextPage = () => {
   const items = [
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
+    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
+    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' },
+  ];
+
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -22,7 +22,7 @@ const AutomationsIndex: NextPage = () => {
         ))}
       </div>
     </main>
-  )
-}
+  );
+};
+
 export default AutomationsIndex;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Cloud Automation Suite
 
 on:
@@ -24,12 +9,6 @@ on:
 concurrency:
   group: cloud-automation-${{ github.ref }}
   cancel-in-progress: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
 name: Zion Autonomous Cloud Automations
 
@@ -39,16 +18,6 @@ on:
   workflow_dispatch: {}
 >>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 permissions:
   contents: write
 
@@ -57,21 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -122,23 +76,27 @@ jobs:
             git push origin HEAD:${GITHUB_REF#refs/heads/}
           else
             echo "No changes to commit."
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           fi
-          fi
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-          fi
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install minimal deps
+        run: |
+          npm ci --omit=dev
+      - name: Run orchestrator
+        run: |
+          node automation/cloud-autonomous-orchestrator.cjs
+      - name: Commit artifacts
+        run: |
+          git config user.name "zion-bot"
+          git config user.email "bot@zion.app"
+          git add public/metrics/latest.json public/automation/status.json docs/reports/ || true
+          git commit -m "chore(automation): update metrics and summary [skip ci]" || echo "No changes"
+          git push || true
+>>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6

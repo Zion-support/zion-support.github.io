@@ -1,22 +1,22 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
-<<<<<<< HEAD
 
-import React from "react",
-import { BadgeDollarSign } from "lucide-react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import React from "react";
+import { BadgeDollarSign } from "lucide-react";
+import { useWallet } from "@/hooks/useWallet";
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-=======
-import React from "react";
-import {BadgeDollarSign} from "lucide-react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Skeleton} from "@/components/ui/skeleton";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function TokenDisplay() {
+<<<<<<< HEAD
+  const { walletloading } = useWallet();
+=======
   const { wallet, loading } = useWallet();
+>>>>>>> origin/auto/autonomy-17186719616
+
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -32,11 +32,15 @@ export function TokenDisplay() {
         ) : (
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
-              <span className="text-3xl font-bold">{wallet?.balance |0}</span>
+              <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
               <span className="ml-1 text-muted-foreground">ZION$</span>
             </div>
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+              Use your tokens to boost visibilityaccess premium featuresor convert to credits.
+=======
               Use your tokens to boost visibility, access premium features, or convert to credits.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="mt-2">
               <Button variant="outline" size="sm">
@@ -47,5 +51,5 @@ export function TokenDisplay() {
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

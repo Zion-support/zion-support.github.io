@@ -1,49 +1,50 @@
 
-import React from "react",
-import { Slider } from "@/components/ui/slider",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Slider } from "@/components/ui/slider";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
 <<<<<<< HEAD
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle} from "@/components/ui/card",
-import { Sparkles } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
-export function UsageStats() {
-  const handleSaveChanges = null;
+  CardTitle} from "@/components/ui/card";
 =======
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
+  CardTitle,
 } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
-      title: "Limits updated"
-      description: "The new usage limits have been saved successfully."
+      title: "Limits updated",
+<<<<<<< HEAD
+      description: "The new usage limits have been saved successfully."});
+=======
+      description: "The new usage limits have been saved successfully.",
     });
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   return (
     <div className="space-y-8">
       <div>
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
         <p className="text-muted-foreground mb-6">
-          Configure usage limits for your team to manage your subscription
-          resources.
+          Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
@@ -55,9 +56,7 @@ export function UsageStats() {
           <CardContent className="space-y-4">
             <div>
               <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium">
-                  Monthly job posting limit
-                </div>
+                <div className="text-sm font-medium">Monthly job posting limit</div>
                 <Badge variant="outline">25 / 50</Badge>
               </div>
               <Progress value={50} className="h-2" />
@@ -72,11 +71,10 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>
-              Save Changes
-            </Button>
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+        
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -87,9 +85,7 @@ export function UsageStats() {
           <CardContent className="space-y-4">
             <div>
               <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium">
-                  Monthly contact credits
-                </div>
+                <div className="text-sm font-medium">Monthly contact credits</div>
                 <Badge variant="outline">178 / 500</Badge>
               </div>
               <Progress value={35.6} className="h-2" />
@@ -104,11 +100,10 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>
-              Save Changes
-            </Button>
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+        
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -134,11 +129,10 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>
-              Save Changes
-            </Button>
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+        
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -175,12 +169,11 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>
-              Save Changes
-            </Button>
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
       </div>
+      
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -189,8 +182,7 @@ export function UsageStats() {
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
             <p className="text-sm text-muted-foreground">
-              Contact your account manager to discuss custom limits for your
-              enterprise.
+              Contact your account manager to discuss custom limits for your enterprise.
             </p>
           </div>
         </div>

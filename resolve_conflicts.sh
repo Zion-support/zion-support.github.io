@@ -1,35 +1,33 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts systematically
-# Keep our PM2 automation improvements, accept main branch for others
+# Script to resolve merge conflicts by choosing the main branch version
+# This will resolve conflicts by keeping the main branch version (HEAD)
 
-echo "Resolving merge conflicts..."
+echo "Resolving merge conflicts by keeping main branch version..."
 
-# Keep our PM2 automation files
-git checkout --ours ecosystem.config.js
-git checkout --ours pm2-automation.sh
-git checkout --ours eslint.config.cjs
+# Get list of conflicted files
+git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
 
-# For most other files, accept the main branch version
-git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-    file=$(echo "$line" | cut -c4-)
-    
-    # Skip our important files
-    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
-        echo "Keeping our version of $file"
-        continue
+echo "Found $(wc -l < conflicted_files.txt) conflicted files"
+
+# For each conflicted file, resolve by choosing main branch version
+while IFS= read -r file; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflict in: $file"
+        # Use git checkout to choose the main branch version (HEAD)
+        git checkout --ours "$file"
+        git add "$file"
     fi
-    
-    # Accept main branch version for most files
-    echo "Accepting main branch version of $file"
-    git checkout --theirs "$file"
-done
+done < conflicted_files.txt
 
-echo "Adding resolved files..."
-git add .
+# Clean up
+rm conflicted_files.txt
 
-echo "Committing merge resolution..."
-git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
+echo "Conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by keeping main branch version
 
-echo "Pushing resolved changes..."
-git push origin HEAD
+- Merged origin/auto/autonomy-17186719616 into main
+- Resolved conflicts by choosing main branch version
+- All conflicts automatically resolved"
+
+echo "Merge completed successfully!"

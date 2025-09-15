@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
 =======
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
+
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 }
+
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
     <>
@@ -27,8 +22,8 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel className="text-white">Your Name</FormLabel>
             <FormControl>
-              <Input
-                placeholder="Enter your full name"
+              <Input 
+                placeholder="Enter your full name" 
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />
@@ -37,6 +32,7 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
+      
       <FormField
         control={form.control}
         name="requesterEmail"
@@ -44,8 +40,8 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel className="text-white">Your Email</FormLabel>
             <FormControl>
-              <Input
-                placeholder="Enter your email address"
+              <Input 
+                placeholder="Enter your email address" 
                 type="email"
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"

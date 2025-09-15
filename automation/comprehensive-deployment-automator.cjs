@@ -63,13 +63,15 @@ class ComprehensiveDeploymentAutomator {
 
   async runTests() {
     this.log('🧪 Running test suite...');
-    const result = await this.runStep('Tests', 'npm run test: smoke'), this.deploymentResults.test = result,
+    const result = await this.runStep('Tests', 'npm run test:smoke');
+    this.deploymentResults.test = result;
     return result.success;
   }
 
   async runLinting() {
     this.log('🔍 Running linting...');
-    const result = await this.runStep('Linting', 'npm run lint: fix'), this.deploymentResults.lint = result,
+    const result = await this.runStep('Linting', 'npm run lint:fix');
+    this.deploymentResults.lint = result;
     return result.success;
   }
 
@@ -82,25 +84,29 @@ class ComprehensiveDeploymentAutomator {
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    const result = await this.runStep('Security Audit', 'npm run security: audit'), this.deploymentResults.security = result,
+    const result = await this.runStep('Security Audit', 'npm run security:audit');
+    this.deploymentResults.security = result;
     return result.success;
   }
 
   async runPerformanceCheck() {
     this.log('⚡ Running performance check...');
-    const result = await this.runStep('Performance Check', 'npm run perf: audit'), this.deploymentResults.performance = result,
+    const result = await this.runStep('Performance Check', 'npm run perf:audit');
+    this.deploymentResults.performance = result;
     return result.success;
   }
 
   async deployToStaging() {
     this.log('🚀 Deploying to staging...');
-    const result = await this.runStep('Staging Deployment', 'npm run deploy: staging'), this.deploymentResults.deployment = result,
+    const result = await this.runStep('Staging Deployment', 'npm run deploy:staging');
+    this.deploymentResults.deployment = result;
     return result.success;
   }
 
   async deployToProduction() {
     this.log('🌟 Deploying to production...');
-    const result = await this.runStep('Production Deployment', 'npm run deploy: production'), this.deploymentResults.deployment = result,
+    const result = await this.runStep('Production Deployment', 'npm run deploy:production');
+    this.deploymentResults.deployment = result;
     return result.success;
   }
 
@@ -248,8 +254,8 @@ class ComprehensiveDeploymentAutomator {
 
 // Run if called directly
 if (require.main === module) {
-    const automator = new ComprehensiveDeploymentAutomator(),
-    automator.run().catch(console.error)
-  }
+  const automator = new ComprehensiveDeploymentAutomator();
+  automator.run().catch(console.error);
+}
 
 module.exports = ComprehensiveDeploymentAutomator;

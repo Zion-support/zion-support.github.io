@@ -1,15 +1,17 @@
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "../components/ProtectedRoute",
-import CommunityPage from "../pages/CommunityPage",
-import ForumCategoryPage from "../pages/ForumCategoryPage",
-import ForumPostPage from "../pages/ForumPostPage",
-import CreatePostPage from "../pages/CreatePostPage",
+import { Fragment } from "react";
+<<<<<<< HEAD
+import { Routes } from "react-router-dom";
+=======
+import { Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
-<<<<<<< HEAD
-const CommunityRoutes = null;
-=======
+
 const CommunityRoutes = () => {
   return (
     <Routes>
@@ -19,6 +21,7 @@ const CommunityRoutes = () => {
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+      
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -37,7 +40,7 @@ const CommunityRoutes = () => {
         }
       />
     </Routes>
-  )
-}
+  );
+};
+
 export default CommunityRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

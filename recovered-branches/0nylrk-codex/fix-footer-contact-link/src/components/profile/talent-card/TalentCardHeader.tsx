@@ -1,37 +1,34 @@
 
-import React from "react",
-import { BadgeCheck } from "lucide-react",
+import React from "react";
+import { BadgeCheck } from "lucide-react";
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
+
 interface TalentCardHeaderProps {
-<<<<<<< HEAD
   fullName: string;
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
-=======
-  fullName: string
-  professionalTitle: string
-  profilePicture?: string;
-  availabilityType: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  yearsExperience: number
+  yearsExperience: number;
 }
-export function TalentCardHeader({
-  fullName;
+
+export function TalentCardHeader({ 
 <<<<<<< HEAD
-  professionalTitle;
-  profilePicture;
-=======
+  fullName
   professionalTitle
   profilePicture
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  availabilityType;
+=======
+  fullName, 
+  professionalTitle, 
+  profilePicture, 
+>>>>>>> origin/auto/autonomy-17186719616
+  availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
+      
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
@@ -41,10 +38,12 @@ export function TalentCardHeader({
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
           </h3>
+          
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
+        
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>
       </div>
     </div>
-  )
+  );
 }

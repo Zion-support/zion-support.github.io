@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Cloud Automation (Daily)
 
 on:
@@ -28,12 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
 name: Cloud Daily Automations
 
@@ -59,27 +38,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 >>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           node-version: 20
           cache: 'npm'
 
@@ -98,23 +61,47 @@ jobs:
         run: npm run sync-health:run || true
 
       - name: Post-automation git sync (safe)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         run: npm run automation:git-sync || true
-        run: npm run automation:git-sync || true
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-        run: npm run automation:git-sync || true
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      - name: Lint check and auto-fix
+        run: npm run linting:fix || true
+
+      - name: Design improvements cycle
+        run: npm run design:analyze || true
+
+      - name: SaaS services analyzer
+        run: npm run saas:analyze || true
+
+      - name: Venture analyzer
+        run: npm run venture:analyze || true
+
+      - name: Responsive content analyzer
+        run: npm run responsive:analyze || true
+
+      - name: Feature marketing analyzer
+        run: npm run feature-marketing:analyze || true
+
+      - name: Homepage promo
+        run: npm run homepage-promo:analyze || true
+
+      - name: UI evolution factory
+        run: npm run ui-evolution:factory || true
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(automation): daily cloud automations output"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+>>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565

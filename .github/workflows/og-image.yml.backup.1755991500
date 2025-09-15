@@ -1,31 +1,10 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: OG Image Generator
 
 on:
   schedule:
     - cron: '0 */6 * * *'
   push:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     branches: [ main ]
 =======
 name: Generate OG Image
@@ -36,42 +15,13 @@ on:
   schedule:
     - cron: '0 1 * * *'
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   workflow_dispatch:
-    branches: [ main ]  workflow_dispatch:
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    branches: [ main ]  workflow_dispatch:
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    branches: [ main ]  workflow_dispatch:
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 permissions:
   contents: write
 
 jobs:
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   generate:
     runs-on: ubuntu-latest
     steps:
@@ -115,23 +65,23 @@ jobs:
           branch: main
           commit_user_name: zion-bot
           commit_user_email: bot@users.noreply.github.com
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           commit_author: zion-bot <bot@users.noreply.github.com>
-          commit_author: zion-bot <bot@users.noreply.github.com>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-          commit_author: zion-bot <bot@users.noreply.github.com>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  og:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate image
+        env:
+          OG_NAME: Jordan Lee
+          OG_TITLE: Senior AI/ML Engineer
+        run: node scripts/generate-og.mjs
+      - name: Commit image
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(og): update og-image.svg'
+          file_pattern: og-image.svg
+>>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8

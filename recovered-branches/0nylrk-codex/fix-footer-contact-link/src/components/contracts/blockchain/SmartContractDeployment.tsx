@@ -1,70 +1,93 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
-import { Loader2, ShieldCheck, Download } from "lucide-react";
-import { toast } from "sonner";
-interface SmartContractDeploymentProps {
 <<<<<<< HEAD
+import React{ useState } from "react";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { BlockchainNetworkDeploymentOptions } from "@/types/smart-contracts";
+import { Loader2ShieldCheckDownload } from "lucide-react";
+=======
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
+import { Loader2, ShieldCheck, Download } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { toast } from "sonner";
+
+interface SmartContractDeploymentProps {
   solidityCode: string;
   onDeploy: (options: DeploymentOptions) => Promise<void>;
-=======
-  solidityCode: string
-  onDeploy: (options: DeploymentOptions) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  isDeploying: boolean
+  isDeploying: boolean;
 }
-export function SmartContractDeployment({
-  solidityCode;
-  onDeploy;
+
+export function SmartContractDeployment({ 
+<<<<<<< HEAD
+  solidityCode
+  onDeploy,
+  isDeploying
+}: SmartContractDeploymentProps) {
+  const [deploymentOptionsetDeploymentOptions] = useState<DeploymentOptions>({
+=======
+  solidityCode, 
+  onDeploy,
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
-<<<<<<< HEAD
-    network: 'none';
-    useEscrow: true;
-    deployToChain: false;
+>>>>>>> origin/auto/autonomy-17186719616
+    network: 'none',
+    useEscrow: true,
+    deployToChain: false,
     walletAddress: ''
   });
 
-  const handleDeployContract = null;
-=======
-    network: 'none'
-    useEscrow: true
-    deployToChain: false
-    walletAddress: ''
-  });
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
       toast.error("Please enter a wallet address for blockchain deployment");
-      return
+      return;
     }
+    
     try {
-      await onDeploy(deploymentOptions)
+      await onDeploy(deploymentOptions);
     } catch (error) {
-      console.error("Deployment error:", error)
+<<<<<<< HEAD
+      console.error("Deployment error:"error);
+=======
+      console.error("Deployment error:", error);
+>>>>>>> origin/auto/autonomy-17186719616
     }
-  }
+  };
+  
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
-    const blob = new Blob([solidityCode], { type: 'text/plain' })
+<<<<<<< HEAD
+    const blob = new Blob([solidityCode]{ type: 'text/plain' });
+=======
+    const blob = new Blob([solidityCode], { type: 'text/plain' });
+>>>>>>> origin/auto/autonomy-17186719616
     const url = URL.createObjectURL(blob);
+    
     // Create a temporary anchor to trigger download
     const a = document.createElement('a');
     a.href = url;
     a.download = 'ZionContract.sol';
     document.body.appendChild(a);
     a.click();
+    
     // Clean up
     URL.revokeObjectURL(url);
     document.body.removeChild(a);
-    toast.success("Solidity contract downloaded")
-  }
+    
+    toast.success("Solidity contract downloaded");
+  };
+
   return (
     <Card className="w-full">
       <CardHeader>
@@ -76,60 +99,71 @@ export function SmartContractDeployment({
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+      
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
-            <Switch
+            <Switch 
               id="deploy-blockchain"
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
-                ...deploymentOptions;
+                ...deploymentOptions,
                 deployToChain: checked
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
+          
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
-                <RadioGroup
+                <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
-                    ...deploymentOptions;
+                    ...deploymentOptions,
                     network: value as BlockchainNetwork
                   })}
                   className="flex flex-col space-y-1"
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="ethereum" id="ethereum" />
+<<<<<<< HEAD
+                    <Label htmlFor="ethereum">Ethereum (higher feesmore secure)</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="polygon" id="polygon" />
+                    <Label htmlFor="polygon">Polygon (lower feesfaster)</Label>
+=======
                     <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="polygon" id="polygon" />
                     <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+>>>>>>> origin/auto/autonomy-17186719616
                   </div>
                 </RadioGroup>
               </div>
+              
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
-                <Input
-                  id="wallet-address"
-                  placeholder="0x..."
-                  value={deploymentOptions.walletAddress |''}
+                <Input 
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions.walletAddress || ''}
                   onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions;
+                    ...deploymentOptions,
                     walletAddress: e.target.value
                   })}
                 />
               </div>
+              
               <div className="flex items-center space-x-2">
-                <Switch
+                <Switch 
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
-                    ...deploymentOptions;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+                    ...deploymentOptions,
                     useEscrow: checked
                   })}
                 />
@@ -137,19 +171,26 @@ export function SmartContractDeployment({
               </div>
             </>
           )}
+          
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
+<<<<<<< HEAD
+              <pre>{solidityCode.slice(0500)}...</pre>
+=======
               <pre>{solidityCode.slice(0, 500)}...</pre>
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
           </div>
         </div>
       </CardContent>
+      
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
+        
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
             <>
@@ -162,5 +203,5 @@ export function SmartContractDeployment({
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

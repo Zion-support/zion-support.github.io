@@ -24,12 +24,6 @@
   ],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:36:05.933Z"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
   "results": [],
   "buildBreakingFiles": [],
@@ -38,24 +32,4 @@
 =======
   "generatedAt": "2025-08-19T17:23:22.064Z"
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-330f
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T18:00:18.033Z"}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T18:00:18.033Z"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T18:00:18.033Z"}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -1,69 +1,59 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom;
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
+import { 
+  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
- } from 'lucide-react';
-import { comprehensiveMicroSaasServices  } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+} from 'lucide-react',
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
+
 export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [expandedService, setExpandedService] = useState<string | null>(null),
 
   // Combine all services
-  const allServices = null;
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom
-  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
-} from 'lucide-react'
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
-  const [expandedService, setExpandedService] = useState<string | null>(null)
-  // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices]
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],
+
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' }
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' }
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' }
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰' }
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' }
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' }
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' }
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' }
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' }
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' }
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' }
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' }
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' }
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' }
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐' }
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' }
+    { id: 'all', name: 'All Services', icon: '🚀' },
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' },
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' },
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-  ]
-  const filteredServices = selectedCategory === 'all'
-    ? allServices
-    : allServices.filter(service => service.category === selectedCategory)
+  ],
+
+  const filteredServices = selectedCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => service.category === selectedCategory),
+
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category)
-    return categoryData?.icon |'🚀'
-  }
+    const categoryData = categories.find(cat => cat.id === category),
+    return categoryData?.icon || '🚀'
+  },
+
   const calculateYearlyPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
+    const price = parseFloat(monthlyPrice.replace('$', '').replace(, '')),
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
-  }
+  },
+
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  },
+
   return (
     <>
       <Head>
@@ -72,6 +62,7 @@ export default function ComprehensivePricingPage() {
         <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-2025" />
       </Head>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Header */}
         <section className="py-20 px-6">
@@ -87,6 +78,7 @@ export default function ComprehensivePricingPage() {
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
                 Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
               </p>
+              
               {/* Billing Toggle */}
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
@@ -107,6 +99,7 @@ export default function ComprehensivePricingPage() {
                   </span>
                 )}
               </div>
+
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
@@ -129,6 +122,7 @@ export default function ComprehensivePricingPage() {
             </motion.div>
           </div>
         </section>
+
         {/* Category Filter */}
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
@@ -155,6 +149,7 @@ export default function ComprehensivePricingPage() {
             </motion.div>
           </div>
         </section>
+
         {/* Services Grid */}
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
@@ -176,6 +171,7 @@ export default function ComprehensivePricingPage() {
                         Popular
                       </div>
                     )}
+
                     {/* Service Header */}
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -189,8 +185,10 @@ export default function ComprehensivePricingPage() {
                           </div>
                         </div>
                       </div>
+
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
+
                       {/* Key Features */}
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 4).map((feature, idx) => (
@@ -200,6 +198,7 @@ export default function ComprehensivePricingPage() {
                           </div>
                         ))}
                       </div>
+
                       {/* Service Stats */}
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
@@ -215,6 +214,7 @@ export default function ComprehensivePricingPage() {
                           <div className="text-xs text-white/60">Trial</div>
                         </div>
                       </div>
+
                       {/* Expand/Collapse Button */}
                       <button
                         onClick={() => toggleServiceExpansion(service.id)}
@@ -225,6 +225,7 @@ export default function ComprehensivePricingPage() {
                           expandedService === service.id ? 'rotate-180' : ''
                         }`} />
                       </button>
+
                       {/* CTA Button */}
                       <a
                         href={service.link}
@@ -236,6 +237,7 @@ export default function ComprehensivePricingPage() {
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     </div>
+
                     {/* Expanded Details */}
                     <AnimatePresence>
                       {expandedService === service.id && (
@@ -252,6 +254,7 @@ export default function ComprehensivePricingPage() {
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
                               <p className="text-white/70 text-sm">{service.marketPosition}</p>
                             </div>
+
                             {/* Technology Stack */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
@@ -263,6 +266,7 @@ export default function ComprehensivePricingPage() {
                                 ))}
                               </div>
                             </div>
+
                             {/* Use Cases */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
@@ -275,6 +279,7 @@ export default function ComprehensivePricingPage() {
                                 ))}
                               </div>
                             </div>
+
                             {/* ROI and Benefits */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
@@ -288,6 +293,7 @@ export default function ComprehensivePricingPage() {
                                 ))}
                               </div>
                             </div>
+
                             {/* Contact Information */}
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
@@ -308,6 +314,7 @@ export default function ComprehensivePricingPage() {
             </div>
           </div>
         </section>
+
         {/* Contact CTA */}
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">

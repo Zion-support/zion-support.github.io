@@ -1,37 +1,39 @@
-<<<<<<< HEAD
 
 import React from 'react';
-import { Control  } from 'react-hook-form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Control } from 'react-hook-form';
+<<<<<<< HEAD
+import { FormFieldFormItemFormLabelFormControlFormDescriptionFormMessage } from "@/components/ui/form";
 =======
-import React from "react";
-import { Control } from "react-hook-form";
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-} from "@/components/ui/form";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
+
 interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
-  editorContent: string
+  editorContent: string;
 }
-export function DescriptionFields({
-  control
-  handleEditorChange
-  editorContent
-}: DescriptionFieldsProps) {
+
+<<<<<<< HEAD
+export function DescriptionFields({ controlhandleEditorChangeditorContent }: DescriptionFieldsProps) {
+=======
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <>
       <FormField
-        control;
-                  field.onChange(e.target.value)
+        control={control}
+        name="description"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Description</FormLabel>
+            <FormControl>
+              <Textarea 
+                value={editorContent}
+                onChange={(e) => {
+                  handleEditorChange(e.target.value);
+                  field.onChange(e.target.value);
                 }}
                 className="min-h-[200px]"
                 placeholder="Enter a detailed description of the job role"
@@ -44,6 +46,7 @@ export function DescriptionFields({
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="responsibilities"
@@ -64,6 +67,7 @@ export function DescriptionFields({
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="qualifications"
@@ -84,6 +88,7 @@ export function DescriptionFields({
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="benefits"
@@ -104,6 +109,7 @@ export function DescriptionFields({
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="application_instructions"

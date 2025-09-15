@@ -1,96 +1,89 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Monitor, Brain, Cpu, Zap, Shield, Globe;
-  Rocket, Target, TrendingUp, Users, CheckCircle;
-  ArrowRight, Star, Award, Clock, DollarSign;
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { 
+  Monitor, Brain, Cpu, Zap, Shield, Globe, 
+  Rocket, Target, TrendingUp, Users, CheckCircle,
+  ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
- } from 'lucide-react';
-const AIPoweredITAssetManagement = null;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Monitor, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-  Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react'
+} from 'lucide-react',
+
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
-      icon: Brain
-      title: "AI-Powered Asset Discovery"
-      description: "Intelligent detection and cataloging of all IT assets across your network"
+      icon: Brain,
+      title: "AI-Powered Asset Discovery",
+      description: "Intelligent detection and cataloging of all IT assets across your network",
       color: "from-purple-500 to-pink-500"
-    }
+    },
     {
-      icon: Monitor
-      title: "Real-Time Monitoring"
-      description: "Continuous monitoring and health assessment of all IT assets"
+      icon: Monitor,
+      title: "Real-Time Monitoring",
+      description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
-    }
+    },
     {
-      icon: Shield
-      title: "Security Compliance"
-      description: "Automated security audits and compliance monitoring for all assets"
+      icon: Shield,
+      title: "Security Compliance",
+      description: "Automated security audits and compliance monitoring for all assets",
       color: "from-emerald-500 to-teal-500"
-    }
+    },
     {
-      icon: TrendingUp
-      title: "Predictive Analytics"
-      description: "AI-driven insights for asset lifecycle management and optimization"
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
     }
-  ]
+  ],
+
   const assetTypes = [
-    "Hardware devices (servers, workstations, mobile devices)"
-    "Software licenses and applications"
-    "Network infrastructure and equipment"
-    "Cloud resources and virtual machines"
-    "Security devices and appliances"
+    "Hardware devices (servers, workstations, mobile devices)",
+    "Software licenses and applications",
+    "Network infrastructure and equipment",
+    "Cloud resources and virtual machines",
+    "Security devices and appliances",
     "Peripheral devices and accessories"
-  ]
+  ],
+
   const benefits = [
     {
-      icon: DollarSign
-      title: "Cost Optimization"
-      value: "35%"
+      icon: DollarSign,
+      title: "Cost Optimization",
+      value: "35%",
       description: "Reduction in IT asset costs"
-    }
+    },
     {
-      icon: Clock
-      title: "Time Savings"
-      value: "60%"
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
       description: "Faster asset management"
-    }
+    },
     {
-      icon: Shield
-      title: "Security Improvement"
-      value: "90%"
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
       description: "Better security compliance"
-    }
+    },
     {
-      icon: TrendingUp
-      title: "Efficiency Boost"
-      value: "200%"
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
       description: "Increased operational efficiency"
     }
-  ]
+  ],
+
   const capabilities = [
-    "Automated asset discovery and inventory"
-    "Real-time health monitoring and alerts"
-    "Predictive maintenance scheduling"
-    "License compliance management"
-    "Security vulnerability assessment"
-    "Asset lifecycle optimization"
-    "Cost allocation and tracking"
+    "Automated asset discovery and inventory",
+    "Real-time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
     "Integration with existing IT tools"
-  ]
+  ],
+
   return (
     <>
       <Head>
@@ -102,6 +95,7 @@ const AIPoweredITAssetManagement = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-powered-it-asset-management" />
       </Head>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -124,7 +118,7 @@ const AIPoweredITAssetManagement = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your IT operations with intelligent asset management that discovers
+                Transform your IT operations with intelligent asset management that discovers, 
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,6 +133,7 @@ const AIPoweredITAssetManagement = () => {
             </motion.div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -156,6 +151,7 @@ const AIPoweredITAssetManagement = () => {
                 Experience the future of IT asset management with our AI-powered platform
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -176,6 +172,7 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
+
         {/* Asset Types Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -193,6 +190,7 @@ const AIPoweredITAssetManagement = () => {
                 Manage every type of IT asset across your entire infrastructure
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
@@ -210,6 +208,7 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
+
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -227,6 +226,7 @@ const AIPoweredITAssetManagement = () => {
                 See the real impact of AI-powered asset management on your IT operations
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -250,6 +250,7 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
+
         {/* Capabilities Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -267,6 +268,7 @@ const AIPoweredITAssetManagement = () => {
                 Comprehensive asset management capabilities powered by artificial intelligence
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div
@@ -284,6 +286,7 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -314,6 +317,6 @@ const AIPoweredITAssetManagement = () => {
       </div>
     </>
   )
-}
-export default AIPoweredITAssetManagement;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+},
+
+export default AIPoweredITAssetManagement,

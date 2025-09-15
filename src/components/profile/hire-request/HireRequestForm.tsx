@@ -1,14 +1,16 @@
-import React from 'react'
-import { useHireRequestForm, FormValues } from './useHireRequestForm'
-import { Button } from '@/components/ui/button'
-import { DialogFooter } from '@/components/ui/dialog'
-import { Form } from '@/components/ui/form'
+
+import React from "react";
+import { useHireRequestForm, FormValues } from "./useHireRequestForm";
+import { Button } from "@/components/ui/button";
+import { DialogFooter } from "@/components/ui/dialog";
+import { Form } from "@/components/ui/form";
 import { Loader2 } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
+import { TalentProfile } from "@/types/talent";
+import { PersonalInfoFields } from "./PersonalInfoFields";
+import { ProjectDetailsField } from "./ProjectDetailsField";
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
+
 export interface HireRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
@@ -16,105 +18,51 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string;
     email?: string;
-    id?: string
-  }
-  onSubmitSuccess?: () => void
-export function HireRequestForm({
-  talent
-  onClose
-  initialJobTitle
-  userDetails
-  onSubmitSuccess
-}: HireRequestFormProps) {
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({
-    talent
-    onClose: onSubmitSuccess |onClose
-    initialJobTitle
-    userDetails
-  })
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <PersonalInfoFields form={form} />
-        </div>
-        <ProjectDetailsField form={form} />
-        <TimelineField form={form} />
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <BudgetFields form={form} talent={talent} />
-        </div>
-        <DialogFooter className='pt-4'>
-          <Button
-            type='button'
-            variant='outline'
-            onClick={onClose}
-            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}
-          >
-            Cancel
-          </Button>
-          <Button
-            type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void
+    id?: string;
+  };
+  onSubmitSuccess?: () => void;
 }
+
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-<<<<<<< HEAD
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
-    talent;
-    onClose: onSubmitSuccess || onClose;
-    initialJobTitle;
+    talent, 
+    onClose: onSubmitSuccess || onClose, 
+    initialJobTitle,
     userDetails 
   });
-=======
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({
-    talent
-    onClose: onSubmitSuccess |onClose
-    initialJobTitle
-    userDetails
-  })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <PersonalInfoFields form={form} />
         </div>
+        
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BudgetFields form={form} talent={talent} />
         </div>
+        
         <DialogFooter className="pt-4">
-          <Button
-            type="button"
-            variant="outline"
+          <Button 
+            type="button" 
+            variant="outline" 
             onClick={onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}
-        <DialogFooter className="pt-4">
-          <Button
-            type="button"
-            variant="outline"
-            onClick = {onClose,}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled = {isSubmitting,}
           >
             Cancel
           </Button>
-          <Button
-            type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
+          <Button 
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
-            disabled = {isSubmitting,}
           >
             {isSubmitting ? (
               <>
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Submitting...
               </>
             ) : (
@@ -124,5 +72,5 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-  )
+  );
 }

@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Cloud Autonomous Automations
 
 on:
@@ -35,12 +20,6 @@ permissions:
 jobs:
   run-automations:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     timeout-minutes: 25
 =======
 name: Cloud Autonomous Automation
@@ -58,53 +37,18 @@ jobs:
   autonomous:
     runs-on: ubuntu-latest
 >>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     steps:
-    timeout-minutes: 25    steps:
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    timeout-minutes: 25    steps:
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    timeout-minutes: 25    steps:
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -112,27 +56,11 @@ jobs:
           node-version: 20
           cache: npm
 >>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Install dependencies
         run: npm ci
 
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      - name: Install dependencies
-        run: npm ci
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Run cloud autonomous automations
         run: node automation/cloud-autonomous-runner.cjs
 
@@ -157,23 +85,34 @@ jobs:
             git push origin HEAD:${{ github.ref_name }}
           else
             echo "No new commits to push"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           fi
-          fi
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-          fi
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      - name: Run site link crawl+fix
+        env:
+          APP_MARKETING_URL: https://ziontechgroup.com
+        run: |
+          node automation/site-link-crawler.cjs | cat
+          node automation/site-link-fixer.cjs | cat
+
+      - name: Keep sitemap fresh
+        run: node automation/sitemap-keeper.cjs | cat
+
+      - name: SEO meta audit
+        env:
+          APP_MARKETING_URL: https://ziontechgroup.com
+        run: node automation/seo-meta-audit.cjs | cat
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node automation/cloud-auto-commit.cjs | cat
+
+      - name: Upload automation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloud-automation-artifacts
+          path: |
+            data/reports/**/*
+            automation/logs/**/*
+          if-no-files-found: ignore
+>>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc

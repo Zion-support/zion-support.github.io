@@ -1,26 +1,32 @@
 
-import React from "react",
-import { Routes, Route, Navigate } from "react-router-dom",
-import { MobileThemeProvider } from "./theme/MobileThemeProvider",
-import { MobileOnboarding } from "./pages/MobileOnboarding",
-import { MobileHome } from "./pages/MobileHome",
-import { MobileBrowse } from "./pages/MobileBrowse",
-import { MobileProjects } from "./pages/MobileProjects",
-import { MobileMessages } from "./pages/MobileMessages",
-import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
+import React from "react";
+<<<<<<< HEAD
+import { RoutesRouteNavigate } from "react-router-dom";
+=======
+import { Routes, Route, Navigate } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
+import { MobileThemeProvider } from "./theme/MobileThemeProvider";
+import { MobileOnboarding } from "./pages/MobileOnboarding";
+import { MobileHome } from "./pages/MobileHome";
+import { MobileBrowse } from "./pages/MobileBrowse";
+import { MobileProjects } from "./pages/MobileProjects";
+import { MobileMessages } from "./pages/MobileMessages";
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";
 import { MobileJobPost } from "./pages/MobileJobPost";
 import { useAuth } from "@/hooks/useAuth";
+
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
+  
   return (
     <MobileThemeProvider>
       <Routes>
         <Route path="/onboarding" element={<MobileOnboarding />} />
-        <Route
-          path="/"
+        <Route 
+          path="/" 
           element={
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />
-          }
+          } 
         />
         <Route path="/browse" element={<MobileBrowse />} />
         <Route path="/projects" element={<MobileProjects />} />
@@ -31,5 +37,5 @@ export function MobileApp() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </MobileThemeProvider>
-  )
+  );
 }

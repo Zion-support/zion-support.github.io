@@ -1,59 +1,71 @@
 
 <<<<<<< HEAD
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
+import React{ useState } from "react";
+import { DisputeStatus } from "@/types/disputes";
+=======
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Skeleton } from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+<<<<<<< HEAD
+  TableRow} from "@/components/ui/table";
+=======
+  TableRow,
+} from "@/components/ui/table";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
-type DisputesListProps = any;
-=======
-import React, { useState } from "react";
-import {Dispute, DisputeStatus} from "@/types/disputes";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Skeleton} from "@/components/ui/skeleton";
-import {formatDistanceToNow} from "date-fns";
-import {ShieldAlert} from "lucide-react";
-import {Link} from "react-router-dom";
+
 type DisputesListProps = {
-  disputes: Dispute[]
-  isLoading: boolean
-}
+  disputes: Dispute[];
+  isLoading: boolean;
+};
+
+<<<<<<< HEAD
+export function DisputesList({ disputesisLoading }: DisputesListProps) {
+  const [statusFiltersetStatusFilter] = useState<DisputeStatus | "all">("all");
+=======
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-  const filteredDisputes = statusFilter === "all"
-    ? disputes
+>>>>>>> origin/auto/autonomy-17186719616
+
+  const filteredDisputes = statusFilter === "all" 
+    ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter);
+
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default";
+      case "open":
+        return "default";
       case "under_review":
-        return "secondary"
+        return "secondary";
       case "resolved":
-        return "outline", // Changed from "success" to "outline"
+        return "outline"; // Changed from "success" to "outline"
       case "closed":
         return "outline";
       default:
-        return "default"
+        return "default";
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+
   if (isLoading) {
     return (
       <div className="space-y-4">
         <div className="flex gap-2 mb-4">
+<<<<<<< HEAD
+          {["All"Open"Under Review"Resolved"Closed"].map((status) => (
+=======
           {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
@@ -70,7 +82,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
+<<<<<<< HEAD
+              {[...Array(5)].map((_i) => (
+=======
               {[...Array(5)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <TableRow key={i}>
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-40" /></TableCell>
@@ -84,8 +100,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           </Table>
         </div>
       </div>
-    )
+    );
   }
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -95,8 +116,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    )
+    );
   }
+
   return (
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
@@ -136,6 +158,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           Closed
         </Button>
       </div>
+
       <div className="border rounded-md overflow-hidden">
         <Table>
           <TableHeader>
@@ -155,24 +178,32 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-                  {dispute.project?.title |"Unknown Project"}
+                  {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
                   <div className="flex flex-col text-sm">
                     <span>
-                      Client: {dispute.client_profile?.display_name |"Unknown Client"}
+                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
                     </span>
                     <span>
-                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
+                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
+                  {formatDistanceToNow(new Date(dispute.created_at){ addSuffix: true })}
+                </TableCell>
+                <TableCell>
+                  <Badge variant={getStatusBadgeVariant(dispute.status)}>
+                    {dispute.status.replace('_' ')}
+=======
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                    {dispute.status.replace('_ ')}
+                    {dispute.status.replace('_', ' ')}
+>>>>>>> origin/auto/autonomy-17186719616
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">
@@ -186,5 +217,5 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-  )
+  );
 }

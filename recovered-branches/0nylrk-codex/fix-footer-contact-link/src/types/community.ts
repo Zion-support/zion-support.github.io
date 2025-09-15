@@ -1,20 +1,19 @@
 
-<<<<<<< HEAD
-export type ForumCategory = any;
-=======
-export type ForumCategory =
+export type ForumCategory = 
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
+
 export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-  adminOnly: boolean
-  icon: string
+  adminOnly: boolean;
+  icon: string;
 }
+
 export interface ForumPost {
   id: string;
   title: string;
@@ -32,9 +31,10 @@ export interface ForumPost {
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean
-  isFeatured?: boolean
+  isLocked?: boolean;
+  isFeatured?: boolean;
 }
+
 export interface ForumReply {
   id: string;
   postId: string;
@@ -47,21 +47,24 @@ export interface ForumReply {
   createdAt: string;
   updatedAt: string;
   upvotes: number;
-  downvotes: number
-  isAnswer?: boolean
+  downvotes: number;
+  isAnswer?: boolean;
 }
+
 export interface Badge {
   id: string;
   name: string;
   description: string;
-  icon: string
-  color: string
+  icon: string;
+  color: string;
 }
+
 export interface UserBadge {
   userId: string;
-  badgeId: string
-  awardedAt: string
+  badgeId: string;
+  awardedAt: string;
 }
+
 export interface CommunityUser {
   id: string;
   name: string;
@@ -71,7 +74,6 @@ export interface CommunityUser {
   postCount: number;
   replyCount: number;
   badges: Badge[];
-  isVerified: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  isModerator: boolean
+  isVerified: boolean;
+  isModerator: boolean;
 }

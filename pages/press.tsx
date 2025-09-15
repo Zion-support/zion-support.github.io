@@ -1,5 +1,6 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
+
 export default function PressPage() {
 	return (
 		<>
@@ -9,5 +10,5 @@ export default function PressPage() {
 				<p className="text-gray-300">Media kit and announcements coming soon.</p>
 			</div>
 		</>
-	)
+	),
 }

@@ -2,21 +2,6 @@
   "_format": "hh-sol-cache-2",
   "files": {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "/workspace/contracts/SemaphoreVerifier.sol": {
       "lastModificationDate": 1754694378585,
       "contentHash": "7a19a155a1e7aab498adb0fa6a054075",
@@ -28,12 +13,6 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           },
 =======
     "/workspace/contracts/ZIONToken.sol": {
@@ -50,21 +29,7 @@
           "viaIR": true,
           "evmVersion": "paris",
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
-          },          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          },          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          },          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -82,21 +47,6 @@
       },
       "imports": [
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "@semaphore-protocol/contracts/base/SemaphoreVerifier.sol"
       ],
       "versionPragmas": [
@@ -117,12 +67,6 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           },
 =======
         "./interfaces/IBridgeAdapter.sol"
@@ -149,21 +93,45 @@
           },
           "viaIR": true,
           "evmVersion": "paris",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
-          },          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          },          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          },          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "IBridgeAdapter"
+      ]
+    },
+    "/workspace/contracts/governance/VoteRelay.sol": {
+      "lastModificationDate": 1754693713589,
+      "contentHash": "c23c3ea565a91a8a0d2791c0ebe30f4e",
+      "sourceName": "contracts/governance/VoteRelay.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+>>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
+          "outputSelection": {
             "*": {
               "*": [
                 "abi",
@@ -181,21 +149,6 @@
       },
       "imports": [
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "./Constants.sol",
         "./SemaphoreVerifierKeyPts.sol"
       ],
@@ -217,12 +170,6 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           },
 =======
         "../interfaces/IBridgeAdapter.sol"
@@ -248,21 +195,7 @@
           "viaIR": true,
           "evmVersion": "paris",
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
-          },          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          },          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          },          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -279,21 +212,6 @@
         }
       },
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "imports": [],
       "versionPragmas": [
         ">=0.8.23 <0.9.0"
@@ -347,12 +265,6 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           },
 =======
       "imports": [
@@ -380,21 +292,7 @@
           "viaIR": true,
           "evmVersion": "paris",
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
-          },          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          },          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          },          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -413,21 +311,6 @@
       "imports": [],
       "versionPragmas": [
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.21"
       ],
       "artifacts": [
@@ -446,12 +329,6 @@
           "optimizer": {
             "enabled": false,
             "runs": 200
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           },
 =======
         "^0.8.24"
@@ -476,21 +353,7 @@
           "viaIR": true,
           "evmVersion": "paris",
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
-          },          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          },          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          },          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -509,31 +372,10 @@
       "imports": [],
       "versionPragmas": [
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.21"
       ],
       "artifacts": [
         "IZkBallotView",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
         "ZkTreasury"
 =======
         "^0.8.24"
@@ -542,21 +384,7 @@
         "GovernanceExecutor",
         "ITimelockControllerLike"
 >>>>>>> origin/cursor/deploy-zion-os-token-and-dao-cross-chain-e51f
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ]
-        "ZkTreasury"      ]
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-        "ZkTreasury"      ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "ZkTreasury"      ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 }

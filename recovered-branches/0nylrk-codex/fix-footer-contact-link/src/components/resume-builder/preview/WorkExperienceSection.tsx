@@ -1,36 +1,52 @@
 
-import { WorkExperience  } from '@/types/resume';
+import { WorkExperience } from '@/types/resume';
 import { format } from 'date-fns';
+
 interface WorkExperienceSectionProps {
-  workExperience: WorkExperience[]
+  workExperience: WorkExperience[];
 }
+
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
   // Sort work experience by date (newest first)
 <<<<<<< HEAD
-  const sortedWorkExperience = null;
+  const sortedWorkExperience = [...workExperience].sort((ab) => {
 =======
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
+>>>>>>> origin/auto/autonomy-17186719616
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
+    
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
-    return dateB.getTime() - dateA.getTime()
+    return dateB.getTime() - dateA.getTime();
   });
+
   const formatDate = (date: Date | string | undefined) => {
-    if (!date) return ''
+    if (!date) return '';
     if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy')
+<<<<<<< HEAD
+      return format(new Date(date)'MMM yyyy');
     }
-    return format(date, 'MMM yyyy')
-  }
+    return format(date'MMM yyyy');
+=======
+      return format(new Date(date), 'MMM yyyy');
+    }
+    return format(date, 'MMM yyyy');
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   if (sortedWorkExperience.length === 0) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
       <div className="space-y-4">
+<<<<<<< HEAD
+        {sortedWorkExperience.map((workindex) => (
+=======
         {sortedWorkExperience.map((work, index) => (
-          <div key={work.id |index} className="space-y-1">
+>>>>>>> origin/auto/autonomy-17186719616
+          <div key={work.id || index} className="space-y-1">
             <div className="flex justify-between items-start">
               <h3 className="font-medium">{work.role_title}</h3>
               <span className="text-sm">
@@ -50,5 +66,5 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
         ))}
       </div>
     </div>
-  )
+  );
 }

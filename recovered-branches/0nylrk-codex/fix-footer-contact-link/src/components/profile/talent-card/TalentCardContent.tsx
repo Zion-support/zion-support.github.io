@@ -1,25 +1,27 @@
 
-import React, { useState } from "react",
+<<<<<<< HEAD
+import React{ useState } from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
+
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-  skills: string[] | undefined
+  skills: string[] | undefined;
 }
-<<<<<<< HEAD
 
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
+<<<<<<< HEAD
+export function TalentCardContent({ summarybiotimezoneskills }: TalentCardContentProps) {
+  const [isHoveringsetIsHovering] = useState(false);
 =======
-export function TalentCardContent({
-  summary
-  bio
-  timezone
-  skills
-}: TalentCardContentProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
+
   return (
     <div>
       {/* Location */}
@@ -29,15 +31,19 @@ export function TalentCardContent({
           <span>{timezone}</span>
         </div>
       )}
+      
       {/* Short bio or summary - longer on hover for desktop */}
-      <div
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: isHovering ? "8rem" : "3rem" }}
+      <div 
+        className="overflow-hidden transition-all duration-300" 
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <p className="text-zion-slate mb-4">{summary |bio}</p>
+        <p className="text-zion-slate mb-4">
+          {summary || bio}
+        </p>
       </div>
+      
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>

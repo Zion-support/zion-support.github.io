@@ -1,43 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-export default function EpisodePage() {
 <<<<<<< HEAD
-  const router = null;
+"use client";
+import React{ useEffectuseState } from 'react';
 =======
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
+import { useRouter } from 'next/router';
+
+export default function EpisodePage() {
   const router = useRouter();
-  const { id } = router.query as { id?: string }
+  const { id } = router.query as { id?: string };
+<<<<<<< HEAD
+  const [episodesetEpisode] = useState<any>(null);
+=======
   const [episode, setEpisode] = useState<any>(null);
+>>>>>>> origin/auto/autonomy-17186719616
+
   useEffect(() => {
     if (!id) return;
     (async () => {
       const res = await fetch('/api/podcast/get?id=' + id);
       const data = await res.json();
       setEpisode(data.episode);
-    })();      setEpisode(data.episode)
-    })()
+    })();
+<<<<<<< HEAD
+  }[id]);
+=======
   }, [id]);
+>>>>>>> origin/auto/autonomy-17186719616
+
   if (!episode) return <div>Loading…</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
-    <div className='space-y-4'>
-      <h1 className='text-2xl font-bold'>{episode.title}</h1>
-      <p className='text-sm text-gray-600'>
-        Guest: {episode.invitee?.name} ·{' '}
-        {new Date(episode.createdAt).toLocaleString()}
-      </p>
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">{episode.title}</h1>
+      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
       {episode.audio?.mp3Url && (
-        <audio controls className='w-full'>
-          <source src={episode.audio.mp3Url} type='audio/mpeg' />
-        </audio>
-      )}
-      <div>
-        <h2 className='text-xl font-semibold'>Transcript</h2>
-        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>
-          {episode.transcript}
-        </pre>
-      </div>
-    </div>
-  );      {episode.audio?.mp3Url && (
         <audio controls className="w-full">
           <source src={episode.audio.mp3Url} type="audio/mpeg" />
         </audio>
@@ -47,5 +44,5 @@ export default function EpisodePage() {
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
-);
+  );
 }

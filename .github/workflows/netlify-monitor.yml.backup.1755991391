@@ -30,21 +30,6 @@ jobs:
         run: npm ci
       - name: Netlify status check
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         id: netlify_check
         continue-on-error: true
         env:
@@ -60,12 +45,6 @@ jobs:
       - name: Create Pull Request (on failure)
         id: cpr
         if: steps.netlify_check.outcome == 'failure'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
         uses: peter-evans/create-pull-request@v6
 =======
         run: node scripts/netlify-monitor.js
@@ -73,21 +52,7 @@ jobs:
         if: failure()
         uses: actions/github-script@v7
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         with:
-        uses: peter-evans/create-pull-request@v6        with:
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-        uses: peter-evans/create-pull-request@v6        with:
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        uses: peter-evans/create-pull-request@v6        with:
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "fix(netlify): automated attempt to remediate Netlify build issues"
           title: "fix(netlify): attempt automated remediation"

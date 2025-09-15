@@ -1,17 +1,16 @@
-import React, { ReactNode } from "react",
-import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import React{ ReactNode } from "react";
+=======
+import React, { ReactNode } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { cn } from "@/lib/utils";
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
+
 interface CategoryCardProps {
-<<<<<<< HEAD
   title: string;
   description: string;
   icon: ReactNode | string;
-=======
-  title: string
-  description: string
-  icon: ReactNode | string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   /**
    * Optional color to use for the icon. If not provided the default cyan
    * accent colour is used. Previously this prop was ignored which meant
@@ -19,26 +18,28 @@ interface CategoryCardProps {
    */
   color?: string;
   count?: number;
-  className?: string
+  className?: string;
 }
-export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
-  // Create a URL-friendly slug from the category title
+
 <<<<<<< HEAD
-  const slug = null;
+export function CategoryCard({ titledescriptioniconcolorcountclassName }: CategoryCardProps) {
 =======
+export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+>>>>>>> origin/auto/autonomy-17186719616
+  // Create a URL-friendly slug from the category title
   const slug = slugify(title);
+
   return (
-    <Link
-      to={`/category/${slug}`}
+    <Link 
+      to={`/category/${slug}`} 
       className={cn(
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
         className
       )}
     >
       <div
         className={cn(
-          "mb-4 p-3 bg-zion-blue-dark rounded-full";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+          "mb-4 p-3 bg-zion-blue-dark rounded-full",
           !color && "text-zion-cyan"
         )}
         style={color ? { color } : undefined}
@@ -51,5 +52,5 @@ export function CategoryCard({ title, description, icon, color, count, className
         <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>
       )}
     </Link>
-  )
+  );
 }

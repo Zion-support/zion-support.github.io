@@ -1,61 +1,65 @@
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+import React{ useState } from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
+
 interface AIListingFormProps {
   onSubmit: (formData: {
-<<<<<<< HEAD
     title: string;
     category: string;
     keyFeatures: string;
-    targetAudience: string
+    targetAudience: string;
   }) => void;
   isLoading: boolean;
-=======
-    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string
-  }) => void;
-  isLoading: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string
-  }
+    targetAudience?: string;
+  };
 }
-<<<<<<< HEAD
 
-export function AIListingForm({ onSubmit, isLoading, initialValues;
+<<<<<<< HEAD
+export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListingFormProps) {
+  const { toast } = useToast();
+  const [titlesetTitle] = useState(initialValues.title || "");
+  const [categorysetCategory] = useState(initialValues.category || "");
+  const [keyFeaturesetKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudiencesetTargetAudience] = useState(initialValues.targetAudience || "");
 =======
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
   const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title |"");
-  const [category, setCategory] = useState(initialValues.category |"");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+>>>>>>> origin/auto/autonomy-17186719616
+
   const handleSubmit = () => {
-    if (!title |!category) {
+    if (!title || !category) {
       toast({
-        title: "Missing required fields"
-        description: "Please provide at least a title and category."
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
         variant: "destructive"
       });
-      return
+      return;
     }
+
     onSubmit({
-      title;
-      category;
-      keyFeatures;
+      title,
+      category,
+      keyFeatures,
       targetAudience
-    })
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    });
+  };
+
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -75,7 +79,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
+<<<<<<< HEAD
+          placeholder="e.g. AI ToolDigital ProductService"
+=======
           placeholder="e.g. AI Tool, Digital Product, Service"
+>>>>>>> origin/auto/autonomy-17186719616
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />
@@ -97,14 +105,18 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
+<<<<<<< HEAD
+          placeholder="e.g. DevelopersMarketersStartups"
+=======
           placeholder="e.g. Developers, Marketers, Startups"
+>>>>>>> origin/auto/autonomy-17186719616
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />
       </div>
-      <Button
+      <Button 
         onClick={handleSubmit}
-        disabled={isLoading |!title |!category}
+        disabled={isLoading || !title || !category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -117,5 +129,5 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         )}
       </Button>
     </div>
-  )
+  );
 }

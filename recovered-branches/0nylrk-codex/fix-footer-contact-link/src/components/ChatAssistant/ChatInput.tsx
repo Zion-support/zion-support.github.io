@@ -1,46 +1,52 @@
 <<<<<<< HEAD
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import React{ useStateuseRefuseEffectFormEventKeyboardEvent } from 'react';
 =======
-import React, {
-  useState
-  useRef
-  useEffect
-  FormEvent
-  KeyboardEvent
-} from "react";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
+
 interface ChatInputProps {
   onSend: (message: string) => void;
-  disabled?: boolean
+  disabled?: boolean;
 }
-<<<<<<< HEAD
 
-export function ChatInput({ onSend, disabled;
+<<<<<<< HEAD
+export function ChatInput({ onSendisabled = false }: ChatInputProps) {
+  const [messagesetMessage] = useState('');
 =======
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
+>>>>>>> origin/auto/autonomy-17186719616
   const inputRef = useRef<HTMLTextAreaElement>(null);
+
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus();
+<<<<<<< HEAD
+  }[]);
+=======
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (message.trim() && !disabled) {
-      (onSend(message), setMessage(""));
+      onSend(message);
+      setMessage('');
     }
-  }
+  };
+
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       if (message.trim() && !disabled) {
-        (onSend(message), setMessage(""));
+        onSend(message);
+        setMessage('');
       }
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -53,10 +59,10 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         rows={1}
         disabled={disabled}
       />
-      <Button
-        type="submit"
+      <Button 
+        type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-        disabled={!message.trim() |disabled}
+        disabled={!message.trim() || disabled}
       >
         <Send className="h-5 w-5" />
       </Button>

@@ -1,16 +1,47 @@
-import React, { Suspense, lazy } from 'react';
-interface LazyComponentProps {component: () => Promise<{ default: React.ComponentType<any> }>;
+import React{ SuspenselazyComponentType } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+
+interface LazyComponentProps {
+  component: () => Promise<{ default: ComponentType<any> }>;
   fallback?: React.ReactNode;
   [key: string]: any;
 }
-const LazyComponent: React.FC<LazyComponentProps> = ({component;
-  fallback = <div>Loading...</div>;
-  ...props;
-}) => {const LazyLoadedComponent = lazy(component);
-  return (;
-    <Suspense fallback={fallback}>;
-      <LazyLoadedComponent {...props} />;
-    </Suspense>;
+
+export default function LazyComponent({ 
+  component
+  fallback = <LoadingSpinner size="md" text="Loading..." />,
+  ...props 
+}: LazyComponentProps) {
+  const LazyLoadedComponent = lazy(component);
+
+  return (
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {...props} />
+    </Suspense>
   );
 }
-export default LazyComponent;
+
+// Pre-configured lazy components for common use cases
+export const LazyROICalculator = (props: any) => (
+  <LazyComponent 
+    component={() => import('./ROICalculator')} 
+    fallback={<LoadingSpinner size="lg" text="Loading ROI Calculator..." />}
+    {...props}
+  />
+);
+
+export const LazyStructuredData = (props: any) => (
+  <LazyComponent 
+    component={() => import('./StructuredData')} 
+    fallback={null}
+    {...props}
+  />
+);
+
+export const LazyInteractiveWidget = (props: any) => (
+  <LazyComponent 
+    component={() => import('./InteractiveContentDiscoveryWidget')} 
+    fallback={<LoadingSpinner size="lg" text="Loading Interactive Widget..." />}
+    {...props}
+  />
+);

@@ -1,32 +1,48 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
-type NewsItem = any;
-    generatedAt = json.generatedAt || ''
-=======
-</div> </div>) )
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
+
+type NewsItem = { source: string; title: string; url: string; summary: string; tags: string[] };
+
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datanews-digest.json');
-  let items: NewsItem[] = [];  let generatedAt = '';
+<<<<<<< HEAD
+  const file = path.join(process.cwd()', 'data', 'news-digest.json');
+  let items: NewsItem[] = [];
+  let generatedAt = ', ';
+  try {
+    const raw = fs.readFileSync('file', 'utf-8');
+    const json = JSON.parse(raw);
+    items = json.items || [];
+    generatedAt = json.generatedAt || ', ';
+  } catch {}
+  return { props: { itemsgeneratedAt } };
+}
+
+export default function NewsDigestPage({ itemsgeneratedAt }: { items: NewsItem[]; generatedAt: string }) {
+=======
+  const file = path.join(process.cwd(), 'data', 'news-digest.json');
+  let items: NewsItem[] = [];
+  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-    items = json.items |[];
-    generatedAt = json.generatedAt |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    items = json.items || [];
+    generatedAt = json.generatedAt || '';
   } catch {}
-  return { props: { items, generatedAt } }
+  return { props: { items, generatedAt } };
 }
-export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
+
+export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[]; generatedAt: string }) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
       <div className="grid grid-cols-1 gap-4">
+<<<<<<< HEAD
+        {items.map((nidx) => (
+=======
         {items.map((n, idx) => (
+>>>>>>> origin/auto/autonomy-17186719616
           <div key={idx} className="border rounded p-4 space-y-1">
             <div className="flex items-center justify-between">
               <a className="font-medium text-blue-600" href={n.url} target="_blank" rel="noreferrer">{n.title}</a>
@@ -40,5 +56,5 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
         ))}
       </div>
     </div>
-);
+  );
 }

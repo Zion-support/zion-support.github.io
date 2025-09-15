@@ -14,25 +14,7 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 .build-failure{background:rgba(239,68,68,.2);border:2px solid #ef4444}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD:public/static-reports/reports/page-validation/index.html.backup.1755991909
-=======
-:public/static-reports/reports/page-validation/index.html.backup.1755991909
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-:public/static-reports/reports/page-validation/index.html.backup.1755991909
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-:public/static-reports/reports/page-validation/index.html.backup.1755991909
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <p>Generated 8/20/2025, 7:01:37 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -62,33 +44,13 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h3><code>pages/api/url-shortener.ts</code></h3>
 <h4>Warnings:</h4>
 <div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected (line 31)</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <p>Generated 8/21/2025, 2:36:32 AM</p>
 =======
 <p>Generated 8/21/2025, 2:48:17 AM</p>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a497
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <div class="build-status build-success">✅ BUILD READY</div>
-<p>Generated 8/21/2025, 2:36:32 AM</p><div class="build-status build-success">✅ BUILD READY</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-<p>Generated 8/21/2025, 2:36:32 AM</p><div class="build-status build-success">✅ BUILD READY</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-<p>Generated 8/21/2025, 2:36:32 AM</p><div class="build-status build-success">✅ BUILD READY</div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <div class="card success">
 <h2>Summary</h2>
 <p><strong>Total Files:</strong> 1</p>
@@ -112,20 +74,5 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <div class="pill error">MISSING_RETURN_STATEMENT: Missing return statement or JSX</div>
 <h4>Warnings:</h4>
 <div class="pill warning">PAGE_TOO_SHORT: Page content seems too short, may be incomplete</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:public/reports/page-validation/index.html.backup.1755991909
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 </div>

@@ -1,76 +1,83 @@
 
-import { useState } from "react",
-import { TALENT_PROFILES } from "@/data/talentData",
+import { useState } from "react";
+import { TALENT_PROFILES } from "@/data/talentData";
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
+
 export interface SearchResult {
   id: string;
   type: "talent" | "job" | "project";
-<<<<<<< HEAD
   title: string;
-=======
-  title: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  description: string
+  description: string;
 }
+
 interface SearchFilters {
   type?: string | null;
   skills?: string[] | null;
   location?: string | null;
-  budget?: { min: number, max: number } | null;
-  availability?: string | null
+  budget?: { min: number; max: number } | null;
+  availability?: string | null;
 }
+
 export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]),
+  const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  const search = null;
-=======
+
   const search = async (query: string) => {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search";
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
-          method: "POST"
-          headers: { "Content-Type": "application/json" }
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+<<<<<<< HEAD
           body: JSON.stringify({ query })}
+=======
+          body: JSON.stringify({ query }),
+        }
+>>>>>>> origin/auto/autonomy-17186719616
       );
       const data = await response.json();
-      const filters: SearchFilters = data.filters |{}
+      const filters: SearchFilters = data.filters || {};
+
       const items: SearchResult[] = [];
       const matchSkill = (skills: string[] | undefined) => {
-        if (!filters.skills |filters.skills.length === 0) return true
+        if (!filters.skills || filters.skills.length === 0) return true;
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
-        )
-      }
-      if (!filters.type |filters.type === "talent" |filters.type === "all") {
+        );
+      };
+
+      if (!filters.type || filters.type === "talent" || filters.type === "all") {
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
           if (!matchSkill(t.skills)) return;
-          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })
-        })
+          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
+        });
       }
-      if (!filters.type |filters.type === "job" |filters.type === "all") {
+
+      if (!filters.type || filters.type === "job" || filters.type === "all") {
         JOB_POSTS.forEach((j) => {
           if (!matchSkill(j.skills)) return;
-          items.push({ id: j.id, type: "job", title: j.title, description: j.description })
-        })
+          items.push({ id: j.id, type: "job", title: j.title, description: j.description });
+        });
       }
-      if (!filters.type |filters.type === "project" |filters.type === "all") {
+
+      if (!filters.type || filters.type === "project" || filters.type === "all") {
         PROJECTS.forEach((p) => {
-          items.push({ id: p.id, type: "project", title: p.job?.title |"Project", description: p.scope_summary })
-        })
+          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
+        });
       }
-      setResults(items)
+
+      setResults(items);
     } catch (err) {
       console.error("search error", err);
-      setResults([])
+      setResults([]);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  return { results, loading, search }
+  };
+
+  return { results, loading, search };
 }

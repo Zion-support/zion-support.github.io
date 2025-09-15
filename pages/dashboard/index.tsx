@@ -1,16 +1,16 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
-<<<<<<< HEAD
-const Dashboard: NextPage;
-=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import EmptyState from '../../components/ui/EmptyState',
+
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Dashboard - Zion</title>
       </Head>
+
       <h1 className="text-2xl font-semibold">Dashboard</h1>
+
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
         <EmptyState
@@ -21,6 +21,7 @@ const Dashboard: NextPage = () => {
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
         />
       </section>
+
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
@@ -31,7 +32,7 @@ const Dashboard: NextPage = () => {
         />
       </section>
     </div>
-  )
-}
-export default Dashboard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  ),
+},
+
+export default Dashboard,

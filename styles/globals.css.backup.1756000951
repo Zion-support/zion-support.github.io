@@ -3,21 +3,6 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
@@ -107,12 +92,6 @@
   animation: spin-slow 20s linear infinite;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 /* Enhanced Scrollbar */
 =======
 /* Import Google Fonts */
@@ -140,41 +119,12 @@ a {
 
 /* Enhanced scrollbar */
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ::-webkit-scrollbar {
-/* Enhanced Scrollbar */::-webkit-scrollbar {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-/* Enhanced Scrollbar */::-webkit-scrollbar {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-/* Enhanced Scrollbar */::-webkit-scrollbar {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   background: rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   border: 1px solid rgba(0, 255, 255, 0.2);
@@ -196,31 +146,22 @@ a {
 ::selection {
   background: rgba(0, 255, 255, 0.35);
   color: white;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
 =======
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  border-radius: 6px;
+  border: 2px solid rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0891b2, #7c3aed);
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+}
 
 ::-moz-selection {
   background: rgba(0, 255, 255, 0.5);
@@ -394,21 +335,6 @@ a {
 /* Selection styles */
 ::selection {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
@@ -879,32 +805,12 @@ h3 {
   body::before,
   body::after {
     animation: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   }
 =======
   background: linear-gradient(135deg, #06b6d4, #8b5cf6);
   color: white;
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  }}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  }}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  }}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 /* Loading states */
 .loading {

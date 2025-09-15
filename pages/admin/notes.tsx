@@ -1,34 +1,34 @@
-import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-type Note = any;
-=======
+import { useEffect, useState } from 'react',
+
 type Note = {
-  id: string
-  targetType: string
-  targetId: string
-  text: string
-  authorId: string
+  id: string,
+  targetType: string,
+  targetId: string,
+  text: string,
+  authorId: string,
   createdAt: number
-}
+},
+
 export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true)
-  const [notes, setNotes] = useState<Note[]>([])
-  const [loading, setLoading] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(true),
+  const [notes, setNotes] = useState<Note[]>([]),
+  const [loading, setLoading] = useState(false),
+
   useEffect(() => {
     async function load() {
-      setLoading(true)
+      setLoading(true),
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
-        if (!res.ok) return
-        const data = await res.json()
-        setNotes(data.notes |[])
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
+        if (!res.ok) return,
+        const data = await res.json(),
+        setNotes(data.notes || []),
       } finally {
-        setLoading(false)
+        setLoading(false),
       }
     }
-    if (isAdmin) load()
-  }, [isAdmin])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    if (isAdmin) load(),
+  }, [isAdmin]),
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -38,6 +38,7 @@ export default function AdminNotesConsole() {
           <span>Admin</span>
         </label>
       </div>
+
       {loading ? (
         <div>Loading…</div>
       ) : notes.length === 0 ? (
@@ -54,5 +55,5 @@ export default function AdminNotesConsole() {
         </div>
       )}
     </div>
-  )
+  ),
 }

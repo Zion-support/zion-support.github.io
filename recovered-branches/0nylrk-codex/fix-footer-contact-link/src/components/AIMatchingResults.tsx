@@ -1,51 +1,62 @@
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { BarChart3BriefcaseIconMonitorUser } from "@/components/icons";
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+
 interface AIMatchingResultsProps {
-<<<<<<< HEAD
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
-=======
-  matches: MatchResultItem[]
-  onSelectMatch?: (match: MatchResultItem) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isLoading?: boolean;
   projectDescription?: string;
-  serviceType?: string
-}
-export function AIMatchingResults({
-  matches;
-  onSelectMatch;
 <<<<<<< HEAD
-  isLoading;
-                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
-                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
+
 =======
-  isLoading = false;
-  projectDescription = "";
+>>>>>>> origin/auto/autonomy-17186719616
+  serviceType?: string;
+}
+
+export function AIMatchingResults({
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
+<<<<<<< HEAD
+  const [activeTabsetActiveTab] = useState("all");
+=======
   const [activeTab, setActiveTab] = useState("all");
+>>>>>>> origin/auto/autonomy-17186719616
+  
   // Group matches by category
   const categories = {
-    all: matches
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
-    services: matches.filter(match => match.category.toLowerCase().includes("service"))
+    all: matches,
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-  }
+  };
+  
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor
-    return BriefcaseIcon
-  }
+    if (lowerCategory.includes("equipment")) return Monitor;
+    return BriefcaseIcon;
+  };
+  
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -56,8 +67,9 @@ export function AIMatchingResults({
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
-    )
+    );
   }
+  
   if (matches.length === 0) {
     return (
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">
@@ -75,8 +87,9 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-    )
+    );
   }
+  
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -94,23 +107,31 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
+        
+<<<<<<< HEAD
+        {Object.entries(categories).map(([tabitems]) => (
+=======
         {Object.entries(categories).map(([tab, items]) => (
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
               items.map((match) => {
                 const CategoryIcon = getCategoryIcon(match.category);
                 return (
-                  <Card
+                  <Card 
                     key={match.id}
                     className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
                     onClick={() => onSelectMatch && onSelectMatch(match)}
                   >
                     <div className="flex">
                       <div className={cn(
+<<<<<<< HEAD
                         "w-2"
-                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
-                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+                        "w-2", 
+>>>>>>> origin/auto/autonomy-17186719616
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"
                       )} />
                       <div className="flex-1 p-4">
@@ -124,6 +145,7 @@ export function AIMatchingResults({
                               </AvatarFallback>
                             )}
                           </Avatar>
+                          
                           <div className="flex-1">
                             <div className="flex justify-between">
                               <div>
@@ -139,11 +161,16 @@ export function AIMatchingResults({
                                 </div>
                               )}
                             </div>
+                            
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
                                 {match.category}
                               </Badge>
+<<<<<<< HEAD
+                              {match.skills && match.skills.slice(03).map((skill: stringi: number) => (
+=======
                               {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+>>>>>>> origin/auto/autonomy-17186719616
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
                                   {skill}
                                 </Badge>
@@ -154,7 +181,7 @@ export function AIMatchingResults({
                       </div>
                     </div>
                   </Card>
-                )
+                );
               })
             ) : (
               <div className="text-center py-8 text-zion-slate-light">
@@ -165,5 +192,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-  )
+  );
 }

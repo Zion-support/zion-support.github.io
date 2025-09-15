@@ -1,35 +1,29 @@
 
 import { UseFormReturn } from "react-hook-form";
-<<<<<<< HEAD
 import { 
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormDescription 
-} from "@/components/ui/form",
-=======
-import {
+<<<<<<< HEAD
   FormField
   FormItem
   FormLabel
   FormControl
-  FormDescription
+=======
+  FormField, 
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+>>>>>>> origin/auto/autonomy-17186719616
+  FormDescription 
 } from "@/components/ui/form";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
+
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
-export function AdditionalClausesFields({
-  form
-}: AdditionalClausesFieldsProps) {
+
+export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {
   return (
     <FormField
-<<<<<<< HEAD
-      control;
-=======
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -48,19 +42,25 @@ export function AdditionalClausesFields({
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value?.includes("nda")}
+                      checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value |[];
+                        const currentValues = field.value || [];
                         return checked
-                          ? field.onChange([...currentValues, "nda"])
+<<<<<<< HEAD
+                          ? field.onChange([...currentValues'nda'])
+=======
+                          ? field.onChange([...currentValues, 'nda'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
-                              currentValues.filter((value) => value !== "nda")
+                              currentValues.filter((value) => value !== 'nda')
                             );
                       }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Confidentiality (NDA)</FormLabel>
+                    <FormLabel>
+                      Confidentiality (NDA)
+                    </FormLabel>
                     <FormDescription>
                       Protect sensitive information
                     </FormDescription>
@@ -68,6 +68,7 @@ export function AdditionalClausesFields({
                 </FormItem>
               )}
             />
+            
             <FormField
               control={form.control}
               name="additionalClauses"
@@ -75,19 +76,25 @@ export function AdditionalClausesFields({
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value?.includes("ip")}
+                      checked={field.value?.includes('ip')}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value |[];
+                        const currentValues = field.value || [];
                         return checked
-                          ? field.onChange([...currentValues, "ip"])
+<<<<<<< HEAD
+                          ? field.onChange([...currentValues'ip'])
+=======
+                          ? field.onChange([...currentValues, 'ip'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
-                              currentValues.filter((value) => value !== "ip")
+                              currentValues.filter((value) => value !== 'ip')
                             );
                       }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Intellectual Property Transfer</FormLabel>
+                    <FormLabel>
+                      Intellectual Property Transfer
+                    </FormLabel>
                     <FormDescription>
                       Transfer ownership of work products
                     </FormDescription>
@@ -95,6 +102,7 @@ export function AdditionalClausesFields({
                 </FormItem>
               )}
             />
+            
             <FormField
               control={form.control}
               name="additionalClauses"
@@ -102,21 +110,25 @@ export function AdditionalClausesFields({
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value?.includes("termination")}
+                      checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value |[];
+                        const currentValues = field.value || [];
                         return checked
-                          ? field.onChange([...currentValues, "termination"])
+<<<<<<< HEAD
+                          ? field.onChange([...currentValues'termination'])
+=======
+                          ? field.onChange([...currentValues, 'termination'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
-                              currentValues.filter(
-                                (value) => value !== "termination"
-                              )
+                              currentValues.filter((value) => value !== 'termination')
                             );
                       }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Termination Clause</FormLabel>
+                    <FormLabel>
+                      Termination Clause
+                    </FormLabel>
                     <FormDescription>
                       Define conditions for ending the contract
                     </FormDescription>
@@ -124,6 +136,7 @@ export function AdditionalClausesFields({
                 </FormItem>
               )}
             />
+            
             <FormField
               control={form.control}
               name="additionalClauses"
@@ -131,22 +144,25 @@ export function AdditionalClausesFields({
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value?.includes("revisions")}
+                      checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value |[];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+                        const currentValues = field.value || [];
                         return checked
-                          ? field.onChange([...currentValues, "revisions"])
+<<<<<<< HEAD
+                          ? field.onChange([...currentValues'revisions'])
+=======
+                          ? field.onChange([...currentValues, 'revisions'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
-                              currentValues.filter(
-                                (value) => value !== "revisions"
-                              )
+                              currentValues.filter((value) => value !== 'revisions')
                             );
                       }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>Revisions & Amendments</FormLabel>
+                    <FormLabel>
+                      Revisions & Amendments
+                    </FormLabel>
                     <FormDescription>
                       Define how changes to the contract are handled
                     </FormDescription>

@@ -1,17 +1,11 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const path = require('path');
 const { spawnSync } = require('child_process');
+
+=======
+const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-<<<<<<< HEAD
 
 function scanForJsonLd(dir) {
   const findings = [];
@@ -36,19 +30,6 @@ function scanForJsonLd(dir) {
 }
 
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
-=======
-const path = require('path');
-const { spawnSync } = require('child_process');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-const path = require('path');
-const { spawnSync } = require('child_process');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -56,21 +37,6 @@ function runNode(relPath, args = []) {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 exports.config = {
   schedule: '*/30 * * * *',
 };
@@ -89,12 +55,6 @@ exports.handler = async () => {
   step('structured-data:audit', 'automation/structured-data-auditor.cjs');
   step('git:sync', 'automation/advanced-git-sync.cjs');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') };
 =======
 exports.config = { schedule: '0 */6 * * *' };
@@ -118,18 +78,4 @@ exports.handler = async () => {
   runNode('automation/advanced-git-sync.cjs');
   return { statusCode: 200, body: JSON.stringify({ ok: true, total: findings.length }) };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
-  return { statusCode: 200, body: logs.join('\n') };};
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  return { statusCode: 200, body: logs.join('\n') };};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  return { statusCode: 200, body: logs.join('\n') };};
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

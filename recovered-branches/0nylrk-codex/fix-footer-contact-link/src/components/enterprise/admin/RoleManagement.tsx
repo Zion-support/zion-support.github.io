@@ -1,102 +1,147 @@
 
 import React from "react";
-<<<<<<< HEAD
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+<<<<<<< HEAD
+  TableRow} from "@/components/ui/table";
+=======
+  TableRow,
+} from "@/components/ui/table";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
 import { InfoIcon } from "lucide-react";
 import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from "@/components/ui/tooltip",
-
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = null;
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+<<<<<<< HEAD
+  TooltipTrigger} from "@/components/ui/tooltip";
 =======
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Switch} from "@/components/ui/switch";
-import {toast} from "@/hooks/use-toast";
-import {InfoIcon} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+>>>>>>> origin/auto/autonomy-17186719616
+
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
     {
-      id: 1
-      name: "Alex Johnson"
-      email: "alex@example.com"
-      role: "Admin"
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
       permissions: {
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: true
-        viewBilling: true
-        manageBilling: true}}
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: true,
+        viewBilling: true,
+<<<<<<< HEAD
+        manageBilling: true}},
+=======
+        manageBilling: true,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
-      id: 2
-      name: "Jamie Smith"
-      email: "jamie@example.com"
-      role: "Recruiter"
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
       permissions: {
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: false
-        viewBilling: false
-        manageBilling: false}}
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: false,
+<<<<<<< HEAD
+        manageBilling: false}},
+=======
+        manageBilling: false,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
-      id: 3
-      name: "Sam Williams"
-      email: "sam@example.com"
-      role: "Manager"
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
       permissions: {
-        viewCandidates: true
-        editCandidates: false
-        createJobs: true
-        manageTeam: false
-        viewBilling: true
-        manageBilling: false}}
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: true,
+<<<<<<< HEAD
+        manageBilling: false}},
+=======
+        manageBilling: false,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
-      id: 4
-      name: "Taylor Brown"
-      email: "taylor@example.com"
-      role: "Viewer"
+      id: 4,
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
       permissions: {
-        viewCandidates: true
-        editCandidates: false
-        createJobs: false
-        manageTeam: false
-        viewBilling: false
-        manageBilling: false}}]
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: false,
+        manageTeam: false,
+        viewBilling: false,
+<<<<<<< HEAD
+        manageBilling: false}}];
+
+  const handlePermissionChange = (memberId: numberpermission: stringvalue: boolean) => {
+    // In a real appthis would make an API call to update permissions
+    toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  };
+
+  const roleDescriptions: Record<string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"};
+=======
+        manageBilling: false,
+      },
+    },
+  ];
+
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
-      title: "Permission updated"
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-  }
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`,
+    });
+  };
+
   const roleDescriptions: Record<string, string> = {
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates",
+  };
+>>>>>>> origin/auto/autonomy-17186719616
+
   return (
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+<<<<<<< HEAD
+          {Object.entries(roleDescriptions).map(([roledescription]) => (
+=======
           {Object.entries(roleDescriptions).map(([role, description]) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
@@ -106,6 +151,7 @@ export function RoleManagement() {
           ))}
         </div>
       </div>
+
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -166,7 +212,11 @@ export function RoleManagement() {
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
+<<<<<<< HEAD
+                        Can addeditand remove team members
+=======
                         Can add, edit, and remove team members
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -199,7 +249,7 @@ export function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <select
+                  <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
                   >
@@ -210,42 +260,62 @@ export function RoleManagement() {
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.viewCandidates}
-                    onCheckedChange={(checked) =>
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
+                    onCheckedChange={(checked) => 
+<<<<<<< HEAD
+                      handlePermissionChange(member.id"viewCandidates"checked)
+=======
                       handlePermissionChange(member.id, "viewCandidates", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.editCandidates}
-                    onCheckedChange={(checked) =>
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
+                    onCheckedChange={(checked) => 
+<<<<<<< HEAD
+                      handlePermissionChange(member.id"editCandidates"checked)
+=======
                       handlePermissionChange(member.id, "editCandidates", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.createJobs}
-                    onCheckedChange={(checked) =>
+                  <Switch 
+                    checked={member.permissions.createJobs} 
+                    onCheckedChange={(checked) => 
+<<<<<<< HEAD
+                      handlePermissionChange(member.id"createJobs"checked)
+=======
                       handlePermissionChange(member.id, "createJobs", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.manageTeam}
-                    onCheckedChange={(checked) =>
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
+                    onCheckedChange={(checked) => 
+<<<<<<< HEAD
+                      handlePermissionChange(member.id"manageTeam"checked)
+=======
                       handlePermissionChange(member.id, "manageTeam", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.viewBilling}
-                    onCheckedChange={(checked) =>
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) => 
+<<<<<<< HEAD
+                      handlePermissionChange(member.id"viewBilling"checked)
+=======
                       handlePermissionChange(member.id, "viewBilling", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
@@ -255,5 +325,5 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
-  )
+  );
 }

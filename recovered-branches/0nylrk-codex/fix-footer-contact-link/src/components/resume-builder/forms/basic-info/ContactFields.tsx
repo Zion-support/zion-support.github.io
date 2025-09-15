@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
 =======
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
+
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -27,12 +22,17 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
+<<<<<<< HEAD
+              <Input placeholder="San FranciscoCA" {...field} />
+=======
               <Input placeholder="San Francisco, CA" {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="website"
@@ -46,6 +46,7 @@ export function ContactFields({ control }: ContactFieldsProps) {
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="linkedin"
@@ -53,15 +54,13 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>LinkedIn</FormLabel>
             <FormControl>
-              <Input
-                placeholder="https://linkedin.com/in/username"
-                {...field}
-              />
+              <Input placeholder="https://linkedin.com/in/username" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
+
       <FormField
         control={control}
         name="github"

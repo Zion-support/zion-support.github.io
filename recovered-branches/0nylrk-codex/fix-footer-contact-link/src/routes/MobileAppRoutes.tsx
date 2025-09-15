@@ -1,10 +1,12 @@
-import { Route, Routes } from "react-router-dom",
-import MobileAppPage from "../pages/MobileAppPage",
+<<<<<<< HEAD
+import { Routes } from "react-router-dom";
+=======
+import { Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
+import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
-<<<<<<< HEAD
-const MobileAppRoutes = null;
-=======
+
 const MobileAppRoutes = () => {
   return (
     <Routes>
@@ -14,7 +16,7 @@ const MobileAppRoutes = () => {
       <Route path="/mobile-launch" element={<MobileLaunchPage />} />
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
-  )
-}
+  );
+};
+
 export default MobileAppRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

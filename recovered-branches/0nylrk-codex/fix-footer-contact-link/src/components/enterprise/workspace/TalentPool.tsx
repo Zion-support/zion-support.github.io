@@ -1,51 +1,67 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import React from "react";
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+
 export function TalentPool() {
   // Mock talent data
-<<<<<<< HEAD
-  const talents = null;
-=======
   const talents = [
     {
-      id: "talent-1"
-      name: "Jessica Lee"
-      role: "UI/UX Designer"
-      skills: ["Figma", "Sketch", "User Testing"];
-      status: "available"
+      id: "talent-1",
+      name: "Jessica Lee",
+      role: "UI/UX Designer",
+<<<<<<< HEAD
+      skills: ["Figma"Sketch"User Testing"],
+=======
+      skills: ["Figma", "Sketch", "User Testing"],
+>>>>>>> origin/auto/autonomy-17186719616
+      status: "available",
       match: 95
-    }
+    },
     {
-      id: "talent-2"
-      name: "Marcus Wright"
-      role: "Full Stack Developer"
-      skills: ["React", "Node.js", "MongoDB"];
-      status: "interviewing"
+      id: "talent-2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+<<<<<<< HEAD
+      skills: ["React"Node.js"MongoDB"],
+=======
+      skills: ["React", "Node.js", "MongoDB"],
+>>>>>>> origin/auto/autonomy-17186719616
+      status: "interviewing",
       match: 92
-    }
+    },
     {
-      id: "talent-3"
-      name: "Aisha Patel"
-      role: "Product Manager"
-      skills: ["Agile", "Roadmapping", "User Research"];
-      status: "available"
+      id: "talent-3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+<<<<<<< HEAD
+      skills: ["Agile"Roadmapping"User Research"],
+=======
+      skills: ["Agile", "Roadmapping", "User Research"],
+>>>>>>> origin/auto/autonomy-17186719616
+      status: "available",
       match: 88
     }
   ];
+
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case "available": return <Badge className="bg-green-500">Available</Badge>;
+      case "available":
+        return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
       case "hired":
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>
+        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>;
       default:
-        return <Badge variant="outline">{status}</Badge>
+        return <Badge variant="outline">{status}</Badge>;
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+
   return (
     <Card>
       <CardHeader>
@@ -74,7 +90,11 @@ export function TalentPool() {
                 </div>
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
+<<<<<<< HEAD
+                {talent.skills.map((skillindex) => (
+=======
                 {talent.skills.map((skill, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>
@@ -89,5 +109,5 @@ export function TalentPool() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

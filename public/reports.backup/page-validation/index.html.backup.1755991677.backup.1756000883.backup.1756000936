@@ -15,31 +15,11 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
 <p>Generated 8/21/2025, 12:29:24 AM</p>
 =======
 <p>Generated 8/21/2025, 1:47:21 AM</p>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <div class="build-status build-success">✅ BUILD READY</div>
-<p>Generated 8/21/2025, 12:29:24 AM</p><div class="build-status build-success">✅ BUILD READY</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-<p>Generated 8/21/2025, 12:29:24 AM</p><div class="build-status build-success">✅ BUILD READY</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-<p>Generated 8/21/2025, 12:29:24 AM</p><div class="build-status build-success">✅ BUILD READY</div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <div class="card success">
 <h2>Summary</h2>
 <p><strong>Total Files:</strong> 1</p>

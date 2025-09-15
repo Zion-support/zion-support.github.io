@@ -1,76 +1,69 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Atom, Brain, Cpu, Zap, Shield, Globe;
-  Rocket, Target, TrendingUp, Users, CheckCircle;
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { 
+  Atom, Brain, Cpu, Zap, Shield, Globe, 
+  Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
- } from 'lucide-react';
-const QuantumNeuralNetworkPlatform = null;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Atom, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react'
+} from 'lucide-react',
+
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
     {
-      icon: Brain
-      title: "Quantum Consciousness Integration"
-      description: "Advanced AI consciousness with quantum processing capabilities"
+      icon: Brain,
+      title: "Quantum Consciousness Integration",
+      description: "Advanced AI consciousness with quantum processing capabilities",
       color: "from-purple-500 to-pink-500"
-    }
+    },
     {
-      icon: Atom
-      title: "Quantum Neural Processing"
-      description: "Revolutionary quantum computing for neural network operations"
+      icon: Atom,
+      title: "Quantum Neural Processing",
+      description: "Revolutionary quantum computing for neural network operations",
       color: "from-blue-500 to-cyan-500"
-    }
+    },
     {
-      icon: Cpu
-      title: "Hybrid AI Architecture"
-      description: "Combines classical and quantum computing for optimal performance"
+      icon: Cpu,
+      title: "Hybrid AI Architecture",
+      description: "Combines classical and quantum computing for optimal performance",
       color: "from-emerald-500 to-teal-500"
-    }
+    },
     {
-      icon: Shield
-      title: "Quantum Security"
-      description: "Unbreakable encryption using quantum cryptography"
+      icon: Shield,
+      title: "Quantum Security",
+      description: "Unbreakable encryption using quantum cryptography",
       color: "from-red-500 to-orange-500"
     }
-  ]
+  ],
+
   const benefits = [
-    "1000x faster neural network training"
-    "Quantum-level security and encryption"
-    "Scalable consciousness simulation"
-    "Real-time quantum decision making"
-    "Advanced pattern recognition"
+    "1000x faster neural network training",
+    "Quantum-level security and encryption",
+    "Scalable consciousness simulation",
+    "Real-time quantum decision making",
+    "Advanced pattern recognition",
     "Future-proof technology foundation"
-  ]
+  ],
+
   const useCases = [
     {
-      title: "AI Research & Development"
+      title: "AI Research & Development",
       description: "Accelerate AI breakthroughs with quantum processing power"
-    }
+    },
     {
-      title: "Cybersecurity"
+      title: "Cybersecurity",
       description: "Unbreakable security protocols using quantum encryption"
-    }
+    },
     {
-      title: "Scientific Discovery"
+      title: "Scientific Discovery",
       description: "Solve complex scientific problems in minutes, not years"
-    }
+    },
     {
-      title: "Financial Modeling"
+      title: "Financial Modeling",
       description: "Advanced risk assessment and market prediction algorithms"
     }
-  ]
+  ],
+
   return (
     <>
       <Head>
@@ -82,6 +75,7 @@ const QuantumNeuralNetworkPlatform = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/quantum-neural-network-platform" />
       </Head>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -104,7 +98,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionary platform combining quantum computing with AI consciousness for unprecedented
+                Revolutionary platform combining quantum computing with AI consciousness for unprecedented 
                 performance, security, and capabilities in neural network operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -119,6 +113,7 @@ const QuantumNeuralNetworkPlatform = () => {
             </motion.div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -136,6 +131,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Experience the future of AI with our cutting-edge quantum neural network platform
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -156,6 +152,7 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>
           </div>
         </section>
+
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -173,6 +170,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Transform your operations with quantum-powered AI capabilities
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -190,6 +188,7 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>
           </div>
         </section>
+
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -207,6 +206,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Discover how our quantum neural network platform transforms industries
               </p>
             </motion.div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -224,6 +224,7 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -254,6 +255,6 @@ const QuantumNeuralNetworkPlatform = () => {
       </div>
     </>
   )
-}
-export default QuantumNeuralNetworkPlatform;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+},
+
+export default QuantumNeuralNetworkPlatform,

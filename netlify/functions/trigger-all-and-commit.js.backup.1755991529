@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -26,12 +11,6 @@ exports.handler = async function(event, context) {
     const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
     
     const reportContent = `# trigger-all-and-commit Report
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
 exports.handler = async function() {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
@@ -54,16 +33,6 @@ exports.handler = async function() {
   }
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 Generated: ${timestamp}
 
 ## Status
@@ -88,12 +57,6 @@ Generated: ${timestamp}
     } catch (gitError) {
       console.log('Git error:', gitError.message);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
     
     console.log('✅ trigger-all-and-commit completed successfully');
@@ -178,27 +141,7 @@ Generated: ${timestamp}
     }
 
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     return {
-    
-    console.log('✅ trigger-all-and-commit completed successfully');
-        return {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    
-    console.log('✅ trigger-all-and-commit completed successfully');
-        return {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    
-    console.log('✅ trigger-all-and-commit completed successfully');
-        return {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       statusCode: 200,
       body: JSON.stringify({
         message: 'trigger-all-and-commit completed successfully',

@@ -1,43 +1,40 @@
 
 import React from 'react';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { AIEnhancementPanel  } from './AIEnhancementPanel';
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
 <<<<<<< HEAD
+  DialogTitle} from '@/components/ui/dialog';
+=======
+  DialogTitle,
+} from '@/components/ui/dialog';
+>>>>>>> origin/auto/autonomy-17186719616
+import { AIEnhancementPanel } from './AIEnhancementPanel';
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+
+interface AIEnhancementDialogProps {
   title: string;
   isOpen: boolean;
   onClose: () => void;
   onApply: (content: string) => void;
   defaultOptions: AIEnhancementOptions;
-=======
-  title: string
-  isOpen: boolean
-  onClose: () => void
-  onApply: (content: string) => void
-  defaultOptions: AIEnhancementOptions
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  initialContent?: string
+  initialContent?: string;
 }
+
 export function AIEnhancementDialog({
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
+  title,
+  isOpen,
+  onClose,
+  onApply,
+  defaultOptions,
   initialContent
 }: AIEnhancementDialogProps) {
-<<<<<<< HEAD
-  const handleApply = null;
-=======
   const handleApply = (content: string) => {
-    onApply(content)
-    onClose()
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    onApply(content);
+    onClose();
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>
       <DialogContent className="max-w-3xl">
@@ -52,5 +49,5 @@ export function AIEnhancementDialog({
         />
       </DialogContent>
     </Dialog>
-  )
+  );
 }

@@ -1,8 +1,13 @@
 
-import { Input } from "@/components/ui/input",
+import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
+
+<<<<<<< HEAD
+export function SearchFilter({ searchTermsetSearchTerm }: SearchFilterProps) {
+=======
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="mb-6">
       <div className="relative">

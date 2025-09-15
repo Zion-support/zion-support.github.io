@@ -1,30 +1,9 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "generatedAt": "2025-08-12T01:34:35.265Z",
   "functions": [
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     "agent-swarm-orchestrator",
 =======
   "generatedAt": "2025-08-12T05:04:56.817Z",
@@ -33,21 +12,7 @@
     "adaptive-orchestrator",
     "agent-of-agents",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ai-changelog-runner",
-    "agent-swarm-orchestrator",    "ai-changelog-runner",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "agent-swarm-orchestrator",    "ai-changelog-runner",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "agent-swarm-orchestrator",    "ai-changelog-runner",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ai-trends-radar-runner",
     "auto-discovery-runner",
     "auto-scheduler",
@@ -129,32 +94,12 @@
     "site-crawler",
     "sitemap_runner",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
     "supreme-orchestrator",
 =======
     "stale-content-auditor-runner",
     "structured-data-auditor",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "todo-scanner-runner",
-    "supreme-orchestrator",    "todo-scanner-runner",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "supreme-orchestrator",    "todo-scanner-runner",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "supreme-orchestrator",    "todo-scanner-runner",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "todo-summary-runner",
     "trigger-all-and-commit",
     "ultra-fast-automation-orchestrator",

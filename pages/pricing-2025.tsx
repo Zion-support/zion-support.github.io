@@ -1,67 +1,58 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { ArrowRight, Check, Star, Users, Zap, Shield, Globe;
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { 
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
- } from 'lucide-react';
+} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import EnhancedFooter from '../components/EnhancedFooter',
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',
+
 export default function Pricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
 
-  const categories = null;
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react'
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-export default function Pricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' }
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' }
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' }
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' }
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' }
+    { id: 'all', name: 'All Services', icon: '🚀' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
-  ]
-  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>
-    selectedCategory === 'all' |service.category.includes(selectedCategory)
-  )
+  ],
+
+  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service => 
+    selectedCategory === 'all' || service.category.includes(selectedCategory)
+  ),
+
   const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', ''))
+    const price = parseFloat(monthlyPrice.replace('$', '')),
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
-    return `$${Math.round(annualPrice)}`
-  }
+    return `$${Math.round(annualPrice)}`,
+  },
+
   const containerVariants = {
-    hidden: { opacity: 0 }
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1
+      opacity: 1,
       transition: {
         staggerChildren: 0.1
       }
     }
-  }
+  },
+
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 0.5
       }
     }
-  }
+  },
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -71,8 +62,11 @@ export default function Pricing2025() {
         <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
+      
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+
       <EnhancedNavigation />
+
       {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -85,9 +79,10 @@ export default function Pricing2025() {
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transparent pricing for our comprehensive collection of innovative micro SAAS services
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
+            
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-white/60'}`}>
@@ -113,6 +108,7 @@ export default function Pricing2025() {
           </motion.div>
         </div>
       </section>
+
       {/* Category Filter */}
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
@@ -134,6 +130,7 @@ export default function Pricing2025() {
           </div>
         </div>
       </section>
+
       {/* Pricing Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -157,6 +154,7 @@ export default function Pricing2025() {
                     MOST POPULAR
                   </div>
                 )}
+
                 {/* Service Header */}
                 <div className="text-center mb-8">
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
@@ -165,6 +163,7 @@ export default function Pricing2025() {
                   <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                 </div>
+
                 {/* Pricing */}
                 <div className="text-center mb-8">
                   <div className="mb-2">
@@ -181,6 +180,7 @@ export default function Pricing2025() {
                     </p>
                   )}
                 </div>
+
                 {/* Rating */}
                 <div className="flex items-center justify-center gap-2 mb-6">
                   <div className="flex items-center gap-1">
@@ -197,6 +197,7 @@ export default function Pricing2025() {
                     {service.rating} ({service.reviews} reviews)
                   </span>
                 </div>
+
                 {/* Features */}
                 <div className="mb-8">
                   <h4 className="text-white font-semibold mb-4 text-center">Key Features:</h4>
@@ -214,6 +215,7 @@ export default function Pricing2025() {
                     )}
                   </div>
                 </div>
+
                 {/* Market Info */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div className="text-center p-3 bg-white/5 rounded-lg">
@@ -225,6 +227,7 @@ export default function Pricing2025() {
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
+
                 {/* ROI and Setup */}
                 <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>
@@ -240,6 +243,7 @@ export default function Pricing2025() {
                     </div>
                   </div>
                 </div>
+
                 {/* Action Buttons */}
                 <div className="space-y-3">
                   <a
@@ -258,6 +262,7 @@ export default function Pricing2025() {
                     Contact Sales
                   </a>
                 </div>
+
                 {/* Contact Info */}
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>
@@ -273,6 +278,7 @@ export default function Pricing2025() {
               </motion.div>
             ))}
           </motion.div>
+
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
@@ -289,6 +295,7 @@ export default function Pricing2025() {
           )}
         </div>
       </section>
+
       {/* Enterprise Solutions */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -302,7 +309,7 @@ export default function Pricing2025() {
               Need Enterprise Solutions?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              We offer custom enterprise solutions, volume discounts, and dedicated support
+              We offer custom enterprise solutions, volume discounts, and dedicated support 
               for organizations requiring multiple services or specialized implementations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -323,6 +330,7 @@ export default function Pricing2025() {
           </motion.div>
         </div>
       </section>
+
       {/* FAQ Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -337,31 +345,31 @@ export default function Pricing2025() {
               Frequently Asked Questions
             </h2>
           </motion.div>
+
           <div className="space-y-6">
             {[
               {
-                question: "What payment methods do you accept?"
+                question: "What payment methods do you accept?",
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms."
-              }
+              },
               {
-                question: "Do you offer free trials?"
+                question: "Do you offer free trials?",
                 answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity."
-              }
+              },
               {
-                question: "Can I cancel my subscription anytime?"
+                question: "Can I cancel my subscription anytime?",
                 answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period."
-              }
+              },
               {
-                question: "Do you offer volume discounts?"
+                question: "Do you offer volume discounts?",
                 answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions."
-              }
+              },
               {
-                question: "What kind of support do you provide?"
+                question: "What kind of support do you provide?",
                 answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers."
-              }
+              },
               {
-                question: "Can I upgrade or downgrade my plan?"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+                question: "Can I upgrade or downgrade my plan?",
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               }
             ].map((faq, index) => (
@@ -380,7 +388,8 @@ export default function Pricing2025() {
           </div>
         </div>
       </section>
+
       <EnhancedFooter />
     </div>
-  )
+  ),
 }

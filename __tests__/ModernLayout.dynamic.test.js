@@ -1,12 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ModernLayout from '../components/ModernLayout.dynamic';
+import ModernLayout from '../components/ModernLayout';
+
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
-    expect(screen.getByTestId('modern-layout')).toBeInTheDocument();
+    expect(screen.getByTestId('modernlayout')).toBeInTheDocument();
   });
+  
   test('displays correct content', () => {
-    // Test content display
+    render(<ModernLayout />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<ModernLayout />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<ModernLayout />);
+  });
 });

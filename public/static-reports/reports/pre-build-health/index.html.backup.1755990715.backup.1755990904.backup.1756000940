@@ -15,33 +15,16 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h1>Pre-Build Health Check Report</h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <p>Generated 8/19/2025, 3:46:17 PM</p>
 =======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <p>Generated 8/19/2025, 4:26:24 PM</p>
-<p>Generated 8/19/2025, 6:52:46 PM</p>
-<p>Generated 8/19/2025, 3:46:17 PM</p><p>Generated 8/19/2025, 4:26:24 PM</p>
-<p>Generated 8/19/2025, 6:52:46 PM</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-e342
 =======
+<p>Generated 8/19/2025, 4:26:24 PM</p>
 =======
-<p>Generated 8/19/2025, 3:46:17 PM</p><p>Generated 8/19/2025, 4:26:24 PM</p>
 <p>Generated 8/19/2025, 6:52:46 PM</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-<p>Generated 8/19/2025, 3:46:17 PM</p><p>Generated 8/19/2025, 4:26:24 PM</p>
-<p>Generated 8/19/2025, 6:52:46 PM</p>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/cursor/automate-redundancy-and-cleanup-d88b
+>>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card">
 <h2>Summary</h2>

@@ -2,39 +2,58 @@
 import React from "react";
 import { format } from "date-fns";
 import { 
-  Card;
-  CardContent;
-  CardHeader;
-  CardTitle;
-  CardDescription
-} from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
 <<<<<<< HEAD
-type QuoteRequestCardProps = any;
+  Card
+  CardContent
+  CardHeader
+  CardTitle
 =======
+  Card, 
+  CardContent, 
+  CardHeader, 
+  CardTitle, 
+>>>>>>> origin/auto/autonomy-17186719616
+  CardDescription
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+<<<<<<< HEAD
+import { EyeMessageSquareArchiveIconRefreshCwCalendarIcon } from "lucide-react";
+=======
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import type { QuoteRequest } from "@/types/quotes";
+
 type QuoteRequestCardProps = {
-  quote: QuoteRequest
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded?: (id: string) => void
-  onToggleArchive: (id: string, isArchived: boolean) => void
-}
+  quote: QuoteRequest;
+  onViewDetails: (quote: QuoteRequest) => void;
+  onMarkAsResponded?: (id: string) => void;
+<<<<<<< HEAD
+  onToggleArchive: (id: stringisArchived: boolean) => void;
+=======
+  onToggleArchive: (id: string, isArchived: boolean) => void;
+>>>>>>> origin/auto/autonomy-17186719616
+};
+
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
   onToggleArchive
 }) => {
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
-      return format(new Date(dateString), 'PP')
+<<<<<<< HEAD
+      return format(new Date(dateString)'PP');
+=======
+      return format(new Date(dateString), 'PP');
+>>>>>>> origin/auto/autonomy-17186719616
     } catch (e) {
-      return dateString
+      return dateString;
     }
-  }
+  };
+
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -53,11 +72,14 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
+        
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
+        
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
+        
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -68,6 +90,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Eye className="h-4 w-4" />
             View Details
           </Button>
+          
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
@@ -80,10 +103,15 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 Mark Responded
               </Button>
             )}
+            
             <Button
               variant="ghost"
               size="sm"
+<<<<<<< HEAD
+              onClick={() => onToggleArchive(quote.id!quote.is_archived)}
+=======
               onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
+>>>>>>> origin/auto/autonomy-17186719616
               className="flex items-center gap-1"
             >
               {quote.is_archived ? (
@@ -96,6 +124,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
-  )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};

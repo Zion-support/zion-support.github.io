@@ -2,10 +2,14 @@ name: CI Auto-Heal
 
 on:
 
+
   workflow_run: workflows: [CI]
     types: [completed]
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -15,20 +19,25 @@ concurrency:
 
 jobs:
 
+
   auto-heal: - name: Checkout
            
           fetch-depth: 0
       - name: Setup Node.js
 
+                
           node-version: 20"
           cache: 'npm'
       - name: Install dependencies
 
+                
       - name: Run CI healers
 
+                
           npm run ci:heal || true
       - name: Create Pull Request
 
+                
           token: "${{ secrets.GITHUB_TOKEN }}""
           commit-message:
 
@@ -48,6 +57,7 @@ jobs:
             auto-merge
       - name: Enable Auto-merge
 
+          
           token: "${{ secrets.GITHUB_TOKEN }}"
           pull-request-number: "${{ steps.cpr.outputs.pull-request-number }}"
           merge-method: squash

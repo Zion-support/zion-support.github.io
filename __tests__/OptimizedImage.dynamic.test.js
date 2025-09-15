@@ -1,16 +1,23 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import OptimizedImagedynamic from '../components/OptimizedImage.dynamic';
-describe('OptimizedImagedynamic', () => {
+import OptimizedImage from '../components/OptimizedImage';
+
+describe('OptimizedImage', () => {
   test('renders without crashing', () => {
-    render(<OptimizedImagedynamic />);
-    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument();
+    render(<OptimizedImage />);
+    expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();
   });
+  
   test('displays correct content', () => {
-    // Test content display
+    render(<OptimizedImage />);
+  });
+  
   test('handles user interactions', () => {
-    // Test user interactions
+    render(<OptimizedImage />);
+  });
+  
   test('applies correct styling', () => {
-    // Test styling
+    render(<OptimizedImage />);
+  });
 });

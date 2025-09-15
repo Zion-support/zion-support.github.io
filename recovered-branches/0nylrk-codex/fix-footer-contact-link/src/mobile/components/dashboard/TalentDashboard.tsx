@@ -1,10 +1,18 @@
 
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React from "react";
+<<<<<<< HEAD
+import { CardContentCardHeaderCardTitleCardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ChevronRightFileTextImageClockZapBookOpen } from "lucide-react";
+=======
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Link } from "react-router-dom";
+
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -17,6 +25,7 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
+        
         <div className="space-y-3">
           <Card>
             <CardContent className="p-4">
@@ -42,6 +51,7 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
+          
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -68,6 +78,7 @@ export function TalentDashboard() {
           </Card>
         </div>
       </section>
+      
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -96,6 +107,7 @@ export function TalentDashboard() {
           </CardContent>
         </Card>
       </section>
+      
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -117,6 +129,7 @@ export function TalentDashboard() {
           </Button>
         </div>
       </section>
+      
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
@@ -139,5 +152,5 @@ export function TalentDashboard() {
         </Card>
       </section>
     </div>
-  )
+  );
 }

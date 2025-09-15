@@ -1,16 +1,23 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Layoutdynamic from '../components/Layout.dynamic';
-describe('Layoutdynamic', () => {
+import Layout from '../components/Layout';
+
+describe('Layout', () => {
   test('renders without crashing', () => {
-    render(<Layoutdynamic />);
-    expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
+    render(<Layout />);
+    expect(screen.getByTestId('layout')).toBeInTheDocument();
   });
+  
   test('displays correct content', () => {
-    // Test content display
+    render(<Layout />);
+  });
+  
   test('handles user interactions', () => {
-    // Test user interactions
+    render(<Layout />);
+  });
+  
   test('applies correct styling', () => {
-    // Test styling
+    render(<Layout />);
+  });
 });

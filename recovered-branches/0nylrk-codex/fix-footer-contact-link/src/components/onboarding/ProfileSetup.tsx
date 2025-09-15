@@ -1,60 +1,78 @@
 
+import { useState } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 <<<<<<< HEAD
-import { useState } from "react",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { User, Mail, AtSign, GraduationCap } from "lucide-react",
-import { Button } from "@/components/ui/button",
+import { UserMailAtSignGraduationCap } from "lucide-react";
+=======
+import { User, Mail, AtSign, GraduationCap } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+<<<<<<< HEAD
+  FormMessage} from "@/components/ui/form";
 
-const profileSchema = null;
-=======
-import {useState} from "react";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {useForm} from "react-hook-form";
-import {z} from "zod";
-import {User, Mail, AtSign, GraduationCap} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 const profileSchema = z.object({
-  displayName: z.string().min(2, "Name must be at least 2 characters");
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
+  displayName: z.string().min(2"Name must be at least 2 characters"),
+  bio: z.string().min(10"Bio must be at least 10 characters").max(500"Bio must be less than 500 characters"),
+  headline: z.string().min(5"Headline must be at least 5 characters").max(100"Headline must be less than 100 characters")});
+=======
+  FormMessage,
+} from "@/components/ui/form";
+
+const profileSchema = z.object({
+  displayName: z.string().min(2, "Name must be at least 2 characters"),
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters"),
+});
+>>>>>>> origin/auto/autonomy-17186719616
+
 type ProfileFormValues = z.infer<typeof profileSchema>;
+
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void
-  userType: string
+  onComplete: (data: ProfileFormValues) => void;
+  userType: string;
 }
+
+<<<<<<< HEAD
+export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
+=======
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const form = useForm<ProfileFormValues>({
-    resolver: zodResolver(profileSchema)
+    resolver: zodResolver(profileSchema),
     defaultValues: {
-      displayName: ""
-      bio: ""
-      headline: ""}})
+      displayName: "",
+      bio: "",
+<<<<<<< HEAD
+      headline: ""}});
+=======
+      headline: "",
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
+
   const getTypeLabel = () => {
     switch (userType) {
-      case "serviceProvider": return "Service Provider";
+      case "serviceProvider":
+        return "Service Provider";
       case "talent":
         return "Talent";
       case "client":
         return "Client";
       default:
-        return "User"
+        return "User";
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -63,6 +81,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
+      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -85,6 +104,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
+          
           <FormField
             control={form.control}
             name="headline"
@@ -94,7 +114,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 <FormControl>
                   <div className="relative">
                     <Input
+<<<<<<< HEAD
+                      placeholder={`e.g.${
+=======
                       placeholder={`e.g., ${
+>>>>>>> origin/auto/autonomy-17186719616
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
@@ -109,6 +133,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
+          
           <FormField
             control={form.control}
             name="bio"
@@ -124,20 +149,25 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
             )}
           />
+          
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
           >
             Complete Profile
           </Button>
         </form>
       </Form>
     </div>
-  )
+  );
 }

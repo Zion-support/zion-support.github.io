@@ -1,154 +1,96 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
+import { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { Mail } from 'lucide-react'
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
-    name: "";
-    email: "";
-    subject: "";
-    message: ""});
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-=======
-export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: ""
-    email: ""
-    subject: ""
-    message: ""})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   const [errors, setErrors] = useState<{
     name?: string;
     email?: string;
     subject?: string;
-    message?: string
-<<<<<<< HEAD
-  }>({}),
+    message?: string;
+  }>({});
 
-  const handleChange = null;
-=======
-  }>({})
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-    setErrors((prev) => ({ ...prev, [name]: undefined }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();  const contactInfo = [{
-      icon: Phone
-      title: "Phone"
-      value: "+1 302 464 0950"
-      link: "tel:+13024640950"
-}
-    {
-      icon: Mail
-      title: "Email"
-      value: "kleber@ziontechgroup.com"
-      link: "mailto:kleber@ziontechgroup.com"
-},    {
-      icon: MapPin,"
-      title: "Address","
-      value: "364 E Main St STE 1008 Middletown DE 19709","
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"};  ]
-  return ("
-    <section className="py-16 px-4 sm:px-6 lg:px-8">"
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial = {
-  { opacity: 0
-  y: 20
-}}
-          whileInView = {
-  { opacity: 1
-  y: 0
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}"
-          className="text-center mb-16"
-"
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Get In Touch
-          </h2>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Contact us today to discuss your technology needs
-          </p>
-        </motion.div>"
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
-          {contactInfo.map((contact, index)  => (
-            <motion.div
-              key={index}
-              initial = {
-  { opacity: 0
-  y: 20
-}}
-              whileInView = {
-  { opacity: 1
-  y: 0
-}}
-              transition = {
-  { duration: 0.6
-  delay: index * 0.1
-}}
-              viewport={{ once: true }}"
-              className="text-center"
+    e.preventDefault();
+
     const schema = z.object({
-      name: z.string().min(2, "Name is required")
-      email: z.string().email("Enter a valid email")
-      subject: z.string().min(2, "Subject is required")
-      message: z.string().min(10, "Message must be at least 10 characters")})
-    const result = schema.safeParse(formData)
+      name: z.string().min(2, "Name is required"),
+      email: z.string().email("Enter a valid email"),
+      subject: z.string().min(2, "Subject is required"),
+      message: z.string().min(10, "Message must be at least 10 characters"),
+    });
+
+    const result = schema.safeParse(formData);
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {}
+      const fieldErrors: Record<string, string> = {};
       for (const err of result.error.errors) {
         if (err.path[0]) {
-          fieldErrors[err.path[0] as string] = err.message
+          fieldErrors[err.path[0] as string] = err.message;
         }
       }
-      setErrors(fieldErrors)
+      setErrors(fieldErrors);
       toast({
-        title: "Form Validation Error"
-        description: result.error.errors[0]?.message |"Please check your form and try again"
-        variant: "destructive"})
-      return
+        title: "Form Validation Error",
+        description: result.error.errors[0]?.message || "Please check your form and try again",
+        variant: "destructive",
+      });
+      return;
     }
-    setErrors({})
-    setIsSubmitting(true)
+
+    setErrors({});
+    setIsSubmitting(true);
+
     fetch("/api/contact", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify(formData)})
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
       .then(async (res) => {
-        setIsSubmitting(false)
+        setIsSubmitting(false);
         if (!res.ok) {
-          const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
+          const data = await res.json().catch(() => ({}));
+          throw new Error(data.error || "Failed to send message");
         }
         toast({
-          title: "Message Sent"
-          description: "We've received your message and will get back to you soon."})
-        setSubmitted(true)
-        setTimeout(() => setSubmitted(false), 2000)
-        setFormData({ name: "", email: "", subject: "", message: "" })
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon.",
+        });
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 2000);
+        setFormData({ name: "", email: "", subject: "", message: "" });
       })
       .catch((err) => {
-        setIsSubmitting(false);        toast({
-          title: "Submission Error"
-          description: err.message
-          variant: "destructive"})
-      })
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+        setIsSubmitting(false);
+        toast({
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive",
+        });
+      });
+  };
+
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,16 +122,14 @@ export function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
-                      Name
-                    ">
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
                       Name
                     </label>
                     <Input
                       id="name"
                       name="name"
-                      value = {formData.name,}
-                      onChange = {handleChange,}
+                      value={formData.name}
+                      onChange={handleChange}
                       className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
@@ -198,17 +138,15 @@ export function ContactSection() {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
-                      Email
-                    ">
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
                       Email
                     </label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
-                      value = {formData.email,}
-                      onChange = {handleChange,}
+                      value={formData.email}
+                      onChange={handleChange}
                       className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
@@ -218,16 +156,14 @@ export function ContactSection() {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
-                    Subject
-                  ">
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
                     Subject
                   </label>
                   <Input
                     id="subject"
                     name="subject"
-                    value = {formData.subject,}
-                    onChange = {handleChange,}
+                    value={formData.subject}
+                    onChange={handleChange}
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -236,17 +172,15 @@ export function ContactSection() {
                   )}
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
-                    Message
-                  ">
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
                     Message
                   </label>
                   <Textarea
                     id="message"
                     name="message"
-                    rows = {4,}
-                    value = {formData.message,}
-                    onChange = {handleChange,}
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -258,7 +192,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled = {isSubmitting,}
+                    disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
@@ -272,25 +206,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
-}setErrors (fieldErrors)
-toast ({
-  return
-}setErrors ({
-})
-setIsSubmitting (true)
-}) .catch ( (err) => {
-  setIsSubmitting (false)
-toast ({
-  title: "Submission Error"
-description: err.message
-})
-};"
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) "
-}</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) "
-}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea)
-}</div> <div> <Button > {'
-  isSubmitting ? 'Sending...' : 'Send Message'
-}</Button>)
-}</div> </form> </div> </div> </div> </div> </section>)
-}'"}
+  );
+}

@@ -1,80 +1,81 @@
 
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
-import { SeverityIndicator } from "../common/SeverityIndicator",
+import React from "react";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
+import { CheckCircleChevronRightFileTextMessageSquareVideo } from "lucide-react";
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Progress } from "@/components/ui/progress";
+import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+
 interface Milestone {
-<<<<<<< HEAD
   id: string;
   title: string;
   dueDate: string;
   status: "completed" | "in_progress" | "pending";
   paymentStatus: "paid" | "pending" | "overdue";
-=======
-  id: string
-  title: string
-  dueDate: string
-  status: "completed" | "in_progress" | "pending"
-  paymentStatus: "paid" | "pending" | "overdue"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  amount: string
+  amount: string;
 }
+
 interface ProjectViewProps {
   project: {
-<<<<<<< HEAD
     id: string;
     title: string;
     client: {
       name: string;
-      avatar?: string
-    },
+      avatar?: string;
+    };
     startDate: string;
     endDate?: string;
     status: string;
     totalAmount: string;
     progress: number;
-=======
-    id: string
-    title: string
-    client: {
-      name: string
-      avatar?: string
-    }
-    startDate: string
-    endDate?: string;
-    status: string
-    totalAmount: string
-    progress: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-    description: string
-  }
-  milestones: Milestone[]
+    description: string;
+  };
+  milestones: Milestone[];
 }
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+
 <<<<<<< HEAD
-  const navigate = null;
+export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
 =======
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const navigate = useNavigate();
+  
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
+<<<<<<< HEAD
+    toast.success("Starting project call"{
+=======
     toast.success("Starting project call", {
+>>>>>>> origin/auto/autonomy-17186719616
       description: "Initializing video connection..."
     });
-    navigate(`/call/${roomId}`)
-  }
+    
+    navigate(`/call/${roomId}`);
+  };
+  
   const messageClient = () => {
+<<<<<<< HEAD
+    toast.info("Opening message thread with client"{
+=======
     toast.info("Opening message thread with client", {
+>>>>>>> origin/auto/autonomy-17186719616
       description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+  
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -93,6 +94,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Badge>{project.status}</Badge>
             </div>
+            
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
                 <span>Progress</span>
@@ -100,6 +102,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
+            
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div>
                 <p className="text-muted-foreground">Start Date</p>
@@ -107,7 +110,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <div>
                 <p className="text-muted-foreground">End Date</p>
-                <p className="font-medium">{project.endDate |"Not set"}</p>
+                <p className="font-medium">{project.endDate || "Not set"}</p>
               </div>
               <div>
                 <p className="text-muted-foreground">Total Amount</p>
@@ -118,24 +121,26 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
             </div>
+            
             <div>
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
             </div>
+            
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
                 <FileText className="h-4 w-4" /> Contract
               </Button>
-              <Button
-                size="sm"
-                variant="outline"
+              <Button 
+                size="sm" 
+                variant="outline" 
                 className="gap-1 flex-1"
                 onClick={messageClient}
               >
                 <MessageSquare className="h-4 w-4" /> Message
               </Button>
-              <Button
-                size="sm"
+              <Button 
+                size="sm" 
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light"
                 onClick={startProjectCall}
               >
@@ -145,6 +150,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
           </div>
         </CardContent>
       </Card>
+      
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
@@ -160,15 +166,16 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                     )}
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
-                  <Badge
+                  <Badge 
                     variant={
-                      milestone.paymentStatus === "paid" ? "default" :
+                      milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
                     }
                   >
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
+                
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
@@ -180,11 +187,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Status:</span>
-                    <span className="capitalize">{milestone.status.replace('_ ')}</span>
+<<<<<<< HEAD
+                    <span className="capitalize">{milestone.status.replace('_' ')}</span>
+=======
+                    <span className="capitalize">{milestone.status.replace('_', ' ')}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                   </div>
-                  <Button
-                    size="sm"
-                    variant="outline"
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
                     className="w-full mt-3 gap-1"
                   >
                     View Details <ChevronRight className="h-4 w-4" />
@@ -196,5 +207,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -176,12 +176,6 @@ h3 {
   top: 0;
   left: 0;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
   right: 0;
   bottom: 0;
 =======
@@ -319,24 +313,7 @@ h3 {
 /* Enhanced futuristic backgrounds */
 .futuristic-bg {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   background: 
-  right: 0;
-  bottom: 0;  background: 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  right: 0;
-  bottom: 0;  background: 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  right: 0;
-  bottom: 0;  background: 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -1116,21 +1093,6 @@ h3 {
     box-shadow: none;
   }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   
   .particle-bg::before {
     display: none;
@@ -1330,12 +1292,6 @@ h3 {
 }
 
 /* Enhanced Quantum Effects */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 .quantum-field {
 =======
 }
@@ -1421,29 +1377,11 @@ h3 {
   font-weight: 600;
   transition: all 0.3s ease;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: relative;
   overflow: hidden;
 }
 
-.quantum-field {  position: relative;
-  overflow: hidden;
-}
-
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-.quantum-field {  position: relative;
-  overflow: hidden;
-}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .quantum-field::before {
   content: '';
   position: absolute;
@@ -1471,52 +1409,17 @@ h3 {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 .holographic::before {
 =======
 .btn-futuristic::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
-.holographic::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-.holographic::before {  content: '';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-.holographic::before {  content: '';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
   animation: holographic-shimmer 4s ease-in-out infinite;
 }
@@ -1656,17 +1559,11 @@ h3 {
   .metaverse-portal::before {
     animation: none;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+=======
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
-<<<<<<< HEAD
 
 .btn-futuristic:hover::before {
   left: 100%;
@@ -1861,14 +1758,3 @@ h3 {
     0 0 15px rgba(59, 130, 246, 0.1);
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

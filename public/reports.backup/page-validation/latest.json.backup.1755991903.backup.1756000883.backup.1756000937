@@ -1,21 +1,6 @@
 {
   "summary": {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 3,
@@ -54,12 +39,6 @@
           "type": "WARNING",
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "line": 0,
 =======
     "totalFiles": 4,
@@ -79,31 +58,51 @@
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
           "line": 81,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "severity": "warning"
-          "line": 0,          "severity": "warning"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          "line": 0,          "severity": "warning"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "line": 0,          "severity": "warning"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+        }
+      ]
+    },
+    {
+      "file": "pages/api/password-strength.ts",
+      "issues": [],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+          "line": 68,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/api/text-analyzer.ts",
+      "issues": [],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+          "line": 71,
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "file": "pages/api/url-shortener.ts",
+      "issues": [],
+      "warnings": [
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+          "line": 31,
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
+          "severity": "warning"
         }
       ]
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
   "buildBreakingFiles": [
     "pages/enhanced-services.tsx"
@@ -117,26 +116,4 @@
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T18:46:21.467Z"
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-5f5b
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  "buildBreakingFiles": [
-    "pages/enhanced-services.tsx"
-  ],
-  "generatedAt": "2025-08-21T00:33:41.084Z"}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  "buildBreakingFiles": [
-    "pages/enhanced-services.tsx"
-  ],
-  "generatedAt": "2025-08-21T00:33:41.084Z"}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

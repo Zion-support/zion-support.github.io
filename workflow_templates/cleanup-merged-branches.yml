@@ -2,10 +2,14 @@ name: Cleanup merged branches
 
 on:
 
+
   schedule: - cron: '0 4 * * 0'
   workflow_dispatch: {}
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -13,6 +17,7 @@ concurrency:
   contents: write
 
 jobs:
+
 
   cleanup: - name: List open PR heads
            
@@ -29,9 +34,11 @@ jobs:
             core.info(`Open PR heads: ${heads.length}`);
       - name: Checkout repository
 
+                
           fetch-depth: 0
       - name: Prune merged branches
 
+                
           set -e
           git fetch --all --prune
           base="origin/main"

@@ -2,31 +2,10 @@
   "summary": {
     "totalChecks": 6,
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "passedChecks": 6,
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     "timestamp": "2025-08-19T17:38:03.158Z"
 =======
     "passedChecks": 5,
@@ -35,21 +14,7 @@
     "canBuild": true,
     "timestamp": "2025-08-19T17:47:07.698Z"
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
-    "timestamp": "2025-08-19T17:38:03.158Z"  },
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "timestamp": "2025-08-19T17:38:03.158Z"  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "timestamp": "2025-08-19T17:38:03.158Z"  },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "results": [
     {
       "name": "Page Structure Validation",
@@ -72,36 +37,13 @@
     {
       "name": "Environment Variables",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "status": "PASS",
       "result": "Environment variables check completed",
 =======
       "status": "FAIL",
       "error": "Missing environment variables: NODE_VERSION, NODE_OPTIONS",
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "critical": false
-      "status": "PASS",
-      "result": "Environment variables check completed",      "critical": false
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "status": "PASS",
-      "result": "Environment variables check completed",      "critical": false
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "status": "PASS",
-      "result": "Environment variables check completed",      "critical": false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "name": "File Permissions",
@@ -117,30 +59,10 @@
     }
   ],
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
   "recommendations": []
 =======
   "recommendations": [
     "Verify all required environment variables are set"
   ]
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  "recommendations": []}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  "recommendations": []}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  "recommendations": []}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

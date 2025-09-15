@@ -1,108 +1,191 @@
 
-import { useState  } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { format } from "date-fns",
-import { CalendarIcon } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { ProductListing } from "@/types/listings";
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from "@/integrations/supabase/client";
-interface ServiceQuoteModalProps {
+import { useState } from 'react';
 <<<<<<< HEAD
+import { DialogContentDialogHeaderDialogTitleDialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
+=======
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+>>>>>>> origin/auto/autonomy-17186719616
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { ProductListing } from "@/types/listings";
+import { toast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
+
+interface ServiceQuoteModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  service: ProductListing | null
+  service: ProductListing | null;
 }
 
-const BUDGET_RANGES = null;
-=======
-  open: boolean
-  onOpenChange: (open: boolean) => void
-  service: ProductListing | null
-}
 const BUDGET_RANGES = [
-  { label: "Less than $5,000", value: "0-5000" }
-  { label: "$5,000 - $10,000", value: "5000-10000" }
-  { label: "$10,000 - $25,000", value: "10000-25000" }
-  { label: "$25,000 - $50,000", value: "25000-50000" }
-  { label: "$50,000+", value: "50000+" }]
+<<<<<<< HEAD
+  { label: "Less than $5,000"value: "0-5000" },
+  { label: "$5,000 - $10,000"value: "5000-10000" },
+  { label: "$10,000 - $25,000"value: "10000-25000" },
+  { label: "$25,000 - $50,000"value: "25000-50000" },
+  { label: "$50,000+"value: "50000+" }];
+
 const TIMELINE_OPTIONS = [
-  { label: "Less than 1 month", value: "lt-1month" }
-  { label: "1-3 months", value: "1-3months" }
-  { label: "3-6 months", value: "3-6months" }
-  { label: "6+ months", value: "6+months" }]
+  { label: "Less than 1 month"value: "lt-1month" },
+  { label: "1-3 months"value: "1-3months" },
+  { label: "3-6 months"value: "3-6months" },
+  { label: "6+ months"value: "6+months" }];
+
+export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModalProps) {
+  const [formDatasetFormData] = useState({
+    description: '',
+    email: '',
+    budget: BUDGET_RANGES[0].value,
+    timeframe: TIMELINE_OPTIONS[0].value});
+  const [startDatesetStartDate] = useState<Date | undefined>(new Date());
+  const [endDatesetEndDate] = useState<Date | undefined>(undefined);
+  const [currentStepsetCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
+  const [isSubmittingsetIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { namevalue } = e.target;
+    setFormData(prev => ({ ...prev[name]: value }));
+=======
+  { label: "Less than $5,000", value: "0-5000" },
+  { label: "$5,000 - $10,000", value: "5000-10000" },
+  { label: "$10,000 - $25,000", value: "10000-25000" },
+  { label: "$25,000 - $50,000", value: "25000-50000" },
+  { label: "$50,000+", value: "50000+" },
+];
+
+const TIMELINE_OPTIONS = [
+  { label: "Less than 1 month", value: "lt-1month" },
+  { label: "1-3 months", value: "1-3months" },
+  { label: "3-6 months", value: "3-6months" },
+  { label: "6+ months", value: "6+months" },
+];
+
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
-    description: ''
-    email: ''
-    budget: BUDGET_RANGES[0].value
-    timeframe: TIMELINE_OPTIONS[0].value})
+    description: '',
+    email: '',
+    budget: BUDGET_RANGES[0].value,
+    timeframe: TIMELINE_OPTIONS[0].value,
+  });
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
+    setFormData(prev => ({ ...prev, [name]: value }));
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true)
+    setIsSubmitting(true);
+
     try {
       // Call Supabase function to process the quote
+<<<<<<< HEAD
+      const { dataerror } = await supabase.functions.invoke('process-quote'{
+=======
       const { data, error } = await supabase.functions.invoke('process-quote', {
+>>>>>>> origin/auto/autonomy-17186719616
         body: {
           service: service ? {
-            id: service.id
-            title: service.title
-            category: service.category} : null
+            id: service.id,
+            title: service.title,
+<<<<<<< HEAD
+            category: service.category} : null,
           quoteDetails: {
-            ...formData
-            startDate: startDate?.toISOString()
+            ...formData,
+            startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
+=======
+            category: service.category,
+          } : null,
+          quoteDetails: {
+            ...formData,
+            startDate: startDate?.toISOString(),
+            endDate: endDate?.toISOString(),
+          }
+>>>>>>> origin/auto/autonomy-17186719616
         }
       });
+
       if (error) throw error;
+
       // Show success message
       toast({
-        title: "Quote Request Submitted!"
-        description: "We've sent your request to the service provider. They will contact you soon."})
+        title: "Quote Request Submitted!",
+<<<<<<< HEAD
+        description: "We've sent your request to the service provider. They will contact you soon."});
+=======
+        description: "We've sent your request to the service provider. They will contact you soon.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
+
       // Close the modal and reset form
       onOpenChange(false);
       setFormData({
-        description: ''
-        email: ''
-        budget: BUDGET_RANGES[0].value
-        timeframe: TIMELINE_OPTIONS[0].value})
+        description: '',
+        email: '',
+        budget: BUDGET_RANGES[0].value,
+<<<<<<< HEAD
+        timeframe: TIMELINE_OPTIONS[0].value});
+=======
+        timeframe: TIMELINE_OPTIONS[0].value,
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       setStartDate(new Date());
       setEndDate(undefined);
-      setCurrentStep('details')
+      setCurrentStep('details');
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Error submitting quote:"error);
+      toast({
+        title: "Error",
+        description: "There was an error submitting your quote request. Please try again.",
+        variant: "destructive"});
+
+=======
       console.error("Error submitting quote:", error);
       toast({
-        title: "Error"
-        description: "There was an error submitting your quote request. Please try again."
-        variant: "destructive"})
+        title: "Error",
+        description: "There was an error submitting your quote request. Please try again.",
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
+
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline');
-    else if (currentStep === 'timeline') setCurrentStep('contact')
-  }
+    else if (currentStep === 'timeline') setCurrentStep('contact');
+  };
+
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details');
-    else if (currentStep === 'contact') setCurrentStep('timeline')
-  }
+    else if (currentStep === 'contact') setCurrentStep('timeline');
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -111,15 +194,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             Request Service Quote
           </DialogTitle>
         </DialogHeader>
+
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (
             <div className="space-y-4">
               <div className="p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light">
                 <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>
-                <p className="text-white text-lg">{service?.title |"Custom Service"}</p>
+                <p className="text-white text-lg">{service?.title || "Custom Service"}</p>
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>
               </div>
+
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
                 <Textarea
@@ -132,11 +217,16 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   required
                 />
               </div>
+
               <div className="space-y-2">
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
-                <Select
-                  value={formData.budget}
+                <Select 
+                  value={formData.budget} 
+<<<<<<< HEAD
+                  onValueChange={(value) => setFormData(prev => ({ ...prevbudget: value }))}
+=======
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+>>>>>>> origin/auto/autonomy-17186719616
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your budget range" />
@@ -152,14 +242,19 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               </div>
             </div>
           )}
+
           {/* Step 2: Timeline */}
           {currentStep === 'timeline' && (
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label className="text-white">Project Timeline</Label>
-                <Select
+                <Select 
                   value={formData.timeframe}
+<<<<<<< HEAD
+                  onValueChange={(value) => setFormData(prev => ({ ...prevtimeframe: value }))}
+=======
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
+>>>>>>> origin/auto/autonomy-17186719616
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your timeline" />
@@ -173,6 +268,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   </SelectContent>
                 </Select>
               </div>
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label className="text-white">Expected Start Date</Label>
@@ -181,12 +277,16 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full";
+                          "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" />
+<<<<<<< HEAD
+                        {startDate ? format(startDate"PPP") : <span>Pick a date</span>}
+=======
                         {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
+>>>>>>> origin/auto/autonomy-17186719616
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
@@ -200,6 +300,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     </PopoverContent>
                   </Popover>
                 </div>
+
                 <div className="space-y-2">
                   <Label className="text-white">Expected End Date</Label>
                   <Popover>
@@ -207,13 +308,16 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+                          "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" />
+<<<<<<< HEAD
+                        {endDate ? format(endDate"PPP") : <span>Pick a date</span>}
+=======
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
+>>>>>>> origin/auto/autonomy-17186719616
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
@@ -221,7 +325,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         mode="single"
                         selected={endDate}
                         onSelect={setEndDate}
-                        disabled={(date) => !startDate |date < startDate}
+                        disabled={(date) => !startDate || date < startDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
                       />
@@ -231,6 +335,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               </div>
             </div>
           )}
+
           {/* Step 3: Contact */}
           {currentStep === 'contact' && (
             <div className="space-y-4">
@@ -247,12 +352,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   required
                 />
               </div>
+
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Service:</span>
-                    <span className="text-white">{service?.title |"Custom Service"}</span>
+                    <span className="text-white">{service?.title || "Custom Service"}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Budget:</span>
@@ -265,19 +371,28 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   {startDate && (
                     <div className="flex justify-between">
                       <span className="text-zion-slate-light">Start Date:</span>
+<<<<<<< HEAD
+                      <span className="text-white">{format(startDate"PPP")}</span>
+=======
                       <span className="text-white">{format(startDate, "PPP")}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                     </div>
                   )}
                   {endDate && (
                     <div className="flex justify-between">
                       <span className="text-zion-slate-light">End Date:</span>
+<<<<<<< HEAD
+                      <span className="text-white">{format(endDate"PPP")}</span>
+=======
                       <span className="text-white">{format(endDate, "PPP")}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                     </div>
                   )}
                 </div>
               </div>
             </div>
           )}
+
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
               <Button
@@ -289,7 +404,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 Previous
               </Button>
             )}
+            
+<<<<<<< HEAD
+            <div className={cn("flex gap-2"currentStep === 'details' && "ml-auto")}>
+=======
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
+>>>>>>> origin/auto/autonomy-17186719616
               <Button
                 type="button"
                 variant="outline"
@@ -298,16 +418,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               >
                 Cancel
               </Button>
+              
               {currentStep !== 'contact' ? (
-                <Button
-                  type="button"
+                <Button 
+                  type="button" 
                   onClick={nextStep}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >
                   Next
                 </Button>
               ) : (
-                <Button
+                <Button 
                   type="submit"
                   disabled={isSubmitting}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -320,5 +441,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

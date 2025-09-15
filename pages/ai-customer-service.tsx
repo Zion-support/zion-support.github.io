@@ -1,5 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
+
 export default function AICustomerService() {
   return (
     <>
@@ -17,3 +18,4 @@ export default function AICustomerService() {
     </>
   )
 }
+

@@ -1,21 +1,26 @@
-import React from 'react',
-import ReactDOM from 'react-dom/client',
-import App from './App.tsx',
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
 import './index.css';
-import { HelmetProvider  } from 'react-helmet-async';
-import { BrowserRouter as Router  } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider  } from '@/context/LanguageContext';
-import { LanguageDetectionPopup  } from './components/LanguageDetectionPopup';
-import { WhitelabelProvider  } from '@/context/WhitelabelContext';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
+
 // Import auth and notification providers
-import { AuthProvider  } from '@/context/auth/AuthProvider';
-import { NotificationProvider  } from './context';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { NotificationProvider } from './context';
+
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
+
 // Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <HelmetProvider>
       <WhitelabelProvider>
         <Router>
@@ -23,9 +28,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
             <NotificationProvider>
               <AnalyticsProvider>
 <<<<<<< HEAD
-                <LanguageProvider authState;
+                <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
 =======
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+>>>>>>> origin/auto/autonomy-17186719616
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>
@@ -35,5 +41,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
-  </React.StrictMode>);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  </React.StrictMode>,
+);

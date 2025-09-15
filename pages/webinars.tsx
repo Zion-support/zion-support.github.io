@@ -1,5 +1,6 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
+
 export default function WebinarsPage() {
 	return (
 		<>
@@ -9,5 +10,5 @@ export default function WebinarsPage() {
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
 			</div>
 		</>
-	)
+	),
 }

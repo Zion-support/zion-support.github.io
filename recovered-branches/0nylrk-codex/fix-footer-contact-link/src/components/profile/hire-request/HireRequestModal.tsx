@@ -1,42 +1,32 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { HireRequestForm } from "./HireRequestForm",
-=======
 import React from "react";
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-} from "@/components/ui/dialog";
+<<<<<<< HEAD
+import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
+=======
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+>>>>>>> origin/auto/autonomy-17186719616
 import { HireRequestForm } from "./HireRequestForm";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
+
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
-  userDetails?: UserProfile
+  userDetails?: UserProfile;
 }
-<<<<<<< HEAD
 
-export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
-  const handleClose = null;
+<<<<<<< HEAD
+export function HireRequestModal({ talentisOpenonCloseuserDetails }: HireRequestModalProps) {
 =======
-export function HireRequestModal({
-  talent
-  isOpen
-  onClose
-  userDetails
-}: HireRequestModalProps) {
+export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const handleClose = () => {
     onClose();
-  }
+  };
+
   if (!talent) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
@@ -45,7 +35,8 @@ export function HireRequestModal({
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
-        <HireRequestForm
+        
+        <HireRequestForm 
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}

@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 exports.handler = async function(event, context) {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
   const githubToken = process.env.GITHUB_TOKEN || '';
@@ -147,12 +132,6 @@ exports.handler = async function(event, context) {
 
     const heartbeat = { startAt, endAt: new Date().toISOString(), baseUrl, totals };
     const commitResult = await commitStamp(heartbeat);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 =======
 // netlify/functions/autonomous-cloud-brain.js
 // An intelligent, ultra-fast orchestrator that selectively triggers key automations
@@ -342,37 +321,15 @@ exports.handler = async function() {
       syncResult = { method: 'none', ok: false, error: 'No NETLIFY_BUILD_HOOK_URL or GITHUB_TOKEN' };
     }
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8ac2
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       body: JSON.stringify({ heartbeat, results: invoked, commitResult })
     };
   } catch (err) {
     log(String(err));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };
 =======
       body: JSON.stringify({
@@ -391,19 +348,5 @@ exports.handler = async function() {
     log(String(err));
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8ac2
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
-    return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };  }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };

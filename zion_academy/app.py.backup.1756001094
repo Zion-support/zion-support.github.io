@@ -1,39 +1,13 @@
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 import os
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
 import uuid
 from datetime import datetime, date
 from sqlalchemy import func, desc
 =======
 from datetime import datetime
 >>>>>>> origin/cursor/add-context-and-interaction-to-updates-4760
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
-import uuid
-from datetime import datetime, date
-from sqlalchemy import func, desc
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-import uuid
-from datetime import datetime, date
-from sqlalchemy import func, desc
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import uuid
-from datetime import datetime, date
-from sqlalchemy import func, desc
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # Import db instance from models.py FIRST
 from models import db, AnalyticsEvent, FeedbackSubmission, ContentAnalytics
 from seed_db import seed_data # Assuming seed_db.py is in the same directory
@@ -128,22 +102,7 @@ def course_detail(course_id):
         # or just rendering a simple not found message.
         return render_template('404.html', title="Course Not Found"), 404 # Assuming you have a 404.html
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # ----- Progress Tracking Endpoints -----
 
 @app.route('/api/enroll', methods=['POST'])
@@ -164,22 +123,7 @@ def api_enroll():
 
     return jsonify({'message': 'enrolled'}), 201
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/complete', methods=['POST'])
 def api_complete_lesson():
     """Mark a lesson as completed and update progress."""
@@ -229,22 +173,7 @@ def api_complete_lesson():
 
     return jsonify({'progress': enrollment.progress})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/progress/<int:user_id>')
 def api_user_progress(user_id):
     """Return progress and achievements for a user."""
@@ -271,22 +200,7 @@ def api_user_progress(user_id):
 
     return jsonify({'enrollments': progress_data, 'achievements': achievements})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/generate-quiz', methods=['POST'])
 def api_generate_quiz():
     """Return a simple quiz for a topic."""
@@ -304,22 +218,7 @@ def api_generate_quiz():
     ]
     return jsonify({'quiz': quiz})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/summarize', methods=['POST'])
 def api_summarize():
     """Return a basic summary of provided text."""
@@ -328,22 +227,7 @@ def api_summarize():
     summary = '.'.join(text.split('.')[:2]).strip()
     return jsonify({'summary': summary})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # ----- Analytics Endpoints -----
 
 @app.route('/api/analytics/track', methods=['POST'])
@@ -377,22 +261,7 @@ def api_track_event():
         'event_id': event.id
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/analytics/content/<content_type>/<int:content_id>')
 def api_content_analytics(content_type, content_id):
     """Get analytics for specific content"""
@@ -436,22 +305,7 @@ def api_content_analytics(content_type, content_id):
             } for e in events]
         })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/analytics/dashboard')
 def api_analytics_dashboard():
     """Get overall analytics dashboard data"""
@@ -503,22 +357,7 @@ def api_analytics_dashboard():
             } for f in feedback_summary]
         })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # ----- Feedback Endpoints -----
 
 @app.route('/api/feedback/submit', methods=['POST'])
@@ -546,22 +385,7 @@ def api_submit_feedback():
         'message': 'Feedback submitted successfully'
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/feedback/list')
 def api_feedback_list():
     """Get list of feedback submissions"""
@@ -583,22 +407,7 @@ def api_feedback_list():
             } for f in feedbacks]
         })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/api/feedback/<int:feedback_id>', methods=['PUT'])
 def api_update_feedback(feedback_id):
     """Update feedback status (admin only)"""
@@ -628,22 +437,7 @@ def api_update_feedback(feedback_id):
         'message': 'Feedback updated successfully'
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # ----- Content Performance Tracking -----
 
 @app.route('/api/analytics/update-content-metrics', methods=['POST'])
@@ -711,22 +505,7 @@ def api_update_content_metrics():
         'message': 'Content metrics updated successfully'
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # ----- Admin Dashboard -----
 
 @app.route('/admin/dashboard')
@@ -734,22 +513,7 @@ def admin_dashboard():
     """Admin dashboard for analytics and feedback management"""
     return render_template('admin_dashboard.html', title='Admin Dashboard')
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @app.route('/user/<int:user_id>')
 def user_profile(user_id):
     """Display user profile with progress and achievements."""

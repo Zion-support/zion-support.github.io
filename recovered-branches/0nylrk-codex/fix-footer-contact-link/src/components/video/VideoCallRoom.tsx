@@ -1,116 +1,144 @@
 
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
-import './video-call.css';
-interface Participant {
 <<<<<<< HEAD
+import React{ useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { VideoOffMicOffPhoneScreenShareOffVolume2VolumeX } from '@/components/icons';
+=======
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons';
+>>>>>>> origin/auto/autonomy-17186719616
+import './video-call.css';
+
+interface Participant {
   id: string;
   name: string;
-=======
-  id: string
-  name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   avatar?: string;
   isMuted?: boolean;
   isVideoEnabled?: boolean;
   isScreenSharing?: boolean;
-  isHost?: boolean
+  isHost?: boolean;
 }
+
 interface VideoCallRoomProps {
-<<<<<<< HEAD
   roomId: string;
   participants?: Participant[];
   onLeave?: () => void;
   onToggleMute?: (isMuted: boolean) => void;
   onToggleVideo?: (isEnabled: boolean) => void;
   onToggleScreenShare?: (isSharing: boolean) => void;
-  className?: string
+  className?: string;
 }
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
-  roomId;
-  participants;
-=======
-  roomId: string
-  participants?: Participant[];
-  onLeave?: () => void;
-  onToggleMute?: (isMuted: boolean) => void
-  onToggleVideo?: (isEnabled: boolean) => void
-  onToggleScreenShare?: (isSharing: boolean) => void
-  className?: string
-}
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
+<<<<<<< HEAD
   roomId
   participants = []
-  onLeave;
-  onToggleMute;
-  onToggleVideo;
-  onToggleScreenShare;
-  className
+=======
+  roomId, 
+  participants = [], 
+>>>>>>> origin/auto/autonomy-17186719616
+  onLeave,
+  onToggleMute,
+  onToggleVideo,
+  onToggleScreenShare,
+  className 
 }) => {
+<<<<<<< HEAD
+  const [isMutedsetIsMuted] = useState(false);
+  const [isVideoEnabledsetIsVideoEnabled] = useState(true);
+  const [isScreenSharingsetIsScreenSharing] = useState(false);
+  const [isAudioOnlysetIsAudioOnly] = useState(false);
+  const [callDurationsetCallDuration] = useState(0);
+=======
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoEnabled, setIsVideoEnabled] = useState(true);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [isAudioOnly, setIsAudioOnly] = useState(false);
   const [callDuration, setCallDuration] = useState(0);
+>>>>>>> origin/auto/autonomy-17186719616
+
   // Call duration timer
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setCallDuration(prevDuration => prevDuration + 1)
+      setCallDuration(prevDuration => prevDuration + 1);
+<<<<<<< HEAD
+    }1000);
+    
+    return () => clearInterval(timer);
+  }[]);
+=======
     }, 1000);
-    return () => clearInterval(timer)
+    
+    return () => clearInterval(timer);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
+
   const formatDuration = (seconds: number) => {
     const hrs = Math.floor(seconds / 3600);
     const mins = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
-  }
+    const secs = seconds % 60;
+    
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  };
+
   const handleToggleMute = () => {
     const newMuteState = !isMuted;
     setIsMuted(newMuteState);
     if (onToggleMute) {
-      onToggleMute(newMuteState)
+      onToggleMute(newMuteState);
     }
-  }
+  };
+
   const handleToggleVideo = () => {
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
     if (onToggleVideo) {
-      onToggleVideo(newVideoState)
+      onToggleVideo(newVideoState);
     }
+    
+<<<<<<< HEAD
+    // If turning video back onensure we're not in audio-only mode
+=======
     // If turning video back on, ensure we're not in audio-only mode
+>>>>>>> origin/auto/autonomy-17186719616
     if (newVideoState) {
-      setIsAudioOnly(false)
+      setIsAudioOnly(false);
     }
-  }
+  };
+
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
     if (onToggleScreenShare) {
-      onToggleScreenShare(newScreenShareState)
+      onToggleScreenShare(newScreenShareState);
     }
-  }
+  };
+
   const handleToggleAudioOnly = () => {
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {
       setIsVideoEnabled(false);
       if (onToggleVideo) {
-        onToggleVideo(false)
+        onToggleVideo(false);
       }
     }
-  }
+  };
+
   const handleLeaveCall = () => {
     if (onLeave) {
-      onLeave()
+      onLeave();
     }
-  }
+  };
+
   return (
-    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
+    <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
@@ -127,6 +155,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Badge>
         </div>
       </CardHeader>
+      
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
@@ -152,6 +181,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
                     </Avatar>
                   </div>
                 )}
+                
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -169,41 +199,46 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             </div>
           )}
         </div>
+        
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-          <Button
-            variant="outline"
-            size="icon"
+          <Button 
+            variant="outline" 
+            size="icon" 
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleMute}
           >
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
-          <Button
-            variant="outline"
-            size="icon"
+          
+          <Button 
+            variant="outline" 
+            size="icon" 
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}
           >
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
-          <Button
-            variant="outline"
+          
+          <Button 
+            variant="outline" 
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}
           >
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
-          <Button
-            variant="outline"
+          
+          <Button 
+            variant="outline" 
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleAudioOnly}
           >
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
-          <Button
-            variant="destructive"
+          
+          <Button 
+            variant="destructive" 
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -213,6 +248,5 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
         </div>
       </CardContent>
     </Card>
-  )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};

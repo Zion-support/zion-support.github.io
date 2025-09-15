@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Content Freshness Auditor
 
 on:
@@ -24,12 +9,6 @@ on:
       - 'pages/**'
       - 'docs/**'
   workflow_dispatch: {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
 =======
 name: Content Freshness Monitor
@@ -44,35 +23,11 @@ concurrency:
   cancel-in-progress: true
 
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-4fee
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 permissions:
   contents: write
 
 jobs:
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   freshness:
     runs-on: ubuntu-latest
     steps:
@@ -95,12 +50,6 @@ jobs:
             git commit -m "chore(automation): update content freshness report [skip ci]"
             git push
           else
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
             echo "No changes to commit"
 =======
   scan-and-sync:
@@ -134,18 +83,4 @@ jobs:
           else
             echo "No content freshness changes to commit"
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-4fee
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           fi
-            echo "No changes to commit"          fi
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-            echo "No changes to commit"          fi
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-            echo "No changes to commit"          fi
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

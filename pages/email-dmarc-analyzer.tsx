@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+
 export default function EmailDmarcAnalyzerPage() {
   return (
     <Layout>
@@ -18,7 +15,7 @@ export default function EmailDmarcAnalyzerPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">Email DMARC Analyzer</h1>
           <p className="text-slate-300">DMARC reporting, SPF/DKIM audits, DNS change tracking, and mailbox provider insights for small teams.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'DMARC aggregate/forensic reportsSPF/DKIM audits & DNS historyProvider insights & tipsWeekly deliverability scorecard' ].map((f) => (
+            {[ 'DMARC aggregate/forensic reportsSPF/DKIM audits & DNS history', 'Provider insights & tipsWeekly deliverability scorecard' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-amber-500/30 text-slate-200">{f}</div>
             ))}
           </div>
@@ -29,5 +26,6 @@ export default function EmailDmarcAnalyzerPage() {
         </div>
       </div>
     </Layout>
-  )
+  ),
 }
+

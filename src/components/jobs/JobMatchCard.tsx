@@ -1,11 +1,12 @@
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import React from 'react';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
+
 interface JobMatchProps {
   matchId: string;
   talentId: string;
@@ -19,27 +20,45 @@ interface JobMatchProps {
   skills: string[];
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
-  onInvite?: (matchId: string) => void
+  onInvite?: (matchId: string) => void;
 }
 
-<<<<<<< HEAD
 export function JobMatchCard({ 
-  matchId;
-  talentId;
-  name;
-  title;
-  company;
-  avatar;
-  location;
-  category;
-  matchPercent;
-  skills;
-  onApply;
-  onViewDetails;
+  matchId, 
+  talentId, 
+  name, 
+  title, 
+  company, 
+  avatar, 
+  location, 
+  category, 
+  matchPercent, 
+  skills,
+  onApply, 
+  onViewDetails, 
   onInvite 
 }: JobMatchProps) {
-  const handleApply = null;
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
+  const handleApply = () => {
+    if (onApply) {
+      onApply(matchId);
+    }
+  };
+
+  const handleViewDetails = () => {
+    if (onViewDetails) {
+      onViewDetails(matchId);
+    }
+  };
+
+  const handleInvite = () => {
+    if (onInvite) {
+      onInvite(matchId);
+    }
+  };
+
+  // Generate a formatted date for display
+  const postedDate = new Date();
+  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)); // Random date within last 2 weeks
   
   return (
     <Card className="overflow-hidden">
@@ -118,16 +137,5 @@ export function JobMatchCard({
         </div>
       </CardContent>
     </Card>
-  )
-=======
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-}
+  );
 }

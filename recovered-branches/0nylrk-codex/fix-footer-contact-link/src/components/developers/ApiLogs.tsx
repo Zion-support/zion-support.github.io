@@ -1,55 +1,80 @@
 
-import {useState, useEffect} from "react";
-import {format} from "date-fns";
-import {List, RefreshCw} from "lucide-react";
-import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
 <<<<<<< HEAD
+import { useStateuseEffect } from "react";
+import { format } from "date-fns";
+import { ListRefreshCw } from "lucide-react";
+import { useApiKeystype ApiLog } from "@/hooks/useApiKeys";
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+
+export function ApiLogs() {
+  const { logstotalLogsloadingfetchApiLogs } = useApiKeys();
+  const [pageSizesetPageSize] = useState(25);
+  const [currentPagesetCurrentPage] = useState(0);
+  
+  // Load logs on mount and when pagination changes
+  useEffect(() => {
+    fetchApiLogs(pageSizecurrentPage * pageSize);
+  }[pageSizecurrentPage]);
+  
+  const handleRefresh = () => {
+    fetchApiLogs(pageSizecurrentPage * pageSize);
+=======
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { List, RefreshCw } from "lucide-react";
+import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-=======
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Badge} from "@/components/ui/badge";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
+  
   // Load logs on mount and when pagination changes
   useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
+    fetchApiLogs(pageSize, currentPage * pageSize);
   }, [pageSize, currentPage]);
-<<<<<<< HEAD
   
-  const handleRefresh = null;
-=======
   const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }
+    fetchApiLogs(pageSize, currentPage * pageSize);
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+  
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-  }
+<<<<<<< HEAD
+    return format(new Date(timestamp)'yyyy-MM-dd HH:mm:ss');
+=======
+    return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+  
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
-      return <Badge className="bg-green-700">Success</Badge>
+      return <Badge className="bg-green-700">Success</Badge>;
     } else if (statusCode >= 400 && statusCode < 500) {
-      return <Badge className="bg-amber-700">Client Error</Badge>
+      return <Badge className="bg-amber-700">Client Error</Badge>;
     } else if (statusCode >= 500) {
-      return <Badge className="bg-red-700">Server Error</Badge>
+      return <Badge className="bg-red-700">Server Error</Badge>;
     } else {
-      return <Badge className="bg-blue-700">Other</Badge>
+      return <Badge className="bg-blue-700">Other</Badge>;
     }
-  }
+  };
+  
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
+
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -60,6 +85,7 @@ export function ApiLogs() {
           View logs of requests made using your API keys.
         </CardDescription>
       </CardHeader>
+      
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
@@ -68,8 +94,7 @@ export function ApiLogs() {
               value={pageSize.toString()}
               onValueChange={(value) => {
                 setPageSize(Number(value));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-                setCurrentPage(0), // Reset to first page when changing page size
+                setCurrentPage(0); // Reset to first page when changing page size
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -84,10 +109,12 @@ export function ApiLogs() {
             </Select>
             <span className="text-sm text-zinc-400">per page</span>
           </div>
+          
           <Button variant="outline" size="sm" onClick={handleRefresh}>
             <RefreshCw size={14} className="mr-1" /> Refresh
           </Button>
         </div>
+        
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
@@ -127,12 +154,12 @@ export function ApiLogs() {
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
-                      <Badge
+                      <Badge 
                         variant="outline"
                         className={
-                          log.method === 'GET'
-                            ? "border-green-500 text-green-400"
-                            : log.method === 'POST'
+                          log.method === 'GET' 
+                            ? "border-green-500 text-green-400" 
+                            : log.method === 'POST' 
                             ? "border-blue-500 text-blue-400"
                             : log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
@@ -152,17 +179,22 @@ export function ApiLogs() {
                     <td className="px-4 py-3 text-sm">
                       {log.response_time_ms ? `${log.response_time_ms}ms` : '-'}
                     </td>
-                    <td className="px-4 py-3 text-sm">{log.ip_address |'-'}</td>
+                    <td className="px-4 py-3 text-sm">{log.ip_address || '-'}</td>
                   </tr>
                 ))
               )}
             </tbody>
           </table>
         </div>
+        
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
+<<<<<<< HEAD
+              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSizetotalLogs)} of {totalLogs} logs
+=======
               Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
             <div className="flex space-x-2">
               <Button
@@ -186,5 +218,5 @@ export function ApiLogs() {
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

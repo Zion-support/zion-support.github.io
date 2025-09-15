@@ -6,33 +6,33 @@ function fixAllJSX(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix semicolons in JSX elements;
+    // Fix semicolons in JSX elements
     content = content.replace(/<(\w+);/g, '<$1');
     content = content.replace(/<\/(\w+)>;/g, '</$1>');
 
-    // Fix semicolons in JSX attributes;
+    // Fix semicolons in JSX attributes
     content = content.replace(/(\w+)="([^"]*)";/g, '$1="$2"');
     content = content.replace(/(\w+)=\{([^}]+)\};/g, '$1={$2}');
 
-    // Fix semicolons in JSX text content;
+    // Fix semicolons in JSX text content
     content = content.replace(/>([^<]+);</g, '>$1<');
 
-    // Fix semicolons in JSX expressions;
+    // Fix semicolons in JSX expressions
     content = content.replace(/\{([^}]+)\};/g, '{$1}');
 
-    // Fix semicolons in JSX closing tags;
+    // Fix semicolons in JSX closing tags
     content = content.replace(/>\s*;/g, '>');
 
-    // Fix semicolons in JSX self-closing tags;
+    // Fix semicolons in JSX self-closing tags
     content = content.replace(/<(\w+)([^>]*)\s*\/>;/g, '<$1$2 />');
 
-    // Fix semicolons in JSX comments;
+    // Fix semicolons in JSX comments
     content = content.replace(/{\/\*([^*]+)\*\/};/g, '{/*$1*/}');
 
-    // Fix object syntax in JSX attributes;
+    // Fix object syntax in JSX attributes
     content = content.replace(/\{\s*\{\s*([^}]+)\s*\}\s*\}/g, '{{$1}}');
 
-    // Fix spaces in object syntax;
+    // Fix spaces in object syntax
     content = content.replace(/\{\s*\{\s*([^}]+)\s*\}\s*\}/g, '{{$1}}');
 
     if (content !== fs.readFileSync(filePath, 'utf8')) {
@@ -42,7 +42,7 @@ function fixAllJSX(filePath) {
 
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath} `, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }

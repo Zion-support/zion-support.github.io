@@ -10,8 +10,8 @@ const path = require('path');
 
 class AppImprover {
   constructor() {
-    this.improvements = [],
-    this.issues = []
+    this.improvements = [];
+    this.issues = [];
   }
 
   log(message) {
@@ -134,7 +134,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;"
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   
   // Security headers
@@ -254,8 +254,8 @@ const fs = require('fs');
 
 class SecurityAuditor {
   constructor() {
-    this.issues = [],
-    this.fixes = []
+    this.issues = [];
+    this.fixes = [];
   }
 
   async runAudit() {
@@ -339,17 +339,17 @@ module.exports = SecurityAuditor;`;
       JSON.stringify(report, null, 2)
     );
 
-    console.log('\n📊 App Analysis Report: '),
+    console.log('\n📊 App Analysis Report:');
     console.log(`❌ Issues found: ${this.issues.length}`);
     console.log(`🚀 Improvements suggested: ${this.improvements.length}`);
 
     if (this.issues.length > 0) {
-      console.log('\nIssues: '),
+      console.log('\nIssues:');
       this.issues.forEach(issue => console.log(`  - ${issue}`));
     }
 
     if (this.improvements.length > 0) {
-      console.log('\nImprovements: '),
+      console.log('\nImprovements:');
       this.improvements.forEach(improvement =>
         console.log(`  - ${improvement}`)
       );

@@ -11,54 +11,28 @@
   },
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/about",
     "title": "About Us — Zion Tech Group | Leading-Edge Technology Solutions",
     "h1": "About Zion Tech Group"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/comprehensive-2025-services-showcase",
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
   {
+<<<<<<< HEAD
+    "route": "/contact",
+    "title": "Contact Us — Zion Tech Group | Get in Touch",
+    "h1": "Get in Touch"
+=======
+    "route": "/comprehensive-2026-services-showcase",
+    "title": "2026 Comprehensive Services Showcase — Zion Tech Group",
+    "h1": "2026 Comprehensive Services Showcase"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
   },
-  {  },
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  {  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  {  },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   {
     "route": "/",
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
@@ -71,21 +45,6 @@
   },
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/resources",
     "title": "Resources — Zion Tech Group | Documentation, Tools & Community",
     "h1": "Resources Hub"
@@ -98,31 +57,11 @@
   {
     "route": "/solutions",
     "title": "Solutions — Zion Tech Group | Industry-Specific Technology Solutions",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     "h1": "Industry Solutions"
 =======
     "route": "/services-advertising-2026",
     "title": "2026 Services Advertising & Marketing — Zion Tech Group",
     "h1": "2026 Services Advertising & Marketing"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
-    "h1": "Industry Solutions"  }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "h1": "Industry Solutions"  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "h1": "Industry Solutions"  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ]

@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Gitleaks
 
 on:
@@ -32,12 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       - name: Checkout repository
 =======
 name: Secret scan (Gitleaks)
@@ -64,29 +43,11 @@ jobs:
     steps:
       - name: Checkout
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Checkout repository        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      - name: Checkout repository        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -99,12 +60,6 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 
 =======
       - name: Run Gitleaks
@@ -125,12 +80,3 @@ concurrency:
         with:
           sarif_file: gitleaks.sarif
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -1,124 +1,84 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { CrownMedalTrophy } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+
 interface LeaderboardEntry {
-<<<<<<< HEAD
   id: string;
   rank: number;
   name: string;
   avatar?: string;
   referrals: number;
   earnings: number;
-=======
-  id: string
-  rank: number
-  name: string
-  avatar?: string;
-  referrals: number
-  earnings: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  badges: string[]
+  badges: string[];
 }
+
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
+      id: "1",
+      rank: 1,
+      name: "AI Tech Guru",
 <<<<<<< HEAD
-      id: "1";
-      rank: 1;
-      name: "AI Tech Guru";
-      avatar: "", // URL would be here
-      referrals: 178;
-      earnings: 4500;
+      avatar: ""// URL would be here
+      referrals: 178,
+      earnings: 4500,
+      badges: ["gold"trending"]
 =======
-      id: "1"
-      rank: 1
-      name: "AI Tech Guru"
       avatar: "", // URL would be here
-      referrals: 178
-      earnings: 4500
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+      referrals: 178,
+      earnings: 4500,
       badges: ["gold", "trending"]
-    }
+>>>>>>> origin/auto/autonomy-17186719616
+    },
     {
-<<<<<<< HEAD
-      id: "2";
-      rank: 2;
-      name: "Machine Learning Hub";
-      avatar: "";
-      referrals: 145;
-      earnings: 3625;
-=======
-      id: "2"
-      rank: 2
-      name: "Machine Learning Hub"
-      avatar: ""
-      referrals: 145
-      earnings: 3625
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+      id: "2",
+      rank: 2,
+      name: "Machine Learning Hub",
+      avatar: "",
+      referrals: 145,
+      earnings: 3625,
       badges: ["silver"]
-    }
+    },
     {
-<<<<<<< HEAD
-      id: "3";
-      rank: 3;
-      name: "Neural Networks Pro";
-      avatar: "";
-      referrals: 124;
-      earnings: 3100;
-=======
-      id: "3"
-      rank: 3
-      name: "Neural Networks Pro"
-      avatar: ""
-      referrals: 124
-      earnings: 3100
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+      id: "3",
+      rank: 3,
+      name: "Neural Networks Pro",
+      avatar: "",
+      referrals: 124,
+      earnings: 3100,
       badges: ["bronze"]
-    }
+    },
     {
-<<<<<<< HEAD
-      id: "4";
-      rank: 4;
-      name: "AI Career Insights";
-      avatar: "";
-      referrals: 98;
-      earnings: 2450;
-=======
-      id: "4"
-      rank: 4
-      name: "AI Career Insights"
-      avatar: ""
-      referrals: 98
-      earnings: 2450
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+      id: "4",
+      rank: 4,
+      name: "AI Career Insights",
+      avatar: "",
+      referrals: 98,
+      earnings: 2450,
       badges: []
-    }
+    },
     {
-<<<<<<< HEAD
-      id: "5";
-      rank: 5;
-      name: "Deep Learning Daily";
-      avatar: "";
-      referrals: 87;
-      earnings: 2175;
-=======
-      id: "5"
-      rank: 5
-      name: "Deep Learning Daily"
-      avatar: ""
-      referrals: 87
-      earnings: 2175
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+      id: "5",
+      rank: 5,
+      name: "Deep Learning Daily",
+      avatar: "",
+      referrals: 87,
+      earnings: 2175,
       badges: ["newcomer"]
     }
   ];
+  
   // Function to render rank badge
-<<<<<<< HEAD
-  const renderRankBadge = null;
-=======
   const renderRankBadge = (rank: number) => {
     switch(rank) {
       case 1:
@@ -126,12 +86,12 @@ export function PartnerLeaderboard() {
       case 2:
         return <Medal className="h-5 w-5 text-gray-400" />;
       case 3:
-        return <Medal className="h-5 w-5 text-amber-700" />
+        return <Medal className="h-5 w-5 text-amber-700" />;
       default:
-        return <span className="text-sm font-semibold">{rank}</span>
+        return <span className="text-sm font-semibold">{rank}</span>;
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+  
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -146,10 +106,10 @@ export function PartnerLeaderboard() {
           <div className="space-y-4">
             {leaderboard.length > 0 ? (
               leaderboard.map(entry => (
-                <div
-                  key={entry.id}
+                <div 
+                  key={entry.id} 
                   className={`flex items-center justify-between p-3 rounded-md ${
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
+                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' : 
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
                   }`}
                 >
@@ -160,7 +120,11 @@ export function PartnerLeaderboard() {
                     <Avatar className="h-10 w-10 border border-zion-blue-light">
                       <AvatarImage src={entry.avatar} />
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">
+<<<<<<< HEAD
+                        {entry.name.substring(02).toUpperCase()}
+=======
                         {entry.name.substring(0, 2).toUpperCase()}
+>>>>>>> origin/auto/autonomy-17186719616
                       </AvatarFallback>
                     </Avatar>
                     <div>
@@ -200,6 +164,7 @@ export function PartnerLeaderboard() {
           </div>
         </CardContent>
       </Card>
+      
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Your Ranking</CardTitle>
@@ -216,6 +181,7 @@ export function PartnerLeaderboard() {
           </div>
         </CardContent>
       </Card>
+      
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Rewards Program</CardTitle>
@@ -236,6 +202,7 @@ export function PartnerLeaderboard() {
               <li>Monthly strategy call with Zion AI team</li>
             </ul>
           </div>
+          
           <div className="p-4 bg-zion-blue rounded-md">
             <div className="flex items-center gap-2 mb-2">
               <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
@@ -252,5 +219,5 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

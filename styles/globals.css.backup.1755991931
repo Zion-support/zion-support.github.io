@@ -895,21 +895,6 @@ body::after {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .quantum-loader::before {
   top: 0;
   left: 0;
@@ -926,12 +911,6 @@ body::after {
   bottom: 10px;
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   animation-direction: reverse;
 =======
 /* Print styles */
@@ -949,21 +928,108 @@ body::after {
     border: 1px solid #000000 !important;
     box-shadow: none !important;
   }
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  animation-direction: reverse;}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  animation-direction: reverse;}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  animation-direction: reverse;}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+/* New futuristic effects */
+.quantum-glow {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.5),
+    0 0 40px rgba(147, 51, 234, 0.3),
+    0 0 60px rgba(16, 185, 129, 0.2);
+  animation: quantumPulse 3s ease-in-out infinite;
+}
+
+@keyframes quantumPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.5),
+      0 0 40px rgba(147, 51, 234, 0.3),
+      0 0 60px rgba(16, 185, 129, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(59, 130, 246, 0.8),
+      0 0 60px rgba(147, 51, 234, 0.5),
+      0 0 90px rgba(16, 185, 129, 0.4);
+  }
+}
+
+.holographic-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #3b82f6, #9333ea, #10b981, #f59e0b);
+  background-clip: padding-box;
+}
+
+.holographic-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #9333ea, #10b981, #f59e0b);
+  border-radius: inherit;
+  z-index: -1;
+  animation: holographicRotate 4s linear infinite;
+}
+
+@keyframes holographicRotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.neural-network {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+  background-size: 100px 100px, 150px 150px, 200px 200px;
+  animation: neuralFlow 20s linear infinite;
+}
+
+@keyframes neuralFlow {
+  0% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  50% { background-position: 100% 100%, 0% 0%, 50% 50%; }
+  100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+}
+
+.cyberpunk-grid {
+  background-image: 
+    linear-gradient(rgba(239, 68, 68, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 68, 68, 0.2) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: cyberpunkScan 2s linear infinite;
+}
+
+@keyframes cyberpunkScan {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(30px, 30px); }
+}
+
+.quantum-field {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(59, 130, 246, 0.3),
+    transparent,
+    rgba(147, 51, 234, 0.3),
+    transparent
+  );
+  animation: quantumSpin 8s linear infinite;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+}
 
 @keyframes quantumSpin {
   0% { transform: rotate(0deg); }
@@ -971,21 +1037,6 @@ body::after {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -1052,17 +1103,11 @@ body::after {
 @keyframes cyberMove {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+=======
+.biomedical-pulse {
+  animation: biomedicalPulse 2s ease-in-out infinite;
 }
-<<<<<<< HEAD
 
 @keyframes biomedicalPulse {
   0%, 100% { 
@@ -1146,14 +1191,3 @@ body::after {
   }
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -2,11 +2,15 @@ name: Marketing Sync (LinkedIn + Instagram)
 
 on:
 
+
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -16,15 +20,22 @@ concurrency:
 
 jobs:
 
+
   main: name: Main Job
       - name: Checkout repository
 
+                
           fetch-depth: 0
 
       - name: Setup Node.js
 
+
+                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
+
+
+                
 

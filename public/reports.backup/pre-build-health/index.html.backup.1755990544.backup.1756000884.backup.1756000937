@@ -14,31 +14,11 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 </style>
 <h1>Pre-Build Health Check Report</h1>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
 <p>Generated 8/19/2025, 5:47:02 PM</p>
 =======
 <p>Generated 8/19/2025, 5:50:49 PM</p>
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <div class="build-status build-success">✅ BUILD READY</div>
-<p>Generated 8/19/2025, 5:47:02 PM</p><div class="build-status build-success">✅ BUILD READY</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-<p>Generated 8/19/2025, 5:47:02 PM</p><div class="build-status build-success">✅ BUILD READY</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-<p>Generated 8/19/2025, 5:47:02 PM</p><div class="build-status build-success">✅ BUILD READY</div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <div class="card">
 <h2>Summary</h2>
 <p><strong>Total Checks:</strong> 6</p>

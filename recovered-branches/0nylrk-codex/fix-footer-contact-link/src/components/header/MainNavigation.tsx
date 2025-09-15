@@ -1,22 +1,25 @@
 
 import React from 'react';
-import { Link  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
+
 interface MainNavigationProps {
-  className?: string
+  className?: string;
 }
+
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
 <<<<<<< HEAD
-    <nav className;
+    <nav className={cn("hidden md:flex items-center space-x-6"className)}>
 =======
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>
+>>>>>>> origin/auto/autonomy-17186719616
       <NavLink
         to="/"
         className={({ isActive }) =>
           cn(
-            "text-sm font-medium transition-colors hover: text-primary"
+            "text-sm font-medium transition-colors hover:text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -42,7 +45,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
         to="/partners"
         className={({ isActive }) =>
           cn(
-            "text-sm font-medium transition-colors hover: text-primary"
+            "text-sm font-medium transition-colors hover:text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -53,9 +56,8 @@ export function MainNavigation({ className }: MainNavigationProps) {
         to="/signup"
         className={({ isActive }) =>
           cn(
-            "text-sm font-medium transition-colors hover: text-primary";
-            isActive ? "text-zion-cyan" : "text-muted-foreground"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+            "text-sm font-medium transition-colors hover:text-primary",
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
         }
@@ -63,5 +65,5 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Register
       </NavLink>
     </nav>
-  )
+  );
 }

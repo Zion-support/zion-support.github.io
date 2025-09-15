@@ -1,34 +1,20 @@
-import React from 'react'
-}
-import React, { Suspense, lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
+
 interface LazyComponentProps {
-  component: ComponentType<Record<string, unknown>>;
-  fallback?: ReactNode;
-  [key: string]: unknown
+  component: () => Promise<{ default: React.ComponentType<any> }>;
+  fallback?: React.ReactNode;
+  [key: string]: any;
 }
-<<<<<<< HEAD
 
 export const LazyComponent: React.FC<LazyComponentProps> = ({
-  component;
-  fallback;
-=======
-const LazyComponent: React.FC<LazyComponentProps> = ({
-  component: Component
-  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  component,
+  fallback = <div>Loading...</div>,
   ...props
+}) => {
+  const LazyLoadedComponent = lazy(component);
   return (
     <Suspense fallback={fallback}>
-      <Component {...props} />
+      <LazyLoadedComponent {...props} />
     </Suspense>
   );
-}
-export default LazyComponent;
-<<<<<<< HEAD
-=======
-import React from 'react';
 };
-=======
-import React from 'react';
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

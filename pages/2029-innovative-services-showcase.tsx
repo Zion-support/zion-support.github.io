@@ -1,63 +1,52 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Atom, Target, ArrowRight, CheckCircle, Star;
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { 
+  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
   Phone, Mail, MapPin
- } from 'lucide-react';
+} from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { aiAutonomousEcosystemServices2029  } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029  } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
-const contactInfo = null;
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star
-  Phone, Mail, MapPin
-} from 'lucide-react'
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',
+
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+},
+
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
-    ...aiAutonomousEcosystemServices2029
-    ...emergingTechBreakthroughServices2029
+    ...aiAutonomousEcosystemServices2029,
+    ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029
-  ]
+  ],
+
   const serviceCategories = [
     {
-      title: '🚀 AI Autonomous Ecosystem'
-      icon: Brain
-      color: 'from-violet-600 via-purple-600 to-indigo-600'
+      title: '🚀 AI Autonomous Ecosystem',
+      icon: Brain,
+      color: 'from-violet-600 via-purple-600 to-indigo-600',
       services: aiAutonomousEcosystemServices2029
-    }
+    },
     {
-      title: '⚛️ Emerging Tech Breakthroughs'
-      icon: Atom
-      color: 'from-indigo-600 via-blue-600 to-cyan-600'
+      title: '⚛️ Emerging Tech Breakthroughs',
+      icon: Atom,
+      color: 'from-indigo-600 via-blue-600 to-cyan-600',
       services: emergingTechBreakthroughServices2029
-    }
+    },
     {
-      title: '🎯 Practical Business Solutions'
-      icon: Target
-      color: 'from-cyan-600 via-teal-600 to-emerald-600'
+      title: '🎯 Practical Business Solutions',
+      icon: Target,
+      color: 'from-cyan-600 via-teal-600 to-emerald-600',
       services: practicalBusinessSolutionServices2029
     }
-  ]
+  ],
+
   return (
     <>
       <Head>
@@ -66,8 +55,10 @@ export default function InnovativeServicesShowcase2029() {
         <meta name="keywords" content="2029 services, AI autonomous, emerging technology, business solutions, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-innovative-services-showcase" />
       </Head>
+      
       <div className="min-h-screen bg-black text-white">
         <UltraFuturisticNavigation2029 />
+
         {/* Hero Section */}
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
@@ -80,8 +71,7 @@ export default function InnovativeServicesShowcase2029() {
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Experience the future of technology with our revolutionary AI autonomous ecosystems
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -96,6 +86,7 @@ export default function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
+
         {/* Services Overview */}
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
@@ -108,10 +99,11 @@ export default function InnovativeServicesShowcase2029() {
                 Revolutionary Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2029 services are organized into three cutting-edge categories, each designed to
+                Our 2029 services are organized into three cutting-edge categories, each designed to 
                 revolutionize different aspects of business and technology.
               </p>
             </motion.div>
+
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               {serviceCategories.map((category, index) => (
                 <motion.div
@@ -127,7 +119,7 @@ export default function InnovativeServicesShowcase2029() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
                     <p className="text-gray-300 mb-6">
-                      {category.services.length} cutting-edge services designed to transform your business
+                      {category.services.length} cutting-edge services designed to transform your business 
                       and accelerate your success in the digital age.
                     </p>
                     <div className="text-sm text-gray-400">
@@ -139,6 +131,7 @@ export default function InnovativeServicesShowcase2029() {
             </div>
           </div>
         </section>
+
         {/* Featured Services */}
         <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
@@ -151,10 +144,11 @@ export default function InnovativeServicesShowcase2029() {
                 Featured Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our most innovative and transformative services that are reshaping industries
+                Explore our most innovative and transformative services that are reshaping industries 
                 and creating new possibilities for businesses worldwide.
               </p>
             </motion.div>
+
             <div className="grid lg:grid-cols-2 gap-8">
               {allServices.slice(0, 4).map((service, index) => (
                 <motion.div
@@ -165,6 +159,7 @@ export default function InnovativeServicesShowcase2029() {
                   viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
+                  
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <div className="text-gray-400 text-sm mb-1">Starting Price</div>
@@ -175,6 +170,7 @@ export default function InnovativeServicesShowcase2029() {
                       <div className="text-lg font-semibold text-blue-400">{service.marketSize}</div>
                     </div>
                   </div>
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
@@ -183,6 +179,7 @@ export default function InnovativeServicesShowcase2029() {
                       </span>
                     ))}
                   </div>
+
                   <div className="flex gap-4">
                     <Link
                       href={`/services/${service.id}`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -197,6 +194,7 @@ export default function InnovativeServicesShowcase2029() {
                 </motion.div>
               ))}
             </div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -210,6 +208,7 @@ export default function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
+
         {/* Contact CTA */}
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
@@ -223,9 +222,10 @@ export default function InnovativeServicesShowcase2029() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Join the future of technology with our innovative 2029 services.
+                Join the future of technology with our innovative 2029 services. 
                 Contact us today to discover how we can revolutionize your business operations.
               </p>
+              
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 <div className="flex items-center justify-center gap-4 text-gray-300">
                   <Phone className="w-6 h-6 text-purple-400" />
@@ -240,6 +240,7 @@ export default function InnovativeServicesShowcase2029() {
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
+
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -254,6 +255,7 @@ export default function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
+
         <UltraFuturisticFooter2029 />
       </div>
     </>

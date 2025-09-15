@@ -1,69 +1,85 @@
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-type RoadmapInputs = any;
-=======
+import Head from 'next/head',
+import React, { useMemo, useState } from 'react',
+
 type RoadmapInputs = {
-  milestones: string
-  keywords: string
+  milestones: string,
+  keywords: string,
   priorities: string
-}
+},
+
 type Stage = {
-  id: number
-  name: string
-  theme: string
-  objective: string
-  highlights: string[]
+  id: number,
+  name: string,
+  theme: string,
+  objective: string,
+  highlights: string[],
   metrics: string[]
-}
+},
+
 function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
   const keywordList = keywords
     .split(/,|\n/)
     .map((s) => s.trim())
-    .filter(Boolean)
+    .filter(Boolean),
+
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
-    .filter(Boolean)
+    .filter(Boolean),
+
   const baseThemes = [
-    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces'
-    'Governance & OwnershipGlobal Scale']
+    'FoundationsTrust Layer',
+    'AI-Native MatchingReputation & Identity',
+    'Payments & EscrowMarketplace Liquidity',
+    'Sovereign WorkflowsOpen Protocol Interfaces',
+    'Governance & OwnershipGlobal Scale'],
+
   return baseThemes.map((theme, index) => {
-    const id = index + 1
-    const name = `Zion v${id}`
-    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() |'core principles'}, focus: ${
-      priorityList.join() |'execution and learning'
-    }.`
+    const id = index + 1,
+    const name = `Zion v${id}`,
+
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join(', ') || 'core principles'}, focus: ${
+      priorityList.join() || 'execution and learning'
+    }.`,
+
     const highlights: string[] = [
-      index === 0 && 'Design system, domain model, and initial data architecture'
-      index === 1 && 'Verifiable credentials, attestations, and dispute primitives'
-      index === 2 && 'AI-assisted scoping, matching, and brief generation'
-      index === 3 && 'Reputation graph, portable profiles, contribution proofs'
-      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps'
-      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration'
-      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations'
-      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem'
-      index === 8 && 'Progressive decentralization, contributor ownership, councils'
+      index === 0 && 'Design system, domain model, and initial data architecture',
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives',
+      index === 2 && 'AI-assisted scoping, matching, and brief generation',
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs',
+      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps',
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration',
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations',
+      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem',
+      index === 8 && 'Progressive decentralization, contributor ownership, councils',
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
-      .map((s) => String(s))
+      .map((s) => String(s)),
+
     const metrics: string[] = [
-      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-    return { id, name, theme, objective, highlights, metrics }
-  })
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)',
+      'On-chain/escrow settlement volumeTime-to-hire and time-to-pay',
+      'Retention and NPS'],
+
+    return { id, name, theme, objective, highlights, metrics },
+  }),
 }
+
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
+
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
 - priorities (string list)
+
 Goals:
 1) Produce a 10-stage roadmap labeled Zion v1 → v10
 2) For each stage: theme, objective, 3-5 highlights, 3-5 measurable metrics
 3) Ensure alignment with AI-native, trustless, talent-first, and sovereign tools ethos
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
+
 Format:
 Zion v{n} — {theme}
 Objective: ...
@@ -77,26 +93,30 @@ Validation:
 - ...
 `
 }
+
 export default function RoadmapPage(): JSX.Element {
-  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements')
-  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools')
-  const [priorities, setPriorities] = useState('governance, scale, regional expansion')
-  const [copied, setCopied] = useState(false)
+  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements'),
+  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools'),
+  const [priorities, setPriorities] = useState('governance, scale, regional expansion'),
+  const [copied, setCopied] = useState(false),
+
   const stages = useMemo(
-    () => generateStages({ milestones, keywords, priorities })
+    () => generateStages({ milestones, keywords, priorities }),
     [milestones, keywords, priorities]
-  )
-  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
+  ),
+
+  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), []),
+
   const copyPrompt = async () => {
     try {
-      await navigator.clipboard.writeText(operatorPrompt)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1500)
+      await navigator.clipboard.writeText(operatorPrompt),
+      setCopied(true),
+      setTimeout(() => setCopied(false), 1500),
     } catch {
-      setCopied(false)
+      setCopied(false),
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  },
+
   return (
     <>
       <Head>
@@ -109,6 +129,7 @@ export default function RoadmapPage(): JSX.Element {
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>
             <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>
           </header>
+
           <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">
             <div className="md:col-span-1">
               <h2 className="text-xl font-semibold">Generator Inputs</h2>
@@ -145,6 +166,7 @@ export default function RoadmapPage(): JSX.Element {
               </div>
             </div>
           </section>
+
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
@@ -157,6 +179,7 @@ export default function RoadmapPage(): JSX.Element {
             </div>
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
+
           <section>
             <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -203,5 +226,5 @@ export default function RoadmapPage(): JSX.Element {
         </div>
       </main>
     </>
-  )
+  ),
 }

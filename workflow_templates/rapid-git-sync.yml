@@ -2,10 +2,12 @@ name: Rapid Git Sync (15m)
 
 on:
 
+
   schedule: - cron: '0 * * * *'
   workflow_dispatch: {}
 
 concurrency:
+
 
   group: "rapid-git-sync-${{ github.ref }}"
   cancel-in-progress: true
@@ -14,19 +16,27 @@ concurrency:
 
 jobs:
 
+
   sync: - name: Checkout
            
           fetch-depth: 0
 
       - name: Setup Node.js
 
+
+                
           node-version: 20
           cache: npm
 
       - name: Install dependencies (minimal)
 
+
+                
+
       - name: Clean git state
 
+
+                
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Clean up any existing rebase state
@@ -38,6 +48,8 @@ jobs:
 
       - name: Git Sync
 
+
+                
           # Set environment variables for safer git operations
           export GIT_AUTHOR_NAME="github-actions[bot]"
           export GIT_COMMITTER_NAME="github-actions[bot]"

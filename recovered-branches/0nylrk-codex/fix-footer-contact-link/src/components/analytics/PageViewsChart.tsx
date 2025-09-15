@@ -1,41 +1,34 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-=======
 import React from "react";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+
 interface PageViewsChartProps {
-  data: Array<{ date: string, views: number }>;
+  data: Array<{ date: string; views: number }>;
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
+  onTimeRangeChange: (range: string) => void;
 }
-export function PageViewsChart({
-  data
-  timeRange
-  onTimeRangeChange
-}: PageViewsChartProps) {
+
+<<<<<<< HEAD
+export function PageViewsChart({ datatimeRangeonTimeRangeChange }: PageViewsChartProps) {
+=======
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
         <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>
-        <CardDescription className="text-zion-slate-light">
-          Daily page view statistics
-        </CardDescription>
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>
       </CardHeader>
       <CardContent className="p-0 pb-4">
-        <AnalyticsChart
+        <AnalyticsChart 
           title=""
-          data={data |[]}
-          dataKeys={["views"]}
+          data={data || []}
+          dataKeys={['views']}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />

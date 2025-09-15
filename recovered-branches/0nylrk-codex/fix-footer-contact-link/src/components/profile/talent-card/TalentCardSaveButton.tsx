@@ -1,77 +1,88 @@
 
-import React from "react",
-import { Heart } from "lucide-react",
+import React from "react";
+import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
+
 interface TalentCardSaveButtonProps {
-<<<<<<< HEAD
   profileId: string;
   profileName: string;
   isSaved: boolean;
+<<<<<<< HEAD
+  onToggleSave?: (id: stringisSaved: boolean) => void;
+=======
   onToggleSave?: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean
+>>>>>>> origin/auto/autonomy-17186719616
+  isAuthenticated: boolean;
 }
 
 export function TalentCardSaveButton({ 
-  profileId;
-  profileName;
-  isSaved;
-=======
-  profileId: string
-  profileName: string
-  isSaved: boolean
-  onToggleSave?: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-}
-export function TalentCardSaveButton({
+<<<<<<< HEAD
   profileId
-  profileName;
+  profileName,
   isSaved
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onToggleSave;
-  isAuthenticated
+=======
+  profileId, 
+  profileName,
+  isSaved, 
+>>>>>>> origin/auto/autonomy-17186719616
+  onToggleSave,
+  isAuthenticated 
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
-  // Handle save toggle
 <<<<<<< HEAD
-  const handleSaveToggle = null;
+  const [localIsSavedsetLocalIsSaved] = React.useState(isSaved);
 =======
+  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+>>>>>>> origin/auto/autonomy-17186719616
+  
+  // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation()
+    e.stopPropagation();
+    
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required"
-        description: "Please log in to save talents to your favorites"
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
         variant: "destructive"
       });
-      return
+      return;
     }
+    
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved)
+<<<<<<< HEAD
+      onToggleSave(profileId!localIsSaved);
+=======
+      onToggleSave(profileId, !localIsSaved);
+>>>>>>> origin/auto/autonomy-17186719616
     }
+    
     toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites"
-      description: localIsSaved
-        ? `${profileName} has been removed from your favorites`
-        : `${profileName} has been added to your favorites`;
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
+      description: localIsSaved 
+        ? `${profileName} has been removed from your favorites` 
+        : `${profileName} has been added to your favorites`,
       variant: "default"
-    })
-  }
+    });
+  };
+
   return (
-    <button
+    <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
       onClick={handleSaveToggle}
       aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
     >
-      <Heart
+      <Heart 
         className={cn(
+<<<<<<< HEAD
           "h-4 w-4 transition-colors"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+          "h-4 w-4 transition-colors", 
+>>>>>>> origin/auto/autonomy-17186719616
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-        )}
+        )} 
       />
     </button>
-  )
+  );
 }

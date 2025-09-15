@@ -1,19 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 
@@ -29,12 +14,6 @@ categories:
   - title: '⚡ Performance'
     labels:
       - 'perf'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       - 'performance'
 =======
 name-template: 'v$NEXT_PATCH_VERSION'
@@ -49,29 +28,11 @@ categories:
       - 'bug'
       - 'fix'
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   - title: '🧰 Maintenance'
     labels:
       - 'chore'
       - 'dependencies'
-      - 'performance'  - title: '🧰 Maintenance'
-    labels:
-      - 'chore'
-      - 'dependencies'
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      - 'performance'  - title: '🧰 Maintenance'
-    labels:
-      - 'chore'
-      - 'dependencies'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   - title: '📝 Documentation'
     labels:
       - 'docs'
@@ -96,23 +57,8 @@ template: |
   $CHANGES
 
   ## Contributors
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   $CONTRIBUTORS
-  $CONTRIBUTORS
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-  $CONTRIBUTORS
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+no-changes-template: 'No user-facing changes.'
+>>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342

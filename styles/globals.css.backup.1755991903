@@ -352,21 +352,6 @@ body::after {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -790,17 +775,17 @@ body::after {
     background: white;
     color: black;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+=======
+/* Advanced Holographic Effects */
+.holographic-bg {
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(147, 51, 234, 0.1) 50%, transparent 70%),
+    linear-gradient(90deg, transparent 30%, rgba(16, 185, 129, 0.1) 50%, transparent 70%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: holographicShift 15s ease-in-out infinite;
 }
-<<<<<<< HEAD
 
 @keyframes holographicShift {
   0%, 100% { 
@@ -1192,14 +1177,3 @@ body::after {
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

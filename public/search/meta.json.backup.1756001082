@@ -606,36 +606,13 @@
   },
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/revolutionary-2025-services-showcase",
     "title": "Revolutionary 2025 Services Showcase | Zion Tech Group",
     "h1": "Revolutionary 2025 Services"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/revolutionary-2028-pricing",
     "title": "2028 Revolutionary Pricing - Zion Tech Group",
     "h1": ""
@@ -928,19 +905,12 @@
   {
     "route": "/reports",
     "title": "",
+<<<<<<< HEAD
+    "h1": "Reports"
+=======
+    "h1": "Autonomous Content Hub"
+>>>>>>> origin/cursor/improve-content-organization-and-searchability-fa56
   },
-  {  },
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  {  },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  {  },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   {
     "route": "/reports/links",
     "title": "",

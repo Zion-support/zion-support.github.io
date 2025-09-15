@@ -42,7 +42,7 @@ function renderReport(results) {
 function main() {
   const pagesDir = path.join(process.cwd(), 'pages');
   const files = findPages(pagesDir);
-  const results = files.slice(0, 200).map((f) =></img> ({ file: path.relative(process.cwd(), f), data: analyze(fs.readFileSync(f, 'utf8')) }));
+  const results = files.slice(0, 200).map((f) => ({ file: path.relative(process.cwd(), f), data: analyze(fs.readFileSync(f, 'utf8')) }));
   const md = renderReport(results);
   ensureDir('docs');
   ensureDir(path.join('public', 'autonomy'));

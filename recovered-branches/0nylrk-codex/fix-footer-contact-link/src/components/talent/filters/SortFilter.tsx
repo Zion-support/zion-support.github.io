@@ -1,20 +1,21 @@
+
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
 <<<<<<< HEAD
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select",
-=======
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from "@/components/ui/select";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  SelectValue} from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
+
+export function SortFilter({ sortOptionsetSortOption }: SortFilterProps) {
+=======
+  SelectValue,
+} from "@/components/ui/select";
+import { SortFilterProps } from "@/types/filters";
+
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="mb-6">
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">

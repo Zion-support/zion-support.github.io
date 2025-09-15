@@ -7,36 +7,16 @@
     "canBuild": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "timestamp": "2025-08-19T18:52:46.389Z"
 =======
     "timestamp": "2025-08-20T12:26:14.200Z"
 >>>>>>> origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
 =======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "timestamp": "2025-08-19T23:54:02.694Z"
-    "timestamp": "2025-08-19T23:51:14.696Z"
-    "timestamp": "2025-08-19T18:52:46.389Z"    "timestamp": "2025-08-19T23:54:02.694Z"
-    "timestamp": "2025-08-19T23:51:14.696Z"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
 =======
-=======
-    "timestamp": "2025-08-19T18:52:46.389Z"    "timestamp": "2025-08-19T23:54:02.694Z"
     "timestamp": "2025-08-19T23:51:14.696Z"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "timestamp": "2025-08-19T18:52:46.389Z"    "timestamp": "2025-08-19T23:54:02.694Z"
-    "timestamp": "2025-08-19T23:51:14.696Z"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/cursor/build-and-fix-errors-0fb2
+>>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
   },
   "results": [
     {
@@ -44,32 +24,13 @@
       "status": "PASS",
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       "result": "All 1 pages are properly structured",
 =======
       "result": "All 23 pages are properly structured",
 >>>>>>> origin/cursor/bc-37e0a79f-43c4-4216-bd12-ddf1b3362bec-8633
 =======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "result": "All 29 pages are properly structured",
-      "result": "All 1 pages are properly structured",      "result": "All 29 pages are properly structured",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "result": "All 1 pages are properly structured",      "result": "All 29 pages are properly structured",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "result": "All 1 pages are properly structured",      "result": "All 29 pages are properly structured",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
       "critical": true
     },
     {

@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const AiModelDevelopmentChat: NextPage;
-=======
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+
 const AiModelDevelopmentChat: NextPage = () => {
   return (
     <div>
       <Head>
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <meta
-          name="description"
-          content="AiModelDevelopmentChat service"
-        />{" "}
+        <meta name="description" content="AiModelDevelopmentChat service" />
       </Head>
+      
       <main>
         <h1>AiModelDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -24,6 +17,6 @@ const AiModelDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-}
+};
+
 export default AiModelDevelopmentChat;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

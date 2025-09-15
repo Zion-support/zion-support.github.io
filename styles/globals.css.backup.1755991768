@@ -39,12 +39,6 @@
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
   --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);
@@ -69,27 +63,7 @@
   --holographic-matrix-advanced: 0 0 300px rgba(139, 92, 246, 0.08);
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-71e4
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
-  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
-  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
-  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
-  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
-  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
-  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
-  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 /* Base styles */
 @layer base {

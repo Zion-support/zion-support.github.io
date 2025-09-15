@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+
 export default function KubernetesRbacAuditorPage() {
   return (
     <Layout>
@@ -18,7 +15,7 @@ export default function KubernetesRbacAuditorPage() {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>
           <p className="text-slate-300">Over-permission detection, wildcard checks, unused bindings, and least-privilege recommendations.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'Cluster-wide RBAC inventoryOver-permission & wildcard detectionUnused binding analysisLeast-privilege recommendations' ].map((f) => (
+            {[ 'Cluster-wide RBAC inventoryOver-permission & wildcard detection', 'Unused binding analysisLeast-privilege recommendations' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-sky-500/30 text-slate-200">{f}</div>
             ))}
           </div>
@@ -29,5 +26,6 @@ export default function KubernetesRbacAuditorPage() {
         </div>
       </div>
     </Layout>
-  )
+  ),
 }
+

@@ -3,50 +3,15 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 /* CSS Variables for modern theming */
 =======
 /* Enhanced Futuristic Design System with Superior Contrast */
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 :root {
-/* CSS Variables for modern theming */:root {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-/* CSS Variables for modern theming */:root {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-/* CSS Variables for modern theming */:root {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   --background: #000000;
   --foreground: #ffffff;
   --primary: #3b82f6;
@@ -108,12 +73,6 @@
   box-shadow: var(--holographic-glow);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
 /* Enhanced Selection */
 ::selection {
@@ -276,27 +235,7 @@ input, textarea, select {
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   color: white;
-/* Enhanced Selection */
-::selection {
-  background: rgba(0, 255, 255, 0.4);  color: white;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-/* Enhanced Selection */
-::selection {
-  background: rgba(0, 255, 255, 0.4);  color: white;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-/* Enhanced Selection */
-::selection {
-  background: rgba(0, 255, 255, 0.4);  color: white;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 

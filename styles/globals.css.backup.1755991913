@@ -185,21 +185,6 @@ h3 {
   height: 100%;
   background: 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
@@ -208,12 +193,6 @@ h3 {
     radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 30% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);
 =======
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
@@ -227,21 +206,7 @@ h3 {
     radial-gradient(circle at 85% 60%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 15% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   pointer-events: none;
-    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   z-index: -1;
   animation: backgroundFloat 30s ease-in-out infinite;
 }
@@ -513,12 +478,6 @@ body::after {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Advanced Card Hover Effects */
 .futuristic-card {
 =======
@@ -667,34 +626,11 @@ body::after {
 /* Enhanced Button Effects */
 .quantum-button {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: relative;
-/* Advanced Card Hover Effects */
-.futuristic-card {  position: relative;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-/* Advanced Card Hover Effects */
-.futuristic-card {  position: relative;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-/* Advanced Card Hover Effects */
-.futuristic-card {  position: relative;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
 <<<<<<< HEAD
 .futuristic-card::before {
 =======
@@ -740,21 +676,7 @@ body::after {
 
 .quantum-button::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
-.futuristic-card::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-.futuristic-card::before {  content: '';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-.futuristic-card::before {  content: '';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: absolute;
   top: 0;
   left: -100%;

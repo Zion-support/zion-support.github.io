@@ -1,22 +1,35 @@
 import type { DefaultSeoProps } from 'next-seo';
-<<<<<<< HEAD
-const config: DefaultSeoProps;
-export default config;
-=======
-  defaultTitle: 'Zion Tech Solutions';
-  titleTemplate: '%s | Zion Tech Solutions'
-  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
+
+const config: DefaultSeoProps = {
+  defaultTitle: 'Zion Tech Solutions',
+  titleTemplate: '%s | Zion Tech Solutions',
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.',
   openGraph: {
-    type: 'website';
-    locale: 'en_US';
-    url: 'https://ziontechgroup.netlify.app'
-    siteName: 'Zion Tech Solutions'}
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup.netlify.app',
+<<<<<<< HEAD
+    siteName: 'Zion Tech Solutions'},
   twitter: {
-    handle: '@ziontech';
-    site: '@ziontech'
-    cardType: 'summary_large_image'}
+    handle: '@ziontech',
+    site: '@ziontech',
+    cardType: 'summary_large_image'},
   additionalMetaTags: [
-{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    { name: 'theme-color', content: '#111827' }]}
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'theme-color', content: '#111827' }]};
+=======
+    siteName: 'Zion Tech Solutions',
+  },
+  twitter: {
+    handle: '@ziontech',
+    site: '@ziontech',
+    cardType: 'summary_large_image',
+  },
+  additionalMetaTags: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'theme-color', content: '#111827' },
+  ],
+};
+>>>>>>> origin/auto/autonomy-17186719616
+
 export default config;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

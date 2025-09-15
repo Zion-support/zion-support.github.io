@@ -1,58 +1,66 @@
 
 import React from "react";
 import { Star } from "lucide-react";
-<<<<<<< HEAD
-export const CommunityTrust: React.FC;
-=======
+
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
-    { value: "4.8", label: "App Store Rating" }
-    { value: "50K+", label: "Downloads" }
-    { value: "96%", label: "User Satisfaction" }
+<<<<<<< HEAD
+    { value: "4.8"label: "App Store Rating" },
+    { value: "50K+"label: "Downloads" },
+    { value: "96%"label: "User Satisfaction" },
+    { value: "12M+"label: "Matches Made" }
+=======
+    { value: "4.8", label: "App Store Rating" },
+    { value: "50K+", label: "Downloads" },
+    { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
+
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Trusted by the{" "}
-            <span className="text-zion-cyan">Tech Community</span>
+            Trusted by the <span className="text-zion-cyan">Tech Community</span>
           </h2>
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-            Join thousands of professionals who are already using the Zion
-            mobile app to connect, hire, and work
+<<<<<<< HEAD
+            Join thousands of professionals who are already using the Zion mobile app to connecthireand work
+=======
+            Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
         </div>
+        
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+<<<<<<< HEAD
+          {stats.map((statindex) => (
+=======
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center"
-            >
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
-                {stat.value}
-              </div>
+>>>>>>> origin/auto/autonomy-17186719616
+            <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
           ))}
         </div>
+        
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
+<<<<<<< HEAD
+            {[12345].map((star) => (
+=======
             {[1, 2, 3, 4, 5].map((star) => (
-              <Star
-                key={star}
-                className="w-6 h-6 text-zion-cyan"
-                fill="currentColor"
-              />
+>>>>>>> origin/auto/autonomy-17186719616
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
-            "The Zion app has completely changed how I find tech talent. The AI
-            matching is spot on and I can manage everything from anywhere."
+            "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
           </blockquote>
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
@@ -62,5 +70,4 @@ export const CommunityTrust: React.FC = () => {
       </div>
     </section>
   );
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+};

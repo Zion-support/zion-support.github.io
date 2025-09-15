@@ -1,160 +1,156 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { HelpCircle, MessageCircle, Phone, Mail, Clock;
-  BookOpen, Video, FileText, Search, Filter;
-  CheckCircle, ArrowRight, Brain, Atom, Rocket;
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import { 
+  HelpCircle, MessageCircle, Phone, Mail, Clock, 
+  BookOpen, Video, FileText, Search, Filter,
+  CheckCircle, ArrowRight, Brain, Atom, Rocket, 
   Shield, Zap, Users, Star, TrendingUp, Code
- } from 'lucide-react';
+} from 'lucide-react',
+
 export default function Support() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const supportCategories = null;
-=======
-import {
-  HelpCircle, MessageCircle, Phone, Mail, Clock
-  BookOpen, Video, FileText, Search, Filter
-  CheckCircle, ArrowRight, Brain, Atom, Rocket
-  Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react'
-export default function Support() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+
   const supportCategories = [
     {
-      id: 'ai-services'
-      name: 'AI Services'
-      icon: <Brain className="w-8 h-8 text-cyan-400" />
-      description: 'Support for AI consciousness and autonomous systems'
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      description: 'Support for AI consciousness and autonomous systems',
       articles: 25
-    }
+    },
     {
-      id: 'quantum-solutions'
-      name: 'Quantum Solutions'
-      icon: <Atom className="w-8 h-8 text-purple-400" />
-      description: 'Help with quantum computing and cryptography'
+      id: 'quantum-solutions',
+      name: 'Quantum Solutions',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      description: 'Help with quantum computing and cryptography',
       articles: 18
-    }
+    },
     {
-      id: 'autonomous-systems'
-      name: 'Autonomous Systems'
-      icon: <Rocket className="w-8 h-8 text-green-400" />
-      description: 'Support for self-managing business operations'
+      id: 'autonomous-systems',
+      name: 'Autonomous Systems',
+      icon: <Rocket className="w-8 h-8 text-green-400" />,
+      description: 'Support for self-managing business operations',
       articles: 32
-    }
+    },
     {
-      id: 'enterprise-it'
-      name: 'Enterprise IT'
-      icon: <Shield className="w-8 h-8 text-blue-400" />
-      description: 'Infrastructure and security support'
+      id: 'enterprise-it',
+      name: 'Enterprise IT',
+      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      description: 'Infrastructure and security support',
       articles: 28
-    }
+    },
     {
-      id: 'billing'
-      name: 'Billing & Account'
-      icon: <Zap className="w-8 h-8 text-yellow-400" />
-      description: 'Payment, invoices, and account management'
+      id: 'billing',
+      name: 'Billing & Account',
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      description: 'Payment, invoices, and account management',
       articles: 15
-    }
+    },
     {
-      id: 'technical'
-      name: 'Technical Issues'
-      icon: <Code className="w-8 h-8 text-orange-400" />
-      description: 'Bug reports and technical troubleshooting'
+      id: 'technical',
+      name: 'Technical Issues',
+      icon: <Code className="w-8 h-8 text-orange-400" />,
+      description: 'Bug reports and technical troubleshooting',
       articles: 42
     }
-  ]
+  ],
+
   const quickActions = [
     {
-      title: 'Live Chat'
-      description: 'Get instant help from our support team'
-      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />
-      action: 'Start Chat'
-      color: 'from-cyan-500 to-blue-600'
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
+      action: 'Start Chat',
+      color: 'from-cyan-500 to-blue-600',
       available: true
-    }
+    },
     {
-      title: 'Phone Support'
-      description: 'Speak directly with our experts'
-      icon: <Phone className="w-8 h-8 text-green-400" />
-      action: 'Call Now'
-      color: 'from-green-500 to-emerald-600'
+      title: 'Phone Support',
+      description: 'Speak directly with our experts',
+      icon: <Phone className="w-8 h-8 text-green-400" />,
+      action: 'Call Now',
+      color: 'from-green-500 to-emerald-600',
       available: true
-    }
+    },
     {
-      title: 'Email Support'
-      description: 'Send us a detailed message'
-      icon: <Mail className="w-8 h-8 text-purple-400" />
-      action: 'Send Email'
-      color: 'from-purple-500 to-pink-600'
+      title: 'Email Support',
+      description: 'Send us a detailed message',
+      icon: <Mail className="w-8 h-8 text-purple-400" />,
+      action: 'Send Email',
+      color: 'from-purple-500 to-pink-600',
       available: true
-    }
+    },
     {
-      title: 'Video Call'
-      description: 'Screen share and visual assistance'
-      icon: <Video className="w-8 h-8 text-orange-400" />
-      action: 'Schedule Call'
-      color: 'from-orange-500 to-red-600'
+      title: 'Video Call',
+      description: 'Screen share and visual assistance',
+      icon: <Video className="w-8 h-8 text-orange-400" />,
+      action: 'Schedule Call',
+      color: 'from-orange-500 to-red-600',
       available: true
     }
-  ]
+  ],
+
   const popularArticles = [
     {
-      title: 'Getting Started with AI Consciousness Platform'
-      category: 'AI Services'
-      readTime: '5 min read'
-      views: '2.4k'
+      title: 'Getting Started with AI Consciousness Platform',
+      category: 'AI Services',
+      readTime: '5 min read',
+      views: '2.4k',
       helpful: '98%'
-    }
+    },
     {
-      title: 'Setting Up Quantum-Secure Infrastructure'
-      category: 'Quantum Solutions'
-      readTime: '8 min read'
-      views: '1.8k'
+      title: 'Setting Up Quantum-Secure Infrastructure',
+      category: 'Quantum Solutions',
+      readTime: '8 min read',
+      views: '1.8k',
       helpful: '95%'
-    }
+    },
     {
-      title: 'Troubleshooting Autonomous System Errors'
-      category: 'Autonomous Systems'
-      readTime: '6 min read'
-      views: '3.1k'
+      title: 'Troubleshooting Autonomous System Errors',
+      category: 'Autonomous Systems',
+      readTime: '6 min read',
+      views: '3.1k',
       helpful: '92%'
-    }
+    },
     {
-      title: 'API Integration Best Practices'
-      category: 'Technical Issues'
-      readTime: '7 min read'
-      views: '4.2k'
+      title: 'API Integration Best Practices',
+      category: 'Technical Issues',
+      readTime: '7 min read',
+      views: '4.2k',
       helpful: '96%'
-    }
+    },
     {
-      title: 'Understanding Your Invoice and Billing'
-      category: 'Billing & Account'
-      readTime: '3 min read'
-      views: '1.5k'
+      title: 'Understanding Your Invoice and Billing',
+      category: 'Billing & Account',
+      readTime: '3 min read',
+      views: '1.5k',
       helpful: '89%'
     }
-  ]
+  ],
+
   const supportHours = [
     {
-      day: 'Monday - Friday'
-      hours: '9:00 AM - 8:00 PM EST'
+      day: 'Monday - Friday',
+      hours: '9:00 AM - 8:00 PM EST',
       status: 'Available'
-    }
+    },
     {
-      day: 'Saturday'
-      hours: '10:00 AM - 6:00 PM EST'
+      day: 'Saturday',
+      hours: '10:00 AM - 6:00 PM EST',
       status: 'Available'
-    }
+    },
     {
-      day: 'Sunday'
-      hours: '12:00 PM - 6:00 PM EST'
+      day: 'Sunday',
+      hours: '12:00 PM - 6:00 PM EST',
       status: 'Limited'
     }
-  ]
-  const filteredCategories = selectedCategory === 'all'
-    ? supportCategories
-    : supportCategories.filter(cat => cat.id === selectedCategory)
+  ],
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? supportCategories 
+    : supportCategories.filter(cat => cat.id === selectedCategory),
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -171,9 +167,10 @@ export default function Support() {
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing
+              Get the support you need for our AI consciousness, quantum computing, 
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
+            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -187,6 +184,7 @@ export default function Support() {
                 />
               </div>
             </div>
+            
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 text-cyan-400">
                 <HelpCircle className="w-6 h-6" />
@@ -204,6 +202,7 @@ export default function Support() {
           </motion.div>
         </div>
       </section>
+
       {/* Quick Actions */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -218,6 +217,7 @@ export default function Support() {
             </h2>
             <p className="text-xl text-gray-400">Choose your preferred support method</p>
           </motion.div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickActions.map((action, index) => (
               <motion.div
@@ -231,8 +231,10 @@ export default function Support() {
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {action.icon}
                   </div>
+                  
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>
+                  
                   <button className={`w-full py-3 px-4 bg-gradient-to-r ${action.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>
                     {action.action}
                   </button>
@@ -242,6 +244,7 @@ export default function Support() {
           </div>
         </div>
       </section>
+
       {/* Support Categories */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
@@ -256,6 +259,7 @@ export default function Support() {
             </h2>
             <p className="text-xl text-gray-400">Find solutions organized by topic and service area</p>
           </motion.div>
+          
           {/* Category Filter */}
           <div className="flex justify-center mb-12">
             <div className="flex flex-wrap gap-3">
@@ -284,6 +288,7 @@ export default function Support() {
               ))}
             </div>
           </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category, index) => (
               <motion.div
@@ -303,6 +308,7 @@ export default function Support() {
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
                     </div>
                   </div>
+                  
                   <div className="flex items-center justify-between pt-4 border-t border-gray-800/50">
                     <span className="text-sm text-gray-400">{category.articles} articles</span>
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
@@ -315,6 +321,7 @@ export default function Support() {
             ))}
           </div>
         </section>
+
         {/* Support Channels */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
@@ -331,6 +338,7 @@ export default function Support() {
                 Multiple support channels to meet your needs
               </p>
             </motion.div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <motion.div
@@ -364,6 +372,7 @@ export default function Support() {
             </div>
           </div>
         </section>
+
         {/* Search and Filter */}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -381,6 +390,7 @@ export default function Support() {
                   />
                 </div>
               </div>
+
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 {supportCategories.map((category) => (
@@ -402,31 +412,32 @@ export default function Support() {
             </div>
           </div>
         </section>
+
         {/* FAQ Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                question: "What is AI Consciousness Evolution?"
+                question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."
-              }
+              },
               {
-                question: "How does Quantum Neural Ecosystem work?"
+                question: "How does Quantum Neural Ecosystem work?",
                 answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."
-              }
+              },
               {
-                question: "What makes Space Resource Intelligence unique?"
+                question: "What makes Space Resource Intelligence unique?",
                 answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."
-              }
+              },
               {
-                question: "How secure is your Quantum Cybersecurity platform?"
+                question: "How secure is your Quantum Cybersecurity platform?",
                 answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."
-              }
+              },
               {
-                question: "Can I integrate your AI with my existing systems?"
+                question: "Can I integrate your AI with my existing systems?",
                 answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."
-              }
+              },
               {
-                question: "What support do you offer for enterprise deployments?"
+                question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
               }
             ].map((faq, index) => (
@@ -459,6 +470,7 @@ export default function Support() {
                 Quick answers to common questions and solutions
               </p>
             </motion.div>
+
             {filteredFAQs.length === 0 ? (
               <div className="text-center py-20">
                 <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -493,6 +505,7 @@ export default function Support() {
             )}
           </div>
         </section>
+
         {/* Support Resources */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -509,6 +522,7 @@ export default function Support() {
                 Comprehensive documentation and learning materials
               </p>
             </motion.div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
                 <motion.div
@@ -544,6 +558,7 @@ export default function Support() {
             </h2>
             <p className="text-xl text-gray-400">Most viewed and helpful support content</p>
           </motion.div>
+          
           <div className="max-w-4xl mx-auto space-y-4">
             {popularArticles.map((article, index) => (
               <motion.div
@@ -578,6 +593,7 @@ export default function Support() {
                         </span>
                       </div>
                     </div>
+                    
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Read</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -589,6 +605,7 @@ export default function Support() {
           </div>
         </div>
       </section>
+
       {/* Support Hours & Contact */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
@@ -602,9 +619,10 @@ export default function Support() {
                 Support Hours & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Our expert support team is available to help you succeed with our
+                Our expert support team is available to help you succeed with our 
                 revolutionary technology solutions.
               </p>
+              
               <div className="space-y-4">
                 {supportHours.map((schedule, index) => (
                   <div key={schedule.day} className="flex items-center justify-between p-4 bg-gray-800/30 rounded-xl">
@@ -613,8 +631,8 @@ export default function Support() {
                       <p className="text-gray-400">{schedule.hours}</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      schedule.status === 'Available'
-                        ? 'bg-green-500/20 text-green-400'
+                      schedule.status === 'Available' 
+                        ? 'bg-green-500/20 text-green-400' 
                         : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
                       {schedule.status}
@@ -623,6 +641,7 @@ export default function Support() {
                 ))}
               </div>
             </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -632,9 +651,10 @@ export default function Support() {
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-                  For urgent technical issues or critical support needs
+                  For urgent technical issues or critical support needs, 
                   our team is available around the clock.
                 </p>
+                
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-cyan-400" />
@@ -649,6 +669,7 @@ export default function Support() {
                     <span className="text-white">Live Chat Available</span>
                   </div>
                 </div>
+                
                 <div className="mt-6 pt-6 border-t border-cyan-500/20">
                   <a
                     href="/contact"
@@ -663,6 +684,7 @@ export default function Support() {
           </div>
         </div>
       </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -675,7 +697,7 @@ export default function Support() {
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our support team is dedicated to ensuring your success with our
+              Our support team is dedicated to ensuring your success with our 
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -698,10 +720,12 @@ export default function Support() {
       </section>
     </div>
   )
-}
-export default Support
+},
+
+export default Support,
           </div>
         </section>
+
         {/* Contact Support */}
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -745,6 +769,6 @@ export default Support
       </main>
     </Layout>
   )
-}
-export default SupportPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+},
+
+export default SupportPage,

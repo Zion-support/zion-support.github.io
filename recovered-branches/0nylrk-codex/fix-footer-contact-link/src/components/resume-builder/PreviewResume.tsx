@@ -1,32 +1,28 @@
-<<<<<<< HEAD
 
 import { Resume } from '@/types/resume';
-import { PreviewHeader;
-  ResumeBasicInfoSection;
-  WorkExperienceSection;
-  EducationSection;
-  SkillsSection;
-  CertificationsSection
- } from './preview';
-=======
-import { Resume } from "@/types/resume";
 import {
-  PreviewHeader
-  ResumeBasicInfoSection
-  WorkExperienceSection
-  EducationSection
-  SkillsSection
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
   CertificationsSection
-} from "./preview";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+} from './preview';
+
 interface PreviewResumeProps {
   resume: Resume;
-  onBack: () => void
+  onBack: () => void;
 }
+
+<<<<<<< HEAD
+export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
+=======
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
+      
       {/* Resume Preview */}
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />

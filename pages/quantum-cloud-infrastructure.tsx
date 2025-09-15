@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+
+
+
 export default function QuantumCloudInfrastructurePage() {
   return (
     <Layout>
@@ -38,3 +37,4 @@ export default function QuantumCloudInfrastructurePage() {
     </Layout>
   )
 }
+

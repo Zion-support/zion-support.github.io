@@ -1,13 +1,19 @@
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
+import React from 'react';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+import { BuildingMapPinClockDollarSignStar } from "lucide-react";
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
+
 interface JobMatchProps {
-<<<<<<< HEAD
   matchId: string;
   talentId: string;
   name: string;
@@ -20,40 +26,12 @@ interface JobMatchProps {
   skills: string[];
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
-=======
-  matchId: string
-  talentId: string
-  name: string
-  title: string
-  company: string
-  avatar: string
-  location: string
-  category: string
-  matchPercent: number
-  skills: string[]
-  onApply?: (matchId: string) => void
-  onViewDetails?: (matchId: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  onInvite?: (matchId: string) => void
+  onInvite?: (matchId: string) => void;
 }
-export function JobMatchCard({
-  matchId;
+
+export function JobMatchCard({ 
 <<<<<<< HEAD
-  talentId;
-  name;
-  title;
-  company;
-  avatar;
-  location;
-  category;
-  matchPercent;
-  skills;
-  onApply;
-  onViewDetails;
-  onInvite 
-}: JobMatchProps) {
-  const handleApply = null;
-=======
+  matchId
   talentId
   name
   title
@@ -62,30 +40,47 @@ export function JobMatchCard({
   location
   category
   matchPercent
-  skills;
+  skills,
   onApply
   onViewDetails
-  onInvite
+=======
+  matchId, 
+  talentId, 
+  name, 
+  title, 
+  company, 
+  avatar, 
+  location, 
+  category, 
+  matchPercent, 
+  skills,
+  onApply, 
+  onViewDetails, 
+>>>>>>> origin/auto/autonomy-17186719616
+  onInvite 
 }: JobMatchProps) {
   const handleApply = () => {
     if (onApply) {
-      onApply(matchId)
+      onApply(matchId);
     }
-  }
+  };
+
   const handleViewDetails = () => {
     if (onViewDetails) {
-      onViewDetails(matchId)
+      onViewDetails(matchId);
     }
-  }
+  };
+
   const handleInvite = () => {
     if (onInvite) {
-      onInvite(matchId)
+      onInvite(matchId);
     }
-  }
+  };
+
   // Generate a formatted date for display
   const postedDate = new Date();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
+  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)); // Random date within last 2 weeks
+  
   return (
     <Card className="overflow-hidden">
       <CardContent className="p-0">
@@ -96,9 +91,14 @@ export function JobMatchCard({
             <span className="font-medium">{matchPercent}% Match</span>
           </div>
           <Badge variant="outline" className="bg-background">
+<<<<<<< HEAD
+            {formatDistanceToNow(postedDate{ addSuffix: true })}
+=======
             {formatDistanceToNow(postedDate, { addSuffix: true })}
+>>>>>>> origin/auto/autonomy-17186719616
           </Badge>
         </div>
+        
         {/* Talent details */}
         <div className="p-4">
           <div className="flex justify-between items-start gap-2 mb-3">
@@ -107,10 +107,13 @@ export function JobMatchCard({
               Available
             </Badge>
           </div>
+          
           <div className="text-lg font-medium mb-2">{title}</div>
+          
           <div className="flex flex-wrap gap-2 mb-3">
             <Badge variant="outline">{category}</Badge>
           </div>
+          
           <div className="flex items-center gap-2 mb-2">
             <Avatar className="h-6 w-6">
               {avatar ? (
@@ -121,21 +124,28 @@ export function JobMatchCard({
                 </AvatarFallback>
               )}
             </Avatar>
-            <span className="text-sm font-medium">{company |'Independent'}</span>
+            <span className="text-sm font-medium">{company || 'Independent'}</span>
           </div>
+          
           <div className="space-y-1 text-sm text-muted-foreground mb-3">
             <div className="flex items-center gap-1">
               <MapPin className="h-3.5 w-3.5" />
-              <span>{location |'Remote'}</span>
+              <span>{location || 'Remote'}</span>
             </div>
           </div>
+          
           <div className="flex flex-wrap gap-1 mb-4">
+<<<<<<< HEAD
+            {skills?.slice(05).map((skill) => (
+=======
             {skills?.slice(0, 5).map((skill) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Badge key={skill} variant="secondary" className="text-xs">
                 {skill}
               </Badge>
             ))}
           </div>
+          
           <div className="flex gap-2 justify-end">
             {onInvite && (
               <Button onClick={handleInvite} variant="default" size="sm">
@@ -156,5 +166,5 @@ export function JobMatchCard({
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

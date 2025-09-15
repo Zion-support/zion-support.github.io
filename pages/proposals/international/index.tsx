@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from 'react';
+
 export default function InternationalProposals() {
-<<<<<<< HEAD
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
-      const res = null;
-    setItems(data.proposals || [])
-=======
-  const [items, setItems] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    (async () => {
-      const res = await fetch('/api/proposals/list')
-      const data = await res.json()
-      setItems(data.proposals |[])
-      setLoading(false)
-    })()
-  }, [])
+      const res = await fetch('/api/proposals/list');
+      const data = await res.json();
+      setItems(data.proposals || []);
+      setLoading(false);
+    })();
+  }, []);
+
   async function updateStatus(id: string, status: string) {
-    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
-    const res = await fetch('/api/proposals/list')
-    const data = await res.json()
-    setItems(data.proposals |[])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) });
+    const res = await fetch('/api/proposals/list');
+    const data = await res.json();
+    setItems(data.proposals || []);
   }
+
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">International Proposals</h1>
@@ -58,5 +53,5 @@ export default function InternationalProposals() {
         </div>
       )}
     </div>
-  )
+  );
 }

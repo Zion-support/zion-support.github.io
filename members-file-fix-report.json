@@ -1,7 +1,0 @@
-{
-  "timestamp": "2025-09-06T09:23:16.051Z",
-  "fixedFiles": ["pages/api/enterprise/companies/[companyId]/members.ts"],
-  "errors": [],
-  "totalFixed": 1,
-  "totalErrors": 0
-}

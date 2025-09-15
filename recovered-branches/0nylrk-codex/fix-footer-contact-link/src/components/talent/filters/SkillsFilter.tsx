@@ -1,32 +1,38 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { ChevronDownChevronUp } from "lucide-react";
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
+
 // Common skills in AI and tech
-<<<<<<< HEAD
-const POPULAR_SKILLS = null;
-=======
 const POPULAR_SKILLS = [
-  "Machine Learning";
-  "Deep Learning";
-  "Python";
-  "TensorFlow";
-  "PyTorch";
-  "Computer Vision";
-  "NLP";
-  "Data Science";
-  "AWS";
-  "Docker";
-  "Kubernetes";
-  "React";
-  "Node.js";
-  "TypeScript";
-  "DevOps";
+  "Machine Learning",
+  "Deep Learning",
+  "Python",
+  "TensorFlow",
+  "PyTorch",
+  "Computer Vision",
+  "NLP",
+  "Data Science",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "React",
+  "Node.js",
+  "TypeScript",
+  "DevOps",
   "Security"
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+<<<<<<< HEAD
+export function SkillsFilter({ selectedSkillstoggleSkillexpandedtoggleSectionisMobileFilterOpen }: SkillsFilterProps) {
+=======
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -40,6 +46,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+      
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
@@ -61,5 +68,5 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         </div>
       )}
     </div>
-  )
+  );
 }

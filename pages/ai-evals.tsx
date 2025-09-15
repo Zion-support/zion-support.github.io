@@ -1,27 +1,22 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
-export default function AIEvalsPage() {
-	const contactInfo = null;
-=======
-import React from 'react';
-import Head from 'next/head';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
+
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
 export default function AIEvalsPage() {
 	const contactInfo = {
-		mobile: '+1 302 464 0950'
-		email: 'kleber@ziontechgroup.com'
-		address: '364 E Main St STE 1008 Middletown DE 19709'
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	}
+	},
+
 	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] }
-		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] }
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost tracking', 'Toxicity/PII checksCSV export'] },
+		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)', 'CI evals via APISlack alerts'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logs', 'SOC2 supportSAML/SSO'] }],
+
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
 			<Head>
@@ -29,6 +24,7 @@ export default function AIEvalsPage() {
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
+
 			<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
 				<div className="text-center max-w-4xl mx-auto mb-12">
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Evaluations</h1>
@@ -38,6 +34,7 @@ export default function AIEvalsPage() {
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</a>
 					</div>
 				</div>
+
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
 					{plans.map((p) => (
 						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
@@ -51,6 +48,7 @@ export default function AIEvalsPage() {
 						</div>
 					))}
 				</div>
+
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
 						<div className="text-gray-400 text-sm mb-2">Key Metric</div>
@@ -68,6 +66,7 @@ export default function AIEvalsPage() {
 						<p className="text-gray-400 mt-2 text-sm">PII redaction, toxicity/abuse detection, jailbreak detection, exportable audit logs.</p>
 					</div>
 				</div>
+
 				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
 						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
@@ -80,5 +79,5 @@ export default function AIEvalsPage() {
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
-	)
+	),
 }

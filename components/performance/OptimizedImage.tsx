@@ -1,62 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
+
 interface OptimizedImageProps {
-  src: string, alt: string
+  src: string;
+  alt: string;
   width?: number;
   height?: number;
-  className?: string;
   priority?: boolean;
+  className?: string;
   sizes?: string;
-  quality?: number;
-  fill?: boolean;
-  style?: React.CSSProperties;
 }
-<<<<<<< HEAD
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
-  alt;
-  width;
-  height;
-  priority;
-=======
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src
-  alt
-  width
-  height
-  className = ''
-  priority = false
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-  quality = 85
-  fill = false
-  style
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+  className = '',
+  sizes = '100vw',
+  ...props
 }) => {
-  if (fill) {
-    return (
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className={className}
-        priority={priority}
-        sizes={sizes}
-        quality={quality}
-        style={style}
-      />
-    );
-  }
+  return (
     <Image
       src={src}
       alt={alt}
-      width={width |800}
-      height={height |600}
-      className={className}
+      width={width}
+      height={height}
       priority={priority}
+      className={className}
       sizes={sizes}
-quality={quality}
-      style={style}
+      {...props}
+    />
   );
-}
-export default OptimizedImage;
+};

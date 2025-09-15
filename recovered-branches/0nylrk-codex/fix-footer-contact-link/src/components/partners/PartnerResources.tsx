@@ -1,89 +1,96 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-interface ResourceItem {
 <<<<<<< HEAD
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { DownloadFileImageFileTextFileTypeFileVideoLink } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+import { toast } from "@/hooks/use-toast";
+
+interface ResourceItem {
   id: string;
   title: string;
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;
-=======
-  id: string
-  title: string
-  description: string
-  type: 'image' | 'video' | 'document' | 'link'
-  icon: JSX.Element
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  url: string
+  url: string;
 }
+
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
+      id: 'logo-pack',
+      title: 'Zion AI Logo Pack',
 <<<<<<< HEAD
-      id: 'logo-pack';
-      title: 'Zion AI Logo Pack';
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
-      type: 'image';
-      icon: <FileImage className;
+      description: 'Official logos in various formats (PNGSVGJPG)',
 =======
-      id: 'logo-pack'
-      title: 'Zion AI Logo Pack'
-      description: 'Official logos in various formats (PNG, SVG, JPG)';
-      type: 'image'
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />
+      description: 'Official logos in various formats (PNG, SVG, JPG)',
+>>>>>>> origin/auto/autonomy-17186719616
+      type: 'image',
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
-    }
+    },
     {
-      id: 'brand-guidelines'
-      title: 'Brand Guidelines'
-      description: 'How to properly use our brand assets in your content'
-      type: 'document'
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />
+      id: 'brand-guidelines',
+      title: 'Brand Guidelines',
+      description: 'How to properly use our brand assets in your content',
+      type: 'document',
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
-    }
+    },
     {
-      id: 'banner-templates'
-      title: 'Social Media Banners'
-      description: 'Pre-designed graphics for your social channels'
-      type: 'image'
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />
+      id: 'banner-templates',
+      title: 'Social Media Banners',
+      description: 'Pre-designed graphics for your social channels',
+      type: 'image',
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
-    }
+    },
     {
-      id: 'promotional-video'
-      title: 'Promotional Video'
-      description: 'Short explainer video about Zion AI Marketplace'
-      type: 'video'
-      icon: <FileVideo className="h-10 w-10 text-red-500" />
+      id: 'promotional-video',
+      title: 'Promotional Video',
+      description: 'Short explainer video about Zion AI Marketplace',
+      type: 'video',
+      icon: <FileVideo className="h-10 w-10 text-red-500" />,
       url: '#'
-    }
+    },
     {
-      id: 'email-templates'
-      title: 'Email Templates'
-      description: 'Ready-to-use email templates for your audience'
-      type: 'document'
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />
+      id: 'email-templates',
+      title: 'Email Templates',
+      description: 'Ready-to-use email templates for your audience',
+      type: 'document',
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
-    }
+    },
     {
-      id: 'talking-points'
-      title: 'Talking Points'
-      description: 'Key messages and benefits to highlight'
-      type: 'document'
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />
+      id: 'talking-points',
+      title: 'Talking Points',
+      description: 'Key messages and benefits to highlight',
+      type: 'document',
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
   ];
+
   const handleDownload = (resource: ResourceItem) => {
+<<<<<<< HEAD
+    // In a real appthis would download the actual resource
+    toast({
+      title: "Download started",
+      description: `Downloading ${resource.title}`,
+      variant: "default"});
+=======
     // In a real app, this would download the actual resource
     toast({
-      title: "Download started"
-      description: `Downloading ${resource.title}`
-      variant: "default"})
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+      title: "Download started",
+      description: `Downloading ${resource.title}`,
+      variant: "default",
+    });
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -103,7 +110,7 @@ export function PartnerResources() {
                   </div>
                   <h3 className="font-semibold text-white mb-1">{resource.title}</h3>
                   <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>
-                  <Button
+                  <Button 
                     onClick={() => handleDownload(resource)}
                     size="sm"
                     variant="outline"
@@ -118,6 +125,7 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
+
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Promotion Guidelines</CardTitle>
@@ -136,6 +144,7 @@ export function PartnerResources() {
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
+
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
@@ -148,6 +157,7 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
+
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Partner Support</CardTitle>
@@ -158,13 +168,17 @@ export function PartnerResources() {
         <CardContent className="flex flex-col items-center text-center py-6">
           <p className="text-zion-slate-light mb-4">
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
+<<<<<<< HEAD
+            Feel free to reach out if you have questions about promotionsresourcesor payment.
+=======
             Feel free to reach out if you have questions about promotions, resources, or payment.
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
-          <Button className="bg-zion-purple hover: bg-zion-purple-dark">
+          <Button className="bg-zion-purple hover:bg-zion-purple-dark">
             Contact Partner Support
           </Button>
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

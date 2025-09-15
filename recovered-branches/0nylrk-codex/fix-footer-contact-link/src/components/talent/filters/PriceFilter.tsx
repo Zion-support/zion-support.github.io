@@ -1,22 +1,23 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react",
+<<<<<<< HEAD
+import { ChevronDownChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
-<<<<<<< HEAD
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-  const handleChange = null;
+
+export function PriceFilter({ priceRangesetPriceRangexpandedtoggleSectionisMobileFilterOpen }: PriceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setPriceRange([values[0]values[1]]);
 =======
-export function PriceFilter({
-  priceRange
-  setPriceRange
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: PriceFilterProps) {
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { PriceFilterProps } from "@/types/filters";
+
+export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -30,14 +31,19 @@ export function PriceFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+      
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
-          <Slider
+          <Slider 
+<<<<<<< HEAD
+            value={[priceRange[0]priceRange[1]]}
+=======
             value={[priceRange[0], priceRange[1]]}
+>>>>>>> origin/auto/autonomy-17186719616
             min={50}
             max={200}
             step={5}

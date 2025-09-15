@@ -1,66 +1,92 @@
 
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
-import { Textarea  } from '@/components/ui/textarea';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementPanelProps {
 <<<<<<< HEAD
+import React{ useState } from 'react';
+import { CardContentCardHeaderCardTitleCardFooter } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { SparklesLoader2CopyCheck } from '@/components/icons';
+import { useAIContentEnhancerAIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from '@/components/icons';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+>>>>>>> origin/auto/autonomy-17186719616
+
+interface AIEnhancementPanelProps {
   title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
-=======
-  title: string
-  defaultOptions: AIEnhancementOptions
-  onApply: (content: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClose?: () => void;
   showInstructions?: boolean;
-  initialContent?: string
+  initialContent?: string;
 }
+
 export function AIEnhancementPanel({
-  title;
-  defaultOptions;
-  onApply;
-  onClose;
-<<<<<<< HEAD
-  showInstructions;
-=======
-  showInstructions = true;
+  title,
+  defaultOptions,
+  onApply,
+  onClose,
+  showInstructions = true,
   initialContent = ''
 }: AIEnhancementPanelProps) {
+<<<<<<< HEAD
+  const [optionsetOptions] = useState<AIEnhancementOptions>({
+    ...defaultOptions,
+    content: initialContent || defaultOptions.content});
+  const [generatedContentsetGeneratedContent] = useState<string>('');
+  const [copiedsetCopied] = useState(false);
+  const { enhanceContentisEnhancing } = useAIContentEnhancer();
+=======
   const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions;
-    content: initialContent |defaultOptions.content})
+    ...defaultOptions,
+    content: initialContent || defaultOptions.content,
+  });
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+>>>>>>> origin/auto/autonomy-17186719616
+
   const handleGenerate = async () => {
     const result = await enhanceContent(options);
     if (result) {
-      setGeneratedContent(result)
+      setGeneratedContent(result);
     }
-  }
+  };
+
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options
-      [field]: e.target.value})
-  }
+      ...options,
+<<<<<<< HEAD
+      [field]: e.target.value});
+=======
+      [field]: e.target.value,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   const handleApply = () => {
     onApply(generatedContent);
-    if (onClose) onClose()
-  }
+    if (onClose) onClose();
+  };
+
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000)
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+    setTimeout(() => setCopied(false)2000);
+=======
+    setTimeout(() => setCopied(false), 2000);
+>>>>>>> origin/auto/autonomy-17186719616
+  };
+
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -77,9 +103,14 @@ export function AIEnhancementPanel({
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
+<<<<<<< HEAD
+            onChange={(e) => handleInputChange(e'content')}
+=======
             onChange={(e) => handleInputChange(e, 'content')}
+>>>>>>> origin/auto/autonomy-17186719616
           />
         </div>
+
         {/* Context input */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Context (optional)</label>
@@ -87,25 +118,37 @@ export function AIEnhancementPanel({
             placeholder="Add any relevant context to guide the AI..."
             className="min-h-[60px]"
             value={options.context}
+<<<<<<< HEAD
+            onChange={(e) => handleInputChange(e'context')}
+=======
             onChange={(e) => handleInputChange(e, 'context')}
+>>>>>>> origin/auto/autonomy-17186719616
           />
         </div>
+
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
             <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
+<<<<<<< HEAD
+              placeholder="E.g.'Make it more conversational' or 'Focus on leadership skills'"
+              value={options.instructions}
+              onChange={(e) => handleInputChange(e'instructions')}
+=======
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
+>>>>>>> origin/auto/autonomy-17186719616
             />
           </div>
         )}
+
         {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
-          className="w-full"
-          disabled={isEnhancing |!options.content && !options.context}
+        <Button 
+          onClick={handleGenerate} 
+          className="w-full" 
+          disabled={isEnhancing || !options.content && !options.context}
         >
           {isEnhancing ? (
             <>
@@ -119,14 +162,19 @@ export function AIEnhancementPanel({
             </>
           )}
         </Button>
+
         {/* Output area */}
         {generatedContent && (
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
               <label className="text-sm font-medium">Generated content</label>
-              <Button
-                variant="ghost"
-                size="sm"
+              <Button 
+                variant="ghost" 
+                size="sm" 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 onClick={handleCopy}
                 className="h-8"
               >
@@ -147,6 +195,7 @@ export function AIEnhancementPanel({
           </div>
         )}
       </CardContent>
+      
       {generatedContent && (
         <CardFooter className="flex justify-between">
           {onClose && (
@@ -160,5 +209,5 @@ export function AIEnhancementPanel({
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }

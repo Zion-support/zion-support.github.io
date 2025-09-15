@@ -1,20 +1,5 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "generatedAt": "2025-08-14T00:10:42.982Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -36,12 +21,6 @@
     "cloud_orchestrator",
     "code-smell-audit-runner",
     "component-props-docs-runner",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
     "component-size-report",
 =======
   "generatedAt": "2025-08-19T03:44:13.291Z",
@@ -60,21 +39,7 @@
     "cloud-swarm-committer",
     "cloud_orchestrator",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "continuous-front-runner",
-    "component-size-report",    "continuous-front-runner",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "component-size-report",    "continuous-front-runner",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "component-size-report",    "continuous-front-runner",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "continuous-orchestrator",
     "contributing-refresher",
     "dead-code-audit",
@@ -91,31 +56,11 @@
     "front-ads-promoter",
     "front-enhancer",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
     "front-enhancer",
 =======
     "front-index-directory-builder",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "front-index-futurizer",
-    "front-enhancer",    "front-index-futurizer",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "front-enhancer",    "front-index-futurizer",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "front-enhancer",    "front-index-futurizer",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "front-index-orchestrator",
     "front-index-scheduler",
     "front-maximizer",
@@ -150,48 +95,20 @@
     "orchestrator-swarm",
     "orphan-pages-detector",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-    "pagespeed-insights-runner",
-    "pm2-automation-redundancy",
-    "pagespeed-insights-runner",
-    "pm2-automation-redundancy",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
 =======
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "readme-advertiser",
     "redirect-manager",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
     "revenue-ideas-lab",
     "roadmap-curator",
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -199,22 +116,18 @@
     "schema-org-enhancer",
     "security-audit",
     "security-audit-runner",
+<<<<<<< HEAD
+    "seo-audit-runner",
+    "site-crawler",
+    "sitemap_runner",
+    "stale-content-auditor-runner",
+    "structured-data-auditor",
+=======
+    "site-crawler",
+    "sitemap-prioritizer",
+    "sitemap_runner",
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "todo-scanner-runner",
-    "revenue-ideas-lab",
-    "roadmap-curator",    "todo-scanner-runner",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    "revenue-ideas-lab",
-    "roadmap-curator",    "todo-scanner-runner",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "revenue-ideas-lab",
-    "roadmap-curator",    "todo-scanner-runner",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "todo-summary-runner",
     "trigger-all-and-commit",
     "ultra-fast-automation-orchestrator",

@@ -1,11 +1,5 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
   "generatedAt": "2025-08-12T01:34:01.359Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -16,27 +10,7 @@
     "adaptive-orchestrator",
     "agent-swarm-orchestrator",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-d83c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ai-changelog-runner",
-  "generatedAt": "2025-08-12T01:34:01.359Z",
-  "functions": [
-    "a11y-alt-text-runner",    "ai-changelog-runner",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  "generatedAt": "2025-08-12T01:34:01.359Z",
-  "functions": [
-    "a11y-alt-text-runner",    "ai-changelog-runner",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  "generatedAt": "2025-08-12T01:34:01.359Z",
-  "functions": [
-    "a11y-alt-text-runner",    "ai-changelog-runner",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ai-trends-radar-runner",
     "auto-discovery-runner",
     "auto-scheduler",

@@ -1,52 +1,83 @@
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
+
 export function WaitlistSection() {
+<<<<<<< HEAD
+  const [emailsetEmail] = useState("");
+  const [namesetName] = useState("");
+  const [rolesetRole] = useState("");
+  const [agreeTermsetAgreeTerms] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+=======
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const { toast } = useToast();
-<<<<<<< HEAD
-  const handleSubmit = null;
-=======
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email |!name |!role |!agreeTerms) {
+    e.preventDefault();
+    
+    if (!email || !name || !role || !agreeTerms) {
       toast({
-        variant: "destructive"
-        title: "Missing information"
-        description: "Please fill all fields and agree to the terms."})
-      return
+        variant: "destructive",
+        title: "Missing information",
+<<<<<<< HEAD
+        description: "Please fill all fields and agree to the terms."});
+=======
+        description: "Please fill all fields and agree to the terms.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
+      return;
     }
+    
     setIsSubmitting(true);
+    
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+<<<<<<< HEAD
+      await new Promise(resolve => setTimeout(resolve1000));
+      
       toast({
-        title: "Success!"
-        description: "Thank you for registering with Zion. We'll be in touch soon."})
+        title: "Success!",
+        description: "Thank you for registering with Zion. We'll be in touch soon."});
+=======
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Success!",
+        description: "Thank you for registering with Zion. We'll be in touch soon.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
+      
       // Reset form
       setEmail("");
       setName("");
       setRole("");
-      setAgreeTerms(false)
+      setAgreeTerms(false);
     } catch (error) {
       toast({
-        variant: "destructive"
-        title: "Something went wrong"
-        description: "Please try again later."})
+        variant: "destructive",
+        title: "Something went wrong",
+<<<<<<< HEAD
+        description: "Please try again later."});
+=======
+        description: "Please try again later.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+  
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}
@@ -54,15 +85,17 @@ export function WaitlistSection() {
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>
         <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>
       </div>
+      
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>Register Now</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4">
-              Join our growing community of AI and tech professionals.
+              Join our growing community of AI and tech professionals. 
               Complete your registration to access exclusive features and personalized services.
             </p>
           </div>
+          
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
@@ -74,6 +107,7 @@ export function WaitlistSection() {
                 className="bg-zion-blue-dark border-zion-blue-light"
               />
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="email">Email Address</Label>
               <Input
@@ -85,19 +119,25 @@ export function WaitlistSection() {
                 className="bg-zion-blue-dark border-zion-blue-light"
               />
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="role">Your Role</Label>
               <Input
                 id="role"
+<<<<<<< HEAD
+                placeholder="IT ManagerDeveloperBusiness Owneretc."
+=======
                 placeholder="IT Manager, Developer, Business Owner, etc."
+>>>>>>> origin/auto/autonomy-17186719616
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light"
               />
             </div>
+            
             <div className="flex items-center space-x-2">
-              <Checkbox
-                id="terms"
+              <Checkbox 
+                id="terms" 
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
               />
@@ -108,9 +148,10 @@ export function WaitlistSection() {
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.
               </Label>
             </div>
-            <Button
-              type="submit"
-              disabled={isSubmitting}
+            
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -119,5 +160,5 @@ export function WaitlistSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

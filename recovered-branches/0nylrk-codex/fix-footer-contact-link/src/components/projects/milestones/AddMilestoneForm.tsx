@@ -1,106 +1,149 @@
 
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 <<<<<<< HEAD
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { CalendarIcon, Loader2  } from 'lucide-react';
-import { format  } from 'date-fns';
-import { Button  } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Input  } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Popover;
-  PopoverContent;
-  PopoverTrigger } from '@/components/ui/popover';
-import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
-const formSchema = null;
+CalendarIconLoader2
 =======
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
-import {format} from 'date-fns';
-import {Button} from '@/components/ui/button';
-import {Calendar} from '@/components/ui/calendar';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
+import { CalendarIcon, Loader2 } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
+import { format } from 'date-fns';
+
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+<<<<<<< HEAD
+  FormMessage} from '@/components/ui/form';
+=======
+  FormMessage,
+} from '@/components/ui/form';
+>>>>>>> origin/auto/autonomy-17186719616
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Popover,
+  PopoverContent,
+<<<<<<< HEAD
+  PopoverTrigger} from '@/components/ui/popover';
+=======
+  PopoverTrigger,
+} from '@/components/ui/popover';
+>>>>>>> origin/auto/autonomy-17186719616
+import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+
 const formSchema = z.object({
-  title: z.string().min(1, 'Title is required');
-  description: z.string().optional()
-  due_date: z.date().optional()
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
+<<<<<<< HEAD
+  title: z.string().min(1'Title is required'),
+  description: z.string().optional(),
+  due_date: z.date().optional(),
+  amount: z.coerce.number().min(0'Amount must be greater than or equal to 0')});
+=======
+  title: z.string().min(1, 'Title is required'),
+  description: z.string().optional(),
+  due_date: z.date().optional(),
+  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0'),
+});
+>>>>>>> origin/auto/autonomy-17186719616
+
 type MilestoneFormValues = z.infer<typeof formSchema>;
+
 interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void
-  isSubmitting: boolean
+  onSubmit: (data: MilestoneFormValues) => void;
+  isSubmitting: boolean;
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
-  projectType?: string
+  projectType?: string;
 }
+
 export function AddMilestoneForm({
-  onSubmit;
-  isSubmitting;
-  onCancel;
-  projectScope = '';
-  projectStartDate = '';
-  projectEndDate = null;
+  onSubmit,
+  isSubmitting,
+  onCancel,
+  projectScope = '',
+  projectStartDate = '',
+  projectEndDate = null,
   projectType = 'Other'
 }: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
-    resolver: zodResolver(formSchema)
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      title: ''
-      description: ''
-      amount: 0}})
+      title: '',
+      description: '',
+<<<<<<< HEAD
+      amount: 0}});
+=======
+      amount: 0,
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
+
   const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit(values)
-    form.reset()
-  }
+    onSubmit(values);
+    form.reset();
+  };
+
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
+<<<<<<< HEAD
+    // If there's only one milestonesubmit it directly
+=======
     // If there's only one milestone, submit it directly
+>>>>>>> origin/auto/autonomy-17186719616
     if (milestones.length === 1) {
       const milestone = milestones[0];
       onSubmit({
-        title: milestone.title
-        description: milestone.description
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        title: milestone.title,
+        description: milestone.description,
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+<<<<<<< HEAD
+        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount
+=======
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+>>>>>>> origin/auto/autonomy-17186719616
       });
-      return
+      return;
     }
+
+<<<<<<< HEAD
+    // If there are multiple milestonesubmit them one by one
+=======
     // If there are multiple milestones, submit them one by one
+>>>>>>> origin/auto/autonomy-17186719616
     milestones.forEach(milestone => {
       onSubmit({
-        title: milestone.title
-        description: milestone.description
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        title: milestone.title,
+        description: milestone.description,
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+<<<<<<< HEAD
+        amount: milestone.estimatedHours * 10// Convert hours to a default payment amount
+=======
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-      })
-    })
-  }
+>>>>>>> origin/auto/autonomy-17186719616
+      });
+    });
+  };
+
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
-      title: milestone.title
-      description: milestone.description
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+      title: milestone.title,
+      description: milestone.description,
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+<<<<<<< HEAD
+      amount: milestone.estimatedHours * 10// Convert hours to a default payment amount
+=======
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-    })
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> origin/auto/autonomy-17186719616
+    });
+  };
+
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
@@ -114,6 +157,7 @@ export function AddMilestoneForm({
           onAddMilestone={handleAddMilestone}
         />
       )}
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
@@ -129,6 +173,7 @@ export function AddMilestoneForm({
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="description"
@@ -146,6 +191,7 @@ export function AddMilestoneForm({
               </FormItem>
             )}
           />
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -161,7 +207,11 @@ export function AddMilestoneForm({
                           className="w-full pl-3 text-left font-normal"
                         >
                           {field.value ? (
+<<<<<<< HEAD
+                            format(field.value"PPP")
+=======
                             format(field.value, "PPP")
+>>>>>>> origin/auto/autonomy-17186719616
                           ) : (
                             <span className="text-muted-foreground">
                               Pick a date
@@ -185,6 +235,7 @@ export function AddMilestoneForm({
                 </FormItem>
               )}
             />
+
             <FormField
               control={form.control}
               name="amount"
@@ -205,6 +256,7 @@ export function AddMilestoneForm({
               )}
             />
           </div>
+
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
               <Button
@@ -230,5 +282,5 @@ export function AddMilestoneForm({
         </form>
       </Form>
     </div>
-  )
+  );
 }

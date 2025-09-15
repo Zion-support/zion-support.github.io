@@ -1,40 +1,50 @@
 
 import React from "react";
-import { getBadgeMeta, BadgeKey } from "./badgeConfig";
-interface BadgeEarnedProps {
 <<<<<<< HEAD
-  badge: BadgeKey;
+import { getBadgeMetaBadgeKey } from "./badgeConfig";
 =======
-  badge: BadgeKey
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+>>>>>>> origin/auto/autonomy-17186719616
+
+interface BadgeEarnedProps {
+  badge: BadgeKey;
   size?: number;
   showName?: boolean;
   showDesc?: boolean;
-  earnedDate?: string
+  earnedDate?: string;
 }
+
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
-  badge;
+  badge,
+  size = 44,
+  showName = true,
+  showDesc = false,
 <<<<<<< HEAD
-  size;
-=======
-  size = 44;
-  showName = true;
-  showDesc = false
   earnedDate}) => {
+=======
+  earnedDate,
+}) => {
+>>>>>>> origin/auto/autonomy-17186719616
   const meta = getBadgeMeta(badge);
   if (!meta) return null;
   const Icon = meta.icon;
+
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">
       <div
         style={{
-          background: meta.bg
-          borderRadius: "9999px"
-          width: size
-          height: size
-          display: "flex"
-          alignItems: "center"
+          background: meta.bg,
+          borderRadius: "9999px",
+          width: size,
+          height: size,
+          display: "flex",
+          alignItems: "center",
+<<<<<<< HEAD
           justifyContent: "center"}}
+=======
+          justifyContent: "center",
+        }}
+>>>>>>> origin/auto/autonomy-17186719616
         className="shadow hover-scale"
         title={meta.name}
       >
@@ -54,6 +64,5 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
         <span className="text-xs text-zion-slate-light">{meta.description}</span>
       )}
     </div>
-  )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  );
+};

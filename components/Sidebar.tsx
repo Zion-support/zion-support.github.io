@@ -1,93 +1,88 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
+"use client";
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { 
-  X;
-  Building2;
-  Code;
-  Smartphone;
-  Cloud;
-  Shield;
-  Zap;
-  ShoppingCart;
-  Heart;
-  GraduationCap;
-  Factory;
-  Truck;
-  CreditCard;
-  Phone;
-  Mail;
-=======
-import {
-  X
-  Building2
-  Code
-  Smartphone
-  Cloud
-  Shield
-  Zap
-  ShoppingCart
-  Heart
-  GraduationCap
-  Factory
-  Truck
-  CreditCard
-  Phone
-  Mail
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  ExternalLink
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Home,
+  Briefcase,
+  Users,
+  Settings,
+  HelpCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Building2,
+  User,
+  LogOut,
+  Search
 } from 'lucide-react';
+
 interface SidebarProps {
-  isOpen: boolean, onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-  const handleDropdownToggle = (title: string) => {
-    setOpenDropdowns(prev =>
-      prev.includes(title)
-        ? prev.filter(item => item !== title)
-        : [...prev, title];
+
+const navigationItems = [
+  {
+    label: 'Home',
+    href: '/',
+    icon: Home
+  },
+  {
+    label: 'Services',
+    href: '/services',
+    icon: Briefcase,
+    children: [
+      { label: 'AI Services', href: '/ai-services', icon: Briefcase },
+      { label: 'IT Services', href: '/it-services', icon: Settings },
+      { label: 'Cloud Services', href: '/cloud-services', icon: Building2 }
+    ]
+  },
+  {
+    label: 'About',
+    href: '/about',
+    icon: Users
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+    icon: Phone
+  },
+  {
+    label: 'Help',
+    href: '/help',
+    icon: HelpCircle
+  }
+];
+
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+
+  const toggleExpanded = (label: string) => {
+    setExpandedItems(prev => 
+      prev.includes(label) 
+        ? prev.filter(item => item !== label)
+        : [...prev, label]
     );
-<<<<<<< HEAD
   };
 
-  const navigation = null;
-  };
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
 
-  const quickLinks = null;
-=======
-  }
-  const navigation = {
-    'Services': [
-      { name: 'Web Development', href: '/services/web-development', icon: Code }
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud }
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield }
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap }
-    ]
-    'Solutions': [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 }
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart }
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart }
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap }
-    ]
-    'Industries': [
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory }
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck }
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard }
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart }
-      { name: 'Education', href: '/industries/education', icon: GraduationCap }
-    ];
-  }
-  const quickLinks = [
-    { name: 'About Us', href: '/about' }
-    { name: 'Our Team', href: '/team' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'Blog', href: '/blog' }
-    { name: 'Careers', href: '/careers' }
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  ];
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -100,12 +95,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
+          
+          {/* Sidebar */}
           <motion.div
-            initial={{ x: -300 }}
+            initial={{ x: '-100%' }}
             animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+          >
+            <div className="flex flex-col h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b">
+                <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
+                <button
+                  onClick={onClose}
+                  className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+          >
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -117,54 +124,108 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                  <X className="w-6 h-6" />
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+          >
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+                >
+                  <X className="h-6 w-6" />
                 </button>
               </div>
+              
+
               {/* Navigation */}
-              <nav className="space-y-4">
-                {Object.entries(navigation).map(([title, links]) => (
-                  <div key={title}>
-                    <button
-                      onClick={() => handleDropdownToggle(title)}
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <div className="space-y-2">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                      onClick={onClose}
-                    >
-                      {link.name}
-                    </Link>
+              <nav className="flex-1 overflow-y-auto py-4">
+                <div className="px-4 space-y-2">
+                  {navigationItems.map((item) => (
+                    <div key={item.label}>
+                      {item.children ? (
+                        <div>
+                          <button
+                            onClick={() => toggleExpanded(item.label)}
+                            className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                          >
+                            <div className="flex items-center">
+                              <item.icon className="h-5 w-5 mr-3" />
+                              {item.label}
+                            </div>
+                            {expandedItems.includes(item.label) ? (
+                              <ChevronDown className="h-4 w-4" />
+                            ) : (
+                              <ChevronRight className="h-4 w-4" />
+                            )}
+                          </button>
+                          {expandedItems.includes(item.label) && (
+                            <div className="ml-6 mt-1 space-y-1">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  href={child.href}
+                                  className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors"
+                                  onClick={onClose}
+                                >
+                                  <child.icon className="h-4 w-4 mr-3" />
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                          onClick={onClose}
+                        >
+                          <item.icon className="h-5 w-5 mr-3" />
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
                   ))}
                 </div>
+              </nav>
+              
+              {/* Contact Info */}
+              <div className="p-6 border-t bg-gray-50">
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Phone className="h-4 w-4 mr-2" />
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Mail className="h-4 w-4 mr-2" />
+                    <span>info@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    <span>123 Tech Street, Innovation City</span>
               </div>
+
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-600">
-                    <Phone className="w-4 h-4" />
+                  <div className="flex items-center text-gray-600">
+                    <Phone className="w-4 h-4 mr-3" />
                     <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-600">
-                    <Mail className="w-4 h-4" />
+                  <div className="flex items-center text-gray-600">
+                    <Mail className="w-4 h-4 mr-3" />
                     <span>kleber@ziontechgroup.com</span>
                   </div>
+                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  </div>
                 </div>
-                <div className="mt-4">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                    onClick={onClose}
-                  >
-                    <span>Get Started</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </Link>
               </div>
             </div>
           </motion.div>
@@ -173,4 +234,214 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     </AnimatePresence>
   );
 }
-export default Sidebar;
+=======
+import Link from 'next/link';
+import { useMemo } from 'react';
+import { 
+  Home, Rocket, Brain, Atom, Monitor, Shield, 
+  Users, FileText, Settings, Cog, Database, 
+  Network, Cloud, Lock, Code, Globe, Star,
+  TrendingUp, BarChart3, Zap, Target, CheckCircle
+} from 'lucide-react';
+
+interface NavLink {
+  href: string;
+  label: string;
+  icon?: React.ComponentType<{ className?: string }>;
+  description?: string;
+  badge?: string;
+}
+
+interface NavSection {
+  title: string;
+  links: NavLink[];
+}
+
+export default function Sidebar() {
+  const navigationSections: NavSection[] = useMemo(
+    () => [
+      {
+        title: 'Core Pages',
+        links: [
+          { href: '/', label: 'Home', icon: Home, description: 'Main homepage' },
+          { href: '/about', label: 'About Us', icon: Users, description: 'Company information' },
+          { href: '/contact', label: 'Contact', icon: Users, description: 'Get in touch' },
+          { href: '/team', label: 'Team', icon: Users, description: 'Leadership team' }
+        ]
+      },
+      {
+        title: 'Services & Solutions',
+        links: [
+          { href: '/services', label: 'All Services', icon: Rocket, description: 'Complete services overview', badge: 'Featured' },
+          { href: '/solutions', label: 'Solutions', icon: Target, description: 'Technology solutions' },
+          { href: '/ai-services', label: 'AI Services', icon: Brain, description: 'Artificial intelligence solutions' },
+          { href: '/quantum-technology', label: 'Quantum Tech', icon: Atom, description: 'Quantum computing solutions' },
+          { href: '/it-infrastructure', label: 'IT Infrastructure', icon: Monitor, description: 'IT infrastructure services' },
+          { href: '/cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security solutions' },
+          { href: '/cloud-solutions', label: 'Cloud Solutions', icon: Cloud, description: 'Cloud computing services' },
+          { href: '/blockchain-solutions', label: 'Blockchain', icon: Database, description: 'Blockchain technology' },
+          { href: '/iot-platforms', label: 'IoT Platforms', icon: Network, description: 'Internet of Things' }
+        ]
+      },
+      {
+        title: 'Resources & Insights',
+        links: [
+          { href: '/blog', label: 'Blog & Articles', icon: FileText, description: 'Latest insights' },
+          { href: '/technology-insights', label: 'Tech Insights', icon: TrendingUp, description: 'Technology trends' },
+          { href: '/case-studies', label: 'Case Studies', icon: Star, description: 'Success stories' },
+          { href: '/white-papers', label: 'White Papers', icon: FileText, description: 'Research & analysis' },
+          { href: '/docs', label: 'Documentation', icon: Code, description: 'Technical docs' },
+          { href: '/api', label: 'API Reference', icon: Code, description: 'API documentation' }
+        ]
+      },
+      {
+        title: 'Company & Support',
+        links: [
+          { href: '/careers', label: 'Careers', icon: Users, description: 'Join our team' },
+          { href: '/support', label: 'Support', icon: Cog, description: 'Get help' },
+          { href: '/privacy', label: 'Privacy Policy', icon: Lock, description: 'Data protection' },
+          { href: '/terms', label: 'Terms of Service', icon: FileText, description: 'Legal terms' },
+          { href: '/cookies', label: 'Cookie Policy', icon: FileText, description: 'Cookie information' }
+        ]
+      },
+      {
+        title: 'Specialized Services',
+        links: [
+          { href: '/quantum-neural-network-platform', label: 'Quantum Neural Networks', icon: Atom, description: 'Quantum AI platform', badge: 'New' },
+          { href: '/autonomous-business-operations-platform', label: 'Autonomous Business', icon: Brain, description: 'AI business automation', badge: 'New' },
+          { href: '/ai-powered-it-asset-management', label: 'IT Asset Management', icon: Monitor, description: 'AI-powered IT management', badge: 'New' },
+          { href: '/ai-consciousness-evolution-2029', label: 'AI Consciousness', icon: Brain, description: 'AI consciousness evolution', badge: 'Featured' }
+        ]
+      }
+    ],
+    []
+  );
+
+  const utilityLinks: NavLink[] = useMemo(
+    () => [
+      { href: '/site-health', label: 'Site Health', icon: CheckCircle, description: 'Website health monitoring' },
+      { href: '/sitemap', label: 'Sitemap', icon: Globe, description: 'Site structure overview' },
+      { href: '/search', label: 'Search', icon: BarChart3, description: 'Search functionality' }
+    ],
+    []
+  );
+
+  return (
+    <aside className="fixed left-0 top-0 z-40 h-screen w-80 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
+      {/* Header */}
+      <div className="mb-6 px-2">
+        <div className="flex items-center space-x-3 mb-4">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <Rocket className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <div className="text-lg font-bold tracking-wide">
+              <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Zion</span>
+              <span className="ml-2 text-white/60">Navigation</span>
+            </div>
+            <div className="text-xs text-gray-500">Tech Group</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Sections */}
+      <div className="space-y-8">
+        {navigationSections.map((section, sectionIndex) => (
+          <div key={sectionIndex}>
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
+              {section.title}
+            </h3>
+            <div className="space-y-1">
+              {section.links.map((link, linkIndex) => (
+                <Link
+                  key={linkIndex}
+                  href={link.href}
+                  className="group flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-200"
+                >
+                  {link.icon && (
+                    <link.icon className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" />
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center space-x-2">
+                      <span className="truncate">{link.label}</span>
+                      {link.badge && (
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${
+                          link.badge === 'New' 
+                            ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                            : 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
+                        }`}>
+                          {link.badge}
+                        </span>
+                      )}
+                    </div>
+                    {link.description && (
+                      <p className="text-xs text-gray-500 truncate">{link.description}</p>
+                    )}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* Utility Links */}
+        <div>
+          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
+            Utilities
+          </h3>
+          <div className="space-y-1">
+            {utilityLinks.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className="group flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-200"
+              >
+                {link.icon && (
+                  <link.icon className="w-4 h-4 text-gray-500 group-hover:text-gray-300 transition-colors" />
+                )}
+                <div className="flex-1 min-w-0">
+                  <span className="truncate">{link.label}</span>
+                  {link.description && (
+                    <p className="text-xs text-gray-500 truncate">{link.description}</p>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="pt-6 border-t border-slate-700/50">
+          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
+            Contact
+          </h3>
+          <div className="space-y-2 px-2">
+            <div className="text-xs text-gray-500">
+              <div className="flex items-center space-x-2 mb-1">
+                <Users className="w-3 h-3" />
+                <span>Zion Tech Group</span>
+              </div>
+              <div className="text-gray-600">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </div>
+            </div>
+            <div className="text-xs text-gray-500">
+              <div className="flex items-center space-x-2 mb-1">
+                <Zap className="w-3 h-3" />
+                <span>Get Started</span>
+              </div>
+              <Link 
+                href="/contact" 
+                className="text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                Contact Us →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

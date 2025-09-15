@@ -1,54 +1,61 @@
 
-import React from "react",
+import React from "react";
 import { cn } from "@/lib/utils";
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
-interface SeverityIndicatorProps {
 <<<<<<< HEAD
-  severity: "safe" | "suspicious" | "dangerous";
+import { AlertTriangleAlertCircleCheckCircle } from "lucide-react";
 =======
-  severity: "safe" | "suspicious" | "dangerous"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
+
+interface SeverityIndicatorProps {
+  severity: "safe" | "suspicious" | "dangerous";
   showIcon?: boolean;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
-  className?: string
+  className?: string;
 }
-<<<<<<< HEAD
 
 export function SeverityIndicator({ 
-  severity;
-  showIcon;
-=======
-export function SeverityIndicator({
+<<<<<<< HEAD
   severity
   showIcon = true
   showText = true
-  size = "md";
-  className
+=======
+  severity, 
+  showIcon = true, 
+  showText = true, 
+>>>>>>> origin/auto/autonomy-17186719616
+  size = "md",
+  className 
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
         return <AlertCircle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-destructive"
         )} />;
       case 'suspicious':
         return <AlertTriangle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-amber-500"
         )} />;
-      default: return <CheckCircle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+      default:
+        return <CheckCircle className={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-green-500"
-        )} />
+        )} />;
     }
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  };
+
   return (
+<<<<<<< HEAD
+    <div className={cn("flex items-center gap-1"className)}>
+=======
     <div className={cn("flex items-center gap-1", className)}>
+>>>>>>> origin/auto/autonomy-17186719616
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
-  )
+  );
 }
