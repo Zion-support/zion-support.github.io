@@ -56,6 +56,11 @@ import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
+import InteractiveTechDemo2026 from './src/components/InteractiveTechDemo2026';
+import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
+import NextGenAIConsciousness2026 from './src/pages/NextGenAIConsciousness2026';
+import QuantumReality2026 from './src/pages/QuantumReality2026';
 
 export default function App(): JSX.Element {
   return (
@@ -120,6 +125,15 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Robotics →
+                      </a>
+                      <a href="/pages/RevolutionaryTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 Tech Showcase →
+                      </a>
+                      <a href="/pages/NextGenAIConsciousness2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧠 AI Consciousness →
+                      </a>
+                      <a href="/pages/QuantumReality2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        ⚛️ Quantum Reality →
                       </a>
                     </div>
                   </div>
@@ -321,6 +335,11 @@ export default function App(): JSX.Element {
                 {/* Ultimate Content Showcase 2026 */}
                 <div className="mb-12">
                   <UltimateContentShowcase2026 />
+                </div>
+
+                {/* Revolutionary Content Showcase 2026 */}
+                <div className="mb-12">
+                  <RevolutionaryContentShowcase2026 />
                 </div>
 
                 {/* Enhanced Content Advertising */}
@@ -621,6 +640,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* Interactive Tech Demo 2026 */}
+                <div className="mb-12">
+                  <InteractiveTechDemo2026 />
+                </div>
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -717,6 +741,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
+          <Route path="/pages/NextGenAIConsciousness2026" element={<NextGenAIConsciousness2026 />} />
+          <Route path="/pages/QuantumReality2026" element={<QuantumReality2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
