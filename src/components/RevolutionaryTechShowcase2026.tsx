@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
@@ -133,6 +137,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -532,6 +537,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 =======
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
   );
