@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@ import {
 } from '@heroicons/react/24/outline'
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 import { getLatestUpdates } from '../data/updates'
 =======
 import React from 'react'
@@ -53,6 +56,7 @@ export default function HomePage() {
 <<<<<<< HEAD
     <div className="bg-black min-h-screen">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -89,6 +93,8 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -111,6 +117,7 @@ export default function HomePage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
             </a>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
           </div>
@@ -254,11 +261,29 @@ export default function HomePage() {
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+          </div>
+        </div>
+        
+        <div className="mt-24">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
+            <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
             {latest.map((item) => (
-              <article key={item.href} className="rounded-2xl bg-white/5 p-6">
-                <h3 className="text-white font-semibold"><a href={item.href}>{item.title}</a></h3>
-                <p className="mt-2 text-sm text-gray-300">{item.summary}</p>
-              </article>
+              <div key={item.title} className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="text-sm text-gray-300 mb-4">{item.summary}</p>
+                <a href={item.href} className="text-sm font-semibold text-blue-400 hover:text-blue-300">
+                  Read more <span aria-hidden="true">→</span>
+                </a>
+              </div>
             ))}
 =======
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
@@ -273,4 +298,3 @@ export default function HomePage() {
     </div>
   )
 }
-

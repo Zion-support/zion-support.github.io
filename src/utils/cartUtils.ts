@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Cart utility functions for managing shopping cart state
+=======
+// Cart utilities for handling shopping cart operations
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 
 =======
 <<<<<<< HEAD
@@ -23,6 +27,7 @@ export interface Cart {
   items: CartItem[];
   total: number;
   itemCount: number;
+<<<<<<< HEAD
 }
 
 export const cartUtils = {
@@ -182,10 +187,133 @@ export const cartUtils = {
 
     if (!Array.isArray(cart.items)) {
       errors.push('Cart items must be an array');
+=======
+  lastUpdated: Date;
+}
+
+export interface CartSummary {
+  subtotal: number;
+  tax: number;
+  shipping: number;
+  total: number;
+  itemCount: number;
+}
+
+class CartUtils {
+  // Calculate cart totals
+  calculateTotals(items: CartItem[]): CartSummary {
+    const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const tax = subtotal * 0.08; // 8% tax rate
+    const shipping = subtotal > 100 ? 0 : 10; // Free shipping over $100
+    const total = subtotal + tax + shipping;
+    const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
+
+    return {
+      subtotal,
+      tax,
+      shipping,
+      total,
+      itemCount,
+    };
+  }
+
+  // Add item to cart
+  addItem(cart: Cart, item: Omit<CartItem, 'quantity'>, quantity: number = 1): Cart {
+    const existingItemIndex = cart.items.findIndex(cartItem => cartItem.id === item.id);
+    
+    let newItems: CartItem[];
+    if (existingItemIndex >= 0) {
+      // Update existing item quantity
+      newItems = [...cart.items];
+      newItems[existingItemIndex] = {
+        ...newItems[existingItemIndex],
+        quantity: newItems[existingItemIndex].quantity + quantity,
+      };
+    } else {
+      // Add new item
+      newItems = [...cart.items, { ...item, quantity }];
+    }
+
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Remove item from cart
+  removeItem(cart: Cart, itemId: string): Cart {
+    const newItems = cart.items.filter(item => item.id !== itemId);
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Update item quantity
+  updateQuantity(cart: Cart, itemId: string, quantity: number): Cart {
+    if (quantity <= 0) {
+      return this.removeItem(cart, itemId);
+    }
+
+    const newItems = cart.items.map(item =>
+      item.id === itemId ? { ...item, quantity } : item
+    );
+    
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Clear cart
+  clearCart(): Cart {
+    return {
+      items: [],
+      total: 0,
+      itemCount: 0,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Get item by ID
+  getItem(cart: Cart, itemId: string): CartItem | undefined {
+    return cart.items.find(item => item.id === itemId);
+  }
+
+  // Check if item exists in cart
+  hasItem(cart: Cart, itemId: string): boolean {
+    return cart.items.some(item => item.id === itemId);
+  }
+
+  // Get cart summary
+  getSummary(cart: Cart): CartSummary {
+    return this.calculateTotals(cart.items);
+  }
+
+  // Validate cart
+  validateCart(cart: Cart): { isValid: boolean; errors: string[] } {
+    const errors: string[] = [];
+
+    if (cart.items.length === 0) {
+      errors.push('Cart is empty');
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
     }
 
     cart.items.forEach((item, index) => {
       if (!item.id) {
+<<<<<<< HEAD
         errors.push(`Item at index ${index} is missing ID`);
       }
       if (!item.name) {
@@ -268,6 +396,17 @@ export const mergeCartItems = cartUtils.mergeCartItems;
         errors.push(`Item at index ${index} has invalid price`);
       }
       if (typeof item.quantity !== 'number' || item.quantity <= 0) {
+=======
+        errors.push(`Item at index ${index} has no ID`);
+      }
+      if (!item.name) {
+        errors.push(`Item at index ${index} has no name`);
+      }
+      if (item.price < 0) {
+        errors.push(`Item at index ${index} has negative price`);
+      }
+      if (item.quantity <= 0) {
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
         errors.push(`Item at index ${index} has invalid quantity`);
       }
     });
@@ -276,6 +415,7 @@ export const mergeCartItems = cartUtils.mergeCartItems;
       isValid: errors.length === 0,
       errors,
     };
+<<<<<<< HEAD
   },
 
   // Persist cart to localStorage
@@ -328,3 +468,33 @@ export const mergeCartItems = cartUtils.mergeCartItems;
 
 >>>>>>> main
 export default cartUtils;
+=======
+  }
+
+  // Format price for display
+  formatPrice(price: number): string {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(price);
+  }
+
+  // Get cart size (number of unique items)
+  getCartSize(cart: Cart): number {
+    return cart.items.length;
+  }
+
+  // Check if cart is empty
+  isEmpty(cart: Cart): boolean {
+    return cart.items.length === 0;
+  }
+}
+
+// Create and export a singleton instance
+const cartUtils = new CartUtils();
+
+export default cartUtils;
+
+// Export the class for testing purposes
+export { CartUtils };
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d

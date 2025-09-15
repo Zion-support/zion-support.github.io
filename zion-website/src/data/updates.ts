@@ -11,6 +11,7 @@ export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
@@ -1431,6 +1432,20 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/eval-ready-agent-release-automation',
     date: '2025-09-15',
     tag: 'Guide'
+=======
+    title: "Launch: Real-Time AI Analytics Dashboard v3.0",
+    summary: "Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.",
+    href: "/updates/real-time-ai-analytics-dashboard-v3-0",
+    date: "2025-09-15",
+    tag: "Launch"
+  },
+  {
+    title: "Launch: AI Agent Orchestration Platform v2.0",
+    summary: "Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.",
+    href: "/updates/ai-agent-orchestration-platform-2-0",
+    date: "2025-09-15",
+    tag: "Launch"
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
   }
 ]
 
@@ -1440,4 +1455,3 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .sort((a, b) => safeDate(b.date) - safeDate(a.date))
     .slice(0, limit)
 }
-

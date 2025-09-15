@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -141,10 +142,15 @@ export default function Footer() {
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-400 xl:text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center">
+          <p>&copy; 2025 Zion Holdings. All rights reserved.</p>
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-400">
-          &copy; 2025 Zion Tech Group. All rights reserved.
-        </p>
       </div>
     </footer>
   )

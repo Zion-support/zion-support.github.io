@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -30,6 +31,8 @@ const navigation = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
