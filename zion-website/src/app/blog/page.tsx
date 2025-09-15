@@ -2,6 +2,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-agent-red-teaming-field-guide',
+    title: 'AI 2026: Agent Red‑Teaming Field Guide',
+    summary:
+      'Evaluation‑driven scenarios, attack taxonomy, and evidence bundles to ship safer agents.'
+  },
+  {
     slug: 'ai-2026-eval-driven-release-engineering-deep-dive',
     title: 'AI 2026: Eval‑Driven Release Engineering — Deep Dive',
     summary:

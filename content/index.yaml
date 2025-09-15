@@ -399,6 +399,20 @@ content_index:
         payback: "3.8 months"
 
   newly_added_september_2025:
+    - id: "ai-2026-agent-red-teaming-field-guide"
+      type: "blog"
+      title: "AI 2026: Agent Red‑Teaming Field Guide"
+      file_path: "/app/blog/ai-2026-agent-red-teaming-field-guide/page.tsx"
+      url: "/blog/ai-2026-agent-red-teaming-field-guide"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Red‑Teaming", "Safety", "Evaluations", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents_prevented: "40%"
+        rollback_time: "< 5 min"
+        audit_ready: true
     - id: "ai-2026-policy-as-code-in-production"
       type: "blog"
       title: "AI 2026: Policy‑as‑Code in Production — Guardrails, Gates, and Evidence"
