@@ -56,6 +56,7 @@ import FutureTechRevolution2026 from './src/pages/FutureTechRevolution2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
+import RevolutionaryTechBanner2026 from './src/components/RevolutionaryTechBanner2026';
 
 export default function App(): JSX.Element {
   return (
@@ -163,6 +164,9 @@ export default function App(): JSX.Element {
                     </a>
                   </div>
                 </div>
+
+                {/* Revolutionary Tech Banner 2026 */}
+                <RevolutionaryTechBanner2026 />
 
                 {/* Revolutionary Content Showcase */}
                 <RevolutionaryContentShowcase />
