@@ -77,15 +77,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
   const latestInsights = [
     {
-      title: 'AI 2026: Edge Agents in Production',
-      href: '/blog/ai-2026-edge-agents-production-guide',
-      tag: 'Guide',
+      title: 'GenAI for Regulated Industries (2025)',
+      href: '/blog/genai-2025-practical-compliance-patterns',
+      tag: 'Compliance',
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
-      title: 'AI 2026: Safety Evals Blueprint',
-      href: '/content/ai-2026-safety-evals-blueprint',
-      tag: 'Blueprint',
+      title: 'Agentic CRM: Autonomous Revenue Workflows',
+      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
+      tag: 'RevOps',
       gradient: 'from-fuchsia-500 to-indigo-500'
     },
     {

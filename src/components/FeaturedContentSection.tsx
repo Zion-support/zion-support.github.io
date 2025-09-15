@@ -41,26 +41,26 @@ const FeaturedContentSection: React.FC = () => {
 
   const latestBlogs = [
     {
-      id: 4,
-      title: '5 AI Trends That Will Define 2025',
-      excerpt: 'From autonomous systems to ethical AI, discover the trends shaping the future.',
-      author: 'Sarah Johnson',
-      date: '2025-01-15',
-      readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop',
-      slug: 'ai-trends-2025',
-      category: 'AI'
+      id: 37,
+      title: 'GenAI for Regulated Industries: Practical Compliance Patterns (2025)',
+      excerpt: 'Deploy GenAI in finance and healthcare with auditability and control.',
+      author: 'Amelia Brooks',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=400&h=250&fit=crop',
+      slug: 'genai-2025-practical-compliance-patterns',
+      category: 'Compliance'
     },
     {
-      id: 5,
-      title: 'Cybersecurity Best Practices for Modern Enterprises',
-      excerpt: 'Protect your business with these essential cybersecurity strategies and tools.',
-      author: 'Michael Chen',
-      date: '2025-01-12',
+      id: 38,
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
+      excerpt: 'Lead-to-cash with agents: enrichment, outreach, pipeline hygiene, renewals.',
+      author: 'Sofia Ramirez',
+      date: '2025-09-15',
       readTime: '7 min read',
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop',
-      slug: 'cybersecurity-best-practices',
-      category: 'Security'
+      image: 'https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=400&h=250&fit=crop',
+      slug: 'agentic-crm-autonomous-revenue-workflows-2025',
+      category: 'Go-To-Market'
     },
     {
       id: 6,
