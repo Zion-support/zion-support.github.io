@@ -257,14 +257,14 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
-                summary: 'Design, deploy, and scale multimodal agents with measurable ROI.',
-                href: '/blog/ai-2026-multimodal-agents-enterprise-blueprint'
+                title: 'AI 2026: Autonomous Procurement Blueprint',
+                summary: 'From sourcing to contract ops with policy-as-code and measurable savings.',
+                href: '/blog/ai-2026-autonomous-procurement-blueprint'
               },
               {
-                title: 'AI 2026: LLM Evals Maturity Model',
-                summary: 'Evaluation-first framework with quality gates and policy-as-code.',
-                href: '/blog/ai-2026-llm-evals-maturity-model'
+                title: 'AI 2026: Guardrails for Multimodal Agents',
+                summary: 'Design patterns for safe image/audio/text agents with continuous evals.',
+                href: '/blog/ai-2026-guardrails-for-multimodal-agents'
               },
               {
                 title: 'AI 2026: Enterprise Retrieval Observability',

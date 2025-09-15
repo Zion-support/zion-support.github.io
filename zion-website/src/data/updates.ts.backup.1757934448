@@ -8,18 +8,32 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+<<<<<<< HEAD
+    title: 'Launch: Autonomous Incident Response (v1.0)',
+    summary:
+      'End-to-end incident triage with real-time RAG, policy-as-code runbooks, and auditable actions.',
+    href: '/updates/autonomous-incident-response-1-0',
+=======
     title: 'Launch: Autonomous Procurement Copilot (v1.0)',
     summary:
       'Automates vendor sourcing, contract analysis, and PO workflows with policy-as-code guardrails and live cost benchmarks.',
     href: '/updates/autonomous-procurement-copilot-1-0',
+>>>>>>> origin/cursor/create-and-deploy-new-content-eb52
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
+<<<<<<< HEAD
+    title: 'Guide: Secure Prompt Engineering (2025 Edition)',
+    summary:
+      'Practical strategies for prompt hardening, jailbreak resistance, and least-privilege tool-use.',
+    href: '/updates/secure-prompt-engineering-2025',
+=======
     title: 'Guide: Production Guardrails for Multimodal Agents',
     summary:
       'Practical design patterns for safe image, audio, and text agents: sandboxing, red-teaming, and continuous evals.',
     href: '/updates/production-guardrails-multimodal-agents',
+>>>>>>> origin/cursor/create-and-deploy-new-content-eb52
     date: '2025-09-15',
     tag: 'Guide'
   },
