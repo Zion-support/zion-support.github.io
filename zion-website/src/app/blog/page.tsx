@@ -176,6 +176,12 @@ const posts = [
   }
   ,
   {
+    slug: 'ai-2026-cost-aware-agent-routing',
+    title: 'AI 2026: Cost‑Aware Agent Routing — Practical Guide',
+    summary: 'Balance quality, latency, and spend using eval signals and budget guardrails.'
+  }
+  ,
+  {
     slug: 'ai-2026-retrieval-latency-patterns',
     title: 'AI 2026: Retrieval Latency Patterns',
     summary: 'Designing sub-500ms retrieval with caches, hybrids, and streaming.'
