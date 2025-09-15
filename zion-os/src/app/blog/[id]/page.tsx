@@ -11,6 +11,21 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-2025': {
+    id: 'ai-governance-2025',
+    title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A field guide to implementing measurable, reversible, and auditable controls for production AI systems.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As AI systems gain autonomy, governance must shift from static policies to programmable guardrails with real-time oversight.',
+      'This guide outlines a practical framework built on capabilities, constraints, and controls: define allowed abilities, codify constraints as policies, and implement controls for monitoring and intervention.',
+      'We cover identity, permissioning, human-in-the-loop checkpoints, incident response, and auditability. We also include rollout patterns and KPIs to measure effectiveness without blocking innovation.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
