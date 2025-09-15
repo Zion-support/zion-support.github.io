@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Agentic Evals Blueprint (v1)',
+    summary:
+      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.',
+    href: '/updates/agentic-evals-blueprint',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Case Study: 38% Cost Reduction with Retrieval-Augmented Agents',
+    summary:
+      'How a Fortune 500 reduced support costs and MTTR with production-grade RAG agents.',
+    href: '/updates/rag-agents-case-study',
+    date: '2025-09-14',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: AI Content Studio 2.0',
     summary:
       'Create high-quality AI articles, videos, and social assets with one click. New templates, workflows, and team collaboration.',
@@ -39,4 +55,11 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Community'
   }
 ]
+
+export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
+  const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
+  return [...siteUpdates]
+    .sort((a, b) => safeDate(b.date) - safeDate(a.date))
+    .slice(0, limit)
+}
 
