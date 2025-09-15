@@ -39,7 +39,7 @@ import {
   Smartphone,
   Network,
   Clock,
-  ShoppingCart,
+  ShoppingCart as ShoppingCart2,
   FileText,
   Key,
   Globe2,
