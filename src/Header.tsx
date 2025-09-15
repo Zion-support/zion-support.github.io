@@ -73,6 +73,24 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           description: 'Emerging technologies and trends',
           href: '/pages/FutureTechTrends2025',
           icon: Database
+        },
+        {
+          name: 'Revolutionary Tech Trends 2025',
+          description: 'Breakthrough technologies reshaping industries',
+          href: '/pages/RevolutionaryTechTrends2025',
+          icon: TrendingUp
+        },
+        {
+          name: 'AI Business Transformation',
+          description: 'Transform your business with AI solutions',
+          href: '/pages/AIBusinessTransformation2025',
+          icon: Brain
+        },
+        {
+          name: 'Next-Gen Innovation Hub',
+          description: 'Cutting-edge research and development',
+          href: '/pages/NextGenInnovationHub2025',
+          icon: Code
         }
       ]
     },
