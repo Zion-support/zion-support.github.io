@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -18,6 +21,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AdvancedAITransformation2026"
+<<<<<<< HEAD
     },
     {
       id: 1,
@@ -247,6 +251,8 @@ const InteractiveTechShowcase: React.FC = () => {
       ],
       color: "from-purple-600 to-pink-600",
       stats: { performance: "1000x", accuracy: "99.9%", speed: "Real-time" }
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
     },
     {
       id: 2,
@@ -647,7 +653,10 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-4xl font-bold text-orange-400 mb-2">2026</div>
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
         </div>
       </div>
     </div>

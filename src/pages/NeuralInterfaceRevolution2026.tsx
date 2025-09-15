@@ -476,6 +476,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
@@ -493,6 +494,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
       {/* Neural Interface Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -658,6 +661,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               <li>• Intuitive operation</li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <div className="text-5xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Non-Invasive BCI</h3>
@@ -739,6 +743,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
             </ul>
           </motion.div>
 
@@ -751,6 +757,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
             initial={{ opacity: 0, y: 50 }}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -770,6 +777,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 =======
             initial={{ opacity: 0, y: 50 }}
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
@@ -1623,6 +1632,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
@@ -1651,6 +1661,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
       {/* Safety & Ethics */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -1696,6 +1708,7 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </button>
             <button className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Neural Demo
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2010,6 +2023,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
             </button>
           </div>
         </div>
