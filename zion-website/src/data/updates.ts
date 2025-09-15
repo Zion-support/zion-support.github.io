@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Sales Copilot (v1.0)',
+    summary:
+      'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',
+    href: '/updates/autonomous-sales-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Real-World RAG Latency',
+    summary:
+      'A practical guide to measure tail latency, hit rate, and answer quality in production RAG.',
+    href: '/updates/evaluating-real-world-rag-latency',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Research Copilot (v1.1)',
     summary:
       'Context-grounded copilots for research teams with retrieval observability, evals, and live citations.',

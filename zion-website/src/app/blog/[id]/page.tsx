@@ -90,13 +90,7 @@ const blogPosts: Record<string, any> = {
   }
 }
 
-interface BlogPostPageProps {
-  params: {
-    id: string
-  }
-}
-
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default function BlogPostPage({ params }: any) {
   const post = blogPosts[params.id]
   
   if (!post) {
