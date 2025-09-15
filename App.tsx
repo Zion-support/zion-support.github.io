@@ -23,6 +23,33 @@ export default function App(): JSX.Element {
           </div>
         </div>
 
+        <section aria-labelledby="featured-content-heading" className="mb-12">
+          <div className="text-center mb-8">
+            <h2 id="featured-content-heading" className="text-3xl font-bold text-gray-900">Featured Content</h2>
+            <p className="text-gray-600">Fresh insights, case studies, and announcements.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow" role="article">
+              <span className="text-sm text-blue-600 font-semibold">Case Study</span>
+              <h3 className="text-xl font-semibold mt-2 mb-2">RAG Assistant Reduces Support Tickets 37%</h3>
+              <p className="text-gray-600 mb-4">How our AI knowledge assistant improved deflection and speed to answer.</p>
+              <a href="/case-studies/rag-assistant" className="text-blue-600 hover:underline">Read more</a>
+            </article>
+            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow" role="article">
+              <span className="text-sm text-purple-600 font-semibold">Announcement</span>
+              <h3 className="text-xl font-semibold mt-2 mb-2">Free Tech Marketplace Launch</h3>
+              <p className="text-gray-600 mb-4">Connect with AI professionals and publish services at zero cost.</p>
+              <a href="/marketplace" className="text-blue-600 hover:underline">Explore</a>
+            </article>
+            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow" role="article">
+              <span className="text-sm text-emerald-600 font-semibold">Insight</span>
+              <h3 className="text-xl font-semibold mt-2 mb-2">Optimizing Cloud Costs with AI</h3>
+              <p className="text-gray-600 mb-4">Practical steps to reduce spend while improving reliability.</p>
+              <a href="/insights/ai-cloud-cost-optimizer" className="text-blue-600 hover:underline">Learn how</a>
+            </article>
+          </div>
+        </section>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <div className="text-4xl mb-4">🤖</div>
