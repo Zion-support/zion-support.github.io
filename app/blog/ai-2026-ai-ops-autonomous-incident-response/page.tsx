@@ -2,6 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
 
+export const metadata = {
+  title: 'AI 2026: Autonomous Incident Response',
+  description: 'Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.',
+};
+
 const AIOpsAutonomousIncidentResponse2026 = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -23,6 +28,14 @@ const AIOpsAutonomousIncidentResponse2026 = () => {
           <h2>Why Autonomous Incident Response</h2>
           <p>As systems scale, manual incident response becomes a bottleneck. Autonomous agents orchestrate detection, triage, remediation, and post-incident learning with guardrails.</p>
 
+        <h2>Core Capabilities</h2>
+          <ul>
+            <li>Signal ingestion from logs, traces, metrics, and synthetic tests</li>
+            <li>Root-cause hypotheses generation with contextual evidence</li>
+            <li>Safe action execution with guardrails and automated rollbacks</li>
+            <li>Post-incident summaries and learning reinforcement</li>
+          </ul>
+
           <h2>Reference Architecture</h2>
           <ul>
             <li>Signals: alerts, logs, traces, eval regressions</li>
@@ -41,6 +54,15 @@ const AIOpsAutonomousIncidentResponse2026 = () => {
 
           <h2>Measuring Impact</h2>
           <p>Track MTTR, time-to-detect, auto-resolved percentage, change failure rate, and incident recurrence. Use eval-gated rollouts to avoid regressions.</p>
+        </div>
+
+        <div className="mt-10 flex gap-4">
+          <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+            Request a Demo
+          </Link>
+          <Link href="/blog/ai-2026-agent-observability-blueprint" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            Read Agent Observability
+          </Link>
         </div>
 
         <footer className="mt-12 flex items-center justify-between">
