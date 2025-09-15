@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
 =======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
 <<<<<<< HEAD
+=======
   const carouselItems = [
     {
       id: 1,
@@ -40,119 +41,114 @@ const DynamicContentCarousel = () => {
       image: "📚",
       gradient: "from-indigo-600 to-purple-600",
       link: "/pages/AITransformationGuide2026"
-=======
-  const slides = [
-    {
-      title: 'AI Revolution 2025',
-      description: 'Discover how artificial intelligence is reshaping industries',
-      image: '/api/placeholder/600/400',
-      link: '/pages/AIRevolution2025'
     },
     {
-      title: 'Quantum Computing',
-      description: 'Experience exponential processing power with quantum technology',
-      image: '/api/placeholder/600/400',
-      link: '/pages/AdvancedQuantumComputing2026'
+      id: 5,
+      title: "Transcendent AI 2031",
+      description: "Experience the next evolution of artificial intelligence",
+      image: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/TranscendentAI2031"
     },
     {
-      title: 'Neural Interfaces',
-      description: 'Bridge mind and machine with direct neural communication',
-      image: '/api/placeholder/600/400',
-      link: '/pages/AdvancedNeuralInterface2026'
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+      id: 6,
+      title: "Universal Tech Revolution 2032",
+      description: "Technology that transcends space, time, and reality itself",
+      image: "🌌",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/UniversalTechRevolution2032"
+>>>>>>> cursor/create-and-deploy-new-content-c963
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
 <<<<<<< HEAD
+    const interval = setInterval(() => {
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+            }`}
+          />
+        ))}
+=======
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 5000);
-    return () => clearInterval(interval);
+
+    return () => clearInterval(timer);
   }, [carouselItems.length]);
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselItems.length) % carouselItems.length);
+  };
+
   return (
-    <div className="relative max-w-6xl mx-auto">
-      <div className="relative overflow-hidden rounded-2xl">
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.5 }}
-            className={`bg-gradient-to-br ${carouselItems[currentSlide].gradient} p-12 text-white`}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="flex items-center justify-between"
           >
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="text-6xl mb-6">{carouselItems[currentSlide].image}</div>
-                <h2 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h2>
-                <p className="text-xl opacity-90 mb-8">{carouselItems[currentSlide].description}</p>
-                <a
-                  href={carouselItems[currentSlide].link}
-                  className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Explore Now →
-                </a>
-              </div>
-              <div className="text-center">
-                <div className="text-9xl opacity-20">{carouselItems[currentSlide].image}</div>
+            <div className="flex-1 pr-8">
+              <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {carouselItems[currentSlide].title}
+              </h3>
+              <p className="text-gray-300 text-lg mb-6">
+                {carouselItems[currentSlide].description}
+              </p>
+              <a
+                href={carouselItems[currentSlide].link}
+                className={`inline-block bg-gradient-to-r ${carouselItems[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
+              >
+                Explore Now →
+              </a>
+            </div>
+            <div className="flex-1">
+              <div className={`w-full h-64 bg-gradient-to-br ${carouselItems[currentSlide].gradient} rounded-xl flex items-center justify-center text-8xl`}>
+                {carouselItems[currentSlide].image}
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
-      </div>
 
-      {/* Navigation Dots */}
-      <div className="flex justify-center space-x-3 mt-8">
-        {carouselItems.map((_, index) => (
-=======
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+        >
+          ←
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+        >
+          →
+        </button>
 
-  return (
-    <div className="relative overflow-hidden rounded-lg">
-      <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-        {slides.map((slide, index) => (
-          <div key={index} className="w-full flex-shrink-0">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8 rounded-lg">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-3xl font-bold mb-4">{slide.title}</h3>
-                  <p className="text-xl mb-6">{slide.description}</p>
-                  <a href={slide.link} className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                    Learn More →
-                  </a>
-                </div>
-                <div className="text-center">
-                  <div className="w-full h-64 bg-white/20 rounded-lg flex items-center justify-center">
-                    <span className="text-6xl">🚀</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      {/* Navigation dots */}
-      <div className="flex justify-center mt-4 space-x-2">
-        {slides.map((_, index) => (
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-<<<<<<< HEAD
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-=======
-              currentSlide === index ? 'bg-purple-600' : 'bg-gray-300'
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-            }`}
-          />
-        ))}
+        {/* Dots Indicator */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {carouselItems.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
   );

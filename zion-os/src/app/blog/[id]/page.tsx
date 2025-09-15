@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -12,6 +11,7 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
@@ -112,13 +112,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
     category: 'Cybersecurity',
+=======
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
+    excerpt:
+      'A field guide for standing up measurable AI governance with policy engines, audit trails, and human-in-the-loop controls.',
+    category: 'AI Solutions',
+>>>>>>> cursor/create-and-deploy-new-content-425b
     author: 'Dr. Emily Watson',
     date: '2025-09-14',
-    readTime: '8 min read',
+    readTime: '11 min read',
     content: [
-      'As AI agents gain autonomy, enterprises must enforce identity, authorization, and policy to avoid costly incidents.',
-      'We present a layered approach: capability bounding, input/output filtering, secure tool adapters, and incident response loops.',
-      'Reference implementations show how to pair verifiable identity (DIDs), audit trails, and policy engines with human-in-the-loop for high-risk actions.'
+      'Organizations are accelerating autonomous workflows, but governance is often bolted on late. This blueprint sequences controls alongside capability unlocks so that safety scales with autonomy.',
+      'We cover policy modeling, graded permissions, exception handling, observability for decisions, and immutable audit trails. We include reference policies and rollout templates for regulated industries.',
+      'The goal is measurable, reversible progress: every new autonomous action ships with a policy, a fallback, and a KPI tied to risk reduction and business value.'
+    ],
+  },
+  'agent-safety-tooling': {
+    id: 'agent-safety-tooling',
+    title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
+    excerpt:
+      'Techniques and tools to harden autonomous agent ecosystems: policy guards, reputation, red-teaming, and runtime monitors.',
+    category: 'Cybersecurity',
+    author: 'Dr. James Wilson',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'As multi-agent ecosystems proliferate, safety must be enforced at design-time and runtime. We outline a layered approach spanning policy checks, capability scoping, and behavioral reputation.',
+      'We demonstrate runtime monitors that catch emergent misbehavior, plus continuous red-teaming pipelines that probe for policy gaps without impacting customers.',
+      'Finally, we show how to wire telemetry into SIEM and incident response workflows so agent incidents are handled as first-class security events.'
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -136,36 +159,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key building blocks include: DID-backed identity, reputation scoring, policy engines, event-driven orchestration, and human-in-the-loop controls for sensitive actions.',
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ],
-  },
-  'ai-supply-chain-orchestration-2025': {
-    id: 'ai-supply-chain-orchestration-2025',
-    title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
-    excerpt:
-      'A pragmatic roadmap to deploy AI-driven planning, routing, and fulfillment with guardrails and measurable ROI.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-15',
-    readTime: '8 min read',
-    content: [
-      'Supply chains are data-rich but execution-poor. AI orchestration closes the loop by converting signals into actions across planning, procurement, routing, and fulfillment.',
-      'Start with demand forecasting and inventory positioning. Add dynamic routing with real-time constraints, then automate exception handling with human-in-the-loop approvals for high-risk actions.',
-      'Reference stack: event streaming, optimization engines, policy guardrails, and audit logs. Outcomes include lower stockouts, reduced logistics cost, and faster cycle times.'
-    ]
-  },
-  'responsible-agent-governance': {
-    id: 'responsible-agent-governance',
-    title: 'Responsible Agent Governance: Policies, Controls, and Audit for AI Agents',
-    excerpt:
-      'Design a governance layer for AI agents with identity, permissions, policy evaluation, and verifiable audit.',
-    category: 'AI Ethics',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-12',
-    readTime: '6 min read',
-    content: [
-      'As organizations adopt AI agents, governance must move from guidelines to enforceable controls. The core is identity, permissions, and policy evaluation with contextual risk.',
-      'Implement capabilities-based access, graded trust, and continuous monitoring. Maintain tamper-evident audit trails and require approvals for sensitive actions.',
-      'This framework reduces operational risk and builds stakeholder trust without slowing innovation.'
-    ]
   },
   'quantum-risk-modeling-2025': {
     id: 'quantum-risk-modeling-2025',
@@ -210,36 +203,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'As AI agents transact and collaborate, marketplaces must enforce identity, reputation, and policy to mitigate fraud and abuse.',
       'This guide covers DID-backed identity, attestations, dispute resolution, and graded trust. We include reference architectures and rollout strategies for enterprise environments.',
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
-    ]
-  },
-  'ai-safety-red-teaming-2025': {
-    id: 'ai-safety-red-teaming-2025',
-    title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
-    excerpt:
-      'Hands-on red teaming techniques, tooling, and governance patterns to harden AI systems against prompt injection, data exfiltration, and policy evasion.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '9 min read',
-    content: [
-      'Enterprises deploying AI at scale face evolving attack surfaces: prompt injection, tool misuse, covert data exfiltration, and model evasion. Red teaming must be continuous and automated.',
-      'This playbook catalogs realistic adversary techniques, safe sandboxes, and CI-integrated evaluations. It includes attack libraries, policy tests, and response runbooks tied to severity levels.',
-      'We outline how to design guardrails with layered defenses: input sanitization, capability routing, authorization boundaries, and human-in-the-loop escalation for sensitive actions.'
-    ]
-  },
-  'multi-agent-systems-at-scale': {
-    id: 'multi-agent-systems-at-scale',
-    title: 'Operating Multi‑Agent Systems at Scale: Reliability, Cost, and Policy',
-    excerpt:
-      'A field guide to running large multi-agent systems with predictable reliability, bounded cost, and enforceable organizational policy.',
-    category: 'Autonomous Systems',
-    author: 'Michael Rodriguez',
-    date: '2025-09-12',
-    readTime: '11 min read',
-    content: [
-      'Multi-agent systems excel at decomposing complex work but can drift in behavior and cost without strong orchestration. Production success requires robust scheduling, tracing, and budget enforcement.',
-      'We cover queue-based architectures, capability registries, policy decision points, circuit breakers, and feedback loops. The goal is graceful degradation over brittle failure.',
-      'The paper concludes with a reference SRE dashboard: latency bands, token budgets, policy hit rates, and rollback controls for fast, safe iteration.'
     ]
   },
 };

@@ -1,19 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+>>>>>>> cursor/create-and-deploy-new-content-425b
+=======
 // Cart utility functions for managing shopping cart state
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Cart utilities for handling shopping cart operations
 
-=======
-// Cart utilities for managing shopping cart functionality
->>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 /**
  * Cart utility functions for managing shopping cart operations
@@ -25,6 +20,7 @@
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
@@ -32,6 +28,8 @@
 // Cart utilities for handling shopping cart operations
 
 >>>>>>> cursor/create-and-deploy-new-content-45eb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-425b
 export interface CartItem {
   id: string;
   name: string;
@@ -51,24 +49,24 @@ export interface Cart {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const cartUtils = {
-<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-425b
 <<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+export const cartUtils = {
   // Create a new empty cart
   createEmptyCart: (): Cart => ({
-=======
-<<<<<<< HEAD
 export const cartUtils = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Create empty cart
   createEmptyCart: (): Cart => ({
     items: [],
     total: 0,
     itemCount: 0
   }),
+<<<<<<< HEAD
 =======
 export interface CartSummary {
   subtotal: number;
@@ -102,12 +100,15 @@ class CartUtils {
   addItem(cart: Cart, item: Omit<CartItem, 'quantity'>): Cart {
 >>>>>>> main
 =======
+
+  // Add item to cart
+  addItem: (cart: Cart, item: Omit<CartItem, 'quantity'>): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
+=======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
 =======
   addItem(cart: Cart, item: Omit<CartItem, 'quantity'>, quantity: number = 1): Cart {
@@ -129,35 +130,20 @@ class CartUtils {
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
 <<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface Discount {
-  code: string;
-  type: 'percentage' | 'fixed';
-  value: number;
-  minimumAmount?: number;
-  expiresAt?: Date;
-}
-
-const TAX_RATE = 0.08; // 8% tax rate
-const FREE_SHIPPING_THRESHOLD = 100;
-const SHIPPING_COST = 9.99;
-
-export function createEmptyCart(): Cart {
-  return {
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> cursor/create-and-deploy-new-content-c963
     items: [],
     total: 0,
     itemCount: 0,
   }),
 
 <<<<<<< HEAD
+=======
   // Add item to cart
   addItem: (cart: Cart, newItem: Omit<CartItem, 'quantity'>): Cart => {
     const existingItemIndex = cart.items.findIndex(item => item.id === newItem.id);
+<<<<<<< HEAD
 =======
 export function addItemToCart(cart: Cart, item: Omit<CartItem, 'quantity'>, quantity: number = 1): Cart {
   const existingItemIndex = cart.items.findIndex(cartItem => cartItem.id === item.id);
@@ -216,27 +202,38 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 <<<<<<< HEAD
 >>>>>>> main
 =======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+    }
+    return item;
+  });
+
+<<<<<<< HEAD
+=======
+  // Remove item from cart
+  removeItem: (cart: Cart, itemId: string): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   },
 
   // Remove item from cart
 <<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 >>>>>>> cursor/create-and-deploy-new-content-45eb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-425b
     const newItems = cart.items.filter(item => item.id !== itemId);
     const summary = this.calculateTotals(newItems);
     
@@ -251,15 +248,13 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
   // Update item quantity
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+>>>>>>> cursor/create-and-deploy-new-content-425b
+=======
   updateItemQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
-=======
-  updateItemQuantity(cart: Cart, itemId: string, quantity: number): Cart {
->>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-c963
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -287,18 +282,13 @@ export function calculateCartTotals(cart: Cart): Cart {
   const total = subtotal + shipping + tax - cart.discount;
 
 <<<<<<< HEAD
-  // Calculate totals
-<<<<<<< HEAD
-  calculateTotals: (cart: Cart): Cart => {
 =======
-  calculateTotals(cart: Cart): Cart {
->>>>>>> main
+  // Calculate totals
+  calculateTotals: (cart: Cart): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
 =======
@@ -318,15 +308,11 @@ export function calculateCartTotals(cart: Cart): Cart {
 
   // Calculate totals
 <<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
@@ -334,15 +320,10 @@ export function calculateCartTotals(cart: Cart): Cart {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
 <<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       itemCount
-=======
-      itemCount,
->>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
   return {
     ...cart,
@@ -376,6 +357,7 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
     };
   }
 
+<<<<<<< HEAD
   // Clear cart
   clearCart(): Cart {
     return {
@@ -396,37 +378,47 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   hasItem(cart: Cart, itemId: string): boolean {
 >>>>>>> main
 =======
+<<<<<<< HEAD
+=======
+=======
+  // Clear cart
+  clearCart: (): Cart => cartUtils.createEmptyCart(),
+
+  // Get item by ID
+  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
+    return cart.items.find(item => item.id === itemId);
+  },
+
+  // Check if item exists in cart
+  hasItem: (cart: Cart, itemId: string): boolean => {
+>>>>>>> cursor/create-and-deploy-new-content-425b
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
     };
   },
 
   // Clear cart
 <<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3a3
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
     };
   },
 
   // Clear cart
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     return cart.items.some(item => item.id === itemId);
   },
 
   // Get cart summary
 <<<<<<< HEAD
-export default cartUtils;
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+export default cartUtils;
   getSummary: (cart: Cart) => ({
     itemCount: cart.itemCount,
     total: cart.total,
@@ -488,10 +480,173 @@ export default cartUtils;
     });
 
     return Array.from(mergedMap.values());
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-45eb
   }
 
+=======
+  }
+};
+
+// Named exports for individual functions
+export const getCartKey = cartUtils.getCartKey;
+export const mergeCartItems = cartUtils.mergeCartItems;
+
+>>>>>>> cursor/create-and-deploy-new-content-c963
+    return {
+      cart,
+      isValid: false,
+      message: `Minimum order amount of $${discount.minimumAmount} required`,
+    };
+  }
+
+  // Calculate discount amount
+  let discountAmount = 0;
+  if (discount.type === 'percentage') {
+    discountAmount = cart.subtotal * (discount.value / 100);
+  } else {
+    discountAmount = discount.value;
+  }
+
+  // Don't allow discount to exceed subtotal
+  discountAmount = Math.min(discountAmount, cart.subtotal);
+
+  const newCart = calculateCartTotals({
+    ...cart,
+    discount: Math.round(discountAmount * 100) / 100,
+  });
+
+  return {
+    cart: newCart,
+    isValid: true,
+    message: 'Discount applied successfully',
+  };
+}
+
+export default cartUtils;
+=======
+export function removeDiscount(cart: Cart): Cart {
+  return calculateCartTotals({
+    ...cart,
+    discount: 0,
+  });
+}
+
+export function getCartSummary(cart: Cart): string {
+  if (cart.itemCount === 0) {
+    return 'Your cart is empty';
+  }
+
+  const itemText = cart.itemCount === 1 ? 'item' : 'items';
+  return `${cart.itemCount} ${itemText} - $${cart.total.toFixed(2)}`;
+}
+
+export function getCartItemById(cart: Cart, itemId: string): CartItem | undefined {
+  return cart.items.find(item => item.id === itemId);
+}
+
+export function isItemInCart(cart: Cart, itemId: string): boolean {
+  return cart.items.some(item => item.id === itemId);
+}
+
+export function getCartItemsByCategory(cart: Cart, category: string): CartItem[] {
+  return cart.items.filter(item => item.category === category);
+}
+
+export function getCartTotalByCategory(cart: Cart, category: string): number {
+  return getCartItemsByCategory(cart, category).reduce(
+    (sum, item) => sum + (item.price * item.quantity),
+    0
+  );
+}
+
+export function validateCartItem(item: Partial<CartItem>): { isValid: boolean; errors: string[] } {
+  const errors: string[] = [];
+
+  if (!item.id) {
+    errors.push('Item ID is required');
+  }
+
+  if (!item.name) {
+    errors.push('Item name is required');
+  }
+
+  if (!item.price || item.price <= 0) {
+    errors.push('Valid price is required');
+  }
+
+  if (!item.quantity || item.quantity <= 0) {
+    errors.push('Valid quantity is required');
+  }
+
+  return {
+    isValid: errors.length === 0,
+    errors,
+  };
+}
+
+export function exportCart(cart: Cart): string {
+  return JSON.stringify(cart, null, 2);
+}
+
+export function importCart(cartData: string): { cart: Cart; isValid: boolean; errors: string[] } {
+  try {
+    const parsed = JSON.parse(cartData);
+    const cart = calculateCartTotals(parsed);
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+    
+    if (existingItemIndex > -1) {
+      // Item exists, increment quantity
+      const updatedItems = [...cart.items];
+      updatedItems[existingItemIndex].quantity += 1;
+      return cartUtils.calculateTotals({ ...cart, items: updatedItems });
+    } else {
+      // New item, add with quantity 1
+      const updatedItems = [...cart.items, { ...newItem, quantity: 1 }];
+      return cartUtils.calculateTotals({ ...cart, items: updatedItems });
+    }
+  },
+
+  // Remove item from cart
+  removeItem: (cart: Cart, itemId: string): Cart => {
+    const updatedItems = cart.items.filter(item => item.id !== itemId);
+    return cartUtils.calculateTotals({ ...cart, items: updatedItems });
+  },
+
+  // Update item quantity
+  updateQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
+    if (quantity <= 0) {
+      return cartUtils.removeItem(cart, itemId);
+    }
+
+    const updatedItems = cart.items.map(item =>
+      item.id === itemId ? { ...item, quantity } : item
+    );
+    return cartUtils.calculateTotals({ ...cart, items: updatedItems });
+  },
+
+  // Clear all items from cart
+  clearCart: (): Cart => cartUtils.createEmptyCart(),
+
+  // Calculate totals
+  calculateTotals: (cart: Cart): Cart => {
+    const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+    
+    return {
+      ...cart,
+      total: Math.round(total * 100) / 100, // Round to 2 decimal places
+      itemCount,
+    };
+  },
+
+  // Get item by ID
+  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
+    return cart.items.find(item => item.id === itemId);
+  },
+
+>>>>>>> cursor/create-and-deploy-new-content-425b
   // Check if item exists in cart
   hasItem(cart: Cart, itemId: string): boolean {
     return cart.items.some(item => item.id === itemId);
@@ -531,6 +686,7 @@ export default cartUtils;
     };
   }
 
+<<<<<<< HEAD
   // Format price for display
   formatPrice(price: number): string {
     return new Intl.NumberFormat('en-US', {
@@ -538,6 +694,23 @@ export default cartUtils;
       currency: 'USD',
     }).format(price);
   }
+=======
+<<<<<<< HEAD
+=======
+  // Persist cart to localStorage
+  persistCart: (cart: Cart): boolean => {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.warn('Failed to persist cart:', error);
+      return false;
+    }
+  },
+>>>>>>> cursor/create-and-deploy-new-content-425b
 
   // Get cart size (number of unique items)
   getCartSize(cart: Cart): number {
@@ -554,6 +727,7 @@ export default cartUtils;
 const cartUtils = new CartUtils();
 
 export default cartUtils;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default {
@@ -575,6 +749,9 @@ export default {
   importCart,
 };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 export default cartUtils;
@@ -582,6 +759,7 @@ export default cartUtils;
 =======
 export default cartUtils;
 >>>>>>> cursor/create-and-deploy-new-content-8735
+<<<<<<< HEAD
 =======
 export default cartUtils;
 >>>>>>> cursor/create-and-deploy-new-content-f977
@@ -591,3 +769,5 @@ export default cartUtils;
 // Export the class for testing purposes
 export { CartUtils };
 >>>>>>> cursor/create-and-deploy-new-content-45eb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-425b

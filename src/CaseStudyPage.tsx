@@ -5,10 +5,31 @@ const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-white">
+>>>>>>> cursor/create-and-deploy-new-content-c963
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+>>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
+=======
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-white">
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+>>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> cursor/create-and-deploy-new-content-425b
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
+        <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Study: {slug}</h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-600">Detailed case study coming soon</p>
         </div>
         
@@ -26,10 +47,12 @@ const CaseStudyPage: React.FC = () => {
               Back to Home
             </a>
           </div>
+=======
+          <p className="text-xl text-gray-600">Coming soon - Detailed case study content</p>
+>>>>>>> cursor/create-and-deploy-new-content-425b
         </div>
       </div>
     </div>
   );
 };
 
-export default CaseStudyPage;

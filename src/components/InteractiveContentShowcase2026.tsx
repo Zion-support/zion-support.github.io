@@ -1,5 +1,7 @@
-"use client";
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from 'next/link';
 import { 
@@ -291,9 +293,11 @@ const InteractiveContentShowcase2026 = () => {
         </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-45eb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
       </div>
     </div>
   );
 };
 
-export default InteractiveContentShowcase2026;

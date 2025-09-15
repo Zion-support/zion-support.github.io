@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryPromoBanner: React.FC = () => {
 <<<<<<< HEAD
+=======
   const [currentPromo, setCurrentPromo] = useState(0);
   
   const promotions = [
@@ -32,14 +33,14 @@ const RevolutionaryPromoBanner: React.FC = () => {
       href: "/pages/AdvancedAITransformation2026",
       gradient: "from-emerald-600 via-teal-600 to-blue-600",
       icon: "🤖"
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
 <<<<<<< HEAD
+=======
       setCurrentPromo((prev) => (prev + 1) % promotions.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -88,13 +89,13 @@ const RevolutionaryPromoBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </motion.div>
       </AnimatePresence>
 
 <<<<<<< HEAD
+=======
       {/* Navigation Dots */}
       <div className="flex justify-center space-x-2 mt-4">
         {promotions.map((_, index) => (
@@ -105,8 +106,7 @@ const RevolutionaryPromoBanner: React.FC = () => {
               index === currentPromo 
                 ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
                 : 'bg-gray-300 hover:bg-gray-400'
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
             }`}
           />
         ))}
@@ -114,5 +114,6 @@ const RevolutionaryPromoBanner: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryPromoBanner;

@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface Revolutionary2026Service {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface Revolutionary2026Service {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -100,10 +92,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.9,
     reviews: 890
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Legal Document Automation
   {
     id: 'ai-legal-document-automation-2026',
@@ -156,10 +144,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 450
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Healthcare Diagnostics Platform
   {
     id: 'ai-healthcare-diagnostics-2026',
@@ -212,10 +196,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.9,
     reviews: 180
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Metaverse Development Platform
   {
     id: 'ai-metaverse-development-platform-2026',
@@ -268,10 +248,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 680
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-communication-2026',
@@ -324,10 +300,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.9,
     reviews: 120
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-2026',
@@ -380,10 +352,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 90
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Neuromorphic Computing Platform
   {
     id: 'neuromorphic-computing-platform-2026',
@@ -436,10 +404,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 45
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // DNA Computing Platform
   {
     id: 'dna-computing-platform-2026',
@@ -492,10 +456,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 30
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Photonic Computing Platform
   {
     id: 'photonic-computing-platform-2026',
@@ -548,10 +508,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 75
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Holographic Display Platform
   {
     id: 'holographic-display-platform-2026',
@@ -604,10 +560,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 420
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Supply Chain Optimization
   {
     id: 'autonomous-supply-chain-optimization-2026',
@@ -660,10 +612,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 580
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Manufacturing AI
   {
     id: 'autonomous-manufacturing-ai-2026',
@@ -716,10 +664,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 380
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Swarm Robotics Platform
   {
     id: 'swarm-robotics-platform-2026',
@@ -772,10 +716,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.7,
     reviews: 95
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Space Mining Platform
   {
     id: 'quantum-space-mining-platform-2026',

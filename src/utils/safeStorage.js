@@ -108,6 +108,7 @@ export const safeStorage = {
         return false;
       }
     }
+<<<<<<< HEAD
   },
   
   // Convenience methods for direct access
@@ -125,6 +126,8 @@ export const safeStorage = {
   
   clear: () => {
     return safeStorage.localStorage.clear();
+=======
+>>>>>>> cursor/create-and-deploy-new-content-425b
   }
 };
 

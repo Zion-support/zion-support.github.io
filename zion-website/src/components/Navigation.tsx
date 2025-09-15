@@ -9,29 +9,23 @@ const navigation = [
   { name: 'Services', href: '/services' },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-425b
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
 =======
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
   { name: 'Contact', href: '/contact' },
 =======
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
 >>>>>>> cursor/create-and-deploy-new-content-8472
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 <<<<<<< HEAD
 =======
-=======
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' },
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-7857
+>>>>>>> cursor/create-and-deploy-new-content-425b
 ]
 
 export default function Navigation() {

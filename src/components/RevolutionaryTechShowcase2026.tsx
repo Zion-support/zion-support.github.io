@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
@@ -135,6 +141,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -532,11 +539,19 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+=======
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
+>>>>>>> cursor/create-and-deploy-new-content-425b
       </div>
     </div>
   );
