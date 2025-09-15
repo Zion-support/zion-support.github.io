@@ -58,6 +58,36 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ],
   },
+  'ai-supply-chain-orchestration-2025': {
+    id: 'ai-supply-chain-orchestration-2025',
+    title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
+    excerpt:
+      'A pragmatic roadmap to deploy AI-driven planning, routing, and fulfillment with guardrails and measurable ROI.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Supply chains are data-rich but execution-poor. AI orchestration closes the loop by converting signals into actions across planning, procurement, routing, and fulfillment.',
+      'Start with demand forecasting and inventory positioning. Add dynamic routing with real-time constraints, then automate exception handling with human-in-the-loop approvals for high-risk actions.',
+      'Reference stack: event streaming, optimization engines, policy guardrails, and audit logs. Outcomes include lower stockouts, reduced logistics cost, and faster cycle times.'
+    ]
+  },
+  'responsible-agent-governance': {
+    id: 'responsible-agent-governance',
+    title: 'Responsible Agent Governance: Policies, Controls, and Audit for AI Agents',
+    excerpt:
+      'Design a governance layer for AI agents with identity, permissions, policy evaluation, and verifiable audit.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '6 min read',
+    content: [
+      'As organizations adopt AI agents, governance must move from guidelines to enforceable controls. The core is identity, permissions, and policy evaluation with contextual risk.',
+      'Implement capabilities-based access, graded trust, and continuous monitoring. Maintain tamper-evident audit trails and require approvals for sensitive actions.',
+      'This framework reduces operational risk and builds stakeholder trust without slowing innovation.'
+    ]
+  },
   'quantum-risk-modeling-2025': {
     id: 'quantum-risk-modeling-2025',
     title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',

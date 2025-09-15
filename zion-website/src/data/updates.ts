@@ -8,6 +8,110 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Research Copilot (v1.1)',
+    summary:
+      'Context-grounded copilots for research teams with retrieval observability, evals, and live citations.',
+    href: '/updates/autonomous-research-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production-Grade Agent Safety Reviews',
+    summary:
+      'Lightweight but rigorous design reviews, checklists, and scorecards to ship safer agents.',
+    href: '/updates/production-agent-safety-reviews',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Blueprint: Cost-Aware Routing with Live Evals',
+    summary:
+      'Combine offline evals with canary live tests to continuously optimize quality, latency, and cost.',
+    href: '/updates/cost-aware-routing-live-evals',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Data Governance Suite (v3)',
+    summary:
+      'End-to-end governance with policy-as-code, lineage, and real-time audit trails for AI systems.',
+    href: '/updates/auto-data-governance-v3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Agent Observability (2025)',
+    summary:
+      'Benchmarks and best practices for tracing, metrics, and safety signals across autonomous agents.',
+    href: '/updates/agent-observability-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Cost-Aware Model Routing (2025)',
+    summary:
+      'Strategies to optimize quality, latency, and cost with dynamic model selection and guardrails.',
+    href: '/updates/cost-aware-model-routing',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Course: Web3 Fundamentals Track',
+    summary:
+      'Beginner-friendly curriculum covering wallets, NFTs, smart contracts, and L2 ecosystems with hands-on projects.',
+    href: '/updates/web3-fundamentals-track',
+    date: '2025-09-01',
+    tag: 'Course'
+  },
+  {
+    title: 'Launch: AI Research Assistant 2.0',
+    summary:
+      'Autonomous research platform with improved retrieval, citation quality, and benchmarked task suites.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Whitepaper: AI Agent Safety Framework (2025)',
+    summary:
+      'Operational guardrails, evals, and policy-as-code for autonomous agents in production.',
+    href: '/updates/agent-safety-whitepaper',
+    date: '2025-09-15',
+    tag: 'Whitepaper'
+  },
+  {
+    title: 'Report: 2025 AI Trends Radar',
+    summary:
+      'Key enterprise AI trends for 2025: agent safety, real-time RAG, governance automation, and cost-aware routing.',
+    href: '/updates/ai-trends-radar-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Research Portal',
+    summary:
+      'Unified portal for research briefs, datasets, and evaluations with live benchmarks and citations.',
+    href: '/updates/ai-lab-research-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Real-Time Retrieval Evals',
+    summary:
+      'Practical guide to measuring latency, hit-rate, and answer quality in streaming RAG systems.',
+    href: '/updates/real-time-retrieval-evals',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: AI Agent Safety Certification (Beta)',
+    summary:
+      'New certification program validating safety practices for autonomous agents across design, evals, and operations.',
+    href: '/updates/ai-agent-safety-certification-beta',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
     summary:
       'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',

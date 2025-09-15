@@ -2,6 +2,24 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-policy-as-code-governance-blueprint',
+    title: 'AI 2026: Policy-as-Code Governance Blueprint',
+    summary:
+      'Operationalizing AI governance with versioned policies, automated checks, and continuous compliance.'
+  },
+  {
+    slug: 'ai-2026-agent-risk-metrics',
+    title: 'AI 2026: Agent Risk Metrics',
+    summary:
+      'Shared risk signals: override rates, policy violations, groundedness, and incident MTTR.'
+  },
+  {
+    slug: 'ai-2026-production-evals-blueprint',
+    title: 'AI 2026: Production Evals Blueprint',
+    summary:
+      'From offline suites to live canaries and deployment gates with auto rollback.'
+  },
+  {
     slug: 'ai-2026-agentic-evals-blueprint',
     title: 'AI 2026: Agentic Evals Blueprint',
     summary:
@@ -20,6 +38,18 @@ const posts = [
       'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.'
   },
   {
+    slug: 'ai-2026-secure-agent-operations',
+    title: 'AI 2026: Secure Agent Operations',
+    summary:
+      'Permissions, observability, and incident response patterns for autonomous agents.'
+  },
+  {
+    slug: 'ai-2026-real-time-rag-blueprint',
+    title: 'AI 2026: Real-Time RAG Blueprint',
+    summary:
+      'Architectures and evals for sub-second retrieval-augmented generation at scale.'
+  },
+  {
     slug: 'ai-2025-enterprise-ai-security-blueprint',
     title: 'Enterprise AI Security Blueprint (2025)',
     summary:
@@ -36,6 +66,12 @@ const posts = [
     title: 'AI 2026: Autonomous Finance Operating System',
     summary:
       'Real-time cash, autonomous close, and policy-as-code guardrails.'
+  }
+  ,
+  {
+    slug: 'ai-2026-enterprise-retrieval-observability',
+    title: 'AI 2026: Enterprise Retrieval Observability',
+    summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
   }
 ]
 

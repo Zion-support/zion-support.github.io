@@ -11,6 +11,50 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-incident-response-playbook-2026",
+    title: "AI 2026: Agent Incident Response Playbook",
+    description:
+      "Eval‑gated triage, mitigation, and escalation playbooks for autonomous agents in production.",
+    ctaLabel: "Read Playbook",
+    href: "/content/ai-2026-agent-incident-response-playbook",
+    emoji: "🚨",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "safe-tool-use-blueprint-2026",
+    title: "AI 2026: Safe Tool Use Blueprint",
+    description:
+      "Permissioned tool use with risk tiers, sandboxes, policy‑as‑code, and runtime checks.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-safe-tool-use-blueprint",
+    emoji: "🧰",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-fleet-management-handbook-2026",
+    title: "AI 2026: Agent Fleet Management Handbook",
+    description:
+      "Operate large fleets with safety, reliability, and cost controls. Playbooks and SLOs included.",
+    ctaLabel: "Read Handbook",
+    href: "/content/ai-2026-agent-fleet-management-handbook",
+    emoji: "🚀",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-operations-2026-overview",
+    title: "AI 2026: Agent Platform Operations",
+    description:
+      "Reference operating model: SLOs, incident response, and eval-gated change management.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-platform-operations",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-revenue-blueprint-2026",
     title: "AI 2026: Autonomous Revenue Blueprint",
     description:
@@ -239,6 +283,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     href: "/blog/ai-2026-production-guardrails-playbook",
     emoji: "🛡️",
     highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "genai-risk-register-2026",
+    title: "AI 2026: Generative AI Risk Register",
+    description:
+      "A living risk register template with example entries and governance linkages.",
+    ctaLabel: "Use Template",
+    href: "/blog/ai-2026-generative-ai-risk-register",
+    emoji: "📋",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-cost-optimization-2026",
+    title: "AI 2026: Agent Cost Optimization Guide",
+    description:
+      "Cut spend with routing, caching, batching, and benchmark-driven model selection.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-cost-optimization",
+    emoji: "💸",
     date: "2025-09-15",
   },
 ];

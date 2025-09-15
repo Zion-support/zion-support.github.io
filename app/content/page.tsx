@@ -15,6 +15,31 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Hub</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evaluation-hub" className="hover:underline">
+              AI 2026: Evaluation Hub
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Central hub for eval harnesses, scenario suites, and governance gates for autonomous AI.
+          </p>
+          <Link href="/content/ai-2026-evaluation-hub" className="text-indigo-700 font-semibold">Explore Hub →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-operational-guardrails" className="hover:underline">
+              AI 2026: Operational Guardrails
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical runtime safeguards, policy gates, and incident response for safe AI operations.
+          </p>
+          <Link href="/content/ai-2026-operational-guardrails" className="text-rose-700 font-semibold">Read Guide →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
@@ -42,14 +67,14 @@ export default function ContentIndexPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/hyperautomation-blueprint-2026" className="hover:underline">
-              Hyperautomation Blueprint 2026
+            <Link href="/blog/ai-2026-agent-observability-blueprint" className="hover:underline">
+              Agent Observability Blueprint 2026
             </Link>
           </h2>
           <p className="text-gray-600 mb-4">
-            A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise.
+            A practical blueprint to instrument agents with metrics, traces, evals, and safety guardrails.
           </p>
-          <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold">Read Guide →</Link>
+          <Link href="/blog/ai-2026-agent-observability-blueprint" className="text-purple-600 font-semibold">Read Guide →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
@@ -68,14 +93,40 @@ export default function ContentIndexPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/edge-ai-agents-2026" className="hover:underline">
-              Edge AI Agents: Real-Time Autonomy
+            <Link href="/blog/ai-2026-trustworthy-rag-blueprint" className="hover:underline">
+              Trustworthy RAG Blueprint 2026
             </Link>
           </h2>
           <p className="text-gray-600 mb-4">
-            How edge-native agents enable ultra-low-latency decisioning and intelligent automation at the edge.
+            Build reliable RAG with grounding, citations, verification, and continuous evaluations.
           </p>
-          <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold">Read Article →</Link>
+          <Link href="/blog/ai-2026-trustworthy-rag-blueprint" className="text-blue-600 font-semibold">Read Article →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Governance</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
+              AI Governance Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical, risk-aware governance with evaluations, policy-as-code, and monitoring.
+          </p>
+          <Link href="/content/ai-governance-blueprint-2026" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-orange-700 mb-2">Operating Model</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-operating-model-2026" className="hover:underline">
+              AI Operating Model 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Structure teams, processes, and platforms to deliver sustained AI outcomes.
+          </p>
+          <Link href="/content/ai-operating-model-2026" className="text-orange-600 font-semibold">Read Guide →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">

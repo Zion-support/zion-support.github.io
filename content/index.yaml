@@ -99,7 +99,22 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
-<<<<<<< HEAD
+    - id: "data-governance-trust-security-2025"
+      type: "blog"
+      title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide"
+      file_path: "/content/blog/ai-2025-data-governance-trust-security.md"
+      url: "/blog/ai-2025-data-governance-trust-security"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI", "Data Governance", "Security", "Compliance", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        risk_reduction: "65%"
+        approval_speed: "2x"
+        audit_coverage: "100%"
+        incidents_reduction: "40%"
+
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -133,8 +148,6 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-<<<<<<< HEAD
-=======
     - id: "ai-2025-advanced-analytics-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Analytics Revolution - Ultimate Enterprise Guide"
@@ -185,8 +198,6 @@ content_index:
         projects: "500+"
         timeline: "6-8 months"
       reading_time: "28 min read"
-      
->>>>>>> origin/new-content-and-promotional-components
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
@@ -263,54 +274,10 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
-=======
-    - id: "ai-enterprise-automation-revolution"
-      type: "blog"
-      title: "AI 2025: The Enterprise Automation Revolution - 500% ROI"
-      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
-      url: "/blog/ai-2025-enterprise-automation-revolution"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "500%"
-        savings: "$200M"
-        satisfaction: "99.8%"
-        time: "12 months"
-
-  new_case_studies:
-    - id: "global-manufacturing-ai-transformation"
-      type: "case-study"
-      title: "Global Manufacturing Giant Achieves 500% ROI with AI Transformation"
-      file_path: "/content/case-studies/global-manufacturing-ai-transformation.md"
-      url: "/case-studies/global-manufacturing-ai-transformation"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Manufacturing", "AI Automation", "ROI", "Transformation"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "500%"
-        savings: "$50M"
-        efficiency: "95%"
-        satisfaction: "98%"
-        
-    - id: "financial-services-ai-revolution"
-      type: "case-study"
-      title: "Financial Services Leader Achieves 600% ROI with AI-Powered Digital Transformation"
-      file_path: "/content/case-studies/financial-services-ai-revolution.md"
-      url: "/case-studies/financial-services-ai-revolution"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
->>>>>>> c8b857ad6d423d3347e8320a93310c8577edc4aa
       featured: true
       is_new: true
       metrics:
         roi: "600%"
-<<<<<<< HEAD
         savings: "$2.8B"
         efficiency: "156%"
         uptime: "99.2%"
@@ -430,26 +397,6 @@ content_index:
         timeframe: "6 months"
         phases: "3 phases"
         payback: "3.8 months"
-=======
-        savings: "$75M"
-        satisfaction: "98%"
-        efficiency: "80%"
-        
-    - id: "quantum-ai-transformation-2026"
-      type: "case-study"
-      title: "Quantum AI Transformation 2026: Ultimate Success Story"
-      file_path: "/content/case-studies/quantum-ai-transformation-2026-ultimate-success.md"
-      url: "/case-studies/quantum-ai-transformation-2026-ultimate-success"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Quantum AI", "Case Study", "ROI", "Transformation", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "800%"
-        savings: "$100M"
-        efficiency: "99%"
-        satisfaction: "99%"
 
   new_resources:
     - id: "ai-transformation-checklist-2025"
@@ -467,7 +414,50 @@ content_index:
         success_rate: "95%"
         implementation_time: "6-12 months"
         roi: "300-500%"
->>>>>>> c8b857ad6d423d3347e8320a93310c8577edc4aa
+
+  newly_added_september_2025:
+    - id: "ai-2026-autonomous-enterprise-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Autonomous Enterprise Blueprint"
+      file_path: "/content/pages/ai-2026-autonomous-enterprise-blueprint.md"
+      url: "/content/ai-2026-autonomous-enterprise-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Autonomous Systems", "Enterprise", "Blueprint", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        timeline: "90 days to first value"
+        success: "95%"
+    - id: "ai-2026-llm-evals-maturity-model"
+      type: "framework"
+      title: "AI 2026: LLM Evals Maturity Model"
+      file_path: "/content/pages/ai-2026-llm-evals-maturity-model.md"
+      url: "/content/ai-2026-llm-evals-maturity-model"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluation", "Governance", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        gated_releases: true
+        ci_integration: true
+    - id: "ai-2026-trust-grid-for-agents"
+      type: "framework"
+      title: "AI 2026: Trust Grid for Autonomous Agents"
+      file_path: "/app/content/ai-2026-trust-grid-for-agents/page.tsx"
+      url: "/content/ai-2026-trust-grid-for-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Trust", "Safety", "Security", "Reliability", "Compliance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        gated_releases: true
+        audit_ready: true
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"

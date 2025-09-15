@@ -39,39 +39,39 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
       href: '/services',
       dropdown: [
         {
-          name: 'AI Solutions',
-          description: 'Artificial Intelligence & Machine Learning',
-          href: '/services/ai',
+          name: 'All Services',
+          description: 'Complete suite of technology solutions',
+          href: '/pages/ComprehensiveServices2025',
+          icon: Globe
+        },
+        {
+          name: 'AI Research Lab',
+          description: 'Cutting-edge AI research and development',
+          href: '/pages/AIResearchLab2025',
           icon: Brain
         },
         {
-          name: 'Blockchain',
-          description: 'Decentralized & Secure Solutions',
-          href: '/services/blockchain',
+          name: 'Quantum Computing',
+          description: 'Quantum solutions for complex problems',
+          href: '/pages/QuantumComputingSolutions2025',
+          icon: Zap
+        },
+        {
+          name: 'Cybersecurity Suite',
+          description: 'Enterprise-grade security solutions',
+          href: '/pages/CybersecuritySuite2025',
           icon: Shield
         },
         {
-          name: 'Cloud Services',
-          description: 'Scalable Cloud Infrastructure',
-          href: '/services/cloud',
-          icon: Cloud
-        },
-        {
-          name: 'Web Development',
-          description: 'Modern Web Applications',
-          href: '/services/web',
+          name: 'Innovation 2025',
+          description: 'Revolutionary technology showcase',
+          href: '/pages/InnovationLanding2025',
           icon: Code
         },
         {
-          name: 'Mobile Apps',
-          description: 'iOS & Android Development',
-          href: '/services/mobile',
-          icon: Smartphone
-        },
-        {
-          name: 'Data Analytics',
-          description: 'Business Intelligence & Insights',
-          href: '/services/data',
+          name: 'Future Tech Trends',
+          description: 'Emerging technologies and trends',
+          href: '/pages/FutureTechTrends2025',
           icon: Database
         }
       ]
@@ -93,6 +93,10 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
           icon: Zap
         }
       ]
+    },
+    {
+      name: 'Playbook 2025',
+      href: '/pages/AIInnovationPlaybook2025'
     },
     {
       name: 'Case Studies',

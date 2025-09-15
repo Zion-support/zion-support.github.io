@@ -9,6 +9,22 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "hyperautomation-blueprint-2026",
+    title: "Hyperautomation Blueprint 2026",
+    summary: "Platform patterns, policy-as-code, and ROI tracking to scale automation.",
+    href: "/content/hyperautomation-blueprint-2026",
+    tag: "Blueprint",
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-agents-roi-playbook-2026",
+    title: "AI Agents ROI Playbook 2026",
+    summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
+    href: "/content/ai-agents-roi-playbook-2026",
+    tag: "Playbook",
+    date: "2025-09-15",
+  },
+  {
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",
@@ -77,6 +93,22 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Guardrails for Autonomous Agents",
     summary: "Isolation domains, policy-as-code, eval gates, and telemetry to ship safely.",
     href: "/blog/ai-2026-production-guardrails-for-autonomous-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "genai-risk-register-2026",
+    title: "AI 2026: Generative AI Risk Register",
+    summary: "A living catalog of GenAI risks tied to owners, mitigations, and eval gates.",
+    href: "/blog/ai-2026-generative-ai-risk-register",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-cost-optimization-2026",
+    title: "AI 2026: Agent Cost Optimization Guide",
+    summary: "Reduce agent TCO via routing, caching, batching, and benchmark-driven choices.",
+    href: "/blog/ai-2026-agent-cost-optimization",
     tag: "Guide",
     date: "2025-09-15",
   },
