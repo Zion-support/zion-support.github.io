@@ -76,7 +76,6 @@ import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomati
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
-import Link from 'next/link';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -181,6 +180,22 @@ export default function HomePage() {
           </div>
         </section>
         
+        {/* New Content Promo: Generative Agents for Customer Support 2026 */}
+        <section className="py-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New Article</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Generative Agents for Customer Support</h2>
+                <p className="text-gray-600 mt-2">Autonomous, policy-aware agents that cut handle time and lift CSAT across channels.</p>
+              </div>
+              <Link href="/blog/ai-2026-generative-agents-customer-support" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
