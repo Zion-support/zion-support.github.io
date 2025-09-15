@@ -8,12 +8,44 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Guide: Production RAG Observability (2026 Preview)',
+    summary:
+      'Telemetry for retrieval systems: coverage, freshness, drift, groundedness with per‑step spans.',
+    href: '/updates/production-rag-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: AI Incident Simulator v1.1',
     summary:
       'New scenarios, live eval gates, and evidence exports to harden agent systems.',
     href: '/updates/ai-incident-simulator-1-1',
     date: '2025-09-15',
     tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Eval‑Ready AI Pipelines (2026)',
+    summary:
+      'From datasets to live canaries with rubrics, harnesses, and rollback rules.',
+    href: '/blog/ai-2026-eval-ready-ai-pipelines-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Agent Observability (2026)',
+    summary:
+      'Traces, eval signals, and guardrail events to operate agent fleets reliably.',
+    href: '/blog/ai-2026-agent-observability-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Governed Tool Use (2026)',
+    summary:
+      'Permissioned adapters with policy‑as‑code, risk tiers, and runtime checks.',
+    href: '/blog/ai-2026-governed-tool-use-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
   },
   {
     title: 'Guide: Real-Time Model Routing Playbook (2026)',
@@ -46,6 +78,14 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-evals-observability-suite-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Red‑Teaming Field Guide (2026)',
+    summary:
+      'Scenario design, attack taxonomy, and evidence capture to proactively harden autonomous agents.',
+    href: '/blog/ai-2026-agent-red-teaming-field-guide',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Launch: Trustworthy Model Routing (2026 Preview)',
@@ -855,6 +895,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/real-time-agent-shadow-testing',
     date: '2025-09-15',
     tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Data Lineage Monitor v1.0',
+    summary:
+      'Continuous provenance tracking and signed evidence bundles across ingestion, retrieval, and generation.',
+    href: '/updates/autonomous-data-lineage-monitor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Eval‑Ready Agent Release Automation',
+    summary:
+      'Wire eval gates, shadow tests, and rollback policies into CI/CD with audit‑ready evidence.',
+    href: '/updates/eval-ready-agent-release-automation',
+    date: '2025-09-15',
+    tag: 'Guide'
   }
 ]
 

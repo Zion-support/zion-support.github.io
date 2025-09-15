@@ -84,8 +84,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: AI Incident Simulator v1.1 —
-              <a href="/updates/ai-incident-simulator-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
+              New: Production RAG Observability (2026 Preview) —
+              <a href="/updates/production-rag-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read guide</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -130,6 +130,13 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Blueprint: Policy‑as‑Code in Production
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/blog/ai-2026-agent-red-teaming-field-guide"
+                className="inline-flex items-center gap-2 rounded-full border border-rose-400/30 bg-rose-500/10 px-4 py-2 text-sm font-semibold text-rose-200 hover:bg-rose-500/20 transition-colors duration-200"
+              >
+                Guide: Agent Red‑Teaming Field Guide
                 <span aria-hidden>→</span>
               </a>
               <a
