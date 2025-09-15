@@ -70,6 +70,9 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const AIPoweredLegalDocumentGenerator = React.lazy(() => import('./pages/services/AI-Powered-Legal-Document-Generator'));
 const AIHealthcareDiagnosticsPlatform = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics-Platform'));
 const BlockchainSupplyChainTransparency = React.lazy(() => import('./pages/services/Blockchain-Supply-Chain-Transparency'));
+// Define lazy components for AI-powered routes (JSX cannot inline React.lazy inside element prop)
+const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
+const AIPoweredMarketingAutomation = React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'));
 
 // Additional pages from remote
 const Legal = React.lazy(() => import('./pages/Legal'));
@@ -86,6 +89,11 @@ const Support = React.lazy(() => import('./pages/Support'));
 
 const Investors = React.lazy(() => import('./pages/Investors'));
 const Press = React.lazy(() => import('./pages/Press'));
+
+// New content showcase pages
+const NewContentShowcase = React.lazy(() => import('./pages/NewContentShowcase'));
+const AIInnovationHub = React.lazy(() => import('./pages/AIInnovationHub'));
+const BlogPostNewContent = React.lazy(() => import('./pages/BlogPostNewContent'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -177,6 +185,11 @@ function App() {
                 <Route path="/legal" element={<Legal />} />
                 <Route path="/press" element={<Press />} />
                 
+                {/* New content showcase routes */}
+                <Route path="/new-content-showcase" element={<NewContentShowcase />} />
+                <Route path="/ai-innovation-hub" element={<AIInnovationHub />} />
+                <Route path="/blog/new-ai-services-announcement" element={<BlogPostNewContent />} />
+                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -189,6 +202,10 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
+
+                {/* New AI-powered service routes */}
+                <Route path="/services/ai-powered-customer-success-platform" element={<AIPoweredCustomerSuccessPlatform />} />
+                <Route path="/services/ai-powered-marketing-automation" element={<AIPoweredMarketingAutomation />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={

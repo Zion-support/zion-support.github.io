@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import Tree, { TreeNode } from "../../components/ui/Tree",
-
-interface ApiResponse {
-  nodes: TreeNode[],
-  status: { gitConnected: boolean, gitBranch?: string },
-}
-
-export default function DevTreePage() {
-  const [nodes, setNodes] = useState<TreeNode[] | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [git, setGit] = useState<ApiResponse["status"] | null>(null),
-  const [adminToken, setAdminToken] = useState<string>(""),
-=======
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 
@@ -26,36 +11,10 @@ export default function DevTreePage() {
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse["status"] | null>(null);
   const [adminToken, setAdminToken] = useState<string>("");
->>>>>>> origin/auto/autonomy-17186719616
 
   const fetchTree = async (token?: string) => {
     try {
       const resp = await fetch("/api/dev/source-map", {
-<<<<<<< HEAD
-        headers: token ? { "x-admin-token": token } : undefined}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`),
-      }
-      const data: ApiResponse = await resp.json(),
-      setNodes(data.nodes),
-      setGit(data.status)
-    } catch (e: any) {
-      setError(e.message || "Failed to load")
-    }
-  },
-
-  useEffect(() => {
-    const stored = localStorage.getItem("ADMIN_TOKEN") || "",
-    setAdminToken(stored),
-    fetchTree(stored),
-  }, []),
-
-  const handleSaveToken = () => {
-    localStorage.setItem("ADMIN_TOKEN", adminToken),
-    fetchTree(adminToken),
-  },
-=======
         headers: token ? { "x-admin-token": token } : undefined,
       });
       if (!resp.ok) {
@@ -80,7 +39,6 @@ export default function DevTreePage() {
     localStorage.setItem("ADMIN_TOKEN", adminToken);
     fetchTree(adminToken);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const onDeploy = async (p: string) => {
     try {
@@ -88,19 +46,6 @@ export default function DevTreePage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-<<<<<<< HEAD
-          "x-admin-token": adminToken},
-        body: JSON.stringify({ path: p })}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`),
-      }
-      await fetchTree(adminToken),
-    } catch (e: any) {
-      setError(e.message || "Deploy failed")
-    }
-  },
-=======
           "x-admin-token": adminToken,
         },
         body: JSON.stringify({ path: p }),
@@ -114,7 +59,6 @@ export default function DevTreePage() {
       setError(e.message || "Deploy failed");
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
@@ -148,9 +92,5 @@ export default function DevTreePage() {
         <div>Loading...</div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,15 +1,4 @@
 
-<<<<<<< HEAD
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next',
-
-export default function PaymentSuccess() {
-  const router = useRouter(), // Changed from navigate
-  const { t } = useTranslation(),
-=======
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate
@@ -19,7 +8,6 @@ import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation();
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
@@ -52,9 +40,5 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

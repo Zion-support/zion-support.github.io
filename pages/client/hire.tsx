@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import FeedbackModal from "../../components/ui/FeedbackModal",
-
-export default function ClientHirePage() {
-  const [talentSlug, setTalentSlug] = useState("ava-chen"),
-  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
-  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
-  const [termsType, setTermsType] = useState("hourly"),
-  const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
-  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000),
-  const [agreementUrl, setAgreementUrl] = useState(""),
-  const [loading, setLoading] = useState(false),
-  const [result, setResult] = useState<any | null>(null),
-  const [showFeedback, setShowFeedback] = useState(false),
-
-  async function sendOffer() {
-    setLoading(true),
-    setResult(null),
-=======
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 
@@ -36,31 +16,16 @@ export default function ClientHirePage() {
   async function sendOffer() {
     setLoading(true);
     setResult(null);
->>>>>>> origin/auto/autonomy-17186719616
     const paymentTerms =
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
-<<<<<<< HEAD
-        : { type: "milestone", milestones: [] },
-=======
         : { type: "milestone", milestones: [] };
->>>>>>> origin/auto/autonomy-17186719616
 
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" },
-<<<<<<< HEAD
-      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })}),
-    const json = await res.json(),
-    setLoading(false),
-    if (!json.ok) {
-      alert(json.error || "Failed to send offer"),
-    } else {
-      setResult(json.offer),
-      setShowFeedback(true),
-=======
       body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl }),
     });
     const json = await res.json();
@@ -70,7 +35,6 @@ export default function ClientHirePage() {
     } else {
       setResult(json.offer);
       setShowFeedback(true);
->>>>>>> origin/auto/autonomy-17186719616
     }
   }
 
@@ -140,15 +104,8 @@ export default function ClientHirePage() {
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
         defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
-<<<<<<< HEAD
-        userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
-      />
-    </div>
-  ),
-=======
         userHeaders={{ 'x-demo-user-role': 'client', 'x-demo-user-id': 'client-1' }}
       />
     </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

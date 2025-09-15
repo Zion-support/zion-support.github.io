@@ -101,3 +101,9 @@ build/
 *.pack
 *.pack.gz
 >>>>>>> origin/auto/autonomy-17186719616
+
+# Ignore Next.js build output
+zion-os/.next
+
+# Ignore Next.js build output
+zion-os/.next
