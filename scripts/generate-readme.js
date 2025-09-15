@@ -1,152 +1,142 @@
+<<<<<<< HEAD
+import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
+// Simple README "maintenance": append an automation run footer with timestamp
+import fs from 'fs';
+import path from 'path';
+function main() {
+  const repoRoot = process.cwd();
+  const readmePath = path.join(repoRoot, 'README.md');
+  const now = new Date().toISOString();
+  let content = '';
+  try {
+    content = fs.readFileSync(readmePath, 'utf8')} catch (err) {
+    // If README doesn't exist, create a basic one
+    content = '# Project\n\n'}
+  const footer = `\n\n---\nAutomation "summary": README refreshed ${now}\n`;
+  if (!content.includes('Automation "summary": ')) {
+    content += footer} else {
+    // replace existing footer
+    content = content.replace(/\n---\nAutomation "summary": [\s\S]*$/m, footer)}
+  fs.writeFileSync(readmePath, content, 'utf8');
+  console.log('✅ README updated')}
+main();
+#!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {;,"});,"}) const repoRoot = process.cwd();,"});,"}) const readmePath = path.join(repoRoot,;,"});,"}) 'README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {;,"});,"}) content = fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {;,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content.includes(;,"});,"}) 'Automation summary:')) {;,"});,"}) content += footer;,"});,"}) } else {;,"});,"}) content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs.writeFileSync(readmePath,content,;,"});,"}) 'utf8');,"});,"}) console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs.readFileSync(readmePath,'utf8';)} catch (err) {; content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes(` 'Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs.writeFileSync(readmePath,content,';utf8'); console.log(','✅ README updated')} main();
+import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
+=======
 #!/usr/bin/env node
+
+/**
+ * Generate README
+ * Creates or updates the main README.md file
+ */
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-function readJson(filePath) {
-  try {
-    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  } catch {
-    return null;
+const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
+
+Leading-edge technology solutions and autonomous innovation systems.
+
+## 🚀 Quick Start
+
+\`\`\`bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start automation systems
+npm run automation:all
+\`\`\`
+
+## 🏗️ Project Structure
+
+- \`pages/\` - Next.js pages and routing
+- \`styles/\` - Global CSS and Tailwind configuration
+- \`automation/\` - Autonomous automation systems
+- \`scripts/\` - Utility scripts and build tools
+- \`public/\` - Static assets and generated content
+
+## 🔧 Available Scripts
+
+### Development
+- \`npm run dev\` - Start development server
+- \`npm run build\` - Build for production
+- \`npm run start\` - Start production server
+
+### Automation
+- \`npm run automation:all\` - Start all automation systems
+- \`npm run redundancy:start\` - Start redundancy systems
+- \`npm run pm2:start\` - Start PM2 process manager
+
+### Maintenance
+- \`npm run lint\` - Run ESLint
+- \`npm run type-check\` - Run TypeScript type checking
+- \`npm run fix:all\` - Fix linting issues
+
+## 🌟 Features
+
+- **Autonomous Content Generation** - AI-powered content creation
+- **Intelligent Automation** - Self-healing automation systems
+- **Redundancy Management** - High-availability infrastructure
+- **Performance Optimization** - Continuous performance monitoring
+- **Modern UI/UX** - Responsive design with Tailwind CSS
+
+## 📚 Documentation
+
+- [Architecture](./ARCHITECTURE.md) - System architecture overview
+- [API Reference](./API.md) - API documentation
+- [Deployment](./DEPLOYMENT.md) - Deployment instructions
+- [Contributing](./CONTRIBUTING.md) - Contribution guidelines
+
+## 🔒 Security
+
+- Regular security audits
+- Automated vulnerability scanning
+- Secure dependency management
+
+## 📊 Monitoring
+
+- Real-time performance metrics
+- Automated health checks
+- Comprehensive logging
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+
+## 📄 License
+
+This project is proprietary software. All rights reserved.
+
+---
+
+*Generated on ${new Date().toISOString()}*
+`;
+
+function generateReadme() {
+  const outputPath = path.join(__dirname, '..', 'README.md');
+  
+  // Check if README already exists and is substantial
+  if (fs.existsSync(outputPath)) {
+    const existingContent = fs.readFileSync(outputPath, 'utf8');
+    if (existingContent.length > 1000) {
+      console.log('⚠️  README.md already exists and appears substantial. Skipping generation.');
+      return;
+    }
   }
-}
 
-function listWorkflows() {
-  const workflowsDir = path.join(process.cwd(), '.github', 'workflows');
-  if (!fs.existsSync(workflowsDir)) return [];
-  return fs
-    .readdirSync(workflowsDir)
-    .filter((f) => f.endsWith('.yml') || f.endsWith('.yaml'))
-    .sort();
-}
-
-function collectPagesSummary() {
-  const pagesDir = path.join(process.cwd(), 'pages');
-  if (!fs.existsSync(pagesDir)) return { total: 0, routes: [] };
-  const files = glob.sync('**/*.{js,jsx,ts,tsx,md,mdx}', { cwd: pagesDir, nodir: true });
-  const routes = files
-    .map((f) => {
-      let route = '/' + f.replace(/index\.(jsx?|tsx?|mdx?)$/, '').replace(/\.(jsx?|tsx?|mdx?)$/, '');
-      route = route.replace(/\\/g, '/');
-      route = route.replace(/\[(.+?)\]/g, ':$1');
-      if (route.endsWith('/')) route = route.slice(0, -1);
-      if (route === '') route = '/';
-      return route;
-    })
-    .filter((r, idx, arr) => arr.indexOf(r) === idx)
-    .sort();
-  return { total: files.length, routes };
-}
-
-function collectComponentsSummary() {
-  const compDir = path.join(process.cwd(), 'components');
-  if (!fs.existsSync(compDir)) return { total: 0 };
-  const files = glob.sync('**/*.{js,jsx,ts,tsx}', { cwd: compDir, nodir: true });
-  return { total: files.length };
-}
-
-function toTitle(basename) {
-  return basename
-    .replace(/\.(yml|yaml)$/i, '')
-    .replace(/[-_]+/g, ' ')
-    .replace(/\b\w/g, (m) => m.toUpperCase());
-}
-
-function parseRepo(pkg) {
-  const repoUrl = (pkg.repository && pkg.repository.url) || pkg.homepage || '';
-  const match = repoUrl.match(/github\.com[/:]([^/]+)\/([^/#.]+)(?:\.git)?/i);
-  if (!match) return null;
-  return { owner: match[1], repo: match[2] };
-}
-
-function collectAutomations(pkg) {
-  const files = listWorkflows();
-  const repo = parseRepo(pkg);
-  if (!repo) return files.map((f) => `- ${f}`);
-  return files.map((f) => {
-    const title = toTitle(f);
-    const url = `https://github.com/${repo.owner}/${repo.repo}/actions/workflows/${f}`;
-    const badge = `${url}/badge.svg`;
-    return `- [${title}](${url}) ![status](${badge})`;
-  });
-}
-
-function generateBadge(label, message, color) {
-  const url = `https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(message)}-${encodeURIComponent(color)}`;
-  return `![${label}: ${message}](${url})`;
-}
-
-function main() {
-  const pkg = readJson(path.join(process.cwd(), 'package.json')) || {};
-  const name = pkg.name || 'zion.app';
-  const description = pkg.description || 'Autonomous, cloud‑native app with self‑running automations.';
-  const homepage = (pkg.homepage || '');
-
-  const pages = collectPagesSummary();
-  const comps = collectComponentsSummary();
-  const automations = collectAutomations(pkg);
-
-  const lines = [];
-  lines.push(`# ${name}`);
-  lines.push('');
-  lines.push(`${generateBadge('Automations', String(automations.length), 'informational')} ${generateBadge('Pages', String(pages.total), 'success')} ${generateBadge('Components', String(comps.total), 'blue')}`);
-  lines.push('');
-  lines.push(description);
-  if (homepage) {
-    lines.push('');
-    lines.push(`Home: ${homepage}`);
-  }
-  lines.push('');
-  lines.push('### Highlights');
-  lines.push('- **Autonomous cloud automations**: GitHub Actions run on schedules to maintain, audit, and improve the repo without human intervention.');
-  lines.push('- **Rapid sync**: A 1-minute cadence keeps branches synchronized.');
-  lines.push('- **Self-healing CI**: Automatic detection and PRs for fixes after failures.');
-  lines.push('');
-  lines.push('### Key Directories');
-  lines.push('- `automation/`: Cloud automation scripts (content, SEO, security, sync).');
-  lines.push('- `scripts/`: Utility scripts (sitemap, SEO, radar, README generator).');
-  lines.push('- `pages/`: Next.js pages.');
-  lines.push('- `components/`: Reusable UI components.');
-  lines.push('');
-  lines.push('### Routes');
-  if (pages.routes.length) {
-    lines.push(pages.routes.map((r) => `- ${r}`).join('\n'));
-  } else {
-    lines.push('- /');
-  }
-  lines.push('');
-  lines.push('### Automations');
-  if (automations.length) {
-    lines.push(automations.join('\n'));
-  } else {
-    lines.push('- None');
-  }
-  lines.push('');
-  lines.push('### Local Development');
-  lines.push('1. Install Node 20+ and npm 10+.');
-  lines.push('2. Install deps: `npm ci`.');
-  lines.push('3. Run dev: `npm run dev`.');
-  lines.push('');
-  lines.push('### Maintenance Commands');
-  lines.push('- `npm run git:sync` – Advanced git sync');
-  lines.push('- `npm run automation:cloud` – Run cloud orchestrator locally');
-  lines.push('- `npm run sitemap` – Regenerate sitemap');
-  lines.push('- `npm run readme:generate` – Refresh this README');
-  lines.push('');
-  lines.push('---');
-  lines.push('This README is auto-generated. Do not edit manually.');
-
-  const outPath = path.join(process.cwd(), 'README.md');
-  const content = lines.join('\n');
-  if (!fs.existsSync(outPath) || fs.readFileSync(outPath, 'utf8') !== content) {
-    fs.writeFileSync(outPath, content, 'utf8');
-    console.log('README.md generated.');
-  } else {
-    console.log('README.md up-to-date.');
-  }
+  fs.writeFileSync(outputPath, README_TEMPLATE);
+  console.log(`✅ README generated at: ${outputPath}`);
 }
 
 if (require.main === module) {
-  main();
+  generateReadme();
 }
+
+module.exports = { generateReadme };
+>>>>>>> origin/auto/autonomy-17186719616

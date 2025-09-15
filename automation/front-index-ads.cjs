@@ -21,8 +21,7 @@ function buildAds() {
     { title: 'Docs & Guides', desc: 'Technical notes and architecture', href: '/.netlify/functions/docs-index-runner' },
     { title: 'AI Changelog', desc: 'Summarized autonomous changes', href: '/newsroom' },
     { title: 'Cloud Automations', desc: 'Netlify scheduled functions powering jobs 24/7', href: '/automation' },
-    { title: 'A11y Alt Text Auditor', desc: 'Find and propose alt text across images', href: '/reports/a11y' },
-    { title: 'Metadata Optimizer', desc: 'Detect missing meta tags and propose fixes', href: '/reports/metadata' },
+    { title: 'Autonomy Directory', desc: 'Browse all cloud functions', href: '/automation/functions-directory' },
   ];
 
   const cards = items.map((item) => (

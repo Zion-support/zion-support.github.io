@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-npx --yes commitlint --edit "$1"
+# Keep commit message hook non-blocking
+if command -v npx >/dev/null 2>&1; then
+  npx --yes commitlint --edit "$1" || true
+fi

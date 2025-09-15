@@ -1,16 +1,32 @@
-// child_process imported within handler to avoid top-level unused var lint
+const path = require('path');
+const { spawnSync } = require('child_process');
+
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+
 exports.config = {
-  schedule: '*/10 * * * *', // every 10 minutes for faster iteration
+  schedule: '*/20 * * * *', // every 20 minutes
 };
 
-exports.handler = async function() {
-  const { execSync } = require('child_process');
-  try {
-    execSync('node automation/front-futurizer.cjs || true', { stdio: 'inherit', shell: true });
-    execSync('node automation/front-index-auto-advertiser.cjs || true', { stdio: 'inherit', shell: true });
-    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(front): enhance front index [skip ci]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
-    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'front-enhancer' }) };
-  } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+exports.handler = async () => {
+  const logs = [];
+  function logStep(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status;
   }
+
+  // Update the front page auto-generated section
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
+
+  // Attempt to sync changes back to main (best-effort)
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+
+  return { statusCode: 200, body: logs.join('\n') };
 };
