@@ -296,30 +296,6 @@ export default function App(): JSX.Element {
                   <DynamicContentCarousel />
                 </div>
 
-<<<<<<< HEAD
-=======
-                {/* Revolutionary Content Showcase */}
-                <div className="mb-12">
-                  <RevolutionaryContentShowcase />
-                </div>
-
-                {/* NEW: Brand New Content Showcase 2026 */}
-                <div className="mb-12">
-                  <NewContentShowcase2026 />
-                </div>
-
-<<<<<<< HEAD
-                {/* Ultimate Content Showcase 2026 */}
-=======
-                {/* NEW: Revolutionary Content Showcase 2026 */}
-                <div className="mb-12">
-                  <RevolutionaryContentShowcase2026 />
-                </div>
-
-<<<<<<< HEAD
-=======
-                {/* Enhanced Content Showcase */}
->>>>>>> cursor/create-and-deploy-new-content-f1b8
                 <div className="mb-12">
                   <UltimateContentShowcase2026 />
                 </div>
@@ -710,25 +686,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-          <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
-          <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
-<<<<<<< HEAD
-          <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
-          <Route path="/pages/AdvancedRoboticsRevolution2026" element={<AdvancedRoboticsRevolution2026 />} />
->>>>>>> cursor/create-and-deploy-new-content-c934
-=======
-<<<<<<< HEAD
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
-=======
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
