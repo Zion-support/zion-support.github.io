@@ -1,3 +1,21 @@
+export default function ContactPage() {
+  return (
+    <div className="mx-auto max-w-4xl px-6 py-16 text-gray-300">
+      <h1 className="text-4xl font-bold text-white">Contact Us</h1>
+      <p className="mt-6 text-lg">We'd love to learn about your goals. Reach out and we'll respond within 1 business day.</p>
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h2 className="text-xl font-semibold text-white">Email</h2>
+          <a className="mt-2 block text-blue-400" href="mailto:hello@ziontechgroup.com">hello@ziontechgroup.com</a>
+        </div>
+        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h2 className="text-xl font-semibold text-white">HQ</h2>
+          <p className="mt-2">Remote-first • Global</p>
+        </div>
+      </div>
+    </div>
+  )
+}
 <<<<<<< HEAD
 
 

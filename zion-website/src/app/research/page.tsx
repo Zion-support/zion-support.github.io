@@ -1,3 +1,33 @@
+const papers = [
+  {
+    title: 'Evaluating Autonomous IT Agents in Production',
+    summary: 'Benchmarks and safety controls for real-world autonomy.',
+    href: '/research',
+  },
+  {
+    title: 'Practical Guardrails for LLM Systems',
+    summary: 'A blueprint for reliable outcomes with generative models.',
+    href: '/research',
+  },
+]
+
+export default function ResearchPage() {
+  return (
+    <div className="mx-auto max-w-5xl px-6 py-16 text-gray-300">
+      <h1 className="text-4xl font-bold text-white">Research</h1>
+      <p className="mt-6 text-lg">Work from our labs on AI safety, autonomy, and next-gen systems.</p>
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {papers.map((p) => (
+          <a key={p.title} href={p.href} className="rounded-2xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition-colors">
+            <h3 className="text-xl font-semibold text-white">{p.title}</h3>
+            <p className="mt-2 text-sm">{p.summary}</p>
+            <div className="mt-4 text-sm font-semibold text-blue-400">Read →</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
 <<<<<<< HEAD
 import {
 

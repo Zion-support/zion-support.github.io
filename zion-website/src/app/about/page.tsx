@@ -1,3 +1,27 @@
+export default function AboutPage() {
+  return (
+    <div className="mx-auto max-w-4xl px-6 py-16 text-gray-300">
+      <h1 className="text-4xl font-bold text-white">About Zion Tech Group</h1>
+      <p className="mt-6 text-lg">
+        We build trustworthy AI, autonomous platforms, and future-ready architectures that help organizations move faster with confidence.
+      </p>
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h2 className="text-xl font-semibold text-white">Our Mission</h2>
+          <p className="mt-2">Accelerate human potential through safe, practical AI and cutting-edge systems.</p>
+        </div>
+        <div className="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <h2 className="text-xl font-semibold text-white">Our Values</h2>
+          <ul className="mt-2 list-disc pl-5 space-y-1">
+            <li>Innovation with accountability</li>
+            <li>Security by default</li>
+            <li>Customer outcomes first</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
 <<<<<<< HEAD
 
 
