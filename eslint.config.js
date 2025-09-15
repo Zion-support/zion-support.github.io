@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
@@ -44,19 +45,27 @@ export default [
   },
   {
     ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
+      'node_modules/**',
+      '.next/**',
+      '**/.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
       '*.config.js',
       '*.config.ts',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
+      'scripts/**',
+      'automation/**',
+      'public/**',
+      'netlify/**',
       'ecosystem*.cjs',
-      '**/*.cjs'
+      '**/*.cjs',
+      'zion-os.disabled/**',
+      'zion-website/.next/**',
+      'zion-os/.next/**',
+      'zion.app/**',
+      'zion_academy/**',
+      '**/static/**',
+      '**/*.min.js'
     ]
   }
 ];
