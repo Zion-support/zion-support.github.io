@@ -7,6 +7,22 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  {
+    title: 'Launch: Agent Evals & Observability Suite v1.0',
+    summary:
+      'Unified live evals, guardrail events, tracing, and budget dashboards to operate agents safely.',
+    href: '/updates/agent-evals-observability-suite-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   // Fresh content added 2025-09-15
   // New content added 2025-09-15 (afternoon batch)
   {
