@@ -106,24 +106,24 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/agent-policy-as-code-starter-kit"
+                href="/updates/ai-security-evidence-vault-v1"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: Policy-as-Code Starter Kit
+                Launch: AI Security Evidence Vault v1
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/ai-lab-research-datasets-portal"
+                href="/updates/real-time-evals-control-plane"
                 className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
               >
-                Report: Research Datasets Portal
+                Launch: Real-Time Evals Control Plane
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/secure-agent-operations-blueprint-2026"
+                href="/updates/enterprise-agent-app-store"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
-                Blueprint: Secure Agent Ops 2026
+                Preview: Enterprise Agent App Store
                 <span aria-hidden>→</span>
               </a>
               <a

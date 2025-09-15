@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Security Evidence Vault v1',
+    summary:
+      'Centralized evidence store for evals, audits, and policy checks with signed artifacts.',
+    href: '/updates/ai-security-evidence-vault-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Real-Time Evals Control Plane',
+    summary:
+      'Low-latency eval orchestration with streaming metrics, gates, and rollback hooks.',
+    href: '/updates/real-time-evals-control-plane',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Preview: Enterprise Agent App Store',
+    summary:
+      'Curated, governable agent apps with permissions, telemetry, and billing integrations.',
+    href: '/updates/enterprise-agent-app-store',
+    date: '2025-09-15',
+    tag: 'Preview'
+  },
+  {
     title: 'Blueprint: Sovereign AI Commerce (2026)',
     summary:
       'Reference architecture and rollout checklist for launching autonomous AI marketplaces with policy gates and evals.',
