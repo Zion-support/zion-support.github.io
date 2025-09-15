@@ -11,6 +11,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'autonomous-enterprise-it-2025': {
+    id: 'autonomous-enterprise-it-2025',
+    title: 'Autonomous Enterprise IT 2025: Operating Models for Self‑Healing Orgs',
+    excerpt:
+      'A practical operating model for enterprises adopting self-healing IT: from observability baselines to closed-loop remediation and governance.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Enterprises are moving beyond dashboards to autonomous operating models. The goal: detect, diagnose, and remediate incidents before they impact customers—safely and audibly.',
+      'We define a maturity path with clear controls: 1) Observability baselines and event normalization, 2) Policy-driven runbooks with human checkpoints, 3) Closed-loop remediation with guardrails, and 4) Continuous improvement via post-incident learning.',
+      'Key capabilities include: topology-aware correlation, change risk prediction, and granular policy governance to ensure safety and compliance in regulated environments.',
+      'Outcomes observed: 40–60% MTTR reduction, fewer out-of-hours pages, and reclaimed engineering time for proactive improvements.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

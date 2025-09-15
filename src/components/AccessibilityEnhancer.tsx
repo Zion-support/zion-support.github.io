@@ -157,10 +157,6 @@ export function AccessibilityEnhancer() {
           (footer as HTMLElement).focus();
           announce('Moved to footer');
         }
-=======
-    focusIndicator: true,
-    screenReader: false
-  });
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -468,23 +464,8 @@ export function AccessibilityEnhancer() {
         ))}
       </div>
     </>
-=======
-    // Enhance focus management
-    const focusableElements = document.querySelectorAll(
-      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-    );
-
-    focusableElements.forEach((element) => {
-      if (element instanceof HTMLElement) {
-        element.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' && element.tagName === 'BUTTON') {
-            e.preventDefault();
-            (element as HTMLButtonElement).click();
-          }
-        });
-      }
-    });
-  }, []);
+  );
+}
 
   const enhanceFormAccessibility = useCallback(() => {
     const forms = document.querySelectorAll('form');
@@ -759,7 +740,6 @@ export function AccessibilityEnhancer() {
         </p>
       </div>
     </div>
->>>>>>> origin/performance-accessibility-improvements
   );
 }
 
