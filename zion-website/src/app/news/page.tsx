@@ -8,6 +8,12 @@ const posts = [
     summary: 'Major upgrades to inference performance, observability, and enterprise security.',
   },
   {
+    slug: 'customer-win-retail',
+    title: 'Global retail autonomous fulfillment rollout',
+    date: '2025-09-15',
+    summary: 'Autonomous agents improved OTIF by 11% across 14 DCs with dynamic routing.',
+  },
+  {
     slug: 'customer-win-finance',
     title: 'Fortune 100 finance deployment',
     date: '2025-09-10',

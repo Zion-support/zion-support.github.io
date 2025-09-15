@@ -11,7 +11,7 @@ const NewContentPromotionBanner: React.FC = () => {
             <p className="text-lg text-gray-600 max-w-2xl">Blueprint for zero-trust agents with isolation domains, policy-as-code, and runtime guards.</p>
           </div>
           <div className="flex gap-3">
-            <a href="/content/ai-2026-zero-trust-agent-architecture" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read →</a>
+            <a href="/blog/ai-2026-zero-trust-agent-architecture" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read →</a>
             <a href="/blog/ai-2026-privacy-preserving-agents" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Privacy</a>
           </div>
         </div>

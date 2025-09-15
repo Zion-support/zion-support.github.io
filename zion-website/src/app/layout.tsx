@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -41,7 +41,12 @@ export const metadata: Metadata = {
     description: 'Transform your business with cutting-edge AI and technology solutions.',
     images: ['/og-image.jpg'],
   },
-  viewport: 'width=device-width, initial-scale=1',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'),
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#000000',
 }
 
@@ -55,8 +60,8 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {/* Promo banner */}
         <div className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center text-sm sm:text-base py-2 px-4">
-          <a href="/updates/agent-safety-whitepaper" className="font-semibold hover:underline">
-            New whitepaper: AI Agent Safety Framework (2025) — read now →
+          <a href="/updates/autonomous-strategy-copilot-1-0" className="font-semibold hover:underline">
+            New: Autonomous Strategy Copilot v1.0 — request a demo →
           </a>
         </div>
         <Navigation />

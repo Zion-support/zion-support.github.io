@@ -1,42 +1,36 @@
-import React from 'react'
-
-export default function UpdateDetailPage() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-3xl py-12 lg:py-16">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Launch: Autonomous Procurement Copilot (v1.0)</h1>
-          <p className="mt-2 text-sm text-blue-400">2025-09-15 · Launch</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Automate vendor sourcing, contract analysis, and purchase order workflows with policy-as-code guardrails, live cost benchmarks,
-            and audit-ready trails. The Procurement Copilot integrates with ERP and sourcing platforms, providing retrieval-grounded answers
-            and measurable quality, latency, and savings.
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Launch</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Launch: Autonomous Procurement Copilot v1.0
+        </h1>
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
+          <p>
+            The Autonomous Procurement Copilot streamlines vendor sourcing, RFP workflows, contract
+            analysis, and approvals. It embeds policy-as-code, evaluation gates, and live cost
+            benchmarks to ensure compliant, cost‑effective decisions.
           </p>
-          <div className="mt-10 space-y-6 text-gray-300">
-            <h2 className="text-2xl font-semibold text-white">Key Capabilities</h2>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Automated RFP/RFQ generation with vendor matching and scoring rubrics</li>
-              <li>Contract analysis with clause extraction, variance detection, and risk flags</li>
-              <li>Policy-as-code guardrails for approvals and spend thresholds</li>
-              <li>Live cost benchmarks and savings insights with evaluation gates</li>
-              <li>Seamless ERP integration (SAP/Oracle/NetSuite) with observability</li>
-            </ul>
-            <h2 className="text-2xl font-semibold text-white">Getting Started</h2>
-            <ol className="list-decimal pl-6 space-y-2">
-              <li>Connect your ERP and document repositories</li>
-              <li>Import procurement policies and approval workflows</li>
-              <li>Enable telemetry and evaluation gates for safe rollout</li>
-            </ol>
-          </div>
-          <div className="mt-10 flex gap-4">
-            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200">
-              Talk to sales
+          <h2>Highlights</h2>
+          <ul>
+            <li>Smart vendor discovery with deduplication and risk signals</li>
+            <li>RFP drafting, scoring rubrics, and side‑by‑side vendor comparisons</li>
+            <li>Contract clause extraction with policy checks and exception workflows</li>
+            <li>Automated approvals with audit‑ready evidence bundles</li>
+          </ul>
+          <h2>Get started</h2>
+          <p>
+            Ready to modernize procurement? Our team can deploy a pilot in weeks with measurable ROI.
+          </p>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Talk to us
             </a>
-            <a href="/updates" className="inline-flex items-center text-blue-400 hover:text-blue-300">Back to Updates →</a>
-          </div>
+          </p>
         </div>
       </div>
     </div>
   )
 }
-

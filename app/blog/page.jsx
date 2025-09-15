@@ -35,6 +35,24 @@ const BlogPage = () => {
       featured: true,
       image: "/images/agents-oncall-2026.jpg"
     },
+    {
+      title: "AI 2026: Eval‑Driven Release Engineering — Deep Dive",
+      description: "Wire objective evals into CI/CD, canaries, and runtime with auto‑rollback.",
+      slug: "ai-2026-eval-driven-release-engineering-deep-dive",
+      category: "Reliability",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/eval-driven-release-deep-dive.jpg"
+    },
+    {
+      title: "AI 2026: Agentic Observability Operating Model",
+      description: "Traces, evals, and policy signals to operate autonomous agents with confidence.",
+      slug: "ai-2026-agentic-observability-operating-model",
+      category: "Observability",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agentic-observability-2026.jpg"
+    },
   ];
 
   const categories = [

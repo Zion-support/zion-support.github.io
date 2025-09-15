@@ -1,6 +1,55 @@
+// @ts-nocheck
 import Link from 'next/link'
 
 const posts = [
+  {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+  },
+  {
+    slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
+    title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
+    summary:
+      'From datasets to live canaries with objective rubrics and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-agent-observability-blueprint',
+    title: 'AI 2026: Agent Observability — Blueprint',
+    summary:
+      'Traces, eval signals, and guardrail events to operate agent fleets reliably.'
+  },
+  {
+    slug: 'ai-2026-governed-tool-use-blueprint',
+    title: 'AI 2026: Governed Tool Use — Blueprint',
+    summary:
+      'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
+  },
+  {
+    slug: 'ai-2026-eval-driven-release-engineering-deep-dive',
+    title: 'AI 2026: Eval‑Driven Release Engineering — Deep Dive',
+    summary:
+      'Objective eval gates in CI/CD and runtime with canaries and auto‑rollback.'
+  },
+  {
+    slug: 'ai-2026-agentic-observability-operating-model',
+    title: 'AI 2026: Agentic Observability Operating Model',
+    summary:
+      'Operating model for traces, evals, and policy signals to run agents safely.'
+  },
   {
     slug: 'ai-2026-sovereign-ai-commerce',
     title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
@@ -68,6 +117,12 @@ const posts = [
       'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.'
   },
   {
+    slug: 'ai-2026-cost-transparency-for-agents',
+    title: 'AI 2026: Cost Transparency for Agentic Systems',
+    summary:
+      'Establishing SLOs, SLIs, and cost attribution for complex multi-agent workflows in production.'
+  },
+  {
     slug: 'ai-2026-multimodal-agents-enterprise-blueprint',
     title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
     summary:
@@ -127,6 +182,12 @@ const posts = [
   }
   ,
   {
+    slug: 'ai-2026-cost-aware-agent-routing',
+    title: 'AI 2026: Cost‑Aware Agent Routing — Practical Guide',
+    summary: 'Balance quality, latency, and spend using eval signals and budget guardrails.'
+  }
+  ,
+  {
     slug: 'ai-2026-retrieval-latency-patterns',
     title: 'AI 2026: Retrieval Latency Patterns',
     summary: 'Designing sub-500ms retrieval with caches, hybrids, and streaming.'
@@ -135,6 +196,22 @@ const posts = [
     slug: 'ai-2026-grounded-generation-blueprint',
     title: 'AI 2026: Grounded Generation Blueprint',
     summary: 'Reduce hallucinations with retrieval, constraints, and eval gates.'
+  }
+  ,
+  {
+    slug: 'ai-2026-generative-ai-risk-register',
+    title: 'AI 2026: Generative AI Risk Register',
+    summary: 'Templates, owners, mitigations, and audit evidence to operationalize AI risk.'
+  },
+  {
+    slug: 'ai-2026-policy-as-code-production-blueprint',
+    title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
+    summary: 'Executable policies with CI/CD gates, canaries, and audit‑ready evidence.'
+  },
+  {
+    slug: 'ai-2026-real-time-retrieval-architectures',
+    title: 'AI 2026: Real‑Time Retrieval Architectures',
+    summary: 'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.'
   }
 ]
 

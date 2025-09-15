@@ -1,30 +1,37 @@
-"use client"
-import React from 'react'
-
-export default function MTTRReductionCaseStudy() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
-        <a href="/updates" className="text-blue-400 hover:text-blue-300 text-sm">← All updates</a>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Case Study: MTTR -42% With Real-Time RAG</h1>
-        <p className="mt-3 text-gray-300">How live retrieval + evals reduced incident time-to-resolution in a Fortune 100 stack.</p>
-        <div className="mt-8 space-y-6 text-gray-200 leading-7">
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Case Study</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Case Study: MTTR Reduction with Real-Time RAG
+        </h1>
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
           <p>
-            By combining streaming retrieval, incident-aware routing, and action guardrails, our client
-            reduced mean-time-to-resolution by 42% across tier-1 incidents while improving answer quality.
+            A large enterprise integrated real-time retrieval telemetry and live evaluation hooks
+            into incident workflows. The result: a 37% reduction in mean time to resolution (MTTR)
+            and fewer regressions during peak traffic.
           </p>
-          <h2 className="text-xl font-semibold text-white">Outcomes</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Tail latency p95 reduced by 37%</li>
-            <li>Escalations reduced by 28%</li>
-            <li>Operator confidence increased with live eval dashboards</li>
+          <h2>Key outcomes</h2>
+          <ul>
+            <li>Automated triage with guardrail events and failure taxonomies</li>
+            <li>Faster root-cause isolation using retrieval quality signals</li>
+            <li>Safe rollbacks via canary gates and abort switches</li>
+            <li>Audit-ready incident timelines with prompt and tool-call diffs</li>
           </ul>
+          <h2>Architecture highlights</h2>
           <p>
-            Learn how to adopt these patterns in your operations and observability stack.
+            Hybrid retrieval with streaming traces, bounded latency budgets, and policy-as-code
+            checks to keep agents reliable under load.
+          </p>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Explore this pattern
+            </a>
           </p>
         </div>
       </div>
     </div>
   )
 }
-

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Content Hub | Zion Tech Group',
@@ -14,6 +13,45 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* New items added September 2025 */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Security</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
+              Secure Agentic Data Pipelines (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Zero-trust, policy-as-code data flows with lineage, ABAC, and continuous verification.
+          </p>
+          <Link href="/content/secure-agentic-data-pipelines-2026" className="text-emerald-600 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Reliability</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/responsible-ai-evaluation-ops-2026" className="hover:underline">
+              Responsible AI Evaluation Ops (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Metrics, scenario harnesses, and CI/CD gates for trustworthy AI delivery.
+          </p>
+          <Link href="/content/responsible-ai-evaluation-ops-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations" className="hover:underline">
+              AI 2026: Evidence-Driven AI Operations
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation-first operating model with policy gates, observability, and SLOs for safe scale.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -168,6 +206,7 @@ export default function ContentIndexPage() {
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
+<<<<<<< HEAD
           <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/genai-governance-2026" className="hover:underline">
@@ -243,6 +282,44 @@ export default function ContentIndexPage() {
             Build an end-to-end observability stack for AI agents with metrics, tracing, and evals.
           </p>
           <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
+=======
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Governance</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
+              AI Governance Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical, risk-aware governance with evaluations, policy-as-code, and monitoring.
+          </p>
+          <Link href="/content/ai-governance-blueprint-2026" className="text-emerald-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-orange-700 mb-2">Operating Model</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-operating-model-2026" className="hover:underline">
+              AI Operating Model 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Structure teams, processes, and platforms to deliver sustained AI outcomes.
+          </p>
+          <Link href="/content/ai-operating-model-2026" className="text-orange-600 font-semibold">Read Guide →</Link>
+>>>>>>> 126fbef79ff2 (feat(content): add AI Governance Blueprint 2026 and AI Operating Model 2026; promote on homepage and content hub; resolve homepage conflict)
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/enterprise-ai-governance-2026" className="hover:underline">
+              Enterprise AI Governance Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical governance: policy-as-code, evals, monitoring, and risk workflows for trustworthy AI.
+          </p>
+          <Link href="/content/enterprise-ai-governance-2026" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
         </article>
       </div>
     </main>

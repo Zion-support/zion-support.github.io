@@ -11,6 +11,181 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "autonomous-ops-roadmap-2026",
+    title: "AI 2026: Autonomous Ops Roadmap",
+    description:
+      "Quarterly plan to go from pilots to production with eval-gated safety and SLOs.",
+    ctaLabel: "Read Roadmap",
+    href: "/blog/ai-2026-autonomous-ops-roadmap",
+    emoji: "🗺️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evidence-vault-blueprint-2026",
+    title: "AI 2026: Evidence Vault Blueprint",
+    description:
+      "Centralize evals, incidents, and approvals for audit-ready AI operations.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-evidence-vault-blueprint",
+    emoji: "🗃️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "zero-trust-agent-architecture-2026",
+    title: "AI 2026: Zero-Trust Agent Architecture",
+    description:
+      "Blueprint for zero-trust agents with isolation domains, policy‑as‑code, and runtime guards.",
+    ctaLabel: "Read Architecture",
+    href: "/blog/ai-2026-zero-trust-agent-architecture",
+    emoji: "🔐",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "privacy-preserving-agents-2026",
+    title: "AI 2026: Privacy-Preserving Agents",
+    description:
+      "Private‑by‑default agents using scoped memory, redaction, and confidential computing.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-privacy-preserving-agents",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evidence-driven-release-checklists-2026",
+    title: "AI 2026: Evidence‑Driven Release Checklists",
+    description:
+      "Make evals operational with runtime gates, progressive delivery, and audit‑ready rollbacks.",
+    ctaLabel: "Read Checklist",
+    href: "/blog/ai-2026-evidence-driven-release-checklists",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-health-dashboard-starter-2026",
+    title: "AI 2026: Agent Platform Health Dashboard — Starter Kit",
+    description:
+      "Pre‑wired SLOs, evals, incident, and cost views with example queries and JSON dashboards.",
+    ctaLabel: "Get Starter Kit",
+    href: "/resources/ai-2026-agent-platform-health-dashboard-starter",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-slos-implementation-guide-2026",
+    title: "AI 2026: Implementing Agent SLOs — Practical Guide",
+    description:
+      "Define, monitor, and enforce SLOs for agent platforms with policy‑as‑code and eval gates.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-slos-implementation-guide",
+    emoji: "📏",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-evidence-hub-starter-2026",
+    title: "AI 2026: Agentic Evidence Hub — Starter Kit",
+    description:
+      "Centralize eval results, incidents, approvals, and change records for audit‑ready operations.",
+    ctaLabel: "Get the Kit",
+    href: "/content/ai-2026-agentic-evidence-hub-starter",
+    emoji: "🧾",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-harness-starter-kit-2026",
+    title: "AI 2026: Evaluation Harness Starter Kit",
+    description:
+      "Ready-to-run scenarios, metrics, and CI hooks to begin eval-driven development.",
+    ctaLabel: "Get the Kit",
+    href: "/content/ai-2026-evaluation-harness-starter-kit",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-red-team-playbooks-2026",
+    title: "AI 2026: Agentic Red-Team Playbooks",
+    description:
+      "Adversarial scenarios, attack trees, and pass criteria to harden autonomous agents.",
+    ctaLabel: "Read Playbooks",
+    href: "/blog/ai-2026-agentic-red-team-playbooks",
+    emoji: "🧨",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "model-routing-cookbook-2026",
+    title: "AI 2026: Model Routing Cookbook",
+    description:
+      "Practical recipes for policy-gated routing, fallbacks, and cost-aware selection.",
+    ctaLabel: "Read Cookbook",
+    href: "/content/ai-2026-model-routing-cookbook",
+    emoji: "🍳",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-evidence-hub-2026",
+    title: "AI 2026: Agent Safety Evidence Hub",
+    description:
+      "Centralize eval results, incidents, and approvals to prove safety at scale.",
+    ctaLabel: "Explore Hub",
+    href: "/content/ai-2026-agent-safety-evidence-hub",
+    emoji: "📚",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "trustworthy-model-routing-2026",
+    title: "AI 2026: Trustworthy Model Routing",
+    description:
+      "Risk-aware, eval-gated routing with policy-as-code, telemetry, and cost controls.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-trustworthy-model-routing",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-benchmark-suite-2026",
+    title: "AI 2026: Agent Benchmark Suite",
+    description:
+      "Scenario-driven benchmarks to measure safety, quality, reliability, and efficiency.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-benchmark-suite",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-slos-2026-guide",
+    title: "AI 2026: Agent Platform SLOs That Matter",
+    description:
+      "A concise SLO set for safety, quality, reliability, and economics—ready to adopt.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-agent-platform-slos",
+    emoji: "📏",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-platform-slos-best-practices-2026-article",
+    title: "AI 2026: Agent Platform SLOs — Best Practices",
+    description:
+      "Practical guidance to define, monitor, and enforce agent platform SLOs.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-platform-slos-best-practices",
+    emoji: "🧭",
+    date: "2025-09-15",
+  },
+  {
     id: "agent-platform-slos-2026",
     title: "AI 2026: Agent Platform SLOs That Matter",
     description:
@@ -213,6 +388,28 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     ctaLabel: "Read Blueprint",
     href: "/content/ai-2026-autonomous-revenue-blueprint",
     emoji: "💼",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "hyperautomation-blueprint-2026",
+    title: "Hyperautomation Blueprint 2026",
+    description:
+      "Scale AI-driven automation with platform patterns, policy-as-code, and ROI tracking.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/hyperautomation-blueprint-2026",
+    emoji: "🧩",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-agents-roi-playbook-2026",
+    title: "AI Agents ROI Playbook 2026",
+    description:
+      "Model, track, and realize ROI from enterprise AI agents with evidence-driven governance.",
+    ctaLabel: "Read Playbook",
+    href: "/content/ai-agents-roi-playbook-2026",
+    emoji: "📏",
     highlight: true,
     date: "2025-09-15",
   },
