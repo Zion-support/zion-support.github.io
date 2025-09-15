@@ -7,6 +7,31 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (even later night batch)
+  {
+    title: 'Launch: Autonomous Knowledge Ops Suite v1.1',
+    summary:
+      'Workflow automations, reviewer assignments, and signed evidence bundles for governed knowledge ops.',
+    href: '/updates/autonomous-knowledge-ops-suite-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production AI Change Windows (2026)',
+    summary:
+      'Establish change windows with eval gates, shadow tests, and rollback rules for safer AI releases.',
+    href: '/updates/production-ai-change-windows-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Retrieval Observability 2026',
+    summary:
+      'Coverage, freshness, and drift metrics adoption across industries, with benchmarks and rollouts.',
+    href: '/updates/state-of-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   // Added 2025-09-15 (new featured content)
   {
     title: 'Launch: Knowledge Graph Copilot v1.0',
