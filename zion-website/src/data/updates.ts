@@ -9,6 +9,30 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-15
   {
+    title: 'Launch: Autonomous Support Copilot v1.3',
+    summary:
+      'Safer tool gating, better retrieval debugging, and SLA-aware escalation workflows.',
+    href: '/updates/autonomous-support-copilot-1-3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Real-Time Agent Rollouts with Live Evals',
+    summary:
+      'Operational guide for shipping agent updates with canaries, metrics, and abort switches.',
+    href: '/updates/real-time-agent-rollouts-live-evals',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Case Study: 25% Ticket Deflection via Support Agents',
+    summary:
+      'How enterprise support saw reduced volume and faster MTTR using eval‑gated agents.',
+    href: '/updates/agent-support-deflection-case-study',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Autonomous Sales Copilot v1.0',
     summary:
       'Pipeline insights, meeting prep, and safe CRM automation with policy-as-code and live evals.',
