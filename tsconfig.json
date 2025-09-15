@@ -46,7 +46,8 @@
       "@data/*": ["src/data/*"],
       "@services/*": ["src/services/*"],
       "@context/*": ["src/context/*"],
-      "@constants/*": ["src/constants/*"]
+      "@constants/*": ["src/constants/*"],
+      "@/components/*": ["src/components/*"]
     },
     "types": ["vite/client", "node"],
     "plugins": [

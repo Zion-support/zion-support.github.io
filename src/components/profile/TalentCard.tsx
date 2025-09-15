@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link",
-import { TalentProfile } from "@/types/talent",
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import React and useState
-
-export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean
-=======
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -30,7 +13,6 @@ export interface TalentCardProps {
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function TalentCard({
@@ -41,37 +23,6 @@ export function TalentCard({
   onToggleSave,
   isAuthenticated
 }: TalentCardProps) {
-<<<<<<< HEAD
-  const [avatarError, setAvatarError] = useState(false),
-
-  const handleViewProfile = () => {
-    if (onViewProfile) {
-      onViewProfile(talent.id),
-    }
-  },
-
-
-    }
-  }
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault(),
-    e.stopPropagation(),
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-  },
-
-  const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault(),
-    e.stopPropagation(),
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved),
-    }
-  },
-
-  const skills = talent.skills?.slice(0, 5) || [],
-  const talentNameInitial = talent.full_name?.charAt(0) || "T",
-=======
   const [avatarError, setAvatarError] = useState(false);
 
   const handleViewProfile = () => {
@@ -98,7 +49,6 @@ export function TalentCard({
 
   const skills = talent.skills?.slice(0, 5) || [];
   const talentNameInitial = talent.full_name?.charAt(0) || "T";
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
@@ -146,46 +96,6 @@ export function TalentCard({
             
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
-<<<<<<< HEAD
-                <div className='flex items-center text-zion-slate-light'>
-                  <MapPin className='h-4 w-4 mr-1' />                  <span>{talent.location}</span>
-                </div>
-              )}
-              {talent.availability_type && (
-                <div className='flex items-center text-zion-slate-light'>
-                  <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">
-            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-            
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-
-
-
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{talent.location}</span>
-                </div>
-                />;
-                <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
-              </Button>;
-            </div>;
-            <p className='text-zion-cyan font-medium'>;
-              {talent && talent.professional_title}
-            </p>;
-
-            <div className='mt-2 flex flex-wrap gap-3 text-sm'>;
-              {talent && talent.location && (;
-                <div className='flex items-center text-zion-slate-light'>;
-                  <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
-                </div>;
-
-
-
-              )}
-              {talent.availability_type && (
-                <div className='flex items-center text-zion-slate-light'>
-                  <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">
-=======
                 <div className="flex items-center text-zion-slate-light">
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
@@ -193,7 +103,6 @@ export function TalentCard({
               )}
               {talent.availability_type && (
                 <div className="flex items-center text-zion-slate-light">
->>>>>>> origin/auto/autonomy-17186719616
                   <Clock className="h-4 w-4 mr-1" />
                   <span>{talent.availability_type}</span>
                 </div>
@@ -203,75 +112,6 @@ export function TalentCard({
         </div>
         
         {skills.length > 0 && (
-<<<<<<< HEAD
-          <div className='mt-4'>
-            <div className='flex flex-wrap gap-2'>
-              {skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index,) => (
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                  {skill}
-                </span>
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                </span>
-              )}
-
-
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
-
-
-              {talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent.availability_type}</span>;
-                </div>;
-              )}
-            </div>;
-          </div>;
-        </div>;
-
-        {skills && skills.length > 0 && (;
-          <div className='mt-4'>;
-            <div className='flex flex-wrap gap-2'>;
-              {skills && skills.map((skill, index) => (;
-                <span
-                  key={index}
-                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'>          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills && skills.map((skill, index,) => (;
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                  {skill}
-                </span>;
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                  {skill}
-                </span>
-              ))}
-                </span>
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-=======
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
@@ -286,91 +126,10 @@ export function TalentCard({
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length || 0) - 5} more
                 </span>
->>>>>>> origin/auto/autonomy-17186719616
               )}
             </div>
           </div>
         )}
-<<<<<<< HEAD
-
-        <div className='mt-5 flex items-center justify-between'>
-          <div>
-            {talent.hourly_rate ? (
-              <div className='text - white font - bold'>;
-                ${talent.hourly_rate}
-                <span className='text-zion-slate-light font-normal'>/hr</span>
-              </div>
-            ) : (
-              <div className='text-zion-slate-light'>Rate not specified</div>
-            )}
-          </div>
-          <div className='flex items-center gap-2'>
-            {isAuthenticated && (
-
-        <div className='mt-5 flex items-center justify-between'>;
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className='text-white font-bold'>;
-                ${talent && talent.hourly_rate}
-                <span className='text-zion-slate-light font-normal'>/hr</span>;
-              </div>;
-            ) : (;
-              <div className='text-zion-slate-light'>Rate not specified</div>;
-            )}
-          </div>;
-
-          <div className='flex items-center gap-2'>;
-            {isAuthenticated && (;
-
-              <Button
-                size='sm'
-                variant='secondary'
-                onClick={handleRequestHire}
-                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
-
-;
-        <div className="mt-5 flex items-center justify-between">;
-
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-
-
-
-        
-        <div className="mt-5 flex items-center justify-between">
-          <div>
-                <span className='text - zion - slate - light font - normal'>/hr</span>;
-              </div>) : (
-              <div className='text - zion - slate - light'>Rate not specified</div>)}
-          </div>;
-          <div className='flex items - center gap - 2'>;
-            {is_authenticated && (
-              <Button;
-                size='sm';
-                variant='secondary';
-                on_click={handleRequestHire}
-                className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
-          <div>;
-
-            {talent.hourly_rate ? (
-              <div className="text-white font-bold">
-                ${talent.hourly_rate}
-
-          </div>;
-
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-
-              <Button
-              <Button
-
-=======
         
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -387,7 +146,6 @@ export function TalentCard({
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
->>>>>>> origin/auto/autonomy-17186719616
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
@@ -400,11 +158,7 @@ export function TalentCard({
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
-<<<<<<< HEAD
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
-=======
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
->>>>>>> origin/auto/autonomy-17186719616
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -412,9 +166,5 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
