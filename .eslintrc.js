@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
@@ -27,7 +23,6 @@ module.exports = {
     'automation/',
     'netlify/',
     'src/',
-<<<<<<< HEAD
     'apps/',
     'backup-merge-conflicts/',
     'recovered-branches/',
@@ -65,8 +60,5 @@ module.exports = {
     'app-optimizer.js',
     'batch-syntax-fixer.cjs',
     'complete-improvement-suite.cjs'
-=======
-    'apps/'
->>>>>>> origin/auto/autonomy-17186719616
   ]
 };
