@@ -218,10 +218,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/autonomous-finance-os-1-0"
+                href="/updates/autonomous-finance-os-1-1"
                 className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
-                Launch: Autonomous Finance OS v1.0
+                Launch: Autonomous Finance OS v1.1
                 <span aria-hidden>→</span>
               </a>
             </div>

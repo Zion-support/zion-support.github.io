@@ -79,6 +79,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Report'
   },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
@@ -269,6 +270,31 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-agents-case-study',
     date: '2025-09-15',
     tag: 'Case Study'
+  }
+  ,
+  {
+    title: 'Launch: Autonomous Finance OS v1.1',
+    summary:
+      'Enhanced controls, real-time guardrails, and automated reconciliations for finance-grade agent ops.',
+    href: '/updates/autonomous-finance-os-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Multimodal Agents (2026 Preview)',
+    summary:
+      'A practical rubric and harnesses to evaluate multimodal grounding, tool use, and safety.',
+    href: '/updates/evaluating-multimodal-agents-2026-preview',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Course: GenAI for Executives',
+    summary:
+      'Executive-focused program on AI strategy, governance, and ROI with hands-on frameworks.',
+    href: '/updates/genai-executive-course',
+    date: '2025-09-15',
+    tag: 'Course'
   }
 ]
 
