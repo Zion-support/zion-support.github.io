@@ -7,6 +7,93 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+<<<<<<< HEAD
+=======
+  // Added 2025-09-15 (latest content)
+  {
+<<<<<<< HEAD
+    title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
+    summary:
+      'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
+    href: '/updates/real-time-ai-analytics-dashboard-v3-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Agent Orchestration Platform v2.0',
+    summary:
+      'Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.',
+    href: '/updates/ai-agent-orchestration-platform-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Autonomous Testing Framework v1.0',
+    summary:
+      'Self-healing test automation with intelligent test generation, execution, and maintenance for enterprise applications.',
+    href: '/updates/ai-autonomous-testing-framework-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+=======
+    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    summary:
+      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
+    href: '/updates/ai-autonomous-workflow-engine-1-0',
+>>>>>>> cursor/create-and-deploy-new-content-8472
+  },
+  // Added 2025-09-15 (new content for homepage promotion)
+  {
+    title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
+    summary:
+      'New real-time scenarios, eval-gated rollbacks, and signed evidence exports to drill agent safety.',
+    href: '/updates/incident-simulation-toolkit-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
+    summary:
+      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
+    href: '/updates/evaluating-real-time-retrieval-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
+    summary:
+      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (new content created now)
+  {
+    title: 'Launch: Autonomous Security Copilot v1.0',
+    summary:
+      'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
+    href: '/updates/autonomous-security-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Guardrails for Tool Use (2026)',
+    summary:
+      'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
+    href: '/updates/production-guardrails-tool-use-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: AI Governance Dashboard v5',
+    summary:
+      'Cross-env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails. Faster, deeper integrations.',
+    href: '/updates/ai-governance-dashboard-v5',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',

@@ -15,12 +15,15 @@
     "noEmit": true,
     "jsx": "react-jsx",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "baseUrl": "."
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
 =======
+=======
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
     "incremental": true,
     "baseUrl": ".",
     "paths": {
@@ -43,7 +46,17 @@
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
+<<<<<<< HEAD
 >>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f
+=======
+=======
+    "baseUrl": "."
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -52,13 +65,22 @@
     "dist",
     "build",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "coverage"
 =======
+=======
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+<<<<<<< HEAD
 >>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f
+=======
+=======
+    "coverage"
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   ]
 }
