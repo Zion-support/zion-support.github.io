@@ -1,35 +1,37 @@
-
-export default function ProductionRagObservability2026() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
-        <div className="mb-6 flex items-center gap-3 text-xs text-gray-400">
-          <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Guide</span>
-          <time dateTime="2025-09-15">September 15, 2025</time>
-        </div>
-        <h1 className="text-4xl font-bold tracking-tight text-white">Production RAG Observability (2026 Preview)</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          Practical telemetry for retrieval systems: coverage, freshness, drift, and grounding quality with per-step spans.
-          Instrument your pipelines to detect regressions early and ship reliable RAG at scale.
-        </p>
-        <div className="mt-10 space-y-6 text-gray-300">
-          <ul className="list-disc list-inside space-y-2">
-            <li>Define SLIs for retrieval coverage and grounding quality</li>
-            <li>Track freshness and drift with dataset and index lineage</li>
-            <li>Per-step spans for retrieval, reranking, and synthesis</li>
-            <li>Connect evals and canary tests to rollout decisions</li>
-          </ul>
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Guide</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Guide: Production RAG Observability (2026 Preview)
+        </h1>
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
           <p>
-            Use these patterns to build dashboards and alerts that keep quality high while optimizing cost and latency.
+            Operate retrieval‑augmented systems with confidence using practical telemetry: coverage,
+            freshness, drift, and groundedness quality across every retrieval and generation step.
           </p>
-        </div>
-        <div className="mt-10">
-          <a href="/contact" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-            Get the full guide →
-          </a>
+          <h2>What to measure</h2>
+          <ul>
+            <li>Coverage and recall across collections and segments</li>
+            <li>Freshness, staleness windows, and recrawl efficacy</li>
+            <li>Drift detection for embeddings and content distributions</li>
+            <li>Groundedness and hallucination risk with task‑level rubrics</li>
+          </ul>
+          <h2>Operational patterns</h2>
+          <ul>
+            <li>Span‑level traces for retrieve‑rerank‑generate pipelines</li>
+            <li>Canary eval gates with auto‑rollback policies</li>
+            <li>Budget‑aware routing with SLOs for latency, cost, and quality</li>
+          </ul>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Implement this with us
+            </a>
+          </p>
         </div>
       </div>
     </div>
   )
 }
-

@@ -145,6 +145,20 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+                href="/updates/autonomous-procurement-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Launch: Procurement Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/production-rag-observability-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Guide: RAG Observability 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/real-time-agent-debugger-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-500/10 px-4 py-2 text-sm font-semibold text-lime-200 hover:bg-lime-500/20 transition-colors duration-200"
               >
