@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
+import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
 
 const Home: React.FC = () => {
   return (
@@ -78,6 +79,11 @@ const Home: React.FC = () => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* NEW: Ultimate Breakthrough Banner */}
+        <div className="container mx-auto px-4">
+          <UltimateBreakthroughBanner />
         </div>
 
         {/* Services Grid */}

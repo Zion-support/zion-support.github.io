@@ -48,6 +48,8 @@ import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026
 import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
+import AI2026UltimateBreakthrough from './pages/AI2026UltimateBreakthrough';
+import QuantumRealityEngine2026 from './pages/QuantumRealityEngine2026';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import TranscendentAI2026 from './pages/TranscendentAI2026';
@@ -523,8 +525,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
           <Route path="/pages/QuantumConsciousnessRevolution2026" element={<QuantumConsciousnessRevolution2026 />} />
           <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
-          <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
-          <Route path="/pages/RevolutionaryInnovationHub2027" element={<RevolutionaryInnovationHub2027 />} />
+            <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
+            <Route path="/pages/AI2026UltimateBreakthrough" element={<AI2026UltimateBreakthrough />} />
+            <Route path="/pages/QuantumRealityEngine2026" element={<QuantumRealityEngine2026 />} />
+            <Route path="/pages/RevolutionaryInnovationHub2027" element={<RevolutionaryInnovationHub2027 />} />
           <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/TranscendentAI2026" element={<TranscendentAI2026 />} />
           <Route path="/pages/TransdimensionalAI2026" element={<TransdimensionalAI2026 />} />
