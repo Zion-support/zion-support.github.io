@@ -7,6 +7,7 @@ const CaseStudyPage: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 =======
     <div className="min-h-screen bg-white">
@@ -14,6 +15,9 @@ const CaseStudyPage: React.FC = () => {
 =======
     <div className="min-h-screen bg-white">
 >>>>>>> cursor/create-and-deploy-new-content-f977
+=======
+    <div className="min-h-screen bg-white">
+>>>>>>> cursor/create-and-deploy-new-content-2ff6
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Study: {slug}</h1>
