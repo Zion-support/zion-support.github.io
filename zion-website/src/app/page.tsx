@@ -1,13 +1,12 @@
-import React from 'react'
-import { getLatestUpdates } from '../data/updates'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
+import { getLatestUpdates } from '../data/updates'
 
 const features = [
   {
@@ -84,6 +83,14 @@ export default function HomePage() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
+            <a
+              href="/updates/ai-content-studio-2"
+              className="inline-flex items-center rounded-full bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-300 ring-1 ring-inset ring-blue-600/20 hover:bg-blue-600/20 transition-colors"
+            >
+              New: AI Content Studio 2.0 <span className="ml-2" aria-hidden>
+                →
+              </span>
+            </a>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
