@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 interface BlogPostMeta {
   id: string;
@@ -11,6 +10,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'agent-safety-guardrails-2025': {
+    id: 'agent-safety-guardrails-2025',
+    title: 'Agent Safety Guardrails 2025: Practical Patterns for Secure AI Systems',
+    excerpt:
+      'A hands-on guide to implementing policy guardrails, authentication, and oversight for production multi-agent systems.',
+    category: 'Cybersecurity',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As multi-agent systems move into production, safety guardrails become non-negotiable. This article outlines practical patterns that balance autonomy with enforceable policy.',
+      'We cover identity and access management for agents, capability scoping, rate limiting, prompt and tool use policies, and verifiable audit trails.',
+      'Reference architectures show how to layer static policies with dynamic risk scoring to prevent escalation and contain failures.',
+    ],
+  },
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint: Operating Models for Responsible Autonomy',
+    excerpt:
+      'Operating models, metrics, and review rituals to govern autonomous AI in regulated enterprises.',
+    category: 'AI Ethics',
+    author: 'Dr. Maria Garcia',
+    date: '2025-09-14',
+    readTime: '9 min read',
+    content: [
+      'Governance must evolve from static policies to living operating systems that guide autonomous AI. We propose a blueprint grounded in measurable outcomes.',
+      'Key elements include decision inventories, tiered criticality, pre-approved playbooks, red-teaming, and post-incident learning loops.',
+      'We provide templates for governance charters, review cadences, and cross-functional roles that keep AI value creation safe and accountable.',
+    ],
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
@@ -87,9 +116,9 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl font-bold mb-4">Article not found</h1>
           <p className="text-gray-500 mb-6">The article you are looking for does not exist.</p>
-          <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+          <a href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
             ← Back to Blog
-          </Link>
+          </a>
         </div>
       </div>
     );
@@ -125,9 +154,9 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
         </article>
 
         <div className="mt-12">
-          <Link href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
+          <a href="/blog" className="text-blue-600 hover:text-blue-700 font-medium">
             ← Back to Blog
-          </Link>
+          </a>
         </div>
       </div>
     </div>

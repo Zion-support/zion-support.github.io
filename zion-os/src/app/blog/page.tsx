@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -16,6 +15,28 @@ export default function BlogPage() {
       date: '2024-01-15',
       readTime: '8 min read',
       image: '/blog/ai-consciousness.jpg',
+      featured: true
+    },
+    {
+      id: 'agent-safety-guardrails-2025',
+      title: 'Agent Safety Guardrails 2025: Practical Patterns for Secure AI Systems',
+      excerpt: 'Implement policy guardrails, scoped capabilities, and oversight for production multi-agent systems.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agent-safety-guardrails.jpg',
+      featured: true
+    },
+    {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint: Operating Models for Responsible Autonomy',
+      excerpt: 'Operating models, metrics, and rituals to govern autonomous AI at enterprise scale.',
+      category: 'AI Ethics',
+      author: 'Dr. Maria Garcia',
+      date: '2025-09-14',
+      readTime: '9 min read',
+      image: '/blog/ai-governance-blueprint.jpg',
       featured: true
     },
     {
@@ -259,12 +280,12 @@ export default function BlogPage() {
                         <p className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</p>
                       </div>
                     </div>
-                    <Link
+                    <a
                       href={`/blog/${post.id}`}
                       className="text-blue-600 hover:text-blue-700 font-medium text-sm"
                     >
                       Read More →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -355,12 +376,12 @@ export default function BlogPage() {
                       </div>
                       <span className="text-xs text-gray-500">{post.author}</span>
                     </div>
-                    <Link
+                    <a
                       href={`/blog/${post.id}`}
                       className="text-blue-600 hover:text-blue-700 font-medium text-sm"
                     >
                       Read More →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -450,18 +471,18 @@ export default function BlogPage() {
             Explore our services, research, and solutions to see how we can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
             >
               Explore Services
-            </Link>
-            <Link
+            </a>
+            <a
               href="/research-development"
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
             >
               View Research
-            </Link>
+            </a>
           </div>
         </div>
       </section>
