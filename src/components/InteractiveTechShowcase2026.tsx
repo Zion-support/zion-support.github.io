@@ -1,169 +1,185 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-  const [activeTech, setActiveTech] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTech, setActiveTech] = useState('quantum');
 
-  const technologies = [
-    {
-      id: 'synthetic-ai',
-      name: 'Synthetic Intelligence',
-      icon: '🧠',
-      description: 'Next-generation AI with synthetic consciousness and autonomous capabilities',
-      features: ['Autonomous decision making', 'Synthetic consciousness', 'Creative problem solving', 'Emotional intelligence'],
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-600/30 to-pink-600/30',
-      borderColor: 'border-purple-400/30'
-    },
-    {
-      id: 'quantum-computing',
-      name: 'Quantum Computing',
+  const technologies = {
+    quantum: {
+      title: 'Quantum Computing',
       icon: '⚡',
-      description: 'Revolutionary quantum computers solving impossible problems',
-      features: ['Exponential speed', 'Quantum cryptography', 'Molecular simulation', 'Quantum supremacy'],
-      color: 'from-cyan-600 to-blue-600',
+      description: 'Experience exponential processing power with 1000+ qubit quantum processors',
+      features: ['1000+ Logical Qubits', 'Quantum Supremacy', 'Molecular Simulation', 'Quantum AI Integration'],
+      color: 'from-cyan-500 to-blue-500',
       bgColor: 'from-cyan-600/30 to-blue-600/30',
       borderColor: 'border-cyan-400/30'
     },
-    {
-      id: 'neural-interface',
-      name: 'Neural Interface',
+    neural: {
+      title: 'Neural Interface',
       icon: '🧬',
-      description: 'Direct brain-computer interfaces for seamless communication',
-      features: ['Thought control', 'Neural feedback', 'Medical applications', 'Non-invasive BCI'],
-      color: 'from-emerald-600 to-teal-600',
+      description: 'Bridge mind and machine with direct brain-computer communication',
+      features: ['Non-invasive BCI', 'Thought Control', 'Neural Feedback', 'Medical Applications'],
+      color: 'from-emerald-500 to-teal-500',
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       borderColor: 'border-emerald-400/30'
     },
-    {
-      id: 'quantum-neural',
-      name: 'Quantum-Neural Fusion',
-      icon: '⚛️',
-      description: 'Revolutionary fusion of quantum and neural computing',
-      features: ['Quantum processing', 'Neural networks', 'Fusion acceleration', 'Molecular simulation'],
-      color: 'from-orange-600 to-red-600',
+    ai: {
+      title: 'Advanced AI',
+      icon: '🤖',
+      description: 'Create AI agents with synthetic consciousness and autonomous capabilities',
+      features: ['Autonomous Agents', 'Synthetic Consciousness', 'Collective Intelligence', 'Creative Synthesis'],
+      color: 'from-purple-500 to-pink-500',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      borderColor: 'border-purple-400/30'
+    },
+    space: {
+      title: 'Space Technology',
+      icon: '🚀',
+      description: 'AI-powered space exploration and satellite technology',
+      features: ['Space Exploration', 'Satellite Technology', 'Planetary Missions', 'Space AI'],
+      color: 'from-orange-500 to-red-500',
       bgColor: 'from-orange-600/30 to-red-600/30',
       borderColor: 'border-orange-400/30'
     }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveTech((prev) => (prev + 1) % technologies.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-sm"></div>
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECH SHOWCASE 2026
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎮 INTERACTIVE TECHNOLOGY SHOWCASE 2026
           </div>
           <h2 className="text-5xl font-bold mb-6">🌟 Interactive Technology Experience</h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our cutting-edge technologies with interactive features and immersive experiences
+            Explore our cutting-edge technologies with interactive features and real-time demonstrations
           </p>
         </div>
 
-        {/* Interactive Technology Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {technologies.map((tech, index) => (
-            <button
-              key={tech.id}
-              onClick={() => setActiveTech(index)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTech === index
-                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
-                  : 'bg-white/20 text-white hover:bg-white/30'
-              }`}
-            >
-              <span className="text-2xl mr-2">{tech.icon}</span>
-              {tech.name}
-            </button>
-          ))}
+        {/* Technology Selector */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex space-x-2">
+            {Object.entries(technologies).map(([key, tech]) => (
+              <button
+                key={key}
+                onClick={() => setActiveTech(key)}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTech === key
+                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                    : 'text-gray-300 hover:text-white hover:bg-white/20'
+                }`}
+              >
+                <span className="text-2xl mr-2">{tech.icon}</span>
+                {tech.title}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Active Technology Display */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            <div className={`text-8xl mb-6 text-center animate-bounce`}>
-              {technologies[activeTech].icon}
-            </div>
-            <h3 className="text-4xl font-bold mb-6 text-center">
-              {technologies[activeTech].name}
-            </h3>
-            <p className="text-xl opacity-90 mb-8 text-center">
-              {technologies[activeTech].description}
-            </p>
-            <div className="space-y-4">
-              {technologies[activeTech].features.map((feature, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r ${technologies[activeTech].bgColor} border ${technologies[activeTech].borderColor} transition-all duration-300 hover:scale-105`}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className={`w-3 h-3 bg-gradient-to-r ${technologies[activeTech].color} rounded-full animate-pulse`}></div>
-                  <span className="text-white font-medium">{feature}</span>
-                </div>
-              ))}
+          <div className="space-y-8">
+            <div className={`bg-gradient-to-br ${technologies[activeTech as keyof typeof technologies].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${technologies[activeTech as keyof typeof technologies].borderColor}`}>
+              <div className="text-8xl mb-6 text-center">
+                {technologies[activeTech as keyof typeof technologies].icon}
+              </div>
+              <h3 className="text-4xl font-bold mb-4 text-center">
+                {technologies[activeTech as keyof typeof technologies].title}
+              </h3>
+              <p className="text-xl opacity-90 text-center mb-8">
+                {technologies[activeTech as keyof typeof technologies].description}
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {technologies[activeTech as keyof typeof technologies].features.map((feature, index) => (
+                  <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-sm font-semibold">{feature}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <div className={`bg-gradient-to-br ${technologies[activeTech].bgColor} backdrop-blur-sm rounded-xl p-8 border ${technologies[activeTech].borderColor} hover:scale-105 transition-all duration-300`}>
-              <h4 className="text-2xl font-bold mb-6 text-center">Technology Impact</h4>
-              <div className="grid grid-cols-2 gap-6">
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h4 className="text-2xl font-bold mb-4">🎯 Key Capabilities</h4>
+              <ul className="space-y-3">
+                {technologies[activeTech as keyof typeof technologies].features.map((feature, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${technologies[activeTech as keyof typeof technologies].color}`}></div>
+                    <span className="text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <h4 className="text-2xl font-bold mb-4">📊 Performance Metrics</h4>
+              <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                  <div className="text-sm opacity-80">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-cyan-400">99.9%</div>
+                  <div className="text-sm opacity-80">Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">1000+</div>
-                  <div className="text-sm opacity-80">Applications</div>
+                  <div className="text-3xl font-bold text-cyan-400">10x</div>
+                  <div className="text-sm opacity-80">Faster</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">50+</div>
-                  <div className="text-sm opacity-80">Countries</div>
+                  <div className="text-3xl font-bold text-cyan-400">24/7</div>
+                  <div className="text-sm opacity-80">Operation</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-sm opacity-80">Availability</div>
+                  <div className="text-3xl font-bold text-cyan-400">∞</div>
+                  <div className="text-sm opacity-80">Scalability</div>
                 </div>
               </div>
+            </div>
+
+            <div className="flex space-x-4">
+              <button className={`flex-1 bg-gradient-to-r ${technologies[activeTech as keyof typeof technologies].color} text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
+                Try Interactive Demo →
+              </button>
+              <button className="flex-1 border border-white/30 text-white py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Technology Navigation */}
-        <div className="flex justify-center mt-12">
-          <div className="flex space-x-2">
-            {technologies.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTech(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeTech === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+        {/* Technology Comparison */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8">🔍 Technology Comparison</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(technologies).map(([key, tech]) => (
+              <div
+                key={key}
+                className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-6 border ${tech.borderColor} cursor-pointer hover:scale-105 transition-all duration-300 ${
+                  activeTech === key ? 'ring-2 ring-white/50' : ''
                 }`}
-              />
+                onClick={() => setActiveTech(key)}
+              >
+                <div className="text-4xl mb-3 text-center">{tech.icon}</div>
+                <h4 className="text-lg font-bold mb-2 text-center">{tech.title}</h4>
+                <p className="text-sm opacity-80 text-center">{tech.description}</p>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <a
-            href={`/pages/${technologies[activeTech].id === 'synthetic-ai' ? 'SyntheticIntelligence2026' : 
-                    technologies[activeTech].id === 'quantum-computing' ? 'AdvancedQuantumComputing2026' :
-                    technologies[activeTech].id === 'neural-interface' ? 'AdvancedNeuralInterface2026' :
-                    'QuantumNeuralFusion2026'}`}
-            className={`inline-block bg-gradient-to-r ${technologies[activeTech].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
-          >
-            Explore {technologies[activeTech].name} →
-          </a>
+        <div className="text-center mt-16">
+          <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join thousands of users already experiencing our revolutionary technology solutions
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Free Trial →
+            </button>
+            <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+              Schedule Demo
+            </button>
+          </div>
         </div>
       </div>
     </div>
