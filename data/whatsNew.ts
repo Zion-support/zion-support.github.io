@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "trustworthy-autonomous-agents-2026",
+    title: "AI 2026: Trustworthy Autonomous Agents",
+    description:
+      "Blueprint for measurable, reliable, auditable agents with policy-as-code and evals-as-code.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/trustworthy-autonomous-agents-2026",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agentic-risk-and-safety-playbook-2026",
     title: "AI 2026: Agentic Risk and Safety Playbook",
     description:
