@@ -57,6 +57,7 @@ import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2
 
 // Import new promotional components
 import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
+import WhatsNewStrip from './components/WhatsNewStrip';
 
 // Import new 2025 quantum AI promotional components
 
@@ -106,6 +107,7 @@ export default function HomePage() {
       </section>
       
       <div className='min-h-screen bg-white'>
+        <WhatsNewStrip />
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}

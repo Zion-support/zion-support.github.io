@@ -1,4 +1,61 @@
 import React from 'react';
+import Link from 'next/link';
+import SEO from '../../components/SEO';
+
+export const metadata = {
+  title: 'AI 2026: Agent Risk Mitigation Playbook | Zion Tech Group',
+  description:
+    'Safeguards, monitoring, and adoption checklists for enterprise agent systems.',
+  keywords: ['agent safety', 'risk mitigation', 'guardrails', 'monitoring', 'governance'],
+};
+
+const AgentRiskMitigationPlaybook: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="AI 2026: Agent Risk Mitigation Playbook"
+        description="Safeguards, monitoring, and adoption checklists for enterprise agent systems."
+        keywords="agent safety, risk mitigation, guardrails, monitoring, governance"
+        url="/blog/ai-2026-agent-risk-mitigation-playbook"
+      />
+
+      <header className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold opacity-90">Safety • 2025-09-15</p>
+          <h1 className="text-3xl md:text-5xl font-bold mt-2">Agent Risk Mitigation Playbook</h1>
+          <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">Practical patterns for safer autonomous agents in production.</p>
+        </div>
+      </header>
+
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="prose prose-lg max-w-none">
+          <h2>Guardrail Patterns</h2>
+          <ul>
+            <li>Policy checks before and after tool calls</li>
+            <li>Isolation domains and sandboxing for untrusted actions</li>
+            <li>Runtime anomaly detection and kill-switches</li>
+          </ul>
+
+          <h3>Adoption Checklist</h3>
+          <ul>
+            <li>Documented risk tiers and controls</li>
+            <li>Incident response runbooks and on-call rotations</li>
+            <li>Continuous evals for critical user journeys</li>
+          </ul>
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link href="/content/ai-2026-agent-safety-evals" className="bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safety Evals</Link>
+          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
+        </div>
+      </article>
+    </div>
+  );
+};
+
+export default AgentRiskMitigationPlaybook;
+
+import React from 'react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
