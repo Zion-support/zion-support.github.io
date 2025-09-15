@@ -114,7 +114,7 @@ export default function HomePage() {
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Fresh content, announcements, and courses from Zion Academy.
+            Fresh content, announcements, research drops, and courses from Zion Academy.
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
@@ -135,6 +135,21 @@ export default function HomePage() {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
                 href: '/updates'
+              },
+              {
+                title: 'Research Drop: AI Governance Blueprint 2025',
+                summary: 'A practical framework for responsible AI governance in enterprises.',
+                href: '/research'
+              },
+              {
+                title: 'Case Study: 40% Cost Reduction with Autonomous IT',
+                summary: 'How a global enterprise cut costs and improved SLAs using Zion OS.',
+                href: '/solutions'
+              },
+              {
+                title: 'Release Notes: v2.5 Platform Enhancements',
+                summary: 'Improved performance, new analytics dashboards, and security updates.',
+                href: '/about'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
