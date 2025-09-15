@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function AIContentGeneratorPage() {
   const features = [
@@ -19,68 +6,31 @@ export default function AIContentGeneratorPage() {
       title: 'AI-Powered Content Creation',
       description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-<<<<<<< HEAD
-      gradient: 'from-purple-400 to-indigo-500'},
-=======
-      gradient: 'from-purple-400 to-indigo-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Real-time Generation',
       description: 'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-<<<<<<< HEAD
-      gradient: 'from-yellow-400 to-orange-500'},
-=======
-      gradient: 'from-yellow-400 to-orange-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Plagiarism-Free Content',
       description: 'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-<<<<<<< HEAD
-      gradient: 'from-green-400 to-emerald-500'},
-=======
-      gradient: 'from-green-400 to-emerald-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'SEO Optimization',
       description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-<<<<<<< HEAD
-      gradient: 'from-blue-400 to-cyan-500'},
-=======
-      gradient: 'from-blue-400 to-cyan-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Users className="w-8 h-8 text-white" />,
       title: 'Multi-Language Support',
       description: 'Generate content in 50+ languages with native-level fluency and cultural understanding.',
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
-<<<<<<< HEAD
-      gradient: 'from-red-400 to-pink-500'},
-=======
-      gradient: 'from-red-400 to-pink-500',
-    },
->>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Clock className="w-8 h-8 text-white" />,
       title: '24/7 Availability',
       description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-<<<<<<< HEAD
-      gradient: 'from-teal-400 to-blue-500'}],
-=======
-      gradient: 'from-teal-400 to-blue-500',
-    },
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const pricingPlans = [
     {
@@ -89,18 +39,6 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Perfect for individuals and small blogs',
       features: [
-<<<<<<< HEAD
-        '1,000 words per month5 content templates',
-        'Basic SEO optimizationEmail support',
-        'API access (100 calls/month)Content analytics dashboard'
-=======
-        '1,000 words per month',
-        '5 content templates',
-        'Basic SEO optimization',
-        'Email support',
-        'API access (100 calls/month)',
-        'Content analytics dashboard'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       color: 'border-gray-600',
@@ -112,21 +50,6 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-<<<<<<< HEAD
-        '10,000 words per month25+ content templates',
-        'Advanced SEO toolsPriority support',
-        'API access (1,000 calls/month)Advanced analytics',
-        'Team collaborationCustom branding'
-=======
-        '10,000 words per month',
-        '25+ content templates',
-        'Advanced SEO tools',
-        'Priority support',
-        'API access (1,000 calls/month)',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom branding'
->>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       color: 'border-blue-500',
@@ -138,77 +61,33 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-<<<<<<< HEAD
-        'Unlimited wordsAll templates + custom',
-        'Full SEO suiteDedicated support',
-        'Unlimited API accessAdvanced analytics',
-        'White-label solutionCustom integrations',
-=======
-        'Unlimited words',
-        'All templates + custom',
-        'Full SEO suite',
-        'Dedicated support',
-        'Unlimited API access',
-        'Advanced analytics',
-        'White-label solution',
-        'Custom integrations',
->>>>>>> origin/auto/autonomy-17186719616
         'SLA guarantee'
       ],
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const useCases = [
     {
       title: 'Blog Writing',
       description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
       icon: '📝',
-<<<<<<< HEAD
-      examples: ['Tech reviewsHow-to guides', 'Industry insightsProduct comparisons']
-=======
-      examples: ['Tech reviews', 'How-to guides', 'Industry insights', 'Product comparisons']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Marketing Copy',
       description: 'Create compelling ad copy, landing pages, and marketing materials.',
       icon: '🎯',
-<<<<<<< HEAD
-      examples: ['Facebook adsGoogle ads', 'Landing pagesEmail campaigns']
-=======
-      examples: ['Facebook ads', 'Google ads', 'Landing pages', 'Email campaigns']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'Social Media',
       description: 'Generate engaging social media posts, captions, and hashtag suggestions.',
       icon: '📱',
-<<<<<<< HEAD
-      examples: ['Instagram postsTwitter threads', 'LinkedIn articlesTikTok captions']
-=======
-      examples: ['Instagram posts', 'Twitter threads', 'LinkedIn articles', 'TikTok captions']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: 'E-commerce',
       description: 'Write product descriptions, category pages, and promotional content.',
       icon: '🛍️',
-<<<<<<< HEAD
-      examples: ['Product descriptionsCategory pages', 'Promotional emailsFAQ sections']
-    }
-  ],
-=======
-      examples: ['Product descriptions', 'Category pages', 'Promotional emails', 'FAQ sections']
-    }
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const integrations = [
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
@@ -217,11 +96,6 @@ export default function AIContentGeneratorPage() {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-<<<<<<< HEAD
-  ],
-=======
-  ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -464,11 +338,6 @@ export default function AIContentGeneratorPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-=======
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
->>>>>>> origin/auto/autonomy-17186719616
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Content Creation?
@@ -499,9 +368,4 @@ export default function AIContentGeneratorPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }

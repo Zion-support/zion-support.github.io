@@ -1,39 +1,9 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-import { Control } from "react-hook-form";
-import { 
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-=======
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
-import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
->>>>>>> origin/auto/autonomy-17186719616
   FormDescription,
   FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-<<<<<<< HEAD
-import { CardContent } from "@/components/ui/card";
-
-interface RateOptimizationSectionProps {
-  control: Control<any>;
-  setValue: (name: stringvalue: any) => void;
-=======
-import { Card, CardContent } from "@/components/ui/card";
-
-interface RateOptimizationSectionProps {
-  control: Control<any>;
-  setValue: (name: string, value: any) => void;
->>>>>>> origin/auto/autonomy-17186719616
   skills: string[];
   yearsExperience: number;
   location?: string;
@@ -49,11 +19,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
-<<<<<<< HEAD
-    setValue("hourlyRate"rate);
-=======
-    setValue("hourlyRate", rate);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
