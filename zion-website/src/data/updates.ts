@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Finance OS (v1.0)',
+    summary:
+      'End-to-end finance copilot with ledger grounding, policy checks, and real-time anomaly detection.',
+    href: '/updates/autonomous-finance-os-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Guardrails for Multimodal Agents (2026)',
+    summary:
+      'Risk-tiered permissions, safe tool adapters, and runtime policy enforcement for multimodal agents.',
+    href: '/updates/production-guardrails-multimodal-agents',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary:
+      'Low-latency hybrid retrieval, memory, and caching layers powering agentic systems.',
+      href: '/updates/real-time-retrieval-architectures-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Autonomous Support Copilot (v1.1)',
     summary:
       'Reliability and cost upgrades with retrieval observability, improved grounding, and safety guardrails.',
