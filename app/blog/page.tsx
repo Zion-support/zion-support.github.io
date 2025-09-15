@@ -41,6 +41,15 @@ const BlogPage = () => {
       image: "/images/llm-evals-maturity-model-2026.jpg"
     },
     {
+      title: "AI 2026: Autonomous Customer Support Agents",
+      description: "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
+      slug: "ai-2026-autonomous-customer-support-agents",
+      category: "Operations",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-support-agents-2026.jpg"
+    },
+    {
       title: "AI 2026: Multimodal Agents Enterprise Blueprint",
       description: "Design patterns, reference architectures, and an adoption roadmap for enterprise multimodal agents.",
       slug: "ai-2026-multimodal-agents-enterprise-blueprint",
@@ -122,6 +131,15 @@ const BlogPage = () => {
       image: "/images/agent-safety-certification-2026.jpg"
     },
     {
+      title: "AI 2026: Secure Agent Architecture",
+      description: "Zero-trust agents with isolation domains, policy-as-code, and runtime guards.",
+      slug: "ai-2026-secure-agent-architecture",
+      category: "Security",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/secure-agent-architecture-2026.jpg"
+    },
+    {
       title: "AI 2026: Edge Agents On-Device Inference",
       description: "Design patterns for private, low-latency edge agents with hybrid offload.",
       slug: "ai-2026-edge-agents-on-device",
@@ -138,6 +156,15 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/autonomous-compliance-2026.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Agents Red-Team Scenarios",
+      description: "Adversarial scenarios, pass criteria, and CI/CD integration to harden agents.",
+      slug: "ai-2026-autonomous-agents-red-team-scenarios",
+      category: "Safety",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-agents-red-team-2026.jpg"
     },
     {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
