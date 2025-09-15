@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-2def
 
 const QuantumComputingRevolution2026: React.FC = () => {
   const [activeQuantum, setActiveQuantum] = useState('supremacy');
@@ -127,21 +122,8 @@ const QuantumComputingRevolution2026: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <>
-      <Helmet>
-        <title>Quantum Computing Revolution 2026 | Zion Tech Group</title>
-        <meta name="description" content="Experience the quantum computing revolution with exponential processing power, quantum cryptography, and breakthrough applications in 2026." />
-        <meta name="keywords" content="Quantum Computing 2026, Quantum Revolution, Quantum Cryptography, Quantum AI, Quantum Algorithms, Quantum Supremacy" />
-        <meta property="og:title" content="Quantum Computing Revolution 2026 | Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary quantum computing solutions that solve impossible problems with exponential speed." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Quantum Computing Revolution 2026" />
-        <meta name="twitter:description" content="Revolutionary quantum computing for 2026" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -333,8 +315,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -683,7 +663,7 @@ const QuantumComputingRevolution2026: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-2def
+    </>
   );
 };
 
