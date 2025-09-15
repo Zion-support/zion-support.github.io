@@ -3,300 +3,273 @@ import { motion } from 'framer-motion';
 
 const BiotechRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🧬 BIOTECH REVOLUTION • 2026
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🧬 BIOTECH REVOLUTION 2026
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold text-white mb-6">
               Next-Generation Biotechnology
             </h1>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-              Revolutionizing healthcare, agriculture, and environmental solutions through 
-              cutting-edge biotechnology, gene editing, and synthetic biology innovations.
+            <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Pioneering the future of life sciences with AI-powered biotechnology, synthetic biology, and precision medicine
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Biotech Solutions
-              </button>
-              <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300 font-semibold">
-                Watch Innovation
-              </button>
-            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Revolutionary Features */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Revolutionary Biotech Capabilities</h2>
-          <p className="text-xl opacity-90">Discover breakthrough technologies reshaping life sciences</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Gene Editing & CRISPR</h3>
-            <p className="text-green-100 mb-6 text-center">
-              Advanced gene editing technologies that can precisely modify DNA sequences 
-              to treat genetic diseases and enhance human capabilities.
-            </p>
-            <ul className="text-green-200 space-y-2 text-sm">
-              <li>• CRISPR-Cas9 precision editing</li>
-              <li>• Base editing technologies</li>
-              <li>• Prime editing systems</li>
-              <li>• Therapeutic applications</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Biology</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Engineering biological systems from scratch to create new organisms, 
-              materials, and processes that don't exist in nature.
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Artificial life forms</li>
-              <li>• Bio-manufacturing</li>
-              <li>• Synthetic organs</li>
-              <li>• Bio-materials</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Direct brain-computer interfaces that enable thought-controlled devices 
-              and enhanced cognitive capabilities through biotechnology.
-            </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• Brain-computer interfaces</li>
-              <li>• Neural prosthetics</li>
-              <li>• Memory enhancement</li>
-              <li>• Cognitive augmentation</li>
-            </ul>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Healthcare Applications */}
-      <div className="bg-gradient-to-r from-emerald-900/50 to-green-900/50 py-20">
-        <div className="container mx-auto px-4">
+      {/* Features Grid */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Healthcare Revolution</h2>
-            <p className="text-xl opacity-90">Transforming medicine with biotechnology innovations</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Biotech Innovations</h2>
+            <p className="text-xl text-gray-300">Cutting-edge technologies transforming healthcare and life sciences</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">💊</div>
-              <h3 className="text-xl font-bold mb-2">Personalized Medicine</h3>
-              <p className="text-sm opacity-90">Customized treatments based on individual genetic profiles and biomarkers</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-6xl mb-4">🧬</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Synthetic Biology</h3>
+              <p className="text-gray-300 mb-6">
+                Engineering biological systems from scratch to create novel organisms and biological circuits
+              </p>
+              <ul className="text-emerald-200 space-y-2 text-sm">
+                <li>• DNA synthesis and editing</li>
+                <li>• Synthetic organisms</li>
+                <li>• Biological circuits</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-6xl mb-4">💊</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Precision Medicine</h3>
+              <p className="text-gray-300 mb-6">
+                Personalized treatments based on individual genetic profiles and molecular characteristics
+              </p>
+              <ul className="text-cyan-200 space-y-2 text-sm">
+                <li>• Genomic analysis</li>
+                <li>• Targeted therapies</li>
+                <li>• Pharmacogenomics</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-6xl mb-4">🧠</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Neural Interfaces</h3>
+              <p className="text-gray-300 mb-6">
+                Direct brain-computer interfaces for medical applications and cognitive enhancement
+              </p>
+              <ul className="text-purple-200 space-y-2 text-sm">
+                <li>• Brain-computer interfaces</li>
+                <li>• Neural prosthetics</li>
+                <li>• Cognitive enhancement</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-6xl mb-4">🔬</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Gene Therapy</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced gene editing techniques for treating genetic disorders and diseases
+              </p>
+              <ul className="text-orange-200 space-y-2 text-sm">
+                <li>• CRISPR-Cas9 systems</li>
+                <li>• Gene replacement therapy</li>
+                <li>• Genetic disease treatment</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-6xl mb-4">🌱</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Bioengineering</h3>
+              <p className="text-gray-300 mb-6">
+                Engineering biological materials and systems for medical and industrial applications
+              </p>
+              <ul className="text-pink-200 space-y-2 text-sm">
+                <li>• Tissue engineering</li>
+                <li>• Biomaterials</li>
+                <li>• Organ regeneration</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
+            >
+              <div className="text-6xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Drug Discovery</h3>
+              <p className="text-gray-300 mb-6">
+                Artificial intelligence accelerating drug discovery and development processes
+              </p>
+              <ul className="text-indigo-200 space-y-2 text-sm">
+                <li>• Molecular design</li>
+                <li>• Drug screening</li>
+                <li>• Clinical trial optimization</li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Applications Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-emerald-900/50 to-cyan-900/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Medical Applications</h2>
+            <p className="text-xl text-gray-300">Transforming healthcare with breakthrough biotechnologies</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">🏥</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Cancer Treatment</h3>
+                  <p className="text-gray-300">Personalized cancer therapies using precision medicine and targeted gene therapies</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">🧬</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Genetic Disorders</h3>
+                  <p className="text-gray-300">Gene therapy treatments for inherited diseases and genetic conditions</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">🧠</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Neurological Conditions</h3>
+                  <p className="text-gray-300">Advanced treatments for Alzheimer's, Parkinson's, and other neurological diseases</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🦠</div>
-              <h3 className="text-xl font-bold mb-2">Cancer Immunotherapy</h3>
-              <p className="text-sm opacity-90">Advanced immune system engineering to fight cancer cells naturally</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🧪</div>
-              <h3 className="text-xl font-bold mb-2">Regenerative Medicine</h3>
-              <p className="text-sm opacity-90">Growing replacement organs and tissues using stem cell technology</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <div className="text-4xl mb-4">🧬</div>
-              <h3 className="text-xl font-bold mb-2">Gene Therapy</h3>
-              <p className="text-sm opacity-90">Correcting genetic defects and treating inherited diseases at the DNA level</p>
+            
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">💉</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Regenerative Medicine</h3>
+                  <p className="text-gray-300">Stem cell therapies and tissue engineering for organ regeneration and repair</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">🔬</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Diagnostics</h3>
+                  <p className="text-gray-300">Advanced diagnostic tools using AI and molecular biomarkers for early disease detection</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">🌱</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Sustainable Medicine</h3>
+                  <p className="text-gray-300">Eco-friendly pharmaceutical production and sustainable healthcare solutions</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Agricultural Innovation */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Agricultural Revolution</h2>
-          <p className="text-xl opacity-90">Feeding the world with sustainable biotechnology solutions</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-3xl font-bold mb-6">Sustainable Agriculture</h3>
-            <p className="text-lg opacity-90 mb-6">
-              Our biotechnology solutions are revolutionizing agriculture by creating 
-              drought-resistant crops, reducing pesticide use, and increasing yields 
-              while maintaining environmental sustainability.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <span className="text-green-400">✓</span>
-                <span>Climate-resistant crop varieties</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-green-400">✓</span>
-                <span>Bio-fertilizers and pest control</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-green-400">✓</span>
-                <span>Precision agriculture systems</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-green-400">✓</span>
-                <span>Vertical farming solutions</span>
-              </li>
-            </ul>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30"
-          >
-            <div className="text-6xl mb-4 text-center">🌱</div>
-            <h4 className="text-xl font-bold mb-4 text-center">Lab-Grown Food</h4>
-            <p className="text-center opacity-90">
-              Cultivating meat, dairy, and other food products in laboratories using 
-              cellular agriculture, reducing environmental impact and ensuring food security.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Environmental Solutions */}
-      <div className="bg-gradient-to-r from-teal-900/50 to-green-900/50 py-20">
-        <div className="container mx-auto px-4">
+      {/* Future Vision Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Environmental Solutions</h2>
-            <p className="text-xl opacity-90">Healing the planet with biotechnology innovations</p>
+            <h2 className="text-4xl font-bold text-white mb-4">The Future of Biotechnology</h2>
+            <p className="text-xl text-gray-300">Envisioning tomorrow's healthcare breakthroughs</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-teal-600/20 to-green-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30">
-              <div className="text-4xl mb-4">🌊</div>
-              <h3 className="text-2xl font-bold mb-4">Ocean Cleanup</h3>
-              <p className="opacity-90 mb-4">
-                Genetically engineered microorganisms that can break down plastic waste 
-                and oil spills in marine environments, restoring ocean health.
-              </p>
-              <div className="text-sm text-teal-300">
-                <div>• Plastic degradation bacteria</div>
-                <div>• Oil spill remediation</div>
-                <div>• Coral reef restoration</div>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold mb-4">Carbon Capture</h3>
-              <p className="opacity-90 mb-4">
-                Bio-engineered plants and microorganisms that can capture and store 
-                atmospheric carbon dioxide more efficiently than natural processes.
+              <div className="text-5xl mb-4 text-center">🔮</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Predictive Medicine</h3>
+              <p className="text-gray-300 text-center">
+                AI-powered systems that predict disease onset and recommend preventive measures before symptoms appear
               </p>
-              <div className="text-sm text-emerald-300">
-                <div>• Enhanced photosynthesis</div>
-                <div>• Carbon-fixing bacteria</div>
-                <div>• Biofuel production</div>
-              </div>
             </div>
             
-            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
-              <div className="text-4xl mb-4">♻️</div>
-              <h3 className="text-2xl font-bold mb-4">Waste Management</h3>
-              <p className="opacity-90 mb-4">
-                Biological systems that can process and convert various types of waste 
-                into valuable resources, creating a circular economy.
+            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+              <div className="text-5xl mb-4 text-center">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Instant Diagnostics</h3>
+              <p className="text-gray-300 text-center">
+                Real-time diagnostic devices that provide instant health assessments and treatment recommendations
               </p>
-              <div className="text-sm text-green-300">
-                <div>• Organic waste conversion</div>
-                <div>• Biodegradable materials</div>
-                <div>• Resource recovery</div>
-              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+              <div className="text-5xl mb-4 text-center">🌍</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Global Health</h3>
+              <p className="text-gray-300 text-center">
+                Democratized access to advanced biotechnologies for improved global health outcomes
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Research & Development */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Research & Development</h2>
-          <p className="text-xl opacity-90">Pioneering the future of biotechnology through cutting-edge research</p>
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-12 text-white"
+          >
+            <h2 className="text-4xl font-bold mb-6">Join the Biotech Revolution</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Be part of the future of healthcare and life sciences with our cutting-edge biotechnology solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Explore Solutions
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
+                Contact Experts
+              </button>
+            </div>
+          </motion.div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/10 transition-all duration-300">
-            <div className="text-4xl mb-4">🔬</div>
-            <h3 className="text-xl font-bold mb-2">Research Labs</h3>
-            <p className="text-sm opacity-90">State-of-the-art facilities for biotechnology research and development</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/10 transition-all duration-300">
-            <div className="text-4xl mb-4">👥</div>
-            <h3 className="text-xl font-bold mb-2">Expert Team</h3>
-            <p className="text-sm opacity-90">World-class scientists and researchers in biotechnology and life sciences</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/10 transition-all duration-300">
-            <div className="text-4xl mb-4">🤝</div>
-            <h3 className="text-xl font-bold mb-2">Partnerships</h3>
-            <p className="text-sm opacity-90">Collaborations with leading universities and research institutions</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/10 transition-all duration-300">
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-bold mb-2">Clinical Trials</h3>
-            <p className="text-sm opacity-90">Rigorous testing and validation of biotechnology solutions</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Life Sciences?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the biotechnology revolution and help us create a healthier, more sustainable 
-            future through cutting-edge life science innovations.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Biotech Journey
-            </button>
-            <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
