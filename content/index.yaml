@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 30
+  total_content_pieces: 32
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -843,6 +843,36 @@ content_index:
         risk_reduction: "60%"
         rollback_time: "< 5 min"
 
+    - id: "ai-2026-eval-driven-release-engineering-deep-dive"
+      type: "blog"
+      title: "AI 2026: Eval‑Driven Release Engineering — Deep Dive"
+      file_path: "/content/blog/ai-2026-eval-driven-release-engineering-deep-dive.md"
+      url: "/blog/ai-2026-eval-driven-release-engineering-deep-dive"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Reliability", "Progressive Delivery", "Governance"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.5%+ gates"
+        rollback: "automatic"
+        latency_p95: "< 250ms"
+
+    - id: "ai-2026-agentic-observability-operating-model"
+      type: "blog"
+      title: "AI 2026: Agentic Observability Operating Model"
+      file_path: "/content/blog/ai-2026-agentic-observability-operating-model.md"
+      url: "/blog/ai-2026-agentic-observability-operating-model"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Observability", "Agents", "Telemetry", "Safety"]
+      featured: true
+      is_new: true
+      metrics:
+        citation_density: "> 0.9"
+        incident_reduction: "40%"
+        audit_ready: true
+
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
@@ -913,12 +943,12 @@ content_index:
       - "Updated last_updated and counts to reflect new content"
 
   metrics:
-    expected_roi_mentions: 48
+    expected_roi_mentions: 50
     success_stories: 8
     implementation_guides: 6
-    blog_posts: 12
-    total_word_count: "~86,000 words"
-    estimated_reading_time: "~345 minutes"
+    blog_posts: 14
+    total_word_count: "~88,500 words"
+    estimated_reading_time: "~375 minutes"
     new_content_roi_highlights: "600% ROI featured prominently across all content"
     promotional_components: 10
     homepage_integration: "Complete with three new compact promos"

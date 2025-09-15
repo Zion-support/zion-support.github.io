@@ -89,6 +89,22 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Playbook'
   },
   {
+    title: 'Guide: Operationalizing Live Evals in Production (2026)',
+    summary:
+      'Blueprint to stand up live eval pipelines with canaries, abort switches, and audit evidence.',
+    href: '/blog/ai-2026-operationalizing-live-evals-in-production',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Playbook: Incident Response for Agentic Systems (2026)',
+    summary:
+      'Runbooks, drills, and telemetry to reduce MTTR and improve safety for autonomous agents.',
+    href: '/blog/ai-2026-incident-response-for-agentic-systems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
     title: 'Guide: AI 2026 Production Safety Checklist',
     summary:
       'Risk tiers, guardrails, evals, canaries, and audit evidence to ship safer AI.',
@@ -479,6 +495,24 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/agent-benchmark-suite-v1',
     date: '2025-09-15',
     tag: 'Launch'
+  }
+  ,
+  // Fresh content added 2025-09-15 (new)
+  {
+    title: 'Launch: Autonomous Procurement Copilot v1.0',
+    summary:
+      'Automates vendor sourcing, RFPs, contract analysis, and approvals with policy-as-code and live cost benchmarks.',
+    href: '/updates/autonomous-procurement-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production RAG Observability (2026 Preview)',
+    summary:
+      'Practical telemetry for retrieval systems: coverage, freshness, drift, and grounding quality with per-step spans.',
+    href: '/updates/production-rag-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
   }
   ,
   {
