@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React from 'react'
+import {
+  ChartBarIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline'
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
 import { getLatestUpdates } from '../data/updates'
 
 export default function HomePage() {

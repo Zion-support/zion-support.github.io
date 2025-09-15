@@ -40,14 +40,22 @@ const navigation = {
   ],
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
 
 <<<<<<< HEAD
 =======
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
