@@ -36,7 +36,7 @@ export default function LatestContentShowcase2025() {
               Complete playbook for implementing AI-driven hyperautomation across your organization with proven strategies and real-world examples.
             </p>
             <Link 
-              href="/blog/ai-2026-hyperautomation-business-playbook"
+              href="/content/hyperautomation-blueprint-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Get Implementation Guide →
@@ -45,15 +45,15 @@ export default function LatestContentShowcase2025() {
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Edge AI Agents</h3>
             <p className="text-gray-600 mb-4">
-              Explore our comprehensive suite of AI automation services designed to accelerate your digital transformation journey.
+              Real-time autonomy with on-device intelligence and sub-50ms control loops.
             </p>
             <Link 
-              href="/services/ai-automation"
+              href="/content/edge-ai-agents-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              View Services →
+              Read the Article →
             </Link>
           </div>
         </div>
