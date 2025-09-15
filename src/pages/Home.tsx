@@ -31,6 +31,7 @@ import {
 import type { ComponentType, SyntheticEvent } from 'react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { NewContentPromoBanner } from "@/components/NewContentPromoBanner";
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -369,6 +370,7 @@ export default function Home() {
       />
       
       <div className="min-h-screen bg-futuristic">
+        <NewContentPromoBanner variant="top" />
         {/* Hero Section */}
         <HeroSection />
 

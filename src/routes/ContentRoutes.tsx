@@ -21,6 +21,7 @@ import Terms from "@/pages/Terms";
 import VideoCall from "@/pages/VideoCall";
 import AIImplementationPlaybook2026 from "@/pages/resources/ai-implementation-playbook-2026";
 import { Navigate, Route, Routes } from "react-router-dom";
+import NewContentShowcase from "@/pages/NewContentShowcase";
 
 const ContentRoutes = () => {
   return (
@@ -72,6 +73,9 @@ const ContentRoutes = () => {
 
       {/* Resources */}
       <Route path="/resources/ai-implementation-playbook-2026" element={<AIImplementationPlaybook2026 />} />
+
+      {/* New Content Showcase */}
+      <Route path="/new-content-showcase" element={<NewContentShowcase />} />
 
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
