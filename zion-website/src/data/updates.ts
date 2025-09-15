@@ -79,7 +79,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
->>>>>>> 661b01d7078213468e26f8ab1845b4ba302ed1aa
     date: '2025-09-15',
     tag: 'Launch'
   },
