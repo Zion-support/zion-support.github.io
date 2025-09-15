@@ -1,5 +1,6 @@
 import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-6f13
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import AppOptimized from './AppOptimized';
 import './index.css';
 
 const rootElement = document.getElementById('root');
@@ -7,7 +8,7 @@ const rootElement = document.getElementById('root');
 function renderApp() {
     const app = (
         <React.StrictMode>
-            <App />
+            <AppOptimized />
         </React.StrictMode>
     );
     
@@ -18,7 +19,7 @@ function renderApp() {
     }
 }
 
-function displayFatalError(message) {
+function displayFatalError(message: string) {
     if (rootElement) {
         rootElement.innerHTML = `
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
@@ -32,10 +33,10 @@ try {
     renderApp();
 } catch (error) {
     console.error('Global error caught in main.tsx:', error);
-    displayFatalError(error.message);
+    displayFatalError((error as Error).message);
 }
 
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
->>>>>>> cursor/create-and-deploy-new-content-6f13
+});
