@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+>>>>>>> cursor/create-and-deploy-new-content-c439
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState('ai');

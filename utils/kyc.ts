@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-export type KycRole = 'client' | 'talent' | 'enterprise';
-export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-export interface KycDocumentMeta {
-
-
-
-
-
-
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
-  url: string;
-  uploaded_at: string;
-  status: 'pending' | 'approved' | 'rejected';
-}
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface KycProfile {
 
 

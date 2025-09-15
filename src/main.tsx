@@ -1,6 +1,4 @@
 import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import AppOptimized from './AppOptimized';
 import './index.css';
 
 const rootElement = document.getElementById('root');
@@ -8,7 +6,7 @@ const rootElement = document.getElementById('root');
 function renderApp() {
     const app = (
         <React.StrictMode>
-            <AppOptimized />
+            <App />
         </React.StrictMode>
     );
     

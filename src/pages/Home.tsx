@@ -234,7 +234,34 @@ const Home: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.section>
+
+        {/* Lazy Loaded Components */}
+        <React.Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
+          <CategoriesSection />
+          <BenefitsSection />
+          <HowItWorksSection />
+          <NewsletterSection />
+          <FeaturedListingsSection />
+          <QuickAccess />
+          <FeatureCTAs />
+          <FeatureHighlights />
+          <ITServiceRequestHero />
+          <FloatingCTA />
+          <PricingSection />
+          <TechSolutionsSection />
+          <CaseStudiesSection />
+          <TeamExpertiseSection />
+          <GlobalPresenceSection />
+          <InnovationResearchSection />
+          <ClientSuccessStoriesSection />
+          <TechnologyStackSection />
+          <SecurityComplianceSection />
+          <AIServicesShowcase />
+          <InteractiveTestimonials />
+          <ServicesShowcase />
+          <RevolutionaryContentShowcase2027 />
+        </React.Suspense>
       </div>
     </>
   );

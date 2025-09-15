@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile } from "../../../../utils/api/storage";
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-import PDFDocument from "pdfkit";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile  } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-import PDFDocument from 'pdfkit';
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
