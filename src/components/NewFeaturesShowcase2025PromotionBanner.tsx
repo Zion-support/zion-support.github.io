@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapStarCheckCircle
 
 export default function NewFeaturesShowcase2025PromotionBanner() {
@@ -56,21 +56,21 @@ export default function NewFeaturesShowcase2025PromotionBanner() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/features"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
                 >
                   <Sparkles className="w-5 h-5 mr-2" />
                   Explore Features
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/demo"
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300"
                 >
                   <Zap className="w-5 h-5 mr-2" />
                   Try Demo
-                </Link>
+                </a>
               </div>
             </div>
             

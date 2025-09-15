@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026UltimatePredictionsRevolutionaryPromotionBanner() {
   return (
@@ -74,24 +74,24 @@ export default function AI2026UltimatePredictionsRevolutionaryPromotionBanner() 
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
+            <a 
               href="/ai-2026-ultimate-future-predictions-revolutionary"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-full text-xl font-bold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               🔮 EXPLORE PREDICTIONS
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2026-quantum-neural-fusion-25000-roi"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-full text-xl font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               📊 VIEW CASE STUDIES
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/webinars/ai-2026-predictions-demo"
               className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-10 py-5 rounded-full text-xl font-bold hover:from-blue-400 hover:to-indigo-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               📺 WATCH DEMO
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

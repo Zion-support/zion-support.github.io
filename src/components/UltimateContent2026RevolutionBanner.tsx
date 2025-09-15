@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContent2026RevolutionBanner = () => {
   return (
@@ -30,18 +30,18 @@ const UltimateContent2026RevolutionBanner = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
+            <a
               href="/ai-2026-revolutionary-content"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore 2026 Revolution
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-ai-2026-breakthrough"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 backdrop-blur-sm"
             >
               Quantum AI Solutions
-            </Link>
+            </a>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">

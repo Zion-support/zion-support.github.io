@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumAIRevolutionShowcase2025 = () => {
   const [activeTabsetActiveTab] = useState('quantum-ai');
@@ -234,12 +234,12 @@ const QuantumAIRevolutionShowcase2025 = () => {
                   </div>
                 </div>
 
-                <Link
+                <a
                   href={item.url}
                   className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-colors"
                 >
                   Read Now
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -255,18 +255,18 @@ const QuantumAIRevolutionShowcase2025 = () => {
               Get a comprehensive AI readiness assessment and customized implementation roadmap that will deliver 500-1,200% ROI for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

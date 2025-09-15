@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 ArrowRightTrendingUpUsersDollarSignZapAwardTarget
 
@@ -130,13 +130,13 @@ export default function RevolutionaryCaseStudiesShowcase() {
                   ))}
                 </div>
                 
-                <Link
+                <a
                   href={`/case-studies/${study.id}`}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-1 transition-transform"
                 >
                   Read Full Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -184,13 +184,13 @@ export default function RevolutionaryCaseStudiesShowcase() {
                   </div>
                 </div>
                 
-                <Link
+                <a
                   href={`/case-studies/${study.id}`}
                   className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:translate-x-1 transition-transform flex items-center"
                 >
                   Read More
                   <ArrowRight className="w-3 h-3 ml-1" />
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -213,21 +213,21 @@ export default function RevolutionaryCaseStudiesShowcase() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
             >
               <Target className="w-5 h-5 mr-2" />
               Start Your Transformation
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/case-studies"
               className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               <Users className="w-5 h-5 mr-2" />
               View All Case Studies
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

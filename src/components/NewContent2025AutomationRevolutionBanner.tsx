@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
@@ -76,13 +76,13 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               <span className="bg-green-600 bg-opacity-50 px-3 py-1 rounded-full text-sm">Best Practices</span>
             </div>
             
-            <Link
+            <a
               href="/blog/ai-2025-enterprise-automation-revolution-complete-guide"
               className="inline-flex items-center bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Complete Guide
               <span className="ml-2">→</span>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Case Study Card */}
@@ -119,13 +119,13 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               </div>
             </div>
             
-            <Link
+            <a
               href="/case-studies/ai-2025-global-manufacturing-automation-1200-roi-success-story"
               className="inline-flex items-center bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               View Case Study
               <span className="ml-2">→</span>
-            </Link>
+            </a>
           </motion.div>
         </div>
 
@@ -162,18 +162,18 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services/ai-automation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore AI Automation Services
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
             >
               Get Implementation Consultation
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

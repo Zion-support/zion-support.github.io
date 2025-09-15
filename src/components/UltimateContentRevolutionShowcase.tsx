@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 const UltimateContentRevolutionShowcase = () => {
   const [activeTab, setActiveTab] = useState('features');
   const [isVisible, setIsVisible] = useState(false);
@@ -233,12 +233,12 @@ const UltimateContentRevolutionShowcase = () => {
                       </span>
                     <p className="text-gray-600 mb-4 text-sm">{study.industry} • {study.duration}</p>
                     <p className="text-gray-700 mb-6 leading-relaxed">{study.description}</p>
-                    <Link
+                    <a
                       href={study.link}
                       className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                     >
                       Read Full Case Study →
-                    </Link>
+                    </a>
             {activeTab === 'testimonials' && (
                 {testimonials.map((testimonial, index) => (
                     <div className="text-4xl text-purple-500 mb-4">"</div>
@@ -319,14 +319,14 @@ const UltimateContentRevolutionShowcase = () => {
                        item.metrics.timeline ? 'Timeline' :
                        item.metrics.users ? 'Users' :
                        item.metrics.clients ? 'Clients' : 'Accuracy'}
-                <Link
+                <a
                   href={item.url}
                   className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                 >
                   {item.category === 'service' ? 'Book Consultation' : 
                    item.category === 'tool' ? 'Use Tool' :
                    item.category === 'platform' ? 'Access Platform' : 'Read More'}
-                </Link>
+                </a>
             </div>
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white">
@@ -334,11 +334,11 @@ const UltimateContentRevolutionShowcase = () => {
           <p className="text-xl mb-8 opacity-90">
             Transform your content strategy with the AI 2025 Ultimate Content Revolution Platform
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               Get Started Today
-            </Link>
+            </a>
               href="/demo"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               Schedule Demo
@@ -352,11 +352,11 @@ const UltimateContentRevolutionShowcase = () => {
               Join 1,000+ organizations already achieving 25,000% ROI with our AI Content Revolution framework.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 Get Started Today
-              </Link>
+              </a>
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 View All Resources

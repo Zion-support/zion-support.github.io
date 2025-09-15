@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainCpuZapTrendingUpGlobe
 
 export default function AI2026FuturePredictionsRevolutionaryBanner() {
@@ -56,19 +56,19 @@ export default function AI2026FuturePredictionsRevolutionaryBanner() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <a 
                 href="/ai-2026-future-predictions-revolutionary"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold rounded-full hover:scale-105 transition-transform duration-300"
               >
                 Explore Predictions
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/ai-2026-quantum-neural-fusion"
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-black transition-colors duration-300"
               >
                 Quantum Fusion
-              </Link>
+              </a>
             </div>
           </div>
           

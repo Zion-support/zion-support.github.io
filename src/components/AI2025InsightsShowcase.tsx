@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025InsightsShowcase: React.FC = () => {
   const insights = [
@@ -142,7 +142,7 @@ const AI2025InsightsShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                <Link
+                <a
                   href={insight.link}
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
@@ -150,7 +150,7 @@ const AI2025InsightsShowcase: React.FC = () => {
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -230,12 +230,12 @@ const AI2025InsightsShowcase: React.FC = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Link
+            <a
               href="/ai-2025-revolutionary-trends-predictions"
               className="bg-white text-purple-600 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
             >
               Read Full Predictions Report
-            </Link>
+            </a>
           </div>
         </div>
       </div>

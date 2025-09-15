@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBreakthroughContentShowcase100000ROI = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -212,13 +212,13 @@ const UltimateBreakthroughContentShowcase100000ROI = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={item.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg"
                 >
                   <span className="mr-2">🚀</span>
                   Explore {item.type === 'blog' ? 'Guide' : item.type === 'case-study' ? 'Success Story' : 'Implementation Guide'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -234,20 +234,20 @@ const UltimateBreakthroughContentShowcase100000ROI = () => {
               Join the AI 2025 Ultimate Breakthrough Revolution and transform your business with the most advanced technologies available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
               >
                 <span className="mr-2">💬</span>
                 Get Expert Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-colors"
               >
                 <span className="mr-2">📚</span>
                 Explore All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

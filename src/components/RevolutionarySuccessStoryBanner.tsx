@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 export default function RevolutionarySuccessStoryBanner() {
@@ -119,18 +119,18 @@ export default function RevolutionarySuccessStoryBanner() {
             transition={{ delay: 1.3duration: 0.6 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <Link 
+            <a 
               href="/case-studies/ai-2025-global-enterprise-transformation-100000-roi"
               className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Read Full Case Study
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </motion.div>
         </div>
         

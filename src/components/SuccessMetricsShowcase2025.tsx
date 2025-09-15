@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const SuccessMetricsShowcase2025 = () => {
   const metrics = [
@@ -166,24 +166,24 @@ const SuccessMetricsShowcase2025 = () => {
               with our cutting-edge technology solutions. 'Let', 's discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
               >
                 Explore Our Solutions
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
               >
                 Schedule Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
               >
                 View Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

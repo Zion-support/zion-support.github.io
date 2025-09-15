@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AdvancedNeuralNetworks2025Banner = () => {
   return (
@@ -19,18 +19,18 @@ const AdvancedNeuralNetworks2025Banner = () => {
             with unprecedented accuracy and efficiency. Experience AI that thinks like humans.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/ai-2025/neural-networks"
               className="bg-white text-orange-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Explore Neural Networks
-            </Link>
-            <Link
+            </a>
+            <a
               href="/neural-networks/demo"
               className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Try Neural Demo
-            </Link>
+            </a>
           </div>
         </div>
         

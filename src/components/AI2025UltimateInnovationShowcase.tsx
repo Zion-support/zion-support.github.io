@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateInnovationShowcase: React.FC = () => {
   const [activeTabsetActiveTab] = useState(0);
@@ -141,19 +141,19 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
           className="text-center"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link
+            <a
               href="/ai-2025-ultimate-breakthrough"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore Breakthroughs
               <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="inline-flex items-center gap-2 border-2 border-gray-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
             >
               Get Started Today
-            </Link>
+            </a>
           </div>
           <p className="text-gray-400 mt-6 text-sm">
             Join thousands of enterprises already transforming with our AI innovations

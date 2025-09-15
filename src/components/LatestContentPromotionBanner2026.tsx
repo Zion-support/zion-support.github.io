@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function LatestContentPromotionBanner2026() {
   return (
@@ -40,18 +40,18 @@ export default function LatestContentPromotionBanner2026() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/blog"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Explore All Content
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
               >
                 Get Custom Insights
-              </Link>
+              </a>
             </div>
           </div>
           
@@ -68,12 +68,12 @@ export default function LatestContentPromotionBanner2026() {
               <p className="text-gray-300 text-sm mb-3">
                 Complete guide to implementing AI automation in enterprise environments with real-world case studies.
               </p>
-              <Link
+              <a
                 href="/blog/ai-2025-enterprise-automation-revolution-ultimate-guide"
                 className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
               >
                 Read More →
-              </Link>
+              </a>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -87,12 +87,12 @@ export default function LatestContentPromotionBanner2026() {
               <p className="text-gray-300 text-sm mb-3">
                 Revolutionary guide to quantum AI applications in business with implementation strategies.
               </p>
-              <Link
+              <a
                 href="/blog/quantum-ai-2026-business-transformation-ultimate-guide"
                 className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
               >
                 Read More →
-              </Link>
+              </a>
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
@@ -106,12 +106,12 @@ export default function LatestContentPromotionBanner2026() {
               <p className="text-gray-300 text-sm mb-3">
                 Next-generation AI-powered cybersecurity solutions protecting enterprises from evolving threats.
               </p>
-              <Link
+              <a
                 href="/blog/ai-2025-cybersecurity-revolution"
                 className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
               >
                 Read More →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

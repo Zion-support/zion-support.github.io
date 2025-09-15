@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
@@ -168,7 +168,7 @@ export default function MobileLaunchPage() {
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <AppleBadge href={IOS_APP_URL} />
               <GoogleBadge href={ANDROID_APP_URL} />
-              <Link href="/open-app"><a className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-4 py-2 text-white/90 hover:bg-white/10">Open app</a></Link>
+              <a href="/open-app"><a className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-4 py-2 text-white/90 hover:bg-white/10">Open app</a></a>
             </div>
           </div>
           <div className="flex items-center justify-center">
@@ -273,9 +273,9 @@ export default function MobileLaunchPage() {
       {/* Helper links */}
       <section className="mt-10 text-sm opacity-80">
         <div className="flex flex-wrap items-center gap-4">
-          <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>
+          <a href="/open-app"><a className="underline">Deep link: /open-app</a></a>
           <span>•</span>
-          <Link href="/download"><a className="underline">Shareable link: /download</a></Link>
+          <a href="/download"><a className="underline">Shareable link: /download</a></a>
         </div>
       </section>
     </EnhancedLayout>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AIRevolution50000ROIPromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -188,18 +188,18 @@ const AIRevolution50000ROIPromotionBanner: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <Link
+                  <a
                     href={currentContent.url}
                     className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
                   >
                     Read {currentContent.readingTime}
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 </div>
               </div>
 
@@ -218,18 +218,18 @@ const AIRevolution50000ROIPromotionBanner: React.FC = () => {
               Join Fortune 500 companies achieving <span className="text-yellow-400 font-bold">50,000% ROI</span> through revolutionary AI transformation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="bg-white text-purple-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Explore AI Services
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
               >
                 View All Success Stories
-              </Link>
+              </a>
             </div>
           </div>
         </div>

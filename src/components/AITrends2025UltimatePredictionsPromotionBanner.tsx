@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 TrendingUpBarChart3GlobeCalendarArrowRightStarTargetZap
 
 export default function AITrends2025UltimatePredictionsPromotionBanner() {
@@ -99,7 +99,7 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold text-white mb-3">Explore Content</h3>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/ai-trends-2025-ultimate-predictions"
                 className="group flex items-center justify-between p-3 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border border-indigo-500/30 rounded-lg hover:from-indigo-600/30 hover:to-purple-600/30 transition-all duration-300"
               >
@@ -113,9 +113,9 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-indigo-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
 
-              <Link 
+              <a 
                 href="/ai-2025-next-generation-innovations"
                 className="group flex items-center justify-between p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300"
               >
@@ -129,9 +129,9 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
 
-              <Link 
+              <a 
                 href="/services"
                 className="group flex items-center justify-between p-3 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg hover:from-blue-600/30 hover:to-cyan-600/30 transition-all duration-300"
               >
@@ -145,7 +145,7 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
                   </div>
                 </div>
                 <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -156,12 +156,12 @@ export default function AITrends2025UltimatePredictionsPromotionBanner() {
             <div className="text-sm text-gray-300">
               <span className="text-indigo-400 font-semibold">Expert Insights:</span> Stay ahead with revolutionary AI predictions
             </div>
-            <Link 
+            <a 
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold text-sm hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

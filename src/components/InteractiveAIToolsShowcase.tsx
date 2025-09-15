@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InteractiveAIToolsShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -256,18 +256,18 @@ const InteractiveAIToolsShowcase = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2">
-                  <Link
+                  <a
                     href={tool.url}
                     className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                   >
                     Learn More →
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href={tool.demoUrl}
                     className="flex-1 border-2 border-purple-600 text-purple-600 px-4 py-2 rounded-lg font-semibold text-center hover:bg-purple-600 hover:text-white transition-all duration-300"
                   >
                     Try Demo
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -324,18 +324,18 @@ const InteractiveAIToolsShowcase = () => {
             Get personalized recommendations and expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/tools"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore All Tools →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
               Get Custom Solution
-            </Link>
+            </a>
           </div>
         </div>
       </div>

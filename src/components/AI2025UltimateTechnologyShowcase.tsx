@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -230,13 +230,13 @@ const AI2025UltimateTechnologyShowcase = () => {
                 </div>
               </div>
 
-              <Link
+              <a
                 href={currentTech.link}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 Explore Technology
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
 
             <div>
@@ -290,18 +290,18 @@ const AI2025UltimateTechnologyShowcase = () => {
             Join thousands of companies already leveraging our AI technologies to achieve unprecedented growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Get Started Today
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-2025-ultimate-content-hub"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
             >
               Explore All Technologies
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

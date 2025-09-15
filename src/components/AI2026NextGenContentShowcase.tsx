@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility // Replaced with regular anchor tags for React compatibility
 
 const AI2026NextGenContentShowcase = () => {
   return (
@@ -35,18 +35,18 @@ const AI2026NextGenContentShowcase = () => {
               Quantum-enhanced AI systems that solve previously impossible problems and unlock new dimensions of intelligence.
             </p>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/content/quantum-ai-2026-revolution"
                 className="block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Explore Quantum AI →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/quantum-ai-business-applications"
                 className="block border border-blue-400 text-blue-300 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Business Applications
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -58,18 +58,18 @@ const AI2026NextGenContentShowcase = () => {
               Direct brain-computer interfaces that enable seamless communication between human consciousness and AI systems.
             </p>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/content/neural-interface-2026-revolution"
                 className="block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Explore Neural Interfaces →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/neural-interface-implementation"
                 className="block border border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
               >
                 Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -81,18 +81,18 @@ const AI2026NextGenContentShowcase = () => {
               Fully autonomous business operations that run independently, make decisions, and adapt to changing conditions.
             </p>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/content/autonomous-business-2026"
                 className="block bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
               >
                 Explore Autonomous Systems →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/autonomous-business-case-studies"
                 className="block border border-pink-400 text-pink-300 px-6 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-colors"
               >
                 Case Studies
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -104,18 +104,18 @@ const AI2026NextGenContentShowcase = () => {
               Artificially created intelligence that surpasses human cognitive abilities and creates new forms of consciousness.
             </p>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/content/synthetic-intelligence-2026"
                 className="block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 Explore Synthetic Intelligence →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/synthetic-intelligence-ethics"
                 className="block border border-indigo-400 text-indigo-300 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors"
               >
                 Ethics & Governance
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -127,18 +127,18 @@ const AI2026NextGenContentShowcase = () => {
               Ultra-low-latency AI processing at the edge that enables real-time decision making and autonomous operations.
             </p>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/content/edge-ai-2026-revolution"
                 className="block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
               >
                 Explore Edge AI →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/edge-ai-implementation"
                 className="block border border-cyan-400 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white transition-colors"
               >
                 Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -150,18 +150,18 @@ const AI2026NextGenContentShowcase = () => {
               AI systems that process and understand multiple data modalities simultaneously for unprecedented insights.
             </p>
             <div className="space-y-3">
-              <Link 
+              <a 
                 href="/content/multimodal-ai-2026"
                 className="block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
               >
                 Explore Multimodal AI →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/multimodal-ai-applications"
                 className="block border border-emerald-400 text-emerald-300 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-colors"
               >
                 Real-World Applications
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -174,18 +174,18 @@ const AI2026NextGenContentShowcase = () => {
               Join thousands of forward-thinking organizations already implementing next-generation AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your AI Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

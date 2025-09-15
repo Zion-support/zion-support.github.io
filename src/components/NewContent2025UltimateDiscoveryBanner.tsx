@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateDiscoveryBanner = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -59,7 +59,7 @@ const NewContent2025UltimateDiscoveryBanner = () => {
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {newContent.filter(item => item.featured).map((item, index) => (
-            <Link
+            <a
               key={index}
               href={item.link}
               className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover:bg-opacity-20 transition-all duration-300 group"
@@ -81,7 +81,7 @@ const NewContent2025UltimateDiscoveryBanner = () => {
               <div className="flex items-center text-yellow-300 font-semibold">
                 Read More →
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -97,7 +97,7 @@ const NewContent2025UltimateDiscoveryBanner = () => {
           {isExpanded && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
               {newContent.filter(item => !item.featured).map((item, index) => (
-                <Link
+                <a
                   key={index}
                   href={item.link}
                   className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 group"
@@ -119,7 +119,7 @@ const NewContent2025UltimateDiscoveryBanner = () => {
                   <div className="flex items-center text-yellow-300 text-sm font-semibold">
                     Explore →
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           )}
@@ -135,18 +135,18 @@ const NewContent2025UltimateDiscoveryBanner = () => {
               Join thousands of companies already experiencing the AI content revolution with unprecedented results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

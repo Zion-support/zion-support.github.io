@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumAI2026BusinessRevolutionBanner: React.FC = () => {
   return (
@@ -80,18 +80,18 @@ const QuantumAI2026BusinessRevolutionBanner: React.FC = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/quantum-ai-2026-business-revolution-ultimate-guide"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Read Complete Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/quantum-computing"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-colors"
             >
               Start Quantum Transformation
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

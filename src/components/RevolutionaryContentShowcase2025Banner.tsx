@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward
 
 export default function RevolutionaryContentShowcase2025Banner() {
@@ -58,20 +58,20 @@ export default function RevolutionaryContentShowcase2025Banner() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <a 
                 href="/revolutionary-content-showcase-2025"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Content Library
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
               
-              <Link 
+              <a 
                 href="/blog/ai-2025-revolutionary-breakthroughs"
                 className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Latest Articles
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -107,9 +107,9 @@ export default function RevolutionaryContentShowcase2025Banner() {
         <div className="mt-8 pt-6 border-t border-white/20">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-white">Featured This Week</h3>
-            <Link href="/revolutionary-content-showcase-2025" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+            <a href="/revolutionary-content-showcase-2025" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
               View All Featured
-            </Link>
+            </a>
           </div>
           
           <div className="grid md:grid-cols-3 gap-4">

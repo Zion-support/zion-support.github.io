@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025BreakthroughContentShowcase = () => {
   const [activeTabsetActiveTab] = useState('all');
@@ -218,12 +218,12 @@ const AI2025BreakthroughContentShowcase = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <a
                   href={item.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all"
                 >
                   Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -239,18 +239,18 @@ const AI2025BreakthroughContentShowcase = () => {
               Join 500+ companies achieving 750%+ ROI with our proven AI strategies
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

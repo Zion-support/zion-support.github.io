@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 ArrowRightBrainZapShieldGlobeTargetTrendingUp
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryAIServices2025: React.FC = () => {
   const services = [
@@ -212,12 +212,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </div>
 
               {/* CTA Button */}
-              <Link href="/contact" className="block w-full">
+              <a href="/contact" className="block w-full">
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </button>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -236,17 +236,17 @@ const RevolutionaryAIServices2025: React.FC = () => {
             Join the AI revolution and unlock unprecedented capabilities that will propel your business into the future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <a href="/contact">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
               </button>
-            </Link>
-            <Link href="/services">
+            </a>
+            <a href="/services">
               <button className="border border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-lg">
                 View All Services
               </button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

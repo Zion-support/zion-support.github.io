@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025ContentRevolutionBanner = () => {
   return (
@@ -27,12 +27,12 @@ const AI2025ContentRevolutionBanner = () => {
               Learn how AI is revolutionizing enterprise operations with 340% ROI increases 
               and unprecedented automation capabilities.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2025-enterprise-transformation" 
               className="inline-flex items-center text-purple-300 hover:text-white font-semibold transition-colors"
             >
               Read Article →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -42,12 +42,12 @@ const AI2025ContentRevolutionBanner = () => {
               Explore how quantum computing is solving previously impossible business 
               problems with exponential computational power.
             </p>
-            <Link 
+            <a 
               href="/blog/quantum-computing-business-applications-2025" 
               className="inline-flex items-center text-purple-300 hover:text-white font-semibold transition-colors"
             >
               Explore Now →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -57,12 +57,12 @@ const AI2025ContentRevolutionBanner = () => {
               See how a global manufacturer achieved 340% efficiency increase using 
               AI automation solutions.
             </p>
-            <Link 
+            <a 
               href="/case-studies/ai-automation-manufacturing-success" 
               className="inline-flex items-center text-purple-300 hover:text-white font-semibold transition-colors"
             >
               View Case Study →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -74,18 +74,18 @@ const AI2025ContentRevolutionBanner = () => {
               with our cutting-edge insights and proven strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/blog"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Explore All Content
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 View Case Studies
-              </Link>
+              </a>
             </div>
           </div>
         </div>

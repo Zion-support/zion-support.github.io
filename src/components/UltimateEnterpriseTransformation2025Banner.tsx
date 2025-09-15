@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateEnterpriseTransformation2025Banner = () => {
   const [currentContentsetCurrentContent] = useState(0);
@@ -169,7 +169,7 @@ const UltimateEnterpriseTransformation2025Banner = () => {
                 </div>
               </div>
 
-              <Link
+              <a
                 href={current.url}
                 className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
@@ -177,7 +177,7 @@ const UltimateEnterpriseTransformation2025Banner = () => {
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
 
             <div className="bg-gradient-to-br from-white/20 to-white/5 rounded-xl p-6">
@@ -221,18 +221,18 @@ const UltimateEnterpriseTransformation2025Banner = () => {
         {/* Call to action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Get Your Free Transformation Assessment
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               View All Resources
-            </Link>
+            </a>
           </div>
           <p className="text-blue-200 mt-4 text-sm">
             Join 500+ Fortune 500 companies already transforming with AI 2025

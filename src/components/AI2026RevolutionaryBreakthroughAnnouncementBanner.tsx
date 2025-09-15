@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {
   return (
@@ -30,18 +30,18 @@ const AI2026RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {
           
           {/* Right side - CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link 
+            <a 
               href="/ai-2026-revolutionary-breakthrough-announcement"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
             >
               🔥 Explore Breakthrough
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-red-600 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
             >
               Get Early Access
-            </Link>
+            </a>
           </div>
         </div>
       </div>

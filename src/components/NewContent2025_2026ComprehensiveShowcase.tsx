@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025_2026ComprehensiveShowcase() {
   return (
@@ -43,12 +43,12 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
                 <span>Autonomous Systems</span>
               </div>
             </div>
-            <Link
+            <a
               href="/ai-2025-2026-ultimate-breakthrough"
               className="inline-block bg-white text-purple-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Breakthrough →
-            </Link>
+            </a>
           </div>
 
           {/* Quantum AI 2026 Breakthrough */}
@@ -73,12 +73,12 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
                 <span>NP-Hard Problem Solving</span>
               </div>
             </div>
-            <Link
+            <a
               href="/quantum-ai-2026-breakthrough"
               className="inline-block bg-white text-cyan-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Quantum AI →
-            </Link>
+            </a>
           </div>
 
           {/* Advanced Neural Architectures 2026 */}
@@ -103,12 +103,12 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
                 <span>Real-time Learning</span>
               </div>
             </div>
-            <Link
+            <a
               href="/advanced-neural-architectures-2026"
               className="inline-block bg-white text-green-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Neural AI →
-            </Link>
+            </a>
           </div>
 
           {/* AI 2025 Enterprise Automation */}
@@ -133,12 +133,12 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
                 <span>ROI Optimization</span>
               </div>
             </div>
-            <Link
+            <a
               href="/ai-2025-enterprise-automation"
               className="inline-block bg-white text-orange-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Automation →
-            </Link>
+            </a>
           </div>
 
           {/* Neural Interface Revolution 2026 */}
@@ -163,12 +163,12 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
                 <span>Thought-to-Action</span>
               </div>
             </div>
-            <Link
+            <a
               href="/neural-interface-revolution-2026"
               className="inline-block bg-white text-pink-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Neural Interface →
-            </Link>
+            </a>
           </div>
 
           {/* AI 2025 Cybersecurity Revolution */}
@@ -193,12 +193,12 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
                 <span>Predictive Security</span>
               </div>
             </div>
-            <Link
+            <a
               href="/ai-2025-cybersecurity-revolution"
               className="inline-block bg-white text-red-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Cybersecurity →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -210,18 +210,18 @@ export default function NewContent2025_2026ComprehensiveShowcase() {
             to achieve unprecedented growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
             >
               Get Started Today
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
             >
               View All Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const EdgeAI2025RevolutionBanner = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -151,18 +151,18 @@ const EdgeAI2025RevolutionBanner = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <Link
+                  <a
                     href={currentContent.url}
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                   >
                     Read Full Story →
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="border-2 border-white/30 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Get Consultation
-                  </Link>
+                  </a>
                 </div>
               </div>
 
@@ -218,18 +218,18 @@ const EdgeAI2025RevolutionBanner = () => {
           {/* Call to Action */}
           <div className="text-center">
             <div className="inline-flex items-center gap-4">
-              <Link
+              <a
                 href="/blog"
                 className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Explore All Content
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
               >
                 View Resources
-              </Link>
+              </a>
             </div>
           </div>
 

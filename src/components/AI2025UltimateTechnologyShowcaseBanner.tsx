@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Brain
@@ -131,20 +131,20 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link
+              <a
                 href="/ai-2025-ultimate-technology-showcase"
                 className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 Explore Technologies
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-2025-ultimate-content-hub"
                 className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 View All Content
                 <Sparkles className="w-5 h-5" />
-              </Link>
+              </a>
             </motion.div>
           </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralInterface2026Banner = () => {
   return (
@@ -101,18 +101,18 @@ const NeuralInterface2026Banner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/neural-interface-2026"
               className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-emerald-400 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore Neural Interface →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/neural-interface-demo"
               className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg font-bold text-lg hover:bg-emerald-400 hover:text-emerald-900 transition-all duration-300"
             >
               Try Demo
-            </Link>
+            </a>
           </div>
           
           <div className="mt-12 text-center">

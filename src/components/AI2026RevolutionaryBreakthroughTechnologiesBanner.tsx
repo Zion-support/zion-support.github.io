@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
@@ -85,18 +85,18 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
             transition={{ delay: 1.0, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Link
+            <a
               href="/content/resources/ai-2026-revolutionary-breakthrough-technologies-ultimate-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transform hover:scale-105 transition-all duration-300 shadow-lg"
             >
               📖 Read Complete Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/ai-consulting"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transform hover:scale-105 transition-all duration-300"
             >
               🚀 Get Implementation Support
-            </Link>
+            </a>
           </motion.div>
 
           {/* Trust Indicators */}

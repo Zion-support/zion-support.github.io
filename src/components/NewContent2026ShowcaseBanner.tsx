@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SparklesBookOpenFileTextArrowRightStarClockCog
 
 export default function NewContent2026ShowcaseBanner() {
@@ -39,13 +39,13 @@ export default function NewContent2026ShowcaseBanner() {
                 <Star className="w-4 h-4 text-yellow-400 mr-1" />
                 <span className="text-sm font-semibold">Featured</span>
               </div>
-              <Link
+              <a
                 href="/blog/ai-2026-quantum-neural-revolution-breakthrough"
                 className="text-yellow-400 hover:text-yellow-300 transition-colors flex items-center"
               >
                 Read More
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -68,13 +68,13 @@ export default function NewContent2026ShowcaseBanner() {
                 <Star className="w-4 h-4 text-yellow-400 mr-1" />
                 <span className="text-sm font-semibold">Ultimate Guide</span>
               </div>
-              <Link
+              <a
                 href="/blog/ai-2026-enterprise-automation-revolution-ultimate-guide"
                 className="text-green-400 hover:text-green-300 transition-colors flex items-center"
               >
                 Read More
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -97,13 +97,13 @@ export default function NewContent2026ShowcaseBanner() {
                 <Star className="w-4 h-4 text-yellow-400 mr-1" />
                 <span className="text-sm font-semibold">Case Study</span>
               </div>
-              <Link
+              <a
                 href="/case-studies/quantum-ai-transformation-2026-ultimate-success"
                 className="text-blue-400 hover:text-blue-300 transition-colors flex items-center"
               >
                 Read More
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -131,22 +131,22 @@ export default function NewContent2026ShowcaseBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <BookOpen className="w-5 h-5 mr-2" />
               Explore All Content
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 flex items-center justify-center"
             >
               <FileText className="w-5 h-5 mr-2" />
               View Success Stories
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
           
           <div className="text-sm opacity-70">
