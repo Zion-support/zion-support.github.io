@@ -1,24 +1,20 @@
 // Global fetch interceptor for handling API requests
-// This file provides global fetch interception and error handling
-
-// Global fetch interceptor
 const originalFetch = window.fetch;
 
-window.fetch = async (...args) => {
+window.fetch = async function(...args) {
   try {
-    const response = await originalFetch(...args);
+    const response = await originalFetch.apply(this, args);
     
-    // Log successful requests in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Fetch request successful:', args[0]);
+    // Add any global response handling here
+    if (!response.ok) {
+      console.warn(`API request failed: ${response.status} ${response.statusText}`);
     }
     
     return response;
   } catch (error) {
-    // Log errors
-    console.error('Fetch request failed:', error);
+    console.error('Fetch error:', error);
     throw error;
   }
 };
 
-export default window.fetch;
+export default {};

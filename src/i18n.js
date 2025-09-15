@@ -1,4 +1,4 @@
-// i18n configuration for internationalization
+// i18n configuration
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -8,21 +8,8 @@ const resources = {
   en: {
     translation: {
       welcome: 'Welcome',
-      home: 'Home',
-      about: 'About',
-      contact: 'Contact',
-      services: 'Services',
-      blog: 'Blog',
-    }
-  },
-  es: {
-    translation: {
-      welcome: 'Bienvenido',
-      home: 'Inicio',
-      about: 'Acerca de',
-      contact: 'Contacto',
-      services: 'Servicios',
-      blog: 'Blog',
+      hello: 'Hello',
+      // Add more translations as needed
     }
   }
 };
@@ -33,15 +20,9 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    debug: process.env.NODE_ENV === 'development',
-    
+    debug: false,
     interpolation: {
       escapeValue: false,
-    },
-    
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
     },
   });
 
