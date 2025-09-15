@@ -459,6 +459,51 @@ content_index:
         breaches: "reduced"
         audit_ready: true
 
+    - id: "ai-2026-cost-aware-model-routing"
+      type: "blog"
+      title: "AI 2026: Cost‑Aware Model Routing — Blueprint"
+      file_path: "/content/blog/ai-2026-cost-aware-model-routing-blueprint.md"
+      url: "/blog/ai-2026-cost-aware-model-routing-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Cost Optimization", "Evaluations", "SLOs", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "35%"
+        latency: "< 600ms"
+        quality: "> 95% target"
+
+    - id: "ai-2026-secure-prompt-engineering"
+      type: "resource"
+      title: "AI 2026: Secure Prompt Engineering — Enterprise Guide"
+      file_path: "/content/resources/ai-2026-secure-prompt-engineering.md"
+      url: "/resources/ai-2026-secure-prompt-engineering"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Prompt Engineering", "Governance", "Policy‑as‑Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        review_time: "-50%"
+        coverage: "100% gated"
+
+    - id: "ai-2026-agent-evidence-hub-starter"
+      type: "resource"
+      title: "AI 2026: Agent Evidence Hub — Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
+      url: "/resources/ai-2026-agent-evidence-hub-starter"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        audit_ready: true
+        integration_time: "< 1 day"
+        data_sources: "Evals, Incidents, Approvals"
+
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
