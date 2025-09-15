@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-safety-governance-blueprint-2025',
+      title: 'AI Safety & Governance Blueprint 2025: Practical Policies for Autonomous Systems',
+      excerpt: 'A pragmatic framework to deploy, audit, and govern autonomous AI agents in production with measurable safety guarantees.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '11 min read',
+      image: '/blog/ai-safety-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -74,6 +85,16 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
+    },
+    {
+      id: 'ai-safety-governance-blueprint-2025',
+      title: 'AI Safety & Governance Blueprint 2025: Practical Policies for Autonomous Systems',
+      excerpt: 'Deployment-ready governance controls: capability scoping, graded autonomy, audit trails, and incident playbooks.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '11 min read',
+      image: '/blog/ai-safety-governance.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',
@@ -158,11 +179,12 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 13, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 2, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
+    { name: 'AI Governance', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },

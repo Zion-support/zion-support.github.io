@@ -28,6 +28,13 @@ const latest2025 = [
     slug: "/news/acquisition-vectoredge",
     color: "blue",
   },
+  {
+    date: "September 15, 2025",
+    category: "GOVERNANCE",
+    title: "Releasing the AI Safety & Governance Blueprint 2025",
+    slug: "/blog/ai-safety-governance-blueprint-2025",
+    color: "emerald",
+  },
 ];
 
 export default function NewsPage() {
