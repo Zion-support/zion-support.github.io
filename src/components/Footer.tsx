@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link"; // Changed from react-router-dom
 // Temporarily disable missing feedback widget to unblock build
 const FeedbackWidget = () => null;
+=======
+>>>>>>> origin/merged-prs
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
@@ -134,6 +137,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li><Link href="/about" className="text-foreground/80 hover:text-primary transition-colors text-sm">About Us</Link></li>
               <li><Link href="/blog" className="text-foreground/80 hover:text-primary transition-colors text-sm">Blog</Link></li>
               <li><Link href="/innovation" className="text-foreground/80 hover:text-primary transition-colors text-sm">Innovation</Link></li>
@@ -179,6 +183,20 @@ export function Footer() {
             <ChevronUp className="h-4 w-4" aria-hidden="true" />
             <span>Back to Top</span>
           </button>
+=======
+              <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Cybersecurity</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Cloud Infrastructure</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Digital Transformation</a></li>
+            </ul>
+          </div>
+        </div>
+
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+
+>>>>>>> origin/merged-prs
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary/20">

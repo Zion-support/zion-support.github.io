@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // Note: This is a Vite project, not Next.js
@@ -8,6 +9,23 @@ type ApiRequest = {
   [key: string]: any;
 };
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export interface Session {
 
   userId: string;
@@ -187,15 +205,37 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 
 };
 
 
 =======
+<<<<<<< HEAD
 // Stub admin auth utility - placeholder for missing functionality
 export const requireAdminAuth = () => {
   // Placeholder implementation
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export function isInternalAgentRequest(req: NextApiRequest): boolean {
+  // Check for internal agent headers or IPs
+  const userAgent = req.headers['user-agent'] |'';
+  // Check for internal agent headers or IPs;
+  const userAgent = req.headers['user-agent'] || '';
+  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+}
+export const isAdmin = () => {
+  // Placeholder implementation;
+>>>>>>> origin/merged-prs
   return true;
 };
 
@@ -203,4 +243,18 @@ export const isAdmin = () => {
   // Placeholder implementation
   return true;
 };
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+
+}
+;
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

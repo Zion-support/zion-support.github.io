@@ -1,5 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 console.log('Testing Next.js installation...');
 try {// Check if Next.js is installed;
   const nextVersion = execSync('npx next --version', { encoding: 'utf8' });

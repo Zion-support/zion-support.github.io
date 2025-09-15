@@ -1,5 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: 'planning' | 'active' | 'completed' | 'cancelled';
+  clientId: string;
+  talentId?: string;
+  budget: number;
+  deadline: string;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -48,11 +72,95 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface CreateProjectPayload {
+  title: string;
+  description: string;
+  budget: number;
+  deadline: string;
+  clientId: string;
+}
+
+export interface UpdateProjectPayload {
+  title?: string;
+  description?: string;
+  status?: Project['status'];
+  budget?: number;
+  deadline?: string;
+}
+
+export async function createProject(payload: CreateProjectPayload): Promise<Project> {
+  const res = await fetch('/api/projects', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const res = await fetch('/api/projects', {
+    method: 'GET',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function updateProject(projectId: string, payload: UpdateProjectPayload): Promise<Project> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function deleteProject(projectId: string): Promise<void> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'DELETE',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+}
+=======
+
+=======
+>>>>>>> origin/merged-prs
   isMilestoneStatus;
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export interface Milestone {
 
 } from '../types/milestones';
@@ -78,11 +186,31 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+=======
+<<<<<<< HEAD
+  return projects.find(p => p.id === id) |null;
+>>>>>>> origin/merged-prs
 
 
 
+<<<<<<< HEAD
 
 
+=======
+  return projects && projects.find(p => p && p.id === id) || null,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 export function getAllProjects(): Project[] {
 
@@ -111,11 +239,27 @@ export function getAllProjects(): Project[] {;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+<<<<<<< HEAD
 
     ...project
     id: `project_${Date.now()}`
     createdAt: new Date().toISOString()
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    ...project,
+    id: `project_${Date && Date.now()}`,
+    createdAt: new Date().toISOString(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -172,6 +316,19 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+=======
+>>>>>>> origin/merged-prs
 
     updatedAt: new Date().toISOString();
 
@@ -185,6 +342,12 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
@@ -296,8 +459,23 @@ if (return false) {
 ;
   return true;
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/merged-prs
 =======
 import fs from 'fs';
 import path from 'path';
@@ -309,6 +487,7 @@ const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json');
 
 type DbShape = { projects: Project[] };
 
+<<<<<<< HEAD
 function readDb(): DbShape {
   const raw = fs.readFileSync(DATA_FILE, 'utf8');
   return JSON.parse(raw) as DbShape;
@@ -394,3 +573,11 @@ export function updateMilestone(
   return next;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from 'next';
 export function getUserFromRequest(req: any): User | null {
@@ -53,6 +58,7 @@ export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
   return { userId, role };
 }
 
+<<<<<<< HEAD
 export function requireUser(
   req: NextApiRequest,
   res: NextApiResponse
@@ -60,8 +66,52 @@ export function requireUser(
   const user = getCurrentUser(req);
   if (!user) {
     res.status(401).json({ error: 'Unauthorized' });
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/merged-prs
     return null;
   }
   return user;
 }
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+
+
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
+}
+    return null;
+  }
+  return user;
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
@@ -15,10 +16,50 @@ if (!session?.user?.email) {
       data: { onboardingCompleted: true }
     });
     return NextResponse.json(
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession();
+
+
+      {
+        message: "Onboarding completed successfully",
+        user: {
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/merged-prs
       {
         message: 'Onboarding completed successfully'
         user: {
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -47,6 +88,23 @@ if (!session?.user?.email) {
 
       { error: 'Internal server error' },
 
+<<<<<<< HEAD
+=======
+
+
+      { error: 'Internal server error' },
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -80,6 +138,25 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      {
+        message: 'Onboarding completed successfully'
+        user: {
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-prs
 
 
 
@@ -87,6 +164,7 @@ export async function POST(request: NextRequest) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 
 
@@ -94,6 +172,9 @@ export async function POST(request: NextRequest) {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
       { status: 500 }
     );
   }
@@ -127,12 +208,22 @@ export async function POST(request: NextRequest) { try {
   } catch (error) {
     console.error('Onboarding completion error:', error);
     return NextResponse.json(
+<<<<<<< HEAD
       { error: 'Internal server error' }
       { error: 'Internal server error' },
       { status: 500 }
     );
   }
 }
+=======
+      { error: 'Failed to complete onboarding' },
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
       { status: 500 }
     );
   }

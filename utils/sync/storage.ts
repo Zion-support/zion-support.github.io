@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 
 
@@ -147,6 +152,7 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
 
 export function getEntityId(event: SyncEvent): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
   switch (event && event.type) {
     case 'proposal':
       return (event && event.payload as any).proposalId;
@@ -183,6 +189,44 @@ export function getEntityId(event: SyncEvent): string {
 }
 
 export function filterEventsByScope(
+=======
+
+export function readState(): SyncState {;
+  return { ...state };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+
+
+export interface SyncMapping {
+  id: string;
+  name: string;
+  sourceConnectionId: string;
+  destinationConnectionId: string;
+  sourceTable?: string;
+  destinationTable?: string;
+  fieldMappings: Record<string, string>;
+  transformations?: Array<{
+    field: string;
+    type: 'format' | 'convert' | 'calculate' | 'filter';
+    config: Record<string, any>;
+  }>;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SyncLog {
+  id: string;
+  jobId: string;
+  level: 'info' | 'warn' | 'error' | 'debug';
+  message: string;
+  details?: Record<string, any>;
+  timestamp: string;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 <<<<<<< HEAD
   events: SyncEvent[]
   scope: InstanceConfig['scope']
@@ -205,6 +249,7 @@ export function filterEventsByScope(
   return events;export function resetState(): void {
   state = { ...defaultState }
 }
+<<<<<<< HEAD
 
   return events;export function resetState(): void {;
   state = { ...defaultState };
@@ -215,6 +260,16 @@ export function filterEventsByScope(
 
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -224,11 +279,41 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+>>>>>>> origin/merged-prs
 }
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+}
+}
+}
+<<<<<<< HEAD
+=======
+  const entity_id = getEntityId (event);
+  const current_version = state.latestVersionByEntityId[entity_id] || 0;
+  const is_newer = event.version > current_version;
+;
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+    state.proposalMerkleById[entity_id] = event.merkle_root;
+>>>>>>> origin/merged-prs
   }
   // Check condition
 if ( {) {
@@ -265,6 +350,13 @@ export function filterEventsByScope (
 if (return events) {
   $2
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
   // Check condition
 if ( {) {
   $2
@@ -287,6 +379,7 @@ if ( {) {
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
+<<<<<<< HEAD
 
 }
 }
@@ -307,3 +400,10 @@ if ( {) {
   return events;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Check, Star, Zap, Brain, Server, Shield, Building } from 'lucide-react';
+=======
+
+import React from 'react';
+>>>>>>> origin/merged-prs
 
 const PricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('monthly');
@@ -378,4 +383,9 @@ const PricingPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PricingPage;
+=======
+export default PricingPage;
+
+>>>>>>> origin/merged-prs

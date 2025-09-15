@@ -1,9 +1,25 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY |process.env.OPENAI_API_TOKEN;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {if (!OPENAI_API_KEY) return null;
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   const user = {;
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;
@@ -211,6 +227,12 @@ if (return null, ) {
   try {
     const parsed = JSON.parse (content),
     const milestones: SuggestedMilestoneItem[] = Array.is_array (parsed?.milestones);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
       ? parsed.milestones;
       : [],
     // Check condition
@@ -299,13 +321,123 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
       tags: ["AI Suggested"];
     }),
     phase_start = due;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",;
+;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,;
+;
+async function callOpenAI(input:MilestoneSuggestionInput):Promise<SuggestedMilestoneItem[] | null> {;
+  if (!OPENAI_API_KEY) return null,;
+;
+  const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include:title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\":[...]`,;
+;
+  const user = {;
+    scopeOfWork:input.scopeOfWork,;
+    startDateIso:input.startDateIso,;
+    endDateIso:input.endDateIso,;
+    projectType:input.projectType;
+  },;
+;
+  const body = {;
+    model:"gpt-4o-mini",;
+    messages:[;
+      { role:"system", content:system },;
+      { role:"user", content:`INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object:{\"milestones\":[{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
+    ],;
+    temperature:0.3;
+  } as any,;
+;
+  const resp = await fetch("https://api.openai.com/v1/chat/completions", {;
+    method:"POST",;
+    headers:{;
+      "Content-Type":"application/json",;
+      Authorization:`Bearer ${OPENAI_API_KEY}`;
+    },;
+    body:JSON.stringify(body);
+  }),;
+  if (!resp.ok) return null,;
+  const data = await resp.json(),;
+  const content = data.choices?.[0]?.message?.content,;
+  if (!content) return null,;
+;
+  try {;
+    const parsed = JSON.parse(content),;
+    const milestones:SuggestedMilestoneItem[] = Array.isArray(parsed?.milestones);
+      ? parsed.milestones;
+      :[],;
+    if (!milestones.length) return null,;
+    return milestones.map((m) => ({;
+      title:String(m.title).slice(0, 120),;
+      description:String(m.description || "").slice(0, 2000),;
+      suggestedDueDateIso:String(m.suggestedDueDateIso),;
+      estimatedEffortHours:Math.max(1, parseInt(String(m.estimatedEffortHours), 10) || 8),;
+      tags:["AI Suggested"];
+    })),;
+  } catch {;
+    return null,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   }
   return milestones;
 }
 export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse> {
   const ai = await callOpenAI (input);
   const milestones = ai && ai.length ? ai : createHeuristicPlan (input);
+<<<<<<< HEAD
 
+=======
+  }
+  return milestones,;
+}
+<<<<<<< HEAD
+=======
+;
+export async function generateMilestones(input:MilestoneSuggestionInput):Promise<MilestoneSuggestionResponse> {;
+  const ai = await callOpenAI(input),;
+  const milestones = ai && ai.length ? ai :createHeuristicPlan(input),;
+  return { milestones },;
+} const body = {
+  model: "gpt-4o-mini", messages: [ {
+  role: "system", content: system 
+};
+{
+  role: "user", content: `INPUT:\n$ {
+  JSON.stringify (user, null, 2) 
+}\n\nReturn JSON object: {
+  \"milestones\": [ {
+  title, description, suggestedDueDateIso, estimatedEffortHours 
+}] 
+}` 
+}];
+temperature: 0.3 
+}as any;
+const resp = await fetch ("https://api.openai.com/v1/chat/completions", {
+  method: "POST", headers: {
+  "Content-Type": "application/json", Authorization: `Bearer $ {
+  OPENAI API KEY 
+}` 
+};
+body: JSON.stringify (body) 
+}return milestones 
+}
+}
+  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  return milestones,;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   return { milestones }
 }
 =======

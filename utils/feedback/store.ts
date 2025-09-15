@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -14,10 +22,25 @@
 
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   id: string;
   type: string;
   message: string;
   rating: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 
 
 
@@ -57,6 +80,12 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 
 export function writeAll(rows: any[]): void {;
@@ -64,8 +93,23 @@ export function writeAll(rows: any[]): void {;
   // Implementation would write to database or file
 }
 
+<<<<<<< HEAD
 export function getAllFeedback(): FeedbackRecord[] {;
   return [...feedbackData];
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
@@ -88,6 +132,7 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
 }
+<<<<<<< HEAD
 
 export function writeAll(rows: any[]): void {;
   console.log('Writing feedback rows:', rows.length);
@@ -99,6 +144,11 @@ export function getAllFeedback(): FeedbackRecord[] {;
 
 }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 =======
 import fs from "fs";
 import path from "path";
@@ -120,6 +170,7 @@ function ensureDataFile(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8");
 }
+<<<<<<< HEAD
 
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   ensureDataFile();
@@ -131,3 +182,10 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   return rec;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

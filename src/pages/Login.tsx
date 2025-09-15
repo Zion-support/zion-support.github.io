@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Lock, Mail, Eye, EyeOff } from 'lucide-react';
+=======
+>>>>>>> origin/merged-prs
 
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,6 +12,7 @@ const Login: React.FC = () => {
     password: ''
   });
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
@@ -109,3 +113,5 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+=======
+>>>>>>> origin/merged-prs

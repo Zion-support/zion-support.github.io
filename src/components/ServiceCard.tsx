@@ -5,6 +5,7 @@ interface ServiceCardProps {
   description: string;
   icon: string;
 
+<<<<<<< HEAD
   features: string[];
   className?: string;
 }
@@ -31,6 +32,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </ul>
 
     </div>
+=======
+        </div>
+
+        <ul className="space-y-2">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center text-sm text-gray-300">
+              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+
+>>>>>>> origin/merged-prs
   );
 };
 

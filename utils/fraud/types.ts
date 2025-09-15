@@ -48,21 +48,64 @@ export interface FraudDetectionResult {
   is_fraud: boolean;
 
 
+<<<<<<< HEAD
 
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export interface FraudDetectionResult {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+=======
+<<<<<<< HEAD
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+<<<<<<< HEAD
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+=======
+<<<<<<< HEAD
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+=======
+=======
+
+  isFraud: boolean;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   confidence: number;
   reasons: string[];
 
 
 
 
+<<<<<<< HEAD
 export interface FraudDetectionConfig {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   enabled: boolean;
   rules: {
     suspiciousActivity: {
@@ -73,6 +116,34 @@ export interface FraudDetectionConfig {
     }
     fake_profile: {
       enabled: boolean;
+<<<<<<< HEAD
+=======
+      threshold: number;
+    };
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number;
+    };
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number;
+    };
+    spam: {
+      enabled: boolean;
+      threshold: number;
+    };
+  };
+  autoActions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidenceThreshold: number;
+  };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-prs
       threshold: number,
     }
     payment_fraud: {
@@ -97,6 +168,7 @@ export interface FraudDetectionConfig {
 
 
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -182,3 +254,34 @@ export interface MonthlyReport {
   topReasons: Array<{ reason: string; count: number }>;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    confidenceThreshold: number,
+  };
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

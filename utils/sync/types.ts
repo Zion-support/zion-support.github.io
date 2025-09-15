@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 
 
@@ -26,6 +31,12 @@ export interface InstanceConfig {
   peers: Peer[];
   secretConfigured: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 export interface Peer {;
   id: string;
@@ -33,6 +44,43 @@ export interface Peer {;
   baseUrl: string, // e.g., https: //zion-latam.example.org;
   scope?: SyncScope,;
   paused?: boolean;
+<<<<<<< HEAD
+=======
+}
+export interface InstanceConfig {
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+;
+export type SyncEventType =;
+  | "proposal";
+  | "token_transfer";
+  | "talent_mobility";
+  | "dao_endorsement";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/merged-prs
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -172,14 +220,30 @@ export interface ProposalPayload extends BaseEventPayload {
   votes: ProposalVoteEntry[];
 }
 
+<<<<<<< HEAD
 export interface TokenTransferPayload extends BaseEventPayload {
   txId: string;
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+  | "leaderboard_entry",;
+export interface BaseEventPayload {;
+  id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+>>>>>>> origin/merged-prs
   token: string;
   amount: number;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 <<<<<<< HEAD
 
 }
@@ -196,14 +260,25 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 =======
 }
 
+<<<<<<< HEAD
 export interface TalentMobilityPayload extends BaseEventPayload {
   personId: string;
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 <<<<<<< HEAD
 
 }
@@ -220,16 +295,30 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   timestamp: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId;
   score: number;
   category: string, // e.g., grants, contributions;
   rank?: number;
   period?: string, // e.g., 2025-Q3;
 }
+=======
+=======
+
+  | "leaderboard_entry",
+export interface BaseEventPayload {
+  id: string;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 
 
@@ -237,6 +326,18 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
@@ -263,12 +364,20 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
+<<<<<<< HEAD
 
   score: number,;
   category: string, // e.g., grants, contributions;
   rank?: number,;
   period?: string, // e.g., 2025-Q3;
 
+=======
+<<<<<<< HEAD
+}
+;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
   score: number;
   category: string, // e.g., grants, contributions;
   rank?: number,;
@@ -282,16 +391,32 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 }
 ;
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merged-prs
 
   | LeaderboardEntryPayload;
 export interface SyncEvent {eventId: string;
@@ -311,10 +436,25 @@ export interface SyncEvent {;
   type: SyncEventType,;
   payload: SyncEventPayload,;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 
 }
 export interface MultiverseState {
@@ -325,11 +465,31 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 
   } catch (error) {
@@ -340,11 +500,20 @@ export interface MultiverseState {
 ;
 export interface MultiverseState {;
   config: InstanceConfig,;
+<<<<<<< HEAD
   lastSyncedAt: number,;
   seenEventIds: Record<string true>,;
   latestVersionByEntityId: Record<string number>,;
   proposalMerkleById: Record<string string>;
   events: SyncEvent[];
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/merged-prs
   lastSyncedAt: number;
   seenEventIds: Record<string, true>,;
   latestVersionByEntityId: Record<string, number>,;
@@ -355,6 +524,7 @@ export interface MultiverseState {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 =======
 
@@ -392,3 +562,9 @@ export interface MultiverseState {
   events: SyncEvent[];
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

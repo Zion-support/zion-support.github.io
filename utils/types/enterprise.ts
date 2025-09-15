@@ -1,7 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+
+export interface CompanyUsageLimits {;
+  monthlyJobPosts: number;
+  budgetCapUsd: number;
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+>>>>>>> origin/merged-prs
 export interface CompanyUsageLimits {monthlyJobPosts: number;
   budgetCapUsd: number;
 }
@@ -106,12 +132,20 @@ export interface InvoiceRecord {;
 
 
 =======
+<<<<<<< HEAD
   meta?: Record<string, unknown>;
 }
 
 export interface InvoiceRecord {
   id: string;
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   companyId: string;
   number: string;
   amountUsd: number;
@@ -119,7 +153,23 @@ export interface InvoiceRecord {
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -170,11 +220,50 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 
 =======
 }
+<<<<<<< HEAD
 
 export interface CompanyRecord {
+=======
+export interface CompanyRecord {id: string;
+  name: string;
+  slug: string, // e.g. acme;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: CompanyPlan;
+  members: CompanyMember[];
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+}
+;
+export interface CompanyRecord {;
+>>>>>>> origin/merged-prs
   id: string;
   name: string;
   slug: string; // e.g. acme
@@ -186,6 +275,13 @@ export interface CompanyRecord {
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -202,6 +298,7 @@ export interface CompanyRecord {
 
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -210,5 +307,20 @@ export interface CompanyRecord {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
+=======
 }
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

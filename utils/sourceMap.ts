@@ -1,9 +1,40 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+export function getGitStatus() {
+  return {
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+export function getGitStatus() {
+  return {
+<<<<<<< HEAD
+    connected: false
+    branch: 'main'
+  }
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  return nodes && nodes.map(markExistenceRecursive);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -51,9 +82,40 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export function getSourceMapWithExistence(): SourceNode[] {
+  const nodes = buildZionSourceMap();
+  return nodes.map(markExistenceRecursive);
+}
+export interface DeployTemplateResult {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-prs
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     connected: false,
     branch: 'main';
   };
@@ -262,6 +324,21 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  } else {
+    skippedPaths.push(keepFile);
+  }
+=======
+<<<<<<< HEAD
+  } else {
+    skippedPaths.push(keepFile);
+  }
+=======
+>>>>>>> origin/merged-prs
 
 
   const keepFile = path && path.join(absoluteDir, '.keep');
@@ -280,6 +357,12 @@ export function deployBasicTemplateForPath(
     fs && fs.writeFileSync(readmeFile, readme);
     createdPaths && createdPaths.push(readmeFile);
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   } else {
     skippedPaths && skippedPaths.push(readmeFile);
   }
@@ -292,6 +375,19 @@ export function deployBasicTemplateForPath(
 }
   return { createdPaths, skippedPaths }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 export interface SourcePosition {
   line: number;
@@ -394,6 +490,7 @@ export function ensure_directory (dir_path: string): void {
   return { created_paths, skipped_paths }
 ;
 
+<<<<<<< HEAD
 
 =======
 export interface DeployTemplateResult {
@@ -434,3 +531,20 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
   return { createdPaths, skippedPaths };
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

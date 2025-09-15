@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
+=======
+>>>>>>> origin/merged-prs
 
 export default function Help() {
   return (
@@ -13,6 +16,7 @@ export default function Help() {
   );
 }
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -535,3 +539,5 @@ export default function Help() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

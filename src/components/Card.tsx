@@ -2,6 +2,7 @@ import React from 'react';
 
 interface CardProps {
 
+<<<<<<< HEAD
 
   title: string;
   description: string;
@@ -30,18 +31,39 @@ const Card: React.FC<CardProps> = ({
   
   const classes = `${baseClasses} ${hoverClasses} ${glassClasses} ${className}`;
   
+=======
+  title?: string;
+  description?: string;
+  className?: string;
+  onClick?: () => void;
+}
+
+const Card: React.FC<CardProps> = ({ 
+  children, 
+  title, 
+  description, 
+  className = '', 
+  onClick 
+}) => {
+>>>>>>> origin/merged-prs
   return (
 
 
+<<<<<<< HEAD
     <div className={classes}>
       {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
       {description && <p className="text-gray-300 mb-4">{description}</p>}
 
 
+=======
+>>>>>>> origin/merged-prs
       {children}
 
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Card;
+=======
+>>>>>>> origin/merged-prs

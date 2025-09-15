@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React from 'react';
+
+  Lock,
+  Zap,
+  BarChart3,
+  Users,
+
+>>>>>>> origin/merged-prs
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -65,6 +75,7 @@ export default function Services() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);
 
+<<<<<<< HEAD
   // Enhanced categories with new services
   const categories = [
     { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
@@ -101,6 +112,130 @@ export default function Services() {
     { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' },
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
     { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' }
+=======
+const Services = () => {
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions for your business needs.',
+      icon: Brain,
+      features: [
+        'Machine Learning',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Chatbots',
+        'Automated Decision Making',
+      ],
+      color: 'from-blue-500 to-purple-600',
+      price: 'Starting at $299/month',
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your business from evolving threats.',
+      icon: Shield,
+      features: [
+        'Threat Detection & Response',
+        'Security Audits',
+        'Penetration Testing',
+        'Compliance Management',
+        'Incident Response',
+        'Security Training',
+      ],
+      color: 'from-red-500 to-pink-600',
+      price: 'Starting at $199/month',
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services.',
+      icon: Cloud,
+      features: [
+        'AWS/Azure/GCP Migration',
+        'DevOps Implementation',
+        'Containerization',
+        'Auto-scaling Solutions',
+        'Cloud Security',
+        'Cost Optimization',
+      ],
+      color: 'from-orange-500 to-red-600',
+      price: 'Starting at $399/month',
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT services and infrastructure management.',
+      icon: Settings,
+      features: [
+        'System Administration',
+        'Network Management',
+        'Hardware Support',
+        'Software Installation',
+        'Backup & Recovery',
+        '24/7 Monitoring',
+      ],
+      color: 'from-green-500 to-teal-600',
+      price: 'Starting at $149/month',
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights.',
+      icon: BarChart3,
+      features: [
+        'Data Visualization',
+        'Business Intelligence',
+        'Real-time Analytics',
+        'Custom Dashboards',
+        'Data Warehousing',
+        'Predictive Modeling',
+      ],
+      color: 'from-purple-500 to-indigo-600',
+      price: 'Starting at $249/month',
+    },
+    {
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications.',
+      icon: Smartphone,
+      features: [
+        'iOS Development',
+        'Android Development',
+        'React Native',
+        'Flutter Apps',
+        'App Store Optimization',
+        'Mobile UI/UX Design',
+      ],
+      color: 'from-pink-500 to-rose-500',
+      price: 'Starting at $199/month',
+    },
+    {
+      title: 'Web Development',
+      description: 'Modern, responsive web applications and websites.',
+      icon: Globe,
+      features: [
+        'React/Next.js Development',
+        'Node.js Backend',
+        'Database Design',
+        'API Development',
+        'Performance Optimization',
+        'SEO Implementation',
+      ],
+      color: 'from-cyan-500 to-blue-600',
+      price: 'Starting at $179/month',
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business.',
+      icon: Rocket,
+      features: [
+        'Process Automation',
+        'Workflow Optimization',
+        'Digital Strategy',
+        'Change Management',
+        'Technology Integration',
+        'Staff Training',
+      ],
+      color: 'from-yellow-500 to-orange-600',
+      price: 'Starting at $499/month',
+    },
+>>>>>>> origin/merged-prs
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
@@ -192,6 +327,7 @@ export default function Services() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Revolutionary
@@ -382,6 +518,23 @@ export default function Services() {
                     <p className="text-gray-300 mb-4 line-clamp-3">
                       {service.description}
                     </p>
+=======
+
+              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-lg mb-3">What's Included:</h4>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+>>>>>>> origin/merged-prs
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -412,6 +565,7 @@ export default function Services() {
                       </div>
                     </div>
 
+<<<<<<< HEAD
                     {/* Action Buttons */}
                     <div className="flex space-x-3">
                       <Link
@@ -495,10 +649,43 @@ export default function Services() {
                 </button>
               </div>
             )}
+=======
+        {/* Benefits Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="bg-white rounded-2xl shadow-lg p-12 mb-20"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We're committed to delivering exceptional results and providing the best possible service to our clients.
+            </p>
           </div>
-        </section>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </motion.div>
+            ))}
+>>>>>>> origin/merged-prs
+          </div>
+        </motion.div>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -600,3 +787,31 @@ export default function Services() {
     </>
   );
 }
+=======
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white"
+        >
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Let's discuss your project and create a customized solution that meets your specific needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Contact Us Today
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              View Portfolio
+            </button>
+          </div>
+        </motion.div>
+
+      </div>
+    </div>
+
+  );
+};
+
+>>>>>>> origin/merged-prs

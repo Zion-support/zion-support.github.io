@@ -84,6 +84,24 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        drop_debugger: true
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info'],
         passes: 2
@@ -106,7 +124,19 @@ export default defineConfig({
     host: true
   },
   optimizeDeps: {
+<<<<<<< HEAD
     include: ['react', 'react-dom', 'framer-motion'],
     exclude: ['@vite/client', '@vite/env']
   }
 });
+=======
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+  },
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

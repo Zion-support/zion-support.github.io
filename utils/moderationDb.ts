@@ -1,8 +1,26 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
+<<<<<<< HEAD
+=======
+
+export interface ModerationFlag {
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   id: string;
   contentId: string;
   contentType: string;
@@ -24,10 +42,34 @@ export async function getFlagById (id: string): Promise < ModerationFlag | null>
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
   flag && flag.status = status;
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
@@ -38,6 +80,12 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 
 
@@ -59,8 +107,69 @@ export async function readAllFlags(): Promise<ModerationFlag[]> {;
 export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+<<<<<<< HEAD
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
+=======
+    contentId: data.contentId || "",
+    contentType: data.contentType || "post",
+    reason: data.reason || "",
+    userEmail: data.userEmail || "",
+    status: "pending",
+    createdAt: new Date().toISOString(),
+    ...data,
+  };
+
+  flags.push(flag);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    content_id: data.content_id || '',
+    content_type: data.content_type || 'post',
+    reason: data.reason || '',
+    user_email: data.user_email || '',
+    status: 'pending',
+    created_at: new Date ().toISOString (),
+    ...data;
+  }
+;
+  flags.push (flag);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  return flag;
+}
+
+export async function updateFlagStatus(
+  id: string,
+  status: ModerationFlag["status"],
+  adminNotes?: string,
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  status: ModerationFlag['status'],
+  admin_notes?: string): Promise < FlaggedContent | undefined> {
+  const flag = await getFlagById (id);
+  // Check condition
+if (return undefined) {
+  $2
+}
+=======
+>>>>>>> origin/merged-prs
     reason: data.reason || '',
     userEmail: data.userEmail || '',
     status: 'pending',
@@ -80,6 +189,7 @@ export async function updateFlagStatus(
   const flag = await getFlagById(id);
   if (!flag) return undefined;
 
+<<<<<<< HEAD
 =======
 import fs from 'fs';
 import path from 'path';
@@ -157,16 +267,37 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
   const flag = await getFlagById(id);
   if (!flag) return undefined;
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
 <<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 }
 
 
 =======
+<<<<<<< HEAD
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

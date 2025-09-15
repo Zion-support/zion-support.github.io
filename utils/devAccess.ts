@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -21,19 +26,41 @@ export type DevRole = 'admin' | 'maintainer' | 'contributor';
 export interface DevIdentity {
 
 export interface DevIdentity {;
+<<<<<<< HEAD
+=======
+  isAuthenticated: boolean;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
   isAuthenticated: boolean;
 
   roles: DevRole[];
   user_id?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 
 
+<<<<<<< HEAD
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
     const gitDir = path.join(process.cwd(), '.git');
     if (!fs.existsSync(gitDir)) return { connected: false };
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
     })
@@ -69,6 +96,37 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+<<<<<<< HEAD
+=======
+  if (token && adminToken && token === adminToken) {
+
+=======
+<<<<<<< HEAD
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  if (token && adminToken && token === adminToken) {
+>>>>>>> origin/merged-prs
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
@@ -85,7 +143,14 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export function requireRoles(
   req: ApiRequest,
   res: ApiResponse,
@@ -105,6 +170,7 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
 
 
 }
@@ -134,17 +200,39 @@ export function requireRoles(
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
+=======
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 import type { NextApiRequest, NextApiResponse } from "next";
 
+<<<<<<< HEAD
 export type DevRole = "admin" | "maintainer" | "contributor";
 
 export interface DevIdentity {
   isAuthenticated: boolean;
   roles: DevRole[];
   userId?: string;
+=======
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+// Development access utilities
+export interface DevAccessConfig {
+  enabled: boolean;
+  allowedIps: string[];
+  allowedUsers: string[];
+  requireAuth: boolean;
+  maxRequestsPerMinute: number;
+>>>>>>> origin/merged-prs
 }
 
 export function getGitStatus(): { connected: boolean; branch?: string } {
@@ -187,4 +275,20 @@ export function requireRoles(
   }
   return identity;
 }
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

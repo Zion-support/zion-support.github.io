@@ -1,10 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merged-prs
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
       img && img.loading = 'lazy';
     }
+<<<<<<< HEAD
     if (!img.decoding) {
       img.decoding = 'async'
+=======
+    if (!img && img.decoding) {
+      img && img.decoding = 'async';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     }
 
 
@@ -24,6 +37,7 @@ export const preloadCriticalResources = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
+<<<<<<< HEAD
 
 // Performance optimization utilities;
 export const optimize_images = () =>: any {
@@ -103,3 +117,9 @@ export const optimizeBundleSize = () => {
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

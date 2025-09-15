@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 
 
@@ -45,8 +50,17 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
 }
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 import i18n from './i18n',
 export type TranslationMap = Record < string string | undefined>,
@@ -91,6 +105,22 @@ export function getSelectedLanguage (): string {
 ;
 export function getSelectedLanguage(): string {;
   return i18n.resolvedLanguage || i18n.language || 'en';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-prs
 
 
 
@@ -100,6 +130,7 @@ export function getSelectedLanguage(): string {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -130,3 +161,9 @@ export function getSelectedLanguage(): string {
   return i18n.resolvedLanguage || i18n.language || 'en';
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

@@ -50,14 +50,35 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
+<<<<<<< HEAD
   getArticleById: (id: string) => null;
 };
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+}
+}
+=======
+<<<<<<< HEAD
+}
+}
+}
+=======
+  getArticleById: (id: string) => null;
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
 
 }
+<<<<<<< HEAD
 
 =======
 export type HelpArticle = {
@@ -117,3 +138,14 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
   return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) };
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

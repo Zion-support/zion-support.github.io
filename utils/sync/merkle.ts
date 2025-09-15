@@ -8,9 +8,24 @@ export function sha256Hex(input: string): string {
 import crypto from "crypto";
 import { ProposalVoteEntry } from "./types";
 
+<<<<<<< HEAD
 export function sha256Hex(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex");
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+// Merkle tree utilities;
+export const merkle = {
+  // Add merkle tree functionality here;
+  create_tree: (leaves: string[]) => null,
+  get_proof: (tree: any, leaf: string) => [],
+  verify_proof: (proof: any[], leaf: string, root: string) => false;
+>>>>>>> origin/merged-prs
 }
 
 export function leafHashForVote(vote: ProposalVoteEntry): string {

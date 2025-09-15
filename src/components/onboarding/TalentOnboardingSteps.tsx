@@ -15,20 +15,38 @@ export function TalentOnboardingSteps() {
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
+<<<<<<< HEAD
       action: "Update",
     },
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
+<<<<<<< HEAD
       action: "Add Skills",
     },
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
       action: "Set",
     },
     {
@@ -39,6 +57,20 @@ export function TalentOnboardingSteps() {
       action: "View Matches",
     },
   ];
+<<<<<<< HEAD
   
   return <OnboardingTracker steps={steps} />;
 }
+=======
+=======
+
+      action: "Set",
+    },
+    {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+
+>>>>>>> origin/merged-prs

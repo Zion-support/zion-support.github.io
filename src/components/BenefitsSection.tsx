@@ -51,6 +51,7 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
+<<<<<<< HEAD
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
@@ -62,3 +63,6 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     </section>
   );
 }
+=======
+
+>>>>>>> origin/merged-prs

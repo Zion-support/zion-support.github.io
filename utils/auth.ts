@@ -1,7 +1,90 @@
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+
+
+// Authentication utilities
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export interface User {
+  id: string;
+  email: string;
+  role: "admin" | "user" | "guest";
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  role: string;
+  isAdmin: boolean;
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export interface User {;
+  id: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+}
+
+  try {;
+    const user = parseUserFromRequest(req);
+
+
+    ensureAdmin(user);
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -29,6 +112,7 @@ if ( {) {
     throw error;
   }
 }
+<<<<<<< HEAD
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
 
   try {
@@ -38,6 +122,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/merged-prs
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
@@ -79,12 +169,68 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
     ensureAdmin(user);
 
 
+<<<<<<< HEAD
+=======
+export interface User {;
+  id: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return { id: "guest", email: "guest@example.com", role: "guest" };
+  }
+
+  // Simple mock for admin users
+  if (authHeader.includes("admin")) {
+    return { id: "admin-1", email: "admin@zion.os", role: "admin" };
+  }
+}
+
+export function ensureAdmin(user: User): void {
+  if (user.role !== "admin") {
+    const error = new Error("Forbidden");
+    (error as any).statusCode = 403;
+    throw error;
+  }
+}
+
+export async function ensureAdminFromApi(
+  req: NextApiRequest,
+): Promise<{ allowed: boolean }> {
+  try {
+    const user = parseUserFromRequest (req);
+    ensure_admin (user);
+}
+    ensureAdmin(user);
+
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 
 // Additional auth utilities for login;
 
@@ -92,6 +238,13 @@ export interface DemoUser {
 
 // Additional auth utilities for login
 export interface DemoUser {;
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   id: string;
   name: string;
   role: 'admin' | 'user' | 'guest';
@@ -162,6 +315,25 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
 
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -209,6 +381,14 @@ if (return null) {
   } catch {
     return null;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 }
 
 
@@ -220,12 +400,41 @@ if (return null) {
 }
 
 =======
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 
 export function getRequestUserEmail(req: NextApiRequest): string | null {
   const emailHeader = req.headers['x-user-email'];
   if (Array.isArray(emailHeader)) return emailHeader[0] || null;
   return (emailHeader as string) || null;
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+export function isAuthenticated(session: AuthSession | null): boolean {
+    if (!session) return false;
+
+  }
+
+  }
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export function hasRole(session: AuthSession | null, role: string): boolean {
+    if (!session || !isAuthenticated(session)) return false;
+
+
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 
 export function isAdminEmail(email: string | null | undefined): boolean {
@@ -233,4 +442,18 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
   return admins.includes(email.toLowerCase());
 }
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

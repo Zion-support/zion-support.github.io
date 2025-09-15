@@ -1,9 +1,46 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface DeployConfig {
+  instanceName: string;
+  governanceMode: string;
+  tokenActivation: boolean;
+  modules: {
+    token: boolean;
+    [key: string]: boolean;
+  };
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+function toSlug(name: string): string {;
+  return name;
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+function toSlug(name: string): string {;
+  return name;
+>>>>>>> origin/merged-prs
 
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 function toSlug(name: string): string {return name;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
@@ -16,11 +53,27 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 <<<<<<< HEAD
 function toSlug(name: string): string {;
   return name;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
+<<<<<<< HEAD
 
 }
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
@@ -43,6 +96,16 @@ function toSlug(name: string): string {
     .replace(/(^-|-$)+/g, "")
     .slice(0, 64);
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
@@ -272,6 +335,15 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 
 import fs from './fs';,
 import path from './path';,
@@ -600,6 +672,150 @@ if ( {) {
     summary;
     version}
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+      changelogPath,;
+      `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
+    ),;
+    assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+;
+  // Schedule launch stream (/summit);
+  ensureDir(eventsDir),;
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function ensureDir(dirPath: string) {;
+  if (!fs.existsSync(dirPath)) {;
+    fs.mkdirSync(dirPath, { recursive: true });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function writeTextFile(filePath: string, content: string) {;
+  ensureDir(path.dirname(filePath)),;
+  fs.writeFileSync(filePath, content, "utf8");
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+;
+function nowIso(): string {;
+  return new Date().toISOString();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export async function performDeploy(input: DeployInput): Promise<DeployResult> {;
+  const version = "Zion OS v1.0";
+  const logs: DeployLogEntry[] = [];
+  const assets: GeneratedAsset[] = [];
+  const instanceSlug = toSlug(input.instanceName);
+  const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug),;
+  const docsDir = path.join(process.cwd(), "docs"),;
+  const eventsDir = path.join(process.cwd(), "data", "events"),;
+  const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
+  const daoDir = path.join(process.cwd(), "data", "dao"),;
+  const tokenDir = path.join(process.cwd(), "data", "token"),;
+  ensureDir(baseDir);
+  const configPath = path.join(baseDir, "config.json");
+  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;
+  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } }),;
+  assets.push({ kind: "config", path: configPath, description: "Deployment config" });
+  // 1. Initialize ZionGPT;
+  if (input.modules.gpt) {;
+    ensureDir(gptDir);
+    const promptBasePath = path.join(gptDir, `${instanceSlug}-prompt-base.md`);
+    const promptBase = `# ZionGPT Prompt Base\n\nInstance: ${input.instanceName}\nLanguage: ${input.defaultLanguage}\nGovernance: ${input.governanceMode}\n\nBehaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,;
+    writeTextFile(promptBasePath, promptBase);
+    assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });
+    logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 2. Deploy DAO + Token Logic;
+  if (input.modules.dao) {;
+    ensureDir(daoDir);
+    const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`);
+    writeTextFile(;
+      daoConfigPath,;
+      JSON.stringify(;
+        {;
+          treasury: `${instanceSlug}-treasury`,;
+          governanceMode: input.governanceMode,;
+          quorum: 0.6,;
+          votingPeriodDays: 7,;
+          constitutionDoc: `/constitution`,;
+          createdAt: nowIso()},;
+        null,;
+        2;
+      );
+    ),;
+    assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
+    logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (input.modules.token || input.tokenActivation) {;
+    ensureDir(tokenDir);
+    const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`);
+    writeTextFile(;
+      tokenConfigPath,;
+      JSON.stringify(;
+        {;
+          symbol: "ZION$",;
+          decimals: 18,;
+          enabled: input.tokenActivation,;
+          stakingEnabled: input.modules.token,;
+          escrowEnabled: true,;
+          createdAt: nowIso()},;
+        null,;
+        2;
+      );
+    ),;
+    assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
+    logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> origin/merged-prs
 
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
@@ -784,8 +1000,14 @@ if ( {) {
 
 
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 =======
           defaultNationRoute,
         ],
@@ -824,4 +1046,16 @@ if ( {) {
     version,
   };
 }
+<<<<<<< HEAD
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

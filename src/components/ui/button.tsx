@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export function Button({ 
@@ -17,6 +18,96 @@ export function Button({
     outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
     ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
     link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  children,
+  href,
+  onClick,
+  type = "button",
+  variant = "primary",
+  size = "md",
+  className = "",
+  disabled = false,
+  style,
+}) => {
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+
+interface ButtonProps {
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  disabled?: boolean;
+  style?: React && React.CSSProperties;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  children,
+  href,
+  onClick,
+  type = "button",
+  variant = "primary",
+  size = "md",
+  className = "",
+  disabled = false,
+  style,
+}) => {
+  const baseClasses =
+    "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+<<<<<<< HEAD
+  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+  const sizeClasses = {
+    sm: "px-3 py-1.5 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg",
+  };
+
+  const variantClasses = {
+    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
+    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   };
   
   const sizeClasses = {
@@ -38,9 +129,20 @@ export function Button({
       className={classes} 
       onClick={onClick} 
       disabled={disabled}
+<<<<<<< HEAD
+=======
+
+    </button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+      style={style}
+>>>>>>> origin/merged-prs
     >
       {children}
     </button>
+<<<<<<< HEAD
   );
 }
 
@@ -51,3 +153,17 @@ export const buttonVariants = {
   ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
 };
+=======
+<<<<<<< HEAD
+  );
+};
+
+export { Button };
+export default Button;
+=======
+
+  );
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

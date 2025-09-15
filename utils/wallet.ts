@@ -7,6 +7,28 @@ export async function connectMetaMask(): Promise<string[]> {
     throw new Error('MetaMask is not installed');
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      method: 'eth_requestAccounts',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export async function connectMetaMask(): Promise<string[]> {
+  if (typeof window === "undefined" || !window.ethereum) {
+    throw new Error("MetaMask is not installed");
+  }
+  try {
+    const accounts = await window.ethereum.request({
+>>>>>>> origin/merged-prs
 
     const accounts = await window && window.ethereum.request({
 
@@ -21,7 +43,18 @@ if ( {) {
     const accounts = await window.ethereum.request ({
 
       method: 'eth_requestAccounts',
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     });
     return accounts;
   } catch (error) {
@@ -50,7 +83,45 @@ if ( {) {
     const accounts = await window.ethereum.request ({
 
       method: 'eth_accounts',
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
+    return [];
+  }
+  try {
+    const accounts = await window.ethereum.request({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      method: "eth_accounts",
+=======
+<<<<<<< HEAD
+      method: "eth_accounts",
+=======
+      method: 'eth_accounts'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     });
     return accounts;
   } catch (error) {
@@ -59,6 +130,38 @@ if ( {) {
 }
 
 export async function getBalance(address: string): Promise<string> {
+<<<<<<< HEAD
+=======
+  if (typeof window === "undefined" || !window.ethereum) {
+    throw new Error("MetaMask is not installed");
+  }
+  try {
+    const balance = await window.ethereum.request({
+      method: "eth_getBalance",
+      params: [address, "latest"],
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
+    throw new Error('MetaMask is not installed');
+  }
+  try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      method: 'eth_getBalance',
+      params: [address, 'latest'],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export async function getBalance(address: string): Promise<string> {
+>>>>>>> origin/merged-prs
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
 
@@ -80,7 +183,18 @@ if ( {) {
 
       method: 'eth_getBalance',
       params: [address, 'latest'],
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     });
     return balance;
   } catch (error) {
@@ -110,25 +224,87 @@ if ( {) {
 
       method: 'personal_sign',
       params: [message, address],
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     });
     return signature;
   } catch (error) {
     throw new Error ('Failed to sign message');
   }
 }
+<<<<<<< HEAD
 
 // Extend Window interface for TypeScript;
 
+=======
+<<<<<<< HEAD
+
+// Extend Window interface for TypeScript;
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+// Extend Window interface for TypeScript;
+
+=======
+// Extend Window interface for TypeScript
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+// Extend Window interface for TypeScript;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 declare global {
   interface Window {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+      removeListener: (
+        event: string,
+        callback: (accounts: string[]) => void,
+      ) => void;
+
+      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
+
+    }
+      removeListener: (event: string, callback: (accounts: string[]) => void) => void;
+>>>>>>> origin/merged-prs
 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -143,6 +319,16 @@ declare global {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+=======
+    }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   }
 }
 =======

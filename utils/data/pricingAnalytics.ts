@@ -1,5 +1,16 @@
 <<<<<<< HEAD
 // Stub pricing analytics utility - placeholder for missing functionality;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 export const trackPricingRequest = async (data: any) => {
   // Placeholder implementation;
@@ -39,6 +50,7 @@ export const getPricingMetrics = async () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
@@ -65,3 +77,33 @@ export const getPricingMetrics = async () => {
   return { metrics: {}, success: true };
 };
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const trackPricingRequest = async (data: any) => {;
+  // Placeholder implementation;
+};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+};
+};
+export const trackPricingRequest = async (data: any) => {;
+  // Placeholder implementation;
+};
+
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

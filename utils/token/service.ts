@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 export function getConfig() {
   return {
@@ -9,6 +14,12 @@ export function getConfig() {
   };
 export interface TokenTransaction {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   id: string;
   userId: string;
 
@@ -39,9 +50,31 @@ export interface TokenTransaction {;
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/merged-prs
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -50,6 +83,15 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     timestamp: Date.now()
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -57,9 +99,21 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason,
     timestamp: Date.now();
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/merged-prs
   
 
 
+<<<<<<< HEAD
 
 
 
@@ -67,6 +121,13 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   transactions.push(transaction);
   return transaction;
 }
@@ -75,6 +136,22 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    type: 'redeem',
+    reason,
+    timestamp: Date.now(),
+  };
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    type: "redeem",
+    reason,
+    timestamp: Date.now(),
+  };
+>>>>>>> origin/merged-prs
 
 
 
@@ -106,12 +183,32 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   transactions.push (transaction);
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    type: 'redeem',
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+    reason,
+    timestamp: Date.now(),
+  };
+<<<<<<< HEAD
+
+=======
+  
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  transactions.push(transaction);
+>>>>>>> origin/merged-prs
   return transaction;
 
 
 
   transactions.push(transaction);
   return transaction;
+<<<<<<< HEAD
 }
 
 
@@ -122,27 +219,180 @@ export function getConfig() {
     maxPerDay: 1000
   };
 }
+=======
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    reason,
+    timestamp: Date && Date.now()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    timestamp: Date.now();
+  };
+// Token service utilities
+export interface TokenConfig {
+  id: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  totalSupply: string;
+  contractAddress?: string;
+  network: string;
+  isActive: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+export interface TokenBalance {
+  address: string;
+  balance: string;
+  tokenId: string;
+  lastUpdated: Date;
+}
+
+// Mock database - in production, this would connect to a real database
+const tokenConfigs: TokenConfig[] = [];
+const tokenBalances: TokenBalance[] = [];
+
+export async function createTokenConfig(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
+  const newConfig: TokenConfig = {
+    ...config,
+    id: `token_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+  tokenConfigs.push(newConfig);
+  return newConfig;
+}
+
+export async function getTokenConfig(id: string): Promise<TokenConfig | null> {
+  return tokenConfigs.find(config => config.id === id) || null;
+}
+
+export async function getAllTokenConfigs(): Promise<TokenConfig[]> {
+  return [...tokenConfigs];
+}
+
+export async function updateTokenConfig(id: string, updates: Partial<TokenConfig>): Promise<TokenConfig | null> {
+  const configIndex = tokenConfigs.findIndex(config => config.id === id);
+  if (configIndex === -1) return null;
+  
+  tokenConfigs[configIndex] = {
+    ...tokenConfigs[configIndex],
+    ...updates,
+    updatedAt: new Date(),
+  };
+  return tokenConfigs[configIndex];
+}
+
+export async function deleteTokenConfig(id: string): Promise<boolean> {
+  const configIndex = tokenConfigs.findIndex(config => config.id === id);
+  if (configIndex === -1) return false;
+  
+  tokenConfigs.splice(configIndex, 1);
+  return true;
+}
+
+export async function getTokenBalance(address: string, tokenId: string): Promise<TokenBalance | null> {
+  return tokenBalances.find(balance => 
+    balance.address === address && balance.tokenId === tokenId
+  ) || null;
+}
+
+export async function updateTokenBalance(address: string, tokenId: string, balance: string): Promise<TokenBalance> {
+  const existingIndex = tokenBalances.findIndex(b => 
+    b.address === address && b.tokenId === tokenId
+  );
+  
+  const balanceData: TokenBalance = {
+    address,
+    balance,
+    tokenId,
+    lastUpdated: new Date(),
+  };
+  
+  if (existingIndex >= 0) {
+    tokenBalances[existingIndex] = balanceData;
+  } else {
+    tokenBalances.push(balanceData);
+  }
+  
+  return balanceData;
+}
+
+export async function getAllTokenBalances(address?: string): Promise<TokenBalance[]> {
+  if (address) {
+    return tokenBalances.filter(balance => balance.address === address);
+  }
+  return [...tokenBalances];
+}
+<<<<<<< HEAD
+=======
+=======
+  };
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  transactions.push(transaction);
+  return transaction;
+}
+
+  const current = tokenStore && tokenStore.getConfig();
+  tokenStore && tokenStore.setConfig({ ...current, ...partial });
+
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 
 =======
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
 
+<<<<<<< HEAD
 export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId);
   const transactions = tokenStore.getTransactions(userId);
@@ -252,3 +502,11 @@ export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void 
   tokenStore.setConfig({ ...current, ...partial });
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 
 
@@ -57,17 +62,64 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 
 
   } catch (error) {
+<<<<<<< HEAD
 
 
   } catch (error) {
+=======
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  try {
+    const fs = require("fs");
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf8");
+      return JSON.parse(content);
+    }
+  } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
 
     const dir = path && path.dirname(filePath),
     if (!fs && fs.existsSync(dir)) {
       fs && fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    console.error("Error reading file:", error);
+  }
+  return defaultValue;
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/merged-prs
 
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
 
+<<<<<<< HEAD
+=======
+  await writeAllDisputes(all);
+  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -91,6 +143,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
+<<<<<<< HEAD
 
 
 
@@ -98,6 +151,42 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+  try {
+    const fs = require ('fs'),
+    if () {) {
+  $2
+}
+      const content = fs.readFileSync (file_path, 'utf8');
+      return JSON.parse (content);
+    }
+  } catch (error) {
+    console.error ('Error reading file:', error);
+  }
+  return default_value;
+}
+    }
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+  } catch (error) {
+    console && console.error('Error writing file:', error);
+  }
+}
+export async function createDispute(dispute: DisputeCase): Promise<void> {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   const all = await readAllDisputes();
   all && all.push(dispute);
 =======
@@ -166,6 +255,7 @@ export async function upsertDispute(updated: DisputeCase): Promise<void> {
   }
   await writeAllDisputes(all);
 }
+<<<<<<< HEAD
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
@@ -177,6 +267,12 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId);
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
 <<<<<<< HEAD
 =======
 
@@ -190,6 +286,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
 
 
 
+<<<<<<< HEAD
 }
 
 
@@ -201,12 +298,61 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+
+<<<<<<< HEAD
+
+
+}
+=======
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+// File system database utilities
+import * as fs from 'fs';
+import * as path from 'path';
+
+export interface FSDocument {
+  id: string;
+  data: any;
+  createdAt: Date;
+  updatedAt: Date;
+  version: number;
+}
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+export interface FSCollection {
+  name: string;
+  path: string;
+  documents: Map<string, FSDocument>;
+>>>>>>> origin/merged-prs
 }
 
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -221,3 +367,36 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 =======
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+export function generateId(): string {
+  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+export function write_json < T>(file_path: string, data: T): void {
+  try {
+    const fs = require ('fs');
+    const path = require ('path');
+    const dir = path.dirname (file_path),
+    if () {) {
+  $2
+}
+}
+export function getDisputeUploadDir (case_id: string): string {
+  return path.join (UPLOADS_ROOT, case_id);
+}
+export async function ensureDisputeUploadDir (case_id: string): Promise < string> {
+  const dir = getDisputeUploadDir (case_id);
+  await mkdir (dir, { recursive: true });
+  return dir;
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

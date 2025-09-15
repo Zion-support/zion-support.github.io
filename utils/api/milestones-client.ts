@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 
 
@@ -12,6 +17,11 @@ function fetch_milestones() {
     credentials: 'include'}),
   if (throw new Error ('Failed to load milestones'), ) {
   $2
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 
 
@@ -128,6 +138,14 @@ export async function createMilestone(projectId: string, payload: any) {;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -139,6 +157,7 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 
+<<<<<<< HEAD
 
 
 
@@ -146,6 +165,18 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/merged-prs
 }
 
 
@@ -174,6 +205,7 @@ export async function createMilestone(projectId: string, payload: any) {
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 }
+<<<<<<< HEAD
 
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
@@ -186,3 +218,10 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   return res.json();
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

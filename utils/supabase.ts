@@ -2,7 +2,23 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
@@ -13,6 +29,57 @@ export const supabase = {
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
     from: (table: string) => ({
+<<<<<<< HEAD
+=======
+      select: (columns: string = "*") => ({
+        eq: (column: string, value: any) => ({
+          single: () => Promise.resolve({ data: null, error: null }),
+          then: (callback: (result: any) => any) =>
+            callback({ data: [], error: null }),
+        }),
+        insert: (data: any) => ({
+          select: (columns: string = "*") => ({
+            single: () => Promise.resolve({ data: data, error: null }),
+          }),
+        }),
+        update: (data: any) => ({
+          eq: (column: string, value: any) => ({
+            select: (columns: string = "*") => ({
+              single: () => Promise.resolve({ data: data, error: null }),
+            }),
+          }),
+        }),
+        delete: () => ({
+          eq: (column: string, value: any) => ({
+            then: (callback: (result: any) => any) =>
+              callback({ data: null, error: null }),
+          }),
+        }),
+      }),
+    }),
+    auth: {
+      getUser: () => Promise.resolve({ data: { user: null }, error: null }),
+      signIn: (credentials: any) =>
+        Promise.resolve({ data: { user: null }, error: null }),
+      signOut: () => Promise.resolve({ error: null }),
+    },
+  };
+}
+
+// Default configuration
+const supabaseConfig: SupabaseConfig = {
+  url:
+    process.env.NEXT_PUBLIC_SUPABASE_URL || "https://your-project.supabase.co",
+  anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key",
+};
+
+export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-prs
       select: (columns: string = '*') => ({
         eq: (column: string, value: any) => ({
           single: () => Promise && Promise.resolve({ data: null, error: null }),
@@ -51,7 +118,14 @@ const supabaseConfig: SupabaseConfig = {
 };
 export const supabase = createSupabaseClient(supabaseConfig);
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -64,7 +138,43 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
+<<<<<<< HEAD
         single: () => null
       })
     })
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        single: () => null;
+      });
+    });
+  });
+}
+<<<<<<< HEAD
+  });
+};
+}
+=======
+<<<<<<< HEAD
+  });
+};
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+  });
+};
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

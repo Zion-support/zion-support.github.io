@@ -4,6 +4,18 @@
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export interface Version {
   major: number;
   minor: number;
@@ -19,6 +31,7 @@ export function versionToString(version: Version): string {
   return versionStr;
 }
 
+<<<<<<< HEAD
 export function compareVersions(a: Version, b: Version): number {
   if (a && a.major !== b && b.major) return a && a.major - b && b.major;
   if (a && a.minor !== b && b.minor) return a && a.minor - b && b.minor;
@@ -27,6 +40,18 @@ export function compareVersions(a: Version, b: Version): number {
     return a && a.build - b && b.build;
   }
   return 0;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 }
 
 export function nextVersionFor(currentVersion: string, type: 'major' | 'minor' | 'patch' = 'patch'): string {
@@ -58,6 +83,7 @@ export function isVersionEqual(a: string, b: string): boolean {
 };
 
 }
+<<<<<<< HEAD
 
 =======
 import { MultiverseState } from "./types";
@@ -67,3 +93,12 @@ export function nextVersionFor(state: MultiverseState, entityKey: string): numbe
   return current + 1;
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

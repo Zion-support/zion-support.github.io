@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -15,6 +16,8 @@ import {
   Lock,
   BarChart3
 } from 'lucide-react';
+=======
+>>>>>>> origin/merged-prs
 
 export default function Solutions() {
   const solutions = [
@@ -62,6 +65,7 @@ export default function Solutions() {
     }
   ];
 
+<<<<<<< HEAD
   const industrySolutions = [
     {
       icon: Building2,
@@ -275,3 +279,5 @@ export default function Solutions() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

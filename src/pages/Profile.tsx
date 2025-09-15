@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { User, 
@@ -794,6 +795,9 @@ const Profile: React.FC = (): JSX.Element => {
       </div>
     </motion.div>
   );
+=======
+import React from 'react';
+>>>>>>> origin/merged-prs
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

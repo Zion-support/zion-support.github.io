@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -38,6 +39,8 @@ import {
   Truck,
   Headphones
 } from 'lucide-react';
+=======
+>>>>>>> origin/merged-prs
 
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
@@ -56,6 +59,7 @@ export default function RequestQuote() {
     preferredContact: 'email'
   });
 
+<<<<<<< HEAD
   const [formStep, setFormStep] = useState(1);
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [isSubmitting, setSubmitting] = useState(false);
@@ -968,3 +972,5 @@ export default function RequestQuote() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

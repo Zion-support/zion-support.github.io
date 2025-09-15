@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { HeroSection } from "@/components/HeroSection";
 import { SEO } from "@/components/SEO";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
@@ -32,6 +33,9 @@ import type { ComponentType, SyntheticEvent } from 'react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NewContentPromoBanner } from "@/components/NewContentPromoBanner";
+=======
+import React from 'react';
+>>>>>>> origin/merged-prs
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -57,6 +61,7 @@ const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowc
 const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
 const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
 
+<<<<<<< HEAD
 interface StatItem {
   value: string;
   label: string;
@@ -135,6 +140,14 @@ export default function Home() {
       description: "Round-the-clock technical assistance",
       icon: Clock,
       color: "from-blue-400 to-indigo-500"
+=======
+const Home: React.FC = () => {
+  const features = [
+    {
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Optimized performance with cutting-edge technology'
+>>>>>>> origin/merged-prs
     },
     {
       value: "99.9%",
@@ -374,6 +387,7 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
 
+<<<<<<< HEAD
         {/* Promo: Policy-as-Code in Production */}
         <motion.section 
           className="py-6 px-4 sm:px-6 lg:px-8"
@@ -1054,5 +1068,8 @@ export default function Home() {
         </React.Suspense>
       </div>
     </>
+=======
+    </div>
+>>>>>>> origin/merged-prs
   );
 }

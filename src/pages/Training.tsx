@@ -32,6 +32,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function Training() {
   const trainingPrograms = [
     {
@@ -453,3 +454,5 @@ export default function Training() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

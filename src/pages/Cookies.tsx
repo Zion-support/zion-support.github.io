@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -13,6 +14,8 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+=======
+>>>>>>> origin/merged-prs
 
 interface CookieType {
   id: string;
@@ -24,6 +27,7 @@ interface CookieType {
   alwaysActive: boolean;
 }
 
+<<<<<<< HEAD
 interface CookieDetail {
   name: string;
   purpose: string;
@@ -438,3 +442,5 @@ const Cookies: React.FC = () => {
 };
 
 export default Cookies;
+=======
+>>>>>>> origin/merged-prs

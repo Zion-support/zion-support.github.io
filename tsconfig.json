@@ -9,8 +9,19 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+<<<<<<< HEAD
     "module": "ESNext",
     "moduleResolution": "bundler",
+=======
+    "noEmit": true,
+    "esModuleInterop": true,
+<<<<<<< HEAD
+    "module": "ESNext",
+=======
+    "module": "esnext",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    "moduleResolution": "node",
+>>>>>>> origin/merged-prs
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -34,9 +45,34 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./*"]
     },
     "types": ["vite/client", "node"]
+=======
+<<<<<<< HEAD
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+=======
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"]
+    }
+>>>>>>> origin/merged-prs
   },
   "include": [
     "**/*",
@@ -56,4 +92,9 @@
   "references": [
     { "path": "./tsconfig.node.json" }
   ]
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+>>>>>>> origin/merged-prs

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,8 @@ import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-ed
 import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+=======
+>>>>>>> origin/merged-prs
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -14,6 +17,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
 const pricingTiers = [
   {
     name: 'Starter',
@@ -395,3 +399,5 @@ export default function ComprehensivePricing() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

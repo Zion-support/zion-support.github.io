@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -20,6 +21,8 @@ import {
   ArrowRight
 } from 'lucide-react';
 import SEO from '@/components/SEO';
+=======
+>>>>>>> origin/merged-prs
 
 export default function NewServicesShowcase2025() {
   const serviceCategories = [
@@ -118,6 +121,7 @@ export default function NewServicesShowcase2025() {
     }
   ];
 
+<<<<<<< HEAD
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
@@ -364,3 +368,5 @@ export default function NewServicesShowcase2025() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

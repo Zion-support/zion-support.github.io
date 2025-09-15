@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -44,6 +45,8 @@ import {
   PieChart,
   LineChart
 } from 'lucide-react';
+=======
+>>>>>>> origin/merged-prs
 
 export default function Helpdesk() {
   const features = [
@@ -85,6 +88,7 @@ export default function Helpdesk() {
     }
   ];
 
+<<<<<<< HEAD
   const capabilities = [
     {
       title: "Multi-Channel Support",
@@ -316,3 +320,5 @@ export default function Helpdesk() {
     </div>
   );
 }
+=======
+>>>>>>> origin/merged-prs

@@ -1,4 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  return (
+    <ThemeProvider attribute="class" default_theme="light">;
+      {children}
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/merged-prs
 
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
@@ -27,6 +49,7 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
+<<<<<<< HEAD
 
     on: jest.fn()
     off: jest.fn()
@@ -39,6 +62,14 @@ export const mockNextRouter = () =>: any ({
   domainLocales: []
   isPreview: false
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    on: jest.fn (),
+    off: jest.fn (),
+    emit: jest.fn ();
+>>>>>>> origin/merged-prs
   },
   isFallback: false,
   isLocale: false,
@@ -80,10 +111,20 @@ export const mockNextRouter = () => ({;
 
 });
 export const createMockProps = (overrides = {}) => ({;
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   ...overrides;
 
 

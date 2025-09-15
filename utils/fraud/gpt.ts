@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  try {
+      return {
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
@@ -62,27 +69,50 @@ if ( {) {
     return {
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+  reasoning: string;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
 
 
 
@@ -93,11 +123,43 @@ if ( {) {
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   label: string;
   confidence: number;
   reasoning: string
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+}
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  label: string;
+  confidence: number;
+  reasoning: string
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
   
   return {
@@ -126,6 +188,7 @@ if ( {) {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   }
 }
+<<<<<<< HEAD
 
 
 
@@ -134,6 +197,12 @@ if ( {) {
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/merged-prs
 
 }
 
@@ -148,6 +217,7 @@ if ( {) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -197,3 +267,8 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
   }
 }
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -142,6 +143,20 @@ const Marketplace = () => (
     </div>
   </div>
 );
+=======
+import ErrorBoundary from './components/ErrorBoundary';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ToastContainer from './components/ToastContainer';
+import { ThemeProvider } from './components/ThemeProvider';
+import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+>>>>>>> origin/merged-prs
 
 function App() {
   return (
@@ -278,6 +293,7 @@ function App() {
                   </div>
                 } />
               </Routes>
+<<<<<<< HEAD
             </Suspense>
           </main>
           <Footer />
@@ -287,6 +303,16 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
+=======
+            </main>
+            <Footer />
+            <ToastContainer />
+            <BackToTop />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </ThemeProvider>
+>>>>>>> origin/merged-prs
   );
 }
 

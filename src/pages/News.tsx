@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -24,6 +25,8 @@ import {
   Database
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+=======
+>>>>>>> origin/merged-prs
 
 interface NewsArticle {
   id: string;
@@ -39,6 +42,7 @@ interface NewsArticle {
   readTime: number;
 }
 
+<<<<<<< HEAD
 const News: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -509,3 +513,5 @@ const News: React.FC = () => {
 };
 
 export default News;
+=======
+>>>>>>> origin/merged-prs

@@ -35,6 +35,7 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     const schema = z.object({
       name: z.string().min(2, "Name is required"),
       email: z.string().email("Enter a valid email"),
@@ -67,6 +68,12 @@ export function ContactSection() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
+=======
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+>>>>>>> origin/merged-prs
       .then(async (res) => {
         setIsSubmitting(false);
         if (!res.ok) {
@@ -159,6 +166,7 @@ export function ContactSection() {
                   <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
                     Subject
                   </label>
+<<<<<<< HEAD
                   <Input
                     id="subject"
                     name="subject"
@@ -194,6 +202,55 @@ export function ContactSection() {
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     disabled={isSubmitting}
                   >
+=======
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your project or how we can help..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              >
+                <Send className="w-5 h-5" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+>>>>>>> origin/merged-prs
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -208,3 +265,8 @@ export function ContactSection() {
     </section>
   );
 }
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> origin/merged-prs

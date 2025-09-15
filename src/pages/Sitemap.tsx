@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Map, ExternalLink } from 'lucide-react';
+=======
+>>>>>>> origin/merged-prs
 
 const Sitemap: React.FC = () => {
   const sitemapData = {
@@ -33,6 +36,7 @@ const Sitemap: React.FC = () => {
     ]
   };
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -109,3 +113,5 @@ const Sitemap: React.FC = () => {
 };
 
 export default Sitemap;
+=======
+>>>>>>> origin/merged-prs

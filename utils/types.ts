@@ -1,6 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merged-prs
+<<<<<<< HEAD
 
 export interface Application {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 export interface Application {;
   id: string;
   name: string;
@@ -11,10 +21,39 @@ export interface Application {;
   createdAt: string;
   updatedAt?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
 
 
 export interface Application {;
 
+<<<<<<< HEAD
+=======
+
+  id: string;
+  jobId: string;
+  talentSlug: string;
+  status: "applied" | "skipped" | "pending";
+  createdAtIso: string;
+}
+export type UserRole = 'admin' | 'user' | 'guest';
+
+
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merged-prs
   id: string;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
@@ -25,11 +64,31 @@ export interface Application {;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+
+
+export interface Application {
+  id: string;
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/merged-prs
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -40,6 +99,7 @@ export type UserRole = 'admin' | 'user' | 'guest';
 
 
 =======
+<<<<<<< HEAD
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 
 export type Job = {
@@ -94,3 +154,14 @@ export type Conversation = {
   messages: Message[];
 };
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

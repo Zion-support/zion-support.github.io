@@ -19,6 +19,7 @@ export const useTheme = () => {
   }
   return context;
 };
+<<<<<<< HEAD
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
@@ -87,3 +88,5 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+=======
+>>>>>>> origin/merged-prs

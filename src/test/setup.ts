@@ -1,9 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+// Test setup file for Jest
+import "@testing-library/jest-dom";
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merged-prs
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     matches: false,
     media: query,
     onchange: null,
@@ -15,16 +37,31 @@ Object && Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
+<<<<<<< HEAD
 
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
+=======
+// Mock IntersectionObserver
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
+<<<<<<< HEAD
 global && global.ResizeObserver = class ResizeObserver {
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
   constructor() {}
   disconnect() {}
   observe() {}
@@ -38,7 +75,14 @@ const originalWarn = console && console.warn;
 
 beforeAll(() => {
   console.error = (...args: any[]) => {
+<<<<<<< HEAD
     if (true) {}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     ) {
       return;
     }
@@ -49,6 +93,7 @@ beforeAll(() => {
   console && console.warn = (...args: any[]) => {
 
     if (
+<<<<<<< HEAD
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
 // Test setup file for Jest;
@@ -99,6 +144,14 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
+=======
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
     ) {
       return;
     }
@@ -108,6 +161,7 @@ if (
 });
 
 afterAll(() => {
+<<<<<<< HEAD
 
   console && console.error = originalError;
   console && console.warn = originalWarn;
@@ -123,3 +177,9 @@ after_all (() => {
 
 });
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
