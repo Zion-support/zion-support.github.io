@@ -1,12 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Layout } from '../components/layout/Layout';
-=======
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
->>>>>>> origin/auto/autonomy-17186719616
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -22,12 +16,6 @@ export default function Innovations2034Page() {
         <title>2034 Cutting-Edge Innovations | Zion Tech Group</title>
         <meta name="description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today." />
         <meta name="keywords" content="2034 innovations, AI consciousness, quantum computing, space mining, metaverse, neural interfaces, fusion energy, nanotechnology, Zion Tech Group" />
-<<<<<<< HEAD
-        <link rel="canonical" href="https://ziontechgroup.com/2034-innovations/" />
-=======
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/2034-innovations" />
->>>>>>> origin/auto/autonomy-17186719616
         
         {/* Open Graph */}
         <meta property="og:title" content="2034 Cutting-Edge Innovations | Zion Tech Group" />
@@ -42,18 +30,6 @@ export default function Innovations2034Page() {
         <meta name="twitter:description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms." />
       </Head>
 
-<<<<<<< HEAD
-      <Layout>
-        <div className="min-h-screen bg-black">
-          {/* Hero Section */}
-          <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-=======
-      <div className="min-h-screen bg-black">
-        <UltraFuturisticNavigation2032 />
-        
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
->>>>>>> origin/auto/autonomy-17186719616
           {/* Animated Background */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse"></div>
@@ -64,12 +40,6 @@ export default function Innovations2034Page() {
             <div className="absolute inset-0">
               {[...Array(15)].map((_, i) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={i}
-                  className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
-=======
-                  key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
->>>>>>> origin/auto/autonomy-17186719616
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -96,12 +66,6 @@ export default function Innovations2034Page() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-<<<<<<< HEAD
-              <motion.h1 
-                className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
-=======
-              <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
->>>>>>> origin/auto/autonomy-17186719616
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, delay: 0.2 }}
@@ -113,12 +77,6 @@ export default function Innovations2034Page() {
                 <span className="text-6xl md:text-8xl">Innovations</span>
               </motion.h1>
               
-<<<<<<< HEAD
-              <motion.p 
-                className="text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
-=======
-              <motion.p className="text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
->>>>>>> origin/auto/autonomy-17186719616
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
@@ -130,33 +88,11 @@ export default function Innovations2034Page() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 1, delay: 0.6 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-6"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg"
-                >
-=======
-                transition={{ duration: 1, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
->>>>>>> origin/auto/autonomy-17186719616
                   Explore Innovations
                 </motion.button>
                 
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg"
-                >
-=======
-                  whileTap={{ scale: 0.95 }} className="border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg">
->>>>>>> origin/auto/autonomy-17186719616
                   Contact Us
                 </motion.button>
               </motion.div>
@@ -167,28 +103,6 @@ export default function Innovations2034Page() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-            transition={{ duration: 1, delay: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center"
-            >
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-=======
-            transition={{ duration: 1, delay: 1 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
->>>>>>> origin/auto/autonomy-17186719616
               />
             </motion.div>
           </motion.div>
@@ -201,13 +115,6 @@ export default function Innovations2034Page() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-=======
-              viewport={{ once: true }} className="text-center mb-16">
->>>>>>> origin/auto/autonomy-17186719616
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation Categories
               </h2>
@@ -281,13 +188,6 @@ export default function Innovations2034Page() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  viewport={{ once: true }}
-                  className="group"
-                >
-=======
-                  viewport={{ once: true }} className="group">
->>>>>>> origin/auto/autonomy-17186719616
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
                     <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {category.icon}
@@ -318,13 +218,6 @@ export default function Innovations2034Page() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-=======
-              viewport={{ once: true }} className="text-center mb-16">
->>>>>>> origin/auto/autonomy-17186719616
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -378,13 +271,6 @@ export default function Innovations2034Page() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  viewport={{ once: true }}
-                  className="group"
-                >
-=======
-                  viewport={{ once: true }} className="group">
->>>>>>> origin/auto/autonomy-17186719616
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">
                     <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       {feature.icon}
@@ -409,13 +295,6 @@ export default function Innovations2034Page() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-=======
-              viewport={{ once: true }} className="max-w-4xl mx-auto">
->>>>>>> origin/auto/autonomy-17186719616
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Build the Future?
               </h2>
@@ -441,26 +320,11 @@ export default function Innovations2034Page() {
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg"
-              >
-=======
-                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
->>>>>>> origin/auto/autonomy-17186719616
                 Start Your Innovation Journey
               </motion.button>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-        </div>
-      </Layout>
-=======
-      </div>
-
-      <UltraFuturisticFooter2034 />
->>>>>>> origin/auto/autonomy-17186719616
     </>
   );
 }

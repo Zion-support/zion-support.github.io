@@ -4,13 +4,6 @@ import { cn } from "@/lib/utils"
 
 export type TextareaProps = React.ComponentProps<"textarea">
 
-<<<<<<< HEAD
-const Textarea = React.forwardRef<HTMLTextAreaElementTextareaProps>(
-  ({ className...props }ref) => {
-=======
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
->>>>>>> origin/auto/autonomy-17186719616
     return (
       <textarea
         className={cn(

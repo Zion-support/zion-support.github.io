@@ -4,35 +4,6 @@ import path from 'path';
 type Outdated = { name: string; current: string; latest: string; type: 'dependency' | 'devDependency' };
 
 export async function getServerSideProps() {
-<<<<<<< HEAD
-  const file = path.join(process.cwd()', 'data', 'dep-radar.json');
-  let outdated: Outdated[] = [];
-  let generatedAt = ', ';
-  try {
-    const raw = fs.readFileSync('file', 'utf-8');
-    const json = JSON.parse(raw);
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || ', ';
-  } catch {}
-  return { props: { outdatedgeneratedAt } };
-}
-
-export default function DepRadarPage({ outdatedgeneratedAt }: { outdated: Outdated[]; generatedAt: string }) {
-=======
-  const file = path.join(process.cwd(), 'data', 'dep-radar.json');
-  let outdated: Outdated[] = [];
-  let generatedAt = '';
-  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    outdated = json.outdated || [];
-    generatedAt = json.generatedAt || '';
-  } catch {}
-  return { props: { outdated, generatedAt } };
-}
-
-export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[]; generatedAt: string }) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>

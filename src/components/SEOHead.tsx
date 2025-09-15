@@ -245,17 +245,19 @@ interface SEOHeadProps {
   title: string;
   description: string;
   keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
+  image?: string;
+  url?: string;
+  type?: string;
   structuredData?: any;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
-  keywords = "AI, Quantum Computing, Neural Interfaces, Technology, Innovation, 2026",
-  canonicalUrl,
-  ogImage = "/api/placeholder/1200/630",
+  keywords = "AI, quantum computing, blockchain, cybersecurity, cloud computing, technology solutions, 2026, innovation",
+  image = "/images/og-image.jpg",
+  url = typeof window !== 'undefined' ? window.location.href : '',
+  type = "website",
   structuredData
 }) => {
   const fullTitle = `${title} | Zion Tech Group`;
@@ -263,37 +265,59 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
+      {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
+      <meta name="title" content={fullTitle} />
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="author" content="Zion Tech Group" />
       
-      {/* Open Graph Tags */}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={fullDescription} />
+      <meta property="twitter:image" content={image} />
+      <meta property="twitter:creator" content="@ziontechgroup" />
+      <meta property="twitter:site" content="@ziontechgroup" />
       
       {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#1a365d" />
+      <link rel="canonical" href={url} />
       
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/images/logo.png",
+          "description": "Leading-edge technology solutions in AI, quantum computing, and cybersecurity",
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service",
+            "email": "contact@ziontechgroup.com"
+          }
+        })}
+      </script>
     </Helmet>
   );
 };

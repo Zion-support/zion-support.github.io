@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 {
   "general": {
     "app_name": "Mercado de IA de Zion",
@@ -22,11 +18,6 @@
     "home": "Inicio",
     "marketplace": "Mercado",
     "categories": "Categorías",
-<<<<<<< HEAD
-    "services": "Servicios",
-    "micro-saas": "Micro SAAS",
-=======
->>>>>>> origin/auto/autonomy-17186719616
     "talent": "Talento",
     "equipment": "Equipamiento",
     "community": "Comunidad",

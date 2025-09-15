@@ -6,11 +6,6 @@ interface ResultsHeaderProps {
   resultCount: number;
 }
 
-<<<<<<< HEAD
-export function ResultsHeader({ isLoadingresultCount }: ResultsHeaderProps) {
-=======
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (

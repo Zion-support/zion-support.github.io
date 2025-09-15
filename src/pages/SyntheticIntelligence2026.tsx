@@ -9,6 +9,7 @@ const SyntheticIntelligence2026: React.FC = () => {
           <p className="text-xl text-gray-600">Coming soon - SyntheticIntelligence2026 content</p>
         </div>
       </div>
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
     </div>
   );
 };
