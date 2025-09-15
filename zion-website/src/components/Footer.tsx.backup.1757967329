@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
@@ -30,6 +37,11 @@ const navigation = {
   ],
 }
 
+<<<<<<< HEAD
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+=======
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
