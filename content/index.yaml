@@ -487,6 +487,38 @@ content_index:
         payback: "< 3 months"
         uptime: "99.9%"
 
+    - id: "ai-2026-zero-trust-agent-architecture"
+      type: "architecture"
+      title: "AI 2026: Zero-Trust Agent Architecture"
+      file_path: "/app/content/ai-2026-zero-trust-agent-architecture/page.tsx"
+      url: "/content/ai-2026-zero-trust-agent-architecture"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Zero-Trust", "Policy-as-Code", "Isolation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_prevention: "99.9%"
+        risk_reduction: "65%"
+        approval_speed: "2x"
+        audit_coverage: "100%"
+
+    - id: "ai-2026-privacy-preserving-agents"
+      type: "blog"
+      title: "AI 2026: Privacy-Preserving Agents"
+      file_path: "/app/blog/ai-2026-privacy-preserving-agents/page.tsx"
+      url: "/blog/ai-2026-privacy-preserving-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Privacy", "Confidential Computing", "Redaction", "Local-First", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        pii_reduction: "80%"
+        on_device_processing: "95%"
+        encrypted_in_transit: "100%"
+        audit_coverage: "99.9%"
+
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
