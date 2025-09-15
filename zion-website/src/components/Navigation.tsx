@@ -8,6 +8,7 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { name: 'Solutions', href: '/solutions' },
   { name: 'Research', href: '/research', tag: 'New' },
   { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
@@ -16,6 +17,12 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
 >>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'Contact', href: '/contact' },
+>>>>>>> cursor/create-and-deploy-new-content-3afb
 ]
 
 export default function Navigation() {

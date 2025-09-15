@@ -34,8 +34,11 @@
     "types": ["vite/client", "node"]
   },
   "include": [
+<<<<<<< HEAD
     "src/**/*",
     "src/types/offline-shims.d.ts",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
@@ -45,10 +48,14 @@
     "node_modules",
     "dist",
     "build",
+<<<<<<< HEAD
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+=======
+    "coverage"
+>>>>>>> cursor/create-and-deploy-new-content-3afb
   ]
 }

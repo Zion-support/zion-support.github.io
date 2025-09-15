@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
@@ -36,12 +39,15 @@ const navigation = {
     },
   ],
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">

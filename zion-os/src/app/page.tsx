@@ -117,6 +117,28 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+      {/* Promo Banner - New Articles */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
+          <a
+            href="/blog/agent-safety-red-teaming-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
+          >
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+>>>>>>> cursor/create-and-deploy-new-content-3afb
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -319,7 +341,11 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+=======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -443,14 +469,22 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
               </a>
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
+<<<<<<< HEAD
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+=======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             </div>
           </div>
         </div>
