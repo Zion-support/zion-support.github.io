@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Content Hub | Zion Tech Group',
@@ -14,6 +13,18 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Operations</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations" className="hover:underline">
+              AI 2026: Evidence-Driven AI Operations
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation-first operating model with policy gates, observability, and SLOs for safe scale.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations" className="text-indigo-700 font-semibold">Read Guide →</Link>
+        </article>
         <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-red-700 mb-2">Security</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -217,6 +228,19 @@ export default function ContentIndexPage() {
             Build an end-to-end observability stack for AI agents with metrics, tracing, and evals.
           </p>
           <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/enterprise-ai-governance-2026" className="hover:underline">
+              Enterprise AI Governance Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical governance: policy-as-code, evals, monitoring, and risk workflows for trustworthy AI.
+          </p>
+          <Link href="/content/enterprise-ai-governance-2026" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
         </article>
       </div>
     </main>

@@ -17,8 +17,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@headlessui/react": "^2.2.8",
     "@heroicons/react": "^2.2.0",

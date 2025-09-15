@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import { siteUpdates } from '../../data/updates'
 
 export default function UpdatesPage() {
@@ -19,10 +18,10 @@ export default function UpdatesPage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {siteUpdates
               .slice()
-              .sort((a, b) => ((a.date ?? '') < (b.date ?? '') ? 1 : -1))
+              .sort((a, b) => (a.date && b.date ? (a.date < b.date ? 1 : -1) : 0))
               .map((item) => (
               <article
-                key={item.title}
+                key={item.href}
                 className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 text-xs text-gray-400">

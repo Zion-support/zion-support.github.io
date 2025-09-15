@@ -52,45 +52,35 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     log_conflict "Resolving conflicts in $file for branch $branch"
     
-    # Check if file has merge conflicts
-<<<<<<< HEAD
-    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-            log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/        elif [[ "$file" == "README.md" || "$file" == "*.md" ]]; then
-            log_message "📝 Markdown file detected, merging both versions..."
-            # For markdown, try to keep both versions where possible
-            sed -i '/        else
-            log_message "📝 Regular file, attempting to merge both versions..."
-            sed -i '/        fi
-=======
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
+    if grep -q "^<<<<<<< " "$file"; then
         cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Intelligent conflict resolution based on file type
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            log_message "📦 Package file detected, keeping main version and merging dependencies..."
-            # Keep main version but add any new dependencies
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-            log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "README.md" || "$file" == "*.md" ]]; then
-            log_message "📝 Markdown file detected, merging both versions..."
-            # For markdown, try to keep both versions where possible
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
-            log_message "📝 Regular file, attempting to merge both versions..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
->>>>>>> origin/auto/autonomy-17186719616
-        
+
+        case "$file" in
+            package.json|package-lock.json)
+                log_message "📦 Package file: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            next.config.js|tsconfig.json|tailwind.config.js)
+                log_message "⚙️ Config file: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            *.yml|*.yaml)
+                log_message "📋 YAML: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            *.md)
+                log_message "📝 Markdown: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+            *)
+                log_message "🧩 Generic file: prefer main version"
+                git checkout --ours -- "$file"
+                ;;
+        esac
+
+        # Remove remaining markers to ensure a clean file
+        sed -i '/^<<<<<<< /,/^>>>>>>> /d' "$file"
+
         log_message "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
         return 0
@@ -258,22 +248,7 @@ for ((i=0; i<total_branches; i+=BATCH_SIZE)); do
     process_batch $i $batch_end "${batch_branches[@]}"
     batch_conflicts=$?
     
-    # Ask user if they want to continue (only if there are more branches)
-    if [ $batch_end -lt $total_branches ]; then
-        echo ""
-        read -p "Continue to next batch? (y/n/s=skip to next, q=quit): " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Qq]$ ]]; then
-            log_message "⏸️  User requested to quit. Stopping batch processing."
-            break
-        elif [[ $REPLY =~ ^[Ss]$ ]]; then
-            log_message "⏭️  User requested to skip to next batch."
-            continue
-        elif [[ ! $REPLY =~ ^[Yy]$ ]]; then
-            log_message "⏸️  Pausing batch processing. You can resume later."
-            break
-        fi
-    fi
+    # Non-interactive: always continue until batches complete
     
     # If this batch had too many conflicts, take a break
     if [ $batch_conflicts -ge $MAX_CONFLICTS_PER_BATCH ]; then

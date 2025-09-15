@@ -7,117 +7,620 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (brand new content)
   {
-    title: 'Launch: Agentic Ops Control Center (v1.0)',
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary:
-      'Unified console for monitoring, guardrails, and live evals across agentic systems.',
-    href: '/updates/agentic-ops-control-center-1-0',
+      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (featured)
+  {
+    title: 'Launch: Autonomous Strategy Copilot v1.0',
+    summary:
+      'Exec-ready strategy copilot that drafts roadmaps, OKRs, and investment memos grounded in telemetry and benchmarks.',
+    href: '/updates/autonomous-strategy-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (even later night batch - fresh content)
+  {
+    title: 'Launch: Realtime Agent Observatory 1.0',
+    summary:
+      'Unified live telemetry for agents: traces, eval signals, budgets, and incident evidence in one place.',
+    href: '/updates/realtime-agent-observatory-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Report: State of Real-Time RAG (2026 Preview)',
+    title: 'Guide: Production Agent Postmortems (2026 Edition)',
     summary:
-      'Benchmarks of streaming retrieval latency, hit rate, and quality across architectures.',
-    href: '/updates/state-of-real-time-rag-2026',
+      'Structured incident reviews with causal graphs, evidence bundles, and remediation playbooks.',
+    href: '/updates/production-agent-postmortems-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: Enterprise Retrieval Latency Benchmarks 2026',
+    summary:
+      'Latency distributions, SLO adherence, and architectural tradeoffs across hybrid retrieval stacks.',
+    href: '/updates/enterprise-retrieval-latency-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  // Added 2025-09-15 (new featured content)
+  {
+    title: 'Launch: Knowledge Graph Copilot v1.0',
+    summary:
+      'Automatically builds and maintains enterprise knowledge graphs with policy-aware ingestion and live evals.',
+    href: '/updates/knowledge-graph-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (late night batch)
+  {
+    title: 'Launch: AI Governance Dashboard v4',
+    summary:
+      'Cross‑env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails.',
+    href: '/updates/ai-governance-dashboard-v4',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Feature: Agent Evidence Bundles v1.1',
+    summary:
+      'Trace‑aligned guardrails and evals, SOC2/ISO export profiles, and tamper‑evident signed manifests.',
+    href: '/updates/agent-evidence-bundles-v1-1',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Knowledge Ops Suite v1.0',
+    summary:
+      'Governed content lifecycle with eval-gated drafts, reviews, and audit-ready publishing.',
+    href: '/updates/autonomous-knowledge-ops-suite-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Postmortems That Drive Reliability (2026)',
+    summary:
+      'Structured incident reviews with evidence bundles, causal graphs, and playbook updates.',
+    href: '/updates/agent-postmortems-reliability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Real-Time Agent Telemetry 2026',
+    summary:
+      'Signals that matter: budgets, guardrail events, eval IDs, and user outcomes.',
+    href: '/updates/state-of-real-time-agent-telemetry-2026',
     date: '2025-09-15',
     tag: 'Report'
   },
   {
-    title: 'Guide: Hardening LLM Integrations for SOC 2',
+    title: 'Report: AI Governance Readiness 2026',
     summary:
-      'Practical controls for secrets, PII redaction, change management, and eval-backed releases.',
-    href: '/updates/hardening-llm-integrations-soc2',
+      'Composite readiness index across governance, controls, data, and platform maturity with next steps.',
+    href: '/updates/ai-governance-readiness-2026',
     date: '2025-09-15',
-    tag: 'Guide'
+    tag: 'Report'
   },
   {
-    title: 'Launch: Autonomous Customer Support Copilot (v1.0)',
+    title: 'Launch: Agent Benchmark Suite v2',
     summary:
-      'Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.',
-    href: '/updates/autonomous-support-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: Agent Orchestration Toolkit (v2)',
-    summary:
-      'Unified workflows for multi-agent planning, tool-use, and guardrails with production templates.',
-    href: '/updates/agent-orchestration-toolkit-v2',
+      'Expanded domain packs, richer rubrics, and native CI canaries to evaluate production agents.',
+    href: '/updates/agent-benchmark-suite-v2',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Launch: ZionGPT 2.0 Real-Time Reasoning',
+    title: 'Feature: Agent Ops SLO Dashboards v2',
     summary:
-      'Next-gen streaming reasoning with tool-use, low-latency retrieval, and safety gates.',
-    href: '/updates/ziongpt-2-real-time-reasoning',
+      'Unified quality, latency, and safety SLOs with per-route budgets and evidence exports.',
+    href: '/updates/agent-ops-slo-dashboards-v2',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Marketing Copilot v1.0',
+    summary:
+      'Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evals.',
+    href: '/updates/autonomous-marketing-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Guide: Production Agent Red Teaming (2025)',
+    title: 'Guide: Production-Grade RAG Latency Budgets (2026)',
     summary:
-      'End-to-end adversarial evaluation playbook with jailbreak taxonomies and measurable mitigations.',
-    href: '/updates/production-agent-red-teaming-2025',
+      'Set, monitor, and enforce latency SLOs for RAG systems with streaming evals and rollbacks.',
+    href: '/updates/production-rag-latency-budgets-2026',
     date: '2025-09-15',
     tag: 'Guide'
   },
   {
-    title: 'Guide: Production Agent Risk Reviews',
+    title: 'Launch: Autonomous Marketing Copilot v1.0',
     summary:
-      'Lightweight operational reviews with shared risk signals and rollback criteria for agents.',
-    href: '/updates/production-agent-risk-reviews',
+      'Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evals.',
+    href: '/updates/autonomous-marketing-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production-Grade RAG Latency Budgets (2026)',
+    summary:
+      'Set, monitor, and enforce latency SLOs for RAG systems with streaming evals and rollbacks.',
+    href: '/updates/production-rag-latency-budgets-2026',
     date: '2025-09-15',
     tag: 'Guide'
   },
   {
-    title: 'Case Study: MTTR -42% With Real-Time RAG',
+    title: 'Guide: Production RAG Observability (2026 Preview)',
     summary:
-      'How live retrieval + evals reduced incident time-to-resolution in a Fortune 100 stack.',
+      'Telemetry for retrieval systems: coverage, freshness, drift, groundedness with per‑step spans.',
+    href: '/updates/production-rag-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Autonomous Marketing Copilot v1.0',
+    summary:
+      'Plan campaigns, generate assets, and auto‑schedule posts with policy guardrails and live evals.',
+    href: '/updates/autonomous-marketing-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent Risk Playbook (2026 Preview)',
+    summary:
+      'Unified taxonomy, scorecards, and mitigation patterns to operationalize agent risk management.',
+    href: '/updates/enterprise-agent-risk-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: AI Incident Simulator v1.1',
+    summary:
+      'New scenarios, live eval gates, and evidence exports to harden agent systems.',
+    href: '/updates/ai-incident-simulator-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Eval‑Ready AI Pipelines (2026)',
+    summary:
+      'From datasets to live canaries with rubrics, harnesses, and rollback rules.',
+    href: '/blog/ai-2026-eval-ready-ai-pipelines-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Agent Observability (2026)',
+    summary:
+      'Traces, eval signals, and guardrail events to operate agent fleets reliably.',
+    href: '/blog/ai-2026-agent-observability-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Governed Tool Use (2026)',
+    summary:
+      'Permissioned adapters with policy‑as‑code, risk tiers, and runtime checks.',
+    href: '/blog/ai-2026-governed-tool-use-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Guide: Real-Time Model Routing Playbook (2026)',
+    summary:
+      'Implement latency- and quality-aware routing with budgets, canaries, and audits.',
+    href: '/updates/real-time-model-routing-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 48% Cost Savings via Eval-Driven Routing',
+    summary:
+      'How a global support org cut cost and improved CSAT with eval-driven routing.',
+    href: '/updates/case-study-eval-driven-routing-48-savings',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Report: State of Agent Tooling 2026 (Preview)',
+    summary:
+      'Landscape of tracing, guardrails, evals, and policy-as-code across leading stacks.',
+    href: '/updates/state-of-agent-tooling-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: Agent Evals & Observability Suite v1.0',
+    summary:
+      'Unified live evals, guardrail events, tracing, and budget dashboards to operate agents safely.',
+    href: '/updates/agent-evals-observability-suite-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Red‑Teaming Field Guide (2026)',
+    summary:
+      'Scenario design, attack taxonomy, and evidence capture to proactively harden autonomous agents.',
+    href: '/blog/ai-2026-agent-red-teaming-field-guide',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Trustworthy Model Routing (2026 Preview)',
+    summary:
+      'Policy-aware routing with eval signals and budgets for safer, cheaper, faster generations.',
+    href: '/updates/trustworthy-model-routing-2026',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent SLO Dashboards',
+    summary:
+      'Define and track SLOs for quality, latency, and safety across agent fleets with live telemetry.',
+    href: '/updates/enterprise-agent-slo-dashboards',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  // Fresh content added 2025-09-15
+  // New content added 2025-09-15 (afternoon batch)
+  {
+    title: 'Launch: AI Content Studio 2.2',
+    summary:
+      'Faster renders, new brand kits, calendar scheduling, and bulk publish with guardrails.',
+    href: '/updates/ai-content-studio-2-2',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Evaluation-Driven Release Management',
+    summary:
+      'Ship safer with canary evals, rollback rules, and quality budgets wired into CI/CD.',
+    href: '/updates/eval-driven-release-management',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: MTTR Reduction with Real-Time RAG',
+    summary:
+      'How live evals and retrieval telemetry cut incident MTTR by 37% at scale.',
     href: '/updates/mttr-reduction-real-time-rag',
     date: '2025-09-15',
     tag: 'Case Study'
   },
   {
-    title: 'Launch: Autonomous Finance OS (v1.0)',
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
     summary:
-      'Real-time cash visibility, autonomous close, and policy-as-code controls for finance.',
-    href: '/updates/autonomous-finance-os-1-0',
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
     date: '2025-09-15',
-    tag: 'Launch'
+    tag: 'Blueprint'
   },
   {
-    title: 'Guide: Enterprise Retrieval Observability (2026)',
+    title: 'Launch: Autonomous Sales Copilot v1.0',
     summary:
-      'End-to-end SLIs, tracing, and evals to keep RAG systems reliable in production.',
-    href: '/updates/enterprise-retrieval-observability-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Guide: Building Eval-Ready AI Pipelines',
-    summary:
-      'How to instrument datasets, harnesses, and live canaries to ship trustworthy AI changes.',
-    href: '/updates/eval-ready-ai-pipelines',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: Autonomous Sales Copilot (v1.0)',
-    summary:
-      'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',
+      'Pipeline insights, meeting prep, and safe CRM automation with policy-as-code and live evals.',
     href: '/updates/autonomous-sales-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Guide: Evaluating Real-World RAG Latency',
+    title: 'Deep Dive: Production Agent Telemetry (2025)',
     summary:
-      'A practical guide to measure tail latency, hit rate, and answer quality in production RAG.',
-    href: '/updates/evaluating-real-world-rag-latency',
+      'Unified tracing, eval signals, and guardrail events to operate agent fleets reliably.',
+    href: '/blog/ai-2025-production-agent-telemetry-deep-dive',
+    date: '2025-09-15',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Guide: AI Governance Maturity Model (2025)',
+    summary:
+      'A staged model to level up governance across policy, controls, telemetry, and auditability.',
+    href: '/blog/ai-2025-ai-governance-maturity-model',
     date: '2025-09-15',
     tag: 'Guide'
+  },
+  {
+    title: 'Guide: Vendor Risk Management for AI (2026 Preview)',
+    summary:
+      'Templates, control mapping, and evidence bundles to assess AI vendors responsibly.',
+    href: '/updates/ai-vendor-risk-management-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Production Agent Incidents (2026 Preview)',
+    summary:
+      'Incident typologies, common root causes, and prevention controls across autonomous agents.',
+    href: '/updates/state-of-agent-incidents-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Blueprint: Evaluation-Driven FinOps for AI',
+    summary:
+      'Unify cost, quality, and latency with eval signals to drive model routing and budgets.',
+    href: '/updates/evaluation-driven-finops',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Feature: Audit-Ready Evidence Bundles',
+    summary:
+      'One-click export of evals, guardrail events, and policy checks for audits and reviews.',
+    href: '/updates/audit-ready-evidence-bundles',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
+    title: 'Guide: Production Guardrails for Multimodal Agents (2026)',
+    summary:
+      'Risk tiers, live eval gates, and audit-ready evidence for safe multimodal agent deployments.',
+    href: '/updates/production-guardrails-multimodal-agents',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Agent Benchmark Suite v1',
+    summary:
+      'Standard task suites, rubrics, and golden datasets with CI and canary integrations.',
+    href: '/updates/agent-benchmark-suite-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025 Edition)',
+    summary:
+      'Threat modeling, guardrails, and regression suites to harden prompts and tool use.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Operationalizing Live Evals in Production (2026)',
+    summary:
+      'Blueprint to stand up live eval pipelines with canaries, abort switches, and audit evidence.',
+    href: '/blog/ai-2026-operationalizing-live-evals-in-production',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Playbook: Incident Response for Agentic Systems (2026)',
+    summary:
+      'Runbooks, drills, and telemetry to reduce MTTR and improve safety for autonomous agents.',
+    href: '/blog/ai-2026-incident-response-for-agentic-systems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: Operationalizing Live Evals in Production (2026)',
+    summary:
+      'Blueprint to stand up live eval pipelines with canaries, abort switches, and audit evidence.',
+    href: '/blog/ai-2026-operationalizing-live-evals-in-production',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Playbook: Incident Response for Agentic Systems (2026)',
+    summary:
+      'Runbooks, drills, and telemetry to reduce MTTR and improve safety for autonomous agents.',
+    href: '/blog/ai-2026-incident-response-for-agentic-systems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: Operationalizing Live Evals in Production (2026)',
+    summary:
+      'Blueprint to stand up live eval pipelines with canaries, abort switches, and audit evidence.',
+    href: '/blog/ai-2026-operationalizing-live-evals-in-production',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Playbook: Incident Response for Agentic Systems (2026)',
+    summary:
+      'Runbooks, drills, and telemetry to reduce MTTR and improve safety for autonomous agents.',
+    href: '/blog/ai-2026-incident-response-for-agentic-systems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: AI 2026 Production Safety Checklist',
+    summary:
+      'Risk tiers, guardrails, evals, canaries, and audit evidence to ship safer AI.',
+    href: '/blog/ai-2026-production-safety-checklist',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.2',
+    summary:
+      'Faster triage, safer tool use, and improved retrieval observability with new eval gates.',
+    href: '/updates/autonomous-support-copilot-1-2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Compliance Readiness 2026',
+    summary:
+      'Benchmarks, controls, and audit evidence patterns to meet emerging AI regulations.',
+    href: '/updates/ai-compliance-readiness-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: Agentic Ops Control Center v2.2',
+    summary:
+      'Deeper incident drilldowns, runbook automation, and cross-environment policy status.',
+    href: '/updates/agentic-ops-control-center-2-2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Sovereign AI Commerce (2026)',
+    summary:
+      'Reference architecture and rollout checklist for launching autonomous AI marketplaces with policy gates and evals.',
+    href: '/blog/ai-2026-sovereign-ai-commerce',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Incident Simulation Toolkit v1.0',
+    summary:
+      'Scenario-driven drills, policy checks, and CI/CD gates to harden agent systems.',
+    href: '/updates/incident-simulation-toolkit-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Agent Governance Toolkit v2.0',
+    summary:
+      'Expanded policy library, evidence capture, and signed bundles for enterprise rollout.',
+    href: '/updates/agent-governance-toolkit-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Incident Response v1.0',
+    summary:
+      'End-to-end automated incident detection, triage, and remediation workflows for AI systems.',
+    href: '/updates/autonomous-incident-response-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Lab Research Portal 2.0',
+    summary:
+      'Revamped portal with live benchmarks, datasets, and research pipelines for teams.',
+    href: '/updates/ai-lab-research-portal-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Research Portal',
+    summary:
+      'Central hub for publications, datasets, and live benchmarks from Zion AI Lab.',
+    href: '/updates/ai-lab-research-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Ops Control Center 2.0',
+    summary:
+      'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
+    href: '/updates/autonomous-ops-control-center-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Compliance Auditor v1.0',
+    summary:
+      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.1',
+    summary:
+      'Upgraded support copilot with retrieval observability, safe tool use, and faster resolutions.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Content Studio 2.1',
+    summary:
+      'Refinements to workflows, new templates, and 20% faster asset generation for teams.',
+    href: '/updates/ai-content-studio-2-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Production RAG Evals Starter Pack',
+    summary:
+      'Ready-to-run eval suites, rubrics, and canary tests to ship reliable RAG systems.',
+    href: '/updates/production-rag-evals-starter-pack',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of AI Governance 2026 (Preview)',
+    summary:
+      'Key findings on policy-as-code adoption, auditability, and enterprise readiness.',
+    href: '/updates/state-of-ai-governance-2026-preview',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Report: State of Real-Time RAG (2026)',
+    summary:
+      'Benchmarks, latency profiles, and production design patterns for sub-second RAG at scale.',
+    href: '/updates/state-of-real-time-rag-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025)',
+    summary:
+      'Permissioning, input validation, and defense-in-depth patterns to harden LLM prompts.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Real-Time RAG Evals (2026)',
+    summary:
+      'Live canaries, streaming metrics, and rollout gates to continuously evaluate real-time RAG.',
+    href: '/updates/real-time-rag-evals-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Real-Time Evals Starter Kit',
+    summary:
+      'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
+    href: '/updates/real-time-evals-starter-kit',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Agent Safety Toolkit (v1)',
+    summary:
+      'End-to-end safety reviews, red-teaming templates, and policy-as-code checks for agentic systems.',
+    href: '/updates/agent-safety-toolkit-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Governance Maturity Model (2026 Preview)',
+    summary:
+      'A staged model to assess and level-up AI governance across policy, controls, and telemetry.',
+    href: '/updates/ai-governance-maturity-model-2026',
+    date: '2025-09-15',
+    tag: 'Report'
   },
   {
     title: 'Launch: Autonomous Research Copilot (v1.1)',
@@ -178,50 +681,34 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: AI Research Assistant 2.0',
     summary:
-      'Autonomous research platform with improved retrieval, citation quality, and benchmarked task suites.',
+      'Major upgrade with better sources, multimodal inputs, and faster research pipelines.',
     href: '/updates/ai-research-assistant-2-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Whitepaper: AI Agent Safety Framework (2025)',
+    title: 'Launch: Mentor Office Hours',
     summary:
-      'Operational guardrails, evals, and policy-as-code for autonomous agents in production.',
-    href: '/updates/agent-safety-whitepaper',
+      'Weekly live sessions with expert mentors for Q&A, portfolio reviews, and roadmap guidance.',
+    href: '/updates/mentor-office-hours',
     date: '2025-09-15',
-    tag: 'Whitepaper'
+    tag: 'Community'
   },
   {
-    title: 'Report: 2025 AI Trends Radar',
+    title: 'Feature: Progress Streaks and Badges',
     summary:
-      'Key enterprise AI trends for 2025: agent safety, real-time RAG, governance automation, and cost-aware routing.',
-    href: '/updates/ai-trends-radar-2025',
+      'Stay motivated with learning streaks and new achievement badges across courses and labs.',
+    href: '/updates/progress-streaks-badges',
     date: '2025-09-15',
-    tag: 'Report'
+    tag: 'Feature'
   },
   {
-    title: 'Launch: AI Lab Research Portal',
+    title: 'Course Update: AI Fundamentals v2.1',
     summary:
-      'Unified portal for research briefs, datasets, and evaluations with live benchmarks and citations.',
-    href: '/updates/ai-lab-research-portal',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Real-Time Retrieval Evals',
-    summary:
-      'Practical guide to measuring latency, hit-rate, and answer quality in streaming RAG systems.',
-    href: '/updates/real-time-retrieval-evals',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: AI Agent Safety Certification (Beta)',
-    summary:
-      'New certification program validating safety practices for autonomous agents across design, evals, and operations.',
-    href: '/updates/ai-agent-safety-certification-beta',
-    date: '2025-09-15',
-    tag: 'Launch'
+      'Refreshed modules on contrastive learning, retrieval patterns, and production evals with labs.',
+    href: '/updates/ai-fundamentals-v2-1',
+    date: '2025-09-14',
+    tag: 'Course'
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
@@ -254,14 +741,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-production-patterns',
     date: '2025-09-15',
     tag: 'Guide'
-  },
-  {
-    title: 'Launch: Agentic Evals Blueprint (v1)',
-    summary:
-      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.',
-    href: '/updates/agentic-evals-blueprint',
-    date: '2025-09-15',
-    tag: 'Launch'
   },
   {
     title: 'Case Study: 38% Cost Reduction with Retrieval-Augmented Agents',
@@ -301,6 +780,328 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/web3-dapp-challenge',
     date: '2025-09-03',
     tag: 'Community'
+  },
+  // New updates added 2025-09-15
+  {
+    title: 'Launch: Agentic Ops Control Center v2.1',
+    summary:
+      'New runbooks, real-time eval alerts, and SOC2-ready audit trails for agent operations.',
+    href: '/updates/agentic-ops-control-center-2-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Real-Time RAG 2026 (Preview)',
+    summary:
+      'Latency budgets, streaming architectures, and eval frameworks for production-grade real-time RAG.',
+    href: '/updates/state-of-real-time-rag-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025 Edition)',
+    summary:
+      'Threat modeling prompts, policy-as-code checks, and red-teaming patterns to harden LLM systems.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: RAG Agents Reduce MTTR by 42%',
+    summary:
+      'Deep dive on observability-driven RAG agents that lowered incident MTTR and support volume.',
+    href: '/updates/rag-agents-case-study',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Finance OS v1.1',
+    summary:
+      'Enhanced controls, real-time guardrails, and automated reconciliations for finance-grade agent ops.',
+    href: '/updates/autonomous-finance-os-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Governance Dashboard v3',
+    summary:
+      'Unified governance KPIs with policy-as-code status, eval gates, and exception workflows.',
+    href: '/updates/ai-governance-dashboard-v3',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Multimodal Agents (2026 Preview)',
+    summary:
+      'A practical rubric and harnesses to evaluate multimodal grounding, tool use, and safety.',
+    href: '/updates/evaluating-multimodal-agents-2026-preview',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Course: GenAI for Executives',
+    summary:
+      'Executive-focused program on AI strategy, governance, and ROI with hands-on frameworks.',
+    href: '/updates/genai-executive-course',
+    date: '2025-09-15',
+    tag: 'Course'
+  },
+  {
+    title: 'Launch: Agent Benchmark Suite v1',
+    summary:
+      'Task suites, rubrics, and golden datasets for production agents across domains.',
+    href: '/updates/agent-benchmark-suite-v1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  }
+  ,
+  // New updates added by background automation on 2025-09-15 (even later batch)
+  {
+    title: 'Launch: Autonomous Customer Insights Copilot v1.0',
+    summary:
+      'Automatic theme detection, sentiment analysis, and action recommendations across support, sales, and product feedback with policy-aware data handling.',
+    href: '/updates/autonomous-customer-insights-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise AI Change Management (2026)',
+    summary:
+      'Governance workflows, rollout strategies, and live eval gates to safely introduce AI changes across teams.',
+    href: '/updates/enterprise-ai-change-management-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of AI Evaluations 2026',
+    summary:
+      'Survey of eval practices, rubrics, and live telemetry adoption across industries with maturity benchmarks.',
+    href: '/updates/state-of-ai-evaluations-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  }
+  ,
+  // Added 2025-09-15 (night batch)
+  {
+    title: 'Launch: Real-Time Retrieval Evals 2026',
+    summary:
+      'Streaming metrics, canary routing, and automated rollback to safely evolve retrieval.',
+    href: '/updates/real-time-retrieval-evals-2026',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Enterprise Agent Safety 2026',
+    summary:
+      'Standardized safety reviews, incident drills, and audit-ready evidence across agent fleets.',
+    href: '/updates/enterprise-agent-safety-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Report: AI Readiness Index 2026',
+    summary:
+      'A composite readiness score across data, governance, and platform maturity.',
+    href: '/updates/enterprise-ai-readiness-index-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Production Agent Runbooks 2026',
+    summary:
+      'Runbooks, approvals, and controls to standardize safe operations of AI agents.',
+    href: '/updates/production-agent-runbooks-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
+  // Fresh content added 2025-09-15 (new)
+  {
+    title: 'Launch: Autonomous Procurement Copilot v1.0',
+    summary:
+      'Automates vendor sourcing, RFPs, contract analysis, and approvals with policy-as-code and live cost benchmarks.',
+    href: '/updates/autonomous-procurement-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production RAG Observability (2026 Preview)',
+    summary:
+      'Practical telemetry for retrieval systems: coverage, freshness, drift, and grounding quality with per-step spans.',
+    href: '/updates/production-rag-observability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
+  // Added 2025-09-15 (new content)
+  {
+    title: 'Launch: Autonomous Knowledge Base Copilot v1.0',
+    summary:
+      'Self-updating KB copilot that drafts, reviews, and publishes articles with guardrails, evals, and audit trails.',
+    href: '/updates/autonomous-knowledge-base-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Agent Tooling 2026',
+    summary:
+      'Landscape, gaps, and maturity of agent debugging, evals, and governance tools across the enterprise.',
+    href: '/updates/state-of-agent-tooling-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  }
+  ,
+  {
+    title: 'Guide: Generative AI Risk Register (2026)',
+    summary:
+      'Template and practices to track risks, owners, mitigations, and audit evidence for AI programs.',
+    href: '/blog/ai-2026-generative-ai-risk-register',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Agent Cost Optimization (2026)',
+    summary:
+      'Cut spend via routing, caching, batching, and benchmark-driven model selection with guardrails.',
+    href: '/blog/ai-2026-agent-cost-optimization',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
+  {
+    title: 'Launch: Autonomous Compliance Auditor v1.1',
+    summary:
+      'Continuous policy checks, evidence bundles, and SOC2-ready exports integrated into CI/CD.',
+    href: '/updates/autonomous-compliance-auditor-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Production Agent Telemetry 2026',
+    summary:
+      'Unified tracing, eval signals, and guardrail events for operating agent fleets reliably.',
+    href: '/updates/production-agent-telemetry-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Report: Enterprise AI Readiness Index (2026 Preview)',
+    summary:
+      'A composite index to score data, governance, and platform maturity across enterprises.',
+    href: '/updates/enterprise-ai-readiness-index-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  }
+  ,
+  // New updates added by automation on 2025-09-15
+  {
+    title: 'Launch: Agent Policy-as-Code Starter Kit',
+    summary:
+      'Ready-to-run policy packs, CI checks, and audit trails to operationalize AI governance in weeks.',
+    href: '/updates/agent-policy-as-code-starter-kit',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Lab Research Datasets Portal',
+    summary:
+      'Curated, enterprise-ready datasets with licenses, schemas, and quality metrics for rapid prototyping.',
+    href: '/updates/ai-lab-research-datasets-portal',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Blueprint: Secure Agent Operations 2026',
+    summary:
+      'End-to-end controls, telemetry, and incident response for safe, compliant, and resilient agent ops.',
+    href: '/updates/secure-agent-operations-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  }
+  ,
+  {
+    title: 'Launch: Autonomous Compliance Copilot v1.0',
+    summary:
+      'Interactive copilot to draft policies, generate evidence, and enforce controls with policy-as-code.',
+    href: '/updates/autonomous-compliance-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: AI Procurement Playbook (2026 Preview)',
+    summary:
+      'Practical steps, templates, and guardrails to source, evaluate, and buy AI systems responsibly.',
+    href: '/updates/ai-procurement-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
+  // Added 2025-09-15
+  {
+    title: 'Launch: Real-Time Agent Debugger v1.0',
+    summary:
+      'Live traces, prompt diffs, and tool-call timelines to debug production agents safely.',
+    href: '/updates/real-time-agent-debugger-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: Agent Risk Metrics 2026 (Preview)',
+    summary:
+      'Unified risk taxonomy, baseline metrics, and evaluation harnesses for autonomous agents.',
+    href: '/updates/agent-risk-metrics-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Production Rollouts with Canary AI Evals',
+    summary:
+      'Blueprint for shipping AI safely: canaries, live evals, abort switches, and evidence trails.',
+    href: '/updates/canary-ai-evals-rollouts',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
+  ,
+  // New content added 2025-09-15 (evening batch)
+  {
+    title: 'Launch: Autonomous Knowledge Base v1.0',
+    summary:
+      'Self-maintaining, policy-aware knowledge base with freshness checks and signed evidence.',
+    href: '/updates/autonomous-knowledge-base-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Runbooks (2026)',
+    summary:
+      'Standard runbooks, approval flows, and audit-ready checklists for safe agent operations.',
+    href: '/updates/production-agent-runbooks-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Feature: Real-Time Agent Shadow Testing',
+    summary:
+      'Validate changes with shadow traffic, guardrail signals, and automatic rollback rules.',
+    href: '/updates/real-time-agent-shadow-testing',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Data Lineage Monitor v1.0',
+    summary:
+      'Continuous provenance tracking and signed evidence bundles across ingestion, retrieval, and generation.',
+    href: '/updates/autonomous-data-lineage-monitor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Eval‑Ready Agent Release Automation',
+    summary:
+      'Wire eval gates, shadow tests, and rollback policies into CI/CD with audit‑ready evidence.',
+    href: '/updates/eval-ready-agent-release-automation',
+    date: '2025-09-15',
+    tag: 'Guide'
   }
 ]
 

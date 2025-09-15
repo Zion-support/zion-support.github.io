@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function EnterpriseAgentObservabilityGuidePage() {
   return (
     <div className="bg-white min-h-screen">
