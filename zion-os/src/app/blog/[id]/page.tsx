@@ -11,6 +11,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-guardrails-2025': {
+    id: 'ai-safety-guardrails-2025',
+    title: 'Operational AI Safety Guardrails 2025: Policy-Driven Autonomy at Scale',
+    excerpt:
+      'A practical reference for implementing runtime guardrails, policy engines, and human escalation paths across critical AI workflows.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'As autonomous systems assume higher-impact responsibilities, safety must be designed as a first-class runtime concern, not a post-hoc checklist.',
+      'This guide covers policy grammars, risk scoring, intervention thresholds, graded permissions, and auditability patterns for regulated industries.'
+    ]
+  },
+  'quantum-supply-chains-2025': {
+    id: 'quantum-supply-chains-2025',
+    title: 'Quantum-Accelerated Supply Chains: Near-Term Wins Using Hybrid Methods',
+    excerpt:
+      'How hybrid quantum-classical optimization improves routing, allocation, and inventory resilience in volatile environments.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Hybrid approaches (QAOA, VQE + classical heuristics) can unlock measurable gains in complex logistics without fault-tolerant hardware.',
+      'We outline evaluation criteria, pilot architectures, and KPIs that separate hype from durable value in operations.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
