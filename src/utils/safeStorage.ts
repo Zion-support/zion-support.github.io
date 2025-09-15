@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
@@ -186,6 +187,9 @@ export const safeStorage = {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-aa0d
     }
   }
 };
