@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AdvancedQuantumComputing2026: React.FC = () => {
+const AIEnterpriseCopilot2025: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -12,15 +12,15 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚛️ ADVANCED QUANTUM COMPUTING • 2026
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧭 AI ENTERPRISE COPILOT • 2025
           </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Advanced Quantum Computing 2026
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            AI Enterprise Copilot
           </h1>
           <p className="text-2xl md:text-3xl opacity-90 mb-8 max-w-4xl mx-auto">
-            Experience the next generation of quantum computing with 1000+ logical qubits, 
-            quantum supremacy, and revolutionary applications.
+            Transform your business operations with AI-powered copilots that work 
+            alongside your teams to enhance productivity and decision-making.
           </p>
         </motion.div>
 
@@ -32,9 +32,9 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">1000+ Logical Qubits</h3>
-            <p className="opacity-90">Unprecedented quantum processing power for complex calculations</p>
+            <div className="text-6xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold mb-4">Intelligent Automation</h3>
+            <p className="opacity-90">Automate complex business processes with AI-powered decision making</p>
           </motion.div>
 
           <motion.div
@@ -43,9 +43,9 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4">🏆</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Supremacy</h3>
-            <p className="opacity-90">Achieved quantum supremacy with exponential speed advantages</p>
+            <div className="text-6xl mb-4">📊</div>
+            <h3 className="text-2xl font-bold mb-4">Predictive Analytics</h3>
+            <p className="opacity-90">Make data-driven decisions with advanced predictive analytics</p>
           </motion.div>
 
           <motion.div
@@ -54,9 +54,9 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:scale-105 transition-all duration-300"
           >
-            <div className="text-6xl mb-4">🧬</div>
-            <h3 className="text-2xl font-bold mb-4">Molecular Simulation</h3>
-            <p className="opacity-90">Revolutionary drug discovery and materials science applications</p>
+            <div className="text-6xl mb-4">💡</div>
+            <h3 className="text-2xl font-bold mb-4">Contextual Assistance</h3>
+            <p className="opacity-90">Get intelligent assistance tailored to your specific business context</p>
           </motion.div>
         </div>
 
@@ -67,15 +67,15 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl font-bold mb-6">Ready for Advanced Quantum Computing?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Deploy AI Copilot?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Experience the most powerful quantum computing technology ever created
+            Transform your business with AI-powered copilots that enhance every aspect of your operations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Go Quantum
+            <a href="/contact" className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Deploy AI Copilot
             </a>
-            <a href="/pages/ComprehensiveServices2025" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+            <a href="/pages/ComprehensiveServices2025" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
               Explore All Services
             </a>
           </div>
@@ -85,4 +85,4 @@ const AdvancedQuantumComputing2026: React.FC = () => {
   );
 };
 
-export default AdvancedQuantumComputing2026;
+export default AIEnterpriseCopilot2025;
