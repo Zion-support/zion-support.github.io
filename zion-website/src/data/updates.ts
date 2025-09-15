@@ -16,6 +16,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: AI Governance Toolkit',
+    summary:
+      'Practical guardrails, policy-as-code, and audit trails to safely scale AI across the enterprise.',
+    href: '/updates/ai-governance-toolkit',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
     title: 'Case Study: 38% Cost Reduction with Retrieval-Augmented Agents',
     summary:
       'How a Fortune 500 reduced support costs and MTTR with production-grade RAG agents.',
@@ -30,6 +38,14 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-content-studio-2',
     date: '2025-09-15',
     tag: 'Product'
+  },
+  {
+    title: 'Course: Web3 Fundamentals Track',
+    summary:
+      'New beginner-to-pro track covering wallets, smart contracts, L2s, and dApp development.',
+    href: '/updates/web3-fundamentals-track',
+    date: '2025-09-15',
+    tag: 'Course'
   },
   {
     title: 'Guide: Enterprise AI Adoption Playbook',
