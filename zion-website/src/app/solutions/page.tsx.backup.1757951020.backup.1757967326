@@ -32,7 +32,6 @@
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
@@ -62,9 +61,6 @@
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const solutions = [
@@ -235,7 +231,6 @@ const solutions = [
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
@@ -265,9 +260,6 @@ const solutions = [
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
 ]
 
 export default function SolutionsPage() {
@@ -329,7 +321,6 @@ export default function SolutionsPage() {
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
@@ -359,9 +350,6 @@ export default function SolutionsPage() {
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
           <p className="mt-4 text-lg leading-8 text-gray-300">Cutting-edge AI solutions for enterprise challenges.</p>
@@ -445,7 +433,6 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
@@ -478,6 +465,3 @@ export default function SolutionsPage() {
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae

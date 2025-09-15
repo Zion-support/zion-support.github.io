@@ -32,7 +32,6 @@
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
@@ -62,9 +61,6 @@
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
 import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const services = [
@@ -254,7 +250,6 @@ const services = [
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
@@ -284,9 +279,6 @@ const services = [
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
 ]
 
 export default function ServicesPage() {
@@ -463,7 +455,6 @@ export default function ServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
@@ -499,9 +490,6 @@ export default function ServicesPage() {
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{service.description}</p>
@@ -608,7 +596,6 @@ export default function ServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
@@ -645,6 +632,3 @@ export default function ServicesPage() {
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> cursor/create-and-deploy-new-content-abae
