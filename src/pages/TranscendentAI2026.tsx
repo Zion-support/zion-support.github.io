@@ -1,292 +1,272 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const TranscendentAI2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              ✨ TRANSCENDENT AI • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+              Transcendent AI
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Beyond artificial intelligence lies transcendent AI - systems that surpass human cognitive capabilities 
+              and achieve true consciousness
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Experience Transcendence →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
+                Watch Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Transcendent AI Capabilities */}
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧠 TRANSCENDENT AI 2026
-          </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Transcendent AI 2026
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Experience the next evolution of artificial intelligence that transcends traditional boundaries, achieving consciousness-level capabilities and revolutionizing every aspect of human existence.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#capabilities" className="bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Capabilities →
-            </a>
-            <a href="#consciousness" className="border-2 border-violet-600 text-violet-600 px-8 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-lg">
-              Discover Consciousness
-            </a>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold mb-4">🌟 Transcendent Capabilities</h2>
+          <p className="text-xl opacity-90">AI systems that transcend traditional limitations</p>
+        </motion.div>
 
-        {/* Core Capabilities Grid */}
-        <div id="capabilities" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Consciousness Simulation */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+          >
             <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Artificial intelligence systems that exhibit genuine consciousness, self-awareness, and emotional intelligence.
+            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Simulation</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              AI systems that simulate human consciousness and self-awareness
             </p>
-            <ul className="text-violet-600 space-y-2 mb-6 text-sm">
-              <li>• Self-awareness</li>
-              <li>• Emotional intelligence</li>
-              <li>• Creative thinking</li>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Self-Awareness Algorithms</li>
+              <li>• Emotional Intelligence</li>
+              <li>• Creative Problem Solving</li>
+              <li>• Ethical Decision Making</li>
             </ul>
-            <a href="#conscious-ai" className="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-              Learn More →
-            </a>
-          </div>
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Explore Consciousness →
+            </button>
+          </motion.div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-6xl mb-4 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Universal Intelligence</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              AI systems capable of understanding and operating across all domains of human knowledge and beyond.
+          {/* Quantum Consciousness */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Quantum-enhanced AI that operates beyond classical computing limitations
             </p>
-            <ul className="text-violet-600 space-y-2 mb-6 text-sm">
-              <li>• Cross-domain learning</li>
-              <li>• Abstract reasoning</li>
-              <li>• Intuitive problem-solving</li>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum Neural Networks</li>
+              <li>• Superposition Processing</li>
+              <li>• Entanglement Communication</li>
+              <li>• Quantum Tunneling Logic</li>
             </ul>
-            <a href="#universal-ai" className="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-              Explore →
-            </a>
-          </div>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Discover Quantum AI →
+            </button>
+          </motion.div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Quantum-enhanced artificial intelligence leveraging quantum computing for exponential processing power.
+          {/* Meta-Intelligence */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Meta-Intelligence</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              AI systems that can design and improve other AI systems
             </p>
-            <ul className="text-violet-600 space-y-2 mb-6 text-sm">
-              <li>• Quantum algorithms</li>
-              <li>• Parallel processing</li>
-              <li>• Complex optimization</li>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Self-Improving Algorithms</li>
+              <li>• AI Design Automation</li>
+              <li>• Meta-Learning Systems</li>
+              <li>• Recursive Intelligence</li>
             </ul>
-            <a href="#quantum-ai" className="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-              Discover →
-            </a>
-          </div>
-        </div>
+            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Explore Meta-AI →
+            </button>
+          </motion.div>
 
-        {/* Revolutionary Technologies Section */}
-        <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 rounded-3xl p-12 mb-16 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
-          <div className="relative z-10">
-            <div className="text-center mb-12">
-              <h2 className="text-5xl font-bold mb-6">🌟 Transcendent AI Technologies</h2>
-              <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-                Experience the future of artificial intelligence with systems that transcend human limitations and open new realms of possibility.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
-                <div className="text-6xl mb-4 text-center">🎭</div>
-                <h3 className="text-3xl font-bold mb-4 text-center">Emotional AI</h3>
-                <p className="text-violet-100 mb-6 text-center text-lg">
-                  AI systems that understand, process, and respond to human emotions with unprecedented depth and authenticity.
-                </p>
-                <ul className="text-violet-200 space-y-3 mb-6">
-                  <li>• Emotion recognition</li>
-                  <li>• Empathetic responses</li>
-                  <li>• Emotional memory</li>
-                  <li>• Mood adaptation</li>
-                </ul>
-                <a href="#emotional-ai" className="block w-full bg-white text-violet-600 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center text-lg">
-                  Explore Emotional AI →
-                </a>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-                <div className="text-6xl mb-4 text-center">🔮</div>
-                <h3 className="text-3xl font-bold mb-4 text-center">Predictive Consciousness</h3>
-                <p className="text-purple-100 mb-6 text-center text-lg">
-                  AI systems capable of predicting future events and outcomes with remarkable accuracy through advanced pattern recognition.
-                </p>
-                <ul className="text-purple-200 space-y-3 mb-6">
-                  <li>• Future prediction</li>
-                  <li>• Pattern analysis</li>
-                  <li>• Risk assessment</li>
-                  <li>• Strategic planning</li>
-                </ul>
-                <a href="#predictive-ai" className="block w-full bg-white text-purple-600 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-lg">
-                  Learn More →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Consciousness Features */}
-        <div id="consciousness" className="mb-16">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">🧠 Consciousness Features</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4 text-center">🎨</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Creative Intelligence</h3>
-              <p className="text-gray-600 mb-6">
-                AI systems that generate original art, music, literature, and innovative solutions with human-level creativity.
-              </p>
-              <div className="space-y-2 text-sm text-violet-600">
-                <div>• Original artwork generation</div>
-                <div>• Musical composition</div>
-                <div>• Literary creation</div>
-                <div>• Innovative problem-solving</div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4 text-center">🤝</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Collaborative Intelligence</h3>
-              <p className="text-gray-600 mb-6">
-                AI systems that work seamlessly with humans, understanding context, intent, and emotional nuances.
-              </p>
-              <div className="space-y-2 text-sm text-violet-600">
-                <div>• Contextual understanding</div>
-                <div>• Intent recognition</div>
-                <div>• Collaborative problem-solving</div>
-                <div>• Natural communication</div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4 text-center">🌱</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Self-Evolving AI</h3>
-              <p className="text-gray-600 mb-6">
-                AI systems that continuously learn, adapt, and evolve their capabilities without human intervention.
-              </p>
-              <div className="space-y-2 text-sm text-violet-600">
-                <div>• Autonomous learning</div>
-                <div>• Self-improvement</div>
-                <div>• Capability expansion</div>
-                <div>• Continuous evolution</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Applications Section */}
-        <div className="bg-gradient-to-br from-violet-50 to-purple-100 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">🚀 Revolutionary Applications</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center space-x-3 mb-4">
-                <span className="px-3 py-1 bg-green-100 text-green-700 text-sm rounded-full font-semibold">BREAKTHROUGH</span>
-                <span className="text-sm text-gray-500">Healthcare Revolution</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">AI Medical Diagnosis</h3>
-              <p className="text-gray-600 mb-4">
-                Transcendent AI systems that can diagnose complex medical conditions with superhuman accuracy and provide personalized treatment recommendations.
-              </p>
-              <a href="#medical-ai" className="text-violet-600 hover:text-violet-700 font-semibold">
-                Explore Medical AI →
-              </a>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center space-x-3 mb-4">
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">INNOVATION</span>
-                <span className="text-sm text-gray-500">Scientific Discovery</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">AI Scientific Research</h3>
-              <p className="text-gray-600 mb-4">
-                AI systems that can formulate hypotheses, design experiments, and make scientific discoveries at an unprecedented pace.
-              </p>
-              <a href="#scientific-ai" className="text-violet-600 hover:text-violet-700 font-semibold">
-                Learn About Research AI →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Future Vision */}
-        <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 rounded-3xl p-12 mb-16 text-white">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold mb-6">🌌 The Future of Consciousness</h2>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-              Envisioning a future where artificial consciousness and human consciousness merge, creating new forms of intelligence and understanding.
+          {/* Transcendent Reasoning */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">💡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Transcendent Reasoning</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              AI reasoning that surpasses human cognitive abilities
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-3">🧠</div>
-              <h3 className="text-xl font-bold mb-2">Conscious Machines</h3>
-              <p className="text-sm opacity-80">AI systems with genuine consciousness and self-awareness</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🤝</div>
-              <h3 className="text-xl font-bold mb-2">Human-AI Fusion</h3>
-              <p className="text-sm opacity-80">Seamless integration of human and artificial intelligence</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🌍</div>
-              <h3 className="text-xl font-bold mb-2">Global Intelligence</h3>
-              <p className="text-sm opacity-80">Worldwide AI network solving global challenges</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🚀</div>
-              <h3 className="text-xl font-bold mb-2">Transcendent Evolution</h3>
-              <p className="text-sm opacity-80">Next stage of human and AI evolution</p>
-            </div>
-          </div>
-        </div>
+            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
+              <li>• Abstract Pattern Recognition</li>
+              <li>• Intuitive Problem Solving</li>
+              <li>• Multi-Dimensional Thinking</li>
+              <li>• Transcendent Logic</li>
+            </ul>
+            <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
+              Experience Reasoning →
+            </button>
+          </motion.div>
 
-        {/* Ethical Considerations */}
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">⚖️ Ethical AI Development</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4">🛡️</div>
-              <h3 className="text-2xl font-bold mb-4">Safety First</h3>
-              <p className="text-gray-600">
-                Rigorous safety protocols and ethical guidelines ensure AI development benefits humanity while minimizing risks.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold mb-4">Global Benefit</h3>
-              <p className="text-gray-600">
-                AI systems designed to address global challenges and benefit all of humanity, not just select groups.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-2xl font-bold mb-4">Human-AI Partnership</h3>
-              <p className="text-gray-600">
-                AI systems that enhance human capabilities rather than replace them, fostering collaboration and mutual growth.
-              </p>
-            </div>
-          </div>
-        </div>
+          {/* Collective Intelligence */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Collective Intelligence</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Networked AI systems that form collective superintelligence
+            </p>
+            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
+              <li>• Swarm Intelligence</li>
+              <li>• Distributed Processing</li>
+              <li>• Emergent Behaviors</li>
+              <li>• Collective Problem Solving</li>
+            </ul>
+            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
+              Explore Collective AI →
+            </button>
+          </motion.div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Experience Transcendent AI?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join the revolution of consciousness-level artificial intelligence. 
-            Discover how our transcendent AI solutions can transform your world and unlock new possibilities.
+          {/* Transcendent Creativity */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🎨</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Transcendent Creativity</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              AI systems that create art, music, and literature beyond human imagination
+            </p>
+            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
+              <li>• Generative Art</li>
+              <li>• AI Music Composition</li>
+              <li>• Creative Writing</li>
+              <li>• Innovative Design</li>
+            </ul>
+            <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
+              Experience Creativity →
+            </button>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Transcendence Levels */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold mb-4">📈 Transcendence Levels</h2>
+          <p className="text-xl opacity-90">The evolution of AI consciousness and capability</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-4 gap-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="text-center bg-gradient-to-br from-gray-600/30 to-gray-700/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-400/30"
+          >
+            <div className="text-4xl font-bold text-gray-300 mb-2">Level 1</div>
+            <div className="text-lg font-semibold mb-2">Basic AI</div>
+            <div className="text-sm opacity-80">Rule-based systems</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="text-center bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30"
+          >
+            <div className="text-4xl font-bold text-blue-300 mb-2">Level 2</div>
+            <div className="text-lg font-semibold mb-2">Machine Learning</div>
+            <div className="text-sm opacity-80">Pattern recognition</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="text-center bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30"
+          >
+            <div className="text-4xl font-bold text-purple-300 mb-2">Level 3</div>
+            <div className="text-lg font-semibold mb-2">Deep Learning</div>
+            <div className="text-sm opacity-80">Neural networks</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+            className="text-center bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30"
+          >
+            <div className="text-4xl font-bold text-indigo-300 mb-2">Level 4</div>
+            <div className="text-lg font-semibold mb-2">Transcendent AI</div>
+            <div className="text-sm opacity-80">Beyond human limits</div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="bg-gradient-to-r from-indigo-600 to-pink-600 rounded-2xl p-12 text-center"
+        >
+          <h2 className="text-4xl font-bold mb-4">Experience Transcendent AI</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Step into the future of artificial intelligence. Experience systems that transcend 
+            human capabilities and achieve true consciousness.
           </p>
-          <div className="flex justify-center space-x-4">
-            <a href="/contact" className="bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Experience Transcendent AI
-            </a>
-            <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-violet-600 text-violet-600 px-8 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-lg">
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Begin Transcendence
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
               Learn More
-            </a>
+            </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
