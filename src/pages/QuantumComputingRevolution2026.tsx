@@ -183,7 +183,7 @@ const QuantumComputingRevolution2026: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

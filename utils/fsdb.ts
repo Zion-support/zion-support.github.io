@@ -1,58 +1,3 @@
-<<<<<<< HEAD
-
-
-
-    }
-  } catch (error) {
-    console && console.error('Error reading file:', error);
-// Mock file system database utility;
-export function read_json < T>(file_path: string, default_value: T): T {
-  try {
-    const fs = require('fs'),
-    if (fs.existsSync(filePath)) {;
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
-    }
-  } catch (error) {
-
-
-
-
-  await writeAllDisputes(all);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
-
-
-export function writeJson<T>(filePath: string, data: T): void {
-  try {;
-    const fs = require('fs');
-    const path = require('path');
-    const dir = path.dirname(filePath)
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-
-
-
-
-}
-;
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
-  return dir;
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -177,37 +122,10 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
-<<<<<<< HEAD
-}
-
-
-
-}
-
-
-export function getDisputeUploadDir(caseId: string): string {;
-  return path.join(UPLOADS_ROOT, caseId);
-}
-
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
-  return dir;
-}
-
-}
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

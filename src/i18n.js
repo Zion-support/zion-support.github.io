@@ -9,29 +9,10 @@ const resources = {
     translation: {
       welcome: 'Welcome',
 <<<<<<< HEAD
+=======
       hello: 'Hello',
       // Add more translations as needed
-=======
-      home: 'Home',
-      about: 'About',
-      contact: 'Contact'
-    }
-  },
-  es: {
-    translation: {
-      welcome: 'Bienvenido',
-      home: 'Inicio',
-      about: 'Acerca de',
-      contact: 'Contacto'
-    }
-  },
-  fr: {
-    translation: {
-      welcome: 'Bienvenue',
-      home: 'Accueil',
-      about: 'À propos',
-      contact: 'Contact'
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
     }
   }
 };
@@ -45,12 +26,9 @@ i18n
     debug: false,
     interpolation: {
 <<<<<<< HEAD
+=======
       escapeValue: false,
     },
-=======
-      escapeValue: false
-    }
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
   });
 
-export default i18n;

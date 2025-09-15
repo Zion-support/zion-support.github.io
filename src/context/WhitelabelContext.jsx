@@ -12,6 +12,7 @@ export const useWhitelabel = () => {
 
 export const WhitelabelProvider = ({ children }) => {
 <<<<<<< HEAD
+=======
   const [whitelabelConfig, setWhitelabelConfig] = useState({
     brandName: 'Zion Tech Group',
     logo: '/logo.png',
@@ -26,20 +27,7 @@ export const WhitelabelProvider = ({ children }) => {
   const value = {
     whitelabelConfig,
     updateConfig,
-=======
-  const [theme, setTheme] = useState('default');
-  const [branding, setBranding] = useState({
-    logo: '/logo.png',
-    companyName: 'Zion Tech Group',
-    primaryColor: '#6366f1'
-  });
-
-  const value = {
-    theme,
-    setTheme,
-    branding,
-    setBranding
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (
@@ -47,4 +35,3 @@ export const WhitelabelProvider = ({ children }) => {
       {children}
     </WhitelabelContext.Provider>
   );
-};

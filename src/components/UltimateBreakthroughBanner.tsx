@@ -1,75 +1,50 @@
-"use client";
-'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-export default function UltimateBreakthroughBanner() {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    // Show banner after 2 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }2000);
-
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    setIsVisible(false);
-  };
-
-  if (isDismissed || !isVisible) {
-    return null;
-  }
-
+const UltimateBreakthroughBanner: React.FC = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 text-white shadow-lg animate-slideDown">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl animate-pulse">🚀</span>
-              <span className="font-bold text-lg">BREAKTHROUGH ANNOUNCEMENT</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <span className="bg-red-500 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                5,000% ROI
-              </span>
-              <span className="text-sm">AI 2025 Ultimate Breakthrough</span>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <Link 
-              href="/blog/ai-2025-ultimate-breakthrough-announcement"
-              className="bg-white text-purple-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors"
-            >
-              Learn More
-            </Link>
-            <button 
-              onClick={handleDismiss}
-              className="text-white hover:text-gray-200 transition-colors p-1"
-              aria-label="Dismiss banner"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-center space-x-3 mb-4">
+          <span className="text-3xl animate-pulse">🧠</span>
+          <h3 className="text-3xl font-bold">AI 2026 ULTIMATE BREAKTHROUGH</h3>
+          <span className="text-3xl animate-pulse">⚛️</span>
         </div>
-        
-        {/* Mobile version */}
-        <div className="md:hidden mt-2 text-center">
-          <span className="bg-red-500 px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-            5,000% ROI
-          </span>
-          <span className="text-sm ml-2">AI 2025 Ultimate Breakthrough</span>
+        <p className="text-xl opacity-95 mb-6 max-w-5xl mx-auto">
+          Revolutionary AI technologies including consciousness transfer, quantum AI fusion, 
+          and interdimensional computing that will reshape reality itself
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+          <a href="/pages/AI2026UltimateBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            🧠 Consciousness Transfer →
+          </a>
+          <a href="/pages/AI2026UltimateBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold border border-white/30">
+            ⚛️ Quantum AI Fusion →
+          </a>
+          <a href="/pages/AI2026UltimateBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30">
+            🌌 Interdimensional Computing →
+          </a>
+          <a href="/pages/QuantumRealityEngine2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-300 font-semibold border border-white/30">
+            🎛️ Reality Engine →
+          </a>
         </div>
       </div>
-    </div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-10 left-20 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-500"></div>
+      </div>
+    </motion.div>
   );
-}
+};
+
+export default UltimateBreakthroughBanner;

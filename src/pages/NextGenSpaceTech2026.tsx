@@ -1,6 +1,5 @@
 import React from 'react';
 
-const NextGenSpaceTech2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -201,9 +200,33 @@ const NextGenSpaceTech2026: React.FC = () => {
           <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
             Join us in the next chapter of human exploration. Our revolutionary space technology is ready to take you beyond Earth and into the infinite possibilities of the universe.
           </p>
-          <a href="/contact" className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl">
-            Start Your Space Journey →
-          </a>
+          <div className="flex justify-center space-x-6">
+            <a href="/pages/UltimateTechShowcase2025" className="bg-white text-cyan-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
+              🚀 Ultimate Tech Showcase
+            </a>
+            <a href="/pages/RevolutionaryTechInsights2025" className="border-2 border-white text-white px-12 py-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-xl">
+              🔮 Tech Insights
+            </a>
+            <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
+              🧠 Synthetic AI
+            </a>
+          </div>
+        </motion.div>
+=======
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Explore the Cosmos?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join us in the greatest adventure in human history. The universe is waiting, 
+            and the future of space exploration starts with you.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Join Mission
+            </button>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Learn More
+            </button>
+          </div>
         </div>
       </div>
     </div>
