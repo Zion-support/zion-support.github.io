@@ -9,10 +9,43 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (brand new content)
   {
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
+    title: 'Launch: AI Governance Dashboard v5',
     summary:
-      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
-    href: '/updates/autonomous-data-quality-copilot-1-0',
+      'Cross-env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails. Faster, deeper integrations.',
+    href: '/updates/ai-governance-dashboard-v5',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
+    summary:
+      'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
+    href: '/updates/autonomous-it-ops-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Analytics Copilot v1.0',
+    summary:
+      'Trustworthy dashboards, KPI narratives, and anomaly alerts grounded in telemetry with audit-ready evidence.',
+    href: '/updates/autonomous-analytics-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
+    summary:
+      'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
+    href: '/updates/agent-runbooks-live-evals',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Agentic Ops Control Center (v1.0)',
+    summary:
+      'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
+    href: '/updates/agentic-ops-control-center-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -310,6 +343,23 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
   },
   // Fresh content added 2025-09-15
+  // New blog posts added 2025-09-15 (to feature on homepage)
+  {
+    title: 'Playbook: Production Agent Postmortems (2026)',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.',
+    href: '/blog/ai-2026-production-agent-postmortems',
+    date: '2025-09-15',
+    tag: 'Playbook'
+  },
+  {
+    title: 'Guide: Real-Time Model Routing (2026)',
+    summary:
+      'Latency- and quality-aware routing with eval gates, budgets, and audit-ready evidence.',
+    href: '/blog/ai-2026-real-time-model-routing-playbook',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // New content added 2025-09-15 (afternoon batch)
   {
     title: 'Launch: AI Content Studio 2.2',
