@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 32
+  total_content_pieces: 34
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -767,6 +767,36 @@ content_index:
         incident_reduction: "40%"
         rollback_time: "< 5 min"
         conversion_lift: "+8%"
+
+    - id: "ai-2026-trustworthy-model-routing-2026-preview"
+      type: "blog"
+      title: "AI 2026: Trustworthy Model Routing — 2026 Preview"
+      file_path: "/content/blog/ai-2026-trustworthy-model-routing-2026-preview.md"
+      url: "/blog/ai-2026-trustworthy-model-routing-2026-preview"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Policy-as-Code", "Evaluations", "Reliability", "Cost Optimization", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        latency_p95: "stable"
+        override_rate: "improved"
+
+    - id: "ai-2026-trustworthy-agent-operations-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Trustworthy Agent Operations — Blueprint"
+      file_path: "/content/pages/ai-2026-trustworthy-agent-operations-blueprint.md"
+      url: "/content/ai-2026-trustworthy-agent-operations-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "SLOs", "Evaluations", "Policy-as-Code", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        mttr: "< 10 min"
+        cost_optimization: "20-40%"
 
     - id: "ai-2026-generative-ai-risk-register"
       type: "blog"
