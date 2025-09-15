@@ -865,3 +865,35 @@ content_index:
     homepage_integration: "Complete with three new compact promos"
     new_2025_content_pieces: 3
     advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
+  new_september_2025:
+    - id: "ai-2026-responsible-ai-operations-blueprint"
+      type: "blog"
+      title: "AI 2026: Responsible AI Operations Blueprint"
+      file_path: "/app/blog/ai-2026-responsible-ai-operations-blueprint/page.tsx"
+      url: "/blog/ai-2026-responsible-ai-operations-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Responsible AI", "Governance", "LLM Evals", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        release_speed: "67% faster"
+        incidents: "-72%"
+      reading_time: "16 min read"
+
+    - id: "ai-2026-foundational-models-cost-optimization-playbook"
+      type: "blog"
+      title: "AI 2026: Foundational Models Cost Optimization Playbook"
+      file_path: "/app/blog/ai-2026-foundational-models-cost-optimization-playbook/page.tsx"
+      url: "/blog/ai-2026-foundational-models-cost-optimization-playbook"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Cost Optimization", "Routing", "Caching", "Distillation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "30-70%"
+        latency: "2.4x faster"
+        quality: "stable via evals"
+      reading_time: "14 min read"

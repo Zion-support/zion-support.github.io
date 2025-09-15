@@ -15,7 +15,33 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-red-700 mb-2">Security</div>
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="hover:underline">
+              Responsible AI Operations Blueprint (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Implement policy-as-code, evals, and incident playbooks to ship reliable AI at scale.
+          </p>
+          <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="hover:underline">
+              Foundational Models Cost Optimization (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce AI infra costs 30–70% with routing, caching, and distillation strategies.
+          </p>
+          <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="text-emerald-700 font-semibold">Read Playbook →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="hover:underline">
               AI 2026: Agent Red Teaming Blueprint

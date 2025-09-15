@@ -619,6 +619,16 @@ export default function HomePage() {
                   <Link href="/blog/ai-2026-autonomous-finance-operating-system" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-emerald-700 mb-2">Cost Ops</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Foundational Models Cost Optimization</h3>
+                  <p className="text-gray-600">Routing, caching, and distillation to cut AI infra costs 30–70%.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -789,6 +799,23 @@ export default function HomePage() {
         <ComprehensiveContentShowcase2026 />
         <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
+        {/* Inline promo for new September 2025 posts */}
+        <section className="py-6 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-indigo-700">New Guides</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Responsible AI Ops + Cost Optimization</h2>
+                <p className="text-gray-600 mt-2">Operational guardrails and 30–70% AI infra savings.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Responsible AI Ops</Link>
+                <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Cost Optimization</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
