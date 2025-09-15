@@ -490,6 +490,22 @@ export const blogPosts = [
   }
   ,
   {
+    id: 31,
+    title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
+    excerpt: "Design compliant, observable, and cost-aware GenAI services that scale safely.",
+    content: "Enterprises in regulated sectors need GenAI patterns that balance speed with safety. This article details reference architectures for policy-as-code governance, audit-grade logging, dataset-linked evals, red-team scenarios, cost routing across model tiers, and staged rollouts that keep risk under control while unlocking impact.",
+    author: "Amara Collins",
+    authorRole: "Chief AI Architect",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Governance",
+    tags: ["GenAI", "Compliance", "Evals", "Cost Routing"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-genai-patterns-2026.jpg",
+    slug: "ai-2026-trusted-genai-patterns-regulated-enterprises"
+  }
+  ,
+  {
     id: 7,
     title: "Generative AI in the Enterprise: Governance That Scales",
     excerpt: "A practical framework to safely operationalize GenAI across teams without slowing innovation.",

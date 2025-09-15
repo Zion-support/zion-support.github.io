@@ -481,7 +481,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0 }}
                 className="bg-slate-800/50 rounded-xl overflow-hidden border border-zion-cyan/50 hover:border-zion-cyan transition-all duration-300 md:col-span-1"
               >
-                <Link to="/blog/new-ai-services-announcement" className="block">
+                <Link to="/blog/ai-2026-trusted-genai-patterns-regulated-enterprises" className="block">
                   <div className="aspect-[16/9] bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 flex items-center justify-center">
                     <div className="text-center">
                       <Brain className="w-16 h-16 text-zion-cyan mx-auto mb-2" />
@@ -491,10 +491,10 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">AI Innovation</span>
-                      <span className="text-xs text-zion-slate-light">Jan 20, 2025 • 15 min read</span>
+                      <span className="text-xs text-zion-slate-light">Sep 15, 2025 • 8 min read</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">Revolutionary AI Services: Transforming Business in 2025</h3>
-                    <p className="text-zion-slate-light line-clamp-3">Discover our latest AI-powered solutions including quantum analytics, autonomous cloud infrastructure, and neural security networks.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">Trusted GenAI Patterns for Regulated Enterprises</h3>
+                    <p className="text-zion-slate-light line-clamp-3">Blueprint for compliant GenAI with policy-as-code, evals, audit logs, and cost-aware routing.</p>
                   </div>
                 </Link>
               </motion.article>
