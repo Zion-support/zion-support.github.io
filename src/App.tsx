@@ -190,6 +190,10 @@ function App() {
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
 
+                {/* New AI-powered service routes */}
+                <Route path="/services/ai-powered-customer-success-platform" element={<React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'))} />} />
+                <Route path="/services/ai-powered-marketing-automation" element={<React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'))} />} />
+
                 {/* Enhanced 404 route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-futuristic flex items-center justify-center">

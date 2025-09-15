@@ -1,22 +1,22 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-import SEO from "@/components/SEO";
-import { Link } from "react-router-dom";
+import { CategoriesSection } from "@/components/CategoriesSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import SEO from "@/components/SEO";
 import { SocialShareSection } from "@/components/SocialShareSection";
-import { useTranslation } from "react-i18next";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { WaitlistSection } from "@/components/WaitlistSection";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
+import { ArrowRight, BarChart3, Settings, Smartphone, Sparkles, Users, Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 export default function Index() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();
@@ -63,6 +63,20 @@ export default function Index() {
       <SEO title={t("home.seo_title")} description={t("home.seo_description")} keywords={t("home.seo_keywords")} canonical="https://ziontechgroup.com/"/>
       <Header />
       <HeroSection />
+      {/* Promotional Banner for New Content */}
+      <section className="bg-zion-blue-dark border-y border-zion-blue-light">
+        <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-center md:text-left">
+            <p className="text-sm text-zion-slate-light">Just published</p>
+            <h3 className="text-xl font-semibold">AIOps 2025 and Sustainable Cloud Guides</h3>
+            <p className="text-zion-slate-light">Move from reactive to predictive ops and cut cloud emissions.</p>
+          </div>
+          <div className="flex gap-3">
+            <Link to="/blog/ai-powered-it-operations-2025" className="px-4 py-2 bg-zion-purple rounded-lg hover:bg-zion-purple-light transition-colors">Read AIOps</Link>
+            <Link to="/blog/sustainable-cloud-practical-steps" className="px-4 py-2 bg-zion-blue rounded-lg border border-zion-blue-light hover:border-zion-purple transition-colors">Read Sustainable Cloud</Link>
+          </div>
+        </div>
+      </section>
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">

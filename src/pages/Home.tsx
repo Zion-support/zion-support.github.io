@@ -1,50 +1,29 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  BarChart3, 
-  Target, 
-  Lightbulb, 
-  Database, 
-  Network, 
-  Eye, 
-  Globe2, 
-  Smartphone, 
-  Monitor, 
-  Server, 
-  Atom, 
-  Car, 
-  Scale, 
-  Leaf, 
-  Factory, 
-  Building, 
-  Clock, 
-  Phone, 
-  Mail, 
-  TrendingUp 
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
+import { SEO } from "@/components/SEO";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { getRecentBlogPosts } from "@/data/blog-posts";
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Atom,
+  Brain,
+  Building,
+  Car,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Cpu,
+  DollarSign,
+  Globe2,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Zap
+} from 'lucide-react';
+import type { ComponentType, SyntheticEvent } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -74,14 +53,14 @@ interface StatItem {
   value: string;
   label: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: ComponentType<any>;
   color: string;
 }
 
 interface AIService {
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: ComponentType<any>;
   features: string[];
   href: string;
   color: string;
@@ -90,7 +69,7 @@ interface AIService {
 interface ServiceCategory {
   name: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: ComponentType<any>;
   href: string;
   count: number;
   color: string;
@@ -100,7 +79,7 @@ interface ServiceCategory {
 interface EmergingTech {
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: ComponentType<any>;
   href: string;
   price: string;
   category: string;
@@ -109,7 +88,7 @@ interface EmergingTech {
 interface MicroSaasService {
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: ComponentType<any>;
   href: string;
   price: string;
   category: string;
@@ -182,6 +161,23 @@ export default function Home() {
       features: ["Lead Scoring", "Customer Insights", "Sales Forecasting"],
       href: "/services/ai-sales-copilot",
       color: "from-green-400 to-emerald-500"
+    }
+    ,
+    {
+      title: "AI Content Studio",
+      description: "Generate on-brand blogs, landing pages, and social posts with built-in SEO and approvals",
+      icon: BookOpen,
+      features: ["Programmatic SEO", "Brand Voice Controls", "Multi-channel Publishing"],
+      href: "/services/ai-content-creation-studio",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      title: "AI Support Agent",
+      description: "Omnichannel support deflection and agent assist with secure retrieval over your docs",
+      icon: HelpCircle,
+      features: ["RAG over Knowledge Base", "Multilingual", "Analytics & Deflection"],
+      href: "/services/ai-customer-support-agent",
+      color: "from-blue-400 to-indigo-500"
     }
   ];
 
@@ -275,6 +271,23 @@ export default function Home() {
       price: "$799/month",
       category: "Transportation"
     }
+    ,
+    {
+      title: "Digital Twins Platform",
+      description: "Simulate and optimize complex systems with real-time telemetry and what-if scenarios",
+      icon: Network,
+      href: "/services/digital-twins-platform",
+      price: "$1,999/month",
+      category: "Industrial Tech"
+    },
+    {
+      title: "Quantum-Safe Vault",
+      description: "Post-quantum key management and hybrid cryptography for long-term data protection",
+      icon: Lock,
+      href: "/services/quantum-ready-cryptography",
+      price: "$3,499/month",
+      category: "Cybersecurity"
+    }
   ];
 
   const microSaasServices: MicroSaasService[] = [
@@ -302,6 +315,23 @@ export default function Home() {
       price: "$399/month",
       category: "Finance"
     }
+    ,
+    {
+      title: "SEO Content Optimizer",
+      description: "Programmatic landing pages, internal linking, and ongoing on-page audits",
+      icon: Gauge,
+      href: "/services/seo-content-optimizer",
+      price: "$129/month",
+      category: "Marketing"
+    },
+    {
+      title: "Cloud Cost Optimizer",
+      description: "Rightsizing, scheduling, and anomaly alerts with policy-based savings actions",
+      icon: BarChart3,
+      href: "/services/cloud-cost-optimizer",
+      price: "$600/month",
+      category: "FinOps"
+    }
   ];
 
   if (isLoading) {
@@ -320,12 +350,71 @@ export default function Home() {
       <SEO 
         title="Zion Tech Group - AI-Powered Business Solutions"
         description="Transform your business with cutting-edge AI solutions, cloud infrastructure, and digital transformation services. Expert IT consulting for the modern enterprise."
-        keywords="AI solutions, cloud computing, digital transformation, IT consulting, cybersecurity, machine learning, business intelligence"
+        keywords={[
+          "AI solutions",
+          "cloud computing",
+          "digital transformation",
+          "IT consulting",
+          "cybersecurity",
+          "machine learning",
+          "business intelligence"
+        ]}
       />
       
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
         <HeroSection />
+
+        {/* Latest from the Blog */}
+        <motion.section 
+          className="py-14 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold text-white">Latest from the Blog</h2>
+              <Link to="/blog" className="text-zion-cyan hover:text-zion-cyan-light">View all →</Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {getRecentBlogPosts(3).map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300"
+                >
+                  <Link to={`/blog/${post.slug}`} className="block">
+                    <div className="aspect-[16/9] bg-slate-700/50">
+                      <img
+                        src={post.imageUrl}
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                        onError={(e: SyntheticEvent<HTMLImageElement, Event>) => {
+                          const target = e.currentTarget;
+                          target.src = "/images/blog-placeholder.svg";
+                        }}
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">{post.category}</span>
+                        <span className="text-xs text-zion-slate-light">{post.publishDate} • {post.readTime}</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">{post.title}</h3>
+                      <p className="text-zion-slate-light line-clamp-3">{post.excerpt}</p>
+                    </div>
+                  </Link>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </motion.section>
 
         {/* Stats Section */}
         <motion.section 
@@ -553,7 +642,7 @@ export default function Home() {
         </motion.section>
 
         {/* Lazy Loaded Components */}
-        <Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
+        <React.Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
           <CategoriesSection />
           <BenefitsSection />
           <HowItWorksSection />
@@ -576,7 +665,7 @@ export default function Home() {
           <AIServicesShowcase />
           <InteractiveTestimonials />
           <ServicesShowcase />
-        </Suspense>
+        </React.Suspense>
       </div>
     </>
   );
