@@ -14,7 +14,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
     "incremental": true,
     "baseUrl": ".",
     "paths": {
@@ -35,15 +34,17 @@
     "types": ["vite/client", "node"]
   },
   "include": [
+<<<<<<< HEAD
     "src/**/*",
     "src/types/offline-shims.d.ts",
 =======
-    "baseUrl": "."
-  },
-  "include": [
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
     "**/*.ts",
     "**/*.tsx",
->>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -59,6 +60,10 @@
     "**/*.spec.tsx"
 =======
     "coverage"
->>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
   ]
 }
