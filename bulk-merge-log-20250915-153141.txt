@@ -316,3 +316,18 @@ yarn.lock
 [2025-09-15 15:32:48] 🔧 Resolving conflicts in yarn.lock for branch dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5...
 [2025-09-15 15:32:48] 🧩 Generic file: prefer main version
 [2025-09-15 15:32:48] ✅ Resolved conflicts in yarn.lock
+[2025-09-15 15:32:49] ✅ Successfully resolved conflicts and merged dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
+[2025-09-15 15:32:49] ✅ Branch dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5 processed successfully
+[2025-09-15 15:32:49] 📊 Batch progress: 11 successful, 1 failed
+[2025-09-15 15:32:49] 📊 Overall progress: 11 successful, 1 failed, 53 conflicts resolved
+[2025-09-15 15:32:49] 📋 Processing branch 13: dependabot/npm_and_yarn/jsdom-26.1.0
+[2025-09-15 15:32:50] 🔄 Attempting to merge dependabot/npm_and_yarn/jsdom-26.1.0...
+[2025-09-15 15:32:52] ⚠️  Merge conflicts detected in dependabot/npm_and_yarn/jsdom-26.1.0, resolving...
+[2025-09-15 15:32:52] 📋 Conflicted files: package-lock.json
+package.json
+[2025-09-15 15:32:52] 🔧 Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/jsdom-26.1.0...
+[2025-09-15 15:32:52] 📦 Package file: prefer main version
+[2025-09-15 15:32:53] ✅ Resolved conflicts in package-lock.json
+[2025-09-15 15:32:53] 🔧 Resolving conflicts in package.json for branch dependabot/npm_and_yarn/jsdom-26.1.0...
+[2025-09-15 15:32:53] 📦 Package file: prefer main version
+[2025-09-15 15:32:53] ✅ Resolved conflicts in package.json

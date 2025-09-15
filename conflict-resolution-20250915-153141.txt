@@ -71,3 +71,6 @@
 2025-09-15 15:32:48 - Resolving conflicts in src/pages/ServicesComparison.tsx for branch dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
 2025-09-15 15:32:48 - Resolving conflicts in src/pages/ServicesShowcase.tsx for branch dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
 2025-09-15 15:32:48 - Resolving conflicts in yarn.lock for branch dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
+2025-09-15 15:32:52 - Merge conflicts detected in dependabot/npm_and_yarn/jsdom-26.1.0
+2025-09-15 15:32:52 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/jsdom-26.1.0
+2025-09-15 15:32:53 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/jsdom-26.1.0
