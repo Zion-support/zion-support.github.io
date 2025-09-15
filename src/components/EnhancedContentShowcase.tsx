@@ -8,68 +8,68 @@ const EnhancedContentShowcase: React.FC = () => {
   const showcaseItems = [
     {
       id: 1,
-      title: "Advanced Tech Innovations 2026",
-      description: "Discover breakthrough innovations that are revolutionizing industries and transforming the future of technology",
-      image: "🚀",
-      gradient: "from-indigo-600 to-purple-600",
-      link: "/pages/AdvancedTechInnovations2026",
-      features: ["Quantum AI Fusion", "Neural Interface Revolution", "Synthetic Intelligence", "Advanced Robotics"],
-      category: "Innovation Showcase",
+      title: "Advanced AI Transformation 2026",
+      description: "Experience the next evolution of artificial intelligence with autonomous reasoning, quantum-enhanced processing, and self-evolving neural architectures.",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/AdvancedAITransformation2026",
+      features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
+      category: "AI & Machine Learning",
       year: "2026"
     },
     {
       id: 2,
-      title: "Future Tech Solutions 2026",
-      description: "Comprehensive technology solutions for tomorrow's challenges, featuring AI-driven automation and next-generation interfaces",
-      image: "🌟",
-      gradient: "from-blue-600 to-indigo-600",
-      link: "/pages/FutureTechSolutions2026",
-      features: ["AI-Powered Automation", "Quantum Computing Platform", "Neural Interface Solutions", "Advanced Cybersecurity"],
-      category: "Technology Solutions",
+      title: "Quantum-Neural Fusion 2026",
+      description: "Revolutionary fusion of quantum computing and neural networks, creating unprecedented processing power for complex problem solving.",
+      image: "⚛️",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumNeuralFusion2026",
+      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"],
+      category: "Quantum Computing",
       year: "2026"
     },
     {
       id: 3,
+      title: "Next-Gen Tech Showcase 2026",
+      description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
+      image: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/NextGenTechShowcase2026",
+      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
+      category: "Technology Showcase",
+      year: "2026"
+    },
+    {
+      id: 4,
       title: "Synthetic Intelligence 2026",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that think, create, and evolve independently.",
       image: "🤖",
-      gradient: "from-purple-600 to-pink-600",
+      gradient: "from-emerald-600 to-teal-600",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Synthetic Consciousness", "Autonomous Agents", "Creative AI", "Collective Intelligence"],
       category: "Synthetic Intelligence",
       year: "2026"
     },
     {
-      id: 4,
+      id: 5,
       title: "Advanced Quantum Computing 2026",
       description: "Experience exponential processing power with 1000+ qubit quantum processors and quantum supremacy capabilities.",
       image: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
+      gradient: "from-indigo-600 to-purple-600",
       link: "/pages/AdvancedQuantumComputing2026",
       features: ["1000+ Qubits", "Quantum Supremacy", "Molecular Simulation", "Quantum AI"],
       category: "Quantum Computing",
       year: "2026"
     },
     {
-      id: 5,
+      id: 6,
       title: "Neural Interface Revolution 2026",
       description: "Bridge mind and machine with direct brain-computer communication and thought control technology.",
       image: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
+      gradient: "from-rose-600 to-pink-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
       category: "Neural Interfaces",
-      year: "2026"
-    },
-    {
-      id: 6,
-      title: "Quantum-Neural Fusion 2026",
-      description: "Revolutionary fusion of quantum computing and neural interfaces for unprecedented capabilities.",
-      image: "⚛️",
-      gradient: "from-violet-600 to-purple-600",
-      link: "/pages/QuantumNeuralFusion2026",
-      features: ["Quantum-neural networks", "Enhanced cognition", "Parallel processing", "Synaptic acceleration"],
-      category: "Quantum Technology",
       year: "2026"
     }
   ];
@@ -91,25 +91,34 @@ const EnhancedContentShowcase: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
 
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ENHANCED CONTENT SHOWCASE • 2026
+    <div className="relative w-full max-w-7xl mx-auto">
+      {/* Main Showcase Container */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"></div>
+        
+        {/* Header */}
+        <div className="relative z-10 text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
+            🚀 REVOLUTIONARY TECHNOLOGY SHOWCASE • JANUARY 2026
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Content
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Experience the Future of Technology
           </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Explore our comprehensive collection of cutting-edge technology content featuring 
-            AI transformation, quantum computing, neural interfaces, and synthetic intelligence.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our groundbreaking innovations in quantum computing, neural interfaces, and synthetic intelligence
           </p>
         </div>
 
-        {/* Main Showcase Carousel */}
-        <div className="relative max-w-7xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl">
+        {/* Carousel Container */}
+        <div className="relative z-10">
+          <div className="relative h-96 overflow-hidden rounded-xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -200,14 +209,14 @@ const EnhancedContentShowcase: React.FC = () => {
               {showcaseItems.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
               ))}
             </div>
-            
+
             <button
               onClick={nextSlide}
               className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
@@ -235,7 +244,7 @@ const EnhancedContentShowcase: React.FC = () => {
 
         {/* Quick Access Grid */}
         <div className="mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Content</h3>
+          <h3 className="text-3xl font-bold text-center mb-8 text-white">Quick Access to All Content</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {showcaseItems.map((item, index) => (
               <motion.div
@@ -244,7 +253,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => goToSlide(index)}
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
@@ -255,8 +264,8 @@ const EnhancedContentShowcase: React.FC = () => {
                   </span>
                 </div>
                 <div className="text-4xl mb-4 text-center">{item.image}</div>
-                <h4 className="text-xl font-bold mb-3 text-center">{item.title}</h4>
-                <p className="text-sm opacity-90 text-center mb-4">{item.description}</p>
+                <h4 className="text-xl font-bold mb-3 text-center text-white">{item.title}</h4>
+                <p className="text-sm opacity-90 text-center mb-4 text-white">{item.description}</p>
                 <a
                   href={item.link}
                   className="block w-full bg-white/20 text-white text-center py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
