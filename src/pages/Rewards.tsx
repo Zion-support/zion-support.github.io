@@ -3,12 +3,8 @@ import { Gift } from 'lucide-react'
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
-<<<<<<< HEAD
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
-=======
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 },
 ];
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function RewardsPage() {
   return (
@@ -26,9 +22,5 @@ export default function RewardsPage() {
         ))}
       </ul>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

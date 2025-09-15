@@ -87,6 +87,11 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Investors = React.lazy(() => import('./pages/Investors'));
 const Press = React.lazy(() => import('./pages/Press'));
 
+// New content showcase pages
+const NewContentShowcase = React.lazy(() => import('./pages/NewContentShowcase'));
+const AIInnovationHub = React.lazy(() => import('./pages/AIInnovationHub'));
+const BlogPostNewContent = React.lazy(() => import('./pages/BlogPostNewContent'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -177,6 +182,11 @@ function App() {
                 <Route path="/legal" element={<Legal />} />
                 <Route path="/press" element={<Press />} />
                 
+                {/* New content showcase routes */}
+                <Route path="/new-content-showcase" element={<NewContentShowcase />} />
+                <Route path="/ai-innovation-hub" element={<AIInnovationHub />} />
+                <Route path="/blog/new-ai-services-announcement" element={<BlogPostNewContent />} />
+                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -189,6 +199,10 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
+
+                {/* New AI-powered service routes */}
+                <Route path="/services/ai-powered-customer-success-platform" element={<React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'))} />} />
+                <Route path="/services/ai-powered-marketing-automation" element={<React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'))} />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={

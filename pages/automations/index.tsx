@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Link from 'next/link',
-=======
 import type { NextPage } from 'next';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
-<<<<<<< HEAD
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-=======
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <main className="space-y-6">
@@ -31,14 +22,7 @@ const AutomationsIndex: NextPage = () => {
         ))}
       </div>
     </main>
-<<<<<<< HEAD
-  ),
-},
-
-export default AutomationsIndex,
-=======
   );
 };
 
 export default AutomationsIndex;
->>>>>>> origin/auto/autonomy-17186719616

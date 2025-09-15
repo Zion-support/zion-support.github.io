@@ -14,13 +14,13 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
-      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
-      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
-      slug: "ai-2026-secure-agent-architecture",
-      category: "Security Architecture",
-      date: "2025-09-15",
+      title: "AI 2026: Autonomous Incident Response",
+      description: "Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.",
+      slug: "ai-2026-ai-ops-autonomous-incident-response",
+      category: "Operations",
+      date: "2025-09-14",
       featured: true,
-      image: "/images/secure-agent-architecture-2026.jpg"
+      image: "/images/ai-ops-autonomous-incident-response-2026.jpg"
     },
     {
       title: "AI 2025: LLM Evaluation Best Practices - Reliable, Fair, and Robust",
@@ -41,13 +41,13 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
-      title: "Enterprise Foundation Models: A Practical Guide (2025)",
-      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
-      slug: "ai-2025-enterprise-foundation-models-practical-guide",
-      category: "Enterprise AI",
+      title: "Enterprise AI Governance Blueprint (2026)",
+      description: "Policy-as-code, risk tiers, and continuous evaluations for safe AI scale.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Governance",
       date: "2025-09-15",
       featured: true,
-      image: "/images/enterprise-foundation-models-2025.jpg"
+      image: "/images/ai-governance-blueprint-2026.jpg"
     },
     {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
