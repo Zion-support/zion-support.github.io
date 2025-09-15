@@ -15,6 +15,19 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/agentic-ops-blueprint-2026" className="hover:underline">
+              Agentic Ops Blueprint 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Operationalize agentic workflows with safety, observability, and measurable ROI.
+          </p>
+          <Link href="/content/agentic-ops-blueprint-2026" className="text-purple-600 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/hyperautomation-blueprint-2026" className="hover:underline">
