@@ -56,7 +56,6 @@ import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution
 import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
 import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
 import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
-import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import InteractiveTechDemo2026 from './src/components/InteractiveTechDemo2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenAIConsciousness2026 from './src/pages/NextGenAIConsciousness2026';
@@ -645,10 +644,6 @@ export default function App(): JSX.Element {
                   <InteractiveTechDemo2026 />
                 </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 text-white relative overflow-hidden">

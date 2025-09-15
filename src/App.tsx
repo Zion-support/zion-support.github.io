@@ -27,6 +27,10 @@ import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard20
 import BiotechRevolution2026 from './pages/BiotechRevolution2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import NextGenTechRevolution2026 from './pages/NextGenTechRevolution2026';
+import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
+import FutureTechShowcase2026 from './pages/FutureTechShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -39,6 +43,9 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Revolutionary Content Banner 2026 */}
+                <RevolutionaryContentBanner2026 />
+
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -403,6 +410,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
+          <Route path="/pages/NextGenTechRevolution2026" element={<NextGenTechRevolution2026 />} />
+          <Route path="/pages/RevolutionaryTechInsights2026" element={<RevolutionaryTechInsights2026 />} />
+          <Route path="/pages/FutureTechShowcase2026" element={<FutureTechShowcase2026 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
