@@ -1,40 +1,30 @@
-export default function UpdateDetailPage() {
+import React from 'react'
+
+export default function AutonomousOpsControlCenter20Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-3xl py-12 lg:py-16">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Autonomous Ops Control Center 2.0
-          </h1>
-          <p className="mt-2 text-sm text-blue-400">2025-09-15</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Version 2.0 of the Autonomous Ops Control Center introduces unified observability for
-            agents, real-time policy enforcement, and automated incident workflows with live evals.
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24">
+        <div className="mb-4 flex items-center gap-3 text-xs text-gray-400">
+          <span className="rounded-full bg-green-500/10 px-2 py-0.5 text-green-300">Launch</span>
+          <time dateTime="2025-09-15">September 15, 2025</time>
+        </div>
+        <h1 className="text-4xl font-bold tracking-tight text-white">Autonomous Ops Control Center 2.0</h1>
+        <p className="mt-4 text-lg leading-8 text-gray-300">
+          Unified command center with live evals, automated guardrails, and incident workflows to safely operate
+          autonomous agents at scale.
+        </p>
+        <div className="mt-8 prose prose-invert prose-lg max-w-none">
+          <h2>What&apos;s New</h2>
+          <ul>
+            <li>Live evaluation dashboards with quality, latency, and cost SLIs</li>
+            <li>Policy-as-code guardrails with canary and rollback automation</li>
+            <li>Incident workflows integrated with observability traces</li>
+          </ul>
+          <p className="mt-6">
+            <a href="/contact" className="text-blue-400 hover:text-blue-300">Request a demo →</a>
           </p>
-          <div className="mt-10 space-y-6 text-gray-300">
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Unified traces, metrics, and safety signals dashboard</li>
-              <li>Policy-as-code guardrails with just-in-time enforcement</li>
-              <li>Runbooks and automated incident workflows with approvals</li>
-              <li>Canary live evals with rollback hooks</li>
-              <li>Deep integrations: PagerDuty, Slack, Jira, Datadog</li>
-            </ul>
-            <p>
-              Modernize operations for autonomous systems with real-time control, visibility, and
-              safety. Contact us to enable Control Center 2.0 in your environment.
-            </p>
-          </div>
-          <div className="mt-10">
-            <a
-              href="/contact"
-              className="inline-flex items-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200"
-            >
-              Request a demo
-            </a>
-          </div>
         </div>
       </div>
     </div>
   )
 }
-
