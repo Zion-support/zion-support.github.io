@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 'use client'
 
@@ -22,16 +12,6 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' },
-]
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -39,43 +19,18 @@ const navigation = [
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
-<<<<<<< HEAD
-=======
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   { name: 'Contact', href: '/contact' },
 =======
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
 >>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
   { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-]
-
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 =======
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 ]

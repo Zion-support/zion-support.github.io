@@ -13,9 +13,4 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
         <p className="text-sm">{basicInfo.summary}</p>
       )}
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }
