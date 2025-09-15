@@ -54,6 +54,46 @@ export default function BlogPage() {
       image: '/blog/ai-cybersecurity.jpg'
     },
     {
+      id: 'edge-ai-on-device-inference',
+      title: 'Edge AI: On-Device Inference for Privacy and Speed',
+      excerpt: 'How to deploy efficient on-device models to reduce latency and protect user data.',
+      category: 'AI Solutions',
+      author: 'Priya Natarajan',
+      date: '2024-01-18',
+      readTime: '7 min read',
+      image: '/blog/edge-ai.jpg'
+    },
+    {
+      id: 'autonomous-agents-in-enterprise',
+      title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls',
+      excerpt: 'Design patterns for safe, measurable, and ROI-positive agent deployments across workflows.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2024-01-16',
+      readTime: '9 min read',
+      image: '/blog/enterprise-agents.jpg'
+    },
+    {
+      id: 'post-quantum-cryptography-roadmap',
+      title: 'Post-Quantum Cryptography: A Practical Migration Roadmap',
+      excerpt: 'Assessing risk, selecting algorithms, and planning phased rollouts to PQC.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2024-01-14',
+      readTime: '8 min read',
+      image: '/blog/pqc-roadmap.jpg'
+    },
+    {
+      id: 'llm-evals-in-production',
+      title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics',
+      excerpt: 'Move beyond static benchmarks with continuous evals, guardrails, and feedback loops.',
+      category: 'Data Science',
+      author: 'Michael Rodriguez',
+      date: '2024-01-11',
+      readTime: '7 min read',
+      image: '/blog/llm-evals.jpg'
+    },
+    {
       id: 'data-science-business-intelligence',
       title: 'Transforming Business Intelligence with Advanced Data Science',
       excerpt: 'Learn how advanced data science techniques are revolutionizing business intelligence and decision-making processes.',
@@ -106,12 +146,12 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 16, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
-    { name: 'Quantum Computing', count: 2, active: false },
+    { name: 'AI Solutions', count: 4, active: false },
+    { name: 'Quantum Computing', count: 3, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
-    { name: 'Data Science', count: 1, active: false },
+    { name: 'Data Science', count: 2, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
