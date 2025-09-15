@@ -30,16 +30,16 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Hyperautomation Guide</h3>
+            <div className="text-4xl mb-4">💸</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">AI FinOps Cost Optimization</h3>
             <p className="text-gray-600 mb-4">
-              Complete playbook for implementing AI-driven hyperautomation across your organization with proven strategies and real-world examples.
+              Control AI spend without sacrificing quality using right-sizing, caching, and eval-gated upgrades.
             </p>
             <Link 
-              href="/blog/ai-2026-hyperautomation-business-playbook"
+              href="/blog/ai-2026-enterprise-ai-finops-cost-optimization"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Get Implementation Guide →
+              Read FinOps Guide →
             </Link>
           </div>
 
