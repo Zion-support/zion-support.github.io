@@ -6,8 +6,14 @@ const UltimateContentShowcase2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 =======
@@ -19,7 +25,11 @@ const UltimateContentShowcase2026: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -29,6 +39,9 @@ const UltimateContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
 
   const showcaseItems = [
     {
@@ -346,6 +359,7 @@ const UltimateContentShowcase2026: React.FC = () => {
         </motion.div>
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 <<<<<<< HEAD
@@ -354,6 +368,12 @@ const UltimateContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> main
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
       description: "Experience the most revolutionary technologies ever created",
@@ -400,9 +420,13 @@ const UltimateContentShowcase2026: React.FC = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9601
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -572,7 +596,11 @@ const UltimateContentShowcase2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -582,6 +610,9 @@ const UltimateContentShowcase2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
       </div>
     </div>
   );

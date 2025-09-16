@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
 <<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
@@ -33,13 +39,19 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lu
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-1912
 
 const Contact: React.FC = () => {
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
 
 const Contact: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -100,7 +112,11 @@ const Contact: React.FC = () => {
     "IoT Solutions"
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -460,7 +476,11 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-5863
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
           </div>
         </div>
       </section>

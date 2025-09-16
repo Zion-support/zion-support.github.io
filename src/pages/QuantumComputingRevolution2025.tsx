@@ -464,7 +464,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -698,7 +702,11 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
       </div>
     </div>
   );

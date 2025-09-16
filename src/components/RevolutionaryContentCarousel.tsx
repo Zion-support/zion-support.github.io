@@ -100,6 +100,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-502e
 =======
 <<<<<<< HEAD
@@ -108,6 +109,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> main
+>>>>>>> main
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -138,7 +145,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -148,6 +159,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
     },
     {
       id: 4,
@@ -185,7 +199,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
       description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -195,6 +213,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
@@ -207,7 +228,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -217,6 +242,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
         "Quantum-Neural Integration",
         "Reality Perception AI",
         "Consciousness Amplification",
@@ -228,7 +256,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -238,6 +270,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -263,7 +298,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -273,6 +312,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
@@ -285,7 +327,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -295,6 +341,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
         "Autonomous AI Agents",
         "Synthetic Consciousness",
         "Collective Intelligence",
@@ -308,7 +357,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-07de
@@ -318,6 +371,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> cursor/create-and-deploy-new-content-01e2
+=======
+>>>>>>> main
+>>>>>>> main
       status: "Live Now",
       impact: "Transformative"
     }
