@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // @ts-nocheck
+=======
+>>>>>>> cursor/create-and-deploy-new-content-973e
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -22,8 +25,13 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-real-time-rag-architectures': require('../../blog/ai-2026-real-time-rag-architectures').default,
   'ai-2026-guardrailed-tooling-risk-tiers': require('../../blog/ai-2026-guardrailed-tooling-risk-tiers').default,
   'ai-2026-production-evidence-hub-blueprint': require('../../blog/ai-2026-production-evidence-hub-blueprint').default,
+<<<<<<< HEAD
   'ai-2026-agent-slo-scorecards': require('../../blog/ai-2026-agent-slo-scorecards').default,
   'ai-2026-cost-aware-model-routing': require('../../blog/ai-2026-cost-aware-model-routing').default,
+=======
+  'ai-2026-agent-slo-blueprint': require('../../blog/ai-2026-agent-slo-blueprint').default,
+  'ai-2026-governed-tool-use-case-studies': require('../../blog/ai-2026-governed-tool-use-case-studies').default,
+>>>>>>> cursor/create-and-deploy-new-content-973e
 }
 
 export default function BlogPostRouter() {
