@@ -41,7 +41,7 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
-import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+import InteractiveTechShowcase2028 from './src/pages/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';

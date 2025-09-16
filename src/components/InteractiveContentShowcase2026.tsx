@@ -99,7 +99,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -109,24 +108,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
           Explore our revolutionary technologies through interactive demonstrations and detailed insights
         </p>
       </div>
-=======
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <divdiv
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE CONTENT SHOWCASE 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Interactive Content Experience
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Immerse yourself in our revolutionary content through interactive demonstrations, 
-            real-time simulations, and hands-on experiences with cutting-edge technology.
-          </p>
-        </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
       {/* Interactive Tabs */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -146,7 +127,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Active Content Display */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
         <div className="grid md:grid-cols-2 gap-8">
@@ -158,40 +138,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
                   {contentTabs[activeTab as keyof typeof contentTabs].content.title}
                 </h3>
                 <div className={`w-16 h-1 bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} rounded-full mt-2`}></div>
-=======
-        {/* Active Content Display */}
-        <divdiv
-          key={activeContent}
-          className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16"
-        >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="text-6xl mb-6">{contentItems[activeContent].icon}</div>
-              <h3 className="text-4xl font-bold mb-6">
-                {contentItems[activeContent].title}
-              </h3>
-              <p className="text-xl opacity-90 mb-8">
-                {contentItems[activeContent].description}
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {contentItems[activeContent].features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <span className="text-cyan-400 text-xl">✓</span>
-                    <span className="text-lg">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex space-x-4">
-                <a
-                  href={contentItems[activeContent].link}
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg"
-                >
-                  Explore Content →
-                </a>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-lg">
-                  Try Interactive Demo
-                </button>
->>>>>>> cursor/create-and-deploy-new-content-79ca
               </div>
             </div>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
@@ -238,7 +184,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
 
@@ -263,65 +208,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
             🚀 Ultimate Revolution →
           </a>
         </div>
-=======
-        </divdiv>
-
-        {/* Feature Highlights */}
-        <divdiv
-          className="grid md:grid-cols-3 gap-8 mb-16"
-        >
-          {[
-            {
-              title: "Real-time Interaction",
-              description: "Interact with technologies in real-time through our advanced simulation platform",
-              icon: "⚡",
-              color: "from-yellow-500 to-orange-500"
-            },
-            {
-              title: "AI-Powered Learning",
-              description: "Learn through AI-guided experiences that adapt to your understanding level",
-              icon: "🧠",
-              color: "from-purple-500 to-pink-500"
-            },
-            {
-              title: "Immersive Experience",
-              description: "Experience technologies through immersive virtual and augmented reality",
-              icon: "🥽",
-              color: "from-cyan-500 to-blue-500"
-            }
-          ].map((feature, index) => (
-            <divdiv
-              key={index}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 text-center"
-            >
-              <div className={`text-4xl mb-4 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-              <p className="text-white/80">{feature.description}</p>
-            </divdiv>
-          ))}
-        </divdiv>
-
-        {/* Call to Action */}
-        <divdiv
-          className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
-            Dive into our interactive content and experience the technologies that are reshaping the future. 
-            Start your journey into the next generation of innovation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-              🎮 Start Interactive Experience →
-            </button>
-            <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-xl">
-              📚 View All Content
-            </button>
-          </div>
-        </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React from 'react';
 
 const FutureTechInnovations2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -26,40 +25,6 @@ const FutureTechInnovations2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Metaverse 2.0</h3>
             <p className="text-purple-100 mb-6 text-center">
               Next-generation virtual worlds with photorealistic avatars, persistent digital economies, and seamless reality blending
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-16">
-          <divdiv
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🚀 FUTURE TECH INNOVATIONS • 2026
-            </div>
-            <h1 className="text-6xl font-bold text-white mb-6">
-              The Future is Here: <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Revolutionary Technologies</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Explore the cutting-edge technologies that are reshaping our world and creating unprecedented opportunities for innovation and growth.
-            </p>
-          </divdiv>
-        </div>
-      </div>
-
-      {/* Revolutionary Technologies Grid */}
-      <div className="container mx-auto px-4 py-16">
-        <divdiv
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
-          {/* AI-Powered Autonomous Systems */}
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-6 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-white text-center">AI-Powered Autonomous Systems</h3>
-            <p className="text-gray-300 mb-6 text-center">
-              Self-managing systems that adapt, learn, and optimize without human intervention, revolutionizing how we approach complex problems.
->>>>>>> cursor/create-and-deploy-new-content-79ca
             </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Photorealistic VR Environments</li>
@@ -173,19 +138,10 @@ const FutureTechInnovations2026: React.FC = () => {
               </span>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Technology Impact Section */}
         <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-=======
-        </divdiv>
-
-        {/* Innovation Impact Section */}
-        <divdiv
-          className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
-        >
->>>>>>> cursor/create-and-deploy-new-content-79ca
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Technology Impact Predictions</h2>
             <p className="text-xl opacity-90">
@@ -230,7 +186,6 @@ const FutureTechInnovations2026: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Implementation Timeline */}
@@ -250,19 +205,6 @@ const FutureTechInnovations2026: React.FC = () => {
                 <p className="text-gray-300">Commercial deployment of brain-inspired processors</p>
               </div>
               <div className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold">March 2026</div>
-=======
-        </divdiv>
-
-        {/* Future Applications */}
-        <divdiv
-          className="text-center"
-        >
-          <h2 className="text-4xl font-bold text-white mb-8">🌟 Future Applications</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold text-white mb-3">Healthcare Revolution</h3>
-              <p className="text-gray-300 text-sm">AI-powered diagnostics, robotic surgery, and personalized medicine</p>
->>>>>>> cursor/create-and-deploy-new-content-79ca
             </div>
             
             <div className="flex items-center space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-lg">
@@ -292,7 +234,6 @@ const FutureTechInnovations2026: React.FC = () => {
               <div className="bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold">December 2026</div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Call to Action */}
@@ -301,18 +242,6 @@ const FutureTechInnovations2026: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in developing and implementing these revolutionary technologies. 
             Be part of the next technological revolution.
-=======
-        </divdiv>
-
-        {/* Call to Action */}
-        <divdiv
-          className="text-center mt-16"
-        >
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Embrace the Future?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join us in shaping tomorrow's world with these revolutionary technologies. 
-            Let's build the future together.
->>>>>>> cursor/create-and-deploy-new-content-79ca
           </p>
           <div className="flex justify-center space-x-6">
             <a href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -322,11 +251,7 @@ const FutureTechInnovations2026: React.FC = () => {
               Explore Solutions
             </a>
           </div>
-<<<<<<< HEAD
         </div>
-=======
-        </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
     </div>
   );
