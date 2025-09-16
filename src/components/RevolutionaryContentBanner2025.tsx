@@ -1,39 +1,103 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const contentSlides = [
+    {
+      title: "Revolutionary Tech Breakthrough 2025",
+      description: "Experience the most groundbreaking technological innovations reshaping our world",
+      link: "/pages/RevolutionaryTechBreakthrough2025",
+      color: "from-purple-600 to-pink-600",
+      icon: "🚀"
+    },
+    {
+      title: "Next-Gen Space Technology 2026",
+      description: "Revolutionary space technologies making interplanetary travel a reality",
+      link: "/pages/NextGenSpaceTech2026",
+      color: "from-cyan-600 to-blue-600",
+      icon: "🛰️"
+    },
+    {
+      title: "Advanced Biotech Revolution 2026",
+      description: "Cutting-edge biotechnology transforming medicine and human enhancement",
+      link: "/pages/AdvancedBiotechRevolution2026",
+      color: "from-emerald-600 to-teal-600",
+      icon: "🧬"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [contentSlides.length]);
+
   return (
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      <div className="relative z-10">
-        <div className="flex items-center justify-center space-x-4 mb-6">
-          <span className="text-4xl animate-bounce">🌟</span>
-          <h3 className="text-4xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2025</h3>
-          <span className="text-4xl animate-bounce">🌟</span>
+    <div className="relative overflow-hidden mb-12">
+      {/* Main Banner */}
+      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+                <span className="text-2xl font-bold">NEW REVOLUTIONARY CONTENT 2025-2026</span>
+                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+              </div>
+              <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
+              <p className="text-xl opacity-95 mb-6 max-w-3xl">
+                {contentSlides[currentSlide].description}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href={contentSlides[currentSlide].link}
+                  className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
+                >
+                  Explore Now →
+                </a>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
+            </div>
+          </div>
         </div>
-        <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
-          Experience the most advanced technology content featuring Ultimate Tech Revolution, 
-          Revolutionary AI Breakthrough, Next-Gen Space Tech, Quantum Reality Engine, Neural Interface Technology, and Advanced Biotech Revolution
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
-          <a href="/pages/UltimateTechRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-            🌟 Ultimate Tech Revolution →
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="flex justify-center space-x-2 mt-6">
+        {contentSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-purple-600' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Quick Access Grid */}
+      <div className="grid md:grid-cols-3 gap-6 mt-8">
+        {contentSlides.map((slide, index) => (
+          <a
+            key={index}
+            href={slide.link}
+            className={`bg-gradient-to-r ${slide.color} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 ${
+              index === currentSlide ? 'ring-4 ring-white/50' : ''
+            }`}
+          >
+            <div className="text-3xl mb-3">{slide.icon}</div>
+            <h3 className="text-xl font-bold mb-2">{slide.title}</h3>
+            <p className="text-sm opacity-90">{slide.description}</p>
           </a>
-          <a href="/pages/RevolutionaryAIBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-            🧠 Revolutionary AI Breakthrough →
-          </a>
-          <a href="/pages/NextGenSpaceTech2032" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-lg">
-            🚀 Next-Gen Space Tech →
-          </a>
-        </div>
-        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/pages/ComprehensiveServices2025" className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105">
-            🌟 Explore All Revolutionary Content →
-          </a>
-          <a href="/pages/UltimateTechRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30 hover:scale-105">
-            🚀 Start Your Journey →
-          </a>
-        </div>
+        ))}
       </div>
     </div>
   );

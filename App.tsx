@@ -107,6 +107,13 @@ import RevolutionaryTechBanner2027_2030 from './src/components/RevolutionaryTech
 import UltimateTechShowcase2027_2030 from './src/components/UltimateTechShowcase2027-2030';
 import InteractiveContentExplorer2027_2030 from './src/components/InteractiveContentExplorer2027-2030';
 
+// Import NEW REVOLUTIONARY CONTENT 2025-2026
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
+import AdvancedBiotechRevolution2026 from './src/pages/AdvancedBiotechRevolution2026';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -120,6 +127,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Ad Banner */}
                 <RevolutionaryAdBanner />
+
+                {/* NEW: Revolutionary Content 2025-2026 Banner */}
+                <RevolutionaryContentBanner2025 />
 
                 {/* NEW: Revolutionary Tech 2027 Banner */}
                 <RevolutionaryTech2027Banner />
@@ -276,6 +286,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 Tech Breakthrough 2025
+                    </a>
+                    <a href="/pages/NextGenSpaceTech2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🛰️ Space Tech 2026
+                    </a>
+                    <a href="/pages/AdvancedBiotechRevolution2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧬 Biotech Revolution 2026
                     </a>
                   </div>
                 </div>
@@ -648,6 +667,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2025 />
+                </div>
+
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -907,14 +931,16 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumRealityManipulation2035" element={<QuantumRealityManipulation2035 />} />
           <Route path="/pages/TranscendentConsciousness2036" element={<TranscendentConsciousness2036 />} />
 
-          {/* NEW REVOLUTIONARY TECH BREAKTHROUGH 2025 CONTENT ROUTES */}
-          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
-
           {/* NEW REVOLUTIONARY TECH 2027-2030 CONTENT ROUTES */}
           <Route path="/pages/QuantumConsciousnessRevolution2027" element={<QuantumConsciousnessRevolution2027 />} />
           <Route path="/pages/InterdimensionalRealityEngine2028" element={<InterdimensionalRealityEngine2028 />} />
           <Route path="/pages/OmniversalAIConsciousness2029" element={<OmniversalAIConsciousness2029 />} />
           <Route path="/pages/TranscendentRealityControl2030" element={<TranscendentRealityControl2030 />} />
+
+          {/* NEW REVOLUTIONARY CONTENT 2025-2026 ROUTES */}
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenSpaceTech2026" element={<NextGenSpaceTech2026 />} />
+          <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
 
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
