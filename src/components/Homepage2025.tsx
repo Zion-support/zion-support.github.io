@@ -76,27 +76,27 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
   const latestInsights = [
     {
-      title: 'GenAI for Regulated Industries (2025)',
-      href: '/blog/genai-2025-practical-compliance-patterns',
-      tag: 'Compliance',
-      gradient: 'from-emerald-500 to-cyan-500'
-    },
-    {
-      title: 'Agentic CRM: Autonomous Revenue Workflows',
-      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
-      tag: 'RevOps',
-      gradient: 'from-fuchsia-500 to-indigo-500'
-    },
-    {
       title: 'AI 2026: Real-Time Retrieval Architectures',
       href: '/blog/ai-2026-real-time-retrieval-architectures',
-      tag: 'Article',
+      tag: 'RAG',
       gradient: 'from-purple-500 to-blue-500'
     },
     {
-      title: 'AI 2026: Autonomous Ops Playbook',
-      href: '/content/ai-2026-autonomous-ops-playbook',
-      tag: 'Playbook',
+      title: 'Agent Evals in Production: Online Metrics',
+      href: '/blog/ai-2026-agent-evals-in-production',
+      tag: 'Evals',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
+      title: 'Guardrailed Tooling: Secure Actions with Risk Tiers',
+      href: '/blog/ai-2026-guardrailed-tooling-risk-tiers',
+      tag: 'Security',
+      gradient: 'from-fuchsia-500 to-indigo-500'
+    },
+    {
+      title: 'AI 2026: Production Evidence Hub — Blueprint',
+      href: '/blog/ai-2026-production-evidence-hub-blueprint',
+      tag: 'Blueprint',
       gradient: 'from-cyan-500 to-blue-600'
     }
   ];

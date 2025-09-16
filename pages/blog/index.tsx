@@ -18,6 +18,9 @@ const posts = [
   { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' },
   { slug: 'ai-2026-foundation-model-quality-engineering', title: 'Foundation Model Quality Engineering (2026)', excerpt: 'Evals, safety, and release health for production-grade foundation model apps.' },
   { slug: 'ai-2026-operationalizing-agentic-workflows', title: 'Operationalizing Agentic Workflows (2026)', excerpt: 'Design SLIs/SLOs, guardrails, and evals to ship reliable agentic systems.' }
+  ,{ slug: 'ai-2026-operational-risk-metrics-for-agents', title: 'Operational Risk Metrics for Agents (2026)', excerpt: 'Standardize override rates, violations, groundedness, and MTTR.' }
+  ,{ slug: 'ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', excerpt: 'Centralize evals, traces, policy events, and incidents for audits.' }
+  ,{ slug: 'ai-2026-secure-tooling-permissions-blueprint', title: 'Secure Tooling Permissions — Blueprint (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.' }
 ]
 
 export default function BlogIndexPage() {

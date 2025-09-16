@@ -324,7 +324,7 @@ export default function HomePage() {
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Incident Response</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Incident Response Playbook</h3>
@@ -336,6 +336,12 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agents‑On‑Call Automation</h3>
               <p className="text-gray-600 mb-4">Design agents that respond safely with eval gates and observability.</p>
               <Link href="/blog/ai-2026-agents-oncall-automation" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Evaluations</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Continuous Eval Gates at Scale</h3>
+              <p className="text-gray-600 mb-4">Ship faster with policy‑gated scenario suites and automated rollbacks.</p>
+              <Link href="/blog/ai-2026-continuous-eval-gates-at-scale" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
             </div>
           </div>
         </div>
@@ -401,6 +407,22 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-safe-change-management-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safe Change</Link>
               <Link href="/blog/ai-2026-evaluation-cookbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Cookbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Live Evals in Production (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Live Evals in Production — Practical Guide</h2>
+              <p className="text-gray-600 mt-2">Instrument, gate, and govern with live evaluations to ship safer and faster.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-live-evals-in-production-practical-guide" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
             </div>
           </div>
         </div>
