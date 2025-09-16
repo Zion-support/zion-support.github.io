@@ -94,6 +94,8 @@ import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough20
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
 import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
+import AI2026NextGenAutonomousSystems from './src/pages/AI2026NextGenAutonomousSystems';
+import QuantumAIIntegration2026 from './src/pages/QuantumAIIntegration2026';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
@@ -105,6 +107,7 @@ import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
 import NewContentPromotionBanner2026 from './src/components/NewContentPromotionBanner2026';
 import RevolutionaryContentPromotionBanner2026 from './src/components/RevolutionaryContentPromotionBanner2026';
 import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
+import NewContentPromotionBanner2026Latest from './src/components/NewContentPromotionBanner2026';
 import RevolutionaryContentAdvertising2027 from './src/components/RevolutionaryContentAdvertising2027';
 import NewContentPromotionalBanner2027 from './src/components/NewContentPromotionalBanner2027';
 import RevolutionaryContentShowcase2027 from './src/pages/RevolutionaryContentShowcase2027';
@@ -235,10 +238,16 @@ export default function App(): JSX.Element {
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
                 
+                {/* NEW: Content Promotion Banner - highlights latest AI breakthroughs */}
+                <NewContentPromotionBanner2026Latest />
+                
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
                   <FeaturedContentShowcase2025 />
                 </div>
+                
+                {/* NEW: Revolutionary Content Showcase - latest AI content */}
+                <NewContentShowcase2026 />
                 
                 {/* Revolutionary Content Banner - highlights new 2026 content */}
                 <div className="mb-12">
@@ -1369,6 +1378,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechShowcase2040" element={<RevolutionaryTechShowcase2040 />} />
           <Route path="/pages/AdvancedTechShowcase2025" element={<AdvancedTechShowcase2025 />} />
           <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
+          <Route path="/ai-2026-next-generation-autonomous-systems" element={<AI2026NextGenAutonomousSystems />} />
+          <Route path="/quantum-ai-integration-2026" element={<QuantumAIIntegration2026 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/TranscendentTechRevolution2027" element={<TranscendentTechRevolution2027 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
