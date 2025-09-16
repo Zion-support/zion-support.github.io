@@ -99,6 +99,10 @@ import AdvancedAIRevolution2027 from './src/pages/AdvancedAIRevolution2027';
 import QuantumRealityManipulation2028 from './src/pages/QuantumRealityManipulation2028';
 import TranscendentConsciousness2029 from './src/pages/TranscendentConsciousness2029';
 import UniversalTechMastery2030 from './src/pages/UniversalTechMastery2030';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import AdvancedTechShowcase2025 from './src/pages/AdvancedTechShowcase2025';
+import NewContentShowcase2025 from './src/components/NewContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -125,6 +129,46 @@ export default function App(): JSX.Element {
                 {/* Interactive Tech Showcase 2033 */}
                 <div className="mb-12">
                   <InteractiveTechShowcase2033 />
+                </div>
+
+                {/* NEW: Revolutionary 2025 Content Banner */}
+                <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-red-600/50 backdrop-blur-sm"></div>
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-4 mb-6">
+                      <span className="text-4xl animate-bounce">🚀</span>
+                      <h3 className="text-4xl font-bold">REVOLUTIONARY 2025 BREAKTHROUGHS</h3>
+                      <span className="text-4xl animate-bounce">🚀</span>
+                    </div>
+                    <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
+                      Experience the most advanced technology breakthroughs featuring Revolutionary Tech Breakthrough 2025, 
+                      Next-Gen Innovation Hub 2025, and Advanced Tech Showcase 2025 with cutting-edge AI, Quantum Computing, 
+                      Neural Interfaces, and Space Technology innovations
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8">
+                      <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🧠 Revolutionary Tech Breakthrough →
+                      </a>
+                      <a href="/pages/NextGenInnovationHub2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🌟 Next-Gen Innovation Hub →
+                      </a>
+                      <a href="/pages/AdvancedTechShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold text-center animate-pulse">
+                        🚀 Advanced Tech Showcase →
+                      </a>
+                    </div>
+                    <div className="flex justify-center space-x-4">
+                      <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
+                        ✨ 3 NEW REVOLUTIONARY PAGES
+                      </span>
+                      <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
+                        🚀 CUTTING-EDGE TECHNOLOGY
+                      </span>
+                      <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
+                        🌟 INTERACTIVE EXPERIENCES
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Enhanced Search Section */}
@@ -359,6 +403,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* New Content Showcase 2025 */}
+                <div className="mb-12">
+                  <NewContentShowcase2025 />
+                </div>
+
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -545,6 +594,26 @@ export default function App(): JSX.Element {
           <Route path="/pages/UniversalTechMastery2030" element={
             <div>
               <UniversalTechMastery2030 />
+              <EnhancedFooter />
+            </div>
+          } />
+
+          {/* New 2025 Revolutionary Pages */}
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={
+            <div>
+              <RevolutionaryTechBreakthrough2025 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/NextGenInnovationHub2025" element={
+            <div>
+              <NextGenInnovationHub2025 />
+              <EnhancedFooter />
+            </div>
+          } />
+          <Route path="/pages/AdvancedTechShowcase2025" element={
+            <div>
+              <AdvancedTechShowcase2025 />
               <EnhancedFooter />
             </div>
           } />
