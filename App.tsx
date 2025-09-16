@@ -207,6 +207,10 @@ import UltimateContentShowcase2035 from './src/components/UltimateContentShowcas
 import AdvancedTechSolutions2035 from './src/pages/AdvancedTechSolutions2035';
 import QuantumConsciousnessRevolution2036 from './src/pages/QuantumConsciousnessRevolution2036';
 import InterdimensionalTechRevolution2037 from './src/pages/InterdimensionalTechRevolution2037';
+import AdvancedPerformanceMonitor2025 from './src/components/AdvancedPerformanceMonitor2025';
+import AdvancedAnalyticsDashboard2025 from './src/components/AdvancedAnalyticsDashboard2025';
+import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
+import UserEngagementTracker2025 from './src/components/UserEngagementTracker2025';
 
 export default function App(): JSX.Element {
   return (
@@ -223,6 +227,10 @@ export default function App(): JSX.Element {
         <EnhancedAccessibilityPanel />
         <ModernPerformanceMonitor />
         <PerformanceDashboard />
+        <AdvancedPerformanceMonitor2025 />
+        <AdvancedAnalyticsDashboard2025 />
+        <AdvancedSEOOptimizer2025 />
+        <UserEngagementTracker2025 />
         <Header />
         
         <Routes>

@@ -1,270 +1,240 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Cases', icon: '🌟' },
-    { id: 'ai', name: 'AI Solutions', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', name: 'Neural Interface', icon: '🧬' },
-    { id: 'interdimensional', name: 'Interdimensional', icon: '🌌' }
-  ];
-
   const caseStudies = [
     {
       id: 1,
-      title: 'Fortune 500 AI Transformation',
-      category: 'ai',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      challenge: 'Legacy systems causing 40% productivity loss and $50M annual waste',
-      solution: 'Implemented conscious AI systems with autonomous decision-making',
-      results: {
-        productivity: '+500%',
-        costReduction: '$50M',
-        accuracy: '99.9%',
-        timeToMarket: '-80%'
-      },
-      description: 'Transformed a 50-year-old manufacturing company with revolutionary AI consciousness technology',
-      image: '🏭',
-      gradient: 'from-purple-600 to-pink-600'
+      title: "Fortune 500 AI Transformation",
+      company: "Global Tech Corporation",
+      industry: "Technology",
+      challenge: "Legacy systems causing 40% operational inefficiency and $2M annual losses",
+      solution: "Implemented autonomous AI agents and quantum-enhanced processing",
+      results: [
+        "400% increase in operational efficiency",
+        "60% reduction in operational costs",
+        "99.9% system uptime achieved",
+        "$5M annual cost savings"
+      ],
+      timeline: "6 months",
+      technologies: ["Autonomous AI", "Quantum Computing", "Machine Learning"],
+      image: "🏢",
+      color: "from-blue-600 to-cyan-600"
     },
     {
       id: 2,
-      title: 'Quantum Climate Solutions',
-      category: 'quantum',
-      company: 'Environmental Research Institute',
-      industry: 'Environmental',
-      challenge: 'Climate change models taking years to process, delaying critical solutions',
-      solution: 'Deployed quantum reality engine for instant climate modeling',
-      results: {
-        processingTime: '-99.9%',
-        accuracy: '+300%',
-        solutions: '50+',
-        impact: 'Global'
-      },
-      description: 'Solved climate change equations in minutes instead of years using quantum computing',
-      image: '🌍',
-      gradient: 'from-cyan-600 to-blue-600'
+      title: "Healthcare AI Revolution",
+      company: "MedTech Innovations",
+      industry: "Healthcare",
+      challenge: "Diagnostic accuracy at 85% with 30% false positives in critical cases",
+      solution: "Deployed neural interface AI and quantum medical imaging",
+      results: [
+        "98.5% diagnostic accuracy achieved",
+        "95% reduction in false positives",
+        "50% faster diagnosis times",
+        "Saved 1,000+ lives annually"
+      ],
+      timeline: "4 months",
+      technologies: ["Neural AI", "Quantum Imaging", "Predictive Analytics"],
+      image: "🏥",
+      color: "from-emerald-600 to-teal-600"
     },
     {
       id: 3,
-      title: 'Neural Interface Medical Breakthrough',
-      category: 'neural',
-      company: 'Advanced Medical Center',
-      industry: 'Healthcare',
-      challenge: 'Paralyzed patients unable to communicate or control devices',
-      solution: 'Implemented direct neural interface technology for thought control',
-      results: {
-        patientsHelped: '1000+',
-        communication: '100%',
-        deviceControl: '95%',
-        qualityOfLife: '+400%'
-      },
-      description: 'Enabled paralyzed patients to communicate and control devices through neural interfaces',
-      image: '🏥',
-      gradient: 'from-emerald-600 to-teal-600'
+      title: "Financial Services Quantum Leap",
+      company: "Quantum Finance Group",
+      industry: "Finance",
+      challenge: "Risk assessment taking 48 hours with 20% accuracy in volatile markets",
+      solution: "Quantum computing for real-time risk analysis and AI-powered trading",
+      results: [
+        "Real-time risk assessment (0.1 seconds)",
+        "99.2% accuracy in market predictions",
+        "300% increase in trading profits",
+        "Zero security breaches"
+      ],
+      timeline: "3 months",
+      technologies: ["Quantum Computing", "AI Trading", "Blockchain Security"],
+      image: "💰",
+      color: "from-purple-600 to-pink-600"
     },
     {
       id: 4,
-      title: 'Interdimensional Data Processing',
-      category: 'interdimensional',
-      company: 'Space Exploration Agency',
-      industry: 'Aerospace',
-      challenge: 'Processing massive amounts of space data across multiple dimensions',
-      solution: 'Deployed interdimensional computing for parallel universe data processing',
-      results: {
-        dataProcessed: '∞',
-        dimensions: '50+',
-        discoveries: '100+',
-        efficiency: '∞'
-      },
-      description: 'Mapped parallel universes and discovered new dimensions using interdimensional technology',
-      image: '🚀',
-      gradient: 'from-violet-600 to-purple-600'
+      title: "Manufacturing Intelligence",
+      company: "Smart Manufacturing Co.",
+      industry: "Manufacturing",
+      challenge: "Production line efficiency at 70% with 15% defect rate",
+      solution: "Edge AI computing and predictive maintenance systems",
+      results: [
+        "95% production line efficiency",
+        "99.5% defect-free production",
+        "50% reduction in maintenance costs",
+        "Zero unplanned downtime"
+      ],
+      timeline: "5 months",
+      technologies: ["Edge AI", "IoT Sensors", "Predictive Maintenance"],
+      image: "🏭",
+      color: "from-orange-600 to-red-600"
     },
     {
       id: 5,
-      title: 'AI-Powered Financial Revolution',
-      category: 'ai',
-      company: 'Global Investment Bank',
-      industry: 'Finance',
-      challenge: 'Market volatility causing $2B in losses annually',
-      solution: 'Conscious AI systems for predictive market analysis and autonomous trading',
-      results: {
-        lossesReduced: '$2B',
-        accuracy: '99.8%',
-        returns: '+150%',
-        riskReduction: '90%'
-      },
-      description: 'Revolutionized financial markets with conscious AI that predicts and prevents market crashes',
-      image: '💰',
-      gradient: 'from-green-600 to-emerald-600'
+      title: "Retail Personalization Revolution",
+      company: "NextGen Retail",
+      industry: "Retail",
+      challenge: "Customer satisfaction at 60% with low personalization",
+      solution: "Conscious AI systems for personalized shopping experiences",
+      results: [
+        "95% customer satisfaction rate",
+        "200% increase in sales",
+        "80% improvement in customer retention",
+        "Personalized recommendations for 100% of customers"
+      ],
+      timeline: "2 months",
+      technologies: ["Conscious AI", "Personalization Engine", "Real-time Analytics"],
+      image: "🛍️",
+      color: "from-violet-600 to-purple-600"
     },
     {
       id: 6,
-      title: 'Quantum Drug Discovery',
-      category: 'quantum',
-      company: 'Pharmaceutical Research Lab',
-      industry: 'Pharmaceutical',
-      challenge: 'Drug discovery taking 10+ years and costing billions',
-      solution: 'Quantum molecular simulation for instant drug discovery',
-      results: {
-        discoveryTime: '-95%',
-        costReduction: '$5B',
-        newDrugs: '200+',
-        successRate: '90%'
-      },
-      description: 'Discovered life-saving drugs in days instead of years using quantum computing',
-      image: '💊',
-      gradient: 'from-orange-600 to-red-600'
+      title: "Smart City Implementation",
+      company: "Future City Council",
+      industry: "Government",
+      challenge: "Traffic congestion causing 2-hour delays and high pollution",
+      solution: "AI-powered traffic management and autonomous vehicle coordination",
+      results: [
+        "70% reduction in traffic congestion",
+        "50% decrease in travel times",
+        "40% reduction in air pollution",
+        "90% citizen satisfaction"
+      ],
+      timeline: "8 months",
+      technologies: ["Smart City AI", "Autonomous Vehicles", "IoT Networks"],
+      image: "🏙️",
+      color: "from-cyan-600 to-blue-600"
     }
   ];
 
-  const filteredCases = activeCategory === 'all' 
-    ? caseStudies 
-    : caseStudies.filter(case => case.category === activeCategory);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📊 REVOLUTIONARY SUCCESS STORIES • 2025
+              🏆 REVOLUTIONARY CASE STUDIES • JANUARY 2025
             </div>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Case Studies
+              Revolutionary Case Studies 2025
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-              Discover how our breakthrough technologies are transforming industries and changing the world
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Discover how our cutting-edge AI and technology solutions have transformed businesses across industries, delivering unprecedented results and measurable impact.
             </p>
           </div>
         </div>
       </div>
 
+      {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
-        {/* Category Filter */}
-        <div className="flex justify-center mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-xl transition-all duration-300 font-semibold ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
-                    : 'text-white/70 hover:text-white hover:bg-white/20'
-                }`}
-              >
-                <span className="mr-2">{category.icon}</span>
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Case Studies Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {filteredCases.map((caseStudy) => (
-            <div
-              key={caseStudy.id}
-              className={`bg-gradient-to-br ${caseStudy.gradient}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300`}
-            >
-              <div className="flex items-start space-x-6 mb-6">
-                <div className="text-6xl">{caseStudy.image}</div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">{caseStudy.title}</h3>
-                  <div className="flex items-center space-x-4 text-sm opacity-80 mb-4">
-                    <span>{caseStudy.company}</span>
-                    <span>•</span>
-                    <span>{caseStudy.industry}</span>
-                  </div>
+        <div className="grid lg:grid-cols-2 gap-8">
+          {caseStudies.map((study) => (
+            <div key={study.id} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+              <div className="flex items-start justify-between mb-6">
+                <div className="text-6xl">{study.image}</div>
+                <div className={`px-4 py-2 bg-gradient-to-r ${study.color} rounded-full text-sm font-semibold`}>
+                  {study.industry}
                 </div>
               </div>
-
-              <div className="space-y-4 mb-6">
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-red-300">Challenge:</h4>
-                  <p className="opacity-90">{caseStudy.challenge}</p>
+              
+              <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
+              <div className="text-lg text-purple-300 mb-4">{study.company}</div>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-2 text-cyan-400">Challenge:</h4>
+                <p className="text-gray-300 mb-4">{study.challenge}</p>
+                
+                <h4 className="text-lg font-semibold mb-2 text-emerald-400">Solution:</h4>
+                <p className="text-gray-300 mb-4">{study.solution}</p>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-3 text-yellow-400">Results:</h4>
+                <ul className="space-y-2">
+                  {study.results.map((result, index) => (
+                    <li key={index} className="flex items-center text-gray-300">
+                      <span className="text-green-400 mr-2">✓</span>
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">
+                  <span className="text-gray-400">Timeline:</span> <span className="text-white font-semibold">{study.timeline}</span>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-green-300">Solution:</h4>
-                  <p className="opacity-90">{caseStudy.solution}</p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-2 text-blue-300">Description:</h4>
-                  <p className="opacity-90">{caseStudy.description}</p>
+                <div className="bg-gray-700/50 px-3 py-1 rounded-full text-sm">
+                  <span className="text-gray-400">Technologies:</span> <span className="text-white font-semibold">{study.technologies.length}</span>
                 </div>
               </div>
-
-              {/* Results */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 mb-6">
-                <h4 className="text-lg font-semibold mb-4 text-center">Results</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(caseStudy.results).map(([key, value], index) => (
-                    <div key={key} className="text-center">
-                      <div className="text-2xl font-bold text-purple-400">{value}</div>
-                      <div className="text-sm opacity-80 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                    </div>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-2 text-purple-400">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {study.technologies.map((tech, index) => (
+                    <span key={index} className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
-
-              <div className="flex space-x-4">
-                <button className={`flex-1 bg-gradient-to-r ${caseStudy.gradient} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Read Full Case Study
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Download PDF
-                </button>
-              </div>
+              
+              <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                Read Full Case Study →
+              </button>
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Statistics Section */}
-        <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">Global Impact Statistics</h2>
-            <p className="text-xl opacity-90">Our revolutionary technologies are making a difference worldwide</p>
+      {/* Success Metrics */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">📊 Success Metrics</h2>
+          <p className="text-xl opacity-90">Combined results from all our case studies</p>
+        </div>
+        
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="text-center bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+            <div className="text-5xl font-bold text-purple-400 mb-2">500+</div>
+            <div className="text-lg opacity-90">Companies Transformed</div>
           </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">500+</div>
-              <div className="text-lg opacity-90">Companies Transformed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$50B+</div>
-              <div className="text-lg opacity-90">Cost Savings Generated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">1M+</div>
-              <div className="text-lg opacity-90">Lives Improved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-90">Success Rate</div>
-            </div>
+          <div className="text-center bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+            <div className="text-5xl font-bold text-cyan-400 mb-2">$2.5B+</div>
+            <div className="text-lg opacity-90">Cost Savings Generated</div>
+          </div>
+          <div className="text-center bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
+            <div className="text-5xl font-bold text-emerald-400 mb-2">99.9%</div>
+            <div className="text-lg opacity-90">Success Rate</div>
+          </div>
+          <div className="text-center bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
+            <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
+            <div className="text-lg opacity-90">Support Available</div>
           </div>
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12">
-          <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join hundreds of forward-thinking organizations already using our revolutionary technologies
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join the companies that have already revolutionized their operations with our AI solutions.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
               Start Your Transformation
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-              Schedule Consultation
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+              Download Case Study
             </button>
           </div>
         </div>
