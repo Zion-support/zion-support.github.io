@@ -129,9 +129,7 @@ const NewContent2025UltimateShowcase = () => {
 
 import React, { useState, useEffect } from 'react';
 import React, { useState } from 'react';
->>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-eef3
 import Link from 'next/link';
 
 const NewContent2025UltimateShowcase = () => {
@@ -430,7 +428,6 @@ const NewContent2025UltimateShowcase = () => {
               >
                 Read More
               </Link>
->>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
             </div>
           </div>
         </div>
@@ -490,7 +487,6 @@ const NewContent2025UltimateShowcase = () => {
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   Read →
->>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
                 </Link>
               </div>
             </div>
@@ -565,7 +561,6 @@ const NewContent2025UltimateShowcase = () => {
           </div>
         </div>
 
->>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
         {/* Resources Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Downloadable Resources</h3>
@@ -680,7 +675,6 @@ const NewContent2025UltimateShowcase = () => {
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300">Support Available</div>
             </div>
->>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
           </div>
         </div>
 
@@ -719,7 +713,6 @@ const NewContent2025UltimateShowcase = () => {
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">Digital Transformation</span>
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">Cloud Migration</span>
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">AI Ethics Framework</span>
->>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
           <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join thousands of organizations already benefiting from our AI solutions. 
@@ -756,7 +749,6 @@ const NewContent2025UltimateShowcase = () => {
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-lg"
             >
               Explore Services
->>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
             </Link>
           </div>
         </div>
@@ -764,11 +756,7 @@ const NewContent2025UltimateShowcase = () => {
     </section>
 
   return (
->>>>>>> cursor/create-and-deploy-new-content-040d
->>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
   return (
->>>>>>> cursor/create-and-deploy-new-content-eef3
->>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
   );
 };
 

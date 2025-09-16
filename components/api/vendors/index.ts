@@ -31,12 +31,9 @@ function handler() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -48,4 +45,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendors = listVendors();
   res.status(200).json({ vendors });
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -5,7 +5,6 @@
   detailsUrl?: string;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -115,8 +114,6 @@ export function getAmlProvider (): AmlProvider {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -172,4 +169,3 @@ export function setAmlProvider(custom: AmlProvider) {
 export function getAmlProvider(): AmlProvider {
   return provider;
 }
->>>>>>> origin/auto/autonomy-17186719616

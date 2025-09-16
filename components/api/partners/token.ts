@@ -9,9 +9,7 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -49,4 +47,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } });
 }
->>>>>>> origin/auto/autonomy-17186719616

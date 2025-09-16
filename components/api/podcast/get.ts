@@ -23,4 +23,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode });
 }
->>>>>>> origin/auto/autonomy-17186719616

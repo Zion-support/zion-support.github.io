@@ -23,7 +23,6 @@
 
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -75,4 +74,3 @@
     </Table>
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

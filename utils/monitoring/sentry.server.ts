@@ -1,9 +1,7 @@
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -16,4 +14,3 @@ if (!Sentry.getCurrentHub().getClient()) {
     enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN),
   });
 }
->>>>>>> origin/auto/autonomy-17186719616

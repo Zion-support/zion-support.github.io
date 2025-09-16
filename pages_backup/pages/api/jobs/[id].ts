@@ -22,11 +22,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   if (!rateLimit(req, res)) return;
@@ -262,7 +259,6 @@ if (job.status = status as Job["status"]) {
     if (typeof status === "string") job.status = status as Job["status"];
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     res.status(200).json({ job });

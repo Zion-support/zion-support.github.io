@@ -54,7 +54,6 @@ function handler() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const { provider_id } = req.query as { provider_id?: string }
@@ -67,7 +66,6 @@ function handler() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

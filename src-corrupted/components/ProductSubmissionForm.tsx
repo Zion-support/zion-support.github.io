@@ -91,8 +91,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   // Handle form submission
@@ -129,17 +127,14 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
     try {
       // Create the product listing
       const productData = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
         title: values.title,
@@ -287,14 +282,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

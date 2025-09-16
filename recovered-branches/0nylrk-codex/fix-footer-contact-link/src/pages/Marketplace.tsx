@@ -5,11 +5,8 @@
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
     }
@@ -85,7 +82,6 @@
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev => 
->>>>>>> origin/auto/autonomy-17186719616
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
         break;
@@ -102,11 +98,8 @@
                 selectedLocations,
                 selectedAvailability,
                 selectedRating
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -140,7 +133,6 @@
               </p>
             </div>
             
->>>>>>> origin/auto/autonomy-17186719616
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (

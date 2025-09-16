@@ -310,7 +310,6 @@ export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;

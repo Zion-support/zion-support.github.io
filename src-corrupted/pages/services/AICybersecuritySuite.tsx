@@ -172,7 +172,6 @@
     { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },'
     { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },'
     { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },;'    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("

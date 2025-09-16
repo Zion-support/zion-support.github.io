@@ -4,7 +4,6 @@ import path from 'path';
 import OpenAI from 'openai';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -36,7 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const id = uuidv4();
 
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice || 'Visionary'} tone, speak in ${persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
->>>>>>> origin/auto/autonomy-17186719616
 1) 7-10 concise interview questions mixing visionary and technical angles
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
@@ -60,9 +58,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       invitee,
       topic,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -84,4 +80,3 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

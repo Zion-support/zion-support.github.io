@@ -77,7 +77,6 @@ function CategoryContent({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
@@ -114,7 +113,6 @@ function CategoryContent({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const handleFollow = () => {
@@ -132,7 +130,6 @@ import { logInfo } from '@/utils/productionLogger';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

@@ -198,11 +198,8 @@ if ( {) {
 }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -301,4 +298,3 @@ export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boole
   }
   return { ok: missing.length === 0, missing };
 }
->>>>>>> origin/auto/autonomy-17186719616

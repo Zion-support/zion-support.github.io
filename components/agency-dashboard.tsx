@@ -1,7 +1,5 @@
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendorsetActiveVendor] = useState(vendor);
@@ -23,7 +21,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 

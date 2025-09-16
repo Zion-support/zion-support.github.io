@@ -47,7 +47,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Market opportunity detection',
       'ROI tracking',
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];
 
@@ -330,4 +329,3 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

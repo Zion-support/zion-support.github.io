@@ -87,8 +87,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       <div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
@@ -106,7 +104,4 @@ export default ReviewForm;    </form>
 export default ReviewForm;
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

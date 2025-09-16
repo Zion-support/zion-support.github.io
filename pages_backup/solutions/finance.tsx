@@ -44,8 +44,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [
   {
     icon: DollarSign,
@@ -161,8 +159,6 @@ export default function FinanceSolutions() {
 ];
 
 export default function FinanceSolutionsPage() {
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -203,10 +199,8 @@ export default function FinanceSolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -349,8 +343,6 @@ export default function FinanceSolutionsPage() {
                   </div>
                 </motion.div>
               ))}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -376,8 +368,6 @@ export default function FinanceSolutionsPage() {
           </div>
         </section>
       </div>
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
     </>
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   );
 }

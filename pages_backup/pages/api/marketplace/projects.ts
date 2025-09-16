@@ -20,7 +20,6 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -56,7 +55,6 @@ import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplac
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 function bad(res: NextApiResponse, message: string, code = 400) {
@@ -66,11 +64,9 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true;

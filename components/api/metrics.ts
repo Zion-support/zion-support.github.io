@@ -6,7 +6,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
     const d = new Date(now);
@@ -180,7 +179,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value)),
     },
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;

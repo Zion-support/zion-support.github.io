@@ -8,7 +8,6 @@ import { Badge } from '@/components / ui / badge';
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 import {
@@ -110,7 +109,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
@@ -152,13 +150,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -219,13 +212,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -324,7 +312,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     {badge}
@@ -615,7 +602,6 @@ function BrowseCards() {
     </div>);
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 }
 

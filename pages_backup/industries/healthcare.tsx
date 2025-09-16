@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import {
   Heart,
   Brain,
@@ -19,7 +18,6 @@ import {
   Camera,
   FileText;
 } from 'lucide-react';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -88,7 +86,6 @@ const services = [
       'Outcome tracking systems'';
     ];
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const benefits = [
   {
@@ -111,7 +108,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
     icon: Shield;
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 const caseStudies = [
   {
@@ -129,7 +125,6 @@ const caseStudies = [
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 ];
 export default function HealthcarePage() {
   return (
@@ -185,7 +180,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -203,7 +197,6 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -221,7 +214,6 @@ export default function HealthcarePage() {
                   </ul>,
                 </motion.div>;
               ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -233,7 +225,6 @@ export default function HealthcarePage() {
               animate={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -260,7 +251,6 @@ export default function HealthcarePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -272,7 +262,6 @@ export default function HealthcarePage() {
               animate={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -290,7 +279,6 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -305,7 +293,6 @@ export default function HealthcarePage() {
                   </div>,
                 </motion.div>;
               ))}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             </div>
           </div>
         </section>
@@ -317,7 +304,6 @@ export default function HealthcarePage() {
               animate={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?

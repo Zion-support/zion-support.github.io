@@ -144,7 +144,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   }
 ];
@@ -162,4 +161,3 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     reviews: 89
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

@@ -2,7 +2,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -65,16 +64,12 @@ export const crm = {
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   },
->>>>>>> origin/auto/autonomy-17186719616
 };
 
 // ATS actions
 export const ats = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -88,4 +83,3 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change });
   },
 };
->>>>>>> origin/auto/autonomy-17186719616

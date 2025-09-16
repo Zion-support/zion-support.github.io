@@ -121,7 +121,6 @@ import { useAuth } from "@/hooks/useAuth";
 // Mock data for demonstration
 const jobsData = [
   {
->>>>>>> origin/auto/autonomy-17186719616
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
@@ -217,10 +216,8 @@ const talentsData = [
           </Button>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -265,4 +262,3 @@ const talentsData = [
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

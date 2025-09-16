@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const RevolutionaryTech2026: React.FC = () => {
@@ -281,3 +282,11 @@ const RevolutionaryTech2026: React.FC = () => {
             >
               Contact Our Experts
             </motion.button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryTech2026;

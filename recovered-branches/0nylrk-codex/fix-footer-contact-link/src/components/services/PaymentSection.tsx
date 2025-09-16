@@ -7,11 +7,8 @@
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
         ${selectedCountry.pricePerIncident.toFixed(2)}
@@ -59,7 +56,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry.country}`}
->>>>>>> origin/auto/autonomy-17186719616
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
         redirectUrl="/it-onsite-services?success=true"
         onPaymentInitiated={handlePaymentInitiated}

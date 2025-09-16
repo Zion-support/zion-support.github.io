@@ -15,7 +15,6 @@ export default function ContentIndexPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
               Secure Agentic Data Pipelines (2026)
@@ -272,6 +271,32 @@ export default function ContentIndexPage() {
             Practical governance: policy-as-code, evals, monitoring, and risk workflows for trustworthy AI.
           </p>
           <Link href="/content/enterprise-ai-governance-2026" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/genai-governance-2026" className="hover:underline">
+              GenAI Governance 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
+          </p>
+          <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/agent-observability-2026" className="hover:underline">
+              Agent Observability 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Build an end-to-end observability stack for AI agents with metrics, tracing, and evals.
+          </p>
+          <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
         </article>
       </div>
     </main>

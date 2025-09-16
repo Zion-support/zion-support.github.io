@@ -16,7 +16,6 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 <h2>1. Multimodal AI Systems</h2>
@@ -47,7 +46,6 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
     author: {
->>>>>>> origin/auto/autonomy-17186719616
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -80,11 +78,8 @@ const BLOG_POSTS: BlogPost[] = [
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 <h2>Energy-Efficient Hardware Selection</h2>
@@ -129,7 +124,6 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Sophia Chen",
       title: "Sustainability Engineer",
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
->>>>>>> origin/auto/autonomy-17186719616
     },
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
@@ -185,12 +179,9 @@ const CATEGORIES = [
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -308,7 +299,6 @@ const CATEGORIES = [
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
->>>>>>> origin/auto/autonomy-17186719616
                 <Input
                   type="text"
                   placeholder="Search articles..."
@@ -341,4 +331,3 @@ const CATEGORIES = [
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

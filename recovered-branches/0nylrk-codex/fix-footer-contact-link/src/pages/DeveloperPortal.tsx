@@ -14,7 +14,6 @@ export function DeveloperPortal() {
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -60,7 +59,6 @@ export function DeveloperPortal() {
   ];
 
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
@@ -104,4 +102,3 @@ export default function ProtectedDeveloperPortal() {
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

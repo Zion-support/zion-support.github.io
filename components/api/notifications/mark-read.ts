@@ -10,7 +10,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -25,4 +24,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: 'Unexpected error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616
