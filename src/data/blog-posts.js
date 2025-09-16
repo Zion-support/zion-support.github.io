@@ -1,4 +1,7 @@
+import { newContent2026 } from './newContent2026';
+
 export const blogPosts = [
+  ...newContent2026,
   {
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
@@ -2751,4 +2754,282 @@ export const getBlogTags = () => {
   }));
 };
 
+export const extraContent2029 = [
+  {
+    id: 9901,
+    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
+    excerpt:
+      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
+    content:
+      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Evidence", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-native-engineering-2029.jpg",
+    slug: "ai-2029-evidence-native-engineering"
+  },
+  {
+    id: 9902,
+    title: "Trusted RAG 2029: Live Freshness Windows and Budget Guardrails",
+    excerpt:
+      "Blueprint for continuously-grounded retrieval with freshness, drift monitors, and spend caps.",
+    content:
+      "Ground answers in sources you can verify. This blueprint shows how to implement freshness windows, detect semantic drift, and enforce budget guardrails for retrieval-heavy systems. Includes copy-paste checks, example policies, and dashboards to track grounding quality over time.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "FinOps"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-guardrails-2029.jpg",
+    slug: "trusted-rag-2029-guardrails"
+  },
+  {
+    id: 9903,
+    title: "Agent SLOs 2029: Minimal Set That Scales Across Teams",
+    excerpt:
+      "A pragmatic SLO set for safety, groundedness, reliability, and budget with ready-to-ship templates.",
+    content:
+      "Cut through noise with four SLOs that matter. We provide targets, templates, and wiring guidance so drift blocks risky changes automatically. Works across agent teams without bespoke dashboards for each.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["SLOs", "Reliability", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/agent-slos-2029.jpg",
+    slug: "agent-slos-2029-minimal-set"
+  },
+  {
+    id: 9904,
+    title: "Exec Guide: Evals + Guardrails You Can Ship Tomorrow",
+    excerpt:
+      "Leaders’ playbook to gate changes with evals, policy, and reversible rollouts.",
+    content:
+      "A concise executive guide to ship safely now. We cover the minimum evals to run, the policy gates to enforce, and a deterministic rollback recipe—all in a copy-paste friendly format.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Policy", "Evals", "Rollbacks"],
+    featured: true,
+    imageUrl: "/images/blog/exec-guide-evals-guardrails-2026.jpg",
+    slug: "exec-guide-eval-gates-ship-tomorrow"
+  },
+  {
+    id: 9905,
+    title: "FinServ Case Study: Policy Routing Cuts Spend by 35%",
+    excerpt:
+      "How routing bands, budgets, and scorecards preserved quality while saving millions.",
+    content:
+      "A real-world FinServ case study implementing banded routing with budget caps. We include the policy, dashboards, and before/after metrics so you can replicate the savings without compromising quality.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/finserv-policy-routing-savings-2026.jpg",
+    slug: "finserv-case-study-policy-routing-35-savings"
+  },
+  {
+    id: 9906,
+    title: "Journey Scorecards Starter: KPIs You Can Adopt Today",
+    excerpt:
+      "Ready-to-use KPI JSON, thresholds, and dashboards for safe, cost-aware AI.",
+    content:
+      "Kickstart journey scorecards with copy-paste KPI JSON, example thresholds, and Grafana panels. Shows how to connect signals to rollout gates so you don't ship blind.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["KPIs", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
+    slug: "journey-scorecards-starter-kpis"
+  },
+  {
+    id: 9907,
+    title: "Blueprint: Agent Rollback Scorecards You Can Trust",
+    excerpt:
+      "Ship reversible changes with scorecards that gate risky diffs and auto‑rollback.",
+    content:
+      "Design rollback scorecards that track risk signals across key journeys. Wire thresholds to deployment policies so regressions halt automatically and revert without paging humans.",
+    author: "Jordan Lee",
+    authorRole: "Staff SRE",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Rollbacks", "Scorecards", "Safety"],
+    featured: true,
+    imageUrl: "/images/blog/agent-rollback-scorecards-2029.jpg",
+    slug: "agent-rollback-scorecards-2029"
+  },
+  {
+    id: 9908,
+    title: "Production Eval Gates: Minimal Set, Maximum Impact",
+    excerpt:
+      "Embed low‑friction gates for quality, cost, and safety in under a sprint.",
+    content:
+      "Adopt a pragmatic eval gate set. This post provides ready-to-ship checks for quality, groundedness, latency, and spend, with JSON configs and CI wiring examples.",
+    author: "Priya Raman",
+    authorRole: "Principal Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["Evals", "Quality", "FinOps"],
+    featured: true,
+    imageUrl: "/images/blog/production-eval-gates-2029.jpg",
+    slug: "production-eval-gates-2029"
+  }
+  ,
+  {
+    id: 9907,
+    title: "Operational Reliability Blueprint (2026)",
+    excerpt:
+      "Eval‑gated releases, rollback contracts, error budgets, and observability for dependable agents.",
+    content:
+      "This blueprint details the practices and guardrails required to achieve reliable autonomous operations. It covers evaluation gates across CI/CD, rollback contracts, SLOs with error budgets, production tracing, and incident response playbooks so teams can ship safely without outages.",
+    author: "Jordan Lee",
+    authorRole: "Principal SRE",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Reliability",
+    tags: ["SRE", "Eval Gates", "Rollback", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/operational-reliability-blueprint-2026.jpg",
+    slug: "ai-2026-operational-reliability-blueprint"
+  },
+  {
+    id: 9908,
+    title: "Executive AI Security Playbook (2026)",
+    excerpt:
+      "Board‑ready controls: policy‑as‑code, eval gates, and audit evidence to ship safely.",
+    content:
+      "A compact executive guide to governing AI systems in production. We outline policy‑as‑code patterns, runtime approvals, safe tool envelopes, identity and access controls, along with evidence capture and reporting for audits and regulators.",
+    author: "Ava Mitchell",
+    authorRole: "Head of Security Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Security",
+    tags: ["Policy", "Identity", "Approvals", "Audit"],
+    featured: true,
+    imageUrl: "/images/blog/executive-ai-security-playbook-2026.jpg",
+    slug: "ai-2026-executive-ai-security-playbook"
+  },
+  {
+    id: 9909,
+    title: "Evidence Hub Architecture — From Traces to Scorecards",
+    excerpt:
+      "Reference architecture that unifies traces, evals, incidents, and KPIs for audit‑ready autonomy.",
+    content:
+      "We present a practical architecture for an Evidence Hub that connects telemetry (traces, logs, metrics), evaluation results, incidents, and release artifacts. The guide includes data schemas, ingestion pipelines, lineage, and dashboards to power scorecards and release gates.",
+    author: "Priya Natarajan",
+    authorRole: "Platform Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Architecture",
+    tags: ["Observability", "Scorecards", "Incidents", "Data Architecture"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-hub-architecture-2026.jpg",
+    slug: "ai-2026-evidence-hub-architecture"
+  }
+];
+
+// Merge new content with existing blog posts
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...newBlogPosts];
+// Keep compatibility export; prefer BLOG_POSTS as unified list
+export const BLOG_POSTS_ALL = allBlogPosts;
+// Back-compat named export expected by some routes/components
+export const BLOG_POSTS = allBlogPosts;
+
+// Add new blog posts to the existing array
+const newBlogPosts = [
+  {
+    id: 20001,
+    title: "AI-Powered Content Marketing Revolution 2026: 500% Engagement Boost",
+    excerpt: "Discover how AI-driven content marketing strategies are delivering unprecedented engagement rates and ROI for businesses worldwide.",
+    content: "The content marketing landscape has been completely transformed by AI in 2026. Our latest research shows that businesses using AI-powered content strategies are seeing 500% increases in engagement, 300% higher conversion rates, and 400% improvement in content ROI. The key lies in AI's ability to understand audience psychology, predict content performance, and create personalized experiences at scale. Our advanced AI content engine analyzes over 10,000 data points per user to create hyper-personalized content that resonates with each individual. This includes dynamic content adaptation, real-time optimization, and predictive content creation that anticipates user needs before they even express them. Companies implementing our AI content marketing platform report 500% increase in engagement rates, 300% higher conversion rates, 400% improvement in content ROI, and 600% faster content production cycles.",
+    author: "Jennifer Martinez",
+    authorRole: "AI Content Marketing Director",
+    publishDate: "2025-01-21",
+    readTime: "7 min read",
+    category: "AI Marketing",
+    tags: ["AI Marketing", "Content Strategy", "Engagement", "ROI", "Personalization"],
+    featured: true,
+    imageUrl: "/images/blog/ai-content-marketing-revolution-2026.jpg",
+    slug: "ai-powered-content-marketing-revolution-2026-500-percent-engagement"
+  },
+  {
+    id: 20002,
+    title: "Quantum Cybersecurity 2026: Unbreakable Digital Fortresses",
+    excerpt: "Revolutionary quantum cybersecurity solutions that provide unbreakable protection against even the most sophisticated cyber threats.",
+    content: "As cyber threats become increasingly sophisticated, traditional security measures are no longer sufficient. Our quantum cybersecurity platform represents a paradigm shift in digital protection, using quantum encryption and AI-powered threat detection to create unbreakable digital fortresses. The system employs quantum key distribution, post-quantum cryptography, and AI-driven threat intelligence to provide 99.99% security effectiveness. Our quantum security protocols are mathematically unbreakable, even by quantum computers, ensuring that your data remains protected against future threats. The platform includes real-time threat detection, automated response systems, and predictive security analytics that identify and neutralize threats before they can cause damage. Organizations implementing quantum cybersecurity report 99.99% security effectiveness, 95% reduction in security incidents, 80% faster threat response times, and 100% compliance with international security standards.",
+    author: "Dr. Michael Thompson",
+    authorRole: "Quantum Security Architect",
+    publishDate: "2025-01-21",
+    readTime: "9 min read",
+    category: "Cybersecurity",
+    tags: ["Quantum Security", "Cybersecurity", "Encryption", "AI Security", "Digital Protection"],
+    featured: true,
+    imageUrl: "/images/blog/quantum-cybersecurity-2026.jpg",
+    slug: "quantum-cybersecurity-2026-unbreakable-digital-fortresses"
+  },
+  {
+    id: 20003,
+    title: "Autonomous Business Intelligence 2026: Self-Optimizing Analytics",
+    excerpt: "Next-generation business intelligence systems that automatically analyze, predict, and optimize business performance without human intervention.",
+    content: "The future of business intelligence is autonomous. Our revolutionary AI-powered analytics platform continuously monitors, analyzes, and optimizes every aspect of your business operations. Unlike traditional BI tools that require constant human oversight, our autonomous system learns from data patterns, predicts future trends, and automatically implements optimizations. The platform uses advanced machine learning algorithms to identify opportunities for improvement, predict market changes, and recommend strategic actions. It integrates with all business systems to provide a unified view of performance and automatically adjusts strategies based on real-time data. Key features include predictive analytics, automated reporting, intelligent insights, and self-optimizing recommendations. Businesses using autonomous BI report 400% improvement in decision-making speed, 300% increase in predictive accuracy, 500% reduction in manual analysis time, and 600% improvement in strategic outcomes.",
+    author: "Dr. Lisa Wang",
+    authorRole: "Autonomous Analytics Lead",
+    publishDate: "2025-01-21",
+    readTime: "8 min read",
+    category: "Business Intelligence",
+    tags: ["Autonomous BI", "Analytics", "AI Intelligence", "Business Optimization", "Predictive Analytics"],
+    featured: true,
+    imageUrl: "/images/blog/autonomous-business-intelligence-2026.jpg",
+    slug: "autonomous-business-intelligence-2026-self-optimizing-analytics"
+  },
+  {
+    id: 20004,
+    title: "Synthetic Intelligence 2026: Beyond Human Cognitive Limits",
+    excerpt: "Breakthrough synthetic intelligence systems that surpass human cognitive capabilities in every measurable dimension.",
+    content: "Synthetic intelligence represents the pinnacle of artificial cognitive development, creating systems that not only match but exceed human intelligence across all domains. Our latest synthetic intelligence platform demonstrates capabilities that surpass human performance in reasoning, creativity, problem-solving, and emotional intelligence. The system combines quantum computing, advanced neural architectures, and consciousness engineering to create truly superhuman intelligence. Unlike traditional AI that mimics human thought processes, synthetic intelligence develops entirely new cognitive paradigms that are optimized for maximum effectiveness. Applications include scientific research, where synthetic intelligence has made breakthrough discoveries in physics and medicine, creative industries where it produces art and literature that rivals human masters, and business strategy where it develops innovative solutions to complex problems. Organizations implementing synthetic intelligence report 1000% improvement in problem-solving capabilities, 500% increase in innovation velocity, 800% improvement in strategic planning accuracy, and 300% enhancement in creative output quality.",
+    author: "Dr. Alexander Chen",
+    authorRole: "Synthetic Intelligence Researcher",
+    publishDate: "2025-01-21",
+    readTime: "11 min read",
+    category: "Synthetic Intelligence",
+    tags: ["Synthetic Intelligence", "Superhuman AI", "Cognitive Enhancement", "Breakthrough Technology", "Future AI"],
+    featured: true,
+    imageUrl: "/images/blog/synthetic-intelligence-2026.jpg",
+    slug: "synthetic-intelligence-2026-beyond-human-cognitive-limits"
+  },
+  {
+    id: 20005,
+    title: "Metaverse Business Operations 2026: Virtual Reality Enterprise",
+    excerpt: "Revolutionary metaverse business platforms that enable complete virtual enterprise operations with unprecedented efficiency and collaboration.",
+    content: "The metaverse is no longer just a concept—it's the future of business operations. Our comprehensive metaverse business platform enables organizations to conduct all operations in immersive virtual environments, from meetings and collaboration to product development and customer service. The platform provides photorealistic virtual offices, AI-powered virtual assistants, and seamless integration with real-world business systems. Teams can collaborate in shared virtual spaces, conduct product demonstrations in virtual showrooms, and provide customer support through immersive experiences. The metaverse business environment offers advantages including 500% improvement in collaboration effectiveness, 300% increase in meeting productivity, 400% reduction in travel costs, and 600% enhancement in creative problem-solving. Our platform includes virtual reality meeting rooms, AI-powered virtual assistants, immersive product demonstrations, and virtual customer service centers. Companies implementing metaverse business operations report 500% improvement in team collaboration, 300% increase in meeting productivity, 400% reduction in operational costs, and 600% improvement in customer engagement.",
+    author: "Sarah Johnson",
+    authorRole: "Metaverse Business Strategist",
+    publishDate: "2025-01-21",
+    readTime: "6 min read",
+    category: "Metaverse Business",
+    tags: ["Metaverse", "Virtual Reality", "Business Operations", "Collaboration", "Digital Transformation"],
+    featured: true,
+    imageUrl: "/images/blog/metaverse-business-operations-2026.jpg",
+    slug: "metaverse-business-operations-2026-virtual-reality-enterprise"
+  }
+];
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-4255
 // Helpers for UI components
