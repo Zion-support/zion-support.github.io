@@ -4,6 +4,8 @@ import Header from './Header';
 import ScrollToTop from './ScrollToTop';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
+import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryTechBanner2026 from './components/RevolutionaryTechBanner2026';
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
@@ -69,10 +71,15 @@ import AI2027UltimateBreakthrough from './pages/AI2027UltimateBreakthrough';
 import QuantumAIRevolution2027 from './pages/QuantumAIRevolution2027';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
+<<<<<<< HEAD
 import AI2026UltimateInnovationHub from './pages/AI2026UltimateInnovationHub';
 import QuantumAIRevolution2026 from './pages/QuantumAIRevolution2026';
 import NextGenAIContentHub2026 from './pages/NextGenAIContentHub2026';
 import AITrendsInsights2026 from './pages/AITrendsInsights2026';
+=======
+import AIBusinessAutomation2026 from './pages/AIBusinessAutomation2026';
+import QuantumComputingEnterprise2026 from './pages/QuantumComputingEnterprise2026';
+>>>>>>> origin/cursor/create-and-deploy-new-content-2dec
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -138,6 +145,7 @@ const App: React.FC = () => {
               {/* Hero Section */}
               <EnhancedHeroSection />
 
+<<<<<<< HEAD
               {/* New Content 2026 Promotion Banner */}
               <div className="mb-12">
                 <NewContent2026PromotionBanner />
@@ -146,6 +154,16 @@ const App: React.FC = () => {
               {/* Revolutionary Content 2026 Banner */}
               <div className="mb-12">
                 <RevolutionaryContent2026Banner />
+=======
+              {/* NEW: Revolutionary Tech Banner 2026 */}
+              <div className="mb-12">
+                <RevolutionaryTechBanner2026 />
+              </div>
+
+              {/* NEW: New Content Showcase 2026 */}
+              <div className="mb-12">
+                <NewContentShowcase2026 />
+>>>>>>> origin/cursor/create-and-deploy-new-content-2dec
               </div>
 
               {/* Revolutionary Content Promo Banner 2025 */}
@@ -518,6 +536,10 @@ const App: React.FC = () => {
           
           {/* NEW: Ultimate Content Showcase 2026 */}
           <Route path="/ultimate-content-showcase-2026" element={<UltimateContentShowcase2026Page />} />
+          
+          {/* NEW: Revolutionary Content Routes 2026 */}
+          <Route path="/ai-business-automation-2026" element={<AIBusinessAutomation2026 />} />
+          <Route path="/quantum-computing-enterprise-2026" element={<QuantumComputingEnterprise2026 />} />
         </Routes>
         
         <Footer />
