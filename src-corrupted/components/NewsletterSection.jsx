@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-
-
+import {motion} from 'framer-motion';
+import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
 export function NewsletterSection(props: any) {

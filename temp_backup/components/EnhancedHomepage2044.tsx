@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, Suspense, lazy, useMemo } from 'react';
 import Layout from './layout/Layout';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,

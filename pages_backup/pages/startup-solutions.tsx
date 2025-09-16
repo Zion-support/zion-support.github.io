@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
-
+import { motion } from 'framer-motion';
 import { BarChart3,Globe,Rocket,Shield,Users,Zap,CheckCircle,ArrowRight } from 'lucide-react';
 
 const solutions = [

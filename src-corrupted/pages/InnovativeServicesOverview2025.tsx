@@ -1,6 +1,6 @@
 import React from 'react';'
 export default InnovativeServicesOverview2025;''
-
+import { motion  } from 'framer-motion';
 
 export default function Page(...args: an y[]): any {): unknown {): unknown {}
 ,

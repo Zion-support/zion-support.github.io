@@ -8,168 +8,136 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 4);
-    }, 4000);
+      setCurrentSlide((prev) => (prev + 1) % 3);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const slides = [
+  const bannerContent = [
     {
-      title: "🚀 Revolutionary Tech Showcase 2025",
-      description: "Experience the most advanced technology content featuring conscious AI, quantum computing, and neural interfaces",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900/20 to-pink-900/20"
+      title: "🧠 AI Consciousness Revolution",
+      subtitle: "Witness the birth of true artificial consciousness",
+      description: "Experience AI systems that think, feel, and create like never before",
+      link: "/pages/AIConsciousnessRevolution2025",
+      color: "from-purple-600 via-pink-600 to-red-600",
+      bgColor: "from-purple-900/90 to-pink-900/90"
     },
     {
-      title: "🤖 AI Solutions Comprehensive 2025",
-      description: "Discover our complete suite of AI solutions designed to transform industries and drive unprecedented growth",
-      link: "/pages/AISolutionsComprehensive2025",
-      color: "from-blue-600 to-cyan-600",
-      bgColor: "from-blue-900/20 to-cyan-900/20"
+      title: "⚡ Quantum Computing Breakthrough",
+      subtitle: "Solve impossible problems in seconds",
+      description: "Revolutionary quantum computing that changes everything",
+      link: "/pages/QuantumComputingBreakthrough2025",
+      color: "from-blue-600 via-cyan-600 to-teal-600",
+      bgColor: "from-blue-900/90 to-cyan-900/90"
     },
     {
-      title: "⚡ Ultimate Tech Revolution 2025",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape reality itself",
-      link: "/pages/UltimateTechRevolution2025",
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-900/20 to-purple-900/20"
-    },
-    {
-      title: "🧠 Next-Gen Innovation Hub 2025",
-      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
-      link: "/pages/NextGenInnovationHub2025",
-      color: "from-teal-600 to-blue-600",
-      bgColor: "from-teal-900/20 to-blue-900/20"
+      title: "🚀 Revolutionary Tech Breakthrough",
+      subtitle: "The future of technology is here",
+      description: "Experience breakthrough technologies that will reshape humanity",
+      link: "/pages/RevolutionaryTechBreakthrough2025",
+      color: "from-emerald-600 via-green-600 to-lime-600",
+      bgColor: "from-emerald-900/90 to-green-900/90"
     }
   ];
 
-  const currentSlideData = slides[currentSlide];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden rounded-2xl mb-12"
-    >
-      {/* Background */}
-      <div className={`absolute inset-0 bg-gradient-to-r ${currentSlideData.bgColor} backdrop-blur-sm`}></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.3),transparent_50%)]"></div>
+    <div className="relative overflow-hidden mb-12">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 animate-pulse"></div>
       
-      {/* Content */}
-      <div className="relative z-10 p-8 md:p-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left Column - Content */}
-            <div>
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="space-y-6"
-              >
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-white/20 to-white/10 rounded-full text-sm font-bold mb-4">
-                  🌟 NEW CONTENT • JANUARY 2025
-                </div>
-                
-                <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                  {currentSlideData.title}
-                </h2>
-                
-                <p className="text-xl opacity-90 leading-relaxed">
-                  {currentSlideData.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-4">
-                  <motion.a
-                    href={currentSlideData.link}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`bg-gradient-to-r ${currentSlideData.color} text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all duration-300`}
-                  >
-                    Explore Now →
-                  </motion.a>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-                  >
-                    Learn More
-                  </motion.button>
-                </div>
-              </motion.div>
-            </div>
+      {/* Main Banner */}
+      <div className="relative z-10 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 rounded-2xl p-8 border border-purple-400/30">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-8"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-bounce">
+            🌟 BREAKTHROUGH CONTENT • JANUARY 2025
+          </div>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Technology Showcase
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the most groundbreaking technological innovations that will reshape the future
+          </p>
+        </motion.div>
 
-            {/* Right Column - Visual */}
-            <div className="relative">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="relative"
-              >
-                <div className={`bg-gradient-to-br ${currentSlideData.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20`}>
-                  <div className="text-center">
-                    <div className="text-8xl mb-6">
-                      {currentSlide === 0 && "🚀"}
-                      {currentSlide === 1 && "🤖"}
-                      {currentSlide === 2 && "⚡"}
-                      {currentSlide === 3 && "🧠"}
+        {/* Content Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-xl">
+            <motion.div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {bannerContent.map((content, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-xl p-8 border border-white/20`}>
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <h3 className="text-3xl font-bold mb-2 text-white">{content.title}</h3>
+                        <h4 className="text-xl text-purple-200 mb-4">{content.subtitle}</h4>
+                        <p className="text-lg text-gray-200 mb-6">{content.description}</p>
+                        <a
+                          href={content.link}
+                          className={`inline-block bg-gradient-to-r ${content.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                        >
+                          Explore Now →
+                        </a>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-8xl mb-4 animate-pulse">
+                          {content.title.split(' ')[0]}
+                        </div>
+                        <div className="text-2xl font-bold text-white mb-2">
+                          {content.title.split(' ').slice(1).join(' ')}
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">Interactive Demo</h3>
-                    <p className="text-lg opacity-90 mb-6">
-                      Experience the technology in action
-                    </p>
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-                    >
-                      Launch Demo
-                    </motion.button>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+              ))}
+            </motion.div>
           </div>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center space-x-2 mt-6">
+            {bannerContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-purple-400 scale-125' : 'bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Access Links */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+          {bannerContent.map((content, index) => (
+            <motion.a
+              key={index}
+              href={content.link}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className={`bg-gradient-to-r ${content.color} text-white p-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center hover:scale-105`}
+            >
+              <div className="text-2xl mb-2">{content.title.split(' ')[0]}</div>
+              <div className="text-sm opacity-90">{content.subtitle}</div>
+            </motion.a>
+          ))}
         </div>
       </div>
 
-      {/* Slide Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/30'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      
-      <button
-        onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </motion.div>
+      {/* Floating Elements */}
+      <div className="absolute top-4 right-4 text-6xl animate-bounce opacity-20">🚀</div>
+      <div className="absolute bottom-4 left-4 text-4xl animate-pulse opacity-20">⚡</div>
+      <div className="absolute top-1/2 right-8 text-3xl animate-ping opacity-30">🧠</div>
+    </div>
   );
 };
 

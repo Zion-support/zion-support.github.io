@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-
+import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
   Cloud, 

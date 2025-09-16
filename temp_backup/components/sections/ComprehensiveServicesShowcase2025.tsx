@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';

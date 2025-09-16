@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/Layout';
-
+import { motion } from 'framer-motion';
 import { 
       title: "Manufacturing AI & Machine Learning",
       description: "AI-powered manufacturing optimization with predictive maintenance and quality control",

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -140,14 +140,14 @@ const AI2026UltimateServicesShowcase = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div
+      <motion.div
         className="max-w-7xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
         {/* Header */}
-        <div variants={itemVariants} className="text-center mb-16">
+        <motion.div variants={itemVariants} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
             <Star className="w-4 h-4" />
             AI 2026 Ultimate Services
@@ -161,12 +161,12 @@ const AI2026UltimateServicesShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the future of artificial intelligence with our cutting-edge services that are transforming industries and revolutionizing human potential.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
-        <div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (
-            <div
+            <motion.div
               key={service.id}
               className={`relative group cursor-pointer ${
                 activeService === index ? 'scale-105' : 'hover:scale-102'
@@ -205,7 +205,7 @@ const AI2026UltimateServicesShowcase = () => {
                 </div>
 
                 {activeService === index && (
-                  <div
+                  <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl border-2 border-purple-400"
                     layoutId="activeService"
                     initial={{ opacity: 0 }}
@@ -214,13 +214,13 @@ const AI2026UltimateServicesShowcase = () => {
                   />
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Active Service Details */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeService}
             variants={itemVariants}
             initial={{ opacity: 0, y: 50 }}
@@ -260,7 +260,7 @@ const AI2026UltimateServicesShowcase = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
                 {services[activeService].features.map((featureindex) => (
-                  <div
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0x: 50 }}
                     animate={{ opacity: 1x: 0 }}
@@ -269,15 +269,15 @@ const AI2026UltimateServicesShowcase = () => {
                   >
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300 text-lg">{feature}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Call to Action */}
-        <div variants={itemVariants} className="text-center mt-16">
+        <motion.div variants={itemVariants} className="text-center mt-16">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -292,8 +292,8 @@ const AI2026UltimateServicesShowcase = () => {
               Schedule Demo
             </button>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

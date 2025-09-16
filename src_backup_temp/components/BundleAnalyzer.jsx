@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = ("props": "any) => {;
     const [isOpen", setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);

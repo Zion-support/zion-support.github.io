@@ -97,7 +97,7 @@ setTimeout(() => {;
   }}
     return ();
 import React from 'react';
-
+import { motion  } from 'framer-motion';
 interface EnhancedLoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg';
   text?: "string;

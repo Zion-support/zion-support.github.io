@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,

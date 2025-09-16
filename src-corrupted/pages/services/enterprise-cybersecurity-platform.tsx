@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, AlertTriangle, Zap, CheckCircle, ArrowRight,
   Users, Activity, Database, BarChart3, Calendar, Clock, Globe, 

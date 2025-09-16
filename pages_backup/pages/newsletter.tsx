@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Mail, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap } from 'lucide-react';
