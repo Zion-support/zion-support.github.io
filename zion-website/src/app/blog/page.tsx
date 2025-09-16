@@ -3,6 +3,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-production-guardrails-toolbox',
+    title: 'AI 2026: Production Guardrails Toolbox',
+    summary:
+      'Practical guardrail patterns for CI gates, runtime checks, and safe rollouts with audit‑ready evidence.'
+  },
+  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:

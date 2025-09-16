@@ -16,6 +16,13 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Blueprint: Production Guardrails Toolbox (2026)',
+    summary: 'Field-tested checks, rollout gates, and audit evidence to ship safe AI.',
+    href: '/blog/ai-2026-production-guardrails-toolbox',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Real-Time Agent Cost Optimizer v1.0',
     summary: 'Automated routing and dynamic budgets to reduce agent inference costs by 27%.',
     href: '/updates/real-time-agent-cost-optimizer-1-0',
