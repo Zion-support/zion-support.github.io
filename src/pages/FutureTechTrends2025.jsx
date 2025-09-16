@@ -2,68 +2,13 @@ import React from 'react';
 
 const FutureTechTrends2025 = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
->>>>>>> cursor/create-and-deploy-new-content-40b9
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6">Future Tech Trends2025</h1>
+          <h1 className="text-6xl font-bold mb-6">Future Tech Trends 2025</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover the latest innovations and breakthrough technologies in future tech trends2025
+            Discover the latest innovations and breakthrough technologies that will shape the future
           </p>
-        </div>
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Innovation</h3>
-            <p className="text-blue-100">Cutting-edge technology solutions</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Technology</h3>
-            <p className="text-blue-100">Revolutionary technological advances</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Future</h3>
-            <p className="text-blue-100">Next-generation solutions</p>
-=======
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-2xl font-bold mb-4">AI Revolution</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced artificial intelligence systems that will transform industries
-            </p>
-            <a href="/pages/AIRevolution2025" className="text-blue-400 hover:text-blue-300 font-semibold">
-              Learn More →
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
-            <p className="text-gray-300 mb-6">
-              Breakthrough quantum technologies for unprecedented computational power
-            </p>
-            <a href="/pages/QuantumComputingBreakthrough" className="text-purple-400 hover:text-purple-300 font-semibold">
-              Explore →
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
-            <div className="text-4xl mb-4">🧬</div>
-            <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
-            <p className="text-gray-300 mb-6">
-              Direct brain-computer interfaces for enhanced human capabilities
-            </p>
-            <a href="/pages/NeuralInterfaceFuture" className="text-green-400 hover:text-green-300 font-semibold">
-              Discover →
-            </a>
->>>>>>> cursor/create-and-deploy-new-content-40b9
-          </div>
         </div>
       </div>
     </div>
