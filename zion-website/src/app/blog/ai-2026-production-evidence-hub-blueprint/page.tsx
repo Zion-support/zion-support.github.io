@@ -3,7 +3,7 @@ export const metadata = {
 	description: 'Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven AI operations.',
 }
 
-function Page() {
+export default function Page() {
 	return (
 		<main className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
 			<header className="mb-8">

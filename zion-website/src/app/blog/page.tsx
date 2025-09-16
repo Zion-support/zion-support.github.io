@@ -9,6 +9,12 @@ const posts = [
       'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
   },
   {
+    slug: 'ai-2026-agentic-slo-dashboards-blueprint',
+    title: 'AI 2026: Agentic SLO Dashboards — Blueprint',
+    summary:
+      'Define SLIs, wire eval gates, and link traces/policy events to incidents.'
+  },
+  {
     slug: 'ai-2026-risk-and-guardrails-operating-model',
     title: 'AI 2026: Risk & Guardrails Operating Model',
     summary:
