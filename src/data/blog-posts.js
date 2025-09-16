@@ -3609,5 +3609,4 @@ const newBlogPosts = [
   }
 ];
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-7f93
 // Helpers for UI components

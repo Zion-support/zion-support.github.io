@@ -91,27 +91,27 @@ import BlogPost_Jan2026_EdgeAIRevolution from './pages/BlogPost_Jan2026_EdgeAIRe
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
-import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
+// import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026'; // File not found
 import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
 import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
 import AdvancedAISolutions2027 from './pages/AdvancedAISolutions2027';
-import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
+import AdvancedAnalyticsDashboard2026 from './components/AdvancedAnalyticsDashboard2026';
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
 import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026';
+// import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026'; // File not found
 import AdvancedTechBreakthrough2025 from './pages/AdvancedTechBreakthrough2025';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import AgentOpsControlPlane2026 from './pages/AgentOpsControlPlane2026';
 import AgenticOpsControls2026 from './pages/AgenticOpsControls2026';
 import AutonomousOpsPlaybook2026 from './pages/AutonomousOpsPlaybook2026';
-import BiotechRevolution2026 from './pages/BiotechRevolution2026';
+// import BiotechRevolution2026 from './pages/BiotechRevolution2026'; // File not found
 import Blog from './pages/Blog';
 import BlogPost_Sep2025_AIExecGuide from './pages/BlogPost_Sep2025_AIExecGuide';
 import BlogPost_Sep2025_CaseStudy from './pages/BlogPost_Sep2025_CaseStudy';
 import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026';
 import EdgeAICompliance2026 from './pages/EdgeAICompliance2026';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
-import InnovationShowcase2026 from './pages/InnovationShowcase2026';
+import InnovationShowcase2026 from './components/InnovationShowcase2026';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
@@ -131,7 +131,7 @@ import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
 import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthrough2025';
 import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
-import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026';
+// import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026'; // File not found
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import SyntheticIntelligenceRevolution2025 from './pages/SyntheticIntelligenceRevolution2025';
@@ -510,13 +510,13 @@ const App: React.FC = () => {
           <Route path="/pages/AgentOpsControlPlane2026" element={<AgentOpsControlPlane2026 />} />
           <Route path="/pages/ResponsibleAutonomyGuide2026" element={<ResponsibleAutonomyGuide2026 />} />
           <Route path="/pages/OperationalEvalGates2026" element={<OperationalEvalGates2026 />} />
-          <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
+          {/* <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} /> */} {/* Component not found */}
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
-          <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} />
+          {/* <Route path="/pages/AdvancedAIConsciousness2026" element={<AdvancedAIConsciousness2026 />} /> */} {/* Component not found */}
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
-          <Route path="/pages/AdvancedRoboticsRevolution2026" element={<AdvancedRoboticsRevolution2026 />} />
+          {/* <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} /> */} {/* Component not found */}
+          {/* <Route path="/pages/AdvancedRoboticsRevolution2026" element={<AdvancedRoboticsRevolution2026 />} /> */} {/* Component not found */}
           <Route path="/pages/QuantumConsciousnessRevolution2026" element={<QuantumConsciousnessRevolution2026 />} />
           <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
           <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
@@ -550,7 +550,6 @@ const App: React.FC = () => {
           <Route path="/advanced-tech-solutions-2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/quantum-computing-guide-2026" element={<QuantumComputingGuide2026 />} />
           
-<<<<<<< HEAD
           {/* NEW: Ultimate Content Routes 2026 */}
           <Route path="/ai-2026-ultimate-innovation-hub" element={<AI2026UltimateInnovationHub />} />
           <Route path="/quantum-ai-revolution-2026" element={<QuantumAIRevolution2026 />} />
