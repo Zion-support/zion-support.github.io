@@ -11,6 +11,27 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
     {
+        title: 'Guide: AI Eval Gates Cookbook (2026)',
+        summary: 'Practical recipes for rollout gates, metric thresholds, and auto-rollbacks.',
+        href: '/updates/ai-eval-gates-cookbook-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Launch: Agent Safety Posture Dashboard v1.0',
+        summary: 'Unified view of safety signals, exceptions, and evidence across environments.',
+        href: '/updates/agent-safety-posture-dashboard-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Report: Evidence Bundle Signing v1',
+        summary: 'Design for signed, tamper-evident change evidence across CI/CD and runtime.',
+        href: '/updates/evidence-bundle-signing-v1',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    {
         title: 'Launch: Autonomous Experimentation Toolkit v1.0',
         summary: 'Safe A/Bs and shadow tests with eval gates, policy checks, and audit evidence.',
         href: '/updates/autonomous-experimentation-toolkit-1-0',
