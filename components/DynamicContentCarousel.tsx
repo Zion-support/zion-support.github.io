@@ -1,14 +1,13 @@
-"use client";
 'use client';
 
-import React{ useStateuseEffectuseRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ChevronLeft
-  ChevronRight
-  Play
-  Pause
-  Volume2
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  Volume2,
   VolumeX,
   Maximize,
   Share2,
@@ -80,7 +79,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '⚛️',
       author: 'Prof. Marcus Rodriguez',
       publishedAt: '2025-01-18',
-      tags: [', 'Quantum', 'Neural 'Networks', 'Computing'Tutorial'],
+      tags: ['Quantum', 'Neural Networks', 'Computing', 'Tutorial'],
       gradient: 'from-cyan-600 to-teal-600',
       stats: {
         qubits: '1000+',
@@ -104,7 +103,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🔗',
       author: 'Dr. Emily Watson',
       publishedAt: '2025-01-15',
-      tags: ['Neural 'Interface', 'BCI', 'Implementation', 'Guide'],
+      tags: ['Neural Interface', 'BCI', 'Implementation', 'Guide'],
       gradient: 'from-pink-600 to-rose-600',
       stats: {
         resolution: '1μV',
@@ -128,7 +127,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🤖',
       author: 'Alex Thompson',
       publishedAt: '2025-01-12',
-      tags: [', 'Automation', 'Business', 'AI', 'Operations'],
+      tags: ['Automation', 'Business', 'AI', 'Operations'],
       gradient: 'from-green-600 to-emerald-600',
       stats: {
         efficiency: '+300%',
@@ -152,7 +151,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🔬',
       author: 'Dr. James Liu',
       publishedAt: '2025-01-10',
-      tags: ['Quantum 'AI', 'Fusion', 'Technology', 'Research'],
+      tags: ['Quantum AI', 'Fusion', 'Technology', 'Research'],
       gradient: 'from-indigo-600 to-purple-600',
       stats: {
         processing: '1000x',
@@ -176,7 +175,7 @@ const DynamicContentCarousel = () => {
       thumbnail: '🛠️',
       author: 'Tech Academy',
       publishedAt: '2025-01-08',
-      tags: ['AI 'Tools', 'Course', 'Tutorial', 'Mastery'],
+      tags: ['AI Tools', 'Course', 'Tutorial', 'Mastery'],
       gradient: 'from-orange-600 to-red-600',
       stats: {
         students: '50K+',
@@ -194,13 +193,13 @@ const DynamicContentCarousel = () => {
     if (isPlaying) {
       intervalRef.current = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-      }5000);
+      }, 5000);
     } else {
       clearInterval(intervalRef.current);
     }
 
     return () => clearInterval(intervalRef.current);
-  }[isPlayingcarouselItems.length]);
+  }, [isPlaying, carouselItems.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
@@ -314,9 +313,9 @@ const DynamicContentCarousel = () => {
         <div className="relative">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0x: 100 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -100 }}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20"
           >
@@ -437,11 +436,11 @@ const DynamicContentCarousel = () => {
               <div className="space-y-6">
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(currentItem.stats).map(([keyvalue]index) => (
+                  {Object.entries(currentItem.stats).map(([key, value], index) => (
                     <motion.div
                       key={key}
-                      initial={{ opacity: 0scale: 0.8 }}
-                      animate={{ opacity: 1scale: 1 }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 }}
                       className="bg-white/10 backdrop-blur-lg rounded-xl p-4 text-center border border-white/20"
                     >
@@ -449,7 +448,7 @@ const DynamicContentCarousel = () => {
                         {value}
                       </div>
                       <div className="text-xs text-gray-400 capitalize">
-                        {key.replace(/([A-Z])/g' $1').trim()}
+                        {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>
                     </motion.div>
                   ))}

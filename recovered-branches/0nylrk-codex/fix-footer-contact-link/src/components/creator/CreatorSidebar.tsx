@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-import { BellFileTextHomeMailSearchSettingsUsers } from "lucide-react";
-=======
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import {
   Sidebar,
   SidebarContent,
@@ -12,12 +7,6 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-<<<<<<< HEAD
-  SidebarGroupContent} from "@/components/ui/sidebar";
-=======
-  SidebarGroupContent,
-} from "@/components/ui/sidebar";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function AppSidebar() {
   return (

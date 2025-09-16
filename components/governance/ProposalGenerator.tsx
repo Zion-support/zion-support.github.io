@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import EnhancedLayout from '../layout/EnhancedLayout';
 
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
@@ -19,11 +13,6 @@ export type ProposalForm = {
 };
 
 export default function ProposalGenerator() {
-<<<<<<< HEAD
-  const [formsetForm] = useState<ProposalForm>({
-=======
-  const [form, setForm] = useState<ProposalForm>({
->>>>>>> origin/auto/autonomy-17186719616
     targetInstitution: 'UNDP',
     type: 'Workforce Dev',
     regionalScope: 'Global',
@@ -31,50 +20,12 @@ export default function ProposalGenerator() {
     supportingMultiverses: '',
     language: 'English',
     customPrompt:
-<<<<<<< HEAD
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metricsocial outcomesand DAO-based governance logic.'});
-  const [isGeneratingsetIsGenerating] = useState(false);
-  const [draftMarkdownsetDraftMarkdown] = useState('');
-  const [draftJsonsetDraftJson] = useState<any>(null);
-  const [exportLinksetExportLinks] = useState<{ pdfUrl?: string; jsonUrl?: string; mdUrl?: string } | null>(null);
-  const [statusMessagesetStatusMessage] = useState('');
-
-  function handleChange<K extends keyof ProposalForm>(key: Kvalue: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev[key]: value }));
-=======
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-  });
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [draftMarkdown, setDraftMarkdown] = useState('');
-  const [draftJson, setDraftJson] = useState<any>(null);
-  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string; jsonUrl?: string; mdUrl?: string } | null>(null);
-  const [statusMessage, setStatusMessage] = useState('');
-
-  function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }));
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   async function handleGenerate() {
     setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/proposals/generate'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)});
-      const data = await res.json();
-      setDraftMarkdown(data.markdown || ', ');
-=======
-      const res = await fetch('/api/proposals/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      setDraftMarkdown(data.markdown || '');
->>>>>>> origin/auto/autonomy-17186719616
       setDraftJson(data.json || null);
       setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {
@@ -88,27 +39,11 @@ export default function ProposalGenerator() {
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/proposals/export'{
-=======
-      const res = await fetch('/api/proposals/export', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,
-<<<<<<< HEAD
-          meta: form})});
-      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrljsonUrl: data.jsonUrlmdUrl: data.mdUrl });
-=======
-          meta: form,
-        }),
-      });
-      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl });
->>>>>>> origin/auto/autonomy-17186719616
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
@@ -119,18 +54,6 @@ export default function ProposalGenerator() {
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/proposals/submit'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: draftMarkdownjson: draftJsonmeta: form })});
-=======
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form }),
-      });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`);
     } catch (e) {
@@ -148,11 +71,6 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.targetInstitution}
-<<<<<<< HEAD
-              onChange={(e) => handleChange(', 'targetInstitution', 'e.target.value)}
-=======
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
->>>>>>> origin/auto/autonomy-17186719616
               placeholder="UNDP / World Bank / ILO"
             />
           </div>
@@ -161,11 +79,6 @@ export default function ProposalGenerator() {
             <select
               className="w-full border rounded px-3 py-2"
               value={form.type}
-<<<<<<< HEAD
-              onChange={(e) => handleChange(', 'type', 'e.target.value as ProposalType)}
-=======
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
->>>>>>> origin/auto/autonomy-17186719616
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -178,11 +91,6 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
-<<<<<<< HEAD
-              onChange={(e) => handleChange(', 'regionalScope', 'e.target.value)}
-=======
-              onChange={(e) => handleChange('regionalScope', e.target.value)}
->>>>>>> origin/auto/autonomy-17186719616
               placeholder="Global / Africa / LATAM / APAC / EU / ..."
             />
           </div>
@@ -191,13 +99,6 @@ export default function ProposalGenerator() {
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form.budgetOrGoals}
-<<<<<<< HEAD
-              onChange={(e) => handleChange(', 'budgetOrGoals', 'e.target.value)}
-              placeholder="$5M for pilot; goals: 10k workers onboarded70% female youthetc."
-=======
-              onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
-              placeholder="$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc."
->>>>>>> origin/auto/autonomy-17186719616
             />
           </div>
           <div>
@@ -205,13 +106,6 @@ export default function ProposalGenerator() {
             <input
               className="w-full border rounded px-3 py-2"
               value={form.supportingMultiverses}
-<<<<<<< HEAD
-              onChange={(e) => handleChange(', 'supportingMultiverses', 'e.target.value)}
-              placeholder="Eg. Zion.aiZion.IDZion.Work"
-=======
-              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
-              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
->>>>>>> origin/auto/autonomy-17186719616
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -220,11 +114,6 @@ export default function ProposalGenerator() {
               <input
                 className="w-full border rounded px-3 py-2"
                 value={form.language}
-<<<<<<< HEAD
-                onChange={(e) => handleChange(', 'language', 'e.target.value)}
-=======
-                onChange={(e) => handleChange('language', e.target.value)}
->>>>>>> origin/auto/autonomy-17186719616
                 placeholder="English / French / Spanish / Arabic / ..."
               />
             </div>
@@ -233,11 +122,6 @@ export default function ProposalGenerator() {
               <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form.customPrompt}
-<<<<<<< HEAD
-                onChange={(e) => handleChange(', 'customPrompt', 'e.target.value)}
-=======
-                onChange={(e) => handleChange('customPrompt', e.target.value)}
->>>>>>> origin/auto/autonomy-17186719616
               />
             </div>
           </div>

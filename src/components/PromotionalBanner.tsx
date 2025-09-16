@@ -1,70 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  X, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Users, 
-  Target,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
-
-interface PromoItem {
-  id: string;
-  title: string;
-  description: string;
-  link: string;
-  icon: React.ComponentType<any>;
-  badge?: string;
-  color: string;
-}
 
 const PromotionalBanner: React.FC = () => {
-  const [currentPromo, setCurrentPromo] = useState(0);
+  const [currentBanner, setCurrentBanner] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  const promotionalItems: PromoItem[] = [
+  const banners = [
     {
-      id: 'ai-customer-success',
-      title: 'AI-Powered Customer Success Platform',
-      description: 'Reduce churn by 40% with predictive analytics and automated onboarding',
-      link: '/services/ai-powered-customer-success-platform',
-      icon: Users,
-      badge: 'NEW',
-      color: 'from-green-400 to-emerald-500'
+      id: 0,
+      title: "🚀 BREAKTHROUGH 2026: AI REVOLUTION",
+      subtitle: "Experience the most advanced AI technologies ever created",
+      cta: "Explore Now →",
+      link: "/pages/AdvancedAITransformation2026",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      bgPattern: "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)"
     },
     {
-      id: 'ai-marketing-automation',
-      title: 'AI Marketing Automation Suite',
-      description: 'Boost conversions by 85% with intelligent targeting and multi-channel campaigns',
-      link: '/services/ai-powered-marketing-automation',
-      icon: Target,
-      badge: 'POPULAR',
-      color: 'from-purple-400 to-pink-500'
+      id: 1,
+      title: "⚡ QUANTUM COMPUTING BREAKTHROUGH",
+      subtitle: "1000+ qubit processors now available for enterprise",
+      cta: "Learn More →",
+      link: "/pages/QuantumComputingRevolution2026",
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      bgPattern: "radial-gradient(circle at 30% 40%, rgba(6, 182, 212, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)"
     },
     {
-      id: 'ai-business-intelligence',
-      title: 'Advanced AI Business Intelligence',
-      description: 'Transform data into actionable insights with 95% prediction accuracy',
-      link: '/services/ai-business-intelligence',
-      icon: TrendingUp,
-      badge: 'FEATURED',
-      color: 'from-cyan-400 to-blue-500'
+      id: 2,
+      title: "🧬 NEURAL INTERFACE REVOLUTION",
+      subtitle: "Direct brain-computer communication is here",
+      cta: "Discover →",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+      bgPattern: "radial-gradient(circle at 40% 30%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 70%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)"
+    },
+    {
+      id: 3,
+      title: "🌟 ULTIMATE TECH SHOWCASE 2026",
+      subtitle: "See all revolutionary technologies in one place",
+      cta: "View Showcase →",
+      link: "/pages/UltimateTechShowcase2026",
+      gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
+      bgPattern: "radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(192, 132, 252, 0.3) 0%, transparent 50%)"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPromo((prev) => (prev + 1) % promotionalItems.length);
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [banners.length]);
 
-  const handleClose = () => {
+  const closeBanner = () => {
     setIsVisible(false);
   };
 
@@ -73,84 +60,79 @@ const PromotionalBanner: React.FC = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        className="relative bg-gradient-to-r from-slate-800/90 to-slate-700/90 backdrop-blur-sm border-b border-zion-cyan/20"
+        exit={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="relative overflow-hidden"
+        style={{
+          background: `linear-gradient(135deg, ${banners[currentBanner].gradient.split(' ').join(', ')})`,
+          backgroundImage: banners[currentBanner].bgPattern
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        {/* Close Button */}
+        <button
+          onClick={closeBanner}
+          className="absolute top-4 right-4 z-20 text-white/80 hover:text-white transition-colors"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Banner Content */}
+        <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4 flex-1">
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r ${promotionalItems[currentPromo].color}`}>
-                    {(() => {
-                      const Icon = promotionalItems[currentPromo].icon;
-                      return <Icon className="w-5 h-5 text-white" />;
-                    })()}
-                  </div>
-                  {promotionalItems[currentPromo].badge && (
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold animate-pulse">
-                      {promotionalItems[currentPromo].badge}
-                    </span>
-                  )}
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-white font-semibold text-lg">
-                    {promotionalItems[currentPromo].title}
-                  </h3>
-                  <p className="text-gray-300 text-sm">
-                    {promotionalItems[currentPromo].description}
-                  </p>
-                </div>
-              </div>
-
-              <Link
-                to={promotionalItems[currentPromo].link}
-                className="hidden sm:flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200 font-semibold"
+            <div className="flex-1">
+              <motion.div
+                key={currentBanner}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-white"
               >
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
+                <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                  {banners[currentBanner].title}
+                </h2>
+                <p className="text-lg opacity-90">
+                  {banners[currentBanner].subtitle}
+                </p>
+              </motion.div>
             </div>
-
+            
             <div className="flex items-center space-x-4">
-              {/* Promo indicators */}
-              <div className="hidden sm:flex items-center space-x-2">
-                {promotionalItems.map((_, index) => (
+              <a
+                href={banners[currentBanner].link}
+                className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 whitespace-nowrap"
+              >
+                {banners[currentBanner].cta}
+              </a>
+              
+              {/* Banner Indicators */}
+              <div className="flex space-x-2">
+                {banners.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentPromo(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                      index === currentPromo ? 'bg-zion-cyan w-6' : 'bg-gray-500'
+                    onClick={() => setCurrentBanner(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentBanner ? 'bg-white' : 'bg-white/30'
                     }`}
                   />
                 ))}
               </div>
-
-              <button
-                onClick={handleClose}
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                <X className="w-5 h-5" />
-              </button>
             </div>
           </div>
+        </div>
 
-          {/* Mobile CTA */}
-          <div className="sm:hidden mt-3">
-            <Link
-              to={promotionalItems[currentPromo].link}
-              className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200 font-semibold"
-            >
-              Learn More <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/2 -right-10 w-16 h-16 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-0 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export { PromotionalBanner };
 export default PromotionalBanner;

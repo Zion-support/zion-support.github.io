@@ -1,11 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -73,18 +66,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       body: body.body || '',
       status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 },
-<<<<<<< HEAD
-    }
-    posts.unshift (post);
-    write_posts (posts);
-    return res.status (201).json (post);
-  }
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

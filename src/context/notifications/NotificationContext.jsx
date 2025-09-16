@@ -30,7 +30,6 @@ export const NotificationProvider = ({ children }) => {
   const value = {
     notifications,
     addNotification,
-    removeNotification
   };
 
   return (
@@ -38,4 +37,3 @@ export const NotificationProvider = ({ children }) => {
       {children}
     </NotificationContext.Provider>
   );
-};

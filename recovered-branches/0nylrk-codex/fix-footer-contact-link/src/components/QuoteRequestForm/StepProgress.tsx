@@ -9,19 +9,6 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps; label: string }[] = [
-<<<<<<< HEAD
-    { id: "service"label: "Service" },
-    { id: "details"label: "Details" },
-    { id: "timeline"label: "Timeline" },
-    { id: "budget"label: "Budget" },
-    { id: "summary"label: "Summary" }
-=======
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
-    { id: "summary", label: "Summary" }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {

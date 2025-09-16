@@ -12,10 +12,6 @@ export interface AddedService {
   rating?: number;
   customerCount?: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro',
@@ -172,7 +168,3 @@ export const added2025Services: AddedService[] = [
     customerCount: 640
   }
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616

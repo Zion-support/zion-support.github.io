@@ -79,24 +79,8 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const AIPoweredLegalDocumentGenerator = React.lazy(() => import('./pages/services/AI-Powered-Legal-Document-Generator'));
 const AIHealthcareDiagnosticsPlatform = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics-Platform'));
 const BlockchainSupplyChainTransparency = React.lazy(() => import('./pages/services/Blockchain-Supply-Chain-Transparency'));
-<<<<<<< HEAD
-const AIBusinessAutomation = React.lazy(() => import('./pages/services/AI-Business-Automation'));
-// Define lazy components for AI-powered routes (JSX cannot inline React.lazy inside element prop)
 const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
 const AIPoweredMarketingAutomation = React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'));
-
-// New content pages
-const InnovativeTechSolutions2025 = React.lazy(() => import('./pages/InnovativeTechSolutions2025'));
-const UltimateServicesShowcase2025Page = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const TheFutureOfAIInBusiness2025 = React.lazy(() => import('./pages/blog/TheFutureOfAIInBusiness2025'));
-const AIRevolution2025 = React.lazy(() => import('./pages/blog/AIRevolution2025'));
-const QuantumComputingBusiness = React.lazy(() => import('./pages/blog/QuantumComputingBusiness'));
-const AIBusinessAutomation2025 = React.lazy(() => import('./pages/blog/AI-Business-Automation-2025'));
-const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
-=======
-const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
-const AIPoweredMarketingAutomation = React.lazy(() => import('./pages/services/AI-Powered-Marketing-Automation'));
->>>>>>> origin/backup-main-20250915-073929
 
 // Additional pages from remote
 const Legal = React.lazy(() => import('./pages/Legal'));
