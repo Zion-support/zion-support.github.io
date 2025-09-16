@@ -1,105 +1,112 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryContentBanner2026: React.FC = () => {
+  const [currentBanner, setCurrentBanner] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const banners = [
+    {
+      title: "🚀 AI Consciousness Revolution 2026",
+      subtitle: "Witness the birth of truly conscious AI",
+      link: "/pages/AIConsciousnessRevolution2026",
+      gradient: "from-purple-600 to-pink-600",
+      icon: "🧠"
+    },
+    {
+      title: "⚡ Quantum Neural Interface 2026",
+      subtitle: "Where consciousness meets quantum reality",
+      link: "/pages/QuantumNeuralInterface2026",
+      gradient: "from-cyan-600 to-purple-600",
+      icon: "🔗"
+    },
+    {
+      title: "🌌 Interdimensional Computing 2026",
+      subtitle: "Break through the barriers of reality",
+      link: "/pages/InterdimensionalComputing2026",
+      gradient: "from-indigo-600 to-violet-600",
+      icon: "🌌"
+    },
+    {
+      title: "🤖 Synthetic Intelligence 2026",
+      subtitle: "The next evolution of AI",
+      link: "/pages/SyntheticIntelligence2026",
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "🤖"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [banners.length]);
+
+  const currentBannerData = banners[currentBanner];
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-l from-blue-500/10 to-transparent"></div>
-      </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-4 left-4 w-8 h-8 bg-purple-400/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-8 right-8 w-6 h-6 bg-pink-400/30 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-4 left-8 w-4 h-4 bg-cyan-400/30 rounded-full animate-pulse delay-2000"></div>
-      <div className="absolute bottom-8 right-4 w-10 h-10 bg-blue-400/30 rounded-full animate-pulse delay-500"></div>
-      
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 BREAKTHROUGH 2026 • REVOLUTIONARY TECHNOLOGY
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Experience the Future of Technology
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Discover our revolutionary AI Innovation Hub, Quantum Computing solutions, and Neural Interface technologies that are reshaping industries worldwide
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI Innovation Hub 2026</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              The most advanced AI technologies that are transforming businesses and creating unprecedented opportunities
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Autonomous AI Agents</li>
-              <li>• Quantum AI Processing</li>
-              <li>• Neural Interface AI</li>
-              <li>• Edge AI Computing</li>
-            </ul>
-            <a href="/pages/AIInnovationHub2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore AI Hub →
-            </a>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          className="relative overflow-hidden"
+        >
+          <div className={`bg-gradient-to-r ${currentBannerData.gradient} text-white py-4 px-4`}>
+            <div className="container mx-auto">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                  <motion.div
+                    key={currentBanner}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <span className="text-2xl">{currentBannerData.icon}</span>
+                    <div>
+                      <div className="text-sm font-bold opacity-90">BREAKTHROUGH 2026</div>
+                      <div className="text-lg font-bold">{currentBannerData.title}</div>
+                      <div className="text-sm opacity-90">{currentBannerData.subtitle}</div>
+                    </div>
+                  </motion.div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <a
+                    href={currentBannerData.link}
+                    className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
+                  >
+                    Explore Now →
+                  </a>
+                  <button
+                    onClick={() => setIsVisible(false)}
+                    className="text-white/70 hover:text-white transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Tech Showcase</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Interactive demonstrations of cutting-edge technologies that will define the future
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Quantum Computing</li>
-              <li>• Neural Interfaces</li>
-              <li>• Conscious AI Systems</li>
-              <li>• Interactive Demos</li>
-            </ul>
-            <a href="/pages/RevolutionaryTechShowcase2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              View Showcase →
-            </a>
+          {/* Progress Bar */}
+          <div className="h-1 bg-black/20">
+            <motion.div
+              className="h-full bg-white/50"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 4, ease: "linear" }}
+            />
           </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌟</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Next-Gen Innovation</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Discover and explore the most revolutionary technologies shaping humanity's future
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• 50+ Active Innovations</li>
-              <li>• 99.9% Success Rate</li>
-              <li>• Infinite Possibilities</li>
-              <li>• Real-time Processing</li>
-            </ul>
-            <a href="/pages/NextGenInnovationHub2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Enter Innovation Hub →
-            </a>
-          </div>
-        </div>
-        
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-sm">Live Demo Available</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-              <span className="text-sm">Interactive Experience</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-              <span className="text-sm">Revolutionary Technology</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
