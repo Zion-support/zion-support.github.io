@@ -1,24 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-
-
-
-
-
-
-  const data = readJsonFile('updates.json', [] as any[]);
-  res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('updates.json', [] as any[]);
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
