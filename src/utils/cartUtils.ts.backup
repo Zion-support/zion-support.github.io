@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -15,11 +17,17 @@
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 // Cart utilities for managing shopping cart functionality
 /**
  * Cart utility functions for managing shopping cart operations
  */
 
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -36,6 +44,7 @@
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 export interface CartItem {
   id: string;
   name: string;
@@ -53,6 +62,8 @@ export interface Cart {
 }
 
 export const cartUtils = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Conflict resolved
@@ -78,6 +89,7 @@ export const cartUtils = {
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   // Create a new empty cart
   createEmptyCart(): Cart {
     return {
@@ -94,6 +106,11 @@ export const cartUtils = {
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolvedmain
@@ -105,6 +122,7 @@ export const cartUtils = {
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
     
     if (existingItem) {
@@ -117,6 +135,8 @@ export const cartUtils = {
       return cartUtils.calculateTotals({ ...cart, items: newItems });
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -125,6 +145,7 @@ export const cartUtils = {
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 export interface Discount {
   code: string;
   type: 'percentage' | 'fixed';
@@ -190,6 +211,11 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolvedmain
@@ -200,10 +226,14 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     }
   },
 
   // Remove item from cart
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -218,11 +248,14 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
 
   // Update item quantity
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Conflict resolved
@@ -235,6 +268,7 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   updateItemQuantity(cart: Cart, itemId: string, quantity: number): Cart {
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
@@ -266,6 +300,11 @@ export function calculateCartTotals(cart: Cart): Cart {
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolvedmain
@@ -276,6 +315,7 @@ export function calculateCartTotals(cart: Cart): Cart {
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -291,6 +331,9 @@ export function calculateCartTotals(cart: Cart): Cart {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolved
@@ -302,12 +345,15 @@ export function calculateCartTotals(cart: Cart): Cart {
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
     return {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Conflict resolved
@@ -320,6 +366,7 @@ export function calculateCartTotals(cart: Cart): Cart {
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
       itemCount,
   return {
     ...cart,
@@ -358,6 +405,10 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 =======
 =======
 =======
+<<<<<<< HEAD
+=======
+=======
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolvedmain
@@ -366,10 +417,13 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     };
   },
 
   // Clear cart
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Conflict resolved
@@ -379,10 +433,14 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     };
   },
 
   // Clear cart
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -393,10 +451,13 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     return cart.items.some(item => item.id === itemId);
   },
 
   // Get cart summary
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 // Conflict resolved
@@ -476,6 +537,7 @@ export const mergeCartItems = cartUtils.mergeCartItems;
 // Conflict resolved
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
   getSummary(cart: Cart) {
   // Check minimum amount
   if (discount.minimumAmount && cart.subtotal < discount.minimumAmount) {
@@ -696,8 +758,11 @@ export default cartUtils;
 export default cartUtils;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 // Conflict resolved
 // Conflict resolved
 // Conflict resolvedcursor/create-and-deploy-new-content-f977
 // Conflict resolvedcbce003a6893117e37bc83ad56f67658329c232e
 >>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
