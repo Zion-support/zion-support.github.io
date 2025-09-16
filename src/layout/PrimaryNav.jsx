@@ -142,3 +142,5 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
     </>);
 }
+
+</div>

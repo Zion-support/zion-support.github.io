@@ -136,7 +136,7 @@ const BusinessTransformation2025Showcase = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent mb-6">
@@ -145,10 +145,10 @@ const BusinessTransformation2025Showcase = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Real results from real businesses. See how companies are achieving unprecedented growth with AI and automation.
           </p>
-        </divdiv>
+        </div>
 
         {/* Navigation Tabs */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {sections.map((section) => {
@@ -168,17 +168,17 @@ const BusinessTransformation2025Showcase = () => {
               </button>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Metrics Display */}
-        <divdiv
+        <div
           key={activeSection}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {transformationData[activeSection as keyof typeof transformationData].metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
-              <divdiv
+              <div
                 key={index}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -197,13 +197,13 @@ const BusinessTransformation2025Showcase = () => {
                     {metric.label}
                   </div>
                 </div>
-              </divdiv>
+              </div>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Success Stories */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -214,7 +214,7 @@ const BusinessTransformation2025Showcase = () => {
             {successStories.map((storyindex) => {
               const Icon = story.icon;
               return (
-                <divdiv
+                <div
                   key={index}
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -256,14 +256,14 @@ const BusinessTransformation2025Showcase = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-12">
@@ -286,10 +286,11 @@ const BusinessTransformation2025Showcase = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default BusinessTransformation2025Showcase;
+</div></div>

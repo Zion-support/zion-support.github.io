@@ -19,7 +19,6 @@ export default function InteractiveEngagementWidget() {
     conversionRate: 0
   });
   const [currentTestimonialsetCurrentTestimonial] = useState(0);
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -43,7 +42,6 @@ export default function InteractiveEngagementWidget() {
       rating: 5
     }
   ];
-
   useEffect(() => {
     // Simulate real-time data updates
     const interval = setInterval(() => {
@@ -54,31 +52,25 @@ export default function InteractiveEngagementWidget() {
         conversionRate: Math.max(0Math.min(100prev.conversionRate + (Math.random() - 0.5) * 1))
       }));
     }2000);
-
     // Rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length);
     }5000);
-
     return () => {
       clearInterval(interval);
       clearInterval(testimonialInterval);
     };
   }[testimonials.length]);
-
   useEffect(() => {
     // Show widget after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
     }3000);
-
     return () => clearTimeout(timer);
   }[]);
-
   if (!isVisible) return null;
-
   return (
-    <divdiv
+    <div
       className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-w-sm z-40"
     >
       <div className="flex justify-between items-center mb-3">
@@ -88,62 +80,40 @@ export default function InteractiveEngagementWidget() {
           className="text-gray-400 hover:text-gray-600 text-xs"
         >
           ✕
-        </button>
-      </div>
-
       {/* Real-time metrics */}
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="text-center">
           <div className="text-lg font-bold text-blue-600">{engagementData.visitors.toLocaleString()}</div>
           <div className="text-xs text-gray-500">Active Visitors</div>
-        </div>
         <div className="text-center">
           <div className="text-lg font-bold text-green-600">{engagementData.timeOnSite.toFixed(1)}m</div>
           <div className="text-xs text-gray-500">Avg. Time</div>
-        </div>
         <div className="text-center">
           <div className="text-lg font-bold text-orange-600">{engagementData.bounceRate.toFixed(1)}%</div>
           <div className="text-xs text-gray-500">Bounce Rate</div>
-        </div>
         <div className="text-center">
           <div className="text-lg font-bold text-purple-600">{engagementData.conversionRate.toFixed(1)}%</div>
           <div className="text-xs text-gray-500">Conversion</div>
-        </div>
-      </div>
-
       {/* Rotating testimonials */}
       <div className="border-t pt-3">
-          <divdiv
+          <div
             key={currentTestimonial}
           >
             <div className="text-xs text-gray-600 mb-2">
               "{testimonials[currentTestimonial].content}"
-            </div>
             <div className="flex justify-between items-center">
               <div>
                 <div className="text-xs font-semibold text-gray-800">
                   {testimonials[currentTestimonial].name}
-                </div>
                 <div className="text-xs text-gray-500">
                   {testimonials[currentTestimonial].role}{testimonials[currentTestimonial].company}
-                </div>
-              </div>
               <div className="flex">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (
                   <span key={i} className="text-yellow-400 text-xs">★</span>
                 ))}
-              </div>
-            </div>
-          </divdiv>
-        </div>
-      </div>
-
       {/* Call to action */}
       <div className="mt-3 pt-3 border-t">
         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs py-2 px-3 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
           Join {engagementData.visitors.toLocaleString()}+ Successful Clients
-        </button>
-      </div>
-    </divdiv>
   );
 }

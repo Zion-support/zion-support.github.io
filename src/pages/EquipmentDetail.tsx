@@ -86,9 +86,7 @@ export default function EquipmentDetail() {
   const [isAdding, setIsAdding] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
-
   useEffect(() => {
     async function loadEquipment() {
       if (!id) {
@@ -96,11 +94,9 @@ export default function EquipmentDetail() {
         setError('No equipment ID provided');
         return;
       }
-
       try {
         setLoading(true);
         setError(null);
-
         // Try to find in static data first
         const equipmentFromSample = SAMPLE_EQUIPMENT[id];
         if (equipmentFromSample) {
@@ -108,14 +104,12 @@ export default function EquipmentDetail() {
           setLoading(false);
           return;
         }
-
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
             const stored = sessionStorage.getItem(`equipment:${id}`);
             if (stored) {
               const storedData = JSON.parse(stored);
-              
               // Check if it's already in EquipmentDetails format or needs conversion
               let equipmentData: EquipmentDetails;
               if (storedData.name) {
@@ -125,7 +119,6 @@ export default function EquipmentDetail() {
                 // It's a ProductListing, convert it
                 equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
               }
-              
               setEquipment(equipmentData);
               setLoading(false);
               return;
@@ -134,7 +127,6 @@ export default function EquipmentDetail() {
             logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
           }
         }
-
         // If not found anywhere, set error
         setError('Equipment not found');
         setLoading(false);
@@ -144,10 +136,8 @@ export default function EquipmentDetail() {
         setLoading(false);
       }
     }
-
     loadEquipment();
   }, [id]);
-
   const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
       toast({
@@ -157,7 +147,6 @@ export default function EquipmentDetail() {
       });
       return;
     }
-
     setIsAdding(true);
     try {
       dispatch({
@@ -169,7 +158,6 @@ export default function EquipmentDetail() {
           quantity,
         },
       });
-
       toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`,
@@ -184,9 +172,7 @@ export default function EquipmentDetail() {
       setIsAdding(false);
     }
   };
-
   const inCart = items.some(item => item.id === equipment?.id);
-
   // Loading state
   if (loading) {
     return (
@@ -197,13 +183,9 @@ export default function EquipmentDetail() {
             <div className="text-center py-20">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
               <p className="text-zion-slate-light">Loading equipment details...</p>
-            </div>
-          </div>
-        </div>
       </>
     );
   }
-
   // Error state
   if (error || !equipment) {
     return (
@@ -214,19 +196,17 @@ export default function EquipmentDetail() {
         />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
-            <divdiv 
+            <div 
               className="text-center py-20"
             >
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
-              </h1>
               <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
                 {error === 'Equipment not found' 
                   ? "The equipment you're looking for doesn't exist or has been removed." 
                   : error || "We couldn't load the equipment details. Please try again."
                 }
-              </p>
               <div className="space-x-4">
                 <Button 
                   onClick={() => router.back()} 
@@ -235,21 +215,14 @@ export default function EquipmentDetail() {
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Go Back
-                </Button>
                 <Button 
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
                 >
                   Browse Equipment
-                </Button>
-              </div>
-            </divdiv>
-          </div>
-        </div>
       </>
     );
   }
-
   return (
     <>
       <NextSeo
@@ -272,14 +245,11 @@ export default function EquipmentDetail() {
               className="text-zion-cyan hover:text-white transition-colors"
             >
               Equipment
-            </button>
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
-          </divnav>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Images */}
-            <divdiv 
+            <div 
               className="space-y-4"
             >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
@@ -288,8 +258,6 @@ export default function EquipmentDetail() {
                   alt={equipment.name}
                   className="object-cover"
                 />
-              </AspectRatio>
-              
               {equipment.images.length > 1 && (
                 <div className="grid grid-cols-4 gap-2">
                   {equipment.images.map((image, index) => (
@@ -307,14 +275,10 @@ export default function EquipmentDetail() {
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
                       />
-                    </button>
                   ))}
-                </div>
               )}
-            </divdiv>
-
             {/* Product Details */}
-            <divdiv 
+            <div 
               className="space-y-6"
             >
               {/* Header */}
@@ -322,14 +286,9 @@ export default function EquipmentDetail() {
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
                     {equipment.category}
-                  </Badge>
                   <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
                     {equipment.brand}
-                  </Badge>
-                </div>
-                
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
-                
                 {equipment.rating && (
                   <div className="flex items-center gap-2">
                     <div className="flex items-center">
@@ -343,33 +302,21 @@ export default function EquipmentDetail() {
                           }`}
                         />
                       ))}
-                    </div>
                     <span className="text-sm text-zion-slate-light">
                       {equipment.rating?.toFixed(1)} ({equipment.reviewCount} reviews)
-                    </span>
-                  </div>
                 )}
-              </div>
-
               {/* Price */}
               <div className="bg-zion-blue-light rounded-lg p-4">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">
                   {formatPrice(equipment.price)}
-                </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
                     {equipment.expectedShipping}
-                  </span>
-                </div>
-              </div>
-
               {/* Description */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white">Description</h3>
                 <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
-              </div>
-
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
                 <div className="space-y-4">
@@ -379,12 +326,8 @@ export default function EquipmentDetail() {
                       <div key={index} className="flex justify-between py-2 border-b border-zion-blue-light">
                         <span className="text-zion-slate-light">{spec.name}</span>
                         <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
-                      </div>
                     ))}
-                  </div>
-                </div>
               )}
-
               {/* Add to Cart */}
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">
                 <div className="flex items-center gap-4">
@@ -397,7 +340,6 @@ export default function EquipmentDetail() {
                       className="h-8 w-8 p-0"
                     >
                       -
-                    </Button>
                     <span className="text-white w-8 text-center">{quantity}</span>
                     <Button
                       variant="outline"
@@ -406,10 +348,6 @@ export default function EquipmentDetail() {
                       className="h-8 w-8 p-0"
                     >
                       +
-                    </Button>
-                  </div>
-                </div>
-                
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}
@@ -420,9 +358,6 @@ export default function EquipmentDetail() {
                 >
                   <ShoppingCart className="h-4 w-4 mr-2" />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
-                </Button>
-              </div>
-              
               {/* Additional Info */}
               <div className="space-y-4 border-t border-zion-blue-light pt-4">
                 {/* Shipping */}
@@ -431,9 +366,6 @@ export default function EquipmentDetail() {
                   <div>
                     <p className="text-white text-sm font-medium">Free Shipping</p>
                     <p className="text-xs">For orders over $100 within the US</p>
-                  </div>
-                </div>
-                
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -441,10 +373,7 @@ export default function EquipmentDetail() {
                     <div>
                       <p className="text-white text-sm font-medium">Warranty</p>
                       <p className="text-xs">{equipment.warranty}</p>
-                    </div>
-                  </div>
                 )}
-                
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -452,15 +381,7 @@ export default function EquipmentDetail() {
                     <div>
                       <p className="text-white text-sm font-medium">Returns</p>
                       <p className="text-xs">{equipment.returnPolicy}</p>
-                    </div>
-                  </div>
                 )}
-              </div>
-            </divdiv>
-          </div>
-        </div>
-      </div>
     </>
   );
 }
-

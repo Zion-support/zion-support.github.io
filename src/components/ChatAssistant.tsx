@@ -85,3 +85,4 @@ const ChatAssistant: React.FC = () => {
 };
 
 export { ChatAssistant };
+</p></p>

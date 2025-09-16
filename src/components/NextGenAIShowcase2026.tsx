@@ -145,20 +145,20 @@ const NextGenAIShowcase2026 = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
-            <divdiv
+            <div
                 scale: aiThinking ? 1.1 : 1,
                 rotate: aiThinking ? 5 : 0 
               }}
             >
               <Brain className="w-12 h-12 text-cyan-400 mr-4" />
-            </divdiv>
+            </div>
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent">
               Next-Gen AI Showcase 2026
             </h2>
-          </divdiv>
+          </div>
           
             Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
             Witness revolutionary capabilities that will transform how we interact with technology.
@@ -175,20 +175,20 @@ const NextGenAIShowcase2026 = () => {
               <div className={`w-2 h-2 rounded-full mr-2 ${aiThinking ? 'bg-green-400' : 'bg-gray-400'}`} />
               AI Status: {aiThinking ? 'Thinking' : 'Ready'}
             </div>
-          </divdiv>
-        </divdiv>
+          </div>
+        </div>
 
         {/* Main Demo Area */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Demo Showcase */}
           <div className="lg:col-span-2">
-              <divdiv
+              <div
                 key={activeDemo}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${demos[activeDemo].color} shadow-2xl relative overflow-hidden`}
               >
                 {/* Background Animation */}
                 <div className="absolute inset-0 opacity-20">
-                  <divdiv
+                  <div
                       scale: [1.1],
                       rotate: [050]
                     }}
@@ -199,16 +199,16 @@ const NextGenAIShowcase2026 = () => {
                     className="text-9xl font-bold text-white/30 absolute top-4 right-4"
                   >
                     {demos[activeDemo].demo}
-                  </divdiv>
+                  </div>
                 </div>
 
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
-                    <divdiv 
+                    <div 
                       className="p-4 bg-white/20 rounded-full mr-6"
                     >
                       {demos[activeDemo].icon}
-                    </divdiv>
+                    </div>
                     <div>
                       <h3 className="text-3xl font-bold text-white mb-2">
                         {demos[activeDemo].title}
@@ -222,30 +222,30 @@ const NextGenAIShowcase2026 = () => {
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {demos[activeDemo].features.map((featureindex) => (
-                      <divdiv
+                      <div
                         key={index}
                         className="flex items-center text-white/90 bg-white/10 p-3 rounded-lg"
                       >
                         <Sparkles className="w-4 h-4 mr-3 text-yellow-300" />
                         <span className="text-sm">{feature}</span>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
 
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4">
                     {Object.entries(demos[activeDemo].stats).map(([keyvalue]index) => (
-                      <divdiv
+                      <div
                         key={index}
                         className="text-center p-4 bg-white/10 rounded-lg"
                       >
                         <div className="text-2xl font-bold text-white mb-1">{value}</div>
                         <div className="text-white/70 text-xs uppercase tracking-wider">{key}</div>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Demo Navigation */}
@@ -279,7 +279,7 @@ const NextGenAIShowcase2026 = () => {
               
               <div className="space-y-4">
                 {aiCapabilities.map((capabilityindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-300 group"
                   >
@@ -292,7 +292,7 @@ const NextGenAIShowcase2026 = () => {
                         <div className="text-gray-300 text-sm">{capability.desc}</div>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -325,7 +325,7 @@ const NextGenAIShowcase2026 = () => {
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="inline-block p-8 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
@@ -343,10 +343,11 @@ const NextGenAIShowcase2026 = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </divbutton>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default NextGenAIShowcase2026;
+</div></div></div></div></div></div></div>

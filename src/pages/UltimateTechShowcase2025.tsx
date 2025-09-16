@@ -212,11 +212,11 @@ const UltimateTechShowcase2025: React.FC = () => {
             </button>
           </div>
       </div>
-        </divdiv>
+        </div>
 
         {/* Technology Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          <divdiv
+          <div
             className="bg-gradient-to-br from-purple-600/40 to-pink-600/40 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">🤖</div>
@@ -234,9 +234,9 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore AI →
             </a>
-          </divdiv>
+          </div>
 
-          <divdiv
+          <div
             className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">⚡</div>
@@ -254,9 +254,9 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Go Quantum →
             </a>
-          </divdiv>
+          </div>
 
-          <divdiv
+          <div
             className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">🧬</div>
@@ -274,9 +274,9 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind →
             </a>
-          </divdiv>
+          </div>
 
-          <divdiv
+          <div
             className="bg-gradient-to-br from-orange-600/40 to-red-600/40 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-8xl mb-6 text-center">🚀</div>
@@ -294,14 +294,14 @@ const UltimateTechShowcase2025: React.FC = () => {
             <a href="/pages/NextGenSpaceTech2026" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Explore Space →
             </a>
-          </divdiv>
+          </div>
         </div>
 
         {/* Featured Innovations */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🌟 Featured Innovations</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <divdiv
+            <div
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-10 border border-purple-400/30"
             >
               <div className="text-6xl mb-6 text-center">🧠</div>
@@ -326,9 +326,9 @@ const UltimateTechShowcase2025: React.FC = () => {
               <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Explore Synthetic AI →
               </a>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/30"
             >
               <div className="text-6xl mb-6 text-center">⚛️</div>
@@ -353,9 +353,9 @@ const UltimateTechShowcase2025: React.FC = () => {
               <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Discover Fusion →
               </a>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-10 border border-emerald-400/30"
             >
               <div className="text-6xl mb-6 text-center">🔬</div>
@@ -380,7 +380,7 @@ const UltimateTechShowcase2025: React.FC = () => {
               <a href="/pages/AdvancedBiotechAI2026" className="block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Explore Biotech →
               </a>
-            </divdiv>
+            </div>
           </div>
         </div>
 

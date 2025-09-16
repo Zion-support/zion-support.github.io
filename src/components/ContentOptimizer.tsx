@@ -40,10 +40,10 @@ const ContentOptimizer: React.FC<ContentOptimizerProps> = ({
   return (
     <div id="content-optimizer">
       {isVisible ? (
-        <divdiv
+        <div
         >
           {children}
-        </divdiv>
+        </div>
       ) : (
         <div className="h-64 bg-gray-100 animate-pulse rounded-lg" />
       )}

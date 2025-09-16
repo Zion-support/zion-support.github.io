@@ -244,12 +244,12 @@ const UltimateTechRevolution2036: React.FC = () => {
                 <li>• Universal physics manipulation</li>
                 <li>• Infinite dimensional control</li>
               </ul>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
         >
           <h2 className="text-6xl font-bold text-white mb-8">Ready to Transcend Reality?</h2>

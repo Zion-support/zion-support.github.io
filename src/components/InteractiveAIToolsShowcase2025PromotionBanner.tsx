@@ -33,7 +33,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -58,7 +58,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Content */}
               <div className="flex-1 text-center lg:text-left">
-                <divdiv
+                <div
                   className="flex items-center justify-center lg:justify-start gap-3 mb-3"
                 >
                   <div className="flex items-center gap-1">
@@ -74,7 +74,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                   </div>
-                </divdiv>
+                </div>
 
                 <divh2
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
@@ -91,7 +91,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   <span className="font-semibold text-white"> 24/7 availability</span>.
                 </divp>
 
-                <divdiv
+                <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
                   <div className="flex items-center gap-2 text-sm text-indigo-100">
@@ -110,9 +110,9 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                     <CheckCircle className="w-4 h-4 text-green-300" />
                     <span>Security Guard</span>
                   </div>
-                </divdiv>
+                </div>
 
-                <divdiv
+                <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >
                   <button className="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl">
@@ -124,11 +124,11 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                     <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                     Explore Suite
                   </button>
-                </divdiv>
+                </div>
               </div>
 
               {/* AI Tools Preview */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row lg:flex-col gap-4"
               >
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center">
@@ -146,7 +146,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
                   <div className="text-lg font-bold text-white mb-1">Analytics</div>
                   <div className="text-indigo-100 text-sm">10x faster</div>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Dismiss Button */}
@@ -161,10 +161,11 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {
 
           {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-pulse" />
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default InteractiveAIToolsShowcase2025PromotionBanner;
+</div></div></div></div></div>

@@ -33,7 +33,7 @@ const InteractiveTechShowcase2026Banner = () => {
   if (isDismissed) return null;
 
   return (
-    <divdiv
+    <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
@@ -157,7 +157,7 @@ const InteractiveTechShowcase2026Banner = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         <div className="h-full bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-pulse"></div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

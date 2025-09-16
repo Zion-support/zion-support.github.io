@@ -139,7 +139,7 @@ const AI2026UltimateServicesShowcase = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <divdiv
+      <div
         className="max-w-7xl mx-auto"
       >
         {/* Header */}
@@ -156,11 +156,11 @@ const AI2026UltimateServicesShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the future of artificial intelligence with our cutting-edge services that are transforming industries and revolutionizing human potential.
           </p>
-        </divdiv>
+        </div>
 
         {/* Services Grid */}
           {services.map((serviceindex) => (
-            <divdiv
+            <div
               key={service.id}
               className={`relative group cursor-pointer ${
                 activeService === index ? 'scale-105' : 'hover:scale-102'
@@ -197,17 +197,17 @@ const AI2026UltimateServicesShowcase = () => {
                 </div>
 
                 {activeService === index && (
-                  <divdiv
+                  <div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl border-2 border-purple-400"
                   />
                 )}
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Active Service Details */}
-          <divdiv
+          <div
             key={activeService}
             className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
@@ -243,17 +243,17 @@ const AI2026UltimateServicesShowcase = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
                 {services[activeService].features.map((featureindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10"
                   >
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300 text-lg">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
@@ -271,8 +271,8 @@ const AI2026UltimateServicesShowcase = () => {
               Schedule Demo
             </button>
           </div>
-        </divdiv>
-      </divdiv>
+        </div>
+      </div>
     </div>
   );
 };

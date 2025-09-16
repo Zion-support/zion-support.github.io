@@ -226,7 +226,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 
           <div className="space-y-4">
             {Object.entries(recommendations).map(([key, recommended]) => (
-              <divdiv
+              <div
                 key={key}
                 className={`p-4 rounded-lg border-2 ${
                   recommended 
@@ -254,7 +254,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                     {recommended ? 'Recommended' : 'Optimized'}
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
@@ -275,7 +275,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                   <span>{Math.round(optimizationProgress)}%</span>
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                  <divdiv
+                  <div
                     className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
                   />
                 </div>

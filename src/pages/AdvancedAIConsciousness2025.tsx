@@ -1,5 +1,5 @@
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
@@ -8,7 +8,7 @@
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center group"
               >
@@ -19,13 +19,13 @@
                 </div>
                 <div className="text-5xl font-bold text-white mb-3">{stat.number}</div>
                 <div className="text-gray-300 text-lg">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
 
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>

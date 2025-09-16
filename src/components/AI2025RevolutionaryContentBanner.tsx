@@ -75,7 +75,7 @@ const AI2025RevolutionaryContentBanner = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
         >
           {/* Background effects */}
@@ -87,7 +87,7 @@ const AI2025RevolutionaryContentBanner = () => {
           {/* Floating particles */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(12)].map((_i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-1 h-1 bg-white/40 rounded-full"
                 style={{
@@ -110,7 +110,7 @@ const AI2025RevolutionaryContentBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left side - Content */}
               <div className="flex-1 text-center lg:text-left">
-                <divdiv
+                <div
                 >
                   {/* Badge */}
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold mb-6">
@@ -134,7 +134,7 @@ const AI2025RevolutionaryContentBanner = () => {
                   </p>
 
                   {/* Current feature highlight */}
-                  <divdiv
+                  <div
                     key={currentFeature}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
                   >
@@ -152,7 +152,7 @@ const AI2025RevolutionaryContentBanner = () => {
                         {currentFeatureData.stats}
                       </span>
                     </div>
-                  </divdiv>
+                  </div>
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -172,40 +172,40 @@ const AI2025RevolutionaryContentBanner = () => {
                       Get Consultation
                     </a>
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Right side - Visual elements */}
               <div className="flex-shrink-0">
                 <div className="relative w-80 h-80">
                   {/* Rotating rings */}
-                  <divdiv
+                  <div
                     className="absolute inset-0 rounded-full border-2 border-purple-500/30"
                   />
                   
-                  <divdiv
+                  <div
                     className="absolute inset-8 rounded-full border-2 border-blue-500/30"
                   />
                   
-                  <divdiv
+                  <div
                     className="absolute inset-16 rounded-full border-2 border-pink-500/30"
                   />
 
                   {/* Center icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <divdiv
+                    <div
                       className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center shadow-2xl`}
                         scale: [1.1],
                         rotate: [05-50]
                       }}
                     >
                       <currentFeatureData.icon className="w-12 h-12 text-white" />
-                    </divdiv>
+                    </div>
                   </div>
 
                   {/* Feature indicators */}
                   {features.map((featureindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className={`absolute w-4 h-4 rounded-full ${
                         index === currentFeature 
@@ -225,7 +225,7 @@ const AI2025RevolutionaryContentBanner = () => {
 
                   {/* Floating elements */}
                   {[...Array(8)].map((_i) => (
-                    <divdiv
+                    <div
                       key={i}
                       className="absolute w-2 h-2 bg-white/60 rounded-full"
                       style={{
@@ -269,10 +269,11 @@ const AI2025RevolutionaryContentBanner = () => {
               <X className="w-5 h-5" />
             </button>
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default AI2025RevolutionaryContentBanner;
+</div></div></div></div></div></div></div></div>

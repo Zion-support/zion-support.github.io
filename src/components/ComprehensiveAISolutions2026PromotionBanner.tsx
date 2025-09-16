@@ -59,16 +59,16 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <divdiv
+            <div
               className="space-y-8"
             >
               {/* Badge */}
-              <divdiv
+              <div
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Brain className="w-4 h-4" />
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026
-              </divdiv>
+              </div>
 
               {/* Main Heading */}
               <divh2
@@ -91,7 +91,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               </divp>
 
               {/* Solutions Grid */}
-              <divdiv
+              <div
                 className="grid grid-cols-2 gap-4"
               >
                 {solutions.map((solutionindex) => (
@@ -102,10 +102,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-white font-semibold">{solution.title}</span>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* Benefits */}
-              <divdiv
+              <div
                 className="space-y-3"
               >
                 {benefits.map((benefitindex) => (
@@ -114,10 +114,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-gray-300">{benefit.text}</span>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* CTA Buttons */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
@@ -131,28 +131,28 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   View Case Studies
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
 
             {/* Right Content - Stats & Visual */}
-            <divdiv
+            <div
               className="space-y-8"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               {/* Visual Element */}
-              <divdiv
+              <div
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
@@ -181,8 +181,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 <div className="absolute top-1/2 -right-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
                   <Rocket className="w-2 h-2 text-white" />
                 </div>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -191,3 +191,4 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 };
 
 export default ComprehensiveAISolutions2026PromotionBanner;
+</div></div>

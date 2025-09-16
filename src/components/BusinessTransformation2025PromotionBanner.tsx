@@ -46,7 +46,7 @@ const BusinessTransformation2025PromotionBanner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
       >
         {/* Animated background elements */}
@@ -61,14 +61,14 @@ const BusinessTransformation2025PromotionBanner = () => {
             {/* Left side - Main content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
-                <divdiv
+                <div
                   className="flex items-center gap-2"
                 >
                   <Sparkles className="w-6 h-6 text-green-400" />
                   <span className="text-green-400 font-bold text-sm uppercase tracking-wider">
                     Proven Results
                   </span>
-                </divdiv>
+                </div>
                 <div className="flex items-center gap-1 text-blue-400">
                   <Clock className="w-4 h-4" />
                   <span className="text-sm font-semibold">Live Data</span>
@@ -85,13 +85,13 @@ const BusinessTransformation2025PromotionBanner = () => {
 
               {/* Rotating metrics showcase */}
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
-                <divdiv
+                <div
                   key={currentMetric}
                   className="flex items-center px-4 py-2 rounded-full bg-white/10 text-white"
                 >
                   <currentMetricData.icon className="w-5 h-5 mr-2" />
                   <span className="font-semibold">{currentMetricData.value} {currentMetricData.label}</span>
-                </divdiv>
+                </div>
                 <div className="flex items-center text-green-400">
                   <Users className="w-4 h-4 mr-1" />
                   <span className="text-sm">500+ Companies</span>
@@ -158,9 +158,10 @@ const BusinessTransformation2025PromotionBanner = () => {
         <div className="absolute top-4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce" />
         <div className="absolute top-8 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping" />
         <div className="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" />
-      </divdiv>
+      </div>
     </div>
   );
 };
 
 export default BusinessTransformation2025PromotionBanner;
+</div></div></div></div></div></div></div></div></div></div>

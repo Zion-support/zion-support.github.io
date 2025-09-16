@@ -52,7 +52,7 @@ const AIServicesPage = () => {
             >
               Transform your business with cutting-edge AI solutions designed to automate, optimize, and revolutionize your operations.
             </divp>
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
@@ -61,7 +61,7 @@ const AIServicesPage = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
                 Learn More
               </button>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ const AIServicesPage = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
               >
@@ -88,7 +88,7 @@ const AIServicesPage = () => {
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -107,7 +107,7 @@ const AIServicesPage = () => {
           >
             Let's discuss how our AI services can drive your success.
           </divp>
-          <divdiv 
+          <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
@@ -116,7 +116,7 @@ const AIServicesPage = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
               View Portfolio
             </button>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>

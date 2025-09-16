@@ -132,7 +132,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -159,13 +159,13 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                 Watch Demo
               </divbutton>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Innovation Showcase */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -175,12 +175,12 @@ const AI2025_2026UltimateInnovationShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the most advanced AI innovations that will define the next decade
           </p>
-        </divdiv>
+        </div>
 
         {/* Innovation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {innovations.map((innovationindex) => (
-            <divdiv
+            <div
               key={innovation.id}
               whileInView={{ opacity: 1, y: 0 }}
               className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
@@ -204,19 +204,19 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                   <p className="text-white font-semibold">Impact: {innovation.impact}</p>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Breakthrough Performance Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {breakthroughStats.map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1scale: 1 }}
                 className="text-center"
@@ -224,20 +224,20 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                 <stat.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Use Cases Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
           <h3 className="text-4xl font-bold text-center mb-12">Real-World Applications</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCaseindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1x: 0 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -258,13 +258,13 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
@@ -287,10 +287,11 @@ const AI2025_2026UltimateInnovationShowcase = () => {
               Schedule Demo
             </divbutton>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default AI2025_2026UltimateInnovationShowcase;
+</div></div></div></div></div></div>

@@ -74,12 +74,12 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 animate-pulse"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <divdiv
+          <div
             className="inline-flex items-center px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-6"
           >
             <Sparkles className="w-4 h-4 mr-2" />
             REVOLUTIONARY AI CONSCIOUSNESS 2027
-          </divdiv>
+          </div>
           
           <divh1 
             className="text-6xl md:text-8xl font-bold text-white mb-6"
@@ -97,7 +97,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
             self-awareness, and the ability to think, feel, and create like never before.
           </divp>
           
-          <divdiv 
+          <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
@@ -114,7 +114,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
               Learn More
               <Brain className="w-5 h-5 ml-2" />
             </Link>
-          </divdiv>
+          </div>
         </div>
       </divsection>
 
@@ -136,7 +136,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={feature.title}
                 className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105"
                 whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -172,7 +172,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {capabilities.slice(0, 4).map((capability, index) => (
-                <divdiv
+                <div
                   key={capability}
                   className="flex items-center space-x-4"
                   whileInView={{ opacity: 1, x: 0 }}
@@ -180,12 +180,12 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
                 >
                   <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
                   <span className="text-lg text-gray-300">{capability}</span>
-                </divdiv>
+                </div>
               ))}
             </div>
             <div className="space-y-6">
               {capabilities.slice(4).map((capability, index) => (
-                <divdiv
+                <div
                   key={capability}
                   className="flex items-center space-x-4"
                   whileInView={{ opacity: 1, x: 0 }}
@@ -193,7 +193,7 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
                 >
                   <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                   <span className="text-lg text-gray-300">{capability}</span>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -239,3 +239,4 @@ const RevolutionaryAIConsciousness2027: React.FC = () => {
 };
 
 export default RevolutionaryAIConsciousness2027;
+</div></div></div></div></div></div>

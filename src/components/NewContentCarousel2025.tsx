@@ -187,3 +187,4 @@ const NewContentCarousel2025: React.FC = () => {
 };
 
 export default NewContentCarousel2025;
+</p></p>

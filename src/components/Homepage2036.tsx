@@ -40,7 +40,6 @@ const categories = [
 
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,7 +49,6 @@ export default function Homepage2036() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -61,7 +59,6 @@ export default function Homepage2036() {
       }
     }
   };
-
   return (
     <Layout>
       {/* Main Content */}
@@ -71,7 +68,7 @@ export default function Homepage2036() {
           {/* Animated Background Elements */}
           <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
-              <divdiv
+              <div
                 key={i}
                 className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
                 style={{
@@ -88,32 +85,23 @@ export default function Homepage2036() {
                 }}
               />
             ))}
-          </div>
-
           <div className="relative z-10 text-center max-w-6xl mx-auto">
-            <divdiv
+            <div
               className="mb-6"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-sm text-cyan-400 mb-6">
                 <Sparkles className="w-4 h-4" />
                 Pioneering the Future of Technology
-              </div>
-            </divdiv>
-
             <divh1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               Zion Tech Group
-            </divh1>
-            
             <divp 
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Experience the future of technology with our cutting-edge micro SAAS services, 
               AI platforms, and quantum solutions. Transform your business with next-generation innovation.
-            </divp>
-            
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
               <a
@@ -122,37 +110,27 @@ export default function Homepage2036() {
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5" />
-              </a>
               <a
                 href={`mailto:${contactInfo.email}`}
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Get Started
                 <ChevronRight className="w-5 h-5" />
-              </a>
-            </divdiv>
-
             {/* Stats */}
-            <divdiv 
+            <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center p-4 bg-gray-800/30 rounded-lg border border-gray-700/50">
                   <div className="text-cyan-400 mb-2 flex justify-center">
                     {stat.icon}
-                  </div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
-                </div>
               ))}
-            </divdiv>
-          </div>
-        </section>
-
         {/* Contact Information */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -160,57 +138,41 @@ export default function Homepage2036() {
               <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Phone className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>
                 <p className="text-gray-300 text-lg font-medium">{contactInfo.mobile}</p>
                 <p className="text-gray-500 text-sm mt-2">Available 24/7 for support</p>
-              </div>
-              
               <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
                 <p className="text-gray-300 text-lg font-medium">{contactInfo.email}</p>
                 <p className="text-gray-500 text-sm mt-2">Fast response guaranteed</p>
-              </div>
-              
               <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-400 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-semibold mb-2 text-white">Address</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{contactInfo.address}</p>
                 <p className="text-gray-500 text-sm mt-2">Global operations</p>
-              </div>
-            </divdiv>
-          </div>
-        </section>
-
         {/* Categories Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Technology Categories
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive range of cutting-edge technology solutions 
                 across multiple domains and industries.
-              </p>
-            </divdiv>
-
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {categories.map((category, index) => (
-                <divdiv
+                <div
                   key={category.name}
                   className="group cursor-pointer"
                   onClick={() => setActiveCategory(category.name.toLowerCase().replace(/\s+/g, '-'))}
@@ -218,46 +180,33 @@ export default function Homepage2036() {
                   <div className="p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-2xl hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
                     <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       {category.icon}
-                    </div>
                     <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
                     <p className="text-gray-400 mb-4">
                       {category.count}+ innovative services and solutions
-                    </p>
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Explore</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                    </div>
-                  </div>
-                </divdiv>
               ))}
-            </divdiv>
-          </div>
-        </section>
-
         {/* Featured Services */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Services
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most innovative and cutting-edge services that are 
                 transforming industries and driving the future of technology.
-              </p>
-            </divdiv>
-
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {featuredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="h-full"
                 >
@@ -286,11 +235,8 @@ export default function Homepage2036() {
                       'default'
                     }
                   />
-                </divdiv>
               ))}
-            </divdiv>
-
-            <divdiv 
+            <div 
               className="text-center mt-12"
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -301,29 +247,20 @@ export default function Homepage2036() {
               >
                 View All Services
                 <ArrowRight className="w-5 h-5" />
-              </a>
-            </divdiv>
-          </div>
-        </section>
-
         {/* Why Choose Us */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We combine cutting-edge technology with proven expertise to deliver 
                 solutions that drive real business transformation.
-              </p>
-            </divdiv>
-
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
@@ -366,35 +303,27 @@ export default function Homepage2036() {
                   color: 'from-red-500 to-pink-600'
                 }
               ].map((feature, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl hover:border-cyan-400 transition-all duration-300 group"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     {feature.icon}
-                  </div>
                   <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
-                </divdiv>
               ))}
-            </divdiv>
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
-              </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join the future of technology with our innovative services. 
                 Contact us today to discuss how we can help you achieve your goals.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`mailto:${contactInfo.email}`}
@@ -402,19 +331,11 @@ export default function Homepage2036() {
                 >
                   <Mail className="w-5 h-5" />
                   Get Started Today
-                </a>
                 <a
                   href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
                   Call Us Now
-                </a>
-              </div>
-            </divdiv>
-          </div>
-        </section>
-      </main>
-    </Layout>
   );
 }

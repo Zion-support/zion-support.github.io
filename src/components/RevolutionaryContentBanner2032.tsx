@@ -44,7 +44,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
 
   return (
       </div>
-    </divdiv>
+    </div>
   );
 };
 

@@ -6,7 +6,6 @@ import React{ useState } from 'react';
 
 export default function RevolutionaryPromoSection() {
   const [hoveredCardsetHoveredCard] = useState<number | null>(null);
-
   const promoItems = [
     {
       id: 1,
@@ -63,7 +62,6 @@ export default function RevolutionaryPromoSection() {
       stats: "∞ ROI"
     }
   ];
-
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,15 +71,10 @@ export default function RevolutionaryPromoSection() {
             <span>🚀</span>
             <span>REVOLUTIONARY CONTENT</span>
             <span>🌟</span>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Discover the Future of AI
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore revolutionary AI technologiesbreakthrough predictionsand success stories that are transforming industries worldwide
-          </p>
-        </div>
-
         {/* Promotional Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {promoItems.map((itemindex) => (
@@ -100,27 +93,17 @@ export default function RevolutionaryPromoSection() {
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full font-bold">
                       {item.badge}
-                    </span>
                     <div className="text-white/80 text-sm font-semibold">
                       {item.stats}
-                    </div>
-                  </div>
                   <h3 className="text-white font-bold text-lg leading-tight">
                     {item.title}
-                  </h3>
-                </div>
-                
                 {/* Animated background elements */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10 animate-pulse"></div>
                 <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full translate-y-8 -translate-x-8 animate-pulse delay-1000"></div>
-              </div>
-
               {/* Content */}
               <div className="p-6">
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {item.description}
-                </p>
-                
                 <a
                   href={item.link}
                   className={`inline-flex items-center space-x-2 bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full justify-center`}
@@ -128,44 +111,28 @@ export default function RevolutionaryPromoSection() {
                   <span>Explore Now</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-
               {/* Hover effect overlay */}
               {hoveredCard === item.id && (
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 pointer-events-none"></div>
               )}
-            </div>
           ))}
-        </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               🌟 Ready to Join the AI Revolution?
-            </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Discover how revolutionary AI technologies can transform your business and deliver unprecedented results
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 🎯 Get Started Today
-              </a>
               <a
                 href="/webinars/ai-2025-revolutionary-breakthroughs"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg border border-white/30"
               >
                 🔥 Watch Webinar
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   );
 }

@@ -64,7 +64,7 @@ const UltimateTechRevolution2032: React.FC = () => {
         </div>
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <divdiv
+          <div
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-8">
               Ultimate Tech Revolution 2032
@@ -85,14 +85,14 @@ const UltimateTechRevolution2032: React.FC = () => {
             <h3 className="text-xl font-bold mb-3 text-center">Quantum AI</h3>
             <p className="text-purple-100 text-sm text-center mb-4">
               Quantum-powered AI that processes information at the speed of thought
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Innovations Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -102,11 +102,11 @@ const UltimateTechRevolution2032: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the groundbreaking innovations that will reshape reality itself
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovations.map((innovation, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 hover:border-purple-400/40 transition-all group"
@@ -450,7 +450,7 @@ const UltimateTechRevolution2032: React.FC = () => {
               </p>
             </div>
               </motion.div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -486,7 +486,7 @@ const UltimateTechRevolution2032: React.FC = () => {
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, scale: 1 }}
             className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-12"
           >
@@ -501,7 +501,7 @@ const UltimateTechRevolution2032: React.FC = () => {
             >
               Transform Your Reality <ArrowRight className="w-6 h-6" />
             </divbutton>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>

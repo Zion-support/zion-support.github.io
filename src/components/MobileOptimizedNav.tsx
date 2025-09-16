@@ -61,23 +61,19 @@ export default function MobileOptimizedNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener(', 'scroll', 'handleScroll);
     return () => window.removeEventListener(', 'scroll', 'handleScroll);
   }[]);
-
   // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
   }[router.asPath]);
-
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -87,15 +83,12 @@ export default function MobileOptimizedNav() {
         setActiveDropdown(null);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
-
   const toggleDropdown = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
@@ -106,10 +99,7 @@ export default function MobileOptimizedNav() {
           <a href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
-            </div>
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-          </a>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -119,7 +109,6 @@ export default function MobileOptimizedNav() {
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.label}
-                </a>
                 {item.children && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
@@ -130,15 +119,9 @@ export default function MobileOptimizedNav() {
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                         >
                           {child.label}
-                        </a>
                       ))}
-                    </div>
-                  </div>
                 )}
-              </div>
             ))}
-          </div>
-
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -146,9 +129,6 @@ export default function MobileOptimizedNav() {
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
               Get Started
-            </a>
-          </div>
-
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -176,11 +156,6 @@ export default function MobileOptimizedNav() {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               )}
-            </svg>
-          </button>
-        </div>
-      </div>
-
       {/* Mobile Navigation Menu */}
       {isOpen && (
         <div className="lg:hidden mobile-nav">
@@ -193,7 +168,6 @@ export default function MobileOptimizedNav() {
                     className="flex-1 text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
                   >
                     {item.label}
-                  </a>
                   {item.children && (
                     <button
                       onClick={() => toggleDropdown(item.label)}
@@ -213,10 +187,7 @@ export default function MobileOptimizedNav() {
                           strokeWidth={2}
                           d="M19 9l-7 7-7-7"
                         />
-                      </svg>
-                    </button>
                   )}
-                </div>
                 {item.children && activeDropdown === item.label && (
                   <div className="pl-4 space-y-1">
                     {item.children.map((child) => (
@@ -226,11 +197,8 @@ export default function MobileOptimizedNav() {
                         className="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm transition-colors"
                       >
                         {child.label}
-                      </a>
                     ))}
-                  </div>
                 )}
-              </div>
             ))}
             <div className="pt-4 border-t border-gray-200">
               <a
@@ -238,11 +206,6 @@ export default function MobileOptimizedNav() {
                 className="block w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
               >
                 Get Started
-              </a>
-            </div>
-          </div>
-        </div>
       )}
-    </nav>
   );
 }

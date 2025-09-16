@@ -52,7 +52,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -62,10 +62,10 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Explore the most advanced technologies of 2026 with interactive demonstrations and real-time experiences
           </p>
-        </divdiv>
+        </div>
 
         {/* Tab Navigation */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center mb-12"
         >
@@ -85,21 +85,21 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Content Area */}
         <div className="relative">
-            <divdiv
+            <div
               key={activeTab}
               className="grid lg:grid-cols-2 gap-12 items-center"
             >
               {/* Left Side - Content */}
               <div>
-                <divdiv
+                <div
                   className={`text-8xl mb-6 text-center lg:text-left`}
                 >
                   {technologies[activeTab as keyof typeof technologies].icon}
-                </divdiv>
+                </div>
                 
                 <divh3
                   className="text-4xl font-bold mb-4"
@@ -127,7 +127,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                   ))}
                 </divul>
 
-                <divdiv
+                <div
                   className="flex space-x-4"
                 >
                   <divbutton
@@ -140,11 +140,11 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                   >
                     Learn More
                   </divbutton>
-                </divdiv>
+                </div>
               </div>
 
               {/* Right Side - Interactive Demo */}
-              <divdiv
+              <div
                 className={`bg-gradient-to-br ${technologies[activeTab as keyof typeof technologies].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${technologies[activeTab as keyof typeof technologies].borderColor} hover:scale-105 transition-all duration-300`}
               >
                 <div className="text-center">
@@ -170,13 +170,13 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                     Launch Interactive Demo
                   </divbutton>
                 </div>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -189,10 +189,11 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           >
             Start Your Journey →
           </divbutton>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default InteractiveRevolutionaryShowcase;
+</div></div></div></div></div></div></div>

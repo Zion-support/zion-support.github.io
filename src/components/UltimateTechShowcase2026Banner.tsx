@@ -53,7 +53,7 @@ const UltimateTechShowcase2026Banner = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -73,15 +73,15 @@ const UltimateTechShowcase2026Banner = () => {
             Discover the most advanced AIquantum computingand neural interface technologies 
             that are reshaping industries and transforming the way we work and live.
           </p>
-        </divdiv>
+        </div>
 
         {/* Technology Showcase */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {technologies.map((techindex) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
@@ -110,18 +110,18 @@ const UltimateTechShowcase2026Banner = () => {
                   <span>{tech.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <divdiv
+                  <div
                     whileInView={{ width: `${tech.progress}%` }}
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                  ></divdiv>
+                  ></div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Achievements */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
@@ -131,7 +131,7 @@ const UltimateTechShowcase2026Banner = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {achievements.map((achievementindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
@@ -143,13 +143,13 @@ const UltimateTechShowcase2026Banner = () => {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{achievement.number}</div>
                 <div className="text-gray-300 text-sm">{achievement.label}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center"
         >
@@ -181,10 +181,11 @@ const UltimateTechShowcase2026Banner = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default UltimateTechShowcase2026Banner;
+</div></div>

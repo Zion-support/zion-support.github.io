@@ -71,7 +71,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-blue-900 via-slate-900 to-purple-900 border-b border-blue-500/30 overflow-hidden"
       >
         {/* Animated Background */}
@@ -84,7 +84,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
-              <divdiv
+              <div
                 className="flex items-center gap-3"
               >
                 <div className="relative">
@@ -104,13 +104,13 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                     Chat with the Future of AI Technology
                   </p>
                 </div>
-              </divdiv>
+              </div>
 
               {/* Rotating Demo Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-blue-500/30"></div>
                 <div className="flex items-center gap-3">
-                    <divdiv
+                    <div
                       key={currentDemo}
                       className="flex items-center gap-2"
                     >
@@ -125,7 +125,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                           {demos[currentDemo].description}
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           {/* Mobile Demo Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="flex items-center gap-2"
                 >
@@ -195,7 +195,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                       {demos[currentDemo].description}
                     </div>
                   </div>
-                </divdiv>
+                </div>
               </div>
             </div>
           </div>
@@ -203,10 +203,10 @@ const InteractiveAIDemo2025PromotionBanner = () => {
 
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-        <divdiv
+        <div
           className="absolute bottom-0 left-0 h-1 bg-white"
-        ></divdiv>
-      </divdiv>
+        ></div>
+      </div>
     </div>
   );
 };

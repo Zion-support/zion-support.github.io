@@ -55,7 +55,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <divdiv
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -68,12 +68,12 @@ const RevolutionaryServicesBanner: React.FC = () => {
             Transform your business with our comprehensive range of cutting-edge technology services. 
             From AI and quantum computing to space technology and neural interfaces.
           </p>
-        </divdiv>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => (
-            <divdiv
+            <div
               key={service.title}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
@@ -87,12 +87,12 @@ const RevolutionaryServicesBanner: React.FC = () => {
                   Learn More →
                 </button>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -112,7 +112,7 @@ const RevolutionaryServicesBanner: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

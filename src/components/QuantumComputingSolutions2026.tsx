@@ -158,7 +158,7 @@ const QuantumComputingSolutions2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-cyan-900/40" />
         <div className="absolute inset-0">
           {[...Array(40)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-30"
               style={{
@@ -180,15 +180,15 @@ const QuantumComputingSolutions2026 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
-          <divdiv
+          <div
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full text-white text-sm font-medium mb-6"
           >
             <Atom className="w-4 h-4 mr-2" />
             Quantum Computing Solutions 2026
-          </divdiv>
+          </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Quantum
@@ -201,14 +201,14 @@ const QuantumComputingSolutions2026 = () => {
             Harness the power of quantum computing to solve the 'world', 's most complex problems. 
             From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
-        </divdiv>
+        </div>
 
         {/* Benefits Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {benefits.map((benefitindex) => (
-            <divdiv
+            <div
               key={index}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
             >
@@ -216,12 +216,12 @@ const QuantumComputingSolutions2026 = () => {
               <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
               <div className="text-lg font-semibold text-white mb-2">{benefit.title}</div>
               <div className="text-gray-300 text-sm">{benefit.description}</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Solutions Grid */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -230,7 +230,7 @@ const QuantumComputingSolutions2026 = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {solutions.map((solutionindex) => (
-              <divdiv
+              <div
                 key={solution.id}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer"
                 onClick={() => setActiveSolution(index)}
@@ -270,13 +270,13 @@ const QuantumComputingSolutions2026 = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Detailed Solution View */}
-          <divdiv
+          <div
             key={activeSolution}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
@@ -326,11 +326,11 @@ const QuantumComputingSolutions2026 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Industry Applications */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -339,7 +339,7 @@ const QuantumComputingSolutions2026 = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
@@ -353,13 +353,13 @@ const QuantumComputingSolutions2026 = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12">
@@ -380,10 +380,11 @@ const QuantumComputingSolutions2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default QuantumComputingSolutions2026;
+</div></div>

@@ -51,7 +51,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Badge */}
@@ -78,13 +78,13 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             {/* Features List */}
             <div className="space-y-4">
               {features.map((featureindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-center space-x-3"
                 >
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
                   <span className="text-gray-300 text-lg">{feature}</span>
-                </divdiv>
+                </div>
               ))}
             </div>
 
@@ -104,10 +104,10 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 Limited Time
               </divbutton>
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Content - Stats Display */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Main Stats Card */}
@@ -119,7 +119,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
               {/* Animated Stat Display */}
               <div className="text-center mb-8">
-                <divdiv
+                <div
                   key={currentStat}
                   className="space-y-4"
                 >
@@ -132,7 +132,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                   <div className="text-gray-300 text-lg">
                     {stats[currentStat].label}
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Progress Indicators */}
@@ -149,22 +149,22 @@ const AI2025TrendsInnovationPromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-8 h-8 text-white" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
               <Zap className="w-6 h-6 text-white" />
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
@@ -178,10 +178,11 @@ const AI2025TrendsInnovationPromotionBanner = () => {
               <span>✓ ROI Guarantee</span>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default AI2025TrendsInnovationPromotionBanner;
+</div></div></div>

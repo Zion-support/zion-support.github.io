@@ -206,22 +206,18 @@ const UserDashboard = () => {
 
 export default UserDashboard;`,
     'data-analyzer': `📊 Data Analysis Results
-
 Dataset: Sales Performance Q1-Q3 2025
 Records Analyzed: 15,847 transactions
-
 Key Insights:
 • Revenue Growth: +23.4% quarter-over-quarter
 • Peak Performance: March 2025 (+31.2% vs February)
 • Top Product Category: AI Solutions (42% of total sales)
 • Customer Acquisition: 1,247 new customers this quarter
-
 Predictions for Q4:
 • Expected Revenue: $2.4M (+18% growth)
 • Recommended Focus: Expand AI Solutions line
 • Risk Factors: Supply chain delays (15% probability)
 • Opportunity: Holiday season boost (+25% expected)
-
 Recommendations:
 1. Increase inventory for AI Solutions by 30%
 2. Launch targeted marketing campaign for Q4
@@ -230,15 +226,11 @@ Recommendations:
     'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logosleek product shotscustomer testimonialsand a compelling call-to-action with upbeat background music.',
     'music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodiesdriving basslinenergetic drum patternsand motivational chord progressions perfect for workout sessions.'
   };
-
   const currentTool = aiTools.find(tool => tool.id === selectedTool) || aiTools[0];
-
   const handleProcess = async () => {
     if (!inputText.trim()) return;
-    
     setIsProcessing(true);
     setProgress(0);
-    
     // Simulate processing
     const interval = setInterval(() => {
       setProgress(prev => {
@@ -255,7 +247,6 @@ Recommendations:
       });
     }200);
   };
-
   const handleReset = () => {
     setInputText(', ');
     setResults(prev => {
@@ -266,7 +257,6 @@ Recommendations:
     setProgress(0);
     setIsProcessing(false);
   };
-
   const handleDownload = () => {
     const result = results[selectedTool];
     if (result) {
@@ -279,29 +269,22 @@ Recommendations:
       URL.revokeObjectURL(url);
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv 
+        <div 
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
             <Sparkles className="w-12 h-12 text-yellow-400 mr-4" />
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
               Interactive AI Tools
-            </h1>
             <Sparkles className="w-12 h-12 text-yellow-400 ml-4" />
-          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Experience the Power of AI
-          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Try our cutting-edge AI tools in real-time. Generate contentcreate visualswrite codeand much more with just a few clicks.
-          </p>
-        </divdiv>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tools Sidebar */}
           <div className="lg:col-span-1">
@@ -326,21 +309,12 @@ Recommendations:
                         selectedTool === tool.id ? 'bg-white/20' : 'bg-white/10'
                       }`}>
                         {tool.icon}
-                      </div>
                       <div>
                         <div className="font-semibold">{tool.name}</div>
                         <div className="text-sm opacity-75">{tool.category}</div>
-                      </div>
-                    </div>
                     <div className="text-sm opacity-75 line-clamp-2">
                       {tool.description}
-                    </div>
-                  </divbutton>
                 ))}
-              </div>
-            </div>
-          </div>
-
           {/* Main Demo Area */}
           <div className="lg:col-span-2">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -349,37 +323,26 @@ Recommendations:
                 <div className="flex items-center">
                   <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 mr-4">
                     {currentTool.icon}
-                  </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{currentTool.name}</h3>
                     <p className="text-gray-300">{currentTool.description}</p>
-                  </div>
-                </div>
                 <div className="flex items-center space-x-2">
                   <div className="text-sm text-gray-400">
                     <Clock className="w-4 h-4 inline mr-1" />
                     {currentTool.processingTime}s
-                  </div>
                   <div className="text-sm text-gray-400">
                     <Star className="w-4 h-4 inline mr-1" />
                     {currentTool.accuracy}%
-                  </div>
-                </div>
-              </div>
-
               {/* Input Section */}
               <div className="mb-8">
                 <label className="block text-lg font-semibold text-white mb-4">
                   Input
-                </label>
                 <textarea
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   placeholder={sampleInputs[selectedTool as keyof typeof sampleInputs]}
                   className="w-full h-32 p-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
                 />
-              </div>
-
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 mb-8">
                 <button
@@ -398,14 +361,12 @@ Recommendations:
                       Process
                     </>
                   )}
-                </button>
                 <button
                   onClick={handleReset}
                   className="flex items-center px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <RotateCcw className="w-5 h-5 mr-2" />
                   Reset
-                </button>
                 {results[selectedTool] && (
                   <button
                     onClick={handleDownload}
@@ -413,47 +374,34 @@ Recommendations:
                   >
                     <Download className="w-5 h-5 mr-2" />
                     Download
-                  </button>
                 )}
-              </div>
-
               {/* Progress Bar */}
               {isProcessing && (
-                <divdiv
+                <div
                   className="mb-8"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-white font-semibold">Processing...</span>
                     <span className="text-gray-400">{Math.round(progress)}%</span>
-                  </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
-                    <divdiv
+                    <div
                       className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
                     />
-                  </div>
-                </divdiv>
               )}
-
               {/* Output Section */}
               <div>
                 <label className="block text-lg font-semibold text-white mb-4">
                   Output
-                </label>
                 <div className="bg-slate-800 rounded-lg p-6 min-h-[200px] border border-white/10">
                   {results[selectedTool] ? (
-                    <divdiv
+                    <div
                       className="text-gray-300 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
-                    </divdiv>
                   ) : (
                     <div className="text-gray-500 italic">
                       {isProcessing ? 'Processing your request...' : 'Click "Process" to see the AI output'}
-                    </div>
                   )}
-                </div>
-              </div>
-
               {/* Features */}
               <div className="mt-8">
                 <h4 className="text-lg font-semibold text-white mb-4">Features</h4>
@@ -462,38 +410,22 @@ Recommendations:
                     <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
-                    </div>
                   ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <divdiv 
+        <div 
           className="text-center mt-20"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Integrate AI into Your Workflow?
-          </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using our AI tools to boost productivity and creativity.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
               <Zap className="w-5 h-5 mr-2" />
               Start Free Trial
-            </button>
             <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
               <Settings className="w-5 h-5 mr-2" />
               View API Docs
-            </button>
-          </div>
-        </divdiv>
-      </div>
-    </div>
   );
 };
-
 export default InteractiveAIToolsDemo2025;

@@ -68,15 +68,11 @@ export default function AdvancedTestimonials() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
-          </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Hear from industry leaders who have transformed their businesses with our AI solutions
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonialindex) => (
-            <divdiv
+            <div
               key={testimonial.name}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -86,29 +82,16 @@ export default function AdvancedTestimonials() {
                 <div>
                   <h3 className="text-lg font-semibold text-white">
                     {testimonial.name}
-                  </h3>
                   <p className="text-white/70 text-sm">
                     {testimonial.role} at {testimonial.company}
-                  </p>
-                </div>
-              </div>
-              
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_i) => (
                   <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                 ))}
-              </div>
-              
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 h-8 w-8 text-purple-400/30" />
                 <p className="text-white/80 italic pl-6">
                   "{testimonial.content}"
-                </p>
-              </div>
-            </divdiv>
           ))}
-        </div>
-      </div>
-    </section>
   );
 }

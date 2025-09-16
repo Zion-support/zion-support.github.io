@@ -176,7 +176,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     type?: 'currency' | 'percentage' | 'number';
     icon: string;
   }) => (
-    <divdiv
+    <div
       className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600"
     >
       <div className="flex items-center justify-between mb-4">
@@ -194,7 +194,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       <div className="text-sm text-gray-600 dark:text-gray-400">
         {title}
       </div>
-    </divdiv>
+    </div>
   );
 
   const ProgressBar = ({ value, max, label, color = 'blue' }: {
@@ -219,7 +219,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
           <span>{formatNumber(value)}</span>
         </div>
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-          <divdiv
+          <div
             className={`h-2 rounded-full ${colorClasses[color as keyof typeof colorClasses]}`}
           />
         </div>

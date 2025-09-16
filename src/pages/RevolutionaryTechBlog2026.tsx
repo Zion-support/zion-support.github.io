@@ -109,7 +109,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            <divdiv
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -121,7 +121,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Stay ahead of the curve with the latest insights on revolutionary technologies that are shaping our future.
               </p>
-            </divdiv>
+            </div>
             </motion.div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {blogPosts.filter(post => post.featured).map((post) => (
-              <divdiv
+              <div
               <motion.div
                 key={post.id}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     {post.category}
                   </span>
                   <span className="text-sm text-gray-400">{post.readTime}</span>
-              </divdiv>
+              </div>
               </motion.div>
             ))}
           </div>
@@ -163,7 +163,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <divdiv
+              <div
               <motion.div
                 key={post.id}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -192,7 +192,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </divdiv>
+              </div>
               </motion.div>
             ))}
           </div>
@@ -202,7 +202,7 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center"
           >

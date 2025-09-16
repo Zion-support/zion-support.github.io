@@ -42,7 +42,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   }[]);
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16"
     >
       {/* Background Pattern */}
@@ -52,7 +52,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <divdiv
+            <div
             >
               <div className="inline-flex items-center space-x-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4" />
@@ -70,10 +70,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 Testexploreand discover 24+ cutting-edge AI tools with live demonstrations. 
                 See how AI can transform your workflow in real-time.
               </p>
-            </divdiv>
+            </div>
 
             {/* Features List */}
-            <divdiv
+            <div
               className="space-y-4"
             >
               {[
@@ -87,10 +87,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25">
@@ -102,10 +102,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 View All Tools
               </button>
-            </divdiv>
+            </div>
 
             {/* Stats */}
-            <divdiv
+            <div
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
             >
               <div className="text-center">
@@ -120,11 +120,11 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 <div className="text-2xl font-bold text-white mb-1">99.9%</div>
                 <div className="text-sm text-gray-400">Uptime</div>
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Interactive Demo Preview */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Demo Container */}
@@ -140,7 +140,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               {/* Tool Showcase */}
               <div className="space-y-4">
                 {tools.map((toolindex) => (
-                  <divdiv
+                  <div
                     key={tool.name}
                       opacity: currentTool === index ? 1 : 0.5,
                       scale: currentTool === index ? 1 : 0.95
@@ -170,7 +170,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                         </div>
                       )}
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
@@ -181,7 +181,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                   <span>{Math.round((currentTool + 1) / tools.length * 100)}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <divdiv
+                  <div
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                   ></div>
                 </div>
@@ -189,7 +189,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
                 y: [0-10],
                 rotate: [050]
               }}
@@ -200,9 +200,9 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Zap className="w-8 h-8 text-white" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
                 y: [010],
                 rotate: [0-50]
               }}
@@ -214,14 +214,14 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg"
             >
               <Star className="w-6 h-6 text-white" />
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
-    </divdiv>
+    </div>
   );
 };
 

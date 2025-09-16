@@ -107,7 +107,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -120,7 +120,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex-1 pr-8">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="space-y-4"
                 >
@@ -179,12 +179,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       Download SDK
                     </button>
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="relative w-80 h-48"
                 >
@@ -207,7 +207,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
                             {[...Array(8)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scale: isPlaying ? [1.21] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
@@ -225,7 +225,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   rotate: isPlaying ? 360 : 0,
                                   scale: isPlaying ? [1.1] : 1
@@ -247,7 +247,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scaleY: isPlaying ? [121] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
@@ -269,7 +269,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scale: isPlaying ? [1.31] : 1,
                                   opacity: isPlaying ? [0.610.6] : 0.8
@@ -304,18 +304,18 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   </div>
 
                   {/* Floating Elements */}
-                  <divdiv
+                  <div
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
-                  </divdiv>
+                  </div>
 
-                  <divdiv
+                  <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
-                  </divdiv>
-                </divdiv>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -342,10 +342,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default InteractiveTechDemo2025PromotionBanner;
+</div></div></div></div></div></div>

@@ -51,7 +51,7 @@ const RevolutionaryTechBlog2025: React.FC = () => {
             </div>
           </div>
         </div>
-        <divdiv
+        <div
           className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white text-center"
         >
           <h2 className="text-4xl font-bold mb-6">🚀 Stay Updated with Revolutionary Tech</h2>
@@ -72,16 +72,16 @@ const RevolutionaryTechBlog2025: React.FC = () => {
           <p className="text-sm opacity-75 mt-4">
             Join 10,000+ tech leaders and innovators
           </p>
-        </divdiv>
+        </div>
 
         {/* Categories */}
-        <divdiv
+        <div
           className="mt-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">📂 Browse by Category</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {['AI Revolution', 'Quantum Computing', 'Neural Technology', 'Autonomous AI', 'Edge Computing', 'Generative AI', 'Blockchain', 'Cybersecurity'].map((category, index) => (
-              <divdiv
+              <div
                 key={category}
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
               >
@@ -92,10 +92,10 @@ const RevolutionaryTechBlog2025: React.FC = () => {
                 <p className="text-gray-600 text-sm text-center mt-2">
                   {Math.floor(Math.random() * 20) + 5} articles
                 </p>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

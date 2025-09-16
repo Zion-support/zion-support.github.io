@@ -9,7 +9,7 @@ const TranscendentConsciousness2036: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full text-sm font-semibold mb-6 animate-pulse">
@@ -37,13 +37,13 @@ const TranscendentConsciousness2036: React.FC = () => {
                 ⚡ Infinite Wisdom
               </span>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -53,7 +53,7 @@ const TranscendentConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Progress through the stages of consciousness evolution to achieve transcendent awareness
           </p>
-        </divdiv>
+        </div>
 
         <div className="space-y-8">
           {[
@@ -93,7 +93,7 @@ const TranscendentConsciousness2036: React.FC = () => {
               color: "from-yellow-500 to-cyan-500"
             }
           ].map((level, index) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, x: 0 }}
               className={`bg-gradient-to-r ${level.color}/20 backdrop-blur-sm rounded-2xl p-8 border border-${level.color.split('-')[1]}-500/30 hover:border-${level.color.split('-')[1]}-400/50 transition-all duration-300`}
@@ -113,7 +113,7 @@ const TranscendentConsciousness2036: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
@@ -121,7 +121,7 @@ const TranscendentConsciousness2036: React.FC = () => {
       {/* Meditation and Training */}
       <div className="bg-gradient-to-r from-pink-900/50 to-indigo-900/50 py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -131,7 +131,7 @@ const TranscendentConsciousness2036: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Guided programs to accelerate your consciousness evolution journey
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -178,7 +178,7 @@ const TranscendentConsciousness2036: React.FC = () => {
                 features: ["Love Activation", "Healing Energy", "Universal Transformation", "Divine Love"]
               }
             ].map((program, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-pink-800/30 to-indigo-800/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300"
@@ -203,7 +203,7 @@ const TranscendentConsciousness2036: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -211,7 +211,7 @@ const TranscendentConsciousness2036: React.FC = () => {
 
       {/* Consciousness Metrics */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -221,7 +221,7 @@ const TranscendentConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Track your progress through advanced consciousness monitoring and analysis
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
@@ -250,7 +250,7 @@ const TranscendentConsciousness2036: React.FC = () => {
               color: "from-cyan-500 to-indigo-500"
             }
           ].map((metric, index) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-pink-800/20 to-indigo-800/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 text-center"
@@ -260,14 +260,14 @@ const TranscendentConsciousness2036: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">{metric.metric}</h3>
               <p className="text-sm text-gray-300">{metric.description}</p>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-pink-600 to-indigo-600 rounded-3xl p-12"
         >
@@ -286,7 +286,7 @@ const TranscendentConsciousness2036: React.FC = () => {
               Explore Programs
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

@@ -96,7 +96,7 @@ const EnhancedHome: React.FC = () => {
               Empowering businesses to thrive in the digital age.
             </divp>
             
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
               <Link
@@ -110,10 +110,10 @@ const EnhancedHome: React.FC = () => {
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
-            </divdiv>
+            </div>
             
             {/* Stats */}
-            <divdiv
+            <div
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => {
@@ -128,7 +128,7 @@ const EnhancedHome: React.FC = () => {
                   </div>
                 );
               })}
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>
@@ -148,7 +148,7 @@ const EnhancedHome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center group"
@@ -169,7 +169,7 @@ const EnhancedHome: React.FC = () => {
                   Learn More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -189,7 +189,7 @@ const EnhancedHome: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-lg shadow-md p-6"
@@ -213,7 +213,7 @@ const EnhancedHome: React.FC = () => {
                     <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -256,3 +256,4 @@ const EnhancedHome: React.FC = () => {
 };
 
 export default EnhancedHome;
+</div></div>

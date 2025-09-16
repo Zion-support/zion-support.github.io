@@ -64,12 +64,12 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6"
           >
             <Play className="w-4 h-4" />
             🎮 NEW: Interactive Technology Demo 2025
-          </divdiv>
+          </div>
 
           <divh2
             className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -88,7 +88,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </divp>
 
           {/* Interactive Demo Preview */}
-          <divdiv
+          <div
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -136,7 +136,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
                   {demoSteps.map((step, index) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="flex items-center gap-3"
                     >
@@ -144,21 +144,21 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                         <span className="text-white text-xs font-bold">{index + 1}</span>
                       </div>
                       <span className="text-gray-300">{step}</span>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
 
           {/* Feature Icons */}
-          <divdiv
+          <div
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
@@ -166,13 +166,13 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-white font-medium">{feature.text}</span>
-                </divdiv>
+                </div>
               );
             })}
-          </divdiv>
+          </div>
 
           {/* CTA Buttons */}
-          <divdiv
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -185,7 +185,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
               Watch Live Stream
               <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-          </divdiv>
+          </div>
         </div>
 
         {/* Floating Elements */}
@@ -198,3 +198,4 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 };
 
 export default InteractiveTechShowcase2025PromotionBanner;
+</div></div>

@@ -25,7 +25,6 @@ interface LazyImageProps {;
   onError?: () => void;
 }
 export default function LazyImage({
-
   src
   alt
   width
@@ -41,7 +40,6 @@ export default function LazyImage({
   onLoad
   onError
 }: LazyImageProps) {
-
   src,
   alt,
   width,
@@ -57,32 +55,18 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-
-
-
-
-
-
-
-
-
-
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-
-
   useEffect(() => {;
     if (priority) return;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
-
           setIsInView(true);
           observer && observer.disconnect();
         }
-
       },;
       {;
         threshold: 0 && 0.1,;
@@ -103,7 +87,6 @@ export default function LazyImage({
     onError?.();
   };
   if (hasError) {;
-
     return (
       <div
         ref={imgRef}
@@ -123,10 +106,7 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-
-
       {isInView && (;
-
         <Image
   style?: React.CSSProperties;
   on_load?: () => void;
@@ -220,8 +200,6 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-
         />)}
     </div>);
-
 }

@@ -318,7 +318,7 @@ const AI2025ContentRecommendationEngine = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {recommendations.map((itemindex) => (
-                <divdiv
+                <div
                   key={item.id}
                   className="group bg-white rounded-xl border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
                 >
@@ -423,7 +423,7 @@ const AI2025ContentRecommendationEngine = () => {
                       </div>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 

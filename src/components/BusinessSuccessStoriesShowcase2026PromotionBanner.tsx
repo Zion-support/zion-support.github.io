@@ -103,19 +103,19 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1x: 0 }}
             className="text-white"
           >
             {/* Badge */}
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-400/30 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4" />
               <span>Business Success Stories Showcase 2026</span>
               <Fire className="w-4 h-4 text-orange-400" />
-            </divdiv>
+            </div>
 
             {/* Title */}
             <divh2
@@ -140,7 +140,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
             </divp>
 
             {/* Current Story Highlight */}
-            <divdiv
+            <div
               key={currentStory}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20"
             >
@@ -164,10 +164,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                   <div className="text-sm text-purple-200">Return on Investment</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Stats */}
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
@@ -183,10 +183,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                   </div>
                 );
               })}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="flex flex-col sm:flex-row gap-4"
             >
@@ -199,10 +199,10 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 <Award className="w-5 h-5" />
                 Start Your Journey
               </button>
-            </divdiv>
+            </div>
 
             {/* Trust Indicators */}
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400"
             >
@@ -218,11 +218,11 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                 <Award className="w-4 h-4 text-yellow-400" />
                 <span>Industry Recognition</span>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
 
           {/* Visual */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1x: 0 }}
             className="relative"
           >
@@ -244,7 +244,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                   const isActive = index === currentStory;
                   
                   return (
-                    <divdiv
+                    <div
                       key={index}
                         opacity: isActive ? 1 : 0.6
                         x: 0,
@@ -268,7 +268,7 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
                           <div className="text-yellow-400 font-bold text-sm">{story.roi}</div>
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   );
                 })}
               </div>
@@ -302,24 +302,24 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
             </div>
 
             {/* Floating Elements */}
-            <divdiv
+            <div
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <TrendingUp className="w-8 h-8 text-white" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <Award className="w-6 h-6 text-white" />
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg"
             >
               <DollarSign className="w-4 h-4 text-white" />
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
 
         {/* Story Indicators */}
@@ -342,3 +342,4 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner = () => {
 };
 
 export default BusinessSuccessStoriesShowcase2026PromotionBanner;
+</div></div></div></div></div></div>

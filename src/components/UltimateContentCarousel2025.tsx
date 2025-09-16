@@ -70,9 +70,10 @@ import React, { useState, useEffect } from 'react';
         </div>
 
           </div>
-        </divdiv>
+        </div>
       </div>
   );
 };
 
 export default UltimateContentCarousel2025;
+</p></p>

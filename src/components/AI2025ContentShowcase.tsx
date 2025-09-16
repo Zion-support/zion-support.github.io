@@ -58,22 +58,16 @@ export default function AI2025ContentShowcase() {
       stats: "99.9% Accuracy"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 mb-8">
             <span className="text-blue-600 font-semibold text-sm">🚀 NEW CONTENT</span>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             AI 2025 Revolutionary Content
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the most advanced AI technologies and breakthrough innovations that are reshaping the future of business and technology.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contentItems.map((itemindex) => (
             <div
@@ -86,33 +80,19 @@ export default function AI2025ContentShowcase() {
                   <div className="text-4xl">{item.icon}</div>
                   <span className={`bg-gradient-to-r ${item.color} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
                     {item.badge}
-                  </span>
-                </div>
-                
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {item.title}
-                </h3>
-                
                 <p className="text-gray-600 mb-6 line-clamp-3">
                   {item.description}
-                </p>
-                
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-gray-900">
                     {item.stats}
-                  </div>
                   <a
                     href={item.link}
                     className={`bg-gradient-to-r ${item.color} text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                   >
                     Explore →
-                  </a>
-                </div>
-              </div>
-            </div>
           ))}
-        </div>
-
         <div className="text-center mt-12">
           <a
             href="/content-showcase"
@@ -121,10 +101,5 @@ export default function AI2025ContentShowcase() {
             View All Content
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
   );
 }

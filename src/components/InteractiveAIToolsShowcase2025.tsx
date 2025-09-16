@@ -152,7 +152,7 @@ const InteractiveAIToolsShowcase2025 = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 bg-clip-text text-transparent mb-6">
@@ -161,10 +161,10 @@ const InteractiveAIToolsShowcase2025 = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Experience the power of artificial intelligence with our comprehensive suite of interactive tools designed to transform your business operations.
           </p>
-        </divdiv>
+        </div>
 
         {/* AI Tools Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
           {Object.entries(aiTools).map(([keytool]) => (
@@ -189,17 +189,17 @@ const InteractiveAIToolsShowcase2025 = () => {
               {/* Hover Effect */}
               <div>
                 {hoveredTool === key && activeTool !== key && (
-                  <divdiv
+                  <div
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-2xl"
                   />
                 )}
               </div>
             </divbutton>
           ))}
-        </divdiv>
+        </div>
 
         {/* Active Tool Details */}
-          <divdiv
+          <div
             key={activeTool}
             className="bg-white rounded-3xl p-8 shadow-xl mb-16"
           >
@@ -263,11 +263,11 @@ const InteractiveAIToolsShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Use Cases */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-slate-900 mb-12">
@@ -275,7 +275,7 @@ const InteractiveAIToolsShowcase2025 = () => {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCaseindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
@@ -292,13 +292,13 @@ const InteractiveAIToolsShowcase2025 = () => {
                     </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-slate-900 mb-12">
@@ -306,7 +306,7 @@ const InteractiveAIToolsShowcase2025 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg"
               >
@@ -325,13 +325,13 @@ const InteractiveAIToolsShowcase2025 = () => {
                   ))}
                 </div>
                 <p className="text-slate-600 italic">"{testimonial.content}"</p>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Experience AI-Powered Tools?</h3>
@@ -348,10 +348,11 @@ const InteractiveAIToolsShowcase2025 = () => {
               Get Started
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default InteractiveAIToolsShowcase2025;
+</div></div></div></div>

@@ -179,7 +179,7 @@ const Homepage2044: React.FC = () => {
               {/* Animated particles with neon trails */}
               <div className="absolute inset-0">
                 {[...Array(20)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]"
                       x: [0, 150, 0],
@@ -209,7 +209,7 @@ const Homepage2044: React.FC = () => {
               </div>
 
               {/* Floating geometric shapes */}
-              <divdiv
+              <div
                 className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45"
                   rotate: [45, 405],
                   scale: [1, 1.2, 1],
@@ -220,7 +220,7 @@ const Homepage2044: React.FC = () => {
                   ease: "linear"
                 }}
               />
-              <divdiv
+              <div
                 className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full"
                   scale: [1, 1.5, 1],
                   opacity: [0.3, 0.8, 0.3],
@@ -234,13 +234,13 @@ const Homepage2044: React.FC = () => {
 
             {/* Hero Content */}
             <div className="text-center max-w-7xl mx-auto relative z-10">
-              <divdiv
+              <div
                 className="mb-8"
               >
                 <span className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/40 rounded-full text-purple-300 text-lg font-medium mb-8 shadow-[0_0_30px_rgba(168,85,247,0.3)] backdrop-blur-sm">
                   🚀 Revolutionary 2044 Technology
                 </span>
-              </divdiv>
+              </div>
 
               <divh1
                 id="hero-heading"
@@ -257,7 +257,7 @@ const Homepage2044: React.FC = () => {
                 Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
               </divp>
 
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
               >
                 <button 
@@ -281,10 +281,10 @@ const Homepage2044: React.FC = () => {
                     <Play className="w-7 h-7 ml-4" />
                   </span>
                 </button>
-              </divdiv>
+              </div>
 
               {/* Featured Service Showcase */}
-              <divdiv
+              <div
                 className="max-w-6xl mx-auto"
               >
                 <div className="text-center mb-12">
@@ -298,7 +298,7 @@ const Homepage2044: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service, index) => (
-                    <divdiv
+                    <div
                       key={service.id}
                       className={`relative group cursor-pointer ${
                         index === currentServiceIndex ? 'scale-105' : 'scale-100'
@@ -342,17 +342,17 @@ const Homepage2044: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             </div>
           </section>
 
           {/* Features Section */}
           <section className="py-24 px-4 relative">
             <div className="max-w-7xl mx-auto">
-              <divdiv
+              <div
                 className="text-center mb-20"
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -363,7 +363,7 @@ const Homepage2044: React.FC = () => {
                 <p className="text-xl text-gray-400 max-w-4xl mx-auto">
                   Experience the future of technology with our cutting-edge solutions that transform businesses and drive innovation
                 </p>
-              </divdiv>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
@@ -374,7 +374,7 @@ const Homepage2044: React.FC = () => {
                   { icon: Cpu, title: "Autonomous Business Intelligence", description: "Fully autonomous AI business intelligence", color: "from-emerald-500 to-teal-500" },
                   { icon: Database, title: "Quantum Cloud Infrastructure", description: "Quantum-powered cloud with consciousness", color: "from-yellow-500 to-orange-500" }
                 ].map((feature, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="group cursor-pointer"
                     whileInView={{ opacity: 1, y: 0 }}
@@ -404,7 +404,7 @@ const Homepage2044: React.FC = () => {
                         </p>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -420,7 +420,7 @@ const Homepage2044: React.FC = () => {
                   { number: "24/7", label: "AI Support Available", icon: Brain },
                   { number: "200+", label: "Countries Served", icon: Globe }
                 ].map((stat, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -431,7 +431,7 @@ const Homepage2044: React.FC = () => {
                     </div>
                     <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
                     <div className="text-gray-400">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -443,3 +443,4 @@ const Homepage2044: React.FC = () => {
 };
 
 export default Homepage2044;
+</div></div></div></div></div>

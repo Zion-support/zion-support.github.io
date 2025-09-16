@@ -98,26 +98,26 @@ const FuturisticAIServices2026Showcase = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <divdiv
+        <div
           className="text-center mb-16"
         >
             <Zap className="w-12 h-12 text-yellow-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               Futuristic AI Services 2026
             </h2>
-          </divdiv>
+          </div>
           
             Experience the next generation of artificial intelligence with our revolutionary 2026 service portfolio.
             Powered by quantum computingneural interfacesand autonomous systems.
           </divp>
-        </divdiv>
+        </div>
 
         {/* Main Service Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <divdiv
+          <div
             className="space-y-8"
           >
-              <divdiv
+              <div
                 key={currentService}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${services[currentService].color} shadow-2xl`}
               >
@@ -137,13 +137,13 @@ const FuturisticAIServices2026Showcase = () => {
 
                 <div className="space-y-4 mb-6">
                   {services[currentService].features.map((featureindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="flex items-center text-white"
                     >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
                       {feature}
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
 
@@ -159,7 +159,7 @@ const FuturisticAIServices2026Showcase = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </divbutton>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Service Navigation */}
@@ -176,10 +176,10 @@ const FuturisticAIServices2026Showcase = () => {
                 />
               ))}
             </div>
-          </divdiv>
+          </div>
 
           {/* Stats Grid */}
-          <divdiv
+          <div
             className="grid grid-cols-2 gap-6"
           >
             {[
@@ -188,20 +188,20 @@ const FuturisticAIServices2026Showcase = () => {
               { icon: <Star className="w-8 h-8" />value: "1M+"label: "Active Users" },
               { icon: <Zap className="w-8 h-8" />value: "0.1ms"label: "Latency" }
             ].map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:bg-white/20 transition-colors duration-300"
               >
                 <div className="text-blue-400 mb-3">{stat.icon}</div>
                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <divbutton
@@ -210,10 +210,11 @@ const FuturisticAIServices2026Showcase = () => {
             Experience the Future Today
             <ArrowRight className="w-5 h-5 ml-2 inline" />
           </divbutton>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default FuturisticAIServices2026Showcase;
+</div></div></div></div>

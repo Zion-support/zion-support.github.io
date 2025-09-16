@@ -172,14 +172,14 @@ const InteractiveSuccessMetrics2025 = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
             <BarChart3 className="w-12 h-12 text-green-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-green-200 to-blue-200 bg-clip-text text-transparent">
               Success Metrics 2025
             </h2>
-          </divdiv>
+          </div>
           
             Real-time performance metrics showcasing unprecedented business transformation results.
             See how our clients achieve extraordinary growth and efficiency.
@@ -192,14 +192,14 @@ const InteractiveSuccessMetrics2025 = () => {
               {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
               {isPlaying ? 'Pause' : 'Play'} Animation
             </button>
-          </divdiv>
-        </divdiv>
+          </div>
+        </div>
 
         {/* Main Metrics Display */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Current Metric Showcase */}
           <div className="lg:col-span-2">
-              <divdiv
+              <div
                 key={currentMetric}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${metrics[currentMetric].color} shadow-2xl relative overflow-hidden`}
               >
@@ -231,17 +231,17 @@ const InteractiveSuccessMetrics2025 = () => {
 
                   <div className="grid grid-cols-2 gap-4">
                     {metrics[currentMetric].details.map((detailindex) => (
-                      <divdiv
+                      <div
                         key={index}
                         className="flex items-center text-white/90"
                       >
                         <ArrowUp className="w-4 h-4 mr-2 text-white" />
                         <span className="text-sm">{detail}</span>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Metric Navigation */}
@@ -278,7 +278,7 @@ const InteractiveSuccessMetrics2025 = () => {
                     <span className="font-bold">{animatedValues.revenue}%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <divdiv 
+                    <div 
                       className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
                     />
                   </div>
@@ -290,7 +290,7 @@ const InteractiveSuccessMetrics2025 = () => {
                     <span className="font-bold">{animatedValues.clients}%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <divdiv 
+                    <div 
                       className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
                     />
                   </div>
@@ -302,7 +302,7 @@ const InteractiveSuccessMetrics2025 = () => {
                     <span className="font-bold">{animatedValues.efficiency}%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <divdiv 
+                    <div 
                       className="bg-gradient-to-r from-yellow-400 to-orange-600 h-2 rounded-full"
                     />
                   </div>
@@ -315,7 +315,7 @@ const InteractiveSuccessMetrics2025 = () => {
               <h4 className="text-xl font-bold text-white mb-4">Achievements</h4>
               <div className="space-y-3">
                 {achievements.map((achievementindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center justify-between text-white"
                   >
@@ -324,7 +324,7 @@ const InteractiveSuccessMetrics2025 = () => {
                       <span className="text-sm">{achievement.title}</span>
                     </div>
                     <span className="font-bold text-sm">{achievement.count}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -332,7 +332,7 @@ const InteractiveSuccessMetrics2025 = () => {
         </div>
 
         {/* Bottom Stats Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
@@ -341,7 +341,7 @@ const InteractiveSuccessMetrics2025 = () => {
             { icon: <PieChart className="w-6 h-6" />value: `${animatedValues.satisfaction}%`label: "Success Rate" },
             { icon: <TrendingUp className="w-6 h-6" />value: "24/7"label: "Monitoring" }
           ].map((statindex) => (
-            <divdiv
+            <div
               key={index}
               className="p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 text-center group"
             >
@@ -350,12 +350,13 @@ const InteractiveSuccessMetrics2025 = () => {
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default InteractiveSuccessMetrics2025;
+</div></div></div></div>

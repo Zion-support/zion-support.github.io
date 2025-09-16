@@ -79,7 +79,6 @@ export default function Sidebar() {
     ],
     []
   );
-
   const utilityLinks: NavLink[] = useMemo(
     () => [
       { href: '/site-health', label: 'Site Health', icon: CheckCircle, description: 'Website health monitoring' },
@@ -88,7 +87,6 @@ export default function Sidebar() {
     ],
     []
   );
-
   return (
     <aside className="fixed left-0 top-0 z-40 h-screen w-80 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
       {/* Header */}
@@ -96,24 +94,17 @@ export default function Sidebar() {
         <div className="flex items-center space-x-3 mb-4">
           <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
             <Rocket className="w-5 h-5 text-white" />
-          </div>
           <div>
             <div className="text-lg font-bold tracking-wide">
               <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Zion</span>
               <span className="ml-2 text-white/60">Navigation</span>
-            </div>
             <div className="text-xs text-gray-500">Tech Group</div>
-          </div>
-        </div>
-      </div>
-
       {/* Navigation Sections */}
       <div className="space-y-8">
         {navigationSections.map((section, sectionIndex) => (
           <div key={sectionIndex}>
             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
               {section.title}
-            </h3>
             <div className="space-y-1">
               {section.links.map((link, linkIndex) => (
                 <a
@@ -134,24 +125,16 @@ export default function Sidebar() {
                             : 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
                         }`}>
                           {link.badge}
-                        </span>
                       )}
-                    </div>
                     {link.description && (
                       <p className="text-xs text-gray-500 truncate">{link.description}</p>
                     )}
-                  </div>
-                </a>
               ))}
-            </div>
-          </div>
         ))}
-
         {/* Utility Links */}
         <div>
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
             Utilities
-          </h3>
           <div className="space-y-1">
             {utilityLinks.map((link, index) => (
               <a
@@ -167,43 +150,27 @@ export default function Sidebar() {
                   {link.description && (
                     <p className="text-xs text-gray-500 truncate">{link.description}</p>
                   )}
-                </div>
-              </a>
             ))}
-          </div>
-        </div>
-
         {/* Contact Information */}
         <div className="pt-6 border-t border-slate-700/50">
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 px-2">
             Contact
-          </h3>
           <div className="space-y-2 px-2">
             <div className="text-xs text-gray-500">
               <div className="flex items-center space-x-2 mb-1">
                 <Users className="w-3 h-3" />
                 <span>Zion Tech Group</span>
-              </div>
               <div className="text-gray-600">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-              </div>
-            </div>
             <div className="text-xs text-gray-500">
               <div className="flex items-center space-x-2 mb-1">
                 <Zap className="w-3 h-3" />
                 <span>Get Started</span>
-              </div>
               <a 
                 href="/contact" 
                 className="text-purple-400 hover:text-purple-300 transition-colors"
               >
                 Contact Us →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
   );
 }

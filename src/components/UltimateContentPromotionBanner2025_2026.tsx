@@ -72,7 +72,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10" />
         <div className="absolute inset-0">
           {[...Array(30)].map((_i) => (
-            <divdiv
+            <div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
               style={{
@@ -96,19 +96,19 @@ const UltimateContentPromotionBanner2025_2026 = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <divdiv
+            <div
               className="text-white"
             >
-                <divdiv
+                <div
                   key={currentSlide}
                 >
                   {/* Badge */}
-                  <divdiv
+                  <div
                     className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20"
                   >
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-semibold">New Content Available</span>
-                  </divdiv>
+                  </div>
 
                   {/* Title */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -130,13 +130,13 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                   {/* Features */}
                   <div className="space-y-3 mb-8">
                     {currentSlideData.features.map((featureindex) => (
-                      <divdiv
+                      <div
                         key={feature}
                         className="flex items-center gap-3"
                       >
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-200">{feature}</span>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
 
@@ -157,26 +157,26 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       Watch Demo
                     </divbutton>
                   </div>
-                </divdiv>
+                </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Visual */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className="relative w-full h-96">
                 {/* Main Visual */}
-                <divdiv
+                <div
                   key={currentSlide}
                   className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center"
                 >
                   <div className="text-center">
-                    <divdiv
+                    <div
                       className="w-32 h-32 mx-auto mb-6"
                     >
                       <currentSlideData.icon className="w-full h-full text-white/80" />
-                    </divdiv>
+                    </div>
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </h3>
@@ -184,11 +184,11 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       Interactive Preview
                     </p>
                   </div>
-                </divdiv>
+                </div>
 
                 {/* Floating Elements */}
                 {[...Array(6)].map((_i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-4 h-4 bg-white/20 rounded-full"
                     style={{
@@ -205,7 +205,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </div>
@@ -227,7 +227,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/10">
-        <divdiv
+        <div
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
         />
       </div>
@@ -236,3 +236,4 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 };
 
 export default UltimateContentPromotionBanner2025_2026;
+</div></div></div></div></div>

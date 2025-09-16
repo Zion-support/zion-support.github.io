@@ -83,4 +83,3 @@ const NewContentAdBanner: React.FC = () => {
 };
 
 export default NewContentAdBanner;
-

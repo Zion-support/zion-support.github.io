@@ -111,67 +111,52 @@ export default function QuantumAIBreakthroughBanner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % breakthroughItems.length);
     }, 7000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
-
   const handleDismiss = () => {
     setIsVisible(false);
     localStorage.setItem('quantumAIBreakthroughBanner_dismissed', 'true');
   };
-
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % breakthroughItems.length);
     setIsAutoPlaying(false);
   };
-
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + breakthroughItems.length) % breakthroughItems.length);
     setIsAutoPlaying(false);
   };
-
   const handleMouseEnter = () => {
     setIsAutoPlaying(false);
   };
-
   const handleMouseLeave = () => {
     setIsAutoPlaying(true);
   };
-
   useEffect(() => {
     const dismissed = localStorage.getItem('quantumAIBreakthroughBanner_dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
   }, []);
-
   if (!isVisible) return null;
-
   const currentItem = breakthroughItems[currentIndex];
   const IconComponent = categoryIcons[currentItem.category];
-
   return (
     <div className="relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 opacity-60" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
-      
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
         <div className="absolute top-40 right-20 w-1 h-1 bg-indigo-400 rounded-full animate-pulse opacity-40"></div>
         <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse opacity-50"></div>
         <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-purple-300 rounded-full animate-pulse opacity-30"></div>
-      </div>
-      
       <div className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           {/* Header */}
@@ -179,15 +164,10 @@ export default function QuantumAIBreakthroughBanner() {
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 px-8 py-4 rounded-full text-lg font-bold mb-8">
               <Atom className="w-6 h-6" />
               Quantum AI Breakthrough 2026
-            </div>
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
               The Future of Computing is Here
-            </h2>
             <p className="text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
               Experience unprecedented breakthroughs in AI, quantum computing, and enterprise automation that will transform your organization's capabilities forever.
-            </p>
-          </div>
-
           {/* Main Content Carousel */}
           <div 
             className="relative bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden"
@@ -200,8 +180,6 @@ export default function QuantumAIBreakthroughBanner() {
               className="absolute top-8 right-8 z-10 p-3 text-gray-400 hover:text-gray-600 transition-colors bg-white rounded-full shadow-lg hover:shadow-xl"
             >
               <X className="w-6 h-6" />
-            </button>
-
             {/* Featured Badge */}
             {currentItem.featured && (
               <div className="absolute top-8 left-8 z-10">
@@ -211,7 +189,6 @@ export default function QuantumAIBreakthroughBanner() {
                 </div>
               </div>
             )}
-
             {/* Content */}
             <div className={`${currentItem.bgColor} p-16 md:p-20`}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -220,48 +197,30 @@ export default function QuantumAIBreakthroughBanner() {
                   <div className="flex items-center gap-6">
                     <div className={`p-4 rounded-2xl ${currentItem.bgColor} border-2 ${currentItem.borderColor} text-4xl`}>
                       {currentItem.icon}
-                    </div>
                     <div>
                       <div className={`text-lg font-bold ${currentItem.color} uppercase tracking-wide`}>
                         {categoryLabels[currentItem.category]}
-                      </div>
                       <div className="flex items-center gap-3">
                         <IconComponent className={`w-6 h-6 ${currentItem.color}`} />
                         <span className="text-lg text-gray-600">AI 2026 Series</span>
-                      </div>
-                    </div>
-                  </div>
-
                   <h3 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                     {currentItem.title}
-                  </h3>
-
                   <p className="text-2xl text-gray-600 leading-relaxed">
                     {currentItem.description}
-                  </p>
-
                   {/* Metrics */}
                   <div className="grid grid-cols-3 gap-8">
                     <div className="text-center">
                       <div className={`text-4xl font-bold ${currentItem.color} mb-3`}>
                         {currentItem.metrics.primary}
-                      </div>
                       <div className="text-lg text-gray-600 font-medium">Improvement</div>
-                    </div>
                     <div className="text-center">
                       <div className={`text-4xl font-bold ${currentItem.color} mb-3`}>
                         {currentItem.metrics.secondary}
-                      </div>
                       <div className="text-lg text-gray-600 font-medium">Accuracy</div>
-                    </div>
                     <div className="text-center">
                       <div className={`text-4xl font-bold ${currentItem.color} mb-3`}>
                         {currentItem.metrics.tertiary}
-                      </div>
                       <div className="text-lg text-gray-600 font-medium">Potential</div>
-                    </div>
-                  </div>
-
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-6">
                     <a
@@ -275,17 +234,12 @@ export default function QuantumAIBreakthroughBanner() {
                     >
                       <Brain className="w-6 h-6 mr-3" />
                       Explore {categoryLabels[currentItem.category]}
-                    </a>
                     <a
                       href="/content"
                       className="inline-flex items-center justify-center px-10 py-5 rounded-2xl font-bold border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 shadow-lg"
                     >
                       <Target className="w-6 h-6 mr-3" />
                       View All Content
-                    </a>
-                  </div>
-                </div>
-
                 {/* Right Content - Visual */}
                 <div className="relative">
                   <div className={`${currentItem.bgColor} rounded-3xl p-12 border-2 ${currentItem.borderColor} relative overflow-hidden`}>
@@ -293,43 +247,27 @@ export default function QuantumAIBreakthroughBanner() {
                     <div className="absolute inset-0 opacity-10">
                       <div className="absolute top-6 right-6 text-8xl">{currentItem.icon}</div>
                       <div className="absolute bottom-6 left-6 text-6xl opacity-50">{currentItem.icon}</div>
-                    </div>
-                    
                     <div className="relative text-center">
                       <div className={`inline-flex items-center justify-center w-32 h-32 rounded-full ${currentItem.bgColor} border-4 ${currentItem.borderColor} mb-10 text-6xl`}>
                         {currentItem.icon}
-                      </div>
                       <h4 className="text-3xl font-bold text-gray-900 mb-8">
                         {categoryLabels[currentItem.category]} Highlights
-                      </h4>
                       <div className="space-y-6 text-left">
                         <div className="flex items-center gap-4">
                           <div className={`w-4 h-4 rounded-full ${currentItem.color.replace('text-', 'bg-')}`} />
                           <span className="text-gray-700 font-medium text-lg">Revolutionary technology</span>
-                        </div>
                         <div className="flex items-center gap-4">
                           <div className={`w-4 h-4 rounded-full ${currentItem.color.replace('text-', 'bg-')}`} />
                           <span className="text-gray-700 font-medium text-lg">Proven implementation</span>
-                        </div>
                         <div className="flex items-center gap-4">
                           <div className={`w-4 h-4 rounded-full ${currentItem.color.replace('text-', 'bg-')}`} />
                           <span className="text-gray-700 font-medium text-lg">Expert guidance</span>
-                        </div>
                         <div className="flex items-center gap-4">
                           <div className={`w-4 h-4 rounded-full ${currentItem.color.replace('text-', 'bg-')}`} />
                           <span className="text-gray-700 font-medium text-lg">Measurable results</span>
-                        </div>
                         <div className="flex items-center gap-4">
                           <div className={`w-4 h-4 rounded-full ${currentItem.color.replace('text-', 'bg-')}`} />
                           <span className="text-gray-700 font-medium text-lg">Future-ready solutions</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Navigation */}
             <div className="flex items-center justify-between p-8 bg-gray-50 border-t border-gray-200">
               <div className="flex items-center gap-4">
@@ -345,8 +283,6 @@ export default function QuantumAIBreakthroughBanner() {
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
-              </div>
-
               {/* Dots Indicator */}
               <div className="flex items-center gap-4">
                 {breakthroughItems.map((_, index) => (
@@ -358,14 +294,9 @@ export default function QuantumAIBreakthroughBanner() {
                     }`}
                   />
                 ))}
-              </div>
-
               <div className="text-lg text-gray-500 font-medium">
                 {currentIndex + 1} of {breakthroughItems.length}
               </div>
-            </div>
-          </div>
-
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <p className="text-2xl text-gray-600 mb-10">
@@ -391,5 +322,6 @@ export default function QuantumAIBreakthroughBanner() {
         </div>
       </div>
     </div>
+  );
   );
 }

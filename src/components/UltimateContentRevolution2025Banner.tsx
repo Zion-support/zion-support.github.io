@@ -39,7 +39,7 @@ const UltimateContentRevolution2025Banner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 overflow-hidden"
       >
         {/* Animated Background */}
@@ -58,11 +58,11 @@ const UltimateContentRevolution2025Banner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
-                <divdiv
+                <div
                   className="w-6 h-6"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                </divdiv>
+                </div>
                 <span className="text-sm font-semibold text-yellow-400 uppercase tracking-wider">
                   New Content Available
                 </span>
@@ -78,7 +78,7 @@ const UltimateContentRevolution2025Banner = () => {
               </h2>
               
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-3">
-                  <divdiv
+                  <div
                     key={currentFeature}
                     className="flex items-center gap-2"
                   >
@@ -86,7 +86,7 @@ const UltimateContentRevolution2025Banner = () => {
                     <span className="text-gray-300 font-medium">
                       {features[currentFeature].text}
                     </span>
-                  </divdiv>
+                  </div>
                 </div>
               </div>
 
@@ -128,7 +128,7 @@ const UltimateContentRevolution2025Banner = () => {
 
           {/* Progress Bar */}
           <div className="mt-4 w-full bg-white/10 rounded-full h-1">
-            <divdiv
+            <div
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
             />
           </div>
@@ -156,9 +156,10 @@ const UltimateContentRevolution2025Banner = () => {
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
-      </divdiv>
+      </div>
     </div>
   );
 };
 
 export default UltimateContentRevolution2025Banner;
+</div></div></div></div></div></div></div>

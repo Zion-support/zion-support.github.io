@@ -190,11 +190,11 @@ const InteractiveContentDiscoveryWidget = () => {
       {/* Modal Overlay */}
       <div>
         {isOpen && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
-            <divdiv
+            <div
               onClick={(e) => e.stopPropagation()}
               className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden shadow-2xl"
             >
@@ -319,7 +319,7 @@ const InteractiveContentDiscoveryWidget = () => {
                   {/* Content Grid/List */}
                   <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                     {filteredContent.map((item) => (
-                      <divdiv
+                      <div
                         key={item.id}
                         className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer ${
                           viewMode === 'list' ? 'flex' : ''
@@ -399,7 +399,7 @@ const InteractiveContentDiscoveryWidget = () => {
                             </button>
                           </div>
                         </div>
-                      </divdiv>
+                      </div>
                     ))}
                   </div>
 
@@ -416,8 +416,8 @@ const InteractiveContentDiscoveryWidget = () => {
                   )}
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </>

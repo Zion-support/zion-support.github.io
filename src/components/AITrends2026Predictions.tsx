@@ -257,7 +257,7 @@ const AITrends2026Predictions = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-1 h-1 bg-indigo-400 rounded-full opacity-30"
             style={{
@@ -277,7 +277,7 @@ const AITrends2026Predictions = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
@@ -296,10 +296,10 @@ const AITrends2026Predictions = () => {
             Expert predictions and probability assessments for the most significant 
             technological breakthroughs expected in 2026.
           </p>
-        </divdiv>
+        </div>
 
         {/* Statistics */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           <div className="text-center">
@@ -326,10 +326,10 @@ const AITrends2026Predictions = () => {
             </div>
             <div className="text-gray-300">Investment</div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Category Tabs */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categoryTabs.map((tab) => {
@@ -350,15 +350,15 @@ const AITrends2026Predictions = () => {
               </button>
             );
           })}
-        </divdiv>
+        </div>
 
         {/* Predictions Grid */}
-        <divdiv
+        <div
           key={activeCategory}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {categories[activeCategory as keyof typeof categories].predictions.map((predictionindex) => (
-            <divdiv
+            <div
               key={index}
               className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
             >
@@ -422,12 +422,12 @@ const AITrends2026Predictions = () => {
 
               {/* Hover Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -455,7 +455,7 @@ const AITrends2026Predictions = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,6 @@ import React{ useState } from 'react';
 
 export default function AI2025ContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
-
   const contentCategories = {
     breakthrough: {
       title: "🚀 Breakthrough Content",
@@ -80,17 +79,13 @@ export default function AI2025ContentDiscoveryWidget() {
       ]
     }
   };
-
   const currentCategory = contentCategories[activeTab as keyof typeof contentCategories];
-
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
         <h2 className="text-2xl font-bold mb-2">Discover AI 2025 Content</h2>
         <p className="text-blue-100">Explore breakthrough technologies and revolutionary solutions</p>
-      </div>
-
       {/* Tabs */}
       <div className="border-b border-gray-200">
         <div className="flex">
@@ -105,11 +100,7 @@ export default function AI2025ContentDiscoveryWidget() {
               }`}
             >
               {category.title}
-            </button>
           ))}
-        </div>
-      </div>
-
       {/* Content Grid */}
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -122,46 +113,27 @@ export default function AI2025ContentDiscoveryWidget() {
               <div className="flex items-start justify-between mb-3">
                 <div className={`px-3 py-1 rounded-full text-xs font-bold text-white ${item.badgeColor}`}>
                   {item.badge}
-                </div>
                 <div className="text-sm font-semibold text-green-600">
                   {item.stats}
-                </div>
-              </div>
-              
               <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
                 {item.title}
-              </h3>
-              
               <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                 {item.description}
-              </p>
-              
               <div className="flex items-center text-blue-600 text-sm font-semibold group-hover:text-blue-700">
                 Learn More
                 <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </a>
           ))}
-        </div>
-      </div>
-
       {/* Footer CTA */}
       <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
         <div className="flex items-center justify-between">
           <div>
             <h4 className="font-semibold text-gray-900">Ready to Transform Your Business?</h4>
             <p className="text-sm text-gray-600">Get started with AI 2025 breakthrough technology</p>
-          </div>
           <a
             href="/contact"
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
           >
             Get Started
-          </a>
-        </div>
-      </div>
-    </div>
   );
 }

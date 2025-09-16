@@ -121,10 +121,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind & Machine →
             </button>
-          </divdiv>
+          </div>
 
           {/* Synthetic Intelligence */}
-          <divdiv
+          <div
             className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -141,10 +141,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <button className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
               Experience Synthetic AI →
             </button>
-          </divdiv>
+          </div>
 
           {/* Space Technology */}
-          <divdiv
+          <div
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🚀</div>
@@ -161,10 +161,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <button className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Explore Space →
             </button>
-          </divdiv>
+          </div>
 
           {/* Biotechnology */}
-          <divdiv
+          <div
             className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🧬</div>

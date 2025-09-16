@@ -151,3 +151,4 @@ const PWAInstaller: React.FC = () => {
 };
 
 export default PWAInstaller;
+</p></p>

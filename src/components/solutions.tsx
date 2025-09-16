@@ -201,7 +201,7 @@ const SolutionsPage: React.FC = () => {
             </divp>
             
             {/* Stats Grid */}
-            <divdiv 
+            <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => (
@@ -213,14 +213,14 @@ const SolutionsPage: React.FC = () => {
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -231,11 +231,11 @@ const SolutionsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to address the most complex business challenges
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   whileInView={{ opacity: 1, y: 0 }}
@@ -269,7 +269,7 @@ const SolutionsPage: React.FC = () => {
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
-                </divdiv>
+                </div>
               ))}
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -293,14 +293,14 @@ const SolutionsPage: React.FC = () => {
                 Request Demo
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -311,11 +311,11 @@ const SolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs.
             </p>
-          </divdiv>
+          </div>
 
           <div className="space-y-16">
             {industrySolutions.map((category, categoryIndex) => (
-              <divdiv
+              <div
                 key={category.category}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -325,7 +325,7 @@ const SolutionsPage: React.FC = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.solutions.map((solution, solutionIndex) => (
-                    <divdiv
+                    <div
                       key={solution.name}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -350,10 +350,10 @@ const SolutionsPage: React.FC = () => {
                       >
                         Learn More <ArrowRight className="ml-2 w-4 h-4" />
                       </a>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -362,7 +362,7 @@ const SolutionsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -387,7 +387,7 @@ const SolutionsPage: React.FC = () => {
                 View All Services
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </Layout>
@@ -395,3 +395,4 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default Solutions;
+</div></div>

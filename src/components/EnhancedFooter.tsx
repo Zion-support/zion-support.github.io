@@ -101,3 +101,4 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
+</p></p>

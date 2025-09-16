@@ -67,7 +67,7 @@ const RevolutionaryContentShowcase = () => {
         </div>
 
         {/* Active Content Display */}
-        <divdiv
+        <div
           key={activeContent}
           className={`bg-gradient-to-br ${contentItems[activeContent].gradient} rounded-2xl p-12`}
         >
@@ -117,7 +117,7 @@ const RevolutionaryContentShowcase = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

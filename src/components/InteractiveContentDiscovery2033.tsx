@@ -106,7 +106,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
@@ -116,10 +116,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system
           </p>
-        </divdiv>
+        </div>
 
         {/* Search and Filters */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
@@ -152,15 +152,15 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               </divbutton>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Content Grid */}
-          <divdiv
+          <div
             key={`${activeFilter}-${searchTerm}`}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredContent.map((item, index) => (
-              <divdiv
+              <div
                 key={item.id}
                 onHoverStart={() => setHoveredItem(item.id)}
                 onHoverEnd={() => setHoveredItem(null)}
@@ -220,25 +220,25 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                 {/* Hover Effect */}
                 <div>
                   {hoveredItem === item.id && (
-                    <divdiv
+                    <div
                       className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl pointer-events-none"
                     />
                   )}
                 </div>
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
-          <divdiv
+          <div
             className="text-center py-12"
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-gray-300 mb-2">No content found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-          </divdiv>
+          </div>
         )}
       </div>
     </divsection>
@@ -246,3 +246,4 @@ const InteractiveContentDiscovery2033: React.FC = () => {
 };
 
 export default InteractiveContentDiscovery2033;
+</div></div></div>

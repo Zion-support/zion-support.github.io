@@ -106,7 +106,7 @@ const EnhancedContentBanner: React.FC = () => {
 
           {/* Carousel */}
           <div className="relative">
-              <divdiv
+              <div
                 key={currentSlide}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30"
               >
@@ -128,7 +128,7 @@ const EnhancedContentBanner: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
 
             {/* Navigation Controls */}

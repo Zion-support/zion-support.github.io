@@ -167,7 +167,7 @@ const BusinessSolutionsShowcase2027 = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
@@ -177,10 +177,10 @@ const BusinessSolutionsShowcase2027 = () => {
             Comprehensive technology solutions designed to accelerate your business growth
             enhance efficiencyand drive innovation across all industries and company sizes.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Navigation */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(categories).map(([keycategory]) => (
@@ -197,10 +197,10 @@ const BusinessSolutionsShowcase2027 = () => {
               {category.title}
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Solutions Display */}
-          <divdiv
+          <div
             key={activeCategory}
             className="max-w-7xl mx-auto"
           >
@@ -222,7 +222,7 @@ const BusinessSolutionsShowcase2027 = () => {
                 {/* Solutions Grid */}
                 <div className="grid md:grid-cols-3 gap-8">
                   {categories[activeCategory].solutions.map((solutionindex) => (
-                    <divdiv
+                    <div
                       key={index}
                       className="group"
                     >
@@ -255,16 +255,16 @@ const BusinessSolutionsShowcase2027 = () => {
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
-                    </divdiv>
+                    </div>
                   ))}
                 </div>
               </div>
             )}
-          </divdiv>
+          </div>
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           className="mt-20"
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
@@ -273,21 +273,21 @@ const BusinessSolutionsShowcase2027 = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((statindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="text-center"
                 >
                   <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mt-20"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -295,7 +295,7 @@ const BusinessSolutionsShowcase2027 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
@@ -315,13 +315,13 @@ const BusinessSolutionsShowcase2027 = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30">
@@ -343,7 +343,7 @@ const BusinessSolutionsShowcase2027 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

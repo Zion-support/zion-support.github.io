@@ -137,7 +137,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       {/* Accessibility Panel */}
       <div>
         {isOpen && (
-          <divdiv
+          <div
             className="absolute bottom-16 right-0 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6"
           >
             <div className="flex items-center justify-between mb-4">
@@ -308,7 +308,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
                 <span>Changes saved automatically</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         )}
       </div>
     </div>

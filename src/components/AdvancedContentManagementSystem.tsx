@@ -158,7 +158,7 @@ const AdvancedContentManagementSystem = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <divdiv
+        <div
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -181,10 +181,10 @@ const AdvancedContentManagementSystem = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Stats Overview */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
           {[
@@ -205,10 +205,10 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Navigation Tabs */}
-        <divdiv
+        <div
           className="mb-8"
         >
           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
@@ -233,10 +233,10 @@ const AdvancedContentManagementSystem = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Content Types Overview */}
-        <divdiv
+        <div
           className="mb-8"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Content Types</h2>
@@ -253,10 +253,10 @@ const AdvancedContentManagementSystem = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Recent Content */}
-        <divdiv
+        <div
           className="bg-white rounded-xl shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-6">
@@ -346,10 +346,10 @@ const AdvancedContentManagementSystem = () => {
               </tbody>
             </table>
           </div>
-        </divdiv>
+        </div>
 
         {/* Analytics Charts Placeholder */}
-        <divdiv
+        <div
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           <div className="bg-white rounded-xl shadow-lg p-6">
@@ -371,7 +371,7 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

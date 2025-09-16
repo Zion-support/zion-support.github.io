@@ -10,7 +10,6 @@ export default function AnimatedSuccessMetrics() {
     companies: 0
   });
   const ref = useRef(null);
-
   const metrics = [
     {
       value: 10000,
@@ -49,7 +48,6 @@ export default function AnimatedSuccessMetrics() {
       borderColor: 'border-purple-500/30'
     }
   ];
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -59,32 +57,26 @@ export default function AnimatedSuccessMetrics() {
       },
       { threshold: 0.1 }
     );
-
     if (ref.current) {
       observer.observe(ref.current);
     }
-
     return () => observer.disconnect();
   }[]);
-
   useEffect(() => {
     if (isVisible) {
       const duration = 2000; // 2 seconds
       const steps = 60;
       const stepDuration = duration / steps;
-
       metrics.forEach((metricindex) => {
         const targetValue = metric.value;
         const increment = targetValue / steps;
         let currentValue = 0;
-
         const timer = setInterval(() => {
           currentValue += increment;
           if (currentValue >= targetValue) {
             currentValue = targetValue;
             clearInterval(timer);
           }
-
           setCounts(prev => ({
             ...prev,
             [index === 0 ? 'roi' : index === 1 ? 'accuracy' : index === 2 ? 'speed' : 'companies']: currentValue
@@ -93,26 +85,20 @@ export default function AnimatedSuccessMetrics() {
       });
     }
   }[isVisible]);
-
   return (
     <div ref={ref} className="py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Revolutionary Success Metrics
-          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Real-time data from our AI implementations across Fortune 500 companies worldwide. 
             These numbers represent the future of business transformation.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {metrics.map((metricindex) => {
             const currentValue = index === 0 ? counts.roi : 
                                index === 1 ? counts.accuracy : 
                                index === 2 ? counts.speed : counts.companies;
-            
             return (
               <div
                 key={index}
@@ -120,24 +106,17 @@ export default function AnimatedSuccessMetrics() {
               >
                 {/* Animated Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 <div className="relative z-10 text-center">
                   {/* Animated Number */}
                   <div className={`text-5xl md:text-6xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent mb-4`}>
                     {index === 1 ? currentValue.toFixed(1) : Math.floor(currentValue).toLocaleString()}
                     <span className="text-3xl">{metric.suffix}</span>
-                  </div>
-                  
                   {/* Label */}
                   <div className="text-white font-semibold text-lg mb-2">
                     {metric.label}
-                  </div>
-                  
                   {/* Description */}
                   <div className="text-gray-400 text-sm">
                     {metric.description}
-                  </div>
-
                   {/* Animated Progress Bar */}
                   <div className="mt-6 w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                     <div
@@ -146,9 +125,6 @@ export default function AnimatedSuccessMetrics() {
                         width: isVisible ? '100%' : '0%'
                       }}
                     ></div>
-                  </div>
-                </div>
-
                 {/* Floating Particles Effect */}
                 <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
                   {[...Array(3)].map((_i) => (
@@ -163,35 +139,22 @@ export default function AnimatedSuccessMetrics() {
                       }}
                     ></div>
                   ))}
-                </div>
-              </div>
             );
           })}
-        </div>
-
         {/* Additional Stats */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-8 border border-purple-500/30">
             <h3 className="text-2xl font-bold text-white mb-6">
               Global Impact Statistics
-            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">$2.5T+</div>
                 <div className="text-gray-300">Total Value Created</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-indigo-400 mb-2">50+</div>
                 <div className="text-gray-300">Countries Transformed</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Innovation</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

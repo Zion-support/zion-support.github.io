@@ -4,7 +4,6 @@ import React{ useState } from 'react';
 
 export default function AdvancedContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('trending');
-
   const contentCategories = {
     trending: [
       {
@@ -111,7 +110,6 @@ export default function AdvancedContentDiscoveryWidget() {
       }
     ]
   };
-
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'Breakthrough': 'from-red-500 to-pink-500',
@@ -129,7 +127,6 @@ export default function AdvancedContentDiscoveryWidget() {
     };
     return colors[category] || 'from-gray-500 to-slate-500';
   };
-
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
       {/* Header */}
@@ -138,11 +135,7 @@ export default function AdvancedContentDiscoveryWidget() {
           <div>
             <h2 className="text-2xl font-bold text-white mb-2">Discover Revolutionary Content</h2>
             <p className="text-blue-100">Explore the latest AI breakthroughsuccess storiesand insights</p>
-          </div>
           <div className="text-4xl">🔍</div>
-        </div>
-      </div>
-
       {/* Tabs */}
       <div className="border-b border-gray-200">
         <div className="flex overflow-x-auto">
@@ -162,11 +155,7 @@ export default function AdvancedContentDiscoveryWidget() {
               }`}
             >
               {label}
-            </button>
           ))}
-        </div>
-      </div>
-
       {/* Content Grid */}
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -181,34 +170,21 @@ export default function AdvancedContentDiscoveryWidget() {
               {item.featured && (
                 <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
                   FEATURED
-                </div>
               )}
-              
               <div className="mb-4">
                 <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${getCategoryColor(item.category)} mb-3`}>
                   {item.category}
-                </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {item.title}
-                </h3>
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {item.description}
-                </p>
-              </div>
-
               <div className="flex items-center justify-between text-sm text-gray-500">
                 <span>{item.readTime}</span>
                 <div className="flex items-center text-blue-600 group-hover:text-blue-700">
                   <span className="mr-1">Read More</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </a>
           ))}
-        </div>
-
         {/* View All Button */}
         <div className="mt-8 text-center">
           <a
@@ -218,11 +194,6 @@ export default function AdvancedContentDiscoveryWidget() {
             <span>View All Content</span>
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-
       {/* Newsletter Signup */}
       <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 border-t border-gray-200">
         <div className="text-center">
@@ -236,10 +207,5 @@ export default function AdvancedContentDiscoveryWidget() {
             />
             <button className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
               Subscribe
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

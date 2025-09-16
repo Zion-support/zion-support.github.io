@@ -228,7 +228,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             Choose from our comprehensive suite of AI services designed to accelerate growth
             improve efficiencyand drive innovation across every aspect of your business.
           </p>
-        </divdiv>
+        </div>
 
         {/* Service Navigation */}
           {services.map((serviceindex) => (
@@ -245,10 +245,10 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               <span className="ml-2">{service.title}</span>
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Active Service Details */}
-        <divdiv
+        <div
           key={activeService}
           className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12"
         >
@@ -363,11 +363,11 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* All Services Grid */}
           {services.map((serviceindex) => (
-            <divdiv
+            <div
               key={service.id}
               className="group"
             >
@@ -404,9 +404,9 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   </div>
                 </div>
               </a>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -433,7 +433,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </divsection>
   );

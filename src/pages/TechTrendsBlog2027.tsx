@@ -109,7 +109,7 @@ const TechTrendsBlog2027 = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -130,7 +130,7 @@ const TechTrendsBlog2027 = () => {
                 Subscribe to Updates
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 

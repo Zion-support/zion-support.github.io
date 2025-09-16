@@ -8,9 +8,7 @@ export default function CloudAutomationsPage() {
       .then(setData)
       .catch(() => setData({ ok: false }));
   }, []);
-
   const items = data?.data ? Object.entries(data.data) : [];
-
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Cloud Automations</h1>
@@ -25,9 +23,6 @@ export default function CloudAutomationsPage() {
             {value.metrics ? (
               <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
             ) : null}
-          </div>
         ))}
-      </div>
-    </div>
   );
 }

@@ -46,22 +46,14 @@ export default function Blog() {
       <div className="max-w-5xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold tracking-tight mb-2">Insights</h1>
         <p className="text-gray-600 mb-10">Latest research, guides, and implementation patterns.</p>
-
         <div className="grid gap-6 md:grid-cols-2">
           {posts.map((post) => (
             <article key={post.slug} className="rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
               <h2 className="text-2xl font-semibold mb-2">
                 <Link to={`/blog/${post.slug}`} className="hover:underline">
                   {post.title}
-                </Link>
-              </h2>
               <p className="text-gray-600 mb-4">{post.summary}</p>
               <div className="text-sm text-gray-500">{new Date(post.date).toLocaleDateString()}</div>
-            </article>
           ))}
-        </div>
-      </div>
-    </div>
   );
 }
-

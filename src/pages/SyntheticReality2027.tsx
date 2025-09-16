@@ -60,7 +60,7 @@ const SyntheticReality2027: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -81,23 +81,23 @@ const SyntheticReality2027: React.FC = () => {
                 🎮 Try Demo
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
 
       {/* Reality Selection */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">Choose Your Reality</h2>
           <p className="text-xl opacity-80">Select from our collection of synthetic realities or create your own</p>
-        </divdiv>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {realities.map((reality, index) => (
-            <divdiv
+            <div
               key={reality.id}
               whileInView={{ opacity: 1, scale: 1 }}
               onClick={() => setSelectedReality(reality.id)}
@@ -115,12 +115,12 @@ const SyntheticReality2027: React.FC = () => {
                   <li key={idx}>• {feature}</li>
                 ))}
               </ul>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Selected Reality Details */}
-        <divdiv
+        <div
           key={selectedReality}
           className="max-w-6xl mx-auto"
         >
@@ -332,22 +332,22 @@ const SyntheticReality2027: React.FC = () => {
               </div>
             </div>
           )}
-        </divdiv>
+        </div>
       </div>
 
       {/* Features Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Revolutionary Features</h2>
             <p className="text-xl opacity-80">Experience the most advanced synthetic reality technology ever created</p>
-          </divdiv>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -357,9 +357,9 @@ const SyntheticReality2027: React.FC = () => {
                 Synthetic realities are indistinguishable from physical reality with perfect 
                 visual, audio, and haptic feedback.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -369,9 +369,9 @@ const SyntheticReality2027: React.FC = () => {
                 Enter any synthetic reality instantly with zero loading times and seamless 
                 transitions between worlds.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
@@ -381,14 +381,14 @@ const SyntheticReality2027: React.FC = () => {
                 Access unlimited synthetic realities created by users worldwide, each with 
                 unique physics and experiences.
               </p>
-            </divdiv>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, scale: 1 }}
           className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12"
         >
@@ -405,7 +405,7 @@ const SyntheticReality2027: React.FC = () => {
               🎮 Try Free Demo
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
