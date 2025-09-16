@@ -2,6 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-261d
 =======
 <<<<<<< HEAD
@@ -15,7 +22,11 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -151,13 +162,23 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -227,9 +248,12 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
         </div>
       </div>
 
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
       <div className="relative z-10 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 rounded-2xl p-8 border border-purple-400/30">
         <div
@@ -315,16 +339,23 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               <div className="text-sm opacity-90">{content.subtitle}</div>
             </motion.a>
           ))}
+>>>>>>> cursor/create-and-deploy-new-content-b461
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {/* Floating Elements */}
       <div className="absolute top-4 right-4 text-6xl animate-bounce opacity-20">🚀</div>
       <div className="absolute bottom-4 left-4 text-4xl animate-pulse opacity-20">⚡</div>
       <div className="absolute top-1/2 right-8 text-3xl animate-ping opacity-30">🧠</div>
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-6">
         {contentSlides.map((_, index) => (
@@ -357,7 +388,10 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
+<<<<<<< HEAD
+=======
       </div>
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -365,9 +399,17 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
     </div>
   );
 };
