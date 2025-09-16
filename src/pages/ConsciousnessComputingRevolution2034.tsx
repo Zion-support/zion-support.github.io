@@ -154,30 +154,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-d9c7
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 import Header from '../Header';
@@ -503,43 +480,11 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Multidimensional existence</li>
                 <li>• Universal creation abilities</li>
               </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3887
             </div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
             </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-<<<<<<< HEAD
             </motion.div>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-eb8d
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
           </div>
         </div>
 
@@ -560,30 +505,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
         <motion.div
->>>>>>> cursor/create-and-deploy-new-content-d9c7
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
         <motion.div
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -610,31 +532,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-de62
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-3887
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
     </div>
   );
 };

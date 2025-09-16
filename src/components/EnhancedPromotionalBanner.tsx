@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const EnhancedPromotionalBanner: React.FC = () => {
@@ -67,7 +66,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
               ✕
             </button>
           </motion.div>
-=======
 
 const EnhancedPromotionalBanner: React.FC = () => {
   return (
@@ -161,7 +159,6 @@ const EnhancedPromotionalBanner: React.FC = () => {
               View Success Stories
             </a>
           </div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
         </div>
       </div>
     </motion.div>

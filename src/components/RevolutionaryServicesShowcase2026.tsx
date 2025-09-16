@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
   Star, 
   Rocket, 
   Infinity, 
@@ -17,7 +14,6 @@ import {
   Users,
   Award,
   TrendingUp
-=======
   Rocket, 
   Star, 
   Infinity, 
@@ -29,12 +25,10 @@ import {
   Award,
   ChevronLeft,
   ChevronRight
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 
 const RevolutionaryServicesShowcase2026: React.FC = () => {
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [stats, setStats] = useState({
@@ -73,7 +67,6 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
       successRate: Math.round(avgRating * 20) // Convert 5-star rating to percentage
     });
   }, []);
-=======
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -132,7 +125,6 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
         return 'from-gray-500 to-gray-600';
     }
   };
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 
   const formatPrice = (price: number) => {
     if (price >= 1000000) {
@@ -142,7 +134,6 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
     }
     return `$${price}`;
   };
-<<<<<<< HEAD
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -187,9 +178,6 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your business with our cutting-edge technologies. From AI consciousness to reality manipulation, 
             we offer solutions that were once thought impossible.
-=======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -296,16 +284,10 @@ const RevolutionaryServicesShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our cutting-edge AI services are designed to revolutionize how you do business, 
             providing unprecedented efficiency, intelligence, and competitive advantage.
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d3fa
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           </p>
         </div>
 
         {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -531,7 +513,6 @@ const RevolutionaryServicesShowcase2026 = () => {
                 Schedule Demo
               </motion.button>
             </div>
-=======
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -817,12 +798,8 @@ const RevolutionaryServicesShowcase2026 = () => {
                 </motion.button>
               </motion.div>
             ))}
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
           </div>
         </div>
-=======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
@@ -935,7 +912,6 @@ const RevolutionaryServicesShowcase2026 = () => {
             </Link>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-d3fa
       </div>
     </div>
   );

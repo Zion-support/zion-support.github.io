@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Clock, User, Tag, TrendingUp, Eye, Heart, Share2, BookOpen, Zap, Brain, Shield, Globe } from 'lucide-react';
 import NewContentAdvertisingBanner2026 from '../components/NewContentAdvertisingBanner2026';
@@ -105,7 +104,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-white/30 rounded-full"
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
@@ -180,13 +178,11 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-<<<<<<< HEAD
                 y: [0, -100, 0],
                 opacity: [0, 1, 0],
               }}
@@ -194,7 +190,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-=======
                 y: [0, -30, 0],
                 opacity: [0.2, 0.8, 0.2],
               }}
@@ -202,13 +197,11 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 duration: 4 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
               }}
             />
           ))}
         </div>
 
-<<<<<<< HEAD
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.div
@@ -375,7 +368,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-=======
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -729,7 +721,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     </div>
   );
 };

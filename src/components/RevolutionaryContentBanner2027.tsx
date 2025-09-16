@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Animated background */}
       <div className="absolute inset-0">
@@ -13,8 +12,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
           <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-1000"></div>
           <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-2000"></div>
           <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-purple-500/20 rounded-full animate-pulse delay-3000"></div>
-=======
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-2xl p-12 mb-12 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -45,7 +42,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
           <a href="/pages/UltimateInnovationHub2027" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl border-2 border-white/30 ml-6">
             🚀 NEW: Ultimate Innovation Hub →
           </a>
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -120,8 +116,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
           <div className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
             🌟 Experience the Future of Technology →
           </div>
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
 

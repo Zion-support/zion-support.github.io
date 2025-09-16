@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -15,20 +14,8 @@ import {
   Rocket,
   Shield
 } from 'lucide-react';
-=======
 import React, { useState } from 'react';
-=======
-=======
 import React, { useState } from 'react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-7a01
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryContentShowcase2026 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,7 +35,6 @@ const RevolutionaryContentShowcase2026 = () => {
       type: "blog"
     },
     {
-<<<<<<< HEAD
       id: 2,
       title: "Ultimate Tech Solutions 2026",
       excerpt: "Revolutionary technologies that are reshaping reality itself. From AI consciousness to interdimensional computing.",
@@ -61,7 +47,6 @@ const RevolutionaryContentShowcase2026 = () => {
       type: "service"
     },
     {
-=======
       title: "Quantum Computing Revolution 2026",
       description: "Breakthrough quantum computing with exponential processing power",
       icon: "⚛️",
@@ -75,7 +60,6 @@ const RevolutionaryContentShowcase2026 = () => {
       icon: '🧬',
       description: 'Step into virtual worlds through direct brain interface',
       link: '/pages/NeuralRealityEngine2026'
->>>>>>> cursor/create-and-deploy-new-content-a7bf
       id: 3,
       title: "Quantum Neural Networks: The Next Computing Paradigm",
       excerpt: "Revolutionary quantum neural networks that process information at the speed of thought.",
@@ -88,7 +72,6 @@ const RevolutionaryContentShowcase2026 = () => {
       type: "blog"
     },
     {
-<<<<<<< HEAD
       id: 4,
       title: "Neural Interface Breakthrough",
       excerpt: "Revolutionary neural interfaces that enable direct communication between human brains and computers.",
@@ -123,31 +106,17 @@ const RevolutionaryContentShowcase2026 = () => {
       featured: true,
       tags: ["Climate Tech", "Global Warming", "Environment"],
       type: "blog"
-=======
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer interfaces enabling thought-controlled technology",
       icon: "🧬",
       link: "/pages/NeuralInterfaceRevolution2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Non-Invasive BCI", "Thought Control", "Neural Data", "Medical Applications"]
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
       id: 'neural',
       name: 'Neural Reality Engine',
       icon: '🧬',
       description: 'Step into virtual worlds through direct brain interface',
       link: '/pages/NeuralRealityEngine2026'
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
->>>>>>> cursor/create-and-deploy-new-content-a7bf
     }
   ];
 
@@ -190,7 +159,6 @@ const RevolutionaryContentShowcase2026 = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
@@ -202,38 +170,21 @@ const RevolutionaryContentShowcase2026 = () => {
         >
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
             Revolutionary Content Showcase
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-7a01
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • BREAKTHROUGH TECHNOLOGY
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Revolutionary Content Showcase 2026
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover the most groundbreaking technologies and insights that are shaping the future of human civilization.
@@ -241,7 +192,6 @@ const RevolutionaryContentShowcase2026 = () => {
         </motion.div>
 
         {/* Main Carousel */}
-<<<<<<< HEAD
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
             <AnimatePresence mode="wait">
@@ -431,7 +381,6 @@ const RevolutionaryContentShowcase2026 = () => {
             ))}
           </div>
         </motion.div>
-=======
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
             <motion.div
@@ -528,8 +477,6 @@ const RevolutionaryContentShowcase2026 = () => {
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY CONTENT 2026 • EXCLUSIVE
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -542,14 +489,12 @@ const RevolutionaryContentShowcase2026 = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • JANUARY 2026
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 REVOLUTIONARY CONTENT 2026 • BREAKTHROUGH TECHNOLOGY
->>>>>>> cursor/create-and-deploy-new-content-6f93
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
             Revolutionary Content Showcase 2026
@@ -569,7 +514,6 @@ const RevolutionaryContentShowcase2026 = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
                   : 'bg-white/20 backdrop-blur-sm text-cyan-200 hover:bg-white/30'
               }`}
-=======
         </divdiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -578,7 +522,6 @@ const RevolutionaryContentShowcase2026 = () => {
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="group"
->>>>>>> cursor/create-and-deploy-new-content-79ca
             >
               {tab.title}
             </button>
@@ -586,16 +529,12 @@ const RevolutionaryContentShowcase2026 = () => {
                 <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Exclusive Content Access</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Get early access to our most revolutionary content and be the first to experience the future of technology
             </p>
           </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -712,8 +651,6 @@ const RevolutionaryContentShowcase2026 = () => {
                 </div>
               </div>
           )}
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -789,14 +726,11 @@ const RevolutionaryContentShowcase2026 = () => {
               <a
                 href={contentTabs[activeTab].link}
                 className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
->>>>>>> cursor/create-and-deploy-new-content-39c9
               >
                 Explore {contentTabs[activeTab].title.split(' ')[1]} →
               </a>
             </div>
-=======
           )}
->>>>>>> cursor/create-and-deploy-new-content-6f93
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -814,14 +748,6 @@ const RevolutionaryContentShowcase2026 = () => {
         </div>
 
         {/* Call to Action */}
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-7a01
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
         <div className="text-center mt-12">
           <a
             href="/pages/RevolutionaryTechBreakthrough2026"
@@ -830,13 +756,6 @@ const RevolutionaryContentShowcase2026 = () => {
             🌟 Experience the Revolutionary Content 2026 →
           </a>
         </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
->>>>>>> cursor/create-and-deploy-new-content-a7bf
       </div>
     </div>
   );

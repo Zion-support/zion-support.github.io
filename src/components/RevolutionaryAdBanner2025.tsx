@@ -48,7 +48,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
   const currentOfferData = offers[currentOffer];
 
   return (
-<<<<<<< HEAD
     <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${
       isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
     }`}>
@@ -167,7 +166,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
     <div className="bg-gradient-to-r from-orange-900 via-red-900 to-pink-900 text-white py-6 mb-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -200,7 +198,6 @@ const RevolutionaryAdBanner2025: React.FC = () => {
             >
               🧠 Tech Showcase →
             </a>
->>>>>>> cursor/create-and-deploy-new-content-e058
           </div>
         </div>
       </div>

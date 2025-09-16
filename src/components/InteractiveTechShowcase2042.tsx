@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const InteractiveTechShowcase2042: React.FC = () => {
   const [activeTech, setActiveTech] = useState('conscious-ai');
@@ -250,12 +244,10 @@ const InteractiveTechShowcase2042: React.FC = () => {
           <p className="text-xl opacity-90 mb-8">
             Join us in exploring the most advanced technology ever created
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
               href="/pages/UltimateTechRevolution2042" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Interactive Experience
@@ -264,8 +256,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
               Schedule Private Demo
             </button>
           </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -351,7 +341,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
                   : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             >
               🚀 Explore Full Revolution →
             </a>
@@ -362,8 +351,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
               ⚡ View All Showcases
             </a>
           </div>
-<<<<<<< HEAD
-=======
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h4 className="text-xl font-semibold mb-4">Key Features</h4>
@@ -422,11 +409,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
           <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors text-lg">
             Contact Our Team
           </button>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
     </div>

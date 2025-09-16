@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-import React, { useState, useEffect } from 'react';
-
-const InteractiveTechShowcase2025: React.FC = () => {
-<<<<<<< HEAD
-  const [activeTech, setActiveTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
+import React, { useState, useEffect } from 'react';
+
+const InteractiveTechShowcase2025: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const technologies = [
     {
@@ -79,8 +69,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
-<<<<<<< HEAD
-=======
     }
   ];
 
@@ -140,17 +128,14 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   <div className="text-left">
                     <h4 className="font-semibold">{tech.name}</h4>
                     <p className="text-sm opacity-80">{tech.description}</p>
-=======
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
->>>>>>> cursor/create-and-deploy-new-content-f2c7
 
   const technologies = [
     {
       id: 1,
-<<<<<<< HEAD
       name: "Quantum AI Processing",
       description: "Revolutionary quantum computing meets artificial intelligence for unprecedented processing power",
       icon: "⚡",
@@ -208,8 +193,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -269,7 +252,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
         'Custom dashboards'
       ],
       demo: 'Watch AI analyze data and generate insights in real-time'
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
     }
   ];
 
@@ -277,7 +259,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-<<<<<<< HEAD
         setActiveTech((prev) => (prev + 1) % technologies.length);
         setIsAnimating(false);
       }, 300);
@@ -330,7 +311,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   <div className="text-left">
                     <h4 className="font-semibold">{tech.name}</h4>
                     <p className="text-sm opacity-80">{tech.description}</p>
-=======
         setActiveDemo((prev) => (prev + 1) % demos.length);
         setIsAnimating(false);
       }, 500);
@@ -373,14 +353,12 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   <div>
                     <h4 className="text-xl font-bold mb-2">{demo.title}</h4>
                     <p className="text-sm opacity-90">{demo.description}</p>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
                   </div>
                 </div>
               </button>
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Active Tech Display */}
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-2xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
             <div className="text-center">
@@ -468,7 +446,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
               Schedule Consultation
-=======
           {/* Interactive Demo Area */}
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <div className="text-center mb-8">
@@ -541,13 +518,9 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Schedule Demo
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-=======
       name: "Quantum Reality Engine",
       icon: "⚛️",
       description: "Manipulate reality itself through quantum computing, creating parallel universes and impossible simulations.",
@@ -646,7 +619,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                     <span className={`px-3 py-1 bg-gradient-to-r ${technologies[activeTab].color} rounded-full text-xs font-semibold ${technologies[activeTab].accentColor}`}>
                       {technologies[activeTab].status}
                     </span>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
                   </div>
                 </div>
               </button>
@@ -702,7 +674,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Technology Timeline */}
         <div className="text-center mb-16">
@@ -744,10 +715,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
           </div>
         </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       </div>
     </div>
   );

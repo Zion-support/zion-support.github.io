@@ -46,11 +46,6 @@ const UltimateContentBanner2035: React.FC = () => {
   const currentBannerData = banners[currentBanner];
 
   return (
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
->>>>>>> cursor/create-and-deploy-new-content-a7bf
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>

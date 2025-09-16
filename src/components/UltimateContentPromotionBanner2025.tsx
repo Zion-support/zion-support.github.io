@@ -2,11 +2,6 @@ import React from 'react';
 
 const UltimateContentPromotionBanner2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -96,8 +91,6 @@ const UltimateContentPromotionBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -129,11 +122,6 @@ const UltimateContentPromotionBanner2025: React.FC = () => {
             🌟 NEW: Ultimate Tech Showcase 2025 →
           </a>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-3887
-=======
->>>>>>> cursor/create-and-deploy-new-content-eb8d
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3fa
       </div>
     </div>
   );

@@ -2,23 +2,18 @@ import React from 'react';
 
 const NextGenTechRevolution2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <section className="py-32 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-6xl font-bold text-white mb-8">
             Next Gen Tech Revolution 2025
-=======
             Next-Gen Tech Revolution 2025
->>>>>>> cursor/create-and-deploy-new-content-d3fa
           </h1>
           <p className="text-2xl text-gray-300 mb-12">
             Experience the most revolutionary technological advancement in human history.
           </p>
-<<<<<<< HEAD
         </div>
       </section>
-=======
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
@@ -61,7 +56,6 @@ const NextGenTechRevolution2025: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-d3fa
     </div>
   );
 };

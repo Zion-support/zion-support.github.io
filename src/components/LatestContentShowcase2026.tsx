@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, Eye, ArrowRight, Star, TrendingUp, Users } from 'lucide-react';
@@ -208,7 +207,6 @@ const LatestContentShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock, User, Tag, Star, TrendingUp, Zap, Globe, Shield, Brain } from 'lucide-react';
@@ -458,7 +456,6 @@ const LatestContentShowcase2026: React.FC = () => {
             </span>
           </button>
         </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       </div>
     </div>
   );

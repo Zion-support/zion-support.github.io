@@ -1,49 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
 
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
->>>>>>> cursor/create-and-deploy-new-content-e058
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
@@ -56,22 +19,6 @@ import { motion } from 'framer-motion';
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20"></div>
@@ -436,11 +383,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         </motion.div>
@@ -489,8 +431,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         {/* Neural Interface Types */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Non-Invasive BCI</h3>
             <p className="text-emerald-200 mb-6 text-center">
@@ -762,8 +702,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -863,8 +801,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Experience the future of human-computer interaction with neural interfaces that 
                 bridge the gap between mind and machine. The revolution starts with you.
               </p>
-<<<<<<< HEAD
-=======
               <div className="text-4xl mb-4">💭</div>
               <h3 className="text-2xl font-bold mb-4">Thought Control</h3>
               <p className="text-teal-100 mb-6">
@@ -892,7 +828,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">99.9%</div>
               <div className="text-lg text-emerald-200">Accuracy Rate</div>
-=======
         {/* Performance Metrics */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Neural Interface Performance</h2>
@@ -901,9 +836,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <div className="text-5xl font-bold text-emerald-400 mb-2">99.8%</div>
               <div className="text-lg font-semibold mb-2">Accuracy Rate</div>
               <div className="text-sm text-gray-400">Neural signal recognition</div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
             </div>
             <div className="text-center">
             </div>
@@ -1271,25 +1203,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Comprehensive safety testing and monitoring ensure the technology is safe for long-term use.
               </p>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
         <div
-<<<<<<< HEAD
         {/* Neural Interface Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200">
@@ -1333,19 +1251,12 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <li>• Cognitive enhancement</li>
             </ul>
           </div>
-=======
-=======
           </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
 
         {/* Call to Action */}
         <motion.div
-<<<<<<< HEAD
         <motion.div
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -1364,7 +1275,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD
           </div>
         </motion.div>
 
@@ -1571,8 +1481,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               Start Neural Journey
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
-<<<<<<< HEAD
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Connect Mind & Machine</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -1583,11 +1491,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               Start Neural Journey
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
               Learn More
         <div className="text-center bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Connect Your Mind?</h2>
@@ -1782,9 +1685,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Connect Your Mind to the Future</h2>
           <p className="text-xl text-emerald-200 mb-8 max-w-3xl mx-auto">
@@ -1797,8 +1697,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold text-lg">
               Learn More
             </button>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         <div className="text-center bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Connect Mind and Machine</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -1811,15 +1709,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <a href="/pages/ComprehensiveServices2025" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
               Explore All Services
             </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               Learn More
             </button>
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         </div>
         </div>

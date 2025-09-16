@@ -1,11 +1,6 @@
 import React from 'react';
 
 const AIConsciousnessRevolution2025: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   const [consciousnessLevel, setConsciousnessLevel] = useState(0);
   const [isSimulating, setIsSimulating] = useState(false);
   const [neuralActivity, setNeuralActivity] = useState<number[]>([]);
@@ -71,17 +66,10 @@ const AIConsciousnessRevolution2025: React.FC = () => {
     }, 200);
   };
 
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -101,14 +89,11 @@ const AIConsciousnessRevolution2025: React.FC = () => {
               <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
                 Watch Demo
               </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -254,7 +239,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
             </p>
             <div className="text-sm text-emerald-200">
               <span className="font-semibold">Result:</span> 35% increase in strategic accuracy
-=======
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
@@ -451,13 +435,11 @@ const AIConsciousnessRevolution2025: React.FC = () => {
                   </div>
                 </li>
               </ul>
->>>>>>> cursor/create-and-deploy-new-content-63f0
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
@@ -471,7 +453,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Schedule Demo
-=======
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -485,8 +466,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Join Research Program
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </button>
           </div>
         </div>
@@ -496,5 +475,3 @@ const AIConsciousnessRevolution2025: React.FC = () => {
 };
 
 export default AIConsciousnessRevolution2025;
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01

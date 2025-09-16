@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function Contact() {
   const { showToast: toast } = useToast();
@@ -14,12 +13,10 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lu
 import React from 'react';
 
 const Contact: React.FC = () => {
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -78,7 +75,6 @@ const Contact: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
@@ -88,7 +84,6 @@ const Contact: React.FC = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           className="max-w-4xl mx-auto text-center"
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -101,7 +96,6 @@ const Contact: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         >
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Contact Us
@@ -110,7 +104,6 @@ const Contact: React.FC = () => {
             Ready to transform your business with revolutionary technology? 
             Get in touch with our experts and discover what's possible.
           </p>
-<<<<<<< HEAD
       </section>
 
       {/* Contact Methods Grid */}
@@ -139,7 +132,6 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
-=======
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -154,7 +146,6 @@ const Contact: React.FC = () => {
             
             {isSubmitted ? (
               <motion.div 
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
                 className="text-center py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -162,14 +153,11 @@ const Contact: React.FC = () => {
               >
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-<<<<<<< HEAD
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
-=======
                 <p className="text-gray-300">We'll get back to you within 24 hours.</p>
               </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -273,7 +261,6 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             )}
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -338,7 +325,6 @@ const Contact: React.FC = () => {
                 </div>
             ))}
           </div>
-=======
           </motion.div>
 
           {/* Contact Information */}
@@ -402,7 +388,6 @@ const Contact: React.FC = () => {
               </ul>
             </div>
           </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
     </div>

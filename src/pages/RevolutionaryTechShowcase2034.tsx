@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-=======
 import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-99e3
 
 const RevolutionaryTechShowcase2034: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
-<<<<<<< HEAD
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
@@ -146,7 +139,6 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
               <div className="text-4xl font-bold mb-2">24/7</div>
               <div className="text-sm opacity-90">Availability</div>
             </div>
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2034: React.FC = () => {
@@ -376,22 +368,6 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
             <button className="border border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
->>>>>>> cursor/create-and-deploy-new-content-9c82
-          </div>
-        </div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-import React from 'react';
-
-const RevolutionaryTechShowcase2034: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Hero Section */}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
           </div>
         </div>
 import React from 'react';
@@ -400,7 +376,14 @@ const RevolutionaryTechShowcase2034: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
->>>>>>> cursor/create-and-deploy-new-content-e058
+          </div>
+        </div>
+import React from 'react';
+
+const RevolutionaryTechShowcase2034: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">

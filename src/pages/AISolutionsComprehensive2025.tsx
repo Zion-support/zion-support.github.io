@@ -2,7 +2,6 @@ import React from 'react';
 
 const AISolutionsComprehensive2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <motion.div
@@ -38,7 +37,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             >
               Transform your business with our cutting-edge AI solutions designed for the future
             </motion.p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -160,11 +158,9 @@ const AISolutionsComprehensive2025: React.FC = () => {
             <div className="text-center">
               <span className="text-2xl font-bold text-green-400">$500,000/month</span>
             </div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
           </div>
         </div>
 
-<<<<<<< HEAD
       {/* Category Filter */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -273,7 +269,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
             <p className="text-xl opacity-80">Join thousands of organizations transforming with AI</p>
-=======
         {/* Enterprise Solutions */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -319,12 +314,10 @@ const AISolutionsComprehensive2025: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">📊 Proven Results</h2>
             <p className="text-xl opacity-90">Our AI solutions deliver measurable business impact</p>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-<<<<<<< HEAD
               <div className="text-5xl font-bold mb-2">10,000+</div>
               <div className="text-lg opacity-80">Active Users</div>
             </div>
@@ -339,7 +332,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">24/7</div>
               <div className="text-lg opacity-80">Support</div>
-=======
               <div className="text-6xl font-bold text-green-400 mb-2">99.9%</div>
               <div className="text-xl font-semibold mb-2">Accuracy Rate</div>
               <div className="text-sm opacity-75">AI prediction accuracy</div>
@@ -358,12 +350,10 @@ const AISolutionsComprehensive2025: React.FC = () => {
               <div className="text-6xl font-bold text-pink-400 mb-2">24/7</div>
               <div className="text-xl font-semibold mb-2">Uptime</div>
               <div className="text-sm opacity-75">Continuous AI operation</div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
       {/* Call to Action */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -383,7 +373,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               View Case Studies
             </button>
-=======
         {/* Client Testimonials */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -426,7 +415,6 @@ const AISolutionsComprehensive2025: React.FC = () => {
             <a href="/pages/RevolutionaryTechShowcase2025" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               View Technology Demo
             </a>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
           </div>
         </div>
       </div>

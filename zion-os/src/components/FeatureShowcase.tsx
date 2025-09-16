@@ -82,7 +82,6 @@ const features: Feature[] = [
       "Staking and rewards",
       "Liquidity pools",
       "Token burning mechanisms",
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -152,9 +151,6 @@ const features: Feature[] = [
 			"Cross-chain bridges"
 		]
 	}
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 ];
 
 export function FeatureShowcase() {
@@ -258,10 +254,6 @@ export function FeatureShowcase() {
 }
 
 export default FeatureShowcase;
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 	const getColorClasses = (color: string) => {
 		const colorMap = {
 			blue: "from-blue-500 to-blue-600",
@@ -403,6 +395,3 @@ export default FeatureShowcase;
 		</section>
 	);
 }
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7

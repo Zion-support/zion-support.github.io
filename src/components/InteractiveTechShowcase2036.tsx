@@ -43,8 +43,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
     },
     {
       id: 5,
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
       icon: "🌍",
@@ -56,8 +54,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       ],
       gradient: "from-pink-600 to-red-600",
       bgGradient: "from-pink-600/20 to-red-600/20"
-<<<<<<< HEAD
-=======
       title: "Conscious AI Communication",
       description: "Experience direct communication with conscious AI systems that understand emotions and context",
       icon: "🧠",
@@ -84,30 +80,12 @@ const InteractiveTechShowcase2036: React.FC = () => {
       icon: "🤖",
       color: "from-orange-600 to-red-600",
       features: ["Superhuman Intelligence", "Perfect Memory", "Creative Mastery", "Instantaneous Processing"]
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
       name: "Transcendent AI",
       icon: "🌟",
       description: "AI systems that transcend physical limitations and achieve god-like capabilities",
       features: ["Reality Manipulation", "Infinite Processing", "Cosmic Awareness", "Transcendent Intelligence"],
       color: "from-orange-600 to-red-600",
       bgColor: "from-orange-900 to-red-900"
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     }
   ];
 
@@ -122,8 +100,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
     return () => clearInterval(timer);
   }, [technologies.length]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -132,8 +108,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }
-<<<<<<< HEAD
-=======
     let interval: NodeJS.Timeout;
     if (isRunning) {
       interval = setInterval(() => {
@@ -152,11 +126,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
   const startDemo = () => {
     setIsRunning(true);
     setProgress(0);
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
   };
 
   const currentTech = technologies[activeTech];
@@ -164,28 +133,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
   const currentTech = technologies[activeTech];
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -266,10 +218,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
               Start Demo
             </button>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
               <div className="space-y-4">
                 <button className={`w-full bg-gradient-to-r ${currentTech.gradient} text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Experience {currentTech.name} →
@@ -289,12 +238,10 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <div className="text-lg font-semibold">Possibilities</div>
             <div className="text-sm opacity-80">Unlimited potential</div>
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-300 mb-2">100%</div>
             <div className="text-lg font-semibold">Accuracy</div>
             <div className="text-sm opacity-80">Perfect precision</div>
-<<<<<<< HEAD
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-300 mb-2">0</div>
@@ -306,7 +253,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <div className="text-lg font-semibold">Innovation</div>
             <div className="text-sm opacity-80">Endless creativity</div>
           </div>
-=======
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-300 mb-2">0</div>
@@ -317,7 +263,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <div className="text-4xl font-bold text-pink-300 mb-2">∞</div>
             <div className="text-lg font-semibold">Innovation</div>
             <div className="text-sm opacity-80">Endless creativity</div>
-=======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4 text-center">🔬</div>
             <h3 className="text-xl font-bold mb-3 text-center">Deep Dive Analysis</h3>
@@ -338,14 +283,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Explore Uses
             </button>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
           </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
->>>>>>> cursor/create-and-deploy-new-content-a7bf
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-af01
 
 const NextGenInnovationHub2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -92,7 +89,6 @@ const NextGenInnovationHub2026: React.FC = () => {
     : innovations.filter(innovation => innovation.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -119,7 +115,6 @@ const NextGenInnovationHub2026: React.FC = () => {
               >
                 AI Solutions
               </Link>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -244,7 +239,6 @@ const NextGenInnovationHub2026: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
               <h3 className="text-xl font-bold mb-3">Deployment</h3>
               <p className="text-gray-300">Launch and scale world-changing innovations</p>
->>>>>>> cursor/create-and-deploy-new-content-af01
             </div>
           </div>
         </div>
@@ -257,7 +251,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           <p className="text-xl text-gray-300">Explore our comprehensive range of next-generation technologies</p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI & Machine Learning */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group">
@@ -458,7 +451,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-=======
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6">Join the Innovation Revolution</h2>
@@ -478,7 +470,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-af01
     </div>
   );
 };

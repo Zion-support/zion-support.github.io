@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   const demos = [
     {
       id: 'ai-consciousness',
@@ -19,16 +13,12 @@
       link: '/pages/ConsciousAIBreakthrough2026'
     },
     {
-=======
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2026 = () => {
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -41,7 +31,6 @@ import {
   Rocket,
   Sparkles,
   ChevronRight,
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -56,64 +45,49 @@ import {
   Atom,
   Sparkles,
   ArrowRight,
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
   Play,
   Pause,
   RotateCcw
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
   const techDemos = [
-=======
 
 const InteractiveTechShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
->>>>>>> cursor/create-and-deploy-new-content-af01
 
   const showcases = [
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'ai-systems',
       name: 'Advanced AI Systems',
       icon: '🤖',
       description: 'Revolutionary AI with autonomous learning and quantum processing',
       features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
       color: 'from-purple-600 to-pink-600',
-=======
       title: 'Conscious AI Systems',
       description: 'AI that achieves true consciousness and self-awareness',
       icon: '🧠',
       color: 'from-purple-500 to-pink-500',
       features: ['Self-aware decision making', 'Emotional intelligence', 'Creative problem solving'],
       stats: { efficiency: '+500%', accuracy: '99.9%', speed: '1000x faster' }
->>>>>>> cursor/create-and-deploy-new-content-af01
     },
     {
       title: 'Quantum Reality Engine',
       description: 'Immersive virtual environments powered by quantum computing',
       icon: '⚡',
-<<<<<<< HEAD
-=======
       color: 'from-cyan-500 to-blue-500',
       features: ['Quantum state processing', 'Parallel universe computing', 'Reality manipulation'],
       stats: { processing: 'Exponential', security: 'Unbreakable', applications: 'Infinite' }
->>>>>>> cursor/create-and-deploy-new-content-af01
     },
     {
       title: 'Neural Interface Pro',
       description: 'Direct brain-computer interface for seamless interaction',
       icon: '🧬',
-<<<<<<< HEAD
-=======
       id: 0,
       title: "Conscious AI Systems",
       description: "Watch our AI systems demonstrate true consciousness and self-awareness in real-time.",
@@ -197,10 +171,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           { name: "Universal Connectivity", value: 100, color: "blue" }
         ]
       }
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
-<<<<<<< HEAD
-=======
       color: 'from-emerald-500 to-teal-500',
       features: ['Thought control', 'Neural feedback', 'Memory enhancement'],
       stats: { response: 'Instant', accuracy: '99.8%', safety: '100%' }
@@ -212,13 +182,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
       color: 'from-orange-500 to-red-500',
       features: ['Multi-dimensional processing', 'Infinite computational power', 'Dimensional data storage'],
       stats: { dimensions: '∞', power: 'Infinite', storage: 'Unlimited' }
->>>>>>> cursor/create-and-deploy-new-content-af01
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     const timer = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
     }, 5000);
@@ -269,7 +236,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
     setTimeout(() => setIsRunning(false), 3000);
   };
 
-=======
       id: 'conscious-ai',
       title: 'Conscious AI Systems',
       icon: '🧠',
@@ -310,10 +276,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
   return (
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-=======
 interface TechDemo {
   id: string;
   title: string;
@@ -555,15 +519,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6"
           >
             <Sparkles className="w-4 h-4" />
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
             Interactive Technology Showcase
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
             Experience the Future
           </h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 }`}
                 onClick={() => setActiveDemo(demo.id)}
               >
@@ -582,7 +543,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </motion.div>
             ))}
           </div>
-=======
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcases.length);
@@ -608,11 +568,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
             🚀 INTERACTIVE SHOWCASE • JANUARY 2026
           </div>
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Showcase 2026</h2>
->>>>>>> cursor/create-and-deploy-new-content-af01
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-<<<<<<< HEAD
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
-=======
     let interval: NodeJS.Timeout;
     if (isPlaying) {
       interval = setInterval(() => {
@@ -654,7 +611,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Experience our revolutionary technologies in action. Watch real-time demonstrations of AI consciousness, 
             quantum processing, neural interfaces, and interdimensional computing.
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </p>
         </motion.div>
 
@@ -694,8 +650,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 />
               </div>
             </div>
-<<<<<<< HEAD
-=======
             Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, and Neural Interfaces
           </p>
         </div>
@@ -792,12 +746,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
               <div className="text-2xl mb-2">{showcase.icon}</div>
               <div className="font-semibold text-sm">{showcase.title}</div>
             </a>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           ))}
 
           {/* Demo Display */}
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30">
-=======
 
             {/* Demo Visualization */}
             <div className="space-y-6">
@@ -861,8 +813,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Interact with revolutionary AI technologies and see them in action
           </p>
@@ -919,7 +869,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </div>
             </div>
 
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedTech}
@@ -928,8 +877,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="text-center mb-8">
                   <div className="text-6xl mb-4">
                     {demos.find(d => d.id === activeDemo)?.icon}
@@ -941,12 +888,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     {demos.find(d => d.id === activeDemo)?.description}
                   </p>
                 </div>
-=======
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Experience the future of technology through interactive demonstrations
           </p>
         </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
 
                 {/* Demo Features */}
                 <div className="space-y-4 mb-8">
@@ -1109,11 +1054,9 @@ const InteractiveTechShowcase2026: React.FC = () => {
       bgColor: 'from-orange-600/30 to-red-600/30',
     },
   ];
-=======
                 {renderDemo()}
               </motion.div>
             </AnimatePresence>
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
 
             {/* Technology Details */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -1157,7 +1100,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Technology Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -1177,7 +1119,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
             <div className="text-gray-300 text-sm">Possibilities</div>
           </div>
-=======
                 <div className="flex items-center mb-6">
                   <div className={`bg-gradient-to-r ${currentDemo.color} p-4 rounded-xl mr-4`}>
                     <currentDemo.icon className="w-10 h-10 text-white" />
@@ -1230,10 +1171,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
           </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
           </div>
 
           <div className="p-8">
@@ -1269,7 +1207,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
 
         {/* Call to Action */}
@@ -1295,8 +1232,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             </button>
           </div>
         </motion.div>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
       </div>
     </div>
   );

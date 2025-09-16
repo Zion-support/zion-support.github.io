@@ -346,16 +346,11 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     reviews: { rating: 4.8, count: 67 }
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3fa
     id: "metaverse-business-001",
     title: "Metaverse Business Solutions",
     description: "Complete metaverse integration services for virtual commerce, immersive experiences, and digital business transformation.",
     category: "Metaverse Technology",
     price: 120000,
-<<<<<<< HEAD
     currency: "$",
     images: ["/images/metaverse-business.jpg"],
     featured: true,
@@ -482,8 +477,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "24-32 weeks",
     support: "Quantum computing experts",
     reviews: { rating: 4.9, count: 45 }
-<<<<<<< HEAD
-=======
     id: "transcendent-ai-001",
     title: "Transcendent AI Intelligence",
     description: "The ultimate AI system that transcends human intelligence and achieves superintelligence capabilities.",
@@ -615,8 +608,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "48-60 months",
     support: "Reality manipulation specialists",
     reviews: { rating: 5.0, count: 2 }
->>>>>>> origin/cursor/create-and-deploy-new-content-2b9f
-=======
   },
   {
     id: "ai-healthcare-001",
@@ -788,9 +779,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "18-26 weeks",
     support: "Cybersecurity experts",
     reviews: { rating: 4.9, count: 123 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-53ca
-=======
     currency: "$",
     images: ["/images/metaverse-business.jpg"],
     featured: true,
@@ -917,8 +905,5 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "24-32 weeks",
     support: "Quantum computing experts",
     reviews: { rating: 4.9, count: 45 }
->>>>>>> cursor/create-and-deploy-new-content-d3fa
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   }
 ];

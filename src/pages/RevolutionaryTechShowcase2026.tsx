@@ -58,7 +58,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -311,7 +310,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join thousands of innovators who are already using our revolutionary technology solutions 
             to transform their businesses and shape the future.
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -323,7 +321,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           </h1>
           <p className="text-2xl opacity-90 max-w-5xl mx-auto">
             Interactive showcase of cutting-edge technologies that will define the future of humanity
->>>>>>> cursor/create-and-deploy-new-content-af01
           </p>
         </div>
 

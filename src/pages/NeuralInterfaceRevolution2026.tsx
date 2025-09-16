@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -128,7 +127,6 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       treatment: 'Optical neural enhancement',
       results: ['Memory restoration', 'Improved cognition', 'Independent living'],
       timeline: '12 months'
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Eye, Ear, Hand, Heart } from 'lucide-react';
@@ -206,12 +204,10 @@ const NeuralInterfaceRevolution2026 = () => {
       title: "Communication Evolution",
       description: "Telepathic communication and shared experiences between connected individuals.",
       impact: "Revolutionize human connection"
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -257,7 +253,6 @@ const NeuralInterfaceRevolution2026 = () => {
               <div className="text-4xl font-bold text-teal-400 mb-2">{neuralData.latency}ms</div>
               <div className="text-lg opacity-80">Response Latency</div>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -376,11 +371,9 @@ const NeuralInterfaceRevolution2026 = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Navigation */}
         <div className="flex flex-wrap justify-center space-x-2 mb-8">
           {['overview', 'technologies', 'applications', 'case-studies', 'contact'].map((tab) => (
@@ -396,7 +389,6 @@ const NeuralInterfaceRevolution2026 = () => {
               {tab.charAt(0).toUpperCase() + tab.slice(1).replace('-', ' ')}
             </button>
           ))}
-=======
       {/* Applications */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -435,10 +427,8 @@ const NeuralInterfaceRevolution2026 = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
 
-<<<<<<< HEAD
         {/* Overview Tab */}
         {activeTab === 'overview' && (
           <div className="space-y-12">
@@ -709,7 +699,6 @@ const NeuralInterfaceRevolution2026 = () => {
               </Link>
             </div>
           </div>
-=======
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -738,7 +727,6 @@ const NeuralInterfaceRevolution2026 = () => {
               </button>
             </motion.div>
           </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
@@ -82,13 +68,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -112,10 +91,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -318,20 +293,11 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
     </>
-=======
-<<<<<<< HEAD
       </div>
     </>
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
     </div>
->>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
 import React from 'react';
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
@@ -540,24 +506,8 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
     </div>
->>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   );
 };
 
 export default RevolutionaryTechShowcase2025;
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01

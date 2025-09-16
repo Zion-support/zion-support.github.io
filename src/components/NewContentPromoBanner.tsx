@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { getRecentBlogPosts } from '../data/blog-posts';
 
@@ -71,7 +70,6 @@ const NewContentPromoBanner: React.FC = () => {
         </div>
       </div>
     </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, X, Star, Clock, Users, TrendingUp } from 'lucide-react';
@@ -225,7 +223,6 @@ const NewContentPromoBanner = () => {
         </div>
       </motion.div>
     </AnimatePresence>
->>>>>>> origin/cursor/create-and-deploy-new-content-052c
   );
 };
 

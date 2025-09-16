@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -46,20 +40,9 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryTechInsights2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -89,7 +72,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </div>
-=======
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -157,13 +139,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         <section className="relative z-10 container mx-auto px-4 py-20 text-center">
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-=======
-=======
             <div className="mb-8">
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
             </div>
@@ -240,25 +216,15 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               ))}
             </div>
           </div>
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
         </section>
 
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
-=======
             <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
             <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
               initial={{ opacity: 0, y: 30 }}
-=======
             <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -269,27 +235,21 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
               </p>
-=======
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
                 <motion.div
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
             </divdiv>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
                 <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
-=======
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
                 <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
                   key={index}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -324,12 +284,8 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-=======
                 </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
-=======
                 </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
               ))}
             </div>
           </div>
@@ -338,12 +294,8 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-=======
                 </motion.div>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
                 </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
               ))}
             </div>
           </div>
@@ -397,17 +349,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
 
->>>>>>> cursor/create-and-deploy-new-content-d9c7
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
@@ -445,7 +387,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </footer>
->>>>>>> cursor/create-and-deploy-new-content-a7bf
       </div>
 
       {/* Featured Insights */}
@@ -584,21 +525,4 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default RevolutionaryTechInsights2026;
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf

@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
 import React, { useState } from 'react';
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState('conscious-ai');
@@ -73,7 +63,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
 
       {/* Interactive Demo Section */}
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -145,9 +134,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                     <div className="text-3xl font-bold text-indigo-300 mb-2">Revolutionary</div>
                     <div className="text-sm text-indigo-200">This demo will fundamentally change your understanding of technology</div>
                   </div>
-=======
->>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
-=======
         {/* Interactive Technology Demos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -227,13 +213,11 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                 <p className="text-gray-300 mb-4">Witness quantum computing manipulating physical reality</p>
                 <div className="bg-black/20 rounded-lg p-4 mb-4">
                   <div className="text-blue-400 text-sm">Quantum State: Superposition achieved. Reality manipulation in progress...</div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
                 </div>
                 <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
                   Manipulate Reality
                 </button>
               </div>
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
@@ -352,7 +336,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                   </li>
                 ))}
               </ul>
->>>>>>> cursor/create-and-deploy-new-content-9c82
             </div>
 
         {/* Interactive Demo Section */}
@@ -382,15 +365,10 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
                 Enter Portal
               </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Demo Selector */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold mb-6">Choose Your Demo</h2>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
             
             {Object.entries(demos).map(([key, demo]) => (
               <div
@@ -445,12 +423,7 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                   Start Demo
                 </button>
               </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
             </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
@@ -472,8 +445,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-lg opacity-80">Support</div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
 
             {/* Demo Controls */}
             <div className="flex space-x-4">
@@ -484,7 +455,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                 Learn More
               </button>
             </div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
           </div>
         </div>
       </div>
@@ -521,8 +491,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join our beta program and be among the first to experience these revolutionary technologies
@@ -531,10 +499,8 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Beta Program
             </button>
-<<<<<<< HEAD
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Learn More
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Future?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join the technological revolution and be part of the future today
@@ -545,21 +511,12 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Contact Sales
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
             </button>
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
     </div>
   );
 };

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -194,10 +182,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -390,10 +374,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
               Witness the most revolutionary technological breakthroughs in human history. These innovations will reshape reality itself.
             </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                 Explore Breakthroughs
@@ -405,12 +385,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-=======
           </div>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
           {/* Breakthrough Showcase */}
           <div className="grid md:grid-cols-2 gap-8 mb-20">
@@ -429,30 +404,20 @@ const UltimateTechBreakthrough2025: React.FC = () => {
                     <p className="text-purple-300 text-sm">{breakthrough.timeline}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
                 <div className="text-lg opacity-80">{achievement.label}</div>
               </motion.div>
             ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>Ultimate Tech Breakthrough 2025 | Zion Tech Group</title>
         <meta name="description" content="Discover the most revolutionary technology breakthroughs of 2025 that are reshaping our world" />
         <meta name="keywords" content="tech breakthrough 2025, revolutionary technology, AI innovation, quantum computing, neural interfaces" />
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-=======
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {breakthrough.description}
                 </p>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
 
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-purple-300">Impact:</h4>
@@ -590,11 +555,8 @@ import { Helmet } from 'react-helmet-async';
           </motion.div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
 const UltimateTechBreakthrough2025: React.FC = () => {
   return (
@@ -777,30 +739,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     </div>
   );
 };

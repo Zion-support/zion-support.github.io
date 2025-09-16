@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -16,16 +15,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       default:
         return REVOLUTIONARY_BLOG_POSTS_2027;
     }
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
@@ -143,29 +133,10 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -179,7 +150,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   };
 
   const nextSlide = () => {
@@ -312,12 +282,10 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-<<<<<<< HEAD
               {currentItems.map((item, index) => (
                 <div key={item.id} className="w-1/3 flex-shrink-0 px-4">
                   {renderItem(item)}
                 </div>
-=======
               {contentItems.map((item) => (
                 <div key={item.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-8 text-white`}>
@@ -351,28 +319,11 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                               </li>
                             ))}
                           </ul>
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
->>>>>>> cursor/create-and-deploy-new-content-a7bf
               </div>
             ))}
           </div>
@@ -426,7 +377,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           >
             {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-rotation
           </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
               ))}
             </div>
           </div>
@@ -464,7 +414,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* View All Button */}
         <div className="text-center mt-8">
           <Link
@@ -476,7 +425,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
-=======
         {/* Quick Access Grid */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {contentItems.map((item, index) => (
@@ -491,18 +439,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
             </a>
           ))}
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> cursor/create-and-deploy-new-content-6f93
->>>>>>> cursor/create-and-deploy-new-content-a7bf
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

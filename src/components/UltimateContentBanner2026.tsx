@@ -2,21 +2,8 @@ import React from 'react';
 
 const UltimateContentBanner2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10 container mx-auto px-4">
@@ -49,17 +36,12 @@ const UltimateContentBanner2026: React.FC = () => {
               className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
             >
               🧠 Innovation Hub →
-<<<<<<< HEAD
-=======
             </a>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
->>>>>>> cursor/create-and-deploy-new-content-f2c7
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -176,7 +158,6 @@ const UltimateContentBanner2026: React.FC = () => {
             Join thousands of innovators already exploring our revolutionary technology content
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
             <a 
               href="/pages/UltimateTechBreakthrough2026" 
               className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400"
@@ -194,9 +175,6 @@ const UltimateContentBanner2026: React.FC = () => {
               className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
             >
               🧠 Innovation Hub →
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
@@ -256,13 +234,7 @@ const UltimateContentBanner2026: React.FC = () => {
             </a>
             <a href="/pages/InterdimensionalTechRevolution2026" className="bg-white text-violet-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               🌌 Interdimensional
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
             </a>
-<<<<<<< HEAD
-=======
-=======
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore All Content
             </button>
@@ -272,12 +244,6 @@ const UltimateContentBanner2026: React.FC = () => {
             <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Schedule Demo
             </button>
-<<<<<<< HEAD
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           </div>
         </div>
       </div>

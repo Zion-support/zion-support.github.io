@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 const UltimateContentBanner2025: React.FC = () => {
@@ -12,24 +6,14 @@ const UltimateContentBanner2025: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import { motion } from 'framer-motion';
 
 const UltimateContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-=======
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateContentBanner2025: React.FC = () => {
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
@@ -100,23 +84,13 @@ const UltimateContentBanner2025: React.FC = () => {
 
   return (
     <motion.div
-<<<<<<< HEAD
       className="relative mb-12 overflow-hidden"
-=======
-<<<<<<< HEAD
       className="relative mb-12 overflow-hidden"
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       variants={containerVariants}
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
       className="relative overflow-hidden rounded-2xl mb-12"
     >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       {/* Background with animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
@@ -150,11 +124,9 @@ const UltimateContentBanner2025: React.FC = () => {
           className="text-center mb-12"
           variants={itemVariants}
         >
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 NEW: ULTIMATE CONTENT 2025
           </div>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🚀 Ultimate Tech Revolution 2025</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
             Experience the most revolutionary technological breakthroughs that will reshape our world in 2025
@@ -193,9 +165,6 @@ const UltimateContentBanner2025: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Innovation Hub →
             </a>
-=======
-<<<<<<< HEAD
-=======
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -293,10 +262,6 @@ const UltimateContentBanner2025: React.FC = () => {
         </div>
       </div>
     </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-ed0b
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <h2 className="text-5xl font-bold text-white mb-4">
             Revolutionary Technology Content
           </h2>
@@ -340,7 +305,6 @@ const UltimateContentBanner2025: React.FC = () => {
                 </div>
               ))}
             </motion.div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
           </div>
 
           {/* Navigation Dots */}
@@ -402,9 +366,7 @@ const UltimateContentBanner2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
     </div>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -478,10 +440,6 @@ const UltimateContentBanner2025: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     <motion.div
       variants={containerVariants}
       initial="hidden"
@@ -585,13 +543,7 @@ const UltimateContentBanner2025: React.FC = () => {
         </div>
       </div>
     </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
     </motion.div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-<<<<<<< HEAD
-=======
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -661,12 +613,6 @@ const UltimateContentBanner2025: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
-=======
->>>>>>> 7fd081304317a19c246388aa7a14fa8ea79259de
->>>>>>> cursor/create-and-deploy-new-content-a7bf
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   );
 };
 

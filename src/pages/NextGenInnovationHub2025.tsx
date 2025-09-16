@@ -1,13 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import { motion } from 'framer-motion';
 
 const NextGenInnovationHub2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -21,13 +16,10 @@ const NextGenInnovationHub2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Discover and explore the most revolutionary technologies shaping humanity's future in our comprehensive innovation hub
           </p>
-<<<<<<< HEAD
         </div>
 
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
-=======
 import { Link } from 'react-router-dom';
 
 const NextGenInnovationHub2025: React.FC = () => {
@@ -56,13 +48,10 @@ const NextGenInnovationHub2025: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
         </div>
 
-<<<<<<< HEAD
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
       {/* Innovation Categories */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -71,21 +60,13 @@ const NextGenInnovationHub2025: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI & Machine Learning</h3>
             <p className="text-emerald-100 mb-6 text-center">
-<<<<<<< HEAD
               Advanced artificial intelligence systems and machine learning algorithms
-=======
-<<<<<<< HEAD
               Advanced artificial intelligence systems and machine learning algorithms
-=======
               Revolutionary AI systems that think, learn, and create beyond human capabilities
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Conscious AI Systems</li>
@@ -140,7 +121,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover the most groundbreaking innovations that are reshaping our world
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -210,7 +190,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Infinite Worlds</span>
                 </div>
               </div>
-=======
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -230,7 +209,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-sm">Ethical</span>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="flex items-center space-x-3 mb-4">
@@ -281,7 +259,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                   <span className="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Infinite Worlds</span>
                 </div>
               </div>
-=======
               <div className="flex items-center justify-between">
                 <span className="text-sm">Processing Speed</span>
                 <span className="text-blue-400 font-semibold">10^15x Faster</span>
@@ -329,12 +306,10 @@ const NextGenInnovationHub2025: React.FC = () => {
           {/* Space Technology */}
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🚀</div>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
             <p className="text-blue-100 mb-6 text-center">
               Advanced space technologies for interplanetary exploration and colonization
             </p>
-<<<<<<< HEAD
             <ul className="text-blue-200 space-y-2 mb-6 text-sm">
               <li>• Faster-than-light Travel</li>
               <li>• Terraforming Technology</li>
@@ -344,7 +319,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             <button className="block w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-center">
               Explore Space →
             </button>
-=======
             <div className="space-y-2 mb-6">
               <div className="flex items-center justify-between">
                 <span className="text-sm">Propulsion</span>
@@ -420,12 +394,10 @@ const NextGenInnovationHub2025: React.FC = () => {
                 AVAILABLE
               </span>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Live Innovation Lab */}
       <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -469,16 +441,10 @@ const NextGenInnovationHub2025: React.FC = () => {
               <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Enter Quantum Lab →
               </button>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         {/* Innovation Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -512,7 +478,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-teal-400 text-teal-400 px-8 py-4 rounded-lg hover:bg-teal-400/10 transition-all duration-300 font-semibold text-lg">
               📚 Learn More
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -760,11 +725,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             <div className="text-xl font-semibold mb-2">Possibilities</div>
             <div className="text-gray-300">Infinite potential</div>
           </motion.div>
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
       {/* Innovation Statistics */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -792,7 +752,6 @@ const NextGenInnovationHub2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Featured Innovations */}
       <div className="bg-gradient-to-r from-teal-800/50 to-cyan-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -841,7 +800,6 @@ const NextGenInnovationHub2025: React.FC = () => {
                 <div>• Direct brain-computer interface</div>
                 <div>• Memory augmentation</div>
                 <div>• Telepathic communication</div>
-=======
       {/* Research Labs */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -890,20 +848,13 @@ const NextGenInnovationHub2025: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-sm">Quantum Error Correction</span>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
               </div>
             </div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
 
       {/* Call to Action */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
       <div className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -921,15 +872,10 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Explore Projects
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
             </button>
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
       <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Join the Innovation Revolution</h2>
@@ -942,7 +888,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
               Join Our Lab
-=======
       <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-cyan-400/30">
           <h2 className="text-4xl font-bold mb-6">🚀 Join the Innovation Revolution</h2>
@@ -957,12 +902,10 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
               Explore Opportunities
->>>>>>> cursor/create-and-deploy-new-content-f1f3
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Footer */}
       <div className="bg-black/50 py-8">
@@ -973,10 +916,6 @@ const NextGenInnovationHub2025: React.FC = () => {
           </p>
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     </div>
   );
 };

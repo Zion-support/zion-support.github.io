@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -67,8 +61,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
                 View Cases →
               </Link>
             </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
 
           {/* Call to Action Buttons */}
@@ -92,7 +84,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               Get Started
             </Link>
           </div>
-<<<<<<< HEAD
 
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -116,7 +107,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
         </div>
       </div>
     </div>
-=======
       </div>
 
       {/* Secondary Promotional Banners */}
@@ -159,9 +149,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
         </div>
       </div>
     </div>
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
->>>>>>> cursor/create-and-deploy-new-content-a7bf
   );
 };
 

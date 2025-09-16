@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -210,14 +206,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -306,8 +295,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
 import React, { useState, useEffect } from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -431,8 +418,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
           </div>
         </div>
 
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         {/* Progress Indicator */}
         <div className="mt-4 flex space-x-2">
           {promotions.map((_, index) => (
@@ -448,19 +433,8 @@ const NewContentPromotionBanner2025: React.FC = () => {
 
       {/* Animated Border */}
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x"></div>
-=======
-<<<<<<< HEAD
       </motion.div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-=======
-<<<<<<< HEAD
       </motion.div>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     </div>
   );
 };

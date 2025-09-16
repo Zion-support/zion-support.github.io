@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -290,7 +289,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       </div>
     </div>
     </>
-=======
 import React from 'react';
 
 const RevolutionaryTechBlog2026: React.FC = () => {
@@ -307,7 +305,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-4899
   );
 };
 

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
 
 const UltimateContentShowcase2025: React.FC = () => {
   return (
@@ -24,7 +16,6 @@ const UltimateContentShowcase2025: React.FC = () => {
           <p className="text-3xl opacity-90 max-w-5xl mx-auto mb-12">
             Discover our comprehensive collection of revolutionary technology content, featuring the most advanced AI, quantum computing, and neural interface solutions ever created
           </p>
-<<<<<<< HEAD
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
@@ -173,7 +164,6 @@ const UltimateContentShowcase2025: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
           <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
           <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
             Join thousands of innovators, researchers, and visionaries who are already using our revolutionary technology to reshape the world. The future is here, and it's waiting for you.
@@ -185,8 +175,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
-<<<<<<< HEAD
-=======
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -314,10 +302,8 @@ const UltimateContentShowcase2025: React.FC = () => {
             >
               Explore Revolution
             </a>
->>>>>>> cursor/create-and-deploy-new-content-e495
           </div>
         </motion.div>
-=======
           <div className="inline-flex items-center space-x-6 mb-8">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
@@ -346,12 +332,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             </button>
           </div>
         </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5775
 import React, { useState } from 'react';
 
 const UltimateContentShowcase2025: React.FC = () => {
@@ -459,10 +439,6 @@ const UltimateContentShowcase2025: React.FC = () => {
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
           🌟 ULTIMATE CONTENT SHOWCASE 2025 • INTERACTIVE
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
         <h2 className="text-5xl font-bold text-white mb-6">
           Experience the <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Future</span>
@@ -534,15 +510,10 @@ const UltimateContentShowcase2025: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
               Explore {item.title} →
             </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
           </div>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         ))}
       </div>
@@ -596,10 +567,6 @@ const UltimateContentShowcase2025: React.FC = () => {
           <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
             Download Case Studies
           </button>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         </div>
       </div>
     </div>

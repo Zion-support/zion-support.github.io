@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechDemo2042: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -82,7 +79,6 @@ const InteractiveTechDemo2042: React.FC = () => {
   const startDemo = () => {
     setIsRunning(true);
     setProgress(0);
-=======
   const [activeDemo, setActiveDemo] = useState('ai');
   const [isRunning, setIsRunning] = useState(false);
   const [demoData, setDemoData] = useState<any>({});
@@ -176,18 +172,10 @@ const InteractiveTechDemo2042: React.FC = () => {
   const startDemo = () => {
     setIsRunning(true);
     setDemoData(demos[activeDemo as keyof typeof demos].data);
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
   };
 
   const stopDemo = () => {
     setIsRunning(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     setProgress(0);
   };
 
@@ -229,7 +217,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                 }`}
               >
                 {demo.icon} {demo.title.split(' ')[0]}
-=======
   };
 
   return (
@@ -262,19 +249,11 @@ const InteractiveTechDemo2042: React.FC = () => {
                 }`}
               >
                 {demo.icon} {demo.title}
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
               </button>
             ))}
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Active Demo Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
           <div className="grid md:grid-cols-2 gap-8">
@@ -292,7 +271,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                   <div key={index} className="flex items-center text-sm">
                     <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                     {feature}
-=======
         {/* Demo Display */}
         <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -414,18 +392,10 @@ const InteractiveTechDemo2042: React.FC = () => {
                         style={{ width: `${typeof value === 'number' ? value : 100}%` }}
                       ></div>
                     </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
                   </div>
                 ))}
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="flex space-x-4">
                 <button
                   onClick={startDemo}
@@ -477,7 +447,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                   </div>
                 </div>
               )}
-=======
               <div className="mt-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
                 <h4 className="text-lg font-bold mb-4">Demo Status</h4>
                 <div className="flex items-center space-x-3">
@@ -491,18 +460,10 @@ const InteractiveTechDemo2042: React.FC = () => {
                   }
                 </div>
               </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Navigation Controls */}
         <div className="flex justify-center space-x-4">
           <button
@@ -536,7 +497,6 @@ const InteractiveTechDemo2042: React.FC = () => {
               {demo.icon} {demo.title.split(' ')[0]}
             </button>
           ))}
-=======
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience More?</h3>
@@ -551,11 +511,6 @@ const InteractiveTechDemo2042: React.FC = () => {
               View Showcase
             </a>
           </div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
         </div>
       </div>
     </div>

@@ -2,12 +2,6 @@ import React from 'react';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (

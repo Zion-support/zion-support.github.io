@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
 
 const UltimateTechBanner2042: React.FC = () => {
   return (
@@ -75,10 +69,6 @@ const UltimateTechBanner2042: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
 import { motion } from 'framer-motion';
 
 const UltimateTechBanner2042: React.FC = () => {
@@ -137,11 +127,6 @@ const UltimateTechBanner2042: React.FC = () => {
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8449
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
   );
 };
 

@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, 
   ArrowRight, 
-<<<<<<< HEAD
   X, 
   Brain, 
   Rocket, 
@@ -15,7 +11,6 @@ import {
   Globe,
   Star,
   CheckCircle
-=======
   Star, 
   Zap, 
   Brain, 
@@ -24,12 +19,10 @@ import {
   Play,
   BookOpen,
   TrendingUp
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 } from 'lucide-react';
 
 const RevolutionaryContentBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
-<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const bannerContent = [
@@ -62,7 +55,6 @@ const RevolutionaryContentBanner2026 = () => {
       color: "from-green-600 to-blue-600",
       link: "/blog",
       features: ["AI Consciousness", "Quantum Computing", "Future Tech"]
-=======
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
@@ -83,12 +75,10 @@ const RevolutionaryContentBanner2026 = () => {
       description: "AI Across the Galaxy",
       icon: Rocket,
       color: "from-indigo-500 to-purple-500"
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
     }, 5000);
@@ -190,7 +180,6 @@ const RevolutionaryContentBanner2026 = () => {
         <div className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse delay-2000"></div>
       </motion.div>
     </AnimatePresence>
-=======
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
@@ -334,7 +323,6 @@ const RevolutionaryContentBanner2026 = () => {
         />
       </div>
     </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   );
 };
 

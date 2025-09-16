@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const UltimatePromotionalBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -213,7 +212,6 @@ const UltimatePromotionalBanner: React.FC = () => {
         </div>
       </div>
     </divsection>
-=======
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
@@ -373,6 +371,5 @@ export default function UltimatePromotionalBanner() {
         </div>
       </div>
     </motion.section>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
   );
 }

@@ -2,16 +2,6 @@ import React from 'react';
 
 const UltimateContentBanner2036: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
     <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -158,15 +148,6 @@ const UltimateContentBanner2036: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cad4ed638271abf0c299f946164227bf540b415a
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -225,12 +206,9 @@ const UltimateContentBanner2036: React.FC = () => {
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
                 <span className="text-purple-200 text-xs">Multi-dimensional Thinking</span>
               </div>
-<<<<<<< HEAD
             </div>
             <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Enter Quantum Realm →
-=======
-=======
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -251,13 +229,10 @@ const UltimateContentBanner2036: React.FC = () => {
             </a>
             <a href="/pages/NextGenTechRevolution2036" className="border border-pink-400 px-10 py-4 rounded-lg hover:bg-pink-500/20 transition-colors text-xl">
               Watch Demo
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </a>
           </div>
         </div>
         
-<<<<<<< HEAD
-=======
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
             <div className="text-5xl mb-4">🤖</div>
@@ -311,28 +286,15 @@ const UltimateContentBanner2036: React.FC = () => {
               <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-1">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential unlocked</div>
->>>>>>> cursor/create-and-deploy-new-content-63f0
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
         <div className="text-center mt-8">
           <a href="/pages/UltimateTechBreakthrough2036" className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience Ultimate Breakthrough →
           </a>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
       </div>
     </div>
   );

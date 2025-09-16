@@ -17,8 +17,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
     setEmail('');
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">
@@ -55,8 +53,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Get exclusive access to our revolutionary technology breakthroughs, 
             AI consciousness updates, and quantum computing innovations.
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </p>
         </div>
 
@@ -77,7 +73,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             >
               {isLoading ? 'Joining...' : 'Join Revolution'}
             </button>
-=======
           </p>
       <div className="py-20 bg-gradient-to-br from-green-900 via-emerald-900 to-green-900">
         <div className="container mx-auto px-4">
@@ -117,10 +112,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           </divdiv>
         </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
         {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
@@ -142,7 +133,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <p className="text-sm opacity-75 text-center mt-4">
               Join 50,000+ tech enthusiasts and industry leaders
             </p>
->>>>>>> cursor/create-and-deploy-new-content-e058
           </form>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -173,8 +163,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <span>✓ Exclusive content only</span>
             </div>
           </div>
-<<<<<<< HEAD
-=======
         )}
 
               </p>
@@ -226,7 +214,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               </div>
             </div>
           </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-e058
         </div>
       </div>
     </div>

@@ -6,43 +6,17 @@ const NextGenInnovationHub2032: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cad4ed638271abf0c299f946164227bf540b415a
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
             🌟 NEXT-GEN INNOVATION • JANUARY 2032
             🧠 NEXT-GEN INNOVATION • JANUARY 2032
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
-=======
             🧠 NEXT-GEN INNOVATION • JANUARY 2032
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-=======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • 2032
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2032
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
         </div>
@@ -64,14 +38,7 @@ const NextGenInnovationHub2032: React.FC = () => {
             <div className="text-center">
               <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full">50+ Active Projects</span>
             </div>
-<<<<<<< HEAD
-=======
             🧠 INNOVATION HUB • JANUARY 2032
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
           </div>
 
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -156,12 +123,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             </ul>
             <div className="text-center">
               <span className="px-3 py-1 bg-pink-500 text-white text-xs rounded-full">20+ Discoveries</span>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             Discover and explore the most revolutionary technologies shaping humanity's future. 
             Our innovation hub showcases cutting-edge solutions that will transform every aspect of life.
           </p>
@@ -259,16 +220,10 @@ const NextGenInnovationHub2032: React.FC = () => {
               <div className="text-4xl mb-3">🚀</div>
               <h4 className="text-lg font-semibold mb-2">Space Tech</h4>
               <p className="text-sm opacity-80">Revolutionary space exploration and colonization technologies.</p>
-<<<<<<< HEAD
->>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -341,9 +296,6 @@ const NextGenInnovationHub2032: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -418,10 +370,6 @@ const NextGenInnovationHub2032: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">∞</div>
             <div className="text-lg opacity-90">Possibilities</div>
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
         {/* Innovation Stats */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -470,9 +418,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             </ul>
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Visit AI Lab →
-<<<<<<< HEAD
-=======
-=======
             Discover and explore the most revolutionary technologies shaping humanity's future
           </p>
         </div>
@@ -491,8 +436,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             >
               <span className="mr-2">{category.icon}</span>
               {category.label}
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
             </button>
           </div>
           
@@ -532,10 +475,6 @@ const NextGenInnovationHub2032: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join our innovation hub and be part of the technological revolution that will shape the future of humanity.
           </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Innovation Hub
@@ -543,14 +482,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             <button className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Tour
             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Ultimate Breakthrough →
@@ -558,8 +489,6 @@ const NextGenInnovationHub2032: React.FC = () => {
             <a href="/pages/RevolutionaryTechShowcase2032" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Tech Showcase →
             </a>
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         </div>
       </div>
@@ -568,5 +497,3 @@ const NextGenInnovationHub2032: React.FC = () => {
 };
 
 export default NextGenInnovationHub2032;
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01

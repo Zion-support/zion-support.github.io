@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 
-<<<<<<< HEAD
 export default function AgenticCRMAutonomousRevenueWorkflows2025() {
   return (
     <>
@@ -15,7 +14,6 @@ export default function AgenticCRMAutonomousRevenueWorkflows2025() {
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-fuchsia-950 text-white'>
-=======
 export default function AgenticCRM2025() {
   return (
     <>
@@ -28,7 +26,6 @@ export default function AgenticCRM2025() {
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
->>>>>>> content-updates-2025-09-16
         <main className='container mx-auto px-6 py-12'>
           <div className='max-w-4xl mx-auto'>
             <nav className='mb-8'>
@@ -40,11 +37,8 @@ export default function AgenticCRM2025() {
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
-<<<<<<< HEAD
                   <span className='px-3 py-1 bg-pink-400/20 text-pink-400 text-sm rounded-full border border-pink-400/30'>
-=======
                   <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30'>
->>>>>>> content-updates-2025-09-16
                     RevOps
                   </span>
                   <span className='text-white/60 text-sm'>September 16, 2025</span>
@@ -55,37 +49,30 @@ export default function AgenticCRM2025() {
                   Agentic CRM: Autonomous Revenue Workflows (2025)
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-<<<<<<< HEAD
                   From lead capture to renewal, design agentic loops that act, learn, and escalate safely.
-=======
                   Automate pipeline health, outbound personalization, and renewal risk mitigation—while preserving human oversight and brand safety.
->>>>>>> content-updates-2025-09-16
                 </p>
               </header>
 
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
-<<<<<<< HEAD
                   Core Plays
                 </h2>
                 <ul className='space-y-2 text-white/80'>
                   <li>• Autonomous lead enrichment and routing with policy checks.</li>
                   <li>• Sequenced multi-channel follow-ups with human-in-the-loop for tone and offers.</li>
                   <li>• Risk-aware upsell/cross-sell triggers from product telemetry.</li>
-=======
                   High-Leverage Autonomy
                 </h2>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Inbox triage and enrichment with human-in-the-loop approvals</li>
                   <li>• Deal desk assistants for policy-compliant quotes</li>
                   <li>• Renewal watchlists with proactive mitigation playbooks</li>
->>>>>>> content-updates-2025-09-16
                 </ul>
               </section>
 
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-indigo-400'>
-<<<<<<< HEAD
                   Safety & Controls
                 </h2>
                 <ul className='space-y-2 text-white/80'>
@@ -93,13 +80,11 @@ export default function AgenticCRM2025() {
                   <li>• Content policy filters and brand voice constraints.</li>
                   <li>• Escalation to sales when thresholds are exceeded.</li>
                 </ul>
-=======
                   Controls and Metrics
                 </h2>
                 <p className='text-white/90 mb-4'>
                   Define guardrails, experiment with small blast radiuses, and track lift with clear north-star metrics for pipeline quality and win rate.
                 </p>
->>>>>>> content-updates-2025-09-16
               </section>
             </article>
           </div>

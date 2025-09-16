@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, ExternalLink, Star } from 'lucide-react';
 
 const DynamicContentCarousel2025: React.FC = () => {
-<<<<<<< HEAD
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -57,7 +56,6 @@ const DynamicContentCarousel2025: React.FC = () => {
       rating: 4.6,
       views: "1.9M",
       gradient: "from-purple-500 to-pink-600"
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselItems = [
     {
@@ -124,12 +122,10 @@ const DynamicContentCarousel2025: React.FC = () => {
       features: ['Reality Simulation', 'Time Manipulation', 'Space Bending', 'Dimension Creation'],
       link: '/pages/RevolutionaryTechBreakthrough2025',
       cta: 'Manipulate Reality →'
->>>>>>> cursor/create-and-deploy-new-content-d3fa
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     if (!isAutoPlaying) return;
     
     const interval = setInterval(() => {
@@ -244,8 +240,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3fa
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -267,7 +261,6 @@ const DynamicContentCarousel2025: React.FC = () => {
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="flex gap-4">
               <button
                 onClick={prevSlide}
@@ -296,7 +289,6 @@ const DynamicContentCarousel2025: React.FC = () => {
         </div>
       </div>
     </section>
-=======
       </div>
 
       {/* Background Animation */}
@@ -326,7 +318,6 @@ const DynamicContentCarousel2025: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-d3fa
   );
 };
 

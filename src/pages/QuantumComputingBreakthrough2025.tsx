@@ -2,7 +2,6 @@ import React from 'react';
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -52,9 +51,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <li>• Protein Folding Simulation</li>
               <li>• Drug Interaction Modeling</li>
               <li>• Molecular Design</li>
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -117,12 +113,9 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <li>• Route optimization</li>
               <li>• Resource allocation</li>
             </ul>
-<<<<<<< HEAD
             <div className="text-center">
               <div className="inline-block bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold">
                 Coming Soon
-=======
-=======
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -239,12 +232,10 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 </ul>
               </motion.div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-63f0
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Quantum Performance Metrics */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -274,7 +265,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <div className="text-lg opacity-80">Uptime</div>
               <div className="text-sm text-emerald-200">Continuous operation</div>
             </div>
-=======
       {/* Quantum Applications Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -412,12 +402,10 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 </div>
               </div>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-63f0
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Quantum Applications */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -512,7 +500,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 <span className="text-purple-400">99%</span>
               </div>
             </div>
-=======
       {/* Quantum Technology Stack */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -621,12 +608,10 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 </li>
               </ul>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-63f0
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Quantum Demo */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -672,7 +657,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                     <div className="text-purple-200">Converged in 0.1 seconds</div>
                   </div>
                 </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
               </div>
             </div>
           </div>
@@ -689,7 +673,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the quantum revolution and harness the power of quantum computing to solve your most complex challenges.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="/pages/RevolutionaryTechShowcase2025" 
@@ -703,7 +686,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             >
               Learn More
             </a>
-=======
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Quantum Journey
@@ -711,7 +693,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
               Schedule Demo
             </button>
-=======
       {/* Performance Metrics */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -746,8 +727,6 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                 <div className="text-cyan-200 text-sm">{item.description}</div>
               </motion.div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-63f0
->>>>>>> origin/cursor/create-and-deploy-new-content-2565
           </div>
         </div>
       </div>
@@ -756,5 +735,3 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
 };
 
 export default QuantumComputingBreakthrough2025;
-=======
->>>>>>> cursor/create-and-deploy-new-content-af01

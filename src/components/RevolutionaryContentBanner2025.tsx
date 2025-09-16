@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,23 +48,17 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   }, [slides.length]);
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Zap, Brain, Rocket, Star, X } from 'lucide-react';
->>>>>>> cursor/create-and-deploy-new-content-a7bf
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -131,8 +116,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -142,17 +125,11 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 NEW: Revolutionary Content 2025
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Technology Content
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             Experience the most advanced technology content featuring breakthrough innovations and cutting-edge solutions
           </p>
         </div>
@@ -163,7 +140,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <h3 className="text-xl font-bold mb-3 text-center">Reality Manipulation</h3>
             <p className="text-indigo-100 mb-4 text-sm text-center">
               Technology that can manipulate the fundamental fabric of reality itself
-=======
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
@@ -253,7 +229,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             
             <p className="text-xl text-white/90 mb-6 max-w-2xl">
               {slides[currentSlide].subtitle}
->>>>>>> cursor/create-and-deploy-new-content-ed0b
             </p>
             <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
               Explore Reality →
@@ -291,7 +266,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Dimensions →
             </a>
-=======
             Discover our most revolutionary content featuring conscious AI, quantum computing, and interdimensional technology
           </p>
         </div>
@@ -343,23 +317,17 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <Link to="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Enter Innovation Hub →
             </Link>
->>>>>>> cursor/create-and-deploy-new-content-f2c7
           </div>
         </div>
         
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             <div className="text-sm opacity-80">Revolutionary Features:</div>
             <div className="flex space-x-2">
               <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Reality Control</span>
               <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Mind Interface</span>
               <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Tech</span>
               <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Multi-Dimensional</span>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 to-black text-white py-16">
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
@@ -455,11 +423,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
                 Schedule Demo
               </button>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
             </div>
           </div>
-<<<<<<< HEAD
-=======
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
             🔬 Revolutionary Tech Breakthrough 2025
           </h2>
@@ -535,10 +500,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             >
               Innovation Hub
             </a>
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
           </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

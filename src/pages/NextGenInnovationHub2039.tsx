@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </div>
 
         {/* Innovation Showcase */}
-=======
 
 const NextGenInnovationHub2039: React.FC = () => {
   return (
@@ -82,20 +78,12 @@ const NextGenInnovationHub2039: React.FC = () => {
 
         {/* Featured Innovations */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🚀 Innovation Showcase 2039</h2>
             <p className="text-xl opacity-90">Discover the most revolutionary innovations that will reshape our world</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Amplification Matrix</h3>
               <p className="text-gray-200 mb-6">
@@ -113,7 +101,6 @@ const NextGenInnovationHub2039: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-sm">Transcendent awareness</span>
-=======
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -150,18 +137,10 @@ const NextGenInnovationHub2039: React.FC = () => {
                   <div className="w-32 bg-white/20 rounded-full h-2">
                     <div className="bg-teal-400 h-2 rounded-full" style={{width: '72%'}}></div>
                   </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
                 </div>
               </div>
             </div>
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4 text-center">Reality Shifting Engine</h3>
               <p className="text-gray-200 mb-6">
@@ -199,7 +178,6 @@ const NextGenInnovationHub2039: React.FC = () => {
             </div>
             
                 </button>
-=======
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -237,21 +215,12 @@ const NextGenInnovationHub2039: React.FC = () => {
                     <div className="bg-blue-400 h-2 rounded-full" style={{width: '45%'}}></div>
                   </div>
                 </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
               </div>
             </div>
           </div>
         </div>
 
         {/* Innovation Statistics */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-4">Quantum Consciousness Training</h3>
@@ -268,9 +237,7 @@ const NextGenInnovationHub2039: React.FC = () => {
               <a href="/contact" className="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
                 Explore Now →
               </a>
->>>>>>> cursor/create-and-deploy-new-content-84c4
             </div>
-=======
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
@@ -291,22 +258,12 @@ const NextGenInnovationHub2039: React.FC = () => {
             <div className="text-4xl font-bold text-blue-400 mb-2">1M+</div>
             <div className="text-lg font-semibold mb-1">Researchers</div>
             <div className="text-sm opacity-75">Global innovation team</div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
             </div>
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
             </div>
->>>>>>> cursor/create-and-deploy-new-content-9df5
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -323,11 +280,6 @@ const NextGenInnovationHub2039: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-e058
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
   );
 };
 

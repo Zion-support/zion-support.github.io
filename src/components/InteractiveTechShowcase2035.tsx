@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2035: React.FC = () => {
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
   const [activeDemo, setActiveDemo] = useState(0);
 
   const demos = [
@@ -62,15 +57,10 @@ const InteractiveTechShowcase2035: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Interactive Technology Showcase 2035
           </h2>
-<<<<<<< HEAD
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences
-=======
-=======
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences
->>>>>>> cursor/create-and-deploy-new-content-99e3
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </p>
         </div>
 
@@ -118,18 +108,10 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </div>
 
               </button>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
->>>>>>> cursor/create-and-deploy-new-content-a7bf
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-a7bf
         {/* Performance Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30">
@@ -147,11 +129,6 @@ const InteractiveTechShowcase2035: React.FC = () => {
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-orange-400/30">
             <div className="text-4xl font-bold text-orange-300 mb-2">∞</div>
             <div className="text-sm text-orange-200">Possibilities</div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
 
@@ -176,12 +153,6 @@ const InteractiveTechShowcase2035: React.FC = () => {
             >
               View Revolutionary Showcase →
             </a>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 12aab46738415179e17493014e84eee20cb02cd5
->>>>>>> cursor/create-and-deploy-new-content-99e3
->>>>>>> cursor/create-and-deploy-new-content-a7bf
           </div>
         </div>
       </div>
