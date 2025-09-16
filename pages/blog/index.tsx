@@ -94,6 +94,8 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Fresh posts
 posts.unshift(
+  { slug: 'ai-2026-governed-agent-slo-dashboards', title: 'Governed Agent SLO Dashboards (2026)', excerpt: 'Executive‑ready, governed SLOs wired to evals and incidents.' },
+  { slug: 'ai-2026-safe-agent-actions-blueprint', title: 'Safe Agent Actions — Blueprint (2026)', excerpt: 'Risk tiers, scoped creds, approvals, and runtime checks for tool use.' },
   { slug: 'ai-2026-agent-release-health-scorecards', title: 'Agent Release Health Scorecards (2026)', excerpt: 'Traces, evals, policy events, and incidents as release health signals.' },
   { slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'Secure Multi‑Agent Operations (2026)', excerpt: 'Operate multi‑agent systems safely with risk tiers and runtime controls.' }
 )
