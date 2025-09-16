@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/new-content-home-20250915
 	title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -24,12 +25,18 @@ export const metadata: Metadata = {
 		'business solutions',
 		'zion tech',
 	],
+=======
+	title: 'Zion Tech Group - Leading AI and Technology Solutions',
+	description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+	keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+>>>>>>> origin/feat/new-updates-ads
 	authors: [{ name: 'Zion Tech Group' }],
 	creator: 'Zion Tech Group',
 	publisher: 'Zion Tech Group',
 	robots: 'index, follow',
 	openGraph: {
 		title: 'Zion Tech Group - Leading AI and Technology Solutions',
+<<<<<<< HEAD
 <<<<<<< HEAD
 		description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
 		url: 'https://ziontechgroup.com',
@@ -39,6 +46,9 @@ export const metadata: Metadata = {
 =======
 		description:
 			'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+=======
+		description: "Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.",
+>>>>>>> origin/feat/new-updates-ads
 		url: 'https://ziontechgroup.com',
 		siteName: 'Zion Tech Group',
 		images: [
@@ -48,7 +58,10 @@ export const metadata: Metadata = {
 				height: 630,
 				alt: 'Zion Tech Group',
 			},
+<<<<<<< HEAD
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
 		],
 		locale: 'en_US',
 		type: 'website',
@@ -61,6 +74,7 @@ export const metadata: Metadata = {
 	},
 	viewport: 'width=device-width, initial-scale=1',
 	themeColor: '#000000',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -115,6 +129,8 @@ export const metadata: Metadata = {
 >>>>>>> origin/feat/case-studies-content
 =======
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
 }
 
 export default function RootLayout({
@@ -124,17 +140,27 @@ export default function RootLayout({
 }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
 	return (
 		<html lang="en" className="scroll-smooth">
 			<body className={`${inter.className} bg-black text-white antialiased`}>
 				<Navigation />
+<<<<<<< HEAD
 				<main className="min-h-screen">{children}</main>
+=======
+				<main className="min-h-screen">
+					{children}
+				</main>
+>>>>>>> origin/feat/new-updates-ads
 				<Footer />
 			</body>
 		</html>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -157,4 +183,6 @@ export default function RootLayout({
 >>>>>>> origin/feature/updates-content
 =======
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
 }

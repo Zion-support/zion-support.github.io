@@ -28,6 +28,7 @@ const callsToAction = [
 ]
 
 const navigation = [
+<<<<<<< HEAD
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
@@ -270,6 +271,19 @@ export default function Navigation() {
 =======
 >>>>>>> origin/feat/content-promo
 =======
+=======
+	{ name: 'Home', href: '/' },
+	{ name: 'About', href: '/about' },
+	{ name: 'Services', href: '/services' },
+	{ name: 'Solutions', href: '/solutions' },
+	{ name: 'Research', href: '/research' },
+	{ name: 'Contact', href: '/contact' },
+]
+
+export default function Navigation() {
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+>>>>>>> origin/feat/new-updates-ads
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
 			<nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -351,7 +365,11 @@ export default function Navigation() {
 									onClick={() => setMobileMenuOpen(false)}
 								>
 									Get Started
+<<<<<<< HEAD
 									</a>
+=======
+								</a>
+>>>>>>> origin/feat/new-updates-ads
 							</div>
 						</div>
 					</div>
@@ -360,4 +378,7 @@ export default function Navigation() {
 		</header>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> origin/feat/new-content-home-20250915
+=======
+>>>>>>> origin/feat/new-updates-ads
