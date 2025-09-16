@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 2001,
+    title: "AI 2026: Trusted Autonomy Field Manual",
+    excerpt: "Practical controls to ship safe, cost-aware agent systems in production.",
+    content: "This field manual distills the must-have controls for trusted autonomy: risk-tiered tool adapters, policy-as-code gates, eval harnesses wired to CI/CD, release scorecards, and incident-ready telemetry. It includes copyable checklists, API shapes, and dashboards to operationalize safety, quality, cost, and speed across agent programs.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Autonomy", "Policy-as-Code", "Evals", "Guardrails"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-trusted-autonomy-field-manual.jpg",
+    slug: "ai-2026-trusted-autonomy-field-manual"
+  },
+  {
+    id: 2002,
+    title: "AI 2026: Agent Incident Response Runbook",
+    excerpt: "Detect, triage, contain, and learn from agent incidents with evidence-first playbooks.",
+    content: "A hands-on runbook for agent incidents: detection signals, containment patterns, remediation workflows, and evidence capture. Learn how to wire eval triggers, rollback strategies, approvals, and post-incident reviews with recurrence-preventing controls and continuous verification.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Reliability",
+    tags: ["Incidents", "SRE", "Guardrails", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-agent-incident-response-runbook.jpg",
+    slug: "ai-2026-agent-incident-response-runbook"
+  },
+  {
     id: 63,
     title: "AI 2026: Runtime Guardrails Blueprint",
     excerpt: "Runtime checks, policy-as-code, and safe tool envelopes for agents.",
