@@ -1,3 +1,67 @@
+import Head from 'next/head'
+import Link from 'next/link'
+
+export default function EvidenceLedOperationsBlueprint2026() {
+  return (
+    <>
+      <Head>
+        <title>AI 2026: Evidence‑Led Operations Blueprint | Zion Tech Group</title>
+        <meta name="description" content="Blueprint for evidence‑led operations: unify evals, incidents, KPIs, and customer signals to drive safer, faster decisions." />
+        <meta property="og:title" content="AI 2026: Evidence‑Led Operations Blueprint" />
+        <meta property="og:description" content="Unify evals, incidents, KPIs, and customer signals for decisions." />
+      </Head>
+
+      <div className='min-h-screen bg-gradient-to-br from-slate-950 via-fuchsia-950 to-indigo-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <div className='max-w-4xl mx-auto'>
+            <nav className='mb-8'>
+              <Link href='/blog' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
+                ← Back to Blog
+              </Link>
+            </nav>
+
+            <article className='prose prose-invert prose-lg max-w-none'>
+              <header className='mb-12 text-center'>
+                <div className='flex items-center gap-3 justify-center mb-4'>
+                  <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
+                    Operations
+                  </span>
+                  <span className='text-white/60 text-sm'>September 2025</span>
+                  <span className='text-white/60 text-sm'>•</span>
+                  <span className='text-white/60 text-sm'>7 min read</span>
+                </div>
+                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
+                  Evidence‑Led Operations Blueprint (2026)
+                </h1>
+                <p className='text-xl text-white/80 max-w-3xl mx-auto'>
+                  Centralize model evals, incidents, KPIs, and customer signals into an evidence hub to improve safety, velocity, and reliability.
+                </p>
+              </header>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-cyan-300'>Evidence model</h2>
+                <ul className='list-disc pl-6 space-y-2 text-white/90'>
+                  <li>Session: intents, plans, tools, outcomes</li>
+                  <li>Evals: task success, groundedness, policy adherence</li>
+                  <li>Incidents: linked to sessions and SLOs</li>
+                  <li>KPIs: business impact and budget adherence</li>
+                </ul>
+              </section>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-emerald-300'>Operating cadence</h2>
+                <p className='text-white/90 mb-4'>
+                  Weekly review of evidence dashboards, SLO breaches, and incident learnings with ticketed actions and follow‑ups.
+                </p>
+              </section>
+            </article>
+          </div>
+        </main>
+      </div>
+    </>
+  )
+}
+
 import React from 'react'
 import Link from 'next/link'
 
