@@ -6,6 +6,11 @@ import Footer from './src/Footer';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
+import PerformanceOptimizer from './src/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+import SEOOptimizer from './src/components/SEOOptimizer';
+import MobileOptimizer from './src/components/MobileOptimizer';
+import PerformanceDashboard from './src/components/PerformanceDashboard';
 import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
 import BlogPost2025 from './src/pages/BlogPost2025';
@@ -49,6 +54,11 @@ export default function App(): JSX.Element {
     <Router>
       <div className="min-h-screen bg-white">
         <ScrollToTop />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer />
+        <SEOOptimizer />
+        <MobileOptimizer />
+        <PerformanceDashboard />
         <Header />
         
         <Routes>
