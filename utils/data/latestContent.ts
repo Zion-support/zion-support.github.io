@@ -46,7 +46,10 @@ export const latestContent: ContentItem[] = [
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/content-update-2027
     tag: "Guide",
     date: "2025-09-15",
   },
@@ -55,11 +58,17 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
     href: "/blog/ai-2026-autonomous-customer-support-agents",
+<<<<<<< HEAD
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-9e5a
+>>>>>>> origin/content-update-2027
     tag: "Guide",
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
@@ -70,6 +79,8 @@ export const latestContent: ContentItem[] = [
   },
   {
 =======
+=======
+>>>>>>> origin/content-update-2027
 <<<<<<< HEAD
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
@@ -164,15 +175,34 @@ export const latestContent: ContentItem[] = [
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
 =======
+<<<<<<< HEAD
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+=======
+=======
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+>>>>>>> cursor/create-and-deploy-new-content-9e5a
+>>>>>>> origin/content-update-2027
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-9e5a
+>>>>>>> origin/content-update-2027
     tag: "Blueprint",
     date: "2025-09-15",
   },
