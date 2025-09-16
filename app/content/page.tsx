@@ -299,40 +299,6 @@ export default function ContentIndexPage() {
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
-<<<<<<< HEAD
-          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/genai-governance-2026" className="hover:underline">
-              GenAI Governance 2026
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
-          </p>
-=======
-          <div className="text-sm font-semibold text-teal-700 mb-2">Blueprint</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/ai-2026-operational-evals-blueprint" className="hover:underline">
-              AI 2026: Operational Evals Blueprint
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            An evaluation-first blueprint with metrics, harnesses, and governance to ship reliable AI systems.
-          </p>
-          <Link href="/content/ai-2026-operational-evals-blueprint" className="text-teal-700 font-semibold">Read Blueprint →</Link>
-        </article>
-
-        <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/genai-governance-2026" className="hover:underline">
-              GenAI Governance 2026
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
-          </p>
->>>>>>> cursor/create-and-deploy-new-content-376e
           <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
         </article>
 

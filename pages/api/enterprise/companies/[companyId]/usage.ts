@@ -5,8 +5,6 @@
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -50,6 +48,5 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
-=======
 
 

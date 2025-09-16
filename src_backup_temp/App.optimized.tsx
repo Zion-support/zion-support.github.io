@@ -1,4 +1,3 @@
-=======
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './src/components/Header.tsx';

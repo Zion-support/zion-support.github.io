@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
-=======
 
 interface HeaderProps {
 
-=======
 export function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 import React, { useState, useEffect } from 'react';
@@ -23,7 +21,6 @@ export function Header({ className = '' }: "HeaderProps) {;
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
-=======
   const location = useLocation();
 ;
   useEffect(() => {;
@@ -408,7 +405,6 @@ const Header = () => {
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
-=======
                     to="/dashboard"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
@@ -444,7 +440,6 @@ const Header = () => {
           </div>
         </div>
 
-=======
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
@@ -508,8 +503,6 @@ const Header = () => {
     );
 }
       </div>
-=======
-=======
         </div>
       )}
     </header>
