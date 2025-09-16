@@ -25,13 +25,7 @@ const navigation = {
 }
 
 export default function Footer() {
-  const links = [
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Research', href: '/research' },
-    { name: 'Contact', href: '/contact' },
+  return (
     <footer className="bg-gray-900 border-t border-white/10">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -88,7 +82,9 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-400 xl:text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+        </div>
       </div>
       <p className="mt-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Zion Tech Group</p>
     </footer>
   )
+}
