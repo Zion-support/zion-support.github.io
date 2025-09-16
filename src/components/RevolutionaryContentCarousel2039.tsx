@@ -7,29 +7,32 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
     {
       id: 1,
       title: "Ultimate Tech Breakthrough 2039",
-      description: "Experience the most revolutionary technological advances that will reshape our universe",
-      icon: "🚀",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/UltimateTechBreakthrough2039",
-      features: ["Conscious AI", "Quantum Computing", "Interdimensional Tech"]
+      description: "Experience the most revolutionary technological advances that will reshape reality itself",
+      image: "🧠",
+      gradient: "from-purple-600/30 to-pink-600/30",
+      borderColor: "border-purple-400/30",
+      textColor: "text-purple-100",
+      link: "/pages/UltimateTechBreakthrough2039"
     },
     {
       id: 2,
       title: "Revolutionary Tech Showcase 2039",
-      description: "Interactive showcase of cutting-edge technologies with live demos and real-time metrics",
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/RevolutionaryTechShowcase2039",
-      features: ["Live Demos", "Real-time Stats", "Interactive Interface"]
+      description: "Interactive showcase of cutting-edge technologies that will define the future",
+      image: "⚡",
+      gradient: "from-cyan-600/30 to-blue-600/30",
+      borderColor: "border-cyan-400/30",
+      textColor: "text-cyan-100",
+      link: "/pages/RevolutionaryTechShowcase2039"
     },
     {
       id: 3,
       title: "Next-Gen Innovation Hub 2039",
-      description: "Discover, explore, and contribute to the most revolutionary innovations shaping the future",
-      icon: "🌟",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NextGenInnovationHub2039",
-      features: ["500+ Innovations", "1M+ Users", "Global Community"]
+      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
+      image: "🌟",
+      gradient: "from-emerald-600/30 to-teal-600/30",
+      borderColor: "border-emerald-400/30",
+      textColor: "text-emerald-100",
+      link: "/pages/NextGenInnovationHub2039"
     }
   ];
 
@@ -49,18 +52,19 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎯 REVOLUTIONARY CONTENT • JANUARY 2039
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT • JANUARY 2039
           </div>
-          <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Content Carousel 2039</h2>
-          <p className="text-xl opacity-90">Discover the most advanced technologies and innovations</p>
+          <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Technology Carousel 2039</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience the future with our groundbreaking content on Conscious AI, Quantum Computing, and Interdimensional Technology
+          </p>
         </div>
 
-        {/* Carousel Container */}
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
             <div 
@@ -69,48 +73,25 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
             >
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      {/* Content */}
-                      <div>
-                        <div className="flex items-center mb-4">
-                          <span className="text-6xl mr-4">{slide.icon}</span>
-                          <div>
-                            <h3 className="text-3xl font-bold mb-2">{slide.title}</h3>
-                            <p className="text-lg opacity-90">{slide.description}</p>
-                          </div>
-                        </div>
-
-                        <div className="mb-6">
-                          <h4 className="text-lg font-semibold mb-3">Key Features</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {slide.features.map((feature, index) => (
-                              <span key={index} className="px-3 py-1 bg-white/20 rounded-full text-sm">
-                                {feature}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="flex space-x-4">
-                          <a 
-                            href={slide.link}
-                            className={`bg-gradient-to-r ${slide.gradient} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                          >
-                            Explore Now →
-                          </a>
-                          <button className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold">
-                            Learn More
-                          </button>
-                        </div>
-                      </div>
-
-                      {/* Visual */}
-                      <div className="text-center">
-                        <div className="text-8xl mb-4">{slide.icon}</div>
-                        <div className="text-2xl font-bold mb-2">2039</div>
-                        <div className="text-lg opacity-90">Revolutionary Technology</div>
-                      </div>
+                  <div className={`bg-gradient-to-br ${slide.gradient} backdrop-blur-sm rounded-xl p-12 border ${slide.borderColor} text-center`}>
+                    <div className="text-8xl mb-6">{slide.image}</div>
+                    <h3 className="text-4xl font-bold mb-6">{slide.title}</h3>
+                    <p className={`text-xl ${slide.textColor} mb-8 max-w-3xl mx-auto`}>
+                      {slide.description}
+                    </p>
+                    <div className="space-y-4">
+                      <ul className={`${slide.textColor} space-y-2 text-lg`}>
+                        <li>• Revolutionary Technology</li>
+                        <li>• Interactive Demos</li>
+                        <li>• Real-time Processing</li>
+                        <li>• Infinite Possibilities</li>
+                      </ul>
+                      <a 
+                        href={slide.link}
+                        className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-xl"
+                      >
+                        Explore {slide.title.split(' ')[0]} →
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -138,31 +119,16 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center mt-6 space-x-2">
+        <div className="flex justify-center space-x-2 mt-8">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentSlide === index ? 'bg-white' : 'bg-white/30'
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
             />
           ))}
-        </div>
-
-        {/* Quick Access Links */}
-        <div className="mt-8 text-center">
-          <div className="flex flex-wrap justify-center gap-4">
-            {slides.map((slide) => (
-              <a
-                key={slide.id}
-                href={slide.link}
-                className={`bg-gradient-to-r ${slide.gradient} text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm`}
-              >
-                {slide.icon} {slide.title.split(' ')[0]}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </div>
