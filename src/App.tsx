@@ -8,6 +8,7 @@ import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising202
 import AdvancedTechBreakthroughBanner from './components/AdvancedTechBreakthroughBanner';
 import AutonomousBusinessOperations2026Showcase from './components/AutonomousBusinessOperations2026Showcase';
 import ContentSpotlight from './components/ContentSpotlight';
+import NewContentAdBanner from './components/NewContentAdBanner';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import EnhancedHeroSection from './components/EnhancedHeroSection';
 import FeaturedContentSection from './components/FeaturedContentSection';
@@ -176,6 +177,11 @@ const App: React.FC = () => {
               {/* Revolutionary Content Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* New Content Advertising Banner */}
+              <div className="mb-12">
+                <NewContentAdBanner />
               </div>
 
               {/* Revolutionary Content Showcase */}
