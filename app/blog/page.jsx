@@ -14,6 +14,24 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Safe Rollouts in Production",
+      description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
+      slug: "ai-2026-safe-rollouts-in-production",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/safe-rollouts-2026.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Evidence‑Led Operations",
+      description: "Operate with auditable evaluation evidence driving safe, compliant decisions.",
+      slug: "ai-2026-autonomous-evidence-led-operations",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/evidence-led-ops-2026.jpg"
+    },
+    {
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
