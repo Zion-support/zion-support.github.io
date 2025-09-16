@@ -6,6 +6,9 @@ const posts = [
   { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'New' },
   { href: '/blog/ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-eval-gated-ci-cd-blueprint', title: 'Eval‑Gated CI/CD — Blueprint (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-agentic-observability-deep-dive', title: 'Agentic Observability — Deep Dive (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-reliable-agent-upgrades-blueprint', title: 'Reliable Agent Upgrades — Blueprint (2026)', tag: 'New' },
 ];
 
 export default function BlogIndexPage() {
