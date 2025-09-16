@@ -40,6 +40,11 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryServicesShowcase2026 from './src/components/RevolutionaryServicesShowcase2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryAIServices2026 from './src/pages/RevolutionaryAIServices2026';
+import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
+import ConsciousAIRevolution2026 from './src/pages/ConsciousAIRevolution2026';
+import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3070,6 +3075,12 @@ export default function App(): JSX.Element {
 >>>>>>> cursor/create-and-deploy-new-content-6f93
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
+          
+          {/* 2026 Revolutionary Content Routes */}
+          <Route path="/pages/RevolutionaryAIServices2026" element={<RevolutionaryAIServices2026 />} />
+          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
+          <Route path="/pages/ConsciousAIRevolution2026" element={<ConsciousAIRevolution2026 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/contact" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
