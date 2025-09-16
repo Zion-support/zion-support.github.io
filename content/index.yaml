@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-16"
-  total_content_pieces: 46
+  total_content_pieces: 47
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -439,6 +439,21 @@ content_index:
         phases: "3 phases"
         payback: "3.8 months"
   newly_added_september_2025:
+    - id: "ai-2026-real-world-eval-gates-case-studies"
+      type: "blog"
+      title: "AI 2026: Real-World Eval Gates — Case Studies from Production"
+      file_path: "/content/blog/ai-2026-real-world-eval-gates-case-studies.md"
+      url: "/blog/ai-2026-real-world-eval-gates-case-studies"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "CI/CD", "Reliability", "Governance", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "13 min read"
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        change_failure_rate: "< 3%"
     - id: "ai-2026-agentic-sandbox-patterns"
       type: "blog"
       title: "AI 2026: Agentic Sandbox Patterns"
