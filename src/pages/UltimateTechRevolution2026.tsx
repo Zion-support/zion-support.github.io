@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
 import Header from '../Header';
 import Footer from '../Footer';
->>>>>>> cursor/create-and-deploy-new-content-de2c
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
 import Header from '../Header';
 import Footer from '../Footer';
->>>>>>> cursor/create-and-deploy-new-content-de2c
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
@@ -35,23 +17,18 @@ const UltimateTechRevolution2026: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE REVOLUTION • 2026
-=======
 
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 const UltimateTechRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE REVOLUTION • 2026
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       {/* Hero Section */}
@@ -233,14 +210,7 @@ const UltimateTechRevolution2026: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🌍 Global Impact</h2>
             <p className="text-xl opacity-80">How our revolutionary technologies will transform the world</p>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -271,12 +241,6 @@ const UltimateTechRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Be part of the most significant technological advancement in human history. 
             Transform your future with our revolutionary solutions.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-bec3
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Tech Revolution 2026
           </h1>
@@ -284,19 +248,12 @@ const UltimateTechRevolution2026: React.FC = () => {
             The most advanced technological revolution in human history. Experience the convergence 
             of quantum computing, neural interfaces, and consciousness transfer that will redefine 
             what it means to be human.
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
-<<<<<<< HEAD
             <button className="border-2 border-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-xl">
               Watch the Future
             </button>
@@ -467,19 +424,14 @@ const UltimateTechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white px-16 py-6 rounded-lg hover:bg-white hover:text-indigo-900 transition-colors font-semibold text-2xl">
               Schedule Experience
-=======
-<<<<<<< HEAD
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Our Experts
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
       {/* Interactive Demo Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl p-12 text-center">
           <h2 className="text-4xl font-bold mb-6">🚀 Experience the Ultimate Revolution</h2>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
             Try our interactive demonstrations of the ultimate technology convergence
->>>>>>> cursor/create-and-deploy-new-content-b2ce
           </p>
           
           <div className="grid md:grid-cols-4 gap-6 mb-8">
@@ -535,12 +487,9 @@ const UltimateTechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
               📞 Schedule Demo
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Our Experts
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             </button>
           </div>
         </div>

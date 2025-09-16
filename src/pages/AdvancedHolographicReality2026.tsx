@@ -3,13 +3,6 @@ import React from 'react';
 
 const AdvancedHolographicReality2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -17,14 +10,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -32,31 +18,11 @@ const AdvancedHolographicReality2026: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
             initial={{ opacity: 0, y: 50 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-011f
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               ✨ HOLOGRAPHIC BREAKTHROUGH • JANUARY 2026
             </div>
@@ -75,14 +41,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2026
             </div>
@@ -168,13 +127,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* Holographic Technologies Grid */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -404,14 +356,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
             </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
               Schedule a Demo
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Applications Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -513,20 +458,7 @@ const AdvancedHolographicReality2026: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Download Brochure
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-011f
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             </button>
           </div>
         </div>

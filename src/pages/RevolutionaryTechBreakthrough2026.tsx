@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-e4b8
 import { motion } from 'framer-motion';
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
@@ -82,39 +72,17 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
     { label: "Neural Accuracy", value: "99.9%", description: "Brain-computer interface precision" },
     { label: "Dimensional Reach", value: "11D", description: "Computing across dimensions" }
   ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -257,34 +225,10 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg">
               🚀 Get Early Access
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-bec3
-=======
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -298,12 +242,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most advanced technological innovations that are reshaping the future of humanity. 
             From quantum consciousness to neural reality interfaces, discover what's possible in 2026.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
@@ -317,16 +255,7 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
 
         {/* Revolutionary Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -514,25 +443,15 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Conscious AI Systems */}
->>>>>>> cursor/create-and-deploy-new-content-f995
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h2 className="text-3xl font-bold mb-4 text-center">Conscious AI Systems</h2>
             <p className="text-purple-100 mb-6 text-center">
-<<<<<<< HEAD
-=======
               The world's first truly conscious artificial intelligence systems that can think, feel, and create independently
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Impact Statistics */}
       <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -546,11 +465,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               See how our breakthrough technologies are transforming industries and creating new possibilities
             </p>
-<<<<<<< HEAD
           </motion.div>
 
-=======
-<<<<<<< HEAD
             <ul className="text-purple-200 space-y-3 mb-6">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
@@ -576,7 +492,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Quantum Consciousness */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -639,16 +554,9 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
                 <strong>Impact:</strong> Solves NP-complete problems in polynomial time
               </p>
             </div>
-=======
-=======
           </motion.div>
 
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -686,18 +594,11 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
               <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-lg opacity-80">Continuous Innovation</div>
             </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Revolutionary Features Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Revolutionary Features</h2>
@@ -740,25 +641,11 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -770,21 +657,7 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
             Join us in the revolutionary transformation of technology. Be part of the breakthrough that will reshape our world.
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -792,8 +665,6 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Our Experts
-=======
-<<<<<<< HEAD
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
@@ -801,28 +672,9 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-lg">
               Watch Demo
->>>>>>> cursor/create-and-deploy-new-content-e4b8
             </button>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
         </div>
 
         {/* Revolutionary Features Grid */}
@@ -988,57 +840,21 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
               Get Early Access
-<<<<<<< HEAD
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               Schedule Demo
-=======
-<<<<<<< HEAD
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               Schedule Demo
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
               📞 Schedule Demo
->>>>>>> cursor/create-and-deploy-new-content-e4b8
->>>>>>> cursor/create-and-deploy-new-content-bec3
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-<<<<<<< HEAD
-=======
         </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 const NextGenAISolutions2025: React.FC = () => {
   return (
@@ -23,7 +22,6 @@ const NextGenAISolutions2025: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
               Watch Demo
             </button>
-=======
 
 
 const NextGenAISolutions2025: React.FC = () => {
@@ -55,11 +53,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
 
@@ -78,7 +72,6 @@ const NextGenAISolutions2025: React.FC = () => {
             </ul>
           </div>
           
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Edge AI Computing</h3>
@@ -103,7 +96,6 @@ const NextGenAISolutions2025: React.FC = () => {
               <li>• Creative collaboration</li>
               <li>• Context-aware outputs</li>
             </ul>
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -209,15 +201,10 @@ const NextGenAISolutions2025: React.FC = () => {
                 <p className="text-gray-300 text-sm">{story.description}</p>
               </div>
             ))}
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -289,7 +276,6 @@ const NextGenAISolutions2025: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -313,11 +299,7 @@ const NextGenAISolutions2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
 
