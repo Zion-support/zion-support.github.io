@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 9601,
+    title: "AI 2026: Real-Time Incident Postmortems — Evidence First",
+    excerpt: "Turn incidents into verifiable learnings with trace-linked evidence and rollback recipes.",
+    content: "Operational excellence depends on collecting verifiable evidence during incidents. This article shows how to structure incident timelines, attach trace-linked artifacts, and codify rollback contracts that make changes auditable and reversible. Copy our JSON templates and dashboards to adopt in under a day.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Incidents", "Evidence", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-incident-postmortems-2026.jpg",
+    slug: "ai-2026-real-time-incident-postmortems"
+  },
+  {
+    id: 9600,
+    title: "Trusted RAG 2026: Eval Gates You Can Ship Today",
+    excerpt: "Add freshness windows, semantic drift checks, and budget guardrails with copy-paste snippets.",
+    content: "A concise, practical recipe to productionize RAG with live freshness windows, semantic drift monitors, and budget-aware routing. We include minimal contracts, CI steps, and scorecard thresholds to gate merges and enable deterministic rollbacks.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "Eval Gates"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-eval-gates-2026.jpg",
+    slug: "trusted-rag-2026-eval-gates"
+  },
+  {
     id: 9503,
     title: "AI 2026: Safe Agent Rollouts — Exec Field Guide",
     excerpt: "A 1‑page checklist to ship agent features safely with eval gates and rollback.",
