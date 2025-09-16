@@ -2,11 +2,15 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
 import { motion } from 'framer-motion';
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -14,6 +18,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm"></div>
@@ -44,6 +50,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
@@ -68,8 +75,139 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <li>• Machine learning integration</li>
               <li>• Portable and wireless</li>
             </ul>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+              Advanced technical capabilities and performance metrics of neural interface systems
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-xl p-6 border border-emerald-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">Signal Processing</h3>
+                <ul className="space-y-3 text-emerald-200">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                    Real-time neural signal acquisition at 30kHz
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                    Advanced noise filtering and artifact removal
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                    Machine learning-based signal classification
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                    Adaptive threshold detection algorithms
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-teal-600/20 to-cyan-600/20 rounded-xl p-6 border border-teal-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">Safety & Biocompatibility</h3>
+                <ul className="space-y-3 text-teal-200">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3"></span>
+                    FDA-approved biocompatible materials
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3"></span>
+                    Non-toxic neural stimulation protocols
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3"></span>
+                    Real-time safety monitoring systems
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-teal-400 rounded-full mr-3"></span>
+                    Automatic emergency shutdown mechanisms
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-xl p-6 border border-cyan-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between text-white mb-2">
+                      <span>Signal Accuracy</span>
+                      <span>99.2%</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full" style={{width: '99.2%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-white mb-2">
+                      <span>Response Time</span>
+                      <span>0.05s</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full" style={{width: '95%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-white mb-2">
+                      <span>Battery Life</span>
+                      <span>72h</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full" style={{width: '90%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-white mb-2">
+                      <span>Data Rate</span>
+                      <span>1.2 Gbps</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full" style={{width: '88%'}}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">Compatibility</h3>
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-purple-400">iOS</div>
+                    <div className="text-purple-200 text-sm">Full Support</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-purple-400">Android</div>
+                    <div className="text-purple-200 text-sm">Full Support</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-purple-400">Windows</div>
+                    <div className="text-purple-200 text-sm">Full Support</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-purple-400">macOS</div>
+                    <div className="text-purple-200 text-sm">Full Support</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-8069
           </div>
 
+<<<<<<< HEAD
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Invasive Neural Implants</h3>
@@ -189,6 +327,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8069
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-4">
@@ -207,6 +347,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 =======
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -797,6 +938,9 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
 =======
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a12c
+>>>>>>> cursor/create-and-deploy-new-content-8069
       </div>
     </div>
   );

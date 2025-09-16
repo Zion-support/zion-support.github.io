@@ -2,7 +2,11 @@ import React from 'react';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
+>>>>>>> cursor/create-and-deploy-new-content-8069
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-20">
@@ -16,6 +20,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             Revolutionary biotechnology merging synthetic biology with AI, creating programmable living systems, 
             bio-computers, and engineered organisms that transform medicine, agriculture, and life itself
           </p>
+<<<<<<< HEAD
           <div className="flex justify-center space-x-8">
             <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-16 py-6 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-2xl transform hover:scale-105">
               🧬 Explore Bio Revolution →
@@ -120,6 +125,49 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌍</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Environmental Restoration</h3>
+=======
+        </div>
+
+        {/* Revolutionary Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic DNA</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Create custom life forms with programmable DNA sequences
+            </p>
+            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
+              <li>• Custom genetic codes</li>
+              <li>• Designer organisms</li>
+              <li>• Bio-manufacturing</li>
+              <li>• Therapeutic applications</li>
+            </ul>
+            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Design Life →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Bio-Engineering</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Engineer biological systems for enhanced human capabilities
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Enhanced organs</li>
+              <li>• Disease resistance</li>
+              <li>• Longevity treatments</li>
+              <li>• Cognitive enhancement</li>
+            </ul>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Enhance Biology →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌱</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Living Materials</h3>
+>>>>>>> cursor/create-and-deploy-new-content-8069
             <p className="text-purple-100 mb-6 text-center">
               Engineered organisms that clean up pollution, restore ecosystems, and combat climate change
             </p>
@@ -164,6 +212,7 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Join the Bio Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto text-gray-300">
             Experience the future where synthetic biology transforms life itself and creates infinite possibilities
@@ -174,6 +223,18 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
               Contact Our Team
+=======
+          <h2 className="text-4xl font-bold mb-6">Ready to Redesign Life?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Join the synthetic biology revolution and help create the future of life itself
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey →
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
+              Learn More
+>>>>>>> cursor/create-and-deploy-new-content-8069
             </button>
           </div>
         </div>
