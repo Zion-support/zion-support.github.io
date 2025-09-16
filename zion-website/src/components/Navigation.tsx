@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 =======
 "use client"
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+"use client"
+>>>>>>> origin/feat/updates-front
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,10 +103,14 @@ const navigation = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'Research', href: '/research' },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { name: 'News', href: '/news' },
 =======
   { name: 'Updates', href: '/updates' },
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+  { name: 'Updates', href: '/updates' },
+>>>>>>> origin/feat/updates-front
   { name: 'Contact', href: '/contact' },
 >>>>>>> origin/feat/news-and-fixes
 ]
@@ -111,6 +119,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,6 +133,8 @@ export default function Navigation() {
 >>>>>>> origin/feat/updates-and-fixes
 =======
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+>>>>>>> origin/feat/updates-front
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -298,6 +309,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -431,3 +443,6 @@ export default function Navigation() {
 >>>>>>> origin/feat/updates-and-fixes
 =======
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+
+>>>>>>> origin/feat/updates-front

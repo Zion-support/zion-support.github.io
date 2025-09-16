@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
 =======
@@ -149,6 +150,8 @@ const solutions = [
 import React from 'react'
 >>>>>>> origin/feat/research-article-promo
 
+=======
+>>>>>>> origin/feat/updates-front
 export default function SolutionsPage() {
   const solutions = [
     { name: 'Autonomous Research Assistant', href: '/solutions/ai-autonomous-research' },
@@ -157,6 +160,7 @@ export default function SolutionsPage() {
   ]
   return (
     <div className="bg-black">
+<<<<<<< HEAD
       <div className="relative isolate px-6 pt-14 lg:px-8">
 <<<<<<< HEAD
         <div className="mx-auto max-w-2xl py-24 sm:py-40">
@@ -1052,3 +1056,14 @@ export default function SolutionsPage() {
 >>>>>>> origin/feat/updates-and-fixes
 =======
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+      <div className="mx-auto max-w-7xl px-6 pt-28 lg:px-8">
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
+        <p className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl">
+          Explore flagship AI platforms and industry solutions designed to deliver measurable results.
+        </p>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/feat/updates-front

@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { UserGroupIcon, LightBulbIcon, CogIcon, ShieldCheckIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 =======
@@ -195,6 +196,8 @@ const reasonsToChoose = [
 import React from 'react'
 >>>>>>> origin/feat/research-article-promo
 
+=======
+>>>>>>> origin/feat/updates-front
 export default function ServicesPage() {
   const services = [
     { name: 'AI Solutions', description: 'Custom AI models, copilots, and automation.' },
@@ -203,6 +206,7 @@ export default function ServicesPage() {
   ]
   return (
     <div className="bg-black">
+<<<<<<< HEAD
       <div className="relative isolate px-6 pt-14 lg:px-8">
 <<<<<<< HEAD
         <div className="mx-auto max-w-2xl py-24 sm:py-40">
@@ -1198,3 +1202,14 @@ export default function ServicesPage() {
 >>>>>>> origin/feat/updates-and-fixes
 =======
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+      <div className="mx-auto max-w-7xl px-6 pt-28 lg:px-8">
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Services</h1>
+        <p className="mt-6 text-lg leading-8 text-gray-300 max-w-3xl">
+          From strategy to implementation, we deliver end-to-end AI services to accelerate your transformation.
+        </p>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/feat/updates-front

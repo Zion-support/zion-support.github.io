@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/feat/content-promo
@@ -13,6 +14,8 @@
 >>>>>>> origin/feat/updates-and-fixes
 =======
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+>>>>>>> origin/feat/updates-front
 const navigation = {
   main: [
 =======
@@ -278,6 +281,7 @@ export default function Footer() {
       <p className="mt-6 text-center text-xs text-gray-500">© {new Date().getFullYear()} Zion Tech Group</p>
     </footer>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -571,3 +575,6 @@ export default function Footer() {
 >>>>>>> origin/feat/updates-and-fixes
 =======
 >>>>>>> origin/feat/updates-and-home-whats-new
+=======
+}
+>>>>>>> origin/feat/updates-front
