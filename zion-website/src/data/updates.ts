@@ -10,6 +10,20 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    {
+        title: 'Launch: Agent Risk Dashboard v1.0',
+        summary: 'Unified risk scoring for agents with policy checks and incident drill‑downs.',
+        href: '/updates/agent-risk-dashboard-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Prompt Risk Scoring (2026 Preview)',
+        summary: 'Measure and mitigate prompt risks with eval gates and red‑team playbooks.',
+        href: '/updates/production-prompt-risk-scoring-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
 	{
 		title: 'Launch: AI Security Evidence Vault v1.0',
 		summary: 'Centralized evidence bundles with automated chain-of-custody and policy checks.',
