@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
     return (<>

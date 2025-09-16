@@ -19,13 +19,22 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
 
   if (isSubscribed) {
     return (
+<<<<<<< HEAD
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 mb-12 text-white text-center">
         <div className="text-6xl mb-6">🎉</div>
         <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
+=======
+      <divdiv
+        className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-12 text-white text-center"
+      >
+        <div className="text-6xl mb-4">🎉</div>
+        <h2 className="text-3xl font-bold mb-4">Welcome to the Future!</h2>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
         <p className="text-xl opacity-90 mb-6">
           You're now part of our exclusive community of innovators and early adopters. 
           Get ready for exclusive updates on the latest technological breakthroughs.
         </p>
+<<<<<<< HEAD
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
           <h4 className="text-xl font-bold mb-4">What's Next?</h4>
           <ul className="text-left space-y-2">
@@ -37,10 +46,20 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
           </ul>
         </div>
       </div>
+=======
+        <button
+          onClick={() => setIsSubscribed(false)}
+          className="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+        >
+          Subscribe Another Email
+        </button>
+      </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
     );
   }
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -49,11 +68,21 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
             <span className="text-4xl animate-pulse">🚀</span>
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
             <span className="text-4xl animate-pulse">🚀</span>
+=======
+    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        <divdiv
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📧 EXCLUSIVE ACCESS 2026
+>>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Be the first to experience the most advanced technologies in human history. 
             Get exclusive access to AI consciousness, quantum reality, and neural interfaces.
           </p>
+<<<<<<< HEAD
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -105,6 +134,33 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h4 className="text-2xl font-bold mb-6 text-center text-white">Get Started Today</h4>
+=======
+        </divdiv>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Benefits Section */}
+          <divdiv
+          >
+            <h3 className="text-3xl font-bold mb-6">What You'll Get:</h3>
+            <div className="space-y-4">
+              {benefits.map((benefit, index) => (
+                <divdiv
+                  key={index}
+                  className="flex items-center space-x-3"
+                >
+                  <span className="text-cyan-400 text-xl">✨</span>
+                  <span className="text-lg">{benefit}</span>
+                </divdiv>
+              ))}
+            </div>
+          </divdiv>
+
+          {/* Newsletter Signup Form */}
+          <divdiv
+            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8"
+          >
+            <h3 className="text-2xl font-bold mb-6 text-center">Get Started Now</h3>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-lg font-semibold mb-2">
@@ -166,6 +222,7 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 )}
               </button>
             </form>
+<<<<<<< HEAD
             
             <p className="text-sm text-gray-300 text-center mt-4">
               Join over 50,000+ innovators already part of our community
@@ -192,6 +249,46 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
             </a>
           </div>
         </div>
+=======
+
+            <div className="mt-6 text-center">
+              <p className="text-sm opacity-80">
+                By subscribing, you agree to receive updates about our revolutionary technologies. 
+                Unsubscribe anytime.
+              </p>
+            </div>
+          </divdiv>
+        </div>
+
+        {/* Additional Features */}
+        <divdiv
+          className="mt-16 grid md:grid-cols-3 gap-8"
+        >
+          {[
+            {
+              title: "Exclusive Demos",
+              description: "Access to interactive technology demonstrations",
+              icon: "🎮"
+            },
+            {
+              title: "Early Access",
+              description: "Be the first to experience breakthrough innovations",
+              icon: "⚡"
+            },
+            {
+              title: "Community Access",
+              description: "Join our community of technology pioneers",
+              icon: "👥"
+            }
+          ].map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
+              <p className="text-white/80">{feature.description}</p>
+            </div>
+          ))}
+        </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
     </div>
   );

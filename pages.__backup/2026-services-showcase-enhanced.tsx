@@ -1,7 +1,7 @@
 import React{ useStateuseMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motionAnimatePresence } from 'framer-motion';
 SearchStarUsersTrendingUpDollarSignClockCheckCircleArrowRightRocketBrainAtomSparklesShieldZapGlobeCpuDatabaseCloudSmartphonePaletteSearch as SearchIconMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparkles as SparklesIconFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrain as BrainIconAtom as AtomIconGlobe2BotChevronRightCrownInfinityZap as ZapIcon2Shield as ShieldIconUsers as UsersIconGlobe as GlobeIconCpu as CpuIconDatabase as DatabaseIcon2Cloud as CloudIconSmartphone as SmartphoneIconPalette as PaletteIconSearch as SearchIcon2MessageSquare as MessageSquareIconFileText as MessageSquareIcon2Calendar as CalendarIconCreditCard as CreditCardIconBarChart3 as BarChart3IconSettings as SettingsIconZap as ZapIcon3Code as CodeIconBookOpen as CodeIcon2Activity as ActivityIconDatabase as DatabaseIcon3Play as PlayIconMail as MailIconPhone as PhoneIconMapPin as MapPinIconFilter as FilterIconGrid as GridIconList as ListIconChevronDown as ChevronDownIconChevronUp as ChevronUpIconSparkles as SparklesIcon2FlaskConical as FlaskConicalIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIconBrain as BrainIcon2Atom as AtomIcon2Globe2 as Globe2IconBot as BotIconChevronRight as ChevronRightIcon
 
 

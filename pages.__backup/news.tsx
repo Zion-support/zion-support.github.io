@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Newspaper
   Calendar
@@ -224,7 +224,7 @@ export default function News() {
       tags: ['AI'Quantum Computing'Innovation'],
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   CalendarClockArrowRightStarUsers
   BrainAtomShieldRocketGlobe,
@@ -314,7 +314,7 @@ export default function News() {
 import React{ useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   NewspaperGlobeAwardUsersRocketBrain
   ArrowRightExternalLinkCalendarTagStar

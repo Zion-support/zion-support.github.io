@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   AlertTriangle, RefreshCw, Bug, 
   Home, ArrowLeft, Info,

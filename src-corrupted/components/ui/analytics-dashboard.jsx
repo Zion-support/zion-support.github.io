@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
 import { Button } from './button';
 export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {

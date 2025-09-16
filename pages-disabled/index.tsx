@@ -21,7 +21,7 @@ import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
 import UltraFuturisticHero2029 from '../components/sections/UltraFuturisticHero2029';
 import UltraFuturisticServiceShowcase2029 from '../components/sections/UltraFuturisticServiceShowcase2029';
 import UltraFuturisticServiceShowcase2030 from '../components/sections/UltraFuturisticServiceShowcase2030';
-
+import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';

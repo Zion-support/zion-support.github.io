@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const RevolutionaryContentBanner2027_2030: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white">
@@ -9,10 +8,7 @@ const RevolutionaryContentBanner2027_2030: React.FC = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10">
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-8"
         >
           <div className="flex items-center justify-center space-x-4 mb-6">
@@ -24,13 +20,10 @@ const RevolutionaryContentBanner2027_2030: React.FC = () => {
             Experience the most advanced technology content featuring AI Revolution, Quantum Reality Manipulation, 
             Transcendent Consciousness, and Universal Tech Mastery
           </p>
-        </div>
+        </divdiv>
 
         {/* New Content Grid */}
-        <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+        <divdiv
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-8"
         >
           <a 
@@ -68,13 +61,10 @@ const RevolutionaryContentBanner2027_2030: React.FC = () => {
             <div className="text-lg font-bold mb-2">Universal Tech Mastery 2030</div>
             <div className="text-sm opacity-90">Master All Technologies Across the Universe</div>
           </a>
-        </div>
+        </divdiv>
 
         {/* Feature Highlights */}
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <divdiv
           className="flex justify-center space-x-6 flex-wrap gap-4"
         >
           <span className="bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-white px-6 py-3 rounded-full text-sm font-semibold border border-purple-400/50">
@@ -89,7 +79,7 @@ const RevolutionaryContentBanner2027_2030: React.FC = () => {
           <span className="bg-gradient-to-r from-emerald-500/30 to-teal-500/30 text-white px-6 py-3 rounded-full text-sm font-semibold border border-emerald-400/50">
             🧠 CONSCIOUSNESS EXPANSION
           </span>
-        </div>
+        </divdiv>
       </div>
     </div>
   );

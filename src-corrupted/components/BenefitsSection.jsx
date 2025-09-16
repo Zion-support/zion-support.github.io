@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
 
 const benefits = [

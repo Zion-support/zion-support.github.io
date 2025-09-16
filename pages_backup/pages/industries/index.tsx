@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 

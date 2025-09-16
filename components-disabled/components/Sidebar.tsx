@@ -2,7 +2,7 @@
 ;
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
+import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter  } from 'next/router';
 import { X,ChevronDown,ChevronRight,Home,Briefcase,Users,FileText,HelpCircle,LogOut,User,Search,Brain,Shield,Cloud,Code,Network,Zap,Phone,Mail,MapPin,Building2;
  } from 'lucide-react';
@@ -28,7 +28,7 @@ const navigation = {'Services': [;
     }}, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
       {isOpen && (<>;
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/router';
 import {

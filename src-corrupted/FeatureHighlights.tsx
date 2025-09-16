@@ -448,7 +448,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     </section>);
 
 }
-
+import { motion  } from 'framer-motion';
   {
 
     icon: "⚡",
@@ -590,7 +590,7 @@ function FeatureHighlights() {
 }
 
 
-
+import { motion  } from 'framer-motion';
   {;
     icon: "⚡",;
     title: "Lightning Fast Performance",;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -151,13 +150,8 @@ const NextGenTechShowcase2026: React.FC = () => {
             ))}
           </div>
 
-          <AnimatePresence mode="wait">
-            <div
+            <divdiv
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
             >
               <div className="text-center mb-8">
@@ -169,8 +163,8 @@ const NextGenTechShowcase2026: React.FC = () => {
                   {techCategories[activeTab as keyof typeof techCategories].description}
                 </p>
               </div>
-            </div>
-          
+            </divdiv>
+          </div>
         </div>
 
         {/* Technology Features */}
@@ -223,18 +217,15 @@ const NextGenTechShowcase2026: React.FC = () => {
                 color: "from-rose-500 to-pink-500"
               }
             ].map((feature, index) => (
-              <div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
               >
                 <div className="text-6xl mb-6 text-center">{feature.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-cyan-300 text-center">{feature.title}</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">{feature.description}</p>
                 <div className={`w-full h-2 bg-gradient-to-r ${feature.color} rounded-full`}></div>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>

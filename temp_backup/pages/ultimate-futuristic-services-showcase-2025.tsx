@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, 

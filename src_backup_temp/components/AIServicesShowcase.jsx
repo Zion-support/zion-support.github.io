@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {motion, AnimatePresence} from 'framer-motion';
 import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
 const aiServices = [;
     {"id": 'ai-chat',;
@@ -272,7 +272,7 @@ export default AIServicesShowcase;
 </motion>;
 </motion>
 import React, {useState} from 'react';''
-''
+import {motion, AnimatePresence} from 'framer-motion';''
 import {Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan} from 'lucide-react';''
 import {Link} from 'react-router-dom';''
 const aiServices = [{"id": 'ai-chat',''}]

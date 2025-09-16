@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
   Shield, Cpu, Database, Cloud, Lock, Users, 

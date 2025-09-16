@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
 export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
     const [isVisible, setIsVisible] = useState(false);

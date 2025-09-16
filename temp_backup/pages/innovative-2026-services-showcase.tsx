@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Shield, Globe, Factory, Leaf, Gamepad2, GraduationCap, Heart, CreditCard, Zap, Phone, Mail } from 'lucide-react';
 import { allInnovative2026Services, innovative2026ServiceStats, popularInnovative2026Services, topRatedInnovative2026Services, highROIInnovative2026Services } from '../data/comprehensive-2026-services-index';
 

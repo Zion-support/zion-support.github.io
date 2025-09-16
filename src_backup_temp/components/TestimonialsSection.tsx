@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {
-
+import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page(props: any) {
 ,
   {
@@ -30,7 +30,7 @@ export default function Page(props: any) {
     company: "Healthcare Innovations",;"
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {;
-
+import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export default function Page(props: any) {;
 ,;

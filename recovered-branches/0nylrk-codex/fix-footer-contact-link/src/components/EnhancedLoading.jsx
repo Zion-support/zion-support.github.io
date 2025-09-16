@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
     const sizeClasses = {
         sm: 'w-4 h-4',

@@ -49,7 +49,7 @@ origin/automation-improvements-final
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { 
   Server, 

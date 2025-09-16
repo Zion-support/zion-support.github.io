@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Star, ArrowRight, Check, Zap, Brain, Shield } from 'lucide-react';
 import Link from 'next/link';
 

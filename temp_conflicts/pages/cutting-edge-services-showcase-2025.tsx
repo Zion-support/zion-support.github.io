@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
   CheckCircle, ArrowRight, Zap, Target, Microscope,

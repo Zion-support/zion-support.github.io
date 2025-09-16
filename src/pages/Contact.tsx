@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -13,21 +15,33 @@ import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
 export default function Contact() {
   const { showToast: toast } = useToast();
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import React from 'react';
+
+const Contact: React.FC = () => {
+<<<<<<< HEAD
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 
 const Contact: React.FC = () => {
 
 const Contact: React.FC = () => {
-
-const Contact: React.FC = () => {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -94,10 +108,7 @@ const Contact: React.FC = () => {
       
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <divdiv
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -108,43 +119,34 @@ const Contact: React.FC = () => {
             Ready to transform your business with cutting-edge AI and technology solutions? 
             Our team of experts is here to help you navigate the digital landscape.
           </p>
-        </div>
+        </divdiv>
       </section>
 
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <divdiv
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {contactMethods.map((method, index) => (
-              <div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="text-cyan-400 mb-4">{method.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-lg text-cyan-400 font-medium mb-2">{method.details}</p>
                 <p className="text-gray-400 text-sm">{method.description}</p>
-              </div>
+              </divdiv>
             ))}
-          </div>
+          </divdiv>
         </div>
       </section>
 
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <divdiv
             className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
           >
             <div className="text-center mb-8">
@@ -155,9 +157,7 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
-              <div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+              <divdiv
                 className="text-center py-12"
               >
                 <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
@@ -165,7 +165,7 @@ const Contact: React.FC = () => {
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
-              </div>
+              </divdiv>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -289,23 +289,21 @@ const Contact: React.FC = () => {
                 </div>
               </form>
             )}
-          </div>
+          </divdiv>
         </div>
       </section>
 
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <divdiv
             className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
           >
             <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -322,13 +320,28 @@ const Contact: React.FC = () => {
                 Email Support
               </a>
             </div>
+<<<<<<< HEAD
           </div>
+=======
+          </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-79ca
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
+          <motion.div
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
+=======
+          <divdiv
+>>>>>>> cursor/create-and-deploy-new-content-79ca
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
@@ -336,6 +349,17 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+          </divdiv>
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> cursor/create-and-deploy-new-content-79ca
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -352,11 +376,8 @@ const Contact: React.FC = () => {
                 description: "Round-the-clock support ensures your business never stops, with rapid response times for critical issues."
               }
             ].map((feature, index) => (
-              <div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 + 0.1 * index }}
                 className="text-center"
               >
                 <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
@@ -366,7 +387,7 @@ const Contact: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Heart, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, Stethoscope } from 'lucide-react';
 import SEO from '../components/SEO';
 

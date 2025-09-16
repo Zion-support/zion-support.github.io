@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, Suspense } from 'react';
 import Layout from './layout/Layout';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2,
   Zap, Globe, Cpu, Eye, Atom, Heart
