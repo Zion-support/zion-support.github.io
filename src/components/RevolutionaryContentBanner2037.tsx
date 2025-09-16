@@ -54,12 +54,15 @@ const RevolutionaryContentBanner2037: React.FC = () => {
               View Interactive Demo
             </a>
           </div>
+<<<<<<< HEAD
 =======
             </a>
           </div>
         </div>
         
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
         </div>
       </div>
     </div>
