@@ -105,7 +105,8 @@ import UltimateTechShowcase2027 from './src/pages/UltimateTechShowcase2027';
 import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
-// import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryContentCarousel2026 from './src/components/RevolutionaryContentCarousel2026';
 import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 import NextGenAIRevolution2027 from './src/pages/NextGenAIRevolution2027';
 import QuantumReality2027 from './src/pages/QuantumReality2027';
@@ -301,6 +302,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Content Banner 2026 - Latest Technology */}
                 <RevolutionaryContentBanner2026 />
+                
+                {/* Revolutionary Content Carousel 2026 - Latest Blog Posts & Services */}
+                <RevolutionaryContentCarousel2026 />
                 
                 {/* Revolutionary Services Showcase 2026 */}
                 <RevolutionaryServicesShowcase2026 />
