@@ -57,7 +57,12 @@ import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner';
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import UltimateTechShowcase2025 from './src/pages/UltimateTechShowcase2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
 import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
@@ -131,6 +136,15 @@ export default function App(): JSX.Element {
                       <a href="/revolutionary-showcase-2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🌟 Interactive Demo →
                       </a>
+                      <a href="/pages/RevolutionaryTechBreakthrough2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 Tech Breakthrough →
+                      </a>
+                      <a href="/pages/UltimateTechShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Ultimate Showcase →
+                      </a>
+                      <a href="/pages/NextGenInnovationHub2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🔬 Innovation Hub →
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -202,6 +216,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/RevolutionaryTechBreakthrough2025" className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🚀 NEW: Tech Breakthrough →
+                    </a>
+                    <a href="/pages/UltimateTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🌟 NEW: Ultimate Showcase →
+                    </a>
+                    <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🔬 NEW: Innovation Hub →
                     </a>
                   </div>
                 </div>
@@ -555,6 +578,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
           <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/UltimateTechShowcase2025" element={<UltimateTechShowcase2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2027 />} />
           <Route path="/contact" element={
