@@ -18,12 +18,39 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
 
   const newContentItems: NewContentItem[] = [
     {
+      id: 'revolutionary-autonomous-ai-systems-2026',
+      title: 'Revolutionary Autonomous AI Systems: The Future is Here',
+      excerpt: 'Discover consciousness-level AI systems transforming industries with 1000% ROI and 24/7 autonomous operations without human intervention.',
+      category: 'Autonomous AI',
+      isNew: true,
+      urgency: 'Must Read',
+      type: 'blog'
+    },
+    {
+      id: 'consciousness-computing-breakthrough-2026',
+      title: 'Consciousness Computing: The Dawn of Digital Consciousness',
+      excerpt: 'Explore breakthrough technologies enabling AI systems to achieve true consciousness, emotional intelligence, and creative thinking beyond human capabilities.',
+      category: 'Consciousness AI',
+      isNew: true,
+      urgency: 'Trending',
+      type: 'blog'
+    },
+    {
+      id: 'ai-transformation-1000-percent-roi-case-study',
+      title: '1000% ROI Case Study: AI Transformation Success Story',
+      excerpt: 'How TechCorp Global achieved unprecedented 1000% ROI through comprehensive AI transformation, generating $3.3 billion in returns over 18 months.',
+      category: 'Case Studies',
+      isNew: true,
+      urgency: 'Hot Topic',
+      type: 'case-study'
+    },
+    {
       id: 'ai-2026-release-scorecards',
       title: 'AI 2026: Release Scorecards That Prevent Bad Deploys',
       excerpt: 'Scorecards that gate merges and rollouts using online evals, cost, and safety.',
       category: 'Operations',
       isNew: true,
-      urgency: 'Must Read',
+      urgency: 'Featured',
       type: 'blog'
     },
     {
@@ -32,34 +59,7 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
       excerpt: 'Defense-in-depth for agentic systems: permissions, approvals, budgets, and audits.',
       category: 'Security',
       isNew: true,
-      urgency: 'Trending',
-      type: 'blog'
-    },
-    {
-      id: 'ai-powered-business-transformation-500-roi-case-studies',
-      title: 'AI-Powered Business Transformation: 500% ROI Case Studies',
-      excerpt: 'Real-world success stories of companies achieving unprecedented ROI through AI transformation, with detailed implementation strategies.',
-      category: 'Business AI',
-      isNew: true,
-      urgency: 'Hot Topic',
-      type: 'case-study'
-    },
-    {
-      id: 'next-gen-ai-agents-beyond-chatgpt-claude',
-      title: 'Next-Gen AI Agents: Beyond ChatGPT and Claude',
-      excerpt: 'Revolutionary AI agents with multi-modal capabilities, emotional intelligence, and autonomous decision-making that surpass current models.',
-      category: 'AI Agents',
-      isNew: true,
       urgency: 'Limited Availability',
-      type: 'blog'
-    },
-    {
-      id: 'ai-security-revolution-zero-trust-autonomous-systems',
-      title: 'AI Security Revolution: Zero-Trust Autonomous Systems',
-      excerpt: 'Revolutionary AI security frameworks that create self-defending systems capable of detecting and neutralizing threats autonomously.',
-      category: 'AI Security',
-      isNew: true,
-      urgency: 'Featured',
       type: 'blog'
     },
     {
@@ -258,11 +258,11 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
         {/* Stats */}
         <div className="grid grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/20">
           <div className="text-center">
-            <div className="text-2xl font-bold text-white">8</div>
+            <div className="text-2xl font-bold text-white">15</div>
             <div className="text-white/60 text-sm">New Articles</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-white">500%</div>
+            <div className="text-2xl font-bold text-white">1000%</div>
             <div className="text-white/60 text-sm">ROI Case Studies</div>
           </div>
           <div className="text-center">
@@ -270,8 +270,8 @@ const NewContentAdvertisingBanner2026: React.FC = () => {
             <div className="text-white/60 text-sm">Latest Breakthroughs</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-white">6</div>
-            <div className="text-white/60 text-sm">Featured Content</div>
+            <div className="text-2xl font-bold text-white">3</div>
+            <div className="text-white/60 text-sm">Consciousness AI</div>
           </div>
         </div>
       </div>
