@@ -147,6 +147,12 @@ import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
 import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
 import NextGenTechRevolution2045 from './src/pages/NextGenTechRevolution2045';
 import UltimateAIConsciousness2046 from './src/pages/UltimateAIConsciousness2046';
+// New content imports
+import UltimateTechShowcase2025 from './src/pages/UltimateTechShowcase2025';
+import AIInnovationRevolution2025 from './src/pages/AIInnovationRevolution2025';
+import UltimateTechShowcasePromotionBanner from './src/components/UltimateTechShowcasePromotionBanner';
+import AIInnovationRevolutionPromotionBanner from './src/components/AIInnovationRevolutionPromotionBanner';
+import UltimateContentShowcaseCarousel from './src/components/UltimateContentShowcaseCarousel';
 import QuantumRealityEngine2047 from './src/pages/QuantumRealityEngine2047';
 import UltimateContentBanner2045 from './src/components/UltimateContentBanner2045';
 import RevolutionaryTechBanner2045 from './src/components/RevolutionaryTechBanner2045';
@@ -255,6 +261,15 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 */}
                 <UltimateContentBanner2025 />
+                
+                {/* NEW: Ultimate Tech Showcase Promotion Banner */}
+                <UltimateTechShowcasePromotionBanner />
+                
+                {/* NEW: AI Innovation Revolution Promotion Banner */}
+                <AIInnovationRevolutionPromotionBanner />
+                
+                {/* NEW: Ultimate Content Showcase Carousel */}
+                <UltimateContentShowcaseCarousel />
                 
                 {/* NEW: Interactive Tech Showcase 2025 */}
                 <InteractiveTechShowcase2025 />
@@ -1398,6 +1413,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateAIConsciousness2032" element={<UltimateAIConsciousness2032 />} />
           <Route path="/pages/QuantumRealityEngine2035" element={<QuantumRealityEngine2035 />} />
 >>>>>>> cursor/create-and-deploy-new-content-cd00
+          {/* New Content Routes */}
+          <Route path="/ultimate-tech-showcase-2025" element={<UltimateTechShowcase2025 />} />
+          <Route path="/ai-innovation-revolution-2025" element={<AIInnovationRevolution2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
