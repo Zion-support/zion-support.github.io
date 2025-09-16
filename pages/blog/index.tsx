@@ -90,6 +90,12 @@ posts.unshift(
   { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
 )
 
+// New content (Sept 16, 2025) — Fresh posts
+posts.unshift(
+  { slug: 'ai-2026-agent-release-health-scorecards', title: 'Agent Release Health Scorecards (2026)', excerpt: 'Traces, evals, policy events, and incidents as release health signals.' },
+  { slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'Secure Multi‑Agent Operations (2026)', excerpt: 'Operate multi‑agent systems safely with risk tiers and runtime controls.' }
+)
+
 // New content (Sept 16, 2025) — Additional (Autonomous Change Mgmt, Red Teaming, Compliance Evidence)
 posts.unshift(
   { slug: 'ai-2026-autonomous-change-management-blueprint', title: 'Autonomous Change Management — Blueprint (2026)', excerpt: 'Design safe, auditable, and low‑risk change pipelines for agentic systems.' },
