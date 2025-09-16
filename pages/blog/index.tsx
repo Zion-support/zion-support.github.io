@@ -39,6 +39,8 @@ const posts = [
   ,{ slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'AI 2026: Secure Multi-Agent Operations Blueprint', excerpt: 'Operate multi-agent systems safely with risk tiers and telemetry.' }
   ,{ slug: 'ai-2026-agent-observability-scorecards', title: 'Agent Observability Scorecards (2026)', excerpt: 'Scorecards for reliability, safety, quality, and efficiency.' }
   ,{ slug: 'ai-2026-cost-aware-routing-in-practice', title: 'Cost-Aware Routing in Practice (2026)', excerpt: 'Route by budget, latency, and quality with safe fallbacks.' }
+  ,{ slug: 'ai-2026-agentic-benchmarking-field-guide', title: 'Agentic Benchmarking Field Guide (2026)', excerpt: 'Benchmark agentic systems with scenario suites and business-aligned SLIs.' }
+  ,{ slug: 'ai-2026-operationalizing-ai-safety-controls', title: 'Operationalizing AI Safety Controls (2026)', excerpt: 'Turn policies into runtime controls wired to SLOs and incidents.' }
 ]
 
 // Newly added posts (Sept 2025)

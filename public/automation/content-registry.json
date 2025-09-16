@@ -337,6 +337,20 @@
       "source": "blog"
     },
     {
+      "title": "Agentic Benchmarking Field Guide (2026)",
+      "href": "/blog/ai-2026-agentic-benchmarking-field-guide",
+      "desc": "Benchmark agentic systems with scenario suites and business-aligned SLIs",
+      "createdAt": "2025-09-16T16:35:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Operationalizing AI Safety Controls (2026)",
+      "href": "/blog/ai-2026-operationalizing-ai-safety-controls",
+      "desc": "Turn policies into runtime controls wired to SLOs and incidents",
+      "createdAt": "2025-09-16T16:36:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "Guide — Edge AI Compliance 2026",
       "href": "/pages/EdgeAICompliance2026",
       "desc": "Device attestation, data residency, and auditability patterns at the edge",
