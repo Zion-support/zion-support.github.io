@@ -60,6 +60,8 @@ import NextGenAIContentPromotionBanner2026 from './components/NextGenAIContentPr
 import AITrendsPromotionBanner2026 from './components/AITrendsPromotionBanner2026';
 import NewContentShowcase2027 from './components/NewContentShowcase2027';
 import RevolutionaryServicesBanner2027 from './components/RevolutionaryServicesBanner2027';
+import NewContentPromotionBanner2025 from './components/NewContentPromotionBanner2025';
+import RevolutionaryContentShowcase2025 from './components/RevolutionaryContentShowcase2025';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
@@ -67,6 +69,8 @@ import AI2026UltimateInnovationHub from './pages/AI2026UltimateInnovationHub';
 import QuantumAIRevolution2026 from './pages/QuantumAIRevolution2026';
 import NextGenAIContentHub2026 from './pages/NextGenAIContentHub2026';
 import AITrendsInsights2026 from './pages/AITrendsInsights2026';
+import AI2025UltimateTransformation from './pages/AI2025UltimateTransformation';
+import QuantumAIRevolution2025 from './pages/QuantumAIRevolution2025';
 import './index.css';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
@@ -175,6 +179,16 @@ const App: React.FC = () => {
               {/* NEW: Revolutionary Services Banner 2027 */}
               <div className="mb-12">
                 <RevolutionaryServicesBanner2027 />
+              </div>
+
+              {/* NEW: 2025 Content Promotion Banner */}
+              <div className="mb-12">
+                <NewContentPromotionBanner2025 />
+              </div>
+
+              {/* NEW: Revolutionary Content Showcase 2025 */}
+              <div className="mb-12">
+                <RevolutionaryContentShowcase2025 />
               </div>
 
               {/* NEW: Content Showcase 2027 */}
@@ -492,6 +506,10 @@ const App: React.FC = () => {
           
           {/* NEW: Advanced AI Solutions 2027 */}
           <Route path="/advanced-ai-solutions-2027" element={<AdvancedAISolutions2027 />} />
+          
+          {/* NEW: 2025 Ultimate Content Routes */}
+          <Route path="/ai-2025-ultimate-transformation" element={<AI2025UltimateTransformation />} />
+          <Route path="/quantum-ai-revolution-2025" element={<QuantumAIRevolution2025 />} />
         </Routes>
         
         <Footer />

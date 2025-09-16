@@ -3287,5 +3287,89 @@ export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
 
+// Additional blog posts for 2025
+const additionalBlogPosts = [
+  {
+    id: 20001,
+    title: "AI-Powered Enterprise Transformation: A Complete Guide for 2025",
+    excerpt: "Discover how leading enterprises are leveraging AI to achieve unprecedented growth, efficiency, and competitive advantage in 2025.",
+    content: "The enterprise AI landscape has evolved dramatically in 2025, with organizations achieving remarkable transformations through strategic AI implementation. This comprehensive guide explores the latest trends, technologies, and best practices that are driving enterprise success. From autonomous business operations to AI-driven decision making, companies are experiencing 300% faster decision cycles, 500% improvement in operational efficiency, and 1000% ROI on AI investments. Key areas covered include: AI governance frameworks, autonomous workflow automation, predictive analytics implementation, and human-AI collaboration strategies. Real-world case studies demonstrate how Fortune 500 companies have achieved complete digital transformation through AI adoption.",
+    author: "Sarah Chen",
+    authorRole: "Enterprise AI Strategist",
+    publishDate: "2025-01-20",
+    readTime: "15 min read",
+    category: "Enterprise AI",
+    tags: ["Enterprise AI", "Digital Transformation", "Business Automation", "AI Strategy", "ROI"],
+    featured: true,
+    imageUrl: "/images/blog/enterprise-ai-transformation-2025.jpg",
+    slug: "ai-powered-enterprise-transformation-2025-guide"
+  },
+  {
+    id: 20002,
+    title: "The Future of Autonomous Systems: Self-Managing Organizations",
+    excerpt: "Explore how autonomous AI systems are creating self-managing organizations that operate with complete independence and unprecedented efficiency.",
+    content: "Autonomous systems represent the next frontier in organizational management, where AI agents handle complex decision-making processes without human intervention. These systems combine advanced machine learning, natural language processing, and predictive analytics to create truly self-managing organizations. Key benefits include 24/7 operational efficiency, instant response to market changes, predictive problem resolution, and continuous optimization. Organizations implementing autonomous systems report 95% reduction in manual processes, 99.9% uptime, and 500% improvement in decision speed. This article covers implementation strategies, technology requirements, governance frameworks, and real-world success stories from companies that have achieved complete autonomy.",
+    author: "Dr. Michael Torres",
+    authorRole: "Autonomous Systems Architect",
+    publishDate: "2025-01-20",
+    readTime: "12 min read",
+    category: "Autonomous Systems",
+    tags: ["Autonomous Systems", "Self-Management", "AI Agents", "Organizational Efficiency", "Future of Work"],
+    featured: true,
+    imageUrl: "/images/blog/autonomous-systems-2025.jpg",
+    slug: "future-autonomous-systems-self-managing-organizations"
+  },
+  {
+    id: 20003,
+    title: "Quantum Computing Breakthrough: Solving Impossible Problems",
+    excerpt: "Revolutionary quantum computing advances are enabling solutions to previously unsolvable problems across industries.",
+    content: "Quantum computing has reached a critical inflection point in 2025, with practical applications now solving real-world problems that were previously impossible. This breakthrough technology leverages quantum mechanical phenomena to process information in ways that classical computers cannot. Key applications include drug discovery (1000x faster molecular simulation), financial modeling (real-time risk analysis), cryptography (unbreakable security), and optimization problems (logistics, supply chain, resource allocation). Companies implementing quantum solutions report 1000x faster computation, 99.9% accuracy improvements, and breakthrough discoveries in previously intractable domains. The article covers quantum advantage, implementation strategies, and industry-specific use cases.",
+    author: "Dr. Lisa Wang",
+    authorRole: "Quantum Computing Researcher",
+    publishDate: "2025-01-20",
+    readTime: "10 min read",
+    category: "Quantum Computing",
+    tags: ["Quantum Computing", "Breakthrough Technology", "Problem Solving", "Innovation", "Future Tech"],
+    featured: true,
+    imageUrl: "/images/blog/quantum-computing-breakthrough-2025.jpg",
+    slug: "quantum-computing-breakthrough-solving-impossible-problems"
+  },
+  {
+    id: 20004,
+    title: "AI Ethics and Governance: Building Trust in the Digital Age",
+    excerpt: "Comprehensive framework for implementing ethical AI practices and governance structures that build trust and ensure responsible AI deployment.",
+    content: "As AI becomes increasingly integrated into every aspect of business and society, establishing robust ethics and governance frameworks is crucial for building trust and ensuring responsible deployment. This comprehensive guide covers the latest developments in AI ethics, including bias mitigation, transparency requirements, accountability frameworks, and regulatory compliance. Key topics include: ethical AI design principles, governance structures, risk assessment methodologies, stakeholder engagement strategies, and compliance frameworks. Organizations implementing comprehensive AI ethics programs report 400% improvement in stakeholder trust, 300% reduction in AI-related incidents, and 500% improvement in regulatory compliance scores.",
+    author: "Dr. James Anderson",
+    authorRole: "AI Ethics Director",
+    publishDate: "2025-01-20",
+    readTime: "14 min read",
+    category: "AI Ethics",
+    tags: ["AI Ethics", "Governance", "Trust", "Responsible AI", "Compliance"],
+    featured: true,
+    imageUrl: "/images/blog/ai-ethics-governance-2025.jpg",
+    slug: "ai-ethics-governance-building-trust-digital-age"
+  },
+  {
+    id: 20005,
+    title: "The Rise of Multimodal AI: Beyond Text and Images",
+    excerpt: "Explore how multimodal AI systems are revolutionizing human-computer interaction by processing multiple data types simultaneously.",
+    content: "Multimodal AI represents a paradigm shift in artificial intelligence, enabling systems to process and understand multiple types of data simultaneously - text, images, audio, video, and sensor data. This breakthrough technology creates more natural and intuitive human-computer interactions, enabling AI systems to understand context and nuance like never before. Key applications include: intelligent assistants that understand voice, gesture, and facial expressions; autonomous vehicles that process visual, auditory, and sensor data; healthcare AI that analyzes medical images, patient records, and vital signs; and creative AI that generates content across multiple media types. Organizations implementing multimodal AI report 600% improvement in user experience, 400% increase in task completion rates, and 500% improvement in accuracy across complex scenarios.",
+    author: "Dr. Maria Rodriguez",
+    authorRole: "Multimodal AI Specialist",
+    publishDate: "2025-01-20",
+    readTime: "11 min read",
+    category: "Multimodal AI",
+    tags: ["Multimodal AI", "Human-Computer Interaction", "Natural Language Processing", "Computer Vision", "AI Innovation"],
+    featured: true,
+    imageUrl: "/images/blog/multimodal-ai-2025.jpg",
+    slug: "rise-multimodal-ai-beyond-text-images"
+  }
+];
+
+// Update the main export to include additional blog posts
+export const allBlogPostsWithNew = [...allBlogPosts, ...additionalBlogPosts];
+export const BLOG_POSTS_ALL = allBlogPostsWithNew;
+export const BLOG_POSTS = allBlogPostsWithNew;
+
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)
