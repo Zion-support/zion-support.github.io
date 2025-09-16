@@ -11,6 +11,13 @@ export interface UpdateItem {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+		title: 'Guide: Operational Evals Blueprint',
+		summary: 'Production-ready gates and scorecards for safer, faster rollouts.',
+		href: '/updates/operational-evals-blueprint',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
 		title: 'Launch: Production RAG Observability Suite v1.0',
 		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
 		href: '/updates/production-rag-observability-suite-1-0',

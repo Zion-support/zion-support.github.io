@@ -109,4 +109,12 @@
     "tags": ["evals", "reliability", "progressive-delivery", "observability"],
     "source": "Zion AI Lab"
   }
+  ,
+  {
+    "title": "Operational Evals Blueprint: Production-Ready Gates and Scorecards",
+    "url": "/reports/ai-lab/articles/new-operational-evals-blueprint-1758052800000.md",
+    "createdAt": "2025-09-16T14:00:00.000Z",
+    "tags": ["evals", "reliability", "production"],
+    "source": "Zion AI Lab"
+  }
 ]
