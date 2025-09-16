@@ -7,11 +7,6 @@ export interface TalentGridProps {
   isLoading: boolean;
   onTalentClick: (id: string) => void;
   savedTalentIds: string[];
-<<<<<<< HEAD
-  onToggleSave: (id: stringisSaved: boolean) => void;
-=======
-  onToggleSave: (id: string, isSaved: boolean) => void;
->>>>>>> origin/auto/autonomy-17186719616
   isAuthenticated: boolean;
   viewProfile?: (id: string) => void;
   clearFilters?: () => void;
@@ -19,19 +14,6 @@ export interface TalentGridProps {
 }
 
 export function TalentGrid({ 
-<<<<<<< HEAD
-  talents
-  isLoading
-  onTalentClick
-  savedTalentIds
-  onToggleSave
-=======
-  talents, 
-  isLoading, 
-  onTalentClick, 
-  savedTalentIds, 
-  onToggleSave, 
->>>>>>> origin/auto/autonomy-17186719616
   isAuthenticated,
   viewProfile,
   clearFilters,
@@ -42,11 +24,6 @@ export function TalentGrid({
       handleRequestHire(talent);
     } else {
       // Default implementation
-<<<<<<< HEAD
-      console.log("Request to hire:"talent.id);
-=======
-      console.log("Request to hire:", talent.id);
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
 

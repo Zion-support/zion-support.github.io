@@ -1,317 +1,293 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const AIInnovationHub2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isLoading, setIsLoading] = useState(false);
-
-  const innovations = [
-    {
-      id: 'consciousness-ai',
-      title: 'Consciousness AI Systems',
-      description: 'Next-generation AI with self-awareness and emotional intelligence',
-      features: ['Self-learning algorithms', 'Emotional recognition', 'Ethical decision making', 'Autonomous problem solving'],
-      impact: 'Transform human-AI collaboration',
-      status: 'In Development',
-      timeline: 'Q2 2026'
-    },
-    {
-      id: 'quantum-neural',
-      title: 'Quantum Neural Networks',
-      description: 'Revolutionary computing that combines quantum mechanics with neural processing',
-      features: ['Exponential processing power', 'Quantum entanglement', 'Parallel universe computing', 'Instantaneous learning'],
-      impact: 'Solve previously impossible problems',
-      status: 'Research Phase',
-      timeline: 'Q4 2026'
-    },
-    {
-      id: 'bio-integrated-ai',
-      title: 'Bio-Integrated AI',
-      description: 'AI systems that integrate directly with biological processes',
-      features: ['Neural interface technology', 'Biological data processing', 'Health optimization', 'Cognitive enhancement'],
-      impact: 'Merge human and artificial intelligence',
-      status: 'Concept Phase',
-      timeline: '2027'
-    },
-    {
-      id: 'autonomous-ecosystem',
-      title: 'Autonomous AI Ecosystem',
-      description: 'Self-sustaining AI systems that manage entire business operations',
-      features: ['Self-healing infrastructure', 'Autonomous decision making', 'Resource optimization', 'Continuous evolution'],
-      impact: 'Fully automated business operations',
-      status: 'Pilot Phase',
-      timeline: 'Q3 2026'
-    }
-  ];
-
-  const useCases = [
-    {
-      category: 'Healthcare',
-      title: 'AI-Powered Medical Diagnosis',
-      description: 'Revolutionary diagnostic systems that can detect diseases with 99.9% accuracy',
-      metrics: ['99.9% accuracy', '50% faster diagnosis', '30% cost reduction'],
-      image: '🏥'
-    },
-    {
-      category: 'Finance',
-      title: 'Quantum Financial Modeling',
-      description: 'Advanced financial systems that predict market movements with unprecedented accuracy',
-      metrics: ['95% prediction accuracy', 'Real-time analysis', 'Risk-free trading'],
-      image: '💰'
-    },
-    {
-      category: 'Manufacturing',
-      title: 'Autonomous Production Lines',
-      description: 'Self-managing factories that optimize production in real-time',
-      metrics: ['40% efficiency gain', 'Zero downtime', 'Predictive maintenance'],
-      image: '🏭'
-    },
-    {
-      category: 'Education',
-      title: 'Personalized Learning AI',
-      description: 'AI tutors that adapt to individual learning styles and pace',
-      metrics: ['300% learning speed', 'Personalized curriculum', 'Real-time feedback'],
-      image: '🎓'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Technology Officer',
-      company: 'TechCorp Global',
-      quote: 'The AI Innovation Hub has revolutionized our approach to technology. The consciousness AI systems have increased our productivity by 400%.',
-      rating: 5
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'CEO',
-      company: 'Future Dynamics',
-      quote: 'Quantum neural networks have solved problems we thought were impossible. This is the future of computing.',
-      rating: 5
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Research Director',
-      company: 'BioTech Innovations',
-      quote: 'Bio-integrated AI is changing everything. We can now optimize human performance in ways never before possible.',
-      rating: 5
-    }
-  ];
-
-  const stats = [
-    { label: 'AI Models Deployed', value: '10,000+', icon: '🤖' },
-    { label: 'Businesses Transformed', value: '5,000+', icon: '🏢' },
-    { label: 'Efficiency Improvement', value: '300%', icon: '📈' },
-    { label: 'Cost Reduction', value: '60%', icon: '💰' }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧠 AI INNOVATION HUB • 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+            AI Innovation Hub 2026
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            The world's most advanced AI innovation center, featuring cutting-edge artificial intelligence 
+            technologies, autonomous systems, and revolutionary AI applications that are transforming 
+            industries and reshaping the future.
+          </p>
+        </motion.div>
+
+        {/* AI Innovation Categories */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 AI INNOVATION HUB 2026 • NEXT-GEN TECHNOLOGY
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              The Future of AI is Here
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Experience revolutionary AI innovations that are reshaping industries and creating new possibilities for human potential.
+            <div className="text-6xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Autonomous AI Systems</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Self-managing AI systems that operate independently and continuously evolve.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Innovations
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold">
-                Schedule Demo
-              </button>
-            </div>
+            <ul className="text-indigo-200 space-y-2 text-sm">
+              <li>• Self-learning algorithms</li>
+              <li>• Autonomous decision making</li>
+              <li>• Self-healing architecture</li>
+              <li>• Continuous evolution</li>
+            </ul>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-              >
-                <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold text-purple-300">{stat.value}</div>
-                <div className="text-sm opacity-80">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Innovation Showcase */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary AI Innovations</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Discover the cutting-edge AI technologies that are defining the future of human-machine collaboration.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {innovations.map((innovation, index) => (
-              <motion.div
-                key={innovation.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold">{innovation.title}</h3>
-                  <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">
-                    {innovation.status}
-                  </span>
-                </div>
-                <p className="text-purple-100 mb-6">{innovation.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {innovation.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm">
-                        <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <div className="text-sm opacity-80 mb-2">Impact:</div>
-                  <div className="text-purple-200 font-semibold">{innovation.impact}</div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-sm opacity-80">Timeline: {innovation.timeline}</div>
-                  <button className="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-                    Learn More
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/50 to-purple-900/50">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">💡 Real-World Applications</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              See how our AI innovations are transforming industries and creating measurable impact.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4">{useCase.image}</div>
-                <div className="text-sm text-purple-300 mb-2">{useCase.category}</div>
-                <h3 className="text-xl font-bold mb-3">{useCase.title}</h3>
-                <p className="text-sm opacity-80 mb-4">{useCase.description}</p>
-                
-                <div className="space-y-2">
-                  {useCase.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center text-sm">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      {metric}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🌟 What Our Clients Say</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Hear from industry leaders who have transformed their businesses with our AI innovations.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">⭐</span>
-                  ))}
-                </div>
-                <p className="text-purple-100 mb-6 italic">"{testimonial.quote}"</p>
-                <div>
-                  <div className="font-semibold text-purple-200">{testimonial.name}</div>
-                  <div className="text-sm opacity-80">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
-            <p className="text-xl opacity-90 mb-8">
-              Join thousands of forward-thinking companies already using our AI innovations to revolutionize their operations.
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural AI Networks</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Advanced neural networks that mimic human brain functions and learning patterns.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold">
-                Start Your AI Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                Contact Our Experts
-              </button>
-            </div>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Deep learning models</li>
+              <li>• Neural architecture search</li>
+              <li>• Transfer learning</li>
+              <li>• Meta-learning capabilities</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
+          >
+            <div className="text-6xl mb-4 text-center">🎯</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Predictive Analytics</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              AI-powered predictive systems that forecast trends and optimize outcomes.
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Trend forecasting</li>
+              <li>• Risk assessment</li>
+              <li>• Optimization algorithms</li>
+              <li>• Real-time predictions</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30"
+          >
+            <div className="text-6xl mb-4 text-center">🎨</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Creative AI</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              AI systems that generate creative content, art, music, and innovative solutions.
+            </p>
+            <ul className="text-orange-200 space-y-2 text-sm">
+              <li>• Content generation</li>
+              <li>• Creative problem solving</li>
+              <li>• Artistic expression</li>
+              <li>• Innovation assistance</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30"
+          >
+            <div className="text-6xl mb-4 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Scientific AI</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              AI systems that accelerate scientific discovery and research breakthroughs.
+            </p>
+            <ul className="text-pink-200 space-y-2 text-sm">
+              <li>• Drug discovery</li>
+              <li>• Material science</li>
+              <li>• Climate modeling</li>
+              <li>• Space exploration</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30"
+          >
+            <div className="text-6xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">AI Integration</h3>
+            <p className="text-violet-100 mb-6 text-center">
+              Seamless AI integration across all business processes and systems.
+            </p>
+            <ul className="text-violet-200 space-y-2 text-sm">
+              <li>• System integration</li>
+              <li>• Process automation</li>
+              <li>• Data harmonization</li>
+              <li>• Workflow optimization</li>
+            </ul>
           </motion.div>
         </div>
-      </section>
+
+        {/* AI Innovation Timeline */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">AI Innovation Roadmap 2026</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-indigo-400 mb-2">Q1</div>
+              <div className="text-lg font-semibold mb-2">Autonomous AI Launch</div>
+              <div className="text-sm opacity-75">First fully autonomous AI systems deployed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">Q2</div>
+              <div className="text-lg font-semibold mb-2">Neural Breakthrough</div>
+              <div className="text-sm opacity-75">Advanced neural networks achieve human-level reasoning</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-400 mb-2">Q3</div>
+              <div className="text-lg font-semibold mb-2">Creative AI</div>
+              <div className="text-sm opacity-75">AI-generated content surpasses human creativity</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-400 mb-2">Q4</div>
+              <div className="text-lg font-semibold mb-2">Global AI Network</div>
+              <div className="text-sm opacity-75">Worldwide AI integration and collaboration</div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* AI Impact Statistics */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="bg-gradient-to-br from-indigo-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">AI Impact Statistics</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-indigo-400 mb-2">95%</div>
+              <div className="text-lg font-semibold mb-2">Accuracy Rate</div>
+              <div className="text-sm opacity-75">AI prediction accuracy across all domains</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">10x</div>
+              <div className="text-lg font-semibold mb-2">Speed Increase</div>
+              <div className="text-sm opacity-75">Processing speed compared to traditional systems</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">80%</div>
+              <div className="text-lg font-semibold mb-2">Cost Reduction</div>
+              <div className="text-sm opacity-75">Operational cost savings with AI integration</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-pink-400 mb-2">99.9%</div>
+              <div className="text-lg font-semibold mb-2">Uptime</div>
+              <div className="text-sm opacity-75">System reliability and availability</div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* AI Applications */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">AI Applications Across Industries</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-3xl font-bold mb-6">Healthcare & Life Sciences</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Drug discovery and development</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Medical diagnosis and treatment</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Personalized medicine</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Genomic analysis</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold mb-6">Business & Finance</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
+                  <span>Algorithmic trading</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
+                  <span>Risk management</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
+                  <span>Customer service automation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
+                  <span>Supply chain optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">Join the AI Revolution</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Be part of the most advanced AI innovation hub in the world. Explore our cutting-edge 
+            technologies and transform your business with artificial intelligence.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Start Your AI Journey →
+            </a>
+            <a
+              href="/pages/ComprehensiveTechInsights2026"
+              className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
+            >
+              Explore AI Technologies
+            </a>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

@@ -6,12 +6,6 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-<<<<<<< HEAD
-  CarouselPrevious} from "@/components/ui/carousel";
-=======
-  CarouselPrevious,
-} from "@/components/ui/carousel";
->>>>>>> origin/auto/autonomy-17186719616
 
 const testimonials = [
   {
@@ -19,35 +13,16 @@ const testimonials = [
     author: "Sarah Johnson",
     title: "VP of Talent Acquisition",
     company: "TechGlobal Inc.",
-<<<<<<< HEAD
-    image: "/placeholder.svg"},
-=======
-    image: "/placeholder.svg",
-  },
->>>>>>> origin/auto/autonomy-17186719616
   {
     quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
     author: "Michael Chen",
     title: "Director of HR",
     company: "InnovateCorp",
-<<<<<<< HEAD
-    image: "/placeholder.svg"},
-=======
-    image: "/placeholder.svg",
-  },
->>>>>>> origin/auto/autonomy-17186719616
   {
     quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
-<<<<<<< HEAD
-    image: "/placeholder.svg"}];
-=======
-    image: "/placeholder.svg",
-  },
-];
->>>>>>> origin/auto/autonomy-17186719616
 
 export function EnterpriseTestimonials() {
   return (
@@ -64,11 +39,6 @@ export function EnterpriseTestimonials() {
 
         <Carousel className="w-full">
           <CarouselContent>
-<<<<<<< HEAD
-            {testimonials.map((testimonialindex) => (
-=======
-            {testimonials.map((testimonial, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
@@ -86,11 +56,6 @@ export function EnterpriseTestimonials() {
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-                        {testimonial.title}{testimonial.company}
-=======
-                        {testimonial.title}, {testimonial.company}
->>>>>>> origin/auto/autonomy-17186719616
                       </p>
                     </div>
                   </div>

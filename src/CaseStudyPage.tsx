@@ -12,8 +12,8 @@ const CaseStudyPage: React.FC = () => {
             Case Study: {slug}
           </h1>
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600">
-              This case study page is under development. Content for {slug} will be available soon.
+            <p className="text-gray-600 text-lg">
+              This case study showcases how we've helped businesses transform with our technology solutions.
             </p>
           </div>
         </div>

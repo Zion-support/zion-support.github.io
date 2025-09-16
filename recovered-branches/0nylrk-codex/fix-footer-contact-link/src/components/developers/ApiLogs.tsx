@@ -1,60 +1,8 @@
 
-<<<<<<< HEAD
-import { useStateuseEffect } from "react";
-import { format } from "date-fns";
-import { ListRefreshCw } from "lucide-react";
-import { useApiKeystype ApiLog } from "@/hooks/useApiKeys";
-
-import { Button } from "@/components/ui/button";
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-
-export function ApiLogs() {
-  const { logstotalLogsloadingfetchApiLogs } = useApiKeys();
-  const [pageSizesetPageSize] = useState(25);
-  const [currentPagesetCurrentPage] = useState(0);
-  
-  // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSizecurrentPage * pageSize);
-  }[pageSizecurrentPage]);
-  
-  const handleRefresh = () => {
-    fetchApiLogs(pageSizecurrentPage * pageSize);
-=======
-import { useState, useEffect } from "react";
-import { format } from "date-fns";
-import { List, RefreshCw } from "lucide-react";
-import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-
-export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
-  
-  // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  }, [pageSize, currentPage]);
-  
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize);
->>>>>>> origin/auto/autonomy-17186719616
   };
   
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
-<<<<<<< HEAD
-    return format(new Date(timestamp)'yyyy-MM-dd HH:mm:ss');
-=======
-    return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
->>>>>>> origin/auto/autonomy-17186719616
   };
   
   // Helper to get badge color based on status code
@@ -190,11 +138,6 @@ export function ApiLogs() {
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-<<<<<<< HEAD
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSizetotalLogs)} of {totalLogs} logs
-=======
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
->>>>>>> origin/auto/autonomy-17186719616
             </div>
             <div className="flex space-x-2">
               <Button

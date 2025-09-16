@@ -24,10 +24,6 @@ export interface RealAdditionService2025Q3 {
 	rating?: number;
 	reviews?: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 	{
 		id: 'ai-email-copilot',

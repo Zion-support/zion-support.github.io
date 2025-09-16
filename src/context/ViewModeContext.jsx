@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const ViewModeContext = createContext();
 
@@ -12,36 +12,13 @@ export const useViewMode = () => {
 
 export const ViewModeProvider = ({ children }) => {
   const [viewMode, setViewMode] = useState('desktop');
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check for saved preferences
-    const savedViewMode = localStorage.getItem('view-mode');
-    const savedDarkMode = localStorage.getItem('dark-mode') === 'true';
-    
-    if (savedViewMode) {
-      setViewMode(savedViewMode);
-    }
-    
-    setIsDarkMode(savedDarkMode);
-  }, []);
-
-  const toggleViewMode = (mode) => {
-    setViewMode(mode);
-    localStorage.setItem('view-mode', mode);
-  };
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !isDarkMode;
-    setIsDarkMode(newDarkMode);
-    localStorage.setItem('dark-mode', newDarkMode.toString());
-  };
+  const [isMobile, setIsMobile] = useState(false);
 
   const value = {
     viewMode,
-    isDarkMode,
-    toggleViewMode,
-    toggleDarkMode,
+    setViewMode,
+    isMobile,
+    setIsMobile
   };
 
   return (
@@ -49,4 +26,3 @@ export const ViewModeProvider = ({ children }) => {
       {children}
     </ViewModeContext.Provider>
   );
-};

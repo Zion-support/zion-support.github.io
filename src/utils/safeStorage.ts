@@ -1,153 +1,133 @@
-<<<<<<< HEAD
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key: string): string | null => {
-    try {
-      return localStorage.getItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return null;
-    }
-  },
-  
-  setItem: (key: string, value: string): void => {
-    try {
-      localStorage.setItem(key, value);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-  
-  removeItem: (key: string): void => {
-    try {
-      localStorage.removeItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-    }
-  },
-  
-  clear: (): void => {
-    try {
-      localStorage.clear();
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-=======
-/**
- * Safe storage utility for handling localStorage and sessionStorage
- * with error handling and fallbacks
- */
+interface StorageOptions {
+  encrypt?: boolean;
+  compress?: boolean;
+  ttl?: number; // Time to live in milliseconds
+}
 
-export const safeStorage = {
-  /**
-   * Safely get item from localStorage
-   */
-  getItem: (key: string): string | null => {
+class SafeStorage {
+  private isAvailable(): boolean {
     try {
-      if (typeof window === 'undefined') return null;
-      return localStorage.getItem(key);
-    } catch (error) {
-      console.warn('Failed to get item from localStorage:', error);
-      return null;
-    }
-  },
-
-  /**
-   * Safely set item in localStorage
-   */
-  setItem: (key: string, value: string): boolean => {
-    try {
-      if (typeof window === 'undefined') return false;
-      localStorage.setItem(key, value);
+      const test = '__storage_test__';
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
       return true;
-    } catch (error) {
-      console.warn('Failed to set item in localStorage:', error);
+    } catch (e) {
       return false;
-    }
-  },
-
-  /**
-   * Safely remove item from localStorage
-   */
-  removeItem: (key: string): boolean => {
-    try {
-      if (typeof window === 'undefined') return false;
-      localStorage.removeItem(key);
-      return true;
-    } catch (error) {
-      console.warn('Failed to remove item from localStorage:', error);
-      return false;
-    }
-  },
-
-  /**
-   * Safely get item from sessionStorage
-   */
-  getSessionItem: (key: string): string | null => {
-    try {
-      if (typeof window === 'undefined') return null;
-      return sessionStorage.getItem(key);
-    } catch (error) {
-      console.warn('Failed to get item from sessionStorage:', error);
-      return null;
-    }
-  },
-
-  /**
-   * Safely set item in sessionStorage
-   */
-  setSessionItem: (key: string, value: string): boolean => {
-    try {
-      if (typeof window === 'undefined') return false;
-      sessionStorage.setItem(key, value);
-      return true;
-    } catch (error) {
-      console.warn('Failed to set item in sessionStorage:', error);
-      return false;
-    }
-  },
-
-  /**
-   * Safely remove item from sessionStorage
-   */
-  removeSessionItem: (key: string): boolean => {
-    try {
-      if (typeof window === 'undefined') return false;
-      sessionStorage.removeItem(key);
-      return true;
-    } catch (error) {
-      console.warn('Failed to remove item from sessionStorage:', error);
-      return false;
-    }
-  },
-
-  /**
-   * Clear all localStorage
-   */
-  clear: (): boolean => {
-    try {
-      if (typeof window === 'undefined') return false;
-      localStorage.clear();
-      return true;
-    } catch (error) {
-      console.warn('Failed to clear localStorage:', error);
-      return false;
-    }
-  },
-
-  /**
-   * Clear all sessionStorage
-   */
-  clearSession: (): boolean => {
-    try {
-      if (typeof window === 'undefined') return false;
-      sessionStorage.clear();
-      return true;
-    } catch (error) {
-      console.warn('Failed to clear sessionStorage:', error);
-      return false;
->>>>>>> cursor/create-and-deploy-new-content-b0b6
     }
   }
-};
 
+  setItem(key: string, value: any, options: StorageOptions = {}): boolean {
+    if (!this.isAvailable()) {
+      console.warn('localStorage is not available');
+      return false;
+    }
+
+    try {
+      let data = value;
+      
+      // Add timestamp if TTL is specified
+      if (options.ttl) {
+        data = {
+          value,
+          timestamp: Date.now(),
+          ttl: options.ttl
+        };
+      }
+
+      // Compress if requested
+      if (options.compress) {
+        // Simple compression placeholder - in real implementation, use a compression library
+        data = JSON.stringify(data);
+      }
+
+      // Encrypt if requested
+      if (options.encrypt) {
+        // Simple encryption placeholder - in real implementation, use proper encryption
+        data = btoa(JSON.stringify(data));
+      }
+
+      localStorage.setItem(key, JSON.stringify(data));
+      return true;
+    } catch (error) {
+      console.error('Error storing data:', error);
+      return false;
+    }
+  }
+
+  getItem(key: string, options: StorageOptions = {}): any {
+    if (!this.isAvailable()) {
+      return null;
+    }
+
+    try {
+      const item = localStorage.getItem(key);
+      if (!item) return null;
+
+      let data = JSON.parse(item);
+
+      // Decrypt if encrypted
+      if (options.encrypt) {
+        data = JSON.parse(atob(data));
+      }
+
+      // Check TTL
+      if (data.timestamp && data.ttl) {
+        const now = Date.now();
+        if (now - data.timestamp > data.ttl) {
+          this.removeItem(key);
+          return null;
+        }
+        data = data.value;
+      }
+
+      return data;
+    } catch (error) {
+      console.error('Error retrieving data:', error);
+      return null;
+    }
+  }
+
+  removeItem(key: string): boolean {
+    if (!this.isAvailable()) {
+      return false;
+    }
+
+    try {
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.error('Error removing data:', error);
+      return false;
+    }
+  }
+
+  clear(): boolean {
+    if (!this.isAvailable()) {
+      return false;
+    }
+
+    try {
+      localStorage.clear();
+      return true;
+    } catch (error) {
+      console.error('Error clearing storage:', error);
+      return false;
+    }
+  }
+
+  keys(): string[] {
+    if (!this.isAvailable()) {
+      return [];
+    }
+
+    try {
+      return Object.keys(localStorage);
+    } catch (error) {
+      console.error('Error getting keys:', error);
+      return [];
+    }
+  }
+}
+
+const safeStorage = new SafeStorage();
 export default safeStorage;

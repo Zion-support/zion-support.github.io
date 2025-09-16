@@ -12,38 +12,9 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  'ai-governance-framework-2025': {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
-    excerpt:
-      'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
-    category: 'AI Governance',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-16',
-    readTime: '12 min read',
-    content: [
-      'AI governance is no longer optional—it\'s essential for building trust and ensuring responsible AI deployment at scale.',
-      'This framework covers policy development, risk assessment, compliance monitoring, and continuous governance across the AI lifecycle.',
-      'We outline practical implementation steps including governance structures, risk frameworks, compliance checklists, and monitoring systems.',
-      'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
-      'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
-      'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
-=======
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  'ai-governance-framework-2025': {
-    id: 'ai-governance-framework-2025',
-    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
-=======
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
->>>>>>> 1f7620a0edd89cd971bd6e6ace7dea7c2db60693
     excerpt:
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
     category: 'AI Safety',
@@ -67,13 +38,26 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
     ]
   },
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Building Trust in Autonomous Systems',
+    excerpt:
+      'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-16',
+    readTime: '12 min read',
+    content: [
+      'AI governance is no longer optional—it\'s essential for building trust and ensuring responsible AI deployment at scale.',
+      'This framework covers policy development, risk assessment, compliance monitoring, and continuous governance across the AI lifecycle.',
+      'We outline practical implementation steps including governance structures, risk frameworks, compliance checklists, and monitoring systems.',
+      'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
+      'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
+      'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
+    ]
+  },
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
@@ -316,4 +300,3 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
     </div>
   );
 }
-

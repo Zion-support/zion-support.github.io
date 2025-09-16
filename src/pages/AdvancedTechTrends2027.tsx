@@ -200,6 +200,19 @@ const AdvancedTechTrends2027: React.FC = () => {
               <div className="text-6xl font-bold text-orange-400 mb-4">100+</div>
               <h3 className="text-2xl font-bold text-white mb-2">Space Missions</h3>
               <p className="text-orange-200">Active space exploration missions</p>
+          {/* Synthetic Biology Revolution */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center space-x-3 mb-6">
+              <span className="text-4xl">🧬</span>
+            </div>
+            <p className="text-gray-300 mb-6 text-lg">
+              Programmable biology is enabling the creation of living machines, 
+              self-healing materials, and biological computers that surpass silicon.
+            </p>
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 p-4 rounded-lg">
+                <h3 className="text-white font-semibold mb-2">Living Factories</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -245,6 +258,13 @@ const AdvancedTechTrends2027: React.FC = () => {
                 <li>• Quantum internet infrastructure</li>
               </ul>
             </motion.div>
+        {/* Emerging Technologies Section */}
+        <div className="mb-16">
+            </div>
+          </div>
+        </div>
+
+            </div>
           </div>
         </div>
 
@@ -269,6 +289,12 @@ const AdvancedTechTrends2027: React.FC = () => {
             <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
               🧠 Synthetic AI
             </a>
+              <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
+                Explore Solutions
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+              </button>
+            </div>
           </div>
         </motion.div>
       </main>
@@ -277,5 +303,6 @@ const AdvancedTechTrends2027: React.FC = () => {
     </div>
   );
 };
+
 
 export default AdvancedTechTrends2027;

@@ -3,15 +3,6 @@ import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRightStar
-  BrainAtomShieldZapTrendingUpGlobeMapPin,
-  UsersBuildingRocketCheckCirclePhoneMail
-=======
-  ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
-  Users, Building, Rocket, CheckCircle, Phone, Mail
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 
 const Homepage2026: React.FC = () => {
@@ -37,15 +28,6 @@ const Homepage2026: React.FC = () => {
             >
               {/* Company Badge */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium"
               >
                 <Star className="w-4 h-4" />
@@ -56,11 +38,6 @@ const Homepage2026: React.FC = () => {
                 Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                Pioneering the future of technology with innovative micro SAAS servicescutting-edge IT infrastructureand advanced AI solutions
-=======
-                Pioneering the future of technology with innovative micro SAAS services, cutting-edge IT infrastructure, and advanced AI solutions
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               
               {/* Enhanced CTA Section */}
@@ -89,11 +66,6 @@ const Homepage2026: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-=======
-                transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="flex items-center justify-center space-x-6 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
@@ -121,11 +93,6 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'
-=======
-              className="text-center mb-16"
->>>>>>> origin/auto/autonomy-17186719616
             >
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -137,11 +104,6 @@ const Homepage2026: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 0.1 }}
-=======
-                transition={{ duration: 0.6, delay: 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="text-center"
               >
                 <div className="text-4xl mb-4">🚀</div>
@@ -154,11 +116,6 @@ const Homepage2026: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
-                transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="text-center"
               >
                 <div className="text-4xl mb-4">🏗️</div>
@@ -171,11 +128,6 @@ const Homepage2026: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 0.3 }}
-=======
-                transition={{ duration: 0.6, delay: 0.3 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="text-center"
               >
                 <div className="text-4xl mb-4">🤖</div>
@@ -188,11 +140,6 @@ const Homepage2026: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 0.4 }}
-=======
-                transition={{ duration: 0.6, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="text-center"
               >
                 <div className="text-4xl mb-4">🧠</div>
@@ -223,26 +170,12 @@ const Homepage2026: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* AI Automation Services */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0x: -20 }}
-                whileInView={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.1 }}
-=======
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300"
               >
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
                   Intelligent automation solutions that streamline operations and boost productivity. 
-<<<<<<< HEAD
-                  From content creation to customer serviceour AI solutions save time and improve efficiency.
-=======
-                  From content creation to customer service, our AI solutions save time and improve efficiency.
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -267,26 +200,12 @@ const Homepage2026: React.FC = () => {
 
               {/* IT Infrastructure Services */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0x: 20 }}
-                whileInView={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
                   Robust infrastructure solutions for modern digital businesses. 
-<<<<<<< HEAD
-                  Edge computingzero trust securityand hybrid cloud management for enterprise-grade performance.
-=======
-                  Edge computing, zero trust security, and hybrid cloud management for enterprise-grade performance.
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -311,26 +230,12 @@ const Homepage2026: React.FC = () => {
 
               {/* Micro SAAS Solutions */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0x: -20 }}
-                whileInView={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.3 }}
-=======
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300"
               >
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
                   Specialized software solutions for specific business needs. 
-<<<<<<< HEAD
-                  Affordablefocused solutions that solve real problems and drive growth.
-=======
-                  Affordable, focused solutions that solve real problems and drive growth.
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -355,26 +260,12 @@ const Homepage2026: React.FC = () => {
 
               {/* Cutting-Edge AI Services */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0x: 20 }}
-                whileInView={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.4 }}
-=======
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300"
               >
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
                   Next-generation AI solutions for competitive advantage. 
-<<<<<<< HEAD
-                  Video generationcode assistanceand data analysis powered by advanced AI.
-=======
-                  Video generation, code assistance, and data analysis powered by advanced AI.
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -429,29 +320,10 @@ const Homepage2026: React.FC = () => {
                       </a>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <div className='flex items-center space-x-3'>
-                    <Phone className='w-5 h-5 text-green-400' />
-                    <div>
-                      <div className='text-sm text-gray-400'>Phone</div>
-                      <a
-                        href='tel:+13024640950'
-                        className='text-cyan-400 hover:underline font-medium'
-                      >                        +1 302 464 0950
-                      </a>
-                    </div>
-                  </div>                  <div className="flex items-center space-x-3">
-=======
-                  <div className="flex items-center space-x-3">
->>>>>>> origin/auto/autonomy-17186719616
                     <Phone className="w-5 h-5 text-green-400" />
                     <div>
                       <div className="text-sm text-gray-400">Phone</div>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
-<<<<<<< HEAD
-=======
-                        +1 302 464 0950
->>>>>>> origin/auto/autonomy-17186719616
                       </a>
                     </div>
                   </div>

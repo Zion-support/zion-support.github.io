@@ -1,52 +1,66 @@
 #!/bin/bash
 
-echo "🔧 Resolving all merge conflicts in the codebase..."
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
-    
-    # Remove all merge conflict markers and keep the HEAD version
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> .*/d' "$file"
-    
-    # Remove any empty lines that might be left
-    sed -i '/^[[:space:]]*$/d' "$file"
-    
-    echo "✅ Resolved conflicts in: $file"
-}
+<<<<<<< HEAD
+echo "🔧 Resolving ALL remaining merge conflicts..."
 
 # Find all files with merge conflicts
-echo "🔍 Searching for files with merge conflicts..."
-conflict_files=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
+conflict_files=$(find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-if [ -z "$conflict_files" ]; then
-    echo "✅ No merge conflicts found!"
-    exit 0
-fi
+echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 
-echo "📋 Found files with conflicts:"
-echo "$conflict_files"
-
-# Process each file
+# For each file, resolve conflicts by keeping the cleaner version
 for file in $conflict_files; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+    echo "🔧 Resolving conflicts in: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Use sed to remove conflict markers and keep the first version (HEAD)
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    # Check if conflicts were resolved
+    if ! grep -q "<<<<<<< HEAD" "$file"; then
+        echo "✅ Resolved conflicts in: $file"
+        rm "$file.backup"
+    else
+        echo "⚠️  Still has conflicts: $file (restored backup)"
+        mv "$file.backup" "$file"
     fi
 done
 
-echo ""
-echo "🎉 All merge conflicts have been resolved!"
-echo "📝 Files processed:"
-echo "$conflict_files"
+echo "🎉 All conflict resolution complete!"
+=======
+echo "Resolving all merge conflicts by using main branch version..."
 
-# Check if there are any remaining conflicts
-remaining_conflicts=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
+# Find all files with merge conflicts
+conflicted_files=$(grep -r -l "<<<<<<< HEAD" src/ 2>/dev/null || true)
 
-if [ -z "$remaining_conflicts" ]; then
-    echo "✅ Verification: No remaining conflicts found!"
-else
-    echo "❌ Warning: Some conflicts may still exist in:"
-    echo "$remaining_conflicts"
+if [ -z "$conflicted_files" ]; then
+    echo "No merge conflicts found."
+    exit 0
 fi
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+
+# For each conflicted file, resolve conflicts by using main branch version
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    
+    # Use git checkout --theirs to resolve conflicts
+    git checkout --theirs "$file" 2>/dev/null || {
+        echo "Failed to resolve conflicts in $file, trying manual approach..."
+        
+        # Manual approach: remove conflict markers and keep the content after =======
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    }
+    
+    # Add the resolved file
+    git add "$file"
+done
+
+echo "All merge conflicts resolved!"
+>>>>>>> cursor/create-and-deploy-new-content-87a1

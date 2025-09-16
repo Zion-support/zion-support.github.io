@@ -1,33 +1,55 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+<<<<<<< HEAD
+# Script to resolve merge conflicts in the repository
+echo "🔧 Starting merge conflict resolution..."
 
-echo "Resolving merge conflicts by keeping main branch version..."
+# Find all files with merge conflicts
+conflict_files=$(find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " 2>/dev/null)
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+echo "Found conflict files:"
+echo "$conflict_files"
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
+# For each file with conflicts, we'll need to manually resolve them
+# This script will help identify the files that need attention
 
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
-    if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
-        git add "$file"
-    fi
-done < conflicted_files.txt
+for file in $conflict_files; do
+    echo "📝 File with conflicts: $file"
+    conflict_count=$(grep -c "<<<<<<< HEAD" "$file" 2>/dev/null || echo "0")
+    echo "   Number of conflict blocks: $conflict_count"
+done
 
-# Clean up
-rm conflicted_files.txt
+echo "✅ Conflict detection complete. Manual resolution required for the above files."
+=======
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.jsx" --include="*.tsx" --include="*.js" --include="*.ts" | cut -d: -f1 | sort | uniq)
 
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
 
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
+for file in $files_with_conflicts; do
+    echo "Resolving conflicts in $file"
+    
+    # Create a temporary file
+    temp_file="${file}.tmp"
+    
+    # Process the file to resolve conflicts by keeping HEAD version
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace original file with resolved version
+    mv "$temp_file" "$file"
+    
+    echo "Resolved conflicts in $file"
+done
 
-echo "Merge completed successfully!"
+echo "All merge conflicts resolved!"
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-36c0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d7eb
+>>>>>>> origin/cursor/create-and-deploy-new-content-6eae
