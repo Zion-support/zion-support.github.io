@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -187,6 +188,8 @@ const RevolutionaryServicesShowcase2026: React.FC = () => {
             Transform your business with our cutting-edge technologies. From AI consciousness to reality manipulation, 
             we offer solutions that were once thought impossible.
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -293,11 +296,15 @@ const RevolutionaryServicesShowcase2026 = () => {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our cutting-edge AI services are designed to revolutionize how you do business, 
             providing unprecedented efficiency, intelligence, and competitive advantage.
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3fa
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
           </p>
         </div>
 
         {/* Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -814,6 +821,8 @@ const RevolutionaryServicesShowcase2026 = () => {
           </div>
         </div>
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;

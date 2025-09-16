@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function EvaluationDrivenFinOpsPage() {
+function EvaluationDrivenFinOpsInner() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-white">
       <h1 className="text-3xl font-bold mb-4">Launch: Evaluation-Driven FinOps (Starter Kit)</h1>
@@ -55,4 +55,3 @@ function Page() {
     </div>
   )
 }
-

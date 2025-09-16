@@ -4,11 +4,26 @@ const NextGenInnovationHub2036: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
 =======
   const [activeInnovation, setActiveInnovation] = useState(0);
@@ -169,6 +184,13 @@ const NextGenInnovationHub2036: React.FC = () => {
                   View Details →
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 =======
   const [selectedInnovation, setSelectedInnovation] = useState(0);
 
@@ -255,6 +277,16 @@ const NextGenInnovationHub2036: React.FC = () => {
                 Explore Innovation
               </button>
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-a7bf
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             </div>
             
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -294,6 +326,13 @@ const NextGenInnovationHub2036: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         {/* Innovation Statistics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -745,9 +784,19 @@ const NextGenInnovationHub2036: React.FC = () => {
               Learn More
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 =======
+<<<<<<< HEAD
             <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
               Start Your Innovation
 >>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+=======
+<<<<<<< HEAD
+            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
+              Start Your Innovation
+>>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
             </button>
           </div>
         </div>

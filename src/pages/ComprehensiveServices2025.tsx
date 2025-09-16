@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
@@ -178,6 +179,8 @@ const ComprehensiveServices2025: React.FC = () => {
             </p>
           </motion.div>
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 import React from 'react';
 
 const ComprehensiveServices2025: React.FC = () => {
@@ -189,13 +192,13 @@ const ComprehensiveServices2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover the latest innovations and breakthrough technologies in comprehensive services2025
           </p>
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Innovation</h3>
             <p className="text-blue-100">Cutting-edge technology solutions</p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <AnimatePresence mode="wait">
@@ -252,240 +255,26 @@ const ComprehensiveServices2025: React.FC = () => {
             Transform your business with our revolutionary technology services that push the boundaries of what's possible
           </p>
         </div>
-
-        {/* Services by Category */}
-        {services.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-20">
-            <div className="text-center mb-12">
-              <div className="text-6xl mb-4">{category.icon}</div>
-              <h2 className="text-4xl font-bold mb-4">{category.category}</h2>
-              <p className="text-xl opacity-75">Revolutionary {category.category.toLowerCase()} solutions for the future</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.services.map((service, serviceIndex) => (
-                <div
-                  key={serviceIndex}
-                  className={`bg-gradient-to-br ${category.bgColor} backdrop-blur-sm rounded-xl p-8 border ${category.borderColor} hover:scale-105 transition-all duration-300`}
-                >
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold mb-4">{service.name}</h3>
-                    <p className="text-gray-300 mb-6">{service.description}</p>
-                  </div>
-
-                  <div className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
-                        <div className="text-green-400 text-lg">✓</div>
-                        <span className="text-sm">{feature}</span>
-<<<<<<< HEAD
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-300 mb-6">
-                      {service.description}
-                    </p>
-                    
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-white mb-4">{service.pricing}</div>
-                      <button className={`w-full bg-gradient-to-r ${serviceCategories[activeCategory as keyof typeof serviceCategories].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                        Get Started
-                      </button>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
-
-      {/* Testimonials Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white mb-16"
-          >
-            <h2 className="text-5xl font-bold mb-6">What Our Clients Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Hear from industry leaders who are already using our revolutionary services
-            </p>
-          </motion.div>
-
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="text-4xl mr-4">{testimonial.avatar}</div>
-                  <div>
-                    <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                  </div>
-                </div>
-                
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400">⭐</span>
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 italic">"{testimonial.content}"</p>
-              </motion.div>
-            ))}
 =======
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="text-center mb-6">
-                    <div className="text-2xl font-bold text-purple-300">{service.price}</div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <button className={`w-full bg-gradient-to-r ${category.color} text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                      Get Started →
-                    </button>
-                    <button className="w-full border border-white/30 text-white py-3 px-6 rounded-lg hover:bg-white/10 transition-colors">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Technology</h3>
+            <p className="text-blue-100">Revolutionary technological advances</p>
           </div>
-        ))}
-
-        {/* Success Stories */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
-            <p className="text-xl opacity-90">See how our services are transforming industries worldwide</p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Future</h3>
+            <p className="text-blue-100">Next-generation solutions</p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4">SpaceX Integration</h3>
-              <p className="text-gray-300 mb-4">Revolutionary propulsion systems powered by quantum consciousness</p>
-              <div className="text-3xl font-bold text-green-400 mb-2">+500%</div>
-              <div className="text-sm opacity-75">Efficiency Increase</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-2xl font-bold mb-4">Medical Breakthrough</h3>
-              <p className="text-gray-300 mb-4">Quantum healing systems curing previously incurable diseases</p>
-              <div className="text-3xl font-bold text-green-400 mb-2">99.7%</div>
-              <div className="text-sm opacity-75">Success Rate</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold mb-4">Climate Revolution</h3>
-              <p className="text-gray-300 mb-4">Interdimensional climate control reversing global warming</p>
-              <div className="text-3xl font-bold text-green-400 mb-2">-95%</div>
-              <div className="text-sm opacity-75">CO2 Reduction</div>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
-          </div>
-        </div>
-      </div>
-
 <<<<<<< HEAD
-      {/* CTA Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <h2 className="text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Join thousands of organizations already using our revolutionary services to achieve unprecedented success
-            </p>
-            
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Get Started Today
-              </button>
-              <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
-                Schedule Consultation
-              </button>
-            </div>
-          </motion.div>
-=======
-                  <div className="space-y-3">
-                    <button className={`w-full bg-gradient-to-r ${category.color} text-white py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                      Get Started →
-                    </button>
-                    <button className="w-full border border-white/30 text-white py-3 px-6 rounded-lg hover:bg-white/10 transition-colors">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        {/* Success Stories */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
-            <p className="text-xl opacity-90">See how our services are transforming industries worldwide</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4">SpaceX Integration</h3>
-              <p className="text-gray-300 mb-4">Revolutionary propulsion systems powered by quantum consciousness</p>
-              <div className="text-3xl font-bold text-green-400 mb-2">+500%</div>
-              <div className="text-sm opacity-75">Efficiency Increase</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-2xl font-bold mb-4">Medical Breakthrough</h3>
-              <p className="text-gray-300 mb-4">Quantum healing systems curing previously incurable diseases</p>
-              <div className="text-3xl font-bold text-green-400 mb-2">99.7%</div>
-              <div className="text-sm opacity-75">Success Rate</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold mb-4">Climate Revolution</h3>
-              <p className="text-gray-300 mb-4">Interdimensional climate control reversing global warming</p>
-              <div className="text-3xl font-bold text-green-400 mb-2">-95%</div>
-              <div className="text-sm opacity-75">CO2 Reduction</div>
-            </div>
-          </div>
-        </div>
-
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+<<<<<<< HEAD
+=======
+        </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
+
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
@@ -503,6 +292,7 @@ const ComprehensiveServices2025: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -516,6 +306,10 @@ const ComprehensiveServices2025: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
+>>>>>>> cursor/create-and-deploy-new-content-f2c7
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
       </div>
     </div>

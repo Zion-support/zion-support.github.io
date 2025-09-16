@@ -8,6 +8,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 =======
@@ -46,6 +47,8 @@ import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-5775
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
@@ -299,11 +302,14 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
             </button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
           </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
       </div>
     </div>

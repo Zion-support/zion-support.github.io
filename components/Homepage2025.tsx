@@ -16,7 +16,7 @@ import {
   Zap
 } from 'lucide-react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
@@ -83,6 +83,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-cyan-500 to-fuchsia-500'
     },
     {
+      title: 'Foundation Model Quality Engineering (2026)',
+      href: '/blog/ai-2026-foundation-model-quality-engineering',
+      tag: 'Quality',
+      gradient: 'from-cyan-500 to-violet-500'
+    },
+    {
       title: 'Cloud Cost Optimization 2025',
       href: '/blog/cloud-cost-optimization-2025',
       tag: 'FinOps',
@@ -95,7 +101,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
-      title: 'Agentic CRM: Autonomous Revenue Workflows',
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
       href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
       tag: 'RevOps',
       gradient: 'from-fuchsia-500 to-indigo-500'

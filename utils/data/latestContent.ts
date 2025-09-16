@@ -61,6 +61,9 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
     href: "/blog/ai-2026-production-safety-checklist",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
@@ -70,6 +73,7 @@ export const latestContent: ContentItem[] = [
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     tag: "Guide",
     date: "2025-09-15",
   },
@@ -78,17 +82,19 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
     href: "/blog/ai-2026-autonomous-customer-support-agents",
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
     tag: "Guide",
     date: "2025-09-15",
   },
   {
->>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> ebfb30356a744281be19d547f1bc32950779af6f
 >>>>>>> cursor/create-and-deploy-new-content-011f
 >>>>>>> main
@@ -99,6 +105,7 @@ export const latestContent: ContentItem[] = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+>>>>>>> origin/cursor/create-and-deploy-new-content-9b28
     tag: "Blueprint",
     date: "2025-09-15",
   },
@@ -125,5 +132,30 @@ export const latestContent: ContentItem[] = [
     href: "/resources/ai-security-blueprint",
     tag: "Blueprint",
     date: "2025-09-14",
-  }
+  },
+  // Newly added content (2025-09-16)
+  {
+    id: "ai-2026-operational-risk-metrics-for-agents",
+    title: "AI 2026: Operational Risk Metrics for Agents",
+    summary: "Standardize override rates, violations, groundedness, and MTTR across teams.",
+    href: "/blog/ai-2026-operational-risk-metrics-for-agents",
+    tag: "Risk",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-production-evidence-hub-blueprint",
+    title: "AI 2026: Production Evidence Hub — Blueprint",
+    summary: "Centralize evals, traces, policy events, and incidents for audits.",
+    href: "/blog/ai-2026-production-evidence-hub-blueprint",
+    tag: "Blueprint",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-secure-tooling-permissions-blueprint",
+    title: "AI 2026: Secure Tooling Permissions — Blueprint",
+    summary: "Risk‑tiered adapters, approvals, and budgets for safe agent actions.",
+    href: "/blog/ai-2026-secure-tooling-permissions-blueprint",
+    tag: "Security",
+    date: "2025-09-16",
+  },
 ];

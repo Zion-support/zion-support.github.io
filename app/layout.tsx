@@ -1076,6 +1076,15 @@ function Header() {
             </span>
           </Link>
           <Link 
+            href="/tools" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
+          >
+            Tools
+            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+              NEW
+            </span>
+          </Link>
+          <Link 
             href="/resources" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
           >
@@ -1239,6 +1248,12 @@ function Footer() {
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
                 Case Studies
+              </Link>
+              <Link 
+                href="/tools" 
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Tools
               </Link>
             </div>
           </div>

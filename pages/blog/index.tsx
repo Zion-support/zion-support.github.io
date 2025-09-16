@@ -1,9 +1,9 @@
-import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
 
 const posts = [
+  { slug: 'ai-customer-agents-2025', title: 'Customer-Facing AI Agents in 2025', excerpt: 'Design reliable, on-brand customer agents with measurable ROI.' },
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
@@ -11,7 +11,10 @@ const posts = [
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
   { slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Practical blueprints for shipping agentic workflows into production.' },
-  { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' }
+  { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
+  { slug: 'genai-2025-practical-compliance-patterns', title: 'GenAI for Regulated Industries (2025)', excerpt: 'Practical compliance patterns for GenAI rollouts in regulated sectors.' },
+  { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' },
+  { slug: 'ai-2026-foundation-model-quality-engineering', title: 'Foundation Model Quality Engineering (2026)', excerpt: 'Evals, safety, and release health for production-grade foundation model apps.' }
 ]
 
 export default function BlogIndexPage() {

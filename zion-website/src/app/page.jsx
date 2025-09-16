@@ -32,8 +32,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: Agent FinOps Blueprint —
-            <a href="/blog/ai-2026-agent-finops-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+            New: Production RAG Latency Budgets (2026) —
+            <a href="/updates/production-rag-latency-budgets-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the playbook</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -48,10 +48,12 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 lg:mt-16 lg:max-w-none lg:grid-cols-3">
           {latest.map((item) => (
-            <article key={item.id} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+            <article key={item.href} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               <div className="flex items-center gap-2 text-xs text-blue-300">
                 <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-0.5 ring-1 ring-inset ring-blue-500/20">{item.tag}</span>
-                <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
+                {item.date ? (
+                  <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
+                ) : null}
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                 <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
