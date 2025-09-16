@@ -21,6 +21,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
 =======
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
@@ -243,12 +244,15 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
         </motion.div>
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌌 INTERDIMENSIONAL TECH 2026
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -354,6 +358,8 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -386,6 +392,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
                 Explore Parallel Worlds
               </button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -425,12 +432,15 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
         </div>
       </div>
 
 <<<<<<< HEAD
         {/* Dimensional Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -777,6 +787,8 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Dimensional Portals</h3>
@@ -925,11 +937,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Dimensions?</h2>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the interdimensional revolution and be among the first to experience 
             technology that transcends the boundaries of our known reality.
@@ -952,11 +967,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Dimensional Demo
             </button>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
 <<<<<<< HEAD
 

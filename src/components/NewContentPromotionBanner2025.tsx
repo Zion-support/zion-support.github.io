@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
 import React from 'react';
 
 const NewContentPromotionBanner2025: React.FC = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="relative overflow-hidden">
       {/* Main Promotion Banner */}
@@ -256,6 +260,8 @@ import React from 'react';
 const NewContentPromotionBanner2025: React.FC = () => {
   return (
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
     <div className="bg-gradient-to-r from-pink-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -341,12 +347,15 @@ const NewContentPromotionBanner2025: React.FC = () => {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
       </div>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
     </div>
   );
 };

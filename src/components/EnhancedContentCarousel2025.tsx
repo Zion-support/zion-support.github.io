@@ -6,6 +6,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 =======
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -23,6 +24,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
       link: '/pages/NextGenAIConsciousness2025',
       features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
   const contentSlides = [
     {
       id: 1,
@@ -34,7 +37,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
       borderColor: "border-purple-400/30",
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
     },
     {
       id: 2,
@@ -166,18 +172,24 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const nextSlide = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
   };
 
   const goToSlide = (index: number) => {
@@ -238,6 +250,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Main Content Display */}
           <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -258,6 +271,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                       <div className={`w-6 h-6 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full flex items-center justify-center text-sm font-bold`}>
                         ✓
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -298,10 +313,14 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
                       </div>
                       <span className="text-lg">{feature}</span>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
                 </div>
@@ -327,6 +346,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     {contentItems[currentSlide].icon}
 =======
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
                   </div>
                   <div className="text-2xl font-semibold mb-4">
                     {contentItems[currentSlide].title} Demo
@@ -347,6 +368,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
           {/* Navigation Controls */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="flex justify-center items-center mt-8 space-x-4">
             <button 
               onClick={prevSlide}
@@ -357,6 +379,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
             
             {/* Slide Indicators */}
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
           <div className="flex justify-center items-center space-x-4 mt-8">
             <button
               onClick={prevSlide}
@@ -367,7 +391,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
               </svg>
             </button>
             
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
             <div className="flex space-x-2">
               {contentItems.map((_, index) => (
                 <button
@@ -375,27 +402,42 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
 <<<<<<< HEAD
+<<<<<<< HEAD
                     index === currentSlide 
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
                       : 'bg-gray-600 hover:bg-gray-500'
 =======
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+=======
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+>>>>>>> cursor/create-and-deploy-new-content-173f
                   }`}
                 />
               ))}
             </div>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button 
               onClick={nextSlide}
               className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
             >
               <span className="text-2xl">›</span>
+=======
+            <button
+              onClick={nextSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+>>>>>>> cursor/create-and-deploy-new-content-173f
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-5 gap-4 mt-12">
           {contentItems.map((item, index) => (
@@ -586,6 +628,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </div>
         </div>
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
         {/* Technology Tags */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4">
@@ -597,6 +641,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Neural Interfaces</span>
               <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
             </div>
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
         {/* Quick Access Grid */}
@@ -620,6 +665,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
               </button>
             ))}
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
           </div>
         </div>
       </div>

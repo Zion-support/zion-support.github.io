@@ -2,11 +2,14 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
 
 const UltimateContentShowcase2025: React.FC = () => {
   return (
@@ -183,6 +186,7 @@ const UltimateContentShowcase2025: React.FC = () => {
             <button className="border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <motion.div
@@ -461,6 +465,10 @@ const UltimateContentShowcase2025: React.FC = () => {
           Explore our revolutionary technologies through interactive showcases and discover what's possible when innovation meets imagination.
         </p>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+=======
+          </div>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-173f
       </div>
 
       {/* Tab Navigation */}
