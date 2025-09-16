@@ -1,18 +1,7 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
 
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
-import { motion } from 'framer-motion';
-
-const NeuralInterfaceRevolution2025: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -23,7 +12,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          <divdiv
             className="text-center text-white"
           >
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-semibold mb-6">
