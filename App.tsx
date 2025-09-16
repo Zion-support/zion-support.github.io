@@ -46,6 +46,8 @@ import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryCont
 import SEOAnalyzer from './src/components/SEOAnalyzer';
 import SEOOptimizer from './src/components/SEOOptimizer';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import UltimateContentPromotionBanner2026 from './src/components/UltimateContentPromotionBanner2026';
+import NewContentShowcaseBanner2026 from './src/components/NewContentShowcaseBanner2026';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import AIExecutiveStrategy2026 from './src/pages/AIExecutiveStrategy2026';
@@ -95,6 +97,8 @@ import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough20
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import AI2026LatestBreakthroughs from './src/pages/AI2026LatestBreakthroughs';
 import Fortune500AITransformation2026 from './src/pages/Fortune500AITransformation2026';
+import AITrends2026Ultimate from './src/pages/AITrends2026Ultimate';
+import UltimateServices2026 from './src/pages/UltimateServices2026';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
@@ -236,6 +240,16 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
+                
+                {/* NEW: Ultimate Content Promotion Banner 2026 */}
+                <div className="mb-12">
+                  <UltimateContentPromotionBanner2026 />
+                </div>
+                
+                {/* NEW: New Content Showcase Banner 2026 */}
+                <div className="mb-12">
+                  <NewContentShowcaseBanner2026 />
+                </div>
                 
                 {/* NEW: Featured Content Showcase - comprehensive content display */}
                 <div className="mb-12">
@@ -1406,6 +1420,8 @@ export default function App(): JSX.Element {
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          <Route path="/ai-trends-2026-ultimate" element={<AITrends2026Ultimate />} />
+          <Route path="/ultimate-services-2026" element={<UltimateServices2026 />} />
           
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
