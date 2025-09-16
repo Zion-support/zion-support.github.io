@@ -43,6 +43,8 @@ import UltimateTechShowcase2027 from './src/components/UltimateTechShowcase2027'
 import AdvancedMLOps2025 from './src/pages/AdvancedMLOps2025';
 import QuantumAI2025 from './src/pages/QuantumAI2025';
 import AutonomousSystems2025 from './src/pages/AutonomousSystems2025';
+import AITechnologyInsights2025 from './src/pages/AITechnologyInsights2025';
+import RevolutionaryAIServicesShowcase from './src/components/RevolutionaryAIServicesShowcase';
 
 export default function App(): JSX.Element {
   return (
@@ -58,6 +60,9 @@ export default function App(): JSX.Element {
                 {/* NEW: Revolutionary Tech 2027 Banner */}
                 <RevolutionaryTech2027Banner />
 
+                {/* Revolutionary AI Services Showcase */}
+                <RevolutionaryAIServicesShowcase />
+
                 {/* REVOLUTIONARY AI SERVICES 2025 BANNER */}
                 <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/50 to-indigo-600/50 backdrop-blur-sm"></div>
@@ -70,7 +75,7 @@ export default function App(): JSX.Element {
                     <p className="text-xl opacity-95 mb-8 max-w-4xl mx-auto">
                       Experience the future of technology with our groundbreaking AI services: Advanced MLOps, Quantum AI, and Autonomous Systems
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                       <a href="/pages/AdvancedMLOps2025" className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Advanced MLOps →
                       </a>
@@ -79,6 +84,9 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AutonomousSystems2025" className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Autonomous Systems →
+                      </a>
+                      <a href="/pages/AITechnologyInsights2025" className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30">
+                        📊 Tech Insights →
                       </a>
                     </div>
                   </div>
@@ -460,6 +468,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedMLOps2025" element={<AdvancedMLOps2025 />} />
           <Route path="/pages/QuantumAI2025" element={<QuantumAI2025 />} />
           <Route path="/pages/AutonomousSystems2025" element={<AutonomousSystems2025 />} />
+          <Route path="/pages/AITechnologyInsights2025" element={<AITechnologyInsights2025 />} />
           <Route path="/pages/QuantumRealityEngine2026" element={<QuantumRealityEngine2026 />} />
           <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
 
