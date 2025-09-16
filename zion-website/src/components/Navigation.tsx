@@ -34,6 +34,7 @@ const navigation = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { name: 'Blog', href: '/blog' },
 =======
 =======
@@ -61,6 +62,9 @@ export default function Navigation() {
             <span className="sr-only">Zion</span>
             <img className="h-8 w-auto" src="/logo.svg" alt="Zion" />
 =======
+=======
+  { name: 'Case Studies', href: '/case-studies' },
+>>>>>>> origin/feat/case-studies-content
   { name: 'Research', href: '/research' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -236,6 +240,7 @@ export default function Navigation() {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/feature/updates-content
@@ -243,3 +248,5 @@ export default function Navigation() {
 >>>>>>> origin/feature/updates-2025-09
 =======
 >>>>>>> origin/feature/content-updates-and-merge-fixes
+=======
+>>>>>>> origin/feat/case-studies-content

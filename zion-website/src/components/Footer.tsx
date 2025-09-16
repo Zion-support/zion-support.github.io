@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+const navigation = {
+  main: [
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Research', href: '/research' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
+  ],
+}
+
+>>>>>>> origin/feat/case-studies-content
 export default function Footer() {
   return (
 <<<<<<< HEAD
@@ -16,6 +32,7 @@ export default function Footer() {
             <p className="text-gray-400 text-base">
               Leading the future of AI and technology solutions. Transform your business with cutting-edge innovation.
             </p>
+<<<<<<< HEAD
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a key={item.name} href={item.href} className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110">
@@ -63,12 +80,30 @@ export default function Footer() {
                   <li><a href="/cookies" className="text-base text-gray-300 hover:text-white transition-colors duration-200">Cookie Policy</a></li>
                 </ul>
               </div>
+=======
+          </div>
+          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Explore</h3>
+              <ul role="list" className="mt-4 space-y-4">
+                {navigation.main.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-base text-gray-300 hover:text-white transition-colors duration-200">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+>>>>>>> origin/feat/case-studies-content
             </div>
           </div>
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-400 xl:text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+<<<<<<< HEAD
 >>>>>>> origin/feature/updates-2025-09
+=======
+>>>>>>> origin/feat/case-studies-content
         </div>
       </div>
     </footer>
@@ -76,6 +111,7 @@ export default function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 
@@ -83,3 +119,5 @@ export default function Footer() {
 =======
 }
 >>>>>>> origin/feature/content-updates-and-merge-fixes
+=======
+>>>>>>> origin/feat/case-studies-content
