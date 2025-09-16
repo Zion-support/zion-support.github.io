@@ -138,7 +138,9 @@ import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
+import FeaturedContentCarousel2026 from './components/FeaturedContentCarousel2026';
+import AIInnovationShowcase2026 from './pages/AIInnovationShowcase2026';
+import NextGenTechTrends2026 from './pages/NextGenTechTrends2026';
 =======
 import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
 import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
@@ -185,6 +187,16 @@ const App: React.FC = () => {
               {/* Revolutionary Content Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentBanner2026 />
+              </div>
+
+              {/* New Content Promotion Banner 2026 */}
+              <div className="mb-12">
+                <NewContentPromotionBanner2026 />
+              </div>
+
+              {/* Featured Content Carousel 2026 */}
+              <div className="mb-12">
+                <FeaturedContentCarousel2026 />
               </div>
 
               {/* New Content Advertising Banner */}
@@ -423,6 +435,10 @@ const App: React.FC = () => {
           <Route path="/pages/EdgeAICompliance2026" element={<EdgeAICompliance2026 />} />
           <Route path="/pages/AIIncidentResponse2026" element={<AIIncidentResponse2026 />} />
           <Route path="/pages/AgenticOpsControls2026" element={<AgenticOpsControls2026 />} />
+          
+          {/* New Content Routes 2026 */}
+          <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
+          <Route path="/next-gen-tech-trends-2026" element={<NextGenTechTrends2026 />} />
         </Routes>
         
         <Footer />
