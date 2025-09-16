@@ -49,3 +49,5 @@ function Page() {
 		</main>
 	)
 }
+
+export default Page
