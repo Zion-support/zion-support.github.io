@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Post‑Incident Learning Loops — Operational Excellence",
+      description: "Turn incidents into durable improvements with evidence‑led learning loops and scorecards.",
+      slug: "ai-2026-post-incident-learning-loops",
+      category: "Reliability",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/post-incident-learning-loops-2026.jpg"
+    },
+    {
       title: "AI 2026: Real‑Time Agent Routing — Best Practices",
       description: "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
       slug: "ai-2026-realtime-agent-routing-best-practices",
