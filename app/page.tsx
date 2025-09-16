@@ -113,6 +113,22 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      {/* Promo: New Real-Time Governance + Routing (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Real-Time Governance + Model Routing</h2>
+              <p className="text-gray-600 mt-2">Policy-as-code with streaming evals and risk-aware routing, ready to adopt.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-realtime-governance-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Governance</Link>
+              <Link href="/content/ai-2026-realtime-model-routing" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Routing</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
