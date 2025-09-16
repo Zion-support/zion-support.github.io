@@ -1,73 +1,11 @@
 import React from 'react';
 
 const AdvancedRobotics2026: React.FC = () => {
-  const [activeRobot, setActiveRobot] = useState('humanoid');
-  const [animationFrame, setAnimationFrame] = useState(0);
-
-  const robotTypes = {
-    'humanoid': {
-      title: "Humanoid Robots",
-      description: "AI-powered human-like robots for complex tasks",
-      icon: "🤖",
-      color: "from-blue-500 to-cyan-500",
-      capabilities: [
-        "Natural human interaction",
-        "Complex problem solving",
-        "Emotional intelligence",
-        "Physical dexterity"
-      ]
-    },
-    'industrial': {
-      title: "Industrial Automation",
-      description: "Advanced manufacturing and production robots",
-      icon: "🏭",
-      color: "from-orange-500 to-red-500",
-      capabilities: [
-        "Precision manufacturing",
-        "Quality control",
-        "Predictive maintenance",
-        "Flexible production"
-      ]
-    },
-    'medical': {
-      title: "Medical Robots",
-      description: "Surgical and healthcare assistance robots",
-      icon: "🏥",
-      color: "from-green-500 to-emerald-500",
-      capabilities: [
-        "Minimally invasive surgery",
-        "Patient monitoring",
-        "Drug delivery",
-        "Rehabilitation therapy"
-      ]
-    },
-    'service': {
-      title: "Service Robots",
-      description: "Robots for everyday service and assistance",
-      icon: "🛎️",
-      color: "from-purple-500 to-pink-500",
-      capabilities: [
-        "Customer service",
-        "Household assistance",
-        "Elderly care",
-        "Education support"
-      ]
-    }
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAnimationFrame(prev => (prev + 1) % 60);
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-600/10 to-gray-600/10"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-500 to-gray-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
