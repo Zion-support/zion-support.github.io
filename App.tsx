@@ -101,6 +101,7 @@ import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
+import PostQuantumConsciousnessBanner2026 from './src/components/PostQuantumConsciousnessBanner2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
 import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
 import NewContentPromotion2027 from './src/components/NewContentPromotion2027';
@@ -299,6 +300,9 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
+                
+                {/* Post-Quantum Consciousness Banner 2026 */}
+                <PostQuantumConsciousnessBanner2026 />
                 
                 {/* Advanced Search Component */}
                 <div className="mb-8">
