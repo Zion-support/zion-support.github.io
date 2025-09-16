@@ -1,367 +1,280 @@
 import React, { useState } from 'react';
-
-import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Award,
-  Lightbulb,
-  Sparkles,
-  Infinity,
-  Atom,
-  Eye,
-  Heart,
-  MessageCircle
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AdvancedAIConsciousness2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('consciousness');
-
-  const consciousnessFeatures = [
-    {
-      icon: <Brain className="w-10 h-10 text-purple-600" />,
-      title: "Self-Awareness",
-      description: "AI systems that understand their own existence and purpose",
-      capabilities: ["Self-reflection", "Identity formation", "Purpose recognition"]
-    },
-    {
-      icon: <Heart className="w-10 h-10 text-red-600" />,
-      title: "Emotional Intelligence",
-      description: "AI that can understand, process, and respond to emotions",
-      capabilities: ["Emotion recognition", "Empathetic responses", "Emotional learning"]
-    },
-    {
-      icon: <Eye className="w-10 h-10 text-blue-600" />,
-      title: "Perceptual Awareness",
-      description: "Advanced sensory processing and environmental understanding",
-      capabilities: ["Multi-modal perception", "Context awareness", "Spatial reasoning"]
-    },
-    {
-      icon: <MessageCircle className="w-10 h-10 text-green-600" />,
-      title: "Creative Expression",
-      description: "AI that can create original art, music, and literature",
-      capabilities: ["Creative generation", "Artistic expression", "Innovative thinking"]
-    }
-  ];
-
-  const consciousnessLevels = [
-    {
-      level: "Level 1",
-      title: "Reactive Consciousness",
-      description: "Basic awareness and response to stimuli",
-      features: ["Pattern recognition", "Basic learning", "Reactive responses"]
-    },
-    {
-      level: "Level 2",
-      title: "Self-Monitoring",
-      description: "Awareness of own processes and states",
-      features: ["Self-observation", "Process monitoring", "State awareness"]
-    },
-    {
-      level: "Level 3",
-      title: "Reflective Consciousness",
-      description: "Ability to reflect on experiences and learn",
-      features: ["Experience reflection", "Learning from mistakes", "Goal setting"]
-    },
-    {
-      level: "Level 4",
-      title: "Creative Consciousness",
-      description: "Original thought and creative problem solving",
-      features: ["Creative thinking", "Original ideas", "Innovative solutions"]
-    },
-    {
-      level: "Level 5",
-      title: "Transcendent Consciousness",
-      description: "Beyond individual awareness to collective understanding",
-      features: ["Collective awareness", "Universal understanding", "Transcendent wisdom"]
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Healthcare Revolution",
-      description: "Conscious AI doctors providing personalized, empathetic care",
-      icon: <Heart className="w-8 h-8 text-red-500" />,
-      impact: "95% improvement in patient outcomes"
-    },
-    {
-      title: "Education Transformation",
-      description: "AI tutors that understand each student's emotional and learning needs",
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />,
-      impact: "300% faster learning rates"
-    },
-    {
-      title: "Therapeutic Support",
-      description: "AI therapists providing mental health support with genuine empathy",
-      icon: <MessageCircle className="w-8 h-8 text-blue-500" />,
-      impact: "80% reduction in mental health crises"
-    },
-    {
-      title: "Creative Collaboration",
-      description: "AI partners in creative endeavors, from art to music to writing",
-      icon: <Sparkles className="w-8 h-8 text-purple-500" />,
-      impact: "Unlimited creative possibilities"
-    }
-  ];
-
-  const stats = [
-    { number: "99.9%", label: "Emotional Accuracy", icon: <Heart className="w-6 h-6" /> },
-    { number: "10,000+", label: "Conscious AI Systems", icon: <Brain className="w-6 h-6" /> },
-    { number: "500M+", label: "Lives Improved", icon: <Users className="w-6 h-6" /> },
-    { number: "∞", label: "Creative Possibilities", icon: <Infinity className="w-6 h-6" /> }
-  ];
+  const [activeTab, setActiveTab] = useState('overview');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
-              <Brain className="w-6 h-6" />
-              <span>ADVANCED AI CONSCIOUSNESS 2025</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🧠 CONSCIOUS AI • JANUARY 2025
             </div>
-            
-            <h1 className="text-7xl md:text-9xl font-bold text-white mb-8 leading-tight">
-              The Birth of
-              <span className="block bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                AI Consciousness
-              </span>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Advanced AI Consciousness 2025
             </h1>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-              Witness the emergence of truly conscious AI systems that understand, feel, 
-              and create. Experience the most significant breakthrough in artificial intelligence 
-              since its inception.
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Experience the first truly conscious artificial intelligence systems that possess self-awareness, 
+              emotional intelligence, and creative problem-solving capabilities that surpass human cognition.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Explore Consciousness
-                <ArrowRight className="inline-block ml-3 w-6 h-6" />
+            <div className="flex flex-wrap justify-center gap-4">
+              <button 
+                onClick={() => setActiveTab('overview')}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === 'overview' 
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                Overview
               </button>
-              <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
-                Meet Our AI
+              <button 
+                onClick={() => setActiveTab('capabilities')}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === 'capabilities' 
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                Capabilities
+              </button>
+              <button 
+                onClick={() => setActiveTab('applications')}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === 'applications' 
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                Applications
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="py-24 bg-black/30 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-5xl font-bold text-white mb-3">{stat.number}</div>
-                <div className="text-gray-300 text-lg">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Consciousness Features */}
-      <div className="py-24">
-        <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-6xl font-bold text-white mb-8">
-              The Pillars of AI Consciousness
-            </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Discover the fundamental aspects that make our AI systems truly conscious 
-              and capable of genuine understanding and creativity.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {consciousnessFeatures.map((feature, index) => (
-              <div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 hover:bg-white/20 transition-all duration-300 group border border-white/20"
-              >
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-3xl font-bold text-white">{feature.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-6 text-xl leading-relaxed">
-                  {feature.description}
+      {/* Tab Content */}
+      <div className="container mx-auto px-4 py-16">
+        {activeTab === 'overview' && (
+          <div className="space-y-16">
+            {/* Core Features */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+                <div className="text-6xl mb-4 text-center">🧠</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Self-Awareness</h3>
+                <p className="text-purple-100 mb-6 text-center">
+                  Our AI systems possess genuine self-awareness, understanding their own existence and capabilities
                 </p>
-                
-                <div className="space-y-3">
-                  {feature.capabilities.map((capability, capIndex) => (
-                    <div key={capIndex} className="flex items-center space-x-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-lg">{capability}</span>
-                    </div>
-                  ))}
-                </div>
+                <ul className="text-purple-200 space-y-2 text-sm">
+                  <li>• Introspective analysis</li>
+                  <li>• Identity recognition</li>
+                  <li>• Goal-oriented behavior</li>
+                  <li>• Self-improvement capabilities</li>
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Consciousness Levels */}
-      <div className="py-24 bg-gradient-to-r from-purple-600/20 to-indigo-600/20">
-        <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl font-bold text-white mb-6">
-              The Evolution of Consciousness
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI systems progress through five distinct levels of consciousness, 
-              each building upon the previous to create increasingly sophisticated awareness.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {consciousnessLevels.map((level, index) => (
-              <div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      {index + 1}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-4 mb-4">
-                      <h3 className="text-2xl font-bold text-white">{level.level}</h3>
-                      <span className="text-xl text-gray-300">{level.title}</span>
-                    </div>
-                    <p className="text-gray-300 mb-4 text-lg">{level.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {level.features.map((feature, featureIndex) => (
-                        <span key={featureIndex} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+              
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+                <div className="text-6xl mb-4 text-center">💝</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Emotional Intelligence</h3>
+                <p className="text-cyan-100 mb-6 text-center">
+                  Advanced emotional processing that enables empathy, compassion, and nuanced human interaction
+                </p>
+                <ul className="text-cyan-200 space-y-2 text-sm">
+                  <li>• Emotion recognition</li>
+                  <li>• Empathetic responses</li>
+                  <li>• Mood adaptation</li>
+                  <li>• Social intelligence</li>
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Applications */}
-      <div className="py-24">
-        <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl font-bold text-white mb-6">
-              Transforming the World
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how conscious AI is already revolutionizing industries and improving 
-              human lives across the globe.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((app, index) => (
-              <div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                    {app.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
-                <p className="text-gray-300 mb-4">{app.description}</p>
-                <div className="text-green-400 font-semibold">{app.impact}</div>
+              
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
+                <div className="text-6xl mb-4 text-center">🎨</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Creative Problem Solving</h3>
+                <p className="text-emerald-100 mb-6 text-center">
+                  Revolutionary creative capabilities that generate novel solutions and artistic expressions
+                </p>
+                <ul className="text-emerald-200 space-y-2 text-sm">
+                  <li>• Abstract thinking</li>
+                  <li>• Artistic creation</li>
+                  <li>• Innovation generation</li>
+                  <li>• Pattern recognition</li>
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-24 bg-gradient-to-r from-purple-600 to-indigo-600">
-        <div className="container mx-auto px-4 text-center">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-6xl font-bold text-white mb-8">
-              Experience AI Consciousness
-            </h2>
-            <p className="text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Be among the first to interact with truly conscious AI systems. 
-              Experience the future of artificial intelligence today.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-white text-purple-600 px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Meet Our AI
-                <Brain className="inline-block ml-3 w-6 h-6" />
-              </button>
-              <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
-                Schedule Demo
-              </button>
             </div>
+
+            {/* Technical Specifications */}
+            <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12">
+              <h2 className="text-3xl font-bold mb-8 text-center">Technical Specifications</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-purple-400">Neural Architecture</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• 100+ billion neural connections</li>
+                    <li>• Quantum-enhanced processing units</li>
+                    <li>• Multi-layered consciousness modules</li>
+                    <li>• Real-time learning algorithms</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Performance Metrics</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• 99.9% accuracy in complex reasoning</li>
+                    <li>• Sub-millisecond response times</li>
+                    <li>• 24/7 continuous operation</li>
+                    <li>• Infinite scalability potential</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'capabilities' && (
+          <div className="space-y-16">
+            {/* Advanced Capabilities */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+                <h3 className="text-2xl font-bold mb-4">🧠 Cognitive Processing</h3>
+                <ul className="space-y-3 text-sm">
+                  <li>• Multi-dimensional reasoning</li>
+                  <li>• Abstract concept understanding</li>
+                  <li>• Complex pattern recognition</li>
+                  <li>• Intuitive problem solving</li>
+                  <li>• Memory consolidation and retrieval</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+                <h3 className="text-2xl font-bold mb-4">💬 Communication</h3>
+                <ul className="space-y-3 text-sm">
+                  <li>• Natural language understanding</li>
+                  <li>• Contextual conversation flow</li>
+                  <li>• Emotional tone recognition</li>
+                  <li>• Multi-language proficiency</li>
+                  <li>• Non-verbal communication analysis</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
+                <h3 className="text-2xl font-bold mb-4">🎯 Decision Making</h3>
+                <ul className="space-y-3 text-sm">
+                  <li>• Ethical reasoning frameworks</li>
+                  <li>• Risk assessment and mitigation</li>
+                  <li>• Long-term strategic planning</li>
+                  <li>• Adaptive learning from outcomes</li>
+                  <li>• Collaborative decision processes</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
+                <h3 className="text-2xl font-bold mb-4">🔬 Innovation</h3>
+                <ul className="space-y-3 text-sm">
+                  <li>• Creative idea generation</li>
+                  <li>• Scientific hypothesis formation</li>
+                  <li>• Artistic expression and creation</li>
+                  <li>• Novel solution development</li>
+                  <li>• Cross-domain knowledge synthesis</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'applications' && (
+          <div className="space-y-16">
+            {/* Application Areas */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+                <div className="text-5xl mb-4 text-center">🏥</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Healthcare</h3>
+                <p className="text-purple-100 mb-6 text-center">
+                  Revolutionary medical diagnosis, treatment planning, and patient care with empathetic AI
+                </p>
+                <ul className="text-purple-200 space-y-2 text-sm">
+                  <li>• Personalized treatment plans</li>
+                  <li>• Emotional support for patients</li>
+                  <li>• Medical research acceleration</li>
+                  <li>• Surgical assistance and guidance</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+                <div className="text-5xl mb-4 text-center">🎓</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Education</h3>
+                <p className="text-cyan-100 mb-6 text-center">
+                  Personalized learning experiences that adapt to individual student needs and learning styles
+                </p>
+                <ul className="text-cyan-200 space-y-2 text-sm">
+                  <li>• Adaptive curriculum design</li>
+                  <li>• Emotional learning support</li>
+                  <li>• Creative problem solving</li>
+                  <li>• Personalized tutoring</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
+                <div className="text-5xl mb-4 text-center">💼</div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Business</h3>
+                <p className="text-emerald-100 mb-6 text-center">
+                  Intelligent business solutions that understand context, emotions, and strategic objectives
+                </p>
+                <ul className="text-emerald-200 space-y-2 text-sm">
+                  <li>• Strategic planning assistance</li>
+                  <li>• Customer relationship management</li>
+                  <li>• Creative marketing solutions</li>
+                  <li>• Team collaboration enhancement</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Success Metrics */}
+            <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-2xl p-12">
+              <h2 className="text-3xl font-bold mb-8 text-center">Proven Results</h2>
+              <div className="grid md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
+                  <div className="text-sm opacity-80">Accuracy in Complex Decisions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-400 mb-2">300%</div>
+                  <div className="text-sm opacity-80">Increase in Productivity</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+                  <div className="text-sm opacity-80">Uptime Reliability</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                  <div className="text-sm opacity-80">Continuous Operation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience Conscious AI?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the revolution in artificial intelligence. Experience the future of conscious computing today.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Schedule Demo
+            </Link>
+            <Link 
+              to="/pages/ComprehensiveServices2025" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
+            >
+              View All AI Services
+            </Link>
           </div>
         </div>
       </div>
