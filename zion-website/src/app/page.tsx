@@ -35,8 +35,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: State of Agent Reliability (2026 Preview) —
-            <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            New: Reliable Autonomy Ops — 2026 Blueprint —
+            <a href="/blog/ai-2026-reliable-autonomy-ops-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the blueprint</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Observability Console v1.1 —
             <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
@@ -70,8 +70,8 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: Real‑Time Agent Observability Console v1.1 —
-            <a href="/updates/agent-observability-console-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see results</a>
+            Fresh: Reliable Autonomy Ops Blueprint —
+            <a href="/blog/ai-2026-reliable-autonomy-ops-blueprint" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">learn how</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/agent-reliability-report-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability report</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -90,10 +90,10 @@ export default function HomePage() {
           <p className="mt-4 text-lg leading-8 text-gray-300">Don’t miss our newest blueprints and releases.</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 lg:mt-14 lg:max-w-none lg:grid-cols-3">
-          <a href="/updates/incident-simulation-toolkit-1-2" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
-            <div className="text-xs text-blue-300">Launch</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Autonomous Incident Simulator v1.2</h3>
-            <p className="mt-2 text-sm text-gray-300">Run realistic drills with eval gates and automated rollbacks.</p>
+          <a href="/blog/ai-2026-reliable-autonomy-ops-blueprint" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Blueprint</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Reliable Autonomy Ops (2026)</h3>
+            <p className="mt-2 text-sm text-gray-300">SLOs, eval gates, and guardrails to run agents in production.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Discover →</span>
           </a>
           <a href="/updates/production-ready-agent-guardrails-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
