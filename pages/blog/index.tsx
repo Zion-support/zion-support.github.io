@@ -12,6 +12,7 @@ const posts = [
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
   { slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Practical blueprints for shipping agentic workflows into production.' },
   { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
+  { slug: 'autonomous-evaluation-playbooks-2025', title: 'Autonomous Evaluation Playbooks (2025)', excerpt: 'Practical evals for reliability, safety, and measurable business impact.' },
   { slug: 'genai-2025-practical-compliance-patterns', title: 'GenAI for Regulated Industries (2025)', excerpt: 'Practical compliance patterns for GenAI rollouts in regulated sectors.' },
   { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' },
   { slug: 'ai-2026-foundation-model-quality-engineering', title: 'Foundation Model Quality Engineering (2026)', excerpt: 'Evals, safety, and release health for production-grade foundation model apps.' }
