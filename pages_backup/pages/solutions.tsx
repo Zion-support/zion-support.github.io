@@ -7,7 +7,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu
   Lock, Cloud, Settings, Eye, Award, Clock, Heart
@@ -22,7 +22,7 @@ import {
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
-
+import { motion } from 'framer-motion',;
 import { 
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
   Lock, Cloud, Settings, Eye, Award, Clock, Heart, 

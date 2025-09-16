@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Target, Rocket, Globe, Cpu, Database, Cloud, Lock,
   ArrowRight, Check, Star, TrendingUp, Users, Zap, Infinity, Sparkles,

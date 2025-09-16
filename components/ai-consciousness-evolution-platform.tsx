@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Globe,
   CheckCircle,
@@ -374,7 +374,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
 } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';

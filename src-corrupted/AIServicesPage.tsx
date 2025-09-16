@@ -16,7 +16,7 @@ import {
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare } from 'lucide-react';
 import { enhancedAIServices2025 } from '@/data/comprehensiveServices2025';
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom } from 'lucide-react';
-
+import { motion } from 'framer-motion';
 
 const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category.includes('AI') || 
@@ -82,7 +82,7 @@ export default function AIServicesPage() {
             </Button>
           </div>
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react';
 
 const AIServicesPage = () => {
@@ -317,7 +317,7 @@ const AIServicesPage: React.FC = () => {
   const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))];
       id: 4,
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -733,7 +733,7 @@ const AIServicesPage = () => {
     }
   };
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket } from 'lucide-react';
 import { SEO } from '@/components/SEO';

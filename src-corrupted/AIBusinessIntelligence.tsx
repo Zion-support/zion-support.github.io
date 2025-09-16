@@ -15,7 +15,7 @@ import {
   Shield, 
   Users, 
 import SEOHead from '../../components/SEOHead';
-
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 

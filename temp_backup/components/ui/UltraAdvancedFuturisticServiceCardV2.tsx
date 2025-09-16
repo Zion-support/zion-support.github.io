@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Users, Clock, CheckCircle } from 'lucide-react';
 
 interface UltraAdvancedFuturisticServiceCardV2Props {

@@ -1,5 +1,8 @@
 // Notification utilities
 interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling

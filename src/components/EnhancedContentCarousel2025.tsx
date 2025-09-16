@@ -3,6 +3,17 @@ import React, { useState, useEffect } from 'react';
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+<<<<<<< HEAD
+  const contentItems = [
+    {
+      id: 1,
+      title: 'Next-Gen AI Consciousness',
+      description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
+      icon: '🧠',
+      gradient: 'from-purple-600 to-pink-600',
+      link: '/pages/NextGenAIConsciousness2025',
+      features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
+=======
   const contentSlides = [
     {
       id: 1,
@@ -14,6 +25,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
       borderColor: "border-purple-400/30",
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
+>>>>>>> cursor/create-and-deploy-new-content-8449
     },
     {
       id: 2,
@@ -69,11 +81,19 @@ const EnhancedContentCarousel2025: React.FC = () => {
   }, [contentSlides.length]);
 
   const nextSlide = () => {
+<<<<<<< HEAD
+    setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+=======
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
+>>>>>>> cursor/create-and-deploy-new-content-8449
   };
 
   const goToSlide = (index: number) => {
@@ -97,6 +117,27 @@ const EnhancedContentCarousel2025: React.FC = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto">
+<<<<<<< HEAD
+          {/* Main Content Display */}
+          <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Content Info */}
+              <div className="space-y-6">
+                <div className="text-8xl mb-4">{contentItems[currentSlide].icon}</div>
+                <h3 className="text-4xl font-bold mb-4">
+                  {contentItems[currentSlide].title}
+                </h3>
+                <p className="text-xl text-gray-300 mb-6">
+                  {contentItems[currentSlide].description}
+                </p>
+
+                {/* Features */}
+                <div className="space-y-3">
+                  {contentItems[currentSlide].features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className={`w-6 h-6 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full flex items-center justify-center text-sm font-bold`}>
+                        ✓
+=======
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -137,8 +178,34 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
+>>>>>>> cursor/create-and-deploy-new-content-8449
                       </div>
                     </div>
+<<<<<<< HEAD
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                  <a 
+                    href={contentItems[currentSlide].link}
+                    className={`bg-gradient-to-r ${contentItems[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center`}
+                  >
+                    Explore Technology →
+                  </a>
+                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+
+              {/* Visual Demo Area */}
+              <div className="bg-gradient-to-br from-gray-700/50 to-purple-700/50 rounded-xl p-8 min-h-[400px] flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-9xl mb-6 animate-pulse">
+                    {contentItems[currentSlide].icon}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
                   </div>
                 </div>
               ))}
@@ -146,6 +213,17 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </div>
 
           {/* Navigation Controls */}
+<<<<<<< HEAD
+          <div className="flex justify-center items-center mt-8 space-x-4">
+            <button 
+              onClick={prevSlide}
+              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
+            >
+              <span className="text-2xl">‹</span>
+            </button>
+            
+            {/* Slide Indicators */}
+=======
           <div className="flex justify-center items-center space-x-4 mt-8">
             <button
               onClick={prevSlide}
@@ -156,18 +234,32 @@ const EnhancedContentCarousel2025: React.FC = () => {
               </svg>
             </button>
             
+>>>>>>> cursor/create-and-deploy-new-content-8449
             <div className="flex space-x-2">
               {contentSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
+<<<<<<< HEAD
+                    index === currentSlide 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
+                      : 'bg-gray-600 hover:bg-gray-500'
+=======
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
+>>>>>>> cursor/create-and-deploy-new-content-8449
                   }`}
                 />
               ))}
             </div>
             
+<<<<<<< HEAD
+            <button 
+              onClick={nextSlide}
+              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
+            >
+              <span className="text-2xl">›</span>
+=======
             <button
               onClick={nextSlide}
               className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
@@ -175,6 +267,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
+>>>>>>> cursor/create-and-deploy-new-content-8449
             </button>
           </div>
 
@@ -186,6 +279,43 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+        {/* Quick Access Grid */}
+        <div className="grid md:grid-cols-5 gap-4 mt-12">
+          {contentItems.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => goToSlide(index)}
+              className={`p-4 rounded-xl transition-all duration-300 ${
+                index === currentSlide
+                  ? `bg-gradient-to-r ${item.gradient} text-white shadow-lg scale-105`
+                  : 'bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 hover:text-white'
+              }`}
+            >
+              <div className="text-3xl mb-2">{item.icon}</div>
+              <div className="text-sm font-semibold text-center">{item.title}</div>
+            </button>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid md:grid-cols-4 gap-8 mt-16">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+            <div className="text-gray-300">Revolutionary Technologies</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-pink-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-300">Available Demos</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-gray-300">Possibilities</div>
+=======
         {/* Technology Tags */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4">
@@ -197,6 +327,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Neural Interfaces</span>
               <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
             </div>
+>>>>>>> cursor/create-and-deploy-new-content-8449
           </div>
         </div>
       </div>

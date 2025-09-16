@@ -5,7 +5,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
-
+import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
@@ -70,7 +70,7 @@ const serviceCategories = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
@@ -986,7 +986,7 @@ export default function ServicesShowcase2028() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap

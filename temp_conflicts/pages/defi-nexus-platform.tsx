@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-
+import { motion } from 'framer-motion';
 import { 
   TrendingUp, Brain, Shield, Zap, Target, 
   BarChart3, Cpu, Globe, Users, Award,

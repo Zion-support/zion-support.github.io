@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
-
+import { motion  } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor  } from 'lucide-react.ts';
 
 const IoTEdgeComputing: React.FC = (): JSX.Element => {

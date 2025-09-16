@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import { 
   Link as LinkIcon, ArrowRight, CheckCircle, Star, TrendingUp, 
   Shield, Zap, Users, Globe, Database, 

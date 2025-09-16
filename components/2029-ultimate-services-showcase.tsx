@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';

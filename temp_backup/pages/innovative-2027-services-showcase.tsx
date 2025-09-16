@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Search, Grid, List, Filter,
   Brain, Shield, Cloud, Factory, Truck, Heart,

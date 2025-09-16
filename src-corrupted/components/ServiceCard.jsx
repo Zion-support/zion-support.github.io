@@ -1,6 +1,6 @@
 import React from 'react';
 export default ServiceCard;
-
+import {motion} from 'framer-motion';
 
 export default function Page(props: any) {
 ;

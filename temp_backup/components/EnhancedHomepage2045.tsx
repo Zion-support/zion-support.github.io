@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
-
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from './layout/Layout';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, TrendingUp, Brain, Shield, Globe, Cpu, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Zap, Phone, Mail, MapPin

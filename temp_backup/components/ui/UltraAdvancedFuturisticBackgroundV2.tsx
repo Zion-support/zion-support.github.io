@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackgroundV2Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme';

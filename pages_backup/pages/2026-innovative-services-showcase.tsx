@@ -2,14 +2,14 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';

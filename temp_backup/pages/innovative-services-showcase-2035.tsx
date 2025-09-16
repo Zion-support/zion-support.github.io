@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-
+import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, TrendingUp, Users,

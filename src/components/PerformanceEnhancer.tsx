@@ -1,84 +1,74 @@
-"use client";
-
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
-  memoryUsage: number | null;
-}
-
-interface PerformanceEnhancerProps {
-  children: React.ReactNode;
-  enableMonitoring?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-}
-
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
-  children,
-  enableMonitoring = true,
-  onMetricsUpdate,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    loadTime: null,
-    memoryUsage: null,
+const PerformanceEnhancer: React.FC = () => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0
   });
 
   useEffect(() => {
-    if (!enableMonitoring || typeof window === 'undefined') return;
-
-    const collectMetrics = () => {
-      const newMetrics: PerformanceMetrics = {
-        fcp: null,
-        lcp: null,
-        fid: null,
-        cls: null,
-        ttfb: null,
-        loadTime: null,
-        memoryUsage: null,
-      };
-
-      // Get navigation timing
-      if ('performance' in window) {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData) {
-          newMetrics.loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          newMetrics.ttfb = perfData.responseStart - perfData.fetchStart;
-        }
-      }
-
-      // Get memory usage if available
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
-      }
-
-      setMetrics(newMetrics);
-      onMetricsUpdate?.(newMetrics);
+    const measurePerformance = () => {
+      // Measure page load time
+      const loadTime = performance.now();
+      
+      // Measure memory usage
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      
+      // Measure network latency
+      const startTime = performance.now();
+      fetch('/api/ping', { method: 'HEAD' })
+        .then(() => {
+          const latency = performance.now() - startTime;
+          setPerformanceMetrics(prev => ({
+            ...prev,
+            loadTime,
+            memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
+            networkLatency: latency
+          }));
+        })
+        .catch(() => {
+          setPerformanceMetrics(prev => ({
+            ...prev,
+            loadTime,
+            memoryUsage: memoryUsage / 1024 / 1024,
+            networkLatency: 0
+          }));
+        });
     };
 
-    // Collect metrics after page load
-    window.addEventListener('load', collectMetrics);
+    measurePerformance();
     
-    // Also collect after a delay to ensure all metrics are available
-    const timeoutId = setTimeout(collectMetrics, 2000);
+    // Set up performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'measure') {
+          setPerformanceMetrics(prev => ({
+            ...prev,
+            renderTime: entry.duration
+          }));
+        }
+      });
+    });
 
-    return () => {
-      window.removeEventListener('load', collectMetrics);
-      clearTimeout(timeoutId);
-    };
-  }, [enableMonitoring, onMetricsUpdate]);
+    observer.observe({ entryTypes: ['measure'] });
 
-  return <>{children}</>;
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg shadow-lg z-50">
+      <h3 className="text-sm font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1 text-xs">
+        <div>Load Time: {performanceMetrics.loadTime.toFixed(2)}ms</div>
+        <div>Memory: {performanceMetrics.memoryUsage.toFixed(2)}MB</div>
+        <div>Latency: {performanceMetrics.networkLatency.toFixed(2)}ms</div>
+        <div>Render: {performanceMetrics.renderTime.toFixed(2)}ms</div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceEnhancer;
