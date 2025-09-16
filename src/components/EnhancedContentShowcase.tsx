@@ -6,6 +6,9 @@ const EnhancedContentShowcase: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
   const showcaseItems = [
     {
       id: 1,
@@ -256,8 +259,11 @@ const EnhancedContentShowcase: React.FC = () => {
     { label: "Breakthroughs", value: "25+", icon: "🏆", color: "text-pink-400" },
     { label: "Global Impact", value: "10M+", icon: "🌍", color: "text-cyan-400" }
   ];
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
     },
     {
       id: 2,
@@ -274,6 +280,9 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
       icon: "🧬",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
@@ -338,8 +347,11 @@ const EnhancedContentShowcase: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -353,6 +365,14 @@ const EnhancedContentShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
+            {/* Category Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">{contentCategories[activeCategory].name}</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                {contentCategories[activeCategory].description}
+              </p>
+            </div>
+
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🌟 ENHANCED CONTENT SHOWCASE • 2026
             </div>
@@ -367,6 +387,9 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
       {/* Interactive Showcase Carousel */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -821,8 +844,11 @@ const EnhancedContentShowcase: React.FC = () => {
             </button>
           </div>
         </motion.div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
       </div>
     </div>
   );
