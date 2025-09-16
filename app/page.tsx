@@ -267,6 +267,16 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Evidence‑First Release Engineering</h3>
               <p className="text-gray-600">Make every release auditable with scorecards, traces, and policy events.</p>
             </Link>
+            <Link href="/content/ai-2026-cost-aware-agent-operations" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Cost‑Aware Agent Operations (2026)</h3>
+              <p className="text-gray-600">Governed routing, caching, and eval‑driven optimization to cut costs 30–70%.</p>
+            </Link>
+            <Link href="/content/ai-2026-evidence-led-incident-review" className="bg-rose-50 rounded-xl shadow p-6 hover:shadow-md transition border border-rose-100">
+              <div className="text-sm font-semibold text-rose-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Evidence‑Led Incident Review (2026)</h3>
+              <p className="text-gray-600">Blameless reviews powered by eval traces, policy events, and action tracking.</p>
+            </Link>
             <Link href="/blog/ai-2026-safe-tool-envelopes-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Safe Tool Envelopes — Production Blueprint</h3>
