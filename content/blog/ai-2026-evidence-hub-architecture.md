@@ -1,26 +1,34 @@
 ---
-title: "AI 2026: Evidence Hub Architecture — Evals, Incidents, and Releases"
-description: "Design a centralized, queryable evidence hub to power eval‑gated releases, incident learning, and audit‑ready governance."
+title: AI 2026: Evidence Hub Architecture — Unifying Evals, Incidents, and Approvals
 date: 2025-09-16
-tags: [AI, Observability, Governance, Evals, Incidents, Releases, 2026]
+tags:
+- Evaluations
+- Governance
+- Observability
+- Reliability
+summary: A practical architecture for an enterprise Evidence Hub that unifies evaluation results, incident data, release approvals, and KPIs to enable audit‑ready, reliable autonomy.
 ---
 
-An evidence hub unifies evaluations, incidents, approvals, releases, and production telemetry so teams can ship autonomy safely.
+Enterprise autonomy needs durable evidence. This guide describes a reference architecture for an Evidence Hub that centralizes:
 
-Core capabilities:
+- Evaluation results and scorecards
+- Release approvals and rollback contracts
+- Incidents, postmortems, and action tracking
+- SLOs, budgets, and cost telemetry
 
-- Unified schema for eval runs, incidents, approvals, and scorecards
-- Provenance, hashing, and immutability for auditability
-- Policy-as-code queries to gate releases and tool use
-- Evidence links embedded in PRs, change tickets, and postmortems
-- Near-real-time ingestion and long-term retention for trending
+Key design principles:
 
-Reference architecture:
+1. Policy‑as‑code for gates and approvals
+2. Route‑aware evaluation execution and reporting
+3. Immutable audit trail with verifiable artifacts
+4. Near‑real‑time ingestion, deduplication, and enrichment
+5. Open schema for integration across CI/CD and runtime
 
-- Ingest: CI runners, production gateways, eval harness, incident bot
-- Store: OLAP warehouse + object store with signed artifacts
-- Serve: Evidence API + dashboards + search
-- Govern: OPA/Rego or Cedar policies with SLO thresholds and exceptions
+Outcomes:
 
-Outcomes: faster, safer releases; measurable reliability; and true audit readiness.
+- Faster, safer releases with measurable guardrails
+- Reduced incident repetition via evidence‑led learning loops
+- Predictable spend with budget checks and variance alerts
+
+Next steps: pilot a minimal hub with scorecards + approvals, then layer incidents and cost telemetry.
 

@@ -1,6 +1,5 @@
 // @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
-import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
@@ -34,14 +33,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            New: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
+            New: AI Governance Dashboard v5 —
+            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what’s new</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Launch: Autonomous Marketing Copilot —
-            <a href="/updates/autonomous-marketing-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">details</a>
+            State of Real‑Time RAG (2026) —
+            <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: State of AI Evaluations (2026 Preview) —
-            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read</a>
+            Agent Reliability Scorecards v1.0 —
+            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see details</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -72,14 +71,12 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
-            Fresh: AI Security Evidence Vault v1.0 —
-            <a href="/updates/ai-security-evidence-vault-v1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
+            Fresh: AI Governance Dashboard v5 —
+            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read now</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Launch: Autonomous Marketing Copilot —
-            <a href="/updates/autonomous-marketing-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">learn more</a>
+            <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">real‑time RAG report</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Report: State of AI Evaluations —
-            <a href="/updates/state-of-ai-evaluations-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">preview</a>
+            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">reliability scorecards</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -94,22 +91,22 @@ export default function HomePage() {
           <p className="mt-4 text-lg leading-8 text-gray-300">Don’t miss our newest blueprints and releases.</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 lg:mt-14 lg:max-w-none lg:grid-cols-3">
-          <a href="/updates/production-rag-observability-suite-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+          <a href="/updates/ai-governance-dashboard-v5" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
             <div className="text-xs text-blue-300">Launch</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Production RAG Observability Suite v1.0</h3>
-            <p className="mt-2 text-sm text-gray-300">Unified traces and retrieval KPIs with drift alerts.</p>
+            <h3 className="mt-2 text-lg font-semibold text-white">AI Governance Dashboard v5</h3>
+            <p className="mt-2 text-sm text-gray-300">Policy posture, eval gates, exceptions, and signed evidence.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Discover →</span>
           </a>
-          <a href="/updates/agentic-change-management-2026" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
-            <div className="text-xs text-blue-300">Guide</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">Agentic Change Management</h3>
-            <p className="mt-2 text-sm text-gray-300">Canaries, eval gates, and policy‑as‑code for safer rollouts.</p>
+          <a href="/updates/state-of-real-time-rag-2026" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Report</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">State of Real‑Time RAG (2026 Preview)</h3>
+            <p className="mt-2 text-sm text-gray-300">Streaming retrieval benchmarks for latency and quality.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Read more →</span>
           </a>
-          <a href="/updates/genai-engineering-masterclass" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
-            <div className="text-xs text-blue-300">Course</div>
-            <h3 className="mt-2 text-lg font-semibold text-white">GenAI Engineering Masterclass</h3>
-            <p className="mt-2 text-sm text-gray-300">Hands‑on RAG, agents, evals, safety, and productionization.</p>
+          <a href="/updates/agent-reliability-scorecards-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Launch</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Agent Reliability Scorecards v1.0</h3>
+            <p className="mt-2 text-sm text-gray-300">Standardized SLIs, risk signals, and trend analytics.</p>
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Learn →</span>
           </a>
         </div>
@@ -145,12 +142,12 @@ export default function HomePage() {
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
-            New: Production RAG Observability Suite —
-            <a href="/updates/production-rag-observability-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            New: AI Governance Dashboard v5 —
+            <a href="/updates/ai-governance-dashboard-v5" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Also read: <a href="/updates/agentic-change-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Change Management Guide</a>
+            Also read: <a href="/updates/state-of-real-time-rag-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Real‑Time RAG Report</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            <a href="/updates/genai-engineering-masterclass" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Masterclass</a>
+            <a href="/updates/agent-reliability-scorecards-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Reliability Scorecards</a>
           </p>
         </div>
       </div>

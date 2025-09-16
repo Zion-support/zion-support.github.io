@@ -66,6 +66,8 @@ import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIConten
 // Import new revolutionary components
 import AdvancedPerformanceOptimizer2026 from './components/AdvancedPerformanceOptimizer2026';
 import RevolutionaryTech2026Showcase from './components/RevolutionaryTech2026Showcase';
+import AdvancedAI2026Dashboard from './components/AdvancedAI2026Dashboard';
+import QuantumConsciousnessShowcase2026 from './components/QuantumConsciousnessShowcase2026';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
@@ -266,6 +268,23 @@ export default function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Read Case Studies</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Agent Platform Guardrails Blueprint (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-rose-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-orange-100">
+            <div>
+              <p className="text-sm font-semibold text-rose-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Platform Guardrails Blueprint</h2>
+              <p className="text-gray-600 mt-2">Policy‑as‑code, approvals, risk tiers, and safe tool use at runtime.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-agent-platform-guardrails-blueprint" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Read Article</Link>
+              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block border border-rose-600 text-rose-700 px-5 py-3 rounded-lg font-semibold hover:bg-rose-50">Policy‑as‑Code</Link>
             </div>
           </div>
         </div>
@@ -990,7 +1009,6 @@ export default function HomePage() {
               </div>
               <div className="shrink-0">
                 <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
-                <Link href="/blog/ai-2025-multimodal-agents-practical-guide" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
                   Read Article
                 </Link>
               </div>
@@ -1292,6 +1310,8 @@ export default function HomePage() {
         {/* New Revolutionary Components */}
         <AdvancedPerformanceOptimizer2026 />
         <RevolutionaryTech2026Showcase />
+        <AdvancedAI2026Dashboard />
+        <QuantumConsciousnessShowcase2026 />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>

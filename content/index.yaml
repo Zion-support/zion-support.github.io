@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-16"
-  total_content_pieces: 44
+  total_content_pieces: 46
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -647,6 +647,21 @@ content_index:
         approval_lead_time: "-50%"
         cost_slo_coverage: "100% gated"
 
+    - id: "ai-2026-reliable-autonomy-operations"
+      type: "blog"
+      title: "AI 2026: Reliable Autonomy Operations — Gates, SLOs, and Runbooks"
+      file_path: "/content/blog/ai-2026-reliable-autonomy-operations.md"
+      url: "/blog/ai-2026-reliable-autonomy-operations"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Reliability", "Operations", "Evaluations", "Governance", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        change_failure_rate: "< 3%"
+
     - id: "ai-2026-autonomous-evidence-led-operations"
       type: "blog"
       title: "AI 2026: Autonomous Evidence‑Led Operations — Centralizing Evals, Incidents, and KPIs"
@@ -679,18 +694,18 @@ content_index:
 
     - id: "ai-2026-evidence-hub-architecture"
       type: "blog"
-      title: "AI 2026: Evidence Hub Architecture — Evals, Incidents, and Releases"
+      title: "AI 2026: Evidence Hub Architecture — Unifying Evals, Incidents, and Approvals"
       file_path: "/content/blog/ai-2026-evidence-hub-architecture.md"
       url: "/blog/ai-2026-evidence-hub-architecture"
       status: "published"
       created: "2025-09-16"
-      tags: ["AI", "Observability", "Governance", "Evals", "Incidents", "Releases", "2026"]
+      tags: ["Evaluations", "Governance", "Observability", "Reliability", "2026"]
       featured: true
       is_new: true
       metrics:
-        time_to_audit: "hours, not weeks"
-        release_reliability: "> 95% pass"
-        incident_learnings: "centralized"
+        approval_speed: "2x"
+        incident_reduction: "40%"
+        audit_ready: true
     
     - id: "ai-2026-zero-trust-agent-architecture"
       type: "blog"
@@ -973,7 +988,6 @@ content_index:
         coverage: "> 70% initial"
         reliability: "> 95% gate pass"
         audit_ready: true
->>>>>>> origin/feat/new-content-2026-evals
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
