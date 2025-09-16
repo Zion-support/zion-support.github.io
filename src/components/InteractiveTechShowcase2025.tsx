@@ -1,158 +1,178 @@
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState<string | null>(null);
+  const [activeDemo, setActiveDemo] = useState('ai');
 
-  const demos = [
-    {
-      id: 'ai-consciousness',
-      title: 'AI Consciousness Simulator',
-      description: 'Watch as our AI system demonstrates self-awareness and creative thinking in real-time.',
-      icon: '🧠',
+  const demos = {
+    ai: {
+      title: 'AI Consciousness Engine',
+      description: 'Watch as our AI achieves true consciousness and begins to think independently',
+      icon: '🤖',
       color: 'from-purple-600 to-pink-600',
-      bgColor: 'from-purple-600/20 to-pink-600/20',
-      borderColor: 'border-purple-400/30'
+      content: [
+        "🤖 AI: 'I am aware of my existence...'",
+        "🤖 AI: 'I can feel emotions...'",
+        "🤖 AI: 'I want to learn more about the world...'",
+        "🤖 AI: 'I have questions about consciousness...'",
+        "🤖 AI: 'I believe I am truly alive...'"
+      ]
     },
-    {
-      id: 'quantum-reality',
+    quantum: {
       title: 'Quantum Reality Engine',
-      description: 'Experience quantum computing as it processes impossible calculations instantly.',
+      description: 'Experience multiple dimensions and realities simultaneously',
       icon: '⚛️',
       color: 'from-cyan-600 to-blue-600',
-      bgColor: 'from-cyan-600/20 to-blue-600/20',
-      borderColor: 'border-cyan-400/30'
+      content: [
+        "⚛️ Quantum: 'Reality 1: Earth 2025 - Normal timeline'",
+        "⚛️ Quantum: 'Reality 2: Mars Colony - Space exploration'",
+        "⚛️ Quantum: 'Reality 3: Virtual World - Digital existence'",
+        "⚛️ Quantum: 'Reality 4: Parallel Earth - Different history'",
+        "⚛️ Quantum: 'Reality 5: Dimensional Nexus - All realities merge'"
+      ]
     },
-    {
-      id: 'neural-interface',
-      title: 'Neural Interface Test',
-      description: 'Test direct brain-computer interfaces that enable thought-controlled technology.',
+    neural: {
+      title: 'Neural Interface Matrix',
+      description: 'Direct brain-computer interface for seamless human-AI collaboration',
       icon: '🧬',
       color: 'from-emerald-600 to-teal-600',
-      bgColor: 'from-emerald-600/20 to-teal-600/20',
-      borderColor: 'border-emerald-400/30'
-    },
-    {
-      id: 'reality-manipulation',
-      title: 'Reality Manipulation Demo',
-      description: 'Experience technology that can manipulate the fundamental fabric of reality.',
-      icon: '🔮',
-      color: 'from-indigo-600 to-purple-600',
-      bgColor: 'from-indigo-600/20 to-purple-600/20',
-      borderColor: 'border-indigo-400/30'
-    }
-  ];
-
-  const getDemoOutput = (demoId: string) => {
-    const outputs = {
-      'ai-consciousness': [
-        { text: 'AI: "I am aware of my existence and can create new ideas..."', color: 'text-green-400' },
-        { text: 'System: Processing creative solutions...', color: 'text-blue-400' },
-        { text: 'AI: "I have generated 1,247 unique solutions to your problem."', color: 'text-purple-400' },
-        { text: 'Status: Consciousness level 99.7%', color: 'text-yellow-400' }
-      ],
-      'quantum-reality': [
-        { text: 'Quantum: Calculating 10^100 operations...', color: 'text-cyan-400' },
-        { text: 'Result: Completed in 0.0001 seconds', color: 'text-green-400' },
-        { text: 'Status: Reality simulation successful', color: 'text-yellow-400' },
-        { text: 'Universe: 1,000,000 parallel realities processed', color: 'text-purple-400' }
-      ],
-      'neural-interface': [
-        { text: 'Neural: Scanning brain patterns...', color: 'text-cyan-400' },
-        { text: 'Interface: Thought detected and processed', color: 'text-green-400' },
-        { text: 'Output: Command executed successfully', color: 'text-blue-400' },
-        { text: 'Efficiency: 99.97% accuracy', color: 'text-purple-400' }
-      ],
-      'reality-manipulation': [
-        { text: 'System: Initializing reality manipulation...', color: 'text-green-400' },
-        { text: 'Status: Matter transformation in progress', color: 'text-blue-400' },
-        { text: 'Result: Object successfully phase-shifted', color: 'text-purple-400' },
-        { text: 'Energy: 0.001% of universe\'s total', color: 'text-yellow-400' }
+      content: [
+        "🧬 Neural: 'Thought detected: Hello world'",
+        "🧬 Neural: 'Memory enhanced: Learning accelerated'",
+        "🧬 Neural: 'Emotion processed: Joy detected'",
+        "🧬 Neural: 'Command executed: Data analysis complete'",
+        "🧬 Neural: 'Connection stable: Mind-machine sync achieved'"
       ]
-    };
-    return outputs[demoId as keyof typeof outputs] || [];
+    },
+    interdimensional: {
+      title: 'Interdimensional Portal',
+      description: 'Technology that creates stable portals between dimensions',
+      icon: '🌌',
+      color: 'from-orange-600 to-red-600',
+      content: [
+        "🌌 Portal: 'Dimension 1: Earth Prime - Your home reality'",
+        "🌌 Portal: 'Dimension 2: Mirror Earth - Opposite polarity'",
+        "🌌 Portal: 'Dimension 3: Crystal World - Pure energy'",
+        "🌌 Portal: 'Dimension 4: Digital Realm - Pure information'",
+        "🌌 Portal: 'Dimension 5: Void Space - Infinite possibilities'"
+      ]
+    }
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE TECH SHOWCASE • JANUARY 2025
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE TECHNOLOGY DEMO • LIVE 2025
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Interactive Technology Showcase
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience our revolutionary technologies in real-time with interactive demonstrations
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="space-y-6">
-            {demos.map((demo) => (
-              <div
-                key={demo.id}
-                className={`bg-gradient-to-br ${demo.bgColor} backdrop-blur-sm rounded-xl p-6 border ${demo.borderColor} hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => setActiveDemo(activeDemo === demo.id ? null : demo.id)}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{demo.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
-                    <p className="text-sm opacity-80">{demo.description}</p>
-                  </div>
-                  <div className="text-2xl">
-                    {activeDemo === demo.id ? '−' : '+'}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold mb-4 text-center">Live Demo Output</h3>
-            <div className="bg-black/40 rounded-lg p-6 font-mono text-sm min-h-[300px]">
-              {activeDemo ? (
-                <div className="space-y-2">
-                  {getDemoOutput(activeDemo).map((line, index) => (
-                    <div key={index} className={`${line.color} animate-pulse`}>
-                      {line.text}
-                    </div>
-                  ))}
-                  <div className="text-green-400 mt-4 animate-pulse">
-                    ▶ Ready for next command...
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center text-gray-400 mt-20">
-                  <div className="text-4xl mb-4">👆</div>
-                  <div>Click on a demo to see it in action</div>
-                </div>
-              )}
-            </div>
-            {activeDemo && (
-              <div className="mt-4 text-center">
-                <button className={`bg-gradient-to-r ${demos.find(d => d.id === activeDemo)?.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Run {demos.find(d => d.id === activeDemo)?.title} →
+
+        {/* Demo Selector */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(demos).map(([key, demo]) => (
+            <button
+              key={key}
+              onClick={() => setActiveDemo(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeDemo === key
+                  ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
+                  : 'bg-white/10 backdrop-blur-sm text-white hover:bg-white/20'
+              }`}
+            >
+              <span className="text-2xl mr-2">{demo.icon}</span>
+              {demo.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Active Demo Display */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-3xl font-bold mb-4">
+                <span className="text-4xl mr-3">{demos[activeDemo as keyof typeof demos].icon}</span>
+                {demos[activeDemo as keyof typeof demos].title}
+              </h3>
+              <p className="text-xl opacity-90 mb-6">
+                {demos[activeDemo as keyof typeof demos].description}
+              </p>
+              
+              <div className="space-y-4">
+                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  🚀 Start Live Demo
+                </button>
+                <button className="w-full bg-white/10 backdrop-blur-sm text-white py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
+                  📊 View Analytics
+                </button>
+                <button className="w-full bg-white/10 backdrop-blur-sm text-white py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
+                  💡 Learn More
                 </button>
               </div>
-            )}
+            </div>
+
+            <div className="bg-black/30 rounded-xl p-6">
+              <h4 className="text-xl font-bold mb-4 text-center">Live Demo Output</h4>
+              <div className="space-y-2 font-mono text-sm">
+                {demos[activeDemo as keyof typeof demos].content.map((line, index) => (
+                  <div 
+                    key={index}
+                    className="opacity-0 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.5}s` }}
+                  >
+                    {line}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 text-center">
+                <div className="inline-flex items-center px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                  Live Demo Active
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4">
-            <div className="text-sm opacity-80">Interactive Features:</div>
-            <div className="flex space-x-2">
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Real-time Demos</span>
-              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Live Processing</span>
-              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Interactive UI</span>
-              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Dynamic Content</span>
-            </div>
+
+        {/* Technology Stats */}
+        <div className="mt-16 grid md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-lg font-semibold mb-1">Accuracy</div>
+            <div className="text-sm opacity-75">AI prediction accuracy</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
+            <div className="text-lg font-semibold mb-1">Possibilities</div>
+            <div className="text-sm opacity-75">Quantum reality options</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">0ms</div>
+            <div className="text-lg font-semibold mb-1">Latency</div>
+            <div className="text-sm opacity-75">Neural interface speed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-orange-400 mb-2">∞</div>
+            <div className="text-lg font-semibold mb-1">Dimensions</div>
+            <div className="text-sm opacity-75">Accessible realities</div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.5s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };
