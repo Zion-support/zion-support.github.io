@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Blueprint: Grounded Generation Guardrails (2026)',
+    summary: 'Reduce hallucinations in production using retrieval, constraints, and objective eval gates.',
+    href: '/updates/grounded-generation-guardrails-2026',
+    date: '2025-09-16',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Case Studies: Evidence‑Driven Routing (2026)',
+    summary: 'Real‑world results from objective routing with evals, risk signals, and budgets.',
+    href: '/updates/evidence-driven-routing-case-studies-2026',
+    date: '2025-09-16',
+    tag: 'Case Studies'
+  },
+  {
     title: 'Blueprint: Real-Time RAG Benchmark Suite (2026)',
     summary: 'Standardized tasks, datasets, and rubrics for benchmarking real-time RAG under latency budgets.',
     href: '/updates/real-time-rag-benchmark-suite-1-0',
