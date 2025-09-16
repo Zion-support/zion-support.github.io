@@ -77,7 +77,8 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
+      </div>
 
         {/* Advanced Features Section */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
