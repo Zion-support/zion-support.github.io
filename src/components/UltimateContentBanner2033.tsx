@@ -1,132 +1,107 @@
 import React, { useState, useEffect } from 'react';
 
 const UltimateContentBanner2033: React.FC = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  
-  const features = [
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const bannerContent = [
     {
-      title: "Conscious AI Systems",
-      description: "AI that thinks, feels, and creates like humans",
-      icon: "🧠",
+      title: "🚀 ULTIMATE TECH BREAKTHROUGH 2033",
+      subtitle: "Conscious AI • Quantum Computing • Interdimensional Technology",
+      cta: "Explore Now",
+      link: "/pages/UltimateTechBreakthrough2033",
       color: "from-purple-600 to-pink-600"
     },
     {
-      title: "Quantum Reality Engine",
-      description: "Simulate entire universes in real-time",
-      icon: "⚛️",
+      title: "⚡ REVOLUTIONARY TECH SHOWCASE 2033",
+      subtitle: "Interactive Demos • Live Statistics • Real-time Processing",
+      cta: "View Showcase",
+      link: "/pages/RevolutionaryTechShowcase2033",
       color: "from-cyan-600 to-blue-600"
     },
     {
-      title: "Interdimensional Computing",
-      description: "Process across multiple dimensions simultaneously",
-      icon: "🌌",
+      title: "🔮 ULTIMATE CONTENT SHOWCASE 2033",
+      subtitle: "Immersive Experience • Multi-dimensional Content • Neural Interface",
+      cta: "Start Exploring",
+      link: "/pages/UltimateContentShowcase2033",
       color: "from-emerald-600 to-teal-600"
-    },
-    {
-      title: "Molecular Intelligence",
-      description: "Manipulate matter and energy at will",
-      icon: "🔬",
-      color: "from-orange-600 to-red-600"
     }
   ];
 
   useEffect(() => {
+    setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
+    }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [bannerContent.length]);
+
+  const currentBanner = bannerContent[currentSlide];
 
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-8 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-lg font-bold mb-8 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2033
-          </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology 2033
-          </h2>
-          <p className="text-2xl md:text-3xl opacity-90 max-w-5xl mx-auto mb-8">
-            Experience the most advanced technological innovations that will completely transform every aspect of human existence
-          </p>
+    <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 animate-pulse"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-cyan-500/10 to-transparent"></div>
         </div>
+      </div>
 
-        {/* Interactive Feature Showcase */}
-        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Featured Technology</h3>
-            <div className="flex justify-center space-x-2 mb-6">
-              {features.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentFeature(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentFeature ? 'bg-yellow-400' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 left-10 text-6xl opacity-20 animate-bounce">🧠</div>
+        <div className="absolute top-20 right-20 text-5xl opacity-20 animate-bounce delay-1000">⚛️</div>
+        <div className="absolute bottom-20 left-20 text-5xl opacity-20 animate-bounce delay-2000">🌌</div>
+        <div className="absolute bottom-10 right-10 text-6xl opacity-20 animate-bounce delay-3000">🧬</div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-12">
+        <div className="text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 NEW: ULTIMATE BREAKTHROUGH TECHNOLOGY • JANUARY 2033
           </div>
           
-          <div className="text-center">
-            <div className="text-8xl mb-6 animate-bounce">
-              {features[currentFeature].icon}
-            </div>
-            <h4 className="text-3xl font-bold mb-4">
-              {features[currentFeature].title}
-            </h4>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              {features[currentFeature].description}
-            </p>
-            <div className="flex justify-center space-x-4">
-              <a 
-                href="/pages/NextGenTechRevolution2033" 
-                className={`bg-gradient-to-r ${features[currentFeature].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-              >
-                Explore Technology →
-              </a>
-              <a 
-                href="/pages/UltimateTechBreakthrough2033" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg"
-              >
-                Learn More →
-              </a>
-            </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            {currentBanner.title}
+          </h2>
+          
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
+            {currentBanner.subtitle}
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a
+              href={currentBanner.link}
+              className={`bg-gradient-to-r ${currentBanner.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400`}
+            >
+              {currentBanner.cta} →
+            </a>
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors text-lg">
+              Learn More
+            </button>
           </div>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <a 
-            href="/pages/NextGenTechRevolution2033" 
-            className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 text-center group"
-          >
-            <div className="text-6xl mb-4 group-hover:animate-pulse">🚀</div>
-            <h3 className="text-2xl font-bold mb-4">Next-Gen Tech Revolution</h3>
-            <p className="text-purple-200 mb-6">
-              Experience the most advanced technological innovations that will reshape humanity's future
-            </p>
-            <div className="text-purple-300 font-semibold group-hover:text-white transition-colors">
-              Explore Revolution →
-            </div>
-          </a>
-
-          <a 
-            href="/pages/UltimateTechBreakthrough2033" 
-            className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300 text-center group"
-          >
-            <div className="text-6xl mb-4 group-hover:animate-pulse">🌟</div>
-            <h3 className="text-2xl font-bold mb-4">Ultimate Tech Breakthrough</h3>
-            <p className="text-indigo-200 mb-6">
-              The most revolutionary technological advances that will completely transform human existence
-            </p>
-            <div className="text-indigo-300 font-semibold group-hover:text-white transition-colors">
-              Discover Breakthrough →
-            </div>
-          </a>
+        {/* Slide Indicators */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {bannerContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
         </div>
+      </div>
+
+      {/* Animated Border */}
+      <div className="absolute inset-0 border-2 border-gradient-to-r from-purple-500 to-cyan-500 rounded-lg opacity-50">
+        <div className="absolute inset-0 border-2 border-gradient-to-r from-purple-500 to-cyan-500 rounded-lg animate-spin"></div>
       </div>
     </div>
   );
