@@ -58,8 +58,12 @@ import RevolutionaryContentPromotionBanner2026 from './components/RevolutionaryC
 import NewContentBreakthroughBanner2026 from './components/NewContentBreakthroughBanner2026';
 import NextGenAIContentPromotionBanner2026 from './components/NextGenAIContentPromotionBanner2026';
 import AITrendsPromotionBanner2026 from './components/AITrendsPromotionBanner2026';
+import NewContentPromotionBanner2027 from './components/NewContentPromotionBanner2027';
+import RevolutionaryTechShowcaseBanner2027 from './components/RevolutionaryTechShowcaseBanner2027';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
+import AIInnovationHub2027 from './pages/AIInnovationHub2027';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
+import AdvancedTechSolutions2027 from './pages/AdvancedTechSolutions2027';
 import QuantumComputingGuide2026 from './pages/QuantumComputingGuide2026';
 import AI2026UltimateInnovationHub from './pages/AI2026UltimateInnovationHub';
 import QuantumAIRevolution2026 from './pages/QuantumAIRevolution2026';
@@ -242,6 +246,16 @@ const App: React.FC = () => {
               {/* NEW: New Content Breakthrough Banner 2026 */}
               <div className="mb-12">
                 <NewContentBreakthroughBanner2026 />
+              </div>
+
+              {/* NEW: Revolutionary Content Promotion Banner 2027 */}
+              <div className="mb-12">
+                <NewContentPromotionBanner2027 />
+              </div>
+
+              {/* NEW: Revolutionary Tech Showcase Banner 2027 */}
+              <div className="mb-12">
+                <RevolutionaryTechShowcaseBanner2027 />
               </div>
 
               {/* Featured Content Section */}
@@ -476,6 +490,10 @@ const App: React.FC = () => {
           {/* NEW: Next Gen Content Routes 2026 */}
           <Route path="/next-gen-ai-content-hub-2026" element={<NextGenAIContentHub2026 />} />
           <Route path="/ai-trends-insights-2026" element={<AITrendsInsights2026 />} />
+          
+          {/* NEW: Revolutionary Content Routes 2027 */}
+          <Route path="/ai-innovation-hub-2027" element={<AIInnovationHub2027 />} />
+          <Route path="/advanced-tech-solutions-2027" element={<AdvancedTechSolutions2027 />} />
         </Routes>
         
         <Footer />
