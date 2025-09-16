@@ -1,234 +1,156 @@
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
-  Cpu, Database, Users, Award, BookOpen, Phone
-} from 'lucide-react';
+import React, { useState } from 'react';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const services = [
-    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
-    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
-    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
-    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+  const navigationItems = [
+    {
+      title: 'AI Solutions',
+      href: '/pages/AdvancedAISystems2026',
+      description: 'Advanced AI Systems & Solutions',
+      icon: '🧠',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Space Technology',
+      href: '/pages/SpaceTechAI2025',
+      description: 'AI-Powered Space Exploration',
+      icon: '🚀',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Biotech Revolution',
+      href: '/pages/BiotechAIRevolution2025',
+      description: 'Revolutionary Biotechnology',
+      icon: '🧬',
+      color: 'from-green-500 to-teal-500'
+    },
+    {
+      title: 'Quantum Computing',
+      href: '/pages/QuantumComputingRevolution2026',
+      description: 'Next-Gen Quantum Solutions',
+      icon: '⚡',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Neural Interfaces',
+      href: '/pages/NeuralInterfaceRevolution2026',
+      description: 'Brain-Computer Interfaces',
+      icon: '🧬',
+      color: 'from-rose-500 to-pink-500'
+    },
+    {
+      title: 'AI Services',
+      href: '/pages/AIServicesPage',
+      description: 'Comprehensive AI Services',
+      icon: '🤖',
+      color: 'from-orange-500 to-red-500'
+    }
   ];
-
-  const company = [
-    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
-    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },
-    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
-    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
-  ];
-
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const closeAllDropdowns = () => {
-    setActiveDropdown(null);
-    setIsOpen(false);
-  };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-              <Brain className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'services' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
-                  >
-                    <div className="p-4">
-                      <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                        Our Solutions
-                      </h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {services.map((service) => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            onClick={closeAllDropdowns}
-                            className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
-                              <service.icon className="w-4 h-4 text-cyan-400" />
-                            </div>
-                            <div className="text-sm text-white/60">{service.description}</div>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                <span>About</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                  activeDropdown === 'company' ? 'rotate-180' : ''
-                }`} />
-              </button>
-              
-              {activeDropdown === 'company' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
-                  <div className="p-4">
-                    <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                      About Zion
-                    </h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      {company.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          onClick={closeAllDropdowns}
-                          className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
-                        >
-                          <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                            <item.icon className="w-5 h-5 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="font-medium text-white group-hover:text-blue-300 transition-colors">
-                              {item.name}
-                            </div>
-                            <div className="text-sm text-white/60">{item.description}</div>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Contact Button */}
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              Get Started
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <a href="/" className="flex-shrink-0 flex items-center">
+              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden py-6 border-t border-white/10"
-          >
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Services
-                </h3>
-                <div className="space-y-2">
-                  {services.map((service) => (
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Solutions
+              </button>
+              <div className="absolute left-0 mt-2 w-96 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="grid grid-cols-2 gap-4 p-6">
+                  {navigationItems.map((item, index) => (
                     <a
-                      key={service.name}
-                      href={service.href}
-                      onClick={closeAllDropdowns}
-                      className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-                    >
-                      {service.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
-                  Company
-                </h3>
-                <div className="space-y-2">
-                  {company.map((item) => (
-                    <a
-                      key={item.name}
+                      key={index}
                       href={item.href}
-                      onClick={closeAllDropdowns}
-                      className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                      className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      {item.name}
+                      <span className="text-2xl">{item.icon}</span>
+                      <div>
+                        <div className="font-semibold text-gray-900 group-hover:text-purple-600">
+                          {item.title}
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {item.description}
+                        </div>
+                      </div>
                     </a>
                   ))}
                 </div>
-              </div>
-              
-              <div className="pt-4 border-t border-white/10">
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300"
-                  onClick={closeAllDropdowns}
-                >
-                  Get Started Today
-                </a>
               </div>
             </div>
-          </motion.div>
+
+            <a href="/pages/InnovationLanding2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Innovation
+            </a>
+            <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Services
+            </a>
+            <a href="/pages/RevolutionaryTechBlog2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Blog
+            </a>
+            <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Contact
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-purple-600 p-2 rounded-md"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              {navigationItems.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  <span className="text-xl">{item.icon}</span>
+                  <div>
+                    <div className="font-semibold">{item.title}</div>
+                    <div className="text-sm text-gray-500">{item.description}</div>
+                  </div>
+                </a>
+              ))}
+              <a href="/pages/InnovationLanding2025" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
+                Innovation
+              </a>
+              <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
+                Services
+              </a>
+              <a href="/pages/RevolutionaryTechBlog2026" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
+                Blog
+              </a>
+              <a href="/contact" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">
+                Contact
+              </a>
+            </div>
+          </div>
         )}
       </div>
     </nav>
