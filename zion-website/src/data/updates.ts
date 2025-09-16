@@ -10,6 +10,28 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // Fresh content (2025-09-16 - new additions)
+    {
+        title: 'Launch: Autonomous Change Approvals v1.0',
+        summary: 'Policy-gated approvals with eval signals and signed evidence for AI changes.',
+        href: '/updates/autonomous-change-approvals-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Agent Safety Red‑Team Playbooks (2026)',
+        summary: 'Reusable red‑team scenarios, risk tiers, and remediation patterns for agents.',
+        href: '/updates/agent-safety-redteam-playbooks-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Real‑Time Guardrail Metrics v1.1',
+        summary: 'Expanded live metrics for tool‑use violations, remediation speed, and risk posture.',
+        href: '/updates/real-time-guardrail-metrics-1-1',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
     // Newly added updates (2025-09-16 - additional)
     {
         title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',
@@ -25,7 +47,6 @@ export const updates: UpdateItem[] = [
         date: '2025-09-16',
         tag: 'Guide',
     },
-=======
     // Fresh content (2025-09-16)
     {
         title: 'Blueprint: Agent Posture Management — Continuous Controls',
