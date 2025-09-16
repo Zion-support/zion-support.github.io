@@ -456,6 +456,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Production Agent Runbooks — Templates (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-blue-700">New templates</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Production Agent Runbooks — Templates</h2>
+              <p className="text-gray-600 mt-2">Copy‑paste runbooks for incidents, rollbacks, and eval‑gated releases.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-production-agent-runbooks-templates" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">Get Templates</Link>
+              <Link href="/blog" className="inline-block border border-blue-600 text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-blue-50">More Articles</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agentic Experimentation Scorecards (Sept 16, 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
