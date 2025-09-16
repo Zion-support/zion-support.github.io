@@ -102,6 +102,9 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
               </a>
+              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
+                ✅ New: AI Safety & Governance 2025
+              </a>
             </div>
           </div>
         </div>

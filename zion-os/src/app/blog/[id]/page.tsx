@@ -11,46 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-  'ai-agent-safety-playbook-2025': {
-    id: 'ai-agent-safety-playbook-2025',
-    title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
+  'ai-safety-governance-blueprint-2025': {
+    id: 'ai-safety-governance-blueprint-2025',
+    title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
     excerpt:
-      'A concise, engineering-first guide to deploy guardrails, audits, and human-in-the-loop controls for real-world autonomous agents.',
-    category: 'AI Safety',
+      'A step-by-step blueprint to operationalize AI safety with policy, controls, red-teaming, and monitoring that scales.',
+    category: 'AI Solutions',
     author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '9 min read',
+    date: '2025-09-14',
+    readTime: '11 min read',
     content: [
-      'Enterprises moving to autonomous agents need safety woven into architecture, not bolted on. This playbook outlines pragmatic controls that preserve velocity while containing risk.',
-      'We cover policy engines, capability scoping, red-teaming, incident response, and post-incident learning loops. Templates and reference checklists are included to accelerate implementation.'
+      'Enterprises are moving from AI experimentation to scaled deployment. This requires a pragmatic safety and governance stack that balances innovation with risk controls.',
+      'This blueprint outlines five pillars: policy and risk taxonomy, gated release process, red‑team and evals, guardrails and runtime policy, and post‑deployment monitoring with feedback loops.',
+      'We include templates for policy definitions, decision matrices for model selection, and reference architectures for integrating safety services into your MLOps/LLMOps pipelines.',
+      'Organizations adopting this approach report faster approvals, fewer incidents, and clearer accountability across legal, security, and product teams.'
     ]
   },
-  'ai-governance-blueprint-2025': {
-    id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+  'edge-ai-inference-acceleration': {
+    id: 'edge-ai-inference-acceleration',
+    title: 'Accelerating Edge AI Inference: Patterns for Low-Latency, Low-Cost Deployment',
     excerpt:
-      'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
-    category: 'AI Governance',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
+      'Design patterns to deliver sub‑100ms inference at the edge using quantization, distillation, batching, and caching.',
+    category: 'Infrastructure',
+    author: 'Michael Rodriguez',
+    date: '2025-09-13',
     readTime: '8 min read',
     content: [
-      'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
-      'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
-    ]
-  },
-  'edge-ai-marketplaces': {
-    id: 'edge-ai-marketplaces',
-    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
-    excerpt:
-      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-14',
-    readTime: '7 min read',
-    content: [
-      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
-      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
+      'As AI moves closer to users and devices, inference latency and cost become the dominant constraints. Edge strategies must optimize the full stack: model, runtime, and network.',
+      'We cover practical techniques: 8‑bit/4‑bit quantization, operator and KV cache optimizations, request batching, speculative decoding, and distillation to smaller student models.',
+      'Deployment patterns include split inference, regional sharding, and device‑side pre/post‑processing with WASM or CUDA. We provide a reference SLO playbook and cost model.',
+      'The result is consistent sub‑100ms responses and 30–60% cost reduction while preserving accuracy for common product tasks.'
     ]
   },
   'sovereign-ai-commerce-2025': {
