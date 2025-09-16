@@ -185,6 +185,53 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Governed Tool Use Case Studies (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-rose-50 to-red-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-red-100">
+            <div>
+              <p className="text-sm font-semibold text-rose-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Governed Tool Use — Case Studies</h2>
+              <p className="text-gray-600 mt-2">Approvals, risk tiers, and runtime checks that prevent real incidents.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Read Case Studies</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Continuous Eval Gates at Scale (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Continuous Eval Gates at Scale</h2>
+              <p className="text-gray-600 mt-2">Scenario suites, scorecards, and automated rollback across teams.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-continuous-eval-gates-at-scale" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Guide</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Reliable Autonomy Operations (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Reliable Autonomy Operations</h2>
+              <p className="text-gray-600 mt-2">Evidence hubs, SLOs, and deterministic rollback for safe change.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-reliable-autonomy-operations" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Quick Spotlight: Agentic Observability Deep Dive (new) */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
