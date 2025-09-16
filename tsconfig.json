@@ -16,6 +16,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "baseUrl": ".",
+<<<<<<< HEAD
     "paths": {
 <<<<<<< HEAD
       "@/*": ["src/*"],
@@ -73,3 +74,10 @@
 >>>>>>> origin/feature/new-content-and-promotions
   ]
 }
+=======
+    "types": ["vite/client", "node"]
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}
+>>>>>>> origin/feature/blog-promos
