@@ -99,8 +99,11 @@ import RevolutionaryContentShowcase2026 from './src/pages/RevolutionaryContentSh
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
+import RevolutionaryServices2026 from './src/pages/RevolutionaryServices2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
+import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
+import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 import RevolutionaryContentBanner2027 from './src/components/RevolutionaryContentBanner2027';
 import UltimateContentBanner2027 from './src/components/UltimateContentBanner2027';
@@ -298,6 +301,11 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* New Content Advertising Banner */}
+                <div className="mb-12">
+                  <NewContentAdvertisingBanner2026 />
+                </div>
+                
                 {/* Revolutionary Content Showcase 2026 */}
                 <RevolutionaryContentShowcase2026 />
                 
@@ -1355,6 +1363,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechBreakthrough2025" element={<UltimateTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryServices2025" element={<RevolutionaryServices2025 />} />
+          <Route path="/pages/RevolutionaryServices2026" element={<RevolutionaryServices2026 />} />
+          <Route path="/revolutionary-content-showcase-2026" element={<RevolutionaryContentShowcase2026 />} />
           <Route path="/pages/UltimateTechBreakthrough2026" element={<UltimateTechBreakthrough2026 />} />
           <Route path="/pages/RevolutionaryTechShowcase2026" element={<RevolutionaryTechShowcase2026 />} />
           <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
