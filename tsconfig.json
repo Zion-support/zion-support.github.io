@@ -34,7 +34,6 @@
     "types": ["vite/client", "node"]
   },
   "include": [
-    "src/**/*",
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
