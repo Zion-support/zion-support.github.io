@@ -83,9 +83,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-cyan-500 to-fuchsia-500'
     },
     {
-      title: 'Foundation Model Quality Engineering (2026)',
-      href: '/blog/ai-2026-foundation-model-quality-engineering',
-      tag: 'Quality',
+      title: 'Agentic Workbench Productivity Blueprint (2026)',
+      href: '/blog/ai-2026-agentic-workbench-productivity-blueprint',
+      tag: 'Productivity',
       gradient: 'from-cyan-500 to-violet-500'
     },
     {
@@ -95,9 +95,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       gradient: 'from-emerald-500 to-teal-500'
     },
     {
-      title: 'GenAI for Regulated Industries (2025)',
-      href: '/blog/genai-2025-practical-compliance-patterns',
-      tag: 'Compliance',
+      title: 'Safety Evals Operational Checklist (2026)',
+      href: '/blog/ai-2026-safety-evals-operational-checklist',
+      tag: 'Safety',
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
