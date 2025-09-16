@@ -285,8 +285,8 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">A concise SLO set for safety, quality, reliability, and cost—ready to adopt.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
-              <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Best Practices</Link>
+              <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
+              <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">SLO Blueprint</Link>
             </div>
           </div>
         </div>
