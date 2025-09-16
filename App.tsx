@@ -212,6 +212,12 @@ import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarouse
 import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
 import NextGenTechRevolution2045 from './src/pages/NextGenTechRevolution2045';
 import UltimateAIConsciousness2046 from './src/pages/UltimateAIConsciousness2046';
+// New content imports
+import UltimateTechShowcase2025 from './src/pages/UltimateTechShowcase2025';
+import AIInnovationRevolution2025 from './src/pages/AIInnovationRevolution2025';
+import UltimateTechShowcasePromotionBanner from './src/components/UltimateTechShowcasePromotionBanner';
+import AIInnovationRevolutionPromotionBanner from './src/components/AIInnovationRevolutionPromotionBanner';
+import UltimateContentShowcaseCarousel from './src/components/UltimateContentShowcaseCarousel';
 import QuantumRealityEngine2047 from './src/pages/QuantumRealityEngine2047';
 import UltimateContentBanner2045 from './src/components/UltimateContentBanner2045';
 import RevolutionaryTechBanner2045 from './src/components/RevolutionaryTechBanner2045';
