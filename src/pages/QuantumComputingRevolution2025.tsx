@@ -7,6 +7,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
 =======
 =======
@@ -891,3 +892,5 @@ const QuantumComputingRevolution2025: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2025;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

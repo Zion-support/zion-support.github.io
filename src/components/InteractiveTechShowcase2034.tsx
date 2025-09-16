@@ -6,6 +6,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const technologies = [
     {
 <<<<<<< HEAD
@@ -655,3 +656,5 @@ const InteractiveTechShowcase2034: React.FC = () => {
 };
 
 export default InteractiveTechShowcase2034;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01

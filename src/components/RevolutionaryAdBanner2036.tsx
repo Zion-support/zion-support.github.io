@@ -99,6 +99,10 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             ))}
           </div>
         </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">

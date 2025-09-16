@@ -3,12 +3,15 @@ import React, { useState, useEffect } from 'react';
 const InteractiveTechShowcase2026 = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+=======
+import React, { useState, useEffect } from 'react';
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+const InteractiveTechShowcase2026: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+>>>>>>> cursor/create-and-deploy-new-content-af01
 
-  const technologies = [
+  const showcases = [
     {
       id: 'conscious-ai',
       title: 'Conscious AI Systems',

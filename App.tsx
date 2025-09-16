@@ -10,13 +10,13 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import SEOOptimizer from './src/components/SEOOptimizer';
 import MobileOptimizer from './src/components/MobileOptimizer';
+import ModernLoadingSpinner from './src/components/ModernLoadingSpinner';
+import EnhancedAccessibilityPanel from './src/components/EnhancedAccessibilityPanel';
+import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
+import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
+import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import LoadingSpinner from './src/components/LoadingSpinner';
-import AnalyticsTracker from './src/components/AnalyticsTracker';
-import SecurityEnhancer from './src/components/SecurityEnhancer';
-import TestingSuite from './src/components/TestingSuite';
-import MonitoringDashboard from './src/components/MonitoringDashboard';
-import DocumentationGenerator from './src/components/DocumentationGenerator';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 
 // Page imports

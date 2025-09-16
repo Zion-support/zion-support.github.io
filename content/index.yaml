@@ -678,6 +678,34 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
+    - id: "ai-2026-secure-agent-operations-blueprint"
+      type: "blog"
+      title: "AI 2026: Secure Agent Operations — Blueprint"
+      file_path: "/content/blog/ai-2026-secure-agent-operations-blueprint.md"
+      url: "/blog/ai-2026-secure-agent-operations-blueprint"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Operations", "Security", "Policy-as-Code", "Evals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+    - id: "ai-2026-agent-operations-checklist"
+      type: "resource"
+      title: "AI 2026: Agent Operations Checklist"
+      file_path: "/content/resources/ai-2026-agent-operations-checklist.md"
+      url: "/resources/ai-2026-agent-operations-checklist"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Operations", "Checklist", "Governance", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        coverage: "Top 10 journeys"
+        adoption_time: "< 1 day"
+        audit_ready: true
 =======
         downloads: "1000+"
         success_rate: "95%"

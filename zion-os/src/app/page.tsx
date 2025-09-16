@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -29,6 +30,9 @@ import React from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-af01
 import FeatureCard from './components/FeatureCard';
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
@@ -272,6 +276,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
+<<<<<<< HEAD
   ];
 
 >>>>>>> origin/feat/news-content
@@ -316,6 +321,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -328,6 +335,7 @@ export default function HomePage() {
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -345,6 +353,8 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -355,6 +365,7 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -393,6 +404,8 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -406,6 +419,7 @@ export default function HomePage() {
         </div>
       </section>
 =======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-6f93
@@ -427,6 +441,8 @@ export default function HomePage() {
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
@@ -435,6 +451,7 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f175
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
+<<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 =======
@@ -454,6 +471,8 @@ export default function HomePage() {
       {/* Latest Blog Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -485,6 +504,7 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
+<<<<<<< HEAD
 
 >>>>>>> origin/feat/news-content
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -724,12 +744,19 @@ export default function HomePage() {
 >>>>>>> cursor/create-and-deploy-new-content-f995
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+                🚀 Start Building Now
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📊 Explore Examples
+>>>>>>> cursor/create-and-deploy-new-content-af01
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/feat/news-content
@@ -747,6 +774,8 @@ export default function HomePage() {
 =======
 >>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======
@@ -758,6 +787,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
+<<<<<<< HEAD
 >>>>>>> origin/feat/news-content
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -837,6 +867,8 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 >>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -921,6 +953,7 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             <div className="flex items-center gap-4">
@@ -1156,6 +1189,8 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-5863
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 =======

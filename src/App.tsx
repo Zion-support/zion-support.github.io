@@ -77,6 +77,8 @@ import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromot
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
+import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
+import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 
 const App: React.FC = () => {
   return (
@@ -90,6 +92,16 @@ const App: React.FC = () => {
             <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
+              
+              {/* NEW: Revolutionary Content Showcase Banner */}
+              <div className="mb-12">
+                <NewContentShowcaseBanner2026 />
+              </div>
+
+              {/* NEW: Revolutionary Services Showcase */}
+              <div className="mb-12">
+                <NewServicesShowcase2026 />
+              </div>
               
               {/* NEW: Advanced Tech Breakthrough Banner */}
               <div className="mb-12">

@@ -6,6 +6,7 @@ const NextGenInnovationHub2032: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -515,3 +516,5 @@ const NextGenInnovationHub2032: React.FC = () => {
 };
 
 export default NextGenInnovationHub2032;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-af01
