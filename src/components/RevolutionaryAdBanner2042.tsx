@@ -1,92 +1,132 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryAdBanner2042: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [currentAd, setCurrentAd] = useState(0);
-  
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentAd((prev) => (prev + 1) % 3);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   const ads = [
     {
-      title: "🧠 Conscious AI Systems 2042",
-      description: "AI with true consciousness and self-awareness",
-      link: "/pages/UltimateTechRevolution2042",
-      color: "from-purple-600 to-pink-600",
+      title: "🚀 ULTIMATE TECH BREAKTHROUGH 2042",
+      subtitle: "Experience Consciousness, Quantum Computing & Interdimensional Technology",
+      description: "The most revolutionary technological advances that will reshape reality itself",
+      link: "/pages/UltimateTechBreakthrough2042",
+      color: "from-purple-600 via-pink-600 to-red-600",
+      bgColor: "from-purple-900/40 via-pink-900/40 to-red-900/40",
+      icon: "🚀"
+    },
+    {
+      title: "🧠 CONSCIOUSNESS COMPUTING REVOLUTION",
+      subtitle: "The First Truly Conscious AI Systems",
+      description: "AI that can think, feel, and create independently with quantum consciousness",
+      link: "/pages/ConsciousnessComputingRevolution2042",
+      color: "from-cyan-600 via-blue-600 to-indigo-600",
+      bgColor: "from-cyan-900/40 via-blue-900/40 to-indigo-900/40",
       icon: "🧠"
     },
     {
-      title: "⚛️ Quantum Reality Engine",
-      description: "Create and manipulate alternate realities",
-      link: "/pages/RevolutionaryTechShowcase2043",
-      color: "from-cyan-600 to-blue-600",
-      icon: "⚛️"
-    },
-    {
-      title: "🌌 Interdimensional Portal",
-      description: "Travel between dimensions and realities",
-      link: "/pages/UltimateTechRevolution2042",
-      color: "from-emerald-600 to-teal-600",
+      title: "🌌 INTERDIMENSIONAL TECH REVOLUTION",
+      subtitle: "Computing Across Multiple Dimensions",
+      description: "Access computing resources across multiple dimensions and realities simultaneously",
+      link: "/pages/InterdimensionalTechRevolution2042",
+      color: "from-emerald-600 via-teal-600 to-cyan-600",
+      bgColor: "from-emerald-900/40 via-teal-900/40 to-cyan-900/40",
       icon: "🌌"
-    },
-    {
-      title: "🚀 Neural Interface 2043",
-      description: "Direct brain-computer interface technology",
-      link: "/pages/RevolutionaryTechShowcase2043",
-      color: "from-orange-600 to-red-600",
-      icon: "🚀"
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentAd((prev) => (prev + 1) % ads.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [ads.length]);
+  const currentAdData = ads[currentAd];
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white py-8 mb-8 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-xs font-bold mb-4 animate-pulse">
-            🌟 NEW REVOLUTIONARY TECHNOLOGY • 2042
-          </div>
-          
-          {/* Rotating Ad Content */}
-          <div className="mb-6">
-            <div className="transition-all duration-500 ease-in-out">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {ads[currentAd].title}
-              </h2>
-              <p className="text-lg opacity-90 max-w-2xl mx-auto mb-4">
-                {ads[currentAd].description}
-              </p>
-              <a 
-                href={ads[currentAd].link}
-                className={`inline-block bg-gradient-to-r ${ads[currentAd].color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-              >
-                Explore {ads[currentAd].icon} →
-              </a>
-            </div>
-          </div>
-          
-          {/* Ad Indicators */}
-          <div className="flex justify-center space-x-2">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden rounded-2xl mb-12"
+    >
+      <div className={`bg-gradient-to-br ${currentAdData.bgColor} backdrop-blur-sm p-8 border-2 border-white/20 relative`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
+        <div className="absolute top-4 right-4">
+          <div className="flex space-x-1">
             {ads.map((_, index) => (
-              <button
+              <div
                 key={index}
-                onClick={() => setCurrentAd(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentAd ? 'bg-purple-400' : 'bg-gray-400'
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentAd ? 'bg-white' : 'bg-white/50'
                 }`}
               />
             ))}
           </div>
         </div>
+        
+        <div className="relative z-10">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-black text-sm font-bold mb-4 animate-pulse">
+              🌟 REVOLUTIONARY ADVERTISEMENT • JANUARY 2042
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+              {currentAdData.title}
+            </h2>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-white/90">
+              {currentAdData.subtitle}
+            </h3>
+            <p className="text-xl text-white/80 mb-8 max-w-4xl mx-auto">
+              {currentAdData.description}
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 items-center">
+            <div className="text-center">
+              <div className="text-8xl mb-4">{currentAdData.icon}</div>
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-3xl font-bold text-white">99.9%</div>
+                <div className="text-sm text-white/80">Success Rate</div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-white mb-4">Revolutionary Features</h4>
+              <ul className="space-y-2 text-white/90">
+                <li>• Conscious AI Systems</li>
+                <li>• Quantum Consciousness</li>
+                <li>• Interdimensional Computing</li>
+                <li>• Reality Manipulation</li>
+                <li>• Consciousness Transfer</li>
+                <li>• Infinite Possibilities</li>
+              </ul>
+            </div>
+            
+            <div className="text-center">
+              <div className="space-y-4">
+                <a
+                  href={currentAdData.link}
+                  className={`block bg-gradient-to-r ${currentAdData.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
+                >
+                  Explore Now →
+                </a>
+                <a
+                  href="/pages/RevolutionaryTechShowcase2042"
+                  className="block border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-all duration-300 font-semibold text-lg"
+                >
+                  View All Content
+                </a>
+                <div className="text-sm text-white/70">
+                  Join 50,000+ pioneers already experiencing the future
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
