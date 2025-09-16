@@ -7,20 +7,33 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-  // Fresh content added 2025-09-15
+  // Fresh content added 2025-01-16
   {
-    title: 'Deep Dive: Enterprise Agent Observability (2026)',
-    title: 'Guide: Agent Platform Operations (2026)',
-    title: 'Launch: Autonomous Ops and SRE for Agents',
-    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
-    title: 'Report: State of AI Automation (2026 Preview)',
-    title: 'Launch: Autonomous Ops Control Center 2.0',
+    title: 'Launch: AI Content Studio v3.0',
+    summary: 'Revolutionary content creation platform with advanced AI writing, video generation, and multi-modal publishing capabilities.',
+    href: '/updates/ai-content-studio-3-0',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Quantum AI Platform v2.0',
+    summary: 'Breakthrough quantum computing platform with neural network acceleration and real-time optimization for enterprise workloads.',
+    href: '/updates/quantum-ai-platform-2-0',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Business Suite 2026',
+    summary: 'Complete autonomous business operations platform with AI agents for finance, HR, operations, and customer service.',
+    href: '/updates/autonomous-business-suite-2026',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Agentic Ops Dashboard (v1.0)',
-    summary:
-      'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
+    summary: 'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
     href: '/updates/agentic-ops-dashboard-1-0',
-    date: '2025-09-15',
+    date: '2025-01-15',
     tag: 'Launch'
   },
   {
@@ -3088,43 +3101,6 @@ export const updates: UpdateItem[] = [
   },
 ]
 
->>>>>>> origin/feature/updates-content
-    href: '/updates/dapp-challenge',
-    date: '2025-09-05',
-    tag: 'Challenge',
-  },
-  {
-    id: 'ai-research-release',
-    title: 'Research Release: Autonomous Agents for IT Operations',
-    summary: 'New paper and demo exploring agentic automation for enterprise IT workflows.',
-    href: '/updates/ai-research-it-ops',
-    date: '2025-09-03',
-    tag: 'Research',
-  },
-  {
-    id: 'zion-os-1-2-release',
-    title: 'Zion OS v1.2 Released',
-    summary: 'Performance improvements, modular deployments, and enhanced governance tooling.',
-    href: '/updates/zion-os-1-2',
-    date: '2025-09-01',
-    tag: 'Release',
-  },
-];
-
-export const getLatestUpdates = (limit = 6) => {
-  return [...updates]
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
-    .slice(0, limit);
-};
-
->>>>>>> origin/feat/updates-content-and-advertising
-  }
-]
-
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
-export function getLatestUpdates(count: number = 6): SiteUpdate[] {
-  return siteUpdates.slice(0, count)
-}
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
