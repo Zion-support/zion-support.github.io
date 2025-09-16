@@ -9,6 +9,20 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Fresh content added 2025-09-16
   {
+    title: 'Guide: Agentic Quality Scorecards (2026)',
+    summary: 'Unify evals, policy events, incidents, and business KPIs into actionable scorecards.',
+    href: '/updates/agentic-quality-scorecards-2026',
+    date: '2025-09-16',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Zero-Trust Agent Controllers v1.0',
+    summary: 'Runtime guards for tool use with approvals, budgets, and adaptive policies.',
+    href: '/updates/zero-trust-agent-controllers-1-0',
+    date: '2025-09-16',
+    tag: 'Release'
+  },
+  {
     title: 'Guide: Production RAG Latency Budgets (2026)',
     summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
     href: '/blog/ai-2026-production-rag-latency-budgets',
