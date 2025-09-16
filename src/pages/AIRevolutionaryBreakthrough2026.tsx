@@ -12,7 +12,7 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
         <meta name="keywords" content="AI breakthrough 2026, synthetic intelligence, quantum AI, autonomous systems, artificial intelligence" />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-lg font-bold mb-8 animate-bounce">
@@ -258,7 +258,6 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
       </main>
       
       <Footer />
-      </div>
     </div>
   );
 };
