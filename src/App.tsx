@@ -124,9 +124,7 @@ import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
 import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
 import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthrough2025';
-import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import SpaceTechRevolution2025 from './pages/SpaceTechRevolution2025';
-import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import SyntheticIntelligenceRevolution2025 from './pages/SyntheticIntelligenceRevolution2025';
 import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
@@ -502,7 +500,6 @@ const App: React.FC = () => {
           <Route path="/pages/ResponsibleAutonomyGuide2026" element={<ResponsibleAutonomyGuide2026 />} />
           <Route path="/pages/OperationalEvalGates2026" element={<OperationalEvalGates2026 />} />
           <Route path="/pages/BiotechRevolution2025" element={<BiotechRevolution2025 />} />
-          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/AdvancedAIConsciousness2027" element={<AdvancedAIConsciousness2027 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
@@ -512,7 +509,6 @@ const App: React.FC = () => {
           <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
           <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
           <Route path="/pages/RevolutionaryInnovationHub2027" element={<RevolutionaryInnovationHub2027 />} />
-          <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
