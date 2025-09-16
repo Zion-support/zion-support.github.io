@@ -51,6 +51,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Exec Guide — Agent SLO Scorecards (2026)',
+      href: '/blog/ai-2026-exec-guide-to-agent-slo-scorecards',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-cyan-600'
+    },
+    {
+      title: 'Agent Platform Readiness Checklist (2026)',
+      href: '/blog/ai-2026-agent-platform-readiness-checklist',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-fuchsia-600'
+    },
+    {
       title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
       href: '/reports/guides/guide-2025-09-agent-slo-blueprints',
       tag: 'New',
