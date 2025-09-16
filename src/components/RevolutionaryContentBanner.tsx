@@ -1,109 +1,155 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryContentBanner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const contentSlides = [
-    {
-      title: "🚀 Ultimate Tech Breakthrough 2025",
-      subtitle: "Revolutionary Innovation",
-      description: "Experience the most groundbreaking technological breakthroughs that are reshaping our world",
-      link: "/pages/UltimateTechBreakthrough2025",
-      color: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🚀"
-    },
-    {
-      title: "🌟 Innovation Showcase 2025",
-      subtitle: "Cutting-Edge Technology",
-      description: "Discover the most innovative technologies that are transforming industries and creating new possibilities",
-      link: "/pages/InnovationShowcase2025",
-      color: "from-cyan-600 via-blue-600 to-indigo-600",
-      icon: "🌟"
-    },
-    {
-      title: "⚡ Revolutionary Services 2025",
-      subtitle: "Next-Gen Solutions",
-      description: "Transform your business with our groundbreaking services that are reshaping industries",
-      link: "/pages/RevolutionaryServices2025",
-      color: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "⚡"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [contentSlides.length]);
-
   return (
-    <>
-      <Helmet>
-        <title>Revolutionary Content 2025 - Latest Innovations</title>
-        <meta name="description" content="Discover our revolutionary new content featuring the latest technological breakthroughs and innovations of 2025." />
-      </Helmet>
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 rounded-2xl"
+    >
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
-      <div className="relative overflow-hidden mb-12">
-        {/* Main Banner */}
-        <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-          <div className="relative z-10">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-              <h2 className="text-3xl font-bold">{contentSlides[currentSlide].title}</h2>
-              <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-            </div>
-            <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-              {contentSlides[currentSlide].description}
-            </p>
-            <div className="flex justify-center space-x-4 mb-6">
-              <a 
-                href={contentSlides[currentSlide].link}
-                className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold border border-white/30"
-              >
-                Explore {contentSlides[currentSlide].subtitle} →
-              </a>
-              <button className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
-                Watch Demo
-              </button>
-            </div>
-            
-            {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2">
-              {contentSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="text-center">
+          {/* Animated Badge */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-8 animate-pulse"
+          >
+            🌟 REVOLUTIONARY NEW CONTENT • JANUARY 2026
+          </motion.div>
 
-        {/* Quick Access Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          {contentSlides.map((slide, index) => (
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            🚀 Revolutionary Technology Showcase
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-12"
+          >
+            Experience the most groundbreaking technological innovations that are reshaping our world. 
+            Discover AI Consciousness, Quantum Neural Networks, Neural Reality Engines, and more!
+          </motion.p>
+
+          {/* Feature Cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"
+          >
+            {/* AI Consciousness */}
+            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3 text-center">🧠</div>
+              <h3 className="text-lg font-bold mb-2 text-center text-purple-100">AI Consciousness</h3>
+              <p className="text-purple-200 text-sm text-center mb-4">
+                Self-aware AI systems with emotional intelligence
+              </p>
+              <a href="/pages/UltimateTechBreakthrough2026" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+                Explore →
+              </a>
+            </div>
+
+            {/* Quantum Neural Networks */}
+            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3 text-center">⚡</div>
+              <h3 className="text-lg font-bold mb-2 text-center text-cyan-100">Quantum Neural</h3>
+              <p className="text-cyan-200 text-sm text-center mb-4">
+                Quantum computing meets neural networks
+              </p>
+              <a href="/pages/RevolutionaryTechBreakthrough2026" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+                Discover →
+              </a>
+            </div>
+
+            {/* Neural Reality Engine */}
+            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3 text-center">🌐</div>
+              <h3 className="text-lg font-bold mb-2 text-center text-emerald-100">Neural Reality</h3>
+              <p className="text-emerald-200 text-sm text-center mb-4">
+                Direct brain-computer interfaces
+              </p>
+              <a href="/pages/NextGenTechRevolution2026" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+                Experience →
+              </a>
+            </div>
+
+            {/* Interdimensional Computing */}
+            <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3 text-center">🌌</div>
+              <h3 className="text-lg font-bold mb-2 text-center text-violet-100">Interdimensional</h3>
+              <p className="text-violet-200 text-sm text-center mb-4">
+                Computing across multiple dimensions
+              </p>
+              <a href="/pages/RevolutionaryTechBlog2026" className="block w-full bg-white text-violet-600 py-2 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center text-sm">
+                Learn More →
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Call to Action Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-wrap justify-center gap-6"
+          >
             <a
-              key={index}
-              href={slide.link}
-              className={`bg-gradient-to-br ${slide.color}/20 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 border border-white/20 group`}
+              href="/pages/UltimateTechBreakthrough2026"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
             >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{slide.icon}</div>
-              <h3 className="text-lg font-bold text-white mb-2">{slide.title}</h3>
-              <p className="text-white/80 text-sm mb-4">{slide.subtitle}</p>
-              <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-lg text-sm font-semibold group-hover:bg-white group-hover:text-gray-900 transition-all duration-300">
-                Explore Now →
-              </div>
+              🚀 Explore All Breakthroughs
             </a>
-          ))}
+            <a
+              href="/pages/RevolutionaryTechBlog2026"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"
+            >
+              📖 Read Our Blog
+            </a>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto"
+          >
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">∞</div>
+              <div className="text-sm text-purple-200">Computing Power</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">100%</div>
+              <div className="text-sm text-cyan-200">Reality Fidelity</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>
+              <div className="text-sm text-emerald-200">AI Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-violet-400 mb-2">∞</div>
+              <div className="text-sm text-violet-200">Dimensions</div>
+            </div>
+          </motion.div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 
