@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const UltimateAIConsciousness2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');

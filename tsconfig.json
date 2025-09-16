@@ -19,6 +19,20 @@
       "@/*": ["src/*"]
     }
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-40b9
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
@@ -40,6 +54,28 @@
   ]
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+>>>>>>> cursor/create-and-deploy-new-content-376e
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 }
->>>>>>> 2e58aaf50d6a55ca120137803d00005c1294e262
+>>>>>>> cursor/create-and-deploy-new-content-40b9
