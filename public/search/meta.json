@@ -476,8 +476,8 @@
   },
   {
     "route": "/case-studies",
-    "title": "",
-    "h1": "Case Studies"
+    "title": "Case Studies | Zion Tech Solutions",
+    "h1": "Success Stories & Case Studies"
   },
   {
     "route": "/categories",
@@ -1285,6 +1285,11 @@
     "h1": "Test Page Working"
   },
   {
+    "route": "/testimonials",
+    "title": "Client Testimonials | Zion Tech Solutions",
+    "h1": "Client Testimonials"
+  },
+  {
     "route": "/thank-you",
     "title": "",
     "h1": "Thank you"
@@ -1736,8 +1741,8 @@
   },
   {
     "route": "/products",
-    "title": "Index - Zion Tech Solutions",
-    "h1": "Index"
+    "title": "Products & Solutions | Zion Tech Solutions",
+    "h1": "Technology Products & Solutions"
   },
   {
     "route": "/plans/enterprise",
