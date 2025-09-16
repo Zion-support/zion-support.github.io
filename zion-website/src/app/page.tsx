@@ -3,17 +3,6 @@ import { getLatestUpdates } from "../data/updates"
 export default function HomePage() {
   const latest = getLatestUpdates(6)
   return (
-<<<<<<< HEAD
-    <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 pt-24">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Leading the Future of{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              AI & Technology
-            </span>
-          </h1>
-=======
     <div className="bg-black">
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
@@ -399,7 +388,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
->>>>>>> 60aabff78405a73f1a20f7e802e2036f236d650f
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
             Join the revolution that is reshaping industries worldwide.
