@@ -204,7 +204,6 @@
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Supported Languages Section */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">

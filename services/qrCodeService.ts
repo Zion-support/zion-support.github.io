@@ -27,13 +27,9 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -67,7 +63,6 @@
     
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
       throw new Error('Margin must be between 0 and 10');
->>>>>>> origin/auto/autonomy-17186719616
     }
   }
 
@@ -81,7 +76,6 @@
     vcard += `TEL:${data.phone}\n`;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     }
     return smsString
@@ -90,7 +84,6 @@
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   private generateGeoString(data: any): string {
@@ -111,13 +104,9 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -175,13 +164,9 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -315,7 +300,6 @@ export const qrCodeService = new QRCodeService ();
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -414,4 +398,3 @@ export const qrCodeService = new QRCodeService();
 }
 
 export const qrCodeService = new QRCodeService();
->>>>>>> origin/auto/autonomy-17186719616

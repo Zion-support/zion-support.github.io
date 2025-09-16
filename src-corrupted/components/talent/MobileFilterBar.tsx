@@ -88,7 +88,6 @@ export function MobileFilterBar({
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           Search by name or skill
         </p>
@@ -104,7 +103,6 @@ export function MobileFilterBar({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

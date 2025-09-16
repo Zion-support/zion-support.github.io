@@ -112,8 +112,6 @@ function getAllFiles(dir, extensions) {let files = [];
 
 
 
-    content = content.replace(/[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
->>>>>>> origin/resolved-all-conflicts-final-1757174062
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(` Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -131,7 +129,6 @@ function getAllFiles(dir, extensions) {;
         files = files.concat(getAllFiles(fullPath, extensions));
 
       } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 

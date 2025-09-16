@@ -30,12 +30,9 @@ const userPosts: ForumPost[] = [
           </Button>
         </div>
       </AppLayout>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -46,7 +43,6 @@ const userPosts: ForumPost[] = [
   return (
     <AppLayout>
       <SEO 
->>>>>>> origin/auto/autonomy-17186719616
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -184,9 +180,7 @@ const userPosts: ForumPost[] = [
       </div>
     </AppLayout>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

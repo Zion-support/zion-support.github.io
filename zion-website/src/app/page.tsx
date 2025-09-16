@@ -79,7 +79,7 @@ const solutions = [
 export default function HomePage() {
   const latest = getLatestUpdates(6)
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black">
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">

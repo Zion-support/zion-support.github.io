@@ -90,7 +90,6 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
->>>>>>> origin/auto/autonomy-17186719616
   return state;
 }
 
@@ -177,4 +176,3 @@ if ( {) {
   }
   return events;
 }
->>>>>>> origin/auto/autonomy-17186719616

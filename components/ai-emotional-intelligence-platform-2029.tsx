@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -363,9 +362,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   return (
@@ -605,7 +602,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="AI Emotional Intelligence Platform 2029" />
         <meta property="og:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
         <meta property="og:type" content="website" />
@@ -644,7 +640,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -690,7 +685,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               transition={{ duration: 1, delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
->>>>>>> origin/auto/autonomy-17186719616
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Emotional Intelligence
               </span>
@@ -700,7 +694,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -725,7 +718,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
->>>>>>> origin/auto/autonomy-17186719616
             >
               Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.
             </motion.p>
@@ -753,7 +745,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -814,7 +805,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </Link>
->>>>>>> origin/auto/autonomy-17186719616
 
               <Link
                 href="#pricing"
@@ -850,7 +840,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -895,7 +884,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               transition={{ duration: 1, delay: 0.9 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
->>>>>>> origin/auto/autonomy-17186719616
               <div className="text-center">
                 <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>
                 <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>
@@ -925,19 +913,14 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -958,7 +941,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 =======
             className="text-center mb-16"
           >
->>>>>>> origin/auto/autonomy-17186719616
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Features</span>
             </h2>
@@ -971,7 +953,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <motion.div
                 key={feature.title}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1028,7 +1009,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
->>>>>>> origin/auto/autonomy-17186719616
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1037,21 +1017,16 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
               </motion.div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             ))}
           </div>
         </div>
       </section>
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Benefits Section */}
       <section className='py-20 bg-black'>;
@@ -1066,20 +1041,15 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Benefits Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1100,7 +1070,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 =======
             className="text-center mb-16"
           >
->>>>>>> origin/auto/autonomy-17186719616
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Business</span>
             </h2>
@@ -1109,7 +1078,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             </p>
           </motion.div>
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 =======
 
@@ -1126,14 +1094,12 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-white text-lg">{benefit}</span>
               </motion.div>
->>>>>>> origin/auto/autonomy-17186719616
             ))}
           </div>
         </div>
       </section>
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
@@ -1158,28 +1124,21 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1200,7 +1159,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 =======
             className="text-center mb-16"
           >
->>>>>>> origin/auto/autonomy-17186719616
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powerful <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Use Cases</span>
             </h2>
@@ -1213,7 +1171,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <motion.div
                 key={useCase.title}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1270,7 +1227,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
               >
                 <div className={`flex justify-center mb-6`}>
->>>>>>> origin/auto/autonomy-17186719616
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1279,21 +1235,16 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
               </motion.div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             ))}
           </div>
         </div>
       </section>
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
@@ -1308,20 +1259,15 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1342,7 +1288,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 =======
             className="text-center mb-16"
           >
->>>>>>> origin/auto/autonomy-17186719616
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
             </h2>
@@ -1351,7 +1296,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             </p>
           </motion.div>
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
@@ -1408,7 +1352,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
->>>>>>> origin/auto/autonomy-17186719616
                   }`}
                 >
                   Get Started
@@ -1424,14 +1367,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1455,7 +1394,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 =======
             className="text-center mb-16"
           >
->>>>>>> origin/auto/autonomy-17186719616
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
@@ -1467,16 +1405,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1541,9 +1474,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1601,7 +1532,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
->>>>>>> origin/auto/autonomy-17186719616
             className="text-center"
           >
             <Link
@@ -1684,7 +1614,6 @@ export default AIEmotionalIntelligencePlatform2029;
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
 =======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
->>>>>>> origin/auto/autonomy-17186719616
             >
               <span className="flex items-center">
                 Get Started Today
@@ -1697,8 +1626,6 @@ export default AIEmotionalIntelligencePlatform2029;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -1713,4 +1640,3 @@ export default AIEmotionalIntelligencePlatform2029;
 };
 
 export default AIEmotionalIntelligencePlatform2029;
->>>>>>> origin/auto/autonomy-17186719616

@@ -12,19 +12,11 @@ for file in $files_with_conflicts; do
     # Create a backup
     cp "$file" "$file.backup.$(date +%s)"
     
-    # Use git to resolve conflicts automatically (choose HEAD version)
-    git checkout --ours "$file" 2>/dev/null || true
+    # Use sed to remove merge conflict markers and keep the first version
+    sed -i '/<<<<<<< HEAD/,/=======/!d; /=======/d; />>>>>>> /d' "$file"
     
-    # If that doesn't work, try to fix manually
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        # Remove merge conflict markers and keep the first version
-        sed -i '/<<<<<<< HEAD/,/>>>>>>> /c\
-        ' "$file"
-        # Clean up any remaining conflict markers
-        sed -i '/=======/d' "$file"
-        sed -i '/<<<<<<< HEAD/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-    fi
+    # Remove any remaining conflict markers
+    sed -i '/<<<<<<< HEAD/d; /=======/d; />>>>>>> /d' "$file"
 done
 
 echo "Merge conflicts fixed!"

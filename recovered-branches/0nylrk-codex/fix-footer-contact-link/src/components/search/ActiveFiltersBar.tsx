@@ -1,10 +1,7 @@
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -39,7 +36,6 @@ interface ActiveFiltersBarProps {
   onClearSearch: () => void;
 }
 
->>>>>>> origin/auto/autonomy-17186719616
 export function ActiveFiltersBar({
   selectedProductTypes,
   selectedLocations,
@@ -48,7 +44,6 @@ export function ActiveFiltersBar({
   searchQuery,
   onRemoveFilter,
   onRemoveRating,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -263,4 +258,3 @@ if (return null) {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

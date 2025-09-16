@@ -1,33 +1,31 @@
 #!/bin/bash
 
-echo "Resolving all merge conflicts by using main branch version..."
+echo "Resolving all merge conflicts by accepting our version..."
 
-# Find all files with merge conflicts
-conflicted_files=$(grep -r -l "<<<<<<< HEAD" src/ 2>/dev/null || true)
+# Find all files with merge conflict markers
+files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.jsx" --include="*.ts" --include="*.js" --include="*.css" --include="*.html" 2>/dev/null | grep -v node_modules | grep -v .git)
 
-if [ -z "$conflicted_files" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
+echo "Found files with conflicts:"
+echo "$files_with_conflicts"
 
-echo "Found conflicted files:"
-echo "$conflicted_files"
-
-# For each conflicted file, resolve conflicts by using main branch version
-for file in $conflicted_files; do
-    echo "Resolving conflicts in: $file"
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    # Use git checkout --theirs to resolve conflicts
-    git checkout --theirs "$file" 2>/dev/null || {
-        echo "Failed to resolve conflicts in $file, trying manual approach..."
-        
-        # Manual approach: remove conflict markers and keep the content after =======
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-    }
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
     
-    # Add the resolved file
-    git add "$file"
+    # Use git checkout --ours to resolve conflicts
+    git checkout --ours "$file" 2>/dev/null || echo "Could not resolve $file with git checkout --ours"
+    
+    # If git checkout didn't work, try manual resolution
+    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file" 2>/dev/null; then
+        echo "Manual resolution needed for $file"
+        # Remove all conflict markers and keep the first version (HEAD)
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
+    fi
 done
 
-echo "All merge conflicts resolved!"
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"

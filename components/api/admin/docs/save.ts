@@ -1,9 +1,6 @@
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
@@ -74,7 +71,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
->>>>>>> origin/auto/autonomy-17186719616
 
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {

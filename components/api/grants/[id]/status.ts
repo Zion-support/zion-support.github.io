@@ -2,10 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -65,4 +63,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(existing);
   res.status(200).json({ record: existing });
 }
->>>>>>> origin/auto/autonomy-17186719616

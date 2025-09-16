@@ -88,14 +88,12 @@ export class AIContentGeneratorService {
       }
     ];
   }
->>>>>>> origin/auto/autonomy-17186719616
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ## Conclusion
@@ -302,13 +300,9 @@ export const AI_CONTENT_PRICING = {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   }
@@ -412,4 +406,3 @@ export const AI_CONTENT_PRICING = {
     ]
   }
 };
->>>>>>> origin/auto/autonomy-17186719616

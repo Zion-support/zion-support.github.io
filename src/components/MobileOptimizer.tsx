@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-interface MobileOptimizerProps {
-  children: React.ReactNode;
-}
-
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
+const MobileOptimizer: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [touchDevice, setTouchDevice] = useState(false);
 
   useEffect(() => {
     const checkDevice = () => {
@@ -18,7 +13,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
       setIsMobile(width < 768);
       setIsTablet(width >= 768 && width < 1024);
       setOrientation(height > width ? 'portrait' : 'landscape');
-      setTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
     };
 
     checkDevice();
@@ -34,157 +28,238 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Apply mobile-specific optimizations
     if (isMobile) {
-      // Prevent zoom on input focus
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-      }
+      // Optimize touch interactions
+      document.body.classList.add('mobile-optimized');
+      
+      // Add touch-friendly styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .mobile-optimized button {
+          min-height: 44px;
+          min-width: 44px;
+        }
+        
+        .mobile-optimized input, 
+        .mobile-optimized textarea {
+          font-size: 16px; /* Prevents zoom on iOS */
+        }
+        
+        .mobile-optimized .touch-target {
+          min-height: 44px;
+          min-width: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .mobile-optimized .swipeable {
+          touch-action: pan-x;
+        }
+      `;
+      document.head.appendChild(style);
 
-      // Add touch-friendly classes
-      document.body.classList.add('touch-device');
+      // Add swipe gestures
+      addSwipeGestures();
+
+      // Optimize images for mobile
+      optimizeImagesForMobile();
+
+      // Add pull-to-refresh functionality
+      addPullToRefresh();
+
     } else {
-      document.body.classList.remove('touch-device');
+      document.body.classList.remove('mobile-optimized');
+    }
+
+    if (isTablet) {
+      document.body.classList.add('tablet-optimized');
+    } else {
+      document.body.classList.remove('tablet-optimized');
     }
 
     // Apply orientation-specific styles
-    document.body.classList.toggle('portrait', orientation === 'portrait');
-    document.body.classList.toggle('landscape', orientation === 'landscape');
+    document.body.classList.add(`orientation-${orientation}`);
 
-    // Apply device-specific classes
-    document.body.classList.toggle('mobile', isMobile);
-    document.body.classList.toggle('tablet', isTablet);
-    document.body.classList.toggle('desktop', !isMobile && !isTablet);
   }, [isMobile, isTablet, orientation]);
 
-  // Add touch event optimizations
-  useEffect(() => {
-    if (touchDevice) {
-      // Add passive event listeners for better performance
-      const addPassiveListener = (element: HTMLElement, event: string, handler: EventListener) => {
-        element.addEventListener(event, handler, { passive: true });
-      };
+  const addSwipeGestures = () => {
+    let startX = 0;
+    let startY = 0;
+    let endX = 0;
+    let endY = 0;
 
-      // Optimize scroll performance
-      const handleTouchMove = (e: TouchEvent) => {
-        // Prevent default on touch move to avoid scrolling issues
-        if (e.target instanceof HTMLElement && e.target.closest('.no-scroll')) {
-          e.preventDefault();
-        }
-      };
-
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
-
-      return () => {
-        document.removeEventListener('touchmove', handleTouchMove);
-      };
-    }
-  }, [touchDevice]);
-
-  // Add mobile-specific CSS
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .touch-device * {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      
-      .touch-device input,
-      .touch-device textarea,
-      .touch-device [contenteditable] {
-        -webkit-user-select: text;
-        -khtml-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
-      }
-      
-      .mobile .mobile-optimized {
-        font-size: 16px; /* Prevent zoom on iOS */
-      }
-      
-      .mobile .touch-target {
-        min-height: 44px;
-        min-width: 44px;
-      }
-      
-      .mobile .swipeable {
-        touch-action: pan-x;
-      }
-      
-      .mobile .scrollable {
-        -webkit-overflow-scrolling: touch;
-        overflow-scrolling: touch;
-      }
-      
-      .portrait .portrait-only {
-        display: block;
-      }
-      
-      .portrait .landscape-only {
-        display: none;
-      }
-      
-      .landscape .portrait-only {
-        display: none;
-      }
-      
-      .landscape .landscape-only {
-        display: block;
-      }
-      
-      @media (max-width: 767px) {
-        .mobile-hidden {
-          display: none !important;
-        }
-        
-        .mobile-full {
-          width: 100% !important;
-        }
-        
-        .mobile-center {
-          text-align: center !important;
-        }
-      }
-      
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .tablet-hidden {
-          display: none !important;
-        }
-      }
-      
-      @media (min-width: 1024px) {
-        .desktop-hidden {
-          display: none !important;
-        }
-      }
-    `;
-    
-    document.head.appendChild(style);
-    
-    return () => {
-      document.head.removeChild(style);
+    const handleTouchStart = (e: TouchEvent) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
     };
-  }, []);
 
-  return (
-    <div 
-      className={`
-        mobile-optimizer
-        ${isMobile ? 'mobile' : ''}
-        ${isTablet ? 'tablet' : ''}
-        ${orientation}
-        ${touchDevice ? 'touch-device' : ''}
-      `}
-    >
-      {children}
-    </div>
-  );
+    const handleTouchEnd = (e: TouchEvent) => {
+      endX = e.changedTouches[0].clientX;
+      endY = e.changedTouches[0].clientY;
+      
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      
+      // Horizontal swipe
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          // Swipe left - could trigger next action
+          handleSwipeLeft();
+        } else {
+          // Swipe right - could trigger previous action
+          handleSwipeRight();
+        }
+      }
+      
+      // Vertical swipe
+      if (Math.abs(diffY) > Math.abs(diffX) && Math.abs(diffY) > 50) {
+        if (diffY > 0) {
+          // Swipe up - could trigger scroll up
+          handleSwipeUp();
+        } else {
+          // Swipe down - could trigger scroll down
+          handleSwipeDown();
+        }
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  };
+
+  const handleSwipeLeft = () => {
+    // Trigger next action (e.g., next slide, next page)
+    const nextButton = document.querySelector('[data-swipe-next]') as HTMLElement;
+    if (nextButton) {
+      nextButton.click();
+    }
+  };
+
+  const handleSwipeRight = () => {
+    // Trigger previous action (e.g., previous slide, previous page)
+    const prevButton = document.querySelector('[data-swipe-prev]') as HTMLElement;
+    if (prevButton) {
+      prevButton.click();
+    }
+  };
+
+  const handleSwipeUp = () => {
+    // Scroll up
+    window.scrollBy(0, -100);
+  };
+
+  const handleSwipeDown = () => {
+    // Scroll down
+    window.scrollBy(0, 100);
+  };
+
+  const optimizeImagesForMobile = () => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" for better performance
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+      
+      // Add responsive image attributes
+      if (!img.hasAttribute('sizes')) {
+        img.setAttribute('sizes', '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw');
+      }
+    });
+  };
+
+  const addPullToRefresh = () => {
+    let startY = 0;
+    let currentY = 0;
+    let isPulling = false;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (window.scrollY === 0) {
+        startY = e.touches[0].clientY;
+        isPulling = true;
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isPulling) return;
+      
+      currentY = e.touches[0].clientY;
+      const pullDistance = currentY - startY;
+      
+      if (pullDistance > 0) {
+        // Add pull-to-refresh visual feedback
+        document.body.style.transform = `translateY(${Math.min(pullDistance * 0.5, 100)}px)`;
+        
+        if (pullDistance > 100) {
+          // Show refresh indicator
+          showRefreshIndicator();
+        }
+      }
+    };
+
+    const handleTouchEnd = () => {
+      if (!isPulling) return;
+      
+      const pullDistance = currentY - startY;
+      
+      if (pullDistance > 100) {
+        // Trigger refresh
+        window.location.reload();
+      } else {
+        // Reset position
+        document.body.style.transform = '';
+        hideRefreshIndicator();
+      }
+      
+      isPulling = false;
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  };
+
+  const showRefreshIndicator = () => {
+    let indicator = document.querySelector('.pull-to-refresh-indicator');
+    if (!indicator) {
+      indicator = document.createElement('div');
+      indicator.className = 'pull-to-refresh-indicator';
+      indicator.innerHTML = 'Release to refresh';
+      indicator.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        z-index: 1000;
+        font-size: 14px;
+      `;
+      document.body.appendChild(indicator);
+    }
+  };
+
+  const hideRefreshIndicator = () => {
+    const indicator = document.querySelector('.pull-to-refresh-indicator');
+    if (indicator) {
+      indicator.remove();
+    }
+  };
+
+  return null; // This component doesn't render anything visible
 };
 
 export default MobileOptimizer;

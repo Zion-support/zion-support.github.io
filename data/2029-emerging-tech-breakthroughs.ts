@@ -11,7 +11,6 @@
     mobile: string;
     email: string;
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
     }
   }
 
@@ -154,7 +153,6 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 =======
     address: string;
   };
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [

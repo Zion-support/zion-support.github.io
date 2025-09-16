@@ -63,6 +63,14 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    summary:
+      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
+    href: '/updates/ai-autonomous-workflow-engine-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
   }
 ]
 

@@ -21,7 +21,6 @@ export function FilterSidebar({
 
 
 =======
->>>>>>> origin/auto/autonomy-17186719616
           onClick={onClearFilters}
         >
           Clear All

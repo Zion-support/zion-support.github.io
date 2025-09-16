@@ -42,7 +42,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -80,9 +79,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(comment)
   }
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
@@ -131,4 +128,3 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

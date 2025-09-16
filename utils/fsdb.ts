@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   } catch (error) {
@@ -26,7 +25,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console && console.error('Error writing file:', error);
   }
@@ -115,7 +113,6 @@ export async function upsertDispute(updated: DisputeCase): Promise<void> {
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
   all.push(dispute);
->>>>>>> origin/auto/autonomy-17186719616
   await writeAllDisputes(all);
 }
 
@@ -127,15 +124,10 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   await mkdir(dir, { recursive: true });
   return dir;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 =======
 }
->>>>>>> origin/auto/autonomy-17186719616

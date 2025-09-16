@@ -185,18 +185,14 @@ export default function Payments() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { Button } from '@/components / ui / button';
 import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -209,4 +205,3 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> origin/auto/autonomy-17186719616

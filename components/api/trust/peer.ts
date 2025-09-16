@@ -5,11 +5,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   const review: TrustPeerReview = {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
@@ -26,4 +23,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   return res.status(200).json({ ok: true, review });
 }
->>>>>>> origin/auto/autonomy-17186719616

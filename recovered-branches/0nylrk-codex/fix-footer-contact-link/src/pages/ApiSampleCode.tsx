@@ -24,7 +24,6 @@ import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
@@ -41,12 +40,9 @@ async function createJob(jobData) {
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 =======
@@ -60,7 +56,6 @@ async function searchTalent(filters = {}) {
     throw error;
   }
 }
->>>>>>> origin/auto/autonomy-17186719616
 
 // Example usage
 async function main() {
@@ -103,7 +98,6 @@ BASE_URL = 'https://api.zionai.com/v1'
 headers = {
     'Authorization': f'Bearer {API_KEY}',
     'Content-Type': 'application/json'
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 def get_jobs(filters=None):
@@ -136,12 +130,9 @@ if __name__ == "__main__":
 async function getJobs(filters = {}) {
   // Convert filters to query string
   const params = new URLSearchParams();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -181,17 +172,13 @@ async function createJob(jobData) {
   });
 }
 
->>>>>>> origin/auto/autonomy-17186719616
 // Search for talent
 async function searchTalent(filters = {}) {
   const params = new URLSearchParams();
   Object.entries(filters).forEach(([key, value]) => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -201,7 +188,6 @@ async function searchTalent(filters = {}) {
   
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' });
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 // Example usage
@@ -266,4 +252,3 @@ export default ApiSampleCode;
 }
 
 export default ApiSampleCode;
->>>>>>> origin/auto/autonomy-17186719616

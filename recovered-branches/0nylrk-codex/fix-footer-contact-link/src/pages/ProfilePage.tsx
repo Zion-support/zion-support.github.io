@@ -20,7 +20,6 @@ export default function ProfilePage() {
         console.error("Error fetching profile:", error);
         setIsError(true);
         toast({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -68,7 +67,6 @@ export default function ProfilePage() {
   }
 
   if (isError || !profileData) {
->>>>>>> origin/auto/autonomy-17186719616
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
@@ -78,7 +76,6 @@ export default function ProfilePage() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -193,17 +190,13 @@ export default function ProfilePage() {
               <div className="space-y-3">
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
                   profileData.portfolio_links.map((link, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <a
                       key={index}
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 )}
@@ -225,12 +218,8 @@ export default function ProfilePage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 )}
@@ -252,12 +241,8 @@ export default function ProfilePage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                 )}
@@ -343,7 +328,6 @@ export default function ProfilePage() {
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> origin/auto/autonomy-17186719616
               }}
             />
             {/* Placeholder for other sidebar elements */}
@@ -352,12 +336,9 @@ export default function ProfilePage() {
       </div>
       <Footer />
     </>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 =======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

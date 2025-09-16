@@ -4,7 +4,6 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -194,4 +193,3 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
 
   return { createdPaths, skippedPaths };
 }
->>>>>>> origin/auto/autonomy-17186719616

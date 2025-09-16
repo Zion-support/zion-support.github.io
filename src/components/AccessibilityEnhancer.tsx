@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC = () => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -14,23 +10,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
-    // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    setIsHighContrast(prefersHighContrast);
+    // Apply high contrast mode if needed
+    const highContrastMedia = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(highContrastMedia.matches);
 
-    // Listen for changes in preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
+    // Listen for changes in user preferences
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+    };
 
-    const handleMotionChange = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      setReducedMotion(e.matches);
+    };
 
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
+    highContrastMedia.addEventListener('change', handleContrastChange);
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', handleMotionChange);
 
     return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
+      highContrastMedia.removeEventListener('change', handleContrastChange);
+      window.matchMedia('(prefers-reduced-motion: reduce)').removeEventListener('change', handleMotionChange);
     };
   }, []);
 
@@ -50,28 +48,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.remove('reduced-motion');
     }
 
-    // Apply font size
+    // Set font size
     root.style.fontSize = `${fontSize}px`;
   }, [isHighContrast, reducedMotion, fontSize]);
 
   // Keyboard navigation enhancement
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main, [role="main"]');
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+        const mainContent = document.querySelector('main');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
-          event.preventDefault();
         }
       }
 
       // Skip to navigation
-      if (event.key === 'Tab' && !event.shiftKey && event.target === document.body) {
-        const navigation = document.querySelector('nav, [role="navigation"]');
+      if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
+        const navigation = document.querySelector('nav');
         if (navigation) {
           (navigation as HTMLElement).focus();
-          event.preventDefault();
         }
       }
     };
@@ -84,93 +80,59 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     
-    const handleTabKey = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        const focusable = Array.from(document.querySelectorAll(focusableElements)) as HTMLElement[];
-        const firstFocusable = focusable[0];
-        const lastFocusable = focusable[focusable.length - 1];
+    const trapFocus = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        const modal = document.querySelector('[role="dialog"]');
+        if (modal) {
+          const focusableContent = modal.querySelectorAll(focusableElements);
+          const firstFocusableElement = focusableContent[0] as HTMLElement;
+          const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-        if (event.shiftKey) {
-          if (document.activeElement === firstFocusable) {
-            lastFocusable?.focus();
-            event.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastFocusable) {
-            firstFocusable?.focus();
-            event.preventDefault();
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              e.preventDefault();
+            }
           }
         }
       }
     };
 
-    document.addEventListener('keydown', handleTabKey);
-    return () => document.removeEventListener('keydown', handleTabKey);
+    document.addEventListener('keydown', trapFocus);
+    return () => document.removeEventListener('keydown', trapFocus);
   }, []);
 
-  return (
-    <>
-      {children}
-      
-      {/* Skip links */}
-      <div className="sr-only focus-within:not-sr-only">
-        <a
-          href="#main-content"
-          className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 z-50 focus:top-4 focus:left-4"
-        >
-          Skip to main content
-        </a>
-        <a
-          href="#navigation"
-          className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 z-50 focus:top-16 focus:left-4"
-        >
-          Skip to navigation
-        </a>
-      </div>
+  // Screen reader announcements
+  const announceToScreenReader = (message: string) => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  };
 
-      {/* Accessibility controls */}
-      <div className="fixed bottom-4 left-4 z-40">
-        <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
-          <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>
-          
-          <div className="space-y-2">
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={isHighContrast}
-                onChange={(e) => setIsHighContrast(e.target.checked)}
-                className="rounded"
-              />
-              <span className="text-sm text-gray-700">High contrast</span>
-            </label>
-            
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={reducedMotion}
-                onChange={(e) => setReducedMotion(e.target.checked)}
-                className="rounded"
-              />
-              <span className="text-sm text-gray-700">Reduce motion</span>
-            </label>
-            
-            <div className="space-y-1">
-              <label className="text-sm text-gray-700">Font size</label>
-              <input
-                type="range"
-                min="12"
-                max="24"
-                value={fontSize}
-                onChange={(e) => setFontSize(Number(e.target.value))}
-                className="w-full"
-              />
-              <div className="text-xs text-gray-500 text-center">{fontSize}px</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+  // Expose functions for other components to use
+  React.useEffect(() => {
+    (window as any).accessibilityEnhancer = {
+      announceToScreenReader,
+      setFontSize,
+      setIsHighContrast,
+      setReducedMotion
+    };
+  }, []);
+
+  return null; // This component doesn't render anything visible
 };
 
 export default AccessibilityEnhancer;
