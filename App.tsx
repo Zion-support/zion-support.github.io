@@ -32,6 +32,7 @@ import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor'
 import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import NewContentBanner2026 from './src/components/NewContentBanner2026';
 import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
+import QuantumAI2026ContentPromotionBanner from './src/components/QuantumAI2026ContentPromotionBanner';
 import NotificationSystem from './src/components/NotificationSystem';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
 import PerformanceEnhancer from './src/components/PerformanceEnhancer';
@@ -262,6 +263,11 @@ export default function App(): JSX.Element {
                 {/* NEW: Interactive Advertising Banner 2026 */}
                 <div className="mb-12">
                   <InteractiveAdvertisingBanner2026 />
+                </div>
+
+                {/* Quantum AI 2026 Content Promotion Banner */}
+                <div className="mb-8">
+                  <QuantumAI2026ContentPromotionBanner />
                 </div>
 
                 {/* Latest Content Promotion Banner 2026 */}
