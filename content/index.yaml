@@ -466,6 +466,21 @@ content_index:
         reliability: "99.9%"
         rollback_time: "< 5 min"
         audit_ready: true
+    - id: "ai-2026-live-evals-in-production-practical-guide"
+      type: "blog"
+      title: "AI 2026: Live Evals in Production — Practical Guide"
+      file_path: "/content/blog/ai-2026-live-evals-in-production-practical-guide.md"
+      url: "/blog/ai-2026-live-evals-in-production-practical-guide"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Reliability", "Governance", "Observability", "2026"]
+      featured: true
+      is_new: true
+      reading_time: "14 min read"
+      metrics:
+        gate_pass_rate: "> 95%"
+        rollback_time: "< 5 min"
+        audit_ready: true
     - id: "ai-2026-production-safety-checklist"
       type: "blog"
       title: "AI 2026: Production Safety Checklist"
