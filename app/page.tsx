@@ -203,6 +203,23 @@ export default function HomePage() {
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
 
+      {/* New Promo: Agent Posture Management (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-fuchsia-100">
+            <div>
+              <p className="text-sm font-semibold text-fuchsia-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Agent Posture Management — Practical Guide</h2>
+              <p className="text-gray-600 mt-2">Continuously assess and harden agents across identity, tools, data, and runtime.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agent-posture-management" className="inline-block bg-fuchsia-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-700">Read Guide</Link>
+              <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block border border-fuchsia-600 text-fuchsia-700 px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-50">Platform SLOs</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* New Promo: Frontier Research Agents (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-pink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
