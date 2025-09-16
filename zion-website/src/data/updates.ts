@@ -7,7 +7,23 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-  // Added 2025-09-15 (latest content)
+  // Fresh content added 2025-09-15
+  {
+    title: 'Deep Dive: Enterprise Agent Observability (2026)',
+    summary:
+      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
+    href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
+    date: '2025-09-15',
+    tag: 'Deep Dive'
+  },
+  {
+    title: 'Complete Guide: Autonomous Business Operations (2026)',
+    summary:
+      'End-to-end guide to implementing autonomous business operations with AI agents, covering strategy, architecture, and rollout.',
+    href: '/blog/ai-2026-autonomous-business-operations-complete-guide',
+    date: '2025-09-15',
+    tag: 'Complete Guide'
+  },
   {
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
