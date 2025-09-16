@@ -44,6 +44,12 @@ const posts = [
   ,{ slug: 'ai-2026-operationalizing-ai-safety-controls', title: 'Operationalizing AI Safety Controls (2026)', excerpt: 'Turn policies into runtime controls wired to SLOs and incidents.' }
 ]
 
+// Fresh posts (Sept 16, 2025)
+posts.unshift(
+  { slug: 'ai-2026-agent-rollback-patterns', title: 'Agent Rollback Patterns — Safe Recovery (2026)', excerpt: 'Staged deploys, eval gates, evidence bundles, and containment for safe recovery.' },
+  { slug: 'ai-2026-agent-release-scorecards', title: 'Agent Release Scorecards — Evidence‑First (2026)', excerpt: 'Executive scorecards wired to SLOs, evals, incidents, and budgets.' }
+)
+
 // Newly added posts (Sept 2025)
 posts.unshift(
   { slug: 'ai-2026-governed-agent-operations-checklist', title: 'Governed Agent Operations Checklist (2026)', excerpt: 'A pragmatic, audit-ready checklist for safe, observable agent ops.' },
