@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 901,
+    title: "AI 2026: Enterprise Agent Observability Deep Dive",
+    excerpt: "End-to-end tracing, eval signals, risk metrics, and governance for production agents.",
+    content: "Production agents require observability that goes beyond logs. This deep dive covers structured traces for tool use, evaluation signals at decision points, red-team findings, user feedback loops, and policy-as-code checks. We map the data model, dashboards, and SLOs for agent reliability and safety.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["Agents", "Observability", "Evals", "Governance"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-enterprise-agent-observability.jpg",
+    slug: "ai-2026-enterprise-agent-observability-deep-dive"
+  },
+  {
+    id: 902,
+    title: "AI 2026: Agent Orchestration Patterns",
+    excerpt: "Deterministic workflows, safety envelopes, and coordination across tools, models, and services.",
+    content: "We catalog orchestration patterns for enterprise agents: event-driven DAGs, tool-call limits with backoff, circuit breakers, compensating actions, and sandboxed execution. Learn how to compose planners, executors, and verifiers with evaluation-gated promotion and rollback.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Architecture",
+    tags: ["Orchestration", "Safety", "Reliability", "Tool Use"],
+    featured: true,
+    imageUrl: "/images/blog/ai-2026-agent-orchestration-patterns.jpg",
+    slug: "ai-2026-agent-orchestration-patterns"
+  },
+  {
     id: 35,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",

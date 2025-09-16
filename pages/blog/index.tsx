@@ -11,7 +11,9 @@ const posts = [
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
   { slug: 'agentic-product-playbooks', title: 'Agentic Product Playbooks', excerpt: 'Practical blueprints for shipping agentic workflows into production.' },
-  { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' }
+  { slug: 'evals-and-guardrails', title: 'Evals, Guardrails, and Safety', excerpt: 'Build trustworthy AI systems with evaluations and safety baselines.' },
+  { slug: 'ai-2026-enterprise-agent-observability-deep-dive', title: 'AI 2026: Enterprise Agent Observability Deep Dive', excerpt: 'Tracing, evals, and risk metrics for reliable production agents.' },
+  { slug: 'ai-2026-agent-orchestration-patterns', title: 'AI 2026: Agent Orchestration Patterns', excerpt: 'Deterministic workflows and safety envelopes for enterprise agents.' }
 ]
 
 export default function BlogIndexPage() {
