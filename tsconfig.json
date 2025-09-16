@@ -30,12 +30,22 @@
       "@data/*": ["src/data/*"],
       "@services/*": ["src/services/*"],
       "@context/*": ["src/context/*"],
+<<<<<<< HEAD
       "@constants/*": ["src/constants/*"]
 =======
       "@/*": ["./*"]
 >>>>>>> origin/feature/new-content-and-promotions
     },
     "types": ["vite/client", "node"]
+=======
+      "@constants/*": ["src/constants/*"],
+      "@/components/*": ["src/components/*"]
+    },
+    "types": ["vite/client", "node"],
+    "plugins": [
+      { "name": "typescript-plugin-css-modules" }
+    ]
+>>>>>>> origin/feature/new-content-2026
   },
   "include": [
     "**/*.ts",
