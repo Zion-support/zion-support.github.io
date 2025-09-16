@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import EnhancedFooter from '../components/EnhancedFooter';
+import Footer from '../Footer';
 
 const ConsciousnessComputing2026: React.FC = () => {
   return (
@@ -222,7 +222,7 @@ const ConsciousnessComputing2026: React.FC = () => {
         </div>
       </main>
       
-      <EnhancedFooter />
+      <Footer />
     </div>
   );
 };
