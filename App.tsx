@@ -98,6 +98,10 @@ import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
 // import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import FeaturedContentShowcase2026 from './src/components/FeaturedContentShowcase2026';
+import RevolutionaryContentPromotionBanner2026 from './src/components/RevolutionaryContentPromotionBanner2026';
+import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import AIRevolutionaryBreakthrough2026 from './src/pages/AIRevolutionaryBreakthrough2026';
+import QuantumConsciousnessRevolution2030 from './src/pages/QuantumConsciousnessRevolution2030';
 import NewContentAdvertisingBanner2026 from './src/components/NewContentAdvertisingBanner2026';
 import NewContentAdvertisingBanner2025 from './src/components/NewContentAdvertisingBanner2025';
 import FeaturedContentShowcase2025 from './src/components/FeaturedContentShowcase2025';
@@ -250,9 +254,19 @@ export default function App(): JSX.Element {
                   <NewContentAdvertisingBanner2026 />
                 </div>
                 
+                {/* Revolutionary Content Promotion Banner */}
+                <div className="mb-12">
+                  <RevolutionaryContentPromotionBanner2026 />
+                </div>
+                
                 {/* Featured Content Showcase - highlights latest/featured blog posts */}
                 <div className="mb-12">
                   <FeaturedContentShowcase2026 />
+                </div>
+                
+                {/* Ultimate Content Showcase */}
+                <div className="mb-12">
+                  <UltimateContentShowcase2026 />
                 </div>
                 {/* New Content Advertising Banner */}
                 <div className="mb-12">
@@ -1219,6 +1233,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/NewContentSeptember2025" element={<NewContentSeptember2025 />} />
           <Route path="/pages/AIExecutiveBriefQ1_2026" element={<AIExecutiveBriefQ1_2026 />} />
           <Route path="/pages/AgenticRAGBlueprint2026" element={<AgenticRAGBlueprint2026 />} />
+          
+          {/* Revolutionary Content 2026 Routes */}
+          <Route path="/ai-revolutionary-breakthrough-2026" element={<AIRevolutionaryBreakthrough2026 />} />
+          <Route path="/quantum-consciousness-revolution-2030" element={<QuantumConsciousnessRevolution2030 />} />
           <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
