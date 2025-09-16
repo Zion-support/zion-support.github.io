@@ -1,123 +1,102 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const SpaceTechInnovation2026: React.FC = () => {
   return (
-    <div>
-      <div>
-        <p>Space Tech Innovation 2026</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <Helmet>
+        <title>Space Technology Innovation 2026 - Revolutionary Space Solutions</title>
+        <meta name="description" content="Explore the latest innovations in space technology and their applications in modern space exploration and research." />
+        <meta name="keywords" content="space technology, space innovation, space tech, space solutions, space 2026" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="text-center">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Space Technology Innovation 2026
+            </h1>
+            <p className="text-3xl opacity-90 max-w-5xl mx-auto">
+              Revolutionary space technology innovations that are transforming space exploration and research
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div>
-      {/* Space Technologies */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <div className="bg-gradient-to-br from-blue-800 to-cyan-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold mb-4">Fusion Propulsion</h3>
-            <p className="text-gray-300">
-              Nuclear fusion engines that can reach Mars in just 30 days instead of 6 months.
+      {/* Features Grid */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6 text-white">
+            Space Technology Innovations
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the powerful capabilities of our space technology innovations
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Advanced Propulsion</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Next-generation propulsion systems for faster and more efficient space travel
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Ion propulsion systems</li>
+              <li>• Nuclear propulsion</li>
+              <li>• Antimatter engines</li>
+            </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-800 to-pink-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🏠</div>
-            <h3 className="text-2xl font-bold mb-4">Mars Habitats</h3>
-            <p className="text-gray-300">
-              Self-sustaining habitats with advanced life support systems for permanent Mars colonies.
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🛰️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Satellite Technology</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Advanced satellite systems for communication, navigation, and research
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Quantum communication</li>
+              <li>• Autonomous navigation</li>
+              <li>• Self-repairing systems</li>
+            </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-green-800 to-emerald-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🌱</div>
-            <h3 className="text-2xl font-bold mb-4">Terraforming Tech</h3>
-            <p className="text-gray-300">
-              Advanced atmospheric processors that can make Mars habitable for humans.
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌍</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Planetary Exploration</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Advanced systems for exploring and colonizing other planets
             </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-yellow-800 to-orange-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">Space Solar Power</h3>
-            <p className="text-gray-300">
-              Massive solar arrays in space that beam clean energy to Earth and Mars.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-red-800 to-pink-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🛸</div>
-            <h3 className="text-2xl font-bold mb-4">Space Elevators</h3>
-            <p className="text-gray-300">
-              Carbon nanotube space elevators that make space travel as easy as taking an elevator.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-indigo-800 to-purple-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🔬</div>
-            <h3 className="text-2xl font-bold mb-4">Space Manufacturing</h3>
-            <p className="text-gray-300">
-              Zero-gravity manufacturing facilities that create materials impossible to make on Earth.
-            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Terraforming technology</li>
+              <li>• Life support systems</li>
+              <li>• Resource extraction</li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        {/* Mission Timeline */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Mission Timeline</h2>
-          
-          <div className="space-y-8">
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2026
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">First Mars Mission Launch</h3>
-                <p className="text-gray-300">Unmanned mission to establish infrastructure on Mars</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-purple-400 to-pink-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2027
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Mars Base Construction</h3>
-                <p className="text-gray-300">Robotic construction of the first permanent Mars base</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2028
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">First Human Mission</h3>
-                <p className="text-gray-300">First humans land on Mars and begin colonization</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-6">
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full font-bold text-sm">
-                2030
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Self-Sustaining Colony</h3>
-                <p className="text-gray-300">Mars colony becomes fully self-sustaining</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        </div>
-
-        {/* Call to Action */}
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-8 py-4 rounded-full text-xl font-bold inline-block hover:scale-105 transition-transform duration-300 cursor-pointer">
-            Join the Space Revolution →
+          <h2 className="text-4xl font-bold mb-6 text-white">
+            Ready to Explore Space?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the space technology innovation movement and be part of the future of space exploration
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              Explore Space Tech
+            </button>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

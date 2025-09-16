@@ -101,7 +101,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
   }, []);
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -111,17 +111,19 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
         
         {/* Floating Dimensional Portals */}
         {[...Array(15)].map((_, i) => (
-          <divdiv
+          <div
             key={i}
             className="absolute w-4 h-4 border-2 border-purple-400 rounded-full opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
+            animate={{
               scale: [1, 1.5, 1],
               opacity: [0.2, 0.6, 0.2],
               rotate: [0, 360],
             }}
+            transition={{
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 2,
@@ -133,11 +135,11 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full text-sm font-bold mb-4"
           >
             🌌 INTERDIMENSIONAL TECH 2027
-          </divdiv>
+          </div>
           <divh2
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
@@ -155,7 +157,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Technology Details */}
-            <divdiv
+            <div
               key={currentDimension}
               className="space-y-8"
             >
@@ -179,31 +181,31 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {interdimensionalTechs[currentDimension].features.map((feature, index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="flex items-center space-x-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"></div>
                     <span className="text-white font-medium">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-6">
                 {Object.entries(interdimensionalTechs[currentDimension].stats).map(([key, value], index) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             {/* Right: Visual Representation */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className={`h-96 rounded-3xl bg-gradient-to-br ${interdimensionalTechs[currentDimension].gradient} p-8 relative overflow-hidden`}>
@@ -227,18 +229,20 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 
                 {/* Dimensional Rift Effects */}
                 {[...Array(25)].map((_, i) => (
-                  <divdiv
+                  <div
                     key={i}
                     className="absolute w-1 h-1 bg-white rounded-full opacity-40"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+                    animate={{
                       scale: [0, 1, 0],
                       opacity: [0, 0.8, 0],
                       x: [0, Math.random() * 100 - 50, 0],
                       y: [0, Math.random() * 100 - 50, 0],
                     }}
+                    transition={{
                       duration: 2 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 3,
@@ -246,7 +250,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                   />
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -265,7 +269,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <divdiv
+          <div
             className="text-center mt-12"
           >
             <div className="inline-flex space-x-4">
@@ -282,10 +286,10 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 ✨ Transdimensional AI →
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 
