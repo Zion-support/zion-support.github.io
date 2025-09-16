@@ -83,6 +83,10 @@ const DynamicContentCarousel = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
 <<<<<<< HEAD
@@ -97,6 +101,7 @@ const DynamicContentCarousel = () => {
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -107,7 +112,6 @@ const DynamicContentCarousel = () => {
 <<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
 =======
->>>>>>> main
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 <<<<<<< HEAD
 =======
@@ -115,15 +119,14 @@ const DynamicContentCarousel = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 >>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -138,6 +141,7 @@ const DynamicContentCarousel = () => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1c02
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             }`}
           />
         ))}

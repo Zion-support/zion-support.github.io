@@ -10,6 +10,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       title: "AI Consciousness Revolution 2025",
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",
@@ -19,6 +21,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       features: ["Self-aware AI agents", "Emotional intelligence", "Creative problem solving", "Ethical decision making"],
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       title: "AI Consciousness Revolution",
       description: "Experience the first AI system with genuine consciousness and self-awareness",
       image: "🧠",
@@ -26,12 +29,17 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       features: ["Self-Aware", "Creative", "Autonomous", "Emotional Intelligence"],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       link: "/pages/RevolutionaryTechBreakthrough2025"
     },
     {
       id: 2,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -55,6 +63,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       features: ["Direct neural interfaces", "Photorealistic VR", "Haptic feedback systems", "Consciousness transfer"],
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       title: "Quantum Reality Engine",
       description: "Manipulate reality itself through quantum computing and parallel universe exploration",
       image: "⚡",
@@ -71,12 +80,17 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       features: ["Thought Control", "VR Integration", "Neural Feedback", "Mind Upload"],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       link: "/pages/NeuralInterfaceRevolution2025"
     },
     {
       id: 4,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -112,6 +126,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/ConsciousnessComputingRevolution2030"
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       title: "Consciousness Transfer Technology",
       description: "Achieve digital immortality through consciousness transfer between biological and artificial bodies",
       image: "🌟",
@@ -129,8 +144,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       link: "/pages/InterdimensionalRealityEngine2028"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     }
   ];
 
@@ -141,17 +159,23 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
 =======
 <<<<<<< HEAD
+        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
+=======
+<<<<<<< HEAD
         setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
 =======
         setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       }, 5000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -162,6 +186,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
   };
 
@@ -169,8 +194,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + revolutionaryContent.length) % revolutionaryContent.length);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   };
 
   const goToSlide = (index: number) => {
@@ -178,6 +206,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -199,6 +229,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
         <div className="relative max-w-6xl mx-auto">
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -246,8 +277,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
           {/* Content Slides */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           <div className="relative overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -255,6 +289,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             >
               {revolutionaryContent.map((content, index) => (
                 <div key={content.id} className="w-full flex-shrink-0">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -277,6 +313,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                           className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                   <div className={`bg-gradient-to-br ${content.gradient} p-12 min-h-[600px] flex items-center`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center w-full">
                       {/* Content */}
@@ -302,12 +339,17 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                           className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                         >
                           Explore {content.title} →
                         </a>
                       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -334,6 +376,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                           </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                       
                       {/* Visual Element */}
                       <div className="relative">
@@ -341,8 +384,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                           <div className="text-9xl opacity-50">{content.image}</div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                       </div>
@@ -353,6 +399,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -428,6 +476,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (
@@ -463,8 +512,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               </a>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             ))}
           </div>
         </div>

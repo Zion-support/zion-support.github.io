@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -10,6 +15,7 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-261d
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -52,10 +58,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -111,77 +113,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               </a>
             </motion.div>
           ))}
-<<<<<<< HEAD
-=======
-=======
-    <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-bounce">🚀</span>
-            <h2 className="text-3xl font-bold">REVOLUTIONARY CONTENT 2025-2026</h2>
-            <span className="text-4xl animate-bounce">🚀</span>
-          </div>
-          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-            Discover the most groundbreaking technology content featuring AI breakthroughs, 
-            space exploration, biotech revolution, and quantum computing innovations
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          <a 
-            href="/pages/RevolutionaryTechBreakthrough2025" 
-            className="bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 hover:scale-105"
-          >
-            <div className="text-4xl mb-3 text-center">🧠</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Revolutionary Tech Breakthrough 2025</h3>
-            <p className="text-sm opacity-90 text-center">
-              Experience the most revolutionary technology breakthroughs reshaping our digital future
-            </p>
-            <div className="text-center mt-3">
-              <span className="px-3 py-1 bg-purple-500 text-white text-xs rounded-full">BREAKTHROUGH</span>
-            </div>
-          </a>
-
-          <a 
-            href="/pages/NextGenSpaceTech2026" 
-            className="bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold border border-white/30 hover:scale-105"
-          >
-            <div className="text-4xl mb-3 text-center">🚀</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Next-Gen Space Tech 2026</h3>
-            <p className="text-sm opacity-90 text-center">
-              Explore revolutionary space technologies making interplanetary travel a reality
-            </p>
-            <div className="text-center mt-3">
-              <span className="px-3 py-1 bg-cyan-500 text-white text-xs rounded-full">SPACE AGE</span>
-            </div>
-          </a>
-
-          <a 
-            href="/pages/AdvancedBiotechRevolution2026" 
-            className="bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30 hover:scale-105"
-          >
-            <div className="text-4xl mb-3 text-center">🧬</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Advanced Biotech Revolution 2026</h3>
-            <p className="text-sm opacity-90 text-center">
-              Discover revolutionary biotechnology transforming healthcare and human enhancement
-            </p>
-            <div className="text-center mt-3">
-              <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full">LIFE CHANGING</span>
-            </div>
-          </a>
-        </div>
-
-        <div className="text-center mt-8">
-          <a 
-            href="/pages/ComprehensiveServices2025" 
-            className="inline-block bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30"
-          >
-            🌟 Explore All Revolutionary Content →
-          </a>
->>>>>>> cursor/create-and-deploy-new-content-9601
->>>>>>> cursor/create-and-deploy-new-content-01e2
         </div>
 
         <motion.div
@@ -219,56 +150,87 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         </motion.div>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f995
 import React, { useState, useEffect } from 'react';
 
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const bannerContent = [
+  
+  const contentSlides = [
     {
-      title: "🧠 AI Consciousness Revolution",
-      subtitle: "Witness the birth of true artificial consciousness",
-      description: "Experience AI systems that think, feel, and create like never before",
-      link: "/pages/AIConsciousnessRevolution2025",
-      color: "from-purple-600 via-pink-600 to-red-600",
-      bgColor: "from-purple-900/90 to-pink-900/90"
-    },
-    {
-      title: "⚡ Quantum Computing Breakthrough",
-      subtitle: "Solve impossible problems in seconds",
-      description: "Revolutionary quantum computing that changes everything",
-      link: "/pages/QuantumComputingBreakthrough2025",
-      color: "from-blue-600 via-cyan-600 to-teal-600",
-      bgColor: "from-blue-900/90 to-cyan-900/90"
-    },
-    {
-      title: "🚀 Revolutionary Tech Breakthrough",
-      subtitle: "The future of technology is here",
-      description: "Experience breakthrough technologies that will reshape humanity",
+      title: "Revolutionary Tech Breakthrough 2025",
+      description: "Experience the most groundbreaking technological innovations reshaping our world",
       link: "/pages/RevolutionaryTechBreakthrough2025",
-      color: "from-emerald-600 via-green-600 to-lime-600",
-      bgColor: "from-emerald-900/90 to-green-900/90"
+      color: "from-purple-600 to-pink-600",
+      icon: "🚀"
+    },
+    {
+      title: "Next-Gen Space Technology 2026",
+      description: "Revolutionary space technologies making interplanetary travel a reality",
+      link: "/pages/NextGenSpaceTech2026",
+      color: "from-cyan-600 to-blue-600",
+      icon: "🛰️"
+    },
+    {
+      title: "Advanced Biotech Revolution 2026",
+      description: "Cutting-edge biotechnology transforming medicine and human enhancement",
+      link: "/pages/AdvancedBiotechRevolution2026",
+      color: "from-emerald-600 to-teal-600",
+      icon: "🧬"
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [contentSlides.length]);
+
   return (
     <div className="relative overflow-hidden mb-12">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 animate-pulse"></div>
-      
       {/* Main Banner */}
+<<<<<<< HEAD
+      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-3xl p-12 text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+                <span className="text-2xl font-bold">NEW REVOLUTIONARY CONTENT 2025-2026</span>
+                <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
+              </div>
+              <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
+              <p className="text-xl opacity-95 mb-6 max-w-3xl">
+                {contentSlides[currentSlide].description}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href={contentSlides[currentSlide].link}
+                  className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
+                >
+                  Explore Now →
+                </a>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="text-8xl opacity-20">{contentSlides[currentSlide].icon}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+=======
       <div className="relative z-10 bg-gradient-to-r from-gray-900 via-purple-900 to-pink-900 rounded-2xl p-8 border border-purple-400/30">
         <div
           initial={{ opacity: 0, y: 20 }}
@@ -362,6 +324,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
       <div className="absolute bottom-4 left-4 text-4xl animate-pulse opacity-20">⚡</div>
       <div className="absolute top-1/2 right-8 text-3xl animate-ping opacity-30">🧠</div>
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 mt-6">
         {contentSlides.map((_, index) => (
@@ -392,6 +355,11 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         ))}
 >>>>>>> cursor/create-and-deploy-new-content-de2c
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-261d
+      </div>
+=======
+<<<<<<< HEAD
 >>>>>>> main
 =======
 =======
@@ -399,6 +367,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-3a26
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     </div>
   );
 };

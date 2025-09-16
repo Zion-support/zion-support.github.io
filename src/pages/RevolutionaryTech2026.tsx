@@ -1,12 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 import React from 'react';
 <<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+import React from 'react';
+import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+import { motion } from 'framer-motion';
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
 const RevolutionaryTech2026: React.FC = () => {
   return (
@@ -288,7 +308,15 @@ const RevolutionaryTech2026: React.FC = () => {
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               Contact Our Experts
+<<<<<<< HEAD
+            </motion.button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
             </button>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </div>
         </div>
       </div>
@@ -299,7 +327,21 @@ const RevolutionaryTech2026: React.FC = () => {
 export default RevolutionaryTech2026;
 <<<<<<< HEAD
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081

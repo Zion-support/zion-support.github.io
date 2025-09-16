@@ -1,183 +1,260 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
+interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = "Zion Tech Group - Revolutionary Technology Solutions",
-  description = "Leading the future of technology with AI, quantum computing, neural interfaces, and revolutionary solutions. Discover breakthrough technologies that are reshaping industries.",
-  keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology solutions, revolutionary tech, breakthrough technology, consciousness computing, interdimensional tech",
-  canonicalUrl = "https://ziontechgroup.com",
-  ogImage = "https://ziontechgroup.com/images/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
-  structuredData
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/logo.png",
-    "description": "Leading the future of technology with revolutionary AI, quantum computing, and neural interface solutions",
-    "foundingDate": "2020",
-    "founders": [
-      {
-        "@type": "Person",
-        "name": "Zion Tech Group Team"
+interface SEOOptimizerProps {
+  data: SEOData;
+  children: React.ReactNode;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ data, children }) => {
+  // Generate structured data for the page
+  const generateStructuredData = () => {
+    const baseUrl = window.location.origin;
+    const currentUrl = window.location.href;
+    
+    const defaultStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": baseUrl,
+      "logo": `${baseUrl}/logo.png`,
+      "description": data.description,
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/zion-tech-group",
+        "https://github.com/Zion-Holdings"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "availableLanguage": "English"
       }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "url": "https://ziontechgroup.com/contact"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Revolutionary Technology Solutions",
-        "description": "AI, quantum computing, neural interfaces, and breakthrough technology solutions"
-      }
+    };
+
+    // Add page-specific structured data
+    if (data.title.includes('AI')) {
+      return {
+        ...defaultStructuredData,
+        "@type": "TechArticle",
+        "headline": data.title,
+        "description": data.description,
+        "author": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${baseUrl}/logo.png`
+          }
+        },
+        "datePublished": new Date().toISOString(),
+        "dateModified": new Date().toISOString(),
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": currentUrl
+        }
+      };
     }
+
+    return { ...defaultStructuredData, ...data.structuredData };
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  // Generate meta tags
+  const generateMetaTags = () => {
+    const baseUrl = window.location.origin;
+    const currentUrl = data.canonical || window.location.href;
+    const ogImage = data.ogImage || `${baseUrl}/og-image.png`;
+
+    return {
+      title: data.title,
+      description: data.description,
+      keywords: data.keywords.join(', '),
+      canonical: currentUrl,
+      ogTitle: data.title,
+      ogDescription: data.description,
+      ogImage: ogImage,
+      ogUrl: currentUrl,
+      ogType: data.ogType || 'website',
+      twitterCard: data.twitterCard || 'summary_large_image',
+      twitterTitle: data.title,
+      twitterDescription: data.description,
+      twitterImage: ogImage
+    };
+  };
+
+  const metaTags = generateMetaTags();
+  const structuredData = generateStructuredData();
+
+  // Track page view for analytics
+  useEffect(() => {
+    // Google Analytics 4 tracking
+    if (typeof gtag !== 'undefined') {
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: data.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      });
+    }
+
+    // Custom analytics tracking
+    if (typeof window !== 'undefined' && window.analytics) {
+      window.analytics.track('Page View', {
+        title: data.title,
+        path: window.location.pathname,
+        timestamp: new Date().toISOString()
+      });
+    }
+  }, [data.title]);
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#8B5CF6" />
-      <meta name="msapplication-TileColor" content="#8B5CF6" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Language and Geo Tags */}
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US" />
-      <meta name="geo.placename" content="United States" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional Structured Data for Technology Services */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Revolutionary Technology Solutions",
-          "description": "AI, quantum computing, neural interfaces, and breakthrough technology solutions",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "serviceType": "Technology Solutions",
-          "areaServed": "Worldwide",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Technology Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AI Consciousness Solutions",
-                  "description": "Self-aware artificial intelligence systems"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Quantum Computing Services",
-                  "description": "Quantum neural fusion and quantum computing solutions"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Neural Interface Technology",
-                  "description": "Direct brain-computer interfaces and neural reality systems"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Interdimensional Computing",
-                  "description": "Multi-dimensional processing and parallel universe networks"
-                }
-              }
-            ]
-          }
-        })}
-      </script>
-    </Helmet>
+    <>
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>{metaTags.title}</title>
+        <meta name="description" content={metaTags.description} />
+        <meta name="keywords" content={metaTags.keywords} />
+        <link rel="canonical" href={metaTags.canonical} />
+
+        {/* Open Graph Tags */}
+        <meta property="og:title" content={metaTags.ogTitle} />
+        <meta property="og:description" content={metaTags.ogDescription} />
+        <meta property="og:image" content={metaTags.ogImage} />
+        <meta property="og:url" content={metaTags.ogUrl} />
+        <meta property="og:type" content={metaTags.ogType} />
+        <meta property="og:site_name" content="Zion Tech Group" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content={metaTags.twitterCard} />
+        <meta name="twitter:title" content={metaTags.twitterTitle} />
+        <meta name="twitter:description" content={metaTags.twitterDescription} />
+        <meta name="twitter:image" content={metaTags.twitterImage} />
+        <meta name="twitter:site" content="@ziontechgroup" />
+
+        {/* Additional SEO Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
+        {/* Performance Hints */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Theme and PWA */}
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+
+        {/* Preload Critical Resources */}
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
+      </Helmet>
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+
+      {children}
+    </>
   );
+};
+
+// SEO data for different page types
+export const seoData = {
+  home: {
+    title: "Zion Tech Group - Revolutionary Technology Solutions | AI, Quantum Computing, Cybersecurity",
+    description: "Leading-edge technology solutions in AI, quantum computing, and cybersecurity. Transform your business with our innovative services and cutting-edge technology.",
+    keywords: [
+      "AI solutions",
+      "quantum computing",
+      "cybersecurity",
+      "technology consulting",
+      "digital transformation",
+      "artificial intelligence",
+      "machine learning",
+      "blockchain",
+      "cloud computing",
+      "data analytics"
+    ],
+    ogType: "website"
+  },
+
+  aiBreakthrough: {
+    title: "AI Revolutionary Breakthrough 2026 - First AGI Implementation | Zion Tech Group",
+    description: "Discover the first Artificial General Intelligence (AGI) implementation in 2026. Revolutionary AI breakthrough with human-level intelligence and self-improvement capabilities.",
+    keywords: [
+      "AGI",
+      "artificial general intelligence",
+      "AI breakthrough 2026",
+      "machine consciousness",
+      "AI revolution",
+      "neural networks",
+      "deep learning",
+      "AI transformation"
+    ],
+    ogType: "article"
+  },
+
+  futureTech: {
+    title: "Future Technology Innovations 2026 - Metaverse 2.0, Quantum Internet | Zion Tech Group",
+    description: "Explore cutting-edge technologies shaping 2026: Metaverse 2.0, Quantum Internet, Synthetic Biology, Space Technology, and Neuromorphic Computing.",
+    keywords: [
+      "future technology 2026",
+      "metaverse 2.0",
+      "quantum internet",
+      "synthetic biology",
+      "space technology",
+      "neuromorphic computing",
+      "advanced robotics",
+      "technology trends"
+    ],
+    ogType: "article"
+  },
+
+  businessAutomation: {
+    title: "Business Automation Guide 2025 - 90-Day Roadmap to 80% Automation | Zion Tech Group",
+    description: "Complete 90-day roadmap to automate 80% of your business operations. Achieve +300% productivity gains and -50% cost reduction with our proven automation strategies.",
+    keywords: [
+      "business automation",
+      "process automation",
+      "workflow automation",
+      "RPA",
+      "AI automation",
+      "digital transformation",
+      "productivity optimization",
+      "cost reduction"
+    ],
+    ogType: "article"
+  }
 };
 
 export default SEOOptimizer;

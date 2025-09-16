@@ -3,6 +3,14 @@ import React from 'react';
 
 const InterdimensionalTechRevolution2030: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌌 INTERDIMENSIONAL REVOLUTION • 2030
+=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -42,6 +50,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">🌌 Interdimensional Technologies</h2>
             <p className="text-xl opacity-80">Access realities beyond our dimension</p>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,6 +77,32 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               </button>
             </div>
 
+<<<<<<< HEAD
+        {/* Interdimensional Technologies */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Dimensional Gateway</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Create stable portals between parallel dimensions and alternate realities
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Interdimensional travel</li>
+              <li>• Parallel universe access</li>
+              <li>• Reality synchronization</li>
+              <li>• Dimensional stability</li>
+            </ul>
+            <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Open Gateway →
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Dimensional Computing</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Process information across infinite parallel dimensions simultaneously
+=======
             {/* Reality Engine */}
             <div
               initial={{ opacity: 0, y: 30 }}
@@ -182,6 +217,7 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
               The interdimensional revolution is just beginning. We're opening doors to 
               realities that were once thought impossible, creating new opportunities 
               for exploration, discovery, and growth.
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">

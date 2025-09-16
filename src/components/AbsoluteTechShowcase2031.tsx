@@ -119,7 +119,15 @@ const AbsoluteTechShowcase2031: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+    <motion.div
+=======
     <div
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 1.2 }}
@@ -133,6 +141,30 @@ const AbsoluteTechShowcase2031: React.FC = () => {
         }}></div>
 =======
 <<<<<<< HEAD
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+=======
+<<<<<<< HEAD
+        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Absolute Tech Showcase2031
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Revolutionary technology solutions and insights for the future
+          </p>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-376e
@@ -140,6 +172,7 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-4f5e
 >>>>>>> cursor/create-and-deploy-new-content-502e
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         
         {/* Absolute Particles */}
         {[...Array(60)].map((_, i) => (

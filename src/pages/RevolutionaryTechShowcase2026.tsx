@@ -1,5 +1,11 @@
 import React from 'react';
 <<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+
+const RevolutionaryTechShowcase2026: React.FC = () => {
+  return (
+=======
+<<<<<<< HEAD
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
@@ -103,6 +109,7 @@ import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <Helmet>
         <title>Revolutionary Tech Showcase 2026 | Zion Tech Group</title>
@@ -261,6 +268,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {/* Technology Showcase Grid */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Technology Showcase</h2>
@@ -333,6 +342,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               <div className="text-sm opacity-75">Unlimited capacity</div>
             </div>
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
         {/* Technology Impact Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
@@ -384,7 +394,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-colors font-semibold text-lg">
               Download Brochure
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
             </button>
           </div>
         </div>
