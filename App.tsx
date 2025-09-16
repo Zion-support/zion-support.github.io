@@ -97,6 +97,9 @@ import OmniversalAIConsciousness2035 from './src/pages/OmniversalAIConsciousness
 import RevolutionaryTechBlog2027 from './src/pages/RevolutionaryTechBlog2027';
 import RevolutionaryTechBreakthrough2030 from './src/pages/RevolutionaryTechBreakthrough2030';
 import UltimateAIConsciousness2032 from './src/pages/UltimateAIConsciousness2032';
+import NewContentBanner2025 from './src/components/NewContentBanner2025';
+import LatestServicesShowcase2025 from './src/components/LatestServicesShowcase2025';
+import LatestBlogShowcase2025 from './src/components/LatestBlogShowcase2025';
 <<<<<<< HEAD
 import RevolutionaryCaseStudies2032 from './src/pages/RevolutionaryCaseStudies2032';
 import EnhancedContentCarousel2032 from './src/components/EnhancedContentCarousel2032';
@@ -227,6 +230,15 @@ export default function App(): JSX.Element {
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
                 <RevolutionaryContentBanner />
+                
+                {/* NEW: New Content Banner 2025 - Latest Content & Services */}
+                <NewContentBanner2025 />
+                
+                {/* NEW: Latest Services Showcase 2025 - Revolutionary AI Solutions */}
+                <LatestServicesShowcase2025 />
+                
+                {/* NEW: Latest Blog Showcase 2025 - Cutting-Edge Technology Blog */}
+                <LatestBlogShowcase2025 />
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
