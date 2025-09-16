@@ -102,6 +102,11 @@ import RevolutionaryContentBanner2032 from './src/components/RevolutionaryConten
 import RevolutionaryTechBreakthrough2032 from './src/pages/RevolutionaryTechBreakthrough2032';
 import UltimateTechRevolution2032 from './src/pages/UltimateTechRevolution2032';
 import NextGenInnovationHub2032 from './src/pages/NextGenInnovationHub2032';
+import RevolutionaryAIContent2025 from './src/pages/RevolutionaryAIContent2025';
+import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
+import RevolutionaryAIContentBanner2025 from './src/components/RevolutionaryAIContentBanner2025';
+import QuantumComputingBanner2025 from './src/components/QuantumComputingBanner2025';
+import InteractiveContentShowcase2025 from './src/components/InteractiveContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -159,6 +164,12 @@ export default function App(): JSX.Element {
 
                 {/* NEW: Revolutionary Content Banner 2032 */}
                 <RevolutionaryContentBanner2032 />
+
+                {/* NEW: Revolutionary AI Content Banner 2025 */}
+                <RevolutionaryAIContentBanner2025 />
+
+                {/* NEW: Quantum Computing Banner 2025 */}
+                <QuantumComputingBanner2025 />
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -285,6 +296,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Autonomous AI 2025
+                    </a>
+                    <a href="/pages/RevolutionaryAIContent2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      🧠 NEW: AI Content 2025 →
+                    </a>
+                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+                      ⚡ NEW: Quantum Revolution →
                     </a>
                   </div>
                 </div>
@@ -621,6 +638,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase2026 />
                 </div>
 
+                {/* NEW: Interactive Content Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveContentShowcase2025 />
+                </div>
+
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
@@ -716,6 +738,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2032" element={<NextGenInnovationHub2032 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2032" element={<RevolutionaryTechBreakthrough2032 />} />
           <Route path="/pages/UltimateTechRevolution2032" element={<UltimateTechRevolution2032 />} />
+          <Route path="/pages/RevolutionaryAIContent2025" element={<RevolutionaryAIContent2025 />} />
+          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
