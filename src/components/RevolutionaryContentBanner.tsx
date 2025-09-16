@@ -1,109 +1,103 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryContentBanner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentBanner, setCurrentBanner] = useState(0);
 
-  const contentSlides = [
+  const banners = [
     {
-      title: "🚀 Ultimate Tech Breakthrough 2025",
-      subtitle: "Revolutionary Innovation",
-      description: "Experience the most groundbreaking technological breakthroughs that are reshaping our world",
+      id: 1,
+      title: "🚀 NEW: Ultimate Tech Breakthrough 2025",
+      subtitle: "Experience Revolutionary Technology",
+      description: "Discover the most advanced technological breakthroughs reshaping our world",
       link: "/pages/UltimateTechBreakthrough2025",
-      color: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🚀"
+      gradient: "from-purple-600 to-pink-600",
+      icon: "🧠"
     },
     {
-      title: "🌟 Innovation Showcase 2025",
-      subtitle: "Cutting-Edge Technology",
-      description: "Discover the most innovative technologies that are transforming industries and creating new possibilities",
+      id: 2,
+      title: "🌟 NEW: Innovation Showcase 2025",
+      subtitle: "Groundbreaking Innovations",
+      description: "Explore cutting-edge innovations that are transforming industries worldwide",
       link: "/pages/InnovationShowcase2025",
-      color: "from-cyan-600 via-blue-600 to-indigo-600",
-      icon: "🌟"
+      gradient: "from-cyan-600 to-blue-600",
+      icon: "⚡"
     },
     {
-      title: "⚡ Revolutionary Services 2025",
-      subtitle: "Next-Gen Solutions",
-      description: "Transform your business with our groundbreaking services that are reshaping industries",
+      id: 3,
+      title: "🚀 NEW: Revolutionary Services 2025",
+      subtitle: "Advanced Technology Services",
+      description: "Experience the most revolutionary technology services available today",
       link: "/pages/RevolutionaryServices2025",
-      color: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "⚡"
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "🧬"
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 4000);
     return () => clearInterval(timer);
-  }, [contentSlides.length]);
+  }, [banners.length]);
+
+  const currentBannerData = banners[currentBanner];
 
   return (
-    <>
-      <Helmet>
-        <title>Revolutionary Content 2025 - Latest Innovations</title>
-        <meta name="description" content="Discover our revolutionary new content featuring the latest technological breakthroughs and innovations of 2025." />
-      </Helmet>
-      
-      <div className="relative overflow-hidden mb-12">
-        {/* Main Banner */}
-        <div className={`bg-gradient-to-r ${contentSlides[currentSlide].color} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-          <div className="relative z-10">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-              <h2 className="text-3xl font-bold">{contentSlides[currentSlide].title}</h2>
-              <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-            </div>
-            <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-              {contentSlides[currentSlide].description}
-            </p>
-            <div className="flex justify-center space-x-4 mb-6">
-              <a 
-                href={contentSlides[currentSlide].link}
-                className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold border border-white/30"
+    <div className="relative mb-12">
+      <div className={`bg-gradient-to-r ${currentBannerData.gradient} rounded-2xl p-8 text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="relative z-10">
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-bold animate-pulse">
+                  BREAKTHROUGH CONTENT
+                </span>
+                <span className="text-sm opacity-90">JANUARY 2025</span>
+              </div>
+              <h2 className="text-4xl font-bold mb-2">{currentBannerData.title}</h2>
+              <p className="text-xl opacity-90 mb-4">{currentBannerData.subtitle}</p>
+              <p className="text-lg opacity-75 mb-6 max-w-2xl">{currentBannerData.description}</p>
+              <a
+                href={currentBannerData.link}
+                className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
               >
-                Explore {contentSlides[currentSlide].subtitle} →
+                Explore Now →
               </a>
-              <button className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
-                Watch Demo
-              </button>
             </div>
-            
-            {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2">
-              {contentSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
-                  }`}
-                />
-              ))}
+            <div className="hidden md:block text-8xl opacity-20">
+              {currentBannerData.icon}
             </div>
           </div>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          {contentSlides.map((slide, index) => (
-            <a
+        {/* Navigation Dots */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {banners.map((_, index) => (
+            <button
               key={index}
-              href={slide.link}
-              className={`bg-gradient-to-br ${slide.color}/20 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 border border-white/20 group`}
-            >
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{slide.icon}</div>
-              <h3 className="text-lg font-bold text-white mb-2">{slide.title}</h3>
-              <p className="text-white/80 text-sm mb-4">{slide.subtitle}</p>
-              <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-lg text-sm font-semibold group-hover:bg-white group-hover:text-gray-900 transition-all duration-300">
-                Explore Now →
-              </div>
-            </a>
+              onClick={() => setCurrentBanner(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentBanner ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
           ))}
         </div>
       </div>
-    </>
+
+      {/* Quick Access Pills */}
+      <div className="flex justify-center space-x-4 mt-6">
+        {banners.map((banner) => (
+          <a
+            key={banner.id}
+            href={banner.link}
+            className={`bg-gradient-to-r ${banner.gradient} text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-semibold text-sm`}
+          >
+            {banner.icon} {banner.subtitle}
+          </a>
+        ))}
+      </div>
+    </div>
   );
 };
 
