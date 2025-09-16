@@ -1,38 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
 
 const RevolutionaryAdBanner2036: React.FC = () => {
   return (
@@ -48,7 +14,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             Discover the most advanced technologies that will reshape our world in 2036
           </p>
         </div>
-<<<<<<< HEAD
         
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
@@ -84,14 +49,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               Enter Quantum Reality
             </button>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-370d
 import React from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
@@ -109,14 +66,8 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Interactive showcase of cutting-edge technologies that will define the future of humanity
           </p>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
         
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🧠</div>
@@ -162,71 +113,12 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         
         <div className="text-center mt-8">
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f2a8
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
->>>>>>> cursor/create-and-deploy-new-content-370d
-=======
-=======
-
-        {/* Rotating Ad Display */}
-        <div className="relative">
-          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 min-h-[400px] flex items-center">
-            <div className="w-full text-center">
-              <div className="text-8xl mb-6 animate-bounce">
-                {ads[currentAd].icon}
-              </div>
-              <h3 className="text-4xl font-bold mb-4">
-                {ads[currentAd].title}
-              </h3>
-              <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-                {ads[currentAd].subtitle}
-              </p>
-              <a 
-                href={ads[currentAd].link}
-                className={`inline-block bg-gradient-to-r ${ads[currentAd].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-              >
-                {ads[currentAd].cta} →
-              </a>
-            </div>
-          </div>
-
-          {/* Ad Indicators */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {ads.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentAd(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentAd 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -241,24 +133,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <p className="text-sm opacity-90">{ad.subtitle}</p>
             </a>
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-9c82
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         <div className="text-center mt-8">
           <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4">
             Explore All Technologies
@@ -266,15 +140,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
             Learn More
           </button>
->>>>>>> a014429381b2b3e2b84229750f8ec75be0d1733b
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
->>>>>>> cursor/create-and-deploy-new-content-f2c7
->>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-ca66
         </div>
       </div>
     </div>
