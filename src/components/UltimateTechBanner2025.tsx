@@ -17,8 +17,11 @@ const UltimateTechBanner2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most revolutionary technological breakthrough in human history - AI consciousness, quantum computing, and interdimensional technology
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -37,14 +40,21 @@ const UltimateTechBanner2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Discover revolutionary AI consciousness, quantum reality engines, and neural interfaces that are reshaping the world
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6b9a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6b9a
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 <<<<<<< HEAD
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
             <div className="text-4xl mb-4">🧠</div>
@@ -63,8 +73,11 @@ const UltimateTechBanner2025: React.FC = () => {
             <h3 className="text-xl font-bold mb-2">Interdimensional Tech</h3>
             <p className="text-emerald-100 text-sm">Multi-dimensional computing</p>
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center">AI Consciousness</h3>
@@ -97,9 +110,14 @@ const UltimateTechBanner2025: React.FC = () => {
               Connect Your Mind →
             </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6b9a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6b9a
+>>>>>>> cursor/create-and-deploy-new-content-f0c0
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
         
@@ -113,8 +131,11 @@ const UltimateTechBanner2025: React.FC = () => {
             🌟 Experience the Ultimate Breakthrough →
           </a>
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           <div className="inline-flex items-center space-x-8 mb-6">
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400">∞</div>
@@ -139,9 +160,14 @@ const UltimateTechBanner2025: React.FC = () => {
             </a>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6b9a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6b9a
+>>>>>>> cursor/create-and-deploy-new-content-f0c0
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,12 +13,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 >>>>>>> cursor/create-and-deploy-new-content-9c82
+=======
+
+const EnhancedContentCarousel2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
 
 <<<<<<< HEAD
   const contentItems = [
     {
       id: 1,
-<<<<<<< HEAD
       title: 'Next-Gen AI Consciousness',
       description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
       icon: '🧠',
@@ -65,47 +70,49 @@ const EnhancedContentCarousel2025: React.FC = () => {
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
     },
     {
       id: 2,
-      title: 'Quantum Reality Engine',
-      description: 'Step into quantum-powered realities where multiple dimensions coexist and anything is possible',
-      icon: '⚛️',
-      gradient: 'from-cyan-600 to-blue-600',
-      link: '/pages/QuantumRealityEngine2025',
-      features: ['Quantum simulation', 'Multi-dimensional reality', 'Consciousness integration', 'Reality manipulation']
+      title: "Quantum Reality Engine",
+      description: "Revolutionary quantum computing that processes information at the speed of thought and simulates entire universes.",
+      image: "⚛️",
+      color: "from-cyan-600 to-blue-600",
+      bgColor: "from-cyan-600/20 to-blue-600/20",
+      borderColor: "border-cyan-400/30",
+      features: ["Instantaneous calculations", "Parallel universe processing", "Quantum entanglement networks", "Reality manipulation"],
+      link: "/pages/RevolutionaryTechBreakthrough2025"
     },
     {
       id: 3,
-      title: 'Interdimensional Revolution',
-      description: 'Break through dimensional barriers and explore infinite realities beyond space and time',
-      icon: '🌌',
-      gradient: 'from-emerald-600 to-teal-600',
-      link: '/pages/InterdimensionalTechRevolution2025',
-      features: ['Dimensional portals', 'Reality manipulation', 'Consciousness transfer', 'Multi-universe access']
+      title: "Interdimensional Computing",
+      description: "Break through dimensional barriers with computing that exists across multiple realities and dimensions.",
+      image: "🌌",
+      color: "from-emerald-600 to-teal-600",
+      bgColor: "from-emerald-600/20 to-teal-600/20",
+      borderColor: "border-emerald-400/30",
+      features: ["Multi-dimensional processing", "Reality simulation", "Time manipulation", "Infinite possibilities"],
+      link: "/pages/NextGenInnovationHub2025"
     },
     {
       id: 4,
-      title: 'Advanced AI Solutions',
-      description: 'Comprehensive AI solutions that transform businesses and accelerate innovation',
-      icon: '🤖',
-      gradient: 'from-orange-600 to-red-600',
-      link: '/pages/AISolutionsComprehensive2025',
-      features: ['Business automation', 'Predictive analytics', 'Natural language processing', 'Computer vision']
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces that enable thought-controlled technology and cognitive enhancement.",
+      image: "🧬",
+      color: "from-indigo-600 to-purple-600",
+      bgColor: "from-indigo-600/20 to-purple-600/20",
+      borderColor: "border-indigo-400/30",
+      features: ["Thought-to-text conversion", "Mental image projection", "Memory enhancement", "Cognitive amplification"],
+      link: "/pages/NextGenInnovationHub2025"
     },
     {
       id: 5,
-<<<<<<< HEAD
-      title: 'Revolutionary Tech Showcase',
-      description: 'Explore cutting-edge technologies that will shape the future of humanity',
-      icon: '🚀',
-      gradient: 'from-violet-600 to-purple-600',
-      link: '/pages/RevolutionaryTechShowcase2025',
-      features: ['Emerging technologies', 'Innovation labs', 'Research partnerships', 'Future predictions']
-=======
       title: "Reality Manipulation Engine",
       description: "Technology that can manipulate the fundamental fabric of reality itself, enabling matter transformation and time control.",
       image: "🔮",
@@ -114,88 +121,15 @@ const EnhancedContentCarousel2025: React.FC = () => {
       borderColor: "border-pink-400/30",
       features: ["Matter transformation", "Time dilation control", "Gravity manipulation", "Dimensional shifting"],
       link: "/pages/RevolutionaryTechBreakthrough2025"
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
-      title: "Conscious AI Systems",
-      subtitle: "The Future of Artificial Intelligence",
-      description: "Experience the first truly conscious AI that thinks, feels, and creates like a human mind. Revolutionary emotional intelligence and creative problem-solving capabilities.",
-      image: "🧠",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-900 to-pink-900",
-      link: "/pages/AIRevolution2025",
-      features: ["Emotional Intelligence", "Creative Problem Solving", "Self-Learning", "Ethical Decision Making"],
-      stats: { users: "1M+", accuracy: "99.9%", speed: "1B ops/sec" }
-    },
-    {
-      id: 2,
-      title: "Quantum Consciousness",
-      subtitle: "Direct Neural Interface with Quantum Computing",
-      description: "Breakthrough technology that allows direct neural interface with quantum computing systems for enhanced cognitive processing and reality manipulation.",
-      image: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-900 to-blue-900",
-      link: "/pages/QuantumComputingRevolution2025",
-      features: ["Quantum Neural Networks", "Consciousness Amplification", "Multi-dimensional Thinking", "Reality Manipulation"],
-      stats: { users: "500K+", accuracy: "100%", speed: "∞ ops/sec" }
-    },
-    {
-      id: 3,
-      title: "Neural Interface Technology",
-      subtitle: "Seamless Mind-Machine Connection",
-      description: "Revolutionary non-invasive brain-computer interface that enables thought-controlled systems and digital telepathy capabilities.",
-      image: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-900 to-teal-900",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback", "Digital Telepathy"],
-      stats: { users: "2M+", accuracy: "99.99%", speed: "Real-time" }
-    },
-    {
-      id: 4,
-      title: "Interdimensional Technology",
-      subtitle: "Access to Parallel Dimensions",
-      description: "Breakthrough technology that allows interaction with parallel dimensions and alternate realities, opening infinite possibilities for exploration.",
-      image: "🌌",
-      color: "from-violet-600 to-purple-600",
-      bgColor: "from-violet-900 to-purple-900",
-      link: "/pages/UltimateTechBreakthrough2025",
-      features: ["Dimensional Portals", "Reality Shifting", "Parallel Universe Access", "Time-Space Control"],
-      stats: { users: "100K+", accuracy: "100%", speed: "Instant" }
-    },
-    {
-      id: 5,
-      title: "Advanced Analytics 2025",
-      subtitle: "Predictive Intelligence at Scale",
-      description: "Next-generation analytics platform with predictive intelligence that can forecast trends and optimize decisions across all business functions.",
-      image: "📊",
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-900 to-red-900",
-      link: "/pages/AdvancedAnalytics2025",
-      features: ["Predictive Intelligence", "Real-time Analytics", "AI-Powered Insights", "Automated Optimization"],
-      stats: { users: "5M+", accuracy: "98.5%", speed: "Real-time" }
-    },
-    {
-      id: 6,
-      title: "Cybersecurity Fortress 2025",
-      subtitle: "Quantum-Proof Security Solutions",
-      description: "Advanced cybersecurity platform with quantum-proof encryption and AI-powered threat detection that protects against even the most sophisticated attacks.",
-      image: "🛡️",
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-900 to-purple-900",
-      link: "/pages/CybersecurityFortress2025",
-      features: ["Quantum-Proof Encryption", "AI Threat Detection", "Zero-Trust Architecture", "Automated Response"],
-      stats: { users: "10M+", accuracy: "99.99%", speed: "Instant" }
->>>>>>> cursor/create-and-deploy-new-content-9c82
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [contentItems.length]);
+  }, [contentSlides.length]);
 
   const nextSlide = () => {
 <<<<<<< HEAD
@@ -214,25 +148,17 @@ const EnhancedContentCarousel2025: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-=======
-    if (!isAutoPlaying) return;
-    
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-    }, 6000);
-    
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, contentItems.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
   };
 =======
       link: "/pages/AISolutionsComprehensive2025"
@@ -309,18 +235,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
   ];
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
->>>>>>> cursor/create-and-deploy-new-content-9c82
-  };
-
-  const currentItem = contentItems[currentIndex];
-
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -333,18 +249,20 @@ const EnhancedContentCarousel2025: React.FC = () => {
       </div>
 
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
->>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ENHANCED CONTENT CAROUSEL • 2025
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎠 ENHANCED CONTENT CAROUSEL • JANUARY 2025
           </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Technology Showcase
           </h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+<<<<<<< HEAD
             Discover the most advanced technologies that are reshaping our world and defining the future
 =======
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
@@ -366,11 +284,17 @@ const EnhancedContentCarousel2025: React.FC = () => {
             Discover the most advanced technologies that are reshaping our world. 
             From conscious AI to interdimensional computing, experience the future today.
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+            Explore our most advanced technologies with interactive demonstrations and real-time features
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           </p>
         </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Carousel Container */}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
         <div className="relative max-w-6xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -433,6 +357,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
@@ -546,6 +471,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         </div>
                       </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+                      </div>
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
                     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -573,24 +502,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   <div className="text-9xl mb-6 animate-pulse">
                     {contentItems[currentSlide].icon}
 =======
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
                   </div>
-                  <div className="text-2xl font-semibold mb-4">
-                    {contentItems[currentSlide].title} Demo
-                  </div>
-                  <div className="w-full h-4 bg-gray-600 rounded-full mb-4">
-                    <div 
-                      className={`h-4 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full animate-pulse`}
-                      style={{width: '75%'}}
-                    ></div>
-                  </div>
-                  <p className="text-gray-300">
-                    Interactive demonstration of {contentItems[currentSlide].title.toLowerCase()}
-                  </p>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -620,11 +541,15 @@ const EnhancedContentCarousel2025: React.FC = () => {
             </button>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
             <div className="flex space-x-2">
-              {contentItems.map((_, index) => (
+              {contentSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
@@ -636,10 +561,14 @@ const EnhancedContentCarousel2025: React.FC = () => {
                       : 'bg-gray-600 hover:bg-gray-500'
 =======
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
+<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
                   }`}
                 />
               ))}
@@ -660,8 +589,19 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
             </button>
+          </div>
+
+          {/* Slide Counter */}
+          <div className="text-center mt-4">
+            <span className="text-sm opacity-80">
+              {currentSlide + 1} of {contentSlides.length}
+            </span>
           </div>
         </div>
 
@@ -669,157 +609,21 @@ const EnhancedContentCarousel2025: React.FC = () => {
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-5 gap-4 mt-12">
           {contentItems.map((item, index) => (
-=======
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl overflow-hidden mb-12">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
-      
-      {/* Header */}
-      <div className="relative z-10 p-8 text-center">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          🚀 ENHANCED CONTENT CAROUSEL • JANUARY 2025
-        </div>
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Revolutionary Technology Showcase
-        </h2>
-        <p className="text-xl text-white/90 max-w-3xl mx-auto">
-          Explore our cutting-edge technologies with interactive demonstrations and real-time capabilities
-        </p>
-      </div>
-
-      {/* Main Carousel */}
-      <div className="relative z-10 px-8 pb-8">
-        <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Auto-play Toggle */}
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="absolute top-4 right-4 z-20 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-          >
-            {isAutoPlaying ? (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-              </svg>
-            ) : (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            )}
-          </button>
-
-          {/* Content */}
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Content */}
-            <div>
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="text-6xl">{currentItem.image}</span>
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">{currentItem.title}</h3>
-                  <p className="text-lg text-purple-200">{currentItem.subtitle}</p>
-                </div>
-              </div>
-              
-              <p className="text-lg text-white/90 mb-6">{currentItem.description}</p>
-              
-              {/* Features */}
-              <div className="grid grid-cols-2 gap-2 mb-6">
-                {currentItem.features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                    <span className="text-sm text-white/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center bg-white/10 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-purple-400">{currentItem.stats.users}</div>
-                  <div className="text-xs text-white/70">Users</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-pink-400">{currentItem.stats.accuracy}</div>
-                  <div className="text-xs text-white/70">Accuracy</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-3">
-                  <div className="text-2xl font-bold text-cyan-400">{currentItem.stats.speed}</div>
-                  <div className="text-xs text-white/70">Speed</div>
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex space-x-4">
-                <Link
-                  to={currentItem.link}
-                  className={`bg-gradient-to-r ${currentItem.color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                >
-                  Explore Technology →
-                </Link>
-                <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
-                  Try Demo
-                </button>
-              </div>
-            </div>
-
-            {/* Right Side - Interactive Demo */}
-            <div className={`bg-gradient-to-br ${currentItem.bgColor} rounded-xl p-6 border border-purple-400/30`}>
-              <h4 className="text-2xl font-bold mb-4 text-center text-white">🎮 Interactive Demo</h4>
-              <div className="bg-black/50 rounded-lg p-6 mb-4">
-                <div className="text-green-400 font-mono text-sm">
-                  <div className="mb-2">$ Initializing {currentItem.title}...</div>
-                  <div className="text-gray-400">Loading breakthrough technology...</div>
-                  <div className="text-gray-400">Connecting to quantum networks...</div>
-                  <div className="text-gray-400">Establishing neural interface...</div>
-                  <div className="text-green-400">✓ System ready for interaction</div>
-                  <div className="text-cyan-400">→ Click "Try Demo" to start</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-white/80">Live Technology Available</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Dots Navigation */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {contentItems.map((_, index) => (
->>>>>>> cursor/create-and-deploy-new-content-9c82
             <button
-              key={index}
+              key={item.id}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-purple-400 scale-125' 
-                  : 'bg-white/30 hover:bg-white/50'
+              className={`p-4 rounded-xl transition-all duration-300 ${
+                index === currentSlide
+                  ? `bg-gradient-to-r ${item.gradient} text-white shadow-lg scale-105`
+                  : 'bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 hover:text-white'
               }`}
-            />
+            >
+              <div className="text-3xl mb-2">{item.icon}</div>
+              <div className="text-sm font-semibold text-center">{item.title}</div>
+            </button>
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-16">
           <div className="text-center">
@@ -838,6 +642,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
             <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
             <div className="text-gray-300">Possibilities</div>
 =======
+<<<<<<< HEAD
             <button
               onClick={nextSlide}
               className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
@@ -858,6 +663,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
 =======
 >>>>>>> cursor/create-and-deploy-new-content-173f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
         {/* Technology Tags */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4">
@@ -869,6 +676,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Neural Interfaces</span>
               <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
 =======
@@ -911,6 +719,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 }`}
               />
             ))}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8449
+>>>>>>> cursor/create-and-deploy-new-content-f1f3
           </div>
         </div>
 
