@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 SearchFilterArrowRightClockTrendingUpStarEye
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -300,13 +300,13 @@ const InteractiveContentDiscovery = () => {
             </div>
 
             {/* Action Button */}
-            <Link
+            <a
               href={item.link}
               className={`w-full py-3 bg-gradient-to-r ${getTypeColor(item.type)} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center group`}
             >
               Explore Content
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           ))}
         </div>
 

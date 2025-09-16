@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryAIContentShowcase2025: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -212,12 +212,12 @@ const RevolutionaryAIContentShowcase2025: React.FC = () => {
                   </div>
                 </div>
 
-                <Link
+                <a
                   href={content.url}
                   className="block w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-center py-2 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
                 >
                   Read {content.readingTime}
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -291,18 +291,18 @@ const RevolutionaryAIContentShowcase2025: React.FC = () => {
 
                 {/* Actions */}
                 <div className="flex flex-col gap-3">
-                  <Link
+                  <a
                     href={content.url}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
                   >
                     Read {content.readingTime}
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="w-full border-2 border-purple-600 text-purple-600 text-center py-2 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
                   >
                     Get Implementation Help
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -320,18 +320,18 @@ const RevolutionaryAIContentShowcase2025: React.FC = () => {
               Get expert guidance and proven strategies for your implementation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore AI Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

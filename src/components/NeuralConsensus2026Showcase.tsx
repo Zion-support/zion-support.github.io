@@ -20,7 +20,7 @@ import {
   Award,
   Star
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralConsensus2026Showcase: React.FC = () => {
   const [activeFeaturesetActiveFeature] = useState(0);
@@ -264,7 +264,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/src/pages/blog/ai-2026-neural-consensus-revolution">
+              <a href="/src/pages/blog/ai-2026-neural-consensus-revolution">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -274,9 +274,9 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                   Read Full Analysis
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </motion.button>
-              </Link>
+              </a>
               
-              <Link href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi">
+              <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -286,7 +286,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                   View Case Studies
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </motion.button>
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

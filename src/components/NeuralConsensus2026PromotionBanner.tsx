@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 BrainZapTrendingUpUsersArrowRightXCheckCircleStar
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -111,7 +111,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
 
                 {/* Action buttons */}
                 <div className="flex items-center space-x-3">
-                  <Link href="/src/pages/blog/ai-2026-neural-consensus-revolution" onClick={handleLearnMore}>
+                  <a href="/src/pages/blog/ai-2026-neural-consensus-revolution" onClick={handleLearnMore}>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -120,9 +120,9 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                       Read Case Study
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </motion.button>
-                  </Link>
+                  </a>
 
-                  <Link href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi" onClick={handleLearnMore}>
+                  <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi" onClick={handleLearnMore}>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -131,7 +131,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                       View ROI Results
                       <TrendingUp className="w-4 h-4 ml-2" />
                     </motion.button>
-                  </Link>
+                  </a>
 
                   <button
                     onClick={handleDismiss}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AITutorialsMastery2025PromotionBanner: React.FC = () => {
   return (
@@ -98,11 +98,11 @@ const AITutorialsMastery2025PromotionBanner: React.FC = () => {
 
         {/* Call to action */}
         <div className="text-center">
-          <Link href="/ai-tutorials-mastery-2025">
+          <a href="/ai-tutorials-mastery-2025">
             <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform shadow-lg shadow-blue-500/25">
               Start Learning AI Today
             </button>
-          </Link>
+          </a>
           <p className="text-gray-400 text-sm mt-4">
             Join the AI revolution with expert-guided tutorials and hands-on projects
           </p>

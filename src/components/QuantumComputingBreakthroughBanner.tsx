@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function QuantumComputingBreakthroughBanner() {
   return (
@@ -49,52 +49,52 @@ export default function QuantumComputingBreakthroughBanner() {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/quantum-computing-breakthroughs-2025"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Quantum Breakthroughs
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/quantum-computing-15000-roi-success"
               className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 shadow-lg"
             >
               View Success Stories
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/resources/quantum-computing-implementation-guide"
               className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
             >
               Implementation Guide
-            </Link>
+            </a>
           </div>
           
           {/* Additional content links */}
           <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution"
               className="text-red-400 hover:text-red-300 transition-colors"
             >
               🚀 AI 2025 Breakthrough
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2026-2030-ultimate-content-revolution"
               className="text-purple-400 hover:text-purple-300 transition-colors"
             >
               🔮 Future Predictions
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies"
               className="text-green-400 hover:text-green-300 transition-colors"
             >
               🏆 Case Studies
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/webinars/quantum-computing-breakthroughs-2025"
               className="text-yellow-400 hover:text-yellow-300 transition-colors"
             >
               🔥 Quantum Webinars
-            </Link>
+            </a>
           </div>
         </div>
       </div>

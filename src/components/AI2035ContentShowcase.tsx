@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapTargetUsersClockTrendingUp
 
 const AI2035ContentShowcase: React.FC = () => {
@@ -140,7 +140,7 @@ const AI2035ContentShowcase: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((itemindex) => (
-            <Link key={index} to={item.href} className="group">
+            <a key={index} to={item.href} className="group">
               <div className={`bg-gradient-to-br ${item.bgColor} p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-gray-300 h-full`}>
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
                   {item.icon}
@@ -161,7 +161,7 @@ const AI2035ContentShowcase: React.FC = () => {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -250,12 +250,12 @@ const AI2035ContentShowcase: React.FC = () => {
                       ))}
                     </div>
                     
-                    <Link href={content.href}>
+                    <a href={content.href}>
                       <Button className="w-full group-hover:bg-purple-600 transition-colors">
                         Explore Content
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -332,18 +332,18 @@ const AI2035ContentShowcase: React.FC = () => {
             Start your transformation journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               to="/blog/ai-2035-revolutionary-breakthroughs"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg"
             >
               🚀 Explore AI 2035 Breakthroughs
-            </Link>
-            <Link
+            </a>
+            <a
               to="/resources/ai-2035-ultimate-implementation-master-guide"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 text-lg"
             >
               📚 Download Free Guide
-            </Link>
+            </a>
           </div>
           <p className="text-sm text-gray-500 mt-4">
             Free forever • No email required • Instant access to 500+ pages

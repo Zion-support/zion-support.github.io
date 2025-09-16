@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(true);
@@ -120,18 +120,18 @@ const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
               </div>
               
               <div className="flex items-center space-x-4">
-                <Link
+                <a
                   href={currentContent.url}
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Read Full Guide →
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
                   Get Consultation
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function QuantumAIFusionPromotionBanner() {
   return (
@@ -33,24 +33,24 @@ export default function QuantumAIFusionPromotionBanner() {
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/quantum-ai-fusion-2030"
               className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-emerald-600 text-white font-bold rounded-lg hover:from-cyan-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
             >
               ⚡ Explore Quantum AI
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2035-singularity-breakthrough"
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300"
             >
               🚀 Singularity 2035
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/neural-interface-revolution-2035"
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300"
             >
               🧠 Neural Revolution
-            </Link>
+            </a>
           </div>
         </div>
         

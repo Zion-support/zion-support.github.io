@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
@@ -210,13 +210,13 @@ const UltimateContentCarousel2025 = () => {
                         </div>
                       </div>
                       
-                      <Link
+                      <a
                         href={slides[currentSlide].href}
                         className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 group shadow-lg"
                       >
                         {slides[currentSlide].cta}
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      </a>
                     </motion.div>
                   </div>
                 </div>

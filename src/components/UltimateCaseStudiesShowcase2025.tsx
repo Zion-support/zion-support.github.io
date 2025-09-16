@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateCaseStudiesShowcase2025 = () => {
   const [activeCase, setActiveCase] = useState(0);
@@ -213,18 +213,18 @@ const UltimateCaseStudiesShowcase2025 = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href={`/case-studies/${currentCase.id}`}
                   className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   View Full Case Study
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
                 >
                   Get Similar Results
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -263,18 +263,18 @@ const UltimateCaseStudiesShowcase2025 = () => {
               Let us help you achieve similar results with our proven AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Success Story
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Our Solutions
-              </Link>
+              </a>
             </div>
           </div>
         </div>

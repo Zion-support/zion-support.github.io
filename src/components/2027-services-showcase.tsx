@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
@@ -158,20 +158,20 @@ export default function ServicesShowcase2027() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2"
               >
                 <Rocket className="w-5 h-5" />
                 <span>Get Started</span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/pricing"
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <DollarSign className="w-5 h-5" />
                 <span>View Pricing</span>
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -308,18 +308,18 @@ export default function ServicesShowcase2027() {
 
                     {/* Actions */}
                     <div className="flex space-x-3">
-                      <Link
+                      <a
                         href={service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
                       >
                         Learn More
-                      </Link>
-                      <Link
+                      </a>
+                      <a
                         href="/contact"
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
                       >
                         Contact
-                      </Link>
+                      </a>
                     </div>
 
                     {/* Category Badge */}
@@ -386,18 +386,18 @@ export default function ServicesShowcase2027() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/pricing"
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
               >
                 View Pricing Plans
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -419,11 +419,11 @@ export default function ServicesShowcase2027() {
           <div className="text-cyan-300 text-sm">
             <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
+              <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</a>
               {' • '}
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>
+              <a href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</a>
               {' • '}
-              <Link href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</Link>
+              <a href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</a>
             </p>
           </div>
         </div>

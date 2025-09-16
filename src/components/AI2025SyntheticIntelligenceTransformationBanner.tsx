@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025SyntheticIntelligenceTransformationBanner() {
   return (
@@ -29,7 +29,7 @@ export default function AI2025SyntheticIntelligenceTransformationBanner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link 
+              <a 
                 href="/case-studies/ai-2025-synthetic-intelligence-transformation-breakthrough"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
@@ -37,13 +37,13 @@ export default function AI2025SyntheticIntelligenceTransformationBanner() {
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 🚀 Start Your Transformation
-              </Link>
+              </a>
             </div>
           </div>
           

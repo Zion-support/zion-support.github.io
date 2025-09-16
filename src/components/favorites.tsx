@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { TALENT_PROFILES } from '../data/talent';
 
 function useFavorites() {
@@ -29,7 +29,7 @@ export default function FavoritesPage() {
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
-            <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
+            <li><a href="/"><a className="hover:underline">Home</a></a></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
           </ol>
@@ -42,7 +42,7 @@ export default function FavoritesPage() {
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
           <div className="text-gray-600 dark:text-gray-300">You haven't saved any talent yet.</div>
           <div className="mt-4">
-            <Link href="/talent"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Browse Talent</a></Link>
+            <a href="/talent"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Browse Talent</a></a>
           </div>
         </div>
       ) : (
@@ -65,8 +65,8 @@ export default function FavoritesPage() {
               <div className="mt-4 flex items-center justify-between text-sm">
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>
                 <div className="flex items-center gap-3">
-                  <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
-                  <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
+                  <a href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></a>
+                  <a href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></a>
                 </div>
               </div>
             </div>

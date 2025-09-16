@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentDiscoveryWidget = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -124,7 +124,7 @@ const NewContentDiscoveryWidget = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
-            <Link
+            <a
               key={item.id}
               href={item.link}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
@@ -167,13 +167,13 @@ const NewContentDiscoveryWidget = () => {
                   </svg>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/content"
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
@@ -182,7 +182,7 @@ const NewContentDiscoveryWidget = () => {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
 
         {/* Newsletter Signup */}

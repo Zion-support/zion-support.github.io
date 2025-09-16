@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026AdvancedAutomationPromotionBanner() {
   return (
@@ -51,18 +51,18 @@ export default function AI2026AdvancedAutomationPromotionBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <a 
               href="/ai-2026-advanced-automation-solutions"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
             >
               Explore Solutions
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2026-advanced-automation-solutions#demo"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 text-center"
             >
               Schedule Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

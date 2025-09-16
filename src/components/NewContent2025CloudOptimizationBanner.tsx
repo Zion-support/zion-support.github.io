@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 XCloudZapTrendingUpCheckCircleDollarSign
 
 const NewContent2025CloudOptimizationBanner: React.FC = () => {
@@ -71,20 +71,20 @@ const NewContent2025CloudOptimizationBanner: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
+              <a
                 href="/blog/ai-2025-cloud-optimization-breakthrough"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Cloud className="h-5 w-5 mr-2" />
                 Read Cloud Optimization Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources/ai-cloud-optimization-master-guide-2025"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
               >
                 <CheckCircle className="h-5 w-5 mr-2" />
                 Get Master Guide
-              </Link>
+              </a>
             </div>
           </div>
 

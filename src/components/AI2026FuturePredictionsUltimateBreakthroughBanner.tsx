@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 const AI2026FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
@@ -136,20 +136,20 @@ const AI2026FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/content/resources/ai-2026-future-predictions-ultimate-breakthrough-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Predictions Guide
               <ArrowRight className="inline w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/content/resources/quantum-neural-fusion-implementation-master-guide-2026"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
             >
               Quantum-Neural Fusion Guide
               <ArrowRight className="inline w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
           
           <div className="text-sm opacity-80 max-w-2xl mx-auto">

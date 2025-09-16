@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InteractiveAIAssessmentTool = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -268,12 +268,12 @@ const InteractiveAIAssessmentTool = () => {
 
             <div className="text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <a
                   href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Your Free Consultation
-                </Link>
+                </a>
                 <button
                   onClick={resetAssessment}
                   className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"

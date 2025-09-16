@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025ContentMarketingRevolutionBanner = () => {
   const [currentContent, setCurrentContent] = useState(0);
@@ -134,18 +134,18 @@ const AI2025ContentMarketingRevolutionBanner = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 Read Full {currentItem.type} →
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
               >
                 Get Implementation Help
-              </Link>
+              </a>
             </div>
           </div>
 

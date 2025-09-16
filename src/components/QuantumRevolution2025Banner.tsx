@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function QuantumRevolution2025Banner() {
   return (
@@ -48,18 +48,18 @@ export default function QuantumRevolution2025Banner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/quantum-computing-revolution-2025"
               className="bg-gradient-to-r from-cyan-400 to-purple-400 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all transform hover:scale-105 shadow-lg"
             >
               Explore Quantum Solutions →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-colors"
             >
               Get Quantum Access
-            </Link>
+            </a>
           </div>
           
           {/* Performance Metrics */}

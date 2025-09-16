@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
 
 <<<<<<< HEAD
@@ -425,19 +425,19 @@ const InteractiveTechDemo2026: React.FC = () => {
             can transform your specific business processes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/contact" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               Schedule Personal Demo
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-solutions" 
               className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
             >
               Explore All Solutions
-            </Link>
+            </a>
           </div>
 >>>>>>> cursor/create-and-deploy-new-content-c963
         </div>

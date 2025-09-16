@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SearchFilterGridListArrowRightStarClockTrendingUpUsersZap
 
 const InteractiveContentWidget2025 = () => {
@@ -236,13 +236,13 @@ const InteractiveContentWidget2025 = () => {
                   </div>
                 </div>
                 
-                <Link
+                <a
                   href="#"
                   className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1 transform duration-200"
                 >
                   Explore Now
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}

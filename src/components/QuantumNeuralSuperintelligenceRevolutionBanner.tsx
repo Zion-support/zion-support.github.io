@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Star } from 'lucide-react';
 
 export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
@@ -170,22 +170,22 @@ export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/content/resources/ai-2025-quantum-neural-superintelligence-implementation-ultimate-guide"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
             >
               <Brain className="w-5 h-5 mr-2" />
               Download Ultimate Guide
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/content/blog/ai-2025-quantum-neural-superintelligence-revolution-ultimate-breakthrough"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 flex items-center justify-center group"
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               Read Full Article
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
           
           <div className="text-blue-200 text-sm">

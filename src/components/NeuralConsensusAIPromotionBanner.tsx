@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NeuralConsensusAIPromotionBanner() {
   return (
@@ -51,18 +51,18 @@ export default function NeuralConsensusAIPromotionBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <a 
               href="/neural-consensus-ai-2026"
               className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
             >
               Experience Technology
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/neural-consensus-ai-2026#demo"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 text-center"
             >
               Start Free Trial
-            </Link>
+            </a>
           </div>
         </div>
       </div>

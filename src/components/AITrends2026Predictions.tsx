@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   TrendingUp
@@ -429,13 +429,13 @@ const AITrends2026Predictions = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={`/ai-trends-2026/${activeCategory}`}
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-indigo-500/25"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
 
               {/* Hover Effect Overlay */}
@@ -460,20 +460,20 @@ const AITrends2026Predictions = () => {
               and early insights into the technologies that will shape 2026.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/ai-trends-2026"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-indigo-500/25"
               >
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Predictions
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/newsletter-signup"
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <Users className="w-5 h-5 mr-2" />
                 Get Updates
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

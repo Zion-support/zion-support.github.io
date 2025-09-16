@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025BreakthroughContentPromotionBanner() {
   return (
@@ -56,24 +56,24 @@ export default function AI2025BreakthroughContentPromotionBanner() {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-2025-advanced-automation-mastery"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Advanced Automation Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2025-enterprise-transformation-breakthrough"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               View Success Stories
-            </Link>
-            <Link
+            </a>
+            <a
               href="/content-showcase"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore All Content
-            </Link>
+            </a>
           </div>
 
           {/* Social Proof */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AutonomousBusinessOperationsPromotionBanner = () => {
   return (
@@ -103,24 +103,24 @@ const AutonomousBusinessOperationsPromotionBanner = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-autonomous-business-operations-2025"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Read Full Article →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-transformation-1000-roi-success-story"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300"
             >
               View Success Story
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-300"
             >
               Start Your Journey
-            </Link>
+            </a>
           </div>
           <p className="text-sm opacity-70 mt-4">
             Join the autonomous business revolution and transform your operations with AI

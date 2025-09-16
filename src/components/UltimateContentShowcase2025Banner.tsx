@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentShowcase2025Banner = () => {
   return (
@@ -90,12 +90,12 @@ const UltimateContentShowcase2025Banner = () => {
               <p className="text-sm opacity-90 mb-4">
                 Complete implementation guide for enterprise generative AI with 300-500% efficiency gains.
               </p>
-              <Link 
+              <a 
                 href="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
                 className="text-blue-300 font-semibold hover:text-blue-200 transition-colors"
               >
                 Read Full Guide →
-              </Link>
+              </a>
             </div>
 
             <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl p-6 border border-green-400/30">
@@ -104,12 +104,12 @@ const UltimateContentShowcase2025Banner = () => {
               <p className="text-sm opacity-90 mb-4">
                 Latest quantum computing applications delivering 1000x faster optimization algorithms.
               </p>
-              <Link 
+              <a 
                 href="/blog/ai-2025-quantum-computing-breakthrough"
                 className="text-green-300 font-semibold hover:text-green-200 transition-colors"
               >
                 Explore Breakthrough →
-              </Link>
+              </a>
             </div>
 
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">
@@ -118,12 +118,12 @@ const UltimateContentShowcase2025Banner = () => {
               <p className="text-sm opacity-90 mb-4">
                 How a Fortune 500 company achieved 2,500% ROI through AI transformation.
               </p>
-              <Link 
+              <a 
                 href="/case-studies/fortune-500-ai-transformation-success"
                 className="text-orange-300 font-semibold hover:text-orange-200 transition-colors"
               >
                 View Case Study →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -131,18 +131,18 @@ const UltimateContentShowcase2025Banner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <Link
+            <a
               href="/blog"
               className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-12 py-6 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:via-orange-400 hover:to-red-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Explore All Content
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="bg-white/20 backdrop-blur-sm text-white px-12 py-6 rounded-2xl font-bold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
             >
               Download Resources
-            </Link>
+            </a>
           </div>
           
           <div className="flex items-center justify-center space-x-12 text-sm opacity-80">

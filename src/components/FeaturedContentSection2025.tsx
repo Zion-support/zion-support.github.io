@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarClockUserTrendingUpStarEyeThumbsUp
 
 export default function FeaturedContentSection2025() {
@@ -92,7 +92,7 @@ export default function FeaturedContentSection2025() {
         {/* Featured Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((contentindex) => (
-            <Link key={index} href={content.href} className="group">
+            <a key={index} href={content.href} className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                 {/* Featured Badge */}
                 {content.featured && (
@@ -167,7 +167,7 @@ export default function FeaturedContentSection2025() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -181,12 +181,12 @@ export default function FeaturedContentSection2025() {
             <p className="text-gray-600 mb-6">
               Stay updated with the latest AI trendsbreakthroughsand industry insights.
             </p>
-            <Link 
+            <a 
               href="/blog" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all"
             >
               Browse Articles <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
@@ -197,12 +197,12 @@ export default function FeaturedContentSection2025() {
             <p className="text-gray-600 mb-6">
               Real-world case studies showcasing remarkable AI transformation results.
             </p>
-            <Link 
+            <a 
               href="/case-studies" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all"
             >
               View Stories <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
@@ -213,12 +213,12 @@ export default function FeaturedContentSection2025() {
             <p className="text-gray-600 mb-6">
               Step-by-step guides to help you implement AI solutions successfully.
             </p>
-            <Link 
+            <a 
               href="/tutorials" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all"
             >
               Start Learning <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -229,18 +229,18 @@ export default function FeaturedContentSection2025() {
             Subscribe to our newsletter and get notified about new articlescase studiesand tutorials as soon as 'they', 're published.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/newsletter" 
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
             >
               Subscribe Now <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Get Custom Content
-            </Link>
+            </a>
           </div>
         </div>
       </div>

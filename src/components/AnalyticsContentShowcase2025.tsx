@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AnalyticsContentShowcase2025 = () => {
   const analyticsContent = [
@@ -74,24 +74,24 @@ const AnalyticsContentShowcase2025 = () => {
                 <p className="text-gray-600 mb-4">
                   {content.description}
                 </p>
-                <Link
+                <a
                   href={content.link}
                   className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/analytics"
             className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
           >
             View All Analytics Content
-          </Link>
+          </a>
         </div>
       </div>
     </section>

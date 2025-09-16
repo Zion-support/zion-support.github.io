@@ -2,7 +2,7 @@
 import React{ useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 AtomZapCpuShieldTargetTrendingUpArrowRightPlayPause
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumComputingShowcase2025: React.FC = () => {
   const [activeTabsetActiveTab] = useState(0);
@@ -210,7 +210,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                     ))}
                   </div>
 
-                  <Link href="/contact">
+                  <a href="/contact">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -219,7 +219,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
                       Get Started
                       <ArrowRight className="w-5 h-5" />
                     </motion.button>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* Visual */}
@@ -328,7 +328,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact">
+            <a href="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -337,8 +337,8 @@ const QuantumComputingShowcase2025: React.FC = () => {
                 Schedule Quantum Consultation
                 <ArrowRight className="w-6 h-6" />
               </motion.button>
-            </Link>
-            <Link href="/quantum-computing-2025">
+            </a>
+            <a href="/quantum-computing-2025">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -346,7 +346,7 @@ const QuantumComputingShowcase2025: React.FC = () => {
               >
                 Learn More About Quantum
               </motion.button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

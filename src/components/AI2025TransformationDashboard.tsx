@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025TransformationDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -106,24 +106,24 @@ const AI2025TransformationDashboard = () => {
           <div className="bg-gray-50 p-6 rounded-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Actions</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Link
+              <a
                 href="/contact"
                 className="bg-purple-600 text-white p-4 rounded-lg text-center font-semibold hover:bg-purple-700 transition-colors"
               >
                 Schedule Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="bg-blue-600 text-white p-4 rounded-lg text-center font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Case Studies
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="bg-green-600 text-white p-4 rounded-lg text-center font-semibold hover:bg-green-700 transition-colors"
               >
                 Download Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -256,18 +256,18 @@ const AI2025TransformationDashboard = () => {
             Get personalized AI recommendations and start your transformation journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Get Started Now
-            </Link>
-            <Link
+            </a>
+            <a
               href="/demo"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Schedule Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

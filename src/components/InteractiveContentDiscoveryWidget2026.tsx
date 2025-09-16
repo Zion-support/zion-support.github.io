@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -186,7 +186,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
                   ))}
                 </div>
 
-                <Link
+                <a
                   href={item.url}
                   className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
                 >
@@ -194,7 +194,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -211,7 +211,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
 
         {/* View All Link */}
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/services"
             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
@@ -219,7 +219,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

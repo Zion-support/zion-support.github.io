@@ -15,7 +15,7 @@ import {
   Users,
   Zap
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import React, { useEffect, useState } from 'react';
 import {
   emergingTechServicesEnhanced2025
@@ -302,24 +302,24 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
               >
-                <Link href="/comprehensive-services-showcase-2026">
+                <a href="/comprehensive-services-showcase-2026">
                   <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                     <span className="flex items-center gap-2">
                       Explore 2026 Services
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </button>
-                </Link>
-                <Link href="/comprehensive-services-showcase-2025">
+                </a>
+                <a href="/comprehensive-services-showcase-2025">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     2025 Services Showcase
                   </button>
-                </Link>
-                <Link href="/get-started">
+                </a>
+                <a href="/get-started">
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
-                </Link>
+                </a>
               </motion.div>
               
               {/* Trust Indicators */}
@@ -361,7 +361,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <h2 className="text-3xl md:text-4xl font-bold text-white">Latest Insights</h2>
               <p className="text-gray-300 mt-2">New guides and blueprints from our experts</p>
             </div>
-            <Link href="/blog" className="text-cyan-400 hover:text-cyan-300">View all</Link>
+            <a href="/blog" className="text-cyan-400 hover:text-cyan-300">View all</a>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

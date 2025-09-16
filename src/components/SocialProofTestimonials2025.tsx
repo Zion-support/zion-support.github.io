@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarQuoteUsersAwardTrendingUpCheckCircleGlobeBuildingZap
 
 export default function SocialProofTestimonials2025() {
@@ -216,19 +216,19 @@ export default function SocialProofTestimonials2025() {
             Start your AI transformation journey today and achieve similar extraordinary results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your Success Story
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies" 
               className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-300 backdrop-blur-sm"
             >
               View All Case Studies
-            </Link>
+            </a>
           </div>
         </div>
       </div>

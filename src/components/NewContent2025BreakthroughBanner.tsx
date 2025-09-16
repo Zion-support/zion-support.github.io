@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025BreakthroughBanner() {
   return (
@@ -19,24 +19,24 @@ export default function NewContent2025BreakthroughBanner() {
             Everything you need to dominate AI in 2025.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-enterprise-automation-revolution"
               className="bg-white text-red-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
               🚀 Read Enterprise Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2025-global-manufacturing-transformation-breakthrough"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors text-lg"
             >
               🏆 View $2.4B Success Story
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Featured New Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link href="/blog/ai-2025-enterprise-automation-revolution" className="group">
+          <a href="/blog/ai-2025-enterprise-automation-revolution" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
               <h3 className="text-lg font-semibold mb-2">AI 2025 Enterprise Automation Revolution</h3>
@@ -47,9 +47,9 @@ export default function NewContent2025BreakthroughBanner() {
                 <span>BREAKTHROUGH</span>
               </div>
             </div>
-          </Link>
+          </a>
           
-          <Link href="/case-studies/ai-2025-global-manufacturing-transformation-breakthrough" className="group">
+          <a href="/case-studies/ai-2025-global-manufacturing-transformation-breakthrough" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏭</div>
               <h3 className="text-lg font-semibold mb-2">$2.4B Manufacturing Success</h3>
@@ -60,9 +60,9 @@ export default function NewContent2025BreakthroughBanner() {
                 <span>NEW</span>
               </div>
             </div>
-          </Link>
+          </a>
 
-          <Link href="/resources/ai-2025-implementation-master-guide" className="group">
+          <a href="/resources/ai-2025-implementation-master-guide" className="group">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
               <h3 className="text-lg font-semibold mb-2">AI Implementation Master Guide</h3>
@@ -73,22 +73,22 @@ export default function NewContent2025BreakthroughBanner() {
                 <span>COMPREHENSIVE</span>
               </div>
             </div>
-          </Link>
+          </a>
         </div>
 
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/blog"
             className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block mr-4"
           >
             View All Articles
-          </Link>
-          <Link
+          </a>
+          <a
             href="/resources"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors inline-block"
           >
             Download All Resources
-          </Link>
+          </a>
         </div>
       </div>
     </section>

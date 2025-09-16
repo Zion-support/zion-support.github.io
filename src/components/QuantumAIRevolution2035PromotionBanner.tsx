@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumAIRevolution2035PromotionBanner = () => {
   return (
@@ -33,18 +33,18 @@ const QuantumAIRevolution2035PromotionBanner = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
+            <a 
               href="/quantum-ai-revolution-2035" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Experience the Revolution →
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/quantum-ai-revolution-2035#matter-creation" 
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
             >
               Matter Creation
-            </Link>
+            </a>
           </div>
           
           {/* Key Features Grid */}
@@ -153,12 +153,12 @@ const QuantumAIRevolution2035PromotionBanner = () => {
               The quantum AI revolution is already beginning. Are you ready to be part of 
               the most profound transformation in the history of consciousness?
             </p>
-            <Link 
+            <a 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Join the Revolution
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralInterfaceContentShowcase2025 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -229,12 +229,12 @@ const NeuralInterfaceContentShowcase2025 = () => {
               <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readingTime}</span>
-                  <Link
+                  <a
                     href={item.url}
                     className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
                   >
                     Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -253,19 +253,19 @@ const NeuralInterfaceContentShowcase2025 = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Neural Interface Assessment
-            </Link>
+            </a>
             
-            <Link
+            <a
               href="/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               View All Success Stories
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

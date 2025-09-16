@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AutonomousSystems2025Banner = () => {
   const [systemStatus, setSystemStatus] = useState('initializing');
@@ -126,18 +126,18 @@ const AutonomousSystems2025Banner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/autonomous-systems-2025"
               className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-10 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Autonomous AI
-            </Link>
-            <Link
+            </a>
+            <a
               href="/autonomous-demo"
               className="border-2 border-orange-400 text-orange-400 px-10 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-gray-900 transition-all duration-300"
             >
               Try Autonomous Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

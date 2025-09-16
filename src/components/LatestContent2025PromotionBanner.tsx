@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarTrendingUpUsersStarClockEyeBookOpenVideoFileText
 
 const LatestContent2025PromotionBanner = () => {
@@ -139,19 +139,19 @@ const LatestContent2025PromotionBanner = () => {
             Get instant notifications when we publish new content and breakthrough insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/content"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore All Content
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/newsletter"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Subscribe to Updates
-            </Link>
+            </a>
           </div>
         </div>
       </div>
