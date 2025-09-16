@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function RealTimeModelRoutingPlaybookPage() {
+function RealTimeModelRoutingPlaybookInner() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16 text-white">
       <h1 className="text-3xl font-bold mb-4">Guide: Real-Time Model Routing Playbook (2026 Preview)</h1>
@@ -18,7 +18,7 @@ export default function RealTimeModelRoutingPlaybookPage() {
   )
 }
 
-export default function Page() {
+function Page() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
@@ -44,4 +44,3 @@ export default function Page() {
     </div>
   )
 }
-

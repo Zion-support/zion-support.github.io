@@ -1,6 +1,6 @@
 content_index:
-  last_updated: "2025-09-15"
-  total_content_pieces: 39
+  last_updated: "2025-09-16"
+  total_content_pieces: 42
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -452,7 +452,48 @@ content_index:
 
   newly_added_september_2025:
 <<<<<<< HEAD
-    - id: "ai-2026-evidence-driven-release-checklists"
+    - id: "ai-2026-agentic-sandbox-patterns"
+      type: "blog"
+      title: "AI 2026: Agentic Sandbox Patterns"
+      file_path: "/content/blog/ai-2026-agentic-sandbox-patterns.md"
+      url: "/blog/ai-2026-agentic-sandbox-patterns"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Agents", "Security", "Sandboxing", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+    - id: "ai-2026-production-safety-checklist"
+      type: "blog"
+      title: "AI 2026: Production Safety Checklist"
+      file_path: "/content/blog/ai-2026-production-safety-checklist.md"
+      url: "/blog/ai-2026-production-safety-checklist"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Safety", "Change Management", "Reliability", "Evals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollback_time: "< 5 min"
+        reliability: "99.9%"
+        audit_ready: true
+    - id: "ai-2026-evaluation-cookbook"
+      type: "blog"
+      title: "AI 2026: Evaluation Cookbook — Scenario Suites, Metrics, and Gates"
+      file_path: "/content/blog/ai-2026-evaluation-cookbook.md"
+      url: "/blog/ai-2026-evaluation-cookbook"
+      status: "published"
+      created: "2025-09-16"
+      tags: ["Evaluations", "Reliability", "Policy-as-Code", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        coverage: "> 70% initial"
+        gate_pass_rate: "> 95%"
+        audit_ready: true
 =======
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"

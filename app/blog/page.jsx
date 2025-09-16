@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Production Safety Checklist",
+      description: "SLO‑driven checklist to harden agents with eval gates, guardrails, and rollback.",
+      slug: "ai-2026-production-safety-checklist",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/production-safety-checklist-2026.jpg"
+    },
+    {
       title: "AI 2026: Safe Rollouts in Production",
       description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
       slug: "ai-2026-safe-rollouts-in-production",
@@ -21,6 +30,15 @@ const BlogPage = () => {
       date: "2025-09-16",
       featured: true,
       image: "/images/safe-rollouts-2026.jpg"
+    },
+    {
+      title: "AI 2026: Causal Evals for Autonomous Agents",
+      description: "Design causality‑aware evaluation harnesses to validate safety and alignment.",
+      slug: "ai-2026-causal-evals-for-autonomous-agents",
+      category: "Evaluation",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/causal-evals-autonomous-agents-2026.jpg"
     },
     {
       title: "AI 2026: Autonomous Evidence‑Led Operations",
@@ -32,7 +50,6 @@ const BlogPage = () => {
       image: "/images/evidence-led-ops-2026.jpg"
     },
     {
->>>>>>> cursor/create-and-deploy-new-content-d9c7
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
@@ -40,9 +57,6 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/enterprise-ai-governance-2026.jpg"
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
     },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
@@ -63,8 +77,6 @@ const BlogPage = () => {
       image: "/images/ai-governance-blueprint-2026.jpg"
     },
     {
-      date: "2025-09-15",
-=======
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
       description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
       slug: "ai-2025-enterprise-ai-agents-breakthrough",
@@ -79,10 +91,17 @@ const BlogPage = () => {
       slug: "ai-2025-quantum-computing-breakthrough",
       category: "Quantum Computing",
       date: "2025-01-15",
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
       featured: true,
       image: "/images/quantum-computing-2025.jpg"
+    },
+    {
+      title: "AI 2026: Evaluation-Driven Release Engineering",
+      description: "Ship safer autonomy with eval-gated rollouts, canary scorecards, and automated rollback.",
+      slug: "ai-2026-evaluation-driven-release-engineering",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/blog/evaluation-driven-release-engineering-2026.jpg"
     }
   ];
 
