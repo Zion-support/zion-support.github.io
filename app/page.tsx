@@ -412,6 +412,24 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Production Evidence Hub (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Production Evidence Hub — Blueprint</h2>
+              <p className="text-gray-600 mt-2">Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-production-evidence-hub-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Blueprint</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-376e
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

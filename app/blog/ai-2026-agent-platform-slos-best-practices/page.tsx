@@ -1,55 +1,49 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2026: Agent Platform SLOs — Best Practices',
-  description:
-    'Define actionable SLOs for agent platforms: safety, quality, reliability, latency, and cost with clear error budgets.',
+  title: 'AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group',
+  description: 'A concise SLO set for safety, quality, reliability, and cost in agent platforms—ready to adopt.',
 };
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Agent Platform SLOs — Best Practices</h1>
-          <p className="text-lg opacity-90">A concise SLO set for safety, quality, reliability, latency, and cost.</p>
-        </div>
-      </section>
-
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-emerald">
-        <p>
-          Adopt service level objectives tailored to autonomous agent platforms. Balance user outcomes and
-          operational safety by encoding targets for evaluation pass‑rates, harmful output rates, tool‑use
-          integrity, tail latency, incident MTTR, and per‑task unit costs.
-        </p>
-
-        <h2>Recommended SLO Categories</h2>
-        <ul>
-          <li>Safety: harmful output rate ≤ threshold; jailbreak block rate ≥ target</li>
-          <li>Quality: eval pass‑rate on critical scenarios ≥ target</li>
-          <li>Reliability: success rate and rollback coverage with error budgets</li>
-          <li>Latency: p95/p99 end‑to‑end and tool latency within budgets</li>
-          <li>Cost: unit economics per task and per successful outcome</li>
-        </ul>
-
-        <h2>Operationalizing SLOs</h2>
-        <ul>
-          <li>Attach eval gates to CI, staging, canary, and ramp</li>
-          <li>Drive change policy with budgets and automatic rollbacks</li>
-          <li>Record evidence artifacts for audits and postmortems</li>
-          <li>Expose dashboards and alerts mapped to business KPIs</li>
-        </ul>
-
-        <div className="mt-10 p-6 rounded-xl bg-gray-50 border border-gray-200">
-          <h3 className="m-0">Related resources</h3>
+    <main className="min-h-screen bg-white text-gray-900">
+      <div className="max-w-3xl mx-auto px-4 py-12">
+        <nav className="mb-8">
+          <Link href="/blog" className="text-purple-600 hover:text-purple-800">← Back to Blog</Link>
+        </nav>
+        <header className="mb-8">
+          <div className="text-sm text-purple-700 font-semibold mb-2">Operations</div>
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">AI 2026: Agent Platform SLOs — Best Practices</h1>
+          <p className="text-gray-600">A concise, adoptable SLO set to operate safe, reliable, and cost‑efficient agent platforms.</p>
+        </header>
+        <article className="prose prose-lg max-w-none">
+          <h2>Why SLOs for Agent Platforms</h2>
+          <p>
+            Agent platforms blend LLMs, tools, evaluators, and orchestrators. Clear service level objectives align
+            safety, reliability, and cost signals with business outcomes.
+          </p>
+          <h3>Core SLO Themes</h3>
           <ul>
-            <li><Link href="/blog/ai-2026-safe-rollouts-in-production">Safe Rollouts in Production</Link></li>
-            <li><Link href="/content/ai-2026-agent-platform-readiness-checklist">Readiness Checklist</Link></li>
-            <li><Link href="/content/ai-2026-evaluation-runbook-starter-kit">Evaluation Runbook</Link></li>
+            <li>Safety: harmful action rate, eval‑gated change coverage, incident MTTR</li>
+            <li>Quality: task success, groundedness, hallucination escape rate</li>
+            <li>Reliability: tool success, latency SLOs per class, rollout error budgets</li>
+            <li>Cost: tokens per task class, infra cost per outcome</li>
           </ul>
-        </div>
-      </main>
-    </div>
+          <h3>Adoption Checklist</h3>
+          <ul>
+            <li>Define task classes and guardrails</li>
+            <li>Attach evals and traces to every rollout</li>
+            <li>Publish dashboards and error budgets</li>
+            <li>Gate risky changes with policy‑as‑code</li>
+          </ul>
+          <p>
+            See also: <Link href="/content/ai-2026-safe-evaluation-hub" className="text-purple-600">Evaluation Hub</Link> and
+            {' '}<Link href="/blog/ai-2026-agent-platform-operations" className="text-purple-600">Platform Operations</Link>.
+          </p>
+        </article>
+      </div>
+    </main>
   );
 }
 
