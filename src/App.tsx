@@ -61,6 +61,9 @@ import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026
 import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2026';
 import AdvancedRoboticsRevolution2026 from './pages/AdvancedRoboticsRevolution2026';
 import TrendingContentSection from './components/TrendingContentSection';
+import NewContentPromotionBanner2026 from './components/NewContentPromotionBanner2026';
+import TrendingContentSection2026 from './components/TrendingContentSection2026';
+import ComprehensiveContentShowcase2026 from './pages/ComprehensiveContentShowcase2026';
 import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
@@ -115,9 +118,14 @@ const App: React.FC = () => {
                 <NewContentShowcase2026 />
               </div>
 
+              {/* NEW: New Content Promotion Banner */}
+              <div className="mb-12">
+                <NewContentPromotionBanner2026 />
+              </div>
+
               {/* NEW: Trending Content Section */}
               <div className="mb-12">
-                <TrendingContentSection />
+                <TrendingContentSection2026 />
               </div>
 
               {/* Revolutionary Content Showcase 2026 */}
@@ -278,6 +286,7 @@ const App: React.FC = () => {
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
+          <Route path="/comprehensive-content-showcase-2026" element={<ComprehensiveContentShowcase2026 />} />
         </Routes>
         
         <Footer />
